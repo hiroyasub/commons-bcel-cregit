@@ -350,31 +350,11 @@ name|i
 operator|++
 control|)
 block|{
-name|byte
-name|b
-decl_stmt|;
-if|if
-condition|(
-operator|(
-name|b
-operator|=
 name|bytes
 operator|.
 name|readByte
 argument_list|()
-operator|)
-operator|!=
-literal|0
-condition|)
-throw|throw
-operator|new
-name|ClassGenException
-argument_list|(
-literal|"Padding byte != 0: "
-operator|+
-name|b
-argument_list|)
-throw|;
+expr_stmt|;
 block|}
 comment|// Default branch target common for both cases (TABLESWITCH, LOOKUPSWITCH)
 name|index
