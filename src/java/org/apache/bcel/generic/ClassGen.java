@@ -147,7 +147,7 @@ operator|new
 name|ArrayList
 argument_list|()
 decl_stmt|;
-comment|/** Convenience constructor to set up some important values initially.    *    * @param class_name fully qualified class name    * @param super_class_name fully qualified superclass name    * @param file_name source file name    * @param access_flags access qualifiers    * @param interfaces implemented interfaces    */
+comment|/** Convenience constructor to set up some important values initially.    *    * @param class_name fully qualified class name    * @param super_class_name fully qualified superclass name    * @param file_name source file name    * @param access_flags access qualifiers    * @param interfaces implemented interfaces    * @param cp constant pool to use    */
 specifier|public
 name|ClassGen
 parameter_list|(
@@ -166,6 +166,9 @@ parameter_list|,
 name|String
 index|[]
 name|interfaces
+parameter_list|,
+name|ConstantPoolGen
+name|cp
 parameter_list|)
 block|{
 name|this
@@ -192,13 +195,12 @@ name|access_flags
 operator|=
 name|access_flags
 expr_stmt|;
+name|this
+operator|.
 name|cp
 operator|=
-operator|new
-name|ConstantPoolGen
-argument_list|()
+name|cp
 expr_stmt|;
-comment|// Create empty constant pool
 comment|// Put everything needed by default into the constant pool and the vectors
 if|if
 condition|(
@@ -280,6 +282,45 @@ name|interfaces
 index|[
 name|i
 index|]
+argument_list|)
+expr_stmt|;
+block|}
+comment|/** Convenience constructor to set up some important values initially.    *    * @param class_name fully qualified class name    * @param super_class_name fully qualified superclass name    * @param file_name source file name    * @param access_flags access qualifiers    * @param interfaces implemented interfaces    */
+specifier|public
+name|ClassGen
+parameter_list|(
+name|String
+name|class_name
+parameter_list|,
+name|String
+name|super_class_name
+parameter_list|,
+name|String
+name|file_name
+parameter_list|,
+name|int
+name|access_flags
+parameter_list|,
+name|String
+index|[]
+name|interfaces
+parameter_list|)
+block|{
+name|this
+argument_list|(
+name|class_name
+argument_list|,
+name|super_class_name
+argument_list|,
+name|file_name
+argument_list|,
+name|access_flags
+argument_list|,
+name|interfaces
+argument_list|,
+operator|new
+name|ConstantPoolGen
+argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
