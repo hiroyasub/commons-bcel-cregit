@@ -35,18 +35,6 @@ name|apache
 operator|.
 name|bcel
 operator|.
-name|Repository
-import|;
-end_import
-
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|bcel
-operator|.
 name|util
 operator|.
 name|SyntheticRepository
@@ -641,7 +629,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/**    * Constructor gets all contents as arguments.    *    * @param class_name Class name    * @param superclass_name Superclass name    * @param file_name File name    * @param major Major compiler version    * @param minor Minor compiler version    * @param access_flags Access rights defined by bit flags    * @param constant_pool Array of constants    * @param interfaces Implemented interfaces    * @param fields Class fields    * @param methods Class methods    * @param attributes Class attributes    */
+comment|/**    * Constructor gets all contents as arguments.    *    * @param class_name_index Class name    * @param superclass_name_index Superclass name    * @param file_name File name    * @param major Major compiler version    * @param minor Minor compiler version    * @param access_flags Access rights defined by bit flags    * @param constant_pool Array of constants    * @param interfaces Implemented interfaces    * @param fields Class fields    * @param methods Class methods    * @param attributes Class attributes    */
 specifier|public
 name|JavaClass
 parameter_list|(
@@ -1469,7 +1457,7 @@ block|{
 block|}
 comment|// Never reached
 block|}
-comment|/**    * @param attributes.    */
+comment|/**    * @param attributes .    */
 specifier|public
 name|void
 name|setAttributes
@@ -1486,7 +1474,7 @@ operator|=
 name|attributes
 expr_stmt|;
 block|}
-comment|/**    * @param class_name.    */
+comment|/**    * @param class_name .    */
 specifier|public
 name|void
 name|setClassName
@@ -1502,7 +1490,7 @@ operator|=
 name|class_name
 expr_stmt|;
 block|}
-comment|/**    * @param class_name_index.    */
+comment|/**    * @param class_name_index .    */
 specifier|public
 name|void
 name|setClassNameIndex
@@ -1518,7 +1506,7 @@ operator|=
 name|class_name_index
 expr_stmt|;
 block|}
-comment|/**    * @param constant_pool.    */
+comment|/**    * @param constant_pool .    */
 specifier|public
 name|void
 name|setConstantPool
@@ -1534,7 +1522,7 @@ operator|=
 name|constant_pool
 expr_stmt|;
 block|}
-comment|/**    * @param fields.    */
+comment|/**    * @param fields .    */
 specifier|public
 name|void
 name|setFields
@@ -1567,7 +1555,7 @@ operator|=
 name|file_name
 expr_stmt|;
 block|}
-comment|/**    * @param interface_names.    */
+comment|/**    * @param interface_names .    */
 specifier|public
 name|void
 name|setInterfaceNames
@@ -1584,7 +1572,7 @@ operator|=
 name|interface_names
 expr_stmt|;
 block|}
-comment|/**    * @param interfaces.    */
+comment|/**    * @param interfaces .    */
 specifier|public
 name|void
 name|setInterfaces
@@ -1601,7 +1589,7 @@ operator|=
 name|interfaces
 expr_stmt|;
 block|}
-comment|/**    * @param major.    */
+comment|/**    * @param major .    */
 specifier|public
 name|void
 name|setMajor
@@ -1617,7 +1605,7 @@ operator|=
 name|major
 expr_stmt|;
 block|}
-comment|/**    * @param methods.    */
+comment|/**    * @param methods .    */
 specifier|public
 name|void
 name|setMethods
@@ -1634,7 +1622,7 @@ operator|=
 name|methods
 expr_stmt|;
 block|}
-comment|/**    * @param minor.    */
+comment|/**    * @param minor .    */
 specifier|public
 name|void
 name|setMinor
@@ -1666,7 +1654,7 @@ operator|=
 name|source_file_name
 expr_stmt|;
 block|}
-comment|/**    * @param superclass_name.    */
+comment|/**    * @param superclass_name .    */
 specifier|public
 name|void
 name|setSuperclassName
@@ -1682,7 +1670,7 @@ operator|=
 name|superclass_name
 expr_stmt|;
 block|}
-comment|/**    * @param superclass_name_index.    */
+comment|/**    * @param superclass_name_index .    */
 specifier|public
 name|void
 name|setSuperclassNameIndex
