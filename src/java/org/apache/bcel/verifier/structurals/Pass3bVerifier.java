@@ -1150,7 +1150,7 @@ name|ArrayList
 argument_list|()
 argument_list|)
 decl_stmt|;
-comment|// TODO: This is buggy, we check only the top-level return instructions this way.
+comment|// TODO: This is buggy, we check only the top-level return instructions this way. Maybe some maniac returns from a method when in a subroutine?
 name|LocalVariables
 name|lvs
 init|=
