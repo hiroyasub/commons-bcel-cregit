@@ -2474,6 +2474,7 @@ name|T_ADDRESS
 init|=
 literal|16
 decl_stmt|;
+comment|/** The primitive type names corresponding to the T_XX constants,    * e.g., TYPE_NAMES[T_INT] = "int"    */
 specifier|public
 specifier|static
 specifier|final
@@ -2516,6 +2517,49 @@ literal|"unknown"
 comment|// Non-standard
 block|}
 decl_stmt|;
+comment|/** The primitive class names corresponding to the T_XX constants,    * e.g., CLASS_TYPE_NAMES[T_INT] = "java.lang.Integer"    */
+specifier|public
+specifier|static
+specifier|final
+name|String
+index|[]
+name|CLASS_TYPE_NAMES
+init|=
+block|{
+name|ILLEGAL_TYPE
+block|,
+name|ILLEGAL_TYPE
+block|,
+name|ILLEGAL_TYPE
+block|,
+name|ILLEGAL_TYPE
+block|,
+literal|"java.lang.Boolean"
+block|,
+literal|"java.lang.Character"
+block|,
+literal|"java.lang.Float"
+block|,
+literal|"java.lang.Double"
+block|,
+literal|"java.lang.Byte"
+block|,
+literal|"java.lang.Short"
+block|,
+literal|"java.lang.Integer"
+block|,
+literal|"java.lang.Long"
+block|,
+literal|"java.lang.Void"
+block|,
+name|ILLEGAL_TYPE
+block|,
+name|ILLEGAL_TYPE
+block|,
+name|ILLEGAL_TYPE
+block|}
+decl_stmt|;
+comment|/** The signature characters corresponding to primitive types,    * e.g., SHORT_TYPE_NAMES[T_INT] = "I"    */
 specifier|public
 specifier|static
 specifier|final
