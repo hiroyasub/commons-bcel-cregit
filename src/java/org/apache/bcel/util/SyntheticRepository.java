@@ -233,7 +233,7 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**    * Find an already defined JavaClass.    */
+comment|/**    * Find an already defined (cached) JavaClass object by name.    */
 specifier|public
 name|JavaClass
 name|findClass
@@ -254,7 +254,7 @@ name|className
 argument_list|)
 return|;
 block|}
-comment|/**    * Lookup a JavaClass object from the class name provided.    */
+comment|/**    * Load a JavaClass object for the given class name using    * the CLASSPATH environment variable.    */
 specifier|public
 name|JavaClass
 name|loadClass
