@@ -190,7 +190,7 @@ init|=
 literal|'/'
 decl_stmt|;
 comment|// directory separator
-comment|/**    * Constructor gets all contents as arguments.    *    * @param class_name Class name    * @param superclass_name Superclass name    * @param file_name File name    * @param major Major compiler version    * @param minor Minor compiler version    * @param access_flags Access rights defined by bit flags    * @param constant_pool Array of constants    * @param interfaces Implemented interfaces    * @param fields Class fields    * @param methods Class methods    * @param attributes Class attributes    * @param source Read from file or generated in memory?    */
+comment|/**    * Constructor gets all contents as arguments.    *    * @param class_name_index Index into constant pool referencing a    * ConstantClass that represents this class.    * @param superclass_name_index Index into constant pool referencing a    * ConstantClass that represents this class's superclass.    * @param file_name File name    * @param major Major compiler version    * @param minor Minor compiler version    * @param access_flags Access rights defined by bit flags    * @param constant_pool Array of constants    * @param interfaces Implemented interfaces    * @param fields Class fields    * @param methods Class methods    * @param attributes Class attributes    * @param source Read from file or generated in memory?    */
 specifier|public
 name|JavaClass
 parameter_list|(

@@ -91,7 +91,7 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**    * @param name_index Name index in constant pool    */
+comment|/**    * @param name_index Name index in constant pool.  Should refer to a    * ConstantUtf8.    */
 specifier|public
 name|ConstantClass
 parameter_list|(
