@@ -151,6 +151,9 @@ name|deferTo
 parameter_list|)
 block|{
 name|this
+argument_list|()
+expr_stmt|;
+name|this
 operator|.
 name|deferTo
 operator|=
