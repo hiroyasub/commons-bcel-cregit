@@ -242,8 +242,13 @@ literal|"package "
 operator|+
 name|package_name
 operator|+
-literal|";\n"
+literal|";"
 argument_list|)
+expr_stmt|;
+name|_out
+operator|.
+name|println
+argument_list|()
 expr_stmt|;
 block|}
 name|_out
@@ -271,8 +276,13 @@ name|_out
 operator|.
 name|println
 argument_list|(
-literal|"import java.io.*;\n"
+literal|"import java.io.*;"
 argument_list|)
+expr_stmt|;
+name|_out
+operator|.
+name|println
+argument_list|()
 expr_stmt|;
 name|_out
 operator|.
@@ -303,8 +313,13 @@ name|_out
 operator|.
 name|println
 argument_list|(
-literal|"  private ClassGen           _cg;\n"
+literal|"  private ClassGen           _cg;"
 argument_list|)
+expr_stmt|;
+name|_out
+operator|.
+name|println
+argument_list|()
 expr_stmt|;
 name|_out
 operator|.
@@ -373,8 +388,13 @@ literal|"new String[] { "
 operator|+
 name|inter
 operator|+
-literal|" });\n"
+literal|" });"
 argument_list|)
+expr_stmt|;
+name|_out
+operator|.
+name|println
+argument_list|()
 expr_stmt|;
 name|_out
 operator|.
@@ -394,8 +414,13 @@ name|_out
 operator|.
 name|println
 argument_list|(
-literal|"  }\n"
+literal|"  }"
 argument_list|)
+expr_stmt|;
+name|_out
+operator|.
+name|println
+argument_list|()
 expr_stmt|;
 name|printCreate
 argument_list|()
@@ -464,8 +489,13 @@ name|_out
 operator|.
 name|println
 argument_list|(
-literal|"  }\n"
+literal|"  }"
 argument_list|)
+expr_stmt|;
+name|_out
+operator|.
+name|println
+argument_list|()
 expr_stmt|;
 block|}
 name|Method
@@ -519,8 +549,13 @@ name|_out
 operator|.
 name|println
 argument_list|(
-literal|"  }\n"
+literal|"  }"
 argument_list|)
+expr_stmt|;
+name|_out
+operator|.
+name|println
+argument_list|()
 expr_stmt|;
 block|}
 name|printMain
@@ -621,8 +656,13 @@ name|_out
 operator|.
 name|println
 argument_list|(
-literal|"  }\n"
+literal|"  }"
 argument_list|)
+expr_stmt|;
+name|_out
+operator|.
+name|println
+argument_list|()
 expr_stmt|;
 block|}
 specifier|private
@@ -690,8 +730,13 @@ block|{
 name|_out
 operator|.
 name|println
+argument_list|()
+expr_stmt|;
+name|_out
+operator|.
+name|println
 argument_list|(
-literal|"\n    field = new FieldGen("
+literal|"    field = new FieldGen("
 operator|+
 name|printFlags
 argument_list|(
@@ -872,8 +917,13 @@ operator|.
 name|getClassName
 argument_list|()
 operator|+
-literal|"\", il, _cp);\n"
+literal|"\", il, _cp);"
 argument_list|)
+expr_stmt|;
+name|_out
+operator|.
+name|println
+argument_list|()
 expr_stmt|;
 name|BCELFactory
 name|factory
