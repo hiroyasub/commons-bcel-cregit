@@ -59,7 +59,7 @@ operator|=
 name|a
 expr_stmt|;
 block|}
-comment|/**     * @return Access flags of the object.    */
+comment|/**     * @return Access flags of the object aka. "modifiers".    */
 specifier|public
 specifier|final
 name|int
@@ -70,7 +70,18 @@ return|return
 name|access_flags
 return|;
 block|}
-comment|/**    * @param access_flags Access flags of the object.     */
+comment|/**     * @return Access flags of the object aka. "modifiers".    */
+specifier|public
+specifier|final
+name|int
+name|getModifiers
+parameter_list|()
+block|{
+return|return
+name|access_flags
+return|;
+block|}
+comment|/** Set access flags aka "modifiers".    * @param access_flags Access flags of the object.     */
 specifier|public
 specifier|final
 name|void
@@ -85,6 +96,22 @@ operator|.
 name|access_flags
 operator|=
 name|access_flags
+expr_stmt|;
+block|}
+comment|/** Set access flags aka "modifiers".    * @param access_flags Access flags of the object.     */
+specifier|public
+specifier|final
+name|void
+name|setModifiers
+parameter_list|(
+name|int
+name|access_flags
+parameter_list|)
+block|{
+name|setAccessFlags
+argument_list|(
+name|access_flags
+argument_list|)
 expr_stmt|;
 block|}
 specifier|private
