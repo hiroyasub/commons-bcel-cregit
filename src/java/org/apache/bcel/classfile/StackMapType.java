@@ -284,6 +284,16 @@ name|Constants
 operator|.
 name|ITEM_Object
 condition|)
+block|{
+if|if
+condition|(
+name|index
+operator|<
+literal|0
+condition|)
+return|return
+literal|", class=<unknown>"
+return|;
 return|return
 literal|", class="
 operator|+
@@ -298,6 +308,7 @@ operator|.
 name|CONSTANT_Class
 argument_list|)
 return|;
+block|}
 if|else if
 condition|(
 name|type
