@@ -135,20 +135,6 @@ name|bcel
 operator|.
 name|classfile
 operator|.
-name|ConstantInterfaceMethodref
-import|;
-end_import
-
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|bcel
-operator|.
-name|classfile
-operator|.
 name|ConstantLong
 import|;
 end_import
@@ -163,35 +149,7 @@ name|bcel
 operator|.
 name|classfile
 operator|.
-name|ConstantNameAndType
-import|;
-end_import
-
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|bcel
-operator|.
-name|classfile
-operator|.
 name|ConstantString
-import|;
-end_import
-
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|bcel
-operator|.
-name|classfile
-operator|.
-name|ConstantUtf8
 import|;
 end_import
 
@@ -264,36 +222,6 @@ operator|.
 name|exc
 operator|.
 name|*
-import|;
-end_import
-
-begin_import
-import|import
-name|java
-operator|.
-name|util
-operator|.
-name|ArrayList
-import|;
-end_import
-
-begin_import
-import|import
-name|java
-operator|.
-name|util
-operator|.
-name|HashMap
-import|;
-end_import
-
-begin_import
-import|import
-name|java
-operator|.
-name|util
-operator|.
-name|Hashtable
 import|;
 end_import
 
@@ -1679,20 +1607,7 @@ argument_list|()
 operator|)
 argument_list|)
 expr_stmt|;
-name|ReferenceType
-name|objectref
-init|=
-operator|(
-name|ReferenceType
-operator|)
-operator|(
-name|stack
-argument_list|()
-operator|.
-name|peek
-argument_list|()
-operator|)
-decl_stmt|;
+comment|//ReferenceType objectref = (ReferenceType) (stack().peek());
 comment|// TODO: This can only be checked if using Staerk-et-al's "set of object types" instead of a
 comment|// "wider cast object type" created during verification.
 comment|//if (! (objectref.isAssignmentCompatibleWith(mg.getType())) ){
@@ -2650,7 +2565,7 @@ name|valueOfInt
 argument_list|(
 name|o
 argument_list|,
-name|index
+name|value
 argument_list|)
 expr_stmt|;
 if|if
@@ -2854,7 +2769,7 @@ name|valueOfInt
 argument_list|(
 name|o
 argument_list|,
-name|index
+name|value
 argument_list|)
 expr_stmt|;
 if|if
@@ -8119,24 +8034,8 @@ argument_list|)
 expr_stmt|;
 block|}
 comment|// It is a ConstantInterfaceMethodref, Pass 3a made it sure.
-name|ConstantInterfaceMethodref
-name|cimr
-init|=
-operator|(
-name|ConstantInterfaceMethodref
-operator|)
-operator|(
-name|cpg
-operator|.
-name|getConstant
-argument_list|(
-name|o
-operator|.
-name|getIndex
-argument_list|()
-argument_list|)
-operator|)
-decl_stmt|;
+comment|// TODO: Do we want to do anything with it?
+comment|//ConstantInterfaceMethodref cimr = (ConstantInterfaceMethodref) (cpg.getConstant(o.getIndex()));
 comment|// the o.getClassType(cpg) type has passed pass 2; see visitLoadClass(o).
 name|Type
 name|t
@@ -8335,22 +8234,8 @@ operator|instanceof
 name|ReferenceType
 condition|)
 block|{
-name|ReferenceType
-name|rFromStack
-init|=
-operator|(
-name|ReferenceType
-operator|)
-name|fromStack
-decl_stmt|;
-name|ReferenceType
-name|rFromDesc
-init|=
-operator|(
-name|ReferenceType
-operator|)
-name|fromDesc
-decl_stmt|;
+comment|//ReferenceType rFromStack = (ReferenceType) fromStack;
+comment|//ReferenceType rFromDesc = (ReferenceType) fromDesc;
 comment|// TODO: This can only be checked when using Staerk-et-al's "set of object types"
 comment|// instead of a "wider cast object type" created during verification.
 comment|//if ( ! rFromStack.isAssignmentCompatibleWith(rFromDesc) ){
@@ -8472,29 +8357,8 @@ name|GENERIC_ARRAY
 expr_stmt|;
 block|}
 block|}
-name|String
-name|objref_classname
-init|=
-operator|(
-operator|(
-name|ObjectType
-operator|)
-name|objref
-operator|)
-operator|.
-name|getClassName
-argument_list|()
-decl_stmt|;
-name|String
-name|theInterface
-init|=
-name|o
-operator|.
-name|getClassName
-argument_list|(
-name|cpg
-argument_list|)
-decl_stmt|;
+comment|// String objref_classname = ((ObjectType) objref).getClassName();
+comment|// String theInterface = o.getClassName(cpg);
 comment|// TODO: This can only be checked if we're using Staerk-et-al's "set of object types"
 comment|//       instead of "wider cast object types" generated during verification.
 comment|//if ( ! Repository.implementationOf(objref_classname, theInterface) ){
