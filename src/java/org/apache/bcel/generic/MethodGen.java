@@ -2586,6 +2586,10 @@ operator|&&
 operator|!
 name|isAbstract
 argument_list|()
+operator|&&
+operator|!
+name|isNative
+argument_list|()
 condition|)
 block|{
 comment|// Remove any stale code attribute
