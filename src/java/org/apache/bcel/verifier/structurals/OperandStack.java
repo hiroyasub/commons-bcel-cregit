@@ -843,7 +843,7 @@ name|i
 argument_list|)
 operator|)
 operator|.
-name|firstCommonSuperclass
+name|getFirstCommonSuperclass
 argument_list|(
 operator|(
 name|ReferenceType

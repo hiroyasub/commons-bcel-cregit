@@ -630,7 +630,7 @@ name|i
 index|]
 operator|)
 operator|.
-name|firstCommonSuperclass
+name|getFirstCommonSuperclass
 argument_list|(
 operator|(
 name|ReferenceType
