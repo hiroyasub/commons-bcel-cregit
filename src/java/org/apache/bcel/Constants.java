@@ -6339,12 +6339,20 @@ decl_stmt|;
 specifier|public
 specifier|static
 specifier|final
+name|byte
+name|ATTR_ANNOTATION_DEFAULT
+init|=
+literal|16
+decl_stmt|;
+specifier|public
+specifier|static
+specifier|final
 name|short
 name|KNOWN_ATTRIBUTES
 init|=
 literal|12
 decl_stmt|;
-comment|//should be 16
+comment|//should be 17
 specifier|public
 specifier|static
 specifier|final
@@ -6384,6 +6392,8 @@ block|,
 literal|"RuntimeVisibleParameterAnnotations"
 block|,
 literal|"RuntimeInvisibleParameterAnnotations"
+block|,
+literal|"AnnotationDefault"
 block|}
 decl_stmt|;
 comment|/** Constants used in the StackMap attribute.    */

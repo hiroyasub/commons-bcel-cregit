@@ -60,6 +60,15 @@ block|{
 block|}
 specifier|public
 name|void
+name|visitAnnotationDefault
+parameter_list|(
+name|AnnotationDefault
+name|obj
+parameter_list|)
+block|{
+block|}
+specifier|public
+name|void
 name|visitCode
 parameter_list|(
 name|Code

@@ -612,6 +612,8 @@ comment|//    case Constants.ATTR_RUNTIMEVISIBLE_PARAMETER_ANNOTATIONS:
 comment|//      return new RuntimeVisibleParameterAnnotations(name_index, length, file, constant_pool);
 comment|//    case Constants.ATTR_RUNTIMEINVISIBLE_PARAMETER_ANNOTATIONS:
 comment|//      return new RuntimeInvisibleParameterAnnotations(name_index, length, file, constant_pool);
+comment|//    case Constants.ATTR_ANNOTATION_DEFAULT:
+comment|//      return new AnnotationDefault(name_index, length, file, constant_pool);
 default|default:
 comment|// Never reached
 throw|throw
