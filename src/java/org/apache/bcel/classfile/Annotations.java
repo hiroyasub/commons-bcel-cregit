@@ -199,13 +199,7 @@ name|Visitor
 name|v
 parameter_list|)
 block|{
-name|v
-operator|.
-name|visitAnnotation
-argument_list|(
-name|this
-argument_list|)
-expr_stmt|;
+comment|//	    v.visitAnnotation(this);
 block|}
 comment|/** 	   * @param annotation_table the entries to set in this annotation 	   */
 specifier|public
@@ -244,7 +238,7 @@ specifier|public
 specifier|final
 name|AnnotationEntry
 index|[]
-name|GetAnnotationTable
+name|getAnnotationTable
 parameter_list|()
 block|{
 return|return
