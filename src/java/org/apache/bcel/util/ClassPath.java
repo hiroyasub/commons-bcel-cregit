@@ -564,7 +564,10 @@ name|list
 operator|.
 name|add
 argument_list|(
-name|ext_path
+name|ext_dir
+operator|.
+name|getPath
+argument_list|()
 operator|+
 name|File
 operator|.
