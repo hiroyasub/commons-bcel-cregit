@@ -437,7 +437,7 @@ expr_stmt|;
 block|}
 specifier|private
 name|Method
-name|method
+name|_method
 decl_stmt|;
 comment|/**    * Unfortunately Jasmin expects ".end method" after each method. Thus we've to check    * for every of the method's attributes if it's the last one and print ".end method"    * then.    */
 specifier|private
@@ -453,7 +453,7 @@ name|Attribute
 index|[]
 name|attributes
 init|=
-name|method
+name|_method
 operator|.
 name|getAttributes
 argument_list|()
@@ -503,7 +503,7 @@ parameter_list|)
 block|{
 if|if
 condition|(
-name|method
+name|_method
 operator|!=
 literal|null
 condition|)
@@ -531,7 +531,7 @@ name|Utility
 operator|.
 name|accessToString
 argument_list|(
-name|method
+name|_method
 operator|.
 name|getAccessFlags
 argument_list|()
@@ -539,12 +539,12 @@ argument_list|)
 operator|+
 literal|" "
 operator|+
-name|method
+name|_method
 operator|.
 name|getName
 argument_list|()
 operator|+
-name|method
+name|_method
 operator|.
 name|getSignature
 argument_list|()
@@ -552,7 +552,7 @@ argument_list|)
 expr_stmt|;
 name|this
 operator|.
-name|method
+name|_method
 operator|=
 name|method
 expr_stmt|;
@@ -561,7 +561,7 @@ name|Attribute
 index|[]
 name|attributes
 init|=
-name|method
+name|_method
 operator|.
 name|getAttributes
 argument_list|()
@@ -695,7 +695,7 @@ init|=
 operator|new
 name|MethodGen
 argument_list|(
-name|method
+name|_method
 argument_list|,
 name|class_name
 argument_list|,
