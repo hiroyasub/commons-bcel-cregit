@@ -425,7 +425,7 @@ name|FILE
 argument_list|)
 return|;
 block|}
-comment|/**    * Read information about the attributes of the attributes of the class.    * @throws  IOException    * @throws  ClassFormatException    */
+comment|/**    * Read information about the attributes of the class.    * @throws  IOException    * @throws  ClassFormatException    */
 specifier|private
 specifier|final
 name|void
