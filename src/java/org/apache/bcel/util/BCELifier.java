@@ -97,6 +97,31 @@ operator|.
 name|EmptyVisitor
 block|{
 specifier|private
+specifier|static
+specifier|final
+name|int
+name|FLAG_FOR_UNKNOWN
+init|=
+operator|-
+literal|1
+decl_stmt|;
+specifier|private
+specifier|static
+specifier|final
+name|int
+name|FLAG_FOR_CLASS
+init|=
+literal|0
+decl_stmt|;
+specifier|private
+specifier|static
+specifier|final
+name|int
+name|FLAG_FOR_METHOD
+init|=
+literal|1
+decl_stmt|;
+specifier|private
 name|JavaClass
 name|_clazz
 decl_stmt|;
@@ -379,7 +404,7 @@ operator|.
 name|getAccessFlags
 argument_list|()
 argument_list|,
-literal|true
+name|FLAG_FOR_CLASS
 argument_list|)
 operator|+
 literal|", "
@@ -869,6 +894,8 @@ name|method
 operator|.
 name|getAccessFlags
 argument_list|()
+argument_list|,
+name|FLAG_FOR_METHOD
 argument_list|)
 operator|+
 literal|", "
@@ -983,7 +1010,7 @@ name|printFlags
 argument_list|(
 name|flags
 argument_list|,
-literal|false
+name|FLAG_FOR_UNKNOWN
 argument_list|)
 return|;
 block|}
@@ -994,8 +1021,8 @@ parameter_list|(
 name|int
 name|flags
 parameter_list|,
-name|boolean
-name|for_class
+name|int
+name|reason
 parameter_list|)
 block|{
 if|if
@@ -1056,13 +1083,63 @@ operator|.
 name|ACC_SYNCHRONIZED
 operator|)
 operator|&&
-name|for_class
+operator|(
+name|reason
+operator|==
+name|FLAG_FOR_CLASS
+operator|)
 condition|)
 name|buf
 operator|.
 name|append
 argument_list|(
 literal|"ACC_SUPER | "
+argument_list|)
+expr_stmt|;
+if|else if
+condition|(
+operator|(
+name|pow
+operator|==
+name|Constants
+operator|.
+name|ACC_VOLATILE
+operator|)
+operator|&&
+operator|(
+name|reason
+operator|==
+name|FLAG_FOR_METHOD
+operator|)
+condition|)
+name|buf
+operator|.
+name|append
+argument_list|(
+literal|"ACC_BRIDGE | "
+argument_list|)
+expr_stmt|;
+if|else if
+condition|(
+operator|(
+name|pow
+operator|==
+name|Constants
+operator|.
+name|ACC_TRANSIENT
+operator|)
+operator|&&
+operator|(
+name|reason
+operator|==
+name|FLAG_FOR_METHOD
+operator|)
+condition|)
+name|buf
+operator|.
+name|append
+argument_list|(
+literal|"ACC_VARARGS | "
 argument_list|)
 expr_stmt|;
 else|else
