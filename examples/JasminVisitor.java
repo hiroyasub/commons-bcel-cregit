@@ -521,6 +521,13 @@ name|Method
 name|method
 parameter_list|)
 block|{
+name|this
+operator|.
+name|_method
+operator|=
+name|method
+expr_stmt|;
+comment|// Remember for use in subsequent visitXXX calls
 name|out
 operator|.
 name|println
@@ -550,13 +557,6 @@ name|getSignature
 argument_list|()
 argument_list|)
 expr_stmt|;
-name|this
-operator|.
-name|_method
-operator|=
-name|method
-expr_stmt|;
-comment|// Remember for use in subsequent visitXXX calls
 name|Attribute
 index|[]
 name|attributes
