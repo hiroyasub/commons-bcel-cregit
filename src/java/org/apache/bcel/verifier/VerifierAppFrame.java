@@ -2321,7 +2321,7 @@ name|showMessageDialog
 argument_list|(
 name|this
 argument_list|,
-literal|"JustIce is a Java class file verifier.\nIt was implemented by Enver Haase in 2001.\nhttp://bcel.sourceforge.net"
+literal|"JustIce is a Java class file verifier.\nIt was implemented by Enver Haase in 2001, 2002.\n<http://jakarta.apache.org/bcel/index.html>"
 argument_list|,
 name|JUSTICE_VERSION
 argument_list|,
