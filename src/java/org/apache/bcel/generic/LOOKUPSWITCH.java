@@ -67,7 +67,7 @@ index|[]
 name|targets
 parameter_list|,
 name|InstructionHandle
-name|target
+name|defaultTarget
 parameter_list|)
 block|{
 name|super
@@ -86,7 +86,7 @@ name|match
 argument_list|,
 name|targets
 argument_list|,
-name|target
+name|defaultTarget
 argument_list|)
 expr_stmt|;
 name|length

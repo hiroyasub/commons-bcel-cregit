@@ -1251,7 +1251,7 @@ name|_out
 operator|.
 name|print
 argument_list|(
-literal|"    Select "
+literal|"Select "
 operator|+
 name|name
 operator|+
@@ -1318,7 +1318,7 @@ name|_out
 operator|.
 name|println
 argument_list|(
-literal|");"
+literal|" }, null);"
 argument_list|)
 expr_stmt|;
 block|}

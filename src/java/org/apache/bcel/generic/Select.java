@@ -40,7 +40,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**   * Select - Abstract super class for LOOKUPSWITCH and TABLESWITCH instructions.  *  * @version $Id$  * @author<A HREF="mailto:m.dahm@gmx.de">M. Dahm</A>  * @see LOOKUPSWITCH  * @see TABLESWITCH  * @see InstructionList  */
+comment|/**   * Select - Abstract super class for LOOKUPSWITCH and TABLESWITCH instructions.  *   *<p>We use our super's<code>target</code> property as the default target.  *  * @version $Id$  * @author<A HREF="mailto:m.dahm@gmx.de">M. Dahm</A>  * @see LOOKUPSWITCH  * @see TABLESWITCH  * @see InstructionList  */
 end_comment
 
 begin_class
@@ -110,14 +110,14 @@ index|[]
 name|targets
 parameter_list|,
 name|InstructionHandle
-name|target
+name|defaultTarget
 parameter_list|)
 block|{
 name|super
 argument_list|(
 name|opcode
 argument_list|,
-name|target
+name|defaultTarget
 argument_list|)
 expr_stmt|;
 name|this

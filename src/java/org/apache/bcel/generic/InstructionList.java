@@ -1896,6 +1896,22 @@ literal|null
 condition|)
 block|{
 comment|// append to start of list
+if|if
+condition|(
+name|this
+operator|.
+name|start
+operator|!=
+literal|null
+condition|)
+name|this
+operator|.
+name|start
+operator|.
+name|prev
+operator|=
+name|end
+expr_stmt|;
 name|end
 operator|.
 name|next
