@@ -109,12 +109,6 @@ specifier|private
 name|String
 name|detailMessage
 decl_stmt|;
-comment|/** This class is not no-args instantiable. */
-specifier|private
-name|VerificationResult
-parameter_list|()
-block|{
-block|}
 comment|/** The usual constructor. */
 specifier|public
 name|VerificationResult

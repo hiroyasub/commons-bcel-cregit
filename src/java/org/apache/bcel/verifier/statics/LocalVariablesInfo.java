@@ -25,18 +25,6 @@ name|apache
 operator|.
 name|bcel
 operator|.
-name|Constants
-import|;
-end_import
-
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|bcel
-operator|.
 name|generic
 operator|.
 name|Type
@@ -73,15 +61,6 @@ specifier|private
 name|LocalVariableInfo
 index|[]
 name|localVariableInfos
-decl_stmt|;
-comment|/** 	 * The ints in the list represent code offsets where either instructions must start 	 * or the offset is the length of the code array. This will be verified in Pass 3a. 	 */
-specifier|private
-name|IntList
-name|instruction_offsets
-init|=
-operator|new
-name|IntList
-argument_list|()
 decl_stmt|;
 comment|/** The constructor. */
 name|LocalVariablesInfo

@@ -1683,26 +1683,7 @@ argument_list|(
 name|current_class
 argument_list|)
 decl_stmt|;
-name|boolean
-name|all3aok
-init|=
-literal|true
-decl_stmt|;
-name|boolean
-name|all3bok
-init|=
-literal|true
-decl_stmt|;
-name|String
-name|all3amsg
-init|=
-literal|""
-decl_stmt|;
-name|String
-name|all3bmsg
-init|=
-literal|""
-decl_stmt|;
+comment|/*           boolean all3aok = true;           boolean all3bok = true;           String all3amsg = "";           String all3bmsg = "";           */
 name|String
 index|[]
 name|methodnames

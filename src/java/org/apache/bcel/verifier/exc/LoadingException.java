@@ -28,11 +28,6 @@ name|LoadingException
 extends|extends
 name|VerifierConstraintViolatedException
 block|{
-comment|/** The specified error message. */
-specifier|private
-name|String
-name|detailMessage
-decl_stmt|;
 comment|/** 	 * Constructs a new LoadingException with null as its error message string. 	 */
 specifier|public
 name|LoadingException
@@ -54,10 +49,6 @@ name|super
 argument_list|(
 name|message
 argument_list|)
-expr_stmt|;
-name|detailMessage
-operator|=
-name|message
 expr_stmt|;
 block|}
 block|}

@@ -52,7 +52,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**   * The repository maintains informations about class interdependencies, e.g.,  * whether a class is a sub-class of another. Delegates actual class loading  * to SyntheticRepository.  *  * @version $Id$  * @author<A HREF="mailto:markus.dahm@berlin.de">M. Dahm</A>  */
+comment|/**  * The repository maintains informations about class interdependencies, e.g.,  * whether a class is a sub-class of another. Delegates actual class loading  * to SyntheticRepository.  *  * @version $Id$  * @author<A HREF="mailto:markus.dahm@berlin.de">M. Dahm</A>  */
 end_comment
 
 begin_class
@@ -267,23 +267,7 @@ name|clazz
 argument_list|)
 expr_stmt|;
 block|}
-specifier|private
-specifier|static
-specifier|final
-name|JavaClass
-name|getSuperClass
-parameter_list|(
-name|JavaClass
-name|clazz
-parameter_list|)
-block|{
-return|return
-name|clazz
-operator|.
-name|getSuperClass
-argument_list|()
-return|;
-block|}
+comment|/*   private static final JavaClass getSuperClass(JavaClass clazz) {     return clazz.getSuperClass();   }   */
 comment|/**    * @return list of super classes of clazz in ascending order, i.e.,    * Object is always the last element    */
 specifier|public
 specifier|static

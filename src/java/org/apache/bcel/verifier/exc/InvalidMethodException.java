@@ -28,12 +28,6 @@ name|InvalidMethodException
 extends|extends
 name|RuntimeException
 block|{
-comment|/** Must not be no-args requested so there's always some error message. */
-specifier|private
-name|InvalidMethodException
-parameter_list|()
-block|{
-block|}
 comment|/** Constructs an InvalidMethodException with the specified detail message. */
 specifier|public
 name|InvalidMethodException

@@ -28,11 +28,6 @@ name|ClassConstraintException
 extends|extends
 name|VerificationException
 block|{
-comment|/** The specified error message. */
-specifier|private
-name|String
-name|detailMessage
-decl_stmt|;
 comment|/** 	 * Constructs a new ClassConstraintException with null as its error message string. 	 */
 specifier|public
 name|ClassConstraintException
@@ -54,10 +49,6 @@ name|super
 argument_list|(
 name|message
 argument_list|)
-expr_stmt|;
-name|detailMessage
-operator|=
-name|message
 expr_stmt|;
 block|}
 block|}
