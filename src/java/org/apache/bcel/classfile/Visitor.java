@@ -25,6 +25,7 @@ interface|interface
 name|Visitor
 block|{
 comment|//public void visitAnnotation(Annotations obj);
+comment|//public void visitParameterAnnotation(ParameterAnnotations obj);
 comment|//public void visitAnnotationEntry(AnnotationEntry obj);
 specifier|public
 name|void

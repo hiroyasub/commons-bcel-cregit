@@ -6323,6 +6323,22 @@ decl_stmt|;
 specifier|public
 specifier|static
 specifier|final
+name|byte
+name|ATTR_RUNTIMEVISIBLE_PARAMETER_ANNOTATIONS
+init|=
+literal|14
+decl_stmt|;
+specifier|public
+specifier|static
+specifier|final
+name|byte
+name|ATTR_RUNTIMEINVISIBLE_PARAMETER_ANNOTATIONS
+init|=
+literal|14
+decl_stmt|;
+specifier|public
+specifier|static
+specifier|final
 name|short
 name|KNOWN_ATTRIBUTES
 init|=
@@ -6363,6 +6379,10 @@ block|,
 literal|"RuntimeVisibleAnnotations"
 block|,
 literal|"RuntimeInvisibleAnnotations"
+block|,
+literal|"RuntimeVisibleParameterAnnotations"
+block|,
+literal|"RuntimeInvisibleParameterAnnotations"
 block|}
 decl_stmt|;
 comment|/** Constants used in the StackMap attribute.    */

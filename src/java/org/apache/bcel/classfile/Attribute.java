@@ -605,9 +605,13 @@ name|constant_pool
 argument_list|)
 return|;
 comment|//    case Constants.ATTR_RUNTIMEVISIBLE_ANNOTATIONS:
-comment|//        return new RuntimeVisibleAnnotations(name_index, length, file, constant_pool);
+comment|//      return new RuntimeVisibleAnnotations(name_index, length, file, constant_pool);
 comment|//    case Constants.ATTR_RUNTIMEINVISIBLE_ANNOTATIONS:
 comment|//      return new RuntimeInvisibleAnnotations(name_index, length, file, constant_pool);
+comment|//    case Constants.ATTR_RUNTIMEVISIBLE_PARAMETER_ANNOTATIONS:
+comment|//      return new RuntimeVisibleParameterAnnotations(name_index, length, file, constant_pool);
+comment|//    case Constants.ATTR_RUNTIMEINVISIBLE_PARAMETER_ANNOTATIONS:
+comment|//      return new RuntimeInvisibleParameterAnnotations(name_index, length, file, constant_pool);
 default|default:
 comment|// Never reached
 throw|throw

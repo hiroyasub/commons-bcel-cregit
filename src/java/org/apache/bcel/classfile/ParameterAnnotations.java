@@ -48,32 +48,32 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * base class for annotations  *   * @version $Id: Annotations  * @author<A HREF="mailto:dbrosius@qis.net">D. Brosius</A>  */
+comment|/**  * base class for parameter annotations  *   * @version $Id: ParameterAnnotations  * @author<A HREF="mailto:dbrosius@qis.net">D. Brosius</A>  */
 end_comment
 
 begin_class
 specifier|public
 specifier|abstract
 class|class
-name|Annotations
+name|ParameterAnnotations
 extends|extends
 name|Attribute
 block|{
 specifier|private
 name|int
-name|annotation_table_length
+name|num_parameters
 decl_stmt|;
 specifier|private
-name|AnnotationEntry
+name|ParameterAnnotationEntry
 index|[]
-name|annotation_table
+name|parameter_annotation_table
 decl_stmt|;
-comment|// Table of annotations
-comment|/** 	 * @param annotation_type the subclass type of the annotation 	 * @param name_index Index pointing to the name<em>Code</em> 	 * @param length Content length in bytes 	 * @param file Input stream 	 * @param constant_pool Array of constants 	 */
-name|Annotations
+comment|// Table of parameter annotations
+comment|/** 	 * @param parameter_annotation_type the subclass type of the parameter annotation 	 * @param name_index Index pointing to the name<em>Code</em> 	 * @param length Content length in bytes 	 * @param file Input stream 	 * @param constant_pool Array of constants 	 */
+name|ParameterAnnotations
 parameter_list|(
 name|byte
-name|annotation_type
+name|parameter_annotation_type
 parameter_list|,
 name|int
 name|name_index
@@ -92,14 +92,14 @@ name|IOException
 block|{
 name|this
 argument_list|(
-name|annotation_type
+name|parameter_annotation_type
 argument_list|,
 name|name_index
 argument_list|,
 name|length
 argument_list|,
 operator|(
-name|AnnotationEntry
+name|ParameterAnnotationEntry
 index|[]
 operator|)
 literal|null
@@ -107,7 +107,7 @@ argument_list|,
 name|constant_pool
 argument_list|)
 expr_stmt|;
-name|annotation_table_length
+name|num_parameters
 operator|=
 operator|(
 name|file
@@ -116,12 +116,12 @@ name|readUnsignedShort
 argument_list|()
 operator|)
 expr_stmt|;
-name|annotation_table
+name|parameter_annotation_table
 operator|=
 operator|new
-name|AnnotationEntry
+name|ParameterAnnotationEntry
 index|[
-name|annotation_table_length
+name|num_parameters
 index|]
 expr_stmt|;
 for|for
@@ -133,18 +133,18 @@ literal|0
 init|;
 name|i
 operator|<
-name|annotation_table_length
+name|num_parameters
 condition|;
 name|i
 operator|++
 control|)
-name|annotation_table
+name|parameter_annotation_table
 index|[
 name|i
 index|]
 operator|=
 operator|new
-name|AnnotationEntry
+name|ParameterAnnotationEntry
 argument_list|(
 name|file
 argument_list|,
@@ -152,12 +152,12 @@ name|constant_pool
 argument_list|)
 expr_stmt|;
 block|}
-comment|/** 	 * @param annotation_type the subclass type of the annotation 	 * @param name_index Index pointing to the name<em>Code</em> 	 * @param length Content length in bytes 	 * @param annotation_table the actual annotations 	 * @param constant_pool Array of constants 	 */
+comment|/** 	 * @param parameter_annotation_type the subclass type of the parameter annotation 	 * @param name_index Index pointing to the name<em>Code</em> 	 * @param length Content length in bytes 	 * @param parameter_annotation_table the actual parameter annotations 	 * @param constant_pool Array of constants 	 */
 specifier|public
-name|Annotations
+name|ParameterAnnotations
 parameter_list|(
 name|byte
-name|annotation_type
+name|parameter_annotation_type
 parameter_list|,
 name|int
 name|name_index
@@ -165,9 +165,9 @@ parameter_list|,
 name|int
 name|length
 parameter_list|,
-name|AnnotationEntry
+name|ParameterAnnotationEntry
 index|[]
-name|annotation_table
+name|parameter_annotation_table
 parameter_list|,
 name|ConstantPool
 name|constant_pool
@@ -175,7 +175,7 @@ parameter_list|)
 block|{
 name|super
 argument_list|(
-name|annotation_type
+name|parameter_annotation_type
 argument_list|,
 name|name_index
 argument_list|,
@@ -184,9 +184,9 @@ argument_list|,
 name|constant_pool
 argument_list|)
 expr_stmt|;
-name|setAnnotationTable
+name|setParameterAnnotationTable
 argument_list|(
-name|annotation_table
+name|parameter_annotation_table
 argument_list|)
 expr_stmt|;
 block|}
@@ -199,72 +199,72 @@ name|Visitor
 name|v
 parameter_list|)
 block|{
-comment|//	    v.visitAnnotation(this);
+comment|//	    v.visitParameterAnnotation(this);
 block|}
-comment|/** 	   * @param annotation_table the entries to set in this annotation 	   */
+comment|/** 	   * @param parameter_annotation_table the entries to set in this parameter annotation 	   */
 specifier|public
 specifier|final
 name|void
-name|setAnnotationTable
+name|setParameterAnnotationTable
 parameter_list|(
-name|AnnotationEntry
+name|ParameterAnnotationEntry
 index|[]
-name|annotation_table
+name|parameter_annotation_table
 parameter_list|)
 block|{
 name|this
 operator|.
-name|annotation_table
+name|parameter_annotation_table
 operator|=
-name|annotation_table
+name|parameter_annotation_table
 expr_stmt|;
-name|annotation_table_length
+name|num_parameters
 operator|=
 operator|(
-name|annotation_table
+name|parameter_annotation_table
 operator|==
 literal|null
 operator|)
 condition|?
 literal|0
 else|:
-name|annotation_table
+name|parameter_annotation_table
 operator|.
 name|length
 expr_stmt|;
 block|}
-comment|/** 	   * @returns the annotation entry table 	   */
+comment|/** 	   * @returns the parameter annotation entry table 	   */
 specifier|public
 specifier|final
-name|AnnotationEntry
+name|ParameterAnnotationEntry
 index|[]
-name|getAnnotationTable
+name|getParameterAnnotationTable
 parameter_list|()
 block|{
 return|return
-name|annotation_table
+name|parameter_annotation_table
 return|;
 block|}
-comment|/** 	   * returns the array of annotation entries in this annotation 	   */
+comment|/** 	   * returns the array of parameter annotation entries in this parameter annotation 	   */
 specifier|public
-name|AnnotationEntry
+name|ParameterAnnotationEntry
 index|[]
-name|getAnnotationEntries
+name|getParameterAnnotationEntries
 parameter_list|()
 block|{
 return|return
-name|annotation_table
+name|parameter_annotation_table
 return|;
 block|}
-comment|/** 	   * @returns the number of annotation entries in this annotation 	   */
+comment|/** 	   * @returns the number of parameter annotation entries in this parameter annotation 	   */
 specifier|public
 specifier|final
 name|int
-name|getNumAnnotations
+name|getNumParameterAnnotation
 parameter_list|()
 block|{
 return|return
-name|annotation_table_length
+name|num_parameters
 return|;
 block|}
 block|}

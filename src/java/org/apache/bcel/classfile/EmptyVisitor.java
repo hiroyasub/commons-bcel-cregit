@@ -31,8 +31,33 @@ name|EmptyVisitor
 parameter_list|()
 block|{
 block|}
-comment|//public void visitAnnotation(Annotations obj) {}
-comment|//public void visitAnnotationEntry(AnnotationEntry obj) {}
+specifier|public
+name|void
+name|visitAnnotation
+parameter_list|(
+name|Annotations
+name|obj
+parameter_list|)
+block|{
+block|}
+specifier|public
+name|void
+name|visitParameterAnnotation
+parameter_list|(
+name|ParameterAnnotations
+name|obj
+parameter_list|)
+block|{
+block|}
+specifier|public
+name|void
+name|visitAnnotationEntry
+parameter_list|(
+name|AnnotationEntry
+name|obj
+parameter_list|)
+block|{
+block|}
 specifier|public
 name|void
 name|visitCode

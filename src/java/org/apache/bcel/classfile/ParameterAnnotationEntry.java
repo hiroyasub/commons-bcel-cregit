@@ -48,16 +48,17 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * base class for annotations  *   * @version $Id: Annotations  * @author<A HREF="mailto:dbrosius@qis.net">D. Brosius</A>  */
+comment|/**  * represents one parameter annotation in the parameter annotation table  *   * @version $Id: ParameterAnnotationEntry  * @author<A HREF="mailto:dbrosius@qis.net">D. Brosius</A>  */
 end_comment
 
 begin_class
 specifier|public
-specifier|abstract
 class|class
-name|Annotations
-extends|extends
-name|Attribute
+name|ParameterAnnotationEntry
+implements|implements
+name|Node
+implements|,
+name|Constants
 block|{
 specifier|private
 name|int
@@ -68,19 +69,9 @@ name|AnnotationEntry
 index|[]
 name|annotation_table
 decl_stmt|;
-comment|// Table of annotations
-comment|/** 	 * @param annotation_type the subclass type of the annotation 	 * @param name_index Index pointing to the name<em>Code</em> 	 * @param length Content length in bytes 	 * @param file Input stream 	 * @param constant_pool Array of constants 	 */
-name|Annotations
+comment|/** 	 * Construct object from file stream. 	 * @param file Input stream 	 * @throws IOException 	 */
+name|ParameterAnnotationEntry
 parameter_list|(
-name|byte
-name|annotation_type
-parameter_list|,
-name|int
-name|name_index
-parameter_list|,
-name|int
-name|length
-parameter_list|,
 name|DataInputStream
 name|file
 parameter_list|,
@@ -90,23 +81,6 @@ parameter_list|)
 throws|throws
 name|IOException
 block|{
-name|this
-argument_list|(
-name|annotation_type
-argument_list|,
-name|name_index
-argument_list|,
-name|length
-argument_list|,
-operator|(
-name|AnnotationEntry
-index|[]
-operator|)
-literal|null
-argument_list|,
-name|constant_pool
-argument_list|)
-expr_stmt|;
 name|annotation_table_length
 operator|=
 operator|(
@@ -152,44 +126,6 @@ name|constant_pool
 argument_list|)
 expr_stmt|;
 block|}
-comment|/** 	 * @param annotation_type the subclass type of the annotation 	 * @param name_index Index pointing to the name<em>Code</em> 	 * @param length Content length in bytes 	 * @param annotation_table the actual annotations 	 * @param constant_pool Array of constants 	 */
-specifier|public
-name|Annotations
-parameter_list|(
-name|byte
-name|annotation_type
-parameter_list|,
-name|int
-name|name_index
-parameter_list|,
-name|int
-name|length
-parameter_list|,
-name|AnnotationEntry
-index|[]
-name|annotation_table
-parameter_list|,
-name|ConstantPool
-name|constant_pool
-parameter_list|)
-block|{
-name|super
-argument_list|(
-name|annotation_type
-argument_list|,
-name|name_index
-argument_list|,
-name|length
-argument_list|,
-name|constant_pool
-argument_list|)
-expr_stmt|;
-name|setAnnotationTable
-argument_list|(
-name|annotation_table
-argument_list|)
-expr_stmt|;
-block|}
 comment|/** 	   * Called by objects that are traversing the nodes of the tree implicitely 	   * defined by the contents of a Java class. I.e., the hierarchy of methods, 	   * fields, attributes, etc. spawns a tree of objects. 	   * 	   * @param v Visitor object 	   */
 specifier|public
 name|void
@@ -199,50 +135,17 @@ name|Visitor
 name|v
 parameter_list|)
 block|{
-comment|//	    v.visitAnnotation(this);
+comment|//	    v.visitParameterAnnotationEntry(this);
 block|}
-comment|/** 	   * @param annotation_table the entries to set in this annotation 	   */
+comment|/** 	   * @returns the number of annotation entries in this parameter annotation 	   */
 specifier|public
 specifier|final
-name|void
-name|setAnnotationTable
-parameter_list|(
-name|AnnotationEntry
-index|[]
-name|annotation_table
-parameter_list|)
-block|{
-name|this
-operator|.
-name|annotation_table
-operator|=
-name|annotation_table
-expr_stmt|;
-name|annotation_table_length
-operator|=
-operator|(
-name|annotation_table
-operator|==
-literal|null
-operator|)
-condition|?
-literal|0
-else|:
-name|annotation_table
-operator|.
-name|length
-expr_stmt|;
-block|}
-comment|/** 	   * @returns the annotation entry table 	   */
-specifier|public
-specifier|final
-name|AnnotationEntry
-index|[]
-name|getAnnotationTable
+name|int
+name|getNumAnnotations
 parameter_list|()
 block|{
 return|return
-name|annotation_table
+name|annotation_table_length
 return|;
 block|}
 comment|/** 	   * returns the array of annotation entries in this annotation 	   */
@@ -254,17 +157,6 @@ parameter_list|()
 block|{
 return|return
 name|annotation_table
-return|;
-block|}
-comment|/** 	   * @returns the number of annotation entries in this annotation 	   */
-specifier|public
-specifier|final
-name|int
-name|getNumAnnotations
-parameter_list|()
-block|{
-return|return
-name|annotation_table_length
 return|;
 block|}
 block|}
