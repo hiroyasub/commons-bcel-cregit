@@ -201,6 +201,30 @@ name|ACC_STRICT
 init|=
 literal|0x0800
 decl_stmt|;
+specifier|public
+specifier|final
+specifier|static
+name|short
+name|ACC_SYNTHETIC
+init|=
+literal|0x1000
+decl_stmt|;
+specifier|public
+specifier|final
+specifier|static
+name|short
+name|ACC_ANNOTATION
+init|=
+literal|0x2000
+decl_stmt|;
+specifier|public
+specifier|final
+specifier|static
+name|short
+name|ACC_ENUM
+init|=
+literal|0x4000
+decl_stmt|;
 comment|// Applies to classes compiled by new compilers only
 specifier|public
 specifier|final
@@ -216,7 +240,7 @@ specifier|static
 name|short
 name|MAX_ACC_FLAG
 init|=
-name|ACC_STRICT
+name|ACC_ENUM
 decl_stmt|;
 specifier|public
 specifier|final
@@ -249,6 +273,12 @@ block|,
 literal|"abstract"
 block|,
 literal|"strictfp"
+block|,
+literal|"synthetic"
+block|,
+literal|"annotation"
+block|,
+literal|"enum"
 block|}
 decl_stmt|;
 comment|/** Tags in constant pool to denote type of constant.    */
