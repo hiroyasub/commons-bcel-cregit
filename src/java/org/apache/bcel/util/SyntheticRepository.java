@@ -159,7 +159,9 @@ name|SyntheticRepository
 name|getInstance
 parameter_list|()
 block|{
-return|return
+name|SyntheticRepository
+name|rep
+init|=
 operator|(
 name|SyntheticRepository
 operator|)
@@ -169,6 +171,24 @@ name|get
 argument_list|(
 name|defaultPath
 argument_list|)
+decl_stmt|;
+if|if
+condition|(
+name|rep
+operator|==
+literal|null
+condition|)
+block|{
+name|rep
+operator|=
+operator|new
+name|SyntheticRepository
+argument_list|()
+expr_stmt|;
+comment|// adds itself to instances
+block|}
+return|return
+name|rep
 return|;
 block|}
 specifier|public
