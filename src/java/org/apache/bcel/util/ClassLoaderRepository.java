@@ -248,6 +248,23 @@ operator|+
 literal|".class"
 argument_list|)
 decl_stmt|;
+if|if
+condition|(
+name|is
+operator|==
+literal|null
+condition|)
+block|{
+throw|throw
+operator|new
+name|ClassNotFoundException
+argument_list|(
+name|className
+operator|+
+literal|" not found."
+argument_list|)
+throw|;
+block|}
 name|ClassParser
 name|parser
 init|=
