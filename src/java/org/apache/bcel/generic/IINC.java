@@ -211,7 +211,7 @@ name|bcel
 operator|.
 name|Constants
 operator|.
-name|MAX_SHORT
+name|MAX_BYTE
 operator|)
 operator|||
 operator|(
