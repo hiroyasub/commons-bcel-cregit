@@ -80,6 +80,7 @@ specifier|protected
 name|ConstantPool
 name|constant_pool
 decl_stmt|;
+specifier|protected
 name|Attribute
 parameter_list|(
 name|byte
