@@ -194,7 +194,7 @@ operator|)
 name|this
 operator|)
 operator|.
-name|referencesClass
+name|referencesClassExact
 argument_list|()
 operator|)
 condition|)
@@ -216,7 +216,7 @@ operator|)
 name|T
 operator|)
 operator|.
-name|referencesClass
+name|referencesClassExact
 argument_list|()
 operator|)
 condition|)
@@ -281,7 +281,7 @@ operator|)
 name|T
 operator|)
 operator|.
-name|referencesInterface
+name|referencesInterfaceExact
 argument_list|()
 operator|)
 condition|)
@@ -335,7 +335,7 @@ operator|)
 name|this
 operator|)
 operator|.
-name|referencesInterface
+name|referencesInterfaceExact
 argument_list|()
 operator|)
 condition|)
@@ -357,7 +357,7 @@ operator|)
 name|T
 operator|)
 operator|.
-name|referencesClass
+name|referencesClassExact
 argument_list|()
 operator|)
 condition|)
@@ -394,7 +394,7 @@ operator|)
 name|T
 operator|)
 operator|.
-name|referencesInterface
+name|referencesInterfaceExact
 argument_list|()
 operator|)
 condition|)
@@ -468,7 +468,7 @@ operator|)
 name|T
 operator|)
 operator|.
-name|referencesClass
+name|referencesClassExact
 argument_list|()
 operator|)
 condition|)
@@ -595,7 +595,7 @@ operator|)
 name|T
 operator|)
 operator|.
-name|referencesInterface
+name|referencesInterfaceExact
 argument_list|()
 operator|)
 condition|)
