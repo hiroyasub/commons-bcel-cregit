@@ -2601,7 +2601,7 @@ literal|"java.lang.Object"
 operator|.
 name|equals
 argument_list|(
-name|getSuperclassName
+name|getClassName
 argument_list|()
 argument_list|)
 condition|)
