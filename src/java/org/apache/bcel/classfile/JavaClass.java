@@ -1113,7 +1113,7 @@ return|return
 name|constant_pool
 return|;
 block|}
-comment|/**    * @return Fields, i.e., variables of the class.    */
+comment|/**    * @return Fields, i.e., variables of the class. Like the JVM spec    * mandates for the classfile format, these fields are those specific to    * this class, and not those of the superclass or superinterfaces.    */
 specifier|public
 name|Field
 index|[]
