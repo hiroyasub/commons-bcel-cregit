@@ -517,7 +517,7 @@ operator|(
 operator|(
 name|ArrayType
 operator|)
-name|this
+name|T
 operator|)
 operator|.
 name|getElementType
