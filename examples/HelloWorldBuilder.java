@@ -26,7 +26,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Create HelloWorld class:  *<PRE>  * import java.io.*;  *  * public class HelloWorld {  *   public static void main(String[] argv) {  *     BufferedReader in   = new BufferedReader(new InputStreamReader(System.in));  *     String name = null;  *   *     try {  *       System.out.print("Please enter your name> ");  *       name = in.readLine();  *     } catch(IOException e) { return; }  *   *     System.out.println("Hello, " + name);  *   }  * }  *</PRE>  *  * @version $Id$  * @author<A HREF="http://www.berlin.de/~markus.dahm/">M. Dahm</A>  */
+comment|/**  * Create HelloWorld class:  *<PRE>  * import java.io.*;  *  * public class HelloWorld {  *   public static void main(String[] argv) {  *     BufferedReader in   = new BufferedReader(new InputStreamReader(System.in));  *     String name = null;  *   *     try {  *       System.out.print("Please enter your name> ");  *       name = in.readLine();  *     } catch(IOException e) {   *       System.out.println(e);  *	 return;   *     }  *   *     System.out.println("Hello, " + name);  *   }  * }  *</PRE>  *  * @version $Id$  * @author<A HREF="http://www.berlin.de/~markus.dahm/">M. Dahm</A>  */
 end_comment
 
 begin_class
@@ -525,10 +525,71 @@ argument_list|(
 name|g
 argument_list|)
 decl_stmt|;
-comment|/* } catch() { ... }      * Add exception handler: simply return from method      */
+comment|/* } catch() { ... }      * Add exception handler: print exception and return from method      */
 name|InstructionHandle
 name|handler
 init|=
+name|il
+operator|.
+name|append
+argument_list|(
+name|factory
+operator|.
+name|createFieldAccess
+argument_list|(
+literal|"java.lang.System"
+argument_list|,
+literal|"out"
+argument_list|,
+name|p_stream
+argument_list|,
+name|Constants
+operator|.
+name|GETSTATIC
+argument_list|)
+argument_list|)
+decl_stmt|;
+comment|// Little trick in order not to save exception object temporarily
+name|il
+operator|.
+name|append
+argument_list|(
+name|InstructionConstants
+operator|.
+name|SWAP
+argument_list|)
+expr_stmt|;
+name|il
+operator|.
+name|append
+argument_list|(
+name|factory
+operator|.
+name|createInvoke
+argument_list|(
+literal|"java.io.PrintStream"
+argument_list|,
+literal|"println"
+argument_list|,
+name|Type
+operator|.
+name|VOID
+argument_list|,
+operator|new
+name|Type
+index|[]
+block|{
+name|Type
+operator|.
+name|OBJECT
+block|}
+argument_list|,
+name|Constants
+operator|.
+name|INVOKEVIRTUAL
+argument_list|)
+argument_list|)
+expr_stmt|;
 name|il
 operator|.
 name|append
@@ -537,7 +598,7 @@ name|InstructionConstants
 operator|.
 name|RETURN
 argument_list|)
-decl_stmt|;
+expr_stmt|;
 name|mg
 operator|.
 name|addExceptionHandler
