@@ -63,6 +63,7 @@ name|IINC
 parameter_list|()
 block|{
 block|}
+comment|/**    * @param n index of local variable    * @param c increment factor    */
 specifier|public
 name|IINC
 parameter_list|(

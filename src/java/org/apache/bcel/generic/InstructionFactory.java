@@ -2887,7 +2887,7 @@ argument_list|)
 throw|;
 block|}
 block|}
-comment|/** Create branch instruction by given opcode, except LOOKUPSWITCH and TABLESWITCH.    * For those you should use the SWITCH compeund instruction.    */
+comment|/** Create branch instruction by given opcode, except LOOKUPSWITCH and TABLESWITCH.    * For those you should use the SWITCH compound instruction.    */
 specifier|public
 specifier|static
 name|BranchInstruction

@@ -156,6 +156,21 @@ argument_list|)
 expr_stmt|;
 comment|// Common for all instructions
 block|}
+comment|/** @return name of instruction, i.e., opcode name    */
+specifier|public
+name|String
+name|getName
+parameter_list|()
+block|{
+return|return
+name|Constants
+operator|.
+name|OPCODE_NAMES
+index|[
+name|opcode
+index|]
+return|;
+block|}
 comment|/**    * Long output format:    *    *&lt;name of opcode&gt; "["&lt;opcode number&gt;"]"     * "("&lt;length of instruction&gt;")"    *    * @param verbose long/short format switch    * @return mnemonic for instruction    */
 specifier|public
 name|String
@@ -170,12 +185,8 @@ condition|(
 name|verbose
 condition|)
 return|return
-name|Constants
-operator|.
-name|OPCODE_NAMES
-index|[
-name|opcode
-index|]
+name|getName
+argument_list|()
 operator|+
 literal|"["
 operator|+
@@ -189,12 +200,8 @@ literal|")"
 return|;
 else|else
 return|return
-name|Constants
-operator|.
-name|OPCODE_NAMES
-index|[
-name|opcode
-index|]
+name|getName
+argument_list|()
 return|;
 block|}
 comment|/**    * @return mnemonic for instruction in verbose format    */
