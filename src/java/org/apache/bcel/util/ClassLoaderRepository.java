@@ -134,6 +134,26 @@ name|this
 argument_list|)
 expr_stmt|;
 block|}
+comment|/**    * Remove class from repository    */
+specifier|public
+name|void
+name|removeClass
+parameter_list|(
+name|JavaClass
+name|clazz
+parameter_list|)
+block|{
+name|loadedClasses
+operator|.
+name|remove
+argument_list|(
+name|clazz
+operator|.
+name|getClassName
+argument_list|()
+argument_list|)
+expr_stmt|;
+block|}
 comment|/**      * Find an already defined JavaClass.      */
 specifier|public
 name|JavaClass

@@ -535,7 +535,7 @@ return|return
 name|clazz
 return|;
 block|}
-comment|/**     * Override this method to create you own classes on the fly. The    * name contains the special token $$BCEL$$. Everything before that    * token is consddered to be a package name. You can encode you own    * arguments into the subsequent string. You must regard however not    * to use any "illegal" characters, i.e., characters that may not    * appear in a Java class name too<br>    *    * The default implementation interprets the string as a encoded compressed    * Java class, unpacks and decodes it with the Utility.decode() method, and    * parses thee resulting byte array and returns the resulting JavaClass object.    *    * @param class_name compressed byte code with "$$BCEL$$" in it    */
+comment|/**     * Override this method to create you own classes on the fly. The    * name contains the special token $$BCEL$$. Everything before that    * token is consddered to be a package name. You can encode you own    * arguments into the subsequent string. You must regard however not    * to use any "illegal" characters, i.e., characters that may not    * appear in a Java class name too<br>    *    * The default implementation interprets the string as a encoded compressed    * Java class, unpacks and decodes it with the Utility.decode() method, and    * parses the resulting byte array and returns the resulting JavaClass object.    *    * @param class_name compressed byte code with "$$BCEL$$" in it    */
 specifier|protected
 name|JavaClass
 name|createClass

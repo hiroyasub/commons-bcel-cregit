@@ -43,6 +43,15 @@ name|JavaClass
 name|clazz
 parameter_list|)
 function_decl|;
+comment|/**      * Remove class from repository      */
+specifier|public
+name|void
+name|removeClass
+parameter_list|(
+name|JavaClass
+name|clazz
+parameter_list|)
+function_decl|;
 comment|/**      * Find the class with the name provided, if the class      * isn't there, return NULL.      */
 specifier|public
 name|JavaClass
