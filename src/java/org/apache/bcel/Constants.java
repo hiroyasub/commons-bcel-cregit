@@ -6334,7 +6334,7 @@ specifier|final
 name|byte
 name|ATTR_RUNTIMEINVISIBLE_PARAMETER_ANNOTATIONS
 init|=
-literal|14
+literal|15
 decl_stmt|;
 specifier|public
 specifier|static
@@ -6342,8 +6342,9 @@ specifier|final
 name|short
 name|KNOWN_ATTRIBUTES
 init|=
-literal|14
+literal|12
 decl_stmt|;
+comment|//should be 16
 specifier|public
 specifier|static
 specifier|final
