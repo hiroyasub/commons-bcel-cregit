@@ -8831,9 +8831,33 @@ name|fromDesc
 decl_stmt|;
 comment|// TODO: This can only be checked using Staerk-et-al's "set of object types", not
 comment|// using a "wider cast object type".
-comment|//if ( ! rFromStack.isAssignmentCompatibleWith(rFromDesc) ){
-comment|//	constraintViolated(o, "Expecting a '"+fromDesc+"' but found a '"+fromStack+"' on the stack (which is not assignment compatible).");
-comment|//}
+if|if
+condition|(
+operator|!
+name|rFromStack
+operator|.
+name|isAssignmentCompatibleWith
+argument_list|(
+name|rFromDesc
+argument_list|)
+condition|)
+block|{
+name|constraintViolated
+argument_list|(
+name|o
+argument_list|,
+literal|"Expecting a '"
+operator|+
+name|fromDesc
+operator|+
+literal|"' but found a '"
+operator|+
+name|fromStack
+operator|+
+literal|"' on the stack (which is not assignment compatible)."
+argument_list|)
+expr_stmt|;
+block|}
 block|}
 else|else
 block|{
@@ -9291,11 +9315,35 @@ name|ReferenceType
 operator|)
 name|fromDesc
 decl_stmt|;
-comment|// TODO: This check can only be done using Staerk-et-al's "set of object types"
+comment|// TODO: This check can possibly only be done using Staerk-et-al's "set of object types"
 comment|// instead of a "wider cast object type" created during verification.
-comment|//if ( ! rFromStack.isAssignmentCompatibleWith(rFromDesc) ){
-comment|//	constraintViolated(o, "Expecting a '"+fromDesc+"' but found a '"+fromStack+"' on the stack (which is not assignment compatible).");
-comment|//}
+if|if
+condition|(
+operator|!
+name|rFromStack
+operator|.
+name|isAssignmentCompatibleWith
+argument_list|(
+name|rFromDesc
+argument_list|)
+condition|)
+block|{
+name|constraintViolated
+argument_list|(
+name|o
+argument_list|,
+literal|"Expecting a '"
+operator|+
+name|fromDesc
+operator|+
+literal|"' but found a '"
+operator|+
+name|fromStack
+operator|+
+literal|"' on the stack (which is not assignment compatible)."
+argument_list|)
+expr_stmt|;
+block|}
 block|}
 else|else
 block|{
@@ -9541,11 +9589,35 @@ name|ReferenceType
 operator|)
 name|fromDesc
 decl_stmt|;
-comment|// TODO: This can only be checked when using Staerk-et-al's "set of object types" instead
+comment|// TODO: This can possibly only be checked when using Staerk-et-al's "set of object types" instead
 comment|// of a single "wider cast object type" created during verification.
-comment|//if ( ! rFromStack.isAssignmentCompatibleWith(rFromDesc) ){
-comment|//	constraintViolated(o, "Expecting a '"+fromDesc+"' but found a '"+fromStack+"' on the stack (which is not assignment compatible).");
-comment|//}
+if|if
+condition|(
+operator|!
+name|rFromStack
+operator|.
+name|isAssignmentCompatibleWith
+argument_list|(
+name|rFromDesc
+argument_list|)
+condition|)
+block|{
+name|constraintViolated
+argument_list|(
+name|o
+argument_list|,
+literal|"Expecting a '"
+operator|+
+name|fromDesc
+operator|+
+literal|"' but found a '"
+operator|+
+name|fromStack
+operator|+
+literal|"' on the stack (which is not assignment compatible)."
+argument_list|)
+expr_stmt|;
+block|}
 block|}
 else|else
 block|{
