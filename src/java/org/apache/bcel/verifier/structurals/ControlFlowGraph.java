@@ -1609,12 +1609,14 @@ name|i
 parameter_list|)
 block|{
 return|return
-name|instructionContexts
+name|subroutines
 operator|.
-name|containsKey
+name|subroutineOf
 argument_list|(
 name|i
 argument_list|)
+operator|==
+literal|null
 return|;
 block|}
 block|}

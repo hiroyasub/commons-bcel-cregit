@@ -4785,7 +4785,7 @@ operator|.
 name|getClassName
 argument_list|()
 operator|+
-literal|"'. The native verfier does allow the method to be declared in some superinterface, which the Java Virtual Machine Specification, Second Edition does not."
+literal|"'. The native verifier does allow the method to be declared in some superinterface, which the Java Virtual Machine Specification, Second Edition does not."
 argument_list|)
 expr_stmt|;
 block|}
@@ -5010,7 +5010,7 @@ operator|.
 name|getClassName
 argument_list|()
 operator|+
-literal|"'. The native verfier does allow the method to be declared in some superclass or implemented interface, which the Java Virtual Machine Specification, Second Edition does not."
+literal|"'. The native verifier does allow the method to be declared in some superclass or implemented interface, which the Java Virtual Machine Specification, Second Edition does not."
 argument_list|)
 expr_stmt|;
 block|}
@@ -5690,7 +5690,7 @@ operator|.
 name|getClassName
 argument_list|()
 operator|+
-literal|"'. The native verfier does allow the method to be declared in some superclass or implemented interface, which the Java Virtual Machine Specification, Second Edition does not."
+literal|"'. The native verifier does allow the method to be declared in some superclass or implemented interface, which the Java Virtual Machine Specification, Second Edition does not."
 argument_list|)
 expr_stmt|;
 block|}
