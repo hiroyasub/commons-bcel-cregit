@@ -296,14 +296,14 @@ name|_out
 operator|.
 name|println
 argument_list|(
-literal|"  private ConstantPoolGen   _cp;"
+literal|"  private ConstantPoolGen    _cp;"
 argument_list|)
 expr_stmt|;
 name|_out
 operator|.
 name|println
 argument_list|(
-literal|"  private ClassGen          _cg;\n"
+literal|"  private ClassGen           _cg;\n"
 argument_list|)
 expr_stmt|;
 name|_out
