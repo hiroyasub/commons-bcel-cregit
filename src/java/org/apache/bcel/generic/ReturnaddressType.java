@@ -115,6 +115,15 @@ name|int
 name|hashCode
 parameter_list|()
 block|{
+if|if
+condition|(
+name|returnTarget
+operator|==
+literal|null
+condition|)
+return|return
+literal|0
+return|;
 return|return
 name|returnTarget
 operator|.
