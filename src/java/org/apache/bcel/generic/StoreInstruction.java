@@ -96,13 +96,6 @@ argument_list|)
 expr_stmt|;
 name|v
 operator|.
-name|visitStoreInstruction
-argument_list|(
-name|this
-argument_list|)
-expr_stmt|;
-name|v
-operator|.
 name|visitTypedInstruction
 argument_list|(
 name|this
