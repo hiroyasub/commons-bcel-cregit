@@ -62,7 +62,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**   * Repository maintains informations about class interdependencies, e.g.  * whether a class is a sub-class of another. JavaClass objects are put  * into a cache which can be purged with clearCache().  *  * All JavaClass objects used as arguments must have been obtained via  * the repository or been added with addClass() manually. This is  * because we have to check for object identity (==).  *  * @version $Id$  * @author<A HREF="mailto:markus.dahm@berlin.de">M. Dahm</A  */
+comment|/**   * The repository maintains informations about class interdependencies, e.g.,  * whether a class is a sub-class of another. JavaClass objects are put  * into a cache which can be purged with clearCache().  *  * All JavaClass objects used as arguments must have been obtained via  * the repository or been added with addClass() manually. This is  * because we have to check for real object identity (==).  *  * @version $Id$  * @author<A HREF="mailto:markus.dahm@berlin.de">M. Dahm</A  */
 end_comment
 
 begin_class
@@ -97,7 +97,7 @@ name|clearCache
 argument_list|()
 expr_stmt|;
 block|}
-comment|/** @return class object for given fully qualified class name, or null    * if the class could not be found or parsed correctly    */
+comment|/** Lookup class somewhere found in your CLASSPATH.    * @return class object for given fully qualified class name, or null    * if the class could not be found or parsed correctly    */
 specifier|public
 specifier|static
 name|JavaClass
@@ -216,7 +216,7 @@ return|return
 name|clazz
 return|;
 block|}
-comment|/**    * Try to find class source via getResourceAsStream()    * @return JavaClass object for given runtime class    */
+comment|/**    * Try to find class source via getResourceAsStream().    * @see Class    * @return JavaClass object for given runtime class    */
 specifier|public
 specifier|static
 name|JavaClass
