@@ -1134,15 +1134,64 @@ literal|"Asking for successors of a RET in dead code?!"
 argument_list|)
 throw|;
 block|}
-comment|//TODO: remove
-throw|throw
+comment|//TODO: remove. Only JustIce must not use it, but foreign users of the ControlFlowGraph
+comment|//      will want it. Thanks Johannes Wust.
+comment|//throw new AssertionViolatedException("DID YOU REALLY WANT TO ASK FOR RET'S SUCCS?");
+name|InstructionHandle
+index|[]
+name|jsrs
+init|=
+name|s
+operator|.
+name|getEnteringJsrInstructions
+argument_list|()
+decl_stmt|;
+name|InstructionHandle
+index|[]
+name|ret
+init|=
 operator|new
-name|AssertionViolatedException
-argument_list|(
-literal|"DID YOU REALLY WANT TO ASK FOR RET'S SUCCS?"
-argument_list|)
-throw|;
-comment|/* 				InstructionHandle[] jsrs = s.getEnteringJsrInstructions(); 				InstructionHandle[] ret = new InstructionHandle[jsrs.length]; 				for (int i=0; i<jsrs.length; i++){ 					ret[i] = jsrs[i].getNext(); 				} 				return ret; */
+name|InstructionHandle
+index|[
+name|jsrs
+operator|.
+name|length
+index|]
+decl_stmt|;
+for|for
+control|(
+name|int
+name|i
+init|=
+literal|0
+init|;
+name|i
+operator|<
+name|jsrs
+operator|.
+name|length
+condition|;
+name|i
+operator|++
+control|)
+block|{
+name|ret
+index|[
+name|i
+index|]
+operator|=
+name|jsrs
+index|[
+name|i
+index|]
+operator|.
+name|getNext
+argument_list|()
+expr_stmt|;
+block|}
+return|return
+name|ret
+return|;
 block|}
 comment|// Terminates method normally.
 if|if
