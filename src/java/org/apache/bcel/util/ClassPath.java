@@ -1035,9 +1035,7 @@ function_decl|;
 block|}
 comment|/** Contains information about file/ZIP entry of the Java class.    */
 specifier|public
-specifier|abstract
-specifier|static
-class|class
+interface|interface
 name|ClassFile
 block|{
 comment|/** @return input stream for class file.      */
@@ -1054,6 +1052,13 @@ specifier|public
 specifier|abstract
 name|String
 name|getPath
+parameter_list|()
+function_decl|;
+comment|/** @return base path of found class, i.e. class is contained relative      * to that path      */
+specifier|public
+specifier|abstract
+name|String
+name|getBase
 parameter_list|()
 function_decl|;
 comment|/** @return modification time of class file.      */
@@ -1206,6 +1211,15 @@ name|length
 argument_list|()
 return|;
 block|}
+specifier|public
+name|String
+name|getBase
+parameter_list|()
+block|{
+return|return
+name|dir
+return|;
+block|}
 block|}
 else|:
 literal|null
@@ -1335,6 +1349,18 @@ return|return
 name|entry
 operator|.
 name|getSize
+argument_list|()
+return|;
+block|}
+specifier|public
+name|String
+name|getBase
+parameter_list|()
+block|{
+return|return
+name|zip
+operator|.
+name|getName
 argument_list|()
 return|;
 block|}
