@@ -245,7 +245,8 @@ operator|)
 name|i1
 operator|)
 operator|.
-name|type
+name|getTypecode
+argument_list|()
 operator|==
 operator|(
 operator|(
@@ -254,7 +255,8 @@ operator|)
 name|i2
 operator|)
 operator|.
-name|type
+name|getTypecode
+argument_list|()
 return|;
 block|}
 block|}
