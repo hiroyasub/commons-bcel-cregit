@@ -1353,7 +1353,7 @@ return|;
 block|}
 block|}
 comment|// End Inner InstructionContextImpl Class.
-comment|/** The MethofGen object we're working on. */
+comment|/** The MethodGen object we're working on. */
 specifier|private
 specifier|final
 name|MethodGen
