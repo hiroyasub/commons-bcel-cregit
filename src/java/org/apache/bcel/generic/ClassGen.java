@@ -200,6 +200,12 @@ argument_list|()
 expr_stmt|;
 comment|// Create empty constant pool
 comment|// Put everything needed by default into the constant pool and the vectors
+if|if
+condition|(
+name|file_name
+operator|!=
+literal|null
+condition|)
 name|addAttribute
 argument_list|(
 operator|new
