@@ -52,7 +52,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * The repository maintains informations about class interdependencies, e.g.,  * whether a class is a sub-class of another. Delegates actual class loading  * to SyntheticRepository.  *  * @version $Id$  * @author<A HREF="mailto:markus.dahm@berlin.de">M. Dahm</A>  */
+comment|/**  * The repository maintains informations about class interdependencies, e.g.,  * whether a class is a sub-class of another. Delegates actual class loading  * to SyntheticRepository with current class path by default.  *  * @see org.apache.bcel.util.Repository  * @see org.apache.bcel.util.SyntheticRepository  *  * @version $Id$  * @author<A HREF="mailto:markus.dahm@berlin.de">M. Dahm</A>  */
 end_comment
 
 begin_class
@@ -71,7 +71,7 @@ name|bcel
 operator|.
 name|util
 operator|.
-name|SyntheticRepository
+name|Repository
 name|_repository
 init|=
 name|SyntheticRepository
@@ -79,7 +79,49 @@ operator|.
 name|getInstance
 argument_list|()
 decl_stmt|;
-comment|/** Lookup class somewhere found in your CLASSPATH.    * @return class object for given fully qualified class name, or null    * if the class could not be found or parsed correctly    */
+comment|/** @return currently used repository instance    */
+specifier|public
+specifier|static
+name|org
+operator|.
+name|apache
+operator|.
+name|bcel
+operator|.
+name|util
+operator|.
+name|Repository
+name|getRepository
+parameter_list|()
+block|{
+return|return
+name|_repository
+return|;
+block|}
+comment|/** Set repository instance to be used for class loading    */
+specifier|public
+specifier|static
+name|void
+name|setRepository
+parameter_list|(
+name|org
+operator|.
+name|apache
+operator|.
+name|bcel
+operator|.
+name|util
+operator|.
+name|Repository
+name|rep
+parameter_list|)
+block|{
+name|_repository
+operator|=
+name|rep
+expr_stmt|;
+block|}
+comment|/** Lookup class somewhere found on your CLASSPATH, or whereever the    * repository instance looks for it.    *    * @return class object for given fully qualified class name, or null    * if the class could not be found or parsed correctly    */
 specifier|public
 specifier|static
 name|JavaClass
@@ -291,7 +333,6 @@ name|clazz
 argument_list|)
 expr_stmt|;
 block|}
-comment|/*   private static final JavaClass getSuperClass(JavaClass clazz) {     return clazz.getSuperClass();   }   */
 comment|/**    * @return list of super classes of clazz in ascending order, i.e.,    * Object is always the last element    */
 specifier|public
 specifier|static

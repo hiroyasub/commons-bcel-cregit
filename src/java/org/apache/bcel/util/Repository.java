@@ -29,6 +29,10 @@ name|JavaClass
 import|;
 end_import
 
+begin_comment
+comment|/**  * Abstract definition of a class repository. Instances may be used  * to load classes from different sources and may be used in the  * Repository.setRpeository method.  *  * @see org.apache.bcel.Repository  * @version $Id$  * @author<A HREF="mailto:markus.dahm@berlin.de">M. Dahm</A>  * @author David Dixon-Peugh  */
+end_comment
+
 begin_interface
 specifier|public
 interface|interface
@@ -40,7 +44,7 @@ name|io
 operator|.
 name|Serializable
 block|{
-comment|/**      * Store the provided class under "clazz.getClassName()"       */
+comment|/**    * Store the provided class under "clazz.getClassName()"     */
 specifier|public
 name|void
 name|storeClass
@@ -49,7 +53,7 @@ name|JavaClass
 name|clazz
 parameter_list|)
 function_decl|;
-comment|/**      * Remove class from repository      */
+comment|/**    * Remove class from repository    */
 specifier|public
 name|void
 name|removeClass
@@ -58,7 +62,7 @@ name|JavaClass
 name|clazz
 parameter_list|)
 function_decl|;
-comment|/**      * Find the class with the name provided, if the class      * isn't there, return NULL.      */
+comment|/**    * Find the class with the name provided, if the class    * isn't there, return NULL.    */
 specifier|public
 name|JavaClass
 name|findClass
@@ -67,7 +71,7 @@ name|String
 name|className
 parameter_list|)
 function_decl|;
-comment|/**      * Find the class with the name provided, if the class      * isn't there, make an attempt to load it.      */
+comment|/**    * Find the class with the name provided, if the class    * isn't there, make an attempt to load it.    */
 specifier|public
 name|JavaClass
 name|loadClass
@@ -81,6 +85,27 @@ operator|.
 name|lang
 operator|.
 name|ClassNotFoundException
+function_decl|;
+comment|/**    * Find the JavaClass instance for the given run-time class object    */
+specifier|public
+name|JavaClass
+name|loadClass
+parameter_list|(
+name|Class
+name|clazz
+parameter_list|)
+throws|throws
+name|java
+operator|.
+name|lang
+operator|.
+name|ClassNotFoundException
+function_decl|;
+comment|/** Clear all entries from cache.    */
+specifier|public
+name|void
+name|clear
+parameter_list|()
 function_decl|;
 block|}
 end_interface

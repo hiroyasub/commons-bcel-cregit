@@ -60,7 +60,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * The repository maintains information about which classes have  * been loaded.  *  * It loads its data from the ClassLoader implementation  * passed into its constructor.  */
+comment|/**  * The repository maintains information about which classes have  * been loaded.  *  * It loads its data from the ClassLoader implementation  * passed into its constructor.  *  * @see org.apache.bcel.Repository  *  * @version $Id$  * @author<A HREF="mailto:markus.dahm@berlin.de">M. Dahm</A>  * @author David Dixon-Peugh  */
 end_comment
 
 begin_class
@@ -79,7 +79,7 @@ name|ClassLoader
 name|loader
 decl_stmt|;
 specifier|private
-name|Map
+name|HashMap
 name|loadedClasses
 init|=
 operator|new
@@ -105,7 +105,7 @@ operator|=
 name|loader
 expr_stmt|;
 block|}
-comment|/**      * Store a new JavaClass into this Repository.      */
+comment|/**    * Store a new JavaClass into this Repository.    */
 specifier|public
 name|void
 name|storeClass
@@ -154,7 +154,7 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Find an already defined JavaClass.      */
+comment|/**    * Find an already defined JavaClass.    */
 specifier|public
 name|JavaClass
 name|findClass
@@ -192,7 +192,7 @@ literal|null
 return|;
 block|}
 block|}
-comment|/**      * Lookup a JavaClass object from the Class Name provided.      */
+comment|/**    * Lookup a JavaClass object from the Class Name provided.    */
 specifier|public
 name|JavaClass
 name|loadClass
@@ -309,6 +309,38 @@ argument_list|()
 argument_list|)
 throw|;
 block|}
+block|}
+specifier|public
+name|JavaClass
+name|loadClass
+parameter_list|(
+name|Class
+name|clazz
+parameter_list|)
+throws|throws
+name|ClassNotFoundException
+block|{
+return|return
+name|loadClass
+argument_list|(
+name|clazz
+operator|.
+name|getName
+argument_list|()
+argument_list|)
+return|;
+block|}
+comment|/** Clear all entries from cache.    */
+specifier|public
+name|void
+name|clear
+parameter_list|()
+block|{
+name|loadedClasses
+operator|.
+name|clear
+argument_list|()
+expr_stmt|;
 block|}
 block|}
 end_class
