@@ -268,7 +268,7 @@ name|className
 argument_list|)
 return|;
 block|}
-comment|/**    * Load a JavaClass object for the given class name using    * the CLASSPATH environment variable.    */
+comment|/**    * Find a JavaClass object by name.    * If it is already in this Repository, the Repository version    * is returned.  Otherwise, the Repository's classpath is searched for    * the class (and it is added to the Repository if found).    *    * @param className the name of the class    * @return the JavaClass object    * @throws ClassNotFoundException if the class is not in the    *   Repository, and could not be found on the classpath    */
 specifier|public
 name|JavaClass
 name|loadClass
@@ -315,6 +315,25 @@ literal|'.'
 argument_list|)
 expr_stmt|;
 comment|// Just in case, canonical form
+name|JavaClass
+name|clazz
+init|=
+name|findClass
+argument_list|(
+name|className
+argument_list|)
+decl_stmt|;
+if|if
+condition|(
+name|clazz
+operator|!=
+literal|null
+condition|)
+block|{
+return|return
+name|clazz
+return|;
+block|}
 try|try
 block|{
 return|return
@@ -355,7 +374,7 @@ argument_list|)
 throw|;
 block|}
 block|}
-comment|/**    * Try to find class source via getResourceAsStream().    * @see Class    * @return JavaClass object for given runtime class    */
+comment|/**    * Find the JavaClass object for a runtime Class object.    * If a class with the same name is already in this Repository,    * the Repository version is returned.  Otherwise, getResourceAsStream()    * is called on the Class object to find the class's representation.    * If the representation is found, it is added to the Repository.    *    * @see Class    * @param clazz the runtime Class object    * @return JavaClass object for given runtime class    * @throws ClassNotFoundException if the class is not in the    *   Repository, and its representation could not be found    */
 specifier|public
 name|JavaClass
 name|loadClass
@@ -374,6 +393,25 @@ operator|.
 name|getName
 argument_list|()
 decl_stmt|;
+name|JavaClass
+name|repositoryClass
+init|=
+name|findClass
+argument_list|(
+name|className
+argument_list|)
+decl_stmt|;
+if|if
+condition|(
+name|repositoryClass
+operator|!=
+literal|null
+condition|)
+block|{
+return|return
+name|repositoryClass
+return|;
+block|}
 name|String
 name|name
 init|=
@@ -437,25 +475,6 @@ parameter_list|)
 throws|throws
 name|ClassNotFoundException
 block|{
-name|JavaClass
-name|clazz
-init|=
-name|findClass
-argument_list|(
-name|className
-argument_list|)
-decl_stmt|;
-if|if
-condition|(
-name|clazz
-operator|!=
-literal|null
-condition|)
-block|{
-return|return
-name|clazz
-return|;
-block|}
 try|try
 block|{
 if|if
@@ -476,13 +495,14 @@ argument_list|,
 name|className
 argument_list|)
 decl_stmt|;
+name|JavaClass
 name|clazz
-operator|=
+init|=
 name|parser
 operator|.
 name|parse
 argument_list|()
-expr_stmt|;
+decl_stmt|;
 name|storeClass
 argument_list|(
 name|clazz
