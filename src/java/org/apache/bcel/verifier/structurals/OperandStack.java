@@ -449,6 +449,7 @@ argument_list|)
 expr_stmt|;
 block|}
 comment|/** 	 * Returns the size of this OperandStack; that means, how many Type objects there are. 	 */
+specifier|public
 name|int
 name|size
 parameter_list|()
