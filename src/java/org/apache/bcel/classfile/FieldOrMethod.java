@@ -119,7 +119,7 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**    * Construct object from file stream.    * @param file Input stream    * @throws IOException    * @throws ClassFormatError    */
+comment|/**    * Construct object from file stream.    * @param file Input stream    * @throws IOException    * @throws ClassFormatException    */
 specifier|protected
 name|FieldOrMethod
 parameter_list|(
@@ -132,7 +132,7 @@ parameter_list|)
 throws|throws
 name|IOException
 throws|,
-name|ClassFormatError
+name|ClassFormatException
 block|{
 name|this
 argument_list|(

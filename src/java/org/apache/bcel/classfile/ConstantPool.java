@@ -74,7 +74,7 @@ name|constant_pool
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**    * Read constants from given file stream.    *    * @param file Input stream    * @throws IOException    * @throws ClassFormatError    */
+comment|/**    * Read constants from given file stream.    *    * @param file Input stream    * @throws IOException    * @throws ClassFormatException    */
 name|ConstantPool
 parameter_list|(
 name|DataInputStream
@@ -83,7 +83,7 @@ parameter_list|)
 throws|throws
 name|IOException
 throws|,
-name|ClassFormatError
+name|ClassFormatException
 block|{
 name|byte
 name|tag
@@ -191,7 +191,7 @@ name|Constant
 name|c
 parameter_list|)
 throws|throws
-name|ClassFormatError
+name|ClassFormatException
 block|{
 name|String
 name|str
@@ -672,7 +672,7 @@ name|byte
 name|tag
 parameter_list|)
 throws|throws
-name|ClassFormatError
+name|ClassFormatException
 block|{
 name|Constant
 name|c
@@ -766,7 +766,7 @@ literal|0
 condition|)
 throw|throw
 operator|new
-name|ClassFormatError
+name|ClassFormatException
 argument_list|(
 literal|"Invalid constant pool reference: "
 operator|+
@@ -786,7 +786,7 @@ name|index
 index|]
 return|;
 block|}
-comment|/**    * Get constant from constant pool and check whether it has the    * expected type.    *    * @param  index Index in constant pool    * @param  tag Tag of expected constant, i.e., its type    * @return Constant value    * @see    Constant    * @throws  ClassFormatError    */
+comment|/**    * Get constant from constant pool and check whether it has the    * expected type.    *    * @param  index Index in constant pool    * @param  tag Tag of expected constant, i.e., its type    * @return Constant value    * @see    Constant    * @throws  ClassFormatException    */
 specifier|public
 name|Constant
 name|getConstant
@@ -798,7 +798,7 @@ name|byte
 name|tag
 parameter_list|)
 throws|throws
-name|ClassFormatError
+name|ClassFormatException
 block|{
 name|Constant
 name|c
@@ -818,7 +818,7 @@ literal|null
 condition|)
 throw|throw
 operator|new
-name|ClassFormatError
+name|ClassFormatException
 argument_list|(
 literal|"Constant pool at index "
 operator|+
@@ -842,7 +842,7 @@ return|;
 else|else
 throw|throw
 operator|new
-name|ClassFormatError
+name|ClassFormatException
 argument_list|(
 literal|"Expected class `"
 operator|+
@@ -874,7 +874,7 @@ return|return
 name|constant_pool
 return|;
 block|}
-comment|/**    * Get string from constant pool and bypass the indirection of     * `ConstantClass' and `ConstantString' objects. I.e. these classes have    * an index field that points to another entry of the constant pool of    * type `ConstantUtf8' which contains the real data.    *    * @param  index Index in constant pool    * @param  tag Tag of expected constant, either ConstantClass or ConstantString    * @return Contents of string reference    * @see    ConstantClass    * @see    ConstantString    * @throws  ClassFormatError    */
+comment|/**    * Get string from constant pool and bypass the indirection of     * `ConstantClass' and `ConstantString' objects. I.e. these classes have    * an index field that points to another entry of the constant pool of    * type `ConstantUtf8' which contains the real data.    *    * @param  index Index in constant pool    * @param  tag Tag of expected constant, either ConstantClass or ConstantString    * @return Contents of string reference    * @see    ConstantClass    * @see    ConstantString    * @throws  ClassFormatException    */
 specifier|public
 name|String
 name|getConstantString
@@ -886,7 +886,7 @@ name|byte
 name|tag
 parameter_list|)
 throws|throws
-name|ClassFormatError
+name|ClassFormatException
 block|{
 name|Constant
 name|c

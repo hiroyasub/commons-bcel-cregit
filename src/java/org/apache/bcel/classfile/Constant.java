@@ -177,7 +177,7 @@ parameter_list|)
 throws|throws
 name|IOException
 throws|,
-name|ClassFormatError
+name|ClassFormatException
 block|{
 name|byte
 name|b
@@ -328,7 +328,7 @@ return|;
 default|default:
 throw|throw
 operator|new
-name|ClassFormatError
+name|ClassFormatException
 argument_list|(
 literal|"Invalid byte tag in constant pool: "
 operator|+

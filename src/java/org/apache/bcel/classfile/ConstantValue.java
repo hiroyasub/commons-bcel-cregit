@@ -236,8 +236,6 @@ specifier|final
 name|String
 name|toString
 parameter_list|()
-throws|throws
-name|InternalError
 block|{
 name|Constant
 name|c
@@ -399,7 +397,7 @@ break|break;
 default|default:
 throw|throw
 operator|new
-name|InternalError
+name|IllegalStateException
 argument_list|(
 literal|"Type of ConstValue invalid: "
 operator|+

@@ -310,7 +310,7 @@ argument_list|)
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**    * Parse the given Java class file and return an object that represents    * the contained data, i.e., constants, methods, fields and commands.    * A<em>ClassFormatError</em> is raised, if the file is not a valid    * .class file. (This does not include verification of the byte code as it    * is performed by the java interpreter).    *    * @return Class object representing the parsed class file    * @throws  IOException    * @throws  ClassFormatError    */
+comment|/**    * Parse the given Java class file and return an object that represents    * the contained data, i.e., constants, methods, fields and commands.    * A<em>ClassFormatException</em> is raised, if the file is not a valid    * .class file. (This does not include verification of the byte code as it    * is performed by the java interpreter).    *    * @return Class object representing the parsed class file    * @throws  IOException    * @throws  ClassFormatException    */
 specifier|public
 name|JavaClass
 name|parse
@@ -318,7 +318,7 @@ parameter_list|()
 throws|throws
 name|IOException
 throws|,
-name|ClassFormatError
+name|ClassFormatException
 block|{
 comment|/****************** Read headers ********************************/
 comment|// Check magic tag of class file
@@ -425,7 +425,7 @@ name|FILE
 argument_list|)
 return|;
 block|}
-comment|/**    * Read information about the attributes of the attributes of the class.    * @throws  IOException    * @throws  ClassFormatError    */
+comment|/**    * Read information about the attributes of the attributes of the class.    * @throws  IOException    * @throws  ClassFormatException    */
 specifier|private
 specifier|final
 name|void
@@ -434,7 +434,7 @@ parameter_list|()
 throws|throws
 name|IOException
 throws|,
-name|ClassFormatError
+name|ClassFormatException
 block|{
 name|int
 name|attributes_count
@@ -483,7 +483,7 @@ name|constant_pool
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**    * Read information about the class and its super class.    * @throws  IOException    * @throws  ClassFormatError    */
+comment|/**    * Read information about the class and its super class.    * @throws  IOException    * @throws  ClassFormatException    */
 specifier|private
 specifier|final
 name|void
@@ -492,7 +492,7 @@ parameter_list|()
 throws|throws
 name|IOException
 throws|,
-name|ClassFormatError
+name|ClassFormatException
 block|{
 name|access_flags
 operator|=
@@ -548,7 +548,7 @@ operator|)
 condition|)
 throw|throw
 operator|new
-name|ClassFormatError
+name|ClassFormatException
 argument_list|(
 literal|"Class can't be both final and abstract"
 argument_list|)
@@ -568,7 +568,7 @@ name|readUnsignedShort
 argument_list|()
 expr_stmt|;
 block|}
-comment|/**    * Read constant pool entries.    * @throws  IOException    * @throws  ClassFormatError    */
+comment|/**    * Read constant pool entries.    * @throws  IOException    * @throws  ClassFormatException    */
 specifier|private
 specifier|final
 name|void
@@ -577,7 +577,7 @@ parameter_list|()
 throws|throws
 name|IOException
 throws|,
-name|ClassFormatError
+name|ClassFormatException
 block|{
 name|constant_pool
 operator|=
@@ -588,7 +588,7 @@ name|file
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**    * Read information about the fields of the class, i.e., its variables.    * @throws  IOException    * @throws  ClassFormatError    */
+comment|/**    * Read information about the fields of the class, i.e., its variables.    * @throws  IOException    * @throws  ClassFormatException    */
 specifier|private
 specifier|final
 name|void
@@ -597,7 +597,7 @@ parameter_list|()
 throws|throws
 name|IOException
 throws|,
-name|ClassFormatError
+name|ClassFormatException
 block|{
 name|int
 name|fields_count
@@ -646,7 +646,7 @@ argument_list|)
 expr_stmt|;
 block|}
 comment|/******************** Private utility methods **********************/
-comment|/**    * Check whether the header of the file is ok.    * Of course, this has to be the first action on successive file reads.    * @throws  IOException    * @throws  ClassFormatError    */
+comment|/**    * Check whether the header of the file is ok.    * Of course, this has to be the first action on successive file reads.    * @throws  IOException    * @throws  ClassFormatException    */
 specifier|private
 specifier|final
 name|void
@@ -655,7 +655,7 @@ parameter_list|()
 throws|throws
 name|IOException
 throws|,
-name|ClassFormatError
+name|ClassFormatException
 block|{
 name|int
 name|magic
@@ -673,7 +673,7 @@ name|magic
 condition|)
 throw|throw
 operator|new
-name|ClassFormatError
+name|ClassFormatException
 argument_list|(
 name|file_name
 operator|+
@@ -681,7 +681,7 @@ literal|" is not a Java .class file"
 argument_list|)
 throw|;
 block|}
-comment|/**    * Read information about the interfaces implemented by this class.    * @throws  IOException    * @throws  ClassFormatError    */
+comment|/**    * Read information about the interfaces implemented by this class.    * @throws  IOException    * @throws  ClassFormatException    */
 specifier|private
 specifier|final
 name|void
@@ -690,7 +690,7 @@ parameter_list|()
 throws|throws
 name|IOException
 throws|,
-name|ClassFormatError
+name|ClassFormatException
 block|{
 name|int
 name|interfaces_count
@@ -735,7 +735,7 @@ name|readUnsignedShort
 argument_list|()
 expr_stmt|;
 block|}
-comment|/**    * Read information about the methods of the class.    * @throws  IOException    * @throws  ClassFormatError    */
+comment|/**    * Read information about the methods of the class.    * @throws  IOException    * @throws  ClassFormatException    */
 specifier|private
 specifier|final
 name|void
@@ -744,7 +744,7 @@ parameter_list|()
 throws|throws
 name|IOException
 throws|,
-name|ClassFormatError
+name|ClassFormatException
 block|{
 name|int
 name|methods_count
@@ -792,7 +792,7 @@ name|constant_pool
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**    * Read major and minor version of compiler which created the file.    * @throws  IOException    * @throws  ClassFormatError    */
+comment|/**    * Read major and minor version of compiler which created the file.    * @throws  IOException    * @throws  ClassFormatException    */
 specifier|private
 specifier|final
 name|void
@@ -801,7 +801,7 @@ parameter_list|()
 throws|throws
 name|IOException
 throws|,
-name|ClassFormatError
+name|ClassFormatException
 block|{
 name|minor
 operator|=

@@ -75,7 +75,7 @@ parameter_list|)
 throws|throws
 name|IOException
 throws|,
-name|ClassFormatError
+name|ClassFormatException
 block|{
 name|super
 argument_list|(

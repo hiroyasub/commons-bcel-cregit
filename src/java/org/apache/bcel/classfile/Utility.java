@@ -429,7 +429,7 @@ argument_list|()
 expr_stmt|;
 throw|throw
 operator|new
-name|ClassFormatError
+name|ClassFormatException
 argument_list|(
 literal|"Byte code error: "
 operator|+
@@ -2195,7 +2195,7 @@ index|[]
 name|argv
 parameter_list|)
 throws|throws
-name|ClassFormatError
+name|ClassFormatException
 block|{
 name|StringBuffer
 name|buf
@@ -2254,7 +2254,7 @@ condition|)
 comment|// void can't be a method argument
 throw|throw
 operator|new
-name|ClassFormatError
+name|ClassFormatException
 argument_list|(
 literal|"Invalid type: "
 operator|+
@@ -2295,7 +2295,7 @@ name|toString
 argument_list|()
 return|;
 block|}
-comment|/**    * @param  signature    Method signature    * @return Array of argument types    * @throws  ClassFormatError      */
+comment|/**    * @param  signature    Method signature    * @return Array of argument types    * @throws  ClassFormatException      */
 specifier|public
 specifier|static
 specifier|final
@@ -2307,7 +2307,7 @@ name|String
 name|signature
 parameter_list|)
 throws|throws
-name|ClassFormatError
+name|ClassFormatException
 block|{
 return|return
 name|methodSignatureArgumentTypes
@@ -2318,7 +2318,7 @@ literal|true
 argument_list|)
 return|;
 block|}
-comment|/**    * @param  signature    Method signature    * @param chopit Shorten class names ?    * @return Array of argument types    * @throws  ClassFormatError      */
+comment|/**    * @param  signature    Method signature    * @param chopit Shorten class names ?    * @return Array of argument types    * @throws  ClassFormatException      */
 specifier|public
 specifier|static
 specifier|final
@@ -2333,7 +2333,7 @@ name|boolean
 name|chopit
 parameter_list|)
 throws|throws
-name|ClassFormatError
+name|ClassFormatException
 block|{
 name|ArrayList
 name|vec
@@ -2365,7 +2365,7 @@ literal|'('
 condition|)
 throw|throw
 operator|new
-name|ClassFormatError
+name|ClassFormatException
 argument_list|(
 literal|"Invalid method signature: "
 operator|+
@@ -2422,7 +2422,7 @@ block|{
 comment|// Should never occur
 throw|throw
 operator|new
-name|ClassFormatError
+name|ClassFormatException
 argument_list|(
 literal|"Invalid method signature: "
 operator|+
@@ -2452,7 +2452,7 @@ return|return
 name|types
 return|;
 block|}
-comment|/**    * @param  signature    Method signature    * @return return type of method    * @throws  ClassFormatError      */
+comment|/**    * @param  signature    Method signature    * @return return type of method    * @throws  ClassFormatException      */
 specifier|public
 specifier|static
 specifier|final
@@ -2463,7 +2463,7 @@ name|String
 name|signature
 parameter_list|)
 throws|throws
-name|ClassFormatError
+name|ClassFormatException
 block|{
 return|return
 name|methodSignatureReturnType
@@ -2474,7 +2474,7 @@ literal|true
 argument_list|)
 return|;
 block|}
-comment|/**    * @param  signature    Method signature    * @param chopit Shorten class names ?    * @return return type of method    * @throws  ClassFormatError      */
+comment|/**    * @param  signature    Method signature    * @param chopit Shorten class names ?    * @return return type of method    * @throws  ClassFormatException      */
 specifier|public
 specifier|static
 specifier|final
@@ -2488,7 +2488,7 @@ name|boolean
 name|chopit
 parameter_list|)
 throws|throws
-name|ClassFormatError
+name|ClassFormatException
 block|{
 name|int
 name|index
@@ -2534,7 +2534,7 @@ block|{
 comment|// Should never occur
 throw|throw
 operator|new
-name|ClassFormatError
+name|ClassFormatException
 argument_list|(
 literal|"Invalid method signature: "
 operator|+
@@ -2610,7 +2610,7 @@ literal|null
 argument_list|)
 return|;
 block|}
-comment|/**    * A return­type signature represents the return value from a method.    * It is a series of bytes in the following grammar:    *    *<return_signature> ::=<field_type> | V    *    * The character V indicates that the method returns no value. Otherwise, the    * signature indicates the type of the return value.    * An argument signature represents an argument passed to a method:    *    *<argument_signature> ::=<field_type>    *    * A method signature represents the arguments that the method expects, and    * the value that it returns.    *<method_signature> ::= (<arguments_signature>)<return_signature>    *<arguments_signature>::=<argument_signature>*    *    * This method converts such a string into a Java type declaration like    * `void main(String[])' and throws a `ClassFormatError' when the parsed     * type is invalid.    *    * @param  signature    Method signature    * @param  name         Method name    * @param  access       Method access rights    * @return Java type declaration    * @throws  ClassFormatError      */
+comment|/**    * A return­type signature represents the return value from a method.    * It is a series of bytes in the following grammar:    *    *<return_signature> ::=<field_type> | V    *    * The character V indicates that the method returns no value. Otherwise, the    * signature indicates the type of the return value.    * An argument signature represents an argument passed to a method:    *    *<argument_signature> ::=<field_type>    *    * A method signature represents the arguments that the method expects, and    * the value that it returns.    *<method_signature> ::= (<arguments_signature>)<return_signature>    *<arguments_signature>::=<argument_signature>*    *    * This method converts such a string into a Java type declaration like    * `void main(String[])' and throws a `ClassFormatException' when the parsed     * type is invalid.    *    * @param  signature    Method signature    * @param  name         Method name    * @param  access       Method access rights    * @return Java type declaration    * @throws  ClassFormatException      */
 specifier|public
 specifier|static
 specifier|final
@@ -2633,7 +2633,7 @@ name|LocalVariableTable
 name|vars
 parameter_list|)
 throws|throws
-name|ClassFormatError
+name|ClassFormatException
 block|{
 name|StringBuffer
 name|buf
@@ -2684,7 +2684,7 @@ literal|'('
 condition|)
 throw|throw
 operator|new
-name|ClassFormatError
+name|ClassFormatException
 argument_list|(
 literal|"Invalid method signature: "
 operator|+
@@ -2842,7 +2842,7 @@ block|{
 comment|// Should never occur
 throw|throw
 operator|new
-name|ClassFormatError
+name|ClassFormatException
 argument_list|(
 literal|"Invalid method signature: "
 operator|+
@@ -3098,7 +3098,7 @@ literal|true
 argument_list|)
 return|;
 block|}
-comment|/**    * The field signature represents the value of an argument to a function or     * the value of a variable. It is a series of bytes generated by the     * following grammar:    *    *<PRE>    *<field_signature> ::=<field_type>    *<field_type>      ::=<base_type>|<object_type>|<array_type>    *<base_type>       ::= B|C|D|F|I|J|S|Z    *<object_type>     ::= L<fullclassname>;    *<array_type>      ::= [<field_type>    *    * The meaning of the base types is as follows:    * B byte signed byte    * C char character    * D double double precision IEEE float    * F float single precision IEEE float    * I int integer    * J long long integer    * L<fullclassname>; ... an object of the given class    * S short signed short    * Z boolean true or false    * [<field sig> ... array    *</PRE>    *    * This method converts this string into a Java type declaration such as    * `String[]' and throws a `ClassFormatError' when the parsed type is     * invalid.    *    * @param  signature  Class signature    * @param chopit Flag that determines whether chopping is executed or not    * @return Java type declaration    * @throws ClassFormatError    */
+comment|/**    * The field signature represents the value of an argument to a function or     * the value of a variable. It is a series of bytes generated by the     * following grammar:    *    *<PRE>    *<field_signature> ::=<field_type>    *<field_type>      ::=<base_type>|<object_type>|<array_type>    *<base_type>       ::= B|C|D|F|I|J|S|Z    *<object_type>     ::= L<fullclassname>;    *<array_type>      ::= [<field_type>    *    * The meaning of the base types is as follows:    * B byte signed byte    * C char character    * D double double precision IEEE float    * F float single precision IEEE float    * I int integer    * J long long integer    * L<fullclassname>; ... an object of the given class    * S short signed short    * Z boolean true or false    * [<field sig> ... array    *</PRE>    *    * This method converts this string into a Java type declaration such as    * `String[]' and throws a `ClassFormatException' when the parsed type is     * invalid.    *    * @param  signature  Class signature    * @param chopit Flag that determines whether chopping is executed or not    * @return Java type declaration    * @throws ClassFormatException    */
 specifier|public
 specifier|static
 specifier|final
@@ -3189,7 +3189,7 @@ literal|0
 condition|)
 throw|throw
 operator|new
-name|ClassFormatError
+name|ClassFormatException
 argument_list|(
 literal|"Invalid signature: "
 operator|+
@@ -3331,7 +3331,7 @@ return|;
 default|default  :
 throw|throw
 operator|new
-name|ClassFormatError
+name|ClassFormatException
 argument_list|(
 literal|"Invalid signature: `"
 operator|+
@@ -3351,7 +3351,7 @@ block|{
 comment|// Should never occur
 throw|throw
 operator|new
-name|ClassFormatError
+name|ClassFormatException
 argument_list|(
 literal|"Invalid signature: "
 operator|+
@@ -3784,7 +3784,7 @@ name|String
 name|signature
 parameter_list|)
 throws|throws
-name|ClassFormatError
+name|ClassFormatException
 block|{
 name|int
 name|index
@@ -3804,7 +3804,7 @@ literal|'('
 condition|)
 throw|throw
 operator|new
-name|ClassFormatError
+name|ClassFormatException
 argument_list|(
 literal|"Invalid method signature: "
 operator|+
@@ -3842,7 +3842,7 @@ parameter_list|)
 block|{
 throw|throw
 operator|new
-name|ClassFormatError
+name|ClassFormatException
 argument_list|(
 literal|"Invalid method signature: "
 operator|+
@@ -3862,7 +3862,7 @@ name|String
 name|signature
 parameter_list|)
 throws|throws
-name|ClassFormatError
+name|ClassFormatException
 block|{
 try|try
 block|{
@@ -3967,7 +3967,7 @@ return|;
 default|default:
 throw|throw
 operator|new
-name|ClassFormatError
+name|ClassFormatException
 argument_list|(
 literal|"Invalid method signature: "
 operator|+
@@ -3984,7 +3984,7 @@ parameter_list|)
 block|{
 throw|throw
 operator|new
-name|ClassFormatError
+name|ClassFormatException
 argument_list|(
 literal|"Invalid method signature: "
 operator|+

@@ -207,7 +207,7 @@ name|name
 argument_list|)
 expr_stmt|;
 block|}
-comment|/* Class method reads one attribute from the input data stream.    * This method must not be accessible from the outside.  It is    * called by the Field and Method constructor methods.    *    * @see    Field    * @see    Method    * @param  file Input stream    * @param  constant_pool Array of constants    * @return Attribute    * @throws  IOException    * @throws  ClassFormatError    * @throws InternalError    */
+comment|/* Class method reads one attribute from the input data stream.    * This method must not be accessible from the outside.  It is    * called by the Field and Method constructor methods.    *    * @see    Field    * @see    Method    * @param  file Input stream    * @param  constant_pool Array of constants    * @return Attribute    * @throws  IOException    * @throws  ClassFormatException    */
 specifier|public
 specifier|static
 specifier|final
@@ -223,9 +223,7 @@ parameter_list|)
 throws|throws
 name|IOException
 throws|,
-name|ClassFormatError
-throws|,
-name|InternalError
+name|ClassFormatException
 block|{
 name|ConstantUtf8
 name|c
@@ -610,7 +608,7 @@ default|default:
 comment|// Never reached
 throw|throw
 operator|new
-name|InternalError
+name|IllegalStateException
 argument_list|(
 literal|"Ooops! default case reached."
 argument_list|)

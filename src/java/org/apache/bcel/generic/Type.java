@@ -638,7 +638,7 @@ literal|0
 condition|)
 throw|throw
 operator|new
-name|ClassFormatError
+name|ClassFormatException
 argument_list|(
 literal|"Invalid signature: "
 operator|+
@@ -721,7 +721,7 @@ block|{
 comment|// Should never occur
 throw|throw
 operator|new
-name|ClassFormatError
+name|ClassFormatException
 argument_list|(
 literal|"Invalid method signature: "
 operator|+
@@ -771,7 +771,7 @@ literal|'('
 condition|)
 throw|throw
 operator|new
-name|ClassFormatError
+name|ClassFormatException
 argument_list|(
 literal|"Invalid method signature: "
 operator|+
@@ -826,7 +826,7 @@ block|{
 comment|// Should never occur
 throw|throw
 operator|new
-name|ClassFormatError
+name|ClassFormatException
 argument_list|(
 literal|"Invalid method signature: "
 operator|+

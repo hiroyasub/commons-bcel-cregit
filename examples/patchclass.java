@@ -23,18 +23,6 @@ name|*
 import|;
 end_import
 
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|bcel
-operator|.
-name|Constants
-import|;
-end_import
-
 begin_comment
 comment|/**  * Patch all Utf8 constants in the given class file<em>file</em>.class  * and save the result in _<em>file</em>.class.  *  * Usage: patch<oldstring><newstring> files  *  * @version $Id$  * @author<A HREF="http://www.berlin.de/~markus.dahm/">M. Dahm</A>  */
 end_comment
