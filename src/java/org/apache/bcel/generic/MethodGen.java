@@ -52,7 +52,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**   * Template class for building up a method. This is done by defining exception  * handlers, adding thrown exceptions, local variables and attributes, whereas  * the `LocalVariableTable' and `LineNumberTable' attributes will be set  * automatically for the code. Use stripAttributes() if you don't like this.  *  * While generating code it may be necessary to insert NOP operations. You can  * use the `removeNOPs' method to get rid off them.  * The resulting method object can be obtained via the `getMethod()' method.  *  * @version $Id$  * @author<A HREF="mailto:markus.dahm@berlin.de">M. Dahm</A>  * @author<A HREF="http://www.vmeng.com/beard">Patrick C. Beard</A>  * @see     InstructionList  * @see     Method  */
+comment|/**   * Template class for building up a method. This is done by defining exception  * handlers, adding thrown exceptions, local variables and attributes, whereas  * the `LocalVariableTable' and `LineNumberTable' attributes will be set  * automatically for the code. Use stripAttributes() if you don't like this.  *  * While generating code it may be necessary to insert NOP operations. You can  * use the `removeNOPs' method to get rid off them.  * The resulting method object can be obtained via the `getMethod()' method.  *  * @version $Id$  * @author<A HREF="mailto:markus.dahm@berlin.de">M. Dahm</A>  * @see     InstructionList  * @see     Method  */
 end_comment
 
 begin_class
@@ -1799,7 +1799,7 @@ argument_list|()
 argument_list|)
 return|;
 block|}
-comment|/**    * Add an exception handler, i.e., specify region where a handler is active and an    * instruction where the actual handling is done.    *    * @param start_pc Start of region (inclusive)    * @param end_pc End of region (inclusive)    * @param handler_pc Where handling is done    * @param catch_type fully qualified class name of handled exception or null if any    * exception is handled    * @return new exception handler object    */
+comment|/**    * Add an exception handler, i.e., specify region where a handler is active and an    * instruction where the actual handling is done.    *    * @param start_pc Start of region (inclusive)    * @param end_pc End of region (inclusive)    * @param handler_pc Where handling is done    * @param catch_type class type of handled exception or null if any    * exception is handled    * @return new exception handler object    */
 specifier|public
 name|CodeExceptionGen
 name|addExceptionHandler
