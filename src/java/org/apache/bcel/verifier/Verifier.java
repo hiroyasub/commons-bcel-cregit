@@ -1064,7 +1064,7 @@ name|out
 operator|.
 name|println
 argument_list|(
-literal|"Pass 3a, method "
+literal|"Pass 3a, method number "
 operator|+
 name|i
 operator|+
