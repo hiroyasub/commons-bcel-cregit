@@ -38,7 +38,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * This class is derived from<em>Attribute</em> and represents a reference  * to a<a href="http://www.inf.fu-berlin.de/~bokowski/pmgjava/index.html">PMG</a>  * attribute.  *  * @version $Id$  * @author<A HREF="mailto:markus.dahm@berlin.de">M. Dahm</A>  * @see     Attribute  */
+comment|/**  * This class is derived from<em>Attribute</em> and represents a reference  * to a<a href="http://www.inf.fu-berlin.de/~bokowski/pmgjava/index.html">PMG</a>  * attribute.  *  * @version $Id$  * @author<A HREF="mailto:m.dahm@gmx.de">M. Dahm</A>  * @see     Attribute  */
 end_comment
 
 begin_class

@@ -16,7 +16,7 @@ comment|/* ==================================================================== 
 end_comment
 
 begin_comment
-comment|/**   * LDC2_W - Push long or double from constant pool  *  *<PRE>Stack: ... -&gt; ..., item.word1, item.word2</PRE>  *  * @version $Id$  * @author<A HREF="mailto:markus.dahm@berlin.de">M. Dahm</A>  */
+comment|/**   * LDC2_W - Push long or double from constant pool  *  *<PRE>Stack: ... -&gt; ..., item.word1, item.word2</PRE>  *  * @version $Id$  * @author<A HREF="mailto:m.dahm@gmx.de">M. Dahm</A>  */
 end_comment
 
 begin_class

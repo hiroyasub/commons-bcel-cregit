@@ -16,7 +16,7 @@ comment|/* ==================================================================== 
 end_comment
 
 begin_comment
-comment|/**  * Denote entity that has both name and type. This is true for local variables,  * methods and fields.  *  * @version $Id$  * @author<A HREF="mailto:markus.dahm@berlin.de">M. Dahm</A>  */
+comment|/**  * Denote entity that has both name and type. This is true for local variables,  * methods and fields.  *  * @version $Id$  * @author<A HREF="mailto:m.dahm@gmx.de">M. Dahm</A>  */
 end_comment
 
 begin_interface

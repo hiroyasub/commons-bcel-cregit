@@ -16,7 +16,7 @@ comment|/* ==================================================================== 
 end_comment
 
 begin_comment
-comment|/**  * Denote family of instructions that allocates space in the heap.  *  * @version $Id$  * @author<A HREF="mailto:markus.dahm@berlin.de">M. Dahm</A>  */
+comment|/**  * Denote family of instructions that allocates space in the heap.  *  * @version $Id$  * @author<A HREF="mailto:m.dahm@gmx.de">M. Dahm</A>  */
 end_comment
 
 begin_interface

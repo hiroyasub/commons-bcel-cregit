@@ -28,7 +28,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**   * CHECKCAST - Check whether object is of given type  *<PRE>Stack: ..., objectref -&gt; ..., objectref</PRE>  *  * @version $Id$  * @author<A HREF="mailto:markus.dahm@berlin.de">M. Dahm</A>  */
+comment|/**   * CHECKCAST - Check whether object is of given type  *<PRE>Stack: ..., objectref -&gt; ..., objectref</PRE>  *  * @version $Id$  * @author<A HREF="mailto:m.dahm@gmx.de">M. Dahm</A>  */
 end_comment
 
 begin_class

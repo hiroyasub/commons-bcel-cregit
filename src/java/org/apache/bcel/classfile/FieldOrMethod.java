@@ -38,7 +38,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**   * Abstract super class for fields and methods.  *  * @version $Id$  * @author<A HREF="mailto:markus.dahm@berlin.de">M. Dahm</A>  */
+comment|/**   * Abstract super class for fields and methods.  *  * @version $Id$  * @author<A HREF="mailto:m.dahm@gmx.de">M. Dahm</A>  */
 end_comment
 
 begin_class

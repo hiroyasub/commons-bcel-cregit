@@ -145,6 +145,8 @@ name|VerificationResult
 name|do_verify
 parameter_list|()
 block|{
+try|try
+block|{
 if|if
 condition|(
 name|myOwner
@@ -375,6 +377,27 @@ name|VerificationResult
 operator|.
 name|VR_NOTYET
 return|;
+block|}
+block|}
+catch|catch
+parameter_list|(
+name|ClassNotFoundException
+name|e
+parameter_list|)
+block|{
+comment|// FIXME: maybe not the best way to handle this
+throw|throw
+operator|new
+name|AssertionViolatedException
+argument_list|(
+literal|"Missing class: "
+operator|+
+name|e
+operator|.
+name|toString
+argument_list|()
+argument_list|)
+throw|;
 block|}
 block|}
 comment|/** 	 * These are the checks that could be done in pass 2 but are delayed to pass 3 	 * for performance reasons. Also, these checks need access to the code array 	 * of the Code attribute of a Method so it's okay to perform them here. 	 * Also see the description of the do_verify() method. 	 * 	 * @throws ClassConstraintException if the verification fails. 	 * @see #do_verify() 	 */
@@ -1160,6 +1183,8 @@ name|void
 name|pass3StaticInstructionOperandsChecks
 parameter_list|()
 block|{
+try|try
+block|{
 comment|// When building up the InstructionList, BCEL has already done all those checks
 comment|// mentioned in The Java Virtual Machine Specification, Second Edition, as
 comment|// "static constraints on the operands of instructions in the code array".
@@ -1312,6 +1337,27 @@ argument_list|()
 expr_stmt|;
 block|}
 block|}
+catch|catch
+parameter_list|(
+name|ClassNotFoundException
+name|e
+parameter_list|)
+block|{
+comment|// FIXME: maybe not the best way to handle this
+throw|throw
+operator|new
+name|AssertionViolatedException
+argument_list|(
+literal|"Missing class: "
+operator|+
+name|e
+operator|.
+name|toString
+argument_list|()
+argument_list|)
+throw|;
+block|}
+block|}
 comment|/** A small utility method returning if a given int i is in the given int[] ints. */
 specifier|private
 specifier|static
@@ -1410,6 +1456,8 @@ name|int
 name|max_locals
 parameter_list|()
 block|{
+try|try
+block|{
 return|return
 name|Repository
 operator|.
@@ -1433,6 +1481,27 @@ operator|.
 name|getMaxLocals
 argument_list|()
 return|;
+block|}
+catch|catch
+parameter_list|(
+name|ClassNotFoundException
+name|e
+parameter_list|)
+block|{
+comment|// FIXME: maybe not the best way to handle this
+throw|throw
+operator|new
+name|AssertionViolatedException
+argument_list|(
+literal|"Missing class: "
+operator|+
+name|e
+operator|.
+name|toString
+argument_list|()
+argument_list|)
+throw|;
+block|}
 block|}
 comment|/** 		 * A utility method to always raise an exeption. 		 */
 specifier|private
@@ -1768,6 +1837,8 @@ name|FieldInstruction
 name|o
 parameter_list|)
 block|{
+try|try
+block|{
 name|indexValid
 argument_list|(
 name|o
@@ -1984,6 +2055,27 @@ argument_list|)
 expr_stmt|;
 block|}
 comment|/* TODO: Check for access modifiers here. */
+block|}
+block|}
+catch|catch
+parameter_list|(
+name|ClassNotFoundException
+name|e
+parameter_list|)
+block|{
+comment|// FIXME: maybe not the best way to handle this
+throw|throw
+operator|new
+name|AssertionViolatedException
+argument_list|(
+literal|"Missing class: "
+operator|+
+name|e
+operator|.
+name|toString
+argument_list|()
+argument_list|)
+throw|;
 block|}
 block|}
 comment|/** Checks if the constraints of operands of the said instruction(s) are satisfied. */
@@ -4063,6 +4155,8 @@ name|PUTSTATIC
 name|o
 parameter_list|)
 block|{
+try|try
+block|{
 name|String
 name|field_name
 init|=
@@ -4319,6 +4413,27 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
+catch|catch
+parameter_list|(
+name|ClassNotFoundException
+name|e
+parameter_list|)
+block|{
+comment|// FIXME: maybe not the best way to handle this
+throw|throw
+operator|new
+name|AssertionViolatedException
+argument_list|(
+literal|"Missing class: "
+operator|+
+name|e
+operator|.
+name|toString
+argument_list|()
+argument_list|)
+throw|;
+block|}
+block|}
 comment|/** Checks if the constraints of operands of the said instruction(s) are satisfied. */
 specifier|public
 name|void
@@ -4327,6 +4442,8 @@ parameter_list|(
 name|GETSTATIC
 name|o
 parameter_list|)
+block|{
+try|try
 block|{
 name|String
 name|field_name
@@ -4452,6 +4569,27 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
+catch|catch
+parameter_list|(
+name|ClassNotFoundException
+name|e
+parameter_list|)
+block|{
+comment|// FIXME: maybe not the best way to handle this
+throw|throw
+operator|new
+name|AssertionViolatedException
+argument_list|(
+literal|"Missing class: "
+operator|+
+name|e
+operator|.
+name|toString
+argument_list|()
+argument_list|)
+throw|;
+block|}
+block|}
 comment|/* Checks if the constraints of operands of the said instruction(s) are satisfied. */
 comment|//public void visitPUTFIELD(PUTFIELD o){
 comment|// for performance reasons done in Pass 3b
@@ -4468,6 +4606,8 @@ parameter_list|(
 name|INVOKEINTERFACE
 name|o
 parameter_list|)
+block|{
+try|try
 block|{
 comment|// INVOKEINTERFACE is a LoadClass; the Class where the referenced method is declared in,
 comment|// is therefore resolved/verified.
@@ -4662,6 +4802,27 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
+catch|catch
+parameter_list|(
+name|ClassNotFoundException
+name|e
+parameter_list|)
+block|{
+comment|// FIXME: maybe not the best way to handle this
+throw|throw
+operator|new
+name|AssertionViolatedException
+argument_list|(
+literal|"Missing class: "
+operator|+
+name|e
+operator|.
+name|toString
+argument_list|()
+argument_list|)
+throw|;
+block|}
+block|}
 comment|/** Checks if the constraints of operands of the said instruction(s) are satisfied. */
 specifier|public
 name|void
@@ -4670,6 +4831,8 @@ parameter_list|(
 name|INVOKESPECIAL
 name|o
 parameter_list|)
+block|{
+try|try
 block|{
 comment|// INVOKESPECIAL is a LoadClass; the Class where the referenced method is declared in,
 comment|// is therefore resolved/verified.
@@ -5088,6 +5251,27 @@ block|}
 block|}
 block|}
 block|}
+catch|catch
+parameter_list|(
+name|ClassNotFoundException
+name|e
+parameter_list|)
+block|{
+comment|// FIXME: maybe not the best way to handle this
+throw|throw
+operator|new
+name|AssertionViolatedException
+argument_list|(
+literal|"Missing class: "
+operator|+
+name|e
+operator|.
+name|toString
+argument_list|()
+argument_list|)
+throw|;
+block|}
+block|}
 comment|/** Checks if the constraints of operands of the said instruction(s) are satisfied. */
 specifier|public
 name|void
@@ -5096,6 +5280,8 @@ parameter_list|(
 name|INVOKESTATIC
 name|o
 parameter_list|)
+block|{
+try|try
 block|{
 comment|// INVOKESTATIC is a LoadClass; the Class where the referenced method is declared in,
 comment|// is therefore resolved/verified.
@@ -5296,6 +5482,27 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
+catch|catch
+parameter_list|(
+name|ClassNotFoundException
+name|e
+parameter_list|)
+block|{
+comment|// FIXME: maybe not the best way to handle this
+throw|throw
+operator|new
+name|AssertionViolatedException
+argument_list|(
+literal|"Missing class: "
+operator|+
+name|e
+operator|.
+name|toString
+argument_list|()
+argument_list|)
+throw|;
+block|}
+block|}
 comment|/** Checks if the constraints of operands of the said instruction(s) are satisfied. */
 specifier|public
 name|void
@@ -5304,6 +5511,8 @@ parameter_list|(
 name|INVOKEVIRTUAL
 name|o
 parameter_list|)
+block|{
+try|try
 block|{
 comment|// INVOKEVIRTUAL is a LoadClass; the Class where the referenced method is declared in,
 comment|// is therefore resolved/verified.
@@ -5499,6 +5708,27 @@ operator|+
 literal|"' is an interface, but not a class as expected."
 argument_list|)
 expr_stmt|;
+block|}
+block|}
+catch|catch
+parameter_list|(
+name|ClassNotFoundException
+name|e
+parameter_list|)
+block|{
+comment|// FIXME: maybe not the best way to handle this
+throw|throw
+operator|new
+name|AssertionViolatedException
+argument_list|(
+literal|"Missing class: "
+operator|+
+name|e
+operator|.
+name|toString
+argument_list|()
+argument_list|)
+throw|;
 block|}
 block|}
 comment|// WIDE stuff is BCEL-internal and cannot be checked here.

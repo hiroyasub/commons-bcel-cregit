@@ -16,7 +16,7 @@ comment|/* ==================================================================== 
 end_comment
 
 begin_comment
-comment|/**   * IF_ICMPLT - Branch if int comparison succeeds  *  *<PRE>Stack: ..., value1, value2 -&gt; ...</PRE>  *  * @version $Id$  * @author<A HREF="mailto:markus.dahm@berlin.de">M. Dahm</A>  */
+comment|/**   * IF_ICMPLT - Branch if int comparison succeeds  *  *<PRE>Stack: ..., value1, value2 -&gt; ...</PRE>  *  * @version $Id$  * @author<A HREF="mailto:m.dahm@gmx.de">M. Dahm</A>  */
 end_comment
 
 begin_class

@@ -52,7 +52,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**   * Abstract super class for all possible java types, namely basic types  * such as int, object types like String and array types, e.g. int[]  *  * @version $Id$  * @author<A HREF="mailto:markus.dahm@berlin.de">M. Dahm</A>  */
+comment|/**   * Abstract super class for all possible java types, namely basic types  * such as int, object types like String and array types, e.g. int[]  *  * @version $Id$  * @author<A HREF="mailto:m.dahm@gmx.de">M. Dahm</A>  */
 end_comment
 
 begin_class

@@ -16,7 +16,7 @@ comment|/* ==================================================================== 
 end_comment
 
 begin_comment
-comment|/**  * Denote that a class targets InstructionHandles within an InstructionList. Namely  * the following implementers:  *  * @see BranchHandle  * @see LocalVariableGen  * @see CodeExceptionGen  * @version $Id$  * @author<A HREF="mailto:markus.dahm@berlin.de">M. Dahm</A>  */
+comment|/**  * Denote that a class targets InstructionHandles within an InstructionList. Namely  * the following implementers:  *  * @see BranchHandle  * @see LocalVariableGen  * @see CodeExceptionGen  * @version $Id$  * @author<A HREF="mailto:m.dahm@gmx.de">M. Dahm</A>  */
 end_comment
 
 begin_interface

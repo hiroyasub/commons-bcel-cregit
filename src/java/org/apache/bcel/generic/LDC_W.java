@@ -40,7 +40,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**   * LDC_W - Push item from constant pool (wide index)  *  *<PRE>Stack: ... -&gt; ..., item.word1, item.word2</PRE>  *  * @version $Id$  * @author<A HREF="mailto:markus.dahm@berlin.de">M. Dahm</A>  */
+comment|/**   * LDC_W - Push item from constant pool (wide index)  *  *<PRE>Stack: ... -&gt; ..., item.word1, item.word2</PRE>  *  * @version $Id$  * @author<A HREF="mailto:m.dahm@gmx.de">M. Dahm</A>  */
 end_comment
 
 begin_class

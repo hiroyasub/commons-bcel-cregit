@@ -40,7 +40,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**   * Utility class implementing a (typesafe) queue of JavaClass  * objects.  *  * @version $Id$  * @author<A HREF="mailto:markus.dahm@berlin.de">M. Dahm</A>   * @see ClassVector */
+comment|/**   * Utility class implementing a (typesafe) queue of JavaClass  * objects.  *  * @version $Id$  * @author<A HREF="mailto:m.dahm@gmx.de">M. Dahm</A>   * @see ClassVector */
 end_comment
 
 begin_class

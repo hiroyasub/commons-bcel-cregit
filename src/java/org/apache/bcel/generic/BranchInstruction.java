@@ -40,7 +40,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**   * Abstract super class for branching instructions like GOTO, IFEQ, etc..  * Branch instructions may have a variable length, namely GOTO, JSR,   * LOOKUPSWITCH and TABLESWITCH.  *  * @see InstructionList  * @version $Id$  * @author<A HREF="mailto:markus.dahm@berlin.de">M. Dahm</A>  */
+comment|/**   * Abstract super class for branching instructions like GOTO, IFEQ, etc..  * Branch instructions may have a variable length, namely GOTO, JSR,   * LOOKUPSWITCH and TABLESWITCH.  *  * @see InstructionList  * @version $Id$  * @author<A HREF="mailto:m.dahm@gmx.de">M. Dahm</A>  */
 end_comment
 
 begin_class

@@ -17,27 +17,13 @@ end_comment
 
 begin_import
 import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|bcel
-operator|.
-name|verifier
-operator|.
-name|*
-import|;
-end_import
-
-begin_import
-import|import
 name|javax
 operator|.
 name|swing
 operator|.
 name|event
 operator|.
-name|*
+name|ListDataEvent
 import|;
 end_import
 

@@ -16,7 +16,7 @@ comment|/* ==================================================================== 
 end_comment
 
 begin_comment
-comment|/**   * DUP - Duplicate top operand stack word  *<PRE>Stack: ..., word -&gt; ..., word, word</PRE>  *  * @version $Id$  * @author<A HREF="mailto:markus.dahm@berlin.de">M. Dahm</A>  */
+comment|/**   * DUP - Duplicate top operand stack word  *<PRE>Stack: ..., word -&gt; ..., word, word</PRE>  *  * @version $Id$  * @author<A HREF="mailto:m.dahm@gmx.de">M. Dahm</A>  */
 end_comment
 
 begin_class

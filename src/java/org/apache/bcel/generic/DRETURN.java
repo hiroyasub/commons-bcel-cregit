@@ -16,7 +16,7 @@ comment|/* ==================================================================== 
 end_comment
 
 begin_comment
-comment|/**   * DRETURN -  Return double from method  *<PRE>Stack: ..., value.word1, value.word2 -&gt;&lt;empty&gt;</PRE>  *  * @version $Id$  * @author<A HREF="mailto:markus.dahm@berlin.de">M. Dahm</A>  */
+comment|/**   * DRETURN -  Return double from method  *<PRE>Stack: ..., value.word1, value.word2 -&gt;&lt;empty&gt;</PRE>  *  * @version $Id$  * @author<A HREF="mailto:m.dahm@gmx.de">M. Dahm</A>  */
 end_comment
 
 begin_class

@@ -19,20 +19,6 @@ end_comment
 
 begin_import
 import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|bcel
-operator|.
-name|generic
-operator|.
-name|InstructionHandle
-import|;
-end_import
-
-begin_import
-import|import
 name|java
 operator|.
 name|util
@@ -43,11 +29,15 @@ end_import
 
 begin_import
 import|import
-name|java
+name|org
 operator|.
-name|util
+name|apache
 operator|.
-name|Iterator
+name|bcel
+operator|.
+name|generic
+operator|.
+name|InstructionHandle
 import|;
 end_import
 

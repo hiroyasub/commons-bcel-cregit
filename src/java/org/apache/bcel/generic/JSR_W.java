@@ -40,7 +40,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**   * JSR_W - Jump to subroutine  *  * @version $Id$  * @author<A HREF="mailto:markus.dahm@berlin.de">M. Dahm</A>  */
+comment|/**   * JSR_W - Jump to subroutine  *  * @version $Id$  * @author<A HREF="mailto:m.dahm@gmx.de">M. Dahm</A>  */
 end_comment
 
 begin_class

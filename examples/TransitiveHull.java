@@ -98,7 +98,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Find all classes referenced by given start class and all classes  * referenced by those and so on. In other words: Compute the transitive  * hull of classes used by a given class. This is done by checking all  * ConstantClass entries and all method and field signatures.<br> This  * may be useful in order to put all class files of an application  * into a single JAR file, e.g..  *<p>  * It fails however in the presence of reflexive code aka introspection.  *<p>  * You'll need Apache's regular expression library supplied together  * with BCEL to use this class.  *  * @version $Id$  * @author<A HREF="mailto:markus.dahm@berlin.de">M. Dahm</A>  */
+comment|/**  * Find all classes referenced by given start class and all classes  * referenced by those and so on. In other words: Compute the transitive  * hull of classes used by a given class. This is done by checking all  * ConstantClass entries and all method and field signatures.<br> This  * may be useful in order to put all class files of an application  * into a single JAR file, e.g..  *<p>  * It fails however in the presence of reflexive code aka introspection.  *<p>  * You'll need Apache's regular expression library supplied together  * with BCEL to use this class.  *  * @version $Id$  * @author<A HREF="mailto:m.dahm@gmx.de">M. Dahm</A>  */
 end_comment
 
 begin_class
@@ -116,6 +116,27 @@ name|classfile
 operator|.
 name|EmptyVisitor
 block|{
+specifier|private
+specifier|static
+class|class
+name|LookupFailure
+extends|extends
+name|RuntimeException
+block|{
+specifier|public
+name|LookupFailure
+parameter_list|(
+name|String
+name|msg
+parameter_list|)
+block|{
+name|super
+argument_list|(
+name|msg
+argument_list|)
+expr_stmt|;
+block|}
+block|}
 specifier|private
 name|JavaClass
 name|_class
@@ -363,6 +384,8 @@ argument_list|)
 expr_stmt|;
 return|return;
 block|}
+try|try
+block|{
 name|JavaClass
 name|clazz
 init|=
@@ -375,10 +398,6 @@ argument_list|)
 decl_stmt|;
 if|if
 condition|(
-name|clazz
-operator|!=
-literal|null
-operator|&&
 name|_set
 operator|.
 name|add
@@ -394,6 +413,26 @@ argument_list|(
 name|clazz
 argument_list|)
 expr_stmt|;
+block|}
+block|}
+catch|catch
+parameter_list|(
+name|ClassNotFoundException
+name|e
+parameter_list|)
+block|{
+throw|throw
+operator|new
+name|LookupFailure
+argument_list|(
+literal|"Missing class: "
+operator|+
+name|e
+operator|.
+name|toString
+argument_list|()
+argument_list|)
+throw|;
 block|}
 block|}
 specifier|public

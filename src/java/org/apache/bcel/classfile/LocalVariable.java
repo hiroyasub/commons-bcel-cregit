@@ -38,7 +38,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * This class represents a local variable within a method. It contains its  * scope, name, signature and index on the method's frame.  *  * @version $Id$  * @author<A HREF="mailto:markus.dahm@berlin.de">M. Dahm</A>  * @see     LocalVariableTable  */
+comment|/**  * This class represents a local variable within a method. It contains its  * scope, name, signature and index on the method's frame.  *  * @version $Id$  * @author<A HREF="mailto:m.dahm@gmx.de">M. Dahm</A>  * @see     LocalVariableTable  */
 end_comment
 
 begin_class

@@ -40,7 +40,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**   * NEWARRAY -  Create new array of basic type (int, short, ...)  *<PRE>Stack: ..., count -&gt; ..., arrayref</PRE>  * type must be one of T_INT, T_SHORT, ...  *   * @version $Id$  * @author<A HREF="mailto:markus.dahm@berlin.de">M. Dahm</A>  */
+comment|/**   * NEWARRAY -  Create new array of basic type (int, short, ...)  *<PRE>Stack: ..., count -&gt; ..., arrayref</PRE>  * type must be one of T_INT, T_SHORT, ...  *   * @version $Id$  * @author<A HREF="mailto:m.dahm@gmx.de">M. Dahm</A>  */
 end_comment
 
 begin_class

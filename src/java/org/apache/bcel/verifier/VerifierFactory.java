@@ -90,10 +90,6 @@ name|String
 name|fully_qualified_classname
 parameter_list|)
 block|{
-name|fully_qualified_classname
-operator|=
-name|fully_qualified_classname
-expr_stmt|;
 name|Verifier
 name|v
 init|=

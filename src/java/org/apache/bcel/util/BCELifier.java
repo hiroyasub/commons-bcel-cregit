@@ -78,7 +78,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**   * This class takes a given JavaClass object and converts it to a  * Java program that creates that very class using BCEL. This  * gives new users of BCEL a useful example showing how things  * are done with BCEL. It does not cover all features of BCEL,  * but tries to mimic hand-written code as close as possible.  *  * @version $Id$  * @author<A HREF="mailto:markus.dahm@berlin.de">M. Dahm</A>   */
+comment|/**   * This class takes a given JavaClass object and converts it to a  * Java program that creates that very class using BCEL. This  * gives new users of BCEL a useful example showing how things  * are done with BCEL. It does not cover all features of BCEL,  * but tries to mimic hand-written code as close as possible.  *  * @version $Id$  * @author<A HREF="mailto:m.dahm@gmx.de">M. Dahm</A>   */
 end_comment
 
 begin_class

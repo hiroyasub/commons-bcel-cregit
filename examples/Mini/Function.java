@@ -6,7 +6,7 @@ package|;
 end_package
 
 begin_comment
-comment|/**  * Represents a function declaration and its arguments. Type information is contained  * in the ASTIdent fields.  *  * @version $Id$  * @author<A HREF="http://www.berlin.de/~markus.dahm/">M. Dahm</A>  */
+comment|/**  * Represents a function declaration and its arguments. Type information is contained  * in the ASTIdent fields.  *  * @version $Id$  * @author<A HREF="mailto:m.dahm@gmx.de">M. Dahm</A>  */
 end_comment
 
 begin_class

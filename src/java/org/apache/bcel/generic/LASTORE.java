@@ -16,7 +16,7 @@ comment|/* ==================================================================== 
 end_comment
 
 begin_comment
-comment|/**   * LASTORE -  Store into long array  *<PRE>Stack: ..., arrayref, index, value.word1, value.word2 -&gt; ...</PRE>  *  * @version $Id$  * @author<A HREF="mailto:markus.dahm@berlin.de">M. Dahm</A>  */
+comment|/**   * LASTORE -  Store into long array  *<PRE>Stack: ..., arrayref, index, value.word1, value.word2 -&gt; ...</PRE>  *  * @version $Id$  * @author<A HREF="mailto:m.dahm@gmx.de">M. Dahm</A>  */
 end_comment
 
 begin_class

@@ -54,7 +54,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**   * Denotes reference such as java.lang.String.  *  * @version $Id$  * @author<A HREF="mailto:markus.dahm@berlin.de">M. Dahm</A>  */
+comment|/**   * Denotes reference such as java.lang.String.  *  * @version $Id$  * @author<A HREF="mailto:m.dahm@gmx.de">M. Dahm</A>  */
 end_comment
 
 begin_class
@@ -174,38 +174,7 @@ name|boolean
 name|referencesClass
 parameter_list|()
 block|{
-name|JavaClass
-name|jc
-init|=
-name|Repository
-operator|.
-name|lookupClass
-argument_list|(
-name|class_name
-argument_list|)
-decl_stmt|;
-if|if
-condition|(
-name|jc
-operator|==
-literal|null
-condition|)
-return|return
-literal|false
-return|;
-else|else
-return|return
-name|jc
-operator|.
-name|isClass
-argument_list|()
-return|;
-block|}
-comment|/**    * If "this" doesn't reference an interface, it references a class    * or a non-existant entity.    */
-specifier|public
-name|boolean
-name|referencesInterface
-parameter_list|()
+try|try
 block|{
 name|JavaClass
 name|jc
@@ -217,16 +186,42 @@ argument_list|(
 name|class_name
 argument_list|)
 decl_stmt|;
-if|if
-condition|(
+return|return
 name|jc
-operator|==
-literal|null
-condition|)
+operator|.
+name|isClass
+argument_list|()
+return|;
+block|}
+catch|catch
+parameter_list|(
+name|ClassNotFoundException
+name|e
+parameter_list|)
+block|{
 return|return
 literal|false
 return|;
-else|else
+block|}
+block|}
+comment|/**    * If "this" doesn't reference an interface, it references a class    * or a non-existant entity.    */
+specifier|public
+name|boolean
+name|referencesInterface
+parameter_list|()
+block|{
+try|try
+block|{
+name|JavaClass
+name|jc
+init|=
+name|Repository
+operator|.
+name|lookupClass
+argument_list|(
+name|class_name
+argument_list|)
+decl_stmt|;
 return|return
 operator|!
 name|jc
@@ -235,6 +230,18 @@ name|isClass
 argument_list|()
 return|;
 block|}
+catch|catch
+parameter_list|(
+name|ClassNotFoundException
+name|e
+parameter_list|)
+block|{
+return|return
+literal|false
+return|;
+block|}
+block|}
+comment|/**    * Return true if this type is a subclass of given ObjectType.    * @throws ClassNotFoundException if any of this class's superclasses    *  can't be found    */
 specifier|public
 name|boolean
 name|subclassOf
@@ -242,6 +249,8 @@ parameter_list|(
 name|ObjectType
 name|superclass
 parameter_list|)
+throws|throws
+name|ClassNotFoundException
 block|{
 if|if
 condition|(
@@ -273,7 +282,7 @@ name|class_name
 argument_list|)
 return|;
 block|}
-comment|/**    * Java Virtual Machine Specification edition 2, § 5.4.4 Access Control    */
+comment|/**    * Java Virtual Machine Specification edition 2, § 5.4.4 Access Control    * @throws ClassNotFoundException if the class referenced by this type    *   can't be found    */
 specifier|public
 name|boolean
 name|accessibleTo
@@ -281,6 +290,8 @@ parameter_list|(
 name|ObjectType
 name|accessor
 parameter_list|)
+throws|throws
+name|ClassNotFoundException
 block|{
 name|JavaClass
 name|jc

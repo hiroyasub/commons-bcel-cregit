@@ -16,7 +16,7 @@ comment|/* ==================================================================== 
 end_comment
 
 begin_comment
-comment|/**  * Denotes an unparameterized instruction to produce a value on top of the stack,  * such as ILOAD, LDC, SIPUSH, DUP, ICONST, etc.  *  * @version $Id$  * @author<A HREF="mailto:markus.dahm@berlin.de">M. Dahm</A>   * @see ILOAD  * @see ICONST  * @see LDC  * @see DUP  * @see SIPUSH  * @see GETSTATIC  */
+comment|/**  * Denotes an unparameterized instruction to produce a value on top of the stack,  * such as ILOAD, LDC, SIPUSH, DUP, ICONST, etc.  *  * @version $Id$  * @author<A HREF="mailto:m.dahm@gmx.de">M. Dahm</A>   * @see ILOAD  * @see ICONST  * @see LDC  * @see DUP  * @see SIPUSH  * @see GETSTATIC  */
 end_comment
 
 begin_interface

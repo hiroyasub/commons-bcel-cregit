@@ -16,7 +16,7 @@ comment|/* ==================================================================== 
 end_comment
 
 begin_comment
-comment|/**  * Unknown (non-standard) attributes may be read via user-defined factory  * objects that can be registered with the Attribute.addAttributeReader  * method. These factory objects should implement this interface.   * @see Attribute  * @version $Id$  * @author<A HREF="mailto:markus.dahm@berlin.de">M. Dahm</A>  */
+comment|/**  * Unknown (non-standard) attributes may be read via user-defined factory  * objects that can be registered with the Attribute.addAttributeReader  * method. These factory objects should implement this interface.   * @see Attribute  * @version $Id$  * @author<A HREF="mailto:m.dahm@gmx.de">M. Dahm</A>  */
 end_comment
 
 begin_interface

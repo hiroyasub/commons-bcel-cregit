@@ -40,7 +40,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**   * Select - Abstract super class for LOOKUPSWITCH and TABLESWITCH instructions.  *  * @version $Id$  * @author<A HREF="mailto:markus.dahm@berlin.de">M. Dahm</A>  * @see LOOKUPSWITCH  * @see TABLESWITCH  * @see InstructionList  */
+comment|/**   * Select - Abstract super class for LOOKUPSWITCH and TABLESWITCH instructions.  *  * @version $Id$  * @author<A HREF="mailto:m.dahm@gmx.de">M. Dahm</A>  * @see LOOKUPSWITCH  * @see TABLESWITCH  * @see InstructionList  */
 end_comment
 
 begin_class

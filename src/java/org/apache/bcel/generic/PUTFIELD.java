@@ -40,7 +40,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**   * PUTFIELD - Put field in object  *<PRE>Stack: ..., objectref, value -&gt; ...</PRE>  * OR  *<PRE>Stack: ..., objectref, value.word1, value.word2 -&gt; ...</PRE>  *  * @version $Id$  * @author<A HREF="mailto:markus.dahm@berlin.de">M. Dahm</A>  */
+comment|/**   * PUTFIELD - Put field in object  *<PRE>Stack: ..., objectref, value -&gt; ...</PRE>  * OR  *<PRE>Stack: ..., objectref, value.word1, value.word2 -&gt; ...</PRE>  *  * @version $Id$  * @author<A HREF="mailto:m.dahm@gmx.de">M. Dahm</A>  */
 end_comment
 
 begin_class

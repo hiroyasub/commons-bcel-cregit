@@ -52,7 +52,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Read class file(s) and examine all of its methods, determining the  * maximum stack depth used by analyzing control flow.  *  * @version $Id$  * @author<A HREF="http://www.berlin.de/~markus.dahm/">M. Dahm</A>  */
+comment|/**  * Read class file(s) and examine all of its methods, determining the  * maximum stack depth used by analyzing control flow.  *  * @version $Id$  * @author<A HREF="mailto:m.dahm@gmx.de">M. Dahm</A>  */
 end_comment
 
 begin_class

@@ -28,7 +28,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**   * ANEWARRAY -  Create new array of references  *<PRE>Stack: ..., count -&gt; ..., arrayref</PRE>  *  * @version $Id$  * @author<A HREF="mailto:markus.dahm@berlin.de">M. Dahm</A>  */
+comment|/**   * ANEWARRAY -  Create new array of references  *<PRE>Stack: ..., count -&gt; ..., arrayref</PRE>  *  * @version $Id$  * @author<A HREF="mailto:m.dahm@gmx.de">M. Dahm</A>  */
 end_comment
 
 begin_class

@@ -38,7 +38,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**   * Abstract super class for Fieldref and Methodref constants.  *  * @version $Id$  * @author<A HREF="mailto:markus.dahm@berlin.de">M. Dahm</A>  * @see     ConstantFieldref  * @see     ConstantMethodref  * @see     ConstantInterfaceMethodref  */
+comment|/**   * Abstract super class for Fieldref and Methodref constants.  *  * @version $Id$  * @author<A HREF="mailto:m.dahm@gmx.de">M. Dahm</A>  * @see     ConstantFieldref  * @see     ConstantMethodref  * @see     ConstantInterfaceMethodref  */
 end_comment
 
 begin_class

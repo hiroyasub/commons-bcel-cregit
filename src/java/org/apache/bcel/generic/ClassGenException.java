@@ -16,7 +16,7 @@ comment|/* ==================================================================== 
 end_comment
 
 begin_comment
-comment|/**   * Thrown on internal errors. Extends RuntimeException so it hasn't to be declared  * in the throws clause every time.  *  * @version $Id$  * @author<A HREF="mailto:markus.dahm@berlin.de">M. Dahm</A>  */
+comment|/**   * Thrown on internal errors. Extends RuntimeException so it hasn't to be declared  * in the throws clause every time.  *  * @version $Id$  * @author<A HREF="mailto:m.dahm@gmx.de">M. Dahm</A>  */
 end_comment
 
 begin_class

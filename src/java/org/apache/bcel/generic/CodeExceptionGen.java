@@ -23,26 +23,14 @@ name|apache
 operator|.
 name|bcel
 operator|.
-name|Constants
-import|;
-end_import
-
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|bcel
-operator|.
 name|classfile
 operator|.
-name|*
+name|CodeException
 import|;
 end_import
 
 begin_comment
-comment|/**   * This class represents an exception handler, i.e., specifies the  region where  * a handler is active and an instruction where the actual handling is done.  * pool as parameters. Opposed to the JVM specification the end of the handled  * region is set to be inclusive, i.e. all instructions between start and end  * are protected including the start and end instructions (handles) themselves.  * The end of the region is automatically mapped to be exclusive when calling  * getCodeException(), i.e., there is no difference semantically.  *  * @version $Id$  * @author<A HREF="mailto:markus.dahm@berlin.de">M. Dahm</A>  * @see     MethodGen  * @see     CodeException  * @see     InstructionHandle  */
+comment|/**   * This class represents an exception handler, i.e., specifies the  region where  * a handler is active and an instruction where the actual handling is done.  * pool as parameters. Opposed to the JVM specification the end of the handled  * region is set to be inclusive, i.e. all instructions between start and end  * are protected including the start and end instructions (handles) themselves.  * The end of the region is automatically mapped to be exclusive when calling  * getCodeException(), i.e., there is no difference semantically.  *  * @version $Id$  * @author<A HREF="mailto:m.dahm@gmx.de">M. Dahm</A>  * @see     MethodGen  * @see     CodeException  * @see     InstructionHandle  */
 end_comment
 
 begin_class

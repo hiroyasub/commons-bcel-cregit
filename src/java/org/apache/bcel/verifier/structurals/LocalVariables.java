@@ -440,6 +440,8 @@ name|int
 name|i
 parameter_list|)
 block|{
+try|try
+block|{
 comment|// We won't accept an unitialized object if we know it was initialized;
 comment|// compare vmspec2, 4.9.4, last paragraph.
 if|if
@@ -723,6 +725,27 @@ operator|.
 name|UNKNOWN
 expr_stmt|;
 block|}
+block|}
+block|}
+catch|catch
+parameter_list|(
+name|ClassNotFoundException
+name|e
+parameter_list|)
+block|{
+comment|// FIXME: maybe not the best way to handle this
+throw|throw
+operator|new
+name|AssertionViolatedException
+argument_list|(
+literal|"Missing class: "
+operator|+
+name|e
+operator|.
+name|toString
+argument_list|()
+argument_list|)
+throw|;
 block|}
 block|}
 comment|/** 	 * Returns a String representation of this object. 	 */

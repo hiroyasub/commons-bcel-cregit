@@ -16,7 +16,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * For efficiency and convenience reasons we want our own hash table. It does  * not conform to java.util.Dictionary(yet).  *  * That environment contains all function definitions and identifiers.  * Hash keys are Strings (identifiers), which are mapped to a table index.  *  * The table consists of `SIZE' fields which have `SLOTS' subfields. Thus   * the maximum number of storable items is `SLOTS' * `SIZE'.  *  * @version $Id$  * @author<A HREF="http://www.berlin.de/~markus.dahm/">M. Dahm</A>  */
+comment|/**  * For efficiency and convenience reasons we want our own hash table. It does  * not conform to java.util.Dictionary(yet).  *  * That environment contains all function definitions and identifiers.  * Hash keys are Strings (identifiers), which are mapped to a table index.  *  * The table consists of `SIZE' fields which have `SLOTS' subfields. Thus   * the maximum number of storable items is `SLOTS' * `SIZE'.  *  * @version $Id$  * @author<A HREF="mailto:m.dahm@gmx.de">M. Dahm</A>  */
 end_comment
 
 begin_class

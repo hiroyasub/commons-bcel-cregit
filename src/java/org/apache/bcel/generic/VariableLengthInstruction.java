@@ -16,7 +16,7 @@ comment|/* ==================================================================== 
 end_comment
 
 begin_comment
-comment|/**  * Denotes an instruction to be a variable length instruction, such as  * GOTO, JSR, LOOKUPSWITCH and TABLESWITCH.  *  * @version $Id$  * @author<A HREF="mailto:markus.dahm@berlin.de">M. Dahm</A>   * @see GOTO  * @see JSR  * @see LOOKUPSWITCH  * @see TABLESWITCH  */
+comment|/**  * Denotes an instruction to be a variable length instruction, such as  * GOTO, JSR, LOOKUPSWITCH and TABLESWITCH.  *  * @version $Id$  * @author<A HREF="mailto:m.dahm@gmx.de">M. Dahm</A>   * @see GOTO  * @see JSR  * @see LOOKUPSWITCH  * @see TABLESWITCH  */
 end_comment
 
 begin_interface

@@ -38,7 +38,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * This class is derived from<em>Attribute</em> and declares this class as  * `synthetic', i.e., it needs special handling.  The JVM specification  * states "A class member that does not appear in the source code must be  * marked using a Synthetic attribute."  It may appear in the ClassFile  * attribute table, a field_info table or a method_info table.  This class  * is intended to be instantiated from the  *<em>Attribute.readAttribute()</em> method.  *  * @version $Id$  * @author<A HREF="mailto:markus.dahm@berlin.de">M. Dahm</A>  * @see     Attribute  */
+comment|/**  * This class is derived from<em>Attribute</em> and declares this class as  * `synthetic', i.e., it needs special handling.  The JVM specification  * states "A class member that does not appear in the source code must be  * marked using a Synthetic attribute."  It may appear in the ClassFile  * attribute table, a field_info table or a method_info table.  This class  * is intended to be instantiated from the  *<em>Attribute.readAttribute()</em> method.  *  * @version $Id$  * @author<A HREF="mailto:m.dahm@gmx.de">M. Dahm</A>  * @see     Attribute  */
 end_comment
 
 begin_class

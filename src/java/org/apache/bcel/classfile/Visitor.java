@@ -16,7 +16,7 @@ comment|/* ==================================================================== 
 end_comment
 
 begin_comment
-comment|/**  * Interface to make use of the Visitor pattern programming style.  * I.e. a class that implements this interface can traverse the contents of  * a Java class just by calling the `accept' method which all classes have.  *  * Implemented by wish of   *<A HREF="http://www.inf.fu-berlin.de/~bokowski">Boris Bokowski</A>.  *  * @version $Id$  * @author<A HREF="mailto:markus.dahm@berlin.de">M. Dahm</A>  */
+comment|/**  * Interface to make use of the Visitor pattern programming style.  * I.e. a class that implements this interface can traverse the contents of  * a Java class just by calling the `accept' method which all classes have.  *  * Implemented by wish of   *<A HREF="http://www.inf.fu-berlin.de/~bokowski">Boris Bokowski</A>.  *  * @version $Id$  * @author<A HREF="mailto:m.dahm@gmx.de">M. Dahm</A>  */
 end_comment
 
 begin_interface

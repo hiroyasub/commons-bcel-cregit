@@ -40,7 +40,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**   * INVOKESTATIC - Invoke a class (static) method  *  *<PRE>Stack: ..., [arg1, [arg2 ...]] -&gt; ...</PRE>  *  * @version $Id$  * @author<A HREF="mailto:markus.dahm@berlin.de">M. Dahm</A>  */
+comment|/**   * INVOKESTATIC - Invoke a class (static) method  *  *<PRE>Stack: ..., [arg1, [arg2 ...]] -&gt; ...</PRE>  *  * @version $Id$  * @author<A HREF="mailto:m.dahm@gmx.de">M. Dahm</A>  */
 end_comment
 
 begin_class

@@ -561,6 +561,8 @@ name|OperandStack
 name|s
 parameter_list|)
 block|{
+try|try
+block|{
 if|if
 condition|(
 operator|(
@@ -879,6 +881,27 @@ argument_list|)
 throw|;
 block|}
 block|}
+block|}
+block|}
+catch|catch
+parameter_list|(
+name|ClassNotFoundException
+name|e
+parameter_list|)
+block|{
+comment|// FIXME: maybe not the best way to handle this
+throw|throw
+operator|new
+name|AssertionViolatedException
+argument_list|(
+literal|"Missing class: "
+operator|+
+name|e
+operator|.
+name|toString
+argument_list|()
+argument_list|)
+throw|;
 block|}
 block|}
 comment|/** 	 * Replaces all occurences of u in this OperandStack instance 	 * with an "initialized" ObjectType. 	 */

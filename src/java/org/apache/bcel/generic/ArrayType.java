@@ -28,7 +28,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**   * Denotes array type, such as int[][]  *  * @version $Id$  * @author<A HREF="mailto:markus.dahm@berlin.de">M. Dahm</A>  */
+comment|/**   * Denotes array type, such as int[][]  *  * @version $Id$  * @author<A HREF="mailto:m.dahm@gmx.de">M. Dahm</A>  */
 end_comment
 
 begin_class

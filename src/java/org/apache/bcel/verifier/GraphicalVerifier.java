@@ -17,11 +17,11 @@ end_comment
 
 begin_import
 import|import
-name|javax
+name|java
 operator|.
-name|swing
+name|awt
 operator|.
-name|UIManager
+name|Dimension
 import|;
 end_import
 
@@ -31,21 +31,17 @@ name|java
 operator|.
 name|awt
 operator|.
-name|*
+name|Toolkit
 import|;
 end_import
 
 begin_import
 import|import
-name|org
+name|javax
 operator|.
-name|apache
+name|swing
 operator|.
-name|bcel
-operator|.
-name|verifier
-operator|.
-name|*
+name|UIManager
 import|;
 end_import
 
@@ -59,7 +55,7 @@ name|bcel
 operator|.
 name|generic
 operator|.
-name|*
+name|Type
 import|;
 end_import
 

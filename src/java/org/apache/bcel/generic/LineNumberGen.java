@@ -23,26 +23,14 @@ name|apache
 operator|.
 name|bcel
 operator|.
-name|Constants
-import|;
-end_import
-
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|bcel
-operator|.
 name|classfile
 operator|.
-name|*
+name|LineNumber
 import|;
 end_import
 
 begin_comment
-comment|/**   * This class represents a line number within a method, i.e., give an instruction  * a line number corresponding to the source code line.  *  * @version $Id$  * @author<A HREF="mailto:markus.dahm@berlin.de">M. Dahm</A>  * @see     LineNumber  * @see     MethodGen  */
+comment|/**   * This class represents a line number within a method, i.e., give an instruction  * a line number corresponding to the source code line.  *  * @version $Id$  * @author<A HREF="mailto:m.dahm@gmx.de">M. Dahm</A>  * @see     LineNumber  * @see     MethodGen  */
 end_comment
 
 begin_class

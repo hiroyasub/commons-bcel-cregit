@@ -124,6 +124,8 @@ operator|==
 literal|null
 condition|)
 block|{
+try|try
+block|{
 name|jc
 operator|=
 name|Repository
@@ -136,6 +138,18 @@ name|getClassName
 argument_list|()
 argument_list|)
 expr_stmt|;
+block|}
+catch|catch
+parameter_list|(
+name|ClassNotFoundException
+name|e
+parameter_list|)
+block|{
+comment|// FIXME: currently, Pass1Verifier treats jc == null as a special
+comment|// case, so we don't need to do anything here.  A better solution
+comment|// would be to simply throw the ClassNotFoundException
+comment|// out of this method.
+block|}
 block|}
 return|return
 name|jc

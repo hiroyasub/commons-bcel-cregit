@@ -16,7 +16,7 @@ comment|/* ==================================================================== 
 end_comment
 
 begin_comment
-comment|/**   * F2L - Convert float to long  *<PRE>Stack: ..., value -&gt; ..., result.word1, result.word2</PRE>  *  * @version $Id$  * @author<A HREF="mailto:markus.dahm@berlin.de">M. Dahm</A>  */
+comment|/**   * F2L - Convert float to long  *<PRE>Stack: ..., value -&gt; ..., result.word1, result.word2</PRE>  *  * @version $Id$  * @author<A HREF="mailto:m.dahm@gmx.de">M. Dahm</A>  */
 end_comment
 
 begin_class

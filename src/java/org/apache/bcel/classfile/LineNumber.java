@@ -17,13 +17,11 @@ end_comment
 
 begin_import
 import|import
-name|org
+name|java
 operator|.
-name|apache
+name|io
 operator|.
-name|bcel
-operator|.
-name|Constants
+name|DataInputStream
 import|;
 end_import
 
@@ -33,12 +31,32 @@ name|java
 operator|.
 name|io
 operator|.
-name|*
+name|DataOutputStream
+import|;
+end_import
+
+begin_import
+import|import
+name|java
+operator|.
+name|io
+operator|.
+name|IOException
+import|;
+end_import
+
+begin_import
+import|import
+name|java
+operator|.
+name|io
+operator|.
+name|Serializable
 import|;
 end_import
 
 begin_comment
-comment|/**  * This class represents a (PC offset, line number) pair, i.e., a line number in  * the source that corresponds to a relative address in the byte code. This  * is used for debugging purposes.  *  * @version $Id$  * @author<A HREF="mailto:markus.dahm@berlin.de">M. Dahm</A>  * @see     LineNumberTable  */
+comment|/**  * This class represents a (PC offset, line number) pair, i.e., a line number in  * the source that corresponds to a relative address in the byte code. This  * is used for debugging purposes.  *  * @version $Id$  * @author<A HREF="mailto:m.dahm@gmx.de">M. Dahm</A>  * @see     LineNumberTable  */
 end_comment
 
 begin_class

@@ -269,6 +269,8 @@ name|VerificationResult
 name|do_verify
 parameter_list|()
 block|{
+try|try
+block|{
 name|VerificationResult
 name|vr1
 init|=
@@ -368,11 +370,34 @@ operator|.
 name|VR_NOTYET
 return|;
 block|}
+catch|catch
+parameter_list|(
+name|ClassNotFoundException
+name|e
+parameter_list|)
+block|{
+comment|// FIXME: this might not be the best way to handle missing classes.
+throw|throw
+operator|new
+name|AssertionViolatedException
+argument_list|(
+literal|"Missing class: "
+operator|+
+name|e
+operator|.
+name|toString
+argument_list|()
+argument_list|)
+throw|;
+block|}
+block|}
 comment|/** 	 * Ensures that every class has a super class and that 	 *<B>final</B> classes are not subclassed. 	 * This means, the class this Pass2Verifier operates 	 * on has proper super classes (transitively) up to 	 * java.lang.Object. 	 * The reason for really loading (and Pass1-verifying) 	 * all of those classes here is that we need them in 	 * Pass2 anyway to verify no final methods are overridden 	 * (that could be declared anywhere in the ancestor hierarchy). 	 * 	 * @throws ClassConstraintException otherwise. 	 */
 specifier|private
 name|void
 name|every_class_has_an_accessible_superclass
 parameter_list|()
+block|{
+try|try
 block|{
 name|HashSet
 name|hs
@@ -565,11 +590,34 @@ block|}
 block|}
 block|}
 block|}
+catch|catch
+parameter_list|(
+name|ClassNotFoundException
+name|e
+parameter_list|)
+block|{
+comment|// FIXME: this might not be the best way to handle missing classes.
+throw|throw
+operator|new
+name|AssertionViolatedException
+argument_list|(
+literal|"Missing class: "
+operator|+
+name|e
+operator|.
+name|toString
+argument_list|()
+argument_list|)
+throw|;
+block|}
+block|}
 comment|/** 	 * Ensures that<B>final</B> methods are not overridden. 	 *<B>Precondition to run this method: 	 * constant_pool_entries_satisfy_static_constraints() and 	 * every_class_has_an_accessible_superclass() have to be invoked before 	 * (in that order).</B> 	 * 	 * @throws ClassConstraintException otherwise. 	 * @see #constant_pool_entries_satisfy_static_constraints() 	 * @see #every_class_has_an_accessible_superclass() 	 */
 specifier|private
 name|void
 name|final_methods_are_not_overridden
 parameter_list|()
+block|{
+try|try
 block|{
 name|HashMap
 name|hashmap
@@ -782,11 +830,34 @@ expr_stmt|;
 comment|// Well, for OBJECT this returns OBJECT so it works (could return anything but must not throw an Exception).
 block|}
 block|}
+catch|catch
+parameter_list|(
+name|ClassNotFoundException
+name|e
+parameter_list|)
+block|{
+comment|// FIXME: this might not be the best way to handle missing classes.
+throw|throw
+operator|new
+name|AssertionViolatedException
+argument_list|(
+literal|"Missing class: "
+operator|+
+name|e
+operator|.
+name|toString
+argument_list|()
+argument_list|)
+throw|;
+block|}
+block|}
 comment|/** 	 * Ensures that the constant pool entries satisfy the static constraints 	 * as described in The Java Virtual Machine Specification, 2nd Edition. 	 * 	 * @throws ClassConstraintException otherwise. 	 */
 specifier|private
 name|void
 name|constant_pool_entries_satisfy_static_constraints
 parameter_list|()
+block|{
+try|try
 block|{
 comment|// Most of the consistency is handled internally by BCEL; here
 comment|// we only have to verify if the indices of the constants point
@@ -811,6 +882,27 @@ name|jc
 argument_list|)
 expr_stmt|;
 comment|// constructor implicitely traverses jc
+block|}
+catch|catch
+parameter_list|(
+name|ClassNotFoundException
+name|e
+parameter_list|)
+block|{
+comment|// FIXME: this might not be the best way to handle missing classes.
+throw|throw
+operator|new
+name|AssertionViolatedException
+argument_list|(
+literal|"Missing class: "
+operator|+
+name|e
+operator|.
+name|toString
+argument_list|()
+argument_list|)
+throw|;
+block|}
 block|}
 comment|/** 	 * A Visitor class that ensures the constant pool satisfies the static 	 * constraints.    * The visitXXX() methods throw ClassConstraintException instances otherwise.    *    * @see #constant_pool_entries_satisfy_static_constraints() 	 */
 specifier|private
@@ -4599,6 +4691,8 @@ name|obj
 parameter_list|)
 block|{
 comment|//vmspec2 4.7.3
+try|try
+block|{
 comment|// No code attribute allowed for native or abstract methods: see visitMethod(Method).
 comment|// Code array constraints are checked in Pass3 (3a and 3b).
 name|checkIndex
@@ -5798,6 +5892,27 @@ comment|// if atts[a] instanceof LocalVariableTable END
 block|}
 comment|// for all attributes atts[a] END
 block|}
+catch|catch
+parameter_list|(
+name|ClassNotFoundException
+name|e
+parameter_list|)
+block|{
+comment|// FIXME: this might not be the best way to handle missing classes.
+throw|throw
+operator|new
+name|AssertionViolatedException
+argument_list|(
+literal|"Missing class: "
+operator|+
+name|e
+operator|.
+name|toString
+argument_list|()
+argument_list|)
+throw|;
+block|}
+block|}
 comment|// visitCode(Code) END
 specifier|public
 name|void
@@ -5808,6 +5923,8 @@ name|obj
 parameter_list|)
 block|{
 comment|//vmspec2 4.7.4
+try|try
+block|{
 comment|// incorrectly named, it's the Exceptions attribute (vmspec2 4.7.4)
 name|checkIndex
 argument_list|(
@@ -6183,6 +6300,27 @@ throw|;
 block|}
 block|}
 block|}
+catch|catch
+parameter_list|(
+name|ClassNotFoundException
+name|e
+parameter_list|)
+block|{
+comment|// FIXME: this might not be the best way to handle missing classes.
+throw|throw
+operator|new
+name|AssertionViolatedException
+argument_list|(
+literal|"Missing class: "
+operator|+
+name|e
+operator|.
+name|toString
+argument_list|()
+argument_list|)
+throw|;
+block|}
+block|}
 comment|// SYNTHETIC: see above
 comment|// DEPRECATED: see above
 comment|//////////////////////////////////////////////////////////////
@@ -6385,6 +6523,8 @@ name|void
 name|field_and_method_refs_are_valid
 parameter_list|()
 block|{
+try|try
+block|{
 name|JavaClass
 name|jc
 init|=
@@ -6418,6 +6558,27 @@ operator|.
 name|visit
 argument_list|()
 expr_stmt|;
+block|}
+catch|catch
+parameter_list|(
+name|ClassNotFoundException
+name|e
+parameter_list|)
+block|{
+comment|// FIXME: this might not be the best way to handle missing classes.
+throw|throw
+operator|new
+name|AssertionViolatedException
+argument_list|(
+literal|"Missing class: "
+operator|+
+name|e
+operator|.
+name|toString
+argument_list|()
+argument_list|)
+throw|;
+block|}
 block|}
 comment|/** 	 * A Visitor class that ensures the ConstantCP-subclassed entries 	 * of the constant pool are valid.    *<B>Precondition: index-style cross referencing in the constant    * pool must be valid.</B> 	 *    * @see #constant_pool_entries_satisfy_static_constraints() 	 * @see org.apache.bcel.classfile.ConstantCP 	 */
 specifier|private

@@ -16,7 +16,7 @@ comment|/* ==================================================================== 
 end_comment
 
 begin_comment
-comment|/**  * Get the type associated with an instruction, int for ILOAD, or the type  * of the field of a PUTFIELD instruction, e.g..  *  * @version $Id$  * @author<A HREF="mailto:markus.dahm@berlin.de">M. Dahm</A>  */
+comment|/**  * Get the type associated with an instruction, int for ILOAD, or the type  * of the field of a PUTFIELD instruction, e.g..  *  * @version $Id$  * @author<A HREF="mailto:m.dahm@gmx.de">M. Dahm</A>  */
 end_comment
 
 begin_interface

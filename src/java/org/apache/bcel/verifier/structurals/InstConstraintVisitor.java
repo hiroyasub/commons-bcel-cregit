@@ -93,20 +93,6 @@ name|bcel
 operator|.
 name|classfile
 operator|.
-name|ConstantInteger
-import|;
-end_import
-
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|bcel
-operator|.
-name|classfile
-operator|.
 name|ConstantFieldref
 import|;
 end_import
@@ -122,6 +108,20 @@ operator|.
 name|classfile
 operator|.
 name|ConstantFloat
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|bcel
+operator|.
+name|classfile
+operator|.
+name|ConstantInteger
 import|;
 end_import
 
@@ -205,7 +205,35 @@ name|bcel
 operator|.
 name|verifier
 operator|.
-name|*
+name|VerificationResult
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|bcel
+operator|.
+name|verifier
+operator|.
+name|Verifier
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|bcel
+operator|.
+name|verifier
+operator|.
+name|VerifierFactory
 import|;
 end_import
 
@@ -221,7 +249,23 @@ name|verifier
 operator|.
 name|exc
 operator|.
-name|*
+name|AssertionViolatedException
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|bcel
+operator|.
+name|verifier
+operator|.
+name|exc
+operator|.
+name|StructuralCodeConstraintException
 import|;
 end_import
 
@@ -1825,6 +1869,8 @@ name|AASTORE
 name|o
 parameter_list|)
 block|{
+try|try
+block|{
 name|Type
 name|arrayref
 init|=
@@ -2001,6 +2047,27 @@ literal|"')"
 argument_list|)
 expr_stmt|;
 block|}
+block|}
+block|}
+catch|catch
+parameter_list|(
+name|ClassNotFoundException
+name|e
+parameter_list|)
+block|{
+comment|// FIXME: maybe not the best way to handle this
+throw|throw
+operator|new
+name|AssertionViolatedException
+argument_list|(
+literal|"Missing class: "
+operator|+
+name|e
+operator|.
+name|toString
+argument_list|()
+argument_list|)
+throw|;
 block|}
 block|}
 comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
@@ -2259,6 +2326,8 @@ name|ATHROW
 name|o
 parameter_list|)
 block|{
+try|try
+block|{
 comment|// It's stated that 'objectref' must be of a ReferenceType --- but since Throwable is
 comment|// not derived from an ArrayType, it follows that 'objectref' must be of an ObjectType or Type.NULL.
 if|if
@@ -2396,6 +2465,27 @@ operator|+
 literal|"'."
 argument_list|)
 expr_stmt|;
+block|}
+block|}
+catch|catch
+parameter_list|(
+name|ClassNotFoundException
+name|e
+parameter_list|)
+block|{
+comment|// FIXME: maybe not the best way to handle this
+throw|throw
+operator|new
+name|AssertionViolatedException
+argument_list|(
+literal|"Missing class: "
+operator|+
+name|e
+operator|.
+name|toString
+argument_list|()
+argument_list|)
+throw|;
 block|}
 block|}
 comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
@@ -5633,6 +5723,8 @@ name|GETFIELD
 name|o
 parameter_list|)
 block|{
+try|try
+block|{
 name|Type
 name|objectref
 init|=
@@ -5918,6 +6010,27 @@ operator|+
 literal|"' is static which it shouldn't be."
 argument_list|)
 expr_stmt|;
+block|}
+block|}
+catch|catch
+parameter_list|(
+name|ClassNotFoundException
+name|e
+parameter_list|)
+block|{
+comment|// FIXME: maybe not the best way to handle this
+throw|throw
+operator|new
+name|AssertionViolatedException
+argument_list|(
+literal|"Missing class: "
+operator|+
+name|e
+operator|.
+name|toString
+argument_list|()
+argument_list|)
+throw|;
 block|}
 block|}
 comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
@@ -8429,6 +8542,8 @@ name|INVOKESPECIAL
 name|o
 parameter_list|)
 block|{
+try|try
+block|{
 comment|// Don't init an object twice.
 if|if
 condition|(
@@ -8956,6 +9071,27 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
+catch|catch
+parameter_list|(
+name|ClassNotFoundException
+name|e
+parameter_list|)
+block|{
+comment|// FIXME: maybe not the best way to handle this
+throw|throw
+operator|new
+name|AssertionViolatedException
+argument_list|(
+literal|"Missing class: "
+operator|+
+name|e
+operator|.
+name|toString
+argument_list|()
+argument_list|)
+throw|;
+block|}
+block|}
 comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
 specifier|public
 name|void
@@ -8964,6 +9100,8 @@ parameter_list|(
 name|INVOKESTATIC
 name|o
 parameter_list|)
+block|{
+try|try
 block|{
 comment|// Method is not native, otherwise pass 3 would not happen.
 name|Type
@@ -9230,6 +9368,27 @@ block|}
 block|}
 block|}
 block|}
+catch|catch
+parameter_list|(
+name|ClassNotFoundException
+name|e
+parameter_list|)
+block|{
+comment|// FIXME: maybe not the best way to handle this
+throw|throw
+operator|new
+name|AssertionViolatedException
+argument_list|(
+literal|"Missing class: "
+operator|+
+name|e
+operator|.
+name|toString
+argument_list|()
+argument_list|)
+throw|;
+block|}
+block|}
 comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
 specifier|public
 name|void
@@ -9238,6 +9397,8 @@ parameter_list|(
 name|INVOKEVIRTUAL
 name|o
 parameter_list|)
+block|{
+try|try
 block|{
 comment|// the o.getClassType(cpg) type has passed pass 2; see visitLoadClass(o).
 name|Type
@@ -9649,6 +9810,27 @@ operator|+
 literal|"' as expected."
 argument_list|)
 expr_stmt|;
+block|}
+block|}
+catch|catch
+parameter_list|(
+name|ClassNotFoundException
+name|e
+parameter_list|)
+block|{
+comment|// FIXME: maybe not the best way to handle this
+throw|throw
+operator|new
+name|AssertionViolatedException
+argument_list|(
+literal|"Missing class: "
+operator|+
+name|e
+operator|.
+name|toString
+argument_list|()
+argument_list|)
+throw|;
 block|}
 block|}
 comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
@@ -12240,6 +12422,8 @@ name|PUTFIELD
 name|o
 parameter_list|)
 block|{
+try|try
+block|{
 name|Type
 name|objectref
 init|=
@@ -12710,6 +12894,27 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
+catch|catch
+parameter_list|(
+name|ClassNotFoundException
+name|e
+parameter_list|)
+block|{
+comment|// FIXME: maybe not the best way to handle this
+throw|throw
+operator|new
+name|AssertionViolatedException
+argument_list|(
+literal|"Missing class: "
+operator|+
+name|e
+operator|.
+name|toString
+argument_list|()
+argument_list|)
+throw|;
+block|}
+block|}
 comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
 specifier|public
 name|void
@@ -12718,6 +12923,8 @@ parameter_list|(
 name|PUTSTATIC
 name|o
 parameter_list|)
+block|{
+try|try
 block|{
 name|String
 name|field_name
@@ -12990,6 +13197,27 @@ block|}
 comment|// TODO: Interface fields may be assigned to only once. (Hard to implement in
 comment|//       JustIce's execution model). This may only happen in<clinit>, see Pass 3a.
 block|}
+catch|catch
+parameter_list|(
+name|ClassNotFoundException
+name|e
+parameter_list|)
+block|{
+comment|// FIXME: maybe not the best way to handle this
+throw|throw
+operator|new
+name|AssertionViolatedException
+argument_list|(
+literal|"Missing class: "
+operator|+
+name|e
+operator|.
+name|toString
+argument_list|()
+argument_list|)
+throw|;
+block|}
+block|}
 comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
 specifier|public
 name|void
@@ -13090,7 +13318,7 @@ comment|// If we leave an<init> method
 if|if
 condition|(
 operator|(
-name|frame
+name|Frame
 operator|.
 name|_this
 operator|!=

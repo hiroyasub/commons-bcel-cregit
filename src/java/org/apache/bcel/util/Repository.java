@@ -30,7 +30,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Abstract definition of a class repository. Instances may be used  * to load classes from different sources and may be used in the  * Repository.setRepository method.  *  * @see org.apache.bcel.Repository  * @version $Id$  * @author<A HREF="mailto:markus.dahm@berlin.de">M. Dahm</A>  * @author David Dixon-Peugh  */
+comment|/**  * Abstract definition of a class repository. Instances may be used  * to load classes from different sources and may be used in the  * Repository.setRepository method.  *  * @see org.apache.bcel.Repository  * @version $Id$  * @author<A HREF="mailto:m.dahm@gmx.de">M. Dahm</A>  * @author David Dixon-Peugh  */
 end_comment
 
 begin_interface
@@ -105,6 +105,12 @@ comment|/** Clear all entries from cache.    */
 specifier|public
 name|void
 name|clear
+parameter_list|()
+function_decl|;
+comment|/** Get the ClassPath associated with this Repository 	 */
+specifier|public
+name|ClassPath
+name|getClassPath
 parameter_list|()
 function_decl|;
 block|}

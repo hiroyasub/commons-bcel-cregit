@@ -40,7 +40,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**   * Utility class implementing a (typesafe) collection of JavaClass  * objects. Contains the most important methods of a Vector.  *  * @version $Id$  * @author<A HREF="mailto:markus.dahm@berlin.de">M. Dahm</A>   * @see ClassQueue */
+comment|/**   * Utility class implementing a (typesafe) collection of JavaClass  * objects. Contains the most important methods of a Vector.  *  * @version $Id$  * @author<A HREF="mailto:m.dahm@gmx.de">M. Dahm</A>   * @see ClassQueue */
 end_comment
 
 begin_class

@@ -23,9 +23,7 @@ name|apache
 operator|.
 name|bcel
 operator|.
-name|verifier
-operator|.
-name|*
+name|Repository
 import|;
 end_import
 
@@ -39,19 +37,7 @@ name|bcel
 operator|.
 name|classfile
 operator|.
-name|*
-import|;
-end_import
-
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|bcel
-operator|.
-name|*
+name|JavaClass
 import|;
 end_import
 
@@ -208,6 +194,8 @@ operator|.
 name|VR_OK
 condition|)
 block|{
+try|try
+block|{
 name|JavaClass
 name|jc
 init|=
@@ -335,6 +323,30 @@ operator|+
 literal|"']:\n"
 operator|+
 name|vr
+argument_list|)
+expr_stmt|;
+block|}
+block|}
+catch|catch
+parameter_list|(
+name|ClassNotFoundException
+name|e
+parameter_list|)
+block|{
+name|System
+operator|.
+name|err
+operator|.
+name|println
+argument_list|(
+literal|"Could not find class "
+operator|+
+name|v
+operator|.
+name|getClassName
+argument_list|()
+operator|+
+literal|" in Repository"
 argument_list|)
 expr_stmt|;
 block|}

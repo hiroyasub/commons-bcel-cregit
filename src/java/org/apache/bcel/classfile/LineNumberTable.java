@@ -38,7 +38,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * This class represents a table of line numbers for debugging  * purposes. This attribute is used by the<em>Code</em> attribute. It  * contains pairs of PCs and line numbers.  *  * @version $Id$  * @author<A HREF="mailto:markus.dahm@berlin.de">M. Dahm</A>  * @see     Code  * @see LineNumber  */
+comment|/**  * This class represents a table of line numbers for debugging  * purposes. This attribute is used by the<em>Code</em> attribute. It  * contains pairs of PCs and line numbers.  *  * @version $Id$  * @author<A HREF="mailto:m.dahm@gmx.de">M. Dahm</A>  * @see     Code  * @see LineNumber  */
 end_comment
 
 begin_class

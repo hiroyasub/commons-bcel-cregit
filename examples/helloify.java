@@ -40,7 +40,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Read class file(s) and patch all of its methods, so that they print  * "hello" and their name and signature before doing anything else.  *  * @version $Id$  * @author<A HREF="http://www.berlin.de/~markus.dahm/">M. Dahm</A>  */
+comment|/**  * Read class file(s) and patch all of its methods, so that they print  * "hello" and their name and signature before doing anything else.  *  * @version $Id$  * @author<A HREF="mailto:m.dahm@gmx.de">M. Dahm</A>  */
 end_comment
 
 begin_class

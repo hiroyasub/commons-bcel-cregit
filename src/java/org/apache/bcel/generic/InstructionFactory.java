@@ -28,7 +28,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**   * Instances of this class may be used, e.g., to generate typed  * versions of instructions. Its main purpose is to be used as the  * byte code generating backend of a compiler. You can subclass it to  * add your own create methods.  *  * @version $Id$  * @author<A HREF="mailto:markus.dahm@berlin.de">M. Dahm</A>  * @see Constants  */
+comment|/**   * Instances of this class may be used, e.g., to generate typed  * versions of instructions. Its main purpose is to be used as the  * byte code generating backend of a compiler. You can subclass it to  * add your own create methods.  *  * @version $Id$  * @author<A HREF="mailto:m.dahm@gmx.de">M. Dahm</A>  * @see Constants  */
 end_comment
 
 begin_class

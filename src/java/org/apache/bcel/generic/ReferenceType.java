@@ -54,7 +54,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Super class for object and array types.  *  * @version $Id$  * @author<A HREF="mailto:markus.dahm@berlin.de">M. Dahm</A>  */
+comment|/**  * Super class for object and array types.  *  * @version $Id$  * @author<A HREF="mailto:m.dahm@gmx.de">M. Dahm</A>  */
 end_comment
 
 begin_class
@@ -97,7 +97,7 @@ literal|"<null object>"
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**    * Return true iff this type is castable to another type t as defined in    * the JVM specification.  The case where this is Type.NULL is not    * defined (see the CHECKCAST definition in the JVM specification).    * However, because e.g. CHECKCAST doesn't throw a    * ClassCastException when casting a null reference to any Object,    * true is returned in this case.    */
+comment|/**    * Return true iff this type is castable to another type t as defined in    * the JVM specification.  The case where this is Type.NULL is not    * defined (see the CHECKCAST definition in the JVM specification).    * However, because e.g. CHECKCAST doesn't throw a    * ClassCastException when casting a null reference to any Object,    * true is returned in this case.    *    * @throws ClassNotFoundException if any classes or interfaces required    *  to determine assignment compatibility can't be found    */
 specifier|public
 name|boolean
 name|isCastableTo
@@ -105,6 +105,8 @@ parameter_list|(
 name|Type
 name|t
 parameter_list|)
+throws|throws
+name|ClassNotFoundException
 block|{
 if|if
 condition|(
@@ -129,7 +131,7 @@ argument_list|)
 return|;
 comment|/* Yes, it's true: It's the same definition.      * See vmspec2 AASTORE / CHECKCAST definitions.      */
 block|}
-comment|/**    * Return true iff this is assignment compatible with another type t    * as defined in the JVM specification; see the AASTORE definition    * there.    */
+comment|/**    * Return true iff this is assignment compatible with another type t    * as defined in the JVM specification; see the AASTORE definition    * there.    * @throws ClassNotFoundException if any classes or interfaces required    *  to determine assignment compatibility can't be found    */
 specifier|public
 name|boolean
 name|isAssignmentCompatibleWith
@@ -137,6 +139,8 @@ parameter_list|(
 name|Type
 name|t
 parameter_list|)
+throws|throws
+name|ClassNotFoundException
 block|{
 if|if
 condition|(
@@ -644,7 +648,7 @@ literal|false
 return|;
 comment|// default.
 block|}
-comment|/**    * This commutative operation returns the first common superclass (narrowest ReferenceType    * referencing a class, not an interface).    * If one of the types is a superclass of the other, the former is returned.    * If "this" is Type.NULL, then t is returned.    * If t is Type.NULL, then "this" is returned.    * If "this" equals t ['this.equals(t)'] "this" is returned.    * If "this" or t is an ArrayType, then Type.OBJECT is returned;    * unless their dimensions match. Then an ArrayType of the same    * number of dimensions is returned, with its basic type being the    * first common super class of the basic types of "this" and t.    * If "this" or t is a ReferenceType referencing an interface, then Type.OBJECT is returned.    * If not all of the two classes' superclasses cannot be found, "null" is returned.    * See the JVM specification edition 2, "§4.9.2 The Bytecode Verifier".    */
+comment|/**    * This commutative operation returns the first common superclass (narrowest ReferenceType    * referencing a class, not an interface).    * If one of the types is a superclass of the other, the former is returned.    * If "this" is Type.NULL, then t is returned.    * If t is Type.NULL, then "this" is returned.    * If "this" equals t ['this.equals(t)'] "this" is returned.    * If "this" or t is an ArrayType, then Type.OBJECT is returned;    * unless their dimensions match. Then an ArrayType of the same    * number of dimensions is returned, with its basic type being the    * first common super class of the basic types of "this" and t.    * If "this" or t is a ReferenceType referencing an interface, then Type.OBJECT is returned.    * If not all of the two classes' superclasses cannot be found, "null" is returned.    * See the JVM specification edition 2, "§4.9.2 The Bytecode Verifier".    *    * @throws ClassNotFoundException on failure to find superclasses of this    *  type, or the type passed as a parameter    */
 specifier|public
 name|ReferenceType
 name|getFirstCommonSuperclass
@@ -652,6 +656,8 @@ parameter_list|(
 name|ReferenceType
 name|t
 parameter_list|)
+throws|throws
+name|ClassNotFoundException
 block|{
 if|if
 condition|(
@@ -1080,7 +1086,7 @@ return|return
 literal|null
 return|;
 block|}
-comment|/**    * This commutative operation returns the first common superclass (narrowest ReferenceType    * referencing a class, not an interface).    * If one of the types is a superclass of the other, the former is returned.    * If "this" is Type.NULL, then t is returned.    * If t is Type.NULL, then "this" is returned.    * If "this" equals t ['this.equals(t)'] "this" is returned.    * If "this" or t is an ArrayType, then Type.OBJECT is returned.    * If "this" or t is a ReferenceType referencing an interface, then Type.OBJECT is returned.    * If not all of the two classes' superclasses cannot be found, "null" is returned.    * See the JVM specification edition 2, "§4.9.2 The Bytecode Verifier".    *    * @deprecated use getFirstCommonSuperclass(ReferenceType t) which has    *             slightly changed semantics.    */
+comment|/**    * This commutative operation returns the first common superclass (narrowest ReferenceType    * referencing a class, not an interface).    * If one of the types is a superclass of the other, the former is returned.    * If "this" is Type.NULL, then t is returned.    * If t is Type.NULL, then "this" is returned.    * If "this" equals t ['this.equals(t)'] "this" is returned.    * If "this" or t is an ArrayType, then Type.OBJECT is returned.    * If "this" or t is a ReferenceType referencing an interface, then Type.OBJECT is returned.    * If not all of the two classes' superclasses cannot be found, "null" is returned.    * See the JVM specification edition 2, "§4.9.2 The Bytecode Verifier".    *    * @deprecated use getFirstCommonSuperclass(ReferenceType t) which has    *             slightly changed semantics.    * @throws ClassNotFoundException on failure to find superclasses of this    *  type, or the type passed as a parameter    */
 specifier|public
 name|ReferenceType
 name|firstCommonSuperclass
@@ -1088,6 +1094,8 @@ parameter_list|(
 name|ReferenceType
 name|t
 parameter_list|)
+throws|throws
+name|ClassNotFoundException
 block|{
 if|if
 condition|(

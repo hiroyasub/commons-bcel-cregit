@@ -40,7 +40,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**   * GOTO_W - Branch always (to relative offset, not absolute address)  *  * @version $Id$  * @author<A HREF="mailto:markus.dahm@berlin.de">M. Dahm</A>  */
+comment|/**   * GOTO_W - Branch always (to relative offset, not absolute address)  *  * @version $Id$  * @author<A HREF="mailto:m.dahm@gmx.de">M. Dahm</A>  */
 end_comment
 
 begin_class

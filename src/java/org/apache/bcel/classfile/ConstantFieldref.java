@@ -38,7 +38,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**   * This class represents a constant pool reference to a field.  *  * @version $Id$  * @author<A HREF="mailto:markus.dahm@berlin.de">M. Dahm</A>  */
+comment|/**   * This class represents a constant pool reference to a field.  *  * @version $Id$  * @author<A HREF="mailto:m.dahm@gmx.de">M. Dahm</A>  */
 end_comment
 
 begin_class

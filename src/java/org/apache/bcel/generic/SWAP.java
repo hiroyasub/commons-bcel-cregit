@@ -16,7 +16,7 @@ comment|/* ==================================================================== 
 end_comment
 
 begin_comment
-comment|/**   * SWAP - Swa top operand stack word  *<PRE>Stack: ..., word2, word1 -&gt; ..., word1, word2</PRE>  *  * @version $Id$  * @author<A HREF="mailto:markus.dahm@berlin.de">M. Dahm</A>  */
+comment|/**   * SWAP - Swa top operand stack word  *<PRE>Stack: ..., word2, word1 -&gt; ..., word1, word2</PRE>  *  * @version $Id$  * @author<A HREF="mailto:m.dahm@gmx.de">M. Dahm</A>  */
 end_comment
 
 begin_class

@@ -66,7 +66,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**   * MULTIANEWARRAY - Create new mutidimensional array of references  *<PRE>Stack: ..., count1, [count2, ...] -&gt; ..., arrayref</PRE>  *  * @version $Id$  * @author<A HREF="mailto:markus.dahm@berlin.de">M. Dahm</A>  */
+comment|/**   * MULTIANEWARRAY - Create new mutidimensional array of references  *<PRE>Stack: ..., count1, [count2, ...] -&gt; ..., arrayref</PRE>  *  * @version $Id$  * @author<A HREF="mailto:m.dahm@gmx.de">M. Dahm</A>  */
 end_comment
 
 begin_class

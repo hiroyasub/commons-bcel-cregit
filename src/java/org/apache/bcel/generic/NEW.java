@@ -17,16 +17,6 @@ end_comment
 
 begin_import
 import|import
-name|java
-operator|.
-name|io
-operator|.
-name|*
-import|;
-end_import
-
-begin_import
-import|import
 name|org
 operator|.
 name|apache
@@ -38,7 +28,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**   * NEW - Create new object  *<PRE>Stack: ... -&gt; ..., objectref</PRE>  *  * @version $Id$  * @author<A HREF="mailto:markus.dahm@berlin.de">M. Dahm</A>  */
+comment|/**   * NEW - Create new object  *<PRE>Stack: ... -&gt; ..., objectref</PRE>  *  * @version $Id$  * @author<A HREF="mailto:m.dahm@gmx.de">M. Dahm</A>  */
 end_comment
 
 begin_class

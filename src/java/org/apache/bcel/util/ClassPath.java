@@ -48,7 +48,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Responsible for loading (class) files from the CLASSPATH. Inspired by  * sun.tools.ClassPath.  *  * @version $Id$  * @author<A HREF="mailto:markus.dahm@berlin.de">M. Dahm</A>  */
+comment|/**  * Responsible for loading (class) files from the CLASSPATH. Inspired by  * sun.tools.ClassPath.  *  * @version $Id$  * @author<A HREF="mailto:m.dahm@gmx.de">M. Dahm</A>  */
 end_comment
 
 begin_class
