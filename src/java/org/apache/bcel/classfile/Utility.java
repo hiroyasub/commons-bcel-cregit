@@ -5163,10 +5163,6 @@ name|int
 name|j
 init|=
 literal|0
-decl_stmt|,
-name|k
-init|=
-literal|0
 decl_stmt|;
 for|for
 control|(

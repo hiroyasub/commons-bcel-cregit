@@ -438,7 +438,7 @@ operator|=
 name|constant_pool
 expr_stmt|;
 block|}
-comment|/**    * @param length.    */
+comment|/**    * @param length the length of this local variable    */
 specifier|public
 specifier|final
 name|void
@@ -455,7 +455,7 @@ operator|=
 name|length
 expr_stmt|;
 block|}
-comment|/**    * @param name_index.    */
+comment|/**    * @param name_index the index into the constant pool for the name of this variable    */
 specifier|public
 specifier|final
 name|void
@@ -472,7 +472,7 @@ operator|=
 name|name_index
 expr_stmt|;
 block|}
-comment|/**    * @param signature_index.    */
+comment|/**    * @param signature_index the index into the constant pool for the signature of this variable    */
 specifier|public
 specifier|final
 name|void
@@ -489,7 +489,7 @@ operator|=
 name|signature_index
 expr_stmt|;
 block|}
-comment|/**    * @param index.    */
+comment|/**    * @param index the index in the local variable table of this variable    */
 specifier|public
 specifier|final
 name|void

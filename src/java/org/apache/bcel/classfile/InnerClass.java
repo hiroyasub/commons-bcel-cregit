@@ -276,7 +276,7 @@ return|return
 name|outer_class_index
 return|;
 block|}
-comment|/**    * @param inner_access_flags.    */
+comment|/**    * @param inner_access_flags access flags for this inner class    */
 specifier|public
 specifier|final
 name|void
@@ -293,7 +293,7 @@ operator|=
 name|inner_access_flags
 expr_stmt|;
 block|}
-comment|/**    * @param inner_class_index.    */
+comment|/**    * @param inner_class_index index into the constant pool for this class    */
 specifier|public
 specifier|final
 name|void
@@ -310,7 +310,7 @@ operator|=
 name|inner_class_index
 expr_stmt|;
 block|}
-comment|/**    * @param inner_name_index.    */
+comment|/**    * @param inner_name_index index into the constant pool for this class's name    */
 specifier|public
 specifier|final
 name|void
@@ -327,7 +327,7 @@ operator|=
 name|inner_name_index
 expr_stmt|;
 block|}
-comment|/**    * @param outer_class_index.    */
+comment|/**    * @param outer_class_index index into the constant pool for the owning class    */
 specifier|public
 specifier|final
 name|void

@@ -240,7 +240,7 @@ return|return
 name|pmg_class_index
 return|;
 block|}
-comment|/**    * @param PMGClass_index.    */
+comment|/**    * @param pmg_class_index    */
 specifier|public
 specifier|final
 name|void
@@ -268,7 +268,7 @@ return|return
 name|pmg_index
 return|;
 block|}
-comment|/**    * @param PMGClass_index.    */
+comment|/**    * @param pmg_index    */
 specifier|public
 specifier|final
 name|void

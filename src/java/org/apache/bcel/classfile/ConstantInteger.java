@@ -167,7 +167,7 @@ return|return
 name|bytes
 return|;
 block|}
-comment|/**    * @param bytes.    */
+comment|/**    * @param bytes the raw bytes that represent this integer    */
 specifier|public
 specifier|final
 name|void

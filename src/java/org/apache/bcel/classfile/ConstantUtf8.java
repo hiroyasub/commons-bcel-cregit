@@ -184,7 +184,7 @@ return|return
 name|bytes
 return|;
 block|}
-comment|/**    * @param bytes.    */
+comment|/**    * @param bytes the raw bytes of this Utf-8    */
 specifier|public
 specifier|final
 name|void

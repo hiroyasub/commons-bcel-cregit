@@ -256,7 +256,7 @@ return|return
 name|bytes
 return|;
 block|}
-comment|/**    * @param bytes.    */
+comment|/**    * @param bytes    */
 specifier|public
 specifier|final
 name|void
@@ -345,10 +345,6 @@ name|c
 operator|.
 name|bytes
 operator|=
-operator|(
-name|byte
-index|[]
-operator|)
 name|bytes
 operator|.
 name|clone

@@ -168,7 +168,7 @@ return|return
 name|name_index
 return|;
 block|}
-comment|/**    * @param name_index.    */
+comment|/**    * @param name_index the name index in the constant pool of this Constant Class    */
 specifier|public
 specifier|final
 name|void

@@ -211,7 +211,7 @@ return|return
 name|signature_index
 return|;
 block|}
-comment|/**    * @param signature_index.    */
+comment|/**    * @param signature_index the index info the constant pool of this signature    */
 specifier|public
 specifier|final
 name|void

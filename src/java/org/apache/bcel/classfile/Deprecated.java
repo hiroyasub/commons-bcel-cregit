@@ -256,7 +256,7 @@ return|return
 name|bytes
 return|;
 block|}
-comment|/**    * @param bytes.    */
+comment|/**    * @param bytes the raw bytes that represents this byte array    */
 specifier|public
 specifier|final
 name|void
@@ -320,10 +320,6 @@ name|c
 operator|.
 name|bytes
 operator|=
-operator|(
-name|byte
-index|[]
-operator|)
 name|bytes
 operator|.
 name|clone

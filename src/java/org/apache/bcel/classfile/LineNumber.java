@@ -216,7 +216,7 @@ return|return
 name|start_pc
 return|;
 block|}
-comment|/**    * @param line_number.    */
+comment|/**    * @param line_number the source line number    */
 specifier|public
 specifier|final
 name|void
@@ -233,7 +233,7 @@ operator|=
 name|line_number
 expr_stmt|;
 block|}
-comment|/**    * @param start_pc.    */
+comment|/**    * @param start_pc the pc for this line number    */
 specifier|public
 specifier|final
 name|void

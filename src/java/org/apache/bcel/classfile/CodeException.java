@@ -284,7 +284,7 @@ return|return
 name|start_pc
 return|;
 block|}
-comment|/**    * @param catch_type.    */
+comment|/**    * @param catch_type the type of exception that is caught    */
 specifier|public
 specifier|final
 name|void

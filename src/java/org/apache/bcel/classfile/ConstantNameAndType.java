@@ -92,17 +92,11 @@ name|IOException
 block|{
 name|this
 argument_list|(
-operator|(
-name|int
-operator|)
 name|file
 operator|.
 name|readUnsignedShort
 argument_list|()
 argument_list|,
-operator|(
-name|int
-operator|)
 name|file
 operator|.
 name|readUnsignedShort
@@ -262,7 +256,7 @@ name|CONSTANT_Utf8
 argument_list|)
 return|;
 block|}
-comment|/**    * @param name_index.    */
+comment|/**    * @param name_index the name index of this constant    */
 specifier|public
 specifier|final
 name|void
@@ -279,7 +273,7 @@ operator|=
 name|name_index
 expr_stmt|;
 block|}
-comment|/**    * @param signature_index.    */
+comment|/**    * @param signature_index the signature index in the constant pool of this type    */
 specifier|public
 specifier|final
 name|void

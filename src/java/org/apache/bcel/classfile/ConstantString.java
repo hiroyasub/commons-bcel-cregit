@@ -84,9 +84,6 @@ name|IOException
 block|{
 name|this
 argument_list|(
-operator|(
-name|int
-operator|)
 name|file
 operator|.
 name|readUnsignedShort
@@ -171,7 +168,7 @@ return|return
 name|string_index
 return|;
 block|}
-comment|/**    * @param string_index.    */
+comment|/**    * @param string_index the index into the constant of the string value    */
 specifier|public
 specifier|final
 name|void

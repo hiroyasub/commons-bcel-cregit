@@ -739,7 +739,7 @@ name|getInternalLength
 argument_list|()
 return|;
 block|}
-comment|/**    * @param attributes.    */
+comment|/**    * @param attributes the attributes to set for this Code    */
 specifier|public
 specifier|final
 name|void
@@ -1039,7 +1039,7 @@ literal|true
 argument_list|)
 return|;
 block|}
-comment|/**    * @return deep copy of this attribute    */
+comment|/**    * @return deep copy of this attribute    *     * @param constant_pool the constant pool to duplicate    */
 specifier|public
 name|Attribute
 name|copy
@@ -1061,10 +1061,6 @@ name|c
 operator|.
 name|code
 operator|=
-operator|(
-name|byte
-index|[]
-operator|)
 name|code
 operator|.
 name|clone

@@ -284,7 +284,7 @@ return|return
 name|line_number_table
 return|;
 block|}
-comment|/**    * @param line_number_table.    */
+comment|/**    * @param line_number_table the line number entries for this table    */
 specifier|public
 specifier|final
 name|void

@@ -109,9 +109,6 @@ name|name_index
 argument_list|,
 name|length
 argument_list|,
-operator|(
-name|int
-operator|)
 name|file
 operator|.
 name|readUnsignedShort
@@ -213,7 +210,7 @@ return|return
 name|constantvalue_index
 return|;
 block|}
-comment|/**    * @param constantvalue_index.    */
+comment|/**    * @param constantvalue_index the index info the constant pool of this constant value    */
 specifier|public
 specifier|final
 name|void

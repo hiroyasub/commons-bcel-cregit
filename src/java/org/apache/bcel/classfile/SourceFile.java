@@ -210,7 +210,7 @@ return|return
 name|sourcefile_index
 return|;
 block|}
-comment|/**    * @param sourcefile_index.    */
+comment|/**    * @param sourcefile_index    */
 specifier|public
 specifier|final
 name|void

@@ -518,10 +518,6 @@ name|c
 operator|.
 name|bytes
 operator|=
-operator|(
-name|byte
-index|[]
-operator|)
 name|bytes
 operator|.
 name|clone

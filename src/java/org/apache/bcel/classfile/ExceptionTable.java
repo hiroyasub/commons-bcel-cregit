@@ -355,7 +355,7 @@ return|return
 name|names
 return|;
 block|}
-comment|/**    * @param exception_index_table.    * Also redefines number_of_exceptions according to table length.    */
+comment|/**    * @param exception_index_table the list of exception indexes    * Also redefines number_of_exceptions according to table length.    */
 specifier|public
 specifier|final
 name|void
@@ -496,10 +496,6 @@ name|c
 operator|.
 name|exception_index_table
 operator|=
-operator|(
-name|int
-index|[]
-operator|)
 name|exception_index_table
 operator|.
 name|clone

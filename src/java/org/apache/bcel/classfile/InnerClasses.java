@@ -281,7 +281,7 @@ return|return
 name|inner_classes
 return|;
 block|}
-comment|/**    * @param inner_classes.    */
+comment|/**    * @param inner_classes the array of inner classes    */
 specifier|public
 specifier|final
 name|void
