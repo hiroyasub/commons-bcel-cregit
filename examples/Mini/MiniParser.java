@@ -4876,14 +4876,14 @@ operator|.
 name|util
 operator|.
 name|Enumeration
-decl|enum
+name|e
 init|=
 name|jj_expentries
 operator|.
 name|elements
 argument_list|()
 init|;
-condition|enum
+name|e
 operator|.
 name|hasMoreElements
 argument_list|()
@@ -4899,7 +4899,7 @@ name|int
 index|[]
 operator|)
 operator|(
-expr|enum
+name|e
 operator|.
 name|nextElement
 argument_list|()
