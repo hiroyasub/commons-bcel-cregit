@@ -35,18 +35,6 @@ name|IOException
 import|;
 end_import
 
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|bcel
-operator|.
-name|Constants
-import|;
-end_import
-
 begin_comment
 comment|/**  * base class for annotations  *   * @version $Id: Annotations  * @author<A HREF="mailto:dbrosius@qis.net">D. Brosius</A>  */
 end_comment

@@ -47,6 +47,16 @@ end_import
 
 begin_import
 import|import
+name|java
+operator|.
+name|util
+operator|.
+name|Map
+import|;
+end_import
+
+begin_import
+import|import
 name|org
 operator|.
 name|apache
@@ -150,7 +160,7 @@ name|p2v
 decl_stmt|;
 comment|/** The Pass3aVerifiers for this Verifier instance. Key: Interned string specifying the method number. */
 specifier|private
-name|HashMap
+name|Map
 name|p3avs
 init|=
 operator|new
@@ -159,7 +169,7 @@ argument_list|()
 decl_stmt|;
 comment|/** The Pass3bVerifiers for this Verifier instance. Key: Interned string specifying the method number. */
 specifier|private
-name|HashMap
+name|Map
 name|p3bvs
 init|=
 operator|new

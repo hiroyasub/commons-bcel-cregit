@@ -41,6 +41,16 @@ name|java
 operator|.
 name|util
 operator|.
+name|Map
+import|;
+end_import
+
+begin_import
+import|import
+name|java
+operator|.
+name|util
+operator|.
 name|Vector
 import|;
 end_import
@@ -57,7 +67,7 @@ block|{
 comment|/** 	 * The HashMap that holds the data about the already-constructed Verifier instances. 	 */
 specifier|private
 specifier|static
-name|HashMap
+name|Map
 name|hashMap
 init|=
 operator|new

@@ -33,7 +33,7 @@ name|java
 operator|.
 name|util
 operator|.
-name|HashMap
+name|Hashtable
 import|;
 end_import
 
@@ -43,7 +43,7 @@ name|java
 operator|.
 name|util
 operator|.
-name|Hashtable
+name|Map
 import|;
 end_import
 
@@ -247,13 +247,13 @@ name|instruction
 decl_stmt|;
 comment|/** 		 * The 'incoming' execution Frames. 		 */
 specifier|private
-name|HashMap
+name|Map
 name|inFrames
 decl_stmt|;
 comment|// key: the last-executed JSR
 comment|/** 		 * The 'outgoing' execution Frames. 		 */
 specifier|private
-name|HashMap
+name|Map
 name|outFrames
 decl_stmt|;
 comment|// key: the last-executed JSR

@@ -93,7 +93,7 @@ comment|// Potential number, some are not used
 specifier|private
 specifier|static
 specifier|final
-name|HashMap
+name|Map
 name|map
 init|=
 operator|new

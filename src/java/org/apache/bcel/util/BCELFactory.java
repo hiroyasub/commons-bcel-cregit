@@ -119,7 +119,7 @@ name|out
 expr_stmt|;
 block|}
 specifier|private
-name|HashMap
+name|Map
 name|branch_map
 init|=
 operator|new

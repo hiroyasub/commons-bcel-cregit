@@ -47,6 +47,16 @@ end_import
 
 begin_import
 import|import
+name|java
+operator|.
+name|util
+operator|.
+name|Map
+import|;
+end_import
+
+begin_import
+import|import
 name|org
 operator|.
 name|apache
@@ -93,7 +103,7 @@ name|ClassLoader
 name|loader
 decl_stmt|;
 specifier|private
-name|HashMap
+name|Map
 name|loadedClasses
 init|=
 operator|new

@@ -70,7 +70,7 @@ name|name
 decl_stmt|;
 specifier|private
 specifier|static
-name|HashMap
+name|Map
 name|unknown_attributes
 init|=
 operator|new

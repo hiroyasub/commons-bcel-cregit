@@ -21,6 +21,16 @@ name|java
 operator|.
 name|util
 operator|.
+name|Collection
+import|;
+end_import
+
+begin_import
+import|import
+name|java
+operator|.
+name|util
+operator|.
 name|HashMap
 import|;
 end_import
@@ -31,7 +41,7 @@ name|java
 operator|.
 name|util
 operator|.
-name|Collection
+name|Map
 import|;
 end_import
 
@@ -65,7 +75,7 @@ operator|.
 name|Serializable
 block|{
 specifier|private
-name|HashMap
+name|Map
 name|_map
 init|=
 operator|new

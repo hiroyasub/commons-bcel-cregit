@@ -17,15 +17,21 @@ end_package
 
 begin_import
 import|import
-name|org
+name|java
 operator|.
-name|apache
+name|util
 operator|.
-name|bcel
+name|Collection
+import|;
+end_import
+
+begin_import
+import|import
+name|java
 operator|.
-name|classfile
+name|util
 operator|.
-name|Utility
+name|HashMap
 import|;
 end_import
 
@@ -45,7 +51,7 @@ name|java
 operator|.
 name|util
 operator|.
-name|Collection
+name|Map
 import|;
 end_import
 
@@ -55,7 +61,21 @@ name|java
 operator|.
 name|util
 operator|.
-name|HashMap
+name|Set
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|bcel
+operator|.
+name|classfile
+operator|.
+name|Utility
 import|;
 end_import
 
@@ -92,11 +112,11 @@ literal|1
 decl_stmt|;
 comment|// byte code offset of instruction
 specifier|private
-name|HashSet
+name|Set
 name|targeters
 decl_stmt|;
 specifier|private
-name|HashMap
+name|Map
 name|attributes
 decl_stmt|;
 specifier|public

@@ -59,6 +59,16 @@ end_import
 
 begin_import
 import|import
+name|java
+operator|.
+name|util
+operator|.
+name|Map
+import|;
+end_import
+
+begin_import
+import|import
 name|org
 operator|.
 name|apache
@@ -109,7 +119,7 @@ argument_list|()
 decl_stmt|;
 specifier|private
 specifier|static
-name|HashMap
+name|Map
 name|_instances
 init|=
 operator|new
@@ -124,7 +134,7 @@ init|=
 literal|null
 decl_stmt|;
 specifier|private
-name|HashMap
+name|Map
 name|_loadedClasses
 init|=
 operator|new
