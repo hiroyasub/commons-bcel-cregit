@@ -234,6 +234,14 @@ parameter_list|)
 function_decl|;
 specifier|public
 name|void
+name|visitSignature
+parameter_list|(
+name|Signature
+name|obj
+parameter_list|)
+function_decl|;
+specifier|public
+name|void
 name|visitSourceFile
 parameter_list|(
 name|SourceFile

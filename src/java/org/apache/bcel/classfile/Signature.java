@@ -173,6 +173,13 @@ argument_list|(
 literal|"Visiting non-standard Signature object"
 argument_list|)
 expr_stmt|;
+name|v
+operator|.
+name|visitSignature
+argument_list|(
+name|this
+argument_list|)
+expr_stmt|;
 block|}
 comment|/**    * Dump source file attribute to file stream in binary format.    *    * @param file Output file stream    * @throw IOException    */
 specifier|public
