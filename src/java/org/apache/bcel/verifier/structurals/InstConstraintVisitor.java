@@ -12556,11 +12556,38 @@ literal|"' is not of a reference type as expected."
 argument_list|)
 expr_stmt|;
 block|}
-comment|// TODO: This can only be checked using Staerk-et-al's "set-of-object types", not
+comment|// TODO: This can possibly only be checked using Staerk-et-al's "set-of-object types", not
 comment|// using "wider cast object types" created during verification.
-comment|//if (!(rvalue.isAssignmentCompatibleWith(shouldbe))){
-comment|//	constraintViolated(o, "The stack top type '"+value+"' is not assignment compatible with '"+shouldbe+"'.");
-comment|//}
+comment|// Comment it out if you encounter problems. See also the analogon at visitPUTSTATIC.
+if|if
+condition|(
+operator|!
+operator|(
+name|rvalue
+operator|.
+name|isAssignmentCompatibleWith
+argument_list|(
+name|shouldbe
+argument_list|)
+operator|)
+condition|)
+block|{
+name|constraintViolated
+argument_list|(
+name|o
+argument_list|,
+literal|"The stack top type '"
+operator|+
+name|value
+operator|+
+literal|"' is not assignment compatible with '"
+operator|+
+name|shouldbe
+operator|+
+literal|"'."
+argument_list|)
+expr_stmt|;
+block|}
 block|}
 else|else
 block|{
