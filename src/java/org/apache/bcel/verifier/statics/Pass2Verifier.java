@@ -7610,6 +7610,19 @@ name|String
 name|name
 parameter_list|)
 block|{
+if|if
+condition|(
+name|name
+operator|.
+name|length
+argument_list|()
+operator|==
+literal|0
+condition|)
+return|return
+literal|false
+return|;
+comment|// must not be empty, reported by<francis.andre@easynet.fr>, thanks!
 comment|// vmspec2 2.7, vmspec2 2.2
 if|if
 condition|(
