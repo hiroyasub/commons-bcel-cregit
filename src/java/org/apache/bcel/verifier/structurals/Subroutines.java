@@ -1363,14 +1363,6 @@ name|HashSet
 argument_list|()
 decl_stmt|;
 comment|// Elements: InstructionHandle
-name|InstructionHandle
-name|ih
-init|=
-name|all
-index|[
-literal|0
-index|]
-decl_stmt|;
 for|for
 control|(
 name|int
