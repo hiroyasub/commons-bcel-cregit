@@ -320,16 +320,11 @@ name|IOException
 name|e
 parameter_list|)
 block|{
-throw|throw
-operator|new
-name|RuntimeException
-argument_list|(
-name|e
-operator|.
-name|getMessage
-argument_list|()
-argument_list|)
-throw|;
+comment|//System.err.println(e);
+return|return
+literal|null
+return|;
+comment|// Use same behaviour as above
 block|}
 name|classes
 operator|.
