@@ -1699,6 +1699,25 @@ argument_list|)
 decl_stmt|;
 if|if
 condition|(
+name|c
+operator|instanceof
+name|ConstantClass
+condition|)
+block|{
+name|addMessage
+argument_list|(
+literal|"Operand of LDC or LDC_W is CONSTANT_Class '"
+operator|+
+name|c
+operator|+
+literal|"' - this is only supported in JDK 1.5 and higher."
+argument_list|)
+expr_stmt|;
+block|}
+else|else
+block|{
+if|if
+condition|(
 operator|!
 operator|(
 operator|(
@@ -1732,6 +1751,7 @@ operator|+
 literal|"'."
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 block|}
 comment|/** Checks if the constraints of operands of the said instruction(s) are satisfied. */
@@ -2061,7 +2081,7 @@ name|cpg
 argument_list|)
 decl_stmt|;
 comment|// Argh. Sun's implementation allows us to have multiple fields of
-comment|// the same name but wirth a different signature.
+comment|// the same name but with a different signature.
 comment|//if (! f_type.equals(o_type)){
 comment|//	constraintViolated(o, "Referenced field '"+field_name+"' has type '"+f_type+"' instead of '"+o_type+"' as expected.");
 comment|//}
