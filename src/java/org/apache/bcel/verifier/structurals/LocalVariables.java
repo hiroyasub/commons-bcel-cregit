@@ -274,6 +274,18 @@ operator|=
 name|type
 expr_stmt|;
 block|}
+comment|/** @return a hash code value for the object.      */
+specifier|public
+name|int
+name|hashCode
+parameter_list|()
+block|{
+return|return
+name|locals
+operator|.
+name|length
+return|;
+block|}
 comment|/* 	 * Fulfills the general contract of Object.equals(). 	 */
 specifier|public
 name|boolean

@@ -302,7 +302,7 @@ block|}
 comment|/** @return a hash code value for the object.    */
 specifier|public
 name|int
-name|hashcode
+name|hashCode
 parameter_list|()
 block|{
 return|return

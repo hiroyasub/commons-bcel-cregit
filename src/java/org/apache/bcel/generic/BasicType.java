@@ -185,6 +185,19 @@ argument_list|)
 throw|;
 block|}
 block|}
+comment|/** @return a hash code value for the object.    */
+specifier|public
+name|int
+name|hashCode
+parameter_list|()
+block|{
+return|return
+operator|(
+name|int
+operator|)
+name|type
+return|;
+block|}
 comment|/** @return true if both type objects refer to the same type    */
 specifier|public
 name|boolean

@@ -149,6 +149,21 @@ return|return
 name|detailMessage
 return|;
 block|}
+comment|/** @return a hash code value for the object.      */
+specifier|public
+name|int
+name|hashCode
+parameter_list|()
+block|{
+return|return
+name|numeric
+operator|^
+name|detailMessage
+operator|.
+name|hashCode
+argument_list|()
+return|;
+block|}
 comment|/** 	 * Returns if two VerificationResult instances are equal. 	 */
 specifier|public
 name|boolean

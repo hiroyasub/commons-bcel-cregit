@@ -109,6 +109,19 @@ operator|=
 name|returnTarget
 expr_stmt|;
 block|}
+comment|/** @return a hash code value for the object.    */
+specifier|public
+name|int
+name|hashCode
+parameter_list|()
+block|{
+return|return
+name|returnTarget
+operator|.
+name|hashCode
+argument_list|()
+return|;
+block|}
 comment|/**    * Returns if the two Returnaddresses refer to the same target.    */
 specifier|public
 name|boolean

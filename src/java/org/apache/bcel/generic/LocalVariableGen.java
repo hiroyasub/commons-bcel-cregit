@@ -486,6 +486,26 @@ name|ih
 operator|)
 return|;
 block|}
+comment|/** @return a hash code value for the object.    */
+specifier|public
+name|int
+name|hashCode
+parameter_list|()
+block|{
+return|return
+name|index
+operator|^
+name|start
+operator|.
+name|hashCode
+argument_list|()
+operator|^
+name|end
+operator|.
+name|hashCode
+argument_list|()
+return|;
+block|}
 comment|/**    * We consider to local variables to be equal, if the use the same index and    * are valid in the same range.    */
 specifier|public
 name|boolean

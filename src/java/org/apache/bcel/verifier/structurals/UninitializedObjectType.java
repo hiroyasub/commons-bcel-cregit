@@ -98,6 +98,19 @@ return|return
 name|initialized
 return|;
 block|}
+comment|/** @return a hash code value for the object.      */
+specifier|public
+name|int
+name|hashCode
+parameter_list|()
+block|{
+return|return
+name|initialized
+operator|.
+name|hashCode
+argument_list|()
+return|;
+block|}
 comment|/** 	 * Returns true on equality of this and o. 	 * Equality means the ObjectType instances of "initialized" 	 * equal one another in this and the o instance. 	 * 	 */
 specifier|public
 name|boolean

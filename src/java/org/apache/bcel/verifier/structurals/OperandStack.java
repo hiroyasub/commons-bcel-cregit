@@ -168,6 +168,19 @@ name|ArrayList
 argument_list|()
 expr_stmt|;
 block|}
+comment|/** @return a hash code value for the object.      */
+specifier|public
+name|int
+name|hashCode
+parameter_list|()
+block|{
+return|return
+name|stack
+operator|.
+name|hashCode
+argument_list|()
+return|;
+block|}
 comment|/** 	 * Returns true if and only if this OperandStack 	 * equals another, meaning equal lengths and equal 	 * objects on the stacks. 	 */
 specifier|public
 name|boolean

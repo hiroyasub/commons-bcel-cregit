@@ -155,6 +155,24 @@ return|return
 name|stack
 return|;
 block|}
+comment|/** @return a hash code value for the object.      */
+specifier|public
+name|int
+name|hashCode
+parameter_list|()
+block|{
+return|return
+name|stack
+operator|.
+name|hashCode
+argument_list|()
+operator|^
+name|locals
+operator|.
+name|hashCode
+argument_list|()
+return|;
+block|}
 comment|/** 	 * 	 */
 specifier|public
 name|boolean
