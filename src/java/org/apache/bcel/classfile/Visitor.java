@@ -24,22 +24,8 @@ specifier|public
 interface|interface
 name|Visitor
 block|{
-specifier|public
-name|void
-name|visitAnnotation
-parameter_list|(
-name|Annotations
-name|obj
-parameter_list|)
-function_decl|;
-specifier|public
-name|void
-name|visitAnnotationEntry
-parameter_list|(
-name|AnnotationEntry
-name|obj
-parameter_list|)
-function_decl|;
+comment|//public void visitAnnotation(Annotations obj);
+comment|//public void visitAnnotationEntry(AnnotationEntry obj);
 specifier|public
 name|void
 name|visitCode
