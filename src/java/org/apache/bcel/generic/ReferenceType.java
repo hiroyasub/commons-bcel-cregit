@@ -54,7 +54,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**   * Super class for objects and arrays.  *  * @version $Id$  * @author<A HREF="mailto:markus.dahm@berlin.de">M. Dahm</A>  */
+comment|/**  * Super class for objects and arrays.  *  * @version $Id$  * @author<A HREF="mailto:markus.dahm@berlin.de">M. Dahm</A>  */
 end_comment
 
 begin_class
@@ -82,7 +82,7 @@ name|s
 argument_list|)
 expr_stmt|;
 block|}
-comment|/** Class is non-abstract but not instantiable from the outside    */
+comment|/** Class is non-abstract but not instantiable from the outside      */
 name|ReferenceType
 parameter_list|()
 block|{
@@ -96,7 +96,7 @@ literal|"<null object>"
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**    * Return true iff this type is castable to another type t as defined in    * the JVM specification.  The case where this is Type.NULL is not    * defined (see the CHECKCAST definition in the JVM specification).    * However, because e.g. CHECKCAST doesn't throw a    * ClassCastException when casting a null reference to any Object,    * true is returned in this case.    */
+comment|/**      * Return true iff this type is castable to another type t as defined in      * the JVM specification.  The case where this is Type.NULL is not      * defined (see the CHECKCAST definition in the JVM specification).      * However, because e.g. CHECKCAST doesn't throw a      * ClassCastException when casting a null reference to any Object,      * true is returned in this case.      */
 specifier|public
 name|boolean
 name|isCastableTo
@@ -126,9 +126,9 @@ argument_list|(
 name|t
 argument_list|)
 return|;
-comment|/* Yes, it's true: It's the same definition. 					   * See vmspec2 AASTORE / CHECKCAST definitions. 					   */
+comment|/* Yes, it's true: It's the same definition.                          * See vmspec2 AASTORE / CHECKCAST definitions.                          */
 block|}
-comment|/**    * Return true iff this is assignment compatible with another type t    * as defined in the JVM specification; see the AASTORE definition    * there.    */
+comment|/**      * Return true iff this is assignment compatible with another type t      * as defined in the JVM specification; see the AASTORE definition      * there.      */
 specifier|public
 name|boolean
 name|isAssignmentCompatibleWith
@@ -172,7 +172,7 @@ return|return
 literal|true
 return|;
 comment|// This is not explicitely stated, but clear. Isn't it?
-comment|/* If this is a class type then      */
+comment|/* If this is a class type then          */
 if|if
 condition|(
 operator|(
@@ -194,7 +194,7 @@ argument_list|()
 operator|)
 condition|)
 block|{
-comment|/* If T is a class type, then this must be the same class as T,          or this must be a subclass of T;       */
+comment|/* If T is a class type, then this must be the same class as T,                or this must be a subclass of T;             */
 if|if
 condition|(
 operator|(
@@ -259,7 +259,7 @@ return|return
 literal|true
 return|;
 block|}
-comment|/* If T is an interface type, this must implement interface T.        */
+comment|/* If T is an interface type, this must implement interface T.              */
 if|if
 condition|(
 operator|(
@@ -313,7 +313,7 @@ literal|true
 return|;
 block|}
 block|}
-comment|/* If this is an interface type, then:      */
+comment|/* If this is an interface type, then:          */
 if|if
 condition|(
 operator|(
@@ -335,7 +335,7 @@ argument_list|()
 operator|)
 condition|)
 block|{
-comment|/* If T is a class type, then T must be Object (§2.4.7).        */
+comment|/* If T is a class type, then T must be Object (§2.4.7).              */
 if|if
 condition|(
 operator|(
@@ -372,7 +372,7 @@ return|return
 literal|true
 return|;
 block|}
-comment|/* If T is an interface type, then T must be the same interface          as this or a superinterface of this (§2.13.2).       */
+comment|/* If T is an interface type, then T must be the same interface                as this or a superinterface of this (§2.13.2).             */
 if|if
 condition|(
 operator|(
@@ -438,7 +438,7 @@ literal|true
 return|;
 block|}
 block|}
-comment|/* If this is an array type, namely, the type SC[], that is, an        array of components of type SC, then:     */
+comment|/* If this is an array type, namely, the type SC[], that is, an            array of components of type SC, then:         */
 if|if
 condition|(
 name|this
@@ -446,7 +446,7 @@ operator|instanceof
 name|ArrayType
 condition|)
 block|{
-comment|/* If T is a class type, then T must be Object (§2.4.7).        */
+comment|/* If T is a class type, then T must be Object (§2.4.7).              */
 if|if
 condition|(
 operator|(
@@ -483,7 +483,7 @@ return|return
 literal|true
 return|;
 block|}
-comment|/* If T is an array type TC[], that is, an array of components          of type TC, then one of the following must be true:       */
+comment|/* If T is an array type TC[], that is, an array of components                of type TC, then one of the following must be true:             */
 if|if
 condition|(
 name|T
@@ -491,7 +491,7 @@ operator|instanceof
 name|ArrayType
 condition|)
 block|{
-comment|/* TC and SC are the same primitive type (§2.4.1). 	 */
+comment|/* TC and SC are the same primitive type (§2.4.1).                  */
 name|Type
 name|sc
 init|=
@@ -538,7 +538,7 @@ condition|)
 return|return
 literal|true
 return|;
-comment|/* TC and SC are reference types (§2.4.6), and type SC is            assignable to TC by these runtime rules.*/
+comment|/* TC and SC are reference types (§2.4.6), and type SC is                        assignable to TC by these runtime rules.*/
 if|if
 condition|(
 name|tc
@@ -643,7 +643,7 @@ literal|false
 return|;
 comment|// default.
 block|}
-comment|/**    * This commutative operation returns the first common superclass (narrowest ReferenceType    * referencing a class, not an interface).    * If one of the types is a superclass of the other, the former is returned.    * If "this" is Type.NULL, then t is returned.    * If t is Type.NULL, then "this" is returned.                                  * If "this" equals t ['this.equals(t)'] "this" is returned.    * If "this" or t is an ArrayType, then Type.OBJECT is returned.    * If "this" or t is a ReferenceType referencing an interface, then Type.OBJECT is returned.    * If not all of the two classes' superclasses cannot be found, "null" is returned.    * See the JVM specification edition 2, "§4.9.2 The Bytecode Verifier".    */
+comment|/**      * This commutative operation returns the first common superclass (narrowest ReferenceType      * referencing a class, not an interface).      * If one of the types is a superclass of the other, the former is returned.      * If "this" is Type.NULL, then t is returned.      * If t is Type.NULL, then "this" is returned.      * If "this" equals t ['this.equals(t)'] "this" is returned.      * If "this" or t is an ArrayType, then Type.OBJECT is returned;      * unless their dimensions match. Then an ArrayType of the same      * number of dimensions is returned, with its basic type being the      * first common super class of the basic types of "this" and t.      * If "this" or t is a ReferenceType referencing an interface, then Type.OBJECT is returned.      * If not all of the two classes' superclasses cannot be found, "null" is returned.      * See the JVM specification edition 2, "§4.9.2 The Bytecode Verifier".      */
 specifier|public
 name|ReferenceType
 name|firstCommonSuperclass
@@ -692,11 +692,100 @@ condition|)
 return|return
 name|this
 return|;
-comment|// TODO: This sounds a little arbitrary. On the other hand, there is
-comment|// no object referenced by Type.NULL so we can also say all the objects
-comment|// referenced by Type.NULL were derived from java.lang.Object.
-comment|// However, the Java Language's "instanceof" operator proves us wrong:
-comment|// "null" is not referring to an instance of java.lang.Object :)
+comment|/*          * TODO: Above sounds a little arbitrary. On the other hand, there is          * no object referenced by Type.NULL so we can also say all the objects          * referenced by Type.NULL were derived from java.lang.Object.          * However, the Java Language's "instanceof" operator proves us wrong:          * "null" is not referring to an instance of java.lang.Object :)          */
+comment|/* This code is from a bug report by Konstantin Shagin<konst@cs.technion.ac.il> */
+if|if
+condition|(
+operator|(
+name|this
+operator|instanceof
+name|ArrayType
+operator|)
+operator|&&
+operator|(
+name|t
+operator|instanceof
+name|ArrayType
+operator|)
+condition|)
+block|{
+name|ArrayType
+name|arrType1
+init|=
+operator|(
+name|ArrayType
+operator|)
+name|this
+decl_stmt|;
+name|ArrayType
+name|arrType2
+init|=
+operator|(
+name|ArrayType
+operator|)
+name|t
+decl_stmt|;
+if|if
+condition|(
+operator|(
+name|arrType1
+operator|.
+name|getDimensions
+argument_list|()
+operator|==
+name|arrType2
+operator|.
+name|getDimensions
+argument_list|()
+operator|)
+operator|&&
+name|arrType1
+operator|.
+name|getBasicType
+argument_list|()
+operator|instanceof
+name|ObjectType
+operator|&&
+name|arrType2
+operator|.
+name|getBasicType
+argument_list|()
+operator|instanceof
+name|ObjectType
+condition|)
+block|{
+return|return
+operator|new
+name|ArrayType
+argument_list|(
+operator|(
+operator|(
+name|ObjectType
+operator|)
+name|arrType1
+operator|.
+name|getBasicType
+argument_list|()
+operator|)
+operator|.
+name|firstCommonSuperclass
+argument_list|(
+operator|(
+name|ObjectType
+operator|)
+name|arrType2
+operator|.
+name|getBasicType
+argument_list|()
+argument_list|)
+argument_list|,
+name|arrType1
+operator|.
+name|getDimensions
+argument_list|()
+argument_list|)
+return|;
+block|}
 if|if
 condition|(
 operator|(
