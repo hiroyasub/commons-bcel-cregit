@@ -745,6 +745,20 @@ name|isFinal
 argument_list|()
 condition|)
 block|{
+if|if
+condition|(
+operator|!
+operator|(
+name|methods
+index|[
+name|i
+index|]
+operator|.
+name|isPrivate
+argument_list|()
+operator|)
+condition|)
+block|{
 throw|throw
 operator|new
 name|ClassConstraintException
@@ -772,6 +786,35 @@ operator|+
 literal|"'."
 argument_list|)
 throw|;
+block|}
+else|else
+block|{
+name|addMessage
+argument_list|(
+literal|"Method '"
+operator|+
+name|name_and_sig
+operator|+
+literal|"' in class '"
+operator|+
+name|hashmap
+operator|.
+name|get
+argument_list|(
+name|name_and_sig
+argument_list|)
+operator|+
+literal|"' overrides the final (not-overridable) definition in class '"
+operator|+
+name|jc
+operator|.
+name|getClassName
+argument_list|()
+operator|+
+literal|"'. This is okay, as the original definition was private; however this constraint leverage was introduced by JLS 8.4.6 (not vmspec2) and the behaviour of the Sun verifiers."
+argument_list|)
+expr_stmt|;
+block|}
 block|}
 else|else
 block|{
