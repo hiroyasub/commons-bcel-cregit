@@ -4778,7 +4778,16 @@ argument_list|(
 name|cpg
 argument_list|)
 operator|+
-literal|"' with expected signature not found in class '"
+literal|"' with expected signature '"
+operator|+
+name|o
+operator|.
+name|getSignature
+argument_list|(
+name|cpg
+argument_list|)
+operator|+
+literal|"' not found in class '"
 operator|+
 name|jc
 operator|.
@@ -5003,7 +5012,16 @@ argument_list|(
 name|cpg
 argument_list|)
 operator|+
-literal|"' with expected signature not found in class '"
+literal|"' with expected signature '"
+operator|+
+name|o
+operator|.
+name|getSignature
+argument_list|(
+name|cpg
+argument_list|)
+operator|+
+literal|"' not found in class '"
 operator|+
 name|jc
 operator|.
@@ -5452,7 +5470,16 @@ argument_list|(
 name|cpg
 argument_list|)
 operator|+
-literal|"' with expected signature not found in class '"
+literal|"' with expected signature '"
+operator|+
+name|o
+operator|.
+name|getSignature
+argument_list|(
+name|cpg
+argument_list|)
+operator|+
+literal|"' not found in class '"
 operator|+
 name|jc
 operator|.
@@ -5683,7 +5710,16 @@ argument_list|(
 name|cpg
 argument_list|)
 operator|+
-literal|"' with expected signature not found in class '"
+literal|"' with expected signature '"
+operator|+
+name|o
+operator|.
+name|getSignature
+argument_list|(
+name|cpg
+argument_list|)
+operator|+
+literal|"' not found in class '"
 operator|+
 name|jc
 operator|.
