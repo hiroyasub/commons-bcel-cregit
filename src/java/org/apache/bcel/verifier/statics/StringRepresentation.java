@@ -48,7 +48,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * BCEL's Node classes (those from the classfile API that<B>accept()</B> Visitor  * instances) have<B>toString()</B> methods that were not designed to be robust,  * this gap is closed by this class.  * When performing class file verification, it may be useful to output which  * entity (e.g. a<B>Code</B> instance) is not satisfying the verifier's  * constraints, but in this case it could be possible for the<B>toString()</B>  * method to throw a RuntimeException.  * A (new StringRepresentation(Node n)).toString() never throws any exception.  * Note that this class also serves as a placeholder for more sophisticated message  * handling in future versions of JustIce.  *   * @version $Id$  * @author<A HREF="http://www.inf.fu-berlin.de/~ehaase"/>Enver Haase</A>  */
+comment|/**  * BCEL's Node classes (those from the classfile API that<B>accept()</B> Visitor  * instances) have<B>toString()</B> methods that were not designed to be robust,  * this gap is closed by this class.  * When performing class file verification, it may be useful to output which  * entity (e.g. a<B>Code</B> instance) is not satisfying the verifier's  * constraints, but in this case it could be possible for the<B>toString()</B>  * method to throw a RuntimeException.  * A (new StringRepresentation(Node n)).toString() never throws any exception.  * Note that this class also serves as a placeholder for more sophisticated message  * handling in future versions of JustIce.  *  * @version $Id$  * @author<A HREF="http://www.inf.fu-berlin.de/~ehaase"/>Enver Haase</A>  */
 end_comment
 
 begin_class
@@ -78,7 +78,7 @@ specifier|private
 name|Node
 name|n
 decl_stmt|;
-comment|/** 	 * Creates a new StringRepresentation object which is the representation of n. 	 * 	 * @see #toString() 	 */
+comment|/**      * Creates a new StringRepresentation object which is the representation of n.      *      * @see #toString()      */
 specifier|public
 name|StringRepresentation
 parameter_list|(
@@ -101,7 +101,7 @@ argument_list|)
 expr_stmt|;
 comment|// assign a string representation to field 'tostring' if we know n's class.
 block|}
-comment|/** 	 * Returns the String representation. 	 */
+comment|/**      * Returns the String representation.      */
 specifier|public
 name|String
 name|toString
@@ -141,7 +141,7 @@ return|return
 name|tostring
 return|;
 block|}
-comment|/** 	 * Returns the String representation of the Node object obj; 	 * this is obj.toString() if it does not throw any RuntimeException, 	 * or else it is a string derived only from obj's class name. 	 */
+comment|/**      * Returns the String representation of the Node object obj;      * this is obj.toString() if it does not throw any RuntimeException,      * or else it is a string derived only from obj's class name.      */
 specifier|private
 name|String
 name|toString
@@ -169,49 +169,7 @@ name|RuntimeException
 name|e
 parameter_list|)
 block|{
-name|String
-name|s
-init|=
-name|obj
-operator|.
-name|getClass
-argument_list|()
-operator|.
-name|getName
-argument_list|()
-decl_stmt|;
-name|s
-operator|=
-name|s
-operator|.
-name|substring
-argument_list|(
-name|s
-operator|.
-name|lastIndexOf
-argument_list|(
-literal|"."
-argument_list|)
-operator|+
-literal|1
-argument_list|)
-expr_stmt|;
-name|ret
-operator|=
-literal|"<<"
-operator|+
-name|s
-operator|+
-literal|">>"
-expr_stmt|;
-block|}
-catch|catch
-parameter_list|(
-name|ClassFormatError
-name|e
-parameter_list|)
-block|{
-comment|/* BCEL can be harsh e.g. trying to convert the "signature" of a ReturnaddressType LocalVariable (shouldn't occur, but people do crazy things) */
+comment|// including ClassFormatException, trying to convert the "signature" of a ReturnaddressType LocalVariable (shouldn't occur, but people do crazy things)
 name|String
 name|s
 init|=

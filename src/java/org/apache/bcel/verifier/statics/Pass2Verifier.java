@@ -2368,11 +2368,10 @@ comment|/* Don't need the return value */
 block|}
 catch|catch
 parameter_list|(
-name|ClassFormatError
+name|ClassFormatException
 name|cfe
 parameter_list|)
 block|{
-comment|// sometimes BCEL is a little harsh describing exceptional situations.
 throw|throw
 operator|new
 name|ClassConstraintException
@@ -2715,11 +2714,10 @@ expr_stmt|;
 block|}
 catch|catch
 parameter_list|(
-name|ClassFormatError
+name|ClassFormatException
 name|cfe
 parameter_list|)
 block|{
-comment|// Well, BCEL sometimes is a little harsh describing exceptional situations.
 throw|throw
 operator|new
 name|ClassConstraintException
@@ -5663,11 +5661,10 @@ expr_stmt|;
 block|}
 catch|catch
 parameter_list|(
-name|ClassFormatError
+name|ClassFormatException
 name|cfe
 parameter_list|)
 block|{
-comment|// sometimes BCEL is a little harsh describing exceptional situations.
 throw|throw
 operator|new
 name|ClassConstraintException
@@ -6832,11 +6829,10 @@ comment|/* Don't need the return value */
 block|}
 catch|catch
 parameter_list|(
-name|ClassFormatError
+name|ClassFormatException
 name|cfe
 parameter_list|)
 block|{
-comment|// Well, BCEL sometimes is a little harsh describing exceptional situations.
 throw|throw
 operator|new
 name|ClassConstraintException
@@ -7107,11 +7103,10 @@ block|}
 block|}
 catch|catch
 parameter_list|(
-name|ClassFormatError
+name|ClassFormatException
 name|cfe
 parameter_list|)
 block|{
-comment|// Well, BCEL sometimes is a little harsh describing exceptional situations.
 throw|throw
 operator|new
 name|ClassConstraintException
@@ -7388,11 +7383,10 @@ block|}
 block|}
 catch|catch
 parameter_list|(
-name|ClassFormatError
+name|ClassFormatException
 name|cfe
 parameter_list|)
 block|{
-comment|// Well, BCEL sometimes is a little harsh describing exceptional situations.
 throw|throw
 operator|new
 name|ClassConstraintException

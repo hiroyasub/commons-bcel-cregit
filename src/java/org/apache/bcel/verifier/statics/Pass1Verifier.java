@@ -259,11 +259,10 @@ return|;
 block|}
 catch|catch
 parameter_list|(
-name|ClassFormatError
+name|ClassFormatException
 name|e
 parameter_list|)
 block|{
-comment|// BCEL sometimes is a little harsh describing exceptual situations.
 return|return
 operator|new
 name|VerificationResult
