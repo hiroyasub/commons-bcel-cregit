@@ -50,6 +50,8 @@ name|PUTFIELD
 extends|extends
 name|FieldInstruction
 implements|implements
+name|PopInstruction
+implements|,
 name|ExceptionThrower
 block|{
 comment|/**    * Empty constructor needed for the Class.newInstance() statement in    * Instruction.readInstruction(). Not to be used otherwise.    */
