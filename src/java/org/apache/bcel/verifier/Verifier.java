@@ -663,6 +663,12 @@ name|meth
 operator|+
 literal|" ('"
 operator|+
+name|org
+operator|.
+name|apache
+operator|.
+name|bcel
+operator|.
 name|Repository
 operator|.
 name|lookupClass
@@ -760,6 +766,12 @@ name|meth
 operator|+
 literal|" ('"
 operator|+
+name|org
+operator|.
+name|apache
+operator|.
+name|bcel
+operator|.
 name|Repository
 operator|.
 name|lookupClass
@@ -1019,6 +1031,12 @@ block|{
 name|JavaClass
 name|jc
 init|=
+name|org
+operator|.
+name|apache
+operator|.
+name|bcel
+operator|.
 name|Repository
 operator|.
 name|lookupClass
@@ -1199,6 +1217,12 @@ operator|.
 name|flush
 argument_list|()
 expr_stmt|;
+name|org
+operator|.
+name|apache
+operator|.
+name|bcel
+operator|.
 name|Repository
 operator|.
 name|clearCache

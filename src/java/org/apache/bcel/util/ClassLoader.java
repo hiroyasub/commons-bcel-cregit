@@ -124,6 +124,12 @@ block|,
 literal|"sun."
 block|}
 decl_stmt|;
+specifier|private
+name|Repository
+name|repository
+init|=
+literal|null
+decl_stmt|;
 specifier|public
 name|ClassLoader
 parameter_list|()
@@ -325,6 +331,12 @@ condition|(
 operator|(
 name|clazz
 operator|=
+name|org
+operator|.
+name|apache
+operator|.
+name|bcel
+operator|.
 name|Repository
 operator|.
 name|lookupClass
