@@ -86,7 +86,7 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**    * @param name_index Index in constant pool to CONSTANT_Utf8    * @param length Content length in bytes    * @param bytes Attribute contents    * @param constant_pool Array of constants    * @param sourcefile_index Index in constant pool to CONSTANT_Utf8    */
+comment|/**    * @param name_index Index in constant pool to CONSTANT_Utf8    * @param length Content length in bytes    * @param bytes Attribute contents    * @param constant_pool Array of constants    */
 specifier|public
 name|Deprecated
 parameter_list|(
