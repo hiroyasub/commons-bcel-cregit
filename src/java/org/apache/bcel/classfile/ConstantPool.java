@@ -894,9 +894,6 @@ decl_stmt|;
 name|int
 name|i
 decl_stmt|;
-name|String
-name|s
-decl_stmt|;
 name|c
 operator|=
 name|getConstant
