@@ -37,6 +37,20 @@ name|bcel
 operator|.
 name|util
 operator|.
+name|BCELComparator
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|bcel
+operator|.
+name|util
+operator|.
 name|SyntheticRepository
 import|;
 end_import
@@ -104,7 +118,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Represents a Java class, i.e., the data structures, constant pool,  * fields, methods and commands contained in a Java .class file.  * See<a href="ftp://java.sun.com/docs/specs/">JVM   * specification</a> for details.   * The intent of this class is to represent a parsed or otherwise existing  * class file.  Those interested in programatically generating classes  * should see the<a href="../generic/ClassGen.html">ClassGen</a> class.   * @version $Id$  * @see org.apache.bcel.generic.ClassGen  * @author<A HREF="mailto:markus.dahm@berlin.de">M. Dahm</A>  */
+comment|/**  * Represents a Java class, i.e., the data structures, constant pool,  * fields, methods and commands contained in a Java .class file.  * See<a href="ftp://java.sun.com/docs/specs/">JVM specification</a> for details.  * The intent of this class is to represent a parsed or otherwise existing  * class file.  Those interested in programatically generating classes  * should see the<a href="../generic/ClassGen.html">ClassGen</a> class.   * @version $Id$  * @see org.apache.bcel.generic.ClassGen  * @author<A HREF="mailto:m.dahm@gmx.de">M. Dahm</A>  */
 end_comment
 
 begin_class
@@ -234,6 +248,85 @@ init|=
 literal|'/'
 decl_stmt|;
 comment|// directory separator
+specifier|private
+specifier|static
+name|BCELComparator
+name|_cmp
+init|=
+operator|new
+name|BCELComparator
+argument_list|()
+block|{
+specifier|public
+name|boolean
+name|equals
+parameter_list|(
+name|Object
+name|o1
+parameter_list|,
+name|Object
+name|o2
+parameter_list|)
+block|{
+name|JavaClass
+name|THIS
+init|=
+operator|(
+name|JavaClass
+operator|)
+name|o1
+decl_stmt|;
+name|JavaClass
+name|THAT
+init|=
+operator|(
+name|JavaClass
+operator|)
+name|o2
+decl_stmt|;
+return|return
+name|THIS
+operator|.
+name|getClassName
+argument_list|()
+operator|.
+name|equals
+argument_list|(
+name|THAT
+operator|.
+name|getClassName
+argument_list|()
+argument_list|)
+return|;
+block|}
+specifier|public
+name|int
+name|hashCode
+parameter_list|(
+name|Object
+name|o
+parameter_list|)
+block|{
+name|JavaClass
+name|THIS
+init|=
+operator|(
+name|JavaClass
+operator|)
+name|o
+decl_stmt|;
+return|return
+name|THIS
+operator|.
+name|getClassName
+argument_list|()
+operator|.
+name|hashCode
+argument_list|()
+return|;
+block|}
+block|}
+decl_stmt|;
 comment|/**    * In cases where we go ahead and create something,    * use the default SyntheticRepository, because we    * don't know any better.    */
 specifier|private
 specifier|transient
@@ -2416,7 +2509,7 @@ operator|=
 name|repository
 expr_stmt|;
 block|}
-comment|/** Equivalent to runtime "instanceof" operator.    *    * @return true if this JavaClass is derived from teh super class    */
+comment|/** Equivalent to runtime "instanceof" operator.    *    * @return true if this JavaClass is derived from the super class    * @throws ClassNotFoundException if superclasses or superinterfaces    *   of this object can't be found    */
 specifier|public
 specifier|final
 name|boolean
@@ -2425,6 +2518,8 @@ parameter_list|(
 name|JavaClass
 name|super_class
 parameter_list|)
+throws|throws
+name|ClassNotFoundException
 block|{
 if|if
 condition|(
@@ -2499,7 +2594,7 @@ return|return
 literal|false
 return|;
 block|}
-comment|/**    * @return true, if clazz is an implementation of interface inter    */
+comment|/**    * @return true, if this class is an implementation of interface inter    * @throws ClassNotFoundException if superclasses or superinterfaces    *   of this class can't be found    */
 specifier|public
 name|boolean
 name|implementationOf
@@ -2507,6 +2602,8 @@ parameter_list|(
 name|JavaClass
 name|inter
 parameter_list|)
+throws|throws
+name|ClassNotFoundException
 block|{
 if|if
 condition|(
@@ -2590,11 +2687,13 @@ return|return
 literal|false
 return|;
 block|}
-comment|/**    * @return the superclass for this JavaClass object, or null if this    * is java.lang.Object    */
+comment|/**    * @return the superclass for this JavaClass object, or null if this    * is java.lang.Object    * @throws ClassNotFoundException if the superclass can't be found    */
 specifier|public
 name|JavaClass
 name|getSuperClass
 parameter_list|()
+throws|throws
+name|ClassNotFoundException
 block|{
 if|if
 condition|(
@@ -2611,8 +2710,6 @@ return|return
 literal|null
 return|;
 block|}
-try|try
-block|{
 return|return
 name|repository
 operator|.
@@ -2623,32 +2720,14 @@ argument_list|()
 argument_list|)
 return|;
 block|}
-catch|catch
-parameter_list|(
-name|ClassNotFoundException
-name|e
-parameter_list|)
-block|{
-name|System
-operator|.
-name|err
-operator|.
-name|println
-argument_list|(
-name|e
-argument_list|)
-expr_stmt|;
-return|return
-literal|null
-return|;
-block|}
-block|}
-comment|/**    * @return list of super classes of this class in ascending order, i.e.,    * java.lang.Object is always the last element    */
+comment|/**    * @return list of super classes of this class in ascending order, i.e.,    * java.lang.Object is always the last element    * @throws ClassNotFoundException if any of the superclasses can't be found    */
 specifier|public
 name|JavaClass
 index|[]
 name|getSuperClasses
 parameter_list|()
+throws|throws
+name|ClassNotFoundException
 block|{
 name|JavaClass
 name|clazz
@@ -2704,6 +2783,8 @@ name|JavaClass
 index|[]
 name|getInterfaces
 parameter_list|()
+throws|throws
+name|ClassNotFoundException
 block|{
 name|String
 index|[]
@@ -2724,8 +2805,6 @@ operator|.
 name|length
 index|]
 decl_stmt|;
-try|try
-block|{
 for|for
 control|(
 name|int
@@ -2759,26 +2838,6 @@ index|]
 argument_list|)
 expr_stmt|;
 block|}
-block|}
-catch|catch
-parameter_list|(
-name|ClassNotFoundException
-name|e
-parameter_list|)
-block|{
-name|System
-operator|.
-name|err
-operator|.
-name|println
-argument_list|(
-name|e
-argument_list|)
-expr_stmt|;
-return|return
-literal|null
-return|;
-block|}
 return|return
 name|classes
 return|;
@@ -2789,6 +2848,8 @@ name|JavaClass
 index|[]
 name|getAllInterfaces
 parameter_list|()
+throws|throws
+name|ClassNotFoundException
 block|{
 name|ClassQueue
 name|queue
@@ -2913,6 +2974,67 @@ name|vec
 operator|.
 name|toArray
 argument_list|()
+return|;
+block|}
+comment|/**    * @return Comparison strategy object    */
+specifier|public
+specifier|static
+name|BCELComparator
+name|getComparator
+parameter_list|()
+block|{
+return|return
+name|_cmp
+return|;
+block|}
+comment|/**    * @param comparator Comparison strategy object    */
+specifier|public
+specifier|static
+name|void
+name|setComparator
+parameter_list|(
+name|BCELComparator
+name|comparator
+parameter_list|)
+block|{
+name|_cmp
+operator|=
+name|comparator
+expr_stmt|;
+block|}
+comment|/**    * Return value as defined by given BCELComparator strategy.    * By default two JavaClass objects are said to be equal when    * their class names are equal.    *     * @see java.lang.Object#equals(java.lang.Object)    */
+specifier|public
+name|boolean
+name|equals
+parameter_list|(
+name|Object
+name|obj
+parameter_list|)
+block|{
+return|return
+name|_cmp
+operator|.
+name|equals
+argument_list|(
+name|this
+argument_list|,
+name|obj
+argument_list|)
+return|;
+block|}
+comment|/**    * Return value as defined by given BCELComparator strategy.    * By default return the hashcode of the class name.    *     * @see java.lang.Object#hashCode()    */
+specifier|public
+name|int
+name|hashCode
+parameter_list|()
+block|{
+return|return
+name|_cmp
+operator|.
+name|hashCode
+argument_list|(
+name|this
+argument_list|)
 return|;
 block|}
 block|}
