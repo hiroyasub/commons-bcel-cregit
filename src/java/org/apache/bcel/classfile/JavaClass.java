@@ -478,10 +478,6 @@ expr_stmt|;
 break|break;
 block|}
 block|}
-comment|// Get class name and superclass name
-name|ConstantUtf8
-name|name
-decl_stmt|;
 comment|/* According to the specification the following entries must be of type      * `ConstantClass' but we check that anyway via the       * `ConstPool.getConstant' method.      */
 name|class_name
 operator|=
@@ -877,6 +873,29 @@ operator|.
 name|printStackTrace
 argument_list|()
 expr_stmt|;
+block|}
+finally|finally
+block|{
+try|try
+block|{
+name|ds
+operator|.
+name|close
+argument_list|()
+expr_stmt|;
+block|}
+catch|catch
+parameter_list|(
+name|IOException
+name|e2
+parameter_list|)
+block|{
+name|e2
+operator|.
+name|printStackTrace
+argument_list|()
+expr_stmt|;
+block|}
 block|}
 return|return
 name|s

@@ -299,9 +299,6 @@ block|{
 name|ConstantUtf8
 name|c
 decl_stmt|;
-name|ConstantValue
-name|cv
-decl_stmt|;
 name|String
 name|name
 decl_stmt|,
@@ -310,15 +307,8 @@ decl_stmt|,
 name|access
 decl_stmt|;
 comment|// Short cuts to constant pool
-name|String
-name|exceptions
-decl_stmt|;
 name|StringBuffer
 name|buf
-decl_stmt|;
-name|Attribute
-index|[]
-name|attr
 decl_stmt|;
 name|access
 operator|=
