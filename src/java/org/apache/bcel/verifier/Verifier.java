@@ -881,7 +881,7 @@ name|out
 operator|.
 name|println
 argument_list|(
-literal|"Now verifiying: "
+literal|"Now verifying: "
 operator|+
 name|args
 index|[
