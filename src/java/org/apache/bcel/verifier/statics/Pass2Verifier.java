@@ -117,6 +117,24 @@ name|apache
 operator|.
 name|bcel
 operator|.
+name|classfile
+operator|.
+name|Deprecated
+import|;
+end_import
+
+begin_comment
+comment|// Use _this_ one!
+end_comment
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|bcel
+operator|.
 name|generic
 operator|.
 name|*

@@ -39,6 +39,24 @@ name|apache
 operator|.
 name|bcel
 operator|.
+name|classfile
+operator|.
+name|Deprecated
+import|;
+end_import
+
+begin_comment
+comment|// use _this_ one!
+end_comment
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|bcel
+operator|.
 name|verifier
 operator|.
 name|exc
