@@ -16,7 +16,7 @@ comment|/* ==================================================================== 
 end_comment
 
 begin_comment
-comment|/**   * DCONST - Push 0.0 or 1.0, other values cause an exception  *  *<PRE>Stack: ... -&gt; ...,<i></PRE>  *  * @version $Id$  * @author<A HREF="mailto:markus.dahm@berlin.de">M. Dahm</A>  */
+comment|/**   * DCONST - Push 0.0 or 1.0, other values cause an exception  *  *<PRE>Stack: ... -&gt; ...,</PRE>  *  * @version $Id$  * @author<A HREF="mailto:markus.dahm@berlin.de">M. Dahm</A>  */
 end_comment
 
 begin_class
