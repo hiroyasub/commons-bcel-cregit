@@ -220,7 +220,7 @@ specifier|static
 name|short
 name|MAX_ACC_FLAG
 init|=
-name|ACC_ABSTRACT
+name|ACC_STRICT
 decl_stmt|;
 specifier|public
 specifier|final
@@ -251,6 +251,8 @@ block|,
 literal|"interface"
 block|,
 literal|"abstract"
+block|,
+literal|"strictfp"
 block|}
 decl_stmt|;
 comment|/** Tags in constant pool to denote type of constant.    */

@@ -97,7 +97,7 @@ name|clearCache
 argument_list|()
 expr_stmt|;
 block|}
-comment|/** @return class object for given fully qualified class name.    */
+comment|/** @return class object for given fully qualified class name, or null    * if the class could not be found or parsed correctly    */
 specifier|public
 specifier|static
 name|JavaClass
@@ -197,6 +197,7 @@ name|IOException
 name|e
 parameter_list|)
 block|{
+comment|// Don't throw exception since there may be other ways to load
 return|return
 literal|null
 return|;
