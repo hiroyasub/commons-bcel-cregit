@@ -501,6 +501,12 @@ name|Synthetic
 name|attribute
 parameter_list|)
 block|{
+if|if
+condition|(
+name|method
+operator|!=
+literal|null
+condition|)
 name|printEndMethod
 argument_list|(
 name|attribute
