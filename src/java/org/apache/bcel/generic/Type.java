@@ -856,11 +856,16 @@ return|return
 name|types
 return|;
 block|}
+comment|/** Convert runtime java.lang.Class to BCEL Type object.    * @param cl Java class    * @return corresponding Type object    */
 specifier|public
 specifier|static
 name|Type
 name|getType
 parameter_list|(
+name|java
+operator|.
+name|lang
+operator|.
 name|Class
 name|cl
 parameter_list|)
