@@ -7722,12 +7722,6 @@ specifier|private
 name|ConstantPool
 name|cp
 decl_stmt|;
-specifier|private
-name|InnerClassDetector
-parameter_list|()
-block|{
-block|}
-comment|// Don't use.
 comment|/** Constructs an InnerClassDetector working on the JavaClass _jc. */
 specifier|public
 name|InnerClassDetector
