@@ -29,6 +29,20 @@ end_import
 
 begin_import
 import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|bcel
+operator|.
+name|generic
+operator|.
+name|Type
+import|;
+end_import
+
+begin_import
+import|import
 name|java
 operator|.
 name|io
@@ -349,6 +363,22 @@ operator|)
 name|copy_
 argument_list|(
 name|constant_pool
+argument_list|)
+return|;
+block|}
+comment|/**    * @return type of field    */
+specifier|public
+name|Type
+name|getType
+parameter_list|()
+block|{
+return|return
+name|Type
+operator|.
+name|getReturnType
+argument_list|(
+name|getSignature
+argument_list|()
 argument_list|)
 return|;
 block|}

@@ -109,6 +109,19 @@ operator|.
 name|CONSTANT_Utf8
 argument_list|)
 expr_stmt|;
+if|if
+condition|(
+name|bytes
+operator|==
+literal|null
+condition|)
+throw|throw
+operator|new
+name|IllegalArgumentException
+argument_list|(
+literal|"bytes must not be null!"
+argument_list|)
+throw|;
 name|this
 operator|.
 name|bytes

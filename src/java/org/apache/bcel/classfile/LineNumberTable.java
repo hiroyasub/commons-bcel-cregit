@@ -559,6 +559,17 @@ operator|<=
 name|r
 condition|)
 do|;
+comment|/* It's possible that we did not find any valid entry for the bytecode      * offset we were looking for.      */
+if|if
+condition|(
+name|min_index
+operator|<
+literal|0
+condition|)
+return|return
+operator|-
+literal|1
+return|;
 return|return
 name|line_number_table
 index|[
