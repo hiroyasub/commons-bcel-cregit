@@ -1599,7 +1599,7 @@ name|ret
 argument_list|)
 return|;
 block|}
-comment|/** 	 * Returns true, if and only if the said instruction is not reachable; that means, 	 * if it not part of this ControlFlowGraph. 	 */
+comment|/** 	 * Returns true, if and only if the said instruction is not reachable; that means, 	 * if it is not part of this ControlFlowGraph. 	 */
 specifier|public
 name|boolean
 name|isDead
