@@ -1959,6 +1959,43 @@ name|field_name
 argument_list|)
 condition|)
 block|{
+name|Type
+name|f_type
+init|=
+name|Type
+operator|.
+name|getType
+argument_list|(
+name|fields
+index|[
+name|i
+index|]
+operator|.
+name|getSignature
+argument_list|()
+argument_list|)
+decl_stmt|;
+name|Type
+name|o_type
+init|=
+name|o
+operator|.
+name|getType
+argument_list|(
+name|cpg
+argument_list|)
+decl_stmt|;
+comment|/* TODO: Check if assignment compatibility is sufficient. 				   * What does Sun do? 				   */
+if|if
+condition|(
+name|f_type
+operator|.
+name|equals
+argument_list|(
+name|o_type
+argument_list|)
+condition|)
+block|{
 name|f
 operator|=
 name|fields
@@ -1967,6 +2004,7 @@ name|i
 index|]
 expr_stmt|;
 break|break;
+block|}
 block|}
 block|}
 if|if
@@ -2022,38 +2060,11 @@ argument_list|(
 name|cpg
 argument_list|)
 decl_stmt|;
-comment|/* TODO: Is there a way to make BCEL tell us if a field 				has a void method's signature, i.e. "()I" instead of "I"? */
-if|if
-condition|(
-operator|!
-name|f_type
-operator|.
-name|equals
-argument_list|(
-name|o_type
-argument_list|)
-condition|)
-block|{
-name|constraintViolated
-argument_list|(
-name|o
-argument_list|,
-literal|"Referenced field '"
-operator|+
-name|field_name
-operator|+
-literal|"' has type '"
-operator|+
-name|f_type
-operator|+
-literal|"' instead of '"
-operator|+
-name|o_type
-operator|+
-literal|"' as expected."
-argument_list|)
-expr_stmt|;
-block|}
+comment|// Argh. Sun's implementation allows us to have multiple fields of
+comment|// the same name but wirth a different signature.
+comment|//if (! f_type.equals(o_type)){
+comment|//	constraintViolated(o, "Referenced field '"+field_name+"' has type '"+f_type+"' instead of '"+o_type+"' as expected.");
+comment|//}
 comment|/* TODO: Check for access modifiers here. */
 block|}
 block|}
