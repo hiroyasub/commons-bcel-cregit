@@ -56,7 +56,7 @@ specifier|public
 class|class
 name|RuntimeInvisibleParameterAnnotations
 extends|extends
-name|Annotations
+name|ParameterAnnotations
 block|{
 comment|/** 	 * @param name_index Index pointing to the name<em>Code</em> 	 * @param length Content length in bytes 	 * @param file Input stream 	 * @param constant_pool Array of constants 	 */
 name|RuntimeInvisibleParameterAnnotations
