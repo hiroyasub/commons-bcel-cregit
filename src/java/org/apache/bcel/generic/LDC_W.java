@@ -90,6 +90,19 @@ name|readUnsignedShort
 argument_list|()
 argument_list|)
 expr_stmt|;
+comment|// Override just in case it has been changed
+name|opcode
+operator|=
+name|org
+operator|.
+name|apache
+operator|.
+name|bcel
+operator|.
+name|Constants
+operator|.
+name|LDC_W
+expr_stmt|;
 name|length
 operator|=
 literal|3
