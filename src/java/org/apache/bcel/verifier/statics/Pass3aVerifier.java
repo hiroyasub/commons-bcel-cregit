@@ -1041,7 +1041,7 @@ comment|// For BCEL's sake, we cannot handle WIDE stuff, but hopefully BCEL does
 comment|// The last byte of the last instruction in the code array must be the byte at index
 comment|// code_length-1 : See the do_verify() comments. We actually don't iterate through the
 comment|// byte array, but use an InstructionList so we cannot check for this. But BCEL does
-comment|// things right, so it's implicitely okay.
+comment|// things right, so it's implicitly okay.
 comment|// TODO: Check how BCEL handles (and will handle) instructions like IMPDEP1, IMPDEP2,
 comment|//       BREAKPOINT... that BCEL knows about but which are illegal anyway.
 comment|//       We currently go the safe way here.
@@ -1832,6 +1832,178 @@ operator|+
 literal|"'."
 argument_list|)
 expr_stmt|;
+block|}
+name|String
+name|field_name
+init|=
+name|o
+operator|.
+name|getFieldName
+argument_list|(
+name|cpg
+argument_list|)
+decl_stmt|;
+name|JavaClass
+name|jc
+init|=
+name|Repository
+operator|.
+name|lookupClass
+argument_list|(
+name|o
+operator|.
+name|getClassType
+argument_list|(
+name|cpg
+argument_list|)
+operator|.
+name|getClassName
+argument_list|()
+argument_list|)
+decl_stmt|;
+name|Field
+index|[]
+name|fields
+init|=
+name|jc
+operator|.
+name|getFields
+argument_list|()
+decl_stmt|;
+name|Field
+name|f
+init|=
+literal|null
+decl_stmt|;
+for|for
+control|(
+name|int
+name|i
+init|=
+literal|0
+init|;
+name|i
+operator|<
+name|fields
+operator|.
+name|length
+condition|;
+name|i
+operator|++
+control|)
+block|{
+if|if
+condition|(
+name|fields
+index|[
+name|i
+index|]
+operator|.
+name|getName
+argument_list|()
+operator|.
+name|equals
+argument_list|(
+name|field_name
+argument_list|)
+condition|)
+block|{
+name|f
+operator|=
+name|fields
+index|[
+name|i
+index|]
+expr_stmt|;
+break|break;
+block|}
+block|}
+if|if
+condition|(
+name|f
+operator|==
+literal|null
+condition|)
+block|{
+comment|/* TODO: also look up if the field is inherited! */
+name|constraintViolated
+argument_list|(
+name|o
+argument_list|,
+literal|"Referenced field '"
+operator|+
+name|field_name
+operator|+
+literal|"' does not exist in class '"
+operator|+
+name|jc
+operator|.
+name|getClassName
+argument_list|()
+operator|+
+literal|"'."
+argument_list|)
+expr_stmt|;
+block|}
+else|else
+block|{
+comment|/* TODO: Check if assignment compatibility is sufficient. 				   What does Sun do? */
+name|Type
+name|f_type
+init|=
+name|Type
+operator|.
+name|getType
+argument_list|(
+name|f
+operator|.
+name|getSignature
+argument_list|()
+argument_list|)
+decl_stmt|;
+name|Type
+name|o_type
+init|=
+name|o
+operator|.
+name|getType
+argument_list|(
+name|cpg
+argument_list|)
+decl_stmt|;
+comment|/* TODO: Is there a way to make BCEL tell us if a field 				has a void method's signature, i.e. "()I" instead of "I"? */
+if|if
+condition|(
+operator|!
+name|f_type
+operator|.
+name|equals
+argument_list|(
+name|o_type
+argument_list|)
+condition|)
+block|{
+name|constraintViolated
+argument_list|(
+name|o
+argument_list|,
+literal|"Referenced field '"
+operator|+
+name|field_name
+operator|+
+literal|"' has type '"
+operator|+
+name|f_type
+operator|+
+literal|"' instead of '"
+operator|+
+name|o_type
+operator|+
+literal|"' as expected."
+argument_list|)
+expr_stmt|;
+block|}
+comment|/* TODO: Check for access modifiers here. */
 block|}
 block|}
 comment|/** Checks if the constraints of operands of the said instruction(s) are satisfied. */
