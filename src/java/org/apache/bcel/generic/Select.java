@@ -95,7 +95,7 @@ name|Select
 parameter_list|()
 block|{
 block|}
-comment|/**    * (Match, target) pairs for switch.    * `Match' and `targets' must have the same length of course.    *    * @param match array of matching values    * @param targets instruction targets    * @param target default instruction target    */
+comment|/**    * (Match, target) pairs for switch.    * `Match' and `targets' must have the same length of course.    *    * @param match array of matching values    * @param targets instruction targets    * @param defaultTarget default instruction target    */
 name|Select
 parameter_list|(
 name|short

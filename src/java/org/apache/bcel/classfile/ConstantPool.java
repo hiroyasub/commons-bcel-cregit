@@ -184,7 +184,7 @@ name|this
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**    * Resolve constant to a string representation.    *    * @param  constant Constant to be printed    * @return String representation    */
+comment|/**    * Resolve constant to a string representation.    *    * @param  c Constant to be printed    * @return String representation    */
 specifier|public
 name|String
 name|constantToString

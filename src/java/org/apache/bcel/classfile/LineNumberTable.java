@@ -128,7 +128,7 @@ name|line_number_table
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**    * Construct object from file stream.    * @param name_index Index of name    * @param length Content length in bytes    * @param file Input stream    * @throws IOException    * @param constant_pool Array of constants    */
+comment|/**    * Construct object from file stream.    * @param name_index Index of name    * @param length Content length in bytes    * @param file Input stream    * @param constant_pool Array of constants    * @throws IOException    */
 name|LineNumberTable
 parameter_list|(
 name|int

@@ -73,7 +73,7 @@ name|BranchInstruction
 parameter_list|()
 block|{
 block|}
-comment|/** Common super constructor    * @param opcodee Instruction opcode    * @param target instruction to branch to    */
+comment|/** Common super constructor    * @param opcode Instruction opcode    * @param target instruction to branch to    */
 specifier|protected
 name|BranchInstruction
 parameter_list|(

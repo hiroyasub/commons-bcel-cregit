@@ -90,7 +90,7 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**    * @param name_index Index in constant pool to CONSTANT_Utf8    * @param length Content length in bytes    * @param inner_classes array of inner classes attributes    * @param constant_pool Array of constants    * @param sourcefile_index Index in constant pool to CONSTANT_Utf8    */
+comment|/**    * @param name_index Index in constant pool to CONSTANT_Utf8    * @param length Content length in bytes    * @param inner_classes array of inner classes attributes    * @param constant_pool Array of constants    */
 specifier|public
 name|InnerClasses
 parameter_list|(

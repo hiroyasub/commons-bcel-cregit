@@ -51,7 +51,7 @@ name|CHECKCAST
 parameter_list|()
 block|{
 block|}
-comment|/** Check whether object is of given type    * @param n index to class in constant pool    */
+comment|/** Check whether object is of given type    * @param index index to class in constant pool    */
 specifier|public
 name|CHECKCAST
 parameter_list|(

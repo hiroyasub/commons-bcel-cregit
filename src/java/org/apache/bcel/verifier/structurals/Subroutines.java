@@ -1318,7 +1318,7 @@ specifier|final
 name|Subroutine
 name|TOPLEVEL
 decl_stmt|;
-comment|/** 	 * Constructor. 	 * @param il A MethodGen object representing method to 	 * create the Subroutine objects of. 	 */
+comment|/** 	 * Constructor. 	 * @param mg A MethodGen object representing method to 	 * create the Subroutine objects of. 	 */
 specifier|public
 name|Subroutines
 parameter_list|(

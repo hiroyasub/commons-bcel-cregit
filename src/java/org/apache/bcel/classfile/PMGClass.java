@@ -130,7 +130,7 @@ name|constant_pool
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**    * @param name_index Index in constant pool to CONSTANT_Utf8    * @param length Content length in bytes    * @param constant_pool Array of constants    * @param PMGClass_index Index in constant pool to CONSTANT_Utf8    */
+comment|/**    * @param name_index Index in constant pool to CONSTANT_Utf8    * @param length Content length in bytes    * @param pmg_index index in constant pool for source file name    * @param pmg_class_index Index in constant pool to CONSTANT_Utf8    * @param constant_pool Array of constants    */
 specifier|public
 name|PMGClass
 parameter_list|(

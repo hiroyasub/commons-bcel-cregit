@@ -34,7 +34,7 @@ name|IfInstruction
 parameter_list|()
 block|{
 block|}
-comment|/**    * @param instruction Target instruction to branch to    */
+comment|/**    * @param opcode opcode of instruction    * @param target Target instruction to branch to    */
 specifier|protected
 name|IfInstruction
 parameter_list|(

@@ -3002,7 +3002,7 @@ operator|<<
 name|n
 return|;
 block|}
-comment|/**    * Replace all occurences of<em>old</em> in<em>str</em> with<em>new</em>.    *    * @param str String to permute    * @param old String to be replaced    * @param new Replacement string    * @return new String object    */
+comment|/**    * Replace all occurences of<em>old</em> in<em>str</em> with<em>new</em>.    *    * @param str String to permute    * @param old String to be replaced    * @param new_ Replacement string    * @return new String object    */
 specifier|public
 specifier|static
 specifier|final
@@ -4923,7 +4923,7 @@ name|toString
 argument_list|()
 return|;
 block|}
-comment|/** Decode a string back to a byte array.    *    * @param bytes the byte array to convert    * @param uncompress use gzip to uncompress the stream of bytes    */
+comment|/** Decode a string back to a byte array.    *    * @param s the string to convert    * @param uncompress use gzip to uncompress the stream of bytes    */
 specifier|public
 specifier|static
 name|byte

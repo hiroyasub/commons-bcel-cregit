@@ -1208,7 +1208,7 @@ return|return
 name|bh
 return|;
 block|}
-comment|/**    * Insert another list before Instruction handle ih contained in this list.    * Consumes argument list, i.e., it becomes empty.    *    * @param i  where to append the instruction list     * @param il Instruction list to insert    * @return instruction handle of the first inserted instruction    */
+comment|/**    * Insert another list before Instruction handle ih contained in this list.    * Consumes argument list, i.e., it becomes empty.    *    * @param ih  where to append the instruction list     * @param il Instruction list to insert    * @return instruction handle of the first inserted instruction    */
 specifier|public
 name|InstructionHandle
 name|insert

@@ -118,7 +118,7 @@ name|constant_pool
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**    * @param name_index Index in constant pool to CONSTANT_Utf8    * @param length Content length in bytes    * @param constant_pool Array of constants    * @param Signature_index Index in constant pool to CONSTANT_Utf8    */
+comment|/**    * @param name_index Index in constant pool to CONSTANT_Utf8    * @param length Content length in bytes    * @param signature_index Index in constant pool to CONSTANT_Utf8    * @param constant_pool Array of constants    */
 specifier|public
 name|Signature
 parameter_list|(
@@ -211,7 +211,7 @@ return|return
 name|signature_index
 return|;
 block|}
-comment|/**    * @param Signature_index.    */
+comment|/**    * @param signature_index.    */
 specifier|public
 specifier|final
 name|void

@@ -149,7 +149,7 @@ name|i
 expr_stmt|;
 block|}
 block|}
-comment|/**    * Initialize with given array of constants.    *    * @param c array of given constants, new ones will be appended    */
+comment|/**    * Initialize with given array of constants.    *    * @param cs array of given constants, new ones will be appended    */
 specifier|public
 name|ConstantPoolGen
 parameter_list|(
@@ -935,7 +935,7 @@ argument_list|)
 argument_list|)
 return|;
 block|}
-comment|/**    * Add a new Class reference to the ConstantPool for a given type.    *    * @param str Class to add    * @return index of entry    */
+comment|/**    * Add a new Class reference to the ConstantPool for a given type.    *    * @param type Class to add    * @return index of entry    */
 specifier|public
 name|int
 name|addClass
@@ -1642,7 +1642,7 @@ operator|-
 literal|1
 return|;
 block|}
-comment|/**    * Add a new NameAndType constant to the ConstantPool if it is not already     * in there.    *    * @param n NameAndType string to add    * @return index of entry    */
+comment|/**    * Add a new NameAndType constant to the ConstantPool if it is not already     * in there.    *    * @param name Name string to add    * @param signature signature string to add    * @return index of entry    */
 specifier|public
 name|int
 name|addNameAndType
@@ -1825,7 +1825,7 @@ argument_list|()
 argument_list|)
 return|;
 block|}
-comment|/**    * Add a new Methodref constant to the ConstantPool, if it is not already     * in there.    *    * @param n Methodref string to add    * @return index of entry    */
+comment|/**    * Add a new Methodref constant to the ConstantPool, if it is not already     * in there.    *    * @param class_name class name string to add    * @param method_name method name string to add    * @param signature method signature string to add    * @return index of entry    */
 specifier|public
 name|int
 name|addMethodref
@@ -2038,7 +2038,7 @@ argument_list|()
 argument_list|)
 return|;
 block|}
-comment|/**    * Add a new InterfaceMethodref constant to the ConstantPool, if it is not already     * in there.    *    * @param n InterfaceMethodref string to add    * @return index of entry    */
+comment|/**    * Add a new InterfaceMethodref constant to the ConstantPool, if it is not already     * in there.    *    * @param class_name class name string to add    * @param method_name method name string to add    * @param signature signature string to add    * @return index of entry    */
 specifier|public
 name|int
 name|addInterfaceMethodref
@@ -2223,7 +2223,7 @@ operator|-
 literal|1
 return|;
 block|}
-comment|/**    * Add a new Fieldref constant to the ConstantPool, if it is not already     * in there.    *    * @param n Fieldref string to add    * @return index of entry    */
+comment|/**    * Add a new Fieldref constant to the ConstantPool, if it is not already     * in there.    *    * @param class_name class name string to add    * @param field_name field name string to add    * @param signature signature string to add    * @return index of entry    */
 specifier|public
 name|int
 name|addFieldref
