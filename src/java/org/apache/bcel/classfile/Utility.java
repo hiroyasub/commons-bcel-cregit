@@ -86,7 +86,74 @@ block|{
 specifier|private
 specifier|static
 name|int
+name|unwrap
+parameter_list|(
+name|ThreadLocal
+name|tl
+parameter_list|)
+block|{
+return|return
+operator|(
+operator|(
+name|Integer
+operator|)
+name|tl
+operator|.
+name|get
+argument_list|()
+operator|)
+operator|.
+name|intValue
+argument_list|()
+return|;
+block|}
+specifier|private
+specifier|static
+name|void
+name|wrap
+parameter_list|(
+name|ThreadLocal
+name|tl
+parameter_list|,
+name|int
+name|value
+parameter_list|)
+block|{
+name|tl
+operator|.
+name|set
+argument_list|(
+operator|new
+name|Integer
+argument_list|(
+name|value
+argument_list|)
+argument_list|)
+expr_stmt|;
+block|}
+specifier|private
+specifier|static
+name|ThreadLocal
 name|consumed_chars
+init|=
+operator|new
+name|ThreadLocal
+argument_list|()
+block|{
+specifier|protected
+name|Object
+name|initialValue
+parameter_list|()
+block|{
+return|return
+operator|new
+name|Integer
+argument_list|(
+literal|0
+argument_list|)
+return|;
+block|}
+block|}
 decl_stmt|;
 comment|/* How many chars have been consumed 				      * during parsing in signatureToString(). 				      * Read by methodSignatureToString(). 				      * Set by side effect,but only internally. 				      */
 specifier|private
@@ -2406,9 +2473,13 @@ name|chopit
 argument_list|)
 argument_list|)
 expr_stmt|;
+comment|//corrected concurrent private static field acess
 name|index
 operator|+=
+name|unwrap
+argument_list|(
 name|consumed_chars
+argument_list|)
 expr_stmt|;
 comment|// update position
 block|}
@@ -2807,9 +2878,13 @@ argument_list|(
 literal|", "
 argument_list|)
 expr_stmt|;
+comment|//corrected concurrent private static field acess
 name|index
 operator|+=
+name|unwrap
+argument_list|(
 name|consumed_chars
+argument_list|)
 expr_stmt|;
 comment|// update position
 block|}
@@ -3112,9 +3187,13 @@ name|boolean
 name|chopit
 parameter_list|)
 block|{
+comment|//corrected concurrent private static field acess
+name|wrap
+argument_list|(
 name|consumed_chars
-operator|=
+argument_list|,
 literal|1
+argument_list|)
 expr_stmt|;
 comment|// This is the default, read just one char like `B'
 try|try
@@ -3196,11 +3275,15 @@ operator|+
 name|signature
 argument_list|)
 throw|;
+comment|//corrected concurrent private static field acess
+name|wrap
+argument_list|(
 name|consumed_chars
-operator|=
+argument_list|,
 name|index
 operator|+
 literal|1
+argument_list|)
 expr_stmt|;
 comment|// "Lblabla;" `L' and `;' are removed
 return|return
@@ -3307,11 +3390,28 @@ argument_list|,
 name|chopit
 argument_list|)
 expr_stmt|;
+comment|//corrected concurrent private static field acess
+comment|//Utility.consumed_chars += consumed_chars; is replaced by:
+name|int
+name|_temp
+init|=
+name|unwrap
+argument_list|(
 name|Utility
 operator|.
 name|consumed_chars
-operator|+=
+argument_list|)
+operator|+
 name|consumed_chars
+decl_stmt|;
+name|wrap
+argument_list|(
+name|Utility
+operator|.
+name|consumed_chars
+argument_list|,
+name|_temp
+argument_list|)
 expr_stmt|;
 return|return
 name|type
