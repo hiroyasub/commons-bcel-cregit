@@ -259,6 +259,12 @@ name|getTypecode
 argument_list|()
 return|;
 block|}
+else|else
+block|{
+return|return
+literal|true
+return|;
+block|}
 block|}
 return|return
 literal|false
