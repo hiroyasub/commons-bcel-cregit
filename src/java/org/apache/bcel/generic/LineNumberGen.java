@@ -62,7 +62,7 @@ specifier|private
 name|int
 name|src_line
 decl_stmt|;
-comment|/**    * Create a line number.    *    * @param ih instruction handle to reference    * @return new line number object    */
+comment|/**    * Create a line number.    *    * @param ih instruction handle to reference    */
 specifier|public
 name|LineNumberGen
 parameter_list|(

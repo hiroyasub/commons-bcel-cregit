@@ -682,7 +682,7 @@ name|str
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**     * Dump class to a file.    *    * @param file Output file    * @throw IOException    */
+comment|/**     * Dump class to a file.    *    * @param file Output file    * @throws IOException    */
 specifier|public
 name|void
 name|dump

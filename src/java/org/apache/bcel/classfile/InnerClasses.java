@@ -127,7 +127,7 @@ name|inner_classes
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**    * Construct object from file stream.    *    * @param name_index Index in constant pool to CONSTANT_Utf8    * @param length Content length in bytes    * @param file Input stream    * @param constant_pool Array of constants    * @throw IOException    */
+comment|/**    * Construct object from file stream.    *    * @param name_index Index in constant pool to CONSTANT_Utf8    * @param length Content length in bytes    * @param file Input stream    * @param constant_pool Array of constants    * @throws IOException    */
 name|InnerClasses
 parameter_list|(
 name|int
@@ -218,7 +218,7 @@ name|this
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**    * Dump source file attribute to file stream in binary format.    *    * @param file Output file stream    * @throw IOException    */
+comment|/**    * Dump source file attribute to file stream in binary format.    *    * @param file Output file stream    * @throws IOException    */
 specifier|public
 specifier|final
 name|void

@@ -131,7 +131,7 @@ name|Visitor
 name|v
 parameter_list|)
 function_decl|;
-comment|/**    * Dump attribute to file stream in binary format.    *    * @param file Output file stream    * @throw IOException    */
+comment|/**    * Dump attribute to file stream in binary format.    *    * @param file Output file stream    * @throws IOException    */
 specifier|public
 name|void
 name|dump
@@ -207,7 +207,7 @@ name|name
 argument_list|)
 expr_stmt|;
 block|}
-comment|/* Class method reads one attribute from the input data stream.    * This method must not be accessible from the outside.  It is    * called by the Field and Method constructor methods.    *    * @see    Field    * @see    Method    * @param  file Input stream    * @param  constant_pool Array of constants    * @return Attribute    * @throw  IOException    * @throw  ClassFormatError    * @throw InternalError    */
+comment|/* Class method reads one attribute from the input data stream.    * This method must not be accessible from the outside.  It is    * called by the Field and Method constructor methods.    *    * @see    Field    * @see    Method    * @param  file Input stream    * @param  constant_pool Array of constants    * @return Attribute    * @throws  IOException    * @throws  ClassFormatError    * @throws InternalError    */
 specifier|public
 specifier|static
 specifier|final

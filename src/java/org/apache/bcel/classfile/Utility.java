@@ -2295,7 +2295,7 @@ name|toString
 argument_list|()
 return|;
 block|}
-comment|/**    * @param  signature    Method signature    * @return Array of argument types    * @throw  ClassFormatError      */
+comment|/**    * @param  signature    Method signature    * @return Array of argument types    * @throws  ClassFormatError      */
 specifier|public
 specifier|static
 specifier|final
@@ -2318,7 +2318,7 @@ literal|true
 argument_list|)
 return|;
 block|}
-comment|/**    * @param  signature    Method signature    * @param chopit Shorten class names ?    * @return Array of argument types    * @throw  ClassFormatError      */
+comment|/**    * @param  signature    Method signature    * @param chopit Shorten class names ?    * @return Array of argument types    * @throws  ClassFormatError      */
 specifier|public
 specifier|static
 specifier|final
@@ -2452,7 +2452,7 @@ return|return
 name|types
 return|;
 block|}
-comment|/**    * @param  signature    Method signature    * @return return type of method    * @throw  ClassFormatError      */
+comment|/**    * @param  signature    Method signature    * @return return type of method    * @throws  ClassFormatError      */
 specifier|public
 specifier|static
 specifier|final
@@ -2474,7 +2474,7 @@ literal|true
 argument_list|)
 return|;
 block|}
-comment|/**    * @param  signature    Method signature    * @param chopit Shorten class names ?    * @return return type of method    * @throw  ClassFormatError      */
+comment|/**    * @param  signature    Method signature    * @param chopit Shorten class names ?    * @return return type of method    * @throws  ClassFormatError      */
 specifier|public
 specifier|static
 specifier|final
@@ -2610,7 +2610,7 @@ literal|null
 argument_list|)
 return|;
 block|}
-comment|/**    * A return­type signature represents the return value from a method.    * It is a series of bytes in the following grammar:    *    *<return_signature> ::=<field_type> | V    *    * The character V indicates that the method returns no value. Otherwise, the    * signature indicates the type of the return value.    * An argument signature represents an argument passed to a method:    *    *<argument_signature> ::=<field_type>    *    * A method signature represents the arguments that the method expects, and    * the value that it returns.    *<method_signature> ::= (<arguments_signature>)<return_signature>    *<arguments_signature>::=<argument_signature>*    *    * This method converts such a string into a Java type declaration like    * `void main(String[])' and throws a `ClassFormatError' when the parsed     * type is invalid.    *    * @param  signature    Method signature    * @param  name         Method name    * @param  access       Method access rights    * @return Java type declaration    * @throw  ClassFormatError      */
+comment|/**    * A return­type signature represents the return value from a method.    * It is a series of bytes in the following grammar:    *    *<return_signature> ::=<field_type> | V    *    * The character V indicates that the method returns no value. Otherwise, the    * signature indicates the type of the return value.    * An argument signature represents an argument passed to a method:    *    *<argument_signature> ::=<field_type>    *    * A method signature represents the arguments that the method expects, and    * the value that it returns.    *<method_signature> ::= (<arguments_signature>)<return_signature>    *<arguments_signature>::=<argument_signature>*    *    * This method converts such a string into a Java type declaration like    * `void main(String[])' and throws a `ClassFormatError' when the parsed     * type is invalid.    *    * @param  signature    Method signature    * @param  name         Method name    * @param  access       Method access rights    * @return Java type declaration    * @throws  ClassFormatError      */
 specifier|public
 specifier|static
 specifier|final
@@ -4450,6 +4450,34 @@ name|boolean
 name|braces
 parameter_list|)
 block|{
+return|return
+name|printArray
+argument_list|(
+name|obj
+argument_list|,
+name|braces
+argument_list|,
+literal|false
+argument_list|)
+return|;
+block|}
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|printArray
+parameter_list|(
+name|Object
+index|[]
+name|obj
+parameter_list|,
+name|boolean
+name|braces
+parameter_list|,
+name|boolean
+name|quote
+parameter_list|)
+block|{
 if|if
 condition|(
 name|obj
@@ -4503,10 +4531,19 @@ index|]
 operator|!=
 literal|null
 condition|)
+block|{
 name|buf
 operator|.
 name|append
 argument_list|(
+operator|(
+name|quote
+condition|?
+literal|"\""
+else|:
+literal|""
+operator|)
+operator|+
 name|obj
 index|[
 name|i
@@ -4514,9 +4551,19 @@ index|]
 operator|.
 name|toString
 argument_list|()
+operator|+
+operator|(
+name|quote
+condition|?
+literal|"\""
+else|:
+literal|""
+operator|)
 argument_list|)
 expr_stmt|;
+block|}
 else|else
+block|{
 name|buf
 operator|.
 name|append
@@ -4524,6 +4571,7 @@ argument_list|(
 literal|"null"
 argument_list|)
 expr_stmt|;
+block|}
 if|if
 condition|(
 name|i
@@ -4534,6 +4582,7 @@ name|length
 operator|-
 literal|1
 condition|)
+block|{
 name|buf
 operator|.
 name|append
@@ -4541,6 +4590,7 @@ argument_list|(
 literal|", "
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 if|if
 condition|(

@@ -83,7 +83,7 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**    * Initialize instance from file data.    *    * @param tag  Constant type tag    * @param file Input stream    * @throw IOException    */
+comment|/**    * Initialize instance from file data.    *    * @param tag  Constant type tag    * @param file Input stream    * @throws IOException    */
 name|ConstantCP
 parameter_list|(
 name|byte
@@ -143,7 +143,7 @@ operator|=
 name|name_and_type_index
 expr_stmt|;
 block|}
-comment|/**     * Dump constant field reference to file stream in binary format.    *    * @param file Output file stream    * @throw IOException    */
+comment|/**     * Dump constant field reference to file stream in binary format.    *    * @param file Output file stream    * @throws IOException    */
 specifier|public
 specifier|final
 name|void

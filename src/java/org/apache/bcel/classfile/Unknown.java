@@ -245,7 +245,7 @@ name|this
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**    * Construct object from file stream.    * @param name_index Index in constant pool    * @param length Content length in bytes    * @param file Input stream    * @param constant_pool Array of constants    * @throw IOException    */
+comment|/**    * Construct object from file stream.    * @param name_index Index in constant pool    * @param length Content length in bytes    * @param file Input stream    * @param constant_pool Array of constants    * @throws IOException    */
 name|Unknown
 parameter_list|(
 name|int
@@ -319,7 +319,7 @@ name|this
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**    * Dump unknown bytes to file stream.    *    * @param file Output file stream    * @throw IOException    */
+comment|/**    * Dump unknown bytes to file stream.    *    * @param file Output file stream    * @throws IOException    */
 specifier|public
 specifier|final
 name|void

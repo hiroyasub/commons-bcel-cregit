@@ -75,7 +75,7 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**    * Initialize instance from file data.    *    * @param file input stream    * @throw IOException    */
+comment|/**    * Initialize instance from file data.    *    * @param file input stream    * @throws IOException    */
 name|ConstantMethodref
 parameter_list|(
 name|DataInputStream

@@ -3981,7 +3981,7 @@ block|}
 block|}
 block|}
 block|}
-comment|/**    * Redirect all references of local variables from old_target to new_target.    *    * @@param lg array of local variables    * @@param old_target the old target instruction handle    * @@param new_target the new target instruction handle    * @@see MethodGen    */
+comment|/**    * Redirect all references of local variables from old_target to new_target.    *    * @param lg array of local variables    * @param old_target the old target instruction handle    * @param new_target the new target instruction handle    * @see MethodGen    */
 specifier|public
 name|void
 name|redirectLocalVariables
@@ -4070,7 +4070,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/**    * Redirect all references of exception handlers from old_target to new_target.    *    * @@param exceptions array of exception handlers    * @@param old_target the old target instruction handle    * @@param new_target the new target instruction handle    * @@see MethodGen    */
+comment|/**    * Redirect all references of exception handlers from old_target to new_target.    *    * @param exceptions array of exception handlers    * @param old_target the old target instruction handle    * @param new_target the new target instruction handle    * @see MethodGen    */
 specifier|public
 name|void
 name|redirectExceptionHandlers

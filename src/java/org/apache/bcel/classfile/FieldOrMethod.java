@@ -119,7 +119,7 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**    * Construct object from file stream.    * @param file Input stream    * @throw IOException    * @throw ClassFormatError    */
+comment|/**    * Construct object from file stream.    * @param file Input stream    * @throws IOException    * @throws ClassFormatError    */
 specifier|protected
 name|FieldOrMethod
 parameter_list|(
@@ -251,7 +251,7 @@ name|attributes
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**    * Dump object to file stream on binary format.    *    * @param file Output file stream    * @throw IOException    */
+comment|/**    * Dump object to file stream on binary format.    *    * @param file Output file stream    * @throws IOException    */
 specifier|public
 specifier|final
 name|void

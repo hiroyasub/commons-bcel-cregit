@@ -98,7 +98,7 @@ name|map
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**    * Construct object from file stream.    * @param name_index Index of name    * @param length Content length in bytes    * @param file Input stream    * @throw IOException    * @param constant_pool Array of constants    */
+comment|/**    * Construct object from file stream.    * @param name_index Index of name    * @param length Content length in bytes    * @param file Input stream    * @throws IOException    * @param constant_pool Array of constants    */
 name|StackMap
 parameter_list|(
 name|int
@@ -174,7 +174,7 @@ name|constant_pool
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**    * Dump line number table attribute to file stream in binary format.    *    * @param file Output file stream    * @throw IOException    */
+comment|/**    * Dump line number table attribute to file stream in binary format.    *    * @param file Output file stream    * @throws IOException    */
 specifier|public
 specifier|final
 name|void

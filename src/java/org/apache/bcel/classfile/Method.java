@@ -69,7 +69,7 @@ name|c
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**    * Construct object from file stream.    * @param file Input stream    * @throw IOException    * @throw ClassFormatError    */
+comment|/**    * Construct object from file stream.    * @param file Input stream    * @throws IOException    * @throws ClassFormatError    */
 name|Method
 parameter_list|(
 name|DataInputStream

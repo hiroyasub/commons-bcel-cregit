@@ -81,7 +81,7 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**    * Initialize instance from file data.    *    * @param file Input stream    * @throw IOException    */
+comment|/**    * Initialize instance from file data.    *    * @param file Input stream    * @throws IOException    */
 name|ConstantNameAndType
 parameter_list|(
 name|DataInputStream
@@ -158,7 +158,7 @@ name|this
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**    * Dump name and signature index to file stream in binary format.    *    * @param file Output file stream    * @throw IOException    */
+comment|/**    * Dump name and signature index to file stream in binary format.    *    * @param file Output file stream    * @throws IOException    */
 specifier|public
 specifier|final
 name|void

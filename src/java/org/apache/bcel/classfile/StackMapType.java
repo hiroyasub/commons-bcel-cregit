@@ -65,7 +65,7 @@ specifier|private
 name|ConstantPool
 name|constant_pool
 decl_stmt|;
-comment|/**    * Construct object from file stream.    * @param file Input stream    * @throw IOException    */
+comment|/**    * Construct object from file stream.    * @param file Input stream    * @throws IOException    */
 name|StackMapType
 parameter_list|(
 name|DataInputStream
@@ -211,7 +211,7 @@ return|return
 name|index
 return|;
 block|}
-comment|/**    * Dump type entries to file.    *    * @param file Output file stream    * @throw IOException    */
+comment|/**    * Dump type entries to file.    *    * @param file Output file stream    * @throws IOException    */
 specifier|public
 specifier|final
 name|void

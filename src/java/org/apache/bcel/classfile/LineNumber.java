@@ -83,7 +83,7 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**    * Construct object from file stream.    * @param file Input stream    * @throw IOException    */
+comment|/**    * Construct object from file stream.    * @param file Input stream    * @throws IOException    */
 name|LineNumber
 parameter_list|(
 name|DataInputStream
@@ -147,7 +147,7 @@ name|this
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**    * Dump line number/pc pair to file stream in binary format.    *    * @param file Output file stream    * @throw IOException    */
+comment|/**    * Dump line number/pc pair to file stream in binary format.    *    * @param file Output file stream    * @throws IOException    */
 specifier|public
 specifier|final
 name|void

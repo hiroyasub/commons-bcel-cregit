@@ -70,7 +70,7 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**    * Initialize instance from file data.    *    * @param file Input stream    * @throw IOException    */
+comment|/**    * Initialize instance from file data.    *    * @param file Input stream    * @throws IOException    */
 name|ConstantUtf8
 parameter_list|(
 name|DataInputStream
@@ -133,7 +133,7 @@ name|this
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**    * Dump String in Utf8 format to file stream.    *    * @param file Output file stream    * @throw IOException    */
+comment|/**    * Dump String in Utf8 format to file stream.    *    * @param file Output file stream    * @throws IOException    */
 specifier|public
 specifier|final
 name|void
