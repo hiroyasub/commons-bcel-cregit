@@ -1074,6 +1074,15 @@ operator|.
 name|getType
 argument_list|()
 decl_stmt|;
+if|if
+condition|(
+name|t
+operator|!=
+name|Constants
+operator|.
+name|T_ADDRESS
+condition|)
+block|{
 name|int
 name|add
 init|=
@@ -1152,6 +1161,21 @@ expr_stmt|;
 return|return
 name|l
 return|;
+block|}
+else|else
+block|{
+throw|throw
+operator|new
+name|IllegalArgumentException
+argument_list|(
+literal|"Can not use "
+operator|+
+name|type
+operator|+
+literal|" as type for local variable"
+argument_list|)
+throw|;
+block|}
 block|}
 comment|/**    * Adds a local variable to this method and assigns an index automatically.    *    * @param name variable name    * @param type variable type    * @param start from where the variable is valid, if this is null,    * it is valid from the start    * @param end until where the variable is valid, if this is null,    * it is valid to the end    * @return new local variable object    * @see LocalVariable    */
 specifier|public
