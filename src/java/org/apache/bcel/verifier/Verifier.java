@@ -787,7 +787,7 @@ name|out
 operator|.
 name|println
 argument_list|(
-literal|"JustIce by Enver Haase, (C) 2001. http://bcel.sourceforge.net\n"
+literal|"JustIce by Enver Haase, (C) 2001-2002.\n<http://bcel.sourceforge.net>\n<http://jakarta.apache.org/bcel>\n"
 argument_list|)
 expr_stmt|;
 for|for
