@@ -59,6 +59,12 @@ begin_class
 specifier|public
 class|class
 name|ConstantPoolGen
+implements|implements
+name|java
+operator|.
+name|io
+operator|.
+name|Serializable
 block|{
 specifier|protected
 name|int
@@ -121,6 +127,12 @@ specifier|private
 specifier|static
 class|class
 name|Index
+implements|implements
+name|java
+operator|.
+name|io
+operator|.
+name|Serializable
 block|{
 name|int
 name|index

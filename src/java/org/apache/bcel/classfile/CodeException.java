@@ -52,6 +52,8 @@ implements|,
 name|Constants
 implements|,
 name|Node
+implements|,
+name|Serializable
 block|{
 specifier|private
 name|int

@@ -55,6 +55,12 @@ implements|,
 name|NamedAndTyped
 implements|,
 name|Cloneable
+implements|,
+name|java
+operator|.
+name|io
+operator|.
+name|Serializable
 block|{
 specifier|private
 name|int

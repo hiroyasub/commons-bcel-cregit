@@ -33,6 +33,12 @@ begin_interface
 specifier|public
 interface|interface
 name|Repository
+extends|extends
+name|java
+operator|.
+name|io
+operator|.
+name|Serializable
 block|{
 comment|/**      * Store the provided class under "clazz.getClassName()"       */
 specifier|public

@@ -60,6 +60,8 @@ implements|implements
 name|Cloneable
 implements|,
 name|Node
+implements|,
+name|Serializable
 block|{
 specifier|protected
 name|int
@@ -251,12 +253,10 @@ operator|=
 operator|(
 name|int
 operator|)
-operator|(
 name|file
 operator|.
 name|readUnsignedShort
 argument_list|()
-operator|)
 expr_stmt|;
 name|c
 operator|=

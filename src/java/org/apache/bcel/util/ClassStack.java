@@ -47,6 +47,12 @@ begin_class
 specifier|public
 class|class
 name|ClassStack
+implements|implements
+name|java
+operator|.
+name|io
+operator|.
+name|Serializable
 block|{
 specifier|private
 name|Stack

@@ -236,6 +236,7 @@ decl_stmt|;
 comment|// directory separator
 comment|/**    * In cases where we go ahead and create something,    * use the default SyntheticRepository, because we    * don't know any better.    */
 specifier|private
+specifier|transient
 name|org
 operator|.
 name|apache

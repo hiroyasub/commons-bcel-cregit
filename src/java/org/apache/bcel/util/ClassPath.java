@@ -55,6 +55,8 @@ begin_class
 specifier|public
 class|class
 name|ClassPath
+implements|implements
+name|Serializable
 block|{
 specifier|public
 specifier|static
@@ -1014,6 +1016,8 @@ specifier|static
 specifier|abstract
 class|class
 name|PathEntry
+implements|implements
+name|Serializable
 block|{
 specifier|abstract
 name|ClassFile

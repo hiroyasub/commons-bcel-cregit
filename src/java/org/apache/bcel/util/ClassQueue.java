@@ -47,6 +47,12 @@ begin_class
 specifier|public
 class|class
 name|ClassQueue
+implements|implements
+name|java
+operator|.
+name|io
+operator|.
+name|Serializable
 block|{
 specifier|protected
 name|ArrayList

@@ -37,6 +37,12 @@ class|class
 name|InstructionFactory
 implements|implements
 name|InstructionConstants
+implements|,
+name|java
+operator|.
+name|io
+operator|.
+name|Serializable
 block|{
 specifier|protected
 name|ClassGen

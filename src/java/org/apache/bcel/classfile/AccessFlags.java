@@ -36,6 +36,12 @@ specifier|public
 specifier|abstract
 class|class
 name|AccessFlags
+implements|implements
+name|java
+operator|.
+name|io
+operator|.
+name|Serializable
 block|{
 specifier|protected
 name|int
