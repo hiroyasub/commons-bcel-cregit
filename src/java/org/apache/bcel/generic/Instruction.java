@@ -108,6 +108,15 @@ operator|-
 literal|1
 decl_stmt|;
 comment|// Opcode number
+specifier|private
+specifier|static
+name|InstructionComparator
+name|cmp
+init|=
+name|InstructionComparator
+operator|.
+name|DEFAULT
+decl_stmt|;
 comment|/**    * Empty constructor needed for the Class.newInstance() statement in    * Instruction.readInstruction(). Not to be used otherwise.    */
 name|Instruction
 parameter_list|()
@@ -727,6 +736,63 @@ name|Visitor
 name|v
 parameter_list|)
 function_decl|;
+comment|/** Get Comparator object used in the equals() method to determine    * equality of instructions.    *    * @return currently used comparator for equals()    */
+specifier|public
+specifier|static
+name|InstructionComparator
+name|getComparator
+parameter_list|()
+block|{
+return|return
+name|cmp
+return|;
+block|}
+comment|/** Set comparator to be used for equals().    */
+specifier|public
+specifier|static
+name|void
+name|setComparator
+parameter_list|(
+name|InstructionComparator
+name|c
+parameter_list|)
+block|{
+name|cmp
+operator|=
+name|c
+expr_stmt|;
+block|}
+comment|/** Check for equality, delegated to comparator    * @return true if that is an Instruction and has the same opcode    */
+specifier|public
+name|boolean
+name|equals
+parameter_list|(
+name|Object
+name|that
+parameter_list|)
+block|{
+return|return
+operator|(
+name|that
+operator|instanceof
+name|Instruction
+operator|)
+condition|?
+name|cmp
+operator|.
+name|equals
+argument_list|(
+name|this
+argument_list|,
+operator|(
+name|Instruction
+operator|)
+name|that
+argument_list|)
+else|:
+literal|false
+return|;
+block|}
 block|}
 end_class
 

@@ -273,6 +273,7 @@ init|=
 operator|new
 name|ReferenceType
 argument_list|()
+block|{}
 decl_stmt|;
 specifier|public
 specifier|static

@@ -16,7 +16,7 @@ comment|/* ==================================================================== 
 end_comment
 
 begin_comment
-comment|/**  * BREAKPOINT  *  * @version $Id$  * @author Enver Haase  */
+comment|/**  * BREAKPOINT, JVM dependent, ignored by default  *  * @version $Id$  * @author<A HREF="mailto:markus.dahm@berlin.de">M. Dahm</A>  */
 end_comment
 
 begin_class
