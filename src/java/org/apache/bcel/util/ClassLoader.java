@@ -162,10 +162,11 @@ index|[]
 name|ignored_packages
 parameter_list|)
 block|{
-name|addIgnoredPkgs
-argument_list|(
+name|this
+operator|.
 name|ignored_packages
-argument_list|)
+operator|=
+name|ignored_packages
 expr_stmt|;
 block|}
 specifier|public
