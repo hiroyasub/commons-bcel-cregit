@@ -2661,9 +2661,9 @@ argument_list|)
 argument_list|)
 return|;
 block|}
-comment|/** Create new array of given size and type.    */
+comment|/** Create new array of given size and type.    * @return an instruction that creates the corresponding array at runtime, i.e. is an AllocationInstruction    */
 specifier|public
-name|AllocationInstruction
+name|Instruction
 name|createNewArray
 parameter_list|(
 name|Type
