@@ -21,7 +21,7 @@ name|java
 operator|.
 name|io
 operator|.
-name|*
+name|IOException
 import|;
 end_import
 
@@ -29,9 +29,9 @@ begin_import
 import|import
 name|java
 operator|.
-name|util
+name|io
 operator|.
-name|Map
+name|InputStream
 import|;
 end_import
 
@@ -55,12 +55,26 @@ name|bcel
 operator|.
 name|classfile
 operator|.
-name|*
+name|ClassParser
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|bcel
+operator|.
+name|classfile
+operator|.
+name|JavaClass
 import|;
 end_import
 
 begin_comment
-comment|/**  * The repository maintains information about which classes have  * been loaded.  *  * It loads its data from the ClassLoader implementation  * passed into its constructor.  *  * @see org.apache.bcel.Repository  *  * @version $Id$  * @author<A HREF="mailto:markus.dahm@berlin.de">M. Dahm</A>  * @author David Dixon-Peugh  */
+comment|/**  * The repository maintains information about which classes have  * been loaded.  *  * It loads its data from the ClassLoader implementation  * passed into its constructor.  *  * @see org.apache.bcel.Repository  *  * @version $Id$  * @author<A HREF="mailto:m.dahm@gmx.de">M. Dahm</A>  * @author David Dixon-Peugh  */
 end_comment
 
 begin_class
@@ -341,6 +355,16 @@ operator|.
 name|clear
 argument_list|()
 expr_stmt|;
+block|}
+comment|/*    * @return null    */
+specifier|public
+name|ClassPath
+name|getClassPath
+parameter_list|()
+block|{
+return|return
+literal|null
+return|;
 block|}
 block|}
 end_class

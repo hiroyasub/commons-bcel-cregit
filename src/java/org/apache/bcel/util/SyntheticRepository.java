@@ -21,7 +21,7 @@ name|java
 operator|.
 name|io
 operator|.
-name|*
+name|IOException
 import|;
 end_import
 
@@ -29,9 +29,9 @@ begin_import
 import|import
 name|java
 operator|.
-name|util
+name|io
 operator|.
-name|Map
+name|InputStream
 import|;
 end_import
 
@@ -55,12 +55,26 @@ name|bcel
 operator|.
 name|classfile
 operator|.
-name|*
+name|ClassParser
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|bcel
+operator|.
+name|classfile
+operator|.
+name|JavaClass
 import|;
 end_import
 
 begin_comment
-comment|/**  * This repository is used in situations where a Class is created  * outside the realm of a ClassLoader. Classes are loaded from  * the file systems using the paths specified in the given  * class path. By default, this is the value returned by  * ClassPath.getClassPath().  *<br>  * It is designed to be used as a singleton, however it  * can also be used with custom classpaths.  * /**  * Abstract definition of a class repository. Instances may be used  * to load classes from different sources and may be used in the  * Repository.setRepository method.  *  * @see org.apache.bcel.Repository  *  * @version $Id$  * @author<A HREF="mailto:markus.dahm@berlin.de">M. Dahm</A>  * @author David Dixon-Peugh  */
+comment|/**  * This repository is used in situations where a Class is created  * outside the realm of a ClassLoader. Classes are loaded from  * the file systems using the paths specified in the given  * class path. By default, this is the value returned by  * ClassPath.getClassPath().  *<br>  * It is designed to be used as a singleton, however it  * can also be used with custom classpaths.  * /**  * Abstract definition of a class repository. Instances may be used  * to load classes from different sources and may be used in the  * Repository.setRepository method.  *  * @see org.apache.bcel.Repository  *  * @version $Id$  * @author<A HREF="mailto:m.dahm@gmx.de">M. Dahm</A>  * @author David Dixon-Peugh  */
 end_comment
 
 begin_class
@@ -511,6 +525,16 @@ operator|+
 name|className
 argument_list|)
 throw|;
+block|}
+comment|/** ClassPath associated with the Repository.    */
+specifier|public
+name|ClassPath
+name|getClassPath
+parameter_list|()
+block|{
+return|return
+name|_path
+return|;
 block|}
 comment|/** Clear all entries from cache.    */
 specifier|public
