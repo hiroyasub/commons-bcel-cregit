@@ -52,7 +52,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**   * Template class for building up a method. This is done by defining exception  * handlers, adding thrown exceptions, local variables and attributes, whereas  * the `LocalVariableTable' and `LineNumberTable' attributes will be set  * automatically for the code. Use stripAttributes() if you don't like this.  *  * While generating code it may be necessary to insert NOP operations. You can  * use the `removeNOPs' method to get rid off them.  * The resulting method object can be obtained via the `getMethod()' method.  *  * @version $Id$  * @author<A HREF="mailto:markus.dahm@berlin.de">M. Dahm</A>  * @see     InstructionList  * @see     Method  */
+comment|/**   * Template class for building up a method. This is done by defining exception  * handlers, adding thrown exceptions, local variables and attributes, whereas  * the `LocalVariableTable' and `LineNumberTable' attributes will be set  * automatically for the code. Use stripAttributes() if you don't like this.  *  * While generating code it may be necessary to insert NOP operations. You can  * use the `removeNOPs' method to get rid off them.  * The resulting method object can be obtained via the `getMethod()' method.  *  * @version $Id$  * @author<A HREF="mailto:markus.dahm@berlin.de">M. Dahm</A>  * @author<A HREF="http://www.vmeng.com/beard">Patrick C. Beard</A> [setMaxStack()]  * @see     InstructionList  * @see     Method  */
 end_comment
 
 begin_class
@@ -3085,7 +3085,7 @@ name|arg_types
 argument_list|)
 return|;
 block|}
-comment|/**    * Computes max. stack size by performing control flow analysis.    * @author<A HREF="http://www.vmeng.com/beard">Patrick C. Beard</A>    */
+comment|/**    * Computes max. stack size by performing control flow analysis.    */
 specifier|public
 name|void
 name|setMaxStack

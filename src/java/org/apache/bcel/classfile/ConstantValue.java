@@ -175,7 +175,7 @@ name|this
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**    * Dump constant value attribute to file stream on binary format.    *    * @param file Output file stream    * @throw IOException    */
+comment|/**    * Dump constant value attribute to file stream on binary format.    *    * @param file Output file stream    * @throws IOException    */
 specifier|public
 specifier|final
 name|void
