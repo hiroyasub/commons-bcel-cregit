@@ -1054,7 +1054,7 @@ name|String
 name|getPath
 parameter_list|()
 function_decl|;
-comment|/** @return base path of found class, i.e. class is contained relative      * to that path      */
+comment|/** @return base path of found class, i.e. class is contained relative      * to that path, which may either denote a directory, or zip file      */
 specifier|public
 specifier|abstract
 name|String

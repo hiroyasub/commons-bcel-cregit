@@ -60,7 +60,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * This repository is used in situations where a Class is created  * outside the realm of a ClassLoader. Classes are loaded from  * the file systems using the paths specified in the given  * class path. By default, this is the value returned by  * ClassPath.getClassPath().  *<br>  * It is designed to be used as a singleton, however it  * can also be used with custom classpaths.  * /**  * Abstract definition of a class repository. Instances may be used  * to load classes from different sources and may be used in the  * Repository.setRpeository method.  *  * @see org.apache.bcel.Repository  *  * @version $Id$  * @author<A HREF="mailto:markus.dahm@berlin.de">M. Dahm</A>  * @author David Dixon-Peugh  */
+comment|/**  * This repository is used in situations where a Class is created  * outside the realm of a ClassLoader. Classes are loaded from  * the file systems using the paths specified in the given  * class path. By default, this is the value returned by  * ClassPath.getClassPath().  *<br>  * It is designed to be used as a singleton, however it  * can also be used with custom classpaths.  * /**  * Abstract definition of a class repository. Instances may be used  * to load classes from different sources and may be used in the  * Repository.setRepository method.  *  * @see org.apache.bcel.Repository  *  * @version $Id$  * @author<A HREF="mailto:markus.dahm@berlin.de">M. Dahm</A>  * @author David Dixon-Peugh  */
 end_comment
 
 begin_class
