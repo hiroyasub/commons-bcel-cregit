@@ -48,7 +48,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Abstract super class for<em>Attribute</em> objects. Currently the  *<em>ConstantValue</em>,<em>SourceFile</em>,<em>Code</em>,  *<em>Exceptiontable</em>,<em>LineNumberTable</em>,   *<em>LocalVariableTable</em>,<em>InnerClasses</em> and  *<em>Synthetic</em> attributes are supported. The  *<em>Unknown</em> attribute stands for non-standard-attributes.  *  * @version $Id$  * @author<A HREF="mailto:markus.dahm@berlin.de">M. Dahm</A>  * @see     ConstantValue  * @see     SourceFile  * @see     Code  * @see     Unknown  * @see     ExceptionTable  * @see     LineNumberTable  * @see     LocalVariableTable   * @see     InnerClasses  * @see     Synthetic  * @see     Deprecated */
+comment|/**  * Abstract super class for<em>Attribute</em> objects. Currently the  *<em>ConstantValue</em>,<em>SourceFile</em>,<em>Code</em>,  *<em>Exceptiontable</em>,<em>LineNumberTable</em>,   *<em>LocalVariableTable</em>,<em>InnerClasses</em> and  *<em>Synthetic</em> attributes are supported. The  *<em>Unknown</em> attribute stands for non-standard-attributes.  *  * @version $Id$  * @author<A HREF="mailto:markus.dahm@berlin.de">M. Dahm</A>  * @see     ConstantValue  * @see     SourceFile  * @see     Code  * @see     Unknown  * @see     ExceptionTable  * @see     LineNumberTable  * @see     LocalVariableTable   * @see     InnerClasses  * @see     Synthetic  * @see     Deprecated  * @see     Signature */
 end_comment
 
 begin_class

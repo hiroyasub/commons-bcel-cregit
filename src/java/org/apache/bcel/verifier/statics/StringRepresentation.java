@@ -31,6 +31,22 @@ name|*
 import|;
 end_import
 
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|bcel
+operator|.
+name|verifier
+operator|.
+name|exc
+operator|.
+name|*
+import|;
+end_import
+
 begin_comment
 comment|/**  * BCEL's Node classes (those from the classfile API that<B>accept()</B> Visitor  * instances) have<B>toString()</B> methods that were not designed to be robust,  * this gap is closed by this class.  * When performing class file verification, it may be useful to output which  * entity (e.g. a<B>Code</B> instance) is not satisfying the verifier's  * constraints, but in this case it could be possible for the<B>toString()</B>  * method to throw a RuntimeException.  * A (new StringRepresentation(Node n)).toString() never throws any exception.  * Note that this class also serves as a placeholder for more sophisticated message  * handling in future versions of JustIce.  *   * @version $Id$  * @author<A HREF="http://www.inf.fu-berlin.de/~ehaase"/>Enver Haase</A>  */
 end_comment
@@ -57,6 +73,11 @@ specifier|private
 name|String
 name|tostring
 decl_stmt|;
+comment|/** The node we ask for its string representation. Not really needed; only for debug output. */
+specifier|private
+name|Node
+name|n
+decl_stmt|;
 comment|/** 	 * Creates a new StringRepresentation object which is the representation of n. 	 * 	 * @see #toString() 	 */
 specifier|public
 name|StringRepresentation
@@ -65,6 +86,12 @@ name|Node
 name|n
 parameter_list|)
 block|{
+name|this
+operator|.
+name|n
+operator|=
+name|n
+expr_stmt|;
 name|n
 operator|.
 name|accept
@@ -72,6 +99,7 @@ argument_list|(
 name|this
 argument_list|)
 expr_stmt|;
+comment|// assign a string representation to field 'tostring' if we know n's class.
 block|}
 comment|/** 	 * Returns the String representation. 	 */
 specifier|public
@@ -79,6 +107,36 @@ name|String
 name|toString
 parameter_list|()
 block|{
+comment|// The run-time check below is needed because we don't want to omit inheritance
+comment|// of "EmptyVisitor" and provide a thousand empty methods.
+comment|// However, in terms of performance this would be a better idea.
+comment|// If some new "Node" is defined in BCEL (such as some concrete "Attribute"), we
+comment|// want to know that this class has also to be adapted.
+if|if
+condition|(
+name|tostring
+operator|==
+literal|null
+condition|)
+throw|throw
+operator|new
+name|AssertionViolatedException
+argument_list|(
+literal|"Please adapt '"
+operator|+
+name|getClass
+argument_list|()
+operator|+
+literal|"' to deal with objects of class '"
+operator|+
+name|n
+operator|.
+name|getClass
+argument_list|()
+operator|+
+literal|"'."
+argument_list|)
+throw|;
 return|return
 name|tostring
 return|;
