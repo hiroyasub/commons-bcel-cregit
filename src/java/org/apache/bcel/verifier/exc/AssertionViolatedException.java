@@ -160,21 +160,6 @@ throw|throw
 name|ave
 throw|;
 block|}
-comment|/** 	 * Returns the backtrace of this AssertionViolatedException as a String. 	 * @return The backtrace of this AssertionViolatedException as a String. 	 */
-specifier|public
-name|String
-name|getStackTrace
-parameter_list|()
-block|{
-return|return
-name|Utility
-operator|.
-name|getStackTrace
-argument_list|(
-name|this
-argument_list|)
-return|;
-block|}
 block|}
 end_class
 
