@@ -103,6 +103,10 @@ name|Constants
 operator|.
 name|LDC_W
 expr_stmt|;
+name|length
+operator|=
+literal|3
+expr_stmt|;
 block|}
 block|}
 end_class
