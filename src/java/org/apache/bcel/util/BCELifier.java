@@ -105,10 +105,6 @@ name|PrintWriter
 name|_out
 decl_stmt|;
 specifier|private
-name|DescendingVisitor
-name|_visitor
-decl_stmt|;
-specifier|private
 name|ConstantPoolGen
 name|_cp
 decl_stmt|;

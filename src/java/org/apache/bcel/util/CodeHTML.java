@@ -240,8 +240,6 @@ decl_stmt|;
 name|String
 name|name
 decl_stmt|,
-name|sig
-decl_stmt|,
 name|signature
 decl_stmt|;
 name|int

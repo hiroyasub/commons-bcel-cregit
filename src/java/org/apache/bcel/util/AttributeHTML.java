@@ -313,15 +313,6 @@ name|Code
 operator|)
 name|attribute
 decl_stmt|;
-name|Attribute
-index|[]
-name|attributes
-init|=
-name|c
-operator|.
-name|getAttributes
-argument_list|()
-decl_stmt|;
 comment|// Some directly printable values
 name|file
 operator|.
