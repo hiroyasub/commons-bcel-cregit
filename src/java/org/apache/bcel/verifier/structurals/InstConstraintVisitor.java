@@ -12928,6 +12928,9 @@ literal|"' is not of a reference type as expected."
 argument_list|)
 expr_stmt|;
 block|}
+comment|// TODO: This can possibly only be checked using Staerk-et-al's "set-of-object types", not
+comment|// using "wider cast object types" created during verification.
+comment|// Comment it out if you encounter problems. See also the analogon at visitPUTFIELD.
 if|if
 condition|(
 operator|!
