@@ -64,12 +64,16 @@ name|DataInputStream
 name|file
 decl_stmt|;
 specifier|private
-name|ZipFile
-name|zip
+name|boolean
+name|fileOwned
 decl_stmt|;
 specifier|private
 name|String
 name|file_name
+decl_stmt|;
+specifier|private
+name|String
+name|zip_file
 decl_stmt|;
 specifier|private
 name|int
@@ -148,6 +152,10 @@ name|file_name
 operator|=
 name|file_name
 expr_stmt|;
+name|fileOwned
+operator|=
+literal|false
+expr_stmt|;
 name|String
 name|clazz
 init|=
@@ -210,15 +218,13 @@ argument_list|)
 argument_list|)
 expr_stmt|;
 block|}
-comment|/** Parse class from given .class file.    *    * @param file_name file name    * @throws IOException    */
+comment|/** Parse class from given .class file.    *    * @param file_name file name    */
 specifier|public
 name|ClassParser
 parameter_list|(
 name|String
 name|file_name
 parameter_list|)
-throws|throws
-name|IOException
 block|{
 name|is_zip
 operator|=
@@ -230,26 +236,12 @@ name|file_name
 operator|=
 name|file_name
 expr_stmt|;
-name|file
+name|fileOwned
 operator|=
-operator|new
-name|DataInputStream
-argument_list|(
-operator|new
-name|BufferedInputStream
-argument_list|(
-operator|new
-name|FileInputStream
-argument_list|(
-name|file_name
-argument_list|)
-argument_list|,
-name|BUFSIZE
-argument_list|)
-argument_list|)
+literal|true
 expr_stmt|;
 block|}
-comment|/** Parse class from given .class file in a ZIP-archive    *    * @param file_name file name    * @throws IOException    */
+comment|/** Parse class from given .class file in a ZIP-archive    *    * @param zip_file zip file name    * @param file_name file name    */
 specifier|public
 name|ClassParser
 parameter_list|(
@@ -259,13 +251,55 @@ parameter_list|,
 name|String
 name|file_name
 parameter_list|)
-throws|throws
-name|IOException
 block|{
 name|is_zip
 operator|=
 literal|true
 expr_stmt|;
+name|fileOwned
+operator|=
+literal|true
+expr_stmt|;
+name|this
+operator|.
+name|zip_file
+operator|=
+name|zip_file
+expr_stmt|;
+name|this
+operator|.
+name|file_name
+operator|=
+name|file_name
+expr_stmt|;
+block|}
+comment|/**    * Parse the given Java class file and return an object that represents    * the contained data, i.e., constants, methods, fields and commands.    * A<em>ClassFormatException</em> is raised, if the file is not a valid    * .class file. (This does not include verification of the byte code as it    * is performed by the java interpreter).    *    * @return Class object representing the parsed class file    * @throws  IOException    * @throws  ClassFormatException    */
+specifier|public
+name|JavaClass
+name|parse
+parameter_list|()
+throws|throws
+name|IOException
+throws|,
+name|ClassFormatException
+block|{
+name|ZipFile
+name|zip
+init|=
+literal|null
+decl_stmt|;
+try|try
+block|{
+if|if
+condition|(
+name|fileOwned
+condition|)
+block|{
+if|if
+condition|(
+name|is_zip
+condition|)
+block|{
 name|zip
 operator|=
 operator|new
@@ -284,12 +318,6 @@ argument_list|(
 name|file_name
 argument_list|)
 decl_stmt|;
-name|this
-operator|.
-name|file_name
-operator|=
-name|file_name
-expr_stmt|;
 name|file
 operator|=
 operator|new
@@ -310,16 +338,28 @@ argument_list|)
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**    * Parse the given Java class file and return an object that represents    * the contained data, i.e., constants, methods, fields and commands.    * A<em>ClassFormatException</em> is raised, if the file is not a valid    * .class file. (This does not include verification of the byte code as it    * is performed by the java interpreter).    *    * @return Class object representing the parsed class file    * @throws  IOException    * @throws  ClassFormatException    */
-specifier|public
-name|JavaClass
-name|parse
-parameter_list|()
-throws|throws
-name|IOException
-throws|,
-name|ClassFormatException
+else|else
 block|{
+name|file
+operator|=
+operator|new
+name|DataInputStream
+argument_list|(
+operator|new
+name|BufferedInputStream
+argument_list|(
+operator|new
+name|FileInputStream
+argument_list|(
+name|file_name
+argument_list|)
+argument_list|,
+name|BUFSIZE
+argument_list|)
+argument_list|)
+expr_stmt|;
+block|}
+block|}
 comment|/****************** Read headers ********************************/
 comment|// Check magic tag of class file
 name|readID
@@ -369,7 +409,15 @@ comment|//  	System.err.println("WARNING: Trailing garbage at end of " + file_na
 comment|//  	System.err.println(bytes + " extra bytes: " + Utility.toHexString(buf));
 comment|//        }
 comment|//      }
+block|}
+finally|finally
+block|{
 comment|// Read everything of interest, so close the file
+if|if
+condition|(
+name|fileOwned
+condition|)
+block|{
 name|file
 operator|.
 name|close
@@ -386,6 +434,8 @@ operator|.
 name|close
 argument_list|()
 expr_stmt|;
+block|}
+block|}
 comment|// Return the information we have gathered in a new object
 return|return
 operator|new
