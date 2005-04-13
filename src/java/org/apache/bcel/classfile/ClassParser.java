@@ -225,6 +225,8 @@ parameter_list|(
 name|String
 name|file_name
 parameter_list|)
+throws|throws
+name|IOException
 block|{
 name|is_zip
 operator|=
