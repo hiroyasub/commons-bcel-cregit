@@ -44,6 +44,8 @@ name|AllocationInstruction
 implements|,
 name|ExceptionThrower
 implements|,
+name|StackConsumer
+implements|,
 name|StackProducer
 block|{
 comment|/**    * Empty constructor needed for the Class.newInstance() statement in    * Instruction.readInstruction(). Not to be used otherwise.    */
