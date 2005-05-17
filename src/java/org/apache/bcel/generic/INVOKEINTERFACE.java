@@ -17,15 +17,21 @@ end_package
 
 begin_import
 import|import
-name|org
+name|java
 operator|.
-name|apache
+name|io
 operator|.
-name|bcel
+name|DataOutputStream
+import|;
+end_import
+
+begin_import
+import|import
+name|java
 operator|.
-name|classfile
+name|io
 operator|.
-name|ConstantPool
+name|IOException
 import|;
 end_import
 
@@ -55,11 +61,15 @@ end_import
 
 begin_import
 import|import
-name|java
+name|org
 operator|.
-name|io
+name|apache
 operator|.
-name|*
+name|bcel
+operator|.
+name|classfile
+operator|.
+name|ConstantPool
 import|;
 end_import
 

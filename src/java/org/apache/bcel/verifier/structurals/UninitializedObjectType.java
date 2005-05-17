@@ -25,7 +25,7 @@ name|apache
 operator|.
 name|bcel
 operator|.
-name|*
+name|Constants
 import|;
 end_import
 
@@ -39,7 +39,21 @@ name|bcel
 operator|.
 name|generic
 operator|.
-name|*
+name|ObjectType
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|bcel
+operator|.
+name|generic
+operator|.
+name|ReferenceType
 import|;
 end_import
 

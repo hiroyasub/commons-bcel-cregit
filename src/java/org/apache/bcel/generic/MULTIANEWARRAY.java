@@ -21,7 +21,17 @@ name|java
 operator|.
 name|io
 operator|.
-name|*
+name|DataOutputStream
+import|;
+end_import
+
+begin_import
+import|import
+name|java
+operator|.
+name|io
+operator|.
+name|IOException
 import|;
 end_import
 
@@ -33,9 +43,7 @@ name|apache
 operator|.
 name|bcel
 operator|.
-name|util
-operator|.
-name|ByteSequence
+name|ExceptionConstants
 import|;
 end_import
 
@@ -61,7 +69,9 @@ name|apache
 operator|.
 name|bcel
 operator|.
-name|ExceptionConstants
+name|util
+operator|.
+name|ByteSequence
 import|;
 end_import
 

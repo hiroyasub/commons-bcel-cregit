@@ -37,7 +37,7 @@ name|bcel
 operator|.
 name|classfile
 operator|.
-name|*
+name|LocalVariable
 import|;
 end_import
 

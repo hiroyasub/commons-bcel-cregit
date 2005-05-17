@@ -21,7 +21,17 @@ name|java
 operator|.
 name|io
 operator|.
-name|*
+name|DataOutputStream
+import|;
+end_import
+
+begin_import
+import|import
+name|java
+operator|.
+name|io
+operator|.
+name|IOException
 import|;
 end_import
 
@@ -163,8 +173,6 @@ name|void
 name|setWide
 parameter_list|()
 block|{
-if|if
-condition|(
 name|wide
 operator|=
 name|index
@@ -178,17 +186,25 @@ operator|.
 name|Constants
 operator|.
 name|MAX_BYTE
+expr_stmt|;
+if|if
+condition|(
+name|wide
 condition|)
+block|{
 name|length
 operator|=
 literal|4
 expr_stmt|;
 comment|// Including the wide byte
+block|}
 else|else
+block|{
 name|length
 operator|=
 literal|2
 expr_stmt|;
+block|}
 block|}
 comment|/**    * Read needed data (e.g. index) from file.    */
 specifier|protected

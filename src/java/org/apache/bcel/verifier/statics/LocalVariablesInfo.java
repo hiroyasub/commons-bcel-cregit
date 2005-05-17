@@ -43,7 +43,23 @@ name|verifier
 operator|.
 name|exc
 operator|.
-name|*
+name|AssertionViolatedException
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|bcel
+operator|.
+name|verifier
+operator|.
+name|exc
+operator|.
+name|LocalVariableInfoInconsistentException
 import|;
 end_import
 

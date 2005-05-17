@@ -27,20 +27,6 @@ name|Constants
 import|;
 end_import
 
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|bcel
-operator|.
-name|generic
-operator|.
-name|InstructionHandle
-import|;
-end_import
-
 begin_comment
 comment|/**   * Returnaddress, the type JSR or JSR_W instructions push upon the stack.  *  * see vmspec2 §3.3.3  * @version $Id$  * @author<A HREF="http://www.inf.fu-berlin.de/~ehaase">Enver Haase</A>  */
 end_comment

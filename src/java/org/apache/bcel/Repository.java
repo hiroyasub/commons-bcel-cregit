@@ -15,6 +15,16 @@ end_package
 
 begin_import
 import|import
+name|java
+operator|.
+name|io
+operator|.
+name|IOException
+import|;
+end_import
+
+begin_import
+import|import
 name|org
 operator|.
 name|apache
@@ -37,17 +47,21 @@ name|bcel
 operator|.
 name|util
 operator|.
-name|*
+name|ClassPath
 import|;
 end_import
 
 begin_import
 import|import
-name|java
+name|org
 operator|.
-name|io
+name|apache
 operator|.
-name|*
+name|bcel
+operator|.
+name|util
+operator|.
+name|SyntheticRepository
 import|;
 end_import
 

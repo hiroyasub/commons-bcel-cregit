@@ -27,7 +27,21 @@ name|bcel
 operator|.
 name|generic
 operator|.
-name|*
+name|InstructionHandle
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|bcel
+operator|.
+name|generic
+operator|.
+name|ObjectType
 import|;
 end_import
 

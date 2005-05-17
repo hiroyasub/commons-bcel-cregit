@@ -27,7 +27,7 @@ name|bcel
 operator|.
 name|generic
 operator|.
-name|*
+name|InstructionHandle
 import|;
 end_import
 

@@ -23,7 +23,19 @@ name|lang
 operator|.
 name|reflect
 operator|.
-name|*
+name|Method
+import|;
+end_import
+
+begin_import
+import|import
+name|java
+operator|.
+name|lang
+operator|.
+name|reflect
+operator|.
+name|Modifier
 import|;
 end_import
 

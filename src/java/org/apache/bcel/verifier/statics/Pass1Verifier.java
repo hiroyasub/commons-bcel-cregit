@@ -25,9 +25,7 @@ name|apache
 operator|.
 name|bcel
 operator|.
-name|classfile
-operator|.
-name|*
+name|Repository
 import|;
 end_import
 
@@ -39,7 +37,23 @@ name|apache
 operator|.
 name|bcel
 operator|.
-name|Repository
+name|classfile
+operator|.
+name|ClassFormatException
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|bcel
+operator|.
+name|classfile
+operator|.
+name|JavaClass
 import|;
 end_import
 
@@ -53,7 +67,35 @@ name|bcel
 operator|.
 name|verifier
 operator|.
-name|*
+name|PassVerifier
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|bcel
+operator|.
+name|verifier
+operator|.
+name|VerificationResult
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|bcel
+operator|.
+name|verifier
+operator|.
+name|Verifier
 import|;
 end_import
 
@@ -69,7 +111,7 @@ name|verifier
 operator|.
 name|exc
 operator|.
-name|*
+name|LoadingException
 import|;
 end_import
 
