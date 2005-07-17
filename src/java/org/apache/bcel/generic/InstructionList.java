@@ -2005,6 +2005,13 @@ name|prev
 operator|=
 name|end
 expr_stmt|;
+else|else
+name|this
+operator|.
+name|end
+operator|=
+name|end
+expr_stmt|;
 block|}
 block|}
 comment|/**    * Move a single instruction (handle) to a new location.    *    * @param ih     moved instruction    * @param target new location of moved instruction    */
