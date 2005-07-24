@@ -290,9 +290,6 @@ comment|// Unknown attribute
 comment|// Get class name from constant pool via `name_index' indirection
 name|name_index
 operator|=
-operator|(
-name|int
-operator|)
 name|file
 operator|.
 name|readUnsignedShort
@@ -414,7 +411,6 @@ argument_list|,
 name|constant_pool
 argument_list|)
 return|;
-else|else
 return|return
 operator|new
 name|Unknown
@@ -676,7 +672,7 @@ return|return
 name|length
 return|;
 block|}
-comment|/**    * @param Attribute length in bytes.    */
+comment|/**    * @param length length in bytes.    */
 specifier|public
 specifier|final
 name|void
@@ -805,7 +801,7 @@ name|Attribute
 name|copy
 parameter_list|(
 name|ConstantPool
-name|constant_pool
+name|_constant_pool
 parameter_list|)
 function_decl|;
 comment|/**    * @return attribute name.    */
