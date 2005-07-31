@@ -192,9 +192,6 @@ name|hashCode
 parameter_list|()
 block|{
 return|return
-operator|(
-name|int
-operator|)
 name|type
 return|;
 block|}
@@ -204,12 +201,12 @@ name|boolean
 name|equals
 parameter_list|(
 name|Object
-name|type
+name|_type
 parameter_list|)
 block|{
 return|return
 operator|(
-name|type
+name|_type
 operator|instanceof
 name|BasicType
 operator|)
@@ -218,7 +215,7 @@ operator|(
 operator|(
 name|BasicType
 operator|)
-name|type
+name|_type
 operator|)
 operator|.
 name|type

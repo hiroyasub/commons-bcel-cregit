@@ -300,7 +300,7 @@ name|Attribute
 name|copy
 parameter_list|(
 name|ConstantPool
-name|constant_pool
+name|_constant_pool
 parameter_list|)
 block|{
 return|return

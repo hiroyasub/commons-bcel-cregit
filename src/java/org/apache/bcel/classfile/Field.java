@@ -477,7 +477,7 @@ name|Field
 name|copy
 parameter_list|(
 name|ConstantPool
-name|constant_pool
+name|_constant_pool
 parameter_list|)
 block|{
 return|return
@@ -486,7 +486,7 @@ name|Field
 operator|)
 name|copy_
 argument_list|(
-name|constant_pool
+name|_constant_pool
 argument_list|)
 return|;
 block|}

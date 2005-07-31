@@ -997,13 +997,13 @@ argument_list|()
 expr_stmt|;
 block|}
 block|}
-comment|/**     * Dump class to a file named file_name.    *    * @param file_name Output file name    * @exception IOException    */
+comment|/**     * Dump class to a file named file_name.    *    * @param _file_name Output file name    * @exception IOException    */
 specifier|public
 name|void
 name|dump
 parameter_list|(
 name|String
-name|file_name
+name|_file_name
 parameter_list|)
 throws|throws
 name|IOException
@@ -1013,7 +1013,7 @@ argument_list|(
 operator|new
 name|File
 argument_list|(
-name|file_name
+name|_file_name
 argument_list|)
 argument_list|)
 expr_stmt|;
@@ -1584,38 +1584,18 @@ block|}
 static|static
 block|{
 comment|// Debugging ... on/off
-name|String
 name|debug
-init|=
-name|System
+operator|=
+name|Boolean
 operator|.
-name|getProperty
+name|getBoolean
 argument_list|(
 literal|"JavaClass.debug"
 argument_list|)
-decl_stmt|;
-if|if
-condition|(
-name|debug
-operator|!=
-literal|null
-condition|)
-name|JavaClass
-operator|.
-name|debug
-operator|=
-operator|new
-name|Boolean
-argument_list|(
-name|debug
-argument_list|)
-operator|.
-name|booleanValue
-argument_list|()
 expr_stmt|;
 comment|// Get path separator either / or \ usually
 name|String
-name|sep
+name|_sep
 init|=
 name|System
 operator|.
@@ -1626,7 +1606,7 @@ argument_list|)
 decl_stmt|;
 if|if
 condition|(
-name|sep
+name|_sep
 operator|!=
 literal|null
 condition|)
@@ -1636,7 +1616,7 @@ name|JavaClass
 operator|.
 name|sep
 operator|=
-name|sep
+name|_sep
 operator|.
 name|charAt
 argument_list|(
@@ -2903,7 +2883,7 @@ name|ClassNotFoundException
 block|{
 name|String
 index|[]
-name|interfaces
+name|_interfaces
 init|=
 name|getInterfaceNames
 argument_list|()
@@ -2915,7 +2895,7 @@ init|=
 operator|new
 name|JavaClass
 index|[
-name|interfaces
+name|_interfaces
 operator|.
 name|length
 index|]
@@ -2929,7 +2909,7 @@ literal|0
 init|;
 name|i
 operator|<
-name|interfaces
+name|_interfaces
 operator|.
 name|length
 condition|;
@@ -2946,7 +2926,7 @@ name|repository
 operator|.
 name|loadClass
 argument_list|(
-name|interfaces
+name|_interfaces
 index|[
 name|i
 index|]
@@ -3014,7 +2994,7 @@ argument_list|()
 decl_stmt|;
 name|JavaClass
 index|[]
-name|interfaces
+name|_interfaces
 init|=
 name|clazz
 operator|.
@@ -3064,7 +3044,7 @@ literal|0
 init|;
 name|i
 operator|<
-name|interfaces
+name|_interfaces
 operator|.
 name|length
 condition|;
@@ -3076,7 +3056,7 @@ name|queue
 operator|.
 name|enqueue
 argument_list|(
-name|interfaces
+name|_interfaces
 index|[
 name|i
 index|]

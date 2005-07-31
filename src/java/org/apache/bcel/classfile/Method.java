@@ -383,18 +383,17 @@ decl_stmt|;
 if|if
 condition|(
 name|code
-operator|!=
+operator|==
 literal|null
 condition|)
+return|return
+literal|null
+return|;
 return|return
 name|code
 operator|.
 name|getLocalVariableTable
 argument_list|()
-return|;
-else|else
-return|return
-literal|null
 return|;
 block|}
 comment|/** @return LineNumberTable of code attribute if any, i.e. the call is forwarded    * to the Code atribute.    */
@@ -413,18 +412,17 @@ decl_stmt|;
 if|if
 condition|(
 name|code
-operator|!=
+operator|==
 literal|null
 condition|)
+return|return
+literal|null
+return|;
 return|return
 name|code
 operator|.
 name|getLineNumberTable
 argument_list|()
-return|;
-else|else
-return|return
-literal|null
 return|;
 block|}
 comment|/**    * Return string representation close to declaration format,    * `public static void main(String[] args) throws IOException', e.g.    *    * @return String representation of the method.    */
@@ -640,7 +638,7 @@ name|Method
 name|copy
 parameter_list|(
 name|ConstantPool
-name|constant_pool
+name|_constant_pool
 parameter_list|)
 block|{
 return|return
@@ -649,7 +647,7 @@ name|Method
 operator|)
 name|copy_
 argument_list|(
-name|constant_pool
+name|_constant_pool
 argument_list|)
 return|;
 block|}

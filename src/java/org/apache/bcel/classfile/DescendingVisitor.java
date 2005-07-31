@@ -172,17 +172,17 @@ name|void
 name|visitJavaClass
 parameter_list|(
 name|JavaClass
-name|clazz
+name|_clazz
 parameter_list|)
 block|{
 name|stack
 operator|.
 name|push
 argument_list|(
-name|clazz
+name|_clazz
 argument_list|)
 expr_stmt|;
-name|clazz
+name|_clazz
 operator|.
 name|accept
 argument_list|(
@@ -193,7 +193,7 @@ name|Field
 index|[]
 name|fields
 init|=
-name|clazz
+name|_clazz
 operator|.
 name|getFields
 argument_list|()
@@ -228,7 +228,7 @@ name|Method
 index|[]
 name|methods
 init|=
-name|clazz
+name|_clazz
 operator|.
 name|getMethods
 argument_list|()
@@ -263,7 +263,7 @@ name|Attribute
 index|[]
 name|attributes
 init|=
-name|clazz
+name|_clazz
 operator|.
 name|getAttributes
 argument_list|()
@@ -294,7 +294,7 @@ argument_list|(
 name|this
 argument_list|)
 expr_stmt|;
-name|clazz
+name|_clazz
 operator|.
 name|getConstantPool
 argument_list|()

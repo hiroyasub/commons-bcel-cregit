@@ -1803,7 +1803,7 @@ name|signature
 parameter_list|)
 block|{
 name|Index
-name|index
+name|_index
 init|=
 operator|(
 name|Index
@@ -1821,12 +1821,12 @@ argument_list|)
 decl_stmt|;
 return|return
 operator|(
-name|index
+name|_index
 operator|!=
 literal|null
 operator|)
 condition|?
-name|index
+name|_index
 operator|.
 name|index
 else|:

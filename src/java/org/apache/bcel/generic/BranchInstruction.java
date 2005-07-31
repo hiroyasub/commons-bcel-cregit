@@ -161,18 +161,18 @@ argument_list|)
 expr_stmt|;
 comment|// May be negative, i.e., point backwards
 block|}
-comment|/**    * @param target branch target    * @return the offset to  `target' relative to this instruction    */
+comment|/**    * @param _target branch target    * @return the offset to  `target' relative to this instruction    */
 specifier|protected
 name|int
 name|getTargetOffset
 parameter_list|(
 name|InstructionHandle
-name|target
+name|_target
 parameter_list|)
 block|{
 if|if
 condition|(
-name|target
+name|_target
 operator|==
 literal|null
 condition|)
@@ -195,7 +195,7 @@ throw|;
 name|int
 name|t
 init|=
-name|target
+name|_target
 operator|.
 name|getPosition
 argument_list|()
@@ -225,7 +225,7 @@ name|t
 operator|+
 literal|":"
 operator|+
-name|target
+name|_target
 argument_list|)
 throw|;
 return|return

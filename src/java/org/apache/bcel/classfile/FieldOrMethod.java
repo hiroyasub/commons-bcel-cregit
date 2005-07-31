@@ -536,7 +536,7 @@ name|FieldOrMethod
 name|copy_
 parameter_list|(
 name|ConstantPool
-name|constant_pool
+name|_constant_pool
 parameter_list|)
 block|{
 name|FieldOrMethod
@@ -566,7 +566,7 @@ name|c
 operator|.
 name|constant_pool
 operator|=
-name|constant_pool
+name|_constant_pool
 expr_stmt|;
 name|c
 operator|.
@@ -606,7 +606,7 @@ index|]
 operator|.
 name|copy
 argument_list|(
-name|constant_pool
+name|_constant_pool
 argument_list|)
 expr_stmt|;
 return|return

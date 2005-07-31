@@ -80,8 +80,6 @@ argument_list|(
 name|i
 argument_list|)
 return|;
-else|else
-block|{
 name|BranchHandle
 name|bh
 init|=
@@ -106,7 +104,6 @@ expr_stmt|;
 return|return
 name|bh
 return|;
-block|}
 block|}
 comment|/** Handle adds itself to the list of resuable handles.    */
 specifier|protected

@@ -1059,13 +1059,13 @@ literal|true
 argument_list|)
 return|;
 block|}
-comment|/**    * @return deep copy of this attribute    *     * @param constant_pool the constant pool to duplicate    */
+comment|/**    * @return deep copy of this attribute    *     * @param _constant_pool the constant pool to duplicate    */
 specifier|public
 name|Attribute
 name|copy
 parameter_list|(
 name|ConstantPool
-name|constant_pool
+name|_constant_pool
 parameter_list|)
 block|{
 name|Code
@@ -1120,7 +1120,7 @@ name|c
 operator|.
 name|constant_pool
 operator|=
-name|constant_pool
+name|_constant_pool
 expr_stmt|;
 name|c
 operator|.
@@ -1199,7 +1199,7 @@ index|]
 operator|.
 name|copy
 argument_list|(
-name|constant_pool
+name|_constant_pool
 argument_list|)
 expr_stmt|;
 return|return

@@ -865,13 +865,9 @@ name|c
 operator|.
 name|getTag
 argument_list|()
-operator|==
+operator|!=
 name|tag
 condition|)
-return|return
-name|c
-return|;
-else|else
 throw|throw
 operator|new
 name|ClassFormatException
@@ -894,6 +890,9 @@ operator|+
 name|c
 argument_list|)
 throw|;
+return|return
+name|c
+return|;
 block|}
 comment|/**    * @return Array of constants.    * @see    Constant    */
 specifier|public

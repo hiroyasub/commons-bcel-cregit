@@ -419,7 +419,7 @@ return|return
 name|name
 return|;
 block|}
-comment|/**    * @param bytes.    */
+comment|/**    * @param bytes the bytes to set    */
 specifier|public
 specifier|final
 name|void
@@ -536,7 +536,7 @@ name|Attribute
 name|copy
 parameter_list|(
 name|ConstantPool
-name|constant_pool
+name|_constant_pool
 parameter_list|)
 block|{
 name|Unknown
@@ -591,7 +591,7 @@ name|c
 operator|.
 name|constant_pool
 operator|=
-name|constant_pool
+name|_constant_pool
 expr_stmt|;
 return|return
 name|c

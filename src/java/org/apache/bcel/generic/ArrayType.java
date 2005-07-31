@@ -276,7 +276,6 @@ condition|)
 return|return
 name|basic_type
 return|;
-else|else
 return|return
 operator|new
 name|ArrayType
@@ -320,12 +319,12 @@ name|boolean
 name|equals
 parameter_list|(
 name|Object
-name|type
+name|_type
 parameter_list|)
 block|{
 if|if
 condition|(
-name|type
+name|_type
 operator|instanceof
 name|ArrayType
 condition|)
@@ -336,7 +335,7 @@ init|=
 operator|(
 name|ArrayType
 operator|)
-name|type
+name|_type
 decl_stmt|;
 return|return
 operator|(
@@ -357,7 +356,6 @@ name|basic_type
 argument_list|)
 return|;
 block|}
-else|else
 return|return
 literal|false
 return|;
