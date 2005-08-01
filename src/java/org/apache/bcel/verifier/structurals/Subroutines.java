@@ -333,6 +333,7 @@ name|Subroutine
 block|{
 comment|/** 		 * UNSET, a symbol for an uninitialized localVariable 		 * field. This is used for the "top-level" Subroutine; 		 * i.e. no subroutine. 		 */
 specifier|private
+specifier|static
 specifier|final
 name|int
 name|UNSET
