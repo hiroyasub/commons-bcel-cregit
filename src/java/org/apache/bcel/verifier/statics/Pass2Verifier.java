@@ -8304,6 +8304,7 @@ return|;
 block|}
 comment|/** 	 * This class serves for finding out if a given JavaClass' ConstantPool 	 * references an Inner Class. 	 * The Java Virtual Machine Specification, Second Edition is not very precise 	 * about when an "InnerClasses" attribute has to appear. However, it states that 	 * there has to be exactly one InnerClasses attribute in the ClassFile structure 	 * if the constant pool of a class or interface refers to any class or interface 	 * "that is not a member of a package". Sun does not mean "member of the default 	 * package". In "Inner Classes Specification" they point out how a "bytecode name" 	 * is derived so one has to deduce what a class name of a class "that is not a 	 * member of a package" looks like: there is at least one character in the byte- 	 * code name that cannot be part of a legal Java Language Class name (and not equal 	 * to '/'). This assumption is wrong as the delimiter is '$' for which 	 * Character.isJavaIdentifierPart() == true. 	 * Hence, you really run into trouble if you have a toplevel class called 	 * "A$XXX" and another toplevel class called "A" with in inner class called "XXX". 	 * JustIce cannot repair this; please note that existing verifiers at this 	 * time even fail to detect missing InnerClasses attributes in pass 2. 	 */
 specifier|private
+specifier|static
 class|class
 name|InnerClassDetector
 extends|extends
