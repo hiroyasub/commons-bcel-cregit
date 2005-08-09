@@ -2233,20 +2233,6 @@ name|getClassName
 argument_list|()
 argument_list|)
 expr_stmt|;
-block|}
-catch|catch
-parameter_list|(
-name|ClassNotFoundException
-name|ex
-parameter_list|)
-block|{
-comment|// FIXME: handle the error
-name|ex
-operator|.
-name|printStackTrace
-argument_list|()
-expr_stmt|;
-block|}
 name|all3amsg
 operator|+=
 literal|"Method '"
@@ -2275,6 +2261,20 @@ argument_list|)
 operator|+
 literal|"\n\n"
 expr_stmt|;
+block|}
+catch|catch
+parameter_list|(
+name|ClassNotFoundException
+name|ex
+parameter_list|)
+block|{
+comment|// FIXME: handle the error
+name|ex
+operator|.
+name|printStackTrace
+argument_list|()
+expr_stmt|;
+block|}
 block|}
 block|}
 name|pass3aTextPane
@@ -2430,20 +2430,6 @@ name|getClassName
 argument_list|()
 argument_list|)
 expr_stmt|;
-block|}
-catch|catch
-parameter_list|(
-name|ClassNotFoundException
-name|ex
-parameter_list|)
-block|{
-comment|// FIXME: handle the error
-name|ex
-operator|.
-name|printStackTrace
-argument_list|()
-expr_stmt|;
-block|}
 name|all3bmsg
 operator|+=
 literal|"Method '"
@@ -2472,6 +2458,20 @@ argument_list|)
 operator|+
 literal|"\n\n"
 expr_stmt|;
+block|}
+catch|catch
+parameter_list|(
+name|ClassNotFoundException
+name|ex
+parameter_list|)
+block|{
+comment|// FIXME: handle the error
+name|ex
+operator|.
+name|printStackTrace
+argument_list|()
+expr_stmt|;
+block|}
 block|}
 block|}
 name|pass3bTextPane
