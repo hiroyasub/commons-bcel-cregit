@@ -2291,20 +2291,6 @@ argument_list|(
 name|class_name
 argument_list|)
 expr_stmt|;
-block|}
-catch|catch
-parameter_list|(
-name|ClassNotFoundException
-name|ex
-parameter_list|)
-block|{
-comment|// FIXME: report the error
-name|ex
-operator|.
-name|printStackTrace
-argument_list|()
-expr_stmt|;
-block|}
 name|int
 name|nr
 init|=
@@ -2359,6 +2345,20 @@ name|red
 expr_stmt|;
 break|break;
 block|}
+block|}
+block|}
+catch|catch
+parameter_list|(
+name|ClassNotFoundException
+name|ex
+parameter_list|)
+block|{
+comment|// FIXME: report the error
+name|ex
+operator|.
+name|printStackTrace
+argument_list|()
+expr_stmt|;
 block|}
 block|}
 else|else
