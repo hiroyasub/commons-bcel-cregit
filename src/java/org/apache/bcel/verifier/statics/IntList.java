@@ -27,6 +27,16 @@ name|ArrayList
 import|;
 end_import
 
+begin_import
+import|import
+name|java
+operator|.
+name|util
+operator|.
+name|List
+import|;
+end_import
+
 begin_comment
 comment|/**  * A small utility class representing a set of basic int values.  *  * @version $Id$  * @author<A HREF="http://www.inf.fu-berlin.de/~ehaase"/>Enver Haase</A>  */
 end_comment
@@ -38,7 +48,7 @@ name|IntList
 block|{
 comment|/** The int are stored as Integer objects here. */
 specifier|private
-name|ArrayList
+name|List
 name|theList
 decl_stmt|;
 comment|/** This constructor creates an empty list. */

@@ -37,6 +37,16 @@ end_import
 
 begin_import
 import|import
+name|java
+operator|.
+name|util
+operator|.
+name|List
+import|;
+end_import
+
+begin_import
+import|import
 name|org
 operator|.
 name|apache
@@ -1048,7 +1058,7 @@ argument_list|()
 return|;
 block|}
 specifier|private
-name|ArrayList
+name|List
 name|observers
 decl_stmt|;
 comment|/** Add observer for this object.    */

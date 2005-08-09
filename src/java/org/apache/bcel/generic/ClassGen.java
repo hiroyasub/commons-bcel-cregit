@@ -37,6 +37,16 @@ end_import
 
 begin_import
 import|import
+name|java
+operator|.
+name|util
+operator|.
+name|List
+import|;
+end_import
+
+begin_import
+import|import
 name|org
 operator|.
 name|apache
@@ -214,7 +224,7 @@ decl_stmt|;
 comment|// Template for building up constant pool
 comment|// ArrayLists instead of arrays to gather fields, methods, etc.
 specifier|private
-name|ArrayList
+name|List
 name|field_vec
 init|=
 operator|new
@@ -222,7 +232,7 @@ name|ArrayList
 argument_list|()
 decl_stmt|;
 specifier|private
-name|ArrayList
+name|List
 name|method_vec
 init|=
 operator|new
@@ -230,7 +240,7 @@ name|ArrayList
 argument_list|()
 decl_stmt|;
 specifier|private
-name|ArrayList
+name|List
 name|attribute_vec
 init|=
 operator|new
@@ -238,7 +248,7 @@ name|ArrayList
 argument_list|()
 decl_stmt|;
 specifier|private
-name|ArrayList
+name|List
 name|interface_vec
 init|=
 operator|new

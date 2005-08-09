@@ -51,6 +51,16 @@ name|java
 operator|.
 name|util
 operator|.
+name|List
+import|;
+end_import
+
+begin_import
+import|import
+name|java
+operator|.
+name|util
+operator|.
 name|Map
 import|;
 end_import
@@ -673,7 +683,7 @@ argument_list|(
 name|search
 argument_list|)
 decl_stmt|;
-name|ArrayList
+name|List
 name|matches
 init|=
 operator|new

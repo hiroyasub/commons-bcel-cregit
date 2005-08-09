@@ -141,6 +141,16 @@ name|java
 operator|.
 name|util
 operator|.
+name|List
+import|;
+end_import
+
+begin_import
+import|import
+name|java
+operator|.
+name|util
+operator|.
 name|zip
 operator|.
 name|GZIPInputStream
@@ -2454,7 +2464,7 @@ parameter_list|)
 throws|throws
 name|ClassFormatException
 block|{
-name|ArrayList
+name|List
 name|vec
 init|=
 operator|new
@@ -2463,10 +2473,6 @@ argument_list|()
 decl_stmt|;
 name|int
 name|index
-decl_stmt|;
-name|String
-index|[]
-name|types
 decl_stmt|;
 try|try
 block|{

@@ -111,6 +111,16 @@ name|java
 operator|.
 name|util
 operator|.
+name|List
+import|;
+end_import
+
+begin_import
+import|import
+name|java
+operator|.
+name|util
+operator|.
 name|StringTokenizer
 import|;
 end_import
@@ -183,7 +193,7 @@ name|class_path
 operator|=
 name|class_path
 expr_stmt|;
-name|ArrayList
+name|List
 name|vec
 init|=
 operator|new
@@ -410,7 +420,7 @@ parameter_list|(
 name|String
 name|path
 parameter_list|,
-name|ArrayList
+name|List
 name|list
 parameter_list|)
 block|{
@@ -514,7 +524,7 @@ argument_list|(
 literal|"java.ext.dirs"
 argument_list|)
 decl_stmt|;
-name|ArrayList
+name|List
 name|list
 init|=
 operator|new
@@ -535,7 +545,7 @@ argument_list|,
 name|list
 argument_list|)
 expr_stmt|;
-name|ArrayList
+name|List
 name|dirs
 init|=
 operator|new

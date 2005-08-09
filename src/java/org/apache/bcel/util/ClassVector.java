@@ -27,6 +27,16 @@ end_import
 
 begin_import
 import|import
+name|java
+operator|.
+name|util
+operator|.
+name|List
+import|;
+end_import
+
+begin_import
+import|import
 name|org
 operator|.
 name|apache
@@ -55,7 +65,7 @@ operator|.
 name|Serializable
 block|{
 specifier|protected
-name|ArrayList
+name|List
 name|vec
 init|=
 operator|new

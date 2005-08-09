@@ -51,6 +51,16 @@ name|java
 operator|.
 name|util
 operator|.
+name|List
+import|;
+end_import
+
+begin_import
+import|import
+name|java
+operator|.
+name|util
+operator|.
 name|Stack
 import|;
 end_import
@@ -263,7 +273,7 @@ name|boolean
 name|strip_attributes
 decl_stmt|;
 specifier|private
-name|ArrayList
+name|List
 name|variable_vec
 init|=
 operator|new
@@ -271,7 +281,7 @@ name|ArrayList
 argument_list|()
 decl_stmt|;
 specifier|private
-name|ArrayList
+name|List
 name|line_number_vec
 init|=
 operator|new
@@ -279,7 +289,7 @@ name|ArrayList
 argument_list|()
 decl_stmt|;
 specifier|private
-name|ArrayList
+name|List
 name|exception_vec
 init|=
 operator|new
@@ -287,7 +297,7 @@ name|ArrayList
 argument_list|()
 decl_stmt|;
 specifier|private
-name|ArrayList
+name|List
 name|throws_vec
 init|=
 operator|new
@@ -295,7 +305,7 @@ name|ArrayList
 argument_list|()
 decl_stmt|;
 specifier|private
-name|ArrayList
+name|List
 name|code_attrs_vec
 init|=
 operator|new
@@ -4106,7 +4116,7 @@ name|maxStackDepth
 return|;
 block|}
 specifier|private
-name|ArrayList
+name|List
 name|observers
 decl_stmt|;
 comment|/** Add observer for this object.    */

@@ -23,6 +23,16 @@ end_import
 
 begin_import
 import|import
+name|java
+operator|.
+name|util
+operator|.
+name|List
+import|;
+end_import
+
+begin_import
+import|import
 name|org
 operator|.
 name|apache
@@ -90,7 +100,7 @@ name|ConstantPoolGen
 name|cp
 decl_stmt|;
 specifier|private
-name|ArrayList
+name|List
 name|attribute_vec
 init|=
 operator|new
