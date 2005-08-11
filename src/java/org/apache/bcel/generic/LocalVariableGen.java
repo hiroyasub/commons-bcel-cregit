@@ -143,6 +143,22 @@ name|index
 operator|=
 name|index
 expr_stmt|;
+comment|// setStart and setEnd add 'this' to a HashSet, causing the hash to compute.
+comment|// The hash uses start and end, so set them before calling setStart/setEnd.
+comment|// Otherwise, the remove will fail because the hash is different than the add.
+comment|// Icky, but should be ok. See Bug: 36110  -- dbrosius
+name|this
+operator|.
+name|start
+operator|=
+name|start
+expr_stmt|;
+name|this
+operator|.
+name|end
+operator|=
+name|end
+expr_stmt|;
 name|setStart
 argument_list|(
 name|start
