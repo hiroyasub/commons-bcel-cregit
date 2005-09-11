@@ -100,7 +100,7 @@ operator|=
 operator|(
 name|file
 operator|.
-name|readUnsignedShort
+name|readUnsignedByte
 argument_list|()
 operator|)
 expr_stmt|;
