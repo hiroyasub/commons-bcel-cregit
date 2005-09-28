@@ -53,6 +53,16 @@ name|java
 operator|.
 name|util
 operator|.
+name|List
+import|;
+end_import
+
+begin_import
+import|import
+name|java
+operator|.
+name|util
+operator|.
 name|Random
 import|;
 end_import
@@ -340,7 +350,7 @@ class|class
 name|InstructionContextQueue
 block|{
 specifier|private
-name|Vector
+name|List
 name|ics
 init|=
 operator|new
@@ -349,7 +359,7 @@ argument_list|()
 decl_stmt|;
 comment|// Type: InstructionContext
 specifier|private
-name|Vector
+name|List
 name|ecs
 init|=
 operator|new

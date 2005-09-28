@@ -41,6 +41,16 @@ name|java
 operator|.
 name|util
 operator|.
+name|List
+import|;
+end_import
+
+begin_import
+import|import
+name|java
+operator|.
+name|util
+operator|.
 name|Map
 import|;
 end_import
@@ -77,7 +87,7 @@ decl_stmt|;
 comment|/** 	 * The VerifierFactoryObserver instances that observe the VerifierFactory. 	 */
 specifier|private
 specifier|static
-name|Vector
+name|List
 name|observers
 init|=
 operator|new
@@ -251,7 +261,7 @@ parameter_list|)
 block|{
 name|observers
 operator|.
-name|addElement
+name|add
 argument_list|(
 name|o
 argument_list|)
@@ -269,7 +279,7 @@ parameter_list|)
 block|{
 name|observers
 operator|.
-name|removeElement
+name|remove
 argument_list|(
 name|o
 argument_list|)
