@@ -25,6 +25,16 @@ name|ArrayList
 import|;
 end_import
 
+begin_import
+import|import
+name|java
+operator|.
+name|util
+operator|.
+name|List
+import|;
+end_import
+
 begin_comment
 comment|/**  * A PassVerifier actually verifies a class file; it is instantiated  * by a Verifier.  * The verification should conform with a certain pass as described  * in The Java Virtual Machine Specification, 2nd edition.  * This book describes four passes. Pass one means loading the  * class and verifying a few static constraints. Pass two actually  * verifies some other constraints that could enforce loading in  * referenced class files. Pass three is the first pass that actually  * checks constraints in the code array of a method in the class file;  * it has two parts with the first verifying static constraints and  * the second part verifying structural constraints (where a data flow  * analysis is used for). The fourth pass, finally, performs checks  * that can only be done at run-time.  * JustIce does not have a run-time pass, but certain constraints that  * are usually delayed until run-time for performance reasons are also  * checked during the second part of pass three.  * PassVerifier instances perform caching.  * That means, if you really want a new verification run of a certain  * pass you must use a new instance of a given PassVerifier.  *  * @version $Id$  * @author<A HREF="http://www.inf.fu-berlin.de/~ehaase"/>Enver Haase</A>  * @see org.apache.bcel.verifier.Verifier  * @see #verify()  */
 end_comment
@@ -37,7 +47,7 @@ name|PassVerifier
 block|{
 comment|/** The (warning) messages. */
 specifier|private
-name|ArrayList
+name|List
 name|messages
 init|=
 operator|new
@@ -110,10 +120,15 @@ name|verify
 argument_list|()
 expr_stmt|;
 comment|// create messages if not already done (cached!)
+return|return
+operator|(
 name|String
 index|[]
-name|ret
-init|=
+operator|)
+name|messages
+operator|.
+name|toArray
+argument_list|(
 operator|new
 name|String
 index|[
@@ -122,43 +137,7 @@ operator|.
 name|size
 argument_list|()
 index|]
-decl_stmt|;
-for|for
-control|(
-name|int
-name|i
-init|=
-literal|0
-init|;
-name|i
-operator|<
-name|messages
-operator|.
-name|size
-argument_list|()
-condition|;
-name|i
-operator|++
-control|)
-block|{
-name|ret
-index|[
-name|i
-index|]
-operator|=
-operator|(
-name|String
-operator|)
-name|messages
-operator|.
-name|get
-argument_list|(
-name|i
 argument_list|)
-expr_stmt|;
-block|}
-return|return
-name|ret
 return|;
 block|}
 block|}
