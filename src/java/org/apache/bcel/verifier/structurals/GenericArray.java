@@ -43,7 +43,22 @@ operator|.
 name|io
 operator|.
 name|Serializable
-block|{ }
+block|{
+specifier|protected
+name|Object
+name|clone
+parameter_list|()
+throws|throws
+name|CloneNotSupportedException
+block|{
+return|return
+name|super
+operator|.
+name|clone
+argument_list|()
+return|;
+block|}
+block|}
 end_class
 
 end_unit
