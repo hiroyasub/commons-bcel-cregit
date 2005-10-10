@@ -386,15 +386,31 @@ init|=
 operator|new
 name|StringBuffer
 argument_list|(
-name|access
-operator|+
-name|signature
-operator|+
-literal|" "
-operator|+
-name|name
+literal|64
 argument_list|)
 decl_stmt|;
+name|buf
+operator|.
+name|append
+argument_list|(
+name|access
+argument_list|)
+operator|.
+name|append
+argument_list|(
+name|signature
+argument_list|)
+operator|.
+name|append
+argument_list|(
+literal|" "
+argument_list|)
+operator|.
+name|append
+argument_list|(
+name|name
+argument_list|)
+expr_stmt|;
 name|ConstantValue
 name|cv
 init|=
@@ -412,7 +428,10 @@ operator|.
 name|append
 argument_list|(
 literal|" = "
-operator|+
+argument_list|)
+operator|.
+name|append
+argument_list|(
 name|cv
 argument_list|)
 expr_stmt|;
@@ -453,12 +472,18 @@ operator|.
 name|append
 argument_list|(
 literal|" ["
-operator|+
+argument_list|)
+operator|.
+name|append
+argument_list|(
 name|a
 operator|.
 name|toString
 argument_list|()
-operator|+
+argument_list|)
+operator|.
+name|append
+argument_list|(
 literal|"]"
 argument_list|)
 expr_stmt|;

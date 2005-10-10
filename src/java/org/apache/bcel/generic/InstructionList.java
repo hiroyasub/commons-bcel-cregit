@@ -3330,7 +3330,10 @@ name|toString
 argument_list|(
 name|verbose
 argument_list|)
-operator|+
+argument_list|)
+operator|.
+name|append
+argument_list|(
 literal|"\n"
 argument_list|)
 expr_stmt|;

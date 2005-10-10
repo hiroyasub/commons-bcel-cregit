@@ -1270,7 +1270,10 @@ operator|.
 name|append
 argument_list|(
 literal|"ACC_"
-operator|+
+argument_list|)
+operator|.
+name|append
+argument_list|(
 name|Constants
 operator|.
 name|ACCESS_NAMES
@@ -1280,7 +1283,10 @@ index|]
 operator|.
 name|toUpperCase
 argument_list|()
-operator|+
+argument_list|)
+operator|.
+name|append
+argument_list|(
 literal|" | "
 argument_list|)
 expr_stmt|;

@@ -4315,7 +4315,10 @@ operator|.
 name|append
 argument_list|(
 literal|"\n\t\tthrows "
-operator|+
+argument_list|)
+operator|.
+name|append
+argument_list|(
 name|e
 operator|.
 name|next

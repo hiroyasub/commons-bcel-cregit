@@ -573,12 +573,18 @@ operator|.
 name|append
 argument_list|(
 literal|" ["
-operator|+
+argument_list|)
+operator|.
+name|append
+argument_list|(
 name|a
 operator|.
 name|toString
 argument_list|()
-operator|+
+argument_list|)
+operator|.
+name|append
+argument_list|(
 literal|"]"
 argument_list|)
 expr_stmt|;
@@ -619,7 +625,10 @@ operator|.
 name|append
 argument_list|(
 literal|"\n\t\tthrows "
-operator|+
+argument_list|)
+operator|.
+name|append
+argument_list|(
 name|str
 argument_list|)
 expr_stmt|;
