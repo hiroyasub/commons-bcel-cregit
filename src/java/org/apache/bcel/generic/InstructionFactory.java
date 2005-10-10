@@ -487,10 +487,6 @@ name|Type
 name|result_type
 decl_stmt|;
 name|String
-index|[]
-name|arg_names
-decl_stmt|;
-name|String
 name|class_name
 decl_stmt|;
 name|String
