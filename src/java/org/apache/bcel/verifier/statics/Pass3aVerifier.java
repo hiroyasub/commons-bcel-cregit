@@ -6729,7 +6729,7 @@ literal|"'. The native verifier possibly allows the method to be declared in som
 argument_list|)
 expr_stmt|;
 block|}
-if|if
+if|else if
 condition|(
 operator|!
 operator|(
