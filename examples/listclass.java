@@ -985,14 +985,10 @@ name|buf
 operator|.
 name|append
 argument_list|(
-operator|new
-name|String
-argument_list|(
 name|c1
 operator|.
 name|getBytes
 argument_list|()
-argument_list|)
 argument_list|)
 expr_stmt|;
 for|for
