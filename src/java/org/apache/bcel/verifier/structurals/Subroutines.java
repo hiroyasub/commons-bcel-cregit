@@ -21,16 +21,6 @@ begin_import
 import|import
 name|java
 operator|.
-name|awt
-operator|.
-name|Color
-import|;
-end_import
-
-begin_import
-import|import
-name|java
-operator|.
 name|util
 operator|.
 name|ArrayList
@@ -1502,6 +1492,43 @@ block|{
 block|}
 block|}
 comment|// end Inner Class SubrouteImpl
+comment|//Node coloring constants
+specifier|private
+specifier|static
+specifier|final
+name|Integer
+name|WHITE
+init|=
+operator|new
+name|Integer
+argument_list|(
+literal|0
+argument_list|)
+decl_stmt|;
+specifier|private
+specifier|static
+specifier|final
+name|Integer
+name|GRAY
+init|=
+operator|new
+name|Integer
+argument_list|(
+literal|1
+argument_list|)
+decl_stmt|;
+specifier|private
+specifier|static
+specifier|final
+name|Integer
+name|BLACK
+init|=
+operator|new
+name|Integer
+argument_list|(
+literal|2
+argument_list|)
+decl_stmt|;
 comment|/** 	 * The Hashtable containing the subroutines found. 	 * Key: InstructionHandle of the leader of the subroutine. 	 * Elements: SubroutineImpl objects. 	 */
 specifier|private
 name|Hashtable
@@ -1794,7 +1821,7 @@ operator|new
 name|Hashtable
 argument_list|()
 decl_stmt|;
-comment|//Graph colouring. Key: InstructionHandle, Value: java.awt.Color .
+comment|//Graph colouring. Key: InstructionHandle, Value: Integer .
 name|iter
 operator|=
 name|sub_leaders
@@ -1851,9 +1878,7 @@ index|[
 name|i
 index|]
 argument_list|,
-name|Color
-operator|.
-name|white
+name|WHITE
 argument_list|)
 expr_stmt|;
 block|}
@@ -1863,9 +1888,7 @@ name|put
 argument_list|(
 name|actual
 argument_list|,
-name|Color
-operator|.
-name|gray
+name|GRAY
 argument_list|)
 expr_stmt|;
 comment|// Init Queue
@@ -1924,9 +1947,7 @@ operator|.
 name|getHandlerPC
 argument_list|()
 argument_list|,
-name|Color
-operator|.
-name|gray
+name|GRAY
 argument_list|)
 expr_stmt|;
 name|Q
@@ -1999,7 +2020,7 @@ if|if
 condition|(
 operator|(
 operator|(
-name|Color
+name|Integer
 operator|)
 name|colors
 operator|.
@@ -2012,9 +2033,7 @@ index|]
 argument_list|)
 operator|)
 operator|==
-name|Color
-operator|.
-name|white
+name|WHITE
 condition|)
 block|{
 name|colors
@@ -2026,9 +2045,7 @@ index|[
 name|i
 index|]
 argument_list|,
-name|Color
-operator|.
-name|gray
+name|GRAY
 argument_list|)
 expr_stmt|;
 name|Q
@@ -2049,9 +2066,7 @@ name|put
 argument_list|(
 name|u
 argument_list|,
-name|Color
-operator|.
-name|black
+name|BLACK
 argument_list|)
 expr_stmt|;
 block|}
@@ -2085,9 +2100,7 @@ name|i
 index|]
 argument_list|)
 operator|==
-name|Color
-operator|.
-name|black
+name|BLACK
 condition|)
 block|{
 operator|(
