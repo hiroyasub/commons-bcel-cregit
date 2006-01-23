@@ -58,7 +58,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * This class represents an uninitialized object type; see The Java  * Virtual Machine Specification, Second Edition, page 147: 4.9.4 for  * more details.  *  * @version $Id$  * @author<A HREF="http://www.inf.fu-berlin.de/~ehaase"/>Enver Haase</A>  */
+comment|/**  * This class represents an uninitialized object type; see The Java  * Virtual Machine Specification, Second Edition, page 147: 4.9.4 for  * more details.  *  * @version $Id$  * @author Enver Haase  */
 end_comment
 
 begin_class

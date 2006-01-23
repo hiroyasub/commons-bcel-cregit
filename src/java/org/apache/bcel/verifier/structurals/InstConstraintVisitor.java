@@ -270,7 +270,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * A Visitor class testing for valid preconditions of JVM instructions.  * The instance of this class will throw a StructuralCodeConstraintException  * instance if an instruction is visitXXX()ed which has preconditions that are  * not satisfied.  * TODO: Currently, the JVM's behaviour concerning monitors (MONITORENTER,  * MONITOREXIT) is not modeled in JustIce.  *  * @version $Id$  * @author<A HREF="http://www.inf.fu-berlin.de/~ehaase"/>Enver Haase</A>  * @see org.apache.bcel.verifier.exc.StructuralCodeConstraintException  * @see org.apache.bcel.verifier.exc.LinkingConstraintException  */
+comment|/**  * A Visitor class testing for valid preconditions of JVM instructions.  * The instance of this class will throw a StructuralCodeConstraintException  * instance if an instruction is visitXXX()ed which has preconditions that are  * not satisfied.  * TODO: Currently, the JVM's behaviour concerning monitors (MONITORENTER,  * MONITOREXIT) is not modeled in JustIce.  *  * @version $Id$  * @author Enver Haase  * @see org.apache.bcel.verifier.exc.StructuralCodeConstraintException  * @see org.apache.bcel.verifier.exc.LinkingConstraintException  */
 end_comment
 
 begin_class

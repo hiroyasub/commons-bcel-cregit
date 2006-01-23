@@ -46,7 +46,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * This class represents an exception handler; that is, an ObjectType  * representing a subclass of java.lang.Throwable and the instruction  * the handler starts off (represented by an InstructionContext).  *   * @version $Id$  * @author<A HREF="http://www.inf.fu-berlin.de/~ehaase"/>Enver Haase</A>  */
+comment|/**  * This class represents an exception handler; that is, an ObjectType  * representing a subclass of java.lang.Throwable and the instruction  * the handler starts off (represented by an InstructionContext).  *   * @version $Id$  * @author Enver Haase  */
 end_comment
 
 begin_class

@@ -28,7 +28,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**   * Returnaddress, the type JSR or JSR_W instructions push upon the stack.  *  * see vmspec2 §3.3.3  * @version $Id$  * @author<A HREF="http://www.inf.fu-berlin.de/~ehaase">Enver Haase</A>  */
+comment|/**   * Returnaddress, the type JSR or JSR_W instructions push upon the stack.  *  * see vmspec2 §3.3.3  * @version $Id$  * @author Enver Haase  */
 end_comment
 
 begin_class

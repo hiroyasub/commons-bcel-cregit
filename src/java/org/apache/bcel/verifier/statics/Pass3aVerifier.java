@@ -1132,7 +1132,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * This PassVerifier verifies a class file according to  * pass 3, static part as described in The Java Virtual  * Machine Specification, 2nd edition.  * More detailed information is to be found at the do_verify()  * method's documentation.   *  * @version $Id$  * @author<A HREF="http://www.inf.fu-berlin.de/~ehaase"/>Enver Haase</A>  * @see #do_verify()  */
+comment|/**  * This PassVerifier verifies a class file according to  * pass 3, static part as described in The Java Virtual  * Machine Specification, 2nd edition.  * More detailed information is to be found at the do_verify()  * method's documentation.   *  * @version $Id$  * @author Enver Haase  * @see #do_verify()  */
 end_comment
 
 begin_class

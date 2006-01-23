@@ -14,7 +14,7 @@ package|;
 end_package
 
 begin_comment
-comment|/**  * Exception constants.  *  * @version $Id$  * @author<A HREF="http://www.inf.fu-berlin.de/~ehaase">E. Haase</A>  */
+comment|/**  * Exception constants.  *  * @version $Id$  * @author  E. Haase  */
 end_comment
 
 begin_interface

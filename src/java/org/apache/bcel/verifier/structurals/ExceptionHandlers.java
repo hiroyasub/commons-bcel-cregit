@@ -90,7 +90,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * This class allows easy access to ExceptionHandler objects.  *  * @version $Id$  * @author<A HREF="http://www.inf.fu-berlin.de/~ehaase"/>Enver Haase</A>  */
+comment|/**  * This class allows easy access to ExceptionHandler objects.  *  * @version $Id$  * @author Enver Haase  */
 end_comment
 
 begin_class

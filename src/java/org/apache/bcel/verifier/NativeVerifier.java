@@ -16,7 +16,7 @@ package|;
 end_package
 
 begin_comment
-comment|/**  * The NativeVerifier class implements a main(String[] args) method that's  * roughly compatible to the one in the Verifier class, but that uses the  * JVM's internal verifier for its class file verification.  * This can be used for comparison runs between the JVM-internal verifier  * and JustIce.  *  * @version $Id$  * @author<A HREF="http://www.inf.fu-berlin.de/~ehaase"/>Enver Haase</A>  */
+comment|/**  * The NativeVerifier class implements a main(String[] args) method that's  * roughly compatible to the one in the Verifier class, but that uses the  * JVM's internal verifier for its class file verification.  * This can be used for comparison runs between the JVM-internal verifier  * and JustIce.  *  * @version $Id$  * @author Enver Haase  */
 end_comment
 
 begin_class

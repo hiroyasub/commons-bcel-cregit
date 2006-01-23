@@ -68,7 +68,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * This class is derived from<em>Attribute</em> and represents a reference  * to a<href="http://wwwipd.ira.uka.de/~pizza/gj/">GJ</a> attribute.  *  * @version $Id$  * @author<A HREF="mailto:m.dahm@gmx.de">M. Dahm</A>  * @see     Attribute  */
+comment|/**  * This class is derived from<em>Attribute</em> and represents a reference  * to a GJ attribute.  *  * @version $Id$  * @author<A HREF="mailto:m.dahm@gmx.de">M. Dahm</A>  * @see     Attribute  */
 end_comment
 
 begin_class

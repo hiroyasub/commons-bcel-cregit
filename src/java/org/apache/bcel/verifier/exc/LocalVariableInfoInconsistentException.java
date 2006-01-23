@@ -18,7 +18,7 @@ package|;
 end_package
 
 begin_comment
-comment|/**  * A LocalVariableInfoInconsistentException instance is thrown by  * the LocalVariableInfo class when it detects that the information  * it holds is inconsistent; this is normally due to inconsistent  * LocalVariableTable entries in the Code attribute of a certain  * Method object.  *  * @version $Id$  * @author<A HREF="http://www.inf.fu-berlin.de/~ehaase"/>Enver Haase</A>  */
+comment|/**  * A LocalVariableInfoInconsistentException instance is thrown by  * the LocalVariableInfo class when it detects that the information  * it holds is inconsistent; this is normally due to inconsistent  * LocalVariableTable entries in the Code attribute of a certain  * Method object.  *  * @version $Id$  * @author Enver Haase  */
 end_comment
 
 begin_class

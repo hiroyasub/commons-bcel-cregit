@@ -102,7 +102,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * This class implements a stack used for symbolic JVM stack simulation.  * [It's used an an operand stack substitute.]  * Elements of this stack are org.apache.bcel.generic.Type objects.  *  * @version $Id$  * @author<A HREF="http://www.inf.fu-berlin.de/~ehaase"/>Enver Haase</A>  */
+comment|/**  * This class implements a stack used for symbolic JVM stack simulation.  * [It's used an an operand stack substitute.]  * Elements of this stack are org.apache.bcel.generic.Type objects.  *  * @version $Id$  * @author Enver Haase  */
 end_comment
 
 begin_class

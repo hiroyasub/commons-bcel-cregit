@@ -18,7 +18,7 @@ package|;
 end_package
 
 begin_comment
-comment|/**  * Instances of this class are thrown by BCEL's class file verifier "JustIce" when a  * class file to verify does not pass one of the verification passes 2 or 3.  * Note that the pass 3 used by "JustIce" involves verification that is usually  * delayed to pass 4.  * The name of this class is justified by the Java Virtual Machine Specification, 2nd  * edition, page 164, 5.4.1 where verification as a part of the linking process is  * defined to be the verification happening in passes 2 and 3.  *  * @version $Id$  * @author<A HREF="http://www.inf.fu-berlin.de/~ehaase"/>Enver Haase</A>  */
+comment|/**  * Instances of this class are thrown by BCEL's class file verifier "JustIce" when a  * class file to verify does not pass one of the verification passes 2 or 3.  * Note that the pass 3 used by "JustIce" involves verification that is usually  * delayed to pass 4.  * The name of this class is justified by the Java Virtual Machine Specification, 2nd  * edition, page 164, 5.4.1 where verification as a part of the linking process is  * defined to be the verification happening in passes 2 and 3.  *  * @version $Id$  * @author Enver Haase  */
 end_comment
 
 begin_class

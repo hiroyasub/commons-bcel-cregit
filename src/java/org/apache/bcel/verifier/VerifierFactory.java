@@ -66,7 +66,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * This class produces instances of the Verifier class. Its purpose is to make  * sure that they are singleton instances with respect to the class name they  * operate on. That means, for every class (represented by a unique fully qualified  * class name) there is exactly one Verifier.  *  * @version $Id$  * @author<A HREF="http://www.inf.fu-berlin.de/~ehaase"/>Enver Haase</A>  * @see org.apache.bcel.verifier.Verifier  */
+comment|/**  * This class produces instances of the Verifier class. Its purpose is to make  * sure that they are singleton instances with respect to the class name they  * operate on. That means, for every class (represented by a unique fully qualified  * class name) there is exactly one Verifier.  *  * @version $Id$  * @author Enver Haase  * @see org.apache.bcel.verifier.Verifier  */
 end_comment
 
 begin_class

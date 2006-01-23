@@ -32,7 +32,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * This interface defines properties of JVM bytecode subroutines.  * Note that it is 'abused' to maintain the top-level code in a  * consistent fashion, too.  *  * @version $Id$  * @author<A HREF="http://www.inf.fu-berlin.de/~ehaase"/>Enver Haase</A>  */
+comment|/**  * This interface defines properties of JVM bytecode subroutines.  * Note that it is 'abused' to maintain the top-level code in a  * consistent fashion, too.  *  * @version $Id$  * @author Enver Haase  */
 end_comment
 
 begin_interface

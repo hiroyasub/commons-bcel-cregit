@@ -42,7 +42,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * An InstructionContext offers convenient access  * to information like control flow successors and  * such.  *  * @version $Id$  * @author<A HREF="http://www.inf.fu-berlin.de/~ehaase"/>Enver Haase</A>  */
+comment|/**  * An InstructionContext offers convenient access  * to information like control flow successors and  * such.  *  * @version $Id$  * @author Enver Haase  */
 end_comment
 
 begin_interface
