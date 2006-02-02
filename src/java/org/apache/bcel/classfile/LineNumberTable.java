@@ -41,6 +41,16 @@ name|java
 operator|.
 name|io
 operator|.
+name|File
+import|;
+end_import
+
+begin_import
+import|import
+name|java
+operator|.
+name|io
+operator|.
 name|IOException
 import|;
 end_import
@@ -357,6 +367,18 @@ operator|new
 name|StringBuffer
 argument_list|()
 decl_stmt|;
+name|String
+name|newLine
+init|=
+name|System
+operator|.
+name|getProperty
+argument_list|(
+literal|"line.separator"
+argument_list|,
+literal|"\n"
+argument_list|)
+decl_stmt|;
 for|for
 control|(
 name|int
@@ -393,6 +415,7 @@ name|line_number_table_length
 operator|-
 literal|1
 condition|)
+block|{
 name|line
 operator|.
 name|append
@@ -400,6 +423,7 @@ argument_list|(
 literal|", "
 argument_list|)
 expr_stmt|;
+block|}
 if|if
 condition|(
 name|line
@@ -414,7 +438,7 @@ name|line
 operator|.
 name|append
 argument_list|(
-literal|'\n'
+name|newLine
 argument_list|)
 expr_stmt|;
 name|buf
@@ -422,6 +446,9 @@ operator|.
 name|append
 argument_list|(
 name|line
+operator|.
+name|toString
+argument_list|()
 argument_list|)
 expr_stmt|;
 name|line
