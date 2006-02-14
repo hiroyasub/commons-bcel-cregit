@@ -492,7 +492,7 @@ name|value
 argument_list|)
 throw|;
 block|}
-comment|/**    * @param cp Constant pool    * @param value to be pushed     */
+comment|/**    * creates a push object from a Character value. Warning: Make sure not to attempt to allow    * autoboxing to create this value parameter, as an alternative constructor will be called    *     * @param cp Constant pool    * @param value to be pushed     */
 specifier|public
 name|PUSH
 parameter_list|(
