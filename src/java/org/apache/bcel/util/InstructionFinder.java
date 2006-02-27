@@ -61,6 +61,16 @@ name|java
 operator|.
 name|util
 operator|.
+name|Locale
+import|;
+end_import
+
+begin_import
+import|import
+name|java
+operator|.
+name|util
+operator|.
 name|Map
 import|;
 end_import
@@ -400,13 +410,18 @@ name|String
 name|pattern
 parameter_list|)
 block|{
+comment|//Bug: 38787 - Instructions are assumed to be english, to avoid odd Locale issues
 name|String
 name|lower
 init|=
 name|pattern
 operator|.
 name|toLowerCase
-argument_list|()
+argument_list|(
+name|Locale
+operator|.
+name|ENGLISH
+argument_list|)
 decl_stmt|;
 name|StringBuffer
 name|buf
