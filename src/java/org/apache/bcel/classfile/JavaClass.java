@@ -490,8 +490,6 @@ name|attributes
 operator|==
 literal|null
 condition|)
-name|this
-operator|.
 name|attributes
 operator|=
 operator|new
@@ -947,12 +945,6 @@ argument_list|(
 name|parent
 argument_list|)
 decl_stmt|;
-if|if
-condition|(
-name|dir
-operator|!=
-literal|null
-condition|)
 name|dir
 operator|.
 name|mkdirs
