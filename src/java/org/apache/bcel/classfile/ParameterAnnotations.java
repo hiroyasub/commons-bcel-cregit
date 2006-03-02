@@ -221,7 +221,7 @@ operator|.
 name|length
 expr_stmt|;
 block|}
-comment|/** 	   * @returns the parameter annotation entry table 	   */
+comment|/** 	   * @return the parameter annotation entry table 	   */
 specifier|public
 specifier|final
 name|ParameterAnnotationEntry
@@ -244,7 +244,7 @@ return|return
 name|parameter_annotation_table
 return|;
 block|}
-comment|/** 	   * @returns the number of parameter annotation entries in this parameter annotation 	   */
+comment|/** 	   * @return the number of parameter annotation entries in this parameter annotation 	   */
 specifier|public
 specifier|final
 name|int
