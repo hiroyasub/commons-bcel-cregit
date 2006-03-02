@@ -383,14 +383,14 @@ name|getAccessFlags
 argument_list|()
 argument_list|)
 operator|+
-literal|" "
+literal|" \""
 operator|+
 name|field
 operator|.
 name|getName
 argument_list|()
 operator|+
-literal|" "
+literal|"\""
 operator|+
 name|field
 operator|.
