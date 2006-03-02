@@ -1282,7 +1282,11 @@ name|i
 index|]
 operator|.
 name|toUpperCase
-argument_list|()
+argument_list|(
+name|Locale
+operator|.
+name|ENGLISH
+argument_list|)
 argument_list|)
 operator|.
 name|append
@@ -1470,7 +1474,11 @@ name|t
 index|]
 operator|.
 name|toUpperCase
-argument_list|()
+argument_list|(
+name|Locale
+operator|.
+name|ENGLISH
+argument_list|)
 return|;
 block|}
 if|else if
