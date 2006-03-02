@@ -137,7 +137,7 @@ parameter_list|)
 block|{
 comment|//	    v.visitParameterAnnotationEntry(this);
 block|}
-comment|/** 	   * @returns the number of annotation entries in this parameter annotation 	   */
+comment|/** 	   * @return the number of annotation entries in this parameter annotation 	   */
 specifier|public
 specifier|final
 name|int
