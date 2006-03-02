@@ -190,7 +190,7 @@ name|getBytes
 argument_list|()
 return|;
 block|}
-comment|/** 	   * @returns the number of element value pairs in this annotation entry 	   */
+comment|/** 	   * @return the number of element value pairs in this annotation entry 	   */
 specifier|public
 specifier|final
 name|int
