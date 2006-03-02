@@ -1543,24 +1543,9 @@ literal|"'; Instruction expects a ReferenceType or a ReturnadressType."
 argument_list|)
 expr_stmt|;
 block|}
-if|if
-condition|(
-name|stacktop
-operator|instanceof
-name|ReferenceType
-condition|)
-block|{
-name|referenceTypeIsInitialized
-argument_list|(
-name|o
-argument_list|,
-operator|(
-name|ReferenceType
-operator|)
-name|stacktop
-argument_list|)
-expr_stmt|;
-block|}
+comment|//if (stacktop instanceof ReferenceType){
+comment|//	referenceTypeIsInitialized(o, (ReferenceType) stacktop);
+comment|//}
 block|}
 block|}
 comment|/** 	 * Assures the generic preconditions of a ReturnInstruction instance. 	 */
@@ -1858,26 +1843,7 @@ literal|"."
 argument_list|)
 expr_stmt|;
 block|}
-name|referenceTypeIsInitialized
-argument_list|(
-name|o
-argument_list|,
-operator|(
-name|ReferenceType
-operator|)
-operator|(
-operator|(
-operator|(
-name|ArrayType
-operator|)
-name|arrayref
-operator|)
-operator|.
-name|getElementType
-argument_list|()
-operator|)
-argument_list|)
-expr_stmt|;
+comment|//referenceTypeIsInitialized(o, (ReferenceType) (((ArrayType) arrayref).getElementType()));
 block|}
 block|}
 comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
@@ -1955,16 +1921,7 @@ expr_stmt|;
 block|}
 else|else
 block|{
-name|referenceTypeIsInitialized
-argument_list|(
-name|o
-argument_list|,
-operator|(
-name|ReferenceType
-operator|)
-name|value
-argument_list|)
-expr_stmt|;
+comment|//referenceTypeIsInitialized(o, (ReferenceType) value);
 block|}
 comment|// Don't bother further with "referenceTypeIsInitialized()", there are no arrays
 comment|// of an uninitialized object type.
@@ -2308,34 +2265,9 @@ literal|"."
 argument_list|)
 expr_stmt|;
 block|}
-if|if
-condition|(
-name|stack
-argument_list|()
-operator|.
-name|peek
-argument_list|()
-operator|instanceof
-name|ReferenceType
-condition|)
-block|{
-name|referenceTypeIsInitialized
-argument_list|(
-name|o
-argument_list|,
-operator|(
-name|ReferenceType
-operator|)
-operator|(
-name|stack
-argument_list|()
-operator|.
-name|peek
-argument_list|()
-operator|)
-argument_list|)
-expr_stmt|;
-block|}
+comment|//if (stack().peek() instanceof ReferenceType){
+comment|//	referenceTypeIsInitialized(o, (ReferenceType) (stack().peek()) );
+comment|//}
 block|}
 comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
 specifier|public
@@ -2978,19 +2910,9 @@ literal|"."
 argument_list|)
 expr_stmt|;
 block|}
-else|else
-block|{
-name|referenceTypeIsInitialized
-argument_list|(
-name|o
-argument_list|,
-operator|(
-name|ReferenceType
-operator|)
-name|objectref
-argument_list|)
-expr_stmt|;
-block|}
+comment|//else{
+comment|//	referenceTypeIsInitialized(o, (ReferenceType) objectref);
+comment|//}
 comment|// The unsigned indexbyte1 and indexbyte2 are used to construct an index into the runtime constant pool of the
 comment|// current class (§3.6), where the value of the index is (indexbyte1<< 8) | indexbyte2. The runtime constant
 comment|// pool item at the index must be a symbolic reference to a class, array, or interface type.
@@ -7051,22 +6973,7 @@ literal|"'."
 argument_list|)
 expr_stmt|;
 block|}
-name|referenceTypeIsInitialized
-argument_list|(
-name|o
-argument_list|,
-operator|(
-name|ReferenceType
-operator|)
-operator|(
-name|stack
-argument_list|()
-operator|.
-name|peek
-argument_list|()
-operator|)
-argument_list|)
-expr_stmt|;
+comment|//referenceTypeIsInitialized(o, (ReferenceType) (stack().peek()) );
 if|if
 condition|(
 operator|!
@@ -7101,24 +7008,7 @@ literal|"'."
 argument_list|)
 expr_stmt|;
 block|}
-name|referenceTypeIsInitialized
-argument_list|(
-name|o
-argument_list|,
-operator|(
-name|ReferenceType
-operator|)
-operator|(
-name|stack
-argument_list|()
-operator|.
-name|peek
-argument_list|(
-literal|1
-argument_list|)
-operator|)
-argument_list|)
-expr_stmt|;
+comment|//referenceTypeIsInitialized(o, (ReferenceType) (stack().peek(1)) );
 block|}
 comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
 specifier|public
@@ -7158,22 +7048,7 @@ operator|+
 literal|"'."
 argument_list|)
 expr_stmt|;
-name|referenceTypeIsInitialized
-argument_list|(
-name|o
-argument_list|,
-operator|(
-name|ReferenceType
-operator|)
-operator|(
-name|stack
-argument_list|()
-operator|.
-name|peek
-argument_list|()
-operator|)
-argument_list|)
-expr_stmt|;
+comment|//referenceTypeIsInitialized(o, (ReferenceType) (stack().peek()) );
 block|}
 if|if
 condition|(
@@ -7208,24 +7083,7 @@ operator|+
 literal|"'."
 argument_list|)
 expr_stmt|;
-name|referenceTypeIsInitialized
-argument_list|(
-name|o
-argument_list|,
-operator|(
-name|ReferenceType
-operator|)
-operator|(
-name|stack
-argument_list|()
-operator|.
-name|peek
-argument_list|(
-literal|1
-argument_list|)
-operator|)
-argument_list|)
-expr_stmt|;
+comment|//referenceTypeIsInitialized(o, (ReferenceType) (stack().peek(1)) );
 block|}
 block|}
 comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
@@ -8275,19 +8133,9 @@ literal|"."
 argument_list|)
 expr_stmt|;
 block|}
-else|else
-block|{
-name|referenceTypeIsInitialized
-argument_list|(
-name|o
-argument_list|,
-operator|(
-name|ReferenceType
-operator|)
-name|objectref
-argument_list|)
-expr_stmt|;
-block|}
+comment|//else{
+comment|//	referenceTypeIsInitialized(o, (ReferenceType) objectref);
+comment|//}
 comment|// The unsigned indexbyte1 and indexbyte2 are used to construct an index into the runtime constant pool of the
 comment|// current class (§3.6), where the value of the index is (indexbyte1<< 8) | indexbyte2. The runtime constant
 comment|// pool item at the index must be a symbolic reference to a class, array, or interface type.
@@ -8561,13 +8409,27 @@ operator|instanceof
 name|ReferenceType
 condition|)
 block|{
-comment|//ReferenceType rFromStack = (ReferenceType) fromStack;
+name|ReferenceType
+name|rFromStack
+init|=
+operator|(
+name|ReferenceType
+operator|)
+name|fromStack
+decl_stmt|;
 comment|//ReferenceType rFromDesc = (ReferenceType) fromDesc;
 comment|// TODO: This can only be checked when using Staerk-et-al's "set of object types"
 comment|// instead of a "wider cast object type" created during verification.
 comment|//if ( ! rFromStack.isAssignmentCompatibleWith(rFromDesc) ){
 comment|//	constraintViolated(o, "Expecting a '"+fromDesc+"' but found a '"+fromStack+"' on the stack (which is not assignment compatible).");
 comment|//}
+name|referenceTypeIsInitialized
+argument_list|(
+name|o
+argument_list|,
+name|rFromStack
+argument_list|)
+expr_stmt|;
 block|}
 else|else
 block|{
@@ -9051,6 +8913,13 @@ literal|"' on the stack (which is not assignment compatible)."
 argument_list|)
 expr_stmt|;
 block|}
+name|referenceTypeIsInitialized
+argument_list|(
+name|o
+argument_list|,
+name|rFromStack
+argument_list|)
+expr_stmt|;
 block|}
 else|else
 block|{
@@ -9560,6 +9429,13 @@ literal|"' on the stack (which is not assignment compatible)."
 argument_list|)
 expr_stmt|;
 block|}
+name|referenceTypeIsInitialized
+argument_list|(
+name|o
+argument_list|,
+name|rFromStack
+argument_list|)
+expr_stmt|;
 block|}
 else|else
 block|{
@@ -9857,6 +9733,13 @@ literal|"' on the stack (which is not assignment compatible)."
 argument_list|)
 expr_stmt|;
 block|}
+name|referenceTypeIsInitialized
+argument_list|(
+name|o
+argument_list|,
+name|rFromStack
+argument_list|)
+expr_stmt|;
 block|}
 else|else
 block|{
@@ -12244,22 +12127,7 @@ literal|"'."
 argument_list|)
 expr_stmt|;
 block|}
-name|referenceTypeIsInitialized
-argument_list|(
-name|o
-argument_list|,
-operator|(
-name|ReferenceType
-operator|)
-operator|(
-name|stack
-argument_list|()
-operator|.
-name|peek
-argument_list|()
-operator|)
-argument_list|)
-expr_stmt|;
+comment|//referenceTypeIsInitialized(o, (ReferenceType) (stack().peek()) );
 block|}
 comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
 specifier|public
@@ -12302,22 +12170,7 @@ literal|"'."
 argument_list|)
 expr_stmt|;
 block|}
-name|referenceTypeIsInitialized
-argument_list|(
-name|o
-argument_list|,
-operator|(
-name|ReferenceType
-operator|)
-operator|(
-name|stack
-argument_list|()
-operator|.
-name|peek
-argument_list|()
-operator|)
-argument_list|)
-expr_stmt|;
+comment|//referenceTypeIsInitialized(o, (ReferenceType) (stack().peek()) );
 block|}
 comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
 specifier|public
