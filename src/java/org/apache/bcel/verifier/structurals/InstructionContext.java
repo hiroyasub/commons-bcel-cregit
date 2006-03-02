@@ -82,6 +82,10 @@ name|ExecutionVisitor
 name|ev
 parameter_list|)
 function_decl|;
+name|Frame
+name|getInFrame
+parameter_list|()
+function_decl|;
 comment|/** 	 * This method returns the outgoing execution frame situation; 	 * therefore<B>it has to be calculated by execute(Frame, ArrayList) 	 * first.</B> 	 * 	 * @see #execute(Frame, ArrayList, InstConstraintVisitor, ExecutionVisitor) 	 */
 name|Frame
 name|getOutFrame
