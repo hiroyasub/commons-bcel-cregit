@@ -161,7 +161,7 @@ operator|=
 name|defaultValue
 expr_stmt|;
 block|}
-comment|/** 	   * @returns the default value 	   */
+comment|/** 	   * @return the default value 	   */
 specifier|public
 specifier|final
 name|ElementValue
