@@ -105,7 +105,7 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**    * Construct object from file stream.    * @param name_index Name index in constant pool    * @param length Content length in bytes    * @param file Input stream    * @param constant_pool Array of constants    * @throw IOException    */
+comment|/**    * Construct object from file stream.    * @param name_index Name index in constant pool    * @param length Content length in bytes    * @param file Input stream    * @param constant_pool Array of constants    * @throws IOException    */
 name|ConstantValue
 parameter_list|(
 name|int
