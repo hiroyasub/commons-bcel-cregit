@@ -431,6 +431,13 @@ name|InstructionTargeter
 name|t
 parameter_list|)
 block|{
+if|if
+condition|(
+name|targeters
+operator|!=
+literal|null
+condition|)
+block|{
 name|targeters
 operator|.
 name|remove
@@ -438,6 +445,7 @@ argument_list|(
 name|t
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 comment|/**    * Denote this handle is being referenced by t.    */
 specifier|public
@@ -669,6 +677,22 @@ name|Collection
 name|getAttributes
 parameter_list|()
 block|{
+if|if
+condition|(
+name|attributes
+operator|==
+literal|null
+condition|)
+block|{
+name|attributes
+operator|=
+operator|new
+name|HashMap
+argument_list|(
+literal|3
+argument_list|)
+expr_stmt|;
+block|}
 return|return
 name|attributes
 operator|.
