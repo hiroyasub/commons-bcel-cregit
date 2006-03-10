@@ -9,9 +9,9 @@ begin_import
 import|import
 name|java
 operator|.
-name|util
+name|io
 operator|.
-name|Vector
+name|File
 import|;
 end_import
 
@@ -21,7 +21,27 @@ name|java
 operator|.
 name|io
 operator|.
-name|*
+name|FileOutputStream
+import|;
+end_import
+
+begin_import
+import|import
+name|java
+operator|.
+name|io
+operator|.
+name|PrintWriter
+import|;
+end_import
+
+begin_import
+import|import
+name|java
+operator|.
+name|util
+operator|.
+name|Vector
 import|;
 end_import
 
@@ -35,7 +55,7 @@ name|bcel
 operator|.
 name|classfile
 operator|.
-name|*
+name|JavaClass
 import|;
 end_import
 
@@ -49,7 +69,21 @@ name|bcel
 operator|.
 name|generic
 operator|.
-name|*
+name|ClassGen
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|bcel
+operator|.
+name|generic
+operator|.
+name|ConstantPoolGen
 import|;
 end_import
 

@@ -13,23 +13,9 @@ name|apache
 operator|.
 name|bcel
 operator|.
-name|classfile
-operator|.
-name|*
-import|;
-end_import
-
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|bcel
-operator|.
 name|generic
 operator|.
-name|*
+name|LocalVariableGen
 import|;
 end_import
 

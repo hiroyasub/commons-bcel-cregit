@@ -266,8 +266,6 @@ literal|1L
 operator|<<
 name|curChar
 decl_stmt|;
-name|MatchLoop
-label|:
 do|do
 block|{
 switch|switch
@@ -385,8 +383,6 @@ operator|&
 literal|077
 operator|)
 decl_stmt|;
-name|MatchLoop
-label|:
 do|do
 block|{
 switch|switch
@@ -434,8 +430,6 @@ operator|&
 literal|077
 operator|)
 decl_stmt|;
-name|MatchLoop
-label|:
 do|do
 block|{
 switch|switch
@@ -2025,8 +2019,6 @@ literal|1L
 operator|<<
 name|curChar
 decl_stmt|;
-name|MatchLoop
-label|:
 do|do
 block|{
 switch|switch
@@ -2231,8 +2223,6 @@ operator|&
 literal|077
 operator|)
 decl_stmt|;
-name|MatchLoop
-label|:
 do|do
 block|{
 switch|switch
@@ -2351,8 +2341,6 @@ operator|&
 literal|077
 operator|)
 decl_stmt|;
-name|MatchLoop
-label|:
 do|do
 block|{
 switch|switch
