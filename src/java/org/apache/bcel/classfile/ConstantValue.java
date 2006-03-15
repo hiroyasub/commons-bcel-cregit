@@ -73,7 +73,7 @@ specifier|private
 name|int
 name|constantvalue_index
 decl_stmt|;
-comment|/**    * Initialize from another object. Note that both objects use the same    * references (shallow copy). Use clone() for a physical copy.    */
+comment|/**      * Initialize from another object. Note that both objects use the same      * references (shallow copy). Use clone() for a physical copy.      */
 specifier|public
 name|ConstantValue
 parameter_list|(
@@ -105,7 +105,7 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**    * Construct object from file stream.    * @param name_index Name index in constant pool    * @param length Content length in bytes    * @param file Input stream    * @param constant_pool Array of constants    * @throws IOException    */
+comment|/**      * Construct object from file stream.      * @param name_index Name index in constant pool      * @param length Content length in bytes      * @param file Input stream      * @param constant_pool Array of constants      * @throws IOException      */
 name|ConstantValue
 parameter_list|(
 name|int
@@ -138,7 +138,7 @@ name|constant_pool
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**    * @param name_index Name index in constant pool    * @param length Content length in bytes    * @param constantvalue_index Index in constant pool    * @param constant_pool Array of constants    */
+comment|/**      * @param name_index Name index in constant pool      * @param length Content length in bytes      * @param constantvalue_index Index in constant pool      * @param constant_pool Array of constants      */
 specifier|public
 name|ConstantValue
 parameter_list|(
@@ -175,7 +175,7 @@ operator|=
 name|constantvalue_index
 expr_stmt|;
 block|}
-comment|/**    * Called by objects that are traversing the nodes of the tree implicitely    * defined by the contents of a Java class. I.e., the hierarchy of methods,    * fields, attributes, etc. spawns a tree of objects.    *    * @param v Visitor object    */
+comment|/**      * Called by objects that are traversing the nodes of the tree implicitely      * defined by the contents of a Java class. I.e., the hierarchy of methods,      * fields, attributes, etc. spawns a tree of objects.      *      * @param v Visitor object      */
 specifier|public
 name|void
 name|accept
@@ -192,7 +192,7 @@ name|this
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**    * Dump constant value attribute to file stream on binary format.    *    * @param file Output file stream    * @throws IOException    */
+comment|/**      * Dump constant value attribute to file stream on binary format.      *      * @param file Output file stream      * @throws IOException      */
 specifier|public
 specifier|final
 name|void
@@ -219,7 +219,7 @@ name|constantvalue_index
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**    * @return Index in constant pool of constant value.    */
+comment|/**      * @return Index in constant pool of constant value.      */
 specifier|public
 specifier|final
 name|int
@@ -230,7 +230,7 @@ return|return
 name|constantvalue_index
 return|;
 block|}
-comment|/**    * @param constantvalue_index the index info the constant pool of this constant value    */
+comment|/**      * @param constantvalue_index the index info the constant pool of this constant value      */
 specifier|public
 specifier|final
 name|void
@@ -247,7 +247,7 @@ operator|=
 name|constantvalue_index
 expr_stmt|;
 block|}
-comment|/**    * @return String representation of constant value.    */
+comment|/**      * @return String representation of constant value.      */
 specifier|public
 specifier|final
 name|String
@@ -426,7 +426,7 @@ return|return
 name|buf
 return|;
 block|}
-comment|/**    * @return deep copy of this attribute    */
+comment|/**      * @return deep copy of this attribute      */
 specifier|public
 name|Attribute
 name|copy

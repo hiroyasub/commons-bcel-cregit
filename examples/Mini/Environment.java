@@ -184,7 +184,7 @@ name|v
 operator|==
 literal|null
 condition|)
-comment|// Not yet initialized
+block|{
 name|table
 index|[
 name|hash
@@ -198,6 +198,7 @@ argument_list|(
 name|SLOTS
 argument_list|)
 expr_stmt|;
+block|}
 else|else
 block|{
 try|try
@@ -289,9 +290,11 @@ name|v
 operator|==
 literal|null
 condition|)
+block|{
 return|return
 literal|null
 return|;
+block|}
 try|try
 block|{
 name|int
@@ -310,6 +313,7 @@ name|index
 operator|>=
 literal|0
 condition|)
+block|{
 name|entry
 operator|=
 operator|(
@@ -322,6 +326,7 @@ argument_list|(
 name|index
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 catch|catch
 parameter_list|(
@@ -369,7 +374,9 @@ name|v
 operator|==
 literal|null
 condition|)
+block|{
 return|return;
+block|}
 try|try
 block|{
 name|int
@@ -473,10 +480,11 @@ argument_list|(
 name|key
 argument_list|)
 condition|)
-comment|// Found index
+block|{
 return|return
 name|i
 return|;
+block|}
 block|}
 return|return
 operator|-
@@ -577,6 +585,7 @@ condition|;
 name|i
 operator|++
 control|)
+block|{
 if|if
 condition|(
 name|table
@@ -586,6 +595,7 @@ index|]
 operator|!=
 literal|null
 condition|)
+block|{
 name|buf
 operator|.
 name|append
@@ -598,6 +608,8 @@ operator|+
 literal|"\n"
 argument_list|)
 expr_stmt|;
+block|}
+block|}
 return|return
 name|buf
 operator|.
@@ -682,6 +694,7 @@ condition|;
 name|j
 operator|++
 control|)
+block|{
 name|entries
 index|[
 name|k
@@ -698,6 +711,7 @@ argument_list|(
 name|j
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 catch|catch
 parameter_list|(

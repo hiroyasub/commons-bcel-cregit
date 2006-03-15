@@ -52,7 +52,7 @@ operator|=
 name|t
 expr_stmt|;
 block|}
-comment|/**    * @return list of instructions still being targeted.    */
+comment|/**      * @return list of instructions still being targeted.      */
 specifier|public
 name|InstructionHandle
 index|[]

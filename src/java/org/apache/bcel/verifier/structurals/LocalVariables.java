@@ -320,9 +320,11 @@ operator|instanceof
 name|LocalVariables
 operator|)
 condition|)
+block|{
 return|return
 literal|false
 return|;
+block|}
 name|LocalVariables
 name|lv
 init|=
@@ -345,9 +347,11 @@ name|locals
 operator|.
 name|length
 condition|)
+block|{
 return|return
 literal|false
 return|;
+block|}
 for|for
 control|(
 name|int

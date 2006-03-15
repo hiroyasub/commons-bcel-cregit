@@ -218,10 +218,12 @@ argument_list|(
 literal|"-java"
 argument_list|)
 condition|)
+block|{
 name|byte_code
 operator|=
 literal|false
 expr_stmt|;
+block|}
 if|else if
 condition|(
 name|argv
@@ -234,11 +236,14 @@ argument_list|(
 literal|"-bytecode"
 argument_list|)
 condition|)
+block|{
 name|byte_code
 operator|=
 literal|true
 expr_stmt|;
+block|}
 else|else
+block|{
 throw|throw
 operator|new
 name|Exception
@@ -251,6 +256,7 @@ name|i
 index|]
 argument_list|)
 throw|;
+block|}
 block|}
 else|else
 block|{
@@ -274,6 +280,7 @@ name|files
 operator|==
 literal|0
 condition|)
+block|{
 name|System
 operator|.
 name|err
@@ -283,6 +290,7 @@ argument_list|(
 literal|"Nothing to compile."
 argument_list|)
 expr_stmt|;
+block|}
 for|for
 control|(
 name|int
@@ -320,6 +328,7 @@ name|j
 operator|==
 literal|0
 condition|)
+block|{
 name|parser
 operator|=
 operator|new
@@ -339,7 +348,9 @@ index|]
 argument_list|)
 argument_list|)
 expr_stmt|;
+block|}
 else|else
+block|{
 name|parser
 operator|.
 name|ReInit
@@ -358,6 +369,7 @@ index|]
 argument_list|)
 argument_list|)
 expr_stmt|;
+block|}
 name|int
 name|index
 init|=
@@ -377,6 +389,7 @@ name|index
 operator|>
 literal|0
 condition|)
+block|{
 name|base_name
 operator|=
 name|file_name
@@ -391,7 +404,9 @@ argument_list|,
 name|index
 argument_list|)
 expr_stmt|;
+block|}
 else|else
+block|{
 name|base_name
 operator|=
 name|file_name
@@ -399,6 +414,7 @@ index|[
 name|j
 index|]
 expr_stmt|;
+block|}
 if|if
 condition|(
 operator|(
@@ -416,6 +432,7 @@ operator|)
 operator|>
 literal|0
 condition|)
+block|{
 name|base_name
 operator|=
 name|base_name
@@ -427,6 +444,7 @@ operator|+
 literal|1
 argument_list|)
 expr_stmt|;
+block|}
 name|file
 operator|=
 name|file_name
@@ -557,6 +575,7 @@ condition|;
 name|i
 operator|++
 control|)
+block|{
 name|System
 operator|.
 name|out
@@ -571,6 +590,7 @@ name|i
 argument_list|)
 argument_list|)
 expr_stmt|;
+block|}
 for|for
 control|(
 name|int
@@ -588,6 +608,7 @@ condition|;
 name|i
 operator|++
 control|)
+block|{
 name|System
 operator|.
 name|out
@@ -602,6 +623,7 @@ name|i
 argument_list|)
 argument_list|)
 expr_stmt|;
+block|}
 if|if
 condition|(
 name|errors
@@ -807,6 +829,7 @@ operator|>
 literal|0
 operator|)
 condition|)
+block|{
 name|System
 operator|.
 name|out
@@ -828,6 +851,7 @@ operator|+
 literal|" warnings."
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 block|}
 catch|catch
@@ -864,6 +888,7 @@ name|pass
 operator|!=
 literal|2
 condition|)
+block|{
 name|errors
 operator|.
 name|addElement
@@ -893,6 +918,7 @@ operator|+
 name|err
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 specifier|final
 specifier|static
@@ -1004,6 +1030,7 @@ condition|;
 name|i
 operator|++
 control|)
+block|{
 name|chs
 index|[
 name|i
@@ -1011,6 +1038,7 @@ index|]
 operator|=
 literal|' '
 expr_stmt|;
+block|}
 return|return
 operator|new
 name|String
@@ -1022,9 +1050,11 @@ name|str
 return|;
 block|}
 else|else
+block|{
 return|return
 name|str
 return|;
+block|}
 block|}
 specifier|final
 specifier|static

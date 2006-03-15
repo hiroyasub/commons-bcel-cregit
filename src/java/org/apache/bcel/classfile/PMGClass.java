@@ -75,7 +75,7 @@ name|pmg_class_index
 decl_stmt|,
 name|pmg_index
 decl_stmt|;
-comment|/**    * Initialize from another object. Note that both objects use the same    * references (shallow copy). Use clone() for a physical copy.    */
+comment|/**      * Initialize from another object. Note that both objects use the same      * references (shallow copy). Use clone() for a physical copy.      */
 specifier|public
 name|PMGClass
 parameter_list|(
@@ -112,7 +112,7 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**    * Construct object from file stream.    * @param name_index Index in constant pool to CONSTANT_Utf8    * @param length Content length in bytes    * @param file Input stream    * @param constant_pool Array of constants    * @throws IOException    */
+comment|/**      * Construct object from file stream.      * @param name_index Index in constant pool to CONSTANT_Utf8      * @param length Content length in bytes      * @param file Input stream      * @param constant_pool Array of constants      * @throws IOException      */
 name|PMGClass
 parameter_list|(
 name|int
@@ -150,7 +150,7 @@ name|constant_pool
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**    * @param name_index Index in constant pool to CONSTANT_Utf8    * @param length Content length in bytes    * @param pmg_index index in constant pool for source file name    * @param pmg_class_index Index in constant pool to CONSTANT_Utf8    * @param constant_pool Array of constants    */
+comment|/**      * @param name_index Index in constant pool to CONSTANT_Utf8      * @param length Content length in bytes      * @param pmg_index index in constant pool for source file name      * @param pmg_class_index Index in constant pool to CONSTANT_Utf8      * @param constant_pool Array of constants      */
 specifier|public
 name|PMGClass
 parameter_list|(
@@ -196,7 +196,7 @@ operator|=
 name|pmg_class_index
 expr_stmt|;
 block|}
-comment|/**    * Called by objects that are traversing the nodes of the tree implicitely    * defined by the contents of a Java class. I.e., the hierarchy of methods,    * fields, attributes, etc. spawns a tree of objects.    *    * @param v Visitor object    */
+comment|/**      * Called by objects that are traversing the nodes of the tree implicitely      * defined by the contents of a Java class. I.e., the hierarchy of methods,      * fields, attributes, etc. spawns a tree of objects.      *      * @param v Visitor object      */
 specifier|public
 name|void
 name|accept
@@ -215,7 +215,7 @@ literal|"Visiting non-standard PMGClass object"
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**    * Dump source file attribute to file stream in binary format.    *    * @param file Output file stream    * @throws IOException    */
+comment|/**      * Dump source file attribute to file stream in binary format.      *      * @param file Output file stream      * @throws IOException      */
 specifier|public
 specifier|final
 name|void
@@ -249,7 +249,7 @@ name|pmg_class_index
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**    * @return Index in constant pool of source file name.    */
+comment|/**      * @return Index in constant pool of source file name.      */
 specifier|public
 specifier|final
 name|int
@@ -260,7 +260,7 @@ return|return
 name|pmg_class_index
 return|;
 block|}
-comment|/**    * @param pmg_class_index    */
+comment|/**      * @param pmg_class_index      */
 specifier|public
 specifier|final
 name|void
@@ -277,7 +277,7 @@ operator|=
 name|pmg_class_index
 expr_stmt|;
 block|}
-comment|/**    * @return Index in constant pool of source file name.    */
+comment|/**      * @return Index in constant pool of source file name.      */
 specifier|public
 specifier|final
 name|int
@@ -288,7 +288,7 @@ return|return
 name|pmg_index
 return|;
 block|}
-comment|/**    * @param pmg_index    */
+comment|/**      * @param pmg_index      */
 specifier|public
 specifier|final
 name|void
@@ -305,7 +305,7 @@ operator|=
 name|pmg_index
 expr_stmt|;
 block|}
-comment|/**    * @return PMG name.    */
+comment|/**      * @return PMG name.      */
 specifier|public
 specifier|final
 name|String
@@ -336,7 +336,7 @@ name|getBytes
 argument_list|()
 return|;
 block|}
-comment|/**    * @return PMG class name.    */
+comment|/**      * @return PMG class name.      */
 specifier|public
 specifier|final
 name|String
@@ -367,7 +367,7 @@ name|getBytes
 argument_list|()
 return|;
 block|}
-comment|/**    * @return String representation    */
+comment|/**      * @return String representation      */
 specifier|public
 specifier|final
 name|String
@@ -388,7 +388,7 @@ operator|+
 literal|")"
 return|;
 block|}
-comment|/**    * @return deep copy of this attribute    */
+comment|/**      * @return deep copy of this attribute      */
 specifier|public
 name|Attribute
 name|copy

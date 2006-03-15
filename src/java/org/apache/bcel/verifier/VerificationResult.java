@@ -24,7 +24,7 @@ specifier|public
 class|class
 name|VerificationResult
 block|{
-comment|/** 	 * Constant to indicate verification has not been tried yet. 	 * This happens if some earlier verification pass did not return VERIFIED_OK. 	 */
+comment|/**      * Constant to indicate verification has not been tried yet.      * This happens if some earlier verification pass did not return VERIFIED_OK.      */
 specifier|public
 specifier|static
 specifier|final
@@ -51,7 +51,7 @@ name|VERIFIED_REJECTED
 init|=
 literal|2
 decl_stmt|;
-comment|/** 	 * This string is the canonical message for verifications that have not been tried yet. 	 * This happens if some earlier verification pass did not return VERIFIED_OK. 	 */
+comment|/**      * This string is the canonical message for verifications that have not been tried yet.      * This happens if some earlier verification pass did not return VERIFIED_OK.      */
 specifier|private
 specifier|static
 specifier|final
@@ -69,7 +69,7 @@ name|VERIFIED_OK_MSG
 init|=
 literal|"Passed verification."
 decl_stmt|;
-comment|/** 	 * Canonical VerificationResult for not-yet-tried verifications. 	 * This happens if some earlier verification pass did not return VERIFIED_OK. 	 */
+comment|/**      * Canonical VerificationResult for not-yet-tried verifications.      * This happens if some earlier verification pass did not return VERIFIED_OK.      */
 specifier|public
 specifier|static
 specifier|final
@@ -164,7 +164,7 @@ name|hashCode
 argument_list|()
 return|;
 block|}
-comment|/** 	 * Returns if two VerificationResult instances are equal. 	 */
+comment|/**      * Returns if two VerificationResult instances are equal.      */
 specifier|public
 name|boolean
 name|equals
@@ -182,9 +182,11 @@ operator|instanceof
 name|VerificationResult
 operator|)
 condition|)
+block|{
 return|return
 literal|false
 return|;
+block|}
 name|VerificationResult
 name|other
 init|=
@@ -220,7 +222,7 @@ operator|)
 operator|)
 return|;
 block|}
-comment|/** 	 * Returns a String representation of the VerificationResult. 	 */
+comment|/**      * Returns a String representation of the VerificationResult.      */
 specifier|public
 name|String
 name|toString
@@ -237,30 +239,36 @@ name|numeric
 operator|==
 name|VERIFIED_NOTYET
 condition|)
+block|{
 name|ret
 operator|=
 literal|"VERIFIED_NOTYET"
 expr_stmt|;
+block|}
 if|if
 condition|(
 name|numeric
 operator|==
 name|VERIFIED_OK
 condition|)
+block|{
 name|ret
 operator|=
 literal|"VERIFIED_OK"
 expr_stmt|;
+block|}
 if|if
 condition|(
 name|numeric
 operator|==
 name|VERIFIED_REJECTED
 condition|)
+block|{
 name|ret
 operator|=
 literal|"VERIFIED_REJECTED"
 expr_stmt|;
+block|}
 name|ret
 operator|+=
 literal|"\n"

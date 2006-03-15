@@ -56,7 +56,7 @@ specifier|private
 name|int
 name|src_line
 decl_stmt|;
-comment|/**    * Create a line number.    *    * @param ih instruction handle to reference    */
+comment|/**      * Create a line number.      *      * @param ih instruction handle to reference      */
 specifier|public
 name|LineNumberGen
 parameter_list|(
@@ -78,7 +78,7 @@ name|src_line
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**    * @return true, if ih is target of this line number    */
+comment|/**      * @return true, if ih is target of this line number      */
 specifier|public
 name|boolean
 name|containsTarget
@@ -95,7 +95,7 @@ operator|==
 name|ih
 return|;
 block|}
-comment|/**    * @param old_ih old target    * @param new_ih new target    */
+comment|/**      * @param old_ih old target      * @param new_ih new target      */
 specifier|public
 name|void
 name|updateTarget
@@ -113,6 +113,7 @@ name|old_ih
 operator|!=
 name|ih
 condition|)
+block|{
 throw|throw
 operator|new
 name|ClassGenException
@@ -128,14 +129,17 @@ operator|+
 literal|"}"
 argument_list|)
 throw|;
+block|}
 else|else
+block|{
 name|setInstruction
 argument_list|(
 name|new_ih
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**    * Get LineNumber attribute .    *    * This relies on that the instruction list has already been dumped to byte code or    * or that the `setPositions' methods has been called for the instruction list.    */
+block|}
+comment|/**      * Get LineNumber attribute .      *      * This relies on that the instruction list has already been dumped to byte code or      * or that the `setPositions' methods has been called for the instruction list.      */
 specifier|public
 name|LineNumber
 name|getLineNumber

@@ -224,7 +224,7 @@ name|length
 operator|==
 literal|3
 condition|)
-comment|// has else branch
+block|{
 name|else_expr
 operator|=
 operator|(
@@ -235,7 +235,9 @@ index|[
 literal|2
 index|]
 expr_stmt|;
+block|}
 else|else
+block|{
 name|MiniC
 operator|.
 name|addError
@@ -253,6 +255,7 @@ argument_list|,
 literal|"IF expression has no ELSE branch"
 argument_list|)
 expr_stmt|;
+block|}
 name|children
 operator|=
 literal|null
@@ -298,6 +301,7 @@ name|else_expr
 operator|!=
 literal|null
 condition|)
+block|{
 name|else_expr
 operator|=
 name|else_expr
@@ -307,6 +311,7 @@ argument_list|(
 name|env
 argument_list|)
 expr_stmt|;
+block|}
 return|return
 name|this
 return|;
@@ -342,6 +347,7 @@ operator|)
 operator|!=
 name|T_BOOLEAN
 condition|)
+block|{
 name|MiniC
 operator|.
 name|addError
@@ -366,6 +372,7 @@ operator|+
 literal|"."
 argument_list|)
 expr_stmt|;
+block|}
 name|then_type
 operator|=
 name|then_expr
@@ -389,6 +396,7 @@ operator|!=
 name|expected
 operator|)
 condition|)
+block|{
 name|MiniC
 operator|.
 name|addError
@@ -420,6 +428,7 @@ operator|+
 literal|"."
 argument_list|)
 expr_stmt|;
+block|}
 if|if
 condition|(
 name|else_expr
@@ -450,6 +459,7 @@ operator|!=
 name|expected
 operator|)
 condition|)
+block|{
 name|MiniC
 operator|.
 name|addError
@@ -481,6 +491,7 @@ operator|+
 literal|"."
 argument_list|)
 expr_stmt|;
+block|}
 if|else if
 condition|(
 name|then_type
@@ -518,6 +529,7 @@ name|then_type
 operator|!=
 name|else_type
 condition|)
+block|{
 name|MiniC
 operator|.
 name|addError
@@ -543,6 +555,7 @@ operator|+
 literal|"."
 argument_list|)
 expr_stmt|;
+block|}
 name|type
 operator|=
 name|then_type
@@ -819,6 +832,7 @@ name|else_expr
 operator|!=
 literal|null
 condition|)
+block|{
 name|else_expr
 operator|.
 name|dump
@@ -828,6 +842,7 @@ operator|+
 literal|" "
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 block|}
 end_class

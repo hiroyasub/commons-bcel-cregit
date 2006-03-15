@@ -24,7 +24,7 @@ specifier|public
 interface|interface
 name|VerifierFactoryObserver
 block|{
-comment|/** 	 * VerifierFactoryObserver instances are notified invoking this method. 	 * The String argument is the fully qualified class name of a class a 	 * new Verifier instance created by the VerifierFactory operates on. 	 */
+comment|/**      * VerifierFactoryObserver instances are notified invoking this method.      * The String argument is the fully qualified class name of a class a      * new Verifier instance created by the VerifierFactory operates on.      */
 specifier|public
 name|void
 name|update

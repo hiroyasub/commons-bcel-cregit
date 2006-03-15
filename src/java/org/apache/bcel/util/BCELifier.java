@@ -265,7 +265,7 @@ specifier|private
 name|ConstantPoolGen
 name|_cp
 decl_stmt|;
-comment|/** @param clazz Java class to "decompile"    * @param out where to output Java program    */
+comment|/** @param clazz Java class to "decompile"      * @param out where to output Java program      */
 specifier|public
 name|BCELifier
 parameter_list|(
@@ -300,7 +300,7 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
-comment|/** Start Java code generation    */
+comment|/** Start Java code generation      */
 specifier|public
 name|void
 name|start
@@ -1163,9 +1163,11 @@ name|flags
 operator|==
 literal|0
 condition|)
+block|{
 return|return
 literal|"0"
 return|;
+block|}
 name|StringBuffer
 name|buf
 init|=
@@ -1221,6 +1223,7 @@ operator|==
 name|FLAG_FOR_CLASS
 operator|)
 condition|)
+block|{
 name|buf
 operator|.
 name|append
@@ -1228,6 +1231,7 @@ argument_list|(
 literal|"ACC_SUPER | "
 argument_list|)
 expr_stmt|;
+block|}
 if|else if
 condition|(
 operator|(
@@ -1244,6 +1248,7 @@ operator|==
 name|FLAG_FOR_METHOD
 operator|)
 condition|)
+block|{
 name|buf
 operator|.
 name|append
@@ -1251,6 +1256,7 @@ argument_list|(
 literal|"ACC_BRIDGE | "
 argument_list|)
 expr_stmt|;
+block|}
 if|else if
 condition|(
 operator|(
@@ -1267,6 +1273,7 @@ operator|==
 name|FLAG_FOR_METHOD
 operator|)
 condition|)
+block|{
 name|buf
 operator|.
 name|append
@@ -1274,7 +1281,9 @@ argument_list|(
 literal|"ACC_VARARGS | "
 argument_list|)
 expr_stmt|;
+block|}
 else|else
+block|{
 name|buf
 operator|.
 name|append
@@ -1304,6 +1313,7 @@ argument_list|(
 literal|" | "
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 name|pow
 operator|<<=
@@ -1351,9 +1361,11 @@ name|length
 operator|==
 literal|0
 condition|)
+block|{
 return|return
 literal|"Type.NO_ARGS"
 return|;
+block|}
 name|StringBuffer
 name|args
 init|=
@@ -1401,6 +1413,7 @@ name|length
 operator|-
 literal|1
 condition|)
+block|{
 name|args
 operator|.
 name|append
@@ -1408,6 +1421,7 @@ argument_list|(
 literal|", "
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 return|return
 literal|"new Type[] { "
@@ -1596,7 +1610,7 @@ literal|"\")"
 return|;
 block|}
 block|}
-comment|/** Default main method    */
+comment|/** Default main method      */
 specifier|public
 specifier|static
 name|void
@@ -1635,6 +1649,7 @@ operator|)
 operator|==
 literal|null
 condition|)
+block|{
 name|java_class
 operator|=
 operator|new
@@ -1647,6 +1662,7 @@ name|parse
 argument_list|()
 expr_stmt|;
 comment|// May throw IOException
+block|}
 name|BCELifier
 name|bcelifier
 init|=

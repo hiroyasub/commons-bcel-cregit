@@ -142,9 +142,11 @@ name|pos
 operator|>
 literal|0
 condition|)
+block|{
 name|pos
 operator|--
 expr_stmt|;
+block|}
 block|}
 block|}
 block|}

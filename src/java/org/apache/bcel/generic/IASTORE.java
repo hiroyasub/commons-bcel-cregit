@@ -28,7 +28,7 @@ name|ArrayInstruction
 implements|implements
 name|StackConsumer
 block|{
-comment|/**     * Store into int array    */
+comment|/**       * Store into int array      */
 specifier|public
 name|IASTORE
 parameter_list|()
@@ -47,7 +47,7 @@ name|IASTORE
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**    * Call corresponding visitor method(s). The order is:    * Call visitor methods of implemented interfaces first, then    * call methods according to the class hierarchy in descending order,    * i.e., the most specific visitXXX() call comes last.    *    * @param v Visitor object    */
+comment|/**      * Call corresponding visitor method(s). The order is:      * Call visitor methods of implemented interfaces first, then      * call methods according to the class hierarchy in descending order,      * i.e., the most specific visitXXX() call comes last.      *      * @param v Visitor object      */
 specifier|public
 name|void
 name|accept

@@ -81,7 +81,7 @@ name|int
 name|line_number
 decl_stmt|;
 comment|// number in source file
-comment|/**    * Initialize from another object.    */
+comment|/**      * Initialize from another object.      */
 specifier|public
 name|LineNumber
 parameter_list|(
@@ -103,7 +103,7 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**    * Construct object from file stream.    * @param file Input stream    * @throws IOException    */
+comment|/**      * Construct object from file stream.      * @param file Input stream      * @throws IOException      */
 name|LineNumber
 parameter_list|(
 name|DataInputStream
@@ -126,7 +126,7 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**    * @param start_pc Program Counter (PC) corresponds to    * @param line_number line number in source file    */
+comment|/**      * @param start_pc Program Counter (PC) corresponds to      * @param line_number line number in source file      */
 specifier|public
 name|LineNumber
 parameter_list|(
@@ -150,7 +150,7 @@ operator|=
 name|line_number
 expr_stmt|;
 block|}
-comment|/**    * Called by objects that are traversing the nodes of the tree implicitely    * defined by the contents of a Java class. I.e., the hierarchy of methods,    * fields, attributes, etc. spawns a tree of objects.    *    * @param v Visitor object    */
+comment|/**      * Called by objects that are traversing the nodes of the tree implicitely      * defined by the contents of a Java class. I.e., the hierarchy of methods,      * fields, attributes, etc. spawns a tree of objects.      *      * @param v Visitor object      */
 specifier|public
 name|void
 name|accept
@@ -167,7 +167,7 @@ name|this
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**    * Dump line number/pc pair to file stream in binary format.    *    * @param file Output file stream    * @throws IOException    */
+comment|/**      * Dump line number/pc pair to file stream in binary format.      *      * @param file Output file stream      * @throws IOException      */
 specifier|public
 specifier|final
 name|void
@@ -194,7 +194,7 @@ name|line_number
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**    * @return Corresponding source line    */
+comment|/**      * @return Corresponding source line      */
 specifier|public
 specifier|final
 name|int
@@ -205,7 +205,7 @@ return|return
 name|line_number
 return|;
 block|}
-comment|/**    * @return PC in code    */
+comment|/**      * @return PC in code      */
 specifier|public
 specifier|final
 name|int
@@ -216,7 +216,7 @@ return|return
 name|start_pc
 return|;
 block|}
-comment|/**    * @param line_number the source line number    */
+comment|/**      * @param line_number the source line number      */
 specifier|public
 specifier|final
 name|void
@@ -233,7 +233,7 @@ operator|=
 name|line_number
 expr_stmt|;
 block|}
-comment|/**    * @param start_pc the pc for this line number    */
+comment|/**      * @param start_pc the pc for this line number      */
 specifier|public
 specifier|final
 name|void
@@ -250,7 +250,7 @@ operator|=
 name|start_pc
 expr_stmt|;
 block|}
-comment|/**    * @return String representation    */
+comment|/**      * @return String representation      */
 specifier|public
 specifier|final
 name|String
@@ -269,7 +269,7 @@ operator|+
 literal|")"
 return|;
 block|}
-comment|/**    * @return deep copy of this object    */
+comment|/**      * @return deep copy of this object      */
 specifier|public
 name|LineNumber
 name|copy

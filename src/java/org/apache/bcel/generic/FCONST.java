@@ -34,7 +34,7 @@ specifier|private
 name|float
 name|value
 decl_stmt|;
-comment|/**    * Empty constructor needed for the Class.newInstance() statement in    * Instruction.readInstruction(). Not to be used otherwise.    */
+comment|/**      * Empty constructor needed for the Class.newInstance() statement in      * Instruction.readInstruction(). Not to be used otherwise.      */
 name|FCONST
 parameter_list|()
 block|{
@@ -70,6 +70,7 @@ name|f
 operator|==
 literal|0.0
 condition|)
+block|{
 name|opcode
 operator|=
 name|org
@@ -82,12 +83,14 @@ name|Constants
 operator|.
 name|FCONST_0
 expr_stmt|;
+block|}
 if|else if
 condition|(
 name|f
 operator|==
 literal|1.0
 condition|)
+block|{
 name|opcode
 operator|=
 name|org
@@ -100,12 +103,14 @@ name|Constants
 operator|.
 name|FCONST_1
 expr_stmt|;
+block|}
 if|else if
 condition|(
 name|f
 operator|==
 literal|2.0
 condition|)
+block|{
 name|opcode
 operator|=
 name|org
@@ -118,7 +123,9 @@ name|Constants
 operator|.
 name|FCONST_2
 expr_stmt|;
+block|}
 else|else
+block|{
 throw|throw
 operator|new
 name|ClassGenException
@@ -128,6 +135,7 @@ operator|+
 name|f
 argument_list|)
 throw|;
+block|}
 name|value
 operator|=
 name|f
@@ -146,7 +154,7 @@ name|value
 argument_list|)
 return|;
 block|}
-comment|/** @return Type.FLOAT    */
+comment|/** @return Type.FLOAT      */
 specifier|public
 name|Type
 name|getType
@@ -161,7 +169,7 @@ operator|.
 name|FLOAT
 return|;
 block|}
-comment|/**    * Call corresponding visitor method(s). The order is:    * Call visitor methods of implemented interfaces first, then    * call methods according to the class hierarchy in descending order,    * i.e., the most specific visitXXX() call comes last.    *    * @param v Visitor object    */
+comment|/**      * Call corresponding visitor method(s). The order is:      * Call visitor methods of implemented interfaces first, then      * call methods according to the class hierarchy in descending order,      * i.e., the most specific visitXXX() call comes last.      *      * @param v Visitor object      */
 specifier|public
 name|void
 name|accept

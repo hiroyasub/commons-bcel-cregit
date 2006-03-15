@@ -287,7 +287,7 @@ return|;
 block|}
 block|}
 decl_stmt|;
-comment|/* How many chars have been consumed 				      * during parsing in signatureToString(). 				      * Read by methodSignatureToString(). 				      * Set by side effect,but only internally. 				      */
+comment|/* How many chars have been consumed      * during parsing in signatureToString().      * Read by methodSignatureToString().      * Set by side effect,but only internally.      */
 specifier|private
 specifier|static
 name|boolean
@@ -295,8 +295,8 @@ name|wide
 init|=
 literal|false
 decl_stmt|;
-comment|/* The `WIDE' instruction is used in the 				      * byte code to allow 16-bit wide indices 				      * for local variables. This opcode 				      * precedes an `ILOAD', e.g.. The opcode 				      * immediately following takes an extra 				      * byte which is combined with the 				      * following byte to form a 				      * 16-bit value. 				      */
-comment|/**    * Convert bit field of flags into string such as `static final'.    *    * @param  access_flags Access flags    * @return String representation of flags    */
+comment|/* The `WIDE' instruction is used in the      * byte code to allow 16-bit wide indices      * for local variables. This opcode      * precedes an `ILOAD', e.g.. The opcode      * immediately following takes an extra      * byte which is combined with the      * following byte to form a      * 16-bit value.      */
+comment|/**      * Convert bit field of flags into string such as `static final'.      *      * @param  access_flags Access flags      * @return String representation of flags      */
 specifier|public
 specifier|static
 specifier|final
@@ -316,7 +316,7 @@ literal|false
 argument_list|)
 return|;
 block|}
-comment|/**    * Convert bit field of flags into string such as `static final'.    *    * Special case: Classes compiled with new compilers and with the    * `ACC_SUPER' flag would be said to be "synchronized". This is    * because SUN used the same value for the flags `ACC_SUPER' and    * `ACC_SYNCHRONIZED'.     *    * @param  access_flags Access flags    * @param  for_class access flags are for class qualifiers ?    * @return String representation of flags    */
+comment|/**      * Convert bit field of flags into string such as `static final'.      *      * Special case: Classes compiled with new compilers and with the      * `ACC_SUPER' flag would be said to be "synchronized". This is      * because SUN used the same value for the flags `ACC_SUPER' and      * `ACC_SYNCHRONIZED'.       *      * @param  access_flags Access flags      * @param  for_class access flags are for class qualifiers ?      * @return String representation of flags      */
 specifier|public
 specifier|static
 specifier|final
@@ -378,7 +378,7 @@ operator|!=
 literal|0
 condition|)
 block|{
-comment|/* Special case: Classes compiled with new compilers and with the 	 * `ACC_SUPER' flag would be said to be "synchronized". This is 	 * because SUN used the same value for the flags `ACC_SUPER' and 	 * `ACC_SYNCHRONIZED'. 	 */
+comment|/* Special case: Classes compiled with new compilers and with the                  * `ACC_SUPER' flag would be said to be "synchronized". This is                  * because SUN used the same value for the flags `ACC_SUPER' and                  * `ACC_SYNCHRONIZED'.                  */
 if|if
 condition|(
 name|for_class
@@ -401,7 +401,9 @@ name|ACC_INTERFACE
 operator|)
 operator|)
 condition|)
+block|{
 continue|continue;
+block|}
 name|buf
 operator|.
 name|append
@@ -431,7 +433,7 @@ name|trim
 argument_list|()
 return|;
 block|}
-comment|/**    * @return "class" or "interface", depending on the ACC_INTERFACE flag    */
+comment|/**      * @return "class" or "interface", depending on the ACC_INTERFACE flag      */
 specifier|public
 specifier|static
 specifier|final
@@ -460,7 +462,7 @@ else|:
 literal|"class"
 return|;
 block|}
-comment|/**    * Disassemble a byte array of JVM byte codes starting from code line     * `index' and return the disassembled string representation. Decode only    * `num' opcodes (including their operands), use -1 if you want to    * decompile everything.    *    * @param  code byte code array    * @param  constant_pool Array of constants    * @param  index offset in `code' array    *<EM>(number of opcodes, not bytes!)</EM>    * @param  length number of opcodes to decompile, -1 for all    * @param  verbose be verbose, e.g. print constant pool index    * @return String representation of byte codes    */
+comment|/**      * Disassemble a byte array of JVM byte codes starting from code line       * `index' and return the disassembled string representation. Decode only      * `num' opcodes (including their operands), use -1 if you want to      * decompile everything.      *      * @param  code byte code array      * @param  constant_pool Array of constants      * @param  index offset in `code' array      *<EM>(number of opcodes, not bytes!)</EM>      * @param  length number of opcodes to decompile, -1 for all      * @param  verbose be verbose, e.g. print constant pool index      * @return String representation of byte codes      */
 specifier|public
 specifier|static
 specifier|final
@@ -523,7 +525,7 @@ condition|;
 name|i
 operator|++
 control|)
-comment|// Skip `index' lines of code
+block|{
 name|codeToString
 argument_list|(
 name|stream
@@ -533,6 +535,7 @@ argument_list|,
 name|verbose
 argument_list|)
 expr_stmt|;
+block|}
 for|for
 control|(
 name|int
@@ -687,7 +690,7 @@ literal|true
 argument_list|)
 return|;
 block|}
-comment|/**    * Disassemble a stream of byte codes and return the    * string representation.    *    * @param  bytes stream of bytes    * @param  constant_pool Array of constants    * @param  verbose be verbose, e.g. print constant pool index    * @return String representation of byte code    */
+comment|/**      * Disassemble a stream of byte codes and return the      * string representation.      *      * @param  bytes stream of bytes      * @param  constant_pool Array of constants      * @param  verbose be verbose, e.g. print constant pool index      * @return String representation of byte code      */
 specifier|public
 specifier|static
 specifier|final
@@ -762,7 +765,7 @@ name|opcode
 index|]
 argument_list|)
 decl_stmt|;
-comment|/* Special case: Skip (0-3) padding bytes, i.e., the      * following bytes are 4-byte-aligned      */
+comment|/* Special case: Skip (0-3) padding bytes, i.e., the          * following bytes are 4-byte-aligned          */
 if|if
 condition|(
 operator|(
@@ -837,6 +840,7 @@ operator|)
 operator|!=
 literal|0
 condition|)
+block|{
 name|System
 operator|.
 name|err
@@ -858,6 +862,7 @@ name|b
 argument_list|)
 expr_stmt|;
 block|}
+block|}
 comment|// Both cases have a field default_offset in common
 name|default_offset
 operator|=
@@ -872,7 +877,7 @@ condition|(
 name|opcode
 condition|)
 block|{
-comment|/* Table switch has variable length arguments.        */
+comment|/* Table switch has variable length arguments.              */
 case|case
 name|Constants
 operator|.
@@ -1007,6 +1012,7 @@ name|length
 operator|-
 literal|1
 condition|)
+block|{
 name|buf
 operator|.
 name|append
@@ -1014,6 +1020,7 @@ argument_list|(
 literal|", "
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 name|buf
 operator|.
@@ -1023,7 +1030,7 @@ literal|")"
 argument_list|)
 expr_stmt|;
 break|break;
-comment|/* Lookup switch has variable length arguments.        */
+comment|/* Lookup switch has variable length arguments.              */
 case|case
 name|Constants
 operator|.
@@ -1175,6 +1182,7 @@ name|npairs
 operator|-
 literal|1
 condition|)
+block|{
 name|buf
 operator|.
 name|append
@@ -1182,6 +1190,7 @@ argument_list|(
 literal|", "
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 name|buf
 operator|.
@@ -1192,7 +1201,7 @@ argument_list|)
 expr_stmt|;
 block|}
 break|break;
-comment|/* Two address bytes + offset from start of byte stream form the      * jump target      */
+comment|/* Two address bytes + offset from start of byte stream form the              * jump target              */
 case|case
 name|Constants
 operator|.
@@ -1308,7 +1317,7 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 break|break;
-comment|/* 32-bit wide jumps        */
+comment|/* 32-bit wide jumps              */
 case|case
 name|Constants
 operator|.
@@ -1346,7 +1355,7 @@ operator|)
 argument_list|)
 expr_stmt|;
 break|break;
-comment|/* Index byte references local variable (register)        */
+comment|/* Index byte references local variable (register)              */
 case|case
 name|Constants
 operator|.
@@ -1421,6 +1430,7 @@ expr_stmt|;
 comment|// Clear flag
 block|}
 else|else
+block|{
 name|vindex
 operator|=
 name|bytes
@@ -1428,6 +1438,7 @@ operator|.
 name|readUnsignedByte
 argument_list|()
 expr_stmt|;
+block|}
 name|buf
 operator|.
 name|append
@@ -1441,7 +1452,7 @@ name|vindex
 argument_list|)
 expr_stmt|;
 break|break;
-comment|/*        * Remember wide byte which is used to form a 16-bit address in the        * following instruction. Relies on that the method is called again with        * the following opcode.        */
+comment|/*              * Remember wide byte which is used to form a 16-bit address in the              * following instruction. Relies on that the method is called again with              * the following opcode.              */
 case|case
 name|Constants
 operator|.
@@ -1459,7 +1470,7 @@ literal|"\t(wide)"
 argument_list|)
 expr_stmt|;
 break|break;
-comment|/* Array of basic type.        */
+comment|/* Array of basic type.              */
 case|case
 name|Constants
 operator|.
@@ -1491,7 +1502,7 @@ literal|">"
 argument_list|)
 expr_stmt|;
 break|break;
-comment|/* Access object/class fields.        */
+comment|/* Access object/class fields.              */
 case|case
 name|Constants
 operator|.
@@ -1556,7 +1567,7 @@ operator|)
 argument_list|)
 expr_stmt|;
 break|break;
-comment|/* Operands are references to classes in constant pool        */
+comment|/* Operands are references to classes in constant pool              */
 case|case
 name|Constants
 operator|.
@@ -1628,7 +1639,7 @@ operator|)
 argument_list|)
 expr_stmt|;
 break|break;
-comment|/* Operands are references to methods in constant pool        */
+comment|/* Operands are references to methods in constant pool              */
 case|case
 name|Constants
 operator|.
@@ -1763,7 +1774,7 @@ argument_list|)
 expr_stmt|;
 comment|// Last byte is a reserved space
 break|break;
-comment|/* Operands are references to items in constant pool        */
+comment|/* Operands are references to items in constant pool              */
 case|case
 name|Constants
 operator|.
@@ -1879,7 +1890,7 @@ operator|)
 argument_list|)
 expr_stmt|;
 break|break;
-comment|/* Array of references.        */
+comment|/* Array of references.              */
 case|case
 name|Constants
 operator|.
@@ -1939,7 +1950,7 @@ operator|)
 argument_list|)
 expr_stmt|;
 break|break;
-comment|/* Multidimensional array of references.        */
+comment|/* Multidimensional array of references.              */
 case|case
 name|Constants
 operator|.
@@ -2014,7 +2025,7 @@ argument_list|)
 expr_stmt|;
 block|}
 break|break;
-comment|/* Increment local variable.      */
+comment|/* Increment local variable.              */
 case|case
 name|Constants
 operator|.
@@ -2243,7 +2254,7 @@ literal|true
 argument_list|)
 return|;
 block|}
-comment|/**    * Shorten long class names,<em>java/lang/String</em> becomes     *<em>String</em>.    *    * @param str The long class name    * @return Compacted class name    */
+comment|/**      * Shorten long class names,<em>java/lang/String</em> becomes       *<em>String</em>.      *      * @param str The long class name      * @return Compacted class name      */
 specifier|public
 specifier|static
 specifier|final
@@ -2263,7 +2274,7 @@ literal|true
 argument_list|)
 return|;
 block|}
-comment|/**    * Shorten long class name<em>str</em>, i.e., chop off the<em>prefix</em>,    * if the    * class name starts with this string and the flag<em>chopit</em> is true.    * Slashes<em>/</em> are converted to dots<em>.</em>.    *    * @param str The long class name    * @param prefix The prefix the get rid off    * @param chopit Flag that determines whether chopping is executed or not    * @return Compacted class name    */
+comment|/**      * Shorten long class name<em>str</em>, i.e., chop off the<em>prefix</em>,      * if the      * class name starts with this string and the flag<em>chopit</em> is true.      * Slashes<em>/</em> are converted to dots<em>.</em>.      *      * @param str The long class name      * @param prefix The prefix the get rid off      * @param chopit Flag that determines whether chopping is executed or not      * @return Compacted class name      */
 specifier|public
 specifier|static
 specifier|final
@@ -2332,6 +2343,7 @@ operator|-
 literal|1
 operator|)
 condition|)
+block|{
 name|str
 operator|=
 name|str
@@ -2342,11 +2354,12 @@ name|len
 argument_list|)
 expr_stmt|;
 block|}
+block|}
 return|return
 name|str
 return|;
 block|}
-comment|/**    * Shorten long class names,<em>java/lang/String</em> becomes     *<em>java.lang.String</em>,    * e.g.. If<em>chopit</em> is<em>true</em> the prefix<em>java.lang</em>    * is also removed.    *    * @param str The long class name    * @param chopit Flag that determines whether chopping is executed or not    * @return Compacted class name    */
+comment|/**      * Shorten long class names,<em>java/lang/String</em> becomes       *<em>java.lang.String</em>,      * e.g.. If<em>chopit</em> is<em>true</em> the prefix<em>java.lang</em>      * is also removed.      *      * @param str The long class name      * @param chopit Flag that determines whether chopping is executed or not      * @return Compacted class name      */
 specifier|public
 specifier|static
 specifier|final
@@ -2371,7 +2384,7 @@ name|chopit
 argument_list|)
 return|;
 block|}
-comment|/**    * @return `flag' with bit `i' set to 1    */
+comment|/**      * @return `flag' with bit `i' set to 1      */
 specifier|public
 specifier|static
 specifier|final
@@ -2394,7 +2407,7 @@ name|i
 argument_list|)
 return|;
 block|}
-comment|/**    * @return `flag' with bit `i' set to 0    */
+comment|/**      * @return `flag' with bit `i' set to 0      */
 specifier|public
 specifier|static
 specifier|final
@@ -2432,7 +2445,7 @@ operator|^
 name|bit
 return|;
 block|}
-comment|/**    * @return true, if bit `i' in `flag' is set    */
+comment|/**      * @return true, if bit `i' in `flag' is set      */
 specifier|public
 specifier|static
 specifier|final
@@ -2459,7 +2472,7 @@ operator|!=
 literal|0
 return|;
 block|}
-comment|/**    * Converts string containing the method return and argument types     * to a byte code method signature.    *    * @param  ret Return type of method    * @param  argv Types of method arguments    * @return Byte code representation of method signature    */
+comment|/**      * Converts string containing the method return and argument types       * to a byte code method signature.      *      * @param  ret Return type of method      * @param  argv Types of method arguments      * @return Byte code representation of method signature      */
 specifier|public
 specifier|final
 specifier|static
@@ -2494,6 +2507,7 @@ name|argv
 operator|!=
 literal|null
 condition|)
+block|{
 for|for
 control|(
 name|int
@@ -2530,7 +2544,7 @@ argument_list|(
 literal|"V"
 argument_list|)
 condition|)
-comment|// void can't be a method argument
+block|{
 throw|throw
 operator|new
 name|ClassFormatException
@@ -2543,6 +2557,7 @@ name|i
 index|]
 argument_list|)
 throw|;
+block|}
 name|buf
 operator|.
 name|append
@@ -2550,6 +2565,7 @@ argument_list|(
 name|str
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 name|str
 operator|=
@@ -2577,7 +2593,7 @@ name|toString
 argument_list|()
 return|;
 block|}
-comment|/**    * @param  signature    Method signature    * @return Array of argument types    * @throws  ClassFormatException      */
+comment|/**      * @param  signature    Method signature      * @return Array of argument types      * @throws  ClassFormatException        */
 specifier|public
 specifier|static
 specifier|final
@@ -2600,7 +2616,7 @@ literal|true
 argument_list|)
 return|;
 block|}
-comment|/**    * @param  signature    Method signature    * @param chopit Shorten class names ?    * @return Array of argument types    * @throws  ClassFormatException      */
+comment|/**      * @param  signature    Method signature      * @param chopit Shorten class names ?      * @return Array of argument types      * @throws  ClassFormatException        */
 specifier|public
 specifier|static
 specifier|final
@@ -2641,6 +2657,7 @@ argument_list|)
 operator|!=
 literal|'('
 condition|)
+block|{
 throw|throw
 operator|new
 name|ClassFormatException
@@ -2650,6 +2667,7 @@ operator|+
 name|signature
 argument_list|)
 throw|;
+block|}
 name|index
 operator|=
 literal|1
@@ -2732,7 +2750,7 @@ index|]
 argument_list|)
 return|;
 block|}
-comment|/**    * @param  signature    Method signature    * @return return type of method    * @throws  ClassFormatException      */
+comment|/**      * @param  signature    Method signature      * @return return type of method      * @throws  ClassFormatException        */
 specifier|public
 specifier|static
 specifier|final
@@ -2754,7 +2772,7 @@ literal|true
 argument_list|)
 return|;
 block|}
-comment|/**    * @param  signature    Method signature    * @param chopit Shorten class names ?    * @return return type of method    * @throws  ClassFormatException      */
+comment|/**      * @param  signature    Method signature      * @param chopit Shorten class names ?      * @return return type of method      * @throws  ClassFormatException        */
 specifier|public
 specifier|static
 specifier|final
@@ -2826,7 +2844,7 @@ return|return
 name|type
 return|;
 block|}
-comment|/**    * Converts method signature to string with all class names compacted.    *    * @param signature to convert    * @param name of method    * @param access flags of method    * @return Human readable signature    */
+comment|/**      * Converts method signature to string with all class names compacted.      *      * @param signature to convert      * @param name of method      * @param access flags of method      * @return Human readable signature      */
 specifier|public
 specifier|static
 specifier|final
@@ -2890,7 +2908,7 @@ literal|null
 argument_list|)
 return|;
 block|}
-comment|/**    * A return­type signature represents the return value from a method.    * It is a series of bytes in the following grammar:    *    *<return_signature> ::=<field_type> | V    *    * The character V indicates that the method returns no value. Otherwise, the    * signature indicates the type of the return value.    * An argument signature represents an argument passed to a method:    *    *<argument_signature> ::=<field_type>    *    * A method signature represents the arguments that the method expects, and    * the value that it returns.    *<method_signature> ::= (<arguments_signature>)<return_signature>    *<arguments_signature>::=<argument_signature>*    *    * This method converts such a string into a Java type declaration like    * `void main(String[])' and throws a `ClassFormatException' when the parsed     * type is invalid.    *    * @param  signature    Method signature    * @param  name         Method name    * @param  access       Method access rights    * @return Java type declaration    * @throws  ClassFormatException      */
+comment|/**      * A return­type signature represents the return value from a method.      * It is a series of bytes in the following grammar:      *      *<return_signature> ::=<field_type> | V      *      * The character V indicates that the method returns no value. Otherwise, the      * signature indicates the type of the return value.      * An argument signature represents an argument passed to a method:      *      *<argument_signature> ::=<field_type>      *      * A method signature represents the arguments that the method expects, and      * the value that it returns.      *<method_signature> ::= (<arguments_signature>)<return_signature>      *<arguments_signature>::=<argument_signature>*      *      * This method converts such a string into a Java type declaration like      * `void main(String[])' and throws a `ClassFormatException' when the parsed       * type is invalid.      *      * @param  signature    Method signature      * @param  name         Method name      * @param  access       Method access rights      * @return Java type declaration      * @throws  ClassFormatException        */
 specifier|public
 specifier|static
 specifier|final
@@ -2962,6 +2980,7 @@ argument_list|)
 operator|!=
 literal|'('
 condition|)
+block|{
 throw|throw
 operator|new
 name|ClassFormatException
@@ -2971,6 +2990,7 @@ operator|+
 name|signature
 argument_list|)
 throw|;
+block|}
 name|index
 operator|=
 literal|1
@@ -3033,6 +3053,7 @@ name|l
 operator|!=
 literal|null
 condition|)
+block|{
 name|buf
 operator|.
 name|append
@@ -3049,7 +3070,9 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
+block|}
 else|else
+block|{
 name|buf
 operator|.
 name|append
@@ -3062,6 +3085,7 @@ argument_list|(
 name|var_index
 argument_list|)
 expr_stmt|;
+block|}
 if|if
 condition|(
 literal|"double"
@@ -3078,14 +3102,18 @@ argument_list|(
 name|param_type
 argument_list|)
 condition|)
+block|{
 name|var_index
 operator|+=
 literal|2
 expr_stmt|;
+block|}
 else|else
+block|{
 name|var_index
 operator|++
 expr_stmt|;
+block|}
 name|buf
 operator|.
 name|append
@@ -3149,7 +3177,7 @@ argument_list|()
 operator|>
 literal|1
 condition|)
-comment|// Tack off the extra ", "
+block|{
 name|buf
 operator|.
 name|setLength
@@ -3162,6 +3190,7 @@ operator|-
 literal|2
 argument_list|)
 expr_stmt|;
+block|}
 name|buf
 operator|.
 name|append
@@ -3217,7 +3246,7 @@ operator|<<
 name|n
 return|;
 block|}
-comment|/**    * Replace all occurences of<em>old</em> in<em>str</em> with<em>new</em>.    *    * @param str String to permute    * @param old String to be replaced    * @param new_ Replacement string    * @return new String object    */
+comment|/**      * Replace all occurences of<em>old</em> in<em>str</em> with<em>new</em>.      *      * @param str String to permute      * @param old String to be replaced      * @param new_ Replacement string      * @return new String object      */
 specifier|public
 specifier|static
 specifier|final
@@ -3368,7 +3397,7 @@ return|return
 name|str
 return|;
 block|}
-comment|/**    * Converts signature to string with all class names compacted.    *    * @param signature to convert    * @return Human readable signature    */
+comment|/**      * Converts signature to string with all class names compacted.      *      * @param signature to convert      * @return Human readable signature      */
 specifier|public
 specifier|static
 specifier|final
@@ -3388,7 +3417,7 @@ literal|true
 argument_list|)
 return|;
 block|}
-comment|/**    * The field signature represents the value of an argument to a function or     * the value of a variable. It is a series of bytes generated by the     * following grammar:    *    *<PRE>    *<field_signature> ::=<field_type>    *<field_type>      ::=<base_type>|<object_type>|<array_type>    *<base_type>       ::= B|C|D|F|I|J|S|Z    *<object_type>     ::= L<fullclassname>;    *<array_type>      ::= [<field_type>    *    * The meaning of the base types is as follows:    * B byte signed byte    * C char character    * D double double precision IEEE float    * F float single precision IEEE float    * I int integer    * J long long integer    * L<fullclassname>; ... an object of the given class    * S short signed short    * Z boolean true or false    * [<field sig> ... array    *</PRE>    *    * This method converts this string into a Java type declaration such as    * `String[]' and throws a `ClassFormatException' when the parsed type is     * invalid.    *    * @param  signature  Class signature    * @param chopit Flag that determines whether chopping is executed or not    * @return Java type declaration    * @throws ClassFormatException    */
+comment|/**      * The field signature represents the value of an argument to a function or       * the value of a variable. It is a series of bytes generated by the       * following grammar:      *      *<PRE>      *<field_signature> ::=<field_type>      *<field_type>      ::=<base_type>|<object_type>|<array_type>      *<base_type>       ::= B|C|D|F|I|J|S|Z      *<object_type>     ::= L<fullclassname>;      *<array_type>      ::= [<field_type>      *      * The meaning of the base types is as follows:      * B byte signed byte      * C char character      * D double double precision IEEE float      * F float single precision IEEE float      * I int integer      * J long long integer      * L<fullclassname>; ... an object of the given class      * S short signed short      * Z boolean true or false      * [<field sig> ... array      *</PRE>      *      * This method converts this string into a Java type declaration such as      * `String[]' and throws a `ClassFormatException' when the parsed type is       * invalid.      *      * @param  signature  Class signature      * @param chopit Flag that determines whether chopping is executed or not      * @return Java type declaration      * @throws ClassFormatException      */
 specifier|public
 specifier|static
 specifier|final
@@ -3481,6 +3510,7 @@ name|index
 operator|<
 literal|0
 condition|)
+block|{
 throw|throw
 operator|new
 name|ClassFormatException
@@ -3490,6 +3520,7 @@ operator|+
 name|signature
 argument_list|)
 throw|;
+block|}
 comment|//corrected concurrent private static field acess
 name|wrap
 argument_list|(
@@ -3573,6 +3604,7 @@ condition|;
 name|n
 operator|++
 control|)
+block|{
 name|brackets
 operator|.
 name|append
@@ -3580,6 +3612,7 @@ argument_list|(
 literal|"[]"
 argument_list|)
 expr_stmt|;
+block|}
 name|consumed_chars
 operator|=
 name|n
@@ -3638,7 +3671,7 @@ case|:
 return|return
 literal|"void"
 return|;
-default|default  :
+default|default:
 throw|throw
 operator|new
 name|ClassFormatException
@@ -3674,7 +3707,7 @@ argument_list|)
 throw|;
 block|}
 block|}
-comment|/** Parse Java type such as "char", or "java.lang.String[]" and return the    * signature in byte code format, e.g. "C" or "[Ljava/lang/String;" respectively.    *    * @param  type Java type    * @return byte code signature    */
+comment|/** Parse Java type such as "char", or "java.lang.String[]" and return the      * signature in byte code format, e.g. "C" or "[Ljava/lang/String;" respectively.      *      * @param  type Java type      * @return byte code signature      */
 specifier|public
 specifier|static
 name|String
@@ -3761,10 +3794,12 @@ if|if
 condition|(
 name|char_found
 condition|)
+block|{
 name|delim
 operator|=
 literal|true
 expr_stmt|;
+block|}
 break|break;
 case|case
 literal|'['
@@ -3774,6 +3809,7 @@ condition|(
 operator|!
 name|char_found
 condition|)
+block|{
 throw|throw
 operator|new
 name|RuntimeException
@@ -3783,6 +3819,7 @@ operator|+
 name|type
 argument_list|)
 throw|;
+block|}
 name|index
 operator|=
 name|i
@@ -3800,6 +3837,7 @@ condition|(
 operator|!
 name|delim
 condition|)
+block|{
 name|buf
 operator|.
 name|append
@@ -3810,6 +3848,7 @@ name|i
 index|]
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 block|}
 name|int
@@ -3823,6 +3862,7 @@ name|index
 operator|>
 literal|0
 condition|)
+block|{
 name|brackets
 operator|=
 name|countBrackets
@@ -3835,6 +3875,7 @@ name|index
 argument_list|)
 argument_list|)
 expr_stmt|;
+block|}
 name|type
 operator|=
 name|buf
@@ -3863,6 +3904,7 @@ condition|;
 name|i
 operator|++
 control|)
+block|{
 name|buf
 operator|.
 name|append
@@ -3870,6 +3912,7 @@ argument_list|(
 literal|'['
 argument_list|)
 expr_stmt|;
+block|}
 name|boolean
 name|found
 init|=
@@ -3937,7 +3980,7 @@ condition|(
 operator|!
 name|found
 condition|)
-comment|// Class name
+block|{
 name|buf
 operator|.
 name|append
@@ -3962,6 +4005,7 @@ argument_list|(
 literal|';'
 argument_list|)
 expr_stmt|;
+block|}
 return|return
 name|buf
 operator|.
@@ -4029,6 +4073,7 @@ if|if
 condition|(
 name|open
 condition|)
+block|{
 throw|throw
 operator|new
 name|RuntimeException
@@ -4038,6 +4083,7 @@ operator|+
 name|brackets
 argument_list|)
 throw|;
+block|}
 name|open
 operator|=
 literal|true
@@ -4051,6 +4097,7 @@ condition|(
 operator|!
 name|open
 condition|)
+block|{
 throw|throw
 operator|new
 name|RuntimeException
@@ -4060,6 +4107,7 @@ operator|+
 name|brackets
 argument_list|)
 throw|;
+block|}
 name|open
 operator|=
 literal|false
@@ -4076,6 +4124,7 @@ if|if
 condition|(
 name|open
 condition|)
+block|{
 throw|throw
 operator|new
 name|RuntimeException
@@ -4085,11 +4134,12 @@ operator|+
 name|brackets
 argument_list|)
 throw|;
+block|}
 return|return
 name|count
 return|;
 block|}
-comment|/**    * Return type of method signature as a byte value as defined in<em>Constants</em>    *    * @param  signature in format described above    * @return type of method signature    * @see    Constants    */
+comment|/**      * Return type of method signature as a byte value as defined in<em>Constants</em>      *      * @param  signature in format described above      * @return type of method signature      * @see    Constants      */
 specifier|public
 specifier|static
 specifier|final
@@ -4118,6 +4168,7 @@ argument_list|)
 operator|!=
 literal|'('
 condition|)
+block|{
 throw|throw
 operator|new
 name|ClassFormatException
@@ -4127,6 +4178,7 @@ operator|+
 name|signature
 argument_list|)
 throw|;
+block|}
 name|index
 operator|=
 name|signature
@@ -4167,7 +4219,7 @@ argument_list|)
 throw|;
 block|}
 block|}
-comment|/**    * Return type of signature as a byte value as defined in<em>Constants</em>    *    * @param  signature in format described above    * @return type of signature    * @see    Constants    */
+comment|/**      * Return type of signature as a byte value as defined in<em>Constants</em>      *      * @param  signature in format described above      * @return type of signature      * @see    Constants      */
 specifier|public
 specifier|static
 specifier|final
@@ -4309,7 +4361,7 @@ argument_list|)
 throw|;
 block|}
 block|}
-comment|/** Map opcode names to opcode numbers. E.g., return Constants.ALOAD for "aload"    */
+comment|/** Map opcode names to opcode numbers. E.g., return Constants.ALOAD for "aload"      */
 specifier|public
 specifier|static
 name|short
@@ -4348,6 +4400,7 @@ condition|;
 name|i
 operator|++
 control|)
+block|{
 if|if
 condition|(
 name|Constants
@@ -4362,15 +4415,18 @@ argument_list|(
 name|name
 argument_list|)
 condition|)
+block|{
 return|return
 name|i
 return|;
+block|}
+block|}
 return|return
 operator|-
 literal|1
 return|;
 block|}
-comment|/**    * Convert (signed) byte to (unsigned) short value, i.e., all negative    * values become positive.    */
+comment|/**      * Convert (signed) byte to (unsigned) short value, i.e., all negative      * values become positive.      */
 specifier|private
 specifier|static
 specifier|final
@@ -4403,7 +4459,7 @@ operator|)
 name|b
 return|;
 block|}
-comment|/** Convert bytes into hexidecimal string    *    * @return bytes as hexidecimal string, e.g. 00 FA 12 ...    */
+comment|/** Convert bytes into hexidecimal string      *      * @return bytes as hexidecimal string, e.g. 00 FA 12 ...      */
 specifier|public
 specifier|static
 specifier|final
@@ -4468,7 +4524,7 @@ name|b
 operator|<
 literal|0x10
 condition|)
-comment|// just one digit, prepend '0'
+block|{
 name|buf
 operator|.
 name|append
@@ -4476,6 +4532,7 @@ argument_list|(
 literal|'0'
 argument_list|)
 expr_stmt|;
+block|}
 name|buf
 operator|.
 name|append
@@ -4493,6 +4550,7 @@ name|length
 operator|-
 literal|1
 condition|)
+block|{
 name|buf
 operator|.
 name|append
@@ -4501,6 +4559,7 @@ literal|' '
 argument_list|)
 expr_stmt|;
 block|}
+block|}
 return|return
 name|buf
 operator|.
@@ -4508,7 +4567,7 @@ name|toString
 argument_list|()
 return|;
 block|}
-comment|/**    * Return a string for an integer justified left or right and filled up with    * `fill' characters if necessary.    *    * @param i integer to format    * @param length length of desired string    * @param left_justify format left or right    * @param fill fill character    * @return formatted int    */
+comment|/**      * Return a string for an integer justified left or right and filled up with      * `fill' characters if necessary.      *      * @param i integer to format      * @param length length of desired string      * @param left_justify format left or right      * @param fill fill character      * @return formatted int      */
 specifier|public
 specifier|static
 specifier|final
@@ -4546,7 +4605,7 @@ name|fill
 argument_list|)
 return|;
 block|}
-comment|/**    * Fillup char with up to length characters with char `fill' and justify it left or right.    *    * @param str string to format    * @param length length of desired string    * @param left_justify format left or right    * @param fill fill character    * @return formatted string    */
+comment|/**      * Fillup char with up to length characters with char `fill' and justify it left or right.      *      * @param str string to format      * @param length length of desired string      * @param left_justify format left or right      * @param fill fill character      * @return formatted string      */
 specifier|public
 specifier|static
 specifier|final
@@ -4610,6 +4669,7 @@ condition|;
 name|j
 operator|++
 control|)
+block|{
 name|buf
 index|[
 name|j
@@ -4617,10 +4677,12 @@ index|]
 operator|=
 name|fill
 expr_stmt|;
+block|}
 if|if
 condition|(
 name|left_justify
 condition|)
+block|{
 return|return
 name|str
 operator|+
@@ -4630,6 +4692,7 @@ argument_list|(
 name|buf
 argument_list|)
 return|;
+block|}
 return|return
 operator|new
 name|String
@@ -4671,9 +4734,11 @@ name|b
 operator|.
 name|length
 condition|)
+block|{
 return|return
 literal|false
 return|;
+block|}
 for|for
 control|(
 name|int
@@ -4688,6 +4753,7 @@ condition|;
 name|i
 operator|++
 control|)
+block|{
 if|if
 condition|(
 name|a
@@ -4700,9 +4766,12 @@ index|[
 name|i
 index|]
 condition|)
+block|{
 return|return
 literal|false
 return|;
+block|}
+block|}
 return|return
 literal|true
 return|;
@@ -4829,9 +4898,11 @@ name|obj
 operator|==
 literal|null
 condition|)
+block|{
 return|return
 literal|null
 return|;
+block|}
 name|StringBuffer
 name|buf
 init|=
@@ -4843,6 +4914,7 @@ if|if
 condition|(
 name|braces
 condition|)
+block|{
 name|buf
 operator|.
 name|append
@@ -4850,6 +4922,7 @@ argument_list|(
 literal|'{'
 argument_list|)
 expr_stmt|;
+block|}
 for|for
 control|(
 name|int
@@ -4947,6 +5020,7 @@ if|if
 condition|(
 name|braces
 condition|)
+block|{
 name|buf
 operator|.
 name|append
@@ -4954,6 +5028,7 @@ argument_list|(
 literal|'}'
 argument_list|)
 expr_stmt|;
+block|}
 return|return
 name|buf
 operator|.
@@ -4961,7 +5036,7 @@ name|toString
 argument_list|()
 return|;
 block|}
-comment|/** @return true, if character is one of (a, ... z, A, ... Z, 0, ... 9, _)    */
+comment|/** @return true, if character is one of (a, ... z, A, ... Z, 0, ... 9, _)      */
 specifier|public
 specifier|static
 name|boolean
@@ -5021,7 +5096,7 @@ literal|'_'
 operator|)
 return|;
 block|}
-comment|/** Encode byte array it into Java identifier string, i.e., a string    * that only contains the following characters: (a, ... z, A, ... Z,    * 0, ... 9, _, $).  The encoding algorithm itself is not too    * clever: if the current byte's ASCII value already is a valid Java    * identifier part, leave it as it is. Otherwise it writes the    * escape character($) followed by<p><ul><li> the ASCII value as a    * hexadecimal string, if the value is not in the range    * 200..247</li><li>a Java identifier char not used in a lowercase    * hexadecimal string, if the value is in the range    * 200..247</li><ul></p>    *    *<p>This operation inflates the original byte array by roughly 40-50%</p>    *    * @param bytes the byte array to convert    * @param compress use gzip to minimize string    */
+comment|/** Encode byte array it into Java identifier string, i.e., a string      * that only contains the following characters: (a, ... z, A, ... Z,      * 0, ... 9, _, $).  The encoding algorithm itself is not too      * clever: if the current byte's ASCII value already is a valid Java      * identifier part, leave it as it is. Otherwise it writes the      * escape character($) followed by<p><ul><li> the ASCII value as a      * hexadecimal string, if the value is not in the range      * 200..247</li><li>a Java identifier char not used in a lowercase      * hexadecimal string, if the value is in the range      * 200..247</li><ul></p>      *      *<p>This operation inflates the original byte array by roughly 40-50%</p>      *      * @param bytes the byte array to convert      * @param compress use gzip to minimize string      */
 specifier|public
 specifier|static
 name|String
@@ -5148,7 +5223,7 @@ name|toString
 argument_list|()
 return|;
 block|}
-comment|/** Decode a string back to a byte array.    *    * @param s the string to convert    * @param uncompress use gzip to uncompress the stream of bytes    */
+comment|/** Decode a string back to a byte array.      *      * @param s the string to convert      * @param uncompress use gzip to uncompress the stream of bytes      */
 specifier|public
 specifier|static
 name|byte
@@ -5301,6 +5376,7 @@ operator|)
 operator|>=
 literal|0
 condition|)
+block|{
 name|tmp
 index|[
 name|count
@@ -5312,6 +5388,7 @@ name|byte
 operator|)
 name|b
 expr_stmt|;
+block|}
 name|bytes
 operator|=
 operator|new
@@ -5485,7 +5562,7 @@ operator|=
 name|j
 expr_stmt|;
 block|}
-comment|/** Decode characters into bytes.    * Used by<a href="Utility.html#decode(java.lang.String, boolean)">decode()</a>    */
+comment|/** Decode characters into bytes.      * Used by<a href="Utility.html#decode(java.lang.String, boolean)">decode()</a>      */
 specifier|private
 specifier|static
 class|class
@@ -5527,9 +5604,11 @@ name|b
 operator|!=
 name|ESCAPE_CHAR
 condition|)
+block|{
 return|return
 name|b
 return|;
+block|}
 name|int
 name|i
 init|=
@@ -5544,10 +5623,12 @@ name|i
 operator|<
 literal|0
 condition|)
+block|{
 return|return
 operator|-
 literal|1
 return|;
+block|}
 if|if
 condition|(
 operator|(
@@ -5594,10 +5675,12 @@ name|j
 operator|<
 literal|0
 condition|)
+block|{
 return|return
 operator|-
 literal|1
 return|;
+block|}
 name|char
 index|[]
 name|tmp
@@ -5672,6 +5755,7 @@ condition|;
 name|i
 operator|++
 control|)
+block|{
 name|cbuf
 index|[
 name|off
@@ -5685,12 +5769,13 @@ operator|)
 name|read
 argument_list|()
 expr_stmt|;
+block|}
 return|return
 name|len
 return|;
 block|}
 block|}
-comment|/** Encode bytes into valid java identifier characters.    * Used by<a href="Utility.html#encode(byte[], boolean)">encode()</a>    */
+comment|/** Encode bytes into valid java identifier characters.      * Used by<a href="Utility.html#encode(byte[], boolean)">encode()</a>      */
 specifier|private
 specifier|static
 class|class
@@ -5880,6 +5965,7 @@ condition|;
 name|i
 operator|++
 control|)
+block|{
 name|write
 argument_list|(
 name|cbuf
@@ -5890,6 +5976,7 @@ name|i
 index|]
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 specifier|public
 name|void
@@ -5921,7 +6008,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/**    * Escape all occurences of newline chars '\n', quotes \", etc.    */
+comment|/**      * Escape all occurences of newline chars '\n', quotes \", etc.      */
 specifier|public
 specifier|static
 specifier|final

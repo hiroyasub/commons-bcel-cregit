@@ -189,7 +189,7 @@ specifier|private
 name|String
 name|class_path
 decl_stmt|;
-comment|/**    * Search for classes in given path.    */
+comment|/**      * Search for classes in given path.      */
 specifier|public
 name|ClassPath
 parameter_list|(
@@ -280,6 +280,7 @@ operator|.
 name|isDirectory
 argument_list|()
 condition|)
+block|{
 name|vec
 operator|.
 name|add
@@ -291,7 +292,9 @@ name|path
 argument_list|)
 argument_list|)
 expr_stmt|;
+block|}
 else|else
+block|{
 name|vec
 operator|.
 name|add
@@ -307,6 +310,7 @@ argument_list|)
 argument_list|)
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 block|}
 catch|catch
@@ -352,7 +356,7 @@ name|paths
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**    * Search for classes in CLASSPATH.    * @deprecated Use SYSTEM_CLASS_PATH constant    */
+comment|/**      * Search for classes in CLASSPATH.      * @deprecated Use SYSTEM_CLASS_PATH constant      */
 specifier|public
 name|ClassPath
 parameter_list|()
@@ -364,7 +368,7 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
-comment|/** @return used class path string    */
+comment|/** @return used class path string      */
 specifier|public
 name|String
 name|toString
@@ -486,6 +490,7 @@ operator|.
 name|exists
 argument_list|()
 condition|)
+block|{
 name|list
 operator|.
 name|add
@@ -496,7 +501,8 @@ expr_stmt|;
 block|}
 block|}
 block|}
-comment|/** Checks for class path components in the following properties:    * "java.class.path", "sun.boot.class.path", "java.ext.dirs"    *    * @return class path as used by default by BCEL    */
+block|}
+comment|/** Checks for class path components in the following properties:      * "java.class.path", "sun.boot.class.path", "java.ext.dirs"      *      * @return class path as used by default by BCEL      */
 specifier|public
 specifier|static
 specifier|final
@@ -660,6 +666,7 @@ name|extensions
 operator|!=
 literal|null
 condition|)
+block|{
 for|for
 control|(
 name|int
@@ -676,6 +683,7 @@ condition|;
 name|i
 operator|++
 control|)
+block|{
 name|list
 operator|.
 name|add
@@ -695,6 +703,8 @@ name|i
 index|]
 argument_list|)
 expr_stmt|;
+block|}
+block|}
 block|}
 name|StringBuffer
 name|buf
@@ -740,6 +750,7 @@ operator|.
 name|hasNext
 argument_list|()
 condition|)
+block|{
 name|buf
 operator|.
 name|append
@@ -749,6 +760,7 @@ operator|.
 name|pathSeparatorChar
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 return|return
 name|buf
@@ -760,7 +772,7 @@ name|intern
 argument_list|()
 return|;
 block|}
-comment|/**    * @param name fully qualified class name, e.g. java.lang.String    * @return input stream for class    */
+comment|/**      * @param name fully qualified class name, e.g. java.lang.String      * @return input stream for class      */
 specifier|public
 name|InputStream
 name|getInputStream
@@ -787,7 +799,7 @@ literal|".class"
 argument_list|)
 return|;
 block|}
-comment|/**    * Return stream for class or resource on CLASSPATH.    *    * @param name fully qualified file name, e.g. java/lang/String    * @param suffix file name ends with suff, e.g. .java    * @return input stream for file on class path    */
+comment|/**      * Return stream for class or resource on CLASSPATH.      *      * @param name fully qualified file name, e.g. java/lang/String      * @param suffix file name ends with suff, e.g. .java      * @return input stream for file on class path      */
 specifier|public
 name|InputStream
 name|getInputStream
@@ -837,9 +849,11 @@ name|is
 operator|!=
 literal|null
 condition|)
+block|{
 return|return
 name|is
 return|;
+block|}
 return|return
 name|getClassFile
 argument_list|(
@@ -852,7 +866,7 @@ name|getInputStream
 argument_list|()
 return|;
 block|}
-comment|/**    * @param name fully qualified file name, e.g. java/lang/String    * @param suffix file name ends with suff, e.g. .java    * @return class file for the java class    */
+comment|/**      * @param name fully qualified file name, e.g. java/lang/String      * @param suffix file name ends with suff, e.g. .java      * @return class file for the java class      */
 specifier|public
 name|ClassFile
 name|getClassFile
@@ -906,9 +920,11 @@ operator|)
 operator|!=
 literal|null
 condition|)
+block|{
 return|return
 name|cf
 return|;
+block|}
 block|}
 throw|throw
 operator|new
@@ -922,7 +938,7 @@ name|suffix
 argument_list|)
 throw|;
 block|}
-comment|/**    * @param name fully qualified class name, e.g. java.lang.String    * @return input stream for class    */
+comment|/**      * @param name fully qualified class name, e.g. java.lang.String      * @return input stream for class      */
 specifier|public
 name|ClassFile
 name|getClassFile
@@ -942,7 +958,7 @@ literal|".class"
 argument_list|)
 return|;
 block|}
-comment|/**    * @param name fully qualified file name, e.g. java/lang/String    * @param suffix file name ends with suffix, e.g. .java    * @return byte array for file on class path    */
+comment|/**      * @param name fully qualified file name, e.g. java/lang/String      * @param suffix file name ends with suffix, e.g. .java      * @return byte array for file on class path      */
 specifier|public
 name|byte
 index|[]
@@ -980,6 +996,7 @@ name|is
 operator|==
 literal|null
 condition|)
+block|{
 throw|throw
 operator|new
 name|IOException
@@ -991,6 +1008,7 @@ operator|+
 name|suffix
 argument_list|)
 throw|;
+block|}
 name|dis
 operator|=
 operator|new
@@ -1031,6 +1049,7 @@ name|dis
 operator|!=
 literal|null
 condition|)
+block|{
 name|dis
 operator|.
 name|close
@@ -1038,7 +1057,8 @@ argument_list|()
 expr_stmt|;
 block|}
 block|}
-comment|/**    * @return byte array for class    */
+block|}
+comment|/**      * @return byte array for class      */
 specifier|public
 name|byte
 index|[]
@@ -1059,7 +1079,7 @@ literal|".class"
 argument_list|)
 return|;
 block|}
-comment|/**    * @param name name of file to search for, e.g. java/lang/String.java    * @return full (canonical) path for file    */
+comment|/**      * @param name name of file to search for, e.g. java/lang/String.java      * @return full (canonical) path for file      */
 specifier|public
 name|String
 name|getPath
@@ -1122,7 +1142,7 @@ name|suffix
 argument_list|)
 return|;
 block|}
-comment|/**    * @param name name of file to search for, e.g. java/lang/String    * @param suffix file name suffix, e.g. .java    * @return full (canonical) path for file, if it exists    */
+comment|/**      * @param name name of file to search for, e.g. java/lang/String      * @param suffix file name suffix, e.g. .java      * @return full (canonical) path for file, if it exists      */
 specifier|public
 name|String
 name|getPath
@@ -1170,12 +1190,12 @@ throws|throws
 name|IOException
 function_decl|;
 block|}
-comment|/** Contains information about file/ZIP entry of the Java class.    */
+comment|/** Contains information about file/ZIP entry of the Java class.      */
 specifier|public
 interface|interface
 name|ClassFile
 block|{
-comment|/** @return input stream for class file.      */
+comment|/** @return input stream for class file.          */
 specifier|public
 specifier|abstract
 name|InputStream
@@ -1184,28 +1204,28 @@ parameter_list|()
 throws|throws
 name|IOException
 function_decl|;
-comment|/** @return canonical path to class file.      */
+comment|/** @return canonical path to class file.          */
 specifier|public
 specifier|abstract
 name|String
 name|getPath
 parameter_list|()
 function_decl|;
-comment|/** @return base path of found class, i.e. class is contained relative      * to that path, which may either denote a directory, or zip file      */
+comment|/** @return base path of found class, i.e. class is contained relative          * to that path, which may either denote a directory, or zip file          */
 specifier|public
 specifier|abstract
 name|String
 name|getBase
 parameter_list|()
 function_decl|;
-comment|/** @return modification time of class file.      */
+comment|/** @return modification time of class file.          */
 specifier|public
 specifier|abstract
 name|long
 name|getTime
 parameter_list|()
 function_decl|;
-comment|/** @return size of class file.      */
+comment|/** @return size of class file.          */
 specifier|public
 specifier|abstract
 name|long

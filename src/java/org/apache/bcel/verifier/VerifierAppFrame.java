@@ -1522,7 +1522,9 @@ operator|.
 name|getValueIsAdjusting
 argument_list|()
 condition|)
+block|{
 return|return;
+block|}
 name|current_class
 operator|=
 name|classNamesJList
@@ -1849,7 +1851,7 @@ argument_list|(
 name|current_class
 argument_list|)
 decl_stmt|;
-comment|/*           boolean all3aok = true;           boolean all3bok = true;           String all3amsg = "";           String all3bmsg = "";           */
+comment|/*                  boolean all3aok = true;                  boolean all3bok = true;                  String all3amsg = "";                  String all3bmsg = "";                  */
 name|String
 index|[]
 name|methodnames
@@ -2092,7 +2094,9 @@ literal|""
 argument_list|)
 operator|)
 condition|)
+block|{
 return|return;
+block|}
 name|VerifierFactory
 operator|.
 name|getVerifier
@@ -2126,7 +2130,9 @@ operator|.
 name|getValueIsAdjusting
 argument_list|()
 condition|)
+block|{
 return|return;
+block|}
 name|Verifier
 name|v
 init|=
@@ -2323,7 +2329,9 @@ operator|.
 name|getValueIsAdjusting
 argument_list|()
 condition|)
+block|{
 return|return;
+block|}
 name|Verifier
 name|v
 init|=

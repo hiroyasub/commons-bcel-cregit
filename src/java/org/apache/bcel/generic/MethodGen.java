@@ -412,7 +412,7 @@ return|;
 block|}
 block|}
 decl_stmt|;
-comment|/**    * Declare method. If the method is non-static the constructor    * automatically declares a local variable `$this' in slot 0. The    * actual code is contained in the `il' parameter, which may further    * manipulated by the user. But he must take care not to remove any    * instruction (handles) that are still referenced from this object.    *    * For example one may not add a local variable and later remove the    * instructions it refers to without causing havoc. It is safe    * however if you remove that local variable, too.    *    * @param access_flags access qualifiers    * @param return_type  method type    * @param arg_types argument types    * @param arg_names argument names (if this is null, default names will be provided    * for them)    * @param method_name name of method    * @param class_name class name containing this method (may be null, if you don't care)    * @param il instruction list associated with this method, may be null only for    * abstract or native methods    * @param cp constant pool    */
+comment|/**      * Declare method. If the method is non-static the constructor      * automatically declares a local variable `$this' in slot 0. The      * actual code is contained in the `il' parameter, which may further      * manipulated by the user. But he must take care not to remove any      * instruction (handles) that are still referenced from this object.      *      * For example one may not add a local variable and later remove the      * instructions it refers to without causing havoc. It is safe      * however if you remove that local variable, too.      *      * @param access_flags access qualifiers      * @param return_type  method type      * @param arg_types argument types      * @param arg_names argument names (if this is null, default names will be provided      * for them)      * @param method_name name of method      * @param class_name class name containing this method (may be null, if you don't care)      * @param il instruction list associated with this method, may be null only for      * abstract or native methods      * @param cp constant pool      */
 specifier|public
 name|MethodGen
 parameter_list|(
@@ -522,7 +522,7 @@ operator|.
 name|getEnd
 argument_list|()
 expr_stmt|;
-comment|/* Add local variables, namely the implicit `this' and the arguments        */
+comment|/* Add local variables, namely the implicit `this' and the arguments              */
 if|if
 condition|(
 operator|!
@@ -620,6 +620,7 @@ name|arg_names
 operator|.
 name|length
 condition|)
+block|{
 throw|throw
 operator|new
 name|ClassGenException
@@ -635,6 +636,7 @@ operator|.
 name|length
 argument_list|)
 throw|;
+block|}
 block|}
 else|else
 block|{
@@ -661,6 +663,7 @@ condition|;
 name|i
 operator|++
 control|)
+block|{
 name|arg_names
 index|[
 name|i
@@ -670,6 +673,7 @@ literal|"arg"
 operator|+
 name|i
 expr_stmt|;
+block|}
 name|setArgumentNames
 argument_list|(
 name|arg_names
@@ -718,7 +722,7 @@ block|}
 block|}
 block|}
 block|}
-comment|/**    * Instantiate from existing method.    *    * @param m method    * @param class_name class name containing this method    * @param cp constant pool    */
+comment|/**      * Instantiate from existing method.      *      * @param m method      * @param class_name class name containing this method      * @param cp constant pool      */
 specifier|public
 name|MethodGen
 parameter_list|(
@@ -1146,6 +1150,7 @@ name|ih
 operator|!=
 literal|null
 condition|)
+block|{
 name|addLineNumber
 argument_list|(
 name|ih
@@ -1156,6 +1161,7 @@ name|getLineNumber
 argument_list|()
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 block|}
 if|else if
@@ -1299,11 +1305,13 @@ expr_stmt|;
 block|}
 block|}
 else|else
+block|{
 name|addCodeAttribute
 argument_list|(
 name|a
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 block|}
 if|else if
@@ -1343,6 +1351,7 @@ condition|;
 name|j
 operator|++
 control|)
+block|{
 name|addException
 argument_list|(
 name|names
@@ -1352,7 +1361,9 @@ index|]
 argument_list|)
 expr_stmt|;
 block|}
+block|}
 else|else
+block|{
 name|addAttribute
 argument_list|(
 name|a
@@ -1360,7 +1371,8 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/**    * Adds a local variable to this method.    *    * @param name variable name    * @param type variable type    * @param slot the index of the local variable, if type is long or double, the next available    * index is slot+2    * @param start from where the variable is valid    * @param end until where the variable is valid    * @return new local variable object    * @see LocalVariable    */
+block|}
+comment|/**      * Adds a local variable to this method.      *      * @param name variable name      * @param type variable type      * @param slot the index of the local variable, if type is long or double, the next available      * index is slot+2      * @param start from where the variable is valid      * @param end until where the variable is valid      * @return new local variable object      * @see LocalVariable      */
 specifier|public
 name|LocalVariableGen
 name|addLocalVariable
@@ -1414,12 +1426,14 @@ name|add
 operator|>
 name|max_locals
 condition|)
+block|{
 name|max_locals
 operator|=
 name|slot
 operator|+
 name|add
 expr_stmt|;
+block|}
 name|LocalVariableGen
 name|l
 init|=
@@ -1455,7 +1469,7 @@ operator|)
 operator|>=
 literal|0
 condition|)
-comment|// Overwrite if necessary
+block|{
 name|variable_vec
 operator|.
 name|set
@@ -1465,7 +1479,9 @@ argument_list|,
 name|l
 argument_list|)
 expr_stmt|;
+block|}
 else|else
+block|{
 name|variable_vec
 operator|.
 name|add
@@ -1473,6 +1489,7 @@ argument_list|(
 name|l
 argument_list|)
 expr_stmt|;
+block|}
 return|return
 name|l
 return|;
@@ -1492,7 +1509,7 @@ argument_list|)
 throw|;
 block|}
 block|}
-comment|/**    * Adds a local variable to this method and assigns an index automatically.    *    * @param name variable name    * @param type variable type    * @param start from where the variable is valid, if this is null,    * it is valid from the start    * @param end until where the variable is valid, if this is null,    * it is valid to the end    * @return new local variable object    * @see LocalVariable    */
+comment|/**      * Adds a local variable to this method and assigns an index automatically.      *      * @param name variable name      * @param type variable type      * @param start from where the variable is valid, if this is null,      * it is valid from the start      * @param end until where the variable is valid, if this is null,      * it is valid to the end      * @return new local variable object      * @see LocalVariable      */
 specifier|public
 name|LocalVariableGen
 name|addLocalVariable
@@ -1525,7 +1542,7 @@ name|end
 argument_list|)
 return|;
 block|}
-comment|/**    * Remove a local variable, its slot will not be reused, if you do not use addLocalVariable    * with an explicit index argument.    */
+comment|/**      * Remove a local variable, its slot will not be reused, if you do not use addLocalVariable      * with an explicit index argument.      */
 specifier|public
 name|void
 name|removeLocalVariable
@@ -1542,7 +1559,7 @@ name|l
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**    * Remove all local variables.    */
+comment|/**      * Remove all local variables.      */
 specifier|public
 name|void
 name|removeLocalVariables
@@ -1554,7 +1571,7 @@ name|clear
 argument_list|()
 expr_stmt|;
 block|}
-comment|/**    * Sort local variables by index    */
+comment|/**      * Sort local variables by index      */
 specifier|private
 specifier|static
 specifier|final
@@ -1615,9 +1632,11 @@ argument_list|()
 operator|<
 name|m
 condition|)
+block|{
 name|i
 operator|++
 expr_stmt|;
+block|}
 while|while
 condition|(
 name|m
@@ -1630,9 +1649,11 @@ operator|.
 name|getIndex
 argument_list|()
 condition|)
+block|{
 name|j
 operator|--
 expr_stmt|;
+block|}
 if|if
 condition|(
 name|i
@@ -1686,6 +1707,7 @@ name|l
 operator|<
 name|j
 condition|)
+block|{
 name|sort
 argument_list|(
 name|vars
@@ -1695,12 +1717,14 @@ argument_list|,
 name|j
 argument_list|)
 expr_stmt|;
+block|}
 if|if
 condition|(
 name|i
 operator|<
 name|r
 condition|)
+block|{
 name|sort
 argument_list|(
 name|vars
@@ -1711,7 +1735,8 @@ name|r
 argument_list|)
 expr_stmt|;
 block|}
-comment|/*    * If the range of the variable has not been set yet, it will be set to be valid from    * the start to the end of the instruction list.    *     * @return array of declared local variables sorted by index    */
+block|}
+comment|/*      * If the range of the variable has not been set yet, it will be set to be valid from      * the start to the end of the instruction list.      *       * @return array of declared local variables sorted by index      */
 specifier|public
 name|LocalVariableGen
 index|[]
@@ -1770,6 +1795,7 @@ argument_list|()
 operator|==
 literal|null
 condition|)
+block|{
 name|lg
 index|[
 name|i
@@ -1783,6 +1809,7 @@ name|getStart
 argument_list|()
 argument_list|)
 expr_stmt|;
+block|}
 if|if
 condition|(
 name|lg
@@ -1795,6 +1822,7 @@ argument_list|()
 operator|==
 literal|null
 condition|)
+block|{
 name|lg
 index|[
 name|i
@@ -1809,12 +1837,14 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
+block|}
 if|if
 condition|(
 name|size
 operator|>
 literal|1
 condition|)
+block|{
 name|sort
 argument_list|(
 name|lg
@@ -1826,11 +1856,12 @@ operator|-
 literal|1
 argument_list|)
 expr_stmt|;
+block|}
 return|return
 name|lg
 return|;
 block|}
-comment|/**    * @return `LocalVariableTable' attribute of all the local variables of this method.    */
+comment|/**      * @return `LocalVariableTable' attribute of all the local variables of this method.      */
 specifier|public
 name|LocalVariableTable
 name|getLocalVariableTable
@@ -1877,6 +1908,7 @@ condition|;
 name|i
 operator|++
 control|)
+block|{
 name|lv
 index|[
 name|i
@@ -1892,6 +1924,7 @@ argument_list|(
 name|cp
 argument_list|)
 expr_stmt|;
+block|}
 return|return
 operator|new
 name|LocalVariableTable
@@ -1920,7 +1953,7 @@ argument_list|()
 argument_list|)
 return|;
 block|}
-comment|/**    * Give an instruction a line number corresponding to the source code line.    *    * @param ih instruction to tag    * @return new line number object    * @see LineNumber    */
+comment|/**      * Give an instruction a line number corresponding to the source code line.      *      * @param ih instruction to tag      * @return new line number object      * @see LineNumber      */
 specifier|public
 name|LineNumberGen
 name|addLineNumber
@@ -1954,7 +1987,7 @@ return|return
 name|l
 return|;
 block|}
-comment|/**    * Remove a line number.    */
+comment|/**      * Remove a line number.      */
 specifier|public
 name|void
 name|removeLineNumber
@@ -1971,7 +2004,7 @@ name|l
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**    * Remove all line numbers.    */
+comment|/**      * Remove all line numbers.      */
 specifier|public
 name|void
 name|removeLineNumbers
@@ -1983,7 +2016,7 @@ name|clear
 argument_list|()
 expr_stmt|;
 block|}
-comment|/*    * @return array of line numbers    */
+comment|/*      * @return array of line numbers      */
 specifier|public
 name|LineNumberGen
 index|[]
@@ -2014,7 +2047,7 @@ return|return
 name|lg
 return|;
 block|}
-comment|/**    * @return `LineNumberTable' attribute of all the local variables of this method.    */
+comment|/**      * @return `LineNumberTable' attribute of all the local variables of this method.      */
 specifier|public
 name|LineNumberTable
 name|getLineNumberTable
@@ -2057,6 +2090,7 @@ condition|;
 name|i
 operator|++
 control|)
+block|{
 name|ln
 index|[
 name|i
@@ -2077,6 +2111,7 @@ operator|.
 name|getLineNumber
 argument_list|()
 expr_stmt|;
+block|}
 block|}
 catch|catch
 parameter_list|(
@@ -2114,7 +2149,7 @@ argument_list|()
 argument_list|)
 return|;
 block|}
-comment|/**    * Add an exception handler, i.e., specify region where a handler is active and an    * instruction where the actual handling is done.    *    * @param start_pc Start of region (inclusive)    * @param end_pc End of region (inclusive)    * @param handler_pc Where handling is done    * @param catch_type class type of handled exception or null if any    * exception is handled    * @return new exception handler object    */
+comment|/**      * Add an exception handler, i.e., specify region where a handler is active and an      * instruction where the actual handling is done.      *      * @param start_pc Start of region (inclusive)      * @param end_pc End of region (inclusive)      * @param handler_pc Where handling is done      * @param catch_type class type of handled exception or null if any      * exception is handled      * @return new exception handler object      */
 specifier|public
 name|CodeExceptionGen
 name|addExceptionHandler
@@ -2152,6 +2187,7 @@ operator|==
 literal|null
 operator|)
 condition|)
+block|{
 throw|throw
 operator|new
 name|ClassGenException
@@ -2159,6 +2195,7 @@ argument_list|(
 literal|"Exception handler target is null instruction"
 argument_list|)
 throw|;
+block|}
 name|CodeExceptionGen
 name|c
 init|=
@@ -2185,7 +2222,7 @@ return|return
 name|c
 return|;
 block|}
-comment|/**    * Remove an exception handler.    */
+comment|/**      * Remove an exception handler.      */
 specifier|public
 name|void
 name|removeExceptionHandler
@@ -2202,7 +2239,7 @@ name|c
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**    * Remove all line numbers.    */
+comment|/**      * Remove all line numbers.      */
 specifier|public
 name|void
 name|removeExceptionHandlers
@@ -2214,7 +2251,7 @@ name|clear
 argument_list|()
 expr_stmt|;
 block|}
-comment|/*    * @return array of declared exception handlers    */
+comment|/*      * @return array of declared exception handlers      */
 specifier|public
 name|CodeExceptionGen
 index|[]
@@ -2245,7 +2282,7 @@ return|return
 name|cg
 return|;
 block|}
-comment|/**    * @return code exceptions for `Code' attribute    */
+comment|/**      * @return code exceptions for `Code' attribute      */
 specifier|private
 name|CodeException
 index|[]
@@ -2325,7 +2362,7 @@ return|return
 name|c_exc
 return|;
 block|}
-comment|/**    * Add an exception possibly thrown by this method.    *    * @param class_name (fully qualified) name of exception    */
+comment|/**      * Add an exception possibly thrown by this method.      *      * @param class_name (fully qualified) name of exception      */
 specifier|public
 name|void
 name|addException
@@ -2342,7 +2379,7 @@ name|class_name
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**    * Remove an exception.    */
+comment|/**      * Remove an exception.      */
 specifier|public
 name|void
 name|removeException
@@ -2359,7 +2396,7 @@ name|c
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**    * Remove all exceptions.    */
+comment|/**      * Remove all exceptions.      */
 specifier|public
 name|void
 name|removeExceptions
@@ -2371,7 +2408,7 @@ name|clear
 argument_list|()
 expr_stmt|;
 block|}
-comment|/*    * @return array of thrown exceptions    */
+comment|/*      * @return array of thrown exceptions      */
 specifier|public
 name|String
 index|[]
@@ -2402,7 +2439,7 @@ return|return
 name|e
 return|;
 block|}
-comment|/**    * @return `Exceptions' attribute of all the exceptions thrown by this method.    */
+comment|/**      * @return `Exceptions' attribute of all the exceptions thrown by this method.      */
 specifier|private
 name|ExceptionTable
 name|getExceptionTable
@@ -2445,6 +2482,7 @@ condition|;
 name|i
 operator|++
 control|)
+block|{
 name|ex
 index|[
 name|i
@@ -2465,6 +2503,7 @@ name|i
 argument_list|)
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 catch|catch
 parameter_list|(
@@ -2499,7 +2538,7 @@ argument_list|()
 argument_list|)
 return|;
 block|}
-comment|/**    * Add an attribute to the code. Currently, the JVM knows about the    * LineNumberTable, LocalVariableTable and StackMap attributes,    * where the former two will be generated automatically and the    * latter is used for the MIDP only. Other attributes will be    * ignored by the JVM but do no harm.    *    * @param a attribute to be added    */
+comment|/**      * Add an attribute to the code. Currently, the JVM knows about the      * LineNumberTable, LocalVariableTable and StackMap attributes,      * where the former two will be generated automatically and the      * latter is used for the MIDP only. Other attributes will be      * ignored by the JVM but do no harm.      *      * @param a attribute to be added      */
 specifier|public
 name|void
 name|addCodeAttribute
@@ -2516,7 +2555,7 @@ name|a
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**    * Remove a code attribute.    */
+comment|/**      * Remove a code attribute.      */
 specifier|public
 name|void
 name|removeCodeAttribute
@@ -2533,7 +2572,7 @@ name|a
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**    * Remove all code attributes.    */
+comment|/**      * Remove all code attributes.      */
 specifier|public
 name|void
 name|removeCodeAttributes
@@ -2545,7 +2584,7 @@ name|clear
 argument_list|()
 expr_stmt|;
 block|}
-comment|/**    * @return all attributes of this method.    */
+comment|/**      * @return all attributes of this method.      */
 specifier|public
 name|Attribute
 index|[]
@@ -2576,7 +2615,7 @@ return|return
 name|attributes
 return|;
 block|}
-comment|/**    * Get method object. Never forget to call setMaxStack() or setMaxStack(max), respectively,    * before calling this method (the same applies for max locals).    *    * @return method object    */
+comment|/**      * Get method object. Never forget to call setMaxStack() or setMaxStack(max), respectively,      * before calling this method (the same applies for max locals).      *      * @return method object      */
 specifier|public
 name|Method
 name|getMethod
@@ -2608,7 +2647,7 @@ argument_list|(
 name|signature
 argument_list|)
 decl_stmt|;
-comment|/* Also updates positions of instructions, i.e., their indices      */
+comment|/* Also updates positions of instructions, i.e., their indices          */
 name|byte
 index|[]
 name|byte_code
@@ -2621,6 +2660,7 @@ name|il
 operator|!=
 literal|null
 condition|)
+block|{
 name|byte_code
 operator|=
 name|il
@@ -2628,6 +2668,7 @@ operator|.
 name|getByteCode
 argument_list|()
 expr_stmt|;
+block|}
 name|LineNumberTable
 name|lnt
 init|=
@@ -2638,7 +2679,7 @@ name|lvt
 init|=
 literal|null
 decl_stmt|;
-comment|/* Create LocalVariableTable and LineNumberTable attributes (for debuggers, e.g.)      */
+comment|/* Create LocalVariableTable and LineNumberTable attributes (for debuggers, e.g.)          */
 if|if
 condition|(
 operator|(
@@ -2653,6 +2694,7 @@ operator|&&
 operator|!
 name|strip_attributes
 condition|)
+block|{
 name|addCodeAttribute
 argument_list|(
 name|lvt
@@ -2663,6 +2705,7 @@ name|cp
 argument_list|)
 argument_list|)
 expr_stmt|;
+block|}
 if|if
 condition|(
 operator|(
@@ -2677,6 +2720,7 @@ operator|&&
 operator|!
 name|strip_attributes
 condition|)
+block|{
 name|addCodeAttribute
 argument_list|(
 name|lnt
@@ -2687,6 +2731,7 @@ name|cp
 argument_list|)
 argument_list|)
 expr_stmt|;
+block|}
 name|Attribute
 index|[]
 name|code_attrs
@@ -2694,7 +2739,7 @@ init|=
 name|getCodeAttributes
 argument_list|()
 decl_stmt|;
-comment|/* Each attribute causes 6 additional header bytes      */
+comment|/* Each attribute causes 6 additional header bytes          */
 name|int
 name|attrs_len
 init|=
@@ -2716,6 +2761,7 @@ condition|;
 name|i
 operator|++
 control|)
+block|{
 name|attrs_len
 operator|+=
 operator|(
@@ -2730,6 +2776,7 @@ operator|+
 literal|6
 operator|)
 expr_stmt|;
+block|}
 name|CodeException
 index|[]
 name|c_exc
@@ -2808,11 +2855,13 @@ name|a
 operator|instanceof
 name|Code
 condition|)
+block|{
 name|removeAttribute
 argument_list|(
 name|a
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 name|code
 operator|=
@@ -2879,6 +2928,7 @@ argument_list|()
 operator|>
 literal|0
 condition|)
+block|{
 name|addAttribute
 argument_list|(
 name|et
@@ -2890,6 +2940,7 @@ argument_list|)
 argument_list|)
 expr_stmt|;
 comment|// Add `Exceptions' if there are "throws" clauses
+block|}
 name|Method
 name|m
 init|=
@@ -2918,49 +2969,57 @@ name|lvt
 operator|!=
 literal|null
 condition|)
+block|{
 name|removeCodeAttribute
 argument_list|(
 name|lvt
 argument_list|)
 expr_stmt|;
+block|}
 if|if
 condition|(
 name|lnt
 operator|!=
 literal|null
 condition|)
+block|{
 name|removeCodeAttribute
 argument_list|(
 name|lnt
 argument_list|)
 expr_stmt|;
+block|}
 if|if
 condition|(
 name|code
 operator|!=
 literal|null
 condition|)
+block|{
 name|removeAttribute
 argument_list|(
 name|code
 argument_list|)
 expr_stmt|;
+block|}
 if|if
 condition|(
 name|et
 operator|!=
 literal|null
 condition|)
+block|{
 name|removeAttribute
 argument_list|(
 name|et
 argument_list|)
 expr_stmt|;
+block|}
 return|return
 name|m
 return|;
 block|}
-comment|/**    * Remove all NOPs from the instruction list (if possible) and update every    * object refering to them, i.e., branch instructions, local variables and    * exception handlers.    */
+comment|/**      * Remove all NOPs from the instruction list (if possible) and update every      * object refering to them, i.e., branch instructions, local variables and      * exception handlers.      */
 specifier|public
 name|void
 name|removeNOPs
@@ -2976,7 +3035,7 @@ block|{
 name|InstructionHandle
 name|next
 decl_stmt|;
-comment|/* Check branch instructions.        */
+comment|/* Check branch instructions.              */
 for|for
 control|(
 name|InstructionHandle
@@ -3090,6 +3149,7 @@ condition|;
 name|j
 operator|++
 control|)
+block|{
 name|targeters
 index|[
 name|j
@@ -3111,7 +3171,8 @@ block|}
 block|}
 block|}
 block|}
-comment|/**    * Set maximum number of local variables.    */
+block|}
+comment|/**      * Set maximum number of local variables.      */
 specifier|public
 name|void
 name|setMaxLocals
@@ -3134,7 +3195,7 @@ return|return
 name|max_locals
 return|;
 block|}
-comment|/**    * Set maximum stack size for this method.    */
+comment|/**      * Set maximum stack size for this method.      */
 specifier|public
 name|void
 name|setMaxStack
@@ -3157,7 +3218,7 @@ return|return
 name|max_stack
 return|;
 block|}
-comment|/** @return class that contains this method    */
+comment|/** @return class that contains this method      */
 specifier|public
 name|String
 name|getClassName
@@ -3380,7 +3441,7 @@ name|arg_types
 argument_list|)
 return|;
 block|}
-comment|/**    * Computes max. stack size by performing control flow analysis.    */
+comment|/**      * Computes max. stack size by performing control flow analysis.      */
 specifier|public
 name|void
 name|setMaxStack
@@ -3392,6 +3453,7 @@ name|il
 operator|!=
 literal|null
 condition|)
+block|{
 name|max_stack
 operator|=
 name|getMaxStack
@@ -3404,13 +3466,16 @@ name|getExceptionHandlers
 argument_list|()
 argument_list|)
 expr_stmt|;
+block|}
 else|else
+block|{
 name|max_stack
 operator|=
 literal|0
 expr_stmt|;
 block|}
-comment|/**    * Compute maximum number of local variables.    */
+block|}
+comment|/**      * Compute maximum number of local variables.      */
 specifier|public
 name|void
 name|setMaxLocals
@@ -3439,6 +3504,7 @@ name|arg_types
 operator|!=
 literal|null
 condition|)
+block|{
 for|for
 control|(
 name|int
@@ -3455,6 +3521,7 @@ condition|;
 name|i
 operator|++
 control|)
+block|{
 name|max
 operator|+=
 name|arg_types
@@ -3465,6 +3532,8 @@ operator|.
 name|getSize
 argument_list|()
 expr_stmt|;
+block|}
+block|}
 for|for
 control|(
 name|InstructionHandle
@@ -3550,10 +3619,12 @@ name|index
 operator|>
 name|max
 condition|)
+block|{
 name|max
 operator|=
 name|index
 expr_stmt|;
+block|}
 block|}
 block|}
 name|max_locals
@@ -3562,12 +3633,14 @@ name|max
 expr_stmt|;
 block|}
 else|else
+block|{
 name|max_locals
 operator|=
 literal|0
 expr_stmt|;
 block|}
-comment|/** Do not/Do produce attributes code attributesLineNumberTable and    * LocalVariableTable, like javac -O    */
+block|}
+comment|/** Do not/Do produce attributes code attributesLineNumberTable and      * LocalVariableTable, like javac -O      */
 specifier|public
 name|void
 name|stripAttributes
@@ -3652,7 +3725,9 @@ argument_list|(
 name|target
 argument_list|)
 condition|)
+block|{
 return|return;
+block|}
 name|branchTargets
 operator|.
 name|push
@@ -3758,7 +3833,7 @@ operator|)
 return|;
 block|}
 block|}
-comment|/**    * Computes stack usage of an instruction list by performing control flow analysis.    *    * @return maximum stack depth used by method    */
+comment|/**      * Computes stack usage of an instruction list by performing control flow analysis.      *      * @return maximum stack depth used by method      */
 specifier|public
 specifier|static
 name|int
@@ -3782,7 +3857,7 @@ operator|new
 name|BranchStack
 argument_list|()
 decl_stmt|;
-comment|/* Initially, populate the branch stack with the exception      * handlers, because these aren't (necessarily) branched to      * explicitly. in each case, the stack will have depth 1,      * containing the exception object.      */
+comment|/* Initially, populate the branch stack with the exception          * handlers, because these aren't (necessarily) branched to          * explicitly. in each case, the stack will have depth 1,          * containing the exception object.          */
 for|for
 control|(
 name|int
@@ -3817,6 +3892,7 @@ name|handler_pc
 operator|!=
 literal|null
 condition|)
+block|{
 name|branchTargets
 operator|.
 name|push
@@ -3826,6 +3902,7 @@ argument_list|,
 literal|1
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 name|int
 name|stackDepth
@@ -3894,10 +3971,12 @@ name|stackDepth
 operator|>
 name|maxStackDepth
 condition|)
+block|{
 name|maxStackDepth
 operator|=
 name|stackDepth
 expr_stmt|;
+block|}
 comment|// choose the next instruction based on whether current is a branch.
 if|if
 condition|(
@@ -3955,6 +4034,7 @@ condition|;
 name|i
 operator|++
 control|)
+block|{
 name|branchTargets
 operator|.
 name|push
@@ -3967,6 +4047,7 @@ argument_list|,
 name|stackDepth
 argument_list|)
 expr_stmt|;
+block|}
 comment|// nothing to fall through to.
 name|ih
 operator|=
@@ -3999,6 +4080,7 @@ name|Constants
 operator|.
 name|JSR_W
 condition|)
+block|{
 name|branchTargets
 operator|.
 name|push
@@ -4013,6 +4095,7 @@ operator|-
 literal|1
 argument_list|)
 expr_stmt|;
+block|}
 name|ih
 operator|=
 literal|null
@@ -4065,10 +4148,12 @@ operator|.
 name|RETURN
 operator|)
 condition|)
+block|{
 name|ih
 operator|=
 literal|null
 expr_stmt|;
+block|}
 block|}
 comment|// normal case, go to the next instruction.
 if|if
@@ -4077,6 +4162,7 @@ name|ih
 operator|!=
 literal|null
 condition|)
+block|{
 name|ih
 operator|=
 name|ih
@@ -4084,6 +4170,7 @@ operator|.
 name|getNext
 argument_list|()
 expr_stmt|;
+block|}
 comment|// if we have no more instructions, see if there are any deferred branches to explore.
 if|if
 condition|(
@@ -4130,7 +4217,7 @@ specifier|private
 name|List
 name|observers
 decl_stmt|;
-comment|/** Add observer for this object.    */
+comment|/** Add observer for this object.      */
 specifier|public
 name|void
 name|addObserver
@@ -4145,12 +4232,14 @@ name|observers
 operator|==
 literal|null
 condition|)
+block|{
 name|observers
 operator|=
 operator|new
 name|ArrayList
 argument_list|()
 expr_stmt|;
+block|}
 name|observers
 operator|.
 name|add
@@ -4159,7 +4248,7 @@ name|o
 argument_list|)
 expr_stmt|;
 block|}
-comment|/** Remove observer for this object.    */
+comment|/** Remove observer for this object.      */
 specifier|public
 name|void
 name|removeObserver
@@ -4174,6 +4263,7 @@ name|observers
 operator|!=
 literal|null
 condition|)
+block|{
 name|observers
 operator|.
 name|remove
@@ -4182,7 +4272,8 @@ name|o
 argument_list|)
 expr_stmt|;
 block|}
-comment|/** Call notify() method on all observers. This method is not called    * automatically whenever the state has changed, but has to be    * called by the user after he has finished editing the object.    */
+block|}
+comment|/** Call notify() method on all observers. This method is not called      * automatically whenever the state has changed, but has to be      * called by the user after he has finished editing the object.      */
 specifier|public
 name|void
 name|update
@@ -4194,6 +4285,7 @@ name|observers
 operator|!=
 literal|null
 condition|)
+block|{
 for|for
 control|(
 name|Iterator
@@ -4210,6 +4302,7 @@ name|hasNext
 argument_list|()
 condition|;
 control|)
+block|{
 operator|(
 operator|(
 name|MethodObserver
@@ -4226,7 +4319,9 @@ name|this
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**    * Return string representation close to declaration format,    * `public static void main(String[]) throws IOException', e.g.    *    * @return String representation of the method.    */
+block|}
+block|}
+comment|/**      * Return string representation close to declaration format,      * `public static void main(String[]) throws IOException', e.g.      *      * @return String representation of the method.      */
 specifier|public
 specifier|final
 name|String
@@ -4310,6 +4405,7 @@ name|hasNext
 argument_list|()
 condition|;
 control|)
+block|{
 name|buf
 operator|.
 name|append
@@ -4326,6 +4422,7 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
+block|}
 return|return
 name|buf
 operator|.
@@ -4333,7 +4430,7 @@ name|toString
 argument_list|()
 return|;
 block|}
-comment|/** @return deep copy of this method    */
+comment|/** @return deep copy of this method      */
 specifier|public
 name|MethodGen
 name|copy
@@ -4409,7 +4506,7 @@ return|return
 name|mg
 return|;
 block|}
-comment|/**    * @return Comparison strategy object    */
+comment|/**      * @return Comparison strategy object      */
 specifier|public
 specifier|static
 name|BCELComparator
@@ -4420,7 +4517,7 @@ return|return
 name|_cmp
 return|;
 block|}
-comment|/**    * @param comparator Comparison strategy object    */
+comment|/**      * @param comparator Comparison strategy object      */
 specifier|public
 specifier|static
 name|void
@@ -4435,7 +4532,7 @@ operator|=
 name|comparator
 expr_stmt|;
 block|}
-comment|/**    * Return value as defined by given BCELComparator strategy.    * By default two MethodGen objects are said to be equal when    * their names and signatures are equal.    *     * @see java.lang.Object#equals(java.lang.Object)    */
+comment|/**      * Return value as defined by given BCELComparator strategy.      * By default two MethodGen objects are said to be equal when      * their names and signatures are equal.      *       * @see java.lang.Object#equals(java.lang.Object)      */
 specifier|public
 name|boolean
 name|equals
@@ -4455,7 +4552,7 @@ name|obj
 argument_list|)
 return|;
 block|}
-comment|/**    * Return value as defined by given BCELComparator strategy.    * By default return the hashcode of the method's name XOR signature.    *     * @see java.lang.Object#hashCode()    */
+comment|/**      * Return value as defined by given BCELComparator strategy.      * By default return the hashcode of the method's name XOR signature.      *       * @see java.lang.Object#hashCode()      */
 specifier|public
 name|int
 name|hashCode

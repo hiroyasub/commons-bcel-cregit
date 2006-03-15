@@ -184,7 +184,7 @@ operator|.
 name|getInstance
 argument_list|()
 decl_stmt|;
-comment|/** Ignored packages are by default ( "java.", "sun.",    * "javax."), i.e. loaded by system class loader    */
+comment|/** Ignored packages are by default ( "java.", "sun.",      * "javax."), i.e. loaded by system class loader      */
 specifier|public
 name|ClassLoader
 parameter_list|()
@@ -195,7 +195,7 @@ name|DEFAULT_IGNORED_PACKAGES
 argument_list|)
 expr_stmt|;
 block|}
-comment|/** @param deferTo delegate class loader to use for ignored packages    */
+comment|/** @param deferTo delegate class loader to use for ignored packages      */
 specifier|public
 name|ClassLoader
 parameter_list|(
@@ -229,7 +229,7 @@ name|deferTo
 argument_list|)
 expr_stmt|;
 block|}
-comment|/** @param ignored_packages classes contained in these packages will be loaded    * with the system class loader    */
+comment|/** @param ignored_packages classes contained in these packages will be loaded      * with the system class loader      */
 specifier|public
 name|ClassLoader
 parameter_list|(
@@ -245,7 +245,7 @@ operator|=
 name|ignored_packages
 expr_stmt|;
 block|}
-comment|/** @param ignored_packages classes contained in these packages will be loaded    * with the system class loader    * @param deferTo delegate class loader to use for ignored packages    */
+comment|/** @param ignored_packages classes contained in these packages will be loaded      * with the system class loader      * @param deferTo delegate class loader to use for ignored packages      */
 specifier|public
 name|ClassLoader
 parameter_list|(
@@ -295,7 +295,7 @@ name|cl
 init|=
 literal|null
 decl_stmt|;
-comment|/* First try: lookup hash table.      */
+comment|/* First try: lookup hash table.          */
 if|if
 condition|(
 operator|(
@@ -315,7 +315,7 @@ operator|==
 literal|null
 condition|)
 block|{
-comment|/* Second try: Load system class using system class loader. You better        * don't mess around with them.        */
+comment|/* Second try: Load system class using system class loader. You better              * don't mess around with them.              */
 for|for
 control|(
 name|int
@@ -371,7 +371,7 @@ name|clazz
 init|=
 literal|null
 decl_stmt|;
-comment|/* Third try: Special request? 	 */
+comment|/* Third try: Special request?                  */
 if|if
 condition|(
 name|class_name
@@ -383,6 +383,7 @@ argument_list|)
 operator|>=
 literal|0
 condition|)
+block|{
 name|clazz
 operator|=
 name|createClass
@@ -390,6 +391,7 @@ argument_list|(
 name|class_name
 argument_list|)
 expr_stmt|;
+block|}
 else|else
 block|{
 comment|// Fourth try: Load classes via repository
@@ -418,6 +420,7 @@ argument_list|)
 expr_stmt|;
 block|}
 else|else
+block|{
 throw|throw
 operator|new
 name|ClassNotFoundException
@@ -425,6 +428,7 @@ argument_list|(
 name|class_name
 argument_list|)
 throw|;
+block|}
 block|}
 if|if
 condition|(
@@ -459,7 +463,7 @@ argument_list|)
 expr_stmt|;
 block|}
 else|else
-comment|// Fourth try: Use default class loader
+block|{
 name|cl
 operator|=
 name|Class
@@ -470,15 +474,18 @@ name|class_name
 argument_list|)
 expr_stmt|;
 block|}
+block|}
 if|if
 condition|(
 name|resolve
 condition|)
+block|{
 name|resolveClass
 argument_list|(
 name|cl
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 name|classes
 operator|.
@@ -493,7 +500,7 @@ return|return
 name|cl
 return|;
 block|}
-comment|/** Override this method if you want to alter a class before it gets actually    * loaded. Does nothing by default.    */
+comment|/** Override this method if you want to alter a class before it gets actually      * loaded. Does nothing by default.      */
 specifier|protected
 name|JavaClass
 name|modifyClass
@@ -506,7 +513,7 @@ return|return
 name|clazz
 return|;
 block|}
-comment|/**     * Override this method to create you own classes on the fly. The    * name contains the special token $$BCEL$$. Everything before that    * token is consddered to be a package name. You can encode you own    * arguments into the subsequent string. You must regard however not    * to use any "illegal" characters, i.e., characters that may not    * appear in a Java class name too<br>    *    * The default implementation interprets the string as a encoded compressed    * Java class, unpacks and decodes it with the Utility.decode() method, and    * parses the resulting byte array and returns the resulting JavaClass object.    *    * @param class_name compressed byte code with "$$BCEL$$" in it    */
+comment|/**       * Override this method to create you own classes on the fly. The      * name contains the special token $$BCEL$$. Everything before that      * token is consddered to be a package name. You can encode you own      * arguments into the subsequent string. You must regard however not      * to use any "illegal" characters, i.e., characters that may not      * appear in a Java class name too<br>      *      * The default implementation interprets the string as a encoded compressed      * Java class, unpacks and decodes it with the Utility.decode() method, and      * parses the resulting byte array and returns the resulting JavaClass object.      *      * @param class_name compressed byte code with "$$BCEL$$" in it      */
 specifier|protected
 name|JavaClass
 name|createClass

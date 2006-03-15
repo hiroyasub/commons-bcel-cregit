@@ -81,7 +81,7 @@ index|[]
 name|map
 decl_stmt|;
 comment|// Table of stack map entries
-comment|/*    * @param name_index Index of name    * @param length Content length in bytes    * @param map Table of stack map entries    * @param constant_pool Array of constants    */
+comment|/*      * @param name_index Index of name      * @param length Content length in bytes      * @param map Table of stack map entries      * @param constant_pool Array of constants      */
 specifier|public
 name|StackMap
 parameter_list|(
@@ -118,7 +118,7 @@ name|map
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**    * Construct object from file stream.    * @param name_index Index of name    * @param length Content length in bytes    * @param file Input stream    * @param constant_pool Array of constants    * @throws IOException    */
+comment|/**      * Construct object from file stream.      * @param name_index Index of name      * @param length Content length in bytes      * @param file Input stream      * @param constant_pool Array of constants      * @throws IOException      */
 name|StackMap
 parameter_list|(
 name|int
@@ -180,6 +180,7 @@ condition|;
 name|i
 operator|++
 control|)
+block|{
 name|map
 index|[
 name|i
@@ -194,7 +195,8 @@ name|constant_pool
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**    * Dump line number table attribute to file stream in binary format.    *    * @param file Output file stream    * @throws IOException    */
+block|}
+comment|/**      * Dump line number table attribute to file stream in binary format.      *      * @param file Output file stream      * @throws IOException      */
 specifier|public
 specifier|final
 name|void
@@ -234,6 +236,7 @@ condition|;
 name|i
 operator|++
 control|)
+block|{
 name|map
 index|[
 name|i
@@ -245,7 +248,8 @@ name|file
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**    * @return Array of stack map entries    */
+block|}
+comment|/**      * @return Array of stack map entries      */
 specifier|public
 specifier|final
 name|StackMapEntry
@@ -257,7 +261,7 @@ return|return
 name|map
 return|;
 block|}
-comment|/**    * @param map Array of stack map entries    */
+comment|/**      * @param map Array of stack map entries      */
 specifier|public
 specifier|final
 name|void
@@ -289,7 +293,7 @@ operator|.
 name|length
 expr_stmt|;
 block|}
-comment|/**    * @return String representation.    */
+comment|/**      * @return String representation.      */
 specifier|public
 specifier|final
 name|String
@@ -341,6 +345,7 @@ name|map_length
 operator|-
 literal|1
 condition|)
+block|{
 name|buf
 operator|.
 name|append
@@ -348,6 +353,7 @@ argument_list|(
 literal|", "
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 name|buf
 operator|.
@@ -363,7 +369,7 @@ name|toString
 argument_list|()
 return|;
 block|}
-comment|/**    * @return deep copy of this attribute    */
+comment|/**      * @return deep copy of this attribute      */
 specifier|public
 name|Attribute
 name|copy
@@ -405,6 +411,7 @@ condition|;
 name|i
 operator|++
 control|)
+block|{
 name|c
 operator|.
 name|map
@@ -420,6 +427,7 @@ operator|.
 name|copy
 argument_list|()
 expr_stmt|;
+block|}
 name|c
 operator|.
 name|constant_pool
@@ -430,7 +438,7 @@ return|return
 name|c
 return|;
 block|}
-comment|/**    * Called by objects that are traversing the nodes of the tree implicitely    * defined by the contents of a Java class. I.e., the hierarchy of methods,    * fields, attributes, etc. spawns a tree of objects.    *    * @param v Visitor object    */
+comment|/**      * Called by objects that are traversing the nodes of the tree implicitely      * defined by the contents of a Java class. I.e., the hierarchy of methods,      * fields, attributes, etc. spawns a tree of objects.      *      * @param v Visitor object      */
 specifier|public
 name|void
 name|accept

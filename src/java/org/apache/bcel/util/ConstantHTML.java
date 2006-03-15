@@ -357,6 +357,7 @@ literal|2
 operator|==
 literal|0
 condition|)
+block|{
 name|file
 operator|.
 name|print
@@ -364,7 +365,9 @@ argument_list|(
 literal|"<TR BGCOLOR=\"#C0C0C0\"><TD>"
 argument_list|)
 expr_stmt|;
+block|}
 else|else
+block|{
 name|file
 operator|.
 name|print
@@ -372,6 +375,7 @@ argument_list|(
 literal|"<TR BGCOLOR=\"#A0A0A0\"><TD>"
 argument_list|)
 expr_stmt|;
+block|}
 if|if
 condition|(
 name|constants
@@ -381,11 +385,13 @@ index|]
 operator|!=
 literal|null
 condition|)
+block|{
 name|writeConstant
 argument_list|(
 name|i
 argument_list|)
 expr_stmt|;
+block|}
 name|file
 operator|.
 name|print
@@ -471,7 +477,7 @@ operator|+
 literal|"</H4>"
 argument_list|)
 expr_stmt|;
-comment|/* For every constant type get the needed parameters and print them appropiately       */
+comment|/* For every constant type get the needed parameters and print them appropiately           */
 switch|switch
 condition|(
 name|tag
@@ -745,6 +751,7 @@ name|length
 operator|-
 literal|1
 condition|)
+block|{
 name|buf
 operator|.
 name|append
@@ -752,6 +759,7 @@ argument_list|(
 literal|",&nbsp;"
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 name|buf
 operator|.
@@ -777,7 +785,7 @@ argument_list|(
 name|class_name
 argument_list|)
 condition|)
-comment|// Method is local to class
+block|{
 name|ref
 operator|=
 literal|"<A HREF=\""
@@ -799,7 +807,9 @@ name|html_method_name
 operator|+
 literal|"</A>"
 expr_stmt|;
+block|}
 else|else
+block|{
 name|ref
 operator|=
 literal|"<A HREF=\""
@@ -816,6 +826,7 @@ literal|"</A>."
 operator|+
 name|html_method_name
 expr_stmt|;
+block|}
 name|constant_ref
 index|[
 name|index
@@ -983,7 +994,7 @@ argument_list|(
 name|class_name
 argument_list|)
 condition|)
-comment|// Field is local to class
+block|{
 name|ref
 operator|=
 literal|"<A HREF=\""
@@ -1000,7 +1011,9 @@ name|field_name
 operator|+
 literal|"</A>"
 expr_stmt|;
+block|}
 else|else
+block|{
 name|ref
 operator|=
 literal|"<A HREF=\""
@@ -1017,6 +1030,7 @@ name|field_name
 operator|+
 literal|"\n"
 expr_stmt|;
+block|}
 name|constant_ref
 index|[
 name|index
@@ -1422,9 +1436,11 @@ argument_list|(
 name|str
 argument_list|)
 condition|)
+block|{
 return|return
 name|i
 return|;
+block|}
 block|}
 return|return
 operator|-

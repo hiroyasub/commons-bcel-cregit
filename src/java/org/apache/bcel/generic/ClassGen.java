@@ -182,7 +182,7 @@ name|AccessFlags
 implements|implements
 name|Cloneable
 block|{
-comment|/* Corresponds to the fields found in a JavaClass object.    */
+comment|/* Corresponds to the fields found in a JavaClass object.      */
 specifier|private
 name|String
 name|class_name
@@ -334,7 +334,7 @@ return|;
 block|}
 block|}
 decl_stmt|;
-comment|/** Convenience constructor to set up some important values initially.    *    * @param class_name fully qualified class name    * @param super_class_name fully qualified superclass name    * @param file_name source file name    * @param access_flags access qualifiers    * @param interfaces implemented interfaces    * @param cp constant pool to use    */
+comment|/** Convenience constructor to set up some important values initially.      *      * @param class_name fully qualified class name      * @param super_class_name fully qualified superclass name      * @param file_name source file name      * @param access_flags access qualifiers      * @param interfaces implemented interfaces      * @param cp constant pool to use      */
 specifier|public
 name|ClassGen
 parameter_list|(
@@ -395,6 +395,7 @@ name|file_name
 operator|!=
 literal|null
 condition|)
+block|{
 name|addAttribute
 argument_list|(
 operator|new
@@ -423,6 +424,7 @@ argument_list|()
 argument_list|)
 argument_list|)
 expr_stmt|;
+block|}
 name|class_name_index
 operator|=
 name|cp
@@ -447,6 +449,7 @@ name|interfaces
 operator|!=
 literal|null
 condition|)
+block|{
 for|for
 control|(
 name|int
@@ -463,6 +466,7 @@ condition|;
 name|i
 operator|++
 control|)
+block|{
 name|addInterface
 argument_list|(
 name|interfaces
@@ -472,7 +476,9 @@ index|]
 argument_list|)
 expr_stmt|;
 block|}
-comment|/** Convenience constructor to set up some important values initially.    *    * @param class_name fully qualified class name    * @param super_class_name fully qualified superclass name    * @param file_name source file name    * @param access_flags access qualifiers    * @param interfaces implemented interfaces    */
+block|}
+block|}
+comment|/** Convenience constructor to set up some important values initially.      *      * @param class_name fully qualified class name      * @param super_class_name fully qualified superclass name      * @param file_name source file name      * @param access_flags access qualifiers      * @param interfaces implemented interfaces      */
 specifier|public
 name|ClassGen
 parameter_list|(
@@ -511,7 +517,7 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**    * Initialize with existing class.    * @param clazz JavaClass object (e.g. read from file)    */
+comment|/**      * Initialize with existing class.      * @param clazz JavaClass object (e.g. read from file)      */
 specifier|public
 name|ClassGen
 parameter_list|(
@@ -638,6 +644,7 @@ condition|;
 name|i
 operator|++
 control|)
+block|{
 name|addInterface
 argument_list|(
 name|interfaces
@@ -646,6 +653,7 @@ name|i
 index|]
 argument_list|)
 expr_stmt|;
+block|}
 for|for
 control|(
 name|int
@@ -662,6 +670,7 @@ condition|;
 name|i
 operator|++
 control|)
+block|{
 name|addAttribute
 argument_list|(
 name|attributes
@@ -670,6 +679,7 @@ name|i
 index|]
 argument_list|)
 expr_stmt|;
+block|}
 for|for
 control|(
 name|int
@@ -686,6 +696,7 @@ condition|;
 name|i
 operator|++
 control|)
+block|{
 name|addMethod
 argument_list|(
 name|methods
@@ -694,6 +705,7 @@ name|i
 index|]
 argument_list|)
 expr_stmt|;
+block|}
 for|for
 control|(
 name|int
@@ -710,6 +722,7 @@ condition|;
 name|i
 operator|++
 control|)
+block|{
 name|addField
 argument_list|(
 name|fields
@@ -719,7 +732,8 @@ index|]
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**    * @return the (finally) built up Java class object.    */
+block|}
+comment|/**      * @return the (finally) built up Java class object.      */
 specifier|public
 name|JavaClass
 name|getJavaClass
@@ -792,7 +806,7 @@ name|attributes
 argument_list|)
 return|;
 block|}
-comment|/**    * Add an interface to this class, i.e., this class has to implement it.    * @param name interface to implement (fully qualified class name)    */
+comment|/**      * Add an interface to this class, i.e., this class has to implement it.      * @param name interface to implement (fully qualified class name)      */
 specifier|public
 name|void
 name|addInterface
@@ -809,7 +823,7 @@ name|name
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**    * Remove an interface from this class.    * @param name interface to remove (fully qualified name)    */
+comment|/**      * Remove an interface from this class.      * @param name interface to remove (fully qualified name)      */
 specifier|public
 name|void
 name|removeInterface
@@ -826,7 +840,7 @@ name|name
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**    * @return major version number of class file    */
+comment|/**      * @return major version number of class file      */
 specifier|public
 name|int
 name|getMajor
@@ -836,7 +850,7 @@ return|return
 name|major
 return|;
 block|}
-comment|/** Set major version number of class file, default value is 45 (JDK 1.1)    * @param major major version number    */
+comment|/** Set major version number of class file, default value is 45 (JDK 1.1)      * @param major major version number      */
 specifier|public
 name|void
 name|setMajor
@@ -852,7 +866,7 @@ operator|=
 name|major
 expr_stmt|;
 block|}
-comment|/** Set minor version number of class file, default value is 3 (JDK 1.1)    * @param minor minor version number    */
+comment|/** Set minor version number of class file, default value is 3 (JDK 1.1)      * @param minor minor version number      */
 specifier|public
 name|void
 name|setMinor
@@ -868,7 +882,7 @@ operator|=
 name|minor
 expr_stmt|;
 block|}
-comment|/**    * @return minor version number of class file    */
+comment|/**      * @return minor version number of class file      */
 specifier|public
 name|int
 name|getMinor
@@ -878,7 +892,7 @@ return|return
 name|minor
 return|;
 block|}
-comment|/**    * Add an attribute to this class.    * @param a attribute to add    */
+comment|/**      * Add an attribute to this class.      * @param a attribute to add      */
 specifier|public
 name|void
 name|addAttribute
@@ -895,7 +909,7 @@ name|a
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**    * Add a method to this class.    * @param m method to add    */
+comment|/**      * Add a method to this class.      * @param m method to add      */
 specifier|public
 name|void
 name|addMethod
@@ -912,7 +926,7 @@ name|m
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**    * Convenience method.    *    * Add an empty constructor to this class that does nothing but calling super().    * @param access_flags rights for constructor    */
+comment|/**      * Convenience method.      *      * Add an empty constructor to this class that does nothing but calling super().      * @param access_flags rights for constructor      */
 specifier|public
 name|void
 name|addEmptyConstructor
@@ -1010,7 +1024,7 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**    * Add a field to this class.    * @param f field to add    */
+comment|/**      * Add a field to this class.      * @param f field to add      */
 specifier|public
 name|void
 name|addField
@@ -1044,7 +1058,7 @@ name|f
 argument_list|)
 return|;
 block|}
-comment|/** @return field object with given name, or null    */
+comment|/** @return field object with given name, or null      */
 specifier|public
 name|Field
 name|containsField
@@ -1093,15 +1107,17 @@ argument_list|(
 name|name
 argument_list|)
 condition|)
+block|{
 return|return
 name|f
 return|;
+block|}
 block|}
 return|return
 literal|null
 return|;
 block|}
-comment|/** @return method object with given name and signature, or null    */
+comment|/** @return method object with given name and signature, or null      */
 specifier|public
 name|Method
 name|containsMethod
@@ -1163,15 +1179,17 @@ argument_list|(
 name|signature
 argument_list|)
 condition|)
+block|{
 return|return
 name|m
 return|;
+block|}
 block|}
 return|return
 literal|null
 return|;
 block|}
-comment|/**    * Remove an attribute from this class.    * @param a attribute to remove    */
+comment|/**      * Remove an attribute from this class.      * @param a attribute to remove      */
 specifier|public
 name|void
 name|removeAttribute
@@ -1188,7 +1206,7 @@ name|a
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**    * Remove a method from this class.    * @param m method to remove    */
+comment|/**      * Remove a method from this class.      * @param m method to remove      */
 specifier|public
 name|void
 name|removeMethod
@@ -1205,7 +1223,7 @@ name|m
 argument_list|)
 expr_stmt|;
 block|}
-comment|/** Replace given method with new one. If the old one does not exist    * add the new_ method to the class anyway.    */
+comment|/** Replace given method with new one. If the old one does not exist      * add the new_ method to the class anyway.      */
 specifier|public
 name|void
 name|replaceMethod
@@ -1223,6 +1241,7 @@ name|new_
 operator|==
 literal|null
 condition|)
+block|{
 throw|throw
 operator|new
 name|ClassGenException
@@ -1230,6 +1249,7 @@ argument_list|(
 literal|"Replacement method must not be null"
 argument_list|)
 throw|;
+block|}
 name|int
 name|i
 init|=
@@ -1246,6 +1266,7 @@ name|i
 operator|<
 literal|0
 condition|)
+block|{
 name|method_vec
 operator|.
 name|add
@@ -1253,7 +1274,9 @@ argument_list|(
 name|new_
 argument_list|)
 expr_stmt|;
+block|}
 else|else
+block|{
 name|method_vec
 operator|.
 name|set
@@ -1264,7 +1287,8 @@ name|new_
 argument_list|)
 expr_stmt|;
 block|}
-comment|/** Replace given field with new one. If the old one does not exist    * add the new_ field to the class anyway.    */
+block|}
+comment|/** Replace given field with new one. If the old one does not exist      * add the new_ field to the class anyway.      */
 specifier|public
 name|void
 name|replaceField
@@ -1282,6 +1306,7 @@ name|new_
 operator|==
 literal|null
 condition|)
+block|{
 throw|throw
 operator|new
 name|ClassGenException
@@ -1289,6 +1314,7 @@ argument_list|(
 literal|"Replacement method must not be null"
 argument_list|)
 throw|;
+block|}
 name|int
 name|i
 init|=
@@ -1305,6 +1331,7 @@ name|i
 operator|<
 literal|0
 condition|)
+block|{
 name|field_vec
 operator|.
 name|add
@@ -1312,7 +1339,9 @@ argument_list|(
 name|new_
 argument_list|)
 expr_stmt|;
+block|}
 else|else
+block|{
 name|field_vec
 operator|.
 name|set
@@ -1323,7 +1352,8 @@ name|new_
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**    * Remove a field to this class.    * @param f field to remove    */
+block|}
+comment|/**      * Remove a field to this class.      * @param f field to remove      */
 specifier|public
 name|void
 name|removeField
@@ -1481,6 +1511,7 @@ condition|;
 name|m
 operator|++
 control|)
+block|{
 name|addMethod
 argument_list|(
 name|methods
@@ -1489,6 +1520,7 @@ name|m
 index|]
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 specifier|public
 name|void
@@ -1604,6 +1636,7 @@ condition|;
 name|i
 operator|++
 control|)
+block|{
 name|interfaces
 index|[
 name|i
@@ -1624,6 +1657,7 @@ name|i
 argument_list|)
 argument_list|)
 expr_stmt|;
+block|}
 return|return
 name|interfaces
 return|;
@@ -1800,7 +1834,7 @@ specifier|private
 name|ArrayList
 name|observers
 decl_stmt|;
-comment|/** Add observer for this object.    */
+comment|/** Add observer for this object.      */
 specifier|public
 name|void
 name|addObserver
@@ -1815,12 +1849,14 @@ name|observers
 operator|==
 literal|null
 condition|)
+block|{
 name|observers
 operator|=
 operator|new
 name|ArrayList
 argument_list|()
 expr_stmt|;
+block|}
 name|observers
 operator|.
 name|add
@@ -1829,7 +1865,7 @@ name|o
 argument_list|)
 expr_stmt|;
 block|}
-comment|/** Remove observer for this object.    */
+comment|/** Remove observer for this object.      */
 specifier|public
 name|void
 name|removeObserver
@@ -1844,6 +1880,7 @@ name|observers
 operator|!=
 literal|null
 condition|)
+block|{
 name|observers
 operator|.
 name|remove
@@ -1852,7 +1889,8 @@ name|o
 argument_list|)
 expr_stmt|;
 block|}
-comment|/** Call notify() method on all observers. This method is not called    * automatically whenever the state has changed, but has to be    * called by the user after he has finished editing the object.    */
+block|}
+comment|/** Call notify() method on all observers. This method is not called      * automatically whenever the state has changed, but has to be      * called by the user after he has finished editing the object.      */
 specifier|public
 name|void
 name|update
@@ -1934,7 +1972,7 @@ literal|null
 return|;
 block|}
 block|}
-comment|/** 	 * @return Comparison strategy object 	 */
+comment|/**      * @return Comparison strategy object      */
 specifier|public
 specifier|static
 name|BCELComparator
@@ -1945,7 +1983,7 @@ return|return
 name|_cmp
 return|;
 block|}
-comment|/** 	 * @param comparator Comparison strategy object 	 */
+comment|/**      * @param comparator Comparison strategy object      */
 specifier|public
 specifier|static
 name|void
@@ -1960,7 +1998,7 @@ operator|=
 name|comparator
 expr_stmt|;
 block|}
-comment|/** 	 * Return value as defined by given BCELComparator strategy. 	 * By default two ClassGen objects are said to be equal when 	 * their class names are equal. 	 *  	 * @see java.lang.Object#equals(java.lang.Object) 	 */
+comment|/**      * Return value as defined by given BCELComparator strategy.      * By default two ClassGen objects are said to be equal when      * their class names are equal.      *       * @see java.lang.Object#equals(java.lang.Object)      */
 specifier|public
 name|boolean
 name|equals
@@ -1980,7 +2018,7 @@ name|obj
 argument_list|)
 return|;
 block|}
-comment|/** 	 * Return value as defined by given BCELComparator strategy. 	 * By default return the hashcode of the class name. 	 *  	 * @see java.lang.Object#hashCode() 	 */
+comment|/**      * Return value as defined by given BCELComparator strategy.      * By default return the hashcode of the class name.      *       * @see java.lang.Object#hashCode()      */
 specifier|public
 name|int
 name|hashCode

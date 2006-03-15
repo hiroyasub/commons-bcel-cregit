@@ -65,7 +65,7 @@ specifier|private
 name|ObjectType
 name|catch_type
 decl_stmt|;
-comment|/**    * Add an exception handler, i.e., specify region where a handler is active and an    * instruction where the actual handling is done.    *    * @param start_pc Start of handled region (inclusive)    * @param end_pc End of handled region (inclusive)    * @param handler_pc Where handling is done    * @param catch_type which exception is handled, null for ANY    */
+comment|/**      * Add an exception handler, i.e., specify region where a handler is active and an      * instruction where the actual handling is done.      *      * @param start_pc Start of handled region (inclusive)      * @param end_pc End of handled region (inclusive)      * @param handler_pc Where handling is done      * @param catch_type which exception is handled, null for ANY      */
 specifier|public
 name|CodeExceptionGen
 parameter_list|(
@@ -104,7 +104,7 @@ operator|=
 name|catch_type
 expr_stmt|;
 block|}
-comment|/**    * Get CodeException object.<BR>    *    * This relies on that the instruction list has already been dumped    * to byte code or or that the `setPositions' methods has been    * called for the instruction list.    *    * @param cp constant pool    */
+comment|/**      * Get CodeException object.<BR>      *      * This relies on that the instruction list has already been dumped      * to byte code or or that the `setPositions' methods has been      * called for the instruction list.      *      * @param cp constant pool      */
 specifier|public
 name|CodeException
 name|getCodeException
@@ -157,7 +157,7 @@ argument_list|)
 argument_list|)
 return|;
 block|}
-comment|/* Set start of handler     * @param start_pc Start of handled region (inclusive)    */
+comment|/* Set start of handler       * @param start_pc Start of handled region (inclusive)      */
 specifier|public
 name|void
 name|setStartPC
@@ -186,7 +186,7 @@ operator|=
 name|start_pc
 expr_stmt|;
 block|}
-comment|/* Set end of handler     * @param end_pc End of handled region (inclusive)    */
+comment|/* Set end of handler       * @param end_pc End of handled region (inclusive)      */
 specifier|public
 name|void
 name|setEndPC
@@ -215,7 +215,7 @@ operator|=
 name|end_pc
 expr_stmt|;
 block|}
-comment|/* Set handler code    * @param handler_pc Start of handler    */
+comment|/* Set handler code      * @param handler_pc Start of handler      */
 specifier|public
 name|void
 name|setHandlerPC
@@ -244,7 +244,7 @@ operator|=
 name|handler_pc
 expr_stmt|;
 block|}
-comment|/**    * @param old_ih old target, either start or end    * @param new_ih new target    */
+comment|/**      * @param old_ih old target, either start or end      * @param new_ih new target      */
 specifier|public
 name|void
 name|updateTarget
@@ -317,6 +317,7 @@ condition|(
 operator|!
 name|targeted
 condition|)
+block|{
 throw|throw
 operator|new
 name|ClassGenException
@@ -341,7 +342,8 @@ literal|"}"
 argument_list|)
 throw|;
 block|}
-comment|/**    * @return true, if ih is target of this handler    */
+block|}
+comment|/**      * @return true, if ih is target of this handler      */
 specifier|public
 name|boolean
 name|containsTarget
@@ -396,7 +398,7 @@ return|return
 name|catch_type
 return|;
 block|}
-comment|/** @return start of handled region (inclusive)    */
+comment|/** @return start of handled region (inclusive)      */
 specifier|public
 name|InstructionHandle
 name|getStartPC
@@ -406,7 +408,7 @@ return|return
 name|start_pc
 return|;
 block|}
-comment|/** @return end of handled region (inclusive)    */
+comment|/** @return end of handled region (inclusive)      */
 specifier|public
 name|InstructionHandle
 name|getEndPC
@@ -416,7 +418,7 @@ return|return
 name|end_pc
 return|;
 block|}
-comment|/** @return start of handler    */
+comment|/** @return start of handler      */
 specifier|public
 name|InstructionHandle
 name|getHandlerPC

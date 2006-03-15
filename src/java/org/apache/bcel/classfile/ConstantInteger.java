@@ -75,7 +75,7 @@ specifier|private
 name|int
 name|bytes
 decl_stmt|;
-comment|/**     * @param bytes Data    */
+comment|/**       * @param bytes Data      */
 specifier|public
 name|ConstantInteger
 parameter_list|(
@@ -97,7 +97,7 @@ operator|=
 name|bytes
 expr_stmt|;
 block|}
-comment|/**    * Initialize from another object.    */
+comment|/**      * Initialize from another object.      */
 specifier|public
 name|ConstantInteger
 parameter_list|(
@@ -114,7 +114,7 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**     * Initialize instance from file data.    *    * @param file Input stream    * @throws IOException    */
+comment|/**       * Initialize instance from file data.      *      * @param file Input stream      * @throws IOException      */
 name|ConstantInteger
 parameter_list|(
 name|DataInputStream
@@ -132,7 +132,7 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**    * Called by objects that are traversing the nodes of the tree implicitely    * defined by the contents of a Java class. I.e., the hierarchy of methods,    * fields, attributes, etc. spawns a tree of objects.    *    * @param v Visitor object    */
+comment|/**      * Called by objects that are traversing the nodes of the tree implicitely      * defined by the contents of a Java class. I.e., the hierarchy of methods,      * fields, attributes, etc. spawns a tree of objects.      *      * @param v Visitor object      */
 specifier|public
 name|void
 name|accept
@@ -149,7 +149,7 @@ name|this
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**    * Dump constant integer to file stream in binary format.    *    * @param file Output file stream    * @throws IOException    */
+comment|/**      * Dump constant integer to file stream in binary format.      *      * @param file Output file stream      * @throws IOException      */
 specifier|public
 specifier|final
 name|void
@@ -176,7 +176,7 @@ name|bytes
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**    * @return data, i.e., 4 bytes.    */
+comment|/**      * @return data, i.e., 4 bytes.      */
 specifier|public
 specifier|final
 name|int
@@ -187,7 +187,7 @@ return|return
 name|bytes
 return|;
 block|}
-comment|/**    * @param bytes the raw bytes that represent this integer    */
+comment|/**      * @param bytes the raw bytes that represent this integer      */
 specifier|public
 specifier|final
 name|void
@@ -204,7 +204,7 @@ operator|=
 name|bytes
 expr_stmt|;
 block|}
-comment|/**    * @return String representation.    */
+comment|/**      * @return String representation.      */
 specifier|public
 specifier|final
 name|String
@@ -224,7 +224,7 @@ operator|+
 literal|")"
 return|;
 block|}
-comment|/** @return Integer object    */
+comment|/** @return Integer object      */
 specifier|public
 name|Object
 name|getConstantValue

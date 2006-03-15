@@ -1258,6 +1258,7 @@ name|s
 operator|==
 literal|2
 condition|)
+block|{
 name|acc
 operator|.
 name|add
@@ -1271,6 +1272,7 @@ literal|1
 argument_list|)
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 block|}
 catch|catch
@@ -2594,9 +2596,11 @@ argument_list|(
 name|any
 argument_list|)
 condition|)
+block|{
 return|return
 name|s
 return|;
+block|}
 block|}
 name|System
 operator|.

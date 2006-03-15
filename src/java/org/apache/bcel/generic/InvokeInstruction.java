@@ -85,12 +85,12 @@ name|StackConsumer
 implements|,
 name|StackProducer
 block|{
-comment|/**    * Empty constructor needed for the Class.newInstance() statement in    * Instruction.readInstruction(). Not to be used otherwise.    */
+comment|/**      * Empty constructor needed for the Class.newInstance() statement in      * Instruction.readInstruction(). Not to be used otherwise.      */
 name|InvokeInstruction
 parameter_list|()
 block|{
 block|}
-comment|/**    * @param index to constant pool    */
+comment|/**      * @param index to constant pool      */
 specifier|protected
 name|InvokeInstruction
 parameter_list|(
@@ -109,7 +109,7 @@ name|index
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**    * @return mnemonic for instruction with symbolic references resolved    */
+comment|/**      * @return mnemonic for instruction with symbolic references resolved      */
 specifier|public
 name|String
 name|toString
@@ -170,7 +170,7 @@ name|nextToken
 argument_list|()
 return|;
 block|}
-comment|/**    * Also works for instructions whose stack effect depends on the    * constant pool entry they reference.    * @return Number of words consumed from stack by this instruction    */
+comment|/**      * Also works for instructions whose stack effect depends on the      * constant pool entry they reference.      * @return Number of words consumed from stack by this instruction      */
 specifier|public
 name|int
 name|consumeStack
@@ -209,16 +209,20 @@ name|Constants
 operator|.
 name|INVOKESTATIC
 condition|)
+block|{
 name|sum
 operator|=
 literal|0
 expr_stmt|;
+block|}
 else|else
+block|{
 name|sum
 operator|=
 literal|1
 expr_stmt|;
 comment|// this reference
+block|}
 name|int
 name|n
 init|=
@@ -240,6 +244,7 @@ condition|;
 name|i
 operator|++
 control|)
+block|{
 name|sum
 operator|+=
 name|args
@@ -250,11 +255,12 @@ operator|.
 name|getSize
 argument_list|()
 expr_stmt|;
+block|}
 return|return
 name|sum
 return|;
 block|}
-comment|/**    * Also works for instructions whose stack effect depends on the    * constant pool entry they reference.    * @return Number of words produced onto stack by this instruction    */
+comment|/**      * Also works for instructions whose stack effect depends on the      * constant pool entry they reference.      * @return Number of words produced onto stack by this instruction      */
 specifier|public
 name|int
 name|produceStack
@@ -273,7 +279,7 @@ name|getSize
 argument_list|()
 return|;
 block|}
-comment|/** @return return type of referenced method.    */
+comment|/** @return return type of referenced method.      */
 specifier|public
 name|Type
 name|getType
@@ -289,7 +295,7 @@ name|cpg
 argument_list|)
 return|;
 block|}
-comment|/** @return name of referenced method.    */
+comment|/** @return name of referenced method.      */
 specifier|public
 name|String
 name|getMethodName
@@ -305,7 +311,7 @@ name|cpg
 argument_list|)
 return|;
 block|}
-comment|/** @return return type of referenced method.    */
+comment|/** @return return type of referenced method.      */
 specifier|public
 name|Type
 name|getReturnType
@@ -326,7 +332,7 @@ argument_list|)
 argument_list|)
 return|;
 block|}
-comment|/** @return argument types of referenced method.    */
+comment|/** @return argument types of referenced method.      */
 specifier|public
 name|Type
 index|[]

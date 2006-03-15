@@ -279,6 +279,7 @@ name|inst
 operator|==
 literal|null
 condition|)
+block|{
 throw|throw
 operator|new
 name|AssertionViolatedException
@@ -286,6 +287,7 @@ argument_list|(
 literal|"Cannot instantiate InstructionContextImpl from NULL."
 argument_list|)
 throw|;
+block|}
 name|instruction
 operator|=
 name|inst
@@ -1062,9 +1064,11 @@ name|currentlast
 operator|instanceof
 name|RET
 condition|)
+block|{
 name|retcount
 operator|++
 expr_stmt|;
+block|}
 if|if
 condition|(
 name|currentlast
@@ -1082,9 +1086,11 @@ operator|==
 operator|-
 literal|1
 condition|)
+block|{
 return|return
 name|current
 return|;
+block|}
 block|}
 block|}
 return|return

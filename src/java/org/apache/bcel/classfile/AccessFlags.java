@@ -52,7 +52,7 @@ name|AccessFlags
 parameter_list|()
 block|{
 block|}
-comment|/**    * @param a inital access flags    */
+comment|/**      * @param a inital access flags      */
 specifier|public
 name|AccessFlags
 parameter_list|(
@@ -65,7 +65,7 @@ operator|=
 name|a
 expr_stmt|;
 block|}
-comment|/**     * @return Access flags of the object aka. "modifiers".    */
+comment|/**       * @return Access flags of the object aka. "modifiers".      */
 specifier|public
 specifier|final
 name|int
@@ -76,7 +76,7 @@ return|return
 name|access_flags
 return|;
 block|}
-comment|/**     * @return Access flags of the object aka. "modifiers".    */
+comment|/**       * @return Access flags of the object aka. "modifiers".      */
 specifier|public
 specifier|final
 name|int
@@ -87,7 +87,7 @@ return|return
 name|access_flags
 return|;
 block|}
-comment|/** Set access flags aka "modifiers".    * @param access_flags Access flags of the object.     */
+comment|/** Set access flags aka "modifiers".      * @param access_flags Access flags of the object.       */
 specifier|public
 specifier|final
 name|void
@@ -104,7 +104,7 @@ operator|=
 name|access_flags
 expr_stmt|;
 block|}
-comment|/** Set access flags aka "modifiers".    * @param access_flags Access flags of the object.     */
+comment|/** Set access flags aka "modifiers".      * @param access_flags Access flags of the object.       */
 specifier|public
 specifier|final
 name|void
@@ -149,11 +149,12 @@ condition|(
 operator|!
 name|set
 condition|)
-comment|// Delete flag ?
+block|{
 name|access_flags
 operator|^=
 name|flag
 expr_stmt|;
+block|}
 block|}
 else|else
 block|{
@@ -162,11 +163,12 @@ if|if
 condition|(
 name|set
 condition|)
-comment|// Set flag ?
+block|{
 name|access_flags
 operator||=
 name|flag
 expr_stmt|;
+block|}
 block|}
 block|}
 specifier|public

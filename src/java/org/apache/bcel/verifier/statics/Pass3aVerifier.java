@@ -2236,7 +2236,7 @@ name|ATHROW
 operator|)
 operator|)
 condition|)
-comment|// JSR / JSR_W would possibly RETurn and then fall off the code!
+block|{
 throw|throw
 operator|new
 name|StaticCodeInstructionConstraintException
@@ -2244,6 +2244,7 @@ argument_list|(
 literal|"Execution must not fall off the bottom of the code array. This constraint is enforced statically as some existing verifiers do - so it may be a false alarm if the last instruction is not reachable."
 argument_list|)
 throw|;
+block|}
 block|}
 comment|/** 	 * These are the checks for the satisfaction of constraints which are described in the 	 * Java Virtual Machine Specification, Second Edition as Static Constraints on 	 * the operands of instructions of Java Virtual Machine Code (chapter 4.8.1). 	 * BCEL parses the code array to create an InstructionList and therefore has to check 	 * some of these constraints. Additional checks are also implemented here. 	 * 	 * @throws StaticCodeConstraintException if the verification fails. 	 */
 specifier|private
@@ -2466,9 +2467,11 @@ index|]
 operator|==
 name|i
 condition|)
+block|{
 return|return
 literal|true
 return|;
+block|}
 block|}
 return|return
 literal|false
@@ -3237,10 +3240,12 @@ operator|)
 operator|==
 literal|0
 condition|)
+block|{
 name|f
 operator|=
 literal|null
 expr_stmt|;
+block|}
 break|break
 name|outer
 break|;
@@ -3254,6 +3259,7 @@ name|f
 operator|==
 literal|null
 condition|)
+block|{
 name|constraintViolated
 argument_list|(
 name|o
@@ -3272,6 +3278,7 @@ operator|+
 literal|"'."
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 else|else
 block|{
@@ -6489,7 +6496,9 @@ name|meth
 operator|!=
 literal|null
 condition|)
+block|{
 break|break;
+block|}
 block|}
 if|if
 condition|(

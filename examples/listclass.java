@@ -297,10 +297,12 @@ argument_list|(
 literal|"-constants"
 argument_list|)
 condition|)
+block|{
 name|constants
 operator|=
 literal|true
 expr_stmt|;
+block|}
 if|else if
 condition|(
 name|argv
@@ -313,10 +315,12 @@ argument_list|(
 literal|"-code"
 argument_list|)
 condition|)
+block|{
 name|code
 operator|=
 literal|true
 expr_stmt|;
+block|}
 if|else if
 condition|(
 name|argv
@@ -329,10 +333,12 @@ argument_list|(
 literal|"-brief"
 argument_list|)
 condition|)
+block|{
 name|verbose
 operator|=
 literal|false
 expr_stmt|;
+block|}
 if|else if
 condition|(
 name|argv
@@ -345,10 +351,12 @@ argument_list|(
 literal|"-dependencies"
 argument_list|)
 condition|)
+block|{
 name|classdep
 operator|=
 literal|true
 expr_stmt|;
+block|}
 if|else if
 condition|(
 name|argv
@@ -361,10 +369,12 @@ argument_list|(
 literal|"-nocontents"
 argument_list|)
 condition|)
+block|{
 name|nocontents
 operator|=
 literal|true
 expr_stmt|;
+block|}
 if|else if
 condition|(
 name|argv
@@ -377,10 +387,12 @@ argument_list|(
 literal|"-recurse"
 argument_list|)
 condition|)
+block|{
 name|recurse
 operator|=
 literal|true
 expr_stmt|;
+block|}
 if|else if
 condition|(
 name|argv
@@ -393,10 +405,12 @@ argument_list|(
 literal|"-exclude"
 argument_list|)
 condition|)
+block|{
 name|exclude
 operator|=
 literal|true
 expr_stmt|;
+block|}
 if|else if
 condition|(
 name|argv
@@ -448,6 +462,7 @@ argument_list|)
 expr_stmt|;
 block|}
 else|else
+block|{
 name|System
 operator|.
 name|err
@@ -465,6 +480,7 @@ literal|" ignored."
 argument_list|)
 expr_stmt|;
 block|}
+block|}
 else|else
 block|{
 comment|// add file name to list
@@ -472,6 +488,7 @@ if|if
 condition|(
 name|exclude
 condition|)
+block|{
 name|exclude_name
 operator|.
 name|addElement
@@ -482,7 +499,9 @@ name|i
 index|]
 argument_list|)
 expr_stmt|;
+block|}
 else|else
+block|{
 name|file_name
 operator|.
 name|addElement
@@ -493,6 +512,7 @@ name|i
 index|]
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 block|}
 if|if
@@ -504,6 +524,7 @@ argument_list|()
 operator|==
 literal|0
 condition|)
+block|{
 name|System
 operator|.
 name|err
@@ -513,6 +534,7 @@ argument_list|(
 literal|"list: No input files specified"
 argument_list|)
 expr_stmt|;
+block|}
 else|else
 block|{
 name|listclass
@@ -686,7 +708,9 @@ argument_list|(
 literal|"["
 argument_list|)
 condition|)
+block|{
 return|return;
+block|}
 for|for
 control|(
 name|int
@@ -704,6 +728,7 @@ condition|;
 name|idx
 operator|++
 control|)
+block|{
 if|if
 condition|(
 name|name
@@ -721,7 +746,10 @@ name|idx
 argument_list|)
 argument_list|)
 condition|)
+block|{
 return|return;
+block|}
+block|}
 if|if
 condition|(
 name|name
@@ -761,6 +789,7 @@ if|if
 condition|(
 name|nocontents
 condition|)
+block|{
 name|System
 operator|.
 name|out
@@ -773,7 +802,9 @@ name|getClassName
 argument_list|()
 argument_list|)
 expr_stmt|;
+block|}
 else|else
+block|{
 name|System
 operator|.
 name|out
@@ -784,11 +815,12 @@ name|java_class
 argument_list|)
 expr_stmt|;
 comment|// Dump the contents
+block|}
 if|if
 condition|(
 name|constants
 condition|)
-comment|// Dump the constant pool ?
+block|{
 name|System
 operator|.
 name|out
@@ -801,11 +833,12 @@ name|getConstantPool
 argument_list|()
 argument_list|)
 expr_stmt|;
+block|}
 if|if
 condition|(
 name|code
 condition|)
-comment|// Dump the method code ?
+block|{
 name|printCode
 argument_list|(
 name|java_class
@@ -816,10 +849,12 @@ argument_list|,
 name|verbose
 argument_list|)
 expr_stmt|;
+block|}
 if|if
 condition|(
 name|classdep
 condition|)
+block|{
 name|printClassDependencies
 argument_list|(
 name|java_class
@@ -828,6 +863,7 @@ name|getConstantPool
 argument_list|()
 argument_list|)
 expr_stmt|;
+block|}
 name|listedClasses
 operator|.
 name|put
@@ -870,6 +906,7 @@ condition|;
 name|idx
 operator|++
 control|)
+block|{
 name|list
 argument_list|(
 name|dependencies
@@ -878,6 +915,7 @@ name|idx
 index|]
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 block|}
 catch|catch
@@ -979,6 +1017,7 @@ condition|;
 name|idx
 operator|++
 control|)
+block|{
 name|System
 operator|.
 name|out
@@ -993,6 +1032,7 @@ name|idx
 index|]
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 specifier|public
 specifier|static
@@ -1140,6 +1180,7 @@ argument_list|)
 operator|==
 literal|'/'
 condition|)
+block|{
 name|buf
 operator|.
 name|setCharAt
@@ -1149,6 +1190,7 @@ argument_list|,
 literal|'.'
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 name|tempArray
 index|[
@@ -1252,6 +1294,7 @@ name|code
 operator|!=
 literal|null
 condition|)
+block|{
 name|System
 operator|.
 name|out
@@ -1266,6 +1309,7 @@ name|verbose
 argument_list|)
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 block|}
 block|}

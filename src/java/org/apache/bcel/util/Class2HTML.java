@@ -152,7 +152,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Read class file(s) and convert them into HTML files.  *  * Given a JavaClass object "class" that is in package "package" five files  * will be created in the specified directory.  *  *<OL>  *<LI> "package"."class".html as the main file which defines the frames for  * the following subfiles.  *<LI>  "package"."class"_attributes.html contains all (known) attributes found in the file  *<LI>  "package"."class"_cp.html contains the constant pool  *<LI>  "package"."class"_code.html contains the byte code  *<LI>  "package"."class"_methods.html contains references to all methods and fields of the class  *</OL>  *  * All subfiles reference each other appropiately, e.g. clicking on a  * method in the Method's frame will jump to the appropiate method in  * the Code frame.  *  * @version $Id$  * @author<A HREF="mailto:m.dahm@gmx.de">M. Dahm</A>  */
+comment|/**  * Read class file(s) and convert them into HTML files.  *  * Given a JavaClass object "class" that is in package "package" five files  * will be created in the specified directory.  *  *<OL>  *<LI> "package"."class".html as the main file which defines the frames for  * the following subfiles.  *<LI>  "package"."class"_attributes.html contains all (known) attributes found in the file  *<LI>  "package"."class"_cp.html contains the constant pool  *<LI>  "package"."class"_code.html contains the byte code  *<LI>  "package"."class"_methods.html contains references to all methods and fields of the class  *</OL>  *  * All subfiles reference each other appropiately, e.g. clicking on a  * method in the Method's frame will jump to the appropiate method in  * the Code frame.  *  * @version $Id$  * @author<A HREF="mailto:m.dahm@gmx.de">M. Dahm</A>   */
 end_comment
 
 begin_class
@@ -188,7 +188,7 @@ specifier|static
 name|ConstantPool
 name|constant_pool
 decl_stmt|;
-comment|/**    * Write contents of the given JavaClass into HTML files.    *     * @param java_class The class to write    * @param dir The directory to put the files in    */
+comment|/**      * Write contents of the given JavaClass into HTML files.      *       * @param java_class The class to write      * @param dir The directory to put the files in      */
 specifier|public
 name|Class2HTML
 parameter_list|(
@@ -255,6 +255,7 @@ operator|>
 operator|-
 literal|1
 condition|)
+block|{
 name|class_package
 operator|=
 name|class_name
@@ -266,12 +267,15 @@ argument_list|,
 name|index
 argument_list|)
 expr_stmt|;
+block|}
 else|else
+block|{
 name|class_package
 operator|=
 literal|""
 expr_stmt|;
 comment|// default package
+block|}
 name|ConstantHTML
 name|constant_html
 init|=
@@ -289,7 +293,7 @@ argument_list|,
 name|constant_pool
 argument_list|)
 decl_stmt|;
-comment|/* Attributes can't be written in one step, so we just open a file      * which will be written consequently.      */
+comment|/* Attributes can't be written in one step, so we just open a file          * which will be written consequently.          */
 name|AttributeHTML
 name|attribute_html
 init|=
@@ -421,7 +425,7 @@ decl_stmt|;
 comment|// Where to store HTML files
 try|try
 block|{
-comment|/* Parse command line arguments.        */
+comment|/* Parse command line arguments.              */
 for|for
 control|(
 name|int
@@ -489,12 +493,14 @@ operator|+
 name|sep
 argument_list|)
 condition|)
+block|{
 name|dir
 operator|=
 name|dir
 operator|+
 name|sep
 expr_stmt|;
+block|}
 operator|new
 name|File
 argument_list|(
@@ -518,6 +524,7 @@ argument_list|(
 literal|"-zip"
 argument_list|)
 condition|)
+block|{
 name|zip_file
 operator|=
 name|argv
@@ -526,7 +533,9 @@ operator|++
 name|i
 index|]
 expr_stmt|;
+block|}
 else|else
+block|{
 name|System
 operator|.
 name|out
@@ -542,8 +551,9 @@ index|]
 argument_list|)
 expr_stmt|;
 block|}
+block|}
 else|else
-comment|// add file name to list */
+block|{
 name|file_name
 index|[
 name|files
@@ -556,12 +566,14 @@ name|i
 index|]
 expr_stmt|;
 block|}
+block|}
 if|if
 condition|(
 name|files
 operator|==
 literal|0
 condition|)
+block|{
 name|System
 operator|.
 name|err
@@ -571,6 +583,7 @@ argument_list|(
 literal|"Class2HTML: No input files specified."
 argument_list|)
 expr_stmt|;
+block|}
 else|else
 block|{
 comment|// Loop through files ...
@@ -611,6 +624,7 @@ name|zip_file
 operator|==
 literal|null
 condition|)
+block|{
 name|parser
 operator|=
 operator|new
@@ -623,7 +637,9 @@ index|]
 argument_list|)
 expr_stmt|;
 comment|// Create parser object from file
+block|}
 else|else
+block|{
 name|parser
 operator|=
 operator|new
@@ -638,6 +654,7 @@ index|]
 argument_list|)
 expr_stmt|;
 comment|// Create parser object from zip file
+block|}
 name|java_class
 operator|=
 name|parser
@@ -691,7 +708,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/**    * Utility method that converts a class reference in the constant pool,    * i.e., an index to a string.    */
+comment|/**      * Utility method that converts a class reference in the constant pool,      * i.e., an index to a string.      */
 specifier|static
 name|String
 name|referenceClass
@@ -1152,6 +1169,7 @@ condition|;
 name|i
 operator|++
 control|)
+block|{
 name|attribute_html
 operator|.
 name|writeAttribute
@@ -1166,6 +1184,7 @@ operator|+
 name|i
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 block|}
 end_class

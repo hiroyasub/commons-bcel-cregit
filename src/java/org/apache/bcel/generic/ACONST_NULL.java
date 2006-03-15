@@ -30,7 +30,7 @@ name|PushInstruction
 implements|,
 name|TypedInstruction
 block|{
-comment|/**     * Push null reference    */
+comment|/**       * Push null reference      */
 specifier|public
 name|ACONST_NULL
 parameter_list|()
@@ -54,7 +54,7 @@ literal|1
 argument_list|)
 expr_stmt|;
 block|}
-comment|/** @return Type.NULL    */
+comment|/** @return Type.NULL      */
 specifier|public
 name|Type
 name|getType
@@ -69,7 +69,7 @@ operator|.
 name|NULL
 return|;
 block|}
-comment|/**    * Call corresponding visitor method(s). The order is:    * Call visitor methods of implemented interfaces first, then    * call methods according to the class hierarchy in descending order,    * i.e., the most specific visitXXX() call comes last.    *    * @param v Visitor object    */
+comment|/**      * Call corresponding visitor method(s). The order is:      * Call visitor methods of implemented interfaces first, then      * call methods according to the class hierarchy in descending order,      * i.e., the most specific visitXXX() call comes last.      *      * @param v Visitor object      */
 specifier|public
 name|void
 name|accept

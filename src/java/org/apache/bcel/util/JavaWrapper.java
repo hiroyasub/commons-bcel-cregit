@@ -91,10 +91,12 @@ argument_list|(
 name|s
 argument_list|)
 condition|)
+block|{
 name|s
 operator|=
 literal|"org.apache.bcel.util.ClassLoader"
 expr_stmt|;
+block|}
 try|try
 block|{
 return|return
@@ -163,7 +165,7 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
-comment|/** Runs the main method of the given class with the arguments passed in argv    *    * @param class_name the fully qualified class name    * @param argv the arguments just as you would pass them directly    */
+comment|/** Runs the main method of the given class with the arguments passed in argv      *      * @param class_name the fully qualified class name      * @param argv the arguments just as you would pass them directly      */
 specifier|public
 name|void
 name|runMain
@@ -214,7 +216,7 @@ argument_list|()
 block|}
 argument_list|)
 expr_stmt|;
-comment|/* Method main is sane ?        */
+comment|/* Method main is sane ?              */
 name|int
 name|m
 init|=
@@ -265,11 +267,13 @@ operator|.
 name|TYPE
 operator|)
 condition|)
+block|{
 throw|throw
 operator|new
 name|NoSuchMethodException
 argument_list|()
 throw|;
+block|}
 block|}
 catch|catch
 parameter_list|(
@@ -322,7 +326,7 @@ argument_list|()
 expr_stmt|;
 block|}
 block|}
-comment|/** Default main method used as wrapper, expects the fully qualified class name    * of the real class as the first argument.    */
+comment|/** Default main method used as wrapper, expects the fully qualified class name      * of the real class as the first argument.      */
 specifier|public
 specifier|static
 name|void
@@ -335,7 +339,7 @@ parameter_list|)
 throws|throws
 name|Exception
 block|{
-comment|/* Expects class name as first argument, other arguments are by-passed.      */
+comment|/* Expects class name as first argument, other arguments are by-passed.          */
 if|if
 condition|(
 name|argv

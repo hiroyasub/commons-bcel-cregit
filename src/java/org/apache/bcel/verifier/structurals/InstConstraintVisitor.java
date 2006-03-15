@@ -476,6 +476,7 @@ operator|.
 name|INT
 argument_list|)
 condition|)
+block|{
 name|constraintViolated
 argument_list|(
 name|o
@@ -487,6 +488,7 @@ operator|+
 literal|"."
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 comment|/** 	 * Assures the ReferenceType r is initialized (or Type.NULL). 	 * Formally, this means (!(r instanceof UninitializedObjectType)), because 	 * there are no uninitialized array types. 	 * @throws org.apache.bcel.verifier.exc.StructuralCodeConstraintException if the above constraint is not satisfied. 	 */
 specifier|private
@@ -544,6 +546,7 @@ operator|.
 name|INT
 argument_list|)
 condition|)
+block|{
 name|constraintViolated
 argument_list|(
 name|o
@@ -555,6 +558,7 @@ operator|+
 literal|"."
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 comment|/** 	 * Assures arrayref is of ArrayType or NULL; 	 * returns true if and only if arrayref is non-NULL. 	 * @throws org.apache.bcel.verifier.exc.StructuralCodeConstraintException if the above constraint is violated.  	 */
 specifier|private
@@ -588,6 +592,7 @@ name|NULL
 argument_list|)
 operator|)
 condition|)
+block|{
 name|constraintViolated
 argument_list|(
 name|o
@@ -599,6 +604,7 @@ operator|+
 literal|"."
 argument_list|)
 expr_stmt|;
+block|}
 return|return
 operator|(
 name|arrayref
@@ -2095,6 +2101,7 @@ operator|.
 name|INT
 argument_list|)
 condition|)
+block|{
 name|constraintViolated
 argument_list|(
 name|o
@@ -2118,6 +2125,7 @@ argument_list|)
 expr_stmt|;
 comment|// The runtime constant pool item at that index must be a symbolic reference to a class,
 comment|// array, or interface type. See Pass 3a.
+block|}
 block|}
 comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
 specifier|public
@@ -2345,7 +2353,9 @@ operator|.
 name|NULL
 argument_list|)
 condition|)
+block|{
 return|return;
+block|}
 name|ObjectType
 name|exc
 init|=
@@ -2663,6 +2673,7 @@ argument_list|)
 operator|)
 operator|)
 condition|)
+block|{
 name|constraintViolated
 argument_list|(
 name|o
@@ -2682,6 +2693,7 @@ operator|+
 literal|"'."
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 block|}
 comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
@@ -5973,10 +5985,12 @@ operator|)
 operator|==
 literal|0
 condition|)
+block|{
 name|f
 operator|=
 literal|null
 expr_stmt|;
+block|}
 break|break
 name|outer
 break|;
@@ -5990,6 +6004,7 @@ name|f
 operator|==
 literal|null
 condition|)
+block|{
 throw|throw
 operator|new
 name|AssertionViolatedException
@@ -6001,6 +6016,7 @@ operator|+
 literal|"' not found?!?"
 argument_list|)
 throw|;
+block|}
 block|}
 if|if
 condition|(

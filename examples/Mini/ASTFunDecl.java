@@ -537,6 +537,7 @@ condition|;
 name|i
 operator|++
 control|)
+block|{
 name|argv
 index|[
 name|i
@@ -552,6 +553,7 @@ index|[
 name|i
 index|]
 expr_stmt|;
+block|}
 name|children
 operator|=
 literal|null
@@ -613,6 +615,7 @@ name|entry
 operator|!=
 literal|null
 condition|)
+block|{
 name|MiniC
 operator|.
 name|addError
@@ -640,7 +643,9 @@ operator|+
 literal|"."
 argument_list|)
 expr_stmt|;
+block|}
 else|else
+block|{
 name|env
 operator|.
 name|put
@@ -655,6 +660,7 @@ index|]
 argument_list|)
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 comment|/* Update entry of this function, i.e. set argument references.      * The entry is already in there by garantuee, but may be of wrong type,      * i.e. the user defined a function `TRUE', e.g. and `TRUE' is of type `Variable'.      */
 try|try
@@ -747,6 +753,7 @@ operator|!=
 name|expected
 operator|)
 condition|)
+block|{
 name|MiniC
 operator|.
 name|addError
@@ -770,6 +777,7 @@ name|type
 index|]
 argument_list|)
 expr_stmt|;
+block|}
 name|name
 operator|.
 name|setType
@@ -794,10 +802,12 @@ name|type
 operator|==
 name|T_UNKNOWN
 condition|)
+block|{
 name|is_recursive
 operator|=
 literal|true
 expr_stmt|;
+block|}
 return|return
 name|type
 return|;
@@ -936,6 +946,7 @@ name|length
 operator|-
 literal|1
 condition|)
+block|{
 name|out
 operator|.
 name|print
@@ -943,6 +954,7 @@ argument_list|(
 literal|", "
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 name|out
 operator|.
@@ -991,6 +1003,7 @@ if|if
 condition|(
 name|main
 condition|)
+block|{
 name|out
 operator|.
 name|println
@@ -998,6 +1011,7 @@ argument_list|(
 literal|"    try {"
 argument_list|)
 expr_stmt|;
+block|}
 name|out
 operator|.
 name|println
@@ -1009,6 +1023,7 @@ if|if
 condition|(
 name|main
 condition|)
+block|{
 name|out
 operator|.
 name|println
@@ -1016,7 +1031,9 @@ argument_list|(
 literal|"    } catch(Exception e) { System.err.println(e); }\n  }\n"
 argument_list|)
 expr_stmt|;
+block|}
 else|else
+block|{
 name|out
 operator|.
 name|println
@@ -1029,6 +1046,7 @@ operator|+
 literal|";\n  }\n"
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 name|reset
 argument_list|()
@@ -1532,6 +1550,7 @@ argument_list|)
 expr_stmt|;
 block|}
 else|else
+block|{
 name|il
 operator|.
 name|append
@@ -1542,6 +1561,7 @@ name|IRETURN
 argument_list|)
 expr_stmt|;
 comment|// Reuse object to save memory
+block|}
 name|method
 operator|.
 name|removeNOPs
@@ -1720,13 +1740,6 @@ operator|.
 name|next
 argument_list|()
 decl_stmt|;
-name|int
-name|len
-init|=
-name|match
-operator|.
-name|length
-decl_stmt|;
 comment|// Everything ok, update code
 name|BranchInstruction
 name|ifeq
@@ -1855,6 +1868,7 @@ condition|;
 name|j
 operator|++
 control|)
+block|{
 if|if
 condition|(
 operator|(
@@ -1881,6 +1895,7 @@ literal|2
 index|]
 operator|)
 condition|)
+block|{
 name|System
 operator|.
 name|err
@@ -1892,6 +1907,8 @@ operator|+
 name|e
 argument_list|)
 expr_stmt|;
+block|}
+block|}
 block|}
 block|}
 block|}
@@ -1965,6 +1982,7 @@ name|length
 operator|-
 literal|1
 condition|)
+block|{
 name|buf
 operator|.
 name|append
@@ -1972,6 +1990,7 @@ argument_list|(
 literal|", "
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 name|buf
 operator|.
@@ -2168,6 +2187,7 @@ condition|;
 name|i
 operator|++
 control|)
+block|{
 name|argv
 index|[
 name|i
@@ -2180,6 +2200,7 @@ operator|+
 literal|" "
 argument_list|)
 expr_stmt|;
+block|}
 name|body
 operator|.
 name|dump
@@ -2258,6 +2279,7 @@ name|max_size
 operator|-
 literal|1
 condition|)
+block|{
 name|buf
 operator|.
 name|append
@@ -2265,6 +2287,7 @@ argument_list|(
 literal|", "
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 name|buf
 operator|.
@@ -2314,10 +2337,12 @@ name|size
 operator|>
 name|max_size
 condition|)
+block|{
 name|max_size
 operator|=
 name|size
 expr_stmt|;
+block|}
 block|}
 specifier|static
 specifier|final

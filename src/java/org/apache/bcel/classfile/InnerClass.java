@@ -99,7 +99,7 @@ specifier|private
 name|int
 name|inner_access_flags
 decl_stmt|;
-comment|/**    * Initialize from another object.    */
+comment|/**      * Initialize from another object.      */
 specifier|public
 name|InnerClass
 parameter_list|(
@@ -131,7 +131,7 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**    * Construct object from file stream.    * @param file Input stream    * @throws IOException    */
+comment|/**      * Construct object from file stream.      * @param file Input stream      * @throws IOException      */
 name|InnerClass
 parameter_list|(
 name|DataInputStream
@@ -164,7 +164,7 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**    * @param inner_class_index Class index in constant pool of inner class    * @param outer_class_index Class index in constant pool of outer class    * @param inner_name_index  Name index in constant pool of inner class    * @param inner_access_flags Access flags of inner class    */
+comment|/**      * @param inner_class_index Class index in constant pool of inner class      * @param outer_class_index Class index in constant pool of outer class      * @param inner_name_index  Name index in constant pool of inner class      * @param inner_access_flags Access flags of inner class      */
 specifier|public
 name|InnerClass
 parameter_list|(
@@ -206,7 +206,7 @@ operator|=
 name|inner_access_flags
 expr_stmt|;
 block|}
-comment|/**    * Called by objects that are traversing the nodes of the tree implicitely    * defined by the contents of a Java class. I.e., the hierarchy of methods,    * fields, attributes, etc. spawns a tree of objects.    *    * @param v Visitor object    */
+comment|/**      * Called by objects that are traversing the nodes of the tree implicitely      * defined by the contents of a Java class. I.e., the hierarchy of methods,      * fields, attributes, etc. spawns a tree of objects.      *      * @param v Visitor object      */
 specifier|public
 name|void
 name|accept
@@ -223,7 +223,7 @@ name|this
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**    * Dump inner class attribute to file stream in binary format.    *    * @param file Output file stream    * @throws IOException    */
+comment|/**      * Dump inner class attribute to file stream in binary format.      *      * @param file Output file stream      * @throws IOException      */
 specifier|public
 specifier|final
 name|void
@@ -264,7 +264,7 @@ name|inner_access_flags
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**    * @return access flags of inner class.    */
+comment|/**      * @return access flags of inner class.      */
 specifier|public
 specifier|final
 name|int
@@ -275,7 +275,7 @@ return|return
 name|inner_access_flags
 return|;
 block|}
-comment|/**    * @return class index of inner class.    */
+comment|/**      * @return class index of inner class.      */
 specifier|public
 specifier|final
 name|int
@@ -286,7 +286,7 @@ return|return
 name|inner_class_index
 return|;
 block|}
-comment|/**    * @return name index of inner class.    */
+comment|/**      * @return name index of inner class.      */
 specifier|public
 specifier|final
 name|int
@@ -297,7 +297,7 @@ return|return
 name|inner_name_index
 return|;
 block|}
-comment|/**    * @return class index of outer class.    */
+comment|/**      * @return class index of outer class.      */
 specifier|public
 specifier|final
 name|int
@@ -308,7 +308,7 @@ return|return
 name|outer_class_index
 return|;
 block|}
-comment|/**    * @param inner_access_flags access flags for this inner class    */
+comment|/**      * @param inner_access_flags access flags for this inner class      */
 specifier|public
 specifier|final
 name|void
@@ -325,7 +325,7 @@ operator|=
 name|inner_access_flags
 expr_stmt|;
 block|}
-comment|/**    * @param inner_class_index index into the constant pool for this class    */
+comment|/**      * @param inner_class_index index into the constant pool for this class      */
 specifier|public
 specifier|final
 name|void
@@ -342,7 +342,7 @@ operator|=
 name|inner_class_index
 expr_stmt|;
 block|}
-comment|/**    * @param inner_name_index index into the constant pool for this class's name    */
+comment|/**      * @param inner_name_index index into the constant pool for this class's name      */
 specifier|public
 specifier|final
 name|void
@@ -359,7 +359,7 @@ operator|=
 name|inner_name_index
 expr_stmt|;
 block|}
-comment|/**    * @param outer_class_index index into the constant pool for the owning class    */
+comment|/**      * @param outer_class_index index into the constant pool for the owning class      */
 specifier|public
 specifier|final
 name|void
@@ -376,7 +376,7 @@ operator|=
 name|outer_class_index
 expr_stmt|;
 block|}
-comment|/**    * @return String representation.    */
+comment|/**      * @return String representation.      */
 specifier|public
 specifier|final
 name|String
@@ -403,7 +403,7 @@ operator|+
 literal|")"
 return|;
 block|}
-comment|/**    * @return Resolved string representation    */
+comment|/**      * @return Resolved string representation      */
 specifier|public
 specifier|final
 name|String
@@ -475,16 +475,19 @@ argument_list|)
 expr_stmt|;
 block|}
 else|else
+block|{
 name|outer_class_name
 operator|=
 literal|"<not a member>"
 expr_stmt|;
+block|}
 if|if
 condition|(
 name|inner_name_index
 operator|!=
 literal|0
 condition|)
+block|{
 name|inner_name
 operator|=
 operator|(
@@ -506,11 +509,14 @@ operator|.
 name|getBytes
 argument_list|()
 expr_stmt|;
+block|}
 else|else
+block|{
 name|inner_name
 operator|=
 literal|"<anonymous>"
 expr_stmt|;
+block|}
 name|access
 operator|=
 name|Utility
@@ -557,7 +563,7 @@ operator|+
 literal|"\")"
 return|;
 block|}
-comment|/**    * @return deep copy of this object    */
+comment|/**      * @return deep copy of this object      */
 specifier|public
 name|InnerClass
 name|copy

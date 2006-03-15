@@ -55,7 +55,7 @@ literal|1
 argument_list|)
 expr_stmt|;
 block|}
-comment|/** @return Type.LONG    */
+comment|/** @return Type.LONG      */
 specifier|public
 name|Type
 name|getType
@@ -70,7 +70,7 @@ operator|.
 name|LONG
 return|;
 block|}
-comment|/**    * Call corresponding visitor method(s). The order is:    * Call visitor methods of implemented interfaces first, then    * call methods according to the class hierarchy in descending order,    * i.e., the most specific visitXXX() call comes last.    *    * @param v Visitor object    */
+comment|/**      * Call corresponding visitor method(s). The order is:      * Call visitor methods of implemented interfaces first, then      * call methods according to the class hierarchy in descending order,      * i.e., the most specific visitXXX() call comes last.      *      * @param v Visitor object      */
 specifier|public
 name|void
 name|accept

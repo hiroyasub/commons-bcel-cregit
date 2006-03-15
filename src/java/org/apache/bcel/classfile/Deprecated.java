@@ -74,7 +74,7 @@ name|byte
 index|[]
 name|bytes
 decl_stmt|;
-comment|/**    * Initialize from another object. Note that both objects use the same    * references (shallow copy). Use clone() for a physical copy.    */
+comment|/**      * Initialize from another object. Note that both objects use the same      * references (shallow copy). Use clone() for a physical copy.      */
 specifier|public
 name|Deprecated
 parameter_list|(
@@ -106,7 +106,7 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**    * @param name_index Index in constant pool to CONSTANT_Utf8    * @param length Content length in bytes    * @param bytes Attribute contents    * @param constant_pool Array of constants    */
+comment|/**      * @param name_index Index in constant pool to CONSTANT_Utf8      * @param length Content length in bytes      * @param bytes Attribute contents      * @param constant_pool Array of constants      */
 specifier|public
 name|Deprecated
 parameter_list|(
@@ -144,7 +144,7 @@ operator|=
 name|bytes
 expr_stmt|;
 block|}
-comment|/**    * Construct object from file stream.    * @param name_index Index in constant pool to CONSTANT_Utf8    * @param length Content length in bytes    * @param file Input stream    * @param constant_pool Array of constants    * @throws IOException    */
+comment|/**      * Construct object from file stream.      * @param name_index Index in constant pool to CONSTANT_Utf8      * @param length Content length in bytes      * @param file Input stream      * @param constant_pool Array of constants      * @throws IOException      */
 name|Deprecated
 parameter_list|(
 name|int
@@ -210,7 +210,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/**    * Called by objects that are traversing the nodes of the tree implicitely    * defined by the contents of a Java class. I.e., the hierarchy of methods,    * fields, attributes, etc. spawns a tree of objects.    *    * @param v Visitor object    */
+comment|/**      * Called by objects that are traversing the nodes of the tree implicitely      * defined by the contents of a Java class. I.e., the hierarchy of methods,      * fields, attributes, etc. spawns a tree of objects.      *      * @param v Visitor object      */
 specifier|public
 name|void
 name|accept
@@ -227,7 +227,7 @@ name|this
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**    * Dump source file attribute to file stream in binary format.    *    * @param file Output file stream    * @throws IOException    */
+comment|/**      * Dump source file attribute to file stream in binary format.      *      * @param file Output file stream      * @throws IOException      */
 specifier|public
 specifier|final
 name|void
@@ -252,6 +252,7 @@ name|length
 operator|>
 literal|0
 condition|)
+block|{
 name|file
 operator|.
 name|write
@@ -264,7 +265,8 @@ name|length
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**    * @return data bytes.    */
+block|}
+comment|/**      * @return data bytes.      */
 specifier|public
 specifier|final
 name|byte
@@ -276,7 +278,7 @@ return|return
 name|bytes
 return|;
 block|}
-comment|/**    * @param bytes the raw bytes that represents this byte array    */
+comment|/**      * @param bytes the raw bytes that represents this byte array      */
 specifier|public
 specifier|final
 name|void
@@ -294,7 +296,7 @@ operator|=
 name|bytes
 expr_stmt|;
 block|}
-comment|/**    * @return attribute name    */
+comment|/**      * @return attribute name      */
 specifier|public
 specifier|final
 name|String
@@ -312,7 +314,7 @@ name|ATTR_DEPRECATED
 index|]
 return|;
 block|}
-comment|/**    * @return deep copy of this attribute    */
+comment|/**      * @return deep copy of this attribute      */
 specifier|public
 name|Attribute
 name|copy

@@ -50,7 +50,7 @@ name|LDC_W
 extends|extends
 name|LDC
 block|{
-comment|/**    * Empty constructor needed for the Class.newInstance() statement in    * Instruction.readInstruction(). Not to be used otherwise.    */
+comment|/**      * Empty constructor needed for the Class.newInstance() statement in      * Instruction.readInstruction(). Not to be used otherwise.      */
 name|LDC_W
 parameter_list|()
 block|{
@@ -68,7 +68,7 @@ name|index
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**    * Read needed data (i.e., index) from file.    */
+comment|/**      * Read needed data (i.e., index) from file.      */
 specifier|protected
 name|void
 name|initFromFile

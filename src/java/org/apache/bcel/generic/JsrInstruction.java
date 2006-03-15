@@ -50,12 +50,12 @@ name|target
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**    * Empty constructor needed for the Class.newInstance() statement in    * Instruction.readInstruction(). Not to be used otherwise.    */
+comment|/**      * Empty constructor needed for the Class.newInstance() statement in      * Instruction.readInstruction(). Not to be used otherwise.      */
 name|JsrInstruction
 parameter_list|()
 block|{
 block|}
-comment|/** @return return address type    */
+comment|/** @return return address type      */
 specifier|public
 name|Type
 name|getType
@@ -73,7 +73,7 @@ argument_list|()
 argument_list|)
 return|;
 block|}
-comment|/**    * Returns an InstructionHandle to the physical successor    * of this JsrInstruction.<B>For this method to work,    * this JsrInstruction object must not be shared between    * multiple InstructionHandle objects!</B>    * Formally, there must not be InstructionHandle objects    * i, j where i != j and i.getInstruction() == this ==    * j.getInstruction().    * @return an InstructionHandle to the "next" instruction that    * will be executed when RETurned from a subroutine.    */
+comment|/**      * Returns an InstructionHandle to the physical successor      * of this JsrInstruction.<B>For this method to work,      * this JsrInstruction object must not be shared between      * multiple InstructionHandle objects!</B>      * Formally, there must not be InstructionHandle objects      * i, j where i != j and i.getInstruction() == this ==      * j.getInstruction().      * @return an InstructionHandle to the "next" instruction that      * will be executed when RETurned from a subroutine.      */
 specifier|public
 name|InstructionHandle
 name|physicalSuccessor
@@ -96,6 +96,7 @@ argument_list|()
 operator|!=
 literal|null
 condition|)
+block|{
 name|ih
 operator|=
 name|ih
@@ -103,6 +104,7 @@ operator|.
 name|getPrev
 argument_list|()
 expr_stmt|;
+block|}
 comment|// Find the handle for "this" JsrInstruction object.
 while|while
 condition|(
@@ -113,6 +115,7 @@ argument_list|()
 operator|!=
 name|this
 condition|)
+block|{
 name|ih
 operator|=
 name|ih
@@ -120,6 +123,7 @@ operator|.
 name|getNext
 argument_list|()
 expr_stmt|;
+block|}
 name|InstructionHandle
 name|toThis
 init|=
@@ -156,6 +160,7 @@ operator|==
 name|this
 operator|)
 condition|)
+block|{
 throw|throw
 operator|new
 name|RuntimeException
@@ -163,6 +168,7 @@ argument_list|(
 literal|"physicalSuccessor() called on a shared JsrInstruction."
 argument_list|)
 throw|;
+block|}
 block|}
 comment|// Return the physical successor
 return|return

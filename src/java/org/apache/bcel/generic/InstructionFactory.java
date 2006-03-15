@@ -75,7 +75,7 @@ operator|=
 name|cp
 expr_stmt|;
 block|}
-comment|/** Initialize with ClassGen object    */
+comment|/** Initialize with ClassGen object      */
 specifier|public
 name|InstructionFactory
 parameter_list|(
@@ -94,7 +94,7 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
-comment|/** Initialize just with ConstantPoolGen object    */
+comment|/** Initialize just with ConstantPoolGen object      */
 specifier|public
 name|InstructionFactory
 parameter_list|(
@@ -110,7 +110,7 @@ name|cp
 argument_list|)
 expr_stmt|;
 block|}
-comment|/** Create an invoke instruction.    *    * @param class_name name of the called class    * @param name name of the called method    * @param ret_type return type of method    * @param arg_types argument types of method    * @param kind how to invoke, i.e., INVOKEINTERFACE, INVOKESTATIC, INVOKEVIRTUAL,    * or INVOKESPECIAL    * @see Constants    */
+comment|/** Create an invoke instruction.      *      * @param class_name name of the called class      * @param name name of the called method      * @param ret_type return type of method      * @param arg_types argument types of method      * @param kind how to invoke, i.e., INVOKEINTERFACE, INVOKESTATIC, INVOKEVIRTUAL,      * or INVOKESPECIAL      * @see Constants      */
 specifier|public
 name|InvokeInstruction
 name|createInvoke
@@ -168,7 +168,7 @@ condition|;
 name|i
 operator|++
 control|)
-comment|// Count size of arguments
+block|{
 name|nargs
 operator|+=
 name|arg_types
@@ -179,6 +179,7 @@ operator|.
 name|getSize
 argument_list|()
 expr_stmt|;
+block|}
 if|if
 condition|(
 name|kind
@@ -187,6 +188,7 @@ name|Constants
 operator|.
 name|INVOKEINTERFACE
 condition|)
+block|{
 name|index
 operator|=
 name|cp
@@ -200,7 +202,9 @@ argument_list|,
 name|signature
 argument_list|)
 expr_stmt|;
+block|}
 else|else
+block|{
 name|index
 operator|=
 name|cp
@@ -214,6 +218,7 @@ argument_list|,
 name|signature
 argument_list|)
 expr_stmt|;
+block|}
 switch|switch
 condition|(
 name|kind
@@ -283,7 +288,7 @@ argument_list|)
 throw|;
 block|}
 block|}
-comment|/** Create a call to the most popular System.out.println() method.    *    * @param s the string to print    */
+comment|/** Create a call to the most popular System.out.println() method.      *      * @param s the string to print      */
 specifier|public
 name|InstructionList
 name|createPrintln
@@ -366,7 +371,7 @@ return|return
 name|il
 return|;
 block|}
-comment|/** Uses PUSH to push a constant value onto the stack.    * @param value must be of type Number, Boolean, Character or String    */
+comment|/** Uses PUSH to push a constant value onto the stack.      * @param value must be of type Number, Boolean, Character or String      */
 specifier|public
 name|Instruction
 name|createConstant
@@ -384,6 +389,7 @@ name|value
 operator|instanceof
 name|Number
 condition|)
+block|{
 name|push
 operator|=
 operator|new
@@ -397,12 +403,14 @@ operator|)
 name|value
 argument_list|)
 expr_stmt|;
+block|}
 if|else if
 condition|(
 name|value
 operator|instanceof
 name|String
 condition|)
+block|{
 name|push
 operator|=
 operator|new
@@ -416,12 +424,14 @@ operator|)
 name|value
 argument_list|)
 expr_stmt|;
+block|}
 if|else if
 condition|(
 name|value
 operator|instanceof
 name|Boolean
 condition|)
+block|{
 name|push
 operator|=
 operator|new
@@ -435,12 +445,14 @@ operator|)
 name|value
 argument_list|)
 expr_stmt|;
+block|}
 if|else if
 condition|(
 name|value
 operator|instanceof
 name|Character
 condition|)
+block|{
 name|push
 operator|=
 operator|new
@@ -454,7 +466,9 @@ operator|)
 name|value
 argument_list|)
 expr_stmt|;
+block|}
 else|else
+block|{
 throw|throw
 operator|new
 name|ClassGenException
@@ -467,6 +481,7 @@ name|getClass
 argument_list|()
 argument_list|)
 throw|;
+block|}
 return|return
 name|push
 operator|.
@@ -893,6 +908,7 @@ argument_list|(
 name|type
 argument_list|)
 condition|)
+block|{
 return|return
 name|createInvoke
 argument_list|(
@@ -906,6 +922,7 @@ operator|.
 name|INVOKEVIRTUAL
 argument_list|)
 return|;
+block|}
 switch|switch
 condition|(
 name|t
@@ -999,7 +1016,7 @@ argument_list|)
 throw|;
 block|}
 block|}
-comment|/** Create a field instruction.    *    * @param class_name name of the accessed class    * @param name name of the referenced field    * @param type  type of field    * @param kind how to access, i.e., GETFIELD, PUTFIELD, GETSTATIC, PUTSTATIC    * @see Constants    */
+comment|/** Create a field instruction.      *      * @param class_name name of the accessed class      * @param name name of the referenced field      * @param type  type of field      * @param kind how to access, i.e., GETFIELD, PUTFIELD, GETSTATIC, PUTSTATIC      * @see Constants      */
 specifier|public
 name|FieldInstruction
 name|createFieldAccess
@@ -1106,7 +1123,7 @@ argument_list|)
 throw|;
 block|}
 block|}
-comment|/** Create reference to `this'    */
+comment|/** Create reference to `this'      */
 specifier|public
 specifier|static
 name|Instruction
@@ -1121,7 +1138,7 @@ literal|0
 argument_list|)
 return|;
 block|}
-comment|/** Create typed return    */
+comment|/** Create typed return      */
 specifier|public
 specifier|static
 name|ReturnInstruction
@@ -1536,7 +1553,7 @@ argument_list|)
 throw|;
 block|}
 block|}
-comment|/**    * Create binary operation for simple basic types, such as int and float.    *    * @param op operation, such as "+", "*", "<<", etc.    */
+comment|/**      * Create binary operation for simple basic types, such as int and float.      *      * @param op operation, such as "+", "*", "<<", etc.      */
 specifier|public
 specifier|static
 name|ArithmeticInstruction
@@ -1643,7 +1660,7 @@ argument_list|)
 throw|;
 block|}
 block|}
-comment|/**    * @param size size of operand, either 1 (int, e.g.) or 2 (double)    */
+comment|/**      * @param size size of operand, either 1 (int, e.g.) or 2 (double)      */
 specifier|public
 specifier|static
 name|StackInstruction
@@ -1671,7 +1688,7 @@ operator|)
 name|POP
 return|;
 block|}
-comment|/**    * @param size size of operand, either 1 (int, e.g.) or 2 (double)    */
+comment|/**      * @param size size of operand, either 1 (int, e.g.) or 2 (double)      */
 specifier|public
 specifier|static
 name|StackInstruction
@@ -1699,7 +1716,7 @@ operator|)
 name|DUP
 return|;
 block|}
-comment|/**    * @param size size of operand, either 1 (int, e.g.) or 2 (double)    */
+comment|/**      * @param size size of operand, either 1 (int, e.g.) or 2 (double)      */
 specifier|public
 specifier|static
 name|StackInstruction
@@ -1727,7 +1744,7 @@ operator|)
 name|DUP_X2
 return|;
 block|}
-comment|/**    * @param size size of operand, either 1 (int, e.g.) or 2 (double)    */
+comment|/**      * @param size size of operand, either 1 (int, e.g.) or 2 (double)      */
 specifier|public
 specifier|static
 name|StackInstruction
@@ -1755,7 +1772,7 @@ operator|)
 name|DUP_X1
 return|;
 block|}
-comment|/**    * @param index index of local variable    */
+comment|/**      * @param index index of local variable      */
 specifier|public
 specifier|static
 name|LocalVariableInstruction
@@ -1873,7 +1890,7 @@ argument_list|)
 throw|;
 block|}
 block|}
-comment|/**    * @param index index of local variable    */
+comment|/**      * @param index index of local variable      */
 specifier|public
 specifier|static
 name|LocalVariableInstruction
@@ -1991,7 +2008,7 @@ argument_list|)
 throw|;
 block|}
 block|}
-comment|/**    * @param type type of elements of array, i.e., array.getElementType()    */
+comment|/**      * @param type type of elements of array, i.e., array.getElementType()      */
 specifier|public
 specifier|static
 name|ArrayInstruction
@@ -2095,7 +2112,7 @@ argument_list|)
 throw|;
 block|}
 block|}
-comment|/**    * @param type type of elements of array, i.e., array.getElementType()    */
+comment|/**      * @param type type of elements of array, i.e., array.getElementType()      */
 specifier|public
 specifier|static
 name|ArrayInstruction
@@ -2199,7 +2216,7 @@ argument_list|)
 throw|;
 block|}
 block|}
-comment|/** Create conversion operation for two stack operands, this may be an I2C, instruction, e.g.,    * if the operands are basic types and CHECKCAST if they are reference types.    */
+comment|/** Create conversion operation for two stack operands, this may be an I2C, instruction, e.g.,      * if the operands are basic types and CHECKCAST if they are reference types.      */
 specifier|public
 name|Instruction
 name|createCast
@@ -2270,12 +2287,14 @@ operator|.
 name|T_SHORT
 operator|)
 condition|)
+block|{
 name|src
 operator|=
 name|Constants
 operator|.
 name|T_INT
 expr_stmt|;
+block|}
 name|String
 index|[]
 name|short_names
@@ -2389,6 +2408,7 @@ name|dest_type
 operator|instanceof
 name|ArrayType
 condition|)
+block|{
 return|return
 operator|new
 name|CHECKCAST
@@ -2404,7 +2424,9 @@ name|dest_type
 argument_list|)
 argument_list|)
 return|;
+block|}
 else|else
+block|{
 return|return
 operator|new
 name|CHECKCAST
@@ -2426,7 +2448,9 @@ argument_list|)
 argument_list|)
 return|;
 block|}
+block|}
 else|else
+block|{
 throw|throw
 operator|new
 name|RuntimeException
@@ -2440,6 +2464,7 @@ operator|+
 name|dest_type
 argument_list|)
 throw|;
+block|}
 block|}
 specifier|public
 name|GETFIELD
@@ -2591,6 +2616,7 @@ name|t
 operator|instanceof
 name|ArrayType
 condition|)
+block|{
 return|return
 operator|new
 name|CHECKCAST
@@ -2606,7 +2632,9 @@ name|t
 argument_list|)
 argument_list|)
 return|;
+block|}
 else|else
+block|{
 return|return
 operator|new
 name|CHECKCAST
@@ -2623,6 +2651,7 @@ argument_list|)
 argument_list|)
 return|;
 block|}
+block|}
 specifier|public
 name|INSTANCEOF
 name|createInstanceOf
@@ -2637,6 +2666,7 @@ name|t
 operator|instanceof
 name|ArrayType
 condition|)
+block|{
 return|return
 operator|new
 name|INSTANCEOF
@@ -2652,7 +2682,9 @@ name|t
 argument_list|)
 argument_list|)
 return|;
+block|}
 else|else
+block|{
 return|return
 operator|new
 name|INSTANCEOF
@@ -2668,6 +2700,7 @@ name|t
 argument_list|)
 argument_list|)
 return|;
+block|}
 block|}
 specifier|public
 name|NEW
@@ -2709,7 +2742,7 @@ argument_list|)
 argument_list|)
 return|;
 block|}
-comment|/** Create new array of given size and type.    * @return an instruction that creates the corresponding array at runtime, i.e. is an AllocationInstruction    */
+comment|/** Create new array of given size and type.      * @return an instruction that creates the corresponding array at runtime, i.e. is an AllocationInstruction      */
 specifier|public
 name|Instruction
 name|createNewArray
@@ -2734,6 +2767,7 @@ name|t
 operator|instanceof
 name|ObjectType
 condition|)
+block|{
 return|return
 operator|new
 name|ANEWARRAY
@@ -2749,12 +2783,14 @@ name|t
 argument_list|)
 argument_list|)
 return|;
+block|}
 if|else if
 condition|(
 name|t
 operator|instanceof
 name|ArrayType
 condition|)
+block|{
 return|return
 operator|new
 name|ANEWARRAY
@@ -2770,7 +2806,9 @@ name|t
 argument_list|)
 argument_list|)
 return|;
+block|}
 else|else
+block|{
 return|return
 operator|new
 name|NEWARRAY
@@ -2787,6 +2825,7 @@ argument_list|()
 argument_list|)
 return|;
 block|}
+block|}
 else|else
 block|{
 name|ArrayType
@@ -2798,6 +2837,7 @@ name|t
 operator|instanceof
 name|ArrayType
 condition|)
+block|{
 name|at
 operator|=
 operator|(
@@ -2805,7 +2845,9 @@ name|ArrayType
 operator|)
 name|t
 expr_stmt|;
+block|}
 else|else
+block|{
 name|at
 operator|=
 operator|new
@@ -2816,6 +2858,7 @@ argument_list|,
 name|dim
 argument_list|)
 expr_stmt|;
+block|}
 return|return
 operator|new
 name|MULTIANEWARRAY
@@ -2832,7 +2875,7 @@ argument_list|)
 return|;
 block|}
 block|}
-comment|/** Create "null" value for reference types, 0 for basic types like int    */
+comment|/** Create "null" value for reference types, 0 for basic types like int      */
 specifier|public
 specifier|static
 name|Instruction
@@ -2935,7 +2978,7 @@ argument_list|)
 throw|;
 block|}
 block|}
-comment|/** Create branch instruction by given opcode, except LOOKUPSWITCH and TABLESWITCH.    * For those you should use the SWITCH compound instruction.    */
+comment|/** Create branch instruction by given opcode, except LOOKUPSWITCH and TABLESWITCH.      * For those you should use the SWITCH compound instruction.      */
 specifier|public
 specifier|static
 name|BranchInstruction

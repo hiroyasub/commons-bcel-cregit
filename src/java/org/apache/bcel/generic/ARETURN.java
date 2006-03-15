@@ -26,7 +26,7 @@ name|ARETURN
 extends|extends
 name|ReturnInstruction
 block|{
-comment|/**     * Return reference from method    */
+comment|/**       * Return reference from method      */
 specifier|public
 name|ARETURN
 parameter_list|()
@@ -45,7 +45,7 @@ name|ARETURN
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**    * Call corresponding visitor method(s). The order is:    * Call visitor methods of implemented interfaces first, then    * call methods according to the class hierarchy in descending order,    * i.e., the most specific visitXXX() call comes last.    *    * @param v Visitor object    */
+comment|/**      * Call corresponding visitor method(s). The order is:      * Call visitor methods of implemented interfaces first, then      * call methods according to the class hierarchy in descending order,      * i.e., the most specific visitXXX() call comes last.      *      * @param v Visitor object      */
 specifier|public
 name|void
 name|accept

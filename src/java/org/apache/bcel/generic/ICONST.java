@@ -34,7 +34,7 @@ specifier|private
 name|int
 name|value
 decl_stmt|;
-comment|/**    * Empty constructor needed for the Class.newInstance() statement in    * Instruction.readInstruction(). Not to be used otherwise.    */
+comment|/**      * Empty constructor needed for the Class.newInstance() statement in      * Instruction.readInstruction(). Not to be used otherwise.      */
 name|ICONST
 parameter_list|()
 block|{
@@ -79,6 +79,7 @@ operator|<=
 literal|5
 operator|)
 condition|)
+block|{
 name|opcode
 operator|=
 operator|(
@@ -99,7 +100,9 @@ name|i
 operator|)
 expr_stmt|;
 comment|// Even works for i == -1
+block|}
 else|else
+block|{
 throw|throw
 operator|new
 name|ClassGenException
@@ -109,6 +112,7 @@ operator|+
 name|i
 argument_list|)
 throw|;
+block|}
 name|value
 operator|=
 name|i
@@ -127,7 +131,7 @@ name|value
 argument_list|)
 return|;
 block|}
-comment|/** @return Type.INT    */
+comment|/** @return Type.INT      */
 specifier|public
 name|Type
 name|getType
@@ -142,7 +146,7 @@ operator|.
 name|INT
 return|;
 block|}
-comment|/**    * Call corresponding visitor method(s). The order is:    * Call visitor methods of implemented interfaces first, then    * call methods according to the class hierarchy in descending order,    * i.e., the most specific visitXXX() call comes last.    *    * @param v Visitor object    */
+comment|/**      * Call corresponding visitor method(s). The order is:      * Call visitor methods of implemented interfaces first, then      * call methods according to the class hierarchy in descending order,      * i.e., the most specific visitXXX() call comes last.      *      * @param v Visitor object      */
 specifier|public
 name|void
 name|accept

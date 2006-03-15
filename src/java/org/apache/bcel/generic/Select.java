@@ -100,12 +100,12 @@ init|=
 literal|0
 decl_stmt|;
 comment|// number of pad bytes for alignment
-comment|/**    * Empty constructor needed for the Class.newInstance() statement in    * Instruction.readInstruction(). Not to be used otherwise.    */
+comment|/**      * Empty constructor needed for the Class.newInstance() statement in      * Instruction.readInstruction(). Not to be used otherwise.      */
 name|Select
 parameter_list|()
 block|{
 block|}
-comment|/**    * (Match, target) pairs for switch.    * `Match' and `targets' must have the same length of course.    *    * @param match array of matching values    * @param targets instruction targets    * @param defaultTarget default instruction target    */
+comment|/**      * (Match, target) pairs for switch.      * `Match' and `targets' must have the same length of course.      *      * @param match array of matching values      * @param targets instruction targets      * @param defaultTarget default instruction target      */
 name|Select
 parameter_list|(
 name|short
@@ -152,6 +152,7 @@ condition|;
 name|i
 operator|++
 control|)
+block|{
 name|notifyTarget
 argument_list|(
 literal|null
@@ -164,6 +165,7 @@ argument_list|,
 name|this
 argument_list|)
 expr_stmt|;
+block|}
 name|this
 operator|.
 name|match
@@ -184,6 +186,7 @@ name|targets
 operator|.
 name|length
 condition|)
+block|{
 throw|throw
 operator|new
 name|ClassGenException
@@ -191,6 +194,7 @@ argument_list|(
 literal|"Match and target array have not the same length"
 argument_list|)
 throw|;
+block|}
 name|indices
 operator|=
 operator|new
@@ -200,7 +204,7 @@ name|match_length
 index|]
 expr_stmt|;
 block|}
-comment|/**    * Since this is a variable length instruction, it may shift the following    * instructions which then need to update their position.    *    * Called by InstructionList.setPositions when setting the position for every    * instruction. In the presence of variable length instructions `setPositions'    * performs multiple passes over the instruction list to calculate the    * correct (byte) positions and offsets by calling this function.    *    * @param offset additional offset caused by preceding (variable length) instructions    * @param max_offset the maximum offset that may be caused by these instructions    * @return additional offset caused by possible change of this instruction's length    */
+comment|/**      * Since this is a variable length instruction, it may shift the following      * instructions which then need to update their position.      *      * Called by InstructionList.setPositions when setting the position for every      * instruction. In the presence of variable length instructions `setPositions'      * performs multiple passes over the instruction list to calculate the      * correct (byte) positions and offsets by calling this function.      *      * @param offset additional offset caused by preceding (variable length) instructions      * @param max_offset the maximum offset that may be caused by these instructions      * @return additional offset caused by possible change of this instruction's length      */
 specifier|protected
 name|int
 name|updatePosition
@@ -222,7 +226,7 @@ name|old_length
 init|=
 name|length
 decl_stmt|;
-comment|/* Alignment on 4-byte-boundary, + 1, because of tag byte.      */
+comment|/* Alignment on 4-byte-boundary, + 1, because of tag byte.          */
 name|padding
 operator|=
 operator|(
@@ -259,7 +263,7 @@ operator|-
 name|old_length
 return|;
 block|}
-comment|/**    * Dump instruction as byte code to stream out.    * @param out Output stream    */
+comment|/**      * Dump instruction as byte code to stream out.      * @param out Output stream      */
 specifier|public
 name|void
 name|dump
@@ -291,7 +295,7 @@ condition|;
 name|i
 operator|++
 control|)
-comment|// Padding bytes
+block|{
 name|out
 operator|.
 name|writeByte
@@ -299,6 +303,7 @@ argument_list|(
 literal|0
 argument_list|)
 expr_stmt|;
+block|}
 name|index
 operator|=
 name|getTargetOffset
@@ -313,7 +318,7 @@ name|index
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**    * Read needed data (e.g. index) from file.    */
+comment|/**      * Read needed data (e.g. index) from file.      */
 specifier|protected
 name|void
 name|initFromFile
@@ -375,7 +380,7 @@ name|readInt
 argument_list|()
 expr_stmt|;
 block|}
-comment|/**    * @return mnemonic for instruction    */
+comment|/**      * @return mnemonic for instruction      */
 specifier|public
 name|String
 name|toString
@@ -432,6 +437,7 @@ index|]
 operator|!=
 literal|null
 condition|)
+block|{
 name|s
 operator|=
 name|targets
@@ -445,6 +451,7 @@ operator|.
 name|toString
 argument_list|()
 expr_stmt|;
+block|}
 name|buf
 operator|.
 name|append
@@ -491,6 +498,7 @@ expr_stmt|;
 block|}
 block|}
 else|else
+block|{
 name|buf
 operator|.
 name|append
@@ -498,6 +506,7 @@ argument_list|(
 literal|" ..."
 argument_list|)
 expr_stmt|;
+block|}
 return|return
 name|buf
 operator|.
@@ -505,7 +514,7 @@ name|toString
 argument_list|()
 return|;
 block|}
-comment|/**    * Set branch target for `i'th case    */
+comment|/**      * Set branch target for `i'th case      */
 specifier|public
 name|void
 name|setTarget
@@ -537,7 +546,7 @@ operator|=
 name|target
 expr_stmt|;
 block|}
-comment|/**    * @param old_ih old target    * @param new_ih new target    */
+comment|/**      * @param old_ih old target      * @param new_ih new target      */
 specifier|public
 name|void
 name|updateTarget
@@ -616,6 +625,7 @@ condition|(
 operator|!
 name|targeted
 condition|)
+block|{
 throw|throw
 operator|new
 name|ClassGenException
@@ -626,7 +636,8 @@ name|old_ih
 argument_list|)
 throw|;
 block|}
-comment|/**    * @return true, if ih is target of this instruction    */
+block|}
+comment|/**      * @return true, if ih is target of this instruction      */
 specifier|public
 name|boolean
 name|containsTarget
@@ -641,9 +652,11 @@ name|target
 operator|==
 name|ih
 condition|)
+block|{
 return|return
 literal|true
 return|;
+block|}
 for|for
 control|(
 name|int
@@ -660,6 +673,7 @@ condition|;
 name|i
 operator|++
 control|)
+block|{
 if|if
 condition|(
 name|targets
@@ -669,9 +683,12 @@ index|]
 operator|==
 name|ih
 condition|)
+block|{
 return|return
 literal|true
 return|;
+block|}
+block|}
 return|return
 literal|false
 return|;
@@ -737,7 +754,7 @@ return|return
 name|copy
 return|;
 block|}
-comment|/**    * Inform targets that they're not targeted anymore.    */
+comment|/**      * Inform targets that they're not targeted anymore.      */
 name|void
 name|dispose
 parameter_list|()
@@ -763,6 +780,7 @@ condition|;
 name|i
 operator|++
 control|)
+block|{
 name|targets
 index|[
 name|i
@@ -774,7 +792,8 @@ name|this
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**    * @return array of match indices    */
+block|}
+comment|/**      * @return array of match indices      */
 specifier|public
 name|int
 index|[]
@@ -785,7 +804,7 @@ return|return
 name|match
 return|;
 block|}
-comment|/**    * @return array of match target offsets    */
+comment|/**      * @return array of match target offsets      */
 specifier|public
 name|int
 index|[]
@@ -796,7 +815,7 @@ return|return
 name|indices
 return|;
 block|}
-comment|/**    * @return array of match targets    */
+comment|/**      * @return array of match targets      */
 specifier|public
 name|InstructionHandle
 index|[]

@@ -76,7 +76,7 @@ name|int
 name|string_index
 decl_stmt|;
 comment|// Identical to ConstantClass except for this name
-comment|/**    * Initialize from another object.    */
+comment|/**      * Initialize from another object.      */
 specifier|public
 name|ConstantString
 parameter_list|(
@@ -93,7 +93,7 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**     * Initialize instance from file data.    *    * @param file Input stream    * @throws IOException    */
+comment|/**       * Initialize instance from file data.      *      * @param file Input stream      * @throws IOException      */
 name|ConstantString
 parameter_list|(
 name|DataInputStream
@@ -111,7 +111,7 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**    * @param string_index Index of Constant_Utf8 in constant pool    */
+comment|/**      * @param string_index Index of Constant_Utf8 in constant pool      */
 specifier|public
 name|ConstantString
 parameter_list|(
@@ -133,7 +133,7 @@ operator|=
 name|string_index
 expr_stmt|;
 block|}
-comment|/**    * Called by objects that are traversing the nodes of the tree implicitely    * defined by the contents of a Java class. I.e., the hierarchy of methods,    * fields, attributes, etc. spawns a tree of objects.    *    * @param v Visitor object    */
+comment|/**      * Called by objects that are traversing the nodes of the tree implicitely      * defined by the contents of a Java class. I.e., the hierarchy of methods,      * fields, attributes, etc. spawns a tree of objects.      *      * @param v Visitor object      */
 specifier|public
 name|void
 name|accept
@@ -150,7 +150,7 @@ name|this
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**    * Dump constant field reference to file stream in binary format.    *    * @param file Output file stream    * @throws IOException    */
+comment|/**      * Dump constant field reference to file stream in binary format.      *      * @param file Output file stream      * @throws IOException      */
 specifier|public
 specifier|final
 name|void
@@ -177,7 +177,7 @@ name|string_index
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**    * @return Index in constant pool of the string (ConstantUtf8).    */
+comment|/**      * @return Index in constant pool of the string (ConstantUtf8).      */
 specifier|public
 specifier|final
 name|int
@@ -188,7 +188,7 @@ return|return
 name|string_index
 return|;
 block|}
-comment|/**    * @param string_index the index into the constant of the string value    */
+comment|/**      * @param string_index the index into the constant of the string value      */
 specifier|public
 specifier|final
 name|void
@@ -205,7 +205,7 @@ operator|=
 name|string_index
 expr_stmt|;
 block|}
-comment|/**    * @return String representation.    */
+comment|/**      * @return String representation.      */
 specifier|public
 specifier|final
 name|String
@@ -225,7 +225,7 @@ operator|+
 literal|")"
 return|;
 block|}
-comment|/** @return String object    */
+comment|/** @return String object      */
 specifier|public
 name|Object
 name|getConstantValue
@@ -260,7 +260,7 @@ name|getBytes
 argument_list|()
 return|;
 block|}
-comment|/** @return dereferenced string    */
+comment|/** @return dereferenced string      */
 specifier|public
 name|String
 name|getBytes

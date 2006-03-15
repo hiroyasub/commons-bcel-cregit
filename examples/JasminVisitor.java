@@ -676,6 +676,7 @@ condition|;
 name|i
 operator|++
 control|)
+block|{
 name|out
 operator|.
 name|println
@@ -695,6 +696,7 @@ literal|'/'
 argument_list|)
 argument_list|)
 expr_stmt|;
+block|}
 name|out
 operator|.
 name|print
@@ -753,6 +755,7 @@ name|length
 operator|==
 literal|0
 condition|)
+block|{
 name|out
 operator|.
 name|print
@@ -760,6 +763,7 @@ argument_list|(
 literal|"\n"
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 specifier|public
 name|void
@@ -815,6 +819,7 @@ operator|-
 literal|1
 index|]
 condition|)
+block|{
 name|out
 operator|.
 name|println
@@ -822,6 +827,7 @@ argument_list|(
 literal|".end method"
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 specifier|public
 name|void
@@ -851,11 +857,13 @@ name|_method
 operator|!=
 literal|null
 condition|)
+block|{
 name|printEndMethod
 argument_list|(
 name|attribute
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 specifier|public
 name|void
@@ -926,6 +934,7 @@ operator|==
 literal|0
 operator|)
 condition|)
+block|{
 name|out
 operator|.
 name|println
@@ -933,6 +942,7 @@ argument_list|(
 literal|".end method"
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 specifier|public
 name|void
@@ -967,6 +977,7 @@ condition|;
 name|i
 operator|++
 control|)
+block|{
 name|out
 operator|.
 name|println
@@ -986,6 +997,7 @@ literal|'/'
 argument_list|)
 argument_list|)
 expr_stmt|;
+block|}
 name|printEndMethod
 argument_list|(
 name|e
@@ -1149,6 +1161,7 @@ condition|;
 name|j
 operator|++
 control|)
+block|{
 name|put
 argument_list|(
 name|targets
@@ -1164,6 +1177,7 @@ operator|+
 literal|":"
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 name|InstructionHandle
 name|ih
@@ -1540,6 +1554,7 @@ name|str
 operator|!=
 literal|null
 condition|)
+block|{
 name|out
 operator|.
 name|println
@@ -1547,6 +1562,7 @@ argument_list|(
 name|str
 argument_list|)
 expr_stmt|;
+block|}
 if|if
 condition|(
 name|inst
@@ -1634,6 +1650,7 @@ condition|;
 name|j
 operator|++
 control|)
+block|{
 name|out
 operator|.
 name|println
@@ -1649,6 +1666,7 @@ index|]
 argument_list|)
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 else|else
 block|{
@@ -1676,6 +1694,7 @@ condition|;
 name|j
 operator|++
 control|)
+block|{
 name|out
 operator|.
 name|println
@@ -1698,6 +1717,7 @@ index|]
 argument_list|)
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 name|out
 operator|.
@@ -1764,6 +1784,7 @@ expr_stmt|;
 block|}
 block|}
 else|else
+block|{
 name|out
 operator|.
 name|println
@@ -1781,6 +1802,7 @@ argument_list|()
 argument_list|)
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 name|out
 operator|.
@@ -1970,6 +1992,7 @@ name|str
 operator|==
 literal|null
 condition|)
+block|{
 name|map
 operator|.
 name|put
@@ -1979,6 +2002,7 @@ argument_list|,
 name|line
 argument_list|)
 expr_stmt|;
+block|}
 else|else
 block|{
 if|if
@@ -1997,8 +2021,9 @@ argument_list|(
 name|line
 argument_list|)
 condition|)
-comment|// Already have a label in the map
+block|{
 return|return;
+block|}
 name|map
 operator|.
 name|put
@@ -2025,11 +2050,6 @@ index|[]
 name|argv
 parameter_list|)
 block|{
-name|ClassParser
-name|parser
-init|=
-literal|null
-decl_stmt|;
 name|JavaClass
 name|java_class
 decl_stmt|;
@@ -2043,6 +2063,7 @@ name|length
 operator|==
 literal|0
 condition|)
+block|{
 name|System
 operator|.
 name|err
@@ -2052,6 +2073,7 @@ argument_list|(
 literal|"disassemble: No input files specified"
 argument_list|)
 expr_stmt|;
+block|}
 else|else
 block|{
 for|for
@@ -2089,6 +2111,7 @@ operator|)
 operator|==
 literal|null
 condition|)
+block|{
 name|java_class
 operator|=
 operator|new
@@ -2103,6 +2126,7 @@ operator|.
 name|parse
 argument_list|()
 expr_stmt|;
+block|}
 name|String
 name|class_name
 init|=

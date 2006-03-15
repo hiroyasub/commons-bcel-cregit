@@ -133,7 +133,7 @@ name|InstructionComparator
 operator|.
 name|DEFAULT
 decl_stmt|;
-comment|/**    * Empty constructor needed for the Class.newInstance() statement in    * Instruction.readInstruction(). Not to be used otherwise.    */
+comment|/**      * Empty constructor needed for the Class.newInstance() statement in      * Instruction.readInstruction(). Not to be used otherwise.      */
 name|Instruction
 parameter_list|()
 block|{
@@ -161,7 +161,7 @@ operator|=
 name|opcode
 expr_stmt|;
 block|}
-comment|/**    * Dump instruction as byte code to stream out.    * @param out Output stream    */
+comment|/**      * Dump instruction as byte code to stream out.      * @param out Output stream      */
 specifier|public
 name|void
 name|dump
@@ -181,7 +181,7 @@ argument_list|)
 expr_stmt|;
 comment|// Common for all instructions
 block|}
-comment|/** @return name of instruction, i.e., opcode name    */
+comment|/** @return name of instruction, i.e., opcode name      */
 specifier|public
 name|String
 name|getName
@@ -196,7 +196,7 @@ name|opcode
 index|]
 return|;
 block|}
-comment|/**    * Long output format:    *    *&lt;name of opcode&gt; "["&lt;opcode number&gt;"]"     * "("&lt;length of instruction&gt;")"    *    * @param verbose long/short format switch    * @return mnemonic for instruction    */
+comment|/**      * Long output format:      *      *&lt;name of opcode&gt; "["&lt;opcode number&gt;"]"       * "("&lt;length of instruction&gt;")"      *      * @param verbose long/short format switch      * @return mnemonic for instruction      */
 specifier|public
 name|String
 name|toString
@@ -209,6 +209,7 @@ if|if
 condition|(
 name|verbose
 condition|)
+block|{
 return|return
 name|getName
 argument_list|()
@@ -223,13 +224,16 @@ name|length
 operator|+
 literal|")"
 return|;
+block|}
 else|else
+block|{
 return|return
 name|getName
 argument_list|()
 return|;
 block|}
-comment|/**    * @return mnemonic for instruction in verbose format    */
+block|}
+comment|/**      * @return mnemonic for instruction in verbose format      */
 specifier|public
 name|String
 name|toString
@@ -242,7 +246,7 @@ literal|true
 argument_list|)
 return|;
 block|}
-comment|/**    * @return mnemonic for instruction with sumbolic references resolved    */
+comment|/**      * @return mnemonic for instruction with sumbolic references resolved      */
 specifier|public
 name|String
 name|toString
@@ -258,7 +262,7 @@ literal|false
 argument_list|)
 return|;
 block|}
-comment|/**    * Use with caution, since `BranchInstruction's have a `target' reference which    * is not copied correctly (only basic types are). This also applies for     * `Select' instructions with their multiple branch targets.    *    * @see BranchInstruction    * @return (shallow) copy of an instruction    */
+comment|/**      * Use with caution, since `BranchInstruction's have a `target' reference which      * is not copied correctly (only basic types are). This also applies for       * `Select' instructions with their multiple branch targets.      *      * @see BranchInstruction      * @return (shallow) copy of an instruction      */
 specifier|public
 name|Instruction
 name|copy
@@ -284,10 +288,12 @@ index|]
 operator|!=
 literal|null
 condition|)
+block|{
 name|i
 operator|=
 name|this
 expr_stmt|;
+block|}
 else|else
 block|{
 try|try
@@ -322,7 +328,7 @@ return|return
 name|i
 return|;
 block|}
-comment|/**    * Read needed data (e.g. index) from file.    *    * @param bytes byte sequence to read from    * @param wide "wide" instruction flag    */
+comment|/**      * Read needed data (e.g. index) from file.      *      * @param bytes byte sequence to read from      * @param wide "wide" instruction flag      */
 specifier|protected
 name|void
 name|initFromFile
@@ -337,7 +343,7 @@ throws|throws
 name|IOException
 block|{
 block|}
-comment|/**    * Read an instruction from (byte code) input stream and return the    * appropiate object.    *    * @param bytes input stream bytes    * @return instruction object being read    */
+comment|/**      * Read an instruction from (byte code) input stream and return the      * appropiate object.      *      * @param bytes input stream bytes      * @return instruction object being read      */
 specifier|public
 specifier|static
 specifier|final
@@ -407,6 +413,7 @@ index|]
 operator|!=
 literal|null
 condition|)
+block|{
 return|return
 name|InstructionConstants
 operator|.
@@ -416,7 +423,8 @@ name|opcode
 index|]
 return|;
 comment|// Used predefined immutable object, if available
-comment|/* Find appropiate class, instantiate an (empty) instruction object      * and initialize it by hand.      */
+block|}
+comment|/* Find appropiate class, instantiate an (empty) instruction object          * and initialize it by hand.          */
 name|Class
 name|clazz
 decl_stmt|;
@@ -488,6 +496,7 @@ name|RET
 operator|)
 operator|)
 condition|)
+block|{
 throw|throw
 operator|new
 name|Exception
@@ -497,6 +506,7 @@ operator|+
 name|opcode
 argument_list|)
 throw|;
+block|}
 name|obj
 operator|.
 name|setOpcode
@@ -564,7 +574,7 @@ operator|.
 name|ENGLISH
 argument_list|)
 decl_stmt|;
-comment|/* ICONST_0, etc. will be shortened to ICONST, etc., since ICONST_0 and the like      * are not implemented (directly).      */
+comment|/* ICONST_0, etc. will be shortened to ICONST, etc., since ICONST_0 and the like          * are not implemented (directly).          */
 try|try
 block|{
 name|int
@@ -618,6 +628,7 @@ operator|<=
 literal|'5'
 operator|)
 condition|)
+block|{
 name|name
 operator|=
 name|name
@@ -631,6 +642,7 @@ operator|-
 literal|2
 argument_list|)
 expr_stmt|;
+block|}
 if|if
 condition|(
 name|name
@@ -640,11 +652,12 @@ argument_list|(
 literal|"ICONST_M1"
 argument_list|)
 condition|)
-comment|// Special case
+block|{
 name|name
 operator|=
 literal|"ICONST"
 expr_stmt|;
+block|}
 block|}
 catch|catch
 parameter_list|(
@@ -668,7 +681,7 @@ operator|+
 name|name
 return|;
 block|}
-comment|/**    * This method also gives right results for instructions whose    * effect on the stack depends on the constant pool entry they    * reference.    *  @return Number of words consumed from stack by this instruction,    * or Constants.UNPREDICTABLE, if this can not be computed statically    */
+comment|/**      * This method also gives right results for instructions whose      * effect on the stack depends on the constant pool entry they      * reference.      *  @return Number of words consumed from stack by this instruction,      * or Constants.UNPREDICTABLE, if this can not be computed statically      */
 specifier|public
 name|int
 name|consumeStack
@@ -686,7 +699,7 @@ name|opcode
 index|]
 return|;
 block|}
-comment|/**    * This method also gives right results for instructions whose    * effect on the stack depends on the constant pool entry they    * reference.    * @return Number of words produced onto stack by this instruction,    * or Constants.UNPREDICTABLE, if this can not be computed statically    */
+comment|/**      * This method also gives right results for instructions whose      * effect on the stack depends on the constant pool entry they      * reference.      * @return Number of words produced onto stack by this instruction,      * or Constants.UNPREDICTABLE, if this can not be computed statically      */
 specifier|public
 name|int
 name|produceStack
@@ -704,7 +717,7 @@ name|opcode
 index|]
 return|;
 block|}
-comment|/**    * @return this instructions opcode    */
+comment|/**      * @return this instructions opcode      */
 specifier|public
 name|short
 name|getOpcode
@@ -714,7 +727,7 @@ return|return
 name|opcode
 return|;
 block|}
-comment|/**    * @return length (in bytes) of instruction    */
+comment|/**      * @return length (in bytes) of instruction      */
 specifier|public
 name|int
 name|getLength
@@ -724,7 +737,7 @@ return|return
 name|length
 return|;
 block|}
-comment|/**    * Needed in readInstruction.    */
+comment|/**      * Needed in readInstruction.      */
 specifier|private
 name|void
 name|setOpcode
@@ -740,13 +753,13 @@ operator|=
 name|opcode
 expr_stmt|;
 block|}
-comment|/** Some instructions may be reused, so don't do anything by default.    */
+comment|/** Some instructions may be reused, so don't do anything by default.      */
 name|void
 name|dispose
 parameter_list|()
 block|{
 block|}
-comment|/**    * Call corresponding visitor method(s). The order is:    * Call visitor methods of implemented interfaces first, then    * call methods according to the class hierarchy in descending order,    * i.e., the most specific visitXXX() call comes last.    *    * @param v Visitor object    */
+comment|/**      * Call corresponding visitor method(s). The order is:      * Call visitor methods of implemented interfaces first, then      * call methods according to the class hierarchy in descending order,      * i.e., the most specific visitXXX() call comes last.      *      * @param v Visitor object      */
 specifier|public
 specifier|abstract
 name|void
@@ -756,7 +769,7 @@ name|Visitor
 name|v
 parameter_list|)
 function_decl|;
-comment|/** Get Comparator object used in the equals() method to determine    * equality of instructions.    *    * @return currently used comparator for equals()    */
+comment|/** Get Comparator object used in the equals() method to determine      * equality of instructions.      *      * @return currently used comparator for equals()      */
 specifier|public
 specifier|static
 name|InstructionComparator
@@ -767,7 +780,7 @@ return|return
 name|cmp
 return|;
 block|}
-comment|/** Set comparator to be used for equals().    */
+comment|/** Set comparator to be used for equals().      */
 specifier|public
 specifier|static
 name|void
@@ -782,7 +795,7 @@ operator|=
 name|c
 expr_stmt|;
 block|}
-comment|/** Check for equality, delegated to comparator    * @return true if that is an Instruction and has the same opcode    */
+comment|/** Check for equality, delegated to comparator      * @return true if that is an Instruction and has the same opcode      */
 specifier|public
 name|boolean
 name|equals

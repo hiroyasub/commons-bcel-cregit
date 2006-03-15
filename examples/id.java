@@ -153,6 +153,7 @@ operator|)
 operator|==
 literal|null
 condition|)
+block|{
 name|clazz
 operator|=
 operator|new
@@ -168,6 +169,7 @@ name|parse
 argument_list|()
 expr_stmt|;
 comment|// May throw IOException
+block|}
 name|ClassGen
 name|cg
 init|=

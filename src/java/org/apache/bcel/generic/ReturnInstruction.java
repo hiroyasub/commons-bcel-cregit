@@ -57,12 +57,12 @@ name|TypedInstruction
 implements|,
 name|StackConsumer
 block|{
-comment|/**    * Empty constructor needed for the Class.newInstance() statement in    * Instruction.readInstruction(). Not to be used otherwise.    */
+comment|/**      * Empty constructor needed for the Class.newInstance() statement in      * Instruction.readInstruction(). Not to be used otherwise.      */
 name|ReturnInstruction
 parameter_list|()
 block|{
 block|}
-comment|/**    * @param opcode of instruction    */
+comment|/**      * @param opcode of instruction      */
 specifier|protected
 name|ReturnInstruction
 parameter_list|(
@@ -181,7 +181,7 @@ name|ILLEGAL_MONITOR_STATE
 block|}
 return|;
 block|}
-comment|/** @return type associated with the instruction    */
+comment|/** @return type associated with the instruction      */
 specifier|public
 name|Type
 name|getType

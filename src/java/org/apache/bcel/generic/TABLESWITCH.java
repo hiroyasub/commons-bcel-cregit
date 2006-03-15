@@ -60,12 +60,12 @@ name|TABLESWITCH
 extends|extends
 name|Select
 block|{
-comment|/**    * Empty constructor needed for the Class.newInstance() statement in    * Instruction.readInstruction(). Not to be used otherwise.    */
+comment|/**      * Empty constructor needed for the Class.newInstance() statement in      * Instruction.readInstruction(). Not to be used otherwise.      */
 name|TABLESWITCH
 parameter_list|()
 block|{
 block|}
-comment|/**    * @param match sorted array of match values, match[0] must be low value,     * match[match_length - 1] high value    * @param targets where to branch for matched values    * @param defaultTarget default branch    */
+comment|/**      * @param match sorted array of match values, match[0] must be low value,       * match[match_length - 1] high value      * @param targets where to branch for matched values      * @param defaultTarget default branch      */
 specifier|public
 name|TABLESWITCH
 parameter_list|(
@@ -113,13 +113,13 @@ operator|*
 literal|4
 operator|)
 expr_stmt|;
-comment|/* Alignment remainder assumed 					      * 0 here, until dump time */
+comment|/* Alignment remainder assumed          * 0 here, until dump time */
 name|fixed_length
 operator|=
 name|length
 expr_stmt|;
 block|}
-comment|/**    * Dump instruction as byte code to stream out.    * @param out Output stream    */
+comment|/**      * Dump instruction as byte code to stream out.      * @param out Output stream      */
 specifier|public
 name|void
 name|dump
@@ -199,7 +199,7 @@ condition|;
 name|i
 operator|++
 control|)
-comment|// jump offsets
+block|{
 name|out
 operator|.
 name|writeInt
@@ -219,7 +219,8 @@ argument_list|)
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**    * Read needed data (e.g. index) from file.    */
+block|}
+comment|/**      * Read needed data (e.g. index) from file.      */
 specifier|protected
 name|void
 name|initFromFile
@@ -328,6 +329,7 @@ condition|;
 name|i
 operator|++
 control|)
+block|{
 name|match
 index|[
 name|i
@@ -337,6 +339,7 @@ index|]
 operator|=
 name|i
 expr_stmt|;
+block|}
 for|for
 control|(
 name|int
@@ -364,7 +367,7 @@ argument_list|()
 expr_stmt|;
 block|}
 block|}
-comment|/**    * Call corresponding visitor method(s). The order is:    * Call visitor methods of implemented interfaces first, then    * call methods according to the class hierarchy in descending order,    * i.e., the most specific visitXXX() call comes last.    *    * @param v Visitor object    */
+comment|/**      * Call corresponding visitor method(s). The order is:      * Call visitor methods of implemented interfaces first, then      * call methods according to the class hierarchy in descending order,      * i.e., the most specific visitXXX() call comes last.      *      * @param v Visitor object      */
 specifier|public
 name|void
 name|accept

@@ -78,7 +78,7 @@ specifier|private
 name|int
 name|number_of_classes
 decl_stmt|;
-comment|/**    * Initialize from another object. Note that both objects use the same    * references (shallow copy). Use clone() for a physical copy.    */
+comment|/**      * Initialize from another object. Note that both objects use the same      * references (shallow copy). Use clone() for a physical copy.      */
 specifier|public
 name|InnerClasses
 parameter_list|(
@@ -110,7 +110,7 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**    * @param name_index Index in constant pool to CONSTANT_Utf8    * @param length Content length in bytes    * @param inner_classes array of inner classes attributes    * @param constant_pool Array of constants    */
+comment|/**      * @param name_index Index in constant pool to CONSTANT_Utf8      * @param length Content length in bytes      * @param inner_classes array of inner classes attributes      * @param constant_pool Array of constants      */
 specifier|public
 name|InnerClasses
 parameter_list|(
@@ -147,7 +147,7 @@ name|inner_classes
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**    * Construct object from file stream.    *    * @param name_index Index in constant pool to CONSTANT_Utf8    * @param length Content length in bytes    * @param file Input stream    * @param constant_pool Array of constants    * @throws IOException    */
+comment|/**      * Construct object from file stream.      *      * @param name_index Index in constant pool to CONSTANT_Utf8      * @param length Content length in bytes      * @param file Input stream      * @param constant_pool Array of constants      * @throws IOException      */
 name|InnerClasses
 parameter_list|(
 name|int
@@ -209,6 +209,7 @@ condition|;
 name|i
 operator|++
 control|)
+block|{
 name|inner_classes
 index|[
 name|i
@@ -221,7 +222,8 @@ name|file
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**    * Called by objects that are traversing the nodes of the tree implicitely    * defined by the contents of a Java class. I.e., the hierarchy of methods,    * fields, attributes, etc. spawns a tree of objects.    *    * @param v Visitor object    */
+block|}
+comment|/**      * Called by objects that are traversing the nodes of the tree implicitely      * defined by the contents of a Java class. I.e., the hierarchy of methods,      * fields, attributes, etc. spawns a tree of objects.      *      * @param v Visitor object      */
 specifier|public
 name|void
 name|accept
@@ -238,7 +240,7 @@ name|this
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**    * Dump source file attribute to file stream in binary format.    *    * @param file Output file stream    * @throws IOException    */
+comment|/**      * Dump source file attribute to file stream in binary format.      *      * @param file Output file stream      * @throws IOException      */
 specifier|public
 specifier|final
 name|void
@@ -278,6 +280,7 @@ condition|;
 name|i
 operator|++
 control|)
+block|{
 name|inner_classes
 index|[
 name|i
@@ -289,7 +292,8 @@ name|file
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**    * @return array of inner class "records"    */
+block|}
+comment|/**      * @return array of inner class "records"      */
 specifier|public
 specifier|final
 name|InnerClass
@@ -301,7 +305,7 @@ return|return
 name|inner_classes
 return|;
 block|}
-comment|/**    * @param inner_classes the array of inner classes    */
+comment|/**      * @param inner_classes the array of inner classes      */
 specifier|public
 specifier|final
 name|void
@@ -333,7 +337,7 @@ operator|.
 name|length
 expr_stmt|;
 block|}
-comment|/**    * @return String representation.    */
+comment|/**      * @return String representation.      */
 specifier|public
 specifier|final
 name|String
@@ -361,6 +365,7 @@ condition|;
 name|i
 operator|++
 control|)
+block|{
 name|buf
 operator|.
 name|append
@@ -381,6 +386,7 @@ argument_list|(
 literal|"\n"
 argument_list|)
 expr_stmt|;
+block|}
 return|return
 name|buf
 operator|.
@@ -388,7 +394,7 @@ name|toString
 argument_list|()
 return|;
 block|}
-comment|/**    * @return deep copy of this attribute    */
+comment|/**      * @return deep copy of this attribute      */
 specifier|public
 name|Attribute
 name|copy
@@ -430,6 +436,7 @@ condition|;
 name|i
 operator|++
 control|)
+block|{
 name|c
 operator|.
 name|inner_classes
@@ -445,6 +452,7 @@ operator|.
 name|copy
 argument_list|()
 expr_stmt|;
+block|}
 name|c
 operator|.
 name|constant_pool

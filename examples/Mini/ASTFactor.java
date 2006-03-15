@@ -93,7 +93,7 @@ operator|==
 operator|-
 literal|1
 condition|)
-comment|// Drop it
+block|{
 return|return
 name|exprs
 index|[
@@ -105,8 +105,9 @@ argument_list|(
 name|env
 argument_list|)
 return|;
+block|}
 else|else
-comment|// Or convert it to Expr node& copy children
+block|{
 return|return
 operator|new
 name|ASTExpr
@@ -125,6 +126,7 @@ argument_list|(
 name|env
 argument_list|)
 return|;
+block|}
 block|}
 block|}
 end_class

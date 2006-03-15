@@ -691,6 +691,7 @@ argument_list|)
 expr_stmt|;
 block|}
 else|else
+block|{
 name|System
 operator|.
 name|err
@@ -700,6 +701,7 @@ argument_list|(
 literal|"Call me with java org.apache.bcel.util.JavaWrapper ProxyCreator"
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 block|}
 end_class

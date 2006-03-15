@@ -104,7 +104,7 @@ name|int
 name|nargs
 decl_stmt|;
 comment|// Number of arguments on stack (number of stack slots), called "count" in vmspec2
-comment|/**    * Empty constructor needed for the Class.newInstance() statement in    * Instruction.readInstruction(). Not to be used otherwise.    */
+comment|/**      * Empty constructor needed for the Class.newInstance() statement in      * Instruction.readInstruction(). Not to be used otherwise.      */
 name|INVOKEINTERFACE
 parameter_list|()
 block|{
@@ -138,6 +138,7 @@ name|nargs
 operator|<
 literal|1
 condition|)
+block|{
 throw|throw
 operator|new
 name|ClassGenException
@@ -147,6 +148,7 @@ operator|+
 name|nargs
 argument_list|)
 throw|;
+block|}
 name|this
 operator|.
 name|nargs
@@ -154,7 +156,7 @@ operator|=
 name|nargs
 expr_stmt|;
 block|}
-comment|/**    * Dump instruction as byte code to stream out.    * @param out Output stream    */
+comment|/**      * Dump instruction as byte code to stream out.      * @param out Output stream      */
 specifier|public
 name|void
 name|dump
@@ -194,7 +196,7 @@ literal|0
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**    * The<B>count</B> argument according to the Java Language Specification,    * Second Edition.    */
+comment|/**      * The<B>count</B> argument according to the Java Language Specification,      * Second Edition.      */
 specifier|public
 name|int
 name|getCount
@@ -204,7 +206,7 @@ return|return
 name|nargs
 return|;
 block|}
-comment|/**    * Read needed data (i.e., index) from file.    */
+comment|/**      * Read needed data (i.e., index) from file.      */
 specifier|protected
 name|void
 name|initFromFile
@@ -245,7 +247,7 @@ argument_list|()
 expr_stmt|;
 comment|// Skip 0 byte
 block|}
-comment|/**    * @return mnemonic for instruction with symbolic references resolved    */
+comment|/**      * @return mnemonic for instruction with symbolic references resolved      */
 specifier|public
 name|String
 name|toString
@@ -386,7 +388,7 @@ return|return
 name|cs
 return|;
 block|}
-comment|/**    * Call corresponding visitor method(s). The order is:    * Call visitor methods of implemented interfaces first, then    * call methods according to the class hierarchy in descending order,    * i.e., the most specific visitXXX() call comes last.    *    * @param v Visitor object    */
+comment|/**      * Call corresponding visitor method(s). The order is:      * Call visitor methods of implemented interfaces first, then      * call methods according to the class hierarchy in descending order,      * i.e., the most specific visitXXX() call comes last.      *      * @param v Visitor object      */
 specifier|public
 name|void
 name|accept

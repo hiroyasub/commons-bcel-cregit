@@ -146,7 +146,7 @@ name|VerificationResult
 operator|.
 name|VR_OK
 condition|)
-comment|//System.exit(1);
+block|{
 name|System
 operator|.
 name|out
@@ -158,6 +158,7 @@ operator|+
 name|vr
 argument_list|)
 expr_stmt|;
+block|}
 name|vr
 operator|=
 name|v
@@ -173,7 +174,7 @@ name|VerificationResult
 operator|.
 name|VR_OK
 condition|)
-comment|//System.exit(1);
+block|{
 name|System
 operator|.
 name|out
@@ -185,6 +186,7 @@ operator|+
 name|vr
 argument_list|)
 expr_stmt|;
+block|}
 if|if
 condition|(
 name|vr
@@ -246,7 +248,7 @@ name|VerificationResult
 operator|.
 name|VR_OK
 condition|)
-comment|//System.exit(1);
+block|{
 name|System
 operator|.
 name|out
@@ -277,6 +279,7 @@ operator|+
 name|vr
 argument_list|)
 expr_stmt|;
+block|}
 name|vr
 operator|=
 name|v
@@ -294,7 +297,7 @@ name|VerificationResult
 operator|.
 name|VR_OK
 condition|)
-comment|//System.exit(1);
+block|{
 name|System
 operator|.
 name|out
@@ -327,6 +330,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
+block|}
 catch|catch
 parameter_list|(
 name|ClassNotFoundException
@@ -356,7 +360,7 @@ operator|-=
 literal|1
 expr_stmt|;
 block|}
-comment|/** 	 * This method implements a demonstration program 	 * of how to use the VerifierFactoryObserver. It transitively verifies 	 * all class files encountered; this may take up a lot of time and, 	 * more notably, memory. 	 */
+comment|/**      * This method implements a demonstration program      * of how to use the VerifierFactoryObserver. It transitively verifies      * all class files encountered; this may take up a lot of time and,      * more notably, memory.      */
 specifier|public
 specifier|static
 name|void
@@ -413,6 +417,7 @@ operator|!=
 operator|-
 literal|1
 condition|)
+block|{
 name|args
 index|[
 literal|0
@@ -430,6 +435,7 @@ argument_list|,
 name|dotclasspos
 argument_list|)
 expr_stmt|;
+block|}
 name|args
 index|[
 literal|0

@@ -29,7 +29,7 @@ name|LocalVariableInstruction
 implements|implements
 name|PopInstruction
 block|{
-comment|/**    * Empty constructor needed for the Class.newInstance() statement in    * Instruction.readInstruction(). Not to be used otherwise.    * tag and length are defined in readInstruction and initFromFile, respectively.    */
+comment|/**      * Empty constructor needed for the Class.newInstance() statement in      * Instruction.readInstruction(). Not to be used otherwise.      * tag and length are defined in readInstruction and initFromFile, respectively.      */
 name|StoreInstruction
 parameter_list|(
 name|short
@@ -47,7 +47,7 @@ name|c_tag
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**    * @param opcode Instruction opcode    * @param c_tag Instruction number for compact version, ASTORE_0, e.g.    * @param n local variable index (unsigned short)    */
+comment|/**      * @param opcode Instruction opcode      * @param c_tag Instruction number for compact version, ASTORE_0, e.g.      * @param n local variable index (unsigned short)      */
 specifier|protected
 name|StoreInstruction
 parameter_list|(
@@ -71,7 +71,7 @@ name|n
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**    * Call corresponding visitor method(s). The order is:    * Call visitor methods of implemented interfaces first, then    * call methods according to the class hierarchy in descending order,    * i.e., the most specific visitXXX() call comes last.    *    * @param v Visitor object    */
+comment|/**      * Call corresponding visitor method(s). The order is:      * Call visitor methods of implemented interfaces first, then      * call methods according to the class hierarchy in descending order,      * i.e., the most specific visitXXX() call comes last.      *      * @param v Visitor object      */
 specifier|public
 name|void
 name|accept

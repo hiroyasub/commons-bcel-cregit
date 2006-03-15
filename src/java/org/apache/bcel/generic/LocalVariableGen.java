@@ -80,7 +80,7 @@ name|start
 decl_stmt|,
 name|end
 decl_stmt|;
-comment|/**    * Generate a local variable that with index `index'. Note that double and long    * variables need two indexs. Index indices have to be provided by the user.    *    * @param index index of local variable    * @param name its name    * @param type its type    * @param start from where the instruction is valid (null means from the start)    * @param end until where the instruction is valid (null means to the end)    */
+comment|/**      * Generate a local variable that with index `index'. Note that double and long      * variables need two indexs. Index indices have to be provided by the user.      *      * @param index index of local variable      * @param name its name      * @param type its type      * @param start from where the instruction is valid (null means from the start)      * @param end until where the instruction is valid (null means to the end)      */
 specifier|public
 name|LocalVariableGen
 parameter_list|(
@@ -116,6 +116,7 @@ operator|.
 name|MAX_SHORT
 operator|)
 condition|)
+block|{
 throw|throw
 operator|new
 name|ClassGenException
@@ -125,6 +126,7 @@ operator|+
 name|index
 argument_list|)
 throw|;
+block|}
 name|this
 operator|.
 name|name
@@ -154,7 +156,7 @@ name|end
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**    * Get LocalVariable object.    *    * This relies on that the instruction list has already been dumped to byte code or    * or that the `setPositions' methods has been called for the instruction list.    *    * Note that for local variables whose scope end at the last    * instruction of the method's code, the JVM specification is ambiguous:    * both a start_pc+length ending at the last instruction and    * start_pc+length ending at first index beyond the end of the code are    * valid.    *    * @param cp constant pool    */
+comment|/**      * Get LocalVariable object.      *      * This relies on that the instruction list has already been dumped to byte code or      * or that the `setPositions' methods has been called for the instruction list.      *      * Note that for local variables whose scope end at the last      * instruction of the method's code, the JVM specification is ambiguous:      * both a start_pc+length ending at the last instruction and      * start_pc+length ending at first index beyond the end of the code are      * valid.      *      * @param cp constant pool      */
 specifier|public
 name|LocalVariable
 name|getLocalVariable
@@ -187,6 +189,7 @@ name|length
 operator|>
 literal|0
 condition|)
+block|{
 name|length
 operator|+=
 name|end
@@ -197,6 +200,7 @@ operator|.
 name|getLength
 argument_list|()
 expr_stmt|;
+block|}
 name|int
 name|name_index
 init|=
@@ -387,7 +391,7 @@ operator|=
 name|end
 expr_stmt|;
 block|}
-comment|/**    * @param old_ih old target, either start or end    * @param new_ih new target    */
+comment|/**      * @param old_ih old target, either start or end      * @param new_ih new target      */
 specifier|public
 name|void
 name|updateTarget
@@ -443,6 +447,7 @@ condition|(
 operator|!
 name|targeted
 condition|)
+block|{
 throw|throw
 operator|new
 name|ClassGenException
@@ -463,7 +468,8 @@ literal|"}"
 argument_list|)
 throw|;
 block|}
-comment|/**    * @return true, if ih is target of this variable    */
+block|}
+comment|/**      * @return true, if ih is target of this variable      */
 specifier|public
 name|boolean
 name|containsTarget
@@ -486,7 +492,7 @@ name|ih
 operator|)
 return|;
 block|}
-comment|/** @return a hash code value for the object.    */
+comment|/** @return a hash code value for the object.      */
 specifier|public
 name|int
 name|hashCode
@@ -512,7 +518,7 @@ return|return
 name|hc
 return|;
 block|}
-comment|/**    * We consider to local variables to be equal, if the use the same index and    * are valid in the same range.    */
+comment|/**      * We consider to local variables to be equal, if the use the same index and      * are valid in the same range.      */
 specifier|public
 name|boolean
 name|equals
@@ -530,9 +536,11 @@ operator|instanceof
 name|LocalVariableGen
 operator|)
 condition|)
+block|{
 return|return
 literal|false
 return|;
+block|}
 name|LocalVariableGen
 name|l
 init|=

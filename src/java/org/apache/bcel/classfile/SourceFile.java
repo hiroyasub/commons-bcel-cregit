@@ -73,7 +73,7 @@ specifier|private
 name|int
 name|sourcefile_index
 decl_stmt|;
-comment|/**    * Initialize from another object. Note that both objects use the same    * references (shallow copy). Use clone() for a physical copy.    */
+comment|/**      * Initialize from another object. Note that both objects use the same      * references (shallow copy). Use clone() for a physical copy.      */
 specifier|public
 name|SourceFile
 parameter_list|(
@@ -105,7 +105,7 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**    * Construct object from file stream.    * @param name_index Index in constant pool to CONSTANT_Utf8    * @param length Content length in bytes    * @param file Input stream    * @param constant_pool Array of constants    * @throws IOException    */
+comment|/**      * Construct object from file stream.      * @param name_index Index in constant pool to CONSTANT_Utf8      * @param length Content length in bytes      * @param file Input stream      * @param constant_pool Array of constants      * @throws IOException      */
 name|SourceFile
 parameter_list|(
 name|int
@@ -138,7 +138,7 @@ name|constant_pool
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**    * @param name_index Index in constant pool to CONSTANT_Utf8, which    * should represent the string "SourceFile".    * @param length Content length in bytes, the value should be 2.    * @param constant_pool The constant pool that this attribute is    * associated with.    * @param sourcefile_index Index in constant pool to CONSTANT_Utf8.  This    * string will be interpreted as the name of the file from which this    * class was compiled.  It will not be interpreted as indicating the name    * of the directory contqining the file or an absolute path; this    * information has to be supplied the consumer of this attribute - in    * many cases, the JVM.    */
+comment|/**      * @param name_index Index in constant pool to CONSTANT_Utf8, which      * should represent the string "SourceFile".      * @param length Content length in bytes, the value should be 2.      * @param constant_pool The constant pool that this attribute is      * associated with.      * @param sourcefile_index Index in constant pool to CONSTANT_Utf8.  This      * string will be interpreted as the name of the file from which this      * class was compiled.  It will not be interpreted as indicating the name      * of the directory contqining the file or an absolute path; this      * information has to be supplied the consumer of this attribute - in      * many cases, the JVM.      */
 specifier|public
 name|SourceFile
 parameter_list|(
@@ -175,7 +175,7 @@ operator|=
 name|sourcefile_index
 expr_stmt|;
 block|}
-comment|/**    * Called by objects that are traversing the nodes of the tree implicitely    * defined by the contents of a Java class. I.e., the hierarchy of methods,    * fields, attributes, etc. spawns a tree of objects.    *    * @param v Visitor object    */
+comment|/**      * Called by objects that are traversing the nodes of the tree implicitely      * defined by the contents of a Java class. I.e., the hierarchy of methods,      * fields, attributes, etc. spawns a tree of objects.      *      * @param v Visitor object      */
 specifier|public
 name|void
 name|accept
@@ -192,7 +192,7 @@ name|this
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**    * Dump source file attribute to file stream in binary format.    *    * @param file Output file stream    * @throws IOException    */
+comment|/**      * Dump source file attribute to file stream in binary format.      *      * @param file Output file stream      * @throws IOException      */
 specifier|public
 specifier|final
 name|void
@@ -219,7 +219,7 @@ name|sourcefile_index
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**    * @return Index in constant pool of source file name.    */
+comment|/**      * @return Index in constant pool of source file name.      */
 specifier|public
 specifier|final
 name|int
@@ -230,7 +230,7 @@ return|return
 name|sourcefile_index
 return|;
 block|}
-comment|/**    * @param sourcefile_index    */
+comment|/**      * @param sourcefile_index      */
 specifier|public
 specifier|final
 name|void
@@ -247,7 +247,7 @@ operator|=
 name|sourcefile_index
 expr_stmt|;
 block|}
-comment|/**    * @return Source file name.    */
+comment|/**      * @return Source file name.      */
 specifier|public
 specifier|final
 name|String
@@ -278,7 +278,7 @@ name|getBytes
 argument_list|()
 return|;
 block|}
-comment|/**    * @return String representation    */
+comment|/**      * @return String representation      */
 specifier|public
 specifier|final
 name|String
@@ -294,7 +294,7 @@ operator|+
 literal|")"
 return|;
 block|}
-comment|/**    * @return deep copy of this attribute    */
+comment|/**      * @return deep copy of this attribute      */
 specifier|public
 name|Attribute
 name|copy

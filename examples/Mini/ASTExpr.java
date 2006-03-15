@@ -442,6 +442,7 @@ operator|!=
 operator|-
 literal|1
 condition|)
+block|{
 name|op
 operator|=
 name|tokenImage
@@ -449,6 +450,7 @@ index|[
 name|unop
 index|]
 expr_stmt|;
+block|}
 if|else if
 condition|(
 name|kind
@@ -456,6 +458,7 @@ operator|!=
 operator|-
 literal|1
 condition|)
+block|{
 name|op
 operator|=
 name|tokenImage
@@ -463,6 +466,7 @@ index|[
 name|kind
 index|]
 expr_stmt|;
+block|}
 return|return
 name|jjtNodeName
 index|[
@@ -571,7 +575,7 @@ operator|-
 literal|1
 operator|)
 condition|)
-comment|// Redundant node (built thru op precedence) ?
+block|{
 return|return
 name|exprs
 index|[
@@ -584,6 +588,7 @@ name|env
 argument_list|)
 return|;
 comment|// --> Replaced by successor
+block|}
 else|else
 block|{
 for|for
@@ -602,7 +607,7 @@ condition|;
 name|i
 operator|++
 control|)
-comment|// Traverse children
+block|{
 name|exprs
 index|[
 name|i
@@ -619,6 +624,7 @@ name|env
 argument_list|)
 expr_stmt|;
 comment|// References may change
+block|}
 return|return
 name|this
 return|;
@@ -659,6 +665,7 @@ name|unop
 operator|==
 name|MINUS
 condition|)
+block|{
 name|child_type
 operator|=
 name|type
@@ -666,7 +673,9 @@ operator|=
 name|T_INT
 expr_stmt|;
 comment|// -
+block|}
 else|else
+block|{
 name|child_type
 operator|=
 name|type
@@ -674,6 +683,7 @@ operator|=
 name|T_BOOLEAN
 expr_stmt|;
 comment|// !
+block|}
 block|}
 else|else
 block|{
@@ -710,12 +720,14 @@ operator|==
 name|DIV
 operator|)
 condition|)
+block|{
 name|child_type
 operator|=
 name|type
 operator|=
 name|T_INT
 expr_stmt|;
+block|}
 if|else if
 condition|(
 operator|(
@@ -730,12 +742,14 @@ operator|==
 name|OR
 operator|)
 condition|)
+block|{
 name|child_type
 operator|=
 name|type
 operator|=
 name|T_BOOLEAN
 expr_stmt|;
+block|}
 else|else
 block|{
 comment|// LEQ, GT, etc.
@@ -785,6 +799,7 @@ name|t
 operator|!=
 name|child_type
 condition|)
+block|{
 name|MiniC
 operator|.
 name|addError
@@ -822,6 +837,7 @@ operator|+
 literal|"."
 argument_list|)
 expr_stmt|;
+block|}
 name|is_simple
 operator|=
 name|is_simple
@@ -916,6 +932,7 @@ name|unop
 operator|==
 name|MINUS
 condition|)
+block|{
 name|ASTFunDecl
 operator|.
 name|push
@@ -927,7 +944,9 @@ operator|+
 name|top
 argument_list|)
 expr_stmt|;
+block|}
 else|else
+block|{
 name|ASTFunDecl
 operator|.
 name|push
@@ -941,6 +960,7 @@ operator|+
 literal|" == 1)? 0 : 1)"
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 else|else
 block|{
@@ -1282,6 +1302,7 @@ name|unop
 operator|==
 name|MINUS
 condition|)
+block|{
 name|il
 operator|.
 name|append
@@ -1291,6 +1312,7 @@ operator|.
 name|INEG
 argument_list|)
 expr_stmt|;
+block|}
 else|else
 block|{
 comment|// == NOT
@@ -1895,7 +1917,7 @@ name|exprs
 operator|!=
 literal|null
 condition|)
-comment|// Children may have no subchildren
+block|{
 for|for
 control|(
 name|int
@@ -1912,6 +1934,7 @@ condition|;
 operator|++
 name|i
 control|)
+block|{
 name|exprs
 index|[
 name|i
@@ -1924,6 +1947,8 @@ operator|+
 literal|" "
 argument_list|)
 expr_stmt|;
+block|}
+block|}
 block|}
 block|}
 end_class

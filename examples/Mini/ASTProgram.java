@@ -668,6 +668,7 @@ name|fun
 operator|!=
 literal|null
 condition|)
+block|{
 name|MiniC
 operator|.
 name|addError
@@ -689,7 +690,9 @@ operator|+
 literal|"."
 argument_list|)
 expr_stmt|;
+block|}
 else|else
+block|{
 name|env
 operator|.
 name|put
@@ -704,6 +707,7 @@ argument_list|)
 argument_list|)
 expr_stmt|;
 comment|// `args' will be set by FunDecl.traverse()
+block|}
 block|}
 comment|// Go for it
 for|for
@@ -767,6 +771,7 @@ argument_list|(
 literal|"main"
 argument_list|)
 condition|)
+block|{
 name|main
 operator|=
 operator|(
@@ -780,12 +785,14 @@ name|fname
 argument_list|)
 expr_stmt|;
 block|}
+block|}
 if|if
 condition|(
 name|main
 operator|==
 literal|null
 condition|)
+block|{
 name|MiniC
 operator|.
 name|addError
@@ -797,6 +804,7 @@ argument_list|,
 literal|"You didn't declare a `main' function."
 argument_list|)
 expr_stmt|;
+block|}
 if|else if
 condition|(
 name|main
@@ -806,6 +814,7 @@ argument_list|()
 operator|!=
 literal|0
 condition|)
+block|{
 name|MiniC
 operator|.
 name|addError
@@ -823,6 +832,7 @@ argument_list|,
 literal|"Main function has too many arguments declared."
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 return|return
 name|this
@@ -892,6 +902,7 @@ argument_list|()
 operator|==
 name|T_UNKNOWN
 condition|)
+block|{
 name|MiniC
 operator|.
 name|addError
@@ -916,6 +927,7 @@ operator|+
 literal|" can not be determined (infinite recursion?)."
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 block|}
 block|}
@@ -1008,6 +1020,7 @@ condition|;
 name|i
 operator|++
 control|)
+block|{
 name|fun_decls
 index|[
 name|i
@@ -1018,6 +1031,7 @@ argument_list|(
 name|out
 argument_list|)
 expr_stmt|;
+block|}
 name|out
 operator|.
 name|println
@@ -1076,19 +1090,12 @@ expr_stmt|;
 name|MethodGen
 name|method
 decl_stmt|;
-name|Method
-name|m
-decl_stmt|;
 name|InstructionList
 name|il
 init|=
 operator|new
 name|InstructionList
 argument_list|()
-decl_stmt|;
-name|byte
-index|[]
-name|byte_code
 decl_stmt|;
 name|String
 name|class_name
@@ -1819,6 +1826,7 @@ condition|;
 name|i
 operator|++
 control|)
+block|{
 name|fun_decls
 index|[
 name|i
@@ -1831,6 +1839,7 @@ argument_list|,
 name|cp
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 specifier|public
 name|void
@@ -1868,6 +1877,7 @@ condition|;
 operator|++
 name|i
 control|)
+block|{
 name|fun_decls
 index|[
 name|i
@@ -1880,6 +1890,7 @@ operator|+
 literal|" "
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 block|}
 end_class

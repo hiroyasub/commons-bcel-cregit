@@ -77,7 +77,7 @@ name|ElementValue
 index|[]
 name|values
 decl_stmt|;
-comment|/** 	 * Construct object from file stream. 	 * @param file Input stream 	 * @param constant_pool the constant pool 	 * @throws IOException 	 */
+comment|/**      * Construct object from file stream.      * @param file Input stream      * @param constant_pool the constant pool      * @throws IOException      */
 name|ElementValue
 parameter_list|(
 name|DataInputStream
@@ -223,6 +223,7 @@ condition|;
 name|i
 operator|++
 control|)
+block|{
 name|values
 index|[
 name|i
@@ -236,6 +237,7 @@ argument_list|,
 name|constant_pool
 argument_list|)
 expr_stmt|;
+block|}
 break|break;
 default|default:
 throw|throw

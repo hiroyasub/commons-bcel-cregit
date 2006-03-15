@@ -93,7 +93,7 @@ operator|.
 name|getInstance
 argument_list|()
 decl_stmt|;
-comment|/** @return currently used repository instance    */
+comment|/** @return currently used repository instance      */
 specifier|public
 specifier|static
 name|org
@@ -112,7 +112,7 @@ return|return
 name|_repository
 return|;
 block|}
-comment|/** Set repository instance to be used for class loading    */
+comment|/** Set repository instance to be used for class loading      */
 specifier|public
 specifier|static
 name|void
@@ -135,7 +135,7 @@ operator|=
 name|rep
 expr_stmt|;
 block|}
-comment|/** Lookup class somewhere found on your CLASSPATH, or whereever the    * repository instance looks for it.    *    * @return class object for given fully qualified class name    * @throws ClassNotFoundException if the class could not be found or    * parsed correctly    */
+comment|/** Lookup class somewhere found on your CLASSPATH, or whereever the      * repository instance looks for it.      *      * @return class object for given fully qualified class name      * @throws ClassNotFoundException if the class could not be found or      * parsed correctly      */
 specifier|public
 specifier|static
 name|JavaClass
@@ -156,7 +156,7 @@ name|class_name
 argument_list|)
 return|;
 block|}
-comment|/**    * Try to find class source using the internal repository instance.    * @see Class    * @return JavaClass object for given runtime class    * @throws ClassNotFoundException if the class could not be found or    * parsed correctly    */
+comment|/**      * Try to find class source using the internal repository instance.      * @see Class      * @return JavaClass object for given runtime class      * @throws ClassNotFoundException if the class could not be found or      * parsed correctly      */
 specifier|public
 specifier|static
 name|JavaClass
@@ -177,7 +177,7 @@ name|clazz
 argument_list|)
 return|;
 block|}
-comment|/**    * @return class file object for given Java class by looking on the    *  system class path; returns null if the class file can't be    *  found    */
+comment|/**      * @return class file object for given Java class by looking on the      *  system class path; returns null if the class file can't be      *  found      */
 specifier|public
 specifier|static
 name|ClassPath
@@ -205,9 +205,11 @@ name|path
 operator|==
 literal|null
 condition|)
+block|{
 return|return
 literal|null
 return|;
+block|}
 return|return
 name|path
 operator|.
@@ -228,7 +230,7 @@ literal|null
 return|;
 block|}
 block|}
-comment|/** Clear the repository.    */
+comment|/** Clear the repository.      */
 specifier|public
 specifier|static
 name|void
@@ -241,7 +243,7 @@ name|clear
 argument_list|()
 expr_stmt|;
 block|}
-comment|/**    * Add clazz to repository if there isn't an equally named class already in there.    *    * @return old entry in repository    */
+comment|/**      * Add clazz to repository if there isn't an equally named class already in there.      *      * @return old entry in repository      */
 specifier|public
 specifier|static
 name|JavaClass
@@ -275,7 +277,7 @@ return|return
 name|old
 return|;
 block|}
-comment|/**    * Remove class with given (fully qualified) name from repository.    */
+comment|/**      * Remove class with given (fully qualified) name from repository.      */
 specifier|public
 specifier|static
 name|void
@@ -298,7 +300,7 @@ argument_list|)
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**    * Remove given class from repository.    */
+comment|/**      * Remove given class from repository.      */
 specifier|public
 specifier|static
 name|void
@@ -316,7 +318,7 @@ name|clazz
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**    * @return list of super classes of clazz in ascending order, i.e.,    * Object is always the last element    * @throws ClassNotFoundException if any of the superclasses can't be found    */
+comment|/**      * @return list of super classes of clazz in ascending order, i.e.,      * Object is always the last element      * @throws ClassNotFoundException if any of the superclasses can't be found      */
 specifier|public
 specifier|static
 name|JavaClass
@@ -336,7 +338,7 @@ name|getSuperClasses
 argument_list|()
 return|;
 block|}
-comment|/**    * @return list of super classes of clazz in ascending order, i.e.,    * Object is always the last element.    * @throws ClassNotFoundException if the named class or any of its    *  superclasses can't be found    */
+comment|/**      * @return list of super classes of clazz in ascending order, i.e.,      * Object is always the last element.      * @throws ClassNotFoundException if the named class or any of its      *  superclasses can't be found      */
 specifier|public
 specifier|static
 name|JavaClass
@@ -364,7 +366,7 @@ name|jc
 argument_list|)
 return|;
 block|}
-comment|/**    * @return all interfaces implemented by class and its super    * classes and the interfaces that those interfaces extend, and so on.    * (Some people call this a transitive hull).    * @throws ClassNotFoundException if any of the class's    *  superclasses or superinterfaces can't be found    */
+comment|/**      * @return all interfaces implemented by class and its super      * classes and the interfaces that those interfaces extend, and so on.      * (Some people call this a transitive hull).      * @throws ClassNotFoundException if any of the class's      *  superclasses or superinterfaces can't be found      */
 specifier|public
 specifier|static
 name|JavaClass
@@ -384,7 +386,7 @@ name|getAllInterfaces
 argument_list|()
 return|;
 block|}
-comment|/**    * @return all interfaces implemented by class and its super    * classes and the interfaces that extend those interfaces, and so on    * @throws ClassNotFoundException if the named class can't be found,    *   or if any of its superclasses or superinterfaces can't be found    */
+comment|/**      * @return all interfaces implemented by class and its super      * classes and the interfaces that extend those interfaces, and so on      * @throws ClassNotFoundException if the named class can't be found,      *   or if any of its superclasses or superinterfaces can't be found      */
 specifier|public
 specifier|static
 name|JavaClass
@@ -407,7 +409,7 @@ argument_list|)
 argument_list|)
 return|;
 block|}
-comment|/**    * Equivalent to runtime "instanceof" operator.    * @return true, if clazz is an instance of super_class    * @throws ClassNotFoundException if any superclasses or superinterfaces    *   of clazz can't be found    */
+comment|/**      * Equivalent to runtime "instanceof" operator.      * @return true, if clazz is an instance of super_class      * @throws ClassNotFoundException if any superclasses or superinterfaces      *   of clazz can't be found      */
 specifier|public
 specifier|static
 name|boolean
@@ -431,7 +433,7 @@ name|super_class
 argument_list|)
 return|;
 block|}
-comment|/**    * @return true, if clazz is an instance of super_class    * @throws ClassNotFoundException if either clazz or super_class    *   can't be found    */
+comment|/**      * @return true, if clazz is an instance of super_class      * @throws ClassNotFoundException if either clazz or super_class      *   can't be found      */
 specifier|public
 specifier|static
 name|boolean
@@ -461,7 +463,7 @@ argument_list|)
 argument_list|)
 return|;
 block|}
-comment|/**    * @return true, if clazz is an instance of super_class    * @throws ClassNotFoundException if super_class can't be found    */
+comment|/**      * @return true, if clazz is an instance of super_class      * @throws ClassNotFoundException if super_class can't be found      */
 specifier|public
 specifier|static
 name|boolean
@@ -488,7 +490,7 @@ argument_list|)
 argument_list|)
 return|;
 block|}
-comment|/**    * @return true, if clazz is an instance of super_class    * @throws ClassNotFoundException if clazz can't be found    */
+comment|/**      * @return true, if clazz is an instance of super_class      * @throws ClassNotFoundException if clazz can't be found      */
 specifier|public
 specifier|static
 name|boolean
@@ -515,7 +517,7 @@ name|super_class
 argument_list|)
 return|;
 block|}
-comment|/**    * @return true, if clazz is an implementation of interface inter    * @throws ClassNotFoundException if any superclasses or superinterfaces    *   of clazz can't be found    */
+comment|/**      * @return true, if clazz is an implementation of interface inter      * @throws ClassNotFoundException if any superclasses or superinterfaces      *   of clazz can't be found      */
 specifier|public
 specifier|static
 name|boolean
@@ -539,7 +541,7 @@ name|inter
 argument_list|)
 return|;
 block|}
-comment|/**    * @return true, if clazz is an implementation of interface inter    * @throws ClassNotFoundException if clazz, inter, or any superclasses    *   or superinterfaces of clazz can't be found    */
+comment|/**      * @return true, if clazz is an implementation of interface inter      * @throws ClassNotFoundException if clazz, inter, or any superclasses      *   or superinterfaces of clazz can't be found      */
 specifier|public
 specifier|static
 name|boolean
@@ -569,7 +571,7 @@ argument_list|)
 argument_list|)
 return|;
 block|}
-comment|/**    * @return true, if clazz is an implementation of interface inter    * @throws ClassNotFoundException if inter or any superclasses    *   or superinterfaces of clazz can't be found    */
+comment|/**      * @return true, if clazz is an implementation of interface inter      * @throws ClassNotFoundException if inter or any superclasses      *   or superinterfaces of clazz can't be found      */
 specifier|public
 specifier|static
 name|boolean
@@ -596,7 +598,7 @@ argument_list|)
 argument_list|)
 return|;
 block|}
-comment|/**    * @return true, if clazz is an implementation of interface inter    * @throws ClassNotFoundException if clazz or any superclasses or    *   superinterfaces of clazz can't be found    */
+comment|/**      * @return true, if clazz is an implementation of interface inter      * @throws ClassNotFoundException if clazz or any superclasses or      *   superinterfaces of clazz can't be found      */
 specifier|public
 specifier|static
 name|boolean

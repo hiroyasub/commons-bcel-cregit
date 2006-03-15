@@ -131,6 +131,7 @@ name|Constants
 operator|.
 name|T_ADDRESS
 condition|)
+block|{
 throw|throw
 operator|new
 name|IllegalArgumentException
@@ -140,6 +141,7 @@ operator|+
 name|type
 argument_list|)
 throw|;
+block|}
 name|this
 operator|.
 name|type
@@ -156,7 +158,7 @@ return|return
 name|type
 return|;
 block|}
-comment|/** @return name of method/field.    */
+comment|/** @return name of method/field.      */
 specifier|public
 name|String
 name|getName
@@ -205,7 +207,7 @@ operator|=
 name|cp
 expr_stmt|;
 block|}
-comment|/**    * Add an attribute to this method. Currently, the JVM knows about    * the `Code', `ConstantValue', `Synthetic' and `Exceptions'    * attributes. Other attributes will be ignored by the JVM but do no    * harm.    *    * @param a attribute to be added    */
+comment|/**      * Add an attribute to this method. Currently, the JVM knows about      * the `Code', `ConstantValue', `Synthetic' and `Exceptions'      * attributes. Other attributes will be ignored by the JVM but do no      * harm.      *      * @param a attribute to be added      */
 specifier|public
 name|void
 name|addAttribute
@@ -222,7 +224,7 @@ name|a
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**    * Remove an attribute.    */
+comment|/**      * Remove an attribute.      */
 specifier|public
 name|void
 name|removeAttribute
@@ -239,7 +241,7 @@ name|a
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**    * Remove all attributes.    */
+comment|/**      * Remove all attributes.      */
 specifier|public
 name|void
 name|removeAttributes
@@ -251,7 +253,7 @@ name|clear
 argument_list|()
 expr_stmt|;
 block|}
-comment|/**    * @return all attributes of this method.    */
+comment|/**      * @return all attributes of this method.      */
 specifier|public
 name|Attribute
 index|[]
@@ -282,7 +284,7 @@ return|return
 name|attributes
 return|;
 block|}
-comment|/** @return signature of method/field.    */
+comment|/** @return signature of method/field.      */
 specifier|public
 specifier|abstract
 name|String

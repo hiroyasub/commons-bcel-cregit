@@ -22,7 +22,7 @@ specifier|public
 interface|interface
 name|ExceptionConstants
 block|{
-comment|/** The mother of all exceptions    */
+comment|/** The mother of all exceptions      */
 specifier|public
 specifier|static
 specifier|final
@@ -33,7 +33,7 @@ name|Throwable
 operator|.
 name|class
 decl_stmt|;
-comment|/** Super class of any run-time exception    */
+comment|/** Super class of any run-time exception      */
 specifier|public
 specifier|static
 specifier|final
@@ -44,7 +44,7 @@ name|RuntimeException
 operator|.
 name|class
 decl_stmt|;
-comment|/** Super class of any linking exception (aka Linkage Error)    */
+comment|/** Super class of any linking exception (aka Linkage Error)      */
 specifier|public
 specifier|static
 specifier|final
@@ -55,7 +55,7 @@ name|LinkageError
 operator|.
 name|class
 decl_stmt|;
-comment|/** Linking Exceptions    */
+comment|/** Linking Exceptions      */
 specifier|public
 specifier|static
 specifier|final
@@ -178,7 +178,7 @@ name|class
 decl_stmt|;
 comment|/* UnsupportedClassVersionError is new in JDK 1.2 */
 comment|//public static final Class UnsupportedClassVersionError = UnsupportedClassVersionError.class;
-comment|/** Run-Time Exceptions     */
+comment|/** Run-Time Exceptions       */
 specifier|public
 specifier|static
 specifier|final
@@ -239,7 +239,7 @@ name|IllegalMonitorStateException
 operator|.
 name|class
 decl_stmt|;
-comment|/** Pre-defined exception arrays according to chapters 5.1-5.4 of the Java Virtual    * Machine Specification     */
+comment|/** Pre-defined exception arrays according to chapters 5.1-5.4 of the Java Virtual      * Machine Specification       */
 specifier|public
 specifier|static
 specifier|final

@@ -52,7 +52,7 @@ specifier|private
 name|InstructionHandle
 name|returnTarget
 decl_stmt|;
-comment|/**    * A Returnaddress [that doesn't know where to return to].    */
+comment|/**      * A Returnaddress [that doesn't know where to return to].      */
 specifier|private
 name|ReturnaddressType
 parameter_list|()
@@ -67,7 +67,7 @@ literal|"<return address>"
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**    * Creates a ReturnaddressType object with a target.    */
+comment|/**      * Creates a ReturnaddressType object with a target.      */
 specifier|public
 name|ReturnaddressType
 parameter_list|(
@@ -95,7 +95,7 @@ operator|=
 name|returnTarget
 expr_stmt|;
 block|}
-comment|/** @return a hash code value for the object.    */
+comment|/** @return a hash code value for the object.      */
 specifier|public
 name|int
 name|hashCode
@@ -107,9 +107,11 @@ name|returnTarget
 operator|==
 literal|null
 condition|)
+block|{
 return|return
 literal|0
 return|;
+block|}
 return|return
 name|returnTarget
 operator|.
@@ -117,7 +119,7 @@ name|hashCode
 argument_list|()
 return|;
 block|}
-comment|/**    * Returns if the two Returnaddresses refer to the same target.    */
+comment|/**      * Returns if the two Returnaddresses refer to the same target.      */
 specifier|public
 name|boolean
 name|equals
@@ -135,9 +137,11 @@ operator|instanceof
 name|ReturnaddressType
 operator|)
 condition|)
+block|{
 return|return
 literal|false
 return|;
+block|}
 name|ReturnaddressType
 name|that
 init|=
@@ -160,6 +164,7 @@ name|returnTarget
 operator|==
 literal|null
 condition|)
+block|{
 return|return
 name|that
 operator|.
@@ -169,6 +174,7 @@ name|this
 operator|.
 name|returnTarget
 return|;
+block|}
 return|return
 name|that
 operator|.
@@ -182,7 +188,7 @@ name|returnTarget
 argument_list|)
 return|;
 block|}
-comment|/**    * @return the target of this ReturnaddressType    */
+comment|/**      * @return the target of this ReturnaddressType      */
 specifier|public
 name|InstructionHandle
 name|getTarget

@@ -277,6 +277,7 @@ name|hs
 operator|==
 literal|null
 condition|)
+block|{
 return|return
 operator|new
 name|ExceptionHandler
@@ -284,6 +285,7 @@ index|[
 literal|0
 index|]
 return|;
+block|}
 else|else
 block|{
 name|ExceptionHandler

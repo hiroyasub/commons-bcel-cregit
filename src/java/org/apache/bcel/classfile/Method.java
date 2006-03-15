@@ -187,13 +187,13 @@ return|;
 block|}
 block|}
 decl_stmt|;
-comment|/**    * Empty constructor, all attributes have to be defined via `setXXX'    * methods. Use at your own risk.    */
+comment|/**      * Empty constructor, all attributes have to be defined via `setXXX'      * methods. Use at your own risk.      */
 specifier|public
 name|Method
 parameter_list|()
 block|{
 block|}
-comment|/**    * Initialize from another object. Note that both objects use the same    * references (shallow copy). Use clone() for a physical copy.    */
+comment|/**      * Initialize from another object. Note that both objects use the same      * references (shallow copy). Use clone() for a physical copy.      */
 specifier|public
 name|Method
 parameter_list|(
@@ -207,7 +207,7 @@ name|c
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**    * Construct object from file stream.    * @param file Input stream    * @throws IOException    * @throws ClassFormatException    */
+comment|/**      * Construct object from file stream.      * @param file Input stream      * @throws IOException      * @throws ClassFormatException      */
 name|Method
 parameter_list|(
 name|DataInputStream
@@ -229,7 +229,7 @@ name|constant_pool
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**    * @param access_flags Access rights of method    * @param name_index Points to field name in constant pool    * @param signature_index Points to encoded signature    * @param attributes Collection of attributes    * @param constant_pool Array of constants    */
+comment|/**      * @param access_flags Access rights of method      * @param name_index Points to field name in constant pool      * @param signature_index Points to encoded signature      * @param attributes Collection of attributes      * @param constant_pool Array of constants      */
 specifier|public
 name|Method
 parameter_list|(
@@ -264,7 +264,7 @@ name|constant_pool
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**    * Called by objects that are traversing the nodes of the tree implicitely    * defined by the contents of a Java class. I.e., the hierarchy of methods,    * fields, attributes, etc. spawns a tree of objects.    *    * @param v Visitor object    */
+comment|/**      * Called by objects that are traversing the nodes of the tree implicitely      * defined by the contents of a Java class. I.e., the hierarchy of methods,      * fields, attributes, etc. spawns a tree of objects.      *      * @param v Visitor object      */
 specifier|public
 name|void
 name|accept
@@ -281,7 +281,7 @@ name|this
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**    * @return Code attribute of method, if any    */
+comment|/**      * @return Code attribute of method, if any      */
 specifier|public
 specifier|final
 name|Code
@@ -302,6 +302,7 @@ condition|;
 name|i
 operator|++
 control|)
+block|{
 if|if
 condition|(
 name|attributes
@@ -311,6 +312,7 @@ index|]
 operator|instanceof
 name|Code
 condition|)
+block|{
 return|return
 operator|(
 name|Code
@@ -320,11 +322,13 @@ index|[
 name|i
 index|]
 return|;
+block|}
+block|}
 return|return
 literal|null
 return|;
 block|}
-comment|/**    * @return ExceptionTable attribute of method, if any, i.e., list all    * exceptions the method may throw not exception handlers!    */
+comment|/**      * @return ExceptionTable attribute of method, if any, i.e., list all      * exceptions the method may throw not exception handlers!      */
 specifier|public
 specifier|final
 name|ExceptionTable
@@ -345,6 +349,7 @@ condition|;
 name|i
 operator|++
 control|)
+block|{
 if|if
 condition|(
 name|attributes
@@ -354,6 +359,7 @@ index|]
 operator|instanceof
 name|ExceptionTable
 condition|)
+block|{
 return|return
 operator|(
 name|ExceptionTable
@@ -363,11 +369,13 @@ index|[
 name|i
 index|]
 return|;
+block|}
+block|}
 return|return
 literal|null
 return|;
 block|}
-comment|/** @return LocalVariableTable of code attribute if any, i.e. the call is forwarded    * to the Code atribute.    */
+comment|/** @return LocalVariableTable of code attribute if any, i.e. the call is forwarded      * to the Code atribute.      */
 specifier|public
 specifier|final
 name|LocalVariableTable
@@ -386,9 +394,11 @@ name|code
 operator|==
 literal|null
 condition|)
+block|{
 return|return
 literal|null
 return|;
+block|}
 return|return
 name|code
 operator|.
@@ -396,7 +406,7 @@ name|getLocalVariableTable
 argument_list|()
 return|;
 block|}
-comment|/** @return LineNumberTable of code attribute if any, i.e. the call is forwarded    * to the Code atribute.    */
+comment|/** @return LineNumberTable of code attribute if any, i.e. the call is forwarded      * to the Code atribute.      */
 specifier|public
 specifier|final
 name|LineNumberTable
@@ -415,9 +425,11 @@ name|code
 operator|==
 literal|null
 condition|)
+block|{
 return|return
 literal|null
 return|;
+block|}
 return|return
 name|code
 operator|.
@@ -425,7 +437,7 @@ name|getLineNumberTable
 argument_list|()
 return|;
 block|}
-comment|/**    * Return string representation close to declaration format,    * `public static void main(String[] args) throws IOException', e.g.    *    * @return String representation of the method.    */
+comment|/**      * Return string representation close to declaration format,      * `public static void main(String[] args) throws IOException', e.g.      *      * @return String representation of the method.      */
 specifier|public
 specifier|final
 name|String
@@ -568,6 +580,7 @@ name|ExceptionTable
 operator|)
 operator|)
 condition|)
+block|{
 name|buf
 operator|.
 name|append
@@ -588,6 +601,7 @@ argument_list|(
 literal|"]"
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 name|ExceptionTable
 name|e
@@ -620,6 +634,7 @@ argument_list|(
 literal|""
 argument_list|)
 condition|)
+block|{
 name|buf
 operator|.
 name|append
@@ -633,6 +648,7 @@ name|str
 argument_list|)
 expr_stmt|;
 block|}
+block|}
 return|return
 name|buf
 operator|.
@@ -640,7 +656,7 @@ name|toString
 argument_list|()
 return|;
 block|}
-comment|/**    * @return deep copy of this method    */
+comment|/**      * @return deep copy of this method      */
 specifier|public
 specifier|final
 name|Method
@@ -660,7 +676,7 @@ name|_constant_pool
 argument_list|)
 return|;
 block|}
-comment|/**    * @return return type of method    */
+comment|/**      * @return return type of method      */
 specifier|public
 name|Type
 name|getReturnType
@@ -676,7 +692,7 @@ argument_list|()
 argument_list|)
 return|;
 block|}
-comment|/**    * @return array of method argument types    */
+comment|/**      * @return array of method argument types      */
 specifier|public
 name|Type
 index|[]
@@ -693,7 +709,7 @@ argument_list|()
 argument_list|)
 return|;
 block|}
-comment|/**    * @return Comparison strategy object    */
+comment|/**      * @return Comparison strategy object      */
 specifier|public
 specifier|static
 name|BCELComparator
@@ -704,7 +720,7 @@ return|return
 name|_cmp
 return|;
 block|}
-comment|/**    * @param comparator Comparison strategy object    */
+comment|/**      * @param comparator Comparison strategy object      */
 specifier|public
 specifier|static
 name|void
@@ -719,7 +735,7 @@ operator|=
 name|comparator
 expr_stmt|;
 block|}
-comment|/**    * Return value as defined by given BCELComparator strategy.    * By default two method objects are said to be equal when    * their names and signatures are equal.    *     * @see java.lang.Object#equals(java.lang.Object)    */
+comment|/**      * Return value as defined by given BCELComparator strategy.      * By default two method objects are said to be equal when      * their names and signatures are equal.      *       * @see java.lang.Object#equals(java.lang.Object)      */
 specifier|public
 name|boolean
 name|equals
@@ -739,7 +755,7 @@ name|obj
 argument_list|)
 return|;
 block|}
-comment|/**    * Return value as defined by given BCELComparator strategy.    * By default return the hashcode of the method's name XOR signature.    *     * @see java.lang.Object#hashCode()    */
+comment|/**      * Return value as defined by given BCELComparator strategy.      * By default return the hashcode of the method's name XOR signature.      *       * @see java.lang.Object#hashCode()      */
 specifier|public
 name|int
 name|hashCode

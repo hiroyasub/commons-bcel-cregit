@@ -69,14 +69,14 @@ name|ConstantCP
 extends|extends
 name|Constant
 block|{
-comment|/** References to the constants containing the class and the field signature    */
+comment|/** References to the constants containing the class and the field signature      */
 specifier|protected
 name|int
 name|class_index
 decl_stmt|,
 name|name_and_type_index
 decl_stmt|;
-comment|/**    * Initialize from another object.    */
+comment|/**      * Initialize from another object.      */
 specifier|public
 name|ConstantCP
 parameter_list|(
@@ -103,7 +103,7 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**    * Initialize instance from file data.    *    * @param tag  Constant type tag    * @param file Input stream    * @throws IOException    */
+comment|/**      * Initialize instance from file data.      *      * @param tag  Constant type tag      * @param file Input stream      * @throws IOException      */
 name|ConstantCP
 parameter_list|(
 name|byte
@@ -131,7 +131,7 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**    * @param class_index Reference to the class containing the field    * @param name_and_type_index and the field signature    */
+comment|/**      * @param class_index Reference to the class containing the field      * @param name_and_type_index and the field signature      */
 specifier|protected
 name|ConstantCP
 parameter_list|(
@@ -163,7 +163,7 @@ operator|=
 name|name_and_type_index
 expr_stmt|;
 block|}
-comment|/**     * Dump constant field reference to file stream in binary format.    *    * @param file Output file stream    * @throws IOException    */
+comment|/**       * Dump constant field reference to file stream in binary format.      *      * @param file Output file stream      * @throws IOException      */
 specifier|public
 specifier|final
 name|void
@@ -197,7 +197,7 @@ name|name_and_type_index
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**    * @return Reference (index) to class this field or method belongs to.    */
+comment|/**      * @return Reference (index) to class this field or method belongs to.      */
 specifier|public
 specifier|final
 name|int
@@ -208,7 +208,7 @@ return|return
 name|class_index
 return|;
 block|}
-comment|/**    * @return Reference (index) to signature of the field.    */
+comment|/**      * @return Reference (index) to signature of the field.      */
 specifier|public
 specifier|final
 name|int
@@ -219,7 +219,7 @@ return|return
 name|name_and_type_index
 return|;
 block|}
-comment|/**    * @param class_index points to Constant_class     */
+comment|/**      * @param class_index points to Constant_class       */
 specifier|public
 specifier|final
 name|void
@@ -236,7 +236,7 @@ operator|=
 name|class_index
 expr_stmt|;
 block|}
-comment|/**    * @return Class this field belongs to.    */
+comment|/**      * @return Class this field belongs to.      */
 specifier|public
 name|String
 name|getClass
@@ -258,7 +258,7 @@ name|CONSTANT_Class
 argument_list|)
 return|;
 block|}
-comment|/**    * @param name_and_type_index points to Constant_NameAndType    */
+comment|/**      * @param name_and_type_index points to Constant_NameAndType      */
 specifier|public
 specifier|final
 name|void
@@ -275,7 +275,7 @@ operator|=
 name|name_and_type_index
 expr_stmt|;
 block|}
-comment|/**    * @return String representation.    */
+comment|/**      * @return String representation.      */
 specifier|public
 specifier|final
 name|String

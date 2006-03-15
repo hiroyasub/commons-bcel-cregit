@@ -323,7 +323,7 @@ name|entry
 operator|==
 literal|null
 condition|)
-comment|// Applying unknown function
+block|{
 name|MiniC
 operator|.
 name|addError
@@ -345,6 +345,7 @@ operator|+
 literal|"."
 argument_list|)
 expr_stmt|;
+block|}
 else|else
 block|{
 if|if
@@ -356,6 +357,7 @@ operator|instanceof
 name|Function
 operator|)
 condition|)
+block|{
 name|MiniC
 operator|.
 name|addError
@@ -377,6 +379,7 @@ operator|+
 literal|"."
 argument_list|)
 expr_stmt|;
+block|}
 else|else
 block|{
 name|int
@@ -411,6 +414,7 @@ operator|.
 name|getNoArgs
 argument_list|()
 condition|)
+block|{
 name|MiniC
 operator|.
 name|addError
@@ -443,6 +447,7 @@ operator|+
 literal|"."
 argument_list|)
 expr_stmt|;
+block|}
 else|else
 block|{
 comment|// Adjust references
@@ -466,7 +471,7 @@ name|exprs
 operator|!=
 literal|null
 condition|)
-comment|// Argument list may be empty
+block|{
 for|for
 control|(
 name|int
@@ -483,6 +488,7 @@ condition|;
 name|i
 operator|++
 control|)
+block|{
 name|exprs
 index|[
 name|i
@@ -498,6 +504,8 @@ argument_list|(
 name|env
 argument_list|)
 expr_stmt|;
+block|}
+block|}
 return|return
 name|this
 return|;
@@ -620,6 +628,7 @@ operator|!=
 name|expect
 operator|)
 condition|)
+block|{
 name|MiniC
 operator|.
 name|addError
@@ -667,7 +676,9 @@ name|t_e
 index|]
 argument_list|)
 expr_stmt|;
+block|}
 else|else
+block|{
 name|args
 index|[
 name|i
@@ -679,6 +690,7 @@ name|t_e
 argument_list|)
 expr_stmt|;
 comment|// Update, may be identical
+block|}
 name|is_simple
 operator|=
 name|is_simple
@@ -700,7 +712,7 @@ name|t
 operator|==
 name|T_UNKNOWN
 condition|)
-comment|// Function type yet unknown
+block|{
 name|fun
 operator|.
 name|setType
@@ -711,6 +723,7 @@ name|expected
 argument_list|)
 expr_stmt|;
 comment|// May be still T_UNKNOWN
+block|}
 return|return
 name|type
 operator|=
@@ -757,6 +770,7 @@ argument_list|(
 literal|"READ"
 argument_list|)
 condition|)
+block|{
 name|ASTFunDecl
 operator|.
 name|push
@@ -766,6 +780,7 @@ argument_list|,
 literal|"_readInt()"
 argument_list|)
 expr_stmt|;
+block|}
 if|else if
 condition|(
 name|fname
@@ -832,6 +847,7 @@ condition|;
 name|i
 operator|--
 control|)
+block|{
 name|exprs
 index|[
 name|i
@@ -842,6 +858,7 @@ argument_list|(
 name|buf
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 name|StringBuffer
 name|call
@@ -899,6 +916,7 @@ name|length
 operator|-
 literal|1
 condition|)
+block|{
 name|call
 operator|.
 name|append
@@ -906,6 +924,7 @@ argument_list|(
 literal|", "
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 block|}
 name|call
@@ -984,6 +1003,7 @@ argument_list|(
 literal|"READ"
 argument_list|)
 condition|)
+block|{
 name|il
 operator|.
 name|append
@@ -1004,6 +1024,7 @@ argument_list|)
 argument_list|)
 argument_list|)
 expr_stmt|;
+block|}
 if|else if
 condition|(
 name|fname

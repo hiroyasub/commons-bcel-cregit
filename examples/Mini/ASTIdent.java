@@ -258,6 +258,7 @@ name|entry
 operator|==
 literal|null
 condition|)
+block|{
 name|MiniC
 operator|.
 name|addError
@@ -271,12 +272,14 @@ operator|+
 name|name
 argument_list|)
 expr_stmt|;
+block|}
 if|else if
 condition|(
 name|entry
 operator|instanceof
 name|Function
 condition|)
+block|{
 name|MiniC
 operator|.
 name|addError
@@ -292,7 +295,9 @@ operator|+
 literal|" used as an identifier."
 argument_list|)
 expr_stmt|;
+block|}
 else|else
+block|{
 name|reference
 operator|=
 operator|(
@@ -300,6 +305,7 @@ name|Variable
 operator|)
 name|entry
 expr_stmt|;
+block|}
 return|return
 name|this
 return|;
@@ -349,10 +355,12 @@ operator|==
 name|T_UNKNOWN
 operator|)
 condition|)
+block|{
 name|type
 operator|=
 name|T_UNKNOWN
 expr_stmt|;
+block|}
 if|else if
 condition|(
 operator|(
@@ -408,12 +416,13 @@ name|t
 expr_stmt|;
 block|}
 else|else
-comment|// (t != T_UNKNOWN)&& (expected != T_UNKNOWN)
+block|{
 name|type
 operator|=
 name|t
 expr_stmt|;
 comment|// Caller has to check for an error, i.e. t != expected
+block|}
 return|return
 name|type
 return|;
@@ -436,6 +445,7 @@ argument_list|(
 literal|"TRUE"
 argument_list|)
 condition|)
+block|{
 name|ASTFunDecl
 operator|.
 name|push
@@ -445,6 +455,7 @@ argument_list|,
 literal|"1"
 argument_list|)
 expr_stmt|;
+block|}
 if|else if
 condition|(
 name|name
@@ -454,6 +465,7 @@ argument_list|(
 literal|"FALSE"
 argument_list|)
 condition|)
+block|{
 name|ASTFunDecl
 operator|.
 name|push
@@ -463,7 +475,9 @@ argument_list|,
 literal|"0"
 argument_list|)
 expr_stmt|;
+block|}
 else|else
+block|{
 name|ASTFunDecl
 operator|.
 name|push
@@ -473,6 +487,7 @@ argument_list|,
 name|name
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 comment|/**    * Fifth pass, produce Java byte code.    */
 specifier|public
@@ -498,6 +513,7 @@ argument_list|(
 literal|"TRUE"
 argument_list|)
 condition|)
+block|{
 name|il
 operator|.
 name|append
@@ -511,6 +527,7 @@ literal|1
 argument_list|)
 argument_list|)
 expr_stmt|;
+block|}
 if|else if
 condition|(
 name|name
@@ -520,6 +537,7 @@ argument_list|(
 literal|"FALSE"
 argument_list|)
 condition|)
+block|{
 name|il
 operator|.
 name|append
@@ -533,6 +551,7 @@ literal|0
 argument_list|)
 argument_list|)
 expr_stmt|;
+block|}
 else|else
 block|{
 name|LocalVariableGen

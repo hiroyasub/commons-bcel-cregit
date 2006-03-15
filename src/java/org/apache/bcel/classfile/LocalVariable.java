@@ -108,12 +108,12 @@ specifier|private
 name|int
 name|index
 decl_stmt|;
-comment|/* Variable is `index'th local variable on 				* this method's frame. 				*/
+comment|/* Variable is `index'th local variable on      * this method's frame.      */
 specifier|private
 name|ConstantPool
 name|constant_pool
 decl_stmt|;
-comment|/**    * Initialize from another object. Note that both objects use the same    * references (shallow copy). Use copy() for a physical copy.    */
+comment|/**      * Initialize from another object. Note that both objects use the same      * references (shallow copy). Use copy() for a physical copy.      */
 specifier|public
 name|LocalVariable
 parameter_list|(
@@ -155,7 +155,7 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**    * Construct object from file stream.    * @param file Input stream    * @throws IOException    */
+comment|/**      * Construct object from file stream.      * @param file Input stream      * @throws IOException      */
 name|LocalVariable
 parameter_list|(
 name|DataInputStream
@@ -198,7 +198,7 @@ name|constant_pool
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**    * @param start_pc Range in which the variable    * @param length ... is valid    * @param name_index Index in constant pool of variable name    * @param signature_index Index of variable's signature    * @param index Variable is `index'th local variable on the method's frame    * @param constant_pool Array of constants    */
+comment|/**      * @param start_pc Range in which the variable      * @param length ... is valid      * @param name_index Index in constant pool of variable name      * @param signature_index Index of variable's signature      * @param index Variable is `index'th local variable on the method's frame      * @param constant_pool Array of constants      */
 specifier|public
 name|LocalVariable
 parameter_list|(
@@ -258,7 +258,7 @@ operator|=
 name|constant_pool
 expr_stmt|;
 block|}
-comment|/**    * Called by objects that are traversing the nodes of the tree implicitely    * defined by the contents of a Java class. I.e., the hierarchy of methods,    * fields, attributes, etc. spawns a tree of objects.    *    * @param v Visitor object    */
+comment|/**      * Called by objects that are traversing the nodes of the tree implicitely      * defined by the contents of a Java class. I.e., the hierarchy of methods,      * fields, attributes, etc. spawns a tree of objects.      *      * @param v Visitor object      */
 specifier|public
 name|void
 name|accept
@@ -275,7 +275,7 @@ name|this
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**    * Dump local variable to file stream in binary format.    *    * @param file Output file stream    * @throws IOException    */
+comment|/**      * Dump local variable to file stream in binary format.      *      * @param file Output file stream      * @throws IOException      */
 specifier|public
 specifier|final
 name|void
@@ -323,7 +323,7 @@ name|index
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**    * @return Constant pool used by this object.    */
+comment|/**      * @return Constant pool used by this object.      */
 specifier|public
 specifier|final
 name|ConstantPool
@@ -334,7 +334,7 @@ return|return
 name|constant_pool
 return|;
 block|}
-comment|/**    * @return Variable is valid within getStartPC() .. getStartPC()+getLength()    */
+comment|/**      * @return Variable is valid within getStartPC() .. getStartPC()+getLength()      */
 specifier|public
 specifier|final
 name|int
@@ -345,7 +345,7 @@ return|return
 name|length
 return|;
 block|}
-comment|/**    * @return Variable name.    */
+comment|/**      * @return Variable name.      */
 specifier|public
 specifier|final
 name|String
@@ -376,7 +376,7 @@ name|getBytes
 argument_list|()
 return|;
 block|}
-comment|/**    * @return Index in constant pool of variable name.    */
+comment|/**      * @return Index in constant pool of variable name.      */
 specifier|public
 specifier|final
 name|int
@@ -387,7 +387,7 @@ return|return
 name|name_index
 return|;
 block|}
-comment|/**    * @return Signature.    */
+comment|/**      * @return Signature.      */
 specifier|public
 specifier|final
 name|String
@@ -418,7 +418,7 @@ name|getBytes
 argument_list|()
 return|;
 block|}
-comment|/**    * @return Index in constant pool of variable signature.    */
+comment|/**      * @return Index in constant pool of variable signature.      */
 specifier|public
 specifier|final
 name|int
@@ -429,7 +429,7 @@ return|return
 name|signature_index
 return|;
 block|}
-comment|/**    * @return index of register where variable is stored    */
+comment|/**      * @return index of register where variable is stored      */
 specifier|public
 specifier|final
 name|int
@@ -440,7 +440,7 @@ return|return
 name|index
 return|;
 block|}
-comment|/**    * @return Start of range where he variable is valid    */
+comment|/**      * @return Start of range where he variable is valid      */
 specifier|public
 specifier|final
 name|int
@@ -451,7 +451,7 @@ return|return
 name|start_pc
 return|;
 block|}
-comment|/**    * @param constant_pool Constant pool to be used for this object.    */
+comment|/**      * @param constant_pool Constant pool to be used for this object.      */
 specifier|public
 specifier|final
 name|void
@@ -468,7 +468,7 @@ operator|=
 name|constant_pool
 expr_stmt|;
 block|}
-comment|/**    * @param length the length of this local variable    */
+comment|/**      * @param length the length of this local variable      */
 specifier|public
 specifier|final
 name|void
@@ -485,7 +485,7 @@ operator|=
 name|length
 expr_stmt|;
 block|}
-comment|/**    * @param name_index the index into the constant pool for the name of this variable    */
+comment|/**      * @param name_index the index into the constant pool for the name of this variable      */
 specifier|public
 specifier|final
 name|void
@@ -502,7 +502,7 @@ operator|=
 name|name_index
 expr_stmt|;
 block|}
-comment|/**    * @param signature_index the index into the constant pool for the signature of this variable    */
+comment|/**      * @param signature_index the index into the constant pool for the signature of this variable      */
 specifier|public
 specifier|final
 name|void
@@ -519,7 +519,7 @@ operator|=
 name|signature_index
 expr_stmt|;
 block|}
-comment|/**    * @param index the index in the local variable table of this variable    */
+comment|/**      * @param index the index in the local variable table of this variable      */
 specifier|public
 specifier|final
 name|void
@@ -536,7 +536,7 @@ operator|=
 name|index
 expr_stmt|;
 block|}
-comment|/**    * @param start_pc Specify range where the local variable is valid.    */
+comment|/**      * @param start_pc Specify range where the local variable is valid.      */
 specifier|public
 specifier|final
 name|void
@@ -553,7 +553,7 @@ operator|=
 name|start_pc
 expr_stmt|;
 block|}
-comment|/**    * @return string representation.    */
+comment|/**      * @return string representation.      */
 specifier|public
 specifier|final
 name|String
@@ -600,7 +600,7 @@ operator|+
 literal|")"
 return|;
 block|}
-comment|/**    * @return deep copy of this object    */
+comment|/**      * @return deep copy of this object      */
 specifier|public
 name|LocalVariable
 name|copy

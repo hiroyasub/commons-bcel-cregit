@@ -225,6 +225,7 @@ name|Type
 operator|.
 name|LONG
 condition|)
+block|{
 name|localVariableInfos
 index|[
 name|slot
@@ -246,6 +247,7 @@ name|theInstance
 argument_list|()
 argument_list|)
 expr_stmt|;
+block|}
 if|if
 condition|(
 name|t
@@ -254,6 +256,7 @@ name|Type
 operator|.
 name|DOUBLE
 condition|)
+block|{
 name|localVariableInfos
 index|[
 name|slot
@@ -275,6 +278,7 @@ name|theInstance
 argument_list|()
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 block|}
 end_class

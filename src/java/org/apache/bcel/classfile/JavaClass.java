@@ -405,7 +405,7 @@ return|;
 block|}
 block|}
 decl_stmt|;
-comment|/**    * In cases where we go ahead and create something,    * use the default SyntheticRepository, because we    * don't know any better.    */
+comment|/**      * In cases where we go ahead and create something,      * use the default SyntheticRepository, because we      * don't know any better.      */
 specifier|private
 specifier|transient
 name|org
@@ -424,7 +424,7 @@ operator|.
 name|getInstance
 argument_list|()
 decl_stmt|;
-comment|/**    * Constructor gets all contents as arguments.    *    * @param class_name_index Index into constant pool referencing a    * ConstantClass that represents this class.    * @param superclass_name_index Index into constant pool referencing a    * ConstantClass that represents this class's superclass.    * @param file_name File name    * @param major Major compiler version    * @param minor Minor compiler version    * @param access_flags Access rights defined by bit flags    * @param constant_pool Array of constants    * @param interfaces Implemented interfaces    * @param fields Class fields    * @param methods Class methods    * @param attributes Class attributes    * @param source Read from file or generated in memory?    */
+comment|/**      * Constructor gets all contents as arguments.      *      * @param class_name_index Index into constant pool referencing a      * ConstantClass that represents this class.      * @param superclass_name_index Index into constant pool referencing a      * ConstantClass that represents this class's superclass.      * @param file_name File name      * @param major Major compiler version      * @param minor Minor compiler version      * @param access_flags Access rights defined by bit flags      * @param constant_pool Array of constants      * @param interfaces Implemented interfaces      * @param fields Class fields      * @param methods Class methods      * @param attributes Class attributes      * @param source Read from file or generated in memory?      */
 specifier|public
 name|JavaClass
 parameter_list|(
@@ -475,7 +475,7 @@ name|interfaces
 operator|==
 literal|null
 condition|)
-comment|// Allowed for backward compatibility
+block|{
 name|interfaces
 operator|=
 operator|new
@@ -484,12 +484,14 @@ index|[
 literal|0
 index|]
 expr_stmt|;
+block|}
 if|if
 condition|(
 name|attributes
 operator|==
 literal|null
 condition|)
+block|{
 name|attributes
 operator|=
 operator|new
@@ -498,12 +500,14 @@ index|[
 literal|0
 index|]
 expr_stmt|;
+block|}
 if|if
 condition|(
 name|fields
 operator|==
 literal|null
 condition|)
+block|{
 name|fields
 operator|=
 operator|new
@@ -512,12 +516,14 @@ index|[
 literal|0
 index|]
 expr_stmt|;
+block|}
 if|if
 condition|(
 name|methods
 operator|==
 literal|null
 condition|)
+block|{
 name|methods
 operator|=
 operator|new
@@ -526,6 +532,7 @@ index|[
 literal|0
 index|]
 expr_stmt|;
+block|}
 name|this
 operator|.
 name|class_name_index
@@ -644,7 +651,7 @@ expr_stmt|;
 break|break;
 block|}
 block|}
-comment|/* According to the specification the following entries must be of type      * `ConstantClass' but we check that anyway via the       * `ConstPool.getConstant' method.      */
+comment|/* According to the specification the following entries must be of type          * `ConstantClass' but we check that anyway via the           * `ConstPool.getConstant' method.          */
 name|class_name
 operator|=
 name|constant_pool
@@ -685,11 +692,14 @@ name|index
 operator|<
 literal|0
 condition|)
+block|{
 name|package_name
 operator|=
 literal|""
 expr_stmt|;
+block|}
 else|else
+block|{
 name|package_name
 operator|=
 name|class_name
@@ -701,6 +711,7 @@ argument_list|,
 name|index
 argument_list|)
 expr_stmt|;
+block|}
 if|if
 condition|(
 name|superclass_name_index
@@ -735,10 +746,12 @@ argument_list|)
 expr_stmt|;
 block|}
 else|else
+block|{
 name|superclass_name
 operator|=
 literal|"java.lang.Object"
 expr_stmt|;
+block|}
 name|interface_names
 operator|=
 operator|new
@@ -799,7 +812,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/**    * Constructor gets all contents as arguments.    *    * @param class_name_index Class name    * @param superclass_name_index Superclass name    * @param file_name File name    * @param major Major compiler version    * @param minor Minor compiler version    * @param access_flags Access rights defined by bit flags    * @param constant_pool Array of constants    * @param interfaces Implemented interfaces    * @param fields Class fields    * @param methods Class methods    * @param attributes Class attributes    */
+comment|/**      * Constructor gets all contents as arguments.      *      * @param class_name_index Class name      * @param superclass_name_index Superclass name      * @param file_name File name      * @param major Major compiler version      * @param minor Minor compiler version      * @param access_flags Access rights defined by bit flags      * @param constant_pool Array of constants      * @param interfaces Implemented interfaces      * @param fields Class fields      * @param methods Class methods      * @param attributes Class attributes      */
 specifier|public
 name|JavaClass
 parameter_list|(
@@ -869,7 +882,7 @@ name|HEAP
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**    * Called by objects that are traversing the nodes of the tree implicitely    * defined by the contents of a Java class. I.e., the hierarchy of methods,    * fields, attributes, etc. spawns a tree of objects.    *    * @param v Visitor object    */
+comment|/**      * Called by objects that are traversing the nodes of the tree implicitely      * defined by the contents of a Java class. I.e., the hierarchy of methods,      * fields, attributes, etc. spawns a tree of objects.      *      * @param v Visitor object      */
 specifier|public
 name|void
 name|accept
@@ -886,7 +899,7 @@ name|this
 argument_list|)
 expr_stmt|;
 block|}
-comment|/* Print debug information depending on `JavaClass.debug'    */
+comment|/* Print debug information depending on `JavaClass.debug'      */
 specifier|static
 specifier|final
 name|void
@@ -900,6 +913,7 @@ if|if
 condition|(
 name|debug
 condition|)
+block|{
 name|System
 operator|.
 name|out
@@ -910,7 +924,8 @@ name|str
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**     * Dump class to a file.    *    * @param file Output file    * @throws IOException    */
+block|}
+comment|/**       * Dump class to a file.      *      * @param file Output file      * @throws IOException      */
 specifier|public
 name|void
 name|dump
@@ -984,6 +999,7 @@ name|dos
 operator|!=
 literal|null
 condition|)
+block|{
 name|dos
 operator|.
 name|close
@@ -991,7 +1007,8 @@ argument_list|()
 expr_stmt|;
 block|}
 block|}
-comment|/**     * Dump class to a file named file_name.    *    * @param _file_name Output file name    * @exception IOException    */
+block|}
+comment|/**       * Dump class to a file named file_name.      *      * @param _file_name Output file name      * @exception IOException      */
 specifier|public
 name|void
 name|dump
@@ -1012,7 +1029,7 @@ argument_list|)
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**    * @return class in binary format    */
+comment|/**      * @return class in binary format      */
 specifier|public
 name|byte
 index|[]
@@ -1085,7 +1102,7 @@ name|toByteArray
 argument_list|()
 return|;
 block|}
-comment|/**    * Dump Java class to output stream in binary format.    *    * @param file Output stream    * @exception IOException    */
+comment|/**      * Dump Java class to output stream in binary format.      *      * @param file Output stream      * @exception IOException      */
 specifier|public
 name|void
 name|dump
@@ -1106,7 +1123,7 @@ argument_list|)
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**    * Dump Java class to output stream in binary format.    *    * @param file Output stream    * @exception IOException    */
+comment|/**      * Dump Java class to output stream in binary format.      *      * @param file Output stream      * @exception IOException      */
 specifier|public
 name|void
 name|dump
@@ -1191,6 +1208,7 @@ condition|;
 name|i
 operator|++
 control|)
+block|{
 name|file
 operator|.
 name|writeShort
@@ -1201,6 +1219,7 @@ name|i
 index|]
 argument_list|)
 expr_stmt|;
+block|}
 name|file
 operator|.
 name|writeShort
@@ -1226,6 +1245,7 @@ condition|;
 name|i
 operator|++
 control|)
+block|{
 name|fields
 index|[
 name|i
@@ -1236,6 +1256,7 @@ argument_list|(
 name|file
 argument_list|)
 expr_stmt|;
+block|}
 name|file
 operator|.
 name|writeShort
@@ -1261,6 +1282,7 @@ condition|;
 name|i
 operator|++
 control|)
+block|{
 name|methods
 index|[
 name|i
@@ -1271,6 +1293,7 @@ argument_list|(
 name|file
 argument_list|)
 expr_stmt|;
+block|}
 if|if
 condition|(
 name|attributes
@@ -1303,6 +1326,7 @@ condition|;
 name|i
 operator|++
 control|)
+block|{
 name|attributes
 index|[
 name|i
@@ -1314,7 +1338,9 @@ name|file
 argument_list|)
 expr_stmt|;
 block|}
+block|}
 else|else
+block|{
 name|file
 operator|.
 name|writeShort
@@ -1322,13 +1348,14 @@ argument_list|(
 literal|0
 argument_list|)
 expr_stmt|;
+block|}
 name|file
 operator|.
 name|flush
 argument_list|()
 expr_stmt|;
 block|}
-comment|/**    * @return Attributes of the class.    */
+comment|/**      * @return Attributes of the class.      */
 specifier|public
 name|Attribute
 index|[]
@@ -1339,7 +1366,7 @@ return|return
 name|attributes
 return|;
 block|}
-comment|/**    * @return Class name.    */
+comment|/**      * @return Class name.      */
 specifier|public
 name|String
 name|getClassName
@@ -1349,7 +1376,7 @@ return|return
 name|class_name
 return|;
 block|}
-comment|/**    * @return Package name.    */
+comment|/**      * @return Package name.      */
 specifier|public
 name|String
 name|getPackageName
@@ -1359,7 +1386,7 @@ return|return
 name|package_name
 return|;
 block|}
-comment|/**    * @return Class name index.    */
+comment|/**      * @return Class name index.      */
 specifier|public
 name|int
 name|getClassNameIndex
@@ -1369,7 +1396,7 @@ return|return
 name|class_name_index
 return|;
 block|}
-comment|/**    * @return Constant pool.    */
+comment|/**      * @return Constant pool.      */
 specifier|public
 name|ConstantPool
 name|getConstantPool
@@ -1379,7 +1406,7 @@ return|return
 name|constant_pool
 return|;
 block|}
-comment|/**    * @return Fields, i.e., variables of the class. Like the JVM spec    * mandates for the classfile format, these fields are those specific to    * this class, and not those of the superclass or superinterfaces.    */
+comment|/**      * @return Fields, i.e., variables of the class. Like the JVM spec      * mandates for the classfile format, these fields are those specific to      * this class, and not those of the superclass or superinterfaces.      */
 specifier|public
 name|Field
 index|[]
@@ -1390,7 +1417,7 @@ return|return
 name|fields
 return|;
 block|}
-comment|/**    * @return File name of class, aka SourceFile attribute value    */
+comment|/**      * @return File name of class, aka SourceFile attribute value      */
 specifier|public
 name|String
 name|getFileName
@@ -1400,7 +1427,7 @@ return|return
 name|file_name
 return|;
 block|}
-comment|/**    * @return Names of implemented interfaces.    */
+comment|/**      * @return Names of implemented interfaces.      */
 specifier|public
 name|String
 index|[]
@@ -1411,7 +1438,7 @@ return|return
 name|interface_names
 return|;
 block|}
-comment|/**    * @return Indices in constant pool of implemented interfaces.    */
+comment|/**      * @return Indices in constant pool of implemented interfaces.      */
 specifier|public
 name|int
 index|[]
@@ -1422,7 +1449,7 @@ return|return
 name|interfaces
 return|;
 block|}
-comment|/**    * @return Major number of class file version.    */
+comment|/**      * @return Major number of class file version.      */
 specifier|public
 name|int
 name|getMajor
@@ -1432,7 +1459,7 @@ return|return
 name|major
 return|;
 block|}
-comment|/**    * @return Methods of the class.    */
+comment|/**      * @return Methods of the class.      */
 specifier|public
 name|Method
 index|[]
@@ -1443,7 +1470,7 @@ return|return
 name|methods
 return|;
 block|}
-comment|/**    * @return A org.apache.bcel.classfile.Method corresponding to    * java.lang.reflect.Method if any    */
+comment|/**      * @return A org.apache.bcel.classfile.Method corresponding to      * java.lang.reflect.Method if any      */
 specifier|public
 name|Method
 name|getMethod
@@ -1535,7 +1562,7 @@ return|return
 literal|null
 return|;
 block|}
-comment|/**    * @return Minor number of class file version.    */
+comment|/**      * @return Minor number of class file version.      */
 specifier|public
 name|int
 name|getMinor
@@ -1545,7 +1572,7 @@ return|return
 name|minor
 return|;
 block|}
-comment|/**    * @return sbsolute path to file where this class was read from    */
+comment|/**      * @return sbsolute path to file where this class was read from      */
 specifier|public
 name|String
 name|getSourceFileName
@@ -1555,7 +1582,7 @@ return|return
 name|source_file_name
 return|;
 block|}
-comment|/**    * @return Superclass name.    */
+comment|/**      * @return Superclass name.      */
 specifier|public
 name|String
 name|getSuperclassName
@@ -1565,7 +1592,7 @@ return|return
 name|superclass_name
 return|;
 block|}
-comment|/**    * @return Class name index.    */
+comment|/**      * @return Class name index.      */
 specifier|public
 name|int
 name|getSuperclassNameIndex
@@ -1604,6 +1631,7 @@ name|_sep
 operator|!=
 literal|null
 condition|)
+block|{
 try|try
 block|{
 name|JavaClass
@@ -1627,7 +1655,8 @@ block|{
 block|}
 comment|// Never reached
 block|}
-comment|/**    * @param attributes .    */
+block|}
+comment|/**      * @param attributes .      */
 specifier|public
 name|void
 name|setAttributes
@@ -1644,7 +1673,7 @@ operator|=
 name|attributes
 expr_stmt|;
 block|}
-comment|/**    * @param class_name .    */
+comment|/**      * @param class_name .      */
 specifier|public
 name|void
 name|setClassName
@@ -1660,7 +1689,7 @@ operator|=
 name|class_name
 expr_stmt|;
 block|}
-comment|/**    * @param class_name_index .    */
+comment|/**      * @param class_name_index .      */
 specifier|public
 name|void
 name|setClassNameIndex
@@ -1676,7 +1705,7 @@ operator|=
 name|class_name_index
 expr_stmt|;
 block|}
-comment|/**    * @param constant_pool .    */
+comment|/**      * @param constant_pool .      */
 specifier|public
 name|void
 name|setConstantPool
@@ -1692,7 +1721,7 @@ operator|=
 name|constant_pool
 expr_stmt|;
 block|}
-comment|/**    * @param fields .    */
+comment|/**      * @param fields .      */
 specifier|public
 name|void
 name|setFields
@@ -1709,7 +1738,7 @@ operator|=
 name|fields
 expr_stmt|;
 block|}
-comment|/**    * Set File name of class, aka SourceFile attribute value    */
+comment|/**      * Set File name of class, aka SourceFile attribute value      */
 specifier|public
 name|void
 name|setFileName
@@ -1725,7 +1754,7 @@ operator|=
 name|file_name
 expr_stmt|;
 block|}
-comment|/**    * @param interface_names .    */
+comment|/**      * @param interface_names .      */
 specifier|public
 name|void
 name|setInterfaceNames
@@ -1742,7 +1771,7 @@ operator|=
 name|interface_names
 expr_stmt|;
 block|}
-comment|/**    * @param interfaces .    */
+comment|/**      * @param interfaces .      */
 specifier|public
 name|void
 name|setInterfaces
@@ -1759,7 +1788,7 @@ operator|=
 name|interfaces
 expr_stmt|;
 block|}
-comment|/**    * @param major .    */
+comment|/**      * @param major .      */
 specifier|public
 name|void
 name|setMajor
@@ -1775,7 +1804,7 @@ operator|=
 name|major
 expr_stmt|;
 block|}
-comment|/**    * @param methods .    */
+comment|/**      * @param methods .      */
 specifier|public
 name|void
 name|setMethods
@@ -1792,7 +1821,7 @@ operator|=
 name|methods
 expr_stmt|;
 block|}
-comment|/**    * @param minor .    */
+comment|/**      * @param minor .      */
 specifier|public
 name|void
 name|setMinor
@@ -1808,7 +1837,7 @@ operator|=
 name|minor
 expr_stmt|;
 block|}
-comment|/**    * Set absolute path to file this class was read from.    */
+comment|/**      * Set absolute path to file this class was read from.      */
 specifier|public
 name|void
 name|setSourceFileName
@@ -1824,7 +1853,7 @@ operator|=
 name|source_file_name
 expr_stmt|;
 block|}
-comment|/**    * @param superclass_name .    */
+comment|/**      * @param superclass_name .      */
 specifier|public
 name|void
 name|setSuperclassName
@@ -1840,7 +1869,7 @@ operator|=
 name|superclass_name
 expr_stmt|;
 block|}
-comment|/**    * @param superclass_name_index .    */
+comment|/**      * @param superclass_name_index .      */
 specifier|public
 name|void
 name|setSuperclassNameIndex
@@ -1856,7 +1885,7 @@ operator|=
 name|superclass_name_index
 expr_stmt|;
 block|}
-comment|/**    * @return String representing class contents.    */
+comment|/**      * @return String representing class contents.      */
 specifier|public
 name|String
 name|toString
@@ -2003,6 +2032,7 @@ name|size
 operator|-
 literal|1
 condition|)
+block|{
 name|buf
 operator|.
 name|append
@@ -2010,6 +2040,7 @@ argument_list|(
 literal|", "
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 name|buf
 operator|.
@@ -2167,6 +2198,7 @@ condition|;
 name|i
 operator|++
 control|)
+block|{
 name|buf
 operator|.
 name|append
@@ -2180,6 +2212,7 @@ index|]
 argument_list|)
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 if|if
 condition|(
@@ -2225,6 +2258,7 @@ condition|;
 name|i
 operator|++
 control|)
+block|{
 name|buf
 operator|.
 name|append
@@ -2245,6 +2279,7 @@ argument_list|(
 literal|'\n'
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 if|if
 condition|(
@@ -2290,6 +2325,7 @@ condition|;
 name|i
 operator|++
 control|)
+block|{
 name|buf
 operator|.
 name|append
@@ -2310,6 +2346,7 @@ argument_list|(
 literal|'\n'
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 return|return
 name|buf
@@ -2356,6 +2393,7 @@ operator|.
 name|hasMoreTokens
 argument_list|()
 condition|)
+block|{
 name|buf
 operator|.
 name|append
@@ -2376,6 +2414,7 @@ argument_list|(
 literal|"\n"
 argument_list|)
 expr_stmt|;
+block|}
 return|return
 name|buf
 operator|.
@@ -2383,7 +2422,7 @@ name|toString
 argument_list|()
 return|;
 block|}
-comment|/**    * @return deep copy of this class    */
+comment|/**      * @return deep copy of this class      */
 specifier|public
 name|JavaClass
 name|copy
@@ -2467,6 +2506,7 @@ condition|;
 name|i
 operator|++
 control|)
+block|{
 name|c
 operator|.
 name|fields
@@ -2486,6 +2526,7 @@ operator|.
 name|constant_pool
 argument_list|)
 expr_stmt|;
+block|}
 name|c
 operator|.
 name|methods
@@ -2514,6 +2555,7 @@ condition|;
 name|i
 operator|++
 control|)
+block|{
 name|c
 operator|.
 name|methods
@@ -2533,6 +2575,7 @@ operator|.
 name|constant_pool
 argument_list|)
 expr_stmt|;
+block|}
 name|c
 operator|.
 name|attributes
@@ -2561,6 +2604,7 @@ condition|;
 name|i
 operator|++
 control|)
+block|{
 name|c
 operator|.
 name|attributes
@@ -2580,6 +2624,7 @@ operator|.
 name|constant_pool
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 catch|catch
 parameter_list|(
@@ -2628,7 +2673,7 @@ operator|==
 literal|0
 return|;
 block|}
-comment|/** @return returns either HEAP (generated), FILE, or ZIP    */
+comment|/** @return returns either HEAP (generated), FILE, or ZIP      */
 specifier|public
 specifier|final
 name|byte
@@ -2640,7 +2685,7 @@ name|source
 return|;
 block|}
 comment|/********************* New repository functionality *********************/
-comment|/**    * Gets the ClassRepository which holds its definition. By default    * this is the same as SyntheticRepository.getInstance();    */
+comment|/**      * Gets the ClassRepository which holds its definition. By default      * this is the same as SyntheticRepository.getInstance();      */
 specifier|public
 name|org
 operator|.
@@ -2658,7 +2703,7 @@ return|return
 name|repository
 return|;
 block|}
-comment|/**    * Sets the ClassRepository which loaded the JavaClass.    * Should be called immediately after parsing is done.    */
+comment|/**      * Sets the ClassRepository which loaded the JavaClass.      * Should be called immediately after parsing is done.      */
 specifier|public
 name|void
 name|setRepository
@@ -2682,7 +2727,7 @@ operator|=
 name|repository
 expr_stmt|;
 block|}
-comment|/** Equivalent to runtime "instanceof" operator.    *    * @return true if this JavaClass is derived from the super class    * @throws ClassNotFoundException if superclasses or superinterfaces    *   of this object can't be found    */
+comment|/** Equivalent to runtime "instanceof" operator.      *      * @return true if this JavaClass is derived from the super class      * @throws ClassNotFoundException if superclasses or superinterfaces      *   of this object can't be found      */
 specifier|public
 specifier|final
 name|boolean
@@ -2703,9 +2748,11 @@ argument_list|(
 name|super_class
 argument_list|)
 condition|)
+block|{
 return|return
 literal|true
 return|;
+block|}
 name|JavaClass
 index|[]
 name|super_classes
@@ -2767,7 +2814,7 @@ return|return
 literal|false
 return|;
 block|}
-comment|/**    * @return true, if this class is an implementation of interface inter    * @throws ClassNotFoundException if superclasses or superinterfaces    *   of this class can't be found    */
+comment|/**      * @return true, if this class is an implementation of interface inter      * @throws ClassNotFoundException if superclasses or superinterfaces      *   of this class can't be found      */
 specifier|public
 name|boolean
 name|implementationOf
@@ -2860,7 +2907,7 @@ return|return
 literal|false
 return|;
 block|}
-comment|/**    * @return the superclass for this JavaClass object, or null if this    * is java.lang.Object    * @throws ClassNotFoundException if the superclass can't be found    */
+comment|/**      * @return the superclass for this JavaClass object, or null if this      * is java.lang.Object      * @throws ClassNotFoundException if the superclass can't be found      */
 specifier|public
 name|JavaClass
 name|getSuperClass
@@ -2893,7 +2940,7 @@ argument_list|()
 argument_list|)
 return|;
 block|}
-comment|/**    * @return list of super classes of this class in ascending order, i.e.,    * java.lang.Object is always the last element    * @throws ClassNotFoundException if any of the superclasses can't be found    */
+comment|/**      * @return list of super classes of this class in ascending order, i.e.,      * java.lang.Object is always the last element      * @throws ClassNotFoundException if any of the superclasses can't be found      */
 specifier|public
 name|JavaClass
 index|[]
@@ -2963,7 +3010,7 @@ index|]
 argument_list|)
 return|;
 block|}
-comment|/**    * Get interfaces directly implemented by this JavaClass.    */
+comment|/**      * Get interfaces directly implemented by this JavaClass.      */
 specifier|public
 name|JavaClass
 index|[]
@@ -3028,7 +3075,7 @@ return|return
 name|classes
 return|;
 block|}
-comment|/**    * Get all interfaces implemented by this JavaClass (transitively).    */
+comment|/**      * Get all interfaces implemented by this JavaClass (transitively).      */
 specifier|public
 name|JavaClass
 index|[]
@@ -3175,7 +3222,7 @@ index|]
 argument_list|)
 return|;
 block|}
-comment|/**    * @return Comparison strategy object    */
+comment|/**      * @return Comparison strategy object      */
 specifier|public
 specifier|static
 name|BCELComparator
@@ -3186,7 +3233,7 @@ return|return
 name|_cmp
 return|;
 block|}
-comment|/**    * @param comparator Comparison strategy object    */
+comment|/**      * @param comparator Comparison strategy object      */
 specifier|public
 specifier|static
 name|void
@@ -3201,7 +3248,7 @@ operator|=
 name|comparator
 expr_stmt|;
 block|}
-comment|/**    * Return value as defined by given BCELComparator strategy.    * By default two JavaClass objects are said to be equal when    * their class names are equal.    *     * @see java.lang.Object#equals(java.lang.Object)    */
+comment|/**      * Return value as defined by given BCELComparator strategy.      * By default two JavaClass objects are said to be equal when      * their class names are equal.      *       * @see java.lang.Object#equals(java.lang.Object)      */
 specifier|public
 name|boolean
 name|equals
@@ -3221,7 +3268,7 @@ name|obj
 argument_list|)
 return|;
 block|}
-comment|/**    * Return the natural ordering of two JavaClasses.    * This ordering is based on the class name    */
+comment|/**      * Return the natural ordering of two JavaClasses.      * This ordering is based on the class name      */
 specifier|public
 name|int
 name|compareTo
@@ -3248,7 +3295,7 @@ argument_list|()
 argument_list|)
 return|;
 block|}
-comment|/**    * Return value as defined by given BCELComparator strategy.    * By default return the hashcode of the class name.    *     * @see java.lang.Object#hashCode()    */
+comment|/**      * Return value as defined by given BCELComparator strategy.      * By default return the hashcode of the class name.      *       * @see java.lang.Object#hashCode()      */
 specifier|public
 name|int
 name|hashCode

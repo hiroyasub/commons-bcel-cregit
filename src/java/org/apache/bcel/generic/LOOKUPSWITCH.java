@@ -60,7 +60,7 @@ name|LOOKUPSWITCH
 extends|extends
 name|Select
 block|{
-comment|/**    * Empty constructor needed for the Class.newInstance() statement in    * Instruction.readInstruction(). Not to be used otherwise.    */
+comment|/**      * Empty constructor needed for the Class.newInstance() statement in      * Instruction.readInstruction(). Not to be used otherwise.      */
 name|LOOKUPSWITCH
 parameter_list|()
 block|{
@@ -112,13 +112,13 @@ operator|*
 literal|8
 operator|)
 expr_stmt|;
-comment|/* alignment remainder assumed 					     * 0 here, until dump time. */
+comment|/* alignment remainder assumed          * 0 here, until dump time. */
 name|fixed_length
 operator|=
 name|length
 expr_stmt|;
 block|}
-comment|/**    * Dump instruction as byte code to stream out.    * @param out Output stream    */
+comment|/**      * Dump instruction as byte code to stream out.      * @param out Output stream      */
 specifier|public
 name|void
 name|dump
@@ -190,7 +190,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/**    * Read needed data (e.g. index) from file.    */
+comment|/**      * Read needed data (e.g. index) from file.      */
 specifier|protected
 name|void
 name|initFromFile
@@ -306,7 +306,7 @@ argument_list|()
 expr_stmt|;
 block|}
 block|}
-comment|/**    * Call corresponding visitor method(s). The order is:    * Call visitor methods of implemented interfaces first, then    * call methods according to the class hierarchy in descending order,    * i.e., the most specific visitXXX() call comes last.    *    * @param v Visitor object    */
+comment|/**      * Call corresponding visitor method(s). The order is:      * Call visitor methods of implemented interfaces first, then      * call methods according to the class hierarchy in descending order,      * i.e., the most specific visitXXX() call comes last.      *      * @param v Visitor object      */
 specifier|public
 name|void
 name|accept

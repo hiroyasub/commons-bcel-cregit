@@ -100,7 +100,7 @@ name|String
 name|signature
 decl_stmt|;
 comment|// signature for the type
-comment|/** Predefined constants    */
+comment|/** Predefined constants      */
 specifier|public
 specifier|static
 specifier|final
@@ -309,7 +309,7 @@ init|=
 operator|new
 name|ReferenceType
 argument_list|()
-block|{}
+block|{     }
 decl_stmt|;
 specifier|public
 specifier|static
@@ -326,7 +326,7 @@ name|T_UNKNOWN
 argument_list|,
 literal|"<unknown object>"
 argument_list|)
-block|{}
+block|{     }
 decl_stmt|;
 specifier|protected
 name|Type
@@ -347,7 +347,7 @@ operator|=
 name|s
 expr_stmt|;
 block|}
-comment|/**    * @return signature for given type.    */
+comment|/**      * @return signature for given type.      */
 specifier|public
 name|String
 name|getSignature
@@ -357,7 +357,7 @@ return|return
 name|signature
 return|;
 block|}
-comment|/**    * @return type as defined in Constants    */
+comment|/**      * @return type as defined in Constants      */
 specifier|public
 name|byte
 name|getType
@@ -367,7 +367,7 @@ return|return
 name|type
 return|;
 block|}
-comment|/**    * @return stack size of this type (2 for long and double, 0 for void, 1 otherwise)    */
+comment|/**      * @return stack size of this type (2 for long and double, 0 for void, 1 otherwise)      */
 specifier|public
 name|int
 name|getSize
@@ -405,7 +405,7 @@ literal|1
 return|;
 block|}
 block|}
-comment|/**    * @return Type string, e.g. `int[]'    */
+comment|/**      * @return Type string, e.g. `int[]'      */
 specifier|public
 name|String
 name|toString
@@ -445,7 +445,7 @@ literal|false
 argument_list|)
 return|;
 block|}
-comment|/**    * Convert type to Java method signature, e.g. int[] f(java.lang.String x)    * becomes (Ljava/lang/String;)[I    *    * @param return_type what the method returns    * @param arg_types what are the argument types    * @return method signature for given type(s).    */
+comment|/**      * Convert type to Java method signature, e.g. int[] f(java.lang.String x)      * becomes (Ljava/lang/String;)[I      *      * @param return_type what the method returns      * @param arg_types what are the argument types      * @return method signature for given type(s).      */
 specifier|public
 specifier|static
 name|String
@@ -497,6 +497,7 @@ condition|;
 name|i
 operator|++
 control|)
+block|{
 name|buf
 operator|.
 name|append
@@ -510,6 +511,7 @@ name|getSignature
 argument_list|()
 argument_list|)
 expr_stmt|;
+block|}
 name|buf
 operator|.
 name|append
@@ -607,7 +609,7 @@ argument_list|)
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**    * Convert signature to a Type object.    * @param signature signature string such as Ljava/lang/String;    * @return type object    */
+comment|/**      * Convert signature to a Type object.      * @param signature signature string such as Ljava/lang/String;      * @return type object      */
 specifier|public
 specifier|static
 specifier|final
@@ -752,6 +754,7 @@ name|index
 operator|<
 literal|0
 condition|)
+block|{
 throw|throw
 operator|new
 name|ClassFormatException
@@ -761,6 +764,7 @@ operator|+
 name|signature
 argument_list|)
 throw|;
+block|}
 comment|//corrected concurrent private static field acess
 name|wrap
 argument_list|(
@@ -795,7 +799,7 @@ argument_list|)
 return|;
 block|}
 block|}
-comment|/**    * Convert return value of a method (signature) to a Type object.    *    * @param signature signature string such as (Ljava/lang/String;)V    * @return return type    */
+comment|/**      * Convert return value of a method (signature) to a Type object.      *      * @param signature signature string such as (Ljava/lang/String;)V      * @return return type      */
 specifier|public
 specifier|static
 name|Type
@@ -850,7 +854,7 @@ argument_list|)
 throw|;
 block|}
 block|}
-comment|/**    * Convert arguments of a method (signature) to an array of Type objects.    * @param signature signature string such as (Ljava/lang/String;)V    * @return array of argument types    */
+comment|/**      * Convert arguments of a method (signature) to an array of Type objects.      * @param signature signature string such as (Ljava/lang/String;)V      * @return array of argument types      */
 specifier|public
 specifier|static
 name|Type
@@ -889,6 +893,7 @@ argument_list|)
 operator|!=
 literal|'('
 condition|)
+block|{
 throw|throw
 operator|new
 name|ClassFormatException
@@ -898,6 +903,7 @@ operator|+
 name|signature
 argument_list|)
 throw|;
+block|}
 name|index
 operator|=
 literal|1
@@ -980,7 +986,7 @@ return|return
 name|types
 return|;
 block|}
-comment|/** Convert runtime java.lang.Class to BCEL Type object.    * @param cl Java class    * @return corresponding Type object    */
+comment|/** Convert runtime java.lang.Class to BCEL Type object.      * @param cl Java class      * @return corresponding Type object      */
 specifier|public
 specifier|static
 name|Type
@@ -1009,7 +1015,7 @@ literal|"Class must not be null"
 argument_list|)
 throw|;
 block|}
-comment|/* That's an amzingly easy case, because getName() returns      * the signature. That's what we would have liked anyway.      */
+comment|/* That's an amzingly easy case, because getName() returns          * the signature. That's what we would have liked anyway.          */
 if|if
 condition|(
 name|cl
@@ -1194,7 +1200,7 @@ argument_list|)
 return|;
 block|}
 block|}
-comment|/**    * Convert runtime java.lang.Class[] to BCEL Type objects.    * @param classes an array of runtime class objects    * @return array of corresponding Type objects    */
+comment|/**      * Convert runtime java.lang.Class[] to BCEL Type objects.      * @param classes an array of runtime class objects      * @return array of corresponding Type objects      */
 specifier|public
 specifier|static
 name|Type

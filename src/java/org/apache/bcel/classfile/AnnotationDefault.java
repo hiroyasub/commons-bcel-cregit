@@ -50,7 +50,7 @@ block|{
 name|ElementValue
 name|default_value
 decl_stmt|;
-comment|/** 	 * @param annotation_type the subclass type of the annotation 	 * @param name_index Index pointing to the name<em>Code</em> 	 * @param length Content length in bytes 	 * @param file Input stream 	 * @param constant_pool Array of constants 	 */
+comment|/**      * @param annotation_type the subclass type of the annotation      * @param name_index Index pointing to the name<em>Code</em>      * @param length Content length in bytes      * @param file Input stream      * @param constant_pool Array of constants      */
 name|AnnotationDefault
 parameter_list|(
 name|byte
@@ -98,7 +98,7 @@ name|constant_pool
 argument_list|)
 expr_stmt|;
 block|}
-comment|/** 	 * @param annotation_type the subclass type of the annotation 	 * @param name_index Index pointing to the name<em>Code</em> 	 * @param length Content length in bytes 	 * @param defaultValue the annotation's default value 	 * @param constant_pool Array of constants 	 */
+comment|/**      * @param annotation_type the subclass type of the annotation      * @param name_index Index pointing to the name<em>Code</em>      * @param length Content length in bytes      * @param defaultValue the annotation's default value      * @param constant_pool Array of constants      */
 specifier|public
 name|AnnotationDefault
 parameter_list|(
@@ -135,7 +135,7 @@ name|defaultValue
 argument_list|)
 expr_stmt|;
 block|}
-comment|/** 	   * Called by objects that are traversing the nodes of the tree implicitely 	   * defined by the contents of a Java class. I.e., the hierarchy of methods, 	   * fields, attributes, etc. spawns a tree of objects. 	   * 	   * @param v Visitor object 	   */
+comment|/**      * Called by objects that are traversing the nodes of the tree implicitely      * defined by the contents of a Java class. I.e., the hierarchy of methods,      * fields, attributes, etc. spawns a tree of objects.      *      * @param v Visitor object      */
 specifier|public
 name|void
 name|accept
@@ -146,7 +146,7 @@ parameter_list|)
 block|{
 comment|//	    v.visitAnnotationDefault(this);
 block|}
-comment|/** 	   * @param defaultValue the default value of this methodinfo's annotation 	   */
+comment|/**      * @param defaultValue the default value of this methodinfo's annotation      */
 specifier|public
 specifier|final
 name|void
@@ -161,7 +161,7 @@ operator|=
 name|defaultValue
 expr_stmt|;
 block|}
-comment|/** 	   * @return the default value 	   */
+comment|/**      * @return the default value      */
 specifier|public
 specifier|final
 name|ElementValue

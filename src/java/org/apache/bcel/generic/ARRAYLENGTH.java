@@ -30,7 +30,7 @@ name|ExceptionThrower
 implements|,
 name|StackProducer
 block|{
-comment|/** Get length of array    */
+comment|/** Get length of array      */
 specifier|public
 name|ARRAYLENGTH
 parameter_list|()
@@ -54,7 +54,7 @@ literal|1
 argument_list|)
 expr_stmt|;
 block|}
-comment|/** @return exceptions this instruction may cause    */
+comment|/** @return exceptions this instruction may cause      */
 specifier|public
 name|Class
 index|[]
@@ -78,7 +78,7 @@ name|NULL_POINTER_EXCEPTION
 block|}
 return|;
 block|}
-comment|/**    * Call corresponding visitor method(s). The order is:    * Call visitor methods of implemented interfaces first, then    * call methods according to the class hierarchy in descending order,    * i.e., the most specific visitXXX() call comes last.    *    * @param v Visitor object    */
+comment|/**      * Call corresponding visitor method(s). The order is:      * Call visitor methods of implemented interfaces first, then      * call methods according to the class hierarchy in descending order,      * i.e., the most specific visitXXX() call comes last.      *      * @param v Visitor object      */
 specifier|public
 name|void
 name|accept

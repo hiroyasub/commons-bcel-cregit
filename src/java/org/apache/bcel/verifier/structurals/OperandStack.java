@@ -243,9 +243,11 @@ operator|instanceof
 name|OperandStack
 operator|)
 condition|)
+block|{
 return|return
 literal|false
 return|;
+block|}
 name|OperandStack
 name|s
 init|=
@@ -420,6 +422,7 @@ name|type
 operator|==
 literal|null
 condition|)
+block|{
 throw|throw
 operator|new
 name|AssertionViolatedException
@@ -427,6 +430,7 @@ argument_list|(
 literal|"Cannot push NULL onto OperandStack."
 argument_list|)
 throw|;
+block|}
 if|if
 condition|(
 name|type
@@ -698,6 +702,7 @@ name|size
 argument_list|()
 operator|)
 condition|)
+block|{
 throw|throw
 operator|new
 name|StructuralCodeConstraintException
@@ -711,6 +716,7 @@ operator|+
 name|s
 argument_list|)
 throw|;
+block|}
 for|for
 control|(
 name|int

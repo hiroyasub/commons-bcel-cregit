@@ -85,7 +85,7 @@ specifier|private
 name|ConstantPool
 name|constant_pool
 decl_stmt|;
-comment|/**    * Construct object from file stream.    * @param file Input stream    * @throws IOException    */
+comment|/**      * Construct object from file stream.      * @param file Input stream      * @throws IOException      */
 name|StackMapType
 parameter_list|(
 name|DataInputStream
@@ -115,6 +115,7 @@ condition|(
 name|hasIndex
 argument_list|()
 condition|)
+block|{
 name|setIndex
 argument_list|(
 name|file
@@ -123,13 +124,14 @@ name|readShort
 argument_list|()
 argument_list|)
 expr_stmt|;
+block|}
 name|setConstantPool
 argument_list|(
 name|constant_pool
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**    * @param type type tag as defined in the Constants interface    * @param index index to constant pool, or byte code offset    */
+comment|/**      * @param type type tag as defined in the Constants interface      * @param index index to constant pool, or byte code offset      */
 specifier|public
 name|StackMapType
 parameter_list|(
@@ -185,6 +187,7 @@ operator|.
 name|ITEM_NewObject
 operator|)
 condition|)
+block|{
 throw|throw
 operator|new
 name|RuntimeException
@@ -194,6 +197,7 @@ operator|+
 name|t
 argument_list|)
 throw|;
+block|}
 name|type
 operator|=
 name|t
@@ -221,7 +225,7 @@ operator|=
 name|t
 expr_stmt|;
 block|}
-comment|/** @return index to constant pool if type == ITEM_Object, or offset    * in byte code, if type == ITEM_NewObject, and -1 otherwise    */
+comment|/** @return index to constant pool if type == ITEM_Object, or offset      * in byte code, if type == ITEM_NewObject, and -1 otherwise      */
 specifier|public
 name|int
 name|getIndex
@@ -231,7 +235,7 @@ return|return
 name|index
 return|;
 block|}
-comment|/**    * Dump type entries to file.    *    * @param file Output file stream    * @throws IOException    */
+comment|/**      * Dump type entries to file.      *      * @param file Output file stream      * @throws IOException      */
 specifier|public
 specifier|final
 name|void
@@ -255,6 +259,7 @@ condition|(
 name|hasIndex
 argument_list|()
 condition|)
+block|{
 name|file
 operator|.
 name|writeShort
@@ -264,7 +269,8 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
-comment|/** @return true, if type is either ITEM_Object or ITEM_NewObject    */
+block|}
+comment|/** @return true, if type is either ITEM_Object or ITEM_NewObject      */
 specifier|public
 specifier|final
 name|boolean
@@ -311,9 +317,11 @@ name|index
 operator|<
 literal|0
 condition|)
+block|{
 return|return
 literal|", class=<unknown>"
 return|;
+block|}
 return|return
 literal|", class="
 operator|+
@@ -337,17 +345,21 @@ name|Constants
 operator|.
 name|ITEM_NewObject
 condition|)
+block|{
 return|return
 literal|", offset="
 operator|+
 name|index
 return|;
+block|}
 else|else
+block|{
 return|return
 literal|""
 return|;
 block|}
-comment|/**    * @return String representation    */
+block|}
+comment|/**      * @return String representation      */
 specifier|public
 specifier|final
 name|String
@@ -370,7 +382,7 @@ operator|+
 literal|")"
 return|;
 block|}
-comment|/**    * @return deep copy of this object    */
+comment|/**      * @return deep copy of this object      */
 specifier|public
 name|StackMapType
 name|copy
@@ -397,7 +409,7 @@ return|return
 literal|null
 return|;
 block|}
-comment|/**    * @return Constant pool used by this object.    */
+comment|/**      * @return Constant pool used by this object.      */
 specifier|public
 specifier|final
 name|ConstantPool
@@ -408,7 +420,7 @@ return|return
 name|constant_pool
 return|;
 block|}
-comment|/**    * @param constant_pool Constant pool to be used for this object.    */
+comment|/**      * @param constant_pool Constant pool to be used for this object.      */
 specifier|public
 specifier|final
 name|void

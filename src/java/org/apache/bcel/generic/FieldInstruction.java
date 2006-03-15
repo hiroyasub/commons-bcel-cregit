@@ -43,12 +43,12 @@ name|FieldOrMethod
 implements|implements
 name|TypedInstruction
 block|{
-comment|/**    * Empty constructor needed for the Class.newInstance() statement in    * Instruction.readInstruction(). Not to be used otherwise.    */
+comment|/**      * Empty constructor needed for the Class.newInstance() statement in      * Instruction.readInstruction(). Not to be used otherwise.      */
 name|FieldInstruction
 parameter_list|()
 block|{
 block|}
-comment|/**    * @param index to constant pool    */
+comment|/**      * @param index to constant pool      */
 specifier|protected
 name|FieldInstruction
 parameter_list|(
@@ -67,7 +67,7 @@ name|index
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**    * @return mnemonic for instruction with symbolic references resolved    */
+comment|/**      * @return mnemonic for instruction with symbolic references resolved      */
 specifier|public
 name|String
 name|toString
@@ -110,7 +110,7 @@ name|CONSTANT_Fieldref
 argument_list|)
 return|;
 block|}
-comment|/** @return size of field (1 or 2)    */
+comment|/** @return size of field (1 or 2)      */
 specifier|protected
 name|int
 name|getFieldSize
@@ -129,7 +129,7 @@ name|getSize
 argument_list|()
 return|;
 block|}
-comment|/** @return return type of referenced field    */
+comment|/** @return return type of referenced field      */
 specifier|public
 name|Type
 name|getType
@@ -145,7 +145,7 @@ name|cpg
 argument_list|)
 return|;
 block|}
-comment|/** @return type of field    */
+comment|/** @return type of field      */
 specifier|public
 name|Type
 name|getFieldType
@@ -166,7 +166,7 @@ argument_list|)
 argument_list|)
 return|;
 block|}
-comment|/** @return name of referenced field.    */
+comment|/** @return name of referenced field.      */
 specifier|public
 name|String
 name|getFieldName

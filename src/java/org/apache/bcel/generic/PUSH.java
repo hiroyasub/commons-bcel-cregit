@@ -47,7 +47,7 @@ specifier|private
 name|Instruction
 name|instruction
 decl_stmt|;
-comment|/**    * This constructor also applies for values of type short, char, byte     *    * @param cp Constant pool    * @param value to be pushed     */
+comment|/**      * This constructor also applies for values of type short, char, byte       *      * @param cp Constant pool      * @param value to be pushed       */
 specifier|public
 name|PUSH
 parameter_list|(
@@ -73,7 +73,7 @@ operator|<=
 literal|5
 operator|)
 condition|)
-comment|// Use ICONST_n
+block|{
 name|instruction
 operator|=
 name|INSTRUCTIONS
@@ -85,6 +85,7 @@ operator|+
 name|value
 index|]
 expr_stmt|;
+block|}
 if|else if
 condition|(
 operator|(
@@ -100,7 +101,7 @@ operator|<=
 literal|127
 operator|)
 condition|)
-comment|// Use BIPUSH
+block|{
 name|instruction
 operator|=
 operator|new
@@ -112,6 +113,7 @@ operator|)
 name|value
 argument_list|)
 expr_stmt|;
+block|}
 if|else if
 condition|(
 operator|(
@@ -127,7 +129,7 @@ operator|<=
 literal|32767
 operator|)
 condition|)
-comment|// Use SIPUSH
+block|{
 name|instruction
 operator|=
 operator|new
@@ -139,8 +141,9 @@ operator|)
 name|value
 argument_list|)
 expr_stmt|;
+block|}
 else|else
-comment|// If everything fails create a Constant pool entry
+block|{
 name|instruction
 operator|=
 operator|new
@@ -155,7 +158,8 @@ argument_list|)
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**    * @param cp Constant pool    * @param value to be pushed     */
+block|}
+comment|/**      * @param cp Constant pool      * @param value to be pushed       */
 specifier|public
 name|PUSH
 parameter_list|(
@@ -184,7 +188,7 @@ operator|)
 index|]
 expr_stmt|;
 block|}
-comment|/**    * @param cp Constant pool    * @param value to be pushed     */
+comment|/**      * @param cp Constant pool      * @param value to be pushed       */
 specifier|public
 name|PUSH
 parameter_list|(
@@ -201,32 +205,38 @@ name|value
 operator|==
 literal|0.0
 condition|)
+block|{
 name|instruction
 operator|=
 name|FCONST_0
 expr_stmt|;
+block|}
 if|else if
 condition|(
 name|value
 operator|==
 literal|1.0
 condition|)
+block|{
 name|instruction
 operator|=
 name|FCONST_1
 expr_stmt|;
+block|}
 if|else if
 condition|(
 name|value
 operator|==
 literal|2.0
 condition|)
+block|{
 name|instruction
 operator|=
 name|FCONST_2
 expr_stmt|;
+block|}
 else|else
-comment|// Create a Constant pool entry
+block|{
 name|instruction
 operator|=
 operator|new
@@ -241,7 +251,8 @@ argument_list|)
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**    * @param cp Constant pool    * @param value to be pushed     */
+block|}
+comment|/**      * @param cp Constant pool      * @param value to be pushed       */
 specifier|public
 name|PUSH
 parameter_list|(
@@ -258,22 +269,26 @@ name|value
 operator|==
 literal|0
 condition|)
+block|{
 name|instruction
 operator|=
 name|LCONST_0
 expr_stmt|;
+block|}
 if|else if
 condition|(
 name|value
 operator|==
 literal|1
 condition|)
+block|{
 name|instruction
 operator|=
 name|LCONST_1
 expr_stmt|;
+block|}
 else|else
-comment|// Create a Constant pool entry
+block|{
 name|instruction
 operator|=
 operator|new
@@ -288,7 +303,8 @@ argument_list|)
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**    * @param cp Constant pool    * @param value to be pushed     */
+block|}
+comment|/**      * @param cp Constant pool      * @param value to be pushed       */
 specifier|public
 name|PUSH
 parameter_list|(
@@ -305,22 +321,26 @@ name|value
 operator|==
 literal|0.0
 condition|)
+block|{
 name|instruction
 operator|=
 name|DCONST_0
 expr_stmt|;
+block|}
 if|else if
 condition|(
 name|value
 operator|==
 literal|1.0
 condition|)
+block|{
 name|instruction
 operator|=
 name|DCONST_1
 expr_stmt|;
+block|}
 else|else
-comment|// Create a Constant pool entry
+block|{
 name|instruction
 operator|=
 operator|new
@@ -335,7 +355,8 @@ argument_list|)
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**    * @param cp Constant pool    * @param value to be pushed     */
+block|}
+comment|/**      * @param cp Constant pool      * @param value to be pushed       */
 specifier|public
 name|PUSH
 parameter_list|(
@@ -352,12 +373,14 @@ name|value
 operator|==
 literal|null
 condition|)
+block|{
 name|instruction
 operator|=
 name|ACONST_NULL
 expr_stmt|;
+block|}
 else|else
-comment|// Create a Constant pool entry
+block|{
 name|instruction
 operator|=
 operator|new
@@ -372,7 +395,8 @@ argument_list|)
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**    * @param cp Constant pool    * @param value to be pushed     */
+block|}
+comment|/**      * @param cp Constant pool      * @param value to be pushed       */
 specifier|public
 name|PUSH
 parameter_list|(
@@ -403,6 +427,7 @@ operator|instanceof
 name|Byte
 operator|)
 condition|)
+block|{
 name|instruction
 operator|=
 operator|new
@@ -418,12 +443,14 @@ argument_list|)
 operator|.
 name|instruction
 expr_stmt|;
+block|}
 if|else if
 condition|(
 name|value
 operator|instanceof
 name|Double
 condition|)
+block|{
 name|instruction
 operator|=
 operator|new
@@ -439,12 +466,14 @@ argument_list|)
 operator|.
 name|instruction
 expr_stmt|;
+block|}
 if|else if
 condition|(
 name|value
 operator|instanceof
 name|Float
 condition|)
+block|{
 name|instruction
 operator|=
 operator|new
@@ -460,12 +489,14 @@ argument_list|)
 operator|.
 name|instruction
 expr_stmt|;
+block|}
 if|else if
 condition|(
 name|value
 operator|instanceof
 name|Long
 condition|)
+block|{
 name|instruction
 operator|=
 operator|new
@@ -481,7 +512,9 @@ argument_list|)
 operator|.
 name|instruction
 expr_stmt|;
+block|}
 else|else
+block|{
 throw|throw
 operator|new
 name|ClassGenException
@@ -492,7 +525,8 @@ name|value
 argument_list|)
 throw|;
 block|}
-comment|/**    * creates a push object from a Character value. Warning: Make sure not to attempt to allow    * autoboxing to create this value parameter, as an alternative constructor will be called    *     * @param cp Constant pool    * @param value to be pushed     */
+block|}
+comment|/**      * creates a push object from a Character value. Warning: Make sure not to attempt to allow      * autoboxing to create this value parameter, as an alternative constructor will be called      *       * @param cp Constant pool      * @param value to be pushed       */
 specifier|public
 name|PUSH
 parameter_list|(
@@ -507,9 +541,6 @@ name|this
 argument_list|(
 name|cp
 argument_list|,
-operator|(
-name|int
-operator|)
 name|value
 operator|.
 name|charValue
@@ -517,7 +548,7 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**    * @param cp Constant pool    * @param value to be pushed     */
+comment|/**      * @param cp Constant pool      * @param value to be pushed       */
 specifier|public
 name|PUSH
 parameter_list|(
@@ -563,7 +594,7 @@ return|return
 name|instruction
 return|;
 block|}
-comment|/**    * @return mnemonic for instruction    */
+comment|/**      * @return mnemonic for instruction      */
 specifier|public
 name|String
 name|toString

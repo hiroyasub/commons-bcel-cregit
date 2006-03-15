@@ -269,6 +269,7 @@ condition|;
 name|i
 operator|++
 control|)
+block|{
 name|writeField
 argument_list|(
 name|fields
@@ -277,6 +278,7 @@ name|i
 index|]
 argument_list|)
 expr_stmt|;
+block|}
 name|file
 operator|.
 name|println
@@ -311,6 +313,7 @@ condition|;
 name|i
 operator|++
 control|)
+block|{
 name|writeMethod
 argument_list|(
 name|methods
@@ -321,6 +324,7 @@ argument_list|,
 name|i
 argument_list|)
 expr_stmt|;
+block|}
 name|file
 operator|.
 name|println
@@ -334,7 +338,7 @@ name|close
 argument_list|()
 expr_stmt|;
 block|}
-comment|/**    * Print field of class.    *    * @param field field to print    * @exception java.io.IOException    */
+comment|/**      * Print field of class.      *      * @param field field to print      * @exception java.io.IOException      */
 specifier|private
 name|void
 name|writeField
@@ -448,6 +452,7 @@ condition|;
 name|i
 operator|++
 control|)
+block|{
 name|attribute_html
 operator|.
 name|writeAttribute
@@ -464,6 +469,7 @@ operator|+
 name|i
 argument_list|)
 expr_stmt|;
+block|}
 for|for
 control|(
 name|int
@@ -631,7 +637,7 @@ operator|.
 name|getAttributes
 argument_list|()
 decl_stmt|;
-comment|/* HTML doesn't like names like<clinit> and spaces are places to break      * lines. Both we don't want...      */
+comment|/* HTML doesn't like names like<clinit> and spaces are places to break          * lines. Both we don't want...          */
 name|access
 operator|=
 name|Utility
@@ -741,6 +747,7 @@ name|length
 operator|-
 literal|1
 condition|)
+block|{
 name|file
 operator|.
 name|print
@@ -748,6 +755,7 @@ argument_list|(
 literal|", "
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 name|file
 operator|.
@@ -878,6 +886,7 @@ name|length
 operator|-
 literal|1
 condition|)
+block|{
 name|file
 operator|.
 name|print
@@ -885,6 +894,7 @@ argument_list|(
 literal|", "
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 name|file
 operator|.
@@ -934,6 +944,7 @@ condition|;
 name|j
 operator|++
 control|)
+block|{
 name|attribute_html
 operator|.
 name|writeAttribute
@@ -958,6 +969,7 @@ argument_list|,
 name|method_number
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 block|}
 block|}

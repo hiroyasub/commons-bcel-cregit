@@ -26,7 +26,7 @@ name|D2I
 extends|extends
 name|ConversionInstruction
 block|{
-comment|/** Convert double to int    */
+comment|/** Convert double to int      */
 specifier|public
 name|D2I
 parameter_list|()
@@ -45,7 +45,7 @@ name|D2I
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**    * Call corresponding visitor method(s). The order is:    * Call visitor methods of implemented interfaces first, then    * call methods according to the class hierarchy in descending order,    * i.e., the most specific visitXXX() call comes last.    *    * @param v Visitor object    */
+comment|/**      * Call corresponding visitor method(s). The order is:      * Call visitor methods of implemented interfaces first, then      * call methods according to the class hierarchy in descending order,      * i.e., the most specific visitXXX() call comes last.      *      * @param v Visitor object      */
 specifier|public
 name|void
 name|accept

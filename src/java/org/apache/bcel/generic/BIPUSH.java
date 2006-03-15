@@ -66,12 +66,12 @@ specifier|private
 name|byte
 name|b
 decl_stmt|;
-comment|/**    * Empty constructor needed for the Class.newInstance() statement in    * Instruction.readInstruction(). Not to be used otherwise.    */
+comment|/**      * Empty constructor needed for the Class.newInstance() statement in      * Instruction.readInstruction(). Not to be used otherwise.      */
 name|BIPUSH
 parameter_list|()
 block|{
 block|}
-comment|/** Push byte on stack    */
+comment|/** Push byte on stack      */
 specifier|public
 name|BIPUSH
 parameter_list|(
@@ -104,7 +104,7 @@ operator|=
 name|b
 expr_stmt|;
 block|}
-comment|/**    * Dump instruction as byte code to stream out.    */
+comment|/**      * Dump instruction as byte code to stream out.      */
 specifier|public
 name|void
 name|dump
@@ -130,7 +130,7 @@ name|b
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**    * @return mnemonic for instruction    */
+comment|/**      * @return mnemonic for instruction      */
 specifier|public
 name|String
 name|toString
@@ -152,7 +152,7 @@ operator|+
 name|b
 return|;
 block|}
-comment|/**    * Read needed data (e.g. index) from file.    */
+comment|/**      * Read needed data (e.g. index) from file.      */
 specifier|protected
 name|void
 name|initFromFile
@@ -191,7 +191,7 @@ name|b
 argument_list|)
 return|;
 block|}
-comment|/** @return Type.BYTE    */
+comment|/** @return Type.BYTE      */
 specifier|public
 name|Type
 name|getType
@@ -206,7 +206,7 @@ operator|.
 name|BYTE
 return|;
 block|}
-comment|/**    * Call corresponding visitor method(s). The order is:    * Call visitor methods of implemented interfaces first, then    * call methods according to the class hierarchy in descending order,    * i.e., the most specific visitXXX() call comes last.    *    * @param v Visitor object    */
+comment|/**      * Call corresponding visitor method(s). The order is:      * Call visitor methods of implemented interfaces first, then      * call methods according to the class hierarchy in descending order,      * i.e., the most specific visitXXX() call comes last.      *      * @param v Visitor object      */
 specifier|public
 name|void
 name|accept

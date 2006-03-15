@@ -91,7 +91,7 @@ name|Constant
 index|[]
 name|constant_pool
 decl_stmt|;
-comment|/**    * @param constant_pool Array of constants    */
+comment|/**      * @param constant_pool Array of constants      */
 specifier|public
 name|ConstantPool
 parameter_list|(
@@ -106,7 +106,7 @@ name|constant_pool
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**    * Read constants from given file stream.    *    * @param file Input stream    * @throws IOException    * @throws ClassFormatException    */
+comment|/**      * Read constants from given file stream.      *      * @param file Input stream      * @throws IOException      * @throws ClassFormatException      */
 name|ConstantPool
 parameter_list|(
 name|DataInputStream
@@ -135,7 +135,7 @@ index|[
 name|constant_pool_count
 index|]
 expr_stmt|;
-comment|/* constant_pool[0] is unused by the compiler and may be used freely      * by the implementation.      */
+comment|/* constant_pool[0] is unused by the compiler and may be used freely          * by the implementation.          */
 for|for
 control|(
 name|int
@@ -163,7 +163,7 @@ argument_list|(
 name|file
 argument_list|)
 expr_stmt|;
-comment|/* Quote from the JVM specification:        * "All eight byte constants take up two spots in the constant pool.        * If this is the n'th byte in the constant pool, then the next item        * will be numbered n+2"        *         * Thus we have to increment the index counter.        */
+comment|/* Quote from the JVM specification:              * "All eight byte constants take up two spots in the constant pool.              * If this is the n'th byte in the constant pool, then the next item              * will be numbered n+2"              *               * Thus we have to increment the index counter.              */
 name|tag
 operator|=
 name|constant_pool
@@ -192,12 +192,14 @@ operator|.
 name|CONSTANT_Long
 operator|)
 condition|)
+block|{
 name|i
 operator|++
 expr_stmt|;
 block|}
 block|}
-comment|/**    * Called by objects that are traversing the nodes of the tree implicitely    * defined by the contents of a Java class. I.e., the hierarchy of methods,    * fields, attributes, etc. spawns a tree of objects.    *    * @param v Visitor object    */
+block|}
+comment|/**      * Called by objects that are traversing the nodes of the tree implicitely      * defined by the contents of a Java class. I.e., the hierarchy of methods,      * fields, attributes, etc. spawns a tree of objects.      *      * @param v Visitor object      */
 specifier|public
 name|void
 name|accept
@@ -214,7 +216,7 @@ name|this
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**    * Resolve constant to a string representation.    *    * @param  c Constant to be printed    * @return String representation    */
+comment|/**      * Resolve constant to a string representation.      *      * @param  c Constant to be printed      * @return String representation      */
 specifier|public
 name|String
 name|constantToString
@@ -692,7 +694,7 @@ name|toString
 argument_list|()
 return|;
 block|}
-comment|/**    * Retrieve constant at `index' from constant pool and resolve it to    * a string representation.    *    * @param  index of constant in constant pool    * @param  tag expected type    * @return String representation    */
+comment|/**      * Retrieve constant at `index' from constant pool and resolve it to      * a string representation.      *      * @param  index of constant in constant pool      * @param  tag expected type      * @return String representation      */
 specifier|public
 name|String
 name|constantToString
@@ -723,7 +725,7 @@ name|c
 argument_list|)
 return|;
 block|}
-comment|/**     * Dump constant pool to file stream in binary format.    *    * @param file Output file stream    * @throws IOException    */
+comment|/**       * Dump constant pool to file stream in binary format.      *      * @param file Output file stream      * @throws IOException      */
 specifier|public
 name|void
 name|dump
@@ -755,6 +757,7 @@ condition|;
 name|i
 operator|++
 control|)
+block|{
 if|if
 condition|(
 name|constant_pool
@@ -764,6 +767,7 @@ index|]
 operator|!=
 literal|null
 condition|)
+block|{
 name|constant_pool
 index|[
 name|i
@@ -775,7 +779,9 @@ name|file
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**    * Get constant from constant pool.    *    * @param  index Index in constant pool    * @return Constant value    * @see    Constant    */
+block|}
+block|}
+comment|/**      * Get constant from constant pool.      *      * @param  index Index in constant pool      * @return Constant value      * @see    Constant      */
 specifier|public
 name|Constant
 name|getConstant
@@ -796,6 +802,7 @@ name|index
 operator|<
 literal|0
 condition|)
+block|{
 throw|throw
 operator|new
 name|ClassFormatException
@@ -811,6 +818,7 @@ operator|.
 name|length
 argument_list|)
 throw|;
+block|}
 return|return
 name|constant_pool
 index|[
@@ -818,7 +826,7 @@ name|index
 index|]
 return|;
 block|}
-comment|/**    * Get constant from constant pool and check whether it has the    * expected type.    *    * @param  index Index in constant pool    * @param  tag Tag of expected constant, i.e., its type    * @return Constant value    * @see    Constant    * @throws  ClassFormatException    */
+comment|/**      * Get constant from constant pool and check whether it has the      * expected type.      *      * @param  index Index in constant pool      * @param  tag Tag of expected constant, i.e., its type      * @return Constant value      * @see    Constant      * @throws  ClassFormatException      */
 specifier|public
 name|Constant
 name|getConstant
@@ -848,6 +856,7 @@ name|c
 operator|==
 literal|null
 condition|)
+block|{
 throw|throw
 operator|new
 name|ClassFormatException
@@ -859,6 +868,7 @@ operator|+
 literal|" is null."
 argument_list|)
 throw|;
+block|}
 if|if
 condition|(
 name|c
@@ -868,6 +878,7 @@ argument_list|()
 operator|!=
 name|tag
 condition|)
+block|{
 throw|throw
 operator|new
 name|ClassFormatException
@@ -890,11 +901,12 @@ operator|+
 name|c
 argument_list|)
 throw|;
+block|}
 return|return
 name|c
 return|;
 block|}
-comment|/**    * @return Array of constants.    * @see    Constant    */
+comment|/**      * @return Array of constants.      * @see    Constant      */
 specifier|public
 name|Constant
 index|[]
@@ -905,7 +917,7 @@ return|return
 name|constant_pool
 return|;
 block|}
-comment|/**    * Get string from constant pool and bypass the indirection of     * `ConstantClass' and `ConstantString' objects. I.e. these classes have    * an index field that points to another entry of the constant pool of    * type `ConstantUtf8' which contains the real data.    *    * @param  index Index in constant pool    * @param  tag Tag of expected constant, either ConstantClass or ConstantString    * @return Contents of string reference    * @see    ConstantClass    * @see    ConstantString    * @throws  ClassFormatException    */
+comment|/**      * Get string from constant pool and bypass the indirection of       * `ConstantClass' and `ConstantString' objects. I.e. these classes have      * an index field that points to another entry of the constant pool of      * type `ConstantUtf8' which contains the real data.      *      * @param  index Index in constant pool      * @param  tag Tag of expected constant, either ConstantClass or ConstantString      * @return Contents of string reference      * @see    ConstantClass      * @see    ConstantString      * @throws  ClassFormatException      */
 specifier|public
 name|String
 name|getConstantString
@@ -934,7 +946,7 @@ argument_list|,
 name|tag
 argument_list|)
 expr_stmt|;
-comment|/* This switch() is not that elegant, since the two classes have the      * same contents, they just differ in the name of the index      * field variable.      * But we want to stick to the JVM naming conventions closely though      * we could have solved these more elegantly by using the same      * variable name or by subclassing.      */
+comment|/* This switch() is not that elegant, since the two classes have the          * same contents, they just differ in the name of the index          * field variable.          * But we want to stick to the JVM naming conventions closely though          * we could have solved these more elegantly by using the same          * variable name or by subclassing.          */
 switch|switch
 condition|(
 name|tag
@@ -1011,7 +1023,7 @@ name|getBytes
 argument_list|()
 return|;
 block|}
-comment|/**    * @return Length of constant pool.    */
+comment|/**      * @return Length of constant pool.      */
 specifier|public
 name|int
 name|getLength
@@ -1021,7 +1033,7 @@ return|return
 name|constant_pool_count
 return|;
 block|}
-comment|/**    * @param constant Constant to set    */
+comment|/**      * @param constant Constant to set      */
 specifier|public
 name|void
 name|setConstant
@@ -1041,7 +1053,7 @@ operator|=
 name|constant
 expr_stmt|;
 block|}
-comment|/**    * @param constant_pool    */
+comment|/**      * @param constant_pool      */
 specifier|public
 name|void
 name|setConstantPool
@@ -1072,7 +1084,7 @@ operator|.
 name|length
 expr_stmt|;
 block|}
-comment|/**    * @return String representation.    */
+comment|/**      * @return String representation.      */
 specifier|public
 name|String
 name|toString
@@ -1099,6 +1111,7 @@ condition|;
 name|i
 operator|++
 control|)
+block|{
 name|buf
 operator|.
 name|append
@@ -1124,6 +1137,7 @@ argument_list|(
 literal|"\n"
 argument_list|)
 expr_stmt|;
+block|}
 return|return
 name|buf
 operator|.
@@ -1131,7 +1145,7 @@ name|toString
 argument_list|()
 return|;
 block|}
-comment|/**    * @return deep copy of this constant pool    */
+comment|/**      * @return deep copy of this constant pool      */
 specifier|public
 name|ConstantPool
 name|copy
@@ -1186,6 +1200,7 @@ index|]
 operator|!=
 literal|null
 condition|)
+block|{
 name|c
 operator|.
 name|constant_pool
@@ -1201,6 +1216,7 @@ operator|.
 name|copy
 argument_list|()
 expr_stmt|;
+block|}
 block|}
 block|}
 catch|catch

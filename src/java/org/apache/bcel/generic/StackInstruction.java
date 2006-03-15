@@ -27,12 +27,12 @@ name|StackInstruction
 extends|extends
 name|Instruction
 block|{
-comment|/**    * Empty constructor needed for the Class.newInstance() statement in    * Instruction.readInstruction(). Not to be used otherwise.    */
+comment|/**      * Empty constructor needed for the Class.newInstance() statement in      * Instruction.readInstruction(). Not to be used otherwise.      */
 name|StackInstruction
 parameter_list|()
 block|{
 block|}
-comment|/**    * @param opcode instruction opcode    */
+comment|/**      * @param opcode instruction opcode      */
 specifier|protected
 name|StackInstruction
 parameter_list|(
@@ -51,7 +51,7 @@ literal|1
 argument_list|)
 expr_stmt|;
 block|}
-comment|/** @return Type.UNKNOWN    */
+comment|/** @return Type.UNKNOWN      */
 specifier|public
 name|Type
 name|getType

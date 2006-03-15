@@ -48,7 +48,7 @@ name|GotoInstruction
 implements|implements
 name|VariableLengthInstruction
 block|{
-comment|/**    * Empty constructor needed for the Class.newInstance() statement in    * Instruction.readInstruction(). Not to be used otherwise.    */
+comment|/**      * Empty constructor needed for the Class.newInstance() statement in      * Instruction.readInstruction(). Not to be used otherwise.      */
 name|GOTO
 parameter_list|()
 block|{
@@ -76,7 +76,7 @@ name|target
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**    * Dump instruction as byte code to stream out.    * @param out Output stream    */
+comment|/**      * Dump instruction as byte code to stream out.      * @param out Output stream      */
 specifier|public
 name|void
 name|dump
@@ -106,6 +106,7 @@ name|Constants
 operator|.
 name|GOTO
 condition|)
+block|{
 name|super
 operator|.
 name|dump
@@ -113,6 +114,7 @@ argument_list|(
 name|out
 argument_list|)
 expr_stmt|;
+block|}
 else|else
 block|{
 comment|// GOTO_W
@@ -137,7 +139,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/** Called in pass 2 of InstructionList.setPositions() in order to update    * the branch target, that may shift due to variable length instructions.    */
+comment|/** Called in pass 2 of InstructionList.setPositions() in order to update      * the branch target, that may shift due to variable length instructions.      */
 specifier|protected
 name|int
 name|updatePosition
@@ -203,7 +205,7 @@ return|return
 literal|0
 return|;
 block|}
-comment|/**    * Call corresponding visitor method(s). The order is:    * Call visitor methods of implemented interfaces first, then    * call methods according to the class hierarchy in descending order,    * i.e., the most specific visitXXX() call comes last.    *    * @param v Visitor object    */
+comment|/**      * Call corresponding visitor method(s). The order is:      * Call visitor methods of implemented interfaces first, then      * call methods according to the class hierarchy in descending order,      * i.e., the most specific visitXXX() call comes last.      *      * @param v Visitor object      */
 specifier|public
 name|void
 name|accept

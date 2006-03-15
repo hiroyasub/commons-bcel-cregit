@@ -151,14 +151,14 @@ operator|new
 name|IvjEventHandler
 argument_list|()
 decl_stmt|;
-comment|/** 	 * The class to verify. Default set to 'java.lang.Object' 	 * in case this class is instantiated via one of the many 	 * machine-generated constructors. 	 */
+comment|/**      * The class to verify. Default set to 'java.lang.Object'      * in case this class is instantiated via one of the many      * machine-generated constructors.      */
 specifier|private
 name|String
 name|class_name
 init|=
 literal|"java.lang.Object"
 decl_stmt|;
-comment|/** 	 * This field is here to count the number of open VerifyDialog 	 * instances so the JVM can be exited afer every Dialog had been 	 * closed. 	 */
+comment|/**      * This field is here to count the number of open VerifyDialog      * instances so the JVM can be exited afer every Dialog had been      * closed.      */
 specifier|private
 specifier|static
 name|int
@@ -204,11 +204,13 @@ operator|.
 name|getPass1Button
 argument_list|()
 condition|)
+block|{
 name|connEtoC1
 argument_list|(
 name|e
 argument_list|)
 expr_stmt|;
+block|}
 if|if
 condition|(
 name|e
@@ -223,11 +225,13 @@ operator|.
 name|getPass2Button
 argument_list|()
 condition|)
+block|{
 name|connEtoC2
 argument_list|(
 name|e
 argument_list|)
 expr_stmt|;
+block|}
 if|if
 condition|(
 name|e
@@ -242,11 +246,13 @@ operator|.
 name|getPass3Button
 argument_list|()
 condition|)
+block|{
 name|connEtoC3
 argument_list|(
 name|e
 argument_list|)
 expr_stmt|;
+block|}
 if|if
 condition|(
 name|e
@@ -261,11 +267,13 @@ operator|.
 name|getFlushButton
 argument_list|()
 condition|)
+block|{
 name|connEtoC4
 argument_list|(
 name|e
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 empty_stmt|;
 block|}
@@ -477,7 +485,7 @@ name|modal
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**  * Use this constructor if you want a possibility to verify other  * class files than java.lang.Object.  * @param fully_qualified_class_name java.lang.String  */
+comment|/**      * Use this constructor if you want a possibility to verify other      * class files than java.lang.Object.      * @param fully_qualified_class_name java.lang.String      */
 specifier|public
 name|VerifyDialog
 parameter_list|(
@@ -505,6 +513,7 @@ operator|!=
 operator|-
 literal|1
 condition|)
+block|{
 name|fully_qualified_class_name
 operator|=
 name|fully_qualified_class_name
@@ -516,6 +525,7 @@ argument_list|,
 name|dotclasspos
 argument_list|)
 expr_stmt|;
+block|}
 name|fully_qualified_class_name
 operator|=
 name|fully_qualified_class_name
@@ -1855,7 +1865,7 @@ argument_list|)
 expr_stmt|;
 comment|// user code end
 block|}
-comment|/**  * Verifies one or more class files.  * Verification results are presented graphically: Red means 'rejected',  * green means 'passed' while yellow means 'could not be verified yet'.  * @param args java.lang.String[] fully qualified names of classes to verify.  */
+comment|/**      * Verifies one or more class files.      * Verification results are presented graphically: Red means 'rejected',      * green means 'passed' while yellow means 'could not be verified yet'.      * @param args java.lang.String[] fully qualified names of classes to verify.      */
 specifier|public
 specifier|static
 name|void
@@ -1953,6 +1963,7 @@ name|classes_to_verify
 operator|==
 literal|0
 condition|)
+block|{
 name|System
 operator|.
 name|exit
@@ -1960,6 +1971,7 @@ argument_list|(
 literal|0
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 empty_stmt|;
 block|}

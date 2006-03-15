@@ -126,6 +126,7 @@ condition|(
 operator|!
 name|reserved
 condition|)
+block|{
 return|return
 name|var_name
 operator|+
@@ -137,12 +138,15 @@ literal|", column "
 operator|+
 name|column
 return|;
+block|}
 else|else
+block|{
 return|return
 name|var_name
 operator|+
 literal|"<reserved key word>"
 return|;
+block|}
 block|}
 specifier|public
 name|ASTIdent

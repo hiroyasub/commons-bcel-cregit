@@ -79,7 +79,7 @@ name|int
 name|signature_index
 decl_stmt|;
 comment|// and its signature.
-comment|/**    * Initialize from another object.    */
+comment|/**      * Initialize from another object.      */
 specifier|public
 name|ConstantNameAndType
 parameter_list|(
@@ -101,7 +101,7 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**    * Initialize instance from file data.    *    * @param file Input stream    * @throws IOException    */
+comment|/**      * Initialize instance from file data.      *      * @param file Input stream      * @throws IOException      */
 name|ConstantNameAndType
 parameter_list|(
 name|DataInputStream
@@ -124,7 +124,7 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**    * @param name_index Name of field/method    * @param signature_index and its signature    */
+comment|/**      * @param name_index Name of field/method      * @param signature_index and its signature      */
 specifier|public
 name|ConstantNameAndType
 parameter_list|(
@@ -155,7 +155,7 @@ operator|=
 name|signature_index
 expr_stmt|;
 block|}
-comment|/**    * Called by objects that are traversing the nodes of the tree implicitely    * defined by the contents of a Java class. I.e., the hierarchy of methods,    * fields, attributes, etc. spawns a tree of objects.    *    * @param v Visitor object    */
+comment|/**      * Called by objects that are traversing the nodes of the tree implicitely      * defined by the contents of a Java class. I.e., the hierarchy of methods,      * fields, attributes, etc. spawns a tree of objects.      *      * @param v Visitor object      */
 specifier|public
 name|void
 name|accept
@@ -172,7 +172,7 @@ name|this
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**    * Dump name and signature index to file stream in binary format.    *    * @param file Output file stream    * @throws IOException    */
+comment|/**      * Dump name and signature index to file stream in binary format.      *      * @param file Output file stream      * @throws IOException      */
 specifier|public
 specifier|final
 name|void
@@ -206,7 +206,7 @@ name|signature_index
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**    * @return Name index in constant pool of field/method name.    */
+comment|/**      * @return Name index in constant pool of field/method name.      */
 specifier|public
 specifier|final
 name|int
@@ -217,7 +217,7 @@ return|return
 name|name_index
 return|;
 block|}
-comment|/** @return name    */
+comment|/** @return name      */
 specifier|public
 specifier|final
 name|String
@@ -241,7 +241,7 @@ name|CONSTANT_Utf8
 argument_list|)
 return|;
 block|}
-comment|/**    * @return Index in constant pool of field/method signature.    */
+comment|/**      * @return Index in constant pool of field/method signature.      */
 specifier|public
 specifier|final
 name|int
@@ -252,7 +252,7 @@ return|return
 name|signature_index
 return|;
 block|}
-comment|/** @return signature    */
+comment|/** @return signature      */
 specifier|public
 specifier|final
 name|String
@@ -276,7 +276,7 @@ name|CONSTANT_Utf8
 argument_list|)
 return|;
 block|}
-comment|/**    * @param name_index the name index of this constant    */
+comment|/**      * @param name_index the name index of this constant      */
 specifier|public
 specifier|final
 name|void
@@ -293,7 +293,7 @@ operator|=
 name|name_index
 expr_stmt|;
 block|}
-comment|/**    * @param signature_index the signature index in the constant pool of this type    */
+comment|/**      * @param signature_index the signature index in the constant pool of this type      */
 specifier|public
 specifier|final
 name|void
@@ -310,7 +310,7 @@ operator|=
 name|signature_index
 expr_stmt|;
 block|}
-comment|/**    * @return String representation    */
+comment|/**      * @return String representation      */
 specifier|public
 specifier|final
 name|String

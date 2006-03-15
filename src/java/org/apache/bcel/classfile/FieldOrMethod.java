@@ -102,7 +102,7 @@ name|FieldOrMethod
 parameter_list|()
 block|{
 block|}
-comment|/**    * Initialize from another object. Note that both objects use the same    * references (shallow copy). Use clone() for a physical copy.    */
+comment|/**      * Initialize from another object. Note that both objects use the same      * references (shallow copy). Use clone() for a physical copy.      */
 specifier|protected
 name|FieldOrMethod
 parameter_list|(
@@ -139,7 +139,7 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**    * Construct object from file stream.    * @param file Input stream    * @throws IOException    * @throws ClassFormatException    */
+comment|/**      * Construct object from file stream.      * @param file Input stream      * @throws IOException      * @throws ClassFormatException      */
 specifier|protected
 name|FieldOrMethod
 parameter_list|(
@@ -205,6 +205,7 @@ condition|;
 name|i
 operator|++
 control|)
+block|{
 name|attributes
 index|[
 name|i
@@ -220,7 +221,8 @@ name|constant_pool
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**    * @param access_flags Access rights of method    * @param name_index Points to field name in constant pool    * @param signature_index Points to encoded signature    * @param attributes Collection of attributes    * @param constant_pool Array of constants    */
+block|}
+comment|/**      * @param access_flags Access rights of method      * @param name_index Points to field name in constant pool      * @param signature_index Points to encoded signature      * @param attributes Collection of attributes      * @param constant_pool Array of constants      */
 specifier|protected
 name|FieldOrMethod
 parameter_list|(
@@ -271,7 +273,7 @@ name|attributes
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**    * Dump object to file stream on binary format.    *    * @param file Output file stream    * @throws IOException    */
+comment|/**      * Dump object to file stream on binary format.      *      * @param file Output file stream      * @throws IOException      */
 specifier|public
 specifier|final
 name|void
@@ -325,6 +327,7 @@ condition|;
 name|i
 operator|++
 control|)
+block|{
 name|attributes
 index|[
 name|i
@@ -336,7 +339,8 @@ name|file
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**    * @return Collection of object attributes.    */
+block|}
+comment|/**      * @return Collection of object attributes.      */
 specifier|public
 specifier|final
 name|Attribute
@@ -348,7 +352,7 @@ return|return
 name|attributes
 return|;
 block|}
-comment|/**    * @param attributes Collection of object attributes.    */
+comment|/**      * @param attributes Collection of object attributes.      */
 specifier|public
 specifier|final
 name|void
@@ -380,7 +384,7 @@ operator|.
 name|length
 expr_stmt|;
 block|}
-comment|/**    * @return Constant pool used by this object.    */
+comment|/**      * @return Constant pool used by this object.      */
 specifier|public
 specifier|final
 name|ConstantPool
@@ -391,7 +395,7 @@ return|return
 name|constant_pool
 return|;
 block|}
-comment|/**    * @param constant_pool Constant pool to be used for this object.    */
+comment|/**      * @param constant_pool Constant pool to be used for this object.      */
 specifier|public
 specifier|final
 name|void
@@ -408,7 +412,7 @@ operator|=
 name|constant_pool
 expr_stmt|;
 block|}
-comment|/**    * @return Index in constant pool of object's name.    */
+comment|/**      * @return Index in constant pool of object's name.      */
 specifier|public
 specifier|final
 name|int
@@ -419,7 +423,7 @@ return|return
 name|name_index
 return|;
 block|}
-comment|/**    * @param name_index Index in constant pool of object's name.    */
+comment|/**      * @param name_index Index in constant pool of object's name.      */
 specifier|public
 specifier|final
 name|void
@@ -436,7 +440,7 @@ operator|=
 name|name_index
 expr_stmt|;
 block|}
-comment|/**    * @return Index in constant pool of field signature.    */
+comment|/**      * @return Index in constant pool of field signature.      */
 specifier|public
 specifier|final
 name|int
@@ -447,7 +451,7 @@ return|return
 name|signature_index
 return|;
 block|}
-comment|/**    * @param signature_index Index in constant pool of field signature.    */
+comment|/**      * @param signature_index Index in constant pool of field signature.      */
 specifier|public
 specifier|final
 name|void
@@ -464,7 +468,7 @@ operator|=
 name|signature_index
 expr_stmt|;
 block|}
-comment|/**    * @return Name of object, i.e., method name or field name    */
+comment|/**      * @return Name of object, i.e., method name or field name      */
 specifier|public
 specifier|final
 name|String
@@ -497,7 +501,7 @@ name|getBytes
 argument_list|()
 return|;
 block|}
-comment|/**    * @return String representation of object's type signature (java style)    */
+comment|/**      * @return String representation of object's type signature (java style)      */
 specifier|public
 specifier|final
 name|String
@@ -530,7 +534,7 @@ name|getBytes
 argument_list|()
 return|;
 block|}
-comment|/**    * @return deep copy of this field    */
+comment|/**      * @return deep copy of this field      */
 specifier|protected
 name|FieldOrMethod
 name|copy_
@@ -580,6 +584,7 @@ condition|;
 name|i
 operator|++
 control|)
+block|{
 name|c
 operator|.
 name|attributes
@@ -597,6 +602,7 @@ argument_list|(
 name|_constant_pool
 argument_list|)
 expr_stmt|;
+block|}
 return|return
 name|c
 return|;

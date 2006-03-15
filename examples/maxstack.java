@@ -144,7 +144,7 @@ name|java_class
 operator|==
 literal|null
 condition|)
-comment|// Look for .class file?
+block|{
 name|java_class
 operator|=
 operator|new
@@ -156,6 +156,7 @@ operator|.
 name|parse
 argument_list|()
 expr_stmt|;
+block|}
 name|ConstantPoolGen
 name|cp
 init|=
@@ -301,6 +302,7 @@ name|computed_stack
 operator|==
 name|compiled_stack
 condition|)
+block|{
 name|System
 operator|.
 name|out
@@ -314,7 +316,9 @@ operator|+
 literal|")"
 argument_list|)
 expr_stmt|;
+block|}
 else|else
+block|{
 name|System
 operator|.
 name|out
@@ -330,12 +334,14 @@ operator|+
 name|computed_stack
 argument_list|)
 expr_stmt|;
+block|}
 if|if
 condition|(
 name|computed_locals
 operator|==
 name|compiled_locals
 condition|)
+block|{
 name|System
 operator|.
 name|out
@@ -349,7 +355,9 @@ operator|+
 literal|")"
 argument_list|)
 expr_stmt|;
+block|}
 else|else
+block|{
 name|System
 operator|.
 name|out
@@ -365,6 +373,7 @@ operator|+
 name|computed_locals
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 block|}
 block|}

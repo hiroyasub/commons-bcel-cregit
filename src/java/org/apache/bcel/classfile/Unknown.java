@@ -117,7 +117,7 @@ operator|new
 name|HashMap
 argument_list|()
 decl_stmt|;
-comment|/** @return array of unknown attributes, but just one for each kind.    */
+comment|/** @return array of unknown attributes, but just one for each kind.      */
 specifier|static
 name|Unknown
 index|[]
@@ -163,6 +163,7 @@ condition|;
 name|i
 operator|++
 control|)
+block|{
 name|unknowns
 index|[
 name|i
@@ -176,6 +177,7 @@ operator|.
 name|next
 argument_list|()
 expr_stmt|;
+block|}
 name|unknown_attributes
 operator|.
 name|clear
@@ -185,7 +187,7 @@ return|return
 name|unknowns
 return|;
 block|}
-comment|/**    * Initialize from another object. Note that both objects use the same    * references (shallow copy). Use clone() for a physical copy.    */
+comment|/**      * Initialize from another object. Note that both objects use the same      * references (shallow copy). Use clone() for a physical copy.      */
 specifier|public
 name|Unknown
 parameter_list|(
@@ -217,7 +219,7 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**    * Create a non-standard attribute.    *    * @param name_index Index in constant pool    * @param length Content length in bytes    * @param bytes Attribute contents    * @param constant_pool Array of constants    */
+comment|/**      * Create a non-standard attribute.      *      * @param name_index Index in constant pool      * @param length Content length in bytes      * @param bytes Attribute contents      * @param constant_pool Array of constants      */
 specifier|public
 name|Unknown
 parameter_list|(
@@ -285,7 +287,7 @@ name|this
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**    * Construct object from file stream.    * @param name_index Index in constant pool    * @param length Content length in bytes    * @param file Input stream    * @param constant_pool Array of constants    * @throws IOException    */
+comment|/**      * Construct object from file stream.      * @param name_index Index in constant pool      * @param length Content length in bytes      * @param file Input stream      * @param constant_pool Array of constants      * @throws IOException      */
 name|Unknown
 parameter_list|(
 name|int
@@ -342,7 +344,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/**    * Called by objects that are traversing the nodes of the tree implicitely    * defined by the contents of a Java class. I.e., the hierarchy of methods,    * fields, attributes, etc. spawns a tree of objects.    *    * @param v Visitor object    */
+comment|/**      * Called by objects that are traversing the nodes of the tree implicitely      * defined by the contents of a Java class. I.e., the hierarchy of methods,      * fields, attributes, etc. spawns a tree of objects.      *      * @param v Visitor object      */
 specifier|public
 name|void
 name|accept
@@ -359,7 +361,7 @@ name|this
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**    * Dump unknown bytes to file stream.    *    * @param file Output file stream    * @throws IOException    */
+comment|/**      * Dump unknown bytes to file stream.      *      * @param file Output file stream      * @throws IOException      */
 specifier|public
 specifier|final
 name|void
@@ -384,6 +386,7 @@ name|length
 operator|>
 literal|0
 condition|)
+block|{
 name|file
 operator|.
 name|write
@@ -396,7 +399,8 @@ name|length
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**    * @return data bytes.    */
+block|}
+comment|/**      * @return data bytes.      */
 specifier|public
 specifier|final
 name|byte
@@ -408,7 +412,7 @@ return|return
 name|bytes
 return|;
 block|}
-comment|/**    * @return name of attribute.    */
+comment|/**      * @return name of attribute.      */
 specifier|public
 specifier|final
 name|String
@@ -419,7 +423,7 @@ return|return
 name|name
 return|;
 block|}
-comment|/**    * @param bytes the bytes to set    */
+comment|/**      * @param bytes the bytes to set      */
 specifier|public
 specifier|final
 name|void
@@ -437,7 +441,7 @@ operator|=
 name|bytes
 expr_stmt|;
 block|}
-comment|/**    * @return String representation.    */
+comment|/**      * @return String representation.      */
 specifier|public
 specifier|final
 name|String
@@ -454,6 +458,7 @@ name|bytes
 operator|==
 literal|null
 condition|)
+block|{
 return|return
 literal|"(Unknown attribute "
 operator|+
@@ -461,6 +466,7 @@ name|name
 operator|+
 literal|")"
 return|;
+block|}
 name|String
 name|hex
 decl_stmt|;
@@ -509,6 +515,7 @@ literal|"... (truncated)"
 expr_stmt|;
 block|}
 else|else
+block|{
 name|hex
 operator|=
 name|Utility
@@ -518,6 +525,7 @@ argument_list|(
 name|bytes
 argument_list|)
 expr_stmt|;
+block|}
 return|return
 literal|"(Unknown attribute "
 operator|+
@@ -530,7 +538,7 @@ operator|+
 literal|")"
 return|;
 block|}
-comment|/**    * @return deep copy of this attribute    */
+comment|/**      * @return deep copy of this attribute      */
 specifier|public
 name|Attribute
 name|copy

@@ -799,10 +799,12 @@ name|VerificationResult
 operator|.
 name|VR_OK
 condition|)
+block|{
 return|return
 literal|null
 return|;
 comment|// It's cached, don't worry.
+block|}
 if|if
 condition|(
 name|method_nr
@@ -932,11 +934,13 @@ name|vr
 return|;
 block|}
 else|else
+block|{
 return|return
 name|VerificationResult
 operator|.
 name|VR_NOTYET
 return|;
+block|}
 block|}
 catch|catch
 parameter_list|(
@@ -2016,11 +2020,14 @@ name|foundSourceFile
 operator|==
 literal|false
 condition|)
+block|{
 name|foundSourceFile
 operator|=
 literal|true
 expr_stmt|;
+block|}
 else|else
+block|{
 throw|throw
 operator|new
 name|ClassConstraintException
@@ -2036,6 +2043,7 @@ literal|"') may have no more than one SourceFile attribute."
 argument_list|)
 throw|;
 comment|//vmspec2 4.7.7
+block|}
 block|}
 if|if
 condition|(
@@ -2053,10 +2061,12 @@ name|foundInnerClasses
 operator|==
 literal|false
 condition|)
+block|{
 name|foundInnerClasses
 operator|=
 literal|true
 expr_stmt|;
+block|}
 else|else
 block|{
 if|if
@@ -2686,9 +2696,11 @@ operator|.
 name|isPrivate
 argument_list|()
 condition|)
+block|{
 name|maxone
 operator|++
 expr_stmt|;
+block|}
 if|if
 condition|(
 name|obj
@@ -2696,9 +2708,11 @@ operator|.
 name|isProtected
 argument_list|()
 condition|)
+block|{
 name|maxone
 operator|++
 expr_stmt|;
+block|}
 if|if
 condition|(
 name|obj
@@ -2706,9 +2720,11 @@ operator|.
 name|isPublic
 argument_list|()
 condition|)
+block|{
 name|maxone
 operator|++
 expr_stmt|;
+block|}
 if|if
 condition|(
 name|maxone
@@ -3360,6 +3376,7 @@ name|act
 operator|instanceof
 name|ArrayType
 condition|)
+block|{
 name|act
 operator|=
 operator|(
@@ -3372,6 +3389,7 @@ operator|.
 name|getBasicType
 argument_list|()
 expr_stmt|;
+block|}
 if|if
 condition|(
 name|act
@@ -3464,6 +3482,7 @@ name|act
 operator|instanceof
 name|ArrayType
 condition|)
+block|{
 name|act
 operator|=
 operator|(
@@ -3476,6 +3495,7 @@ operator|.
 name|getBasicType
 argument_list|()
 expr_stmt|;
+block|}
 if|if
 condition|(
 name|act
@@ -3597,9 +3617,11 @@ operator|.
 name|isPrivate
 argument_list|()
 condition|)
+block|{
 name|maxone
 operator|++
 expr_stmt|;
+block|}
 if|if
 condition|(
 name|obj
@@ -3607,9 +3629,11 @@ operator|.
 name|isProtected
 argument_list|()
 condition|)
+block|{
 name|maxone
 operator|++
 expr_stmt|;
+block|}
 if|if
 condition|(
 name|obj
@@ -3617,9 +3641,11 @@ operator|.
 name|isPublic
 argument_list|()
 condition|)
+block|{
 name|maxone
 operator|++
 expr_stmt|;
+block|}
 if|if
 condition|(
 name|maxone
@@ -3657,6 +3683,7 @@ operator|.
 name|isFinal
 argument_list|()
 condition|)
+block|{
 throw|throw
 operator|new
 name|ClassConstraintException
@@ -3671,6 +3698,7 @@ operator|+
 literal|"' must not have the ACC_FINAL modifier set."
 argument_list|)
 throw|;
+block|}
 if|if
 condition|(
 name|obj
@@ -3678,6 +3706,7 @@ operator|.
 name|isNative
 argument_list|()
 condition|)
+block|{
 throw|throw
 operator|new
 name|ClassConstraintException
@@ -3692,6 +3721,7 @@ operator|+
 literal|"' must not have the ACC_NATIVE modifier set."
 argument_list|)
 throw|;
+block|}
 if|if
 condition|(
 name|obj
@@ -3699,6 +3729,7 @@ operator|.
 name|isPrivate
 argument_list|()
 condition|)
+block|{
 throw|throw
 operator|new
 name|ClassConstraintException
@@ -3713,6 +3744,7 @@ operator|+
 literal|"' must not have the ACC_PRIVATE modifier set."
 argument_list|)
 throw|;
+block|}
 if|if
 condition|(
 name|obj
@@ -3720,6 +3752,7 @@ operator|.
 name|isStatic
 argument_list|()
 condition|)
+block|{
 throw|throw
 operator|new
 name|ClassConstraintException
@@ -3734,6 +3767,7 @@ operator|+
 literal|"' must not have the ACC_STATIC modifier set."
 argument_list|)
 throw|;
+block|}
 if|if
 condition|(
 name|obj
@@ -3741,6 +3775,7 @@ operator|.
 name|isStrictfp
 argument_list|()
 condition|)
+block|{
 throw|throw
 operator|new
 name|ClassConstraintException
@@ -3755,6 +3790,7 @@ operator|+
 literal|"' must not have the ACC_STRICT modifier set."
 argument_list|)
 throw|;
+block|}
 if|if
 condition|(
 name|obj
@@ -3762,6 +3798,7 @@ operator|.
 name|isSynchronized
 argument_list|()
 condition|)
+block|{
 throw|throw
 operator|new
 name|ClassConstraintException
@@ -3776,6 +3813,7 @@ operator|+
 literal|"' must not have the ACC_SYNCHRONIZED modifier set."
 argument_list|)
 throw|;
+block|}
 block|}
 block|}
 else|else
@@ -4319,9 +4357,11 @@ index|]
 operator|instanceof
 name|Code
 condition|)
+block|{
 name|num_code_atts
 operator|++
 expr_stmt|;
+block|}
 block|}
 if|if
 condition|(
@@ -5687,8 +5727,10 @@ name|e
 operator|==
 name|t
 condition|)
+block|{
 break|break;
 comment|// It's a subclass of Throwable, OKAY, leave.
+block|}
 name|v
 operator|=
 name|VerifierFactory
@@ -5781,6 +5823,7 @@ name|e
 operator|!=
 name|t
 condition|)
+block|{
 throw|throw
 operator|new
 name|ClassConstraintException
@@ -5820,6 +5863,7 @@ operator|+
 literal|"'."
 argument_list|)
 throw|;
+block|}
 block|}
 block|}
 block|}
@@ -6804,8 +6848,10 @@ name|e
 operator|==
 name|t
 condition|)
+block|{
 break|break;
 comment|// It's a subclass of Throwable, OKAY, leave.
+block|}
 name|v
 operator|=
 name|VerifierFactory
@@ -6884,6 +6930,7 @@ name|e
 operator|!=
 name|t
 condition|)
+block|{
 throw|throw
 operator|new
 name|ClassConstraintException
@@ -6909,6 +6956,7 @@ operator|+
 literal|"'."
 argument_list|)
 throw|;
+block|}
 block|}
 block|}
 block|}
@@ -8059,9 +8107,11 @@ argument_list|(
 name|name
 argument_list|)
 condition|)
+block|{
 return|return
 literal|true
 return|;
+block|}
 if|if
 condition|(
 name|allowStaticInit
@@ -8141,9 +8191,11 @@ literal|0
 argument_list|)
 argument_list|)
 condition|)
+block|{
 return|return
 literal|false
 return|;
+block|}
 for|for
 control|(
 name|int
@@ -8177,9 +8229,11 @@ name|i
 argument_list|)
 argument_list|)
 condition|)
+block|{
 return|return
 literal|false
 return|;
+block|}
 block|}
 return|return
 literal|true
@@ -8205,9 +8259,11 @@ argument_list|(
 literal|"<"
 argument_list|)
 condition|)
+block|{
 return|return
 literal|false
 return|;
+block|}
 return|return
 name|validJavaLangMethodName
 argument_list|(
@@ -8234,10 +8290,12 @@ argument_list|()
 operator|==
 literal|0
 condition|)
+block|{
 return|return
 literal|false
 return|;
 comment|// must not be empty, reported by<francis.andre@easynet.fr>, thanks!
+block|}
 comment|// vmspec2 2.7, vmspec2 2.2
 if|if
 condition|(
@@ -8254,9 +8312,11 @@ literal|0
 argument_list|)
 argument_list|)
 condition|)
+block|{
 return|return
 literal|false
 return|;
+block|}
 for|for
 control|(
 name|int
@@ -8290,9 +8350,11 @@ name|i
 argument_list|)
 argument_list|)
 condition|)
+block|{
 return|return
 literal|false
 return|;
+block|}
 block|}
 return|return
 literal|true

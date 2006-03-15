@@ -45,7 +45,7 @@ specifier|private
 name|int
 name|match_length
 decl_stmt|;
-comment|/**    * Template for switch() constructs. If the match array can be    * sorted in ascending order with gaps no larger than max_gap    * between the numbers, a TABLESWITCH instruction is generated, and    * a LOOKUPSWITCH otherwise. The former may be more efficient, but    * needs more space.    *     * Note, that the key array always will be sorted, though we leave    * the original arrays unaltered.    *    * @param match array of match values (case 2: ... case 7: ..., etc.)    * @param targets the instructions to be branched to for each case    * @param target the default target    * @param max_gap maximum gap that may between case branches    */
+comment|/**      * Template for switch() constructs. If the match array can be      * sorted in ascending order with gaps no larger than max_gap      * between the numbers, a TABLESWITCH instruction is generated, and      * a LOOKUPSWITCH otherwise. The former may be more efficient, but      * needs more space.      *       * Note, that the key array always will be sorted, though we leave      * the original arrays unaltered.      *      * @param match array of match values (case 2: ... case 7: ..., etc.)      * @param targets the instructions to be branched to for each case      * @param target the default target      * @param max_gap maximum gap that may between case branches      */
 specifier|public
 name|SWITCH
 parameter_list|(
@@ -102,7 +102,7 @@ operator|)
 operator|<
 literal|2
 condition|)
-comment|// (almost) empty switch, or just default
+block|{
 name|instruction
 operator|=
 operator|new
@@ -115,6 +115,7 @@ argument_list|,
 name|target
 argument_list|)
 expr_stmt|;
+block|}
 else|else
 block|{
 name|sort
@@ -159,6 +160,7 @@ argument_list|)
 expr_stmt|;
 block|}
 else|else
+block|{
 name|instruction
 operator|=
 operator|new
@@ -175,6 +177,7 @@ argument_list|,
 name|target
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 block|}
 specifier|public
@@ -411,7 +414,7 @@ name|count
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**    * Sort match and targets array with QuickSort.    */
+comment|/**      * Sort match and targets array with QuickSort.      */
 specifier|private
 specifier|final
 name|void
@@ -463,9 +466,11 @@ index|]
 operator|<
 name|m
 condition|)
+block|{
 name|i
 operator|++
 expr_stmt|;
+block|}
 while|while
 condition|(
 name|m
@@ -475,9 +480,11 @@ index|[
 name|j
 index|]
 condition|)
+block|{
 name|j
 operator|--
 expr_stmt|;
+block|}
 if|if
 condition|(
 name|i
@@ -556,6 +563,7 @@ name|l
 operator|<
 name|j
 condition|)
+block|{
 name|sort
 argument_list|(
 name|l
@@ -563,12 +571,14 @@ argument_list|,
 name|j
 argument_list|)
 expr_stmt|;
+block|}
 if|if
 condition|(
 name|i
 operator|<
 name|r
 condition|)
+block|{
 name|sort
 argument_list|(
 name|i
@@ -577,7 +587,8 @@ name|r
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**    * @return match is sorted in ascending order with no gap bigger than max_gap?    */
+block|}
+comment|/**      * @return match is sorted in ascending order with no gap bigger than max_gap?      */
 specifier|private
 specifier|final
 name|boolean
@@ -601,6 +612,7 @@ condition|;
 name|i
 operator|++
 control|)
+block|{
 if|if
 condition|(
 name|match
@@ -617,9 +629,12 @@ index|]
 operator|>
 name|max_gap
 condition|)
+block|{
 return|return
 literal|false
 return|;
+block|}
+block|}
 return|return
 literal|true
 return|;

@@ -83,7 +83,7 @@ specifier|private
 name|ConstantPool
 name|constant_pool
 decl_stmt|;
-comment|/**    * Construct object from file stream.    * @param file Input stream    * @throws IOException    */
+comment|/**      * Construct object from file stream.      * @param file Input stream      * @throws IOException      */
 name|StackMapEntry
 parameter_list|(
 name|DataInputStream
@@ -139,6 +139,7 @@ condition|;
 name|i
 operator|++
 control|)
+block|{
 name|types_of_locals
 index|[
 name|i
@@ -152,6 +153,7 @@ argument_list|,
 name|constant_pool
 argument_list|)
 expr_stmt|;
+block|}
 name|number_of_stack_items
 operator|=
 name|file
@@ -181,6 +183,7 @@ condition|;
 name|i
 operator|++
 control|)
+block|{
 name|types_of_stack_items
 index|[
 name|i
@@ -194,6 +197,7 @@ argument_list|,
 name|constant_pool
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 specifier|public
 name|StackMapEntry
@@ -256,7 +260,7 @@ operator|=
 name|constant_pool
 expr_stmt|;
 block|}
-comment|/**    * Dump stack map entry    *    * @param file Output file stream    * @throws IOException    */
+comment|/**      * Dump stack map entry      *      * @param file Output file stream      * @throws IOException      */
 specifier|public
 specifier|final
 name|void
@@ -296,6 +300,7 @@ condition|;
 name|i
 operator|++
 control|)
+block|{
 name|types_of_locals
 index|[
 name|i
@@ -306,6 +311,7 @@ argument_list|(
 name|file
 argument_list|)
 expr_stmt|;
+block|}
 name|file
 operator|.
 name|writeShort
@@ -327,6 +333,7 @@ condition|;
 name|i
 operator|++
 control|)
+block|{
 name|types_of_stack_items
 index|[
 name|i
@@ -338,7 +345,8 @@ name|file
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**    * @return String representation.    */
+block|}
+comment|/**      * @return String representation.      */
 specifier|public
 specifier|final
 name|String
@@ -413,6 +421,7 @@ name|number_of_locals
 operator|-
 literal|1
 condition|)
+block|{
 name|buf
 operator|.
 name|append
@@ -420,6 +429,7 @@ argument_list|(
 literal|", "
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 name|buf
 operator|.
@@ -476,6 +486,7 @@ name|number_of_stack_items
 operator|-
 literal|1
 condition|)
+block|{
 name|buf
 operator|.
 name|append
@@ -483,6 +494,7 @@ argument_list|(
 literal|", "
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 name|buf
 operator|.
@@ -620,7 +632,7 @@ return|return
 name|types_of_stack_items
 return|;
 block|}
-comment|/**    * @return deep copy of this object    */
+comment|/**      * @return deep copy of this object      */
 specifier|public
 name|StackMapEntry
 name|copy
@@ -647,7 +659,7 @@ return|return
 literal|null
 return|;
 block|}
-comment|/**    * Called by objects that are traversing the nodes of the tree implicitely    * defined by the contents of a Java class. I.e., the hierarchy of methods,    * fields, attributes, etc. spawns a tree of objects.    *    * @param v Visitor object    */
+comment|/**      * Called by objects that are traversing the nodes of the tree implicitely      * defined by the contents of a Java class. I.e., the hierarchy of methods,      * fields, attributes, etc. spawns a tree of objects.      *      * @param v Visitor object      */
 specifier|public
 name|void
 name|accept
@@ -664,7 +676,7 @@ name|this
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**    * @return Constant pool used by this object.    */
+comment|/**      * @return Constant pool used by this object.      */
 specifier|public
 specifier|final
 name|ConstantPool
@@ -675,7 +687,7 @@ return|return
 name|constant_pool
 return|;
 block|}
-comment|/**    * @param constant_pool Constant pool to be used for this object.    */
+comment|/**      * @param constant_pool Constant pool to be used for this object.      */
 specifier|public
 specifier|final
 name|void

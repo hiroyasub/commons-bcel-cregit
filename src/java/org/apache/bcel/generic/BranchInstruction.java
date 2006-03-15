@@ -78,12 +78,12 @@ name|int
 name|position
 decl_stmt|;
 comment|// Byte code offset
-comment|/**    * Empty constructor needed for the Class.newInstance() statement in    * Instruction.readInstruction(). Not to be used otherwise.    */
+comment|/**      * Empty constructor needed for the Class.newInstance() statement in      * Instruction.readInstruction(). Not to be used otherwise.      */
 name|BranchInstruction
 parameter_list|()
 block|{
 block|}
-comment|/** Common super constructor    * @param opcode Instruction opcode    * @param target instruction to branch to    */
+comment|/** Common super constructor      * @param opcode Instruction opcode      * @param target instruction to branch to      */
 specifier|protected
 name|BranchInstruction
 parameter_list|(
@@ -110,7 +110,7 @@ name|target
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**    * Dump instruction as byte code to stream out.    * @param out Output stream    */
+comment|/**      * Dump instruction as byte code to stream out.      * @param out Output stream      */
 specifier|public
 name|void
 name|dump
@@ -144,7 +144,7 @@ argument_list|)
 operator|>=
 literal|32767
 condition|)
-comment|// too large for short
+block|{
 throw|throw
 operator|new
 name|ClassGenException
@@ -152,6 +152,7 @@ argument_list|(
 literal|"Branch target offset too large for short"
 argument_list|)
 throw|;
+block|}
 name|out
 operator|.
 name|writeShort
@@ -161,7 +162,7 @@ argument_list|)
 expr_stmt|;
 comment|// May be negative, i.e., point backwards
 block|}
-comment|/**    * @param _target branch target    * @return the offset to  `target' relative to this instruction    */
+comment|/**      * @param _target branch target      * @return the offset to  `target' relative to this instruction      */
 specifier|protected
 name|int
 name|getTargetOffset
@@ -176,6 +177,7 @@ name|_target
 operator|==
 literal|null
 condition|)
+block|{
 throw|throw
 operator|new
 name|ClassGenException
@@ -192,6 +194,7 @@ operator|+
 literal|" is invalid null handle"
 argument_list|)
 throw|;
+block|}
 name|int
 name|t
 init|=
@@ -206,6 +209,7 @@ name|t
 operator|<
 literal|0
 condition|)
+block|{
 throw|throw
 operator|new
 name|ClassGenException
@@ -228,13 +232,14 @@ operator|+
 name|_target
 argument_list|)
 throw|;
+block|}
 return|return
 name|t
 operator|-
 name|position
 return|;
 block|}
-comment|/**    * @return the offset to this instruction's target    */
+comment|/**      * @return the offset to this instruction's target      */
 specifier|protected
 name|int
 name|getTargetOffset
@@ -247,7 +252,7 @@ name|target
 argument_list|)
 return|;
 block|}
-comment|/**    * Called by InstructionList.setPositions when setting the position for every    * instruction. In the presence of variable length instructions `setPositions'    * performs multiple passes over the instruction list to calculate the    * correct (byte) positions and offsets by calling this function.    *    * @param offset additional offset caused by preceding (variable length) instructions    * @param max_offset the maximum offset that may be caused by these instructions    * @return additional offset caused by possible change of this instruction's length    */
+comment|/**      * Called by InstructionList.setPositions when setting the position for every      * instruction. In the presence of variable length instructions `setPositions'      * performs multiple passes over the instruction list to calculate the      * correct (byte) positions and offsets by calling this function.      *      * @param offset additional offset caused by preceding (variable length) instructions      * @param max_offset the maximum offset that may be caused by these instructions      * @return additional offset caused by possible change of this instruction's length      */
 specifier|protected
 name|int
 name|updatePosition
@@ -267,7 +272,7 @@ return|return
 literal|0
 return|;
 block|}
-comment|/**    * Long output format:    *    *&lt;position in byte code&gt;    *&lt;name of opcode&gt; "["&lt;opcode number&gt;"]"     * "("&lt;length of instruction&gt;")"    * "&lt;"&lt;target instruction&gt;"&gt;" "@"&lt;branch target offset&gt;    *    * @param verbose long/short format switch    * @return mnemonic for instruction    */
+comment|/**      * Long output format:      *      *&lt;position in byte code&gt;      *&lt;name of opcode&gt; "["&lt;opcode number&gt;"]"       * "("&lt;length of instruction&gt;")"      * "&lt;"&lt;target instruction&gt;"&gt;" "@"&lt;branch target offset&gt;      *      * @param verbose long/short format switch      * @return mnemonic for instruction      */
 specifier|public
 name|String
 name|toString
@@ -312,10 +317,12 @@ argument_list|()
 operator|==
 name|this
 condition|)
+block|{
 name|t
 operator|=
 literal|"<points to itself>"
 expr_stmt|;
+block|}
 if|else if
 condition|(
 name|target
@@ -325,11 +332,14 @@ argument_list|()
 operator|==
 literal|null
 condition|)
+block|{
 name|t
 operator|=
 literal|"<null instruction!!!?>"
 expr_stmt|;
+block|}
 else|else
+block|{
 name|t
 operator|=
 name|target
@@ -343,6 +353,7 @@ literal|false
 argument_list|)
 expr_stmt|;
 comment|// Avoid circles
+block|}
 block|}
 block|}
 else|else
@@ -379,7 +390,7 @@ operator|+
 name|t
 return|;
 block|}
-comment|/**    * Read needed data (e.g. index) from file. Conversion to a InstructionHandle    * is done in InstructionList(byte[]).    *    * @param bytes input stream    * @param wide wide prefix?    * @see InstructionList    */
+comment|/**      * Read needed data (e.g. index) from file. Conversion to a InstructionHandle      * is done in InstructionList(byte[]).      *      * @param bytes input stream      * @param wide wide prefix?      * @see InstructionList      */
 specifier|protected
 name|void
 name|initFromFile
@@ -405,7 +416,7 @@ name|readShort
 argument_list|()
 expr_stmt|;
 block|}
-comment|/**    * @return target offset in byte code    */
+comment|/**      * @return target offset in byte code      */
 specifier|public
 specifier|final
 name|int
@@ -416,7 +427,7 @@ return|return
 name|index
 return|;
 block|}
-comment|/**    * @return target of branch instruction    */
+comment|/**      * @return target of branch instruction      */
 specifier|public
 name|InstructionHandle
 name|getTarget
@@ -426,7 +437,7 @@ return|return
 name|target
 return|;
 block|}
-comment|/**    * Set branch target    * @param target branch target    */
+comment|/**      * Set branch target      * @param target branch target      */
 specifier|public
 name|void
 name|setTarget
@@ -453,7 +464,7 @@ operator|=
 name|target
 expr_stmt|;
 block|}
-comment|/**    * Used by BranchInstruction, LocalVariableGen, CodeExceptionGen    */
+comment|/**      * Used by BranchInstruction, LocalVariableGen, CodeExceptionGen      */
 specifier|static
 specifier|final
 name|void
@@ -475,6 +486,7 @@ name|old_ih
 operator|!=
 literal|null
 condition|)
+block|{
 name|old_ih
 operator|.
 name|removeTargeter
@@ -482,12 +494,14 @@ argument_list|(
 name|t
 argument_list|)
 expr_stmt|;
+block|}
 if|if
 condition|(
 name|new_ih
 operator|!=
 literal|null
 condition|)
+block|{
 name|new_ih
 operator|.
 name|addTargeter
@@ -496,7 +510,8 @@ name|t
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**    * @param old_ih old target    * @param new_ih new target    */
+block|}
+comment|/**      * @param old_ih old target      * @param new_ih new target      */
 specifier|public
 name|void
 name|updateTarget
@@ -514,12 +529,15 @@ name|target
 operator|==
 name|old_ih
 condition|)
+block|{
 name|setTarget
 argument_list|(
 name|new_ih
 argument_list|)
 expr_stmt|;
+block|}
 else|else
+block|{
 throw|throw
 operator|new
 name|ClassGenException
@@ -534,7 +552,8 @@ name|target
 argument_list|)
 throw|;
 block|}
-comment|/**    * @return true, if ih is target of this instruction    */
+block|}
+comment|/**      * @return true, if ih is target of this instruction      */
 specifier|public
 name|boolean
 name|containsTarget
@@ -551,7 +570,7 @@ name|ih
 operator|)
 return|;
 block|}
-comment|/**    * Inform target that it's not targeted anymore.    */
+comment|/**      * Inform target that it's not targeted anymore.      */
 name|void
 name|dispose
 parameter_list|()

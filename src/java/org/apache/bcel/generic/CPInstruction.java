@@ -112,12 +112,12 @@ name|int
 name|index
 decl_stmt|;
 comment|// index to constant pool
-comment|/**    * Empty constructor needed for the Class.newInstance() statement in    * Instruction.readInstruction(). Not to be used otherwise.    */
+comment|/**      * Empty constructor needed for the Class.newInstance() statement in      * Instruction.readInstruction(). Not to be used otherwise.      */
 name|CPInstruction
 parameter_list|()
 block|{
 block|}
-comment|/**    * @param index to constant pool    */
+comment|/**      * @param index to constant pool      */
 specifier|protected
 name|CPInstruction
 parameter_list|(
@@ -144,7 +144,7 @@ name|index
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**    * Dump instruction as byte code to stream out.    * @param out Output stream    */
+comment|/**      * Dump instruction as byte code to stream out.      * @param out Output stream      */
 specifier|public
 name|void
 name|dump
@@ -170,7 +170,7 @@ name|index
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**    * Long output format:    *    *&lt;name of opcode&gt; "["&lt;opcode number&gt;"]"     * "("&lt;length of instruction&gt;")" "&lt;"&lt; constant pool index&gt;"&gt;"    *    * @param verbose long/short format switch    * @return mnemonic for instruction    */
+comment|/**      * Long output format:      *      *&lt;name of opcode&gt; "["&lt;opcode number&gt;"]"       * "("&lt;length of instruction&gt;")" "&lt;"&lt; constant pool index&gt;"&gt;"      *      * @param verbose long/short format switch      * @return mnemonic for instruction      */
 specifier|public
 name|String
 name|toString
@@ -192,7 +192,7 @@ operator|+
 name|index
 return|;
 block|}
-comment|/**    * @return mnemonic for instruction with symbolic references resolved    */
+comment|/**      * @return mnemonic for instruction with symbolic references resolved      */
 specifier|public
 name|String
 name|toString
@@ -227,6 +227,7 @@ name|c
 operator|instanceof
 name|ConstantClass
 condition|)
+block|{
 name|str
 operator|=
 name|str
@@ -238,6 +239,7 @@ argument_list|,
 literal|'/'
 argument_list|)
 expr_stmt|;
+block|}
 return|return
 name|org
 operator|.
@@ -257,7 +259,7 @@ operator|+
 name|str
 return|;
 block|}
-comment|/**    * Read needed data (i.e., index) from file.    * @param bytes input stream    * @param wide wide prefix?    */
+comment|/**      * Read needed data (i.e., index) from file.      * @param bytes input stream      * @param wide wide prefix?      */
 specifier|protected
 name|void
 name|initFromFile
@@ -284,7 +286,7 @@ operator|=
 literal|3
 expr_stmt|;
 block|}
-comment|/**    * @return index in constant pool referred by this instruction.    */
+comment|/**      * @return index in constant pool referred by this instruction.      */
 specifier|public
 specifier|final
 name|int
@@ -295,7 +297,7 @@ return|return
 name|index
 return|;
 block|}
-comment|/**    * Set the index to constant pool.    * @param index in  constant pool.    */
+comment|/**      * Set the index to constant pool.      * @param index in  constant pool.      */
 specifier|public
 name|void
 name|setIndex
@@ -310,6 +312,7 @@ name|index
 operator|<
 literal|0
 condition|)
+block|{
 throw|throw
 operator|new
 name|ClassGenException
@@ -319,6 +322,7 @@ operator|+
 name|index
 argument_list|)
 throw|;
+block|}
 name|this
 operator|.
 name|index
@@ -326,7 +330,7 @@ operator|=
 name|index
 expr_stmt|;
 block|}
-comment|/** @return type related with this instruction.    */
+comment|/** @return type related with this instruction.      */
 specifier|public
 name|Type
 name|getType
@@ -373,6 +377,7 @@ argument_list|(
 literal|"["
 argument_list|)
 condition|)
+block|{
 name|name
 operator|=
 literal|"L"
@@ -381,6 +386,7 @@ name|name
 operator|+
 literal|";"
 expr_stmt|;
+block|}
 return|return
 name|Type
 operator|.

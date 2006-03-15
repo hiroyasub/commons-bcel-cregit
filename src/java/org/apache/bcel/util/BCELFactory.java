@@ -706,6 +706,7 @@ argument_list|(
 name|i
 argument_list|)
 condition|)
+block|{
 name|i
 operator|.
 name|accept
@@ -713,6 +714,7 @@ argument_list|(
 name|this
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 name|updateBranchTargets
 argument_list|()
@@ -1293,6 +1295,7 @@ name|type
 operator|instanceof
 name|ArrayType
 condition|)
+block|{
 name|type
 operator|=
 operator|(
@@ -1305,6 +1308,7 @@ operator|.
 name|getBasicType
 argument_list|()
 expr_stmt|;
+block|}
 name|_out
 operator|.
 name|println
@@ -1360,6 +1364,7 @@ name|value
 operator|instanceof
 name|String
 condition|)
+block|{
 name|embed
 operator|=
 literal|'"'
@@ -1376,12 +1381,14 @@ argument_list|)
 operator|+
 literal|'"'
 expr_stmt|;
+block|}
 if|else if
 condition|(
 name|value
 operator|instanceof
 name|Character
 condition|)
+block|{
 name|embed
 operator|=
 literal|"(char)0x"
@@ -1401,6 +1408,7 @@ name|charValue
 argument_list|()
 argument_list|)
 expr_stmt|;
+block|}
 name|_out
 operator|.
 name|println
@@ -1700,6 +1708,7 @@ name|length
 operator|-
 literal|1
 condition|)
+block|{
 name|args
 operator|.
 name|append
@@ -1707,6 +1716,7 @@ argument_list|(
 literal|", "
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 name|args
 operator|.
@@ -1778,6 +1788,7 @@ name|length
 operator|-
 literal|1
 condition|)
+block|{
 name|_out
 operator|.
 name|print
@@ -1785,6 +1796,7 @@ argument_list|(
 literal|", "
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 name|_out
 operator|.
@@ -1877,6 +1889,7 @@ operator|.
 name|hasTargeters
 argument_list|()
 condition|)
+block|{
 name|_out
 operator|.
 name|println
@@ -1892,7 +1905,9 @@ operator|+
 literal|");"
 argument_list|)
 expr_stmt|;
+block|}
 else|else
+block|{
 name|_out
 operator|.
 name|println
@@ -1904,6 +1919,7 @@ operator|+
 literal|");"
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 specifier|public
 name|void

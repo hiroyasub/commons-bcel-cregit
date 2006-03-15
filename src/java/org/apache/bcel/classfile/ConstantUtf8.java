@@ -73,7 +73,7 @@ specifier|private
 name|String
 name|bytes
 decl_stmt|;
-comment|/**    * Initialize from another object.    */
+comment|/**      * Initialize from another object.      */
 specifier|public
 name|ConstantUtf8
 parameter_list|(
@@ -90,7 +90,7 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**    * Initialize instance from file data.    *    * @param file Input stream    * @throws IOException    */
+comment|/**      * Initialize instance from file data.      *      * @param file Input stream      * @throws IOException      */
 name|ConstantUtf8
 parameter_list|(
 name|DataInputStream
@@ -114,7 +114,7 @@ name|readUTF
 argument_list|()
 expr_stmt|;
 block|}
-comment|/**    * @param bytes Data    */
+comment|/**      * @param bytes Data      */
 specifier|public
 name|ConstantUtf8
 parameter_list|(
@@ -135,6 +135,7 @@ name|bytes
 operator|==
 literal|null
 condition|)
+block|{
 throw|throw
 operator|new
 name|IllegalArgumentException
@@ -142,6 +143,7 @@ argument_list|(
 literal|"bytes must not be null!"
 argument_list|)
 throw|;
+block|}
 name|this
 operator|.
 name|bytes
@@ -149,7 +151,7 @@ operator|=
 name|bytes
 expr_stmt|;
 block|}
-comment|/**    * Called by objects that are traversing the nodes of the tree implicitely    * defined by the contents of a Java class. I.e., the hierarchy of methods,    * fields, attributes, etc. spawns a tree of objects.    *    * @param v Visitor object    */
+comment|/**      * Called by objects that are traversing the nodes of the tree implicitely      * defined by the contents of a Java class. I.e., the hierarchy of methods,      * fields, attributes, etc. spawns a tree of objects.      *      * @param v Visitor object      */
 specifier|public
 name|void
 name|accept
@@ -166,7 +168,7 @@ name|this
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**    * Dump String in Utf8 format to file stream.    *    * @param file Output file stream    * @throws IOException    */
+comment|/**      * Dump String in Utf8 format to file stream.      *      * @param file Output file stream      * @throws IOException      */
 specifier|public
 specifier|final
 name|void
@@ -193,7 +195,7 @@ name|bytes
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**    * @return Data converted to string.    */
+comment|/**      * @return Data converted to string.      */
 specifier|public
 specifier|final
 name|String
@@ -204,7 +206,7 @@ return|return
 name|bytes
 return|;
 block|}
-comment|/**    * @param bytes the raw bytes of this Utf-8    */
+comment|/**      * @param bytes the raw bytes of this Utf-8      */
 specifier|public
 specifier|final
 name|void
@@ -221,7 +223,7 @@ operator|=
 name|bytes
 expr_stmt|;
 block|}
-comment|/**    * @return String representation    */
+comment|/**      * @return String representation      */
 specifier|public
 specifier|final
 name|String

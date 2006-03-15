@@ -49,7 +49,7 @@ operator|=
 name|i
 expr_stmt|;
 block|}
-comment|/** Factory methods.    */
+comment|/** Factory methods.      */
 specifier|private
 specifier|static
 name|BranchHandle
@@ -73,6 +73,7 @@ name|bh_list
 operator|==
 literal|null
 condition|)
+block|{
 return|return
 operator|new
 name|BranchHandle
@@ -80,6 +81,7 @@ argument_list|(
 name|i
 argument_list|)
 return|;
+block|}
 name|BranchHandle
 name|bh
 init|=
@@ -105,7 +107,7 @@ return|return
 name|bh
 return|;
 block|}
-comment|/** Handle adds itself to the list of resuable handles.    */
+comment|/** Handle adds itself to the list of resuable handles.      */
 specifier|protected
 name|void
 name|addHandle
@@ -120,7 +122,7 @@ operator|=
 name|this
 expr_stmt|;
 block|}
-comment|/* Override InstructionHandle methods: delegate to branch instruction.    * Through this overriding all access to the private i_position field should    * be prevented.    */
+comment|/* Override InstructionHandle methods: delegate to branch instruction.      * Through this overriding all access to the private i_position field should      * be prevented.      */
 specifier|public
 name|int
 name|getPosition
@@ -181,7 +183,7 @@ return|return
 name|x
 return|;
 block|}
-comment|/**    * Pass new target to instruction.    */
+comment|/**      * Pass new target to instruction.      */
 specifier|public
 name|void
 name|setTarget
@@ -198,7 +200,7 @@ name|ih
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**    * Update target of instruction.    */
+comment|/**      * Update target of instruction.      */
 specifier|public
 name|void
 name|updateTarget
@@ -220,7 +222,7 @@ name|new_ih
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**    * @return target of instruction.    */
+comment|/**      * @return target of instruction.      */
 specifier|public
 name|InstructionHandle
 name|getTarget
@@ -233,7 +235,7 @@ name|getTarget
 argument_list|()
 return|;
 block|}
-comment|/**     * Set new contents. Old instruction is disposed and may not be used anymore.    */
+comment|/**       * Set new contents. Old instruction is disposed and may not be used anymore.      */
 specifier|public
 name|void
 name|setInstruction
@@ -258,6 +260,7 @@ operator|instanceof
 name|BranchInstruction
 operator|)
 condition|)
+block|{
 throw|throw
 operator|new
 name|ClassGenException
@@ -269,6 +272,7 @@ operator|+
 literal|" to branch handle which is not a branch instruction"
 argument_list|)
 throw|;
+block|}
 name|bi
 operator|=
 operator|(

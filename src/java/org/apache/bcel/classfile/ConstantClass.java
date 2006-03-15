@@ -76,7 +76,7 @@ name|int
 name|name_index
 decl_stmt|;
 comment|// Identical to ConstantString except for the name
-comment|/**    * Initialize from another object.    */
+comment|/**      * Initialize from another object.      */
 specifier|public
 name|ConstantClass
 parameter_list|(
@@ -93,7 +93,7 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**    * Initialize instance from file data.    *    * @param file Input stream    * @throws IOException    */
+comment|/**      * Initialize instance from file data.      *      * @param file Input stream      * @throws IOException      */
 name|ConstantClass
 parameter_list|(
 name|DataInputStream
@@ -111,7 +111,7 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**    * @param name_index Name index in constant pool.  Should refer to a    * ConstantUtf8.    */
+comment|/**      * @param name_index Name index in constant pool.  Should refer to a      * ConstantUtf8.      */
 specifier|public
 name|ConstantClass
 parameter_list|(
@@ -133,7 +133,7 @@ operator|=
 name|name_index
 expr_stmt|;
 block|}
-comment|/**    * Called by objects that are traversing the nodes of the tree implicitely    * defined by the contents of a Java class. I.e., the hierarchy of methods,    * fields, attributes, etc. spawns a tree of objects.    *    * @param v Visitor object    */
+comment|/**      * Called by objects that are traversing the nodes of the tree implicitely      * defined by the contents of a Java class. I.e., the hierarchy of methods,      * fields, attributes, etc. spawns a tree of objects.      *      * @param v Visitor object      */
 specifier|public
 name|void
 name|accept
@@ -150,7 +150,7 @@ name|this
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**     * Dump constant class to file stream in binary format.    *    * @param file Output file stream    * @throws IOException    */
+comment|/**       * Dump constant class to file stream in binary format.      *      * @param file Output file stream      * @throws IOException      */
 specifier|public
 specifier|final
 name|void
@@ -177,7 +177,7 @@ name|name_index
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**    * @return Name index in constant pool of class name.    */
+comment|/**      * @return Name index in constant pool of class name.      */
 specifier|public
 specifier|final
 name|int
@@ -188,7 +188,7 @@ return|return
 name|name_index
 return|;
 block|}
-comment|/**    * @param name_index the name index in the constant pool of this Constant Class    */
+comment|/**      * @param name_index the name index in the constant pool of this Constant Class      */
 specifier|public
 specifier|final
 name|void
@@ -205,7 +205,7 @@ operator|=
 name|name_index
 expr_stmt|;
 block|}
-comment|/** @return String object    */
+comment|/** @return String object      */
 specifier|public
 name|Object
 name|getConstantValue
@@ -240,7 +240,7 @@ name|getBytes
 argument_list|()
 return|;
 block|}
-comment|/** @return dereferenced string    */
+comment|/** @return dereferenced string      */
 specifier|public
 name|String
 name|getBytes
@@ -259,7 +259,7 @@ name|cp
 argument_list|)
 return|;
 block|}
-comment|/**    * @return String representation.    */
+comment|/**      * @return String representation.      */
 specifier|public
 specifier|final
 name|String

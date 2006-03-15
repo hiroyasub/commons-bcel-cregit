@@ -47,7 +47,7 @@ specifier|private
 name|Type
 name|basic_type
 decl_stmt|;
-comment|/**    * Convenience constructor for array type, e.g. int[]    *    * @param type array type, e.g. T_INT    */
+comment|/**      * Convenience constructor for array type, e.g. int[]      *      * @param type array type, e.g. T_INT      */
 specifier|public
 name|ArrayType
 parameter_list|(
@@ -71,7 +71,7 @@ name|dimensions
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**    * Convenience constructor for reference array type, e.g. Object[]    *    * @param class_name complete name of class (java.lang.String, e.g.)    */
+comment|/**      * Convenience constructor for reference array type, e.g. Object[]      *      * @param class_name complete name of class (java.lang.String, e.g.)      */
 specifier|public
 name|ArrayType
 parameter_list|(
@@ -94,7 +94,7 @@ name|dimensions
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**    * Constructor for array of given type    *    * @param type type of array (may be an array itself)    */
+comment|/**      * Constructor for array of given type      *      * @param type type of array (may be an array itself)      */
 specifier|public
 name|ArrayType
 parameter_list|(
@@ -130,6 +130,7 @@ operator|.
 name|MAX_BYTE
 operator|)
 condition|)
+block|{
 throw|throw
 operator|new
 name|ClassGenException
@@ -139,6 +140,7 @@ operator|+
 name|dimensions
 argument_list|)
 throw|;
+block|}
 switch|switch
 condition|(
 name|type
@@ -226,6 +228,7 @@ condition|;
 name|i
 operator|++
 control|)
+block|{
 name|buf
 operator|.
 name|append
@@ -233,6 +236,7 @@ argument_list|(
 literal|'['
 argument_list|)
 expr_stmt|;
+block|}
 name|buf
 operator|.
 name|append
@@ -251,7 +255,7 @@ name|toString
 argument_list|()
 expr_stmt|;
 block|}
-comment|/**    * @return basic type of array, i.e., for int[][][] the basic type is int    */
+comment|/**      * @return basic type of array, i.e., for int[][][] the basic type is int      */
 specifier|public
 name|Type
 name|getBasicType
@@ -261,7 +265,7 @@ return|return
 name|basic_type
 return|;
 block|}
-comment|/**    * @return element type of array, i.e., for int[][][] the element type is int[][]    */
+comment|/**      * @return element type of array, i.e., for int[][][] the element type is int[][]      */
 specifier|public
 name|Type
 name|getElementType
@@ -273,9 +277,11 @@ name|dimensions
 operator|==
 literal|1
 condition|)
+block|{
 return|return
 name|basic_type
 return|;
+block|}
 return|return
 operator|new
 name|ArrayType
@@ -288,7 +294,7 @@ literal|1
 argument_list|)
 return|;
 block|}
-comment|/** @return number of dimensions of array    */
+comment|/** @return number of dimensions of array      */
 specifier|public
 name|int
 name|getDimensions
@@ -298,7 +304,7 @@ return|return
 name|dimensions
 return|;
 block|}
-comment|/** @return a hash code value for the object.    */
+comment|/** @return a hash code value for the object.      */
 specifier|public
 name|int
 name|hashCode
@@ -313,7 +319,7 @@ operator|^
 name|dimensions
 return|;
 block|}
-comment|/** @return true if both type objects refer to the same array type.    */
+comment|/** @return true if both type objects refer to the same array type.      */
 specifier|public
 name|boolean
 name|equals

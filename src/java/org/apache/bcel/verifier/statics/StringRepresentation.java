@@ -566,6 +566,7 @@ name|tostring
 operator|==
 literal|null
 condition|)
+block|{
 throw|throw
 operator|new
 name|AssertionViolatedException
@@ -585,6 +586,7 @@ operator|+
 literal|"'."
 argument_list|)
 throw|;
+block|}
 return|return
 name|tostring
 return|;

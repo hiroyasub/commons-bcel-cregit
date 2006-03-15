@@ -143,9 +143,11 @@ operator|instanceof
 name|UninitializedObjectType
 operator|)
 condition|)
+block|{
 return|return
 literal|false
 return|;
+block|}
 return|return
 name|initialized
 operator|.

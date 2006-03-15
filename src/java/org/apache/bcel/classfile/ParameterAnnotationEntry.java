@@ -69,7 +69,7 @@ name|AnnotationEntry
 index|[]
 name|annotation_table
 decl_stmt|;
-comment|/** 	 * Construct object from file stream. 	 * @param file Input stream 	 * @throws IOException 	 */
+comment|/**      * Construct object from file stream.      * @param file Input stream      * @throws IOException      */
 name|ParameterAnnotationEntry
 parameter_list|(
 name|DataInputStream
@@ -112,6 +112,7 @@ condition|;
 name|i
 operator|++
 control|)
+block|{
 name|annotation_table
 index|[
 name|i
@@ -126,7 +127,8 @@ name|constant_pool
 argument_list|)
 expr_stmt|;
 block|}
-comment|/** 	   * Called by objects that are traversing the nodes of the tree implicitely 	   * defined by the contents of a Java class. I.e., the hierarchy of methods, 	   * fields, attributes, etc. spawns a tree of objects. 	   * 	   * @param v Visitor object 	   */
+block|}
+comment|/**      * Called by objects that are traversing the nodes of the tree implicitely      * defined by the contents of a Java class. I.e., the hierarchy of methods,      * fields, attributes, etc. spawns a tree of objects.      *      * @param v Visitor object      */
 specifier|public
 name|void
 name|accept
@@ -137,7 +139,7 @@ parameter_list|)
 block|{
 comment|//	    v.visitParameterAnnotationEntry(this);
 block|}
-comment|/** 	   * @return the number of annotation entries in this parameter annotation 	   */
+comment|/**      * @return the number of annotation entries in this parameter annotation      */
 specifier|public
 specifier|final
 name|int
@@ -148,7 +150,7 @@ return|return
 name|annotation_table_length
 return|;
 block|}
-comment|/** 	   * returns the array of annotation entries in this annotation 	   */
+comment|/**      * returns the array of annotation entries in this annotation      */
 specifier|public
 name|AnnotationEntry
 index|[]

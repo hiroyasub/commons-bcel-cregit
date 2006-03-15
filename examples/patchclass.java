@@ -144,6 +144,7 @@ condition|;
 name|i
 operator|++
 control|)
+block|{
 name|file_name
 index|[
 name|files
@@ -155,6 +156,7 @@ index|[
 name|i
 index|]
 expr_stmt|;
+block|}
 for|for
 control|(
 name|int

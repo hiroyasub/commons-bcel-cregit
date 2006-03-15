@@ -25,13 +25,13 @@ specifier|abstract
 class|class
 name|NativeVerifier
 block|{
-comment|/** 	 * This class must not be instantiated. 	 */
+comment|/**      * This class must not be instantiated.      */
 specifier|private
 name|NativeVerifier
 parameter_list|()
 block|{
 block|}
-comment|/** 	 * Works only on the first argument. 	 */
+comment|/**      * Works only on the first argument.      */
 specifier|public
 specifier|static
 name|void
@@ -88,6 +88,7 @@ operator|!=
 operator|-
 literal|1
 condition|)
+block|{
 name|args
 index|[
 literal|0
@@ -105,6 +106,7 @@ argument_list|,
 name|dotclasspos
 argument_list|)
 expr_stmt|;
+block|}
 name|args
 index|[
 literal|0

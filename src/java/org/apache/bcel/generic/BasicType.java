@@ -39,7 +39,7 @@ name|BasicType
 extends|extends
 name|Type
 block|{
-comment|/**    * Constructor for basic types such as int, long, `void'    *    * @param type one of T_INT, T_BOOLEAN, ..., T_VOID    * @see org.apache.bcel.Constants    */
+comment|/**      * Constructor for basic types such as int, long, `void'      *      * @param type one of T_INT, T_BOOLEAN, ..., T_VOID      * @see org.apache.bcel.Constants      */
 name|BasicType
 parameter_list|(
 name|byte
@@ -76,6 +76,7 @@ operator|.
 name|T_VOID
 operator|)
 condition|)
+block|{
 throw|throw
 operator|new
 name|ClassGenException
@@ -85,6 +86,7 @@ operator|+
 name|type
 argument_list|)
 throw|;
+block|}
 block|}
 specifier|public
 specifier|static
@@ -185,7 +187,7 @@ argument_list|)
 throw|;
 block|}
 block|}
-comment|/** @return a hash code value for the object.    */
+comment|/** @return a hash code value for the object.      */
 specifier|public
 name|int
 name|hashCode
@@ -195,7 +197,7 @@ return|return
 name|type
 return|;
 block|}
-comment|/** @return true if both type objects refer to the same type    */
+comment|/** @return true if both type objects refer to the same type      */
 specifier|public
 name|boolean
 name|equals

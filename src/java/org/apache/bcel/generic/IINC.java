@@ -68,12 +68,12 @@ specifier|private
 name|int
 name|c
 decl_stmt|;
-comment|/**    * Empty constructor needed for the Class.newInstance() statement in    * Instruction.readInstruction(). Not to be used otherwise.    */
+comment|/**      * Empty constructor needed for the Class.newInstance() statement in      * Instruction.readInstruction(). Not to be used otherwise.      */
 name|IINC
 parameter_list|()
 block|{
 block|}
-comment|/**    * @param n index of local variable    * @param c increment factor    */
+comment|/**      * @param n index of local variable      * @param c increment factor      */
 specifier|public
 name|IINC
 parameter_list|(
@@ -123,7 +123,7 @@ name|c
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**    * Dump instruction as byte code to stream out.    * @param out Output stream    */
+comment|/**      * Dump instruction as byte code to stream out.      * @param out Output stream      */
 specifier|public
 name|void
 name|dump
@@ -138,7 +138,7 @@ if|if
 condition|(
 name|wide
 condition|)
-comment|// Need WIDE prefix ?
+block|{
 name|out
 operator|.
 name|writeByte
@@ -154,6 +154,7 @@ operator|.
 name|WIDE
 argument_list|)
 expr_stmt|;
+block|}
 name|out
 operator|.
 name|writeByte
@@ -253,7 +254,7 @@ literal|3
 expr_stmt|;
 block|}
 block|}
-comment|/**    * Read needed data (e.g. index) from file.    */
+comment|/**      * Read needed data (e.g. index) from file.      */
 specifier|protected
 name|void
 name|initFromFile
@@ -319,7 +320,7 @@ argument_list|()
 expr_stmt|;
 block|}
 block|}
-comment|/**    * @return mnemonic for instruction    */
+comment|/**      * @return mnemonic for instruction      */
 specifier|public
 name|String
 name|toString
@@ -341,7 +342,7 @@ operator|+
 name|c
 return|;
 block|}
-comment|/**    * Set index of local variable.    */
+comment|/**      * Set index of local variable.      */
 specifier|public
 specifier|final
 name|void
@@ -357,6 +358,7 @@ name|n
 operator|<
 literal|0
 condition|)
+block|{
 throw|throw
 operator|new
 name|ClassGenException
@@ -366,6 +368,7 @@ operator|+
 name|n
 argument_list|)
 throw|;
+block|}
 name|this
 operator|.
 name|n
@@ -376,7 +379,7 @@ name|setWide
 argument_list|()
 expr_stmt|;
 block|}
-comment|/**    * @return increment factor    */
+comment|/**      * @return increment factor      */
 specifier|public
 specifier|final
 name|int
@@ -387,7 +390,7 @@ return|return
 name|c
 return|;
 block|}
-comment|/**    * Set increment factor.    */
+comment|/**      * Set increment factor.      */
 specifier|public
 specifier|final
 name|void
@@ -407,7 +410,7 @@ name|setWide
 argument_list|()
 expr_stmt|;
 block|}
-comment|/** @return int type    */
+comment|/** @return int type      */
 specifier|public
 name|Type
 name|getType
@@ -422,7 +425,7 @@ operator|.
 name|INT
 return|;
 block|}
-comment|/**    * Call corresponding visitor method(s). The order is:    * Call visitor methods of implemented interfaces first, then    * call methods according to the class hierarchy in descending order,    * i.e., the most specific visitXXX() call comes last.    *    * @param v Visitor object    */
+comment|/**      * Call corresponding visitor method(s). The order is:      * Call visitor methods of implemented interfaces first, then      * call methods according to the class hierarchy in descending order,      * i.e., the most specific visitXXX() call comes last.      *      * @param v Visitor object      */
 specifier|public
 name|void
 name|accept

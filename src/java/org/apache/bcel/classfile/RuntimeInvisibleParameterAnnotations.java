@@ -58,7 +58,7 @@ name|RuntimeInvisibleParameterAnnotations
 extends|extends
 name|ParameterAnnotations
 block|{
-comment|/** 	 * @param name_index Index pointing to the name<em>Code</em> 	 * @param length Content length in bytes 	 * @param file Input stream 	 * @param constant_pool Array of constants 	 */
+comment|/**      * @param name_index Index pointing to the name<em>Code</em>      * @param length Content length in bytes      * @param file Input stream      * @param constant_pool Array of constants      */
 name|RuntimeInvisibleParameterAnnotations
 parameter_list|(
 name|int
@@ -92,7 +92,7 @@ name|constant_pool
 argument_list|)
 expr_stmt|;
 block|}
-comment|/** 	 * @return deep copy of this attribute 	 */
+comment|/**      * @return deep copy of this attribute      */
 specifier|public
 name|Attribute
 name|copy

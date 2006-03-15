@@ -79,7 +79,7 @@ index|[]
 name|local_variable_table
 decl_stmt|;
 comment|// variables
-comment|/**    * Initialize from another object. Note that both objects use the same    * references (shallow copy). Use copy() for a physical copy.    */
+comment|/**      * Initialize from another object. Note that both objects use the same      * references (shallow copy). Use copy() for a physical copy.      */
 specifier|public
 name|LocalVariableTable
 parameter_list|(
@@ -111,7 +111,7 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**    * @param name_index Index in constant pool to `LocalVariableTable'    * @param length Content length in bytes    * @param local_variable_table Table of local variables    * @param constant_pool Array of constants    */
+comment|/**      * @param name_index Index in constant pool to `LocalVariableTable'      * @param length Content length in bytes      * @param local_variable_table Table of local variables      * @param constant_pool Array of constants      */
 specifier|public
 name|LocalVariableTable
 parameter_list|(
@@ -148,7 +148,7 @@ name|local_variable_table
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**    * Construct object from file stream.    * @param name_index Index in constant pool    * @param length Content length in bytes    * @param file Input stream    * @param constant_pool Array of constants    * @throws IOException    */
+comment|/**      * Construct object from file stream.      * @param name_index Index in constant pool      * @param length Content length in bytes      * @param file Input stream      * @param constant_pool Array of constants      * @throws IOException      */
 name|LocalVariableTable
 parameter_list|(
 name|int
@@ -212,6 +212,7 @@ condition|;
 name|i
 operator|++
 control|)
+block|{
 name|local_variable_table
 index|[
 name|i
@@ -226,7 +227,8 @@ name|constant_pool
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**    * Called by objects that are traversing the nodes of the tree implicitely    * defined by the contents of a Java class. I.e., the hierarchy of methods,    * fields, attributes, etc. spawns a tree of objects.    *    * @param v Visitor object    */
+block|}
+comment|/**      * Called by objects that are traversing the nodes of the tree implicitely      * defined by the contents of a Java class. I.e., the hierarchy of methods,      * fields, attributes, etc. spawns a tree of objects.      *      * @param v Visitor object      */
 specifier|public
 name|void
 name|accept
@@ -243,7 +245,7 @@ name|this
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**    * Dump local variable table attribute to file stream in binary format.    *    * @param file Output file stream    * @throws IOException    */
+comment|/**      * Dump local variable table attribute to file stream in binary format.      *      * @param file Output file stream      * @throws IOException      */
 specifier|public
 specifier|final
 name|void
@@ -283,6 +285,7 @@ condition|;
 name|i
 operator|++
 control|)
+block|{
 name|local_variable_table
 index|[
 name|i
@@ -294,7 +297,8 @@ name|file
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**    * @return Array of local variables of method.    */
+block|}
+comment|/**      * @return Array of local variables of method.      */
 specifier|public
 specifier|final
 name|LocalVariable
@@ -306,7 +310,7 @@ return|return
 name|local_variable_table
 return|;
 block|}
-comment|/**     * @return first matching variable using index    *     * @param index the variable slot    *     * @return the first LocalVariable that matches the slot or null if not found    *     * @deprecated since 5.2 because multiple variables can share the    *             same slot, use getLocalVariable(int index, int pc) instead.    */
+comment|/**       * @return first matching variable using index      *       * @param index the variable slot      *       * @return the first LocalVariable that matches the slot or null if not found      *       * @deprecated since 5.2 because multiple variables can share the      *             same slot, use getLocalVariable(int index, int pc) instead.      */
 specifier|public
 specifier|final
 name|LocalVariable
@@ -330,6 +334,7 @@ condition|;
 name|i
 operator|++
 control|)
+block|{
 if|if
 condition|(
 name|local_variable_table
@@ -342,17 +347,20 @@ argument_list|()
 operator|==
 name|index
 condition|)
+block|{
 return|return
 name|local_variable_table
 index|[
 name|i
 index|]
 return|;
+block|}
+block|}
 return|return
 literal|null
 return|;
 block|}
-comment|/**     * @return matching variable using index when variable is used at supplied pc    *     * @param index the variable slot    * @param pc the current pc that this variable is alive    *     * @return the LocalVariable that matches or null if not found    */
+comment|/**       * @return matching variable using index when variable is used at supplied pc      *       * @param index the variable slot      * @param pc the current pc that this variable is alive      *       * @return the LocalVariable that matches or null if not found      */
 specifier|public
 specifier|final
 name|LocalVariable
@@ -379,6 +387,7 @@ condition|;
 name|i
 operator|++
 control|)
+block|{
 if|if
 condition|(
 name|local_variable_table
@@ -430,12 +439,15 @@ operator|<
 name|end_pc
 operator|)
 condition|)
+block|{
 return|return
 name|local_variable_table
 index|[
 name|i
 index|]
 return|;
+block|}
+block|}
 block|}
 return|return
 literal|null
@@ -472,7 +484,7 @@ operator|.
 name|length
 expr_stmt|;
 block|}
-comment|/**    * @return String representation.    */
+comment|/**      * @return String representation.      */
 specifier|public
 specifier|final
 name|String
@@ -524,6 +536,7 @@ name|local_variable_table_length
 operator|-
 literal|1
 condition|)
+block|{
 name|buf
 operator|.
 name|append
@@ -532,6 +545,7 @@ literal|'\n'
 argument_list|)
 expr_stmt|;
 block|}
+block|}
 return|return
 name|buf
 operator|.
@@ -539,7 +553,7 @@ name|toString
 argument_list|()
 return|;
 block|}
-comment|/**    * @return deep copy of this attribute    */
+comment|/**      * @return deep copy of this attribute      */
 specifier|public
 name|Attribute
 name|copy
@@ -581,6 +595,7 @@ condition|;
 name|i
 operator|++
 control|)
+block|{
 name|c
 operator|.
 name|local_variable_table
@@ -596,6 +611,7 @@ operator|.
 name|copy
 argument_list|()
 expr_stmt|;
+block|}
 name|c
 operator|.
 name|constant_pool

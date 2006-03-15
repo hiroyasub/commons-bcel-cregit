@@ -36,7 +36,7 @@ specifier|public
 interface|interface
 name|InstructionConstants
 block|{
-comment|/** Predefined instruction objects    */
+comment|/** Predefined instruction objects      */
 specifier|public
 specifier|static
 specifier|final
@@ -1136,7 +1136,7 @@ operator|new
 name|MONITOREXIT
 argument_list|()
 decl_stmt|;
-comment|/** You can use these constants in multiple places safely, if you can guarantee    * that you will never alter their internal values, e.g. call setIndex().    */
+comment|/** You can use these constants in multiple places safely, if you can guarantee      * that you will never alter their internal values, e.g. call setIndex().      */
 specifier|public
 specifier|static
 specifier|final
@@ -1289,7 +1289,7 @@ argument_list|(
 literal|2
 argument_list|)
 decl_stmt|;
-comment|/** Get object via its opcode, for immutable instructions like    * branch instructions entries are set to null.    */
+comment|/** Get object via its opcode, for immutable instructions like      * branch instructions entries are set to null.      */
 specifier|public
 specifier|static
 specifier|final
@@ -1303,7 +1303,7 @@ index|[
 literal|256
 index|]
 decl_stmt|;
-comment|/** Interfaces may have no static initializers, so we simulate this    * with an inner class.    */
+comment|/** Interfaces may have no static initializers, so we simulate this      * with an inner class.      */
 specifier|static
 specifier|final
 name|Clinit

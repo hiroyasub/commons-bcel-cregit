@@ -29,12 +29,12 @@ name|BranchInstruction
 implements|implements
 name|StackConsumer
 block|{
-comment|/**    * Empty constructor needed for the Class.newInstance() statement in    * Instruction.readInstruction(). Not to be used otherwise.    */
+comment|/**      * Empty constructor needed for the Class.newInstance() statement in      * Instruction.readInstruction(). Not to be used otherwise.      */
 name|IfInstruction
 parameter_list|()
 block|{
 block|}
-comment|/**    * @param opcode opcode of instruction    * @param target Target instruction to branch to    */
+comment|/**      * @param opcode opcode of instruction      * @param target Target instruction to branch to      */
 specifier|protected
 name|IfInstruction
 parameter_list|(
@@ -53,7 +53,7 @@ name|target
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**    * @return negation of instruction, e.g. IFEQ.negate() == IFNE    */
+comment|/**      * @return negation of instruction, e.g. IFEQ.negate() == IFNE      */
 specifier|public
 specifier|abstract
 name|IfInstruction

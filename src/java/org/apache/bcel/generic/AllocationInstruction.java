@@ -23,7 +23,7 @@ begin_interface
 specifier|public
 interface|interface
 name|AllocationInstruction
-block|{}
+block|{ }
 end_interface
 
 end_unit

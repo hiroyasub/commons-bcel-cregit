@@ -149,7 +149,7 @@ return|return
 name|instruction
 return|;
 block|}
-comment|/**    * Replace current instruction contained in this handle.    * Old instruction is disposed using Instruction.dispose().    */
+comment|/**      * Replace current instruction contained in this handle.      * Old instruction is disposed using Instruction.dispose().      */
 specifier|public
 name|void
 name|setInstruction
@@ -165,6 +165,7 @@ name|i
 operator|==
 literal|null
 condition|)
+block|{
 throw|throw
 operator|new
 name|ClassGenException
@@ -172,6 +173,7 @@ argument_list|(
 literal|"Assigning null to handle"
 argument_list|)
 throw|;
+block|}
 if|if
 condition|(
 operator|(
@@ -191,6 +193,7 @@ operator|instanceof
 name|BranchInstruction
 operator|)
 condition|)
+block|{
 throw|throw
 operator|new
 name|ClassGenException
@@ -202,23 +205,26 @@ operator|+
 literal|" to plain handle"
 argument_list|)
 throw|;
+block|}
 if|if
 condition|(
 name|instruction
 operator|!=
 literal|null
 condition|)
+block|{
 name|instruction
 operator|.
 name|dispose
 argument_list|()
 expr_stmt|;
+block|}
 name|instruction
 operator|=
 name|i
 expr_stmt|;
 block|}
-comment|/**    * Temporarily swap the current instruction, without disturbing    * anything. Meant to be used by a debugger, implementing    * breakpoints. Current instruction is returned.    */
+comment|/**      * Temporarily swap the current instruction, without disturbing      * anything. Meant to be used by a debugger, implementing      * breakpoints. Current instruction is returned.      */
 specifier|public
 name|Instruction
 name|swapInstruction
@@ -262,7 +268,7 @@ init|=
 literal|null
 decl_stmt|;
 comment|// List of reusable handles
-comment|/** Factory method.    */
+comment|/** Factory method.      */
 specifier|static
 specifier|final
 name|InstructionHandle
@@ -278,6 +284,7 @@ name|ih_list
 operator|==
 literal|null
 condition|)
+block|{
 return|return
 operator|new
 name|InstructionHandle
@@ -285,6 +292,7 @@ argument_list|(
 name|i
 argument_list|)
 return|;
+block|}
 else|else
 block|{
 name|InstructionHandle
@@ -310,7 +318,7 @@ name|ih
 return|;
 block|}
 block|}
-comment|/**    * Called by InstructionList.setPositions when setting the position for every    * instruction. In the presence of variable length instructions `setPositions()'    * performs multiple passes over the instruction list to calculate the    * correct (byte) positions and offsets by calling this function.    *    * @param offset additional offset caused by preceding (variable length) instructions    * @param max_offset the maximum offset that may be caused by these instructions    * @return additional offset caused by possible change of this instruction's length    */
+comment|/**      * Called by InstructionList.setPositions when setting the position for every      * instruction. In the presence of variable length instructions `setPositions()'      * performs multiple passes over the instruction list to calculate the      * correct (byte) positions and offsets by calling this function.      *      * @param offset additional offset caused by preceding (variable length) instructions      * @param max_offset the maximum offset that may be caused by these instructions      * @return additional offset caused by possible change of this instruction's length      */
 specifier|protected
 name|int
 name|updatePosition
@@ -330,7 +338,7 @@ return|return
 literal|0
 return|;
 block|}
-comment|/** @return the position, i.e., the byte code offset of the contained    * instruction. This is accurate only after    * InstructionList.setPositions() has been called.    */
+comment|/** @return the position, i.e., the byte code offset of the contained      * instruction. This is accurate only after      * InstructionList.setPositions() has been called.      */
 specifier|public
 name|int
 name|getPosition
@@ -340,7 +348,7 @@ return|return
 name|i_position
 return|;
 block|}
-comment|/** Set the position, i.e., the byte code offset of the contained    * instruction.    */
+comment|/** Set the position, i.e., the byte code offset of the contained      * instruction.      */
 name|void
 name|setPosition
 parameter_list|(
@@ -353,7 +361,7 @@ operator|=
 name|pos
 expr_stmt|;
 block|}
-comment|/** Overridden in BranchHandle    */
+comment|/** Overridden in BranchHandle      */
 specifier|protected
 name|void
 name|addHandle
@@ -368,7 +376,7 @@ operator|=
 name|this
 expr_stmt|;
 block|}
-comment|/**    * Delete contents, i.e., remove user access and make handle reusable.    */
+comment|/**      * Delete contents, i.e., remove user access and make handle reusable.      */
 name|void
 name|dispose
 parameter_list|()
@@ -404,7 +412,7 @@ name|addHandle
 argument_list|()
 expr_stmt|;
 block|}
-comment|/** Remove all targeters, if any.    */
+comment|/** Remove all targeters, if any.      */
 specifier|public
 name|void
 name|removeAllTargeters
@@ -416,13 +424,15 @@ name|targeters
 operator|!=
 literal|null
 condition|)
+block|{
 name|targeters
 operator|.
 name|clear
 argument_list|()
 expr_stmt|;
 block|}
-comment|/**    * Denote this handle isn't referenced anymore by t.    */
+block|}
+comment|/**      * Denote this handle isn't referenced anymore by t.      */
 specifier|public
 name|void
 name|removeTargeter
@@ -447,7 +457,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/**    * Denote this handle is being referenced by t.    */
+comment|/**      * Denote this handle is being referenced by t.      */
 specifier|public
 name|void
 name|addTargeter
@@ -462,12 +472,14 @@ name|targeters
 operator|==
 literal|null
 condition|)
+block|{
 name|targeters
 operator|=
 operator|new
 name|HashSet
 argument_list|()
 expr_stmt|;
+block|}
 comment|//if(!targeters.contains(t))
 name|targeters
 operator|.
@@ -499,7 +511,7 @@ literal|0
 operator|)
 return|;
 block|}
-comment|/**    * @return null, if there are no targeters    */
+comment|/**      * @return null, if there are no targeters      */
 specifier|public
 name|InstructionTargeter
 index|[]
@@ -512,9 +524,11 @@ operator|!
 name|hasTargeters
 argument_list|()
 condition|)
+block|{
 return|return
 literal|null
 return|;
+block|}
 name|InstructionTargeter
 index|[]
 name|t
@@ -539,7 +553,7 @@ return|return
 name|t
 return|;
 block|}
-comment|/** @return a (verbose) string representation of the contained instruction.     */
+comment|/** @return a (verbose) string representation of the contained instruction.       */
 specifier|public
 name|String
 name|toString
@@ -572,7 +586,7 @@ name|verbose
 argument_list|)
 return|;
 block|}
-comment|/** @return a string representation of the contained instruction.     */
+comment|/** @return a string representation of the contained instruction.       */
 specifier|public
 name|String
 name|toString
@@ -585,7 +599,7 @@ literal|true
 argument_list|)
 return|;
 block|}
-comment|/** Add an attribute to an instruction handle.    *    * @param key the key object to store/retrieve the attribute    * @param attr the attribute to associate with this handle    */
+comment|/** Add an attribute to an instruction handle.      *      * @param key the key object to store/retrieve the attribute      * @param attr the attribute to associate with this handle      */
 specifier|public
 name|void
 name|addAttribute
@@ -603,6 +617,7 @@ name|attributes
 operator|==
 literal|null
 condition|)
+block|{
 name|attributes
 operator|=
 operator|new
@@ -611,6 +626,7 @@ argument_list|(
 literal|3
 argument_list|)
 expr_stmt|;
+block|}
 name|attributes
 operator|.
 name|put
@@ -621,7 +637,7 @@ name|attr
 argument_list|)
 expr_stmt|;
 block|}
-comment|/** Delete an attribute of an instruction handle.    *    * @param key the key object to retrieve the attribute    */
+comment|/** Delete an attribute of an instruction handle.      *      * @param key the key object to retrieve the attribute      */
 specifier|public
 name|void
 name|removeAttribute
@@ -636,6 +652,7 @@ name|attributes
 operator|!=
 literal|null
 condition|)
+block|{
 name|attributes
 operator|.
 name|remove
@@ -644,7 +661,8 @@ name|key
 argument_list|)
 expr_stmt|;
 block|}
-comment|/** Get attribute of an instruction handle.    *    * @param key the key object to store/retrieve the attribute    */
+block|}
+comment|/** Get attribute of an instruction handle.      *      * @param key the key object to store/retrieve the attribute      */
 specifier|public
 name|Object
 name|getAttribute
@@ -659,6 +677,7 @@ name|attributes
 operator|!=
 literal|null
 condition|)
+block|{
 return|return
 name|attributes
 operator|.
@@ -667,11 +686,12 @@ argument_list|(
 name|key
 argument_list|)
 return|;
+block|}
 return|return
 literal|null
 return|;
 block|}
-comment|/** @return all attributes associated with this handle    */
+comment|/** @return all attributes associated with this handle      */
 specifier|public
 name|Collection
 name|getAttributes
@@ -700,7 +720,7 @@ name|values
 argument_list|()
 return|;
 block|}
-comment|/** Convenience method, simply calls accept() on the contained instruction.    *    * @param v Visitor object    */
+comment|/** Convenience method, simply calls accept() on the contained instruction.      *      * @param v Visitor object      */
 specifier|public
 name|void
 name|accept

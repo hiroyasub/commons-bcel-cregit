@@ -31,12 +31,12 @@ name|ExceptionThrower
 implements|,
 name|TypedInstruction
 block|{
-comment|/**    * Empty constructor needed for the Class.newInstance() statement in    * Instruction.readInstruction(). Not to be used otherwise.    */
+comment|/**      * Empty constructor needed for the Class.newInstance() statement in      * Instruction.readInstruction(). Not to be used otherwise.      */
 name|ArrayInstruction
 parameter_list|()
 block|{
 block|}
-comment|/**    * @param opcode of instruction    */
+comment|/**      * @param opcode of instruction      */
 specifier|protected
 name|ArrayInstruction
 parameter_list|(
@@ -73,7 +73,7 @@ operator|.
 name|EXCS_ARRAY_EXCEPTION
 return|;
 block|}
-comment|/** @return type associated with the instruction    */
+comment|/** @return type associated with the instruction      */
 specifier|public
 name|Type
 name|getType

@@ -142,7 +142,7 @@ specifier|public
 class|class
 name|Verifier
 block|{
-comment|/** 	 * The name of the class this verifier operates on. 	 */
+comment|/**      * The name of the class this verifier operates on.      */
 specifier|private
 specifier|final
 name|String
@@ -384,7 +384,7 @@ name|verify
 argument_list|()
 return|;
 block|}
-comment|/** 	 * Instantiation is done by the VerifierFactory. 	 * 	 * @see VerifierFactory 	 */
+comment|/**      * Instantiation is done by the VerifierFactory.      *      * @see VerifierFactory      */
 name|Verifier
 parameter_list|(
 name|String
@@ -399,7 +399,7 @@ name|flush
 argument_list|()
 expr_stmt|;
 block|}
-comment|/** 	 * Returns the name of the class this verifier operates on. 	 * This is particularly interesting when this verifier was created 	 * recursively by another Verifier and you got a reference to this 	 * Verifier by the getVerifiers() method of the VerifierFactory. 	 * @see VerifierFactory 	 */
+comment|/**      * Returns the name of the class this verifier operates on.      * This is particularly interesting when this verifier was created      * recursively by another Verifier and you got a reference to this      * Verifier by the getVerifiers() method of the VerifierFactory.      * @see VerifierFactory      */
 specifier|public
 specifier|final
 name|String
@@ -410,7 +410,7 @@ return|return
 name|classname
 return|;
 block|}
-comment|/** 	 * Forget everything known about the class file; that means, really 	 * start a new verification of a possibly different class file from 	 * BCEL's repository. 	 * 	 */
+comment|/**      * Forget everything known about the class file; that means, really      * start a new verification of a possibly different class file from      * BCEL's repository.      *      */
 specifier|public
 name|void
 name|flush
@@ -435,7 +435,7 @@ name|clear
 argument_list|()
 expr_stmt|;
 block|}
-comment|/** 	 * This returns all the (warning) messages collected during verification. 	 * A prefix shows from which verifying pass a message originates. 	 */
+comment|/**      * This returns all the (warning) messages collected during verification.      * A prefix shows from which verifying pass a message originates.      */
 specifier|public
 name|String
 index|[]
@@ -802,7 +802,7 @@ return|return
 name|ret
 return|;
 block|}
-comment|/** 	 * Verifies class files. 	 * This is a simple demonstration of how the API of BCEL's 	 * class file verifier "JustIce" may be used. 	 * You should supply command-line arguments which are 	 * fully qualified namea of the classes to verify. These class files 	 * must be somewhere in your CLASSPATH (refer to Sun's 	 * documentation for questions about this) or you must have put the classes 	 * into the BCEL Repository yourself (via 'addClass(JavaClass)'). 	 */
+comment|/**      * Verifies class files.      * This is a simple demonstration of how the API of BCEL's      * class file verifier "JustIce" may be used.      * You should supply command-line arguments which are      * fully qualified namea of the classes to verify. These class files      * must be somewhere in your CLASSPATH (refer to Sun's      * documentation for questions about this) or you must have put the classes      * into the BCEL Repository yourself (via 'addClass(JavaClass)').      */
 specifier|public
 specifier|static
 name|void
@@ -874,6 +874,7 @@ operator|!=
 operator|-
 literal|1
 condition|)
+block|{
 name|args
 index|[
 name|k
@@ -891,6 +892,7 @@ argument_list|,
 name|dotclasspos
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 name|args
 index|[
@@ -1121,6 +1123,7 @@ name|length
 operator|==
 literal|0
 condition|)
+block|{
 name|System
 operator|.
 name|out
@@ -1130,6 +1133,7 @@ argument_list|(
 literal|"<none>"
 argument_list|)
 expr_stmt|;
+block|}
 for|for
 control|(
 name|int

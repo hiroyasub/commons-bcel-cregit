@@ -80,7 +80,7 @@ index|[]
 name|exception_index_table
 decl_stmt|;
 comment|// constant pool
-comment|/**    * Initialize from another object. Note that both objects use the same    * references (shallow copy). Use copy() for a physical copy.    */
+comment|/**      * Initialize from another object. Note that both objects use the same      * references (shallow copy). Use copy() for a physical copy.      */
 specifier|public
 name|ExceptionTable
 parameter_list|(
@@ -112,7 +112,7 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**    * @param name_index Index in constant pool    * @param length Content length in bytes    * @param exception_index_table Table of indices in constant pool    * @param constant_pool Array of constants    */
+comment|/**      * @param name_index Index in constant pool      * @param length Content length in bytes      * @param exception_index_table Table of indices in constant pool      * @param constant_pool Array of constants      */
 specifier|public
 name|ExceptionTable
 parameter_list|(
@@ -149,7 +149,7 @@ name|exception_index_table
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**    * Construct object from file stream.    * @param name_index Index in constant pool    * @param length Content length in bytes    * @param file Input stream    * @param constant_pool Array of constants    * @throws IOException    */
+comment|/**      * Construct object from file stream.      * @param name_index Index in constant pool      * @param length Content length in bytes      * @param file Input stream      * @param constant_pool Array of constants      * @throws IOException      */
 name|ExceptionTable
 parameter_list|(
 name|int
@@ -211,6 +211,7 @@ condition|;
 name|i
 operator|++
 control|)
+block|{
 name|exception_index_table
 index|[
 name|i
@@ -222,7 +223,8 @@ name|readUnsignedShort
 argument_list|()
 expr_stmt|;
 block|}
-comment|/**    * Called by objects that are traversing the nodes of the tree implicitely    * defined by the contents of a Java class. I.e., the hierarchy of methods,    * fields, attributes, etc. spawns a tree of objects.    *    * @param v Visitor object    */
+block|}
+comment|/**      * Called by objects that are traversing the nodes of the tree implicitely      * defined by the contents of a Java class. I.e., the hierarchy of methods,      * fields, attributes, etc. spawns a tree of objects.      *      * @param v Visitor object      */
 specifier|public
 name|void
 name|accept
@@ -239,7 +241,7 @@ name|this
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**    * Dump exceptions attribute to file stream in binary format.    *    * @param file Output file stream    * @throws IOException    */
+comment|/**      * Dump exceptions attribute to file stream in binary format.      *      * @param file Output file stream      * @throws IOException      */
 specifier|public
 specifier|final
 name|void
@@ -279,6 +281,7 @@ condition|;
 name|i
 operator|++
 control|)
+block|{
 name|file
 operator|.
 name|writeShort
@@ -290,7 +293,8 @@ index|]
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**    * @return Array of indices into constant pool of thrown exceptions.    */
+block|}
+comment|/**      * @return Array of indices into constant pool of thrown exceptions.      */
 specifier|public
 specifier|final
 name|int
@@ -302,7 +306,7 @@ return|return
 name|exception_index_table
 return|;
 block|}
-comment|/**    * @return Length of exception table.    */
+comment|/**      * @return Length of exception table.      */
 specifier|public
 specifier|final
 name|int
@@ -313,7 +317,7 @@ return|return
 name|number_of_exceptions
 return|;
 block|}
-comment|/**    * @return class names of thrown exceptions    */
+comment|/**      * @return class names of thrown exceptions      */
 specifier|public
 specifier|final
 name|String
@@ -345,6 +349,7 @@ condition|;
 name|i
 operator|++
 control|)
+block|{
 name|names
 index|[
 name|i
@@ -371,11 +376,12 @@ argument_list|,
 literal|'.'
 argument_list|)
 expr_stmt|;
+block|}
 return|return
 name|names
 return|;
 block|}
-comment|/**    * @param exception_index_table the list of exception indexes    * Also redefines number_of_exceptions according to table length.    */
+comment|/**      * @param exception_index_table the list of exception indexes      * Also redefines number_of_exceptions according to table length.      */
 specifier|public
 specifier|final
 name|void
@@ -407,7 +413,7 @@ operator|.
 name|length
 expr_stmt|;
 block|}
-comment|/**    * @return String representation, i.e., a list of thrown exceptions.    */
+comment|/**      * @return String representation, i.e., a list of thrown exceptions.      */
 specifier|public
 specifier|final
 name|String
@@ -479,6 +485,7 @@ name|number_of_exceptions
 operator|-
 literal|1
 condition|)
+block|{
 name|buf
 operator|.
 name|append
@@ -487,6 +494,7 @@ literal|", "
 argument_list|)
 expr_stmt|;
 block|}
+block|}
 return|return
 name|buf
 operator|.
@@ -494,7 +502,7 @@ name|toString
 argument_list|()
 return|;
 block|}
-comment|/**    * @return deep copy of this attribute    */
+comment|/**      * @return deep copy of this attribute      */
 specifier|public
 name|Attribute
 name|copy

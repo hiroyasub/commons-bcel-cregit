@@ -34,7 +34,7 @@ specifier|private
 name|long
 name|value
 decl_stmt|;
-comment|/**    * Empty constructor needed for the Class.newInstance() statement in    * Instruction.readInstruction(). Not to be used otherwise.    */
+comment|/**      * Empty constructor needed for the Class.newInstance() statement in      * Instruction.readInstruction(). Not to be used otherwise.      */
 name|LCONST
 parameter_list|()
 block|{
@@ -70,6 +70,7 @@ name|l
 operator|==
 literal|0
 condition|)
+block|{
 name|opcode
 operator|=
 name|org
@@ -82,12 +83,14 @@ name|Constants
 operator|.
 name|LCONST_0
 expr_stmt|;
+block|}
 if|else if
 condition|(
 name|l
 operator|==
 literal|1
 condition|)
+block|{
 name|opcode
 operator|=
 name|org
@@ -100,7 +103,9 @@ name|Constants
 operator|.
 name|LCONST_1
 expr_stmt|;
+block|}
 else|else
+block|{
 throw|throw
 operator|new
 name|ClassGenException
@@ -110,6 +115,7 @@ operator|+
 name|l
 argument_list|)
 throw|;
+block|}
 name|value
 operator|=
 name|l
@@ -128,7 +134,7 @@ name|value
 argument_list|)
 return|;
 block|}
-comment|/** @return Type.LONG    */
+comment|/** @return Type.LONG      */
 specifier|public
 name|Type
 name|getType
@@ -143,7 +149,7 @@ operator|.
 name|LONG
 return|;
 block|}
-comment|/**    * Call corresponding visitor method(s). The order is:    * Call visitor methods of implemented interfaces first, then    * call methods according to the class hierarchy in descending order,    * i.e., the most specific visitXXX() call comes last.    *    * @param v Visitor object    */
+comment|/**      * Call corresponding visitor method(s). The order is:      * Call visitor methods of implemented interfaces first, then      * call methods according to the class hierarchy in descending order,      * i.e., the most specific visitXXX() call comes last.      *      * @param v Visitor object      */
 specifier|public
 name|void
 name|accept

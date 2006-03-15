@@ -52,7 +52,7 @@ specifier|private
 name|ElementValue
 name|value
 decl_stmt|;
-comment|/** 	 * Construct object from file stream. 	 * @param file Input stream 	 * @param constant_pool the constant pool 	 * @throws IOException 	 */
+comment|/**      * Construct object from file stream.      * @param file Input stream      * @param constant_pool the constant pool      * @throws IOException      */
 name|ElementValuePair
 parameter_list|(
 name|DataInputStream

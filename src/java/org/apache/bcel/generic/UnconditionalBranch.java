@@ -23,7 +23,7 @@ begin_interface
 specifier|public
 interface|interface
 name|UnconditionalBranch
-block|{}
+block|{ }
 end_interface
 
 end_unit

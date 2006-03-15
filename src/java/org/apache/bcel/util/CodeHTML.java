@@ -359,6 +359,7 @@ condition|;
 name|i
 operator|++
 control|)
+block|{
 name|writeMethod
 argument_list|(
 name|methods
@@ -369,6 +370,7 @@ argument_list|,
 name|i
 argument_list|)
 expr_stmt|;
+block|}
 name|file
 operator|.
 name|println
@@ -382,7 +384,7 @@ name|close
 argument_list|()
 expr_stmt|;
 block|}
-comment|/**    * Disassemble a stream of byte codes and return the    * string representation.    *    * @param  stream data input stream    * @return String representation of byte code    */
+comment|/**      * Disassemble a stream of byte codes and return the      * string representation.      *      * @param  stream data input stream      * @return String representation of byte code      */
 specifier|private
 specifier|final
 name|String
@@ -473,7 +475,7 @@ argument_list|(
 literal|"</TT></TD><TD>"
 argument_list|)
 expr_stmt|;
-comment|/* Special case: Skip (0-3) padding bytes, i.e., the      * following bytes are 4-byte-aligned      */
+comment|/* Special case: Skip (0-3) padding bytes, i.e., the          * following bytes are 4-byte-aligned          */
 if|if
 condition|(
 operator|(
@@ -527,11 +529,13 @@ condition|;
 name|i
 operator|++
 control|)
+block|{
 name|bytes
 operator|.
 name|readByte
 argument_list|()
 expr_stmt|;
+block|}
 comment|// Both cases have a field default_offset in common
 name|default_offset
 operator|=
@@ -673,6 +677,7 @@ condition|;
 name|i
 operator|++
 control|)
+block|{
 name|buf
 operator|.
 name|append
@@ -716,6 +721,7 @@ argument_list|(
 literal|"</A></TD>"
 argument_list|)
 expr_stmt|;
+block|}
 name|buf
 operator|.
 name|append
@@ -754,7 +760,7 @@ literal|"</A></TD></TR>\n</TABLE>\n"
 argument_list|)
 expr_stmt|;
 break|break;
-comment|/* Lookup switch has variable length arguments.        */
+comment|/* Lookup switch has variable length arguments.              */
 case|case
 name|LOOKUPSWITCH
 case|:
@@ -874,6 +880,7 @@ condition|;
 name|i
 operator|++
 control|)
+block|{
 name|buf
 operator|.
 name|append
@@ -917,6 +924,7 @@ argument_list|(
 literal|"</A></TD>"
 argument_list|)
 expr_stmt|;
+block|}
 name|buf
 operator|.
 name|append
@@ -955,7 +963,7 @@ literal|"</A></TD></TR>\n</TABLE>\n"
 argument_list|)
 expr_stmt|;
 break|break;
-comment|/* Two address bytes + offset from start of byte stream form the        * jump target.        */
+comment|/* Two address bytes + offset from start of byte stream form the              * jump target.              */
 case|case
 name|GOTO
 case|:
@@ -1067,7 +1075,7 @@ literal|"</A>"
 argument_list|)
 expr_stmt|;
 break|break;
-comment|/* Same for 32-bit wide jumps        */
+comment|/* Same for 32-bit wide jumps              */
 case|case
 name|GOTO_W
 case|:
@@ -1127,7 +1135,7 @@ literal|"</A>"
 argument_list|)
 expr_stmt|;
 break|break;
-comment|/* Index byte references local variable (register)        */
+comment|/* Index byte references local variable (register)              */
 case|case
 name|ALOAD
 case|:
@@ -1180,6 +1188,7 @@ expr_stmt|;
 comment|// Clear flag
 block|}
 else|else
+block|{
 name|vindex
 operator|=
 name|bytes
@@ -1187,6 +1196,7 @@ operator|.
 name|readUnsignedByte
 argument_list|()
 expr_stmt|;
+block|}
 name|buf
 operator|.
 name|append
@@ -1200,7 +1210,7 @@ name|vindex
 argument_list|)
 expr_stmt|;
 break|break;
-comment|/*        * Remember wide byte which is used to form a 16-bit address in the        * following instruction. Relies on that the method is called again with        * the following opcode.        */
+comment|/*              * Remember wide byte which is used to form a 16-bit address in the              * following instruction. Relies on that the method is called again with              * the following opcode.              */
 case|case
 name|WIDE
 case|:
@@ -1216,7 +1226,7 @@ literal|"(wide)"
 argument_list|)
 expr_stmt|;
 break|break;
-comment|/* Array of basic type.        */
+comment|/* Array of basic type.              */
 case|case
 name|NEWARRAY
 case|:
@@ -1244,7 +1254,7 @@ literal|"</FONT>"
 argument_list|)
 expr_stmt|;
 break|break;
-comment|/* Access object/class fields.        */
+comment|/* Access object/class fields.              */
 case|case
 name|GETFIELD
 case|:
@@ -1377,6 +1387,7 @@ argument_list|)
 expr_stmt|;
 block|}
 else|else
+block|{
 name|buf
 operator|.
 name|append
@@ -1399,8 +1410,9 @@ argument_list|(
 name|field_name
 argument_list|)
 expr_stmt|;
+block|}
 break|break;
-comment|/* Operands are references to classes in constant pool        */
+comment|/* Operands are references to classes in constant pool              */
 case|case
 name|CHECKCAST
 case|:
@@ -1430,7 +1442,7 @@ argument_list|)
 argument_list|)
 expr_stmt|;
 break|break;
-comment|/* Operands are references to methods in constant pool        */
+comment|/* Operands are references to methods in constant pool              */
 case|case
 name|INVOKESPECIAL
 case|:
@@ -1735,6 +1747,7 @@ name|length
 operator|-
 literal|1
 condition|)
+block|{
 name|buf
 operator|.
 name|append
@@ -1742,6 +1755,7 @@ argument_list|(
 literal|", "
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 comment|// Attach return type
 name|buf
@@ -1762,7 +1776,7 @@ argument_list|)
 argument_list|)
 expr_stmt|;
 break|break;
-comment|/* Operands are references to items in constant pool        */
+comment|/* Operands are references to items in constant pool              */
 case|case
 name|LDC_W
 case|:
@@ -1902,7 +1916,7 @@ literal|"</a>"
 argument_list|)
 expr_stmt|;
 break|break;
-comment|/* Array of references.        */
+comment|/* Array of references.              */
 case|case
 name|ANEWARRAY
 case|:
@@ -1926,7 +1940,7 @@ argument_list|)
 argument_list|)
 expr_stmt|;
 break|break;
-comment|/* Multidimensional array of references.        */
+comment|/* Multidimensional array of references.              */
 case|case
 name|MULTIANEWARRAY
 case|:
@@ -1973,7 +1987,7 @@ literal|"-dimensional"
 argument_list|)
 expr_stmt|;
 break|break;
-comment|/* Increment local variable.        */
+comment|/* Increment local variable.              */
 case|case
 name|IINC
 case|:
@@ -2170,7 +2184,7 @@ name|toString
 argument_list|()
 return|;
 block|}
-comment|/**    * Find all target addresses in code, so that they can be marked    * with&lt;A NAME = ...&gt;. Target addresses are kept in an BitSet object.    */
+comment|/**      * Find all target addresses in code, so that they can be marked      * with&lt;A NAME = ...&gt;. Target addresses are kept in an BitSet object.      */
 specifier|private
 specifier|final
 name|void
@@ -2205,7 +2219,7 @@ expr_stmt|;
 name|int
 name|opcode
 decl_stmt|;
-comment|/* First get Code attribute from method and the exceptions handled      * (try .. catch) in this method. We only need the line number here.      */
+comment|/* First get Code attribute from method and the exceptions handled          * (try .. catch) in this method. We only need the line number here.          */
 if|if
 condition|(
 name|code
@@ -2489,11 +2503,13 @@ condition|;
 name|j
 operator|++
 control|)
+block|{
 name|bytes
 operator|.
 name|readByte
 argument_list|()
 expr_stmt|;
+block|}
 comment|// Both cases have a field default_offset in common
 name|default_offset
 operator|=
@@ -2788,7 +2804,7 @@ comment|// Ignore output
 block|}
 block|}
 block|}
-comment|/**    * Write a single method with the byte code associated with it.    */
+comment|/**      * Write a single method with the byte code associated with it.      */
 specifier|private
 name|void
 name|writeMethod
@@ -2974,6 +2990,7 @@ name|length
 operator|-
 literal|1
 condition|)
+block|{
 name|file
 operator|.
 name|print
@@ -2981,6 +2998,7 @@ argument_list|(
 literal|",&nbsp;"
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 name|file
 operator|.
@@ -3050,6 +3068,7 @@ name|tag
 operator|!=
 name|ATTR_UNKNOWN
 condition|)
+block|{
 name|file
 operator|.
 name|print
@@ -3076,7 +3095,9 @@ operator|+
 literal|"</A></LI>\n"
 argument_list|)
 expr_stmt|;
+block|}
 else|else
+block|{
 name|file
 operator|.
 name|print
@@ -3091,6 +3112,7 @@ operator|+
 literal|"</LI>"
 argument_list|)
 expr_stmt|;
+block|}
 if|if
 condition|(
 name|tag
@@ -3301,7 +3323,7 @@ name|anchor
 init|=
 literal|""
 decl_stmt|;
-comment|/* Set an anchor mark if this line is targetted by a goto, jsr, etc. 	 * Defining an anchor for every line is very inefficient! 	 */
+comment|/* Set an anchor mark if this line is targetted by a goto, jsr, etc.                  * Defining an anchor for every line is very inefficient!                  */
 if|if
 condition|(
 name|goto_set
@@ -3311,6 +3333,7 @@ argument_list|(
 name|offset
 argument_list|)
 condition|)
+block|{
 name|anchor
 operator|=
 literal|"<A NAME=code"
@@ -3323,6 +3346,7 @@ name|offset
 operator|+
 literal|"></A>"
 expr_stmt|;
+block|}
 name|String
 name|anchor2
 decl_stmt|;
@@ -3337,7 +3361,7 @@ name|code
 operator|.
 name|length
 condition|)
-comment|// last loop
+block|{
 name|anchor2
 operator|=
 literal|"<A NAME=code"
@@ -3356,13 +3380,16 @@ name|offset
 operator|+
 literal|"</A>"
 expr_stmt|;
+block|}
 else|else
+block|{
 name|anchor2
 operator|=
 literal|""
 operator|+
 name|offset
 expr_stmt|;
+block|}
 name|file
 operator|.
 name|println

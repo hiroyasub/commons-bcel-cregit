@@ -424,7 +424,7 @@ condition|;
 name|j
 operator|++
 control|)
-comment|// Directly use array
+block|{
 name|methods
 index|[
 name|j
@@ -438,6 +438,7 @@ name|j
 index|]
 argument_list|)
 expr_stmt|;
+block|}
 comment|/* Finally dump it back to a file. 	   */
 name|java_class
 operator|.
@@ -590,9 +591,11 @@ operator|==
 literal|null
 operator|)
 condition|)
+block|{
 return|return
 name|m
 return|;
+block|}
 comment|/* Create instruction list to be inserted at method start.      */
 name|String
 name|mesg
@@ -749,6 +752,7 @@ block|}
 block|}
 block|}
 else|else
+block|{
 name|il
 operator|.
 name|insert
@@ -761,6 +765,7 @@ argument_list|,
 name|patch
 argument_list|)
 expr_stmt|;
+block|}
 comment|/* Stack size must be at least 2, since the println method takes 2 argument.      */
 if|if
 condition|(
@@ -771,6 +776,7 @@ argument_list|()
 operator|<
 literal|2
 condition|)
+block|{
 name|mg
 operator|.
 name|setMaxStack
@@ -778,6 +784,7 @@ argument_list|(
 literal|2
 argument_list|)
 expr_stmt|;
+block|}
 name|m
 operator|=
 name|mg

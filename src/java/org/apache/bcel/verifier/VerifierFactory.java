@@ -74,7 +74,7 @@ specifier|public
 class|class
 name|VerifierFactory
 block|{
-comment|/** 	 * The HashMap that holds the data about the already-constructed Verifier instances. 	 */
+comment|/**      * The HashMap that holds the data about the already-constructed Verifier instances.      */
 specifier|private
 specifier|static
 name|Map
@@ -84,7 +84,7 @@ operator|new
 name|HashMap
 argument_list|()
 decl_stmt|;
-comment|/** 	 * The VerifierFactoryObserver instances that observe the VerifierFactory. 	 */
+comment|/**      * The VerifierFactoryObserver instances that observe the VerifierFactory.      */
 specifier|private
 specifier|static
 name|List
@@ -94,13 +94,13 @@ operator|new
 name|Vector
 argument_list|()
 decl_stmt|;
-comment|/** 	 * The VerifierFactory is not instantiable. 	 */
+comment|/**      * The VerifierFactory is not instantiable.      */
 specifier|private
 name|VerifierFactory
 parameter_list|()
 block|{
 block|}
-comment|/** 	 * Returns the (only) verifier responsible for the class with the given name. 	 * Possibly a new Verifier object is transparently created. 	 * @return the (only) verifier responsible for the class with the given name. 	 */
+comment|/**      * Returns the (only) verifier responsible for the class with the given name.      * Possibly a new Verifier object is transparently created.      * @return the (only) verifier responsible for the class with the given name.      */
 specifier|public
 specifier|static
 name|Verifier
@@ -159,7 +159,7 @@ return|return
 name|v
 return|;
 block|}
-comment|/** 	 * Notifies the observers of a newly generated Verifier. 	 */
+comment|/**      * Notifies the observers of a newly generated Verifier.      */
 specifier|private
 specifier|static
 name|void
@@ -206,7 +206,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/** 	 * Returns all Verifier instances created so far. 	 * This is useful when a Verifier recursively lets 	 * the VerifierFactory create other Verifier instances 	 * and if you want to verify the transitive hull of 	 * referenced class files. 	 */
+comment|/**      * Returns all Verifier instances created so far.      * This is useful when a Verifier recursively lets      * the VerifierFactory create other Verifier instances      * and if you want to verify the transitive hull of      * referenced class files.      */
 specifier|public
 specifier|static
 name|Verifier
@@ -249,7 +249,7 @@ operator|)
 return|;
 comment|// Because vs is big enough, vs is used to store the values into and returned!
 block|}
-comment|/** 	 * Adds the VerifierFactoryObserver o to the list of observers. 	 */
+comment|/**      * Adds the VerifierFactoryObserver o to the list of observers.      */
 specifier|public
 specifier|static
 name|void
@@ -267,7 +267,7 @@ name|o
 argument_list|)
 expr_stmt|;
 block|}
-comment|/** 	 * Removes the VerifierFactoryObserver o from the list of observers. 	 */
+comment|/**      * Removes the VerifierFactoryObserver o from the list of observers.      */
 specifier|public
 specifier|static
 name|void

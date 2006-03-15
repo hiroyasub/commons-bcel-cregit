@@ -345,6 +345,7 @@ condition|;
 name|i
 operator|++
 control|)
+block|{
 name|exprs
 index|[
 name|i
@@ -366,6 +367,7 @@ name|clone
 argument_list|()
 argument_list|)
 expr_stmt|;
+block|}
 comment|// Put argument names into hash table aka. environment
 for|for
 control|(
@@ -416,6 +418,7 @@ name|entry
 operator|!=
 literal|null
 condition|)
+block|{
 name|MiniC
 operator|.
 name|addError
@@ -437,7 +440,9 @@ operator|+
 literal|"."
 argument_list|)
 expr_stmt|;
+block|}
 else|else
+block|{
 name|env
 operator|.
 name|put
@@ -449,6 +454,7 @@ name|id
 argument_list|)
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 name|body
 operator|=
@@ -845,6 +851,7 @@ condition|;
 name|i
 operator|++
 control|)
+block|{
 name|l
 index|[
 name|i
@@ -855,6 +862,7 @@ argument_list|(
 name|end
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 specifier|public
 name|void

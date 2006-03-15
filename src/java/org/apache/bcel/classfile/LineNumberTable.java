@@ -79,7 +79,7 @@ index|[]
 name|line_number_table
 decl_stmt|;
 comment|// Table of line/numbers pairs
-comment|/*    * Initialize from another object. Note that both objects use the same    * references (shallow copy). Use copy() for a physical copy.    */
+comment|/*      * Initialize from another object. Note that both objects use the same      * references (shallow copy). Use copy() for a physical copy.      */
 specifier|public
 name|LineNumberTable
 parameter_list|(
@@ -111,7 +111,7 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
-comment|/*    * @param name_index Index of name    * @param length Content length in bytes    * @param line_number_table Table of line/numbers pairs    * @param constant_pool Array of constants    */
+comment|/*      * @param name_index Index of name      * @param length Content length in bytes      * @param line_number_table Table of line/numbers pairs      * @param constant_pool Array of constants      */
 specifier|public
 name|LineNumberTable
 parameter_list|(
@@ -148,7 +148,7 @@ name|line_number_table
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**    * Construct object from file stream.    * @param name_index Index of name    * @param length Content length in bytes    * @param file Input stream    * @param constant_pool Array of constants    * @throws IOException    */
+comment|/**      * Construct object from file stream.      * @param name_index Index of name      * @param length Content length in bytes      * @param file Input stream      * @param constant_pool Array of constants      * @throws IOException      */
 name|LineNumberTable
 parameter_list|(
 name|int
@@ -212,6 +212,7 @@ condition|;
 name|i
 operator|++
 control|)
+block|{
 name|line_number_table
 index|[
 name|i
@@ -224,7 +225,8 @@ name|file
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**    * Called by objects that are traversing the nodes of the tree implicitely    * defined by the contents of a Java class. I.e., the hierarchy of methods,    * fields, attributes, etc. spawns a tree of objects.    *    * @param v Visitor object    */
+block|}
+comment|/**      * Called by objects that are traversing the nodes of the tree implicitely      * defined by the contents of a Java class. I.e., the hierarchy of methods,      * fields, attributes, etc. spawns a tree of objects.      *      * @param v Visitor object      */
 specifier|public
 name|void
 name|accept
@@ -241,7 +243,7 @@ name|this
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**    * Dump line number table attribute to file stream in binary format.    *    * @param file Output file stream    * @throws IOException    */
+comment|/**      * Dump line number table attribute to file stream in binary format.      *      * @param file Output file stream      * @throws IOException      */
 specifier|public
 specifier|final
 name|void
@@ -281,6 +283,7 @@ condition|;
 name|i
 operator|++
 control|)
+block|{
 name|line_number_table
 index|[
 name|i
@@ -292,7 +295,8 @@ name|file
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**    * @return Array of (pc offset, line number) pairs.    */
+block|}
+comment|/**      * @return Array of (pc offset, line number) pairs.      */
 specifier|public
 specifier|final
 name|LineNumber
@@ -304,7 +308,7 @@ return|return
 name|line_number_table
 return|;
 block|}
-comment|/**    * @param line_number_table the line number entries for this table    */
+comment|/**      * @param line_number_table the line number entries for this table      */
 specifier|public
 specifier|final
 name|void
@@ -336,7 +340,7 @@ operator|.
 name|length
 expr_stmt|;
 block|}
-comment|/**    * @return String representation.    */
+comment|/**      * @return String representation.      */
 specifier|public
 specifier|final
 name|String
@@ -464,7 +468,7 @@ name|toString
 argument_list|()
 return|;
 block|}
-comment|/**    * Map byte code positions to source code lines.    *    * @param pos byte code offset    * @return corresponding line in source code    */
+comment|/**      * Map byte code positions to source code lines.      *      * @param pos byte code offset      * @return corresponding line in source code      */
 specifier|public
 name|int
 name|getSourceLine
@@ -490,11 +494,12 @@ name|r
 operator|<
 literal|0
 condition|)
-comment|// array is empty
+block|{
 return|return
 operator|-
 literal|1
 return|;
+block|}
 name|int
 name|min_index
 init|=
@@ -506,7 +511,7 @@ init|=
 operator|-
 literal|1
 decl_stmt|;
-comment|/* Do a binary search since the array is ordered.      */
+comment|/* Do a binary search since the array is ordered.          */
 do|do
 block|{
 name|int
@@ -537,6 +542,7 @@ name|j
 operator|==
 name|pos
 condition|)
+block|{
 return|return
 name|line_number_table
 index|[
@@ -546,28 +552,31 @@ operator|.
 name|getLineNumber
 argument_list|()
 return|;
+block|}
 if|else if
 condition|(
 name|pos
 operator|<
 name|j
 condition|)
-comment|// else constrain search area
+block|{
 name|r
 operator|=
 name|i
 operator|-
 literal|1
 expr_stmt|;
+block|}
 else|else
-comment|// pos> j
+block|{
 name|l
 operator|=
 name|i
 operator|+
 literal|1
 expr_stmt|;
-comment|/* If exact match can't be found (which is the most common case)        * return the line number that corresponds to the greatest index less        * than pos.        */
+block|}
+comment|/* If exact match can't be found (which is the most common case)              * return the line number that corresponds to the greatest index less              * than pos.              */
 if|if
 condition|(
 name|j
@@ -596,17 +605,19 @@ operator|<=
 name|r
 condition|)
 do|;
-comment|/* It's possible that we did not find any valid entry for the bytecode      * offset we were looking for.      */
+comment|/* It's possible that we did not find any valid entry for the bytecode          * offset we were looking for.          */
 if|if
 condition|(
 name|min_index
 operator|<
 literal|0
 condition|)
+block|{
 return|return
 operator|-
 literal|1
 return|;
+block|}
 return|return
 name|line_number_table
 index|[
@@ -617,7 +628,7 @@ name|getLineNumber
 argument_list|()
 return|;
 block|}
-comment|/**    * @return deep copy of this attribute    */
+comment|/**      * @return deep copy of this attribute      */
 specifier|public
 name|Attribute
 name|copy
@@ -659,6 +670,7 @@ condition|;
 name|i
 operator|++
 control|)
+block|{
 name|c
 operator|.
 name|line_number_table
@@ -674,6 +686,7 @@ operator|.
 name|copy
 argument_list|()
 expr_stmt|;
+block|}
 name|c
 operator|.
 name|constant_pool

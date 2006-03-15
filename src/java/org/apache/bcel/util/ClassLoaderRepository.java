@@ -129,7 +129,7 @@ operator|=
 name|loader
 expr_stmt|;
 block|}
-comment|/**    * Store a new JavaClass into this Repository.    */
+comment|/**      * Store a new JavaClass into this Repository.      */
 specifier|public
 name|void
 name|storeClass
@@ -158,7 +158,7 @@ name|this
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**    * Remove class from repository    */
+comment|/**      * Remove class from repository      */
 specifier|public
 name|void
 name|removeClass
@@ -178,7 +178,7 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**    * Find an already defined JavaClass.    */
+comment|/**      * Find an already defined JavaClass.      */
 specifier|public
 name|JavaClass
 name|findClass
@@ -216,7 +216,7 @@ literal|null
 return|;
 block|}
 block|}
-comment|/**    * Lookup a JavaClass object from the Class Name provided.    */
+comment|/**      * Lookup a JavaClass object from the Class Name provided.      */
 specifier|public
 name|JavaClass
 name|loadClass
@@ -354,7 +354,7 @@ argument_list|()
 argument_list|)
 return|;
 block|}
-comment|/** Clear all entries from cache.    */
+comment|/** Clear all entries from cache.      */
 specifier|public
 name|void
 name|clear
@@ -366,7 +366,7 @@ name|clear
 argument_list|()
 expr_stmt|;
 block|}
-comment|/*    * @return null    */
+comment|/*      * @return null      */
 specifier|public
 name|ClassPath
 name|getClassPath

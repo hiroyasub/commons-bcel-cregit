@@ -179,13 +179,13 @@ index|[]
 name|byte_positions
 decl_stmt|;
 comment|// byte code offsets corresponding to instructions
-comment|/**    * Create (empty) instruction list.    */
+comment|/**      * Create (empty) instruction list.      */
 specifier|public
 name|InstructionList
 parameter_list|()
 block|{
 block|}
-comment|/**    * Create instruction list containing one instruction.    * @param i initial instruction    */
+comment|/**      * Create instruction list containing one instruction.      * @param i initial instruction      */
 specifier|public
 name|InstructionList
 parameter_list|(
@@ -199,7 +199,7 @@ name|i
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**    * Create instruction list containing one instruction.    * @param i initial instruction    */
+comment|/**      * Create instruction list containing one instruction.      * @param i initial instruction      */
 specifier|public
 name|InstructionList
 parameter_list|(
@@ -213,7 +213,7 @@ name|i
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**    * Initialize list with (nonnull) compound instruction. Consumes argument    * list, i.e., it becomes empty.    *    * @param c compound instruction (list)    */
+comment|/**      * Initialize list with (nonnull) compound instruction. Consumes argument      * list, i.e., it becomes empty.      *      * @param c compound instruction (list)      */
 specifier|public
 name|InstructionList
 parameter_list|(
@@ -230,7 +230,7 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**    * Test for empty list.    */
+comment|/**      * Test for empty list.      */
 specifier|public
 name|boolean
 name|isEmpty
@@ -243,7 +243,7 @@ literal|null
 return|;
 block|}
 comment|//&& end == null
-comment|/**    * Find the target instruction (handle) that corresponds to the given target    * position (byte code offset).    *    * @param ihs array of instruction handles, i.e. il.getInstructionHandles()    * @param pos array of positions corresponding to ihs, i.e. il.getInstructionPositions()    * @param count length of arrays    * @param target target position to search for    * @return target position's instruction handle if available    */
+comment|/**      * Find the target instruction (handle) that corresponds to the given target      * position (byte code offset).      *      * @param ihs array of instruction handles, i.e. il.getInstructionHandles()      * @param pos array of positions corresponding to ihs, i.e. il.getInstructionPositions()      * @param count length of arrays      * @param target target position to search for      * @return target position's instruction handle if available      */
 specifier|public
 specifier|static
 name|InstructionHandle
@@ -275,7 +275,7 @@ name|count
 operator|-
 literal|1
 decl_stmt|;
-comment|/* Do a binary search since the pos array is orderd.      */
+comment|/* Do a binary search since the pos array is orderd.          */
 do|do
 block|{
 name|int
@@ -303,34 +303,37 @@ name|j
 operator|==
 name|target
 condition|)
-comment|// target found
+block|{
 return|return
 name|ihs
 index|[
 name|i
 index|]
 return|;
+block|}
 if|else if
 condition|(
 name|target
 operator|<
 name|j
 condition|)
-comment|// else constrain search area
+block|{
 name|r
 operator|=
 name|i
 operator|-
 literal|1
 expr_stmt|;
+block|}
 else|else
-comment|// target> j
+block|{
 name|l
 operator|=
 name|i
 operator|+
 literal|1
 expr_stmt|;
+block|}
 block|}
 do|while
 condition|(
@@ -343,7 +346,7 @@ return|return
 literal|null
 return|;
 block|}
-comment|/**    * Get instruction handle for instruction at byte code position pos.    * This only works properly, if the list is freshly initialized from a byte array or    * setPositions() has been called before this method.    *    * @param pos byte code position to search for    * @return target position's instruction handle if available    */
+comment|/**      * Get instruction handle for instruction at byte code position pos.      * This only works properly, if the list is freshly initialized from a byte array or      * setPositions() has been called before this method.      *      * @param pos byte code position to search for      * @return target position's instruction handle if available      */
 specifier|public
 name|InstructionHandle
 name|findHandle
@@ -372,7 +375,7 @@ name|pos
 argument_list|)
 return|;
 block|}
-comment|/**    * Initialize instruction list from byte array.    *    * @param code byte array containing the instructions    */
+comment|/**      * Initialize instruction list from byte array.      *      * @param code byte array containing the instructions      */
 specifier|public
 name|InstructionList
 parameter_list|(
@@ -421,7 +424,7 @@ init|=
 literal|0
 decl_stmt|;
 comment|// Contains actual length
-comment|/* Pass 1: Create an object for each byte code and append them      * to the list.      */
+comment|/* Pass 1: Create an object for each byte code and append them          * to the list.          */
 try|try
 block|{
 while|while
@@ -450,7 +453,7 @@ index|]
 operator|=
 name|off
 expr_stmt|;
-comment|/* Read one instruction from the byte stream, the byte position is set 	 * accordingly. 	 */
+comment|/* Read one instruction from the byte stream, the byte position is set                  * accordingly.                  */
 name|Instruction
 name|i
 init|=
@@ -470,7 +473,7 @@ name|i
 operator|instanceof
 name|BranchInstruction
 condition|)
-comment|// Use proper append() method
+block|{
 name|ih
 operator|=
 name|append
@@ -481,7 +484,9 @@ operator|)
 name|i
 argument_list|)
 expr_stmt|;
+block|}
 else|else
+block|{
 name|ih
 operator|=
 name|append
@@ -489,6 +494,7 @@ argument_list|(
 name|i
 argument_list|)
 expr_stmt|;
+block|}
 name|ih
 operator|.
 name|setPosition
@@ -549,7 +555,7 @@ argument_list|,
 name|count
 argument_list|)
 expr_stmt|;
-comment|/* Pass 2: Look for BranchInstruction and update their targets, i.e.,      * convert offsets to instruction handles.      */
+comment|/* Pass 2: Look for BranchInstruction and update their targets, i.e.,          * convert offsets to instruction handles.          */
 for|for
 control|(
 name|int
@@ -600,7 +606,7 @@ operator|.
 name|getIndex
 argument_list|()
 decl_stmt|;
-comment|/* Byte code position: 						   * relative -> absolute. */
+comment|/* Byte code position:                  * relative -> absolute. */
 comment|// Search for target position
 name|InstructionHandle
 name|ih
@@ -622,7 +628,7 @@ name|ih
 operator|==
 literal|null
 condition|)
-comment|// Search failed
+block|{
 throw|throw
 operator|new
 name|ClassGenException
@@ -632,6 +638,7 @@ operator|+
 name|bi
 argument_list|)
 throw|;
+block|}
 name|bi
 operator|.
 name|setTarget
@@ -713,7 +720,7 @@ name|ih
 operator|==
 literal|null
 condition|)
-comment|// Search failed
+block|{
 throw|throw
 operator|new
 name|ClassGenException
@@ -723,6 +730,7 @@ operator|+
 name|bi
 argument_list|)
 throw|;
+block|}
 name|s
 operator|.
 name|setTarget
@@ -738,7 +746,7 @@ block|}
 block|}
 block|}
 block|}
-comment|/**    * Append another list after instruction (handle) ih contained in this list.    * Consumes argument list, i.e., it becomes empty.    *    * @param ih where to append the instruction list     * @param il Instruction list to append to this one    * @return instruction handle pointing to the<B>first</B> appended instruction    */
+comment|/**      * Append another list after instruction (handle) ih contained in this list.      * Consumes argument list, i.e., it becomes empty.      *      * @param ih where to append the instruction list       * @param il Instruction list to append to this one      * @return instruction handle pointing to the<B>first</B> appended instruction      */
 specifier|public
 name|InstructionHandle
 name|append
@@ -756,6 +764,7 @@ name|il
 operator|==
 literal|null
 condition|)
+block|{
 throw|throw
 operator|new
 name|ClassGenException
@@ -763,6 +772,7 @@ argument_list|(
 literal|"Appending null InstructionList"
 argument_list|)
 throw|;
+block|}
 if|if
 condition|(
 name|il
@@ -770,10 +780,11 @@ operator|.
 name|isEmpty
 argument_list|()
 condition|)
-comment|// Nothing to do
+block|{
 return|return
 name|ih
 return|;
+block|}
 name|InstructionHandle
 name|next
 init|=
@@ -817,7 +828,7 @@ name|next
 operator|!=
 literal|null
 condition|)
-comment|// i == end ?
+block|{
 name|next
 operator|.
 name|prev
@@ -826,7 +837,9 @@ name|il
 operator|.
 name|end
 expr_stmt|;
+block|}
 else|else
+block|{
 name|end
 operator|=
 name|il
@@ -834,6 +847,7 @@ operator|.
 name|end
 expr_stmt|;
 comment|// Update end ...
+block|}
 name|length
 operator|+=
 name|il
@@ -850,7 +864,7 @@ return|return
 name|ret
 return|;
 block|}
-comment|/**    * Append another list after instruction i contained in this list.    * Consumes argument list, i.e., it becomes empty.    *    * @param i  where to append the instruction list     * @param il Instruction list to append to this one    * @return instruction handle pointing to the<B>first</B> appended instruction    */
+comment|/**      * Append another list after instruction i contained in this list.      * Consumes argument list, i.e., it becomes empty.      *      * @param i  where to append the instruction list       * @param il Instruction list to append to this one      * @return instruction handle pointing to the<B>first</B> appended instruction      */
 specifier|public
 name|InstructionHandle
 name|append
@@ -878,7 +892,7 @@ operator|)
 operator|==
 literal|null
 condition|)
-comment|// Also applies for empty list
+block|{
 throw|throw
 operator|new
 name|ClassGenException
@@ -890,6 +904,7 @@ operator|+
 literal|" is not contained in this list."
 argument_list|)
 throw|;
+block|}
 return|return
 name|append
 argument_list|(
@@ -899,7 +914,7 @@ name|il
 argument_list|)
 return|;
 block|}
-comment|/**    * Append another list to this one.    * Consumes argument list, i.e., it becomes empty.    *    * @param il list to append to end of this list    * @return instruction handle of the<B>first</B> appended instruction    */
+comment|/**      * Append another list to this one.      * Consumes argument list, i.e., it becomes empty.      *      * @param il list to append to end of this list      * @return instruction handle of the<B>first</B> appended instruction      */
 specifier|public
 name|InstructionHandle
 name|append
@@ -914,6 +929,7 @@ name|il
 operator|==
 literal|null
 condition|)
+block|{
 throw|throw
 operator|new
 name|ClassGenException
@@ -921,6 +937,7 @@ argument_list|(
 literal|"Appending null InstructionList"
 argument_list|)
 throw|;
+block|}
 if|if
 condition|(
 name|il
@@ -928,10 +945,11 @@ operator|.
 name|isEmpty
 argument_list|()
 condition|)
-comment|// Nothing to do
+block|{
 return|return
 literal|null
 return|;
+block|}
 if|if
 condition|(
 name|isEmpty
@@ -966,6 +984,7 @@ name|start
 return|;
 block|}
 else|else
+block|{
 return|return
 name|append
 argument_list|(
@@ -976,7 +995,8 @@ argument_list|)
 return|;
 comment|// was end.instruction
 block|}
-comment|/**    * Append an instruction to the end of this list.    *    * @param ih instruction to append    */
+block|}
+comment|/**      * Append an instruction to the end of this list.      *      * @param ih instruction to append      */
 specifier|private
 name|void
 name|append
@@ -1038,7 +1058,7 @@ operator|++
 expr_stmt|;
 comment|// Update length
 block|}
-comment|/**    * Append an instruction to the end of this list.    *    * @param i instruction to append    * @return instruction handle of the appended instruction    */
+comment|/**      * Append an instruction to the end of this list.      *      * @param i instruction to append      * @return instruction handle of the appended instruction      */
 specifier|public
 name|InstructionHandle
 name|append
@@ -1066,7 +1086,7 @@ return|return
 name|ih
 return|;
 block|}
-comment|/**    * Append a branch instruction to the end of this list.    *    * @param i branch instruction to append    * @return branch instruction handle of the appended instruction    */
+comment|/**      * Append a branch instruction to the end of this list.      *      * @param i branch instruction to append      * @return branch instruction handle of the appended instruction      */
 specifier|public
 name|BranchHandle
 name|append
@@ -1094,7 +1114,7 @@ return|return
 name|ih
 return|;
 block|}
-comment|/**    * Append a single instruction j after another instruction i, which    * must be in this list of course!    *    * @param i Instruction in list    * @param j Instruction to append after i in list    * @return instruction handle of the first appended instruction    */
+comment|/**      * Append a single instruction j after another instruction i, which      * must be in this list of course!      *      * @param i Instruction in list      * @param j Instruction to append after i in list      * @return instruction handle of the first appended instruction      */
 specifier|public
 name|InstructionHandle
 name|append
@@ -1119,7 +1139,7 @@ argument_list|)
 argument_list|)
 return|;
 block|}
-comment|/**    * Append a compound instruction, after instruction i.    *    * @param i Instruction in list    * @param c The composite instruction (containing an InstructionList)    * @return instruction handle of the first appended instruction    */
+comment|/**      * Append a compound instruction, after instruction i.      *      * @param i Instruction in list      * @param c The composite instruction (containing an InstructionList)      * @return instruction handle of the first appended instruction      */
 specifier|public
 name|InstructionHandle
 name|append
@@ -1143,7 +1163,7 @@ argument_list|()
 argument_list|)
 return|;
 block|}
-comment|/**    * Append a compound instruction.    *    * @param c The composite instruction (containing an InstructionList)    * @return instruction handle of the first appended instruction    */
+comment|/**      * Append a compound instruction.      *      * @param c The composite instruction (containing an InstructionList)      * @return instruction handle of the first appended instruction      */
 specifier|public
 name|InstructionHandle
 name|append
@@ -1162,7 +1182,7 @@ argument_list|()
 argument_list|)
 return|;
 block|}
-comment|/**    * Append a compound instruction.    *    * @param ih where to append the instruction list     * @param c The composite instruction (containing an InstructionList)    * @return instruction handle of the first appended instruction    */
+comment|/**      * Append a compound instruction.      *      * @param ih where to append the instruction list       * @param c The composite instruction (containing an InstructionList)      * @return instruction handle of the first appended instruction      */
 specifier|public
 name|InstructionHandle
 name|append
@@ -1186,7 +1206,7 @@ argument_list|()
 argument_list|)
 return|;
 block|}
-comment|/**    * Append an instruction after instruction (handle) ih contained in this list.    *    * @param ih where to append the instruction list     * @param i Instruction to append    * @return instruction handle pointing to the<B>first</B> appended instruction    */
+comment|/**      * Append an instruction after instruction (handle) ih contained in this list.      *      * @param ih where to append the instruction list       * @param i Instruction to append      * @return instruction handle pointing to the<B>first</B> appended instruction      */
 specifier|public
 name|InstructionHandle
 name|append
@@ -1211,7 +1231,7 @@ argument_list|)
 argument_list|)
 return|;
 block|}
-comment|/**    * Append an instruction after instruction (handle) ih contained in this list.    *    * @param ih where to append the instruction list     * @param i Instruction to append    * @return instruction handle pointing to the<B>first</B> appended instruction    */
+comment|/**      * Append an instruction after instruction (handle) ih contained in this list.      *      * @param ih where to append the instruction list       * @param i Instruction to append      * @return instruction handle pointing to the<B>first</B> appended instruction      */
 specifier|public
 name|BranchHandle
 name|append
@@ -1258,7 +1278,7 @@ return|return
 name|bh
 return|;
 block|}
-comment|/**    * Insert another list before Instruction handle ih contained in this list.    * Consumes argument list, i.e., it becomes empty.    *    * @param ih  where to append the instruction list     * @param il Instruction list to insert    * @return instruction handle of the first inserted instruction    */
+comment|/**      * Insert another list before Instruction handle ih contained in this list.      * Consumes argument list, i.e., it becomes empty.      *      * @param ih  where to append the instruction list       * @param il Instruction list to insert      * @return instruction handle of the first inserted instruction      */
 specifier|public
 name|InstructionHandle
 name|insert
@@ -1276,6 +1296,7 @@ name|il
 operator|==
 literal|null
 condition|)
+block|{
 throw|throw
 operator|new
 name|ClassGenException
@@ -1283,6 +1304,7 @@ argument_list|(
 literal|"Inserting null InstructionList"
 argument_list|)
 throw|;
+block|}
 if|if
 condition|(
 name|il
@@ -1290,10 +1312,11 @@ operator|.
 name|isEmpty
 argument_list|()
 condition|)
-comment|// Nothing to do
+block|{
 return|return
 name|ih
 return|;
+block|}
 name|InstructionHandle
 name|prev
 init|=
@@ -1337,7 +1360,7 @@ name|prev
 operator|!=
 literal|null
 condition|)
-comment|// ih == start ?
+block|{
 name|prev
 operator|.
 name|next
@@ -1346,7 +1369,9 @@ name|il
 operator|.
 name|start
 expr_stmt|;
+block|}
 else|else
+block|{
 name|start
 operator|=
 name|il
@@ -1354,6 +1379,7 @@ operator|.
 name|start
 expr_stmt|;
 comment|// Update start ...
+block|}
 name|length
 operator|+=
 name|il
@@ -1370,7 +1396,7 @@ return|return
 name|ret
 return|;
 block|}
-comment|/**    * Insert another list.       *    * @param il list to insert before start of this list    * @return instruction handle of the first inserted instruction    */
+comment|/**      * Insert another list.         *      * @param il list to insert before start of this list      * @return instruction handle of the first inserted instruction      */
 specifier|public
 name|InstructionHandle
 name|insert
@@ -1396,6 +1422,7 @@ name|start
 return|;
 block|}
 else|else
+block|{
 return|return
 name|insert
 argument_list|(
@@ -1405,7 +1432,8 @@ name|il
 argument_list|)
 return|;
 block|}
-comment|/**    * Insert an instruction at start of this list.    *    * @param ih instruction to insert    */
+block|}
+comment|/**      * Insert an instruction at start of this list.      *      * @param ih instruction to insert      */
 specifier|private
 name|void
 name|insert
@@ -1466,7 +1494,7 @@ name|length
 operator|++
 expr_stmt|;
 block|}
-comment|/**    * Insert another list before Instruction i contained in this list.    * Consumes argument list, i.e., it becomes empty.    *    * @param i  where to append the instruction list     * @param il Instruction list to insert    * @return instruction handle pointing to the first inserted instruction,    * i.e., il.getStart()    */
+comment|/**      * Insert another list before Instruction i contained in this list.      * Consumes argument list, i.e., it becomes empty.      *      * @param i  where to append the instruction list       * @param il Instruction list to insert      * @return instruction handle pointing to the first inserted instruction,      * i.e., il.getStart()      */
 specifier|public
 name|InstructionHandle
 name|insert
@@ -1494,6 +1522,7 @@ operator|)
 operator|==
 literal|null
 condition|)
+block|{
 throw|throw
 operator|new
 name|ClassGenException
@@ -1505,6 +1534,7 @@ operator|+
 literal|" is not contained in this list."
 argument_list|)
 throw|;
+block|}
 return|return
 name|insert
 argument_list|(
@@ -1514,7 +1544,7 @@ name|il
 argument_list|)
 return|;
 block|}
-comment|/**    * Insert an instruction at start of this list.    *    * @param i instruction to insert    * @return instruction handle of the inserted instruction    */
+comment|/**      * Insert an instruction at start of this list.      *      * @param i instruction to insert      * @return instruction handle of the inserted instruction      */
 specifier|public
 name|InstructionHandle
 name|insert
@@ -1542,7 +1572,7 @@ return|return
 name|ih
 return|;
 block|}
-comment|/**    * Insert a branch instruction at start of this list.    *    * @param i branch instruction to insert    * @return branch instruction handle of the appended instruction    */
+comment|/**      * Insert a branch instruction at start of this list.      *      * @param i branch instruction to insert      * @return branch instruction handle of the appended instruction      */
 specifier|public
 name|BranchHandle
 name|insert
@@ -1570,7 +1600,7 @@ return|return
 name|ih
 return|;
 block|}
-comment|/**    * Insert a single instruction j before another instruction i, which    * must be in this list of course!    *    * @param i Instruction in list    * @param j Instruction to insert before i in list    * @return instruction handle of the first inserted instruction    */
+comment|/**      * Insert a single instruction j before another instruction i, which      * must be in this list of course!      *      * @param i Instruction in list      * @param j Instruction to insert before i in list      * @return instruction handle of the first inserted instruction      */
 specifier|public
 name|InstructionHandle
 name|insert
@@ -1595,7 +1625,7 @@ argument_list|)
 argument_list|)
 return|;
 block|}
-comment|/**    * Insert a compound instruction before instruction i.    *    * @param i Instruction in list    * @param c The composite instruction (containing an InstructionList)    * @return instruction handle of the first inserted instruction    */
+comment|/**      * Insert a compound instruction before instruction i.      *      * @param i Instruction in list      * @param c The composite instruction (containing an InstructionList)      * @return instruction handle of the first inserted instruction      */
 specifier|public
 name|InstructionHandle
 name|insert
@@ -1619,7 +1649,7 @@ argument_list|()
 argument_list|)
 return|;
 block|}
-comment|/**    * Insert a compound instruction.    *    * @param c The composite instruction (containing an InstructionList)    * @return instruction handle of the first inserted instruction    */
+comment|/**      * Insert a compound instruction.      *      * @param c The composite instruction (containing an InstructionList)      * @return instruction handle of the first inserted instruction      */
 specifier|public
 name|InstructionHandle
 name|insert
@@ -1638,7 +1668,7 @@ argument_list|()
 argument_list|)
 return|;
 block|}
-comment|/**    * Insert an instruction before instruction (handle) ih contained in this list.    *    * @param ih where to insert to the instruction list     * @param i Instruction to insert    * @return instruction handle of the first inserted instruction    */
+comment|/**      * Insert an instruction before instruction (handle) ih contained in this list.      *      * @param ih where to insert to the instruction list       * @param i Instruction to insert      * @return instruction handle of the first inserted instruction      */
 specifier|public
 name|InstructionHandle
 name|insert
@@ -1663,7 +1693,7 @@ argument_list|)
 argument_list|)
 return|;
 block|}
-comment|/**    * Insert a compound instruction.    *    * @param ih where to insert the instruction list     * @param c The composite instruction (containing an InstructionList)    * @return instruction handle of the first inserted instruction    */
+comment|/**      * Insert a compound instruction.      *      * @param ih where to insert the instruction list       * @param c The composite instruction (containing an InstructionList)      * @return instruction handle of the first inserted instruction      */
 specifier|public
 name|InstructionHandle
 name|insert
@@ -1687,7 +1717,7 @@ argument_list|()
 argument_list|)
 return|;
 block|}
-comment|/**    * Insert an instruction before instruction (handle) ih contained in this list.    *    * @param ih where to insert to the instruction list     * @param i Instruction to insert    * @return instruction handle of the first inserted instruction    */
+comment|/**      * Insert an instruction before instruction (handle) ih contained in this list.      *      * @param ih where to insert to the instruction list       * @param i Instruction to insert      * @return instruction handle of the first inserted instruction      */
 specifier|public
 name|BranchHandle
 name|insert
@@ -1734,7 +1764,7 @@ return|return
 name|bh
 return|;
 block|}
-comment|/**    * Take all instructions (handles) from "start" to "end" and append them after the    * new location "target". Of course, "end" must be after "start" and target must    * not be located withing this range. If you want to move something to the start of    * the list use null as value for target.<br>    * Any instruction targeters pointing to handles within the block, keep their targets.    *    * @param start  of moved block    * @param end    of moved block    * @param target of moved block    */
+comment|/**      * Take all instructions (handles) from "start" to "end" and append them after the      * new location "target". Of course, "end" must be after "start" and target must      * not be located withing this range. If you want to move something to the start of      * the list use null as value for target.<br>      * Any instruction targeters pointing to handles within the block, keep their targets.      *      * @param start  of moved block      * @param end    of moved block      * @param target of moved block      */
 specifier|public
 name|void
 name|move
@@ -1764,6 +1794,7 @@ operator|==
 literal|null
 operator|)
 condition|)
+block|{
 throw|throw
 operator|new
 name|ClassGenException
@@ -1777,6 +1808,7 @@ operator|+
 name|end
 argument_list|)
 throw|;
+block|}
 if|if
 condition|(
 operator|(
@@ -1791,6 +1823,7 @@ operator|==
 name|end
 operator|)
 condition|)
+block|{
 throw|throw
 operator|new
 name|ClassGenException
@@ -1808,6 +1841,7 @@ operator|+
 name|target
 argument_list|)
 throw|;
+block|}
 for|for
 control|(
 name|InstructionHandle
@@ -1834,7 +1868,7 @@ name|ih
 operator|==
 literal|null
 condition|)
-comment|// At end of list, end not found yet
+block|{
 throw|throw
 operator|new
 name|ClassGenException
@@ -1848,13 +1882,14 @@ operator|+
 name|end
 argument_list|)
 throw|;
+block|}
 if|else if
 condition|(
 name|ih
 operator|==
 name|target
 condition|)
-comment|// target may be null
+block|{
 throw|throw
 operator|new
 name|ClassGenException
@@ -1872,6 +1907,7 @@ operator|+
 name|target
 argument_list|)
 throw|;
+block|}
 block|}
 comment|// Step 2: Temporarily remove the given instructions from the list
 name|InstructionHandle
@@ -1893,40 +1929,46 @@ name|prev
 operator|!=
 literal|null
 condition|)
+block|{
 name|prev
 operator|.
 name|next
 operator|=
 name|next
 expr_stmt|;
+block|}
 else|else
-comment|// start == this.start!
+block|{
 name|this
 operator|.
 name|start
 operator|=
 name|next
 expr_stmt|;
+block|}
 if|if
 condition|(
 name|next
 operator|!=
 literal|null
 condition|)
+block|{
 name|next
 operator|.
 name|prev
 operator|=
 name|prev
 expr_stmt|;
+block|}
 else|else
-comment|// end == this.end!
+block|{
 name|this
 operator|.
 name|end
 operator|=
 name|prev
 expr_stmt|;
+block|}
 name|start
 operator|.
 name|prev
@@ -1954,6 +1996,7 @@ name|start
 operator|!=
 literal|null
 condition|)
+block|{
 name|this
 operator|.
 name|start
@@ -1962,6 +2005,7 @@ name|prev
 operator|=
 name|end
 expr_stmt|;
+block|}
 name|end
 operator|.
 name|next
@@ -2009,13 +2053,16 @@ name|next
 operator|!=
 literal|null
 condition|)
+block|{
 name|next
 operator|.
 name|prev
 operator|=
 name|end
 expr_stmt|;
+block|}
 else|else
+block|{
 name|this
 operator|.
 name|end
@@ -2024,7 +2071,8 @@ name|end
 expr_stmt|;
 block|}
 block|}
-comment|/**    * Move a single instruction (handle) to a new location.    *    * @param ih     moved instruction    * @param target new location of moved instruction    */
+block|}
+comment|/**      * Move a single instruction (handle) to a new location.      *      * @param ih     moved instruction      * @param target new location of moved instruction      */
 specifier|public
 name|void
 name|move
@@ -2046,7 +2094,7 @@ name|target
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**    * Remove from instruction `prev' to instruction `next' both contained    * in this list. Throws TargetLostException when one of the removed instruction handles    * is still being targeted.    *    * @param prev where to start deleting (predecessor, exclusive)    * @param next where to end deleting (successor, exclusive)    */
+comment|/**      * Remove from instruction `prev' to instruction `next' both contained      * in this list. Throws TargetLostException when one of the removed instruction handles      * is still being targeted.      *      * @param prev where to start deleting (predecessor, exclusive)      * @param next where to end deleting (successor, exclusive)      */
 specifier|private
 name|void
 name|remove
@@ -2199,6 +2247,7 @@ name|ih
 operator|.
 name|next
 control|)
+block|{
 name|ih
 operator|.
 name|getInstruction
@@ -2208,6 +2257,7 @@ name|dispose
 argument_list|()
 expr_stmt|;
 comment|// e.g. BranchInstructions release their targets
+block|}
 name|StringBuffer
 name|buf
 init|=
@@ -2284,11 +2334,13 @@ literal|null
 expr_stmt|;
 block|}
 else|else
+block|{
 name|ih
 operator|.
 name|dispose
 argument_list|()
 expr_stmt|;
+block|}
 block|}
 name|buf
 operator|.
@@ -2340,7 +2392,7 @@ argument_list|)
 throw|;
 block|}
 block|}
-comment|/**    * Remove instruction from this list. The corresponding Instruction    * handles must not be reused!    *    * @param ih instruction (handle) to remove     */
+comment|/**      * Remove instruction from this list. The corresponding Instruction      * handles must not be reused!      *      * @param ih instruction (handle) to remove       */
 specifier|public
 name|void
 name|delete
@@ -2363,7 +2415,7 @@ name|next
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**    * Remove instruction from this list. The corresponding Instruction    * handles must not be reused!    *    * @param i instruction to remove    */
+comment|/**      * Remove instruction from this list. The corresponding Instruction      * handles must not be reused!      *      * @param i instruction to remove      */
 specifier|public
 name|void
 name|delete
@@ -2390,6 +2442,7 @@ operator|)
 operator|==
 literal|null
 condition|)
+block|{
 throw|throw
 operator|new
 name|ClassGenException
@@ -2401,13 +2454,14 @@ operator|+
 literal|" is not contained in this list."
 argument_list|)
 throw|;
+block|}
 name|delete
 argument_list|(
 name|ih
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**    * Remove instructions from instruction `from' to instruction `to' contained    * in this list. The user must ensure that `from' is an instruction before    * `to', or risk havoc. The corresponding Instruction handles must not be reused!    *    * @param from where to start deleting (inclusive)    * @param to   where to end deleting (inclusive)    */
+comment|/**      * Remove instructions from instruction `from' to instruction `to' contained      * in this list. The user must ensure that `from' is an instruction before      * `to', or risk havoc. The corresponding Instruction handles must not be reused!      *      * @param from where to start deleting (inclusive)      * @param to   where to end deleting (inclusive)      */
 specifier|public
 name|void
 name|delete
@@ -2433,7 +2487,7 @@ name|next
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**    * Remove instructions from instruction `from' to instruction `to' contained    * in this list. The user must ensure that `from' is an instruction before    * `to', or risk havoc. The corresponding Instruction handles must not be reused!    *    * @param from where to start deleting (inclusive)    * @param to   where to end deleting (inclusive)    */
+comment|/**      * Remove instructions from instruction `from' to instruction `to' contained      * in this list. The user must ensure that `from' is an instruction before      * `to', or risk havoc. The corresponding Instruction handles must not be reused!      *      * @param from where to start deleting (inclusive)      * @param to   where to end deleting (inclusive)      */
 specifier|public
 name|void
 name|delete
@@ -2465,6 +2519,7 @@ operator|)
 operator|==
 literal|null
 condition|)
+block|{
 throw|throw
 operator|new
 name|ClassGenException
@@ -2476,6 +2531,7 @@ operator|+
 literal|" is not contained in this list."
 argument_list|)
 throw|;
+block|}
 if|if
 condition|(
 operator|(
@@ -2489,6 +2545,7 @@ operator|)
 operator|==
 literal|null
 condition|)
+block|{
 throw|throw
 operator|new
 name|ClassGenException
@@ -2500,6 +2557,7 @@ operator|+
 literal|" is not contained in this list."
 argument_list|)
 throw|;
+block|}
 name|delete
 argument_list|(
 name|from_ih
@@ -2508,7 +2566,7 @@ name|to_ih
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**    * Search for given Instruction reference, start at beginning of list.    *    * @param i instruction to search for    * @return instruction found on success, null otherwise    */
+comment|/**      * Search for given Instruction reference, start at beginning of list.      *      * @param i instruction to search for      * @return instruction found on success, null otherwise      */
 specifier|private
 name|InstructionHandle
 name|findInstruction1
@@ -2534,6 +2592,7 @@ name|ih
 operator|.
 name|next
 control|)
+block|{
 if|if
 condition|(
 name|ih
@@ -2542,14 +2601,17 @@ name|instruction
 operator|==
 name|i
 condition|)
+block|{
 return|return
 name|ih
 return|;
+block|}
+block|}
 return|return
 literal|null
 return|;
 block|}
-comment|/**    * Search for given Instruction reference, start at end of list    *    * @param i instruction to search for    * @return instruction found on success, null otherwise    */
+comment|/**      * Search for given Instruction reference, start at end of list      *      * @param i instruction to search for      * @return instruction found on success, null otherwise      */
 specifier|private
 name|InstructionHandle
 name|findInstruction2
@@ -2575,6 +2637,7 @@ name|ih
 operator|.
 name|prev
 control|)
+block|{
 if|if
 condition|(
 name|ih
@@ -2583,9 +2646,12 @@ name|instruction
 operator|==
 name|i
 condition|)
+block|{
 return|return
 name|ih
 return|;
+block|}
+block|}
 return|return
 literal|null
 return|;
@@ -2604,9 +2670,11 @@ name|i
 operator|==
 literal|null
 condition|)
+block|{
 return|return
 literal|false
 return|;
+block|}
 for|for
 control|(
 name|InstructionHandle
@@ -2624,15 +2692,19 @@ name|ih
 operator|.
 name|next
 control|)
+block|{
 if|if
 condition|(
 name|ih
 operator|==
 name|i
 condition|)
+block|{
 return|return
 literal|true
 return|;
+block|}
+block|}
 return|return
 literal|false
 return|;
@@ -2665,7 +2737,7 @@ literal|false
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**    * Give all instructions their position number (offset in byte stream), i.e.,    * make the list ready to be dumped.    *    * @param check Perform sanity checks, e.g. if all targeted instructions really belong    * to this list    */
+comment|/**      * Give all instructions their position number (offset in byte stream), i.e.,      * make the list ready to be dumped.      *      * @param check Perform sanity checks, e.g. if all targeted instructions really belong      * to this list      */
 specifier|public
 name|void
 name|setPositions
@@ -2702,7 +2774,7 @@ index|[
 name|length
 index|]
 decl_stmt|;
-comment|/* Pass 0: Sanity checks      */
+comment|/* Pass 0: Sanity checks          */
 if|if
 condition|(
 name|check
@@ -2764,6 +2836,7 @@ argument_list|(
 name|inst
 argument_list|)
 condition|)
+block|{
 throw|throw
 operator|new
 name|ClassGenException
@@ -2786,6 +2859,7 @@ operator|+
 literal|" not in instruction list"
 argument_list|)
 throw|;
+block|}
 if|if
 condition|(
 name|i
@@ -2841,6 +2915,7 @@ argument_list|(
 name|inst
 argument_list|)
 condition|)
+block|{
 throw|throw
 operator|new
 name|ClassGenException
@@ -2865,6 +2940,7 @@ argument_list|)
 throw|;
 block|}
 block|}
+block|}
 if|if
 condition|(
 operator|!
@@ -2874,6 +2950,7 @@ operator|instanceof
 name|BranchHandle
 operator|)
 condition|)
+block|{
 throw|throw
 operator|new
 name|ClassGenException
@@ -2899,7 +2976,8 @@ throw|;
 block|}
 block|}
 block|}
-comment|/* Pass 1: Set position numbers and sum up the maximum number of bytes an      * instruction may be shifted.      */
+block|}
+comment|/* Pass 1: Set position numbers and sum up the maximum number of bytes an          * instruction may be shifted.          */
 for|for
 control|(
 name|InstructionHandle
@@ -2940,7 +3018,7 @@ index|]
 operator|=
 name|index
 expr_stmt|;
-comment|/* Get an estimate about how many additional bytes may be added, because        * BranchInstructions may have variable length depending on the target        * offset (short vs. int) or alignment issues (TABLESWITCH and        * LOOKUPSWITCH).        */
+comment|/* Get an estimate about how many additional bytes may be added, because              * BranchInstructions may have variable length depending on the target              * offset (short vs. int) or alignment issues (TABLESWITCH and              * LOOKUPSWITCH).              */
 switch|switch
 condition|(
 name|i
@@ -2988,7 +3066,7 @@ name|getLength
 argument_list|()
 expr_stmt|;
 block|}
-comment|/* Pass 2: Expand the variable-length (Branch)Instructions depending on      * the target offset (short or int) and ensure that branch targets are      * within this list.      */
+comment|/* Pass 2: Expand the variable-length (Branch)Instructions depending on          * the target offset (short or int) and ensure that branch targets are          * within this list.          */
 for|for
 control|(
 name|InstructionHandle
@@ -3006,6 +3084,7 @@ name|ih
 operator|.
 name|next
 control|)
+block|{
 name|additional_bytes
 operator|+=
 name|ih
@@ -3017,7 +3096,8 @@ argument_list|,
 name|max_additional_bytes
 argument_list|)
 expr_stmt|;
-comment|/* Pass 3: Update position numbers (which may have changed due to the      * preceding expansions), like pass 1.      */
+block|}
+comment|/* Pass 3: Update position numbers (which may have changed due to the          * preceding expansions), like pass 1.          */
 name|index
 operator|=
 name|count
@@ -3097,7 +3177,7 @@ name|count
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**    * When everything is finished, use this method to convert the instruction    * list into an array of bytes.    *    * @return the byte code ready to be dumped    */
+comment|/**      * When everything is finished, use this method to convert the instruction      * list into an array of bytes.      *      * @return the byte code ready to be dumped      */
 specifier|public
 name|byte
 index|[]
@@ -3187,7 +3267,7 @@ name|toByteArray
 argument_list|()
 return|;
 block|}
-comment|/**    * @return an array of instructions without target information for branch instructions.    */
+comment|/**      * @return an array of instructions without target information for branch instructions.      */
 specifier|public
 name|Instruction
 index|[]
@@ -3286,7 +3366,7 @@ literal|true
 argument_list|)
 return|;
 block|}
-comment|/**    * @param verbose toggle output format    * @return String containing all instructions in this list.    */
+comment|/**      * @param verbose toggle output format      * @return String containing all instructions in this list.      */
 specifier|public
 name|String
 name|toString
@@ -3345,7 +3425,7 @@ name|toString
 argument_list|()
 return|;
 block|}
-comment|/**    * @return Enumeration that lists all instructions (handles)    */
+comment|/**      * @return Enumeration that lists all instructions (handles)      */
 specifier|public
 name|Iterator
 name|iterator
@@ -3407,7 +3487,7 @@ block|}
 block|}
 return|;
 block|}
-comment|/**    * @return array containing all instructions (handles)    */
+comment|/**      * @return array containing all instructions (handles)      */
 specifier|public
 name|InstructionHandle
 index|[]
@@ -3462,7 +3542,7 @@ return|return
 name|ihs
 return|;
 block|}
-comment|/**    * Get positions (offsets) of all instructions in the list. This relies on that    * the list has been freshly created from an byte code array, or that setPositions()    * has been called. Otherwise this may be inaccurate.    *    * @return array containing all instruction's offset in byte code    */
+comment|/**      * Get positions (offsets) of all instructions in the list. This relies on that      * the list has been freshly created from an byte code array, or that setPositions()      * has been called. Otherwise this may be inaccurate.      *      * @return array containing all instruction's offset in byte code      */
 specifier|public
 name|int
 index|[]
@@ -3473,7 +3553,7 @@ return|return
 name|byte_positions
 return|;
 block|}
-comment|/**    * @return complete, i.e., deep copy of this list    */
+comment|/**      * @return complete, i.e., deep copy of this list      */
 specifier|public
 name|InstructionList
 name|copy
@@ -3493,7 +3573,7 @@ operator|new
 name|InstructionList
 argument_list|()
 decl_stmt|;
-comment|/* Pass 1: Make copies of all instructions, append them to the new list      * and associate old instruction references with the new ones, i.e.,      * a 1:1 mapping.      */
+comment|/* Pass 1: Make copies of all instructions, append them to the new list          * and associate old instruction references with the new ones, i.e.,          * a 1:1 mapping.          */
 for|for
 control|(
 name|InstructionHandle
@@ -3534,6 +3614,7 @@ name|c
 operator|instanceof
 name|BranchInstruction
 condition|)
+block|{
 name|map
 operator|.
 name|put
@@ -3551,7 +3632,9 @@ name|c
 argument_list|)
 argument_list|)
 expr_stmt|;
+block|}
 else|else
+block|{
 name|map
 operator|.
 name|put
@@ -3567,7 +3650,8 @@ argument_list|)
 argument_list|)
 expr_stmt|;
 block|}
-comment|/* Pass 2: Update branch targets.      */
+block|}
+comment|/* Pass 2: Update branch targets.          */
 name|InstructionHandle
 name|ih
 init|=
@@ -3741,7 +3825,7 @@ return|return
 name|il
 return|;
 block|}
-comment|/** Replace all references to the old constant pool with references to the new    *  constant pool    */
+comment|/** Replace all references to the old constant pool with references to the new      *  constant pool      */
 specifier|public
 name|void
 name|replaceConstantPool
@@ -3839,7 +3923,7 @@ operator|=
 literal|0
 expr_stmt|;
 block|}
-comment|/**    * Delete contents of list. Provides besser memory utilization,    * because the system then may reuse the instruction handles. This    * method is typically called right after    *<href="MethodGen.html#getMethod()">MethodGen.getMethod()</a>.    */
+comment|/**      * Delete contents of list. Provides besser memory utilization,      * because the system then may reuse the instruction handles. This      * method is typically called right after      *<href="MethodGen.html#getMethod()">MethodGen.getMethod()</a>.      */
 specifier|public
 name|void
 name|dispose
@@ -3863,17 +3947,19 @@ name|ih
 operator|.
 name|prev
 control|)
-comment|/* Causes BranchInstructions to release target and targeters, because it        * calls dispose() on the contained instruction.        */
+block|{
+comment|/* Causes BranchInstructions to release target and targeters, because it              * calls dispose() on the contained instruction.              */
 name|ih
 operator|.
 name|dispose
 argument_list|()
 expr_stmt|;
+block|}
 name|clear
 argument_list|()
 expr_stmt|;
 block|}
-comment|/**    * @return start of list    */
+comment|/**      * @return start of list      */
 specifier|public
 name|InstructionHandle
 name|getStart
@@ -3883,7 +3969,7 @@ return|return
 name|start
 return|;
 block|}
-comment|/**    * @return end of list    */
+comment|/**      * @return end of list      */
 specifier|public
 name|InstructionHandle
 name|getEnd
@@ -3893,7 +3979,7 @@ return|return
 name|end
 return|;
 block|}
-comment|/**    * @return length of list (Number of instructions, not bytes)    */
+comment|/**      * @return length of list (Number of instructions, not bytes)      */
 specifier|public
 name|int
 name|getLength
@@ -3903,7 +3989,7 @@ return|return
 name|length
 return|;
 block|}
-comment|/**    * @return length of list (Number of instructions, not bytes)    */
+comment|/**      * @return length of list (Number of instructions, not bytes)      */
 specifier|public
 name|int
 name|size
@@ -3913,7 +3999,7 @@ return|return
 name|length
 return|;
 block|}
-comment|/**    * Redirect all references from old_target to new_target, i.e., update targets     * of branch instructions.    *    * @param old_target the old target instruction handle    * @param new_target the new target instruction handle    */
+comment|/**      * Redirect all references from old_target to new_target, i.e., update targets       * of branch instructions.      *      * @param old_target the old target instruction handle      * @param new_target the new target instruction handle      */
 specifier|public
 name|void
 name|redirectBranches
@@ -3980,6 +4066,7 @@ name|target
 operator|==
 name|old_target
 condition|)
+block|{
 name|b
 operator|.
 name|setTarget
@@ -3987,6 +4074,7 @@ argument_list|(
 name|new_target
 argument_list|)
 expr_stmt|;
+block|}
 if|if
 condition|(
 name|b
@@ -4025,7 +4113,7 @@ condition|;
 name|j
 operator|++
 control|)
-comment|// Update targets
+block|{
 if|if
 condition|(
 name|targets
@@ -4035,6 +4123,7 @@ index|]
 operator|==
 name|old_target
 condition|)
+block|{
 operator|(
 operator|(
 name|Select
@@ -4053,7 +4142,9 @@ block|}
 block|}
 block|}
 block|}
-comment|/**    * Redirect all references of local variables from old_target to new_target.    *    * @param lg array of local variables    * @param old_target the old target instruction handle    * @param new_target the new target instruction handle    * @see MethodGen    */
+block|}
+block|}
+comment|/**      * Redirect all references of local variables from old_target to new_target.      *      * @param lg array of local variables      * @param old_target the old target instruction handle      * @param new_target the new target instruction handle      * @see MethodGen      */
 specifier|public
 name|void
 name|redirectLocalVariables
@@ -4114,6 +4205,7 @@ name|start
 operator|==
 name|old_target
 condition|)
+block|{
 name|lg
 index|[
 name|i
@@ -4124,12 +4216,14 @@ argument_list|(
 name|new_target
 argument_list|)
 expr_stmt|;
+block|}
 if|if
 condition|(
 name|end
 operator|==
 name|old_target
 condition|)
+block|{
 name|lg
 index|[
 name|i
@@ -4142,7 +4236,8 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/**    * Redirect all references of exception handlers from old_target to new_target.    *    * @param exceptions array of exception handlers    * @param old_target the old target instruction handle    * @param new_target the new target instruction handle    * @see MethodGen    */
+block|}
+comment|/**      * Redirect all references of exception handlers from old_target to new_target.      *      * @param exceptions array of exception handlers      * @param old_target the old target instruction handle      * @param new_target the new target instruction handle      * @see MethodGen      */
 specifier|public
 name|void
 name|redirectExceptionHandlers
@@ -4187,6 +4282,7 @@ argument_list|()
 operator|==
 name|old_target
 condition|)
+block|{
 name|exceptions
 index|[
 name|i
@@ -4197,6 +4293,7 @@ argument_list|(
 name|new_target
 argument_list|)
 expr_stmt|;
+block|}
 if|if
 condition|(
 name|exceptions
@@ -4209,6 +4306,7 @@ argument_list|()
 operator|==
 name|old_target
 condition|)
+block|{
 name|exceptions
 index|[
 name|i
@@ -4219,6 +4317,7 @@ argument_list|(
 name|new_target
 argument_list|)
 expr_stmt|;
+block|}
 if|if
 condition|(
 name|exceptions
@@ -4231,6 +4330,7 @@ argument_list|()
 operator|==
 name|old_target
 condition|)
+block|{
 name|exceptions
 index|[
 name|i
@@ -4243,11 +4343,12 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
+block|}
 specifier|private
 name|List
 name|observers
 decl_stmt|;
-comment|/** Add observer for this object.    */
+comment|/** Add observer for this object.      */
 specifier|public
 name|void
 name|addObserver
@@ -4262,12 +4363,14 @@ name|observers
 operator|==
 literal|null
 condition|)
+block|{
 name|observers
 operator|=
 operator|new
 name|ArrayList
 argument_list|()
 expr_stmt|;
+block|}
 name|observers
 operator|.
 name|add
@@ -4276,7 +4379,7 @@ name|o
 argument_list|)
 expr_stmt|;
 block|}
-comment|/** Remove observer for this object.    */
+comment|/** Remove observer for this object.      */
 specifier|public
 name|void
 name|removeObserver
@@ -4291,6 +4394,7 @@ name|observers
 operator|!=
 literal|null
 condition|)
+block|{
 name|observers
 operator|.
 name|remove
@@ -4299,7 +4403,8 @@ name|o
 argument_list|)
 expr_stmt|;
 block|}
-comment|/** Call notify() method on all observers. This method is not called    * automatically whenever the state has changed, but has to be    * called by the user after he has finished editing the object.    */
+block|}
+comment|/** Call notify() method on all observers. This method is not called      * automatically whenever the state has changed, but has to be      * called by the user after he has finished editing the object.      */
 specifier|public
 name|void
 name|update
@@ -4311,6 +4416,7 @@ name|observers
 operator|!=
 literal|null
 condition|)
+block|{
 for|for
 control|(
 name|Iterator
@@ -4327,6 +4433,7 @@ name|hasNext
 argument_list|()
 condition|;
 control|)
+block|{
 operator|(
 operator|(
 name|InstructionListObserver
@@ -4342,6 +4449,8 @@ argument_list|(
 name|this
 argument_list|)
 expr_stmt|;
+block|}
+block|}
 block|}
 block|}
 end_class

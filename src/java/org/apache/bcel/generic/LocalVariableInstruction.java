@@ -115,7 +115,7 @@ operator|.
 name|MAX_BYTE
 return|;
 block|}
-comment|/**    * Empty constructor needed for the Class.newInstance() statement in    * Instruction.readInstruction(). Not to be used otherwise.    * tag and length are defined in readInstruction and initFromFile, respectively.    */
+comment|/**      * Empty constructor needed for the Class.newInstance() statement in      * Instruction.readInstruction(). Not to be used otherwise.      * tag and length are defined in readInstruction and initFromFile, respectively.      */
 name|LocalVariableInstruction
 parameter_list|(
 name|short
@@ -141,12 +141,12 @@ operator|=
 name|c_tag
 expr_stmt|;
 block|}
-comment|/**    * Empty constructor needed for the Class.newInstance() statement in    * Instruction.readInstruction(). Also used by IINC()!    */
+comment|/**      * Empty constructor needed for the Class.newInstance() statement in      * Instruction.readInstruction(). Also used by IINC()!      */
 name|LocalVariableInstruction
 parameter_list|()
 block|{
 block|}
-comment|/**    * @param opcode Instruction opcode    * @param c_tag Instruction number for compact version, ALOAD_0, e.g.    * @param n local variable index (unsigned short)    */
+comment|/**      * @param opcode Instruction opcode      * @param c_tag Instruction number for compact version, ALOAD_0, e.g.      * @param n local variable index (unsigned short)      */
 specifier|protected
 name|LocalVariableInstruction
 parameter_list|(
@@ -186,7 +186,7 @@ name|n
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**    * Dump instruction as byte code to stream out.    * @param out Output stream    */
+comment|/**      * Dump instruction as byte code to stream out.      * @param out Output stream      */
 specifier|public
 name|void
 name|dump
@@ -202,7 +202,7 @@ condition|(
 name|wide
 argument_list|()
 condition|)
-comment|// Need WIDE prefix ?
+block|{
 name|out
 operator|.
 name|writeByte
@@ -212,6 +212,7 @@ operator|.
 name|WIDE
 argument_list|)
 expr_stmt|;
+block|}
 name|out
 operator|.
 name|writeByte
@@ -232,6 +233,7 @@ condition|(
 name|wide
 argument_list|()
 condition|)
+block|{
 name|out
 operator|.
 name|writeShort
@@ -239,7 +241,9 @@ argument_list|(
 name|n
 argument_list|)
 expr_stmt|;
+block|}
 else|else
+block|{
 name|out
 operator|.
 name|writeByte
@@ -249,7 +253,8 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/**    * Long output format:    *    *&lt;name of opcode&gt; "["&lt;opcode number&gt;"]"     * "("&lt;length of instruction&gt;")" "&lt;"&lt; local variable index&gt;"&gt;"    *    * @param verbose long/short format switch    * @return mnemonic for instruction    */
+block|}
+comment|/**      * Long output format:      *      *&lt;name of opcode&gt; "["&lt;opcode number&gt;"]"       * "("&lt;length of instruction&gt;")" "&lt;"&lt; local variable index&gt;"&gt;"      *      * @param verbose long/short format switch      * @return mnemonic for instruction      */
 specifier|public
 name|String
 name|toString
@@ -296,6 +301,7 @@ name|ASTORE_3
 operator|)
 operator|)
 condition|)
+block|{
 return|return
 name|super
 operator|.
@@ -304,7 +310,9 @@ argument_list|(
 name|verbose
 argument_list|)
 return|;
+block|}
 else|else
+block|{
 return|return
 name|super
 operator|.
@@ -318,7 +326,8 @@ operator|+
 name|n
 return|;
 block|}
-comment|/**    * Read needed data (e.g. index) from file.    * PRE: (ILOAD<= tag<= ALOAD_3) || (ISTORE<= tag<= ASTORE_3)    */
+block|}
+comment|/**      * Read needed data (e.g. index) from file.      * PRE: (ILOAD<= tag<= ALOAD_3) || (ISTORE<= tag<= ASTORE_3)      */
 specifier|protected
 name|void
 name|initFromFile
@@ -448,7 +457,7 @@ literal|1
 expr_stmt|;
 block|}
 block|}
-comment|/**    * @return local variable index  referred by this instruction.    */
+comment|/**      * @return local variable index  referred by this instruction.      */
 specifier|public
 specifier|final
 name|int
@@ -459,7 +468,7 @@ return|return
 name|n
 return|;
 block|}
-comment|/**    * Set the local variable index    */
+comment|/**      * Set the local variable index      */
 specifier|public
 name|void
 name|setIndex
@@ -484,6 +493,7 @@ operator|.
 name|MAX_SHORT
 operator|)
 condition|)
+block|{
 throw|throw
 operator|new
 name|ClassGenException
@@ -493,6 +503,7 @@ operator|+
 name|n
 argument_list|)
 throw|;
+block|}
 name|this
 operator|.
 name|n
@@ -538,19 +549,22 @@ condition|(
 name|wide
 argument_list|()
 condition|)
-comment|// Need WIDE prefix ?
+block|{
 name|length
 operator|=
 literal|4
 expr_stmt|;
+block|}
 else|else
+block|{
 name|length
 operator|=
 literal|2
 expr_stmt|;
 block|}
 block|}
-comment|/** @return canonical tag for instruction, e.g., ALOAD for ALOAD_0    */
+block|}
+comment|/** @return canonical tag for instruction, e.g., ALOAD for ALOAD_0      */
 specifier|public
 name|short
 name|getCanonicalTag
@@ -560,7 +574,7 @@ return|return
 name|canon_tag
 return|;
 block|}
-comment|/**    * Returns the type associated with the instruction -     * in case of ALOAD or ASTORE Type.OBJECT is returned.    * This is just a bit incorrect, because ALOAD and ASTORE    * may work on every ReferenceType (including Type.NULL) and    * ASTORE may even work on a ReturnaddressType .    * @return type associated with the instruction    */
+comment|/**      * Returns the type associated with the instruction -       * in case of ALOAD or ASTORE Type.OBJECT is returned.      * This is just a bit incorrect, because ALOAD and ASTORE      * may work on every ReferenceType (including Type.NULL) and      * ASTORE may even work on a ReturnaddressType .      * @return type associated with the instruction      */
 specifier|public
 name|Type
 name|getType

@@ -45,12 +45,12 @@ name|StackProducer
 implements|,
 name|StackConsumer
 block|{
-comment|/**    * Empty constructor needed for the Class.newInstance() statement in    * Instruction.readInstruction(). Not to be used otherwise.    */
+comment|/**      * Empty constructor needed for the Class.newInstance() statement in      * Instruction.readInstruction(). Not to be used otherwise.      */
 name|ConversionInstruction
 parameter_list|()
 block|{
 block|}
-comment|/**    * @param opcode opcode of instruction    */
+comment|/**      * @param opcode opcode of instruction      */
 specifier|protected
 name|ConversionInstruction
 parameter_list|(
@@ -69,7 +69,7 @@ literal|1
 argument_list|)
 expr_stmt|;
 block|}
-comment|/** @return type associated with the instruction    */
+comment|/** @return type associated with the instruction      */
 specifier|public
 name|Type
 name|getType

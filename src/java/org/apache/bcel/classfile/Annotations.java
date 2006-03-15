@@ -57,7 +57,7 @@ index|[]
 name|annotation_table
 decl_stmt|;
 comment|// Table of annotations
-comment|/** 	 * @param annotation_type the subclass type of the annotation 	 * @param name_index Index pointing to the name<em>Code</em> 	 * @param length Content length in bytes 	 * @param file Input stream 	 * @param constant_pool Array of constants 	 */
+comment|/**      * @param annotation_type the subclass type of the annotation      * @param name_index Index pointing to the name<em>Code</em>      * @param length Content length in bytes      * @param file Input stream      * @param constant_pool Array of constants      */
 name|Annotations
 parameter_list|(
 name|byte
@@ -126,6 +126,7 @@ condition|;
 name|i
 operator|++
 control|)
+block|{
 name|annotation_table
 index|[
 name|i
@@ -140,7 +141,8 @@ name|constant_pool
 argument_list|)
 expr_stmt|;
 block|}
-comment|/** 	 * @param annotation_type the subclass type of the annotation 	 * @param name_index Index pointing to the name<em>Code</em> 	 * @param length Content length in bytes 	 * @param annotation_table the actual annotations 	 * @param constant_pool Array of constants 	 */
+block|}
+comment|/**      * @param annotation_type the subclass type of the annotation      * @param name_index Index pointing to the name<em>Code</em>      * @param length Content length in bytes      * @param annotation_table the actual annotations      * @param constant_pool Array of constants      */
 specifier|public
 name|Annotations
 parameter_list|(
@@ -178,7 +180,7 @@ name|annotation_table
 argument_list|)
 expr_stmt|;
 block|}
-comment|/** 	   * Called by objects that are traversing the nodes of the tree implicitely 	   * defined by the contents of a Java class. I.e., the hierarchy of methods, 	   * fields, attributes, etc. spawns a tree of objects. 	   * 	   * @param v Visitor object 	   */
+comment|/**      * Called by objects that are traversing the nodes of the tree implicitely      * defined by the contents of a Java class. I.e., the hierarchy of methods,      * fields, attributes, etc. spawns a tree of objects.      *      * @param v Visitor object      */
 specifier|public
 name|void
 name|accept
@@ -189,7 +191,7 @@ parameter_list|)
 block|{
 comment|//	    v.visitAnnotation(this);
 block|}
-comment|/** 	   * @param annotation_table the entries to set in this annotation 	   */
+comment|/**      * @param annotation_table the entries to set in this annotation      */
 specifier|public
 specifier|final
 name|void
@@ -221,7 +223,7 @@ operator|.
 name|length
 expr_stmt|;
 block|}
-comment|/** 	   * @return the annotation entry table 	   */
+comment|/**      * @return the annotation entry table      */
 specifier|public
 specifier|final
 name|AnnotationEntry
@@ -233,7 +235,7 @@ return|return
 name|annotation_table
 return|;
 block|}
-comment|/** 	   * returns the array of annotation entries in this annotation 	   */
+comment|/**      * returns the array of annotation entries in this annotation      */
 specifier|public
 name|AnnotationEntry
 index|[]
@@ -244,7 +246,7 @@ return|return
 name|annotation_table
 return|;
 block|}
-comment|/** 	   * @return the number of annotation entries in this annotation 	   */
+comment|/**      * @return the number of annotation entries in this annotation      */
 specifier|public
 specifier|final
 name|int

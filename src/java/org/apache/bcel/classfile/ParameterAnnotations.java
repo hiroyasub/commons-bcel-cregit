@@ -57,7 +57,7 @@ index|[]
 name|parameter_annotation_table
 decl_stmt|;
 comment|// Table of parameter annotations
-comment|/** 	 * @param parameter_annotation_type the subclass type of the parameter annotation 	 * @param name_index Index pointing to the name<em>Code</em> 	 * @param length Content length in bytes 	 * @param file Input stream 	 * @param constant_pool Array of constants 	 */
+comment|/**      * @param parameter_annotation_type the subclass type of the parameter annotation      * @param name_index Index pointing to the name<em>Code</em>      * @param length Content length in bytes      * @param file Input stream      * @param constant_pool Array of constants      */
 name|ParameterAnnotations
 parameter_list|(
 name|byte
@@ -126,6 +126,7 @@ condition|;
 name|i
 operator|++
 control|)
+block|{
 name|parameter_annotation_table
 index|[
 name|i
@@ -140,7 +141,8 @@ name|constant_pool
 argument_list|)
 expr_stmt|;
 block|}
-comment|/** 	 * @param parameter_annotation_type the subclass type of the parameter annotation 	 * @param name_index Index pointing to the name<em>Code</em> 	 * @param length Content length in bytes 	 * @param parameter_annotation_table the actual parameter annotations 	 * @param constant_pool Array of constants 	 */
+block|}
+comment|/**      * @param parameter_annotation_type the subclass type of the parameter annotation      * @param name_index Index pointing to the name<em>Code</em>      * @param length Content length in bytes      * @param parameter_annotation_table the actual parameter annotations      * @param constant_pool Array of constants      */
 specifier|public
 name|ParameterAnnotations
 parameter_list|(
@@ -178,7 +180,7 @@ name|parameter_annotation_table
 argument_list|)
 expr_stmt|;
 block|}
-comment|/** 	   * Called by objects that are traversing the nodes of the tree implicitely 	   * defined by the contents of a Java class. I.e., the hierarchy of methods, 	   * fields, attributes, etc. spawns a tree of objects. 	   * 	   * @param v Visitor object 	   */
+comment|/**      * Called by objects that are traversing the nodes of the tree implicitely      * defined by the contents of a Java class. I.e., the hierarchy of methods,      * fields, attributes, etc. spawns a tree of objects.      *      * @param v Visitor object      */
 specifier|public
 name|void
 name|accept
@@ -189,7 +191,7 @@ parameter_list|)
 block|{
 comment|//	    v.visitParameterAnnotation(this);
 block|}
-comment|/** 	   * @param parameter_annotation_table the entries to set in this parameter annotation 	   */
+comment|/**      * @param parameter_annotation_table the entries to set in this parameter annotation      */
 specifier|public
 specifier|final
 name|void
@@ -221,7 +223,7 @@ operator|.
 name|length
 expr_stmt|;
 block|}
-comment|/** 	   * @return the parameter annotation entry table 	   */
+comment|/**      * @return the parameter annotation entry table      */
 specifier|public
 specifier|final
 name|ParameterAnnotationEntry
@@ -233,7 +235,7 @@ return|return
 name|parameter_annotation_table
 return|;
 block|}
-comment|/** 	   * returns the array of parameter annotation entries in this parameter annotation 	   */
+comment|/**      * returns the array of parameter annotation entries in this parameter annotation      */
 specifier|public
 name|ParameterAnnotationEntry
 index|[]
@@ -244,7 +246,7 @@ return|return
 name|parameter_annotation_table
 return|;
 block|}
-comment|/** 	   * @return the number of parameter annotation entries in this parameter annotation 	   */
+comment|/**      * @return the number of parameter annotation entries in this parameter annotation      */
 specifier|public
 specifier|final
 name|int

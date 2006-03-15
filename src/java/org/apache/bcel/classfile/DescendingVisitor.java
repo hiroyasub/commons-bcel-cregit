@@ -52,7 +52,7 @@ operator|new
 name|Stack
 argument_list|()
 decl_stmt|;
-comment|/** @return container of current entitity, i.e., predecessor during traversal    */
+comment|/** @return container of current entitity, i.e., predecessor during traversal      */
 specifier|public
 name|Object
 name|predecessor
@@ -65,7 +65,7 @@ literal|0
 argument_list|)
 return|;
 block|}
-comment|/**    * @param level nesting level, i.e., 0 returns the direct predecessor    * @return container of current entitity, i.e., predecessor during traversal    */
+comment|/**      * @param level nesting level, i.e., 0 returns the direct predecessor      * @return container of current entitity, i.e., predecessor during traversal      */
 specifier|public
 name|Object
 name|predecessor
@@ -96,10 +96,13 @@ operator|<
 literal|0
 operator|)
 condition|)
+block|{
 return|return
 literal|null
 return|;
+block|}
 else|else
+block|{
 return|return
 name|stack
 operator|.
@@ -116,7 +119,8 @@ argument_list|)
 return|;
 comment|// size - 1 == current
 block|}
-comment|/** @return current object    */
+block|}
+comment|/** @return current object      */
 specifier|public
 name|Object
 name|current
@@ -129,7 +133,7 @@ name|peek
 argument_list|()
 return|;
 block|}
-comment|/**    * @param clazz Class to traverse    * @param visitor visitor object to apply to all components    */
+comment|/**      * @param clazz Class to traverse      * @param visitor visitor object to apply to all components      */
 specifier|public
 name|DescendingVisitor
 parameter_list|(
@@ -153,7 +157,7 @@ operator|=
 name|visitor
 expr_stmt|;
 block|}
-comment|/**    * Start traversal.    */
+comment|/**      * Start traversal.      */
 specifier|public
 name|void
 name|visit
@@ -214,6 +218,7 @@ condition|;
 name|i
 operator|++
 control|)
+block|{
 name|fields
 index|[
 name|i
@@ -224,6 +229,7 @@ argument_list|(
 name|this
 argument_list|)
 expr_stmt|;
+block|}
 name|Method
 index|[]
 name|methods
@@ -249,6 +255,7 @@ condition|;
 name|i
 operator|++
 control|)
+block|{
 name|methods
 index|[
 name|i
@@ -259,6 +266,7 @@ argument_list|(
 name|this
 argument_list|)
 expr_stmt|;
+block|}
 name|Attribute
 index|[]
 name|attributes
@@ -284,6 +292,7 @@ condition|;
 name|i
 operator|++
 control|)
+block|{
 name|attributes
 index|[
 name|i
@@ -294,6 +303,7 @@ argument_list|(
 name|this
 argument_list|)
 expr_stmt|;
+block|}
 name|_clazz
 operator|.
 name|getConstantPool
@@ -357,6 +367,7 @@ condition|;
 name|i
 operator|++
 control|)
+block|{
 name|entries
 index|[
 name|i
@@ -367,6 +378,7 @@ argument_list|(
 name|this
 argument_list|)
 expr_stmt|;
+block|}
 name|stack
 operator|.
 name|pop
@@ -448,6 +460,7 @@ condition|;
 name|i
 operator|++
 control|)
+block|{
 name|attributes
 index|[
 name|i
@@ -458,6 +471,7 @@ argument_list|(
 name|this
 argument_list|)
 expr_stmt|;
+block|}
 name|stack
 operator|.
 name|pop
@@ -539,6 +553,7 @@ condition|;
 name|i
 operator|++
 control|)
+block|{
 name|attributes
 index|[
 name|i
@@ -549,6 +564,7 @@ argument_list|(
 name|this
 argument_list|)
 expr_stmt|;
+block|}
 name|stack
 operator|.
 name|pop
@@ -630,6 +646,7 @@ condition|;
 name|i
 operator|++
 control|)
+block|{
 name|table
 index|[
 name|i
@@ -640,6 +657,7 @@ argument_list|(
 name|this
 argument_list|)
 expr_stmt|;
+block|}
 name|Attribute
 index|[]
 name|attributes
@@ -665,6 +683,7 @@ condition|;
 name|i
 operator|++
 control|)
+block|{
 name|attributes
 index|[
 name|i
@@ -675,6 +694,7 @@ argument_list|(
 name|this
 argument_list|)
 expr_stmt|;
+block|}
 name|stack
 operator|.
 name|pop
@@ -756,6 +776,7 @@ condition|;
 name|i
 operator|++
 control|)
+block|{
 name|numbers
 index|[
 name|i
@@ -766,6 +787,7 @@ argument_list|(
 name|this
 argument_list|)
 expr_stmt|;
+block|}
 name|stack
 operator|.
 name|pop
@@ -847,6 +869,7 @@ condition|;
 name|i
 operator|++
 control|)
+block|{
 name|vars
 index|[
 name|i
@@ -857,6 +880,7 @@ argument_list|(
 name|this
 argument_list|)
 expr_stmt|;
+block|}
 name|stack
 operator|.
 name|pop
@@ -910,6 +934,7 @@ condition|;
 name|i
 operator|++
 control|)
+block|{
 name|vars
 index|[
 name|i
@@ -920,6 +945,7 @@ argument_list|(
 name|this
 argument_list|)
 expr_stmt|;
+block|}
 name|stack
 operator|.
 name|pop
@@ -1039,6 +1065,7 @@ index|]
 operator|!=
 literal|null
 condition|)
+block|{
 name|constants
 index|[
 name|i
@@ -1049,6 +1076,7 @@ argument_list|(
 name|this
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 name|stack
 operator|.
@@ -1411,6 +1439,7 @@ condition|;
 name|i
 operator|++
 control|)
+block|{
 name|ics
 index|[
 name|i
@@ -1421,6 +1450,7 @@ argument_list|(
 name|this
 argument_list|)
 expr_stmt|;
+block|}
 name|stack
 operator|.
 name|pop

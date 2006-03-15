@@ -83,7 +83,7 @@ specifier|private
 name|int
 name|signature_index
 decl_stmt|;
-comment|/**    * Initialize from another object. Note that both objects use the same    * references (shallow copy). Use clone() for a physical copy.    */
+comment|/**      * Initialize from another object. Note that both objects use the same      * references (shallow copy). Use clone() for a physical copy.      */
 specifier|public
 name|Signature
 parameter_list|(
@@ -115,7 +115,7 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**    * Construct object from file stream.    * @param name_index Index in constant pool to CONSTANT_Utf8    * @param length Content length in bytes    * @param file Input stream    * @param constant_pool Array of constants    * @throws IOException    */
+comment|/**      * Construct object from file stream.      * @param name_index Index in constant pool to CONSTANT_Utf8      * @param length Content length in bytes      * @param file Input stream      * @param constant_pool Array of constants      * @throws IOException      */
 name|Signature
 parameter_list|(
 name|int
@@ -148,7 +148,7 @@ name|constant_pool
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**    * @param name_index Index in constant pool to CONSTANT_Utf8    * @param length Content length in bytes    * @param signature_index Index in constant pool to CONSTANT_Utf8    * @param constant_pool Array of constants    */
+comment|/**      * @param name_index Index in constant pool to CONSTANT_Utf8      * @param length Content length in bytes      * @param signature_index Index in constant pool to CONSTANT_Utf8      * @param constant_pool Array of constants      */
 specifier|public
 name|Signature
 parameter_list|(
@@ -185,7 +185,7 @@ operator|=
 name|signature_index
 expr_stmt|;
 block|}
-comment|/**    * Called by objects that are traversing the nodes of the tree implicitely    * defined by the contents of a Java class. I.e., the hierarchy of methods,    * fields, attributes, etc. spawns a tree of objects.    *    * @param v Visitor object    */
+comment|/**      * Called by objects that are traversing the nodes of the tree implicitely      * defined by the contents of a Java class. I.e., the hierarchy of methods,      * fields, attributes, etc. spawns a tree of objects.      *      * @param v Visitor object      */
 specifier|public
 name|void
 name|accept
@@ -203,7 +203,7 @@ name|this
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**    * Dump source file attribute to file stream in binary format.    *    * @param file Output file stream    * @throws IOException    */
+comment|/**      * Dump source file attribute to file stream in binary format.      *      * @param file Output file stream      * @throws IOException      */
 specifier|public
 specifier|final
 name|void
@@ -230,7 +230,7 @@ name|signature_index
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**    * @return Index in constant pool of source file name.    */
+comment|/**      * @return Index in constant pool of source file name.      */
 specifier|public
 specifier|final
 name|int
@@ -241,7 +241,7 @@ return|return
 name|signature_index
 return|;
 block|}
-comment|/**    * @param signature_index the index info the constant pool of this signature    */
+comment|/**      * @param signature_index the index info the constant pool of this signature      */
 specifier|public
 specifier|final
 name|void
@@ -258,7 +258,7 @@ operator|=
 name|signature_index
 expr_stmt|;
 block|}
-comment|/**    * @return GJ signature.    */
+comment|/**      * @return GJ signature.      */
 specifier|public
 specifier|final
 name|String
@@ -289,7 +289,7 @@ name|getBytes
 argument_list|()
 return|;
 block|}
-comment|/**    * Extends ByteArrayInputStream to make 'unreading' chars possible.    */
+comment|/**      * Extends ByteArrayInputStream to make 'unreading' chars possible.      */
 specifier|private
 specifier|static
 specifier|final
@@ -359,9 +359,11 @@ name|pos
 operator|>
 literal|0
 condition|)
+block|{
 name|pos
 operator|--
 expr_stmt|;
+block|}
 block|}
 block|}
 specifier|private
@@ -413,6 +415,7 @@ operator|==
 operator|-
 literal|1
 condition|)
+block|{
 throw|throw
 operator|new
 name|RuntimeException
@@ -427,6 +430,7 @@ operator|+
 literal|" no ident, reaching EOF"
 argument_list|)
 throw|;
+block|}
 comment|//System.out.println("return from ident:" + (char)ch);
 if|if
 condition|(
@@ -538,11 +542,13 @@ condition|;
 name|i
 operator|++
 control|)
+block|{
 name|in
 operator|.
 name|unread
 argument_list|()
 expr_stmt|;
+block|}
 block|}
 return|return;
 block|}
@@ -634,11 +640,13 @@ operator|!=
 operator|-
 literal|1
 condition|)
+block|{
 name|in
 operator|.
 name|unread
 argument_list|()
 expr_stmt|;
+block|}
 block|}
 specifier|private
 specifier|static
@@ -732,6 +740,7 @@ operator|==
 operator|-
 literal|1
 condition|)
+block|{
 throw|throw
 operator|new
 name|RuntimeException
@@ -746,6 +755,7 @@ operator|+
 literal|" reaching EOF"
 argument_list|)
 throw|;
+block|}
 comment|//System.out.println("Still no>");
 name|buf
 operator|.
@@ -781,11 +791,13 @@ argument_list|)
 expr_stmt|;
 block|}
 else|else
+block|{
 name|in
 operator|.
 name|unread
 argument_list|()
 expr_stmt|;
+block|}
 name|ch
 operator|=
 name|in
@@ -834,6 +846,7 @@ name|ch
 operator|!=
 literal|';'
 condition|)
+block|{
 throw|throw
 operator|new
 name|RuntimeException
@@ -853,6 +866,7 @@ operator|)
 name|ch
 argument_list|)
 throw|;
+block|}
 block|}
 specifier|public
 specifier|static
@@ -945,7 +959,7 @@ literal|">;"
 argument_list|)
 return|;
 block|}
-comment|/**    * @return String representation    */
+comment|/**      * @return String representation      */
 specifier|public
 specifier|final
 name|String
@@ -966,7 +980,7 @@ operator|+
 literal|")"
 return|;
 block|}
-comment|/**    * @return deep copy of this attribute    */
+comment|/**      * @return deep copy of this attribute      */
 specifier|public
 name|Attribute
 name|copy

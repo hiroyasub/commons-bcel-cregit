@@ -341,7 +341,7 @@ name|i
 expr_stmt|;
 block|}
 block|}
-comment|/**    * Initialize with given array of constants.    *    * @param cs array of given constants, new ones will be appended    */
+comment|/**      * Initialize with given array of constants.      *      * @param cs array of given constants, new ones will be appended      */
 specifier|public
 name|ConstantPoolGen
 parameter_list|(
@@ -399,12 +399,14 @@ name|length
 operator|>
 literal|0
 condition|)
+block|{
 name|index
 operator|=
 name|cs
 operator|.
 name|length
 expr_stmt|;
+block|}
 for|for
 control|(
 name|int
@@ -475,6 +477,7 @@ argument_list|(
 name|key
 argument_list|)
 condition|)
+block|{
 name|string_table
 operator|.
 name|put
@@ -488,6 +491,7 @@ name|i
 argument_list|)
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 if|else if
 condition|(
@@ -536,6 +540,7 @@ argument_list|(
 name|key
 argument_list|)
 condition|)
+block|{
 name|class_table
 operator|.
 name|put
@@ -549,6 +554,7 @@ name|i
 argument_list|)
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 if|else if
 condition|(
@@ -618,6 +624,7 @@ argument_list|(
 name|key
 argument_list|)
 condition|)
+block|{
 name|n_a_t_table
 operator|.
 name|put
@@ -631,6 +638,7 @@ name|i
 argument_list|)
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 if|else if
 condition|(
@@ -665,6 +673,7 @@ argument_list|(
 name|key
 argument_list|)
 condition|)
+block|{
 name|utf8_table
 operator|.
 name|put
@@ -678,6 +687,7 @@ name|i
 argument_list|)
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 if|else if
 condition|(
@@ -804,20 +814,24 @@ name|c
 operator|instanceof
 name|ConstantInterfaceMethodref
 condition|)
+block|{
 name|delim
 operator|=
 name|IMETHODREF_DELIM
 expr_stmt|;
+block|}
 if|else if
 condition|(
 name|c
 operator|instanceof
 name|ConstantFieldref
 condition|)
+block|{
 name|delim
 operator|=
 name|FIELDREF_DELIM
 expr_stmt|;
+block|}
 name|String
 name|key
 init|=
@@ -841,6 +855,7 @@ argument_list|(
 name|key
 argument_list|)
 condition|)
+block|{
 name|cp_table
 operator|.
 name|put
@@ -857,7 +872,8 @@ expr_stmt|;
 block|}
 block|}
 block|}
-comment|/**    * Initialize with given constant pool.    */
+block|}
+comment|/**      * Initialize with given constant pool.      */
 specifier|public
 name|ConstantPoolGen
 parameter_list|(
@@ -874,13 +890,13 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**    * Create empty constant pool.    */
+comment|/**      * Create empty constant pool.      */
 specifier|public
 name|ConstantPoolGen
 parameter_list|()
 block|{
 block|}
-comment|/** Resize internal array of constants.    */
+comment|/** Resize internal array of constants.      */
 specifier|protected
 name|void
 name|adjustSize
@@ -938,7 +954,7 @@ operator|new
 name|HashMap
 argument_list|()
 decl_stmt|;
-comment|/**     * Look for ConstantString in ConstantPool containing String `str'.    *    * @param str String to search for    * @return index on success, -1 otherwise    */
+comment|/**       * Look for ConstantString in ConstantPool containing String `str'.      *      * @param str String to search for      * @return index on success, -1 otherwise      */
 specifier|public
 name|int
 name|lookupString
@@ -975,7 +991,7 @@ operator|-
 literal|1
 return|;
 block|}
-comment|/**    * Add a new String constant to the ConstantPool, if it is not already in there.    *    * @param str String to add    * @return index of entry    */
+comment|/**      * Add a new String constant to the ConstantPool, if it is not already in there.      *      * @param str String to add      * @return index of entry      */
 specifier|public
 name|int
 name|addString
@@ -1001,10 +1017,12 @@ operator|!=
 operator|-
 literal|1
 condition|)
+block|{
 return|return
 name|ret
 return|;
 comment|// Already in CP
+block|}
 name|int
 name|utf8
 init|=
@@ -1047,6 +1065,7 @@ argument_list|(
 name|str
 argument_list|)
 condition|)
+block|{
 name|string_table
 operator|.
 name|put
@@ -1060,6 +1079,7 @@ name|ret
 argument_list|)
 argument_list|)
 expr_stmt|;
+block|}
 return|return
 name|ret
 return|;
@@ -1072,7 +1092,7 @@ operator|new
 name|HashMap
 argument_list|()
 decl_stmt|;
-comment|/**    * Look for ConstantClass in ConstantPool named `str'.    *    * @param str String to search for    * @return index on success, -1 otherwise    */
+comment|/**      * Look for ConstantClass in ConstantPool named `str'.      *      * @param str String to search for      * @return index on success, -1 otherwise      */
 specifier|public
 name|int
 name|lookupClass
@@ -1141,10 +1161,12 @@ operator|!=
 operator|-
 literal|1
 condition|)
+block|{
 return|return
 name|ret
 return|;
 comment|// Already in CP
+block|}
 name|adjustSize
 argument_list|()
 expr_stmt|;
@@ -1182,6 +1204,7 @@ argument_list|(
 name|clazz
 argument_list|)
 condition|)
+block|{
 name|class_table
 operator|.
 name|put
@@ -1195,11 +1218,12 @@ name|ret
 argument_list|)
 argument_list|)
 expr_stmt|;
+block|}
 return|return
 name|ret
 return|;
 block|}
-comment|/**    * Add a new Class reference to the ConstantPool, if it is not already in there.    *    * @param str Class to add    * @return index of entry    */
+comment|/**      * Add a new Class reference to the ConstantPool, if it is not already in there.      *      * @param str Class to add      * @return index of entry      */
 specifier|public
 name|int
 name|addClass
@@ -1222,7 +1246,7 @@ argument_list|)
 argument_list|)
 return|;
 block|}
-comment|/**    * Add a new Class reference to the ConstantPool for a given type.    *    * @param type Class to add    * @return index of entry    */
+comment|/**      * Add a new Class reference to the ConstantPool for a given type.      *      * @param type Class to add      * @return index of entry      */
 specifier|public
 name|int
 name|addClass
@@ -1241,7 +1265,7 @@ argument_list|()
 argument_list|)
 return|;
 block|}
-comment|/**    * Add a reference to an array class (e.g. String[][]) as needed by MULTIANEWARRAY    * instruction, e.g. to the ConstantPool.    *    * @param type type of array class    * @return index of entry    */
+comment|/**      * Add a reference to an array class (e.g. String[][]) as needed by MULTIANEWARRAY      * instruction, e.g. to the ConstantPool.      *      * @param type type of array class      * @return index of entry      */
 specifier|public
 name|int
 name|addArrayClass
@@ -1260,7 +1284,7 @@ argument_list|()
 argument_list|)
 return|;
 block|}
-comment|/**     * Look for ConstantInteger in ConstantPool.    *    * @param n integer number to look for    * @return index on success, -1 otherwise    */
+comment|/**       * Look for ConstantInteger in ConstantPool.      *      * @param n integer number to look for      * @return index on success, -1 otherwise      */
 specifier|public
 name|int
 name|lookupInteger
@@ -1314,9 +1338,11 @@ argument_list|()
 operator|==
 name|n
 condition|)
+block|{
 return|return
 name|i
 return|;
+block|}
 block|}
 block|}
 return|return
@@ -1324,7 +1350,7 @@ operator|-
 literal|1
 return|;
 block|}
-comment|/**    * Add a new Integer constant to the ConstantPool, if it is not already in there.    *    * @param n integer number to add    * @return index of entry    */
+comment|/**      * Add a new Integer constant to the ConstantPool, if it is not already in there.      *      * @param n integer number to add      * @return index of entry      */
 specifier|public
 name|int
 name|addInteger
@@ -1350,10 +1376,12 @@ operator|!=
 operator|-
 literal|1
 condition|)
+block|{
 return|return
 name|ret
 return|;
 comment|// Already in CP
+block|}
 name|adjustSize
 argument_list|()
 expr_stmt|;
@@ -1377,7 +1405,7 @@ return|return
 name|ret
 return|;
 block|}
-comment|/**     * Look for ConstantFloat in ConstantPool.    *    * @param n Float number to look for    * @return index on success, -1 otherwise    */
+comment|/**       * Look for ConstantFloat in ConstantPool.      *      * @param n Float number to look for      * @return index on success, -1 otherwise      */
 specifier|public
 name|int
 name|lookupFloat
@@ -1446,9 +1474,11 @@ argument_list|)
 operator|==
 name|bits
 condition|)
+block|{
 return|return
 name|i
 return|;
+block|}
 block|}
 block|}
 return|return
@@ -1456,7 +1486,7 @@ operator|-
 literal|1
 return|;
 block|}
-comment|/**    * Add a new Float constant to the ConstantPool, if it is not already in there.    *    * @param n Float number to add    * @return index of entry    */
+comment|/**      * Add a new Float constant to the ConstantPool, if it is not already in there.      *      * @param n Float number to add      * @return index of entry      */
 specifier|public
 name|int
 name|addFloat
@@ -1482,10 +1512,12 @@ operator|!=
 operator|-
 literal|1
 condition|)
+block|{
 return|return
 name|ret
 return|;
 comment|// Already in CP
+block|}
 name|adjustSize
 argument_list|()
 expr_stmt|;
@@ -1517,7 +1549,7 @@ operator|new
 name|HashMap
 argument_list|()
 decl_stmt|;
-comment|/**     * Look for ConstantUtf8 in ConstantPool.    *    * @param n Utf8 string to look for    * @return index on success, -1 otherwise    */
+comment|/**       * Look for ConstantUtf8 in ConstantPool.      *      * @param n Utf8 string to look for      * @return index on success, -1 otherwise      */
 specifier|public
 name|int
 name|lookupUtf8
@@ -1554,7 +1586,7 @@ operator|-
 literal|1
 return|;
 block|}
-comment|/**    * Add a new Utf8 constant to the ConstantPool, if it is not already in there.    *    * @param n Utf8 string to add    * @return index of entry    */
+comment|/**      * Add a new Utf8 constant to the ConstantPool, if it is not already in there.      *      * @param n Utf8 string to add      * @return index of entry      */
 specifier|public
 name|int
 name|addUtf8
@@ -1580,10 +1612,12 @@ operator|!=
 operator|-
 literal|1
 condition|)
+block|{
 return|return
 name|ret
 return|;
 comment|// Already in CP
+block|}
 name|adjustSize
 argument_list|()
 expr_stmt|;
@@ -1613,6 +1647,7 @@ argument_list|(
 name|n
 argument_list|)
 condition|)
+block|{
 name|utf8_table
 operator|.
 name|put
@@ -1626,11 +1661,12 @@ name|ret
 argument_list|)
 argument_list|)
 expr_stmt|;
+block|}
 return|return
 name|ret
 return|;
 block|}
-comment|/**     * Look for ConstantLong in ConstantPool.    *    * @param n Long number to look for    * @return index on success, -1 otherwise    */
+comment|/**       * Look for ConstantLong in ConstantPool.      *      * @param n Long number to look for      * @return index on success, -1 otherwise      */
 specifier|public
 name|int
 name|lookupLong
@@ -1684,9 +1720,11 @@ argument_list|()
 operator|==
 name|n
 condition|)
+block|{
 return|return
 name|i
 return|;
+block|}
 block|}
 block|}
 return|return
@@ -1694,7 +1732,7 @@ operator|-
 literal|1
 return|;
 block|}
-comment|/**    * Add a new long constant to the ConstantPool, if it is not already in there.    *    * @param n Long number to add    * @return index of entry    */
+comment|/**      * Add a new long constant to the ConstantPool, if it is not already in there.      *      * @param n Long number to add      * @return index of entry      */
 specifier|public
 name|int
 name|addLong
@@ -1720,10 +1758,12 @@ operator|!=
 operator|-
 literal|1
 condition|)
+block|{
 return|return
 name|ret
 return|;
 comment|// Already in CP
+block|}
 name|adjustSize
 argument_list|()
 expr_stmt|;
@@ -1751,7 +1791,7 @@ return|return
 name|ret
 return|;
 block|}
-comment|/**     * Look for ConstantDouble in ConstantPool.    *    * @param n Double number to look for    * @return index on success, -1 otherwise    */
+comment|/**       * Look for ConstantDouble in ConstantPool.      *      * @param n Double number to look for      * @return index on success, -1 otherwise      */
 specifier|public
 name|int
 name|lookupDouble
@@ -1820,9 +1860,11 @@ argument_list|)
 operator|==
 name|bits
 condition|)
+block|{
 return|return
 name|i
 return|;
+block|}
 block|}
 block|}
 return|return
@@ -1830,7 +1872,7 @@ operator|-
 literal|1
 return|;
 block|}
-comment|/**    * Add a new double constant to the ConstantPool, if it is not already in there.    *    * @param n Double number to add    * @return index of entry    */
+comment|/**      * Add a new double constant to the ConstantPool, if it is not already in there.      *      * @param n Double number to add      * @return index of entry      */
 specifier|public
 name|int
 name|addDouble
@@ -1856,10 +1898,12 @@ operator|!=
 operator|-
 literal|1
 condition|)
+block|{
 return|return
 name|ret
 return|;
 comment|// Already in CP
+block|}
 name|adjustSize
 argument_list|()
 expr_stmt|;
@@ -1895,7 +1939,7 @@ operator|new
 name|HashMap
 argument_list|()
 decl_stmt|;
-comment|/**     * Look for ConstantNameAndType in ConstantPool.    *    * @param name of variable/method    * @param signature of variable/method    * @return index on success, -1 otherwise    */
+comment|/**       * Look for ConstantNameAndType in ConstantPool.      *      * @param name of variable/method      * @param signature of variable/method      * @return index on success, -1 otherwise      */
 specifier|public
 name|int
 name|lookupNameAndType
@@ -1939,7 +1983,7 @@ operator|-
 literal|1
 return|;
 block|}
-comment|/**    * Add a new NameAndType constant to the ConstantPool if it is not already     * in there.    *    * @param name Name string to add    * @param signature signature string to add    * @return index of entry    */
+comment|/**      * Add a new NameAndType constant to the ConstantPool if it is not already       * in there.      *      * @param name Name string to add      * @param signature signature string to add      * @return index of entry      */
 specifier|public
 name|int
 name|addNameAndType
@@ -1975,10 +2019,12 @@ operator|!=
 operator|-
 literal|1
 condition|)
+block|{
 return|return
 name|ret
 return|;
 comment|// Already in CP
+block|}
 name|adjustSize
 argument_list|()
 expr_stmt|;
@@ -2033,6 +2079,7 @@ argument_list|(
 name|key
 argument_list|)
 condition|)
+block|{
 name|n_a_t_table
 operator|.
 name|put
@@ -2046,6 +2093,7 @@ name|ret
 argument_list|)
 argument_list|)
 expr_stmt|;
+block|}
 return|return
 name|ret
 return|;
@@ -2058,7 +2106,7 @@ operator|new
 name|HashMap
 argument_list|()
 decl_stmt|;
-comment|/**     * Look for ConstantMethodref in ConstantPool.    *    * @param class_name Where to find method    * @param method_name Guess what    * @param signature return and argument types    * @return index on success, -1 otherwise    */
+comment|/**       * Look for ConstantMethodref in ConstantPool.      *      * @param class_name Where to find method      * @param method_name Guess what      * @param signature return and argument types      * @return index on success, -1 otherwise      */
 specifier|public
 name|int
 name|lookupMethodref
@@ -2137,7 +2185,7 @@ argument_list|()
 argument_list|)
 return|;
 block|}
-comment|/**    * Add a new Methodref constant to the ConstantPool, if it is not already     * in there.    *    * @param class_name class name string to add    * @param method_name method name string to add    * @param signature method signature string to add    * @return index of entry    */
+comment|/**      * Add a new Methodref constant to the ConstantPool, if it is not already       * in there.      *      * @param class_name class name string to add      * @param method_name method name string to add      * @param signature method signature string to add      * @return index of entry      */
 specifier|public
 name|int
 name|addMethodref
@@ -2177,10 +2225,12 @@ operator|!=
 operator|-
 literal|1
 condition|)
+block|{
 return|return
 name|ret
 return|;
 comment|// Already in CP
+block|}
 name|adjustSize
 argument_list|()
 expr_stmt|;
@@ -2241,6 +2291,7 @@ argument_list|(
 name|key
 argument_list|)
 condition|)
+block|{
 name|cp_table
 operator|.
 name|put
@@ -2254,6 +2305,7 @@ name|ret
 argument_list|)
 argument_list|)
 expr_stmt|;
+block|}
 return|return
 name|ret
 return|;
@@ -2286,7 +2338,7 @@ argument_list|()
 argument_list|)
 return|;
 block|}
-comment|/**     * Look for ConstantInterfaceMethodref in ConstantPool.    *    * @param class_name Where to find method    * @param method_name Guess what    * @param signature return and argument types    * @return index on success, -1 otherwise    */
+comment|/**       * Look for ConstantInterfaceMethodref in ConstantPool.      *      * @param class_name Where to find method      * @param method_name Guess what      * @param signature return and argument types      * @return index on success, -1 otherwise      */
 specifier|public
 name|int
 name|lookupInterfaceMethodref
@@ -2365,7 +2417,7 @@ argument_list|()
 argument_list|)
 return|;
 block|}
-comment|/**    * Add a new InterfaceMethodref constant to the ConstantPool, if it is not already     * in there.    *    * @param class_name class name string to add    * @param method_name method name string to add    * @param signature signature string to add    * @return index of entry    */
+comment|/**      * Add a new InterfaceMethodref constant to the ConstantPool, if it is not already       * in there.      *      * @param class_name class name string to add      * @param method_name method name string to add      * @param signature signature string to add      * @return index of entry      */
 specifier|public
 name|int
 name|addInterfaceMethodref
@@ -2405,10 +2457,12 @@ operator|!=
 operator|-
 literal|1
 condition|)
+block|{
 return|return
 name|ret
 return|;
 comment|// Already in CP
+block|}
 name|adjustSize
 argument_list|()
 expr_stmt|;
@@ -2469,6 +2523,7 @@ argument_list|(
 name|key
 argument_list|)
 condition|)
+block|{
 name|cp_table
 operator|.
 name|put
@@ -2482,6 +2537,7 @@ name|ret
 argument_list|)
 argument_list|)
 expr_stmt|;
+block|}
 return|return
 name|ret
 return|;
@@ -2514,7 +2570,7 @@ argument_list|()
 argument_list|)
 return|;
 block|}
-comment|/**     * Look for ConstantFieldref in ConstantPool.    *    * @param class_name Where to find method    * @param field_name Guess what    * @param signature return and argument types    * @return index on success, -1 otherwise    */
+comment|/**       * Look for ConstantFieldref in ConstantPool.      *      * @param class_name Where to find method      * @param field_name Guess what      * @param signature return and argument types      * @return index on success, -1 otherwise      */
 specifier|public
 name|int
 name|lookupFieldref
@@ -2565,7 +2621,7 @@ operator|-
 literal|1
 return|;
 block|}
-comment|/**    * Add a new Fieldref constant to the ConstantPool, if it is not already     * in there.    *    * @param class_name class name string to add    * @param field_name field name string to add    * @param signature signature string to add    * @return index of entry    */
+comment|/**      * Add a new Fieldref constant to the ConstantPool, if it is not already       * in there.      *      * @param class_name class name string to add      * @param field_name field name string to add      * @param signature signature string to add      * @return index of entry      */
 specifier|public
 name|int
 name|addFieldref
@@ -2606,10 +2662,12 @@ operator|!=
 operator|-
 literal|1
 condition|)
+block|{
 return|return
 name|ret
 return|;
 comment|// Already in CP
+block|}
 name|adjustSize
 argument_list|()
 expr_stmt|;
@@ -2670,6 +2728,7 @@ argument_list|(
 name|key
 argument_list|)
 condition|)
+block|{
 name|cp_table
 operator|.
 name|put
@@ -2683,11 +2742,12 @@ name|ret
 argument_list|)
 argument_list|)
 expr_stmt|;
+block|}
 return|return
 name|ret
 return|;
 block|}
-comment|/**    * @param i index in constant pool    * @return constant pool entry at index i    */
+comment|/**      * @param i index in constant pool      * @return constant pool entry at index i      */
 specifier|public
 name|Constant
 name|getConstant
@@ -2703,7 +2763,7 @@ name|i
 index|]
 return|;
 block|}
-comment|/**    * Use with care!    *    * @param i index in constant pool    * @param c new constant pool entry at index i    */
+comment|/**      * Use with care!      *      * @param i index in constant pool      * @param c new constant pool entry at index i      */
 specifier|public
 name|void
 name|setConstant
@@ -2723,7 +2783,7 @@ operator|=
 name|c
 expr_stmt|;
 block|}
-comment|/**    * @return intermediate constant pool    */
+comment|/**      * @return intermediate constant pool      */
 specifier|public
 name|ConstantPool
 name|getConstantPool
@@ -2737,7 +2797,7 @@ name|constants
 argument_list|)
 return|;
 block|}
-comment|/**    * @return current size of constant pool    */
+comment|/**      * @return current size of constant pool      */
 specifier|public
 name|int
 name|getSize
@@ -2747,7 +2807,7 @@ return|return
 name|index
 return|;
 block|}
-comment|/**    * @return constant pool with proper length    */
+comment|/**      * @return constant pool with proper length      */
 specifier|public
 name|ConstantPool
 name|getFinalConstantPool
@@ -2786,7 +2846,7 @@ name|cs
 argument_list|)
 return|;
 block|}
-comment|/**    * @return String representation.    */
+comment|/**      * @return String representation.      */
 specifier|public
 name|String
 name|toString
@@ -2813,6 +2873,7 @@ condition|;
 name|i
 operator|++
 control|)
+block|{
 name|buf
 operator|.
 name|append
@@ -2838,6 +2899,7 @@ argument_list|(
 literal|"\n"
 argument_list|)
 expr_stmt|;
+block|}
 return|return
 name|buf
 operator|.
@@ -2845,7 +2907,7 @@ name|toString
 argument_list|()
 return|;
 block|}
-comment|/** Import constant from another ConstantPool and return new index.    */
+comment|/** Import constant from another ConstantPool and return new index.      */
 specifier|public
 name|int
 name|addConstant

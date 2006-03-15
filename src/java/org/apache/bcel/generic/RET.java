@@ -73,7 +73,7 @@ name|int
 name|index
 decl_stmt|;
 comment|// index to local variable containg the return address
-comment|/**    * Empty constructor needed for the Class.newInstance() statement in    * Instruction.readInstruction(). Not to be used otherwise.    */
+comment|/**      * Empty constructor needed for the Class.newInstance() statement in      * Instruction.readInstruction(). Not to be used otherwise.      */
 name|RET
 parameter_list|()
 block|{
@@ -110,7 +110,7 @@ argument_list|)
 expr_stmt|;
 comment|// May set wide as side effect
 block|}
-comment|/**    * Dump instruction as byte code to stream out.    * @param out Output stream    */
+comment|/**      * Dump instruction as byte code to stream out.      * @param out Output stream      */
 specifier|public
 name|void
 name|dump
@@ -125,6 +125,7 @@ if|if
 condition|(
 name|wide
 condition|)
+block|{
 name|out
 operator|.
 name|writeByte
@@ -140,6 +141,7 @@ operator|.
 name|WIDE
 argument_list|)
 expr_stmt|;
+block|}
 name|out
 operator|.
 name|writeByte
@@ -151,6 +153,7 @@ if|if
 condition|(
 name|wide
 condition|)
+block|{
 name|out
 operator|.
 name|writeShort
@@ -158,7 +161,9 @@ argument_list|(
 name|index
 argument_list|)
 expr_stmt|;
+block|}
 else|else
+block|{
 name|out
 operator|.
 name|writeByte
@@ -166,6 +171,7 @@ argument_list|(
 name|index
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 specifier|private
 specifier|final
@@ -206,7 +212,7 @@ literal|2
 expr_stmt|;
 block|}
 block|}
-comment|/**    * Read needed data (e.g. index) from file.    */
+comment|/**      * Read needed data (e.g. index) from file.      */
 specifier|protected
 name|void
 name|initFromFile
@@ -258,7 +264,7 @@ literal|2
 expr_stmt|;
 block|}
 block|}
-comment|/**    * @return index of local variable containg the return address    */
+comment|/**      * @return index of local variable containg the return address      */
 specifier|public
 specifier|final
 name|int
@@ -269,7 +275,7 @@ return|return
 name|index
 return|;
 block|}
-comment|/**    * Set index of local variable containg the return address    */
+comment|/**      * Set index of local variable containg the return address      */
 specifier|public
 specifier|final
 name|void
@@ -285,6 +291,7 @@ name|n
 operator|<
 literal|0
 condition|)
+block|{
 throw|throw
 operator|new
 name|ClassGenException
@@ -294,6 +301,7 @@ operator|+
 name|n
 argument_list|)
 throw|;
+block|}
 name|index
 operator|=
 name|n
@@ -302,7 +310,7 @@ name|setWide
 argument_list|()
 expr_stmt|;
 block|}
-comment|/**    * @return mnemonic for instruction    */
+comment|/**      * @return mnemonic for instruction      */
 specifier|public
 name|String
 name|toString
@@ -324,7 +332,7 @@ operator|+
 name|index
 return|;
 block|}
-comment|/** @return return address type    */
+comment|/** @return return address type      */
 specifier|public
 name|Type
 name|getType
@@ -339,7 +347,7 @@ operator|.
 name|NO_TARGET
 return|;
 block|}
-comment|/**    * Call corresponding visitor method(s). The order is:    * Call visitor methods of implemented interfaces first, then    * call methods according to the class hierarchy in descending order,    * i.e., the most specific visitXXX() call comes last.    *    * @param v Visitor object    */
+comment|/**      * Call corresponding visitor method(s). The order is:      * Call visitor methods of implemented interfaces first, then      * call methods according to the class hierarchy in descending order,      * i.e., the most specific visitXXX() call comes last.      *      * @param v Visitor object      */
 specifier|public
 name|void
 name|accept

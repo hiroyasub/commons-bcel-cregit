@@ -66,7 +66,7 @@ name|ExceptionThrower
 implements|,
 name|TypedInstruction
 block|{
-comment|/**    * Empty constructor needed for the Class.newInstance() statement in    * Instruction.readInstruction(). Not to be used otherwise.    */
+comment|/**      * Empty constructor needed for the Class.newInstance() statement in      * Instruction.readInstruction(). Not to be used otherwise.      */
 name|LDC
 parameter_list|()
 block|{
@@ -157,7 +157,7 @@ literal|3
 expr_stmt|;
 block|}
 block|}
-comment|/**    * Dump instruction as byte code to stream out.    * @param out Output stream    */
+comment|/**      * Dump instruction as byte code to stream out.      * @param out Output stream      */
 specifier|public
 name|void
 name|dump
@@ -181,6 +181,7 @@ name|length
 operator|==
 literal|2
 condition|)
+block|{
 name|out
 operator|.
 name|writeByte
@@ -188,8 +189,9 @@ argument_list|(
 name|index
 argument_list|)
 expr_stmt|;
+block|}
 else|else
-comment|// Applies for LDC_W
+block|{
 name|out
 operator|.
 name|writeShort
@@ -198,7 +200,8 @@ name|index
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**    * Set the index to constant pool and adjust size.    */
+block|}
+comment|/**      * Set the index to constant pool and adjust size.      */
 specifier|public
 specifier|final
 name|void
@@ -219,7 +222,7 @@ name|setSize
 argument_list|()
 expr_stmt|;
 block|}
-comment|/**    * Read needed data (e.g. index) from file.    */
+comment|/**      * Read needed data (e.g. index) from file.      */
 specifier|protected
 name|void
 name|initFromFile
@@ -425,17 +428,6 @@ operator|.
 name|CONSTANT_Class
 case|:
 return|return
-operator|(
-name|org
-operator|.
-name|apache
-operator|.
-name|bcel
-operator|.
-name|classfile
-operator|.
-name|ConstantClass
-operator|)
 name|c
 return|;
 default|default:
@@ -570,7 +562,7 @@ operator|.
 name|EXCS_STRING_RESOLUTION
 return|;
 block|}
-comment|/**    * Call corresponding visitor method(s). The order is:    * Call visitor methods of implemented interfaces first, then    * call methods according to the class hierarchy in descending order,    * i.e., the most specific visitXXX() call comes last.    *    * @param v Visitor object    */
+comment|/**      * Call corresponding visitor method(s). The order is:      * Call visitor methods of implemented interfaces first, then      * call methods according to the class hierarchy in descending order,      * i.e., the most specific visitXXX() call comes last.      *      * @param v Visitor object      */
 specifier|public
 name|void
 name|accept

@@ -59,7 +59,7 @@ name|ConstantInterfaceMethodref
 extends|extends
 name|ConstantCP
 block|{
-comment|/**    * Initialize from another object.    */
+comment|/**      * Initialize from another object.      */
 specifier|public
 name|ConstantInterfaceMethodref
 parameter_list|(
@@ -85,7 +85,7 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**    * Initialize instance from file data.    *    * @param file input stream    * @throws IOException    */
+comment|/**      * Initialize instance from file data.      *      * @param file input stream      * @throws IOException      */
 name|ConstantInterfaceMethodref
 parameter_list|(
 name|DataInputStream
@@ -104,7 +104,7 @@ name|file
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**    * @param class_index Reference to the class containing the method    * @param name_and_type_index and the method signature    */
+comment|/**      * @param class_index Reference to the class containing the method      * @param name_and_type_index and the method signature      */
 specifier|public
 name|ConstantInterfaceMethodref
 parameter_list|(
@@ -127,7 +127,7 @@ name|name_and_type_index
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**    * Called by objects that are traversing the nodes of the tree implicitely    * defined by the contents of a Java class. I.e., the hierarchy of methods,    * fields, attributes, etc. spawns a tree of objects.    *    * @param v Visitor object    */
+comment|/**      * Called by objects that are traversing the nodes of the tree implicitely      * defined by the contents of a Java class. I.e., the hierarchy of methods,      * fields, attributes, etc. spawns a tree of objects.      *      * @param v Visitor object      */
 specifier|public
 name|void
 name|accept

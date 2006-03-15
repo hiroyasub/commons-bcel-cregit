@@ -111,7 +111,7 @@ index|[]
 name|attributes
 decl_stmt|;
 comment|// or LocalVariable
-comment|/**    * Initialize from another object. Note that both objects use the same    * references (shallow copy). Use copy() for a physical copy.    */
+comment|/**      * Initialize from another object. Note that both objects use the same      * references (shallow copy). Use copy() for a physical copy.      */
 specifier|public
 name|Code
 parameter_list|(
@@ -163,7 +163,7 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**    * @param name_index Index pointing to the name<em>Code</em>    * @param length Content length in bytes    * @param file Input stream    * @param constant_pool Array of constants    */
+comment|/**      * @param name_index Index pointing to the name<em>Code</em>      * @param length Content length in bytes      * @param file Input stream      * @param constant_pool Array of constants      */
 name|Code
 parameter_list|(
 name|int
@@ -242,7 +242,7 @@ argument_list|(
 name|code
 argument_list|)
 expr_stmt|;
-comment|/* Read exception table that contains all regions where an exception      * handler is active, i.e., a try { ... } catch() block.      */
+comment|/* Read exception table that contains all regions where an exception          * handler is active, i.e., a try { ... } catch() block.          */
 name|exception_table_length
 operator|=
 name|file
@@ -272,6 +272,7 @@ condition|;
 name|i
 operator|++
 control|)
+block|{
 name|exception_table
 index|[
 name|i
@@ -283,7 +284,8 @@ argument_list|(
 name|file
 argument_list|)
 expr_stmt|;
-comment|/* Read all attributes, currently `LineNumberTable' and      * `LocalVariableTable'      */
+block|}
+comment|/* Read all attributes, currently `LineNumberTable' and          * `LocalVariableTable'          */
 name|attributes_count
 operator|=
 name|file
@@ -313,6 +315,7 @@ condition|;
 name|i
 operator|++
 control|)
+block|{
 name|attributes
 index|[
 name|i
@@ -327,7 +330,8 @@ argument_list|,
 name|constant_pool
 argument_list|)
 expr_stmt|;
-comment|/* Adjust length, because of setAttributes in this(), s.b.  length      * is incorrect, because it didn't take the internal attributes      * into account yet! Very subtle bug, fixed in 3.1.1.      */
+block|}
+comment|/* Adjust length, because of setAttributes in this(), s.b.  length          * is incorrect, because it didn't take the internal attributes          * into account yet! Very subtle bug, fixed in 3.1.1.          */
 name|this
 operator|.
 name|length
@@ -335,7 +339,7 @@ operator|=
 name|length
 expr_stmt|;
 block|}
-comment|/**    * @param name_index Index pointing to the name<em>Code</em>    * @param length Content length in bytes    * @param max_stack Maximum size of stack    * @param max_locals Number of local variables    * @param code Actual byte code    * @param exception_table Table of handled exceptions    * @param attributes Attributes of code: LineNumber or LocalVariable    * @param constant_pool Array of constants    */
+comment|/**      * @param name_index Index pointing to the name<em>Code</em>      * @param length Content length in bytes      * @param max_stack Maximum size of stack      * @param max_locals Number of local variables      * @param code Actual byte code      * @param exception_table Table of handled exceptions      * @param attributes Attributes of code: LineNumber or LocalVariable      * @param constant_pool Array of constants      */
 specifier|public
 name|Code
 parameter_list|(
@@ -409,7 +413,7 @@ argument_list|)
 expr_stmt|;
 comment|// Overwrites length!
 block|}
-comment|/**    * Called by objects that are traversing the nodes of the tree implicitely    * defined by the contents of a Java class. I.e., the hierarchy of methods,    * fields, attributes, etc. spawns a tree of objects.    *    * @param v Visitor object    */
+comment|/**      * Called by objects that are traversing the nodes of the tree implicitely      * defined by the contents of a Java class. I.e., the hierarchy of methods,      * fields, attributes, etc. spawns a tree of objects.      *      * @param v Visitor object      */
 specifier|public
 name|void
 name|accept
@@ -426,7 +430,7 @@ name|this
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**    * Dump code attribute to file stream in binary format.    *    * @param file Output file stream    * @throws IOException    */
+comment|/**      * Dump code attribute to file stream in binary format.      *      * @param file Output file stream      * @throws IOException      */
 specifier|public
 specifier|final
 name|void
@@ -498,6 +502,7 @@ condition|;
 name|i
 operator|++
 control|)
+block|{
 name|exception_table
 index|[
 name|i
@@ -508,6 +513,7 @@ argument_list|(
 name|file
 argument_list|)
 expr_stmt|;
+block|}
 name|file
 operator|.
 name|writeShort
@@ -529,6 +535,7 @@ condition|;
 name|i
 operator|++
 control|)
+block|{
 name|attributes
 index|[
 name|i
@@ -540,7 +547,8 @@ name|file
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**    * @return Collection of code attributes.    * @see Attribute    */
+block|}
+comment|/**      * @return Collection of code attributes.      * @see Attribute      */
 specifier|public
 specifier|final
 name|Attribute
@@ -552,7 +560,7 @@ return|return
 name|attributes
 return|;
 block|}
-comment|/**    * @return LineNumberTable of Code, if it has one    */
+comment|/**      * @return LineNumberTable of Code, if it has one      */
 specifier|public
 name|LineNumberTable
 name|getLineNumberTable
@@ -572,6 +580,7 @@ condition|;
 name|i
 operator|++
 control|)
+block|{
 if|if
 condition|(
 name|attributes
@@ -581,6 +590,7 @@ index|]
 operator|instanceof
 name|LineNumberTable
 condition|)
+block|{
 return|return
 operator|(
 name|LineNumberTable
@@ -590,11 +600,13 @@ index|[
 name|i
 index|]
 return|;
+block|}
+block|}
 return|return
 literal|null
 return|;
 block|}
-comment|/**    * @return LocalVariableTable of Code, if it has one    */
+comment|/**      * @return LocalVariableTable of Code, if it has one      */
 specifier|public
 name|LocalVariableTable
 name|getLocalVariableTable
@@ -614,6 +626,7 @@ condition|;
 name|i
 operator|++
 control|)
+block|{
 if|if
 condition|(
 name|attributes
@@ -623,6 +636,7 @@ index|]
 operator|instanceof
 name|LocalVariableTable
 condition|)
+block|{
 return|return
 operator|(
 name|LocalVariableTable
@@ -632,11 +646,13 @@ index|[
 name|i
 index|]
 return|;
+block|}
+block|}
 return|return
 literal|null
 return|;
 block|}
-comment|/**    * @return Actual byte code of the method.    */
+comment|/**      * @return Actual byte code of the method.      */
 specifier|public
 specifier|final
 name|byte
@@ -648,7 +664,7 @@ return|return
 name|code
 return|;
 block|}
-comment|/**    * @return Table of handled exceptions.    * @see CodeException    */
+comment|/**      * @return Table of handled exceptions.      * @see CodeException      */
 specifier|public
 specifier|final
 name|CodeException
@@ -660,7 +676,7 @@ return|return
 name|exception_table
 return|;
 block|}
-comment|/**    * @return Number of local variables.    */
+comment|/**      * @return Number of local variables.      */
 specifier|public
 specifier|final
 name|int
@@ -671,7 +687,7 @@ return|return
 name|max_locals
 return|;
 block|}
-comment|/**    * @return Maximum size of stack used by this method.    */
+comment|/**      * @return Maximum size of stack used by this method.      */
 specifier|public
 specifier|final
 name|int
@@ -682,7 +698,7 @@ return|return
 name|max_stack
 return|;
 block|}
-comment|/**    * @return the internal length of this code attribute (minus the first 6 bytes)     * and excluding all its attributes    */
+comment|/**      * @return the internal length of this code attribute (minus the first 6 bytes)       * and excluding all its attributes      */
 specifier|private
 specifier|final
 name|int
@@ -714,7 +730,7 @@ literal|2
 comment|/* attributes count */
 return|;
 block|}
-comment|/**    * @return the full size of this code attribute, minus its first 6 bytes,    * including the size of all its contained attributes    */
+comment|/**      * @return the full size of this code attribute, minus its first 6 bytes,      * including the size of all its contained attributes      */
 specifier|private
 specifier|final
 name|int
@@ -740,6 +756,7 @@ condition|;
 name|i
 operator|++
 control|)
+block|{
 name|len
 operator|+=
 name|attributes
@@ -752,6 +769,7 @@ operator|+
 literal|6
 comment|/*attribute header size*/
 expr_stmt|;
+block|}
 return|return
 name|len
 operator|+
@@ -759,7 +777,7 @@ name|getInternalLength
 argument_list|()
 return|;
 block|}
-comment|/**    * @param attributes the attributes to set for this Code    */
+comment|/**      * @param attributes the attributes to set for this Code      */
 specifier|public
 specifier|final
 name|void
@@ -797,7 +815,7 @@ argument_list|()
 expr_stmt|;
 comment|// Adjust length
 block|}
-comment|/**    * @param code byte code    */
+comment|/**      * @param code byte code      */
 specifier|public
 specifier|final
 name|void
@@ -829,7 +847,7 @@ operator|.
 name|length
 expr_stmt|;
 block|}
-comment|/**    * @param exception_table exception table    */
+comment|/**      * @param exception_table exception table      */
 specifier|public
 specifier|final
 name|void
@@ -861,7 +879,7 @@ operator|.
 name|length
 expr_stmt|;
 block|}
-comment|/**    * @param max_locals maximum number of local variables    */
+comment|/**      * @param max_locals maximum number of local variables      */
 specifier|public
 specifier|final
 name|void
@@ -878,7 +896,7 @@ operator|=
 name|max_locals
 expr_stmt|;
 block|}
-comment|/**    * @param max_stack maximum stack size    */
+comment|/**      * @param max_stack maximum stack size      */
 specifier|public
 specifier|final
 name|void
@@ -895,7 +913,7 @@ operator|=
 name|max_stack
 expr_stmt|;
 block|}
-comment|/**    * @return String representation of code chunk.    */
+comment|/**      * @return String representation of code chunk.      */
 specifier|public
 specifier|final
 name|String
@@ -1005,6 +1023,7 @@ condition|;
 name|i
 operator|++
 control|)
+block|{
 name|buf
 operator|.
 name|append
@@ -1027,6 +1046,7 @@ argument_list|(
 literal|"\n"
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 if|if
 condition|(
@@ -1056,6 +1076,7 @@ condition|;
 name|i
 operator|++
 control|)
+block|{
 name|buf
 operator|.
 name|append
@@ -1075,6 +1096,7 @@ literal|"\n"
 argument_list|)
 expr_stmt|;
 block|}
+block|}
 return|return
 name|buf
 operator|.
@@ -1082,7 +1104,7 @@ name|toString
 argument_list|()
 return|;
 block|}
-comment|/**    * @return String representation of code chunk.    */
+comment|/**      * @return String representation of code chunk.      */
 specifier|public
 specifier|final
 name|String
@@ -1096,7 +1118,7 @@ literal|true
 argument_list|)
 return|;
 block|}
-comment|/**    * @return deep copy of this attribute    *     * @param _constant_pool the constant pool to duplicate    */
+comment|/**      * @return deep copy of this attribute      *       * @param _constant_pool the constant pool to duplicate      */
 specifier|public
 name|Attribute
 name|copy
@@ -1183,6 +1205,7 @@ condition|;
 name|i
 operator|++
 control|)
+block|{
 name|c
 operator|.
 name|exception_table
@@ -1198,6 +1221,7 @@ operator|.
 name|copy
 argument_list|()
 expr_stmt|;
+block|}
 name|c
 operator|.
 name|attributes
@@ -1222,6 +1246,7 @@ condition|;
 name|i
 operator|++
 control|)
+block|{
 name|c
 operator|.
 name|attributes
@@ -1239,6 +1264,7 @@ argument_list|(
 name|_constant_pool
 argument_list|)
 expr_stmt|;
+block|}
 return|return
 name|c
 return|;

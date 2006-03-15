@@ -70,7 +70,7 @@ specifier|private
 name|byte
 name|type
 decl_stmt|;
-comment|/**    * Empty constructor needed for the Class.newInstance() statement in    * Instruction.readInstruction(). Not to be used otherwise.    */
+comment|/**      * Empty constructor needed for the Class.newInstance() statement in      * Instruction.readInstruction(). Not to be used otherwise.      */
 name|NEWARRAY
 parameter_list|()
 block|{
@@ -123,7 +123,7 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**    * Dump instruction as byte code to stream out.    * @param out Output stream    */
+comment|/**      * Dump instruction as byte code to stream out.      * @param out Output stream      */
 specifier|public
 name|void
 name|dump
@@ -149,7 +149,7 @@ name|type
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**    * @return numeric code for basic element type    */
+comment|/**      * @return numeric code for basic element type      */
 specifier|public
 specifier|final
 name|byte
@@ -160,7 +160,7 @@ return|return
 name|type
 return|;
 block|}
-comment|/**    * @return type of constructed array    */
+comment|/**      * @return type of constructed array      */
 specifier|public
 specifier|final
 name|Type
@@ -182,7 +182,7 @@ literal|1
 argument_list|)
 return|;
 block|}
-comment|/**    * @return mnemonic for instruction    */
+comment|/**      * @return mnemonic for instruction      */
 specifier|public
 name|String
 name|toString
@@ -215,7 +215,7 @@ name|type
 index|]
 return|;
 block|}
-comment|/**    * Read needed data (e.g. index) from file.    */
+comment|/**      * Read needed data (e.g. index) from file.      */
 specifier|protected
 name|void
 name|initFromFile
@@ -264,7 +264,7 @@ name|NEGATIVE_ARRAY_SIZE_EXCEPTION
 block|}
 return|;
 block|}
-comment|/**    * Call corresponding visitor method(s). The order is:    * Call visitor methods of implemented interfaces first, then    * call methods according to the class hierarchy in descending order,    * i.e., the most specific visitXXX() call comes last.    *    * @param v Visitor object    */
+comment|/**      * Call corresponding visitor method(s). The order is:      * Call visitor methods of implemented interfaces first, then      * call methods according to the class hierarchy in descending order,      * i.e., the most specific visitXXX() call comes last.      *      * @param v Visitor object      */
 specifier|public
 name|void
 name|accept

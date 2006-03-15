@@ -225,7 +225,7 @@ name|handles
 decl_stmt|;
 comment|// map instruction
 comment|// list to array
-comment|/** 	 * @param il 	 *          instruction list to search for given patterns 	 */
+comment|/**      * @param il      *          instruction list to search for given patterns      */
 specifier|public
 name|InstructionFinder
 parameter_list|(
@@ -243,7 +243,7 @@ name|reread
 argument_list|()
 expr_stmt|;
 block|}
-comment|/** 	 * Reread the instruction list, e.g., after you've altered the list upon a 	 * match. 	 */
+comment|/**      * Reread the instruction list, e.g., after you've altered the list upon a      * match.      */
 specifier|public
 specifier|final
 name|void
@@ -292,6 +292,7 @@ condition|;
 name|i
 operator|++
 control|)
+block|{
 name|buf
 index|[
 name|i
@@ -311,6 +312,7 @@ name|getOpcode
 argument_list|()
 argument_list|)
 expr_stmt|;
+block|}
 name|il_string
 operator|=
 operator|new
@@ -320,7 +322,7 @@ name|buf
 argument_list|)
 expr_stmt|;
 block|}
-comment|/** 	 * Map symbolic instruction names like "getfield" to a single character. 	 *  	 * @param pattern 	 *          instruction pattern in lower case 	 * @return encoded string for a pattern such as "BranchInstruction". 	 */
+comment|/**      * Map symbolic instruction names like "getfield" to a single character.      *       * @param pattern      *          instruction pattern in lower case      * @return encoded string for a pattern such as "BranchInstruction".      */
 specifier|private
 specifier|static
 specifier|final
@@ -350,9 +352,11 @@ name|result
 operator|!=
 literal|null
 condition|)
+block|{
 return|return
 name|result
 return|;
+block|}
 for|for
 control|(
 name|short
@@ -367,6 +371,7 @@ condition|;
 name|i
 operator|++
 control|)
+block|{
 if|if
 condition|(
 name|pattern
@@ -381,6 +386,7 @@ name|i
 index|]
 argument_list|)
 condition|)
+block|{
 return|return
 literal|""
 operator|+
@@ -389,6 +395,8 @@ argument_list|(
 name|i
 argument_list|)
 return|;
+block|}
+block|}
 throw|throw
 operator|new
 name|RuntimeException
@@ -399,7 +407,7 @@ name|pattern
 argument_list|)
 throw|;
 block|}
-comment|/** 	 * Replace symbolic names of instructions with the appropiate character and 	 * remove all white space from string. Meta characters such as +, * are 	 * ignored. 	 *  	 * @param pattern 	 *          The pattern to compile 	 * @return translated regular expression string 	 */
+comment|/**      * Replace symbolic names of instructions with the appropiate character and      * remove all white space from string. Meta characters such as +, * are      * ignored.      *       * @param pattern      *          The pattern to compile      * @return translated regular expression string      */
 specifier|private
 specifier|static
 specifier|final
@@ -514,6 +522,7 @@ name|i
 operator|<
 name|size
 condition|)
+block|{
 name|ch
 operator|=
 name|lower
@@ -523,8 +532,11 @@ argument_list|(
 name|i
 argument_list|)
 expr_stmt|;
+block|}
 else|else
+block|{
 break|break;
+block|}
 block|}
 name|i
 operator|--
@@ -553,6 +565,7 @@ argument_list|(
 name|ch
 argument_list|)
 condition|)
+block|{
 name|buf
 operator|.
 name|append
@@ -561,6 +574,7 @@ name|ch
 argument_list|)
 expr_stmt|;
 block|}
+block|}
 return|return
 name|buf
 operator|.
@@ -568,7 +582,7 @@ name|toString
 argument_list|()
 return|;
 block|}
-comment|/** 	 * @return the matched piece of code as an array of instruction (handles) 	 */
+comment|/**      * @return the matched piece of code as an array of instruction (handles)      */
 specifier|private
 name|InstructionHandle
 index|[]
@@ -610,7 +624,7 @@ return|return
 name|match
 return|;
 block|}
-comment|/** 	 * Search for the given pattern in the instruction list. You can search for 	 * any valid opcode via its symbolic name, e.g. "istore". You can also use a 	 * super class or an interface name to match a whole set of instructions, e.g. 	 * "BranchInstruction" or "LoadInstruction". "istore" is also an alias for all 	 * "istore_x" instructions. Additional aliases are "if" for "ifxx", "if_icmp" 	 * for "if_icmpxx", "if_acmp" for "if_acmpxx". 	 *  	 * Consecutive instruction names must be separated by white space which will 	 * be removed during the compilation of the pattern. 	 *  	 * For the rest the usual pattern matching rules for regular expressions 	 * apply. 	 *<P> 	 * Example pattern: 	 *  	 *<pre> 	 * search(&quot;BranchInstruction NOP ((IfInstruction|GOTO)+ ISTORE Instruction)*&quot;); 	 *</pre> 	 *  	 *<p> 	 * If you alter the instruction list upon a match such that other matching 	 * areas are affected, you should call reread() to update the finder and call 	 * search() again, because the matches are cached. 	 *  	 * @param pattern 	 *          the instruction pattern to search for, where case is ignored 	 * @param from 	 *          where to start the search in the instruction list 	 * @param constraint 	 *          optional CodeConstraint to check the found code pattern for 	 *          user-defined constraints 	 * @return iterator of matches where e.nextElement() returns an array of 	 *         instruction handles describing the matched area 	 */
+comment|/**      * Search for the given pattern in the instruction list. You can search for      * any valid opcode via its symbolic name, e.g. "istore". You can also use a      * super class or an interface name to match a whole set of instructions, e.g.      * "BranchInstruction" or "LoadInstruction". "istore" is also an alias for all      * "istore_x" instructions. Additional aliases are "if" for "ifxx", "if_icmp"      * for "if_icmpxx", "if_acmp" for "if_acmpxx".      *       * Consecutive instruction names must be separated by white space which will      * be removed during the compilation of the pattern.      *       * For the rest the usual pattern matching rules for regular expressions      * apply.      *<P>      * Example pattern:      *       *<pre>      * search(&quot;BranchInstruction NOP ((IfInstruction|GOTO)+ ISTORE Instruction)*&quot;);      *</pre>      *       *<p>      * If you alter the instruction list upon a match such that other matching      * areas are affected, you should call reread() to update the finder and call      * search() again, because the matches are cached.      *       * @param pattern      *          the instruction pattern to search for, where case is ignored      * @param from      *          where to start the search in the instruction list      * @param constraint      *          optional CodeConstraint to check the found code pattern for      *          user-defined constraints      * @return iterator of matches where e.nextElement() returns an array of      *         instruction handles describing the matched area      */
 specifier|public
 specifier|final
 name|Iterator
@@ -682,6 +696,7 @@ operator|==
 operator|-
 literal|1
 condition|)
+block|{
 throw|throw
 operator|new
 name|ClassGenException
@@ -693,6 +708,7 @@ operator|+
 literal|" not found in instruction list."
 argument_list|)
 throw|;
+block|}
 name|Pattern
 name|regex
 init|=
@@ -811,7 +827,7 @@ name|iterator
 argument_list|()
 return|;
 block|}
-comment|/** 	 * Start search beginning from the start of the given instruction list. 	 *  	 * @param pattern 	 *          the instruction pattern to search for, where case is ignored 	 * @return iterator of matches where e.nextElement() returns an array of 	 *         instruction handles describing the matched area 	 */
+comment|/**      * Start search beginning from the start of the given instruction list.      *       * @param pattern      *          the instruction pattern to search for, where case is ignored      * @return iterator of matches where e.nextElement() returns an array of      *         instruction handles describing the matched area      */
 specifier|public
 specifier|final
 name|Iterator
@@ -835,7 +851,7 @@ literal|null
 argument_list|)
 return|;
 block|}
-comment|/** 	 * Start search beginning from `from'. 	 *  	 * @param pattern 	 *          the instruction pattern to search for, where case is ignored 	 * @param from 	 *          where to start the search in the instruction list 	 * @return iterator of matches where e.nextElement() returns an array of 	 *         instruction handles describing the matched area 	 */
+comment|/**      * Start search beginning from `from'.      *       * @param pattern      *          the instruction pattern to search for, where case is ignored      * @param from      *          where to start the search in the instruction list      * @return iterator of matches where e.nextElement() returns an array of      *         instruction handles describing the matched area      */
 specifier|public
 specifier|final
 name|Iterator
@@ -859,7 +875,7 @@ literal|null
 argument_list|)
 return|;
 block|}
-comment|/** 	 * Start search beginning from the start of the given instruction list. Check 	 * found matches with the constraint object. 	 *  	 * @param pattern 	 *          the instruction pattern to search for, case is ignored 	 * @param constraint 	 *          constraints to be checked on matching code 	 * @return instruction handle or `null' if the match failed 	 */
+comment|/**      * Start search beginning from the start of the given instruction list. Check      * found matches with the constraint object.      *       * @param pattern      *          the instruction pattern to search for, case is ignored      * @param constraint      *          constraints to be checked on matching code      * @return instruction handle or `null' if the match failed      */
 specifier|public
 specifier|final
 name|Iterator
@@ -886,7 +902,7 @@ name|constraint
 argument_list|)
 return|;
 block|}
-comment|/** 	 * Convert opcode number to char. 	 */
+comment|/**      * Convert opcode number to char.      */
 specifier|private
 specifier|static
 specifier|final
@@ -908,7 +924,7 @@ name|OFFSET
 operator|)
 return|;
 block|}
-comment|/** 	 * @return the inquired instruction list 	 */
+comment|/**      * @return the inquired instruction list      */
 specifier|public
 specifier|final
 name|InstructionList
@@ -919,13 +935,13 @@ return|return
 name|il
 return|;
 block|}
-comment|/** 	 * Code patterns found may be checked using an additional user-defined 	 * constraint object whether they really match the needed criterion. I.e., 	 * check constraints that can not expressed with regular expressions. 	 *  	 */
+comment|/**      * Code patterns found may be checked using an additional user-defined      * constraint object whether they really match the needed criterion. I.e.,      * check constraints that can not expressed with regular expressions.      *       */
 specifier|public
 specifier|static
 interface|interface
 name|CodeConstraint
 block|{
-comment|/** 		 * @param match 		 *          array of instructions matching the requested pattern 		 * @return true if the matched area is really useful 		 */
+comment|/**          * @param match          *          array of instructions matching the requested pattern          * @return true if the matched area is really useful          */
 specifier|public
 name|boolean
 name|checkCode
@@ -1673,6 +1689,7 @@ name|NO_OPCODES
 operator|-
 literal|1
 condition|)
+block|{
 name|buf
 operator|.
 name|append
@@ -1680,6 +1697,7 @@ argument_list|(
 literal|'|'
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 block|}
 name|buf
@@ -1783,7 +1801,7 @@ name|toString
 argument_list|()
 return|;
 block|}
-comment|/* 	 * Internal debugging routines. 	 */
+comment|/*      * Internal debugging routines.      */
 specifier|private
 specifier|static
 specifier|final
@@ -1862,6 +1880,7 @@ if|if
 condition|(
 name|make_string
 condition|)
+block|{
 name|buf
 operator|.
 name|append
@@ -1876,14 +1895,13 @@ name|OFFSET
 index|]
 argument_list|)
 expr_stmt|;
+block|}
 else|else
+block|{
 name|buf
 operator|.
 name|append
 argument_list|(
-operator|(
-name|int
-operator|)
 operator|(
 name|ch
 operator|-
@@ -1892,7 +1910,9 @@ operator|)
 argument_list|)
 expr_stmt|;
 block|}
+block|}
 else|else
+block|{
 name|buf
 operator|.
 name|append
@@ -1900,6 +1920,7 @@ argument_list|(
 name|ch
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 return|return
 name|buf

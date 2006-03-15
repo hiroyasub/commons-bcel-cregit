@@ -24,7 +24,7 @@ specifier|public
 interface|interface
 name|StackConsumer
 block|{
-comment|/** @return how many words are consumed from stack    */
+comment|/** @return how many words are consumed from stack      */
 specifier|public
 name|int
 name|consumeStack

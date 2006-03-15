@@ -189,6 +189,7 @@ name|no_args
 operator|-
 literal|1
 condition|)
+block|{
 name|buf
 operator|.
 name|append
@@ -196,6 +197,7 @@ argument_list|(
 literal|", "
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 name|String
 name|prefix
@@ -218,6 +220,7 @@ condition|(
 operator|!
 name|reserved
 condition|)
+block|{
 return|return
 name|prefix
 operator|+
@@ -229,12 +232,15 @@ literal|", column "
 operator|+
 name|column
 return|;
+block|}
 else|else
+block|{
 return|return
 name|prefix
 operator|+
 literal|"<predefined function>"
 return|;
+block|}
 block|}
 specifier|public
 name|int

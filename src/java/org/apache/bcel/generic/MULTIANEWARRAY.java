@@ -96,7 +96,7 @@ specifier|private
 name|short
 name|dimensions
 decl_stmt|;
-comment|/**    * Empty constructor needed for the Class.newInstance() statement in    * Instruction.readInstruction(). Not to be used otherwise.    */
+comment|/**      * Empty constructor needed for the Class.newInstance() statement in      * Instruction.readInstruction(). Not to be used otherwise.      */
 name|MULTIANEWARRAY
 parameter_list|()
 block|{
@@ -132,6 +132,7 @@ name|dimensions
 operator|<
 literal|1
 condition|)
+block|{
 throw|throw
 operator|new
 name|ClassGenException
@@ -141,6 +142,7 @@ operator|+
 name|dimensions
 argument_list|)
 throw|;
+block|}
 name|this
 operator|.
 name|dimensions
@@ -152,7 +154,7 @@ operator|=
 literal|4
 expr_stmt|;
 block|}
-comment|/**    * Dump instruction as byte code to stream out.    * @param out Output stream    */
+comment|/**      * Dump instruction as byte code to stream out.      * @param out Output stream      */
 specifier|public
 name|void
 name|dump
@@ -185,7 +187,7 @@ name|dimensions
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**    * Read needed data (i.e., no. dimension) from file.    */
+comment|/**      * Read needed data (i.e., no. dimension) from file.      */
 specifier|protected
 name|void
 name|initFromFile
@@ -220,7 +222,7 @@ operator|=
 literal|4
 expr_stmt|;
 block|}
-comment|/**    * @return number of dimensions to be created    */
+comment|/**      * @return number of dimensions to be created      */
 specifier|public
 specifier|final
 name|short
@@ -231,7 +233,7 @@ return|return
 name|dimensions
 return|;
 block|}
-comment|/**    * @return mnemonic for instruction    */
+comment|/**      * @return mnemonic for instruction      */
 specifier|public
 name|String
 name|toString
@@ -257,7 +259,7 @@ operator|+
 name|dimensions
 return|;
 block|}
-comment|/**    * @return mnemonic for instruction with symbolic references resolved    */
+comment|/**      * @return mnemonic for instruction with symbolic references resolved      */
 specifier|public
 name|String
 name|toString
@@ -279,7 +281,7 @@ operator|+
 name|dimensions
 return|;
 block|}
-comment|/**    * Also works for instructions whose stack effect depends on the    * constant pool entry they reference.    * @return Number of words consumed from stack by this instruction    */
+comment|/**      * Also works for instructions whose stack effect depends on the      * constant pool entry they reference.      * @return Number of words consumed from stack by this instruction      */
 specifier|public
 name|int
 name|consumeStack
@@ -418,7 +420,7 @@ else|:
 literal|null
 return|;
 block|}
-comment|/**    * Call corresponding visitor method(s). The order is:    * Call visitor methods of implemented interfaces first, then    * call methods according to the class hierarchy in descending order,    * i.e., the most specific visitXXX() call comes last.    *    * @param v Visitor object    */
+comment|/**      * Call corresponding visitor method(s). The order is:      * Call visitor methods of implemented interfaces first, then      * call methods according to the class hierarchy in descending order,      * i.e., the most specific visitXXX() call comes last.      *      * @param v Visitor object      */
 specifier|public
 name|void
 name|accept

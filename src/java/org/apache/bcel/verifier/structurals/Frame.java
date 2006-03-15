@@ -191,10 +191,12 @@ operator|instanceof
 name|Frame
 operator|)
 condition|)
+block|{
 return|return
 literal|false
 return|;
 comment|// implies "null" is non-equal.
+block|}
 name|Frame
 name|f
 init|=

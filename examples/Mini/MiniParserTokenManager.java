@@ -205,10 +205,6 @@ name|curPos
 parameter_list|)
 block|{
 name|int
-index|[]
-name|nextStates
-decl_stmt|;
-name|int
 name|startsAt
 init|=
 literal|0
@@ -230,8 +226,6 @@ operator|=
 name|startState
 expr_stmt|;
 name|int
-name|j
-decl_stmt|,
 name|kind
 init|=
 literal|0x7fffffff
@@ -249,9 +243,11 @@ name|jjround
 operator|==
 literal|0x7fffffff
 condition|)
+block|{
 name|ReInitRounds
 argument_list|()
 expr_stmt|;
+block|}
 if|if
 condition|(
 name|curChar
@@ -297,10 +293,12 @@ name|kind
 operator|>
 literal|7
 condition|)
+block|{
 name|kind
 operator|=
 literal|7
 expr_stmt|;
+block|}
 block|}
 if|if
 condition|(
@@ -308,6 +306,7 @@ name|curChar
 operator|==
 literal|13
 condition|)
+block|{
 name|jjstateSet
 index|[
 name|jjnewStateCnt
@@ -316,6 +315,7 @@ index|]
 operator|=
 literal|1
 expr_stmt|;
+block|}
 break|break;
 case|case
 literal|1
@@ -330,10 +330,12 @@ name|kind
 operator|>
 literal|7
 condition|)
+block|{
 name|kind
 operator|=
 literal|7
 expr_stmt|;
+block|}
 break|break;
 case|case
 literal|2
@@ -344,6 +346,7 @@ name|curChar
 operator|==
 literal|13
 condition|)
+block|{
 name|jjstateSet
 index|[
 name|jjnewStateCnt
@@ -352,6 +355,7 @@ index|]
 operator|=
 literal|1
 expr_stmt|;
+block|}
 break|break;
 default|default :
 break|break;
@@ -372,17 +376,6 @@ operator|<
 literal|128
 condition|)
 block|{
-name|long
-name|l
-init|=
-literal|1L
-operator|<<
-operator|(
-name|curChar
-operator|&
-literal|077
-operator|)
-decl_stmt|;
 do|do
 block|{
 switch|switch
@@ -408,28 +401,6 @@ do|;
 block|}
 else|else
 block|{
-name|int
-name|i2
-init|=
-operator|(
-name|curChar
-operator|&
-literal|0xff
-operator|)
-operator|>>
-literal|6
-decl_stmt|;
-name|long
-name|l2
-init|=
-literal|1L
-operator|<<
-operator|(
-name|curChar
-operator|&
-literal|077
-operator|)
-decl_stmt|;
 do|do
 block|{
 switch|switch
@@ -496,9 +467,11 @@ name|startsAt
 operator|)
 operator|)
 condition|)
+block|{
 return|return
 name|curPos
 return|;
+block|}
 try|try
 block|{
 name|curChar
@@ -582,9 +555,11 @@ operator|)
 operator|!=
 literal|0L
 condition|)
+block|{
 return|return
 literal|1
 return|;
+block|}
 if|if
 condition|(
 operator|(
@@ -625,9 +600,11 @@ operator|)
 operator|!=
 literal|0L
 condition|)
+block|{
 return|return
 literal|1
 return|;
+block|}
 if|if
 condition|(
 operator|(
@@ -691,9 +668,11 @@ operator|)
 operator|!=
 literal|0L
 condition|)
+block|{
 return|return
 literal|1
 return|;
+block|}
 return|return
 operator|-
 literal|1
@@ -1127,6 +1106,7 @@ operator|)
 operator|!=
 literal|0L
 condition|)
+block|{
 return|return
 name|jjStopAtPos
 argument_list|(
@@ -1135,6 +1115,7 @@ argument_list|,
 literal|6
 argument_list|)
 return|;
+block|}
 break|break;
 case|case
 literal|61
@@ -1149,6 +1130,7 @@ operator|)
 operator|!=
 literal|0L
 condition|)
+block|{
 return|return
 name|jjStopAtPos
 argument_list|(
@@ -1157,6 +1139,7 @@ argument_list|,
 literal|18
 argument_list|)
 return|;
+block|}
 if|else if
 condition|(
 operator|(
@@ -1167,6 +1150,7 @@ operator|)
 operator|!=
 literal|0L
 condition|)
+block|{
 return|return
 name|jjStopAtPos
 argument_list|(
@@ -1175,6 +1159,7 @@ argument_list|,
 literal|19
 argument_list|)
 return|;
+block|}
 if|else if
 condition|(
 operator|(
@@ -1185,6 +1170,7 @@ operator|)
 operator|!=
 literal|0L
 condition|)
+block|{
 return|return
 name|jjStopAtPos
 argument_list|(
@@ -1193,6 +1179,7 @@ argument_list|,
 literal|20
 argument_list|)
 return|;
+block|}
 if|else if
 condition|(
 operator|(
@@ -1203,6 +1190,7 @@ operator|)
 operator|!=
 literal|0L
 condition|)
+block|{
 return|return
 name|jjStopAtPos
 argument_list|(
@@ -1211,6 +1199,7 @@ argument_list|,
 literal|21
 argument_list|)
 return|;
+block|}
 break|break;
 case|case
 literal|65
@@ -1247,6 +1236,7 @@ operator|)
 operator|!=
 literal|0L
 condition|)
+block|{
 return|return
 name|jjStartNfaWithStates_0
 argument_list|(
@@ -1257,6 +1247,7 @@ argument_list|,
 literal|1
 argument_list|)
 return|;
+block|}
 break|break;
 case|case
 literal|72
@@ -1282,6 +1273,7 @@ operator|)
 operator|!=
 literal|0L
 condition|)
+block|{
 return|return
 name|jjStartNfaWithStates_0
 argument_list|(
@@ -1292,6 +1284,7 @@ argument_list|,
 literal|1
 argument_list|)
 return|;
+block|}
 break|break;
 case|case
 literal|76
@@ -1317,6 +1310,7 @@ operator|)
 operator|!=
 literal|0L
 condition|)
+block|{
 return|return
 name|jjStartNfaWithStates_0
 argument_list|(
@@ -1327,6 +1321,7 @@ argument_list|,
 literal|1
 argument_list|)
 return|;
+block|}
 return|return
 name|jjMoveStringLiteralDfa2_0
 argument_list|(
@@ -1348,6 +1343,7 @@ operator|)
 operator|!=
 literal|0L
 condition|)
+block|{
 return|return
 name|jjStartNfaWithStates_0
 argument_list|(
@@ -1358,6 +1354,7 @@ argument_list|,
 literal|1
 argument_list|)
 return|;
+block|}
 return|return
 name|jjMoveStringLiteralDfa2_0
 argument_list|(
@@ -1414,6 +1411,7 @@ operator|)
 operator|==
 literal|0L
 condition|)
+block|{
 return|return
 name|jjStartNfa_0
 argument_list|(
@@ -1422,6 +1420,7 @@ argument_list|,
 name|old0
 argument_list|)
 return|;
+block|}
 try|try
 block|{
 name|curChar
@@ -1482,6 +1481,7 @@ operator|)
 operator|!=
 literal|0L
 condition|)
+block|{
 return|return
 name|jjStartNfaWithStates_0
 argument_list|(
@@ -1492,6 +1492,7 @@ argument_list|,
 literal|1
 argument_list|)
 return|;
+block|}
 break|break;
 case|case
 literal|69
@@ -1539,6 +1540,7 @@ operator|)
 operator|!=
 literal|0L
 condition|)
+block|{
 return|return
 name|jjStartNfaWithStates_0
 argument_list|(
@@ -1549,6 +1551,7 @@ argument_list|,
 literal|1
 argument_list|)
 return|;
+block|}
 break|break;
 case|case
 literal|83
@@ -1574,6 +1577,7 @@ operator|)
 operator|!=
 literal|0L
 condition|)
+block|{
 return|return
 name|jjStartNfaWithStates_0
 argument_list|(
@@ -1584,6 +1588,7 @@ argument_list|,
 literal|1
 argument_list|)
 return|;
+block|}
 break|break;
 case|case
 literal|85
@@ -1633,6 +1638,7 @@ operator|)
 operator|==
 literal|0L
 condition|)
+block|{
 return|return
 name|jjStartNfa_0
 argument_list|(
@@ -1641,6 +1647,7 @@ argument_list|,
 name|old0
 argument_list|)
 return|;
+block|}
 try|try
 block|{
 name|curChar
@@ -1690,6 +1697,7 @@ operator|)
 operator|!=
 literal|0L
 condition|)
+block|{
 return|return
 name|jjStartNfaWithStates_0
 argument_list|(
@@ -1700,6 +1708,7 @@ argument_list|,
 literal|1
 argument_list|)
 return|;
+block|}
 break|break;
 case|case
 literal|69
@@ -1714,6 +1723,7 @@ operator|)
 operator|!=
 literal|0L
 condition|)
+block|{
 return|return
 name|jjStartNfaWithStates_0
 argument_list|(
@@ -1724,6 +1734,7 @@ argument_list|,
 literal|1
 argument_list|)
 return|;
+block|}
 if|else if
 condition|(
 operator|(
@@ -1734,6 +1745,7 @@ operator|)
 operator|!=
 literal|0L
 condition|)
+block|{
 return|return
 name|jjStartNfaWithStates_0
 argument_list|(
@@ -1744,6 +1756,7 @@ argument_list|,
 literal|1
 argument_list|)
 return|;
+block|}
 break|break;
 case|case
 literal|78
@@ -1758,6 +1771,7 @@ operator|)
 operator|!=
 literal|0L
 condition|)
+block|{
 return|return
 name|jjStartNfaWithStates_0
 argument_list|(
@@ -1768,6 +1782,7 @@ argument_list|,
 literal|1
 argument_list|)
 return|;
+block|}
 break|break;
 case|case
 literal|83
@@ -1828,6 +1843,7 @@ operator|)
 operator|==
 literal|0L
 condition|)
+block|{
 return|return
 name|jjStartNfa_0
 argument_list|(
@@ -1836,6 +1852,7 @@ argument_list|,
 name|old0
 argument_list|)
 return|;
+block|}
 try|try
 block|{
 name|curChar
@@ -1885,6 +1902,7 @@ operator|)
 operator|!=
 literal|0L
 condition|)
+block|{
 return|return
 name|jjStartNfaWithStates_0
 argument_list|(
@@ -1895,6 +1913,7 @@ argument_list|,
 literal|1
 argument_list|)
 return|;
+block|}
 if|else if
 condition|(
 operator|(
@@ -1905,6 +1924,7 @@ operator|)
 operator|!=
 literal|0L
 condition|)
+block|{
 return|return
 name|jjStartNfaWithStates_0
 argument_list|(
@@ -1915,6 +1935,7 @@ argument_list|,
 literal|1
 argument_list|)
 return|;
+block|}
 break|break;
 default|default :
 break|break;
@@ -1958,10 +1979,6 @@ name|curPos
 parameter_list|)
 block|{
 name|int
-index|[]
-name|nextStates
-decl_stmt|;
-name|int
 name|startsAt
 init|=
 literal|0
@@ -1983,8 +2000,6 @@ operator|=
 name|startState
 expr_stmt|;
 name|int
-name|j
-decl_stmt|,
 name|kind
 init|=
 literal|0x7fffffff
@@ -2002,9 +2017,11 @@ name|jjround
 operator|==
 literal|0x7fffffff
 condition|)
+block|{
 name|ReInitRounds
 argument_list|()
 expr_stmt|;
+block|}
 if|if
 condition|(
 name|curChar
@@ -2050,10 +2067,12 @@ name|kind
 operator|>
 literal|41
 condition|)
+block|{
 name|kind
 operator|=
 literal|41
 expr_stmt|;
+block|}
 name|jjCheckNAdd
 argument_list|(
 literal|2
@@ -2066,6 +2085,7 @@ name|curChar
 operator|==
 literal|34
 condition|)
+block|{
 name|jjCheckNAddTwoStates
 argument_list|(
 literal|4
@@ -2073,6 +2093,7 @@ argument_list|,
 literal|5
 argument_list|)
 expr_stmt|;
+block|}
 break|break;
 case|case
 literal|1
@@ -2087,17 +2108,21 @@ operator|)
 operator|==
 literal|0L
 condition|)
+block|{
 break|break;
+block|}
 if|if
 condition|(
 name|kind
 operator|>
 literal|40
 condition|)
+block|{
 name|kind
 operator|=
 literal|40
 expr_stmt|;
+block|}
 name|jjstateSet
 index|[
 name|jjnewStateCnt
@@ -2120,17 +2145,21 @@ operator|)
 operator|==
 literal|0L
 condition|)
+block|{
 break|break;
+block|}
 if|if
 condition|(
 name|kind
 operator|>
 literal|41
 condition|)
+block|{
 name|kind
 operator|=
 literal|41
 expr_stmt|;
+block|}
 name|jjCheckNAdd
 argument_list|(
 literal|2
@@ -2146,6 +2175,7 @@ name|curChar
 operator|==
 literal|34
 condition|)
+block|{
 name|jjCheckNAddTwoStates
 argument_list|(
 literal|4
@@ -2153,6 +2183,7 @@ argument_list|,
 literal|5
 argument_list|)
 expr_stmt|;
+block|}
 break|break;
 case|case
 literal|4
@@ -2167,6 +2198,7 @@ operator|)
 operator|!=
 literal|0L
 condition|)
+block|{
 name|jjCheckNAddTwoStates
 argument_list|(
 literal|4
@@ -2174,6 +2206,7 @@ argument_list|,
 literal|5
 argument_list|)
 expr_stmt|;
+block|}
 break|break;
 case|case
 literal|5
@@ -2188,10 +2221,12 @@ name|kind
 operator|>
 literal|42
 condition|)
+block|{
 name|kind
 operator|=
 literal|42
 expr_stmt|;
+block|}
 break|break;
 default|default :
 break|break;
@@ -2247,17 +2282,21 @@ operator|)
 operator|==
 literal|0L
 condition|)
+block|{
 break|break;
+block|}
 if|if
 condition|(
 name|kind
 operator|>
 literal|40
 condition|)
+block|{
 name|kind
 operator|=
 literal|40
 expr_stmt|;
+block|}
 name|jjCheckNAdd
 argument_list|(
 literal|1
@@ -2277,17 +2316,21 @@ operator|)
 operator|==
 literal|0L
 condition|)
+block|{
 break|break;
+block|}
 if|if
 condition|(
 name|kind
 operator|>
 literal|40
 condition|)
+block|{
 name|kind
 operator|=
 literal|40
 expr_stmt|;
+block|}
 name|jjCheckNAdd
 argument_list|(
 literal|1
@@ -2368,6 +2411,7 @@ operator|)
 operator|!=
 literal|0L
 condition|)
+block|{
 name|jjAddStates
 argument_list|(
 literal|0
@@ -2375,6 +2419,7 @@ argument_list|,
 literal|1
 argument_list|)
 expr_stmt|;
+block|}
 break|break;
 default|default :
 break|break;
@@ -2431,9 +2476,11 @@ name|startsAt
 operator|)
 operator|)
 condition|)
+block|{
 return|return
 name|curPos
 return|;
+block|}
 try|try
 block|{
 name|curChar
@@ -2817,6 +2864,7 @@ name|input_stream
 operator|!=
 literal|null
 condition|)
+block|{
 throw|throw
 operator|new
 name|TokenMgrError
@@ -2828,6 +2876,7 @@ operator|.
 name|STATIC_LEXER_ERROR
 argument_list|)
 throw|;
+block|}
 name|input_stream
 operator|=
 name|stream
@@ -2907,6 +2956,7 @@ operator|>
 literal|0
 condition|;
 control|)
+block|{
 name|jjrounds
 index|[
 name|i
@@ -2914,6 +2964,7 @@ index|]
 operator|=
 literal|0x80000000
 expr_stmt|;
+block|}
 block|}
 specifier|static
 specifier|public
@@ -2957,6 +3008,7 @@ name|lexState
 operator|<
 literal|0
 condition|)
+block|{
 throw|throw
 operator|new
 name|TokenMgrError
@@ -2972,11 +3024,14 @@ operator|.
 name|INVALID_LEXICAL_STATE
 argument_list|)
 throw|;
+block|}
 else|else
+block|{
 name|curLexState
 operator|=
 name|lexState
 expr_stmt|;
+block|}
 block|}
 specifier|static
 specifier|private
@@ -3101,9 +3156,6 @@ name|Token
 name|getNextToken
 parameter_list|()
 block|{
-name|int
-name|kind
-decl_stmt|;
 name|Token
 name|specialToken
 init|=
@@ -3213,6 +3265,7 @@ operator|)
 operator|!=
 literal|0L
 condition|)
+block|{
 name|curChar
 operator|=
 name|input_stream
@@ -3220,6 +3273,7 @@ operator|.
 name|BeginToken
 argument_list|()
 expr_stmt|;
+block|}
 block|}
 catch|catch
 parameter_list|(
@@ -3298,6 +3352,7 @@ literal|1
 operator|<
 name|curPos
 condition|)
+block|{
 name|input_stream
 operator|.
 name|backup
@@ -3309,6 +3364,7 @@ operator|-
 literal|1
 argument_list|)
 expr_stmt|;
+block|}
 if|if
 condition|(
 operator|(
@@ -3354,6 +3410,7 @@ operator|!=
 operator|-
 literal|1
 condition|)
+block|{
 name|curLexState
 operator|=
 name|jjnewLexState
@@ -3361,6 +3418,7 @@ index|[
 name|jjmatchedKind
 index|]
 expr_stmt|;
+block|}
 return|return
 name|matchedToken
 return|;
@@ -3424,10 +3482,12 @@ name|specialToken
 operator|==
 literal|null
 condition|)
+block|{
 name|specialToken
 operator|=
 name|matchedToken
 expr_stmt|;
+block|}
 else|else
 block|{
 name|matchedToken
@@ -3454,11 +3514,13 @@ argument_list|)
 expr_stmt|;
 block|}
 else|else
+block|{
 name|SkipLexicalActions
 argument_list|(
 literal|null
 argument_list|)
 expr_stmt|;
+block|}
 if|if
 condition|(
 name|jjnewLexState
@@ -3469,6 +3531,7 @@ operator|!=
 operator|-
 literal|1
 condition|)
+block|{
 name|curLexState
 operator|=
 name|jjnewLexState
@@ -3476,6 +3539,7 @@ index|[
 name|jjmatchedKind
 index|]
 expr_stmt|;
+block|}
 continue|continue
 name|EOFLoop
 continue|;
@@ -3496,6 +3560,7 @@ operator|!=
 operator|-
 literal|1
 condition|)
+block|{
 name|curLexState
 operator|=
 name|jjnewLexState
@@ -3503,6 +3568,7 @@ index|[
 name|jjmatchedKind
 index|]
 expr_stmt|;
+block|}
 name|curPos
 operator|=
 literal|0
@@ -3622,9 +3688,11 @@ literal|0
 expr_stmt|;
 block|}
 else|else
+block|{
 name|error_column
 operator|++
 expr_stmt|;
+block|}
 block|}
 if|if
 condition|(

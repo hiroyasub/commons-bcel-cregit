@@ -275,7 +275,7 @@ name|stripped
 operator|!=
 literal|null
 condition|)
-comment|// Any NOPs stripped?
+block|{
 name|methods
 index|[
 name|i
@@ -284,6 +284,7 @@ operator|=
 name|stripped
 expr_stmt|;
 comment|// Overwrite with stripped method
+block|}
 block|}
 block|}
 comment|/* Dump the class to<class name>_.class        */
@@ -432,7 +433,9 @@ operator|)
 operator|==
 literal|null
 condition|)
+block|{
 break|break;
+block|}
 name|count
 operator|+=
 name|match
@@ -512,6 +515,7 @@ condition|;
 name|j
 operator|++
 control|)
+block|{
 name|targeters
 index|[
 name|j
@@ -527,6 +531,7 @@ argument_list|,
 name|next
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 block|}
 block|}

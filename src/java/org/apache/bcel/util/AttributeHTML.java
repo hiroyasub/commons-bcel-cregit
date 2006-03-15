@@ -461,8 +461,9 @@ name|tag
 operator|==
 name|ATTR_UNKNOWN
 condition|)
-comment|// Don't know what to do about this one
+block|{
 return|return;
+block|}
 name|attr_count
 operator|++
 expr_stmt|;
@@ -475,6 +476,7 @@ literal|2
 operator|==
 literal|0
 condition|)
+block|{
 name|file
 operator|.
 name|print
@@ -482,7 +484,9 @@ argument_list|(
 literal|"<TR BGCOLOR=\"#C0C0C0\"><TD>"
 argument_list|)
 expr_stmt|;
+block|}
 else|else
+block|{
 name|file
 operator|.
 name|print
@@ -490,6 +494,7 @@ argument_list|(
 literal|"<TR BGCOLOR=\"#A0A0A0\"><TD>"
 argument_list|)
 expr_stmt|;
+block|}
 name|file
 operator|.
 name|println
@@ -512,7 +517,7 @@ operator|+
 literal|"</A></H4>"
 argument_list|)
 expr_stmt|;
-comment|/* Handle different attributes      */
+comment|/* Handle different attributes          */
 switch|switch
 condition|(
 name|tag
@@ -630,6 +635,7 @@ name|catch_type
 operator|!=
 literal|0
 condition|)
+block|{
 name|file
 operator|.
 name|print
@@ -643,7 +649,9 @@ argument_list|)
 argument_list|)
 expr_stmt|;
 comment|// Create Link to _cp.html
+block|}
 else|else
+block|{
 name|file
 operator|.
 name|print
@@ -651,6 +659,7 @@ argument_list|(
 literal|"Any Exception"
 argument_list|)
 expr_stmt|;
+block|}
 name|file
 operator|.
 name|print
@@ -826,6 +835,7 @@ condition|;
 name|i
 operator|++
 control|)
+block|{
 name|file
 operator|.
 name|print
@@ -851,6 +861,7 @@ operator|+
 literal|")</A>\n"
 argument_list|)
 expr_stmt|;
+block|}
 name|file
 operator|.
 name|print
@@ -938,6 +949,7 @@ name|length
 operator|-
 literal|1
 condition|)
+block|{
 name|file
 operator|.
 name|print
@@ -946,6 +958,7 @@ literal|", "
 argument_list|)
 expr_stmt|;
 comment|// breakable
+block|}
 block|}
 break|break;
 case|case
@@ -1201,6 +1214,7 @@ name|index
 operator|>
 literal|0
 condition|)
+block|{
 name|name
 operator|=
 operator|(
@@ -1220,11 +1234,14 @@ operator|.
 name|getBytes
 argument_list|()
 expr_stmt|;
+block|}
 else|else
+block|{
 name|name
 operator|=
 literal|"&lt;anonymous&gt;"
 expr_stmt|;
+block|}
 name|access
 operator|=
 name|Utility

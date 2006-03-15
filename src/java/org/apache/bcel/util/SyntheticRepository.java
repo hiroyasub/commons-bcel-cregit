@@ -96,7 +96,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * This repository is used in situations where a Class is created  * outside the realm of a ClassLoader. Classes are loaded from  * the file systems using the paths specified in the given  * class path. By default, this is the value returned by  * ClassPath.getClassPath().  *<br>  * It is designed to be used as a singleton, however it  * can also be used with custom classpaths.  * /**  * Abstract definition of a class repository. Instances may be used  * to load classes from different sources and may be used in the  * Repository.setRepository method.  *  * @see org.apache.bcel.Repository  *  * @version $Id$  * @author<A HREF="mailto:m.dahm@gmx.de">M. Dahm</A>  * @author David Dixon-Peugh  */
+comment|/**  * This repository is used in situations where a Class is created  * outside the realm of a ClassLoader. Classes are loaded from  * the file systems using the paths specified in the given  * class path. By default, this is the value returned by  * ClassPath.getClassPath().  *<br>  * It is designed to be used as a singleton, however it  * can also be used with custom classpaths.  *  /**  * Abstract definition of a class repository. Instances may be used  * to load classes from different sources and may be used in the  * Repository.setRepository method.  *  * @see org.apache.bcel.Repository  *  * @version $Id$  * @author<A HREF="mailto:m.dahm@gmx.de">M. Dahm</A>  * @author David Dixon-Peugh  */
 end_comment
 
 begin_class
@@ -220,7 +220,7 @@ return|return
 name|rep
 return|;
 block|}
-comment|/**    * Store a new JavaClass instance into this Repository.    */
+comment|/**      * Store a new JavaClass instance into this Repository.      */
 specifier|public
 name|void
 name|storeClass
@@ -253,7 +253,7 @@ name|this
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**    * Remove class from repository    */
+comment|/**      * Remove class from repository      */
 specifier|public
 name|void
 name|removeClass
@@ -273,7 +273,7 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**    * Find an already defined (cached) JavaClass object by name.    */
+comment|/**      * Find an already defined (cached) JavaClass object by name.      */
 specifier|public
 name|JavaClass
 name|findClass
@@ -301,9 +301,11 @@ name|ref
 operator|==
 literal|null
 condition|)
+block|{
 return|return
 literal|null
 return|;
+block|}
 return|return
 operator|(
 name|JavaClass
@@ -314,7 +316,7 @@ name|get
 argument_list|()
 return|;
 block|}
-comment|/**    * Find a JavaClass object by name.    * If it is already in this Repository, the Repository version    * is returned.  Otherwise, the Repository's classpath is searched for    * the class (and it is added to the Repository if found).    *    * @param className the name of the class    * @return the JavaClass object    * @throws ClassNotFoundException if the class is not in the    *   Repository, and could not be found on the classpath    */
+comment|/**      * Find a JavaClass object by name.      * If it is already in this Repository, the Repository version      * is returned.  Otherwise, the Repository's classpath is searched for      * the class (and it is added to the Repository if found).      *      * @param className the name of the class      * @return the JavaClass object      * @throws ClassNotFoundException if the class is not in the      *   Repository, and could not be found on the classpath      */
 specifier|public
 name|JavaClass
 name|loadClass
@@ -420,7 +422,7 @@ argument_list|)
 throw|;
 block|}
 block|}
-comment|/**    * Find the JavaClass object for a runtime Class object.    * If a class with the same name is already in this Repository,    * the Repository version is returned.  Otherwise, getResourceAsStream()    * is called on the Class object to find the class's representation.    * If the representation is found, it is added to the Repository.    *    * @see Class    * @param clazz the runtime Class object    * @return JavaClass object for given runtime class    * @throws ClassNotFoundException if the class is not in the    *   Repository, and its representation could not be found    */
+comment|/**      * Find the JavaClass object for a runtime Class object.      * If a class with the same name is already in this Repository,      * the Repository version is returned.  Otherwise, getResourceAsStream()      * is called on the Class object to find the class's representation.      * If the representation is found, it is added to the Repository.      *      * @see Class      * @param clazz the runtime Class object      * @return JavaClass object for given runtime class      * @throws ClassNotFoundException if the class is not in the      *   Repository, and its representation could not be found      */
 specifier|public
 name|JavaClass
 name|loadClass
@@ -592,7 +594,7 @@ name|className
 argument_list|)
 throw|;
 block|}
-comment|/** ClassPath associated with the Repository.    */
+comment|/** ClassPath associated with the Repository.      */
 specifier|public
 name|ClassPath
 name|getClassPath
@@ -602,7 +604,7 @@ return|return
 name|_path
 return|;
 block|}
-comment|/** Clear all entries from cache.    */
+comment|/** Clear all entries from cache.      */
 specifier|public
 name|void
 name|clear

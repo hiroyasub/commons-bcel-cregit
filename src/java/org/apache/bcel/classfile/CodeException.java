@@ -99,13 +99,13 @@ specifier|private
 name|int
 name|handler_pc
 decl_stmt|;
-comment|/* Starting address of exception handler, i.e., 			   * an offset from start of code. 			   */
+comment|/* Starting address of exception handler, i.e.,      * an offset from start of code.      */
 specifier|private
 name|int
 name|catch_type
 decl_stmt|;
-comment|/* If this is zero the handler catches any 			   * exception, otherwise it points to the 			   * exception class which is to be caught. 			   */
-comment|/**    * Initialize from another object.    */
+comment|/* If this is zero the handler catches any      * exception, otherwise it points to the      * exception class which is to be caught.      */
+comment|/**      * Initialize from another object.      */
 specifier|public
 name|CodeException
 parameter_list|(
@@ -137,7 +137,7 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**    * Construct object from file stream.    * @param file Input stream    * @throws IOException    */
+comment|/**      * Construct object from file stream.      * @param file Input stream      * @throws IOException      */
 name|CodeException
 parameter_list|(
 name|DataInputStream
@@ -170,7 +170,7 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**    * @param start_pc Range in the code the exception handler is active,    * start_pc is inclusive while    * @param end_pc is exclusive    * @param handler_pc Starting address of exception handler, i.e.,    * an offset from start of code.    * @param catch_type If zero the handler catches any     * exception, otherwise it points to the exception class which is     * to be caught.    */
+comment|/**      * @param start_pc Range in the code the exception handler is active,      * start_pc is inclusive while      * @param end_pc is exclusive      * @param handler_pc Starting address of exception handler, i.e.,      * an offset from start of code.      * @param catch_type If zero the handler catches any       * exception, otherwise it points to the exception class which is       * to be caught.      */
 specifier|public
 name|CodeException
 parameter_list|(
@@ -212,7 +212,7 @@ operator|=
 name|catch_type
 expr_stmt|;
 block|}
-comment|/**    * Called by objects that are traversing the nodes of the tree implicitely    * defined by the contents of a Java class. I.e., the hierarchy of methods,    * fields, attributes, etc. spawns a tree of objects.    *    * @param v Visitor object    */
+comment|/**      * Called by objects that are traversing the nodes of the tree implicitely      * defined by the contents of a Java class. I.e., the hierarchy of methods,      * fields, attributes, etc. spawns a tree of objects.      *      * @param v Visitor object      */
 specifier|public
 name|void
 name|accept
@@ -229,7 +229,7 @@ name|this
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**    * Dump code exception to file stream in binary format.    *    * @param file Output file stream    * @throws IOException    */
+comment|/**      * Dump code exception to file stream in binary format.      *      * @param file Output file stream      * @throws IOException      */
 specifier|public
 specifier|final
 name|void
@@ -270,7 +270,7 @@ name|catch_type
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**    * @return 0, if the handler catches any exception, otherwise it points to    * the exception class which is to be caught.    */
+comment|/**      * @return 0, if the handler catches any exception, otherwise it points to      * the exception class which is to be caught.      */
 specifier|public
 specifier|final
 name|int
@@ -281,7 +281,7 @@ return|return
 name|catch_type
 return|;
 block|}
-comment|/**    * @return Exclusive end index of the region where the handler is active.    */
+comment|/**      * @return Exclusive end index of the region where the handler is active.      */
 specifier|public
 specifier|final
 name|int
@@ -292,7 +292,7 @@ return|return
 name|end_pc
 return|;
 block|}
-comment|/**    * @return Starting address of exception handler, relative to the code.    */
+comment|/**      * @return Starting address of exception handler, relative to the code.      */
 specifier|public
 specifier|final
 name|int
@@ -303,7 +303,7 @@ return|return
 name|handler_pc
 return|;
 block|}
-comment|/**    * @return Inclusive start index of the region where the handler is active.    */
+comment|/**      * @return Inclusive start index of the region where the handler is active.      */
 specifier|public
 specifier|final
 name|int
@@ -314,7 +314,7 @@ return|return
 name|start_pc
 return|;
 block|}
-comment|/**    * @param catch_type the type of exception that is caught    */
+comment|/**      * @param catch_type the type of exception that is caught      */
 specifier|public
 specifier|final
 name|void
@@ -331,7 +331,7 @@ operator|=
 name|catch_type
 expr_stmt|;
 block|}
-comment|/**    * @param end_pc end of handled block    */
+comment|/**      * @param end_pc end of handled block      */
 specifier|public
 specifier|final
 name|void
@@ -348,7 +348,7 @@ operator|=
 name|end_pc
 expr_stmt|;
 block|}
-comment|/**    * @param handler_pc where the actual code is    */
+comment|/**      * @param handler_pc where the actual code is      */
 specifier|public
 specifier|final
 name|void
@@ -365,7 +365,7 @@ operator|=
 name|handler_pc
 expr_stmt|;
 block|}
-comment|/**    * @param start_pc start of handled block    */
+comment|/**      * @param start_pc start of handled block      */
 specifier|public
 specifier|final
 name|void
@@ -382,7 +382,7 @@ operator|=
 name|start_pc
 expr_stmt|;
 block|}
-comment|/**    * @return String representation.    */
+comment|/**      * @return String representation.      */
 specifier|public
 specifier|final
 name|String
@@ -409,7 +409,7 @@ operator|+
 literal|")"
 return|;
 block|}
-comment|/**    * @return String representation.    */
+comment|/**      * @return String representation.      */
 specifier|public
 specifier|final
 name|String
@@ -431,11 +431,14 @@ name|catch_type
 operator|==
 literal|0
 condition|)
+block|{
 name|str
 operator|=
 literal|"<Any exception>(0)"
 expr_stmt|;
+block|}
 else|else
+block|{
 name|str
 operator|=
 name|Utility
@@ -466,6 +469,7 @@ else|:
 literal|""
 operator|)
 expr_stmt|;
+block|}
 return|return
 name|start_pc
 operator|+
@@ -500,7 +504,7 @@ literal|true
 argument_list|)
 return|;
 block|}
-comment|/**    * @return deep copy of this object    */
+comment|/**      * @return deep copy of this object      */
 specifier|public
 name|CodeException
 name|copy

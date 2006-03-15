@@ -187,7 +187,7 @@ return|;
 block|}
 block|}
 decl_stmt|;
-comment|/**     * Initialize from another object. Note that both objects use the same     * references (shallow copy). Use clone() for a physical copy.     */
+comment|/**      * Initialize from another object. Note that both objects use the same      * references (shallow copy). Use clone() for a physical copy.      */
 specifier|public
 name|Field
 parameter_list|(
@@ -201,7 +201,7 @@ name|c
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**    * Construct object from file stream.    * @param file Input stream    */
+comment|/**      * Construct object from file stream.      * @param file Input stream      */
 name|Field
 parameter_list|(
 name|DataInputStream
@@ -223,7 +223,7 @@ name|constant_pool
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**    * @param access_flags Access rights of field    * @param name_index Points to field name in constant pool    * @param signature_index Points to encoded signature    * @param attributes Collection of attributes    * @param constant_pool Array of constants    */
+comment|/**      * @param access_flags Access rights of field      * @param name_index Points to field name in constant pool      * @param signature_index Points to encoded signature      * @param attributes Collection of attributes      * @param constant_pool Array of constants      */
 specifier|public
 name|Field
 parameter_list|(
@@ -258,7 +258,7 @@ name|constant_pool
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**    * Called by objects that are traversing the nodes of the tree implicitely    * defined by the contents of a Java class. I.e., the hierarchy of methods,    * fields, attributes, etc. spawns a tree of objects.    *    * @param v Visitor object    */
+comment|/**      * Called by objects that are traversing the nodes of the tree implicitely      * defined by the contents of a Java class. I.e., the hierarchy of methods,      * fields, attributes, etc. spawns a tree of objects.      *      * @param v Visitor object      */
 specifier|public
 name|void
 name|accept
@@ -275,7 +275,7 @@ name|this
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**    * @return constant value associated with this field (may be null)    */
+comment|/**      * @return constant value associated with this field (may be null)      */
 specifier|public
 specifier|final
 name|ConstantValue
@@ -296,6 +296,7 @@ condition|;
 name|i
 operator|++
 control|)
+block|{
 if|if
 condition|(
 name|attributes
@@ -310,6 +311,7 @@ name|Constants
 operator|.
 name|ATTR_CONSTANT_VALUE
 condition|)
+block|{
 return|return
 operator|(
 name|ConstantValue
@@ -319,11 +321,13 @@ index|[
 name|i
 index|]
 return|;
+block|}
+block|}
 return|return
 literal|null
 return|;
 block|}
-comment|/**    * Return string representation close to declaration format,    * `public static final short MAX = 100', e.g..    *    * @return String representation of field, including the signature.    */
+comment|/**      * Return string representation close to declaration format,      * `public static final short MAX = 100', e.g..      *      * @return String representation of field, including the signature.      */
 specifier|public
 specifier|final
 name|String
@@ -423,6 +427,7 @@ name|cv
 operator|!=
 literal|null
 condition|)
+block|{
 name|buf
 operator|.
 name|append
@@ -435,6 +440,7 @@ argument_list|(
 name|cv
 argument_list|)
 expr_stmt|;
+block|}
 for|for
 control|(
 name|int
@@ -467,6 +473,7 @@ operator|instanceof
 name|ConstantValue
 operator|)
 condition|)
+block|{
 name|buf
 operator|.
 name|append
@@ -488,6 +495,7 @@ literal|"]"
 argument_list|)
 expr_stmt|;
 block|}
+block|}
 return|return
 name|buf
 operator|.
@@ -495,7 +503,7 @@ name|toString
 argument_list|()
 return|;
 block|}
-comment|/**    * @return deep copy of this field    */
+comment|/**      * @return deep copy of this field      */
 specifier|public
 specifier|final
 name|Field
@@ -515,7 +523,7 @@ name|_constant_pool
 argument_list|)
 return|;
 block|}
-comment|/**    * @return type of field    */
+comment|/**      * @return type of field      */
 specifier|public
 name|Type
 name|getType
@@ -531,7 +539,7 @@ argument_list|()
 argument_list|)
 return|;
 block|}
-comment|/**    * @return Comparison strategy object    */
+comment|/**      * @return Comparison strategy object      */
 specifier|public
 specifier|static
 name|BCELComparator
@@ -542,7 +550,7 @@ return|return
 name|_cmp
 return|;
 block|}
-comment|/**    * @param comparator Comparison strategy object    */
+comment|/**      * @param comparator Comparison strategy object      */
 specifier|public
 specifier|static
 name|void
@@ -557,7 +565,7 @@ operator|=
 name|comparator
 expr_stmt|;
 block|}
-comment|/**    * Return value as defined by given BCELComparator strategy.    * By default two Field objects are said to be equal when    * their names and signatures are equal.    *     * @see java.lang.Object#equals(java.lang.Object)    */
+comment|/**      * Return value as defined by given BCELComparator strategy.      * By default two Field objects are said to be equal when      * their names and signatures are equal.      *       * @see java.lang.Object#equals(java.lang.Object)      */
 specifier|public
 name|boolean
 name|equals
@@ -577,7 +585,7 @@ name|obj
 argument_list|)
 return|;
 block|}
-comment|/**    * Return value as defined by given BCELComparator strategy.    * By default return the hashcode of the field's name XOR signature.    *     * @see java.lang.Object#hashCode()    */
+comment|/**      * Return value as defined by given BCELComparator strategy.      * By default return the hashcode of the field's name XOR signature.      *       * @see java.lang.Object#hashCode()      */
 specifier|public
 name|int
 name|hashCode

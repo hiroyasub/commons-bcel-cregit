@@ -286,7 +286,7 @@ return|;
 block|}
 block|}
 decl_stmt|;
-comment|/**    * Declare a field. If it is static (isStatic() == true) and has a    * basic type like int or String it may have an initial value    * associated with it as defined by setInitValue().    *    * @param access_flags access qualifiers    * @param type  field type    * @param name field name    * @param cp constant pool    */
+comment|/**      * Declare a field. If it is static (isStatic() == true) and has a      * basic type like int or String it may have an initial value      * associated with it as defined by setInitValue().      *      * @param access_flags access qualifiers      * @param type  field type      * @param name field name      * @param cp constant pool      */
 specifier|public
 name|FieldGen
 parameter_list|(
@@ -324,7 +324,7 @@ name|cp
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**    * Instantiate from existing field.    *    * @param field Field object    * @param cp constant pool (must contain the same entries as the field's constant pool)    */
+comment|/**      * Instantiate from existing field.      *      * @param field Field object      * @param cp constant pool (must contain the same entries as the field's constant pool)      */
 specifier|public
 name|FieldGen
 parameter_list|(
@@ -395,6 +395,7 @@ index|]
 operator|instanceof
 name|ConstantValue
 condition|)
+block|{
 name|setValue
 argument_list|(
 operator|(
@@ -411,7 +412,9 @@ name|getConstantValueIndex
 argument_list|()
 argument_list|)
 expr_stmt|;
+block|}
 else|else
+block|{
 name|addAttribute
 argument_list|(
 name|attrs
@@ -420,6 +423,7 @@ name|i
 index|]
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 block|}
 specifier|private
@@ -465,7 +469,7 @@ name|cp
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**    * Set (optional) initial value of field, otherwise it will be set to null/0/false    * by the JVM automatically.    */
+comment|/**      * Set (optional) initial value of field, otherwise it will be set to null/0/false      * by the JVM automatically.      */
 specifier|public
 name|void
 name|setInitValue
@@ -489,10 +493,12 @@ name|str
 operator|!=
 literal|null
 condition|)
+block|{
 name|value
 operator|=
 name|str
 expr_stmt|;
+block|}
 block|}
 specifier|public
 name|void
@@ -515,6 +521,7 @@ name|l
 operator|!=
 literal|0L
 condition|)
+block|{
 name|value
 operator|=
 operator|new
@@ -523,6 +530,7 @@ argument_list|(
 name|l
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 specifier|public
 name|void
@@ -545,6 +553,7 @@ name|i
 operator|!=
 literal|0
 condition|)
+block|{
 name|value
 operator|=
 operator|new
@@ -553,6 +562,7 @@ argument_list|(
 name|i
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 specifier|public
 name|void
@@ -575,6 +585,7 @@ name|s
 operator|!=
 literal|0
 condition|)
+block|{
 name|value
 operator|=
 operator|new
@@ -583,6 +594,7 @@ argument_list|(
 name|s
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 specifier|public
 name|void
@@ -605,6 +617,7 @@ name|c
 operator|!=
 literal|0
 condition|)
+block|{
 name|value
 operator|=
 operator|new
@@ -613,6 +626,7 @@ argument_list|(
 name|c
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 specifier|public
 name|void
@@ -635,6 +649,7 @@ name|b
 operator|!=
 literal|0
 condition|)
+block|{
 name|value
 operator|=
 operator|new
@@ -643,6 +658,7 @@ argument_list|(
 name|b
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 specifier|public
 name|void
@@ -663,6 +679,7 @@ if|if
 condition|(
 name|b
 condition|)
+block|{
 name|value
 operator|=
 operator|new
@@ -671,6 +688,7 @@ argument_list|(
 literal|1
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 specifier|public
 name|void
@@ -693,6 +711,7 @@ name|f
 operator|!=
 literal|0.0
 condition|)
+block|{
 name|value
 operator|=
 operator|new
@@ -701,6 +720,7 @@ argument_list|(
 name|f
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 specifier|public
 name|void
@@ -723,6 +743,7 @@ name|d
 operator|!=
 literal|0.0
 condition|)
+block|{
 name|value
 operator|=
 operator|new
@@ -732,7 +753,8 @@ name|d
 argument_list|)
 expr_stmt|;
 block|}
-comment|/** Remove any initial value.    */
+block|}
+comment|/** Remove any initial value.      */
 specifier|public
 name|void
 name|cancelInitValue
@@ -757,6 +779,7 @@ name|type
 operator|==
 literal|null
 condition|)
+block|{
 throw|throw
 operator|new
 name|ClassGenException
@@ -764,12 +787,14 @@ argument_list|(
 literal|"You haven't defined the type of the field yet"
 argument_list|)
 throw|;
+block|}
 if|if
 condition|(
 operator|!
 name|isFinal
 argument_list|()
 condition|)
+block|{
 throw|throw
 operator|new
 name|ClassGenException
@@ -777,6 +802,7 @@ argument_list|(
 literal|"Only final fields may have an initial value!"
 argument_list|)
 throw|;
+block|}
 if|if
 condition|(
 operator|!
@@ -787,6 +813,7 @@ argument_list|(
 name|atype
 argument_list|)
 condition|)
+block|{
 throw|throw
 operator|new
 name|ClassGenException
@@ -801,7 +828,8 @@ name|atype
 argument_list|)
 throw|;
 block|}
-comment|/**    * Get field object after having set up all necessary values.    */
+block|}
+comment|/**      * Get field object after having set up all necessary values.      */
 specifier|public
 name|Field
 name|getField
@@ -1061,7 +1089,7 @@ specifier|private
 name|List
 name|observers
 decl_stmt|;
-comment|/** Add observer for this object.    */
+comment|/** Add observer for this object.      */
 specifier|public
 name|void
 name|addObserver
@@ -1076,12 +1104,14 @@ name|observers
 operator|==
 literal|null
 condition|)
+block|{
 name|observers
 operator|=
 operator|new
 name|ArrayList
 argument_list|()
 expr_stmt|;
+block|}
 name|observers
 operator|.
 name|add
@@ -1090,7 +1120,7 @@ name|o
 argument_list|)
 expr_stmt|;
 block|}
-comment|/** Remove observer for this object.    */
+comment|/** Remove observer for this object.      */
 specifier|public
 name|void
 name|removeObserver
@@ -1105,6 +1135,7 @@ name|observers
 operator|!=
 literal|null
 condition|)
+block|{
 name|observers
 operator|.
 name|remove
@@ -1113,7 +1144,8 @@ name|o
 argument_list|)
 expr_stmt|;
 block|}
-comment|/** Call notify() method on all observers. This method is not called    * automatically whenever the state has changed, but has to be    * called by the user after he has finished editing the object.    */
+block|}
+comment|/** Call notify() method on all observers. This method is not called      * automatically whenever the state has changed, but has to be      * called by the user after he has finished editing the object.      */
 specifier|public
 name|void
 name|update
@@ -1125,6 +1157,7 @@ name|observers
 operator|!=
 literal|null
 condition|)
+block|{
 for|for
 control|(
 name|Iterator
@@ -1141,6 +1174,7 @@ name|hasNext
 argument_list|()
 condition|;
 control|)
+block|{
 operator|(
 operator|(
 name|FieldObserver
@@ -1156,6 +1190,8 @@ argument_list|(
 name|this
 argument_list|)
 expr_stmt|;
+block|}
+block|}
 block|}
 specifier|public
 name|String
@@ -1177,11 +1213,13 @@ argument_list|()
 return|;
 block|}
 else|else
+block|{
 return|return
 literal|null
 return|;
 block|}
-comment|/**    * Return string representation close to declaration format,    * `public static final short MAX = 100', e.g..    *    * @return String representation of field    */
+block|}
+comment|/**      * Return string representation close to declaration format,      * `public static final short MAX = 100', e.g..      *      * @return String representation of field      */
 specifier|public
 specifier|final
 name|String
@@ -1277,6 +1315,7 @@ name|value
 operator|!=
 literal|null
 condition|)
+block|{
 name|buf
 operator|.
 name|append
@@ -1289,6 +1328,7 @@ argument_list|(
 name|value
 argument_list|)
 expr_stmt|;
+block|}
 return|return
 name|buf
 operator|.
@@ -1296,7 +1336,7 @@ name|toString
 argument_list|()
 return|;
 block|}
-comment|/** @return deep copy of this field    */
+comment|/** @return deep copy of this field      */
 specifier|public
 name|FieldGen
 name|copy
@@ -1325,7 +1365,7 @@ return|return
 name|fg
 return|;
 block|}
-comment|/** 	 * @return Comparison strategy object 	 */
+comment|/**      * @return Comparison strategy object      */
 specifier|public
 specifier|static
 name|BCELComparator
@@ -1336,7 +1376,7 @@ return|return
 name|_cmp
 return|;
 block|}
-comment|/** 	 * @param comparator Comparison strategy object 	 */
+comment|/**      * @param comparator Comparison strategy object      */
 specifier|public
 specifier|static
 name|void
@@ -1351,7 +1391,7 @@ operator|=
 name|comparator
 expr_stmt|;
 block|}
-comment|/** 	 * Return value as defined by given BCELComparator strategy. 	 * By default two FieldGen objects are said to be equal when 	 * their names and signatures are equal. 	 *  	 * @see java.lang.Object#equals(java.lang.Object) 	 */
+comment|/**      * Return value as defined by given BCELComparator strategy.      * By default two FieldGen objects are said to be equal when      * their names and signatures are equal.      *       * @see java.lang.Object#equals(java.lang.Object)      */
 specifier|public
 name|boolean
 name|equals
@@ -1371,7 +1411,7 @@ name|obj
 argument_list|)
 return|;
 block|}
-comment|/** 	 * Return value as defined by given BCELComparator strategy. 	 * By default return the hashcode of the field's name XOR signature. 	 *  	 * @see java.lang.Object#hashCode() 	 */
+comment|/**      * Return value as defined by given BCELComparator strategy.      * By default return the hashcode of the field's name XOR signature.      *       * @see java.lang.Object#hashCode()      */
 specifier|public
 name|int
 name|hashCode

@@ -26,7 +26,7 @@ name|FSTORE
 extends|extends
 name|StoreInstruction
 block|{
-comment|/**    * Empty constructor needed for the Class.newInstance() statement in    * Instruction.readInstruction(). Not to be used otherwise.    */
+comment|/**      * Empty constructor needed for the Class.newInstance() statement in      * Instruction.readInstruction(). Not to be used otherwise.      */
 name|FSTORE
 parameter_list|()
 block|{
@@ -54,7 +54,7 @@ name|FSTORE_0
 argument_list|)
 expr_stmt|;
 block|}
-comment|/** Store float into local variable    * @param n index of local variable    */
+comment|/** Store float into local variable      * @param n index of local variable      */
 specifier|public
 name|FSTORE
 parameter_list|(
@@ -88,7 +88,7 @@ name|n
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**    * Call corresponding visitor method(s). The order is:    * Call visitor methods of implemented interfaces first, then    * call methods according to the class hierarchy in descending order,    * i.e., the most specific visitXXX() call comes last.    *    * @param v Visitor object    */
+comment|/**      * Call corresponding visitor method(s). The order is:      * Call visitor methods of implemented interfaces first, then      * call methods according to the class hierarchy in descending order,      * i.e., the most specific visitXXX() call comes last.      *      * @param v Visitor object      */
 specifier|public
 name|void
 name|accept

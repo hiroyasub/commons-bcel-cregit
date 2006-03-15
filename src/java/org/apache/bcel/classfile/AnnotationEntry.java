@@ -77,7 +77,7 @@ specifier|private
 name|ConstantPool
 name|constant_pool
 decl_stmt|;
-comment|/** 	 * Construct object from file stream. 	 * @param file Input stream 	 * @throws IOException 	 */
+comment|/**      * Construct object from file stream.      * @param file Input stream      * @throws IOException      */
 name|AnnotationEntry
 parameter_list|(
 name|DataInputStream
@@ -129,6 +129,7 @@ condition|;
 name|i
 operator|++
 control|)
+block|{
 name|element_value_pairs
 index|[
 name|i
@@ -142,6 +143,7 @@ argument_list|,
 name|constant_pool
 argument_list|)
 expr_stmt|;
+block|}
 name|this
 operator|.
 name|constant_pool
@@ -149,7 +151,7 @@ operator|=
 name|constant_pool
 expr_stmt|;
 block|}
-comment|/** 	   * Called by objects that are traversing the nodes of the tree implicitely 	   * defined by the contents of a Java class. I.e., the hierarchy of methods, 	   * fields, attributes, etc. spawns a tree of objects. 	   * 	   * @param v Visitor object 	   */
+comment|/**      * Called by objects that are traversing the nodes of the tree implicitely      * defined by the contents of a Java class. I.e., the hierarchy of methods,      * fields, attributes, etc. spawns a tree of objects.      *      * @param v Visitor object      */
 specifier|public
 name|void
 name|accept
@@ -160,7 +162,7 @@ parameter_list|)
 block|{
 comment|//	    v.visitAnnotationEntry(this);
 block|}
-comment|/** 	   * @return the annotation type name 	   */
+comment|/**      * @return the annotation type name      */
 specifier|public
 name|String
 name|getAnnotationType
@@ -190,7 +192,7 @@ name|getBytes
 argument_list|()
 return|;
 block|}
-comment|/** 	   * @return the number of element value pairs in this annotation entry 	   */
+comment|/**      * @return the number of element value pairs in this annotation entry      */
 specifier|public
 specifier|final
 name|int
@@ -201,7 +203,7 @@ return|return
 name|num_element_value_pairs
 return|;
 block|}
-comment|/** 	   * @return the element value pairs in this annotation entry 	   */
+comment|/**      * @return the element value pairs in this annotation entry      */
 specifier|public
 name|ElementValuePair
 index|[]
