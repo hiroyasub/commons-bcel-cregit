@@ -36,7 +36,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * an ElementValuePair's element value. This class will be broken out into  * different subclasses. This is a temporary implementation.  *   * @version $Id: ElementValue  * @author<A HREF="mailto:dbrosius@qis.net">D. Brosius</A>  */
+comment|/**  * an ElementValuePair's element value. This class will be broken out into  * different subclasses. This is a temporary implementation.  *   * @version $Id: ElementValue  * @author<A HREF="mailto:dbrosius@qis.net">D. Brosius</A>  * @since 5.2  */
 end_comment
 
 begin_class
