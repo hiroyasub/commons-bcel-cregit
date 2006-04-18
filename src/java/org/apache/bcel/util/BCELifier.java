@@ -1186,7 +1186,7 @@ name|pow
 init|=
 literal|1
 init|;
-name|i
+name|pow
 operator|<=
 name|Constants
 operator|.
