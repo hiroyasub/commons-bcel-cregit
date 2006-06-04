@@ -189,7 +189,13 @@ name|Visitor
 name|v
 parameter_list|)
 block|{
-comment|//	    v.visitAnnotation(this);
+name|v
+operator|.
+name|visitAnnotation
+argument_list|(
+name|this
+argument_list|)
+expr_stmt|;
 block|}
 comment|/**      * @param annotation_table the entries to set in this annotation      */
 specifier|public

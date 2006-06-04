@@ -107,6 +107,22 @@ specifier|public
 specifier|final
 specifier|static
 name|short
+name|MAJOR_1_6
+init|=
+literal|50
+decl_stmt|;
+specifier|public
+specifier|final
+specifier|static
+name|short
+name|MINOR_1_6
+init|=
+literal|0
+decl_stmt|;
+specifier|public
+specifier|final
+specifier|static
+name|short
 name|MAJOR
 init|=
 name|MAJOR_1_1
@@ -186,6 +202,14 @@ specifier|final
 specifier|static
 name|short
 name|ACC_SYNCHRONIZED
+init|=
+literal|0x0020
+decl_stmt|;
+specifier|public
+specifier|final
+specifier|static
+name|short
+name|ACC_SYPER
 init|=
 literal|0x0020
 decl_stmt|;
@@ -6328,7 +6352,7 @@ specifier|public
 specifier|static
 specifier|final
 name|byte
-name|ATTR_RUNTIMEVISIBLE_ANNOTATIONS
+name|ATTR_RUNTIME_VISIBLE_ANNOTATIONS
 init|=
 literal|12
 decl_stmt|;
@@ -6336,7 +6360,7 @@ specifier|public
 specifier|static
 specifier|final
 name|byte
-name|ATTR_RUNTIMEINVISIBLE_ANNOTATIONS
+name|ATTR_RUNTIMEIN_VISIBLE_ANNOTATIONS
 init|=
 literal|13
 decl_stmt|;
@@ -6344,7 +6368,7 @@ specifier|public
 specifier|static
 specifier|final
 name|byte
-name|ATTR_RUNTIMEVISIBLE_PARAMETER_ANNOTATIONS
+name|ATTR_RUNTIME_VISIBLE_PARAMETER_ANNOTATIONS
 init|=
 literal|14
 decl_stmt|;
@@ -6352,7 +6376,7 @@ specifier|public
 specifier|static
 specifier|final
 name|byte
-name|ATTR_RUNTIMEINVISIBLE_PARAMETER_ANNOTATIONS
+name|ATTR_RUNTIMEIN_VISIBLE_PARAMETER_ANNOTATIONS
 init|=
 literal|15
 decl_stmt|;
@@ -6367,12 +6391,28 @@ decl_stmt|;
 specifier|public
 specifier|static
 specifier|final
+name|byte
+name|ATTR_LOCAL_VARIABLE_TYPE_TABLE
+init|=
+literal|17
+decl_stmt|;
+specifier|public
+specifier|static
+specifier|final
+name|byte
+name|ATTR_ENCLOSING_METHOD
+init|=
+literal|18
+decl_stmt|;
+specifier|public
+specifier|static
+specifier|final
 name|short
 name|KNOWN_ATTRIBUTES
 init|=
-literal|12
+literal|19
 decl_stmt|;
-comment|//should be 17
+comment|// TOFO: FIXXXXX
 specifier|public
 specifier|static
 specifier|final
@@ -6414,6 +6454,10 @@ block|,
 literal|"RuntimeInvisibleParameterAnnotations"
 block|,
 literal|"AnnotationDefault"
+block|,
+literal|"LocalVariableTypeTable"
+block|,
+literal|"EnclosingMethod"
 block|}
 decl_stmt|;
 comment|/** Constants used in the StackMap attribute.    */

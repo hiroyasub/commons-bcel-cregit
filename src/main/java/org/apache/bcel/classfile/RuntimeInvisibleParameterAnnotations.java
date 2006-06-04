@@ -80,7 +80,7 @@ name|super
 argument_list|(
 name|Constants
 operator|.
-name|ATTR_RUNTIMEINVISIBLE_PARAMETER_ANNOTATIONS
+name|ATTR_RUNTIMEIN_VISIBLE_PARAMETER_ANNOTATIONS
 argument_list|,
 name|name_index
 argument_list|,

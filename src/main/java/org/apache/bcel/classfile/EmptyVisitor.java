@@ -16,7 +16,7 @@ package|;
 end_package
 
 begin_comment
-comment|/**  * Visitor with empty method bodies, can be extended and used in conjunction with the  * DescendingVisitor class, e.g.  *  * By courtesy of David Spencer.  *  * @see DescendingVisitor  * @version $Id$  *   */
+comment|/**  * Visitor with empty method bodies, can be extended and used in conjunction  * with the DescendingVisitor class, e.g. By courtesy of David Spencer.  *   * @see DescendingVisitor  * @version $Id$  */
 end_comment
 
 begin_class
@@ -351,6 +351,24 @@ name|void
 name|visitStackMapEntry
 parameter_list|(
 name|StackMapEntry
+name|obj
+parameter_list|)
+block|{
+block|}
+specifier|public
+name|void
+name|visitEnclosingMethod
+parameter_list|(
+name|EnclosingMethod
+name|obj
+parameter_list|)
+block|{
+block|}
+specifier|public
+name|void
+name|visitLocalVariableTypeTable
+parameter_list|(
+name|LocalVariableTypeTable
 name|obj
 parameter_list|)
 block|{

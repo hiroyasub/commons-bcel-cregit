@@ -16,7 +16,7 @@ package|;
 end_package
 
 begin_comment
-comment|/**  * Interface to make use of the Visitor pattern programming style.  * I.e. a class that implements this interface can traverse the contents of  * a Java class just by calling the `accept' method which all classes have.  *  * @version $Id$  * @author<A HREF="mailto:m.dahm@gmx.de">M. Dahm</A>  */
+comment|/**  * Interface to make use of the Visitor pattern programming style. I.e. a class  * that implements this interface can traverse the contents of a Java class just  * by calling the `accept' method which all classes have.  *   * @version $Id$  * @author<A HREF="mailto:m.dahm@gmx.de">M. Dahm</A>  */
 end_comment
 
 begin_interface
@@ -24,10 +24,6 @@ specifier|public
 interface|interface
 name|Visitor
 block|{
-comment|//public void visitAnnotation(Annotations obj);
-comment|//public void visitParameterAnnotation(ParameterAnnotations obj);
-comment|//public void visitAnnotationEntry(AnnotationEntry obj);
-comment|//public void visitAnnotationDefault(AnnotationDefault obj);
 specifier|public
 name|void
 name|visitCode
@@ -281,6 +277,54 @@ name|void
 name|visitStackMapEntry
 parameter_list|(
 name|StackMapEntry
+name|obj
+parameter_list|)
+function_decl|;
+specifier|public
+name|void
+name|visitAnnotation
+parameter_list|(
+name|Annotations
+name|obj
+parameter_list|)
+function_decl|;
+specifier|public
+name|void
+name|visitParameterAnnotation
+parameter_list|(
+name|ParameterAnnotations
+name|obj
+parameter_list|)
+function_decl|;
+specifier|public
+name|void
+name|visitAnnotationEntry
+parameter_list|(
+name|AnnotationEntry
+name|obj
+parameter_list|)
+function_decl|;
+specifier|public
+name|void
+name|visitAnnotationDefault
+parameter_list|(
+name|AnnotationDefault
+name|obj
+parameter_list|)
+function_decl|;
+specifier|public
+name|void
+name|visitLocalVariableTypeTable
+parameter_list|(
+name|LocalVariableTypeTable
+name|obj
+parameter_list|)
+function_decl|;
+specifier|public
+name|void
+name|visitEnclosingMethod
+parameter_list|(
+name|EnclosingMethod
 name|obj
 parameter_list|)
 function_decl|;

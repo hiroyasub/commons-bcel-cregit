@@ -26,7 +26,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Traverses a JavaClass with another Visitor object 'piggy-backed'  * that is applied to all components of a JavaClass object. I.e. this  * class supplies the traversal strategy, other classes can make use  * of it.  *  * @version $Id$  * @author<A HREF="mailto:m.dahm@gmx.de">M. Dahm</A>   */
+comment|/**  * Traverses a JavaClass with another Visitor object 'piggy-backed' that is  * applied to all components of a JavaClass object. I.e. this class supplies the  * traversal strategy, other classes can make use of it.  *   * @version $Id$  * @author<A HREF="mailto:m.dahm@gmx.de">M. Dahm</A>  */
 end_comment
 
 begin_class
@@ -52,7 +52,7 @@ operator|new
 name|Stack
 argument_list|()
 decl_stmt|;
-comment|/** @return container of current entitity, i.e., predecessor during traversal      */
+comment|/** 	 * @return container of current entitity, i.e., predecessor during traversal 	 */
 specifier|public
 name|Object
 name|predecessor
@@ -65,7 +65,7 @@ literal|0
 argument_list|)
 return|;
 block|}
-comment|/**      * @param level nesting level, i.e., 0 returns the direct predecessor      * @return container of current entitity, i.e., predecessor during traversal      */
+comment|/** 	 * @param level 	 *            nesting level, i.e., 0 returns the direct predecessor 	 * @return container of current entitity, i.e., predecessor during traversal 	 */
 specifier|public
 name|Object
 name|predecessor
@@ -120,7 +120,7 @@ return|;
 comment|// size - 1 == current
 block|}
 block|}
-comment|/** @return current object      */
+comment|/** 	 * @return current object 	 */
 specifier|public
 name|Object
 name|current
@@ -133,7 +133,7 @@ name|peek
 argument_list|()
 return|;
 block|}
-comment|/**      * @param clazz Class to traverse      * @param visitor visitor object to apply to all components      */
+comment|/** 	 * @param clazz 	 *            Class to traverse 	 * @param visitor 	 *            visitor object to apply to all components 	 */
 specifier|public
 name|DescendingVisitor
 parameter_list|(
@@ -157,7 +157,7 @@ operator|=
 name|visitor
 expr_stmt|;
 block|}
-comment|/**      * Start traversal.      */
+comment|/** 	 * Start traversal. 	 */
 specifier|public
 name|void
 name|visit
@@ -1613,6 +1613,118 @@ name|attribute
 argument_list|)
 expr_stmt|;
 name|attribute
+operator|.
+name|accept
+argument_list|(
+name|visitor
+argument_list|)
+expr_stmt|;
+name|stack
+operator|.
+name|pop
+argument_list|()
+expr_stmt|;
+block|}
+specifier|public
+name|void
+name|visitAnnotationDefault
+parameter_list|(
+name|AnnotationDefault
+name|obj
+parameter_list|)
+block|{
+name|stack
+operator|.
+name|push
+argument_list|(
+name|obj
+argument_list|)
+expr_stmt|;
+name|obj
+operator|.
+name|accept
+argument_list|(
+name|visitor
+argument_list|)
+expr_stmt|;
+name|stack
+operator|.
+name|pop
+argument_list|()
+expr_stmt|;
+block|}
+specifier|public
+name|void
+name|visitEnclosingMethod
+parameter_list|(
+name|EnclosingMethod
+name|obj
+parameter_list|)
+block|{
+name|stack
+operator|.
+name|push
+argument_list|(
+name|obj
+argument_list|)
+expr_stmt|;
+name|obj
+operator|.
+name|accept
+argument_list|(
+name|visitor
+argument_list|)
+expr_stmt|;
+name|stack
+operator|.
+name|pop
+argument_list|()
+expr_stmt|;
+block|}
+specifier|public
+name|void
+name|visitLocalVariableTypeTable
+parameter_list|(
+name|LocalVariableTypeTable
+name|obj
+parameter_list|)
+block|{
+name|stack
+operator|.
+name|push
+argument_list|(
+name|obj
+argument_list|)
+expr_stmt|;
+name|obj
+operator|.
+name|accept
+argument_list|(
+name|visitor
+argument_list|)
+expr_stmt|;
+name|stack
+operator|.
+name|pop
+argument_list|()
+expr_stmt|;
+block|}
+specifier|public
+name|void
+name|visitParameterAnnotation
+parameter_list|(
+name|ParameterAnnotations
+name|obj
+parameter_list|)
+block|{
+name|stack
+operator|.
+name|push
+argument_list|(
+name|obj
+argument_list|)
+expr_stmt|;
+name|obj
 operator|.
 name|accept
 argument_list|(
