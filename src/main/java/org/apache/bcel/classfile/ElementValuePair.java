@@ -75,8 +75,9 @@ operator|)
 expr_stmt|;
 name|value
 operator|=
-operator|new
 name|ElementValue
+operator|.
+name|readElementValue
 argument_list|(
 name|file
 argument_list|,

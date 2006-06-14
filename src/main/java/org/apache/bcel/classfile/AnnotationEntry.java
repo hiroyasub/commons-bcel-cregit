@@ -31,6 +31,16 @@ name|java
 operator|.
 name|io
 operator|.
+name|DataOutputStream
+import|;
+end_import
+
+begin_import
+import|import
+name|java
+operator|.
+name|io
+operator|.
 name|IOException
 import|;
 end_import
@@ -213,6 +223,16 @@ block|{
 return|return
 name|element_value_pairs
 return|;
+block|}
+specifier|public
+name|void
+name|dump
+parameter_list|(
+name|DataOutputStream
+name|dos
+parameter_list|)
+block|{
+comment|// TODO Auto-generated method stub
 block|}
 block|}
 end_class

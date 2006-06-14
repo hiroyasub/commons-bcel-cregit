@@ -1,8 +1,4 @@
 begin_unit|revision:1.0.0;language:Java;cregit-version:0.0.1
-begin_comment
-comment|/*  * Copyright  2000-2004 The Apache Software Foundation  *  *  Licensed under the Apache License, Version 2.0 (the "License");  *  you may not use this file except in compliance with the License.  *  You may obtain a copy of the License at  *  *      http://www.apache.org/licenses/LICENSE-2.0  *  *  Unless required by applicable law or agreed to in writing, software  *  distributed under the License is distributed on an "AS IS" BASIS,  *  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.  *  See the License for the specific language governing permissions and  *  limitations under the License.  *  */
-end_comment
-
 begin_package
 package|package
 name|org
@@ -11,7 +7,7 @@ name|apache
 operator|.
 name|bcel
 operator|.
-name|classfile
+name|generic
 package|;
 end_package
 
@@ -47,60 +43,110 @@ end_import
 
 begin_import
 import|import
-name|java
+name|org
 operator|.
-name|util
+name|apache
 operator|.
-name|ArrayList
+name|bcel
+operator|.
+name|classfile
+operator|.
+name|AnnotationElementValue
 import|;
 end_import
 
 begin_import
 import|import
-name|java
+name|org
 operator|.
-name|util
+name|apache
 operator|.
-name|List
+name|bcel
+operator|.
+name|classfile
+operator|.
+name|ArrayElementValue
 import|;
 end_import
 
-begin_comment
-comment|/**  * @version $Id: ElementValue  * @author<A HREF="mailto:dbrosius@qis.net">D. Brosius</A>  * @since 5.2  */
-end_comment
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|bcel
+operator|.
+name|classfile
+operator|.
+name|ClassElementValue
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|bcel
+operator|.
+name|classfile
+operator|.
+name|ElementValue
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|bcel
+operator|.
+name|classfile
+operator|.
+name|EnumElementValue
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|bcel
+operator|.
+name|classfile
+operator|.
+name|SimpleElementValue
+import|;
+end_import
 
 begin_class
 specifier|public
 specifier|abstract
 class|class
-name|ElementValue
+name|ElementValueGen
 block|{
 specifier|protected
 name|int
 name|type
 decl_stmt|;
 specifier|protected
-name|ConstantPool
-name|cpool
+name|ConstantPoolGen
+name|cpGen
 decl_stmt|;
-specifier|public
-name|String
-name|toString
-parameter_list|()
-block|{
-return|return
-name|stringifyValue
-argument_list|()
-return|;
-block|}
 specifier|protected
-name|ElementValue
+name|ElementValueGen
 parameter_list|(
 name|int
 name|type
 parameter_list|,
-name|ConstantPool
-name|cpool
+name|ConstantPoolGen
+name|cpGen
 parameter_list|)
 block|{
 name|this
@@ -111,11 +157,18 @@ name|type
 expr_stmt|;
 name|this
 operator|.
-name|cpool
+name|cpGen
 operator|=
-name|cpool
+name|cpGen
 expr_stmt|;
 block|}
+comment|/** 	 * Subtypes return an immutable variant of the ElementValueGen 	 */
+specifier|public
+specifier|abstract
+name|ElementValue
+name|getElementValue
+parameter_list|()
+function_decl|;
 specifier|public
 name|int
 name|getElementValueType
@@ -248,24 +301,24 @@ literal|'Z'
 decl_stmt|;
 specifier|public
 specifier|static
-name|ElementValue
+name|ElementValueGen
 name|readElementValue
 parameter_list|(
 name|DataInputStream
 name|dis
 parameter_list|,
-name|ConstantPool
-name|cpool
+name|ConstantPoolGen
+name|cpGen
 parameter_list|)
 throws|throws
 name|IOException
 block|{
-name|byte
+name|int
 name|type
 init|=
 name|dis
 operator|.
-name|readByte
+name|readUnsignedByte
 argument_list|()
 decl_stmt|;
 switch|switch
@@ -279,7 +332,7 @@ case|:
 comment|// byte
 return|return
 operator|new
-name|SimpleElementValue
+name|SimpleElementValueGen
 argument_list|(
 name|PRIMITIVE_BYTE
 argument_list|,
@@ -288,7 +341,7 @@ operator|.
 name|readUnsignedShort
 argument_list|()
 argument_list|,
-name|cpool
+name|cpGen
 argument_list|)
 return|;
 case|case
@@ -297,7 +350,7 @@ case|:
 comment|// char
 return|return
 operator|new
-name|SimpleElementValue
+name|SimpleElementValueGen
 argument_list|(
 name|PRIMITIVE_CHAR
 argument_list|,
@@ -306,7 +359,7 @@ operator|.
 name|readUnsignedShort
 argument_list|()
 argument_list|,
-name|cpool
+name|cpGen
 argument_list|)
 return|;
 case|case
@@ -315,7 +368,7 @@ case|:
 comment|// double
 return|return
 operator|new
-name|SimpleElementValue
+name|SimpleElementValueGen
 argument_list|(
 name|PRIMITIVE_DOUBLE
 argument_list|,
@@ -324,7 +377,7 @@ operator|.
 name|readUnsignedShort
 argument_list|()
 argument_list|,
-name|cpool
+name|cpGen
 argument_list|)
 return|;
 case|case
@@ -333,7 +386,7 @@ case|:
 comment|// float
 return|return
 operator|new
-name|SimpleElementValue
+name|SimpleElementValueGen
 argument_list|(
 name|PRIMITIVE_FLOAT
 argument_list|,
@@ -342,7 +395,7 @@ operator|.
 name|readUnsignedShort
 argument_list|()
 argument_list|,
-name|cpool
+name|cpGen
 argument_list|)
 return|;
 case|case
@@ -351,7 +404,7 @@ case|:
 comment|// int
 return|return
 operator|new
-name|SimpleElementValue
+name|SimpleElementValueGen
 argument_list|(
 name|PRIMITIVE_INT
 argument_list|,
@@ -360,7 +413,7 @@ operator|.
 name|readUnsignedShort
 argument_list|()
 argument_list|,
-name|cpool
+name|cpGen
 argument_list|)
 return|;
 case|case
@@ -369,7 +422,7 @@ case|:
 comment|// long
 return|return
 operator|new
-name|SimpleElementValue
+name|SimpleElementValueGen
 argument_list|(
 name|PRIMITIVE_LONG
 argument_list|,
@@ -378,7 +431,7 @@ operator|.
 name|readUnsignedShort
 argument_list|()
 argument_list|,
-name|cpool
+name|cpGen
 argument_list|)
 return|;
 case|case
@@ -387,7 +440,7 @@ case|:
 comment|// short
 return|return
 operator|new
-name|SimpleElementValue
+name|SimpleElementValueGen
 argument_list|(
 name|PRIMITIVE_SHORT
 argument_list|,
@@ -396,7 +449,7 @@ operator|.
 name|readUnsignedShort
 argument_list|()
 argument_list|,
-name|cpool
+name|cpGen
 argument_list|)
 return|;
 case|case
@@ -405,7 +458,7 @@ case|:
 comment|// boolean
 return|return
 operator|new
-name|SimpleElementValue
+name|SimpleElementValueGen
 argument_list|(
 name|PRIMITIVE_BOOLEAN
 argument_list|,
@@ -414,7 +467,7 @@ operator|.
 name|readUnsignedShort
 argument_list|()
 argument_list|,
-name|cpool
+name|cpGen
 argument_list|)
 return|;
 case|case
@@ -423,7 +476,7 @@ case|:
 comment|// String
 return|return
 operator|new
-name|SimpleElementValue
+name|SimpleElementValueGen
 argument_list|(
 name|STRING
 argument_list|,
@@ -432,7 +485,7 @@ operator|.
 name|readUnsignedShort
 argument_list|()
 argument_list|,
-name|cpool
+name|cpGen
 argument_list|)
 return|;
 case|case
@@ -441,10 +494,8 @@ case|:
 comment|// Enum constant
 return|return
 operator|new
-name|EnumElementValue
+name|EnumElementValueGen
 argument_list|(
-name|ENUM_CONSTANT
-argument_list|,
 name|dis
 operator|.
 name|readUnsignedShort
@@ -455,7 +506,7 @@ operator|.
 name|readUnsignedShort
 argument_list|()
 argument_list|,
-name|cpool
+name|cpGen
 argument_list|)
 return|;
 case|case
@@ -464,109 +515,29 @@ case|:
 comment|// Class
 return|return
 operator|new
-name|ClassElementValue
+name|ClassElementValueGen
 argument_list|(
-name|CLASS
-argument_list|,
 name|dis
 operator|.
 name|readUnsignedShort
 argument_list|()
 argument_list|,
-name|cpool
+name|cpGen
 argument_list|)
 return|;
-case|case
-literal|'@'
-case|:
-comment|// Annotation
-return|return
-operator|new
-name|AnnotationElementValue
-argument_list|(
-name|ANNOTATION
-argument_list|,
-operator|new
-name|AnnotationEntry
-argument_list|(
-name|dis
-argument_list|,
-name|cpool
-argument_list|)
-argument_list|,
-name|cpool
-argument_list|)
-return|;
-case|case
-literal|'['
-case|:
-comment|// Array
-name|int
-name|numArrayVals
-init|=
-name|dis
-operator|.
-name|readUnsignedShort
-argument_list|()
-decl_stmt|;
-name|List
-name|arrayVals
-init|=
-operator|new
-name|ArrayList
-argument_list|()
-decl_stmt|;
-name|ElementValue
-index|[]
-name|evalues
-init|=
-operator|new
-name|ElementValue
-index|[
-name|numArrayVals
-index|]
-decl_stmt|;
-for|for
-control|(
-name|int
-name|j
-init|=
-literal|0
-init|;
-name|j
-operator|<
-name|numArrayVals
-condition|;
-name|j
-operator|++
-control|)
-block|{
-name|evalues
-index|[
-name|j
-index|]
-operator|=
-name|ElementValue
-operator|.
-name|readElementValue
-argument_list|(
-name|dis
-argument_list|,
-name|cpool
-argument_list|)
-expr_stmt|;
-block|}
-return|return
-operator|new
-name|ArrayElementValue
-argument_list|(
-name|ARRAY
-argument_list|,
-name|evalues
-argument_list|,
-name|cpool
-argument_list|)
-return|;
+comment|//
+comment|// case '@': // Annotation
+comment|// return new
+comment|// AnnotationElementValueGen(ANNOTATION,Annotation.read(dis,cpGen),cpGen);
+comment|//
+comment|// case '[': // Array
+comment|// int numArrayVals = dis.readUnsignedShort();
+comment|// List arrayVals = new ArrayList();
+comment|// ElementValue[] evalues = new ElementValue[numArrayVals];
+comment|// for (int j=0;j<numArrayVals;j++) {
+comment|// evalues[j] = ElementValue.readElementValue(dis,cpGen);
+comment|// }
+comment|// return new ArrayElementValue(ARRAY,evalues,cpGen);
 default|default:
 throw|throw
 operator|new
@@ -579,32 +550,177 @@ argument_list|)
 throw|;
 block|}
 block|}
-specifier|public
-name|String
-name|toShortString
+specifier|protected
+name|ConstantPoolGen
+name|getConstantPool
 parameter_list|()
 block|{
-name|StringBuffer
-name|result
-init|=
-operator|new
-name|StringBuffer
-argument_list|()
-decl_stmt|;
-name|result
-operator|.
-name|append
-argument_list|(
-name|stringifyValue
-argument_list|()
-argument_list|)
-expr_stmt|;
 return|return
-name|result
-operator|.
-name|toString
-argument_list|()
+name|cpGen
 return|;
+block|}
+comment|/** 	 * Creates an (modifiable) ElementValueGen copy of an (immutable) 	 * ElementValue - constant pool is assumed correct. 	 */
+specifier|public
+specifier|static
+name|ElementValueGen
+name|copy
+parameter_list|(
+name|ElementValue
+name|value
+parameter_list|,
+name|ConstantPoolGen
+name|cpool
+parameter_list|,
+name|boolean
+name|copyPoolEntries
+parameter_list|)
+block|{
+switch|switch
+condition|(
+name|value
+operator|.
+name|getElementValueType
+argument_list|()
+condition|)
+block|{
+case|case
+literal|'B'
+case|:
+comment|// byte
+case|case
+literal|'C'
+case|:
+comment|// char
+case|case
+literal|'D'
+case|:
+comment|// double
+case|case
+literal|'F'
+case|:
+comment|// float
+case|case
+literal|'I'
+case|:
+comment|// int
+case|case
+literal|'J'
+case|:
+comment|// long
+case|case
+literal|'S'
+case|:
+comment|// short
+case|case
+literal|'Z'
+case|:
+comment|// boolean
+case|case
+literal|'s'
+case|:
+comment|// String
+return|return
+operator|new
+name|SimpleElementValueGen
+argument_list|(
+operator|(
+name|SimpleElementValue
+operator|)
+name|value
+argument_list|,
+name|cpool
+argument_list|,
+name|copyPoolEntries
+argument_list|)
+return|;
+case|case
+literal|'e'
+case|:
+comment|// Enum constant
+return|return
+operator|new
+name|EnumElementValueGen
+argument_list|(
+operator|(
+name|EnumElementValue
+operator|)
+name|value
+argument_list|,
+name|cpool
+argument_list|,
+name|copyPoolEntries
+argument_list|)
+return|;
+case|case
+literal|'@'
+case|:
+comment|// Annotation
+return|return
+operator|new
+name|AnnotationElementValueGen
+argument_list|(
+operator|(
+name|AnnotationElementValue
+operator|)
+name|value
+argument_list|,
+name|cpool
+argument_list|,
+name|copyPoolEntries
+argument_list|)
+return|;
+case|case
+literal|'['
+case|:
+comment|// Array
+return|return
+operator|new
+name|ArrayElementValueGen
+argument_list|(
+operator|(
+name|ArrayElementValue
+operator|)
+name|value
+argument_list|,
+name|cpool
+argument_list|,
+name|copyPoolEntries
+argument_list|)
+return|;
+case|case
+literal|'c'
+case|:
+comment|// Class
+return|return
+operator|new
+name|ClassElementValueGen
+argument_list|(
+operator|(
+name|ClassElementValue
+operator|)
+name|value
+argument_list|,
+name|cpool
+argument_list|,
+name|copyPoolEntries
+argument_list|)
+return|;
+default|default:
+throw|throw
+operator|new
+name|RuntimeException
+argument_list|(
+literal|"Not implemented yet! ("
+operator|+
+name|value
+operator|.
+name|getElementValueType
+argument_list|()
+operator|+
+literal|")"
+argument_list|)
+throw|;
+block|}
 block|}
 block|}
 end_class

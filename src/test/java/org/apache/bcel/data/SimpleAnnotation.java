@@ -19,19 +19,7 @@ name|lang
 operator|.
 name|annotation
 operator|.
-name|Retention
-import|;
-end_import
-
-begin_import
-import|import
-name|java
-operator|.
-name|lang
-operator|.
-name|annotation
-operator|.
-name|RetentionPolicy
+name|*
 import|;
 end_import
 

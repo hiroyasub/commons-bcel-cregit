@@ -87,6 +87,20 @@ name|Constants
 import|;
 end_import
 
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|bcel
+operator|.
+name|classfile
+operator|.
+name|ConstantUtf8
+import|;
+end_import
+
 begin_comment
 comment|/**  * Abstract super class for<em>Attribute</em> objects. Currently the  *<em>ConstantValue</em>,<em>SourceFile</em>,<em>Code</em>,  *<em>Exceptiontable</em>,<em>LineNumberTable</em>,  *<em>LocalVariableTable</em>,<em>InnerClasses</em> and  *<em>Synthetic</em> attributes are supported. The<em>Unknown</em>  * attribute stands for non-standard-attributes.  *   * @version $Id$  * @author<A HREF="mailto:m.dahm@gmx.de">M. Dahm</A>  * @see ConstantValue  * @see SourceFile  * @see Code  * @see Unknown  * @see ExceptionTable  * @see LineNumberTable  * @see LocalVariableTable  * @see InnerClasses  * @see Synthetic  * @see Deprecated  * @see Signature  */
 end_comment
@@ -327,15 +341,7 @@ name|readInt
 argument_list|()
 expr_stmt|;
 comment|// Compare strings to find known attribute
-name|System
-operator|.
-name|out
-operator|.
-name|println
-argument_list|(
-name|name
-argument_list|)
-expr_stmt|;
+comment|// System.out.println(name);
 for|for
 control|(
 name|byte
@@ -787,6 +793,36 @@ literal|"Ooops! default case reached."
 argument_list|)
 throw|;
 block|}
+block|}
+comment|/** 	 * @return Name of attribute 	 */
+specifier|public
+name|String
+name|getName
+parameter_list|()
+block|{
+name|ConstantUtf8
+name|c
+init|=
+operator|(
+name|ConstantUtf8
+operator|)
+name|constant_pool
+operator|.
+name|getConstant
+argument_list|(
+name|name_index
+argument_list|,
+name|Constants
+operator|.
+name|CONSTANT_Utf8
+argument_list|)
+decl_stmt|;
+return|return
+name|c
+operator|.
+name|getBytes
+argument_list|()
+return|;
 block|}
 comment|/** 	 * @return Length of attribute field in bytes. 	 */
 specifier|public
