@@ -59,6 +59,7 @@ extends|extends
 name|Annotations
 block|{
 comment|/**      * @param name_index Index pointing to the name<em>Code</em>      * @param length Content length in bytes      * @param file Input stream      * @param constant_pool Array of constants      */
+specifier|public
 name|RuntimeVisibleAnnotations
 parameter_list|(
 name|int
@@ -89,6 +90,8 @@ argument_list|,
 name|file
 argument_list|,
 name|constant_pool
+argument_list|,
+literal|true
 argument_list|)
 expr_stmt|;
 block|}

@@ -57,7 +57,12 @@ index|[]
 name|annotation_table
 decl_stmt|;
 comment|// Table of annotations
+specifier|private
+name|boolean
+name|isRuntimeVisible
+decl_stmt|;
 comment|/**      * @param annotation_type the subclass type of the annotation      * @param name_index Index pointing to the name<em>Code</em>      * @param length Content length in bytes      * @param file Input stream      * @param constant_pool Array of constants      */
+specifier|public
 name|Annotations
 parameter_list|(
 name|byte
@@ -74,6 +79,9 @@ name|file
 parameter_list|,
 name|ConstantPool
 name|constant_pool
+parameter_list|,
+name|boolean
+name|isRuntimeVisible
 parameter_list|)
 throws|throws
 name|IOException
@@ -93,6 +101,8 @@ operator|)
 literal|null
 argument_list|,
 name|constant_pool
+argument_list|,
+name|isRuntimeVisible
 argument_list|)
 expr_stmt|;
 name|annotation_table_length
@@ -132,12 +142,15 @@ index|[
 name|i
 index|]
 operator|=
-operator|new
 name|AnnotationEntry
+operator|.
+name|read
 argument_list|(
 name|file
 argument_list|,
 name|constant_pool
+argument_list|,
+name|isRuntimeVisible
 argument_list|)
 expr_stmt|;
 block|}
@@ -161,6 +174,9 @@ name|annotation_table
 parameter_list|,
 name|ConstantPool
 name|constant_pool
+parameter_list|,
+name|boolean
+name|isRuntimeVisible
 parameter_list|)
 block|{
 name|super
@@ -178,6 +194,12 @@ name|setAnnotationTable
 argument_list|(
 name|annotation_table
 argument_list|)
+expr_stmt|;
+name|this
+operator|.
+name|isRuntimeVisible
+operator|=
+name|isRuntimeVisible
 expr_stmt|;
 block|}
 comment|/**      * Called by objects that are traversing the nodes of the tree implicitely      * defined by the contents of a Java class. I.e., the hierarchy of methods,      * fields, attributes, etc. spawns a tree of objects.      *      * @param v Visitor object      */
@@ -261,6 +283,15 @@ parameter_list|()
 block|{
 return|return
 name|annotation_table_length
+return|;
+block|}
+specifier|public
+name|boolean
+name|isRuntimeVisible
+parameter_list|()
+block|{
+return|return
+name|isRuntimeVisible
 return|;
 block|}
 block|}

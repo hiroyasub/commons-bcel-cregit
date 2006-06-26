@@ -58,7 +58,7 @@ specifier|private
 name|int
 name|index
 decl_stmt|;
-specifier|protected
+specifier|public
 name|SimpleElementValue
 parameter_list|(
 name|int

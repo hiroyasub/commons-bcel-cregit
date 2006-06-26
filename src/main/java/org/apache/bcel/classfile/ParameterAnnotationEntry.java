@@ -113,17 +113,21 @@ name|i
 operator|++
 control|)
 block|{
+comment|//        	 TODO isRuntimeVisible
 name|annotation_table
 index|[
 name|i
 index|]
 operator|=
-operator|new
 name|AnnotationEntry
+operator|.
+name|read
 argument_list|(
 name|file
 argument_list|,
 name|constant_pool
+argument_list|,
+literal|false
 argument_list|)
 expr_stmt|;
 block|}

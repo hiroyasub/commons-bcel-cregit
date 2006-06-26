@@ -99,6 +99,20 @@ name|bcel
 operator|.
 name|classfile
 operator|.
+name|Annotations
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|bcel
+operator|.
+name|classfile
+operator|.
 name|Attribute
 import|;
 end_import
@@ -155,7 +169,7 @@ name|bcel
 operator|.
 name|generic
 operator|.
-name|AnnotationGen
+name|AnnotationEntryGen
 import|;
 end_import
 
@@ -197,7 +211,7 @@ name|bcel
 operator|.
 name|generic
 operator|.
-name|ElementNameValuePairGen
+name|ElementValueGen
 import|;
 end_import
 
@@ -211,7 +225,7 @@ name|bcel
 operator|.
 name|generic
 operator|.
-name|ElementValueGen
+name|ElementValuePairGen
 import|;
 end_import
 
@@ -320,11 +334,11 @@ literal|4
 argument_list|)
 decl_stmt|;
 comment|// Give it a name, call it 'id'
-name|ElementNameValuePairGen
+name|ElementValuePairGen
 name|nvGen
 init|=
 operator|new
-name|ElementNameValuePairGen
+name|ElementValuePairGen
 argument_list|(
 literal|"id"
 argument_list|,
@@ -382,11 +396,11 @@ argument_list|)
 expr_stmt|;
 comment|// Build an annotation of type 'SimpleAnnotation' with 'id=4' as the
 comment|// only value :)
-name|AnnotationGen
+name|AnnotationEntryGen
 name|a
 init|=
 operator|new
-name|AnnotationGen
+name|AnnotationEntryGen
 argument_list|(
 name|t
 argument_list|,
@@ -445,11 +459,11 @@ literal|4
 argument_list|)
 decl_stmt|;
 comment|// Give it a name, call it 'id'
-name|ElementNameValuePairGen
+name|ElementValuePairGen
 name|nvGen
 init|=
 operator|new
-name|ElementNameValuePairGen
+name|ElementValuePairGen
 argument_list|(
 literal|"id"
 argument_list|,
@@ -507,11 +521,11 @@ argument_list|)
 expr_stmt|;
 comment|// Build a RV annotation of type 'SimpleAnnotation' with 'id=4' as the
 comment|// only value :)
-name|AnnotationGen
+name|AnnotationEntryGen
 name|a
 init|=
 operator|new
-name|AnnotationGen
+name|AnnotationEntryGen
 argument_list|(
 name|t
 argument_list|,
@@ -590,12 +604,12 @@ name|assertTrue
 argument_list|(
 operator|(
 operator|(
-name|RuntimeAnnotations
+name|Annotations
 operator|)
 name|attribute
 operator|)
 operator|.
-name|areVisible
+name|isRuntimeVisible
 argument_list|()
 argument_list|)
 expr_stmt|;
@@ -614,11 +628,11 @@ argument_list|)
 expr_stmt|;
 comment|// Build a RIV annotation of type 'SimpleAnnotation' with 'id=4' as the
 comment|// only value :)
-name|AnnotationGen
+name|AnnotationEntryGen
 name|a2
 init|=
 operator|new
-name|AnnotationGen
+name|AnnotationEntryGen
 argument_list|(
 name|t
 argument_list|,
@@ -697,12 +711,12 @@ name|assertFalse
 argument_list|(
 operator|(
 operator|(
-name|RuntimeAnnotations
+name|Annotations
 operator|)
 name|attribute
 operator|)
 operator|.
-name|areVisible
+name|isRuntimeVisible
 argument_list|()
 argument_list|)
 expr_stmt|;
@@ -724,7 +738,7 @@ specifier|private
 name|void
 name|checkSerialize
 parameter_list|(
-name|AnnotationGen
+name|AnnotationEntryGen
 name|a
 parameter_list|,
 name|ConstantPoolGen
@@ -809,10 +823,10 @@ argument_list|(
 name|bais
 argument_list|)
 decl_stmt|;
-name|AnnotationGen
+name|AnnotationEntryGen
 name|annAfter
 init|=
-name|AnnotationGen
+name|AnnotationEntryGen
 operator|.
 name|read
 argument_list|(
@@ -936,11 +950,11 @@ name|i
 operator|++
 control|)
 block|{
-name|ElementNameValuePairGen
+name|ElementValuePairGen
 name|beforeElement
 init|=
 operator|(
-name|ElementNameValuePairGen
+name|ElementValuePairGen
 operator|)
 name|a
 operator|.
@@ -952,11 +966,11 @@ argument_list|(
 name|i
 argument_list|)
 decl_stmt|;
-name|ElementNameValuePairGen
+name|ElementValuePairGen
 name|afterElement
 init|=
 operator|(
-name|ElementNameValuePairGen
+name|ElementValuePairGen
 operator|)
 name|annAfter
 operator|.

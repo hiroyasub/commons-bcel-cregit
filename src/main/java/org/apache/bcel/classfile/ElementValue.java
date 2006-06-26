@@ -480,18 +480,22 @@ case|case
 literal|'@'
 case|:
 comment|// Annotation
+comment|// TODO isRuntimeVisible
 return|return
 operator|new
 name|AnnotationElementValue
 argument_list|(
 name|ANNOTATION
 argument_list|,
-operator|new
 name|AnnotationEntry
+operator|.
+name|read
 argument_list|(
 name|dis
 argument_list|,
 name|cpool
+argument_list|,
+literal|false
 argument_list|)
 argument_list|,
 name|cpool
