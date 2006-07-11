@@ -43,6 +43,26 @@ end_import
 
 begin_import
 import|import
+name|java
+operator|.
+name|util
+operator|.
+name|ArrayList
+import|;
+end_import
+
+begin_import
+import|import
+name|java
+operator|.
+name|util
+operator|.
+name|List
+import|;
+end_import
+
+begin_import
+import|import
 name|org
 operator|.
 name|apache
@@ -51,7 +71,7 @@ name|bcel
 operator|.
 name|classfile
 operator|.
-name|AnnotationElementValue
+name|AnnotationEntry
 import|;
 end_import
 
@@ -66,20 +86,6 @@ operator|.
 name|classfile
 operator|.
 name|ArrayElementValue
-import|;
-end_import
-
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|bcel
-operator|.
-name|classfile
-operator|.
-name|ClassElementValue
 import|;
 end_import
 
@@ -509,21 +515,132 @@ argument_list|,
 name|cpGen
 argument_list|)
 return|;
-comment|// case 'c': // Class
-comment|// return new ClassElementValueGen(dis.readUnsignedShort(), cpGen);
-comment|//
-comment|// case '@': // Annotation
-comment|// return new
-comment|// AnnotationElementValueGen(ANNOTATION,Annotation.read(dis,cpGen),cpGen);
-comment|//
-comment|// case '[': // Array
-comment|// int numArrayVals = dis.readUnsignedShort();
-comment|// List arrayVals = new ArrayList();
-comment|// ElementValue[] evalues = new ElementValue[numArrayVals];
-comment|// for (int j=0;j<numArrayVals;j++) {
-comment|// evalues[j] = ElementValue.readElementValue(dis,cpGen);
-comment|// }
-comment|// return new ArrayElementValue(ARRAY,evalues,cpGen);
+case|case
+literal|'c'
+case|:
+comment|// Class
+return|return
+operator|new
+name|ClassElementValueGen
+argument_list|(
+name|dis
+operator|.
+name|readUnsignedShort
+argument_list|()
+argument_list|,
+name|cpGen
+argument_list|)
+return|;
+case|case
+literal|'@'
+case|:
+comment|// Annotation
+comment|// TODO: isRuntimeVisible ??????????
+comment|// FIXME
+return|return
+operator|new
+name|AnnotationElementValueGen
+argument_list|(
+name|ANNOTATION
+argument_list|,
+operator|new
+name|AnnotationEntryGen
+argument_list|(
+name|AnnotationEntry
+operator|.
+name|read
+argument_list|(
+name|dis
+argument_list|,
+name|cpGen
+operator|.
+name|getConstantPool
+argument_list|()
+argument_list|,
+literal|true
+argument_list|)
+argument_list|,
+name|cpGen
+argument_list|,
+literal|false
+argument_list|)
+argument_list|,
+name|cpGen
+argument_list|)
+return|;
+case|case
+literal|'['
+case|:
+comment|// Array
+name|int
+name|numArrayVals
+init|=
+name|dis
+operator|.
+name|readUnsignedShort
+argument_list|()
+decl_stmt|;
+name|List
+name|arrayVals
+init|=
+operator|new
+name|ArrayList
+argument_list|()
+decl_stmt|;
+name|ElementValue
+index|[]
+name|evalues
+init|=
+operator|new
+name|ElementValue
+index|[
+name|numArrayVals
+index|]
+decl_stmt|;
+for|for
+control|(
+name|int
+name|j
+init|=
+literal|0
+init|;
+name|j
+operator|<
+name|numArrayVals
+condition|;
+name|j
+operator|++
+control|)
+block|{
+name|evalues
+index|[
+name|j
+index|]
+operator|=
+name|ElementValue
+operator|.
+name|readElementValue
+argument_list|(
+name|dis
+argument_list|,
+name|cpGen
+operator|.
+name|getConstantPool
+argument_list|()
+argument_list|)
+expr_stmt|;
+block|}
+return|return
+operator|new
+name|ArrayElementValueGen
+argument_list|(
+name|ARRAY
+argument_list|,
+name|evalues
+argument_list|,
+name|cpGen
+argument_list|)
+return|;
 default|default:
 throw|throw
 operator|new
@@ -645,7 +762,7 @@ comment|// return new ArrayElementValueGen((ArrayElementValue) value, cpool,
 comment|// copyPoolEntries);
 comment|// case 'c': // Class
 comment|// return new ClassElementValueGen((ClassElementValue) value, cpool,
-comment|//					copyPoolEntries);
+comment|// copyPoolEntries);
 default|default:
 throw|throw
 operator|new

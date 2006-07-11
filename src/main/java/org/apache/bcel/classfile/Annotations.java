@@ -251,18 +251,9 @@ operator|.
 name|length
 expr_stmt|;
 block|}
+comment|// TODO: update method names
 comment|/**      * @return the annotation entry table      */
-specifier|public
-specifier|final
-name|AnnotationEntry
-index|[]
-name|getAnnotationTable
-parameter_list|()
-block|{
-return|return
-name|annotation_table
-return|;
-block|}
+comment|/*     public final AnnotationEntry[] getAnnotationTable() {         return annotation_table;     }*/
 comment|/**      * returns the array of annotation entries in this annotation      */
 specifier|public
 name|AnnotationEntry

@@ -40,7 +40,7 @@ block|{
 return|return
 name|getTestClass
 argument_list|(
-literal|"org.apache.bcel.data.MarkedType$1"
+literal|"org.apache.bcel.data.MarkedType"
 argument_list|)
 return|;
 block|}
