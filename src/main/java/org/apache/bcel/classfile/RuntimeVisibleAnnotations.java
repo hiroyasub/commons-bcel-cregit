@@ -31,6 +31,16 @@ name|java
 operator|.
 name|io
 operator|.
+name|DataOutputStream
+import|;
+end_import
+
+begin_import
+import|import
+name|java
+operator|.
+name|io
+operator|.
 name|IOException
 import|;
 end_import
@@ -48,7 +58,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * represents an annotation that is represented in the class file  * and is provided to the JVM.  *   * @version $Id: RuntimeVisibleAnnotations  * @author<A HREF="mailto:dbrosius@qis.net">D. Brosius</A>  * @since 5.2  */
+comment|/**  * represents an annotation that is represented in the class file and is  * provided to the JVM.  *   * @version $Id: RuntimeVisibleAnnotations  * @author<A HREF="mailto:dbrosius@qis.net">D. Brosius</A>  * @since 5.2  */
 end_comment
 
 begin_class
@@ -58,7 +68,7 @@ name|RuntimeVisibleAnnotations
 extends|extends
 name|Annotations
 block|{
-comment|/**      * @param name_index Index pointing to the name<em>Code</em>      * @param length Content length in bytes      * @param file Input stream      * @param constant_pool Array of constants      */
+comment|/** 	 * @param name_index 	 *            Index pointing to the name<em>Code</em> 	 * @param length 	 *            Content length in bytes 	 * @param file 	 *            Input stream 	 * @param constant_pool 	 *            Array of constants 	 */
 specifier|public
 name|RuntimeVisibleAnnotations
 parameter_list|(
@@ -95,7 +105,7 @@ literal|true
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * @return deep copy of this attribute      */
+comment|/** 	 * @return deep copy of this attribute 	 */
 specifier|public
 name|Attribute
 name|copy
@@ -116,6 +126,30 @@ decl_stmt|;
 return|return
 name|c
 return|;
+block|}
+specifier|public
+specifier|final
+name|void
+name|dump
+parameter_list|(
+name|DataOutputStream
+name|dos
+parameter_list|)
+throws|throws
+name|IOException
+block|{
+name|super
+operator|.
+name|dump
+argument_list|(
+name|dos
+argument_list|)
+expr_stmt|;
+name|writeAnnotations
+argument_list|(
+name|dos
+argument_list|)
+expr_stmt|;
 block|}
 block|}
 end_class

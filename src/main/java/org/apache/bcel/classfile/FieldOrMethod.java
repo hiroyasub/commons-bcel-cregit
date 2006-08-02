@@ -763,7 +763,7 @@ name|j
 init|=
 literal|0
 init|;
-name|i
+name|j
 operator|<
 name|annotations
 operator|.
@@ -772,9 +772,10 @@ argument_list|()
 operator|.
 name|length
 condition|;
-name|i
+name|j
 operator|++
 control|)
+block|{
 name|accumulatedAnnotations
 operator|.
 name|add
@@ -790,6 +791,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
+block|}
 name|annotationEntries
 operator|=
 operator|(
@@ -802,8 +804,12 @@ name|toArray
 argument_list|(
 operator|new
 name|AnnotationEntry
-index|[]
-block|{}
+index|[
+name|accumulatedAnnotations
+operator|.
+name|size
+argument_list|()
+index|]
 argument_list|)
 expr_stmt|;
 name|annotationsOutOfDate
