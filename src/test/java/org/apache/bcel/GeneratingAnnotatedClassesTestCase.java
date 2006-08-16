@@ -1484,7 +1484,7 @@ name|innerValue
 decl_stmt|;
 name|assertTrue
 argument_list|(
-literal|"Should be called LSimpleAnnotation; but is called: "
+literal|"Should be called Lorg/apache/bcel/data/SimpleAnnotation; but is called: "
 operator|+
 name|innerAnnotationValue
 operator|.
@@ -1504,7 +1504,7 @@ argument_list|()
 operator|.
 name|equals
 argument_list|(
-literal|"LSimpleAnnotation;"
+literal|"Lorg/apache/bcel/data/SimpleAnnotation;"
 argument_list|)
 argument_list|)
 expr_stmt|;

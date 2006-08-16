@@ -71,6 +71,20 @@ name|bcel
 operator|.
 name|classfile
 operator|.
+name|AnnotationElementValue
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|bcel
+operator|.
+name|classfile
+operator|.
 name|AnnotationEntry
 import|;
 end_import
@@ -86,6 +100,20 @@ operator|.
 name|classfile
 operator|.
 name|ArrayElementValue
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|bcel
+operator|.
+name|classfile
+operator|.
+name|ClassElementValue
 import|;
 end_import
 
@@ -754,15 +782,60 @@ argument_list|,
 name|copyPoolEntries
 argument_list|)
 return|;
-comment|// case '@': // Annotation
-comment|// return new AnnotationElementValueGen(
-comment|// (AnnotationElementValue) value, cpool, copyPoolEntries);
-comment|// case '[': // Array
-comment|// return new ArrayElementValueGen((ArrayElementValue) value, cpool,
-comment|// copyPoolEntries);
-comment|// case 'c': // Class
-comment|// return new ClassElementValueGen((ClassElementValue) value, cpool,
-comment|// copyPoolEntries);
+case|case
+literal|'@'
+case|:
+comment|// Annotation
+return|return
+operator|new
+name|AnnotationElementValueGen
+argument_list|(
+operator|(
+name|AnnotationElementValue
+operator|)
+name|value
+argument_list|,
+name|cpool
+argument_list|,
+name|copyPoolEntries
+argument_list|)
+return|;
+case|case
+literal|'['
+case|:
+comment|// Array
+return|return
+operator|new
+name|ArrayElementValueGen
+argument_list|(
+operator|(
+name|ArrayElementValue
+operator|)
+name|value
+argument_list|,
+name|cpool
+argument_list|,
+name|copyPoolEntries
+argument_list|)
+return|;
+case|case
+literal|'c'
+case|:
+comment|// Class
+return|return
+operator|new
+name|ClassElementValueGen
+argument_list|(
+operator|(
+name|ClassElementValue
+operator|)
+name|value
+argument_list|,
+name|cpool
+argument_list|,
+name|copyPoolEntries
+argument_list|)
+return|;
 default|default:
 throw|throw
 operator|new
