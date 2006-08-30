@@ -1643,6 +1643,7 @@ argument_list|(
 literal|"\t"
 argument_list|)
 expr_stmt|;
+comment|/* FALL THRU */
 case|case
 name|Constants
 operator|.
