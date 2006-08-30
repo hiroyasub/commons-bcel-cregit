@@ -334,12 +334,6 @@ name|ArrayList
 argument_list|()
 decl_stmt|;
 specifier|private
-name|boolean
-name|unpackedAnnotations
-init|=
-literal|false
-decl_stmt|;
-specifier|private
 specifier|static
 name|BCELComparator
 name|_cmp
