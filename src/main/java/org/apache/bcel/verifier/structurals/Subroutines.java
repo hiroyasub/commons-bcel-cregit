@@ -53,16 +53,6 @@ name|java
 operator|.
 name|util
 operator|.
-name|Hashtable
-import|;
-end_import
-
-begin_import
-import|import
-name|java
-operator|.
-name|util
-operator|.
 name|Iterator
 import|;
 end_import
@@ -1551,13 +1541,13 @@ argument_list|(
 literal|2
 argument_list|)
 decl_stmt|;
-comment|/** 	 * The Hashtable containing the subroutines found. 	 * Key: InstructionHandle of the leader of the subroutine. 	 * Elements: SubroutineImpl objects. 	 */
+comment|/** 	 * The map containing the subroutines found. 	 * Key: InstructionHandle of the leader of the subroutine. 	 * Elements: SubroutineImpl objects. 	 */
 specifier|private
-name|Hashtable
+name|Map
 name|subroutines
 init|=
 operator|new
-name|Hashtable
+name|HashMap
 argument_list|()
 decl_stmt|;
 comment|/** 	 * This is referring to a special subroutine, namely the 	 * top level. This is not really a subroutine but we use 	 * it to distinguish between top level instructions and 	 * unreachable instructions. 	 */

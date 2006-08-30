@@ -33,7 +33,7 @@ name|java
 operator|.
 name|util
 operator|.
-name|Hashtable
+name|HashMap
 import|;
 end_import
 
@@ -1480,11 +1480,11 @@ name|exceptionhandlers
 decl_stmt|;
 comment|/** All InstructionContext instances of this ControlFlowGraph. */
 specifier|private
-name|Hashtable
+name|Map
 name|instructionContexts
 init|=
 operator|new
-name|Hashtable
+name|HashMap
 argument_list|()
 decl_stmt|;
 comment|//keys: InstructionHandle, values: InstructionContextImpl

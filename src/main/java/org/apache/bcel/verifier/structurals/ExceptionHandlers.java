@@ -23,6 +23,16 @@ name|java
 operator|.
 name|util
 operator|.
+name|HashMap
+import|;
+end_import
+
+begin_import
+import|import
+name|java
+operator|.
+name|util
+operator|.
 name|HashSet
 import|;
 end_import
@@ -33,7 +43,7 @@ name|java
 operator|.
 name|util
 operator|.
-name|Hashtable
+name|Map
 import|;
 end_import
 
@@ -100,7 +110,7 @@ name|ExceptionHandlers
 block|{
 comment|/** 	 * The ExceptionHandler instances. 	 * Key: InstructionHandle objects, Values: HashSet<ExceptionHandler> instances. 	 */
 specifier|private
-name|Hashtable
+name|Map
 name|exceptionhandlers
 decl_stmt|;
 comment|/** 	 * Constructor. Creates a new ExceptionHandlers instance. 	 */
@@ -114,7 +124,7 @@ block|{
 name|exceptionhandlers
 operator|=
 operator|new
-name|Hashtable
+name|HashMap
 argument_list|()
 expr_stmt|;
 name|CodeExceptionGen
