@@ -1513,8 +1513,12 @@ name|toArray
 argument_list|(
 operator|new
 name|AnnotationEntry
-index|[]
-block|{}
+index|[
+name|accumulatedAnnotations
+operator|.
+name|size
+argument_list|()
+index|]
 argument_list|)
 expr_stmt|;
 name|annotationsOutOfDate
