@@ -107,6 +107,16 @@ end_import
 
 begin_import
 import|import
+name|java
+operator|.
+name|util
+operator|.
+name|NoSuchElementException
+import|;
+end_import
+
+begin_import
+import|import
 name|org
 operator|.
 name|apache
@@ -3446,7 +3456,20 @@ specifier|public
 name|Object
 name|next
 parameter_list|()
+throws|throws
+name|NoSuchElementException
 block|{
+if|if
+condition|(
+name|ih
+operator|==
+literal|null
+condition|)
+throw|throw
+operator|new
+name|NoSuchElementException
+argument_list|()
+throw|;
 name|InstructionHandle
 name|i
 init|=
