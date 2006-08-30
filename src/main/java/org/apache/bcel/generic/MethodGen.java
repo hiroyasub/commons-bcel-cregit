@@ -4850,13 +4850,6 @@ name|paramAnnInvisAttr
 init|=
 literal|null
 decl_stmt|;
-name|List
-name|accumulatedAnnotations
-init|=
-operator|new
-name|ArrayList
-argument_list|()
-decl_stmt|;
 for|for
 control|(
 name|int

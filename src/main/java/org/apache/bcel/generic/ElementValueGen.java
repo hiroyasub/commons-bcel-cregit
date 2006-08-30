@@ -608,13 +608,6 @@ operator|.
 name|readUnsignedShort
 argument_list|()
 decl_stmt|;
-name|List
-name|arrayVals
-init|=
-operator|new
-name|ArrayList
-argument_list|()
-decl_stmt|;
 name|ElementValue
 index|[]
 name|evalues
