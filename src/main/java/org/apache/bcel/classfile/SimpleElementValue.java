@@ -725,8 +725,9 @@ name|CONSTANT_Integer
 argument_list|)
 decl_stmt|;
 return|return
-operator|new
-name|Character
+name|String
+operator|.
+name|valueOf
 argument_list|(
 operator|(
 name|char
@@ -736,9 +737,6 @@ operator|.
 name|getBytes
 argument_list|()
 argument_list|)
-operator|.
-name|toString
-argument_list|()
 return|;
 case|case
 name|PRIMITIVE_BOOLEAN
