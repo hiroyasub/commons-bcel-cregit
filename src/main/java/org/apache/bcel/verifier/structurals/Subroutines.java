@@ -33,6 +33,16 @@ name|java
 operator|.
 name|util
 operator|.
+name|HashMap
+import|;
+end_import
+
+begin_import
+import|import
+name|java
+operator|.
+name|util
+operator|.
 name|HashSet
 import|;
 end_import
@@ -54,6 +64,16 @@ operator|.
 name|util
 operator|.
 name|Iterator
+import|;
+end_import
+
+begin_import
+import|import
+name|java
+operator|.
+name|util
+operator|.
+name|Map
 import|;
 end_import
 
@@ -1816,11 +1836,11 @@ name|HashSet
 argument_list|()
 decl_stmt|;
 comment|// we don't want to assign an instruction to two or more Subroutine objects.
-name|Hashtable
+name|Map
 name|colors
 init|=
 operator|new
-name|Hashtable
+name|HashMap
 argument_list|()
 decl_stmt|;
 comment|//Graph colouring. Key: InstructionHandle, Value: Integer .
