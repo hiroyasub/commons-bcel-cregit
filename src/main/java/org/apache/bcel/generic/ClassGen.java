@@ -1037,8 +1037,12 @@ name|toArray
 argument_list|(
 operator|new
 name|AnnotationEntryGen
-index|[]
-block|{}
+index|[
+name|annotationGenObjs
+operator|.
+name|size
+argument_list|()
+index|]
 argument_list|)
 return|;
 block|}
