@@ -1464,12 +1464,8 @@ return|;
 block|}
 block|}
 comment|// End Inner InstructionContextImpl Class.
-comment|/** The MethodGen object we're working on. */
-specifier|private
-specifier|final
-name|MethodGen
-name|method_gen
-decl_stmt|;
+comment|///** The MethodGen object we're working on. */
+comment|//private final MethodGen method_gen;
 comment|/** The Subroutines object for the method whose control flow is represented by this ControlFlowGraph. */
 specifier|private
 specifier|final
@@ -1565,12 +1561,7 @@ argument_list|)
 argument_list|)
 expr_stmt|;
 block|}
-name|this
-operator|.
-name|method_gen
-operator|=
-name|method_gen
-expr_stmt|;
+comment|//this.method_gen = method_gen;
 block|}
 comment|/** 	 * Returns the InstructionContext of a given instruction. 	 */
 specifier|public
