@@ -78,7 +78,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * represents one annotation in the annotation table  *   * @version $Id: AnnotationEntry  * @author<A HREF="mailto:dbrosius@qis.net">D. Brosius</A>  * @since 5.2  */
+comment|/**  * represents one annotation in the annotation table  *   * @version $Id: AnnotationEntry  * @author<A HREF="mailto:dbrosius@qis.net">D. Brosius</A>  * @since 5.3  */
 end_comment
 
 begin_class
