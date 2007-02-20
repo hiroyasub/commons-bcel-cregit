@@ -1513,6 +1513,12 @@ case|:
 return|return
 name|FDIV
 return|;
+case|case
+literal|'%'
+case|:
+return|return
+name|FREM
+return|;
 default|default:
 throw|throw
 operator|new
@@ -1563,6 +1569,12 @@ literal|'/'
 case|:
 return|return
 name|DDIV
+return|;
+case|case
+literal|'%'
+case|:
+return|return
+name|DREM
 return|;
 default|default:
 throw|throw
