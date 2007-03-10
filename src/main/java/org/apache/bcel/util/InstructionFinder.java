@@ -172,6 +172,11 @@ comment|/**  * InstructionFinder is a tool to search for given instructions patt
 end_comment
 
 begin_class
+annotation|@
+name|SuppressWarnings
+argument_list|(
+literal|"unchecked"
+argument_list|)
 specifier|public
 class|class
 name|InstructionFinder
@@ -777,8 +782,6 @@ name|endExpr
 operator|-
 name|startExpr
 operator|)
-operator|+
-literal|1
 decl_stmt|;
 name|InstructionHandle
 index|[]
@@ -1626,7 +1629,8 @@ name|value
 argument_list|)
 argument_list|)
 expr_stmt|;
-comment|// precompile all patterns
+comment|// precompile all
+comment|// patterns
 block|}
 block|}
 comment|// Add instruction alias to match anything
@@ -1668,7 +1672,8 @@ operator|.
 name|UNDEFINED
 condition|)
 block|{
-comment|// Not an
+comment|// Not
+comment|// an
 comment|// invalid
 comment|// opcode
 name|buf
@@ -1801,134 +1806,26 @@ name|toString
 argument_list|()
 return|;
 block|}
-comment|/*      * Internal debugging routines.      */
-specifier|private
-specifier|static
-specifier|final
-name|String
-name|pattern2string
-parameter_list|(
-name|String
-name|pattern
-parameter_list|)
-block|{
-return|return
-name|pattern2string
-argument_list|(
-name|pattern
-argument_list|,
-literal|true
-argument_list|)
-return|;
-block|}
-specifier|private
-specifier|static
-specifier|final
-name|String
-name|pattern2string
-parameter_list|(
-name|String
-name|pattern
-parameter_list|,
-name|boolean
-name|make_string
-parameter_list|)
-block|{
-name|StringBuffer
-name|buf
-init|=
-operator|new
-name|StringBuffer
-argument_list|()
-decl_stmt|;
-for|for
-control|(
-name|int
-name|i
-init|=
-literal|0
-init|;
-name|i
-operator|<
-name|pattern
-operator|.
-name|length
-argument_list|()
-condition|;
-name|i
-operator|++
-control|)
-block|{
-name|char
-name|ch
-init|=
-name|pattern
-operator|.
-name|charAt
-argument_list|(
-name|i
-argument_list|)
-decl_stmt|;
-if|if
-condition|(
-name|ch
-operator|>=
-name|OFFSET
-condition|)
-block|{
-if|if
-condition|(
-name|make_string
-condition|)
-block|{
-name|buf
-operator|.
-name|append
-argument_list|(
-name|Constants
-operator|.
-name|OPCODE_NAMES
-index|[
-name|ch
-operator|-
-name|OFFSET
-index|]
-argument_list|)
-expr_stmt|;
-block|}
-else|else
-block|{
-name|buf
-operator|.
-name|append
-argument_list|(
-operator|(
-name|ch
-operator|-
-name|OFFSET
-operator|)
-argument_list|)
-expr_stmt|;
-block|}
-block|}
-else|else
-block|{
-name|buf
-operator|.
-name|append
-argument_list|(
-name|ch
-argument_list|)
-expr_stmt|;
-block|}
-block|}
-return|return
-name|buf
-operator|.
-name|toString
-argument_list|()
-return|;
-block|}
+comment|/* 	 * Internal debugging routines. 	 */
+comment|//    private static final String pattern2string( String pattern ) {
+comment|//        return pattern2string(pattern, true);
+comment|//    }
+comment|//    private static final String pattern2string( String pattern, boolean make_string ) {
+comment|//        StringBuffer buf = new StringBuffer();
+comment|//        for (int i = 0; i< pattern.length(); i++) {
+comment|//            char ch = pattern.charAt(i);
+comment|//            if (ch>= OFFSET) {
+comment|//                if (make_string) {
+comment|//                    buf.append(Constants.OPCODE_NAMES[ch - OFFSET]);
+comment|//                } else {
+comment|//                    buf.append((ch - OFFSET));
+comment|//                }
+comment|//            } else {
+comment|//                buf.append(ch);
+comment|//            }
+comment|//        }
+comment|//        return buf.toString();
+comment|//    }
 block|}
 end_class
 
