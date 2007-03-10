@@ -664,7 +664,11 @@ throw|throw
 operator|new
 name|ClassFormatException
 argument_list|(
-literal|"Class can't be both final and abstract"
+literal|"Class "
+operator|+
+name|file_name
+operator|+
+literal|" can't be both final and abstract"
 argument_list|)
 throw|;
 block|}
