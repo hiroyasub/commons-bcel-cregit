@@ -27,6 +27,20 @@ name|bcel
 operator|.
 name|classfile
 operator|.
+name|Annotations
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|bcel
+operator|.
+name|classfile
+operator|.
 name|Code
 import|;
 end_import
@@ -377,6 +391,20 @@ name|bcel
 operator|.
 name|classfile
 operator|.
+name|LocalVariableTypeTable
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|bcel
+operator|.
+name|classfile
+operator|.
 name|Method
 import|;
 end_import
@@ -680,6 +708,42 @@ operator|=
 literal|"<CODE>"
 expr_stmt|;
 comment|// We don't need real code outputs.
+block|}
+specifier|public
+name|void
+name|visitAnnotation
+parameter_list|(
+name|Annotations
+name|obj
+parameter_list|)
+block|{
+comment|//this is invoked whenever an annotation is found
+comment|//when verifier is passed over a class
+name|tostring
+operator|=
+name|toString
+argument_list|(
+name|obj
+argument_list|)
+expr_stmt|;
+block|}
+specifier|public
+name|void
+name|visitLocalVariableTypeTable
+parameter_list|(
+name|LocalVariableTypeTable
+name|obj
+parameter_list|)
+block|{
+comment|//this is invoked whenever a local variable type is found
+comment|//when verifier is passed over a class
+name|tostring
+operator|=
+name|toString
+argument_list|(
+name|obj
+argument_list|)
+expr_stmt|;
 block|}
 specifier|public
 name|void
