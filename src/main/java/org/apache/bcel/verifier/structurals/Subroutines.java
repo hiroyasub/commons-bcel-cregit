@@ -2621,6 +2621,11 @@ argument_list|(
 literal|"DEBUG: Please verify '"
 operator|+
 name|any
+operator|.
+name|toString
+argument_list|(
+literal|true
+argument_list|)
 operator|+
 literal|"' lies in dead code."
 argument_list|)
