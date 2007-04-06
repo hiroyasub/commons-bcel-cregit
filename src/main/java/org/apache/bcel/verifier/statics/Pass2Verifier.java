@@ -6506,6 +6506,12 @@ operator|++
 expr_stmt|;
 if|if
 condition|(
+operator|!
+name|m
+operator|.
+name|isStatic
+argument_list|()
+operator|&&
 name|num_of_lvt_attribs
 operator|>
 name|obj
