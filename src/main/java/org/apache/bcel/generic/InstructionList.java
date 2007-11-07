@@ -2139,12 +2139,13 @@ literal|null
 operator|)
 condition|)
 block|{
-comment|// singleton list
 name|first
 operator|=
+name|start
+expr_stmt|;
 name|last
 operator|=
-name|start
+name|end
 expr_stmt|;
 name|start
 operator|=
