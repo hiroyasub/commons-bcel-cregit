@@ -172,11 +172,6 @@ comment|/**  * InstructionFinder is a tool to search for given instructions patt
 end_comment
 
 begin_class
-annotation|@
-name|SuppressWarnings
-argument_list|(
-literal|"unchecked"
-argument_list|)
 specifier|public
 class|class
 name|InstructionFinder
