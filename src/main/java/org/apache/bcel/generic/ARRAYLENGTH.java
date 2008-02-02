@@ -29,6 +29,8 @@ implements|implements
 name|ExceptionThrower
 implements|,
 name|StackProducer
+implements|,
+name|StackConsumer
 block|{
 comment|/** Get length of array      */
 specifier|public
