@@ -120,13 +120,15 @@ name|cpg
 parameter_list|)
 block|{
 return|return
-name|getType
+name|Type
+operator|.
+name|getTypeSize
+argument_list|(
+name|getSignature
 argument_list|(
 name|cpg
 argument_list|)
-operator|.
-name|getSize
-argument_list|()
+argument_list|)
 return|;
 block|}
 comment|/** @return return type of referenced field      */
