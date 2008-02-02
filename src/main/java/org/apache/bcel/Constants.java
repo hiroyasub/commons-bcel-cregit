@@ -22,7 +22,7 @@ specifier|public
 interface|interface
 name|Constants
 block|{
-comment|/** Major and minor version of the code.    */
+comment|/** Major version number of class files for Java 1.1.    *  @see #MINOR_1_1    *  */
 specifier|public
 specifier|final
 specifier|static
@@ -31,6 +31,7 @@ name|MAJOR_1_1
 init|=
 literal|45
 decl_stmt|;
+comment|/** Minor version number of class files for Java 1.1.    *  @see #MAJOR_1_1    *  */
 specifier|public
 specifier|final
 specifier|static
@@ -39,6 +40,7 @@ name|MINOR_1_1
 init|=
 literal|3
 decl_stmt|;
+comment|/** Major version number of class files for Java 1.2.    *  @see #MINOR_1_2    *  */
 specifier|public
 specifier|final
 specifier|static
@@ -47,6 +49,7 @@ name|MAJOR_1_2
 init|=
 literal|46
 decl_stmt|;
+comment|/** Minor version number of class files for Java 1.2.    *  @see #MAJOR_1_2    *  */
 specifier|public
 specifier|final
 specifier|static
@@ -55,6 +58,7 @@ name|MINOR_1_2
 init|=
 literal|0
 decl_stmt|;
+comment|/** Major version number of class files for Java 1.2.    *  @see #MINOR_1_2    *  */
 specifier|public
 specifier|final
 specifier|static
@@ -63,6 +67,7 @@ name|MAJOR_1_3
 init|=
 literal|47
 decl_stmt|;
+comment|/** Minor version number of class files for Java 1.3.    *  @see #MAJOR_1_3    *  */
 specifier|public
 specifier|final
 specifier|static
@@ -71,6 +76,7 @@ name|MINOR_1_3
 init|=
 literal|0
 decl_stmt|;
+comment|/** Major version number of class files for Java 1.3.    *  @see #MINOR_1_3    *  */
 specifier|public
 specifier|final
 specifier|static
@@ -79,6 +85,7 @@ name|MAJOR_1_4
 init|=
 literal|48
 decl_stmt|;
+comment|/** Minor version number of class files for Java 1.4.    *  @see #MAJOR_1_4    *  */
 specifier|public
 specifier|final
 specifier|static
@@ -87,6 +94,7 @@ name|MINOR_1_4
 init|=
 literal|0
 decl_stmt|;
+comment|/** Major version number of class files for Java 1.4.    *  @see #MINOR_1_4    *  */
 specifier|public
 specifier|final
 specifier|static
@@ -95,6 +103,7 @@ name|MAJOR_1_5
 init|=
 literal|49
 decl_stmt|;
+comment|/** Minor version number of class files for Java 1.5.    *  @see #MAJOR_1_5    *  */
 specifier|public
 specifier|final
 specifier|static
@@ -103,6 +112,7 @@ name|MINOR_1_5
 init|=
 literal|0
 decl_stmt|;
+comment|/** Major version number of class files for Java 1.5.    *  @see #MINOR_1_5    *  */
 specifier|public
 specifier|final
 specifier|static
@@ -111,6 +121,7 @@ name|MAJOR_1_6
 init|=
 literal|50
 decl_stmt|;
+comment|/** Minor version number of class files for Java 1.6.    *  @see #MAJOR_1_6    *  */
 specifier|public
 specifier|final
 specifier|static
@@ -119,6 +130,7 @@ name|MINOR_1_6
 init|=
 literal|0
 decl_stmt|;
+comment|/** Default major version number.  Class file is for Java 1.1.    *  @see #MAJOR_1_1    *  */
 specifier|public
 specifier|final
 specifier|static
@@ -127,7 +139,7 @@ name|MAJOR
 init|=
 name|MAJOR_1_1
 decl_stmt|;
-comment|// Defaults
+comment|/** Default major version number.  Class file is for Java 1.1.    *  @see #MAJOR_1_1    *  */
 specifier|public
 specifier|final
 specifier|static
@@ -156,7 +168,7 @@ init|=
 literal|255
 decl_stmt|;
 comment|// 2^8 - 1
-comment|/** Access flags for classes, fields and methods.    */
+comment|/** One of the access flags for fields, methods, or classes.    *  @see<a href='http://java.sun.com/docs/books/jvms/second_edition/html/ClassFile.doc.html#2877'>Flag definitions for Fields in the Java Virtual Machine Specification (2nd edition).</a>    *  @see<a href='http://java.sun.com/docs/books/jvms/second_edition/html/ClassFile.doc.html#1513'>Flag definitions for Methods in the Java Virtual Machine Specification (2nd edition).</a>    *  @see<a href='http://java.sun.com/docs/books/jvms/second_edition/html/ClassFile.doc.html#88478'>Flag definitions for Classes in the Java Virtual Machine Specification (2nd edition).</a>    */
 specifier|public
 specifier|final
 specifier|static
@@ -165,6 +177,7 @@ name|ACC_PUBLIC
 init|=
 literal|0x0001
 decl_stmt|;
+comment|/** One of the access flags for fields, methods, or classes.    *  @see #ACC_PUBLIC    */
 specifier|public
 specifier|final
 specifier|static
@@ -173,6 +186,7 @@ name|ACC_PRIVATE
 init|=
 literal|0x0002
 decl_stmt|;
+comment|/** One of the access flags for fields, methods, or classes.    *  @see #ACC_PUBLIC    */
 specifier|public
 specifier|final
 specifier|static
@@ -181,6 +195,7 @@ name|ACC_PROTECTED
 init|=
 literal|0x0004
 decl_stmt|;
+comment|/** One of the access flags for fields, methods, or classes.    *  @see #ACC_PUBLIC    */
 specifier|public
 specifier|final
 specifier|static
@@ -189,6 +204,7 @@ name|ACC_STATIC
 init|=
 literal|0x0008
 decl_stmt|;
+comment|/** One of the access flags for fields, methods, or classes.    *  @see #ACC_PUBLIC    */
 specifier|public
 specifier|final
 specifier|static
@@ -197,6 +213,7 @@ name|ACC_FINAL
 init|=
 literal|0x0010
 decl_stmt|;
+comment|/** One of the access flags for fields, methods, or classes.    *  @see #ACC_PUBLIC    */
 specifier|public
 specifier|final
 specifier|static
@@ -205,6 +222,7 @@ name|ACC_SYNCHRONIZED
 init|=
 literal|0x0020
 decl_stmt|;
+comment|/** One of the access flags for fields, methods, or classes.    *  @see #ACC_PUBLIC    */
 specifier|public
 specifier|final
 specifier|static
@@ -213,6 +231,7 @@ name|ACC_SYPER
 init|=
 literal|0x0020
 decl_stmt|;
+comment|/** One of the access flags for fields, methods, or classes.    *  @see #ACC_PUBLIC    */
 specifier|public
 specifier|final
 specifier|static
@@ -221,6 +240,7 @@ name|ACC_VOLATILE
 init|=
 literal|0x0040
 decl_stmt|;
+comment|/** One of the access flags for fields, methods, or classes.    *  @see #ACC_PUBLIC    */
 specifier|public
 specifier|final
 specifier|static
@@ -229,6 +249,7 @@ name|ACC_BRIDGE
 init|=
 literal|0x0040
 decl_stmt|;
+comment|/** One of the access flags for fields, methods, or classes.    *  @see #ACC_PUBLIC    */
 specifier|public
 specifier|final
 specifier|static
@@ -237,6 +258,7 @@ name|ACC_TRANSIENT
 init|=
 literal|0x0080
 decl_stmt|;
+comment|/** One of the access flags for fields, methods, or classes.    *  @see #ACC_PUBLIC    */
 specifier|public
 specifier|final
 specifier|static
@@ -245,6 +267,7 @@ name|ACC_VARARGS
 init|=
 literal|0x0080
 decl_stmt|;
+comment|/** One of the access flags for fields, methods, or classes.    *  @see #ACC_PUBLIC    */
 specifier|public
 specifier|final
 specifier|static
@@ -253,6 +276,7 @@ name|ACC_NATIVE
 init|=
 literal|0x0100
 decl_stmt|;
+comment|/** One of the access flags for fields, methods, or classes.    *  @see #ACC_PUBLIC    */
 specifier|public
 specifier|final
 specifier|static
@@ -261,6 +285,7 @@ name|ACC_INTERFACE
 init|=
 literal|0x0200
 decl_stmt|;
+comment|/** One of the access flags for fields, methods, or classes.    *  @see #ACC_PUBLIC    */
 specifier|public
 specifier|final
 specifier|static
@@ -269,6 +294,7 @@ name|ACC_ABSTRACT
 init|=
 literal|0x0400
 decl_stmt|;
+comment|/** One of the access flags for fields, methods, or classes.    *  @see #ACC_PUBLIC    */
 specifier|public
 specifier|final
 specifier|static
@@ -277,6 +303,7 @@ name|ACC_STRICT
 init|=
 literal|0x0800
 decl_stmt|;
+comment|/** One of the access flags for fields, methods, or classes.    *  @see #ACC_PUBLIC    */
 specifier|public
 specifier|final
 specifier|static
@@ -285,6 +312,7 @@ name|ACC_SYNTHETIC
 init|=
 literal|0x1000
 decl_stmt|;
+comment|/** One of the access flags for fields, methods, or classes.    *  @see #ACC_PUBLIC    */
 specifier|public
 specifier|final
 specifier|static
@@ -293,6 +321,7 @@ name|ACC_ANNOTATION
 init|=
 literal|0x2000
 decl_stmt|;
+comment|/** One of the access flags for fields, methods, or classes.    *  @see #ACC_PUBLIC    */
 specifier|public
 specifier|final
 specifier|static
@@ -302,6 +331,7 @@ init|=
 literal|0x4000
 decl_stmt|;
 comment|// Applies to classes compiled by new compilers only
+comment|/** One of the access flags for fields, methods, or classes.    *  @see #ACC_PUBLIC    */
 specifier|public
 specifier|final
 specifier|static
@@ -310,6 +340,7 @@ name|ACC_SUPER
 init|=
 literal|0x0020
 decl_stmt|;
+comment|/** One of the access flags for fields, methods, or classes.    *  @see #ACC_PUBLIC    */
 specifier|public
 specifier|final
 specifier|static
@@ -318,6 +349,7 @@ name|MAX_ACC_FLAG
 init|=
 name|ACC_ENUM
 decl_stmt|;
+comment|/** The names of the access flags. */
 specifier|public
 specifier|final
 specifier|static
@@ -357,7 +389,7 @@ block|,
 literal|"enum"
 block|}
 decl_stmt|;
-comment|/** Tags in constant pool to denote type of constant.    */
+comment|/** Marks a constant pool entry as type UTF-8.  */
 specifier|public
 specifier|final
 specifier|static
@@ -366,6 +398,7 @@ name|CONSTANT_Utf8
 init|=
 literal|1
 decl_stmt|;
+comment|/** Marks a constant pool entry as type Integer.  */
 specifier|public
 specifier|final
 specifier|static
@@ -374,6 +407,7 @@ name|CONSTANT_Integer
 init|=
 literal|3
 decl_stmt|;
+comment|/** Marks a constant pool entry as type Float.  */
 specifier|public
 specifier|final
 specifier|static
@@ -382,6 +416,7 @@ name|CONSTANT_Float
 init|=
 literal|4
 decl_stmt|;
+comment|/** Marks a constant pool entry as type Long.  */
 specifier|public
 specifier|final
 specifier|static
@@ -390,6 +425,7 @@ name|CONSTANT_Long
 init|=
 literal|5
 decl_stmt|;
+comment|/** Marks a constant pool entry as type Double.  */
 specifier|public
 specifier|final
 specifier|static
@@ -398,6 +434,7 @@ name|CONSTANT_Double
 init|=
 literal|6
 decl_stmt|;
+comment|/** Marks a constant pool entry as a Class.  */
 specifier|public
 specifier|final
 specifier|static
@@ -406,6 +443,7 @@ name|CONSTANT_Class
 init|=
 literal|7
 decl_stmt|;
+comment|/** Marks a constant pool entry as a Field Reference.  */
 specifier|public
 specifier|final
 specifier|static
@@ -414,6 +452,7 @@ name|CONSTANT_Fieldref
 init|=
 literal|9
 decl_stmt|;
+comment|/** Marks a constant pool entry as type String.  */
 specifier|public
 specifier|final
 specifier|static
@@ -422,6 +461,7 @@ name|CONSTANT_String
 init|=
 literal|8
 decl_stmt|;
+comment|/** Marks a constant pool entry as a Method Reference.  */
 specifier|public
 specifier|final
 specifier|static
@@ -430,6 +470,7 @@ name|CONSTANT_Methodref
 init|=
 literal|10
 decl_stmt|;
+comment|/** Marks a constant pool entry as an Interface Method Reference.  */
 specifier|public
 specifier|final
 specifier|static
@@ -438,6 +479,7 @@ name|CONSTANT_InterfaceMethodref
 init|=
 literal|11
 decl_stmt|;
+comment|/** Marks a constant pool entry as a name and type.  */
 specifier|public
 specifier|final
 specifier|static
@@ -446,6 +488,7 @@ name|CONSTANT_NameAndType
 init|=
 literal|12
 decl_stmt|;
+comment|/** The names of the types of entries in a constant pool. */
 specifier|public
 specifier|final
 specifier|static
@@ -513,7 +556,7 @@ block|,
 literal|"java.io.Serializable"
 block|}
 decl_stmt|;
-comment|/**    * Limitations of the Java Virtual Machine.    * See The Java Virtual Machine Specification, Second Edition, page 152, chapter 4.10.    */
+comment|/**    * One of the limitations of the Java Virtual Machine.    * @see<a href="http://java.sun.com/docs/books/jvms/second_edition/html/ClassFile.doc.html#88659"> The Java Virtual Machine Specification, Second Edition, page 152, chapter 4.10.</a>    */
 specifier|public
 specifier|static
 specifier|final
@@ -522,6 +565,7 @@ name|MAX_CP_ENTRIES
 init|=
 literal|65535
 decl_stmt|;
+comment|/**    * One of the limitations of the Java Virtual Machine.    * @see<a href="http://java.sun.com/docs/books/jvms/second_edition/html/ClassFile.doc.html#88659"> The Java Virtual Machine Specification, Second Edition, page 152, chapter 4.10.</a>    */
 specifier|public
 specifier|static
 specifier|final
@@ -531,7 +575,7 @@ init|=
 literal|65536
 decl_stmt|;
 comment|//bytes
-comment|/** Java VM opcodes.    */
+comment|/** Java VM opcode.    * @see<a href="http://java.sun.com/docs/books/jvms/second_edition/html/Instructions2.doc.html">Opcode definitions in The Java Virtual Machine Specification</a> */
 specifier|public
 specifier|static
 specifier|final
@@ -540,6 +584,7 @@ name|NOP
 init|=
 literal|0
 decl_stmt|;
+comment|/** Java VM opcode.    * @see<a href="http://java.sun.com/docs/books/jvms/second_edition/html/Instructions2.doc.html">Opcode definitions in The Java Virtual Machine Specification</a> */
 specifier|public
 specifier|static
 specifier|final
@@ -548,6 +593,7 @@ name|ACONST_NULL
 init|=
 literal|1
 decl_stmt|;
+comment|/** Java VM opcode.    * @see<a href="http://java.sun.com/docs/books/jvms/second_edition/html/Instructions2.doc.html">Opcode definitions in The Java Virtual Machine Specification</a> */
 specifier|public
 specifier|static
 specifier|final
@@ -556,6 +602,7 @@ name|ICONST_M1
 init|=
 literal|2
 decl_stmt|;
+comment|/** Java VM opcode.    * @see<a href="http://java.sun.com/docs/books/jvms/second_edition/html/Instructions2.doc.html">Opcode definitions in The Java Virtual Machine Specification</a> */
 specifier|public
 specifier|static
 specifier|final
@@ -564,6 +611,7 @@ name|ICONST_0
 init|=
 literal|3
 decl_stmt|;
+comment|/** Java VM opcode.    * @see<a href="http://java.sun.com/docs/books/jvms/second_edition/html/Instructions2.doc.html">Opcode definitions in The Java Virtual Machine Specification</a> */
 specifier|public
 specifier|static
 specifier|final
@@ -572,6 +620,7 @@ name|ICONST_1
 init|=
 literal|4
 decl_stmt|;
+comment|/** Java VM opcode.    * @see<a href="http://java.sun.com/docs/books/jvms/second_edition/html/Instructions2.doc.html">Opcode definitions in The Java Virtual Machine Specification</a> */
 specifier|public
 specifier|static
 specifier|final
@@ -580,6 +629,7 @@ name|ICONST_2
 init|=
 literal|5
 decl_stmt|;
+comment|/** Java VM opcode.    * @see<a href="http://java.sun.com/docs/books/jvms/second_edition/html/Instructions2.doc.html">Opcode definitions in The Java Virtual Machine Specification</a> */
 specifier|public
 specifier|static
 specifier|final
@@ -588,6 +638,7 @@ name|ICONST_3
 init|=
 literal|6
 decl_stmt|;
+comment|/** Java VM opcode.    * @see<a href="http://java.sun.com/docs/books/jvms/second_edition/html/Instructions2.doc.html">Opcode definitions in The Java Virtual Machine Specification</a> */
 specifier|public
 specifier|static
 specifier|final
@@ -596,6 +647,7 @@ name|ICONST_4
 init|=
 literal|7
 decl_stmt|;
+comment|/** Java VM opcode.    * @see<a href="http://java.sun.com/docs/books/jvms/second_edition/html/Instructions2.doc.html">Opcode definitions in The Java Virtual Machine Specification</a> */
 specifier|public
 specifier|static
 specifier|final
@@ -604,6 +656,7 @@ name|ICONST_5
 init|=
 literal|8
 decl_stmt|;
+comment|/** Java VM opcode.    * @see<a href="http://java.sun.com/docs/books/jvms/second_edition/html/Instructions2.doc.html">Opcode definitions in The Java Virtual Machine Specification</a> */
 specifier|public
 specifier|static
 specifier|final
@@ -612,6 +665,7 @@ name|LCONST_0
 init|=
 literal|9
 decl_stmt|;
+comment|/** Java VM opcode.    * @see<a href="http://java.sun.com/docs/books/jvms/second_edition/html/Instructions2.doc.html">Opcode definitions in The Java Virtual Machine Specification</a> */
 specifier|public
 specifier|static
 specifier|final
@@ -620,6 +674,7 @@ name|LCONST_1
 init|=
 literal|10
 decl_stmt|;
+comment|/** Java VM opcode.    * @see<a href="http://java.sun.com/docs/books/jvms/second_edition/html/Instructions2.doc.html">Opcode definitions in The Java Virtual Machine Specification</a> */
 specifier|public
 specifier|static
 specifier|final
@@ -628,6 +683,7 @@ name|FCONST_0
 init|=
 literal|11
 decl_stmt|;
+comment|/** Java VM opcode.    * @see<a href="http://java.sun.com/docs/books/jvms/second_edition/html/Instructions2.doc.html">Opcode definitions in The Java Virtual Machine Specification</a> */
 specifier|public
 specifier|static
 specifier|final
@@ -636,6 +692,7 @@ name|FCONST_1
 init|=
 literal|12
 decl_stmt|;
+comment|/** Java VM opcode.    * @see<a href="http://java.sun.com/docs/books/jvms/second_edition/html/Instructions2.doc.html">Opcode definitions in The Java Virtual Machine Specification</a> */
 specifier|public
 specifier|static
 specifier|final
@@ -644,6 +701,7 @@ name|FCONST_2
 init|=
 literal|13
 decl_stmt|;
+comment|/** Java VM opcode.    * @see<a href="http://java.sun.com/docs/books/jvms/second_edition/html/Instructions2.doc.html">Opcode definitions in The Java Virtual Machine Specification</a> */
 specifier|public
 specifier|static
 specifier|final
@@ -652,6 +710,7 @@ name|DCONST_0
 init|=
 literal|14
 decl_stmt|;
+comment|/** Java VM opcode.    * @see<a href="http://java.sun.com/docs/books/jvms/second_edition/html/Instructions2.doc.html">Opcode definitions in The Java Virtual Machine Specification</a> */
 specifier|public
 specifier|static
 specifier|final
@@ -660,6 +719,7 @@ name|DCONST_1
 init|=
 literal|15
 decl_stmt|;
+comment|/** Java VM opcode.    * @see<a href="http://java.sun.com/docs/books/jvms/second_edition/html/Instructions2.doc.html">Opcode definitions in The Java Virtual Machine Specification</a> */
 specifier|public
 specifier|static
 specifier|final
@@ -668,6 +728,7 @@ name|BIPUSH
 init|=
 literal|16
 decl_stmt|;
+comment|/** Java VM opcode.    * @see<a href="http://java.sun.com/docs/books/jvms/second_edition/html/Instructions2.doc.html">Opcode definitions in The Java Virtual Machine Specification</a> */
 specifier|public
 specifier|static
 specifier|final
@@ -676,6 +737,7 @@ name|SIPUSH
 init|=
 literal|17
 decl_stmt|;
+comment|/** Java VM opcode.    * @see<a href="http://java.sun.com/docs/books/jvms/second_edition/html/Instructions2.doc.html">Opcode definitions in The Java Virtual Machine Specification</a> */
 specifier|public
 specifier|static
 specifier|final
@@ -684,6 +746,7 @@ name|LDC
 init|=
 literal|18
 decl_stmt|;
+comment|/** Java VM opcode.    * @see<a href="http://java.sun.com/docs/books/jvms/second_edition/html/Instructions2.doc.html">Opcode definitions in The Java Virtual Machine Specification</a> */
 specifier|public
 specifier|static
 specifier|final
@@ -692,6 +755,7 @@ name|LDC_W
 init|=
 literal|19
 decl_stmt|;
+comment|/** Java VM opcode.    * @see<a href="http://java.sun.com/docs/books/jvms/second_edition/html/Instructions2.doc.html">Opcode definitions in The Java Virtual Machine Specification</a> */
 specifier|public
 specifier|static
 specifier|final
@@ -700,6 +764,7 @@ name|LDC2_W
 init|=
 literal|20
 decl_stmt|;
+comment|/** Java VM opcode.    * @see<a href="http://java.sun.com/docs/books/jvms/second_edition/html/Instructions2.doc.html">Opcode definitions in The Java Virtual Machine Specification</a> */
 specifier|public
 specifier|static
 specifier|final
@@ -708,6 +773,7 @@ name|ILOAD
 init|=
 literal|21
 decl_stmt|;
+comment|/** Java VM opcode.    * @see<a href="http://java.sun.com/docs/books/jvms/second_edition/html/Instructions2.doc.html">Opcode definitions in The Java Virtual Machine Specification</a> */
 specifier|public
 specifier|static
 specifier|final
@@ -716,6 +782,7 @@ name|LLOAD
 init|=
 literal|22
 decl_stmt|;
+comment|/** Java VM opcode.    * @see<a href="http://java.sun.com/docs/books/jvms/second_edition/html/Instructions2.doc.html">Opcode definitions in The Java Virtual Machine Specification</a> */
 specifier|public
 specifier|static
 specifier|final
@@ -724,6 +791,7 @@ name|FLOAD
 init|=
 literal|23
 decl_stmt|;
+comment|/** Java VM opcode.    * @see<a href="http://java.sun.com/docs/books/jvms/second_edition/html/Instructions2.doc.html">Opcode definitions in The Java Virtual Machine Specification</a> */
 specifier|public
 specifier|static
 specifier|final
@@ -732,6 +800,7 @@ name|DLOAD
 init|=
 literal|24
 decl_stmt|;
+comment|/** Java VM opcode.    * @see<a href="http://java.sun.com/docs/books/jvms/second_edition/html/Instructions2.doc.html">Opcode definitions in The Java Virtual Machine Specification</a> */
 specifier|public
 specifier|static
 specifier|final
@@ -740,6 +809,7 @@ name|ALOAD
 init|=
 literal|25
 decl_stmt|;
+comment|/** Java VM opcode.    * @see<a href="http://java.sun.com/docs/books/jvms/second_edition/html/Instructions2.doc.html">Opcode definitions in The Java Virtual Machine Specification</a> */
 specifier|public
 specifier|static
 specifier|final
@@ -748,6 +818,7 @@ name|ILOAD_0
 init|=
 literal|26
 decl_stmt|;
+comment|/** Java VM opcode.    * @see<a href="http://java.sun.com/docs/books/jvms/second_edition/html/Instructions2.doc.html">Opcode definitions in The Java Virtual Machine Specification</a> */
 specifier|public
 specifier|static
 specifier|final
@@ -756,6 +827,7 @@ name|ILOAD_1
 init|=
 literal|27
 decl_stmt|;
+comment|/** Java VM opcode.    * @see<a href="http://java.sun.com/docs/books/jvms/second_edition/html/Instructions2.doc.html">Opcode definitions in The Java Virtual Machine Specification</a> */
 specifier|public
 specifier|static
 specifier|final
@@ -764,6 +836,7 @@ name|ILOAD_2
 init|=
 literal|28
 decl_stmt|;
+comment|/** Java VM opcode.    * @see<a href="http://java.sun.com/docs/books/jvms/second_edition/html/Instructions2.doc.html">Opcode definitions in The Java Virtual Machine Specification</a> */
 specifier|public
 specifier|static
 specifier|final
@@ -772,6 +845,7 @@ name|ILOAD_3
 init|=
 literal|29
 decl_stmt|;
+comment|/** Java VM opcode.    * @see<a href="http://java.sun.com/docs/books/jvms/second_edition/html/Instructions2.doc.html">Opcode definitions in The Java Virtual Machine Specification</a> */
 specifier|public
 specifier|static
 specifier|final
@@ -780,6 +854,7 @@ name|LLOAD_0
 init|=
 literal|30
 decl_stmt|;
+comment|/** Java VM opcode.    * @see<a href="http://java.sun.com/docs/books/jvms/second_edition/html/Instructions2.doc.html">Opcode definitions in The Java Virtual Machine Specification</a> */
 specifier|public
 specifier|static
 specifier|final
@@ -788,6 +863,7 @@ name|LLOAD_1
 init|=
 literal|31
 decl_stmt|;
+comment|/** Java VM opcode.    * @see<a href="http://java.sun.com/docs/books/jvms/second_edition/html/Instructions2.doc.html">Opcode definitions in The Java Virtual Machine Specification</a> */
 specifier|public
 specifier|static
 specifier|final
@@ -796,6 +872,7 @@ name|LLOAD_2
 init|=
 literal|32
 decl_stmt|;
+comment|/** Java VM opcode.    * @see<a href="http://java.sun.com/docs/books/jvms/second_edition/html/Instructions2.doc.html">Opcode definitions in The Java Virtual Machine Specification</a> */
 specifier|public
 specifier|static
 specifier|final
@@ -804,6 +881,7 @@ name|LLOAD_3
 init|=
 literal|33
 decl_stmt|;
+comment|/** Java VM opcode.    * @see<a href="http://java.sun.com/docs/books/jvms/second_edition/html/Instructions2.doc.html">Opcode definitions in The Java Virtual Machine Specification</a> */
 specifier|public
 specifier|static
 specifier|final
@@ -812,6 +890,7 @@ name|FLOAD_0
 init|=
 literal|34
 decl_stmt|;
+comment|/** Java VM opcode.    * @see<a href="http://java.sun.com/docs/books/jvms/second_edition/html/Instructions2.doc.html">Opcode definitions in The Java Virtual Machine Specification</a> */
 specifier|public
 specifier|static
 specifier|final
@@ -820,6 +899,7 @@ name|FLOAD_1
 init|=
 literal|35
 decl_stmt|;
+comment|/** Java VM opcode.    * @see<a href="http://java.sun.com/docs/books/jvms/second_edition/html/Instructions2.doc.html">Opcode definitions in The Java Virtual Machine Specification</a> */
 specifier|public
 specifier|static
 specifier|final
@@ -828,6 +908,7 @@ name|FLOAD_2
 init|=
 literal|36
 decl_stmt|;
+comment|/** Java VM opcode.    * @see<a href="http://java.sun.com/docs/books/jvms/second_edition/html/Instructions2.doc.html">Opcode definitions in The Java Virtual Machine Specification</a> */
 specifier|public
 specifier|static
 specifier|final
@@ -836,6 +917,7 @@ name|FLOAD_3
 init|=
 literal|37
 decl_stmt|;
+comment|/** Java VM opcode.    * @see<a href="http://java.sun.com/docs/books/jvms/second_edition/html/Instructions2.doc.html">Opcode definitions in The Java Virtual Machine Specification</a> */
 specifier|public
 specifier|static
 specifier|final
@@ -844,6 +926,7 @@ name|DLOAD_0
 init|=
 literal|38
 decl_stmt|;
+comment|/** Java VM opcode.    * @see<a href="http://java.sun.com/docs/books/jvms/second_edition/html/Instructions2.doc.html">Opcode definitions in The Java Virtual Machine Specification</a> */
 specifier|public
 specifier|static
 specifier|final
@@ -852,6 +935,7 @@ name|DLOAD_1
 init|=
 literal|39
 decl_stmt|;
+comment|/** Java VM opcode.    * @see<a href="http://java.sun.com/docs/books/jvms/second_edition/html/Instructions2.doc.html">Opcode definitions in The Java Virtual Machine Specification</a> */
 specifier|public
 specifier|static
 specifier|final
@@ -860,6 +944,7 @@ name|DLOAD_2
 init|=
 literal|40
 decl_stmt|;
+comment|/** Java VM opcode.    * @see<a href="http://java.sun.com/docs/books/jvms/second_edition/html/Instructions2.doc.html">Opcode definitions in The Java Virtual Machine Specification</a> */
 specifier|public
 specifier|static
 specifier|final
@@ -868,6 +953,7 @@ name|DLOAD_3
 init|=
 literal|41
 decl_stmt|;
+comment|/** Java VM opcode.    * @see<a href="http://java.sun.com/docs/books/jvms/second_edition/html/Instructions2.doc.html">Opcode definitions in The Java Virtual Machine Specification</a> */
 specifier|public
 specifier|static
 specifier|final
@@ -876,6 +962,7 @@ name|ALOAD_0
 init|=
 literal|42
 decl_stmt|;
+comment|/** Java VM opcode.    * @see<a href="http://java.sun.com/docs/books/jvms/second_edition/html/Instructions2.doc.html">Opcode definitions in The Java Virtual Machine Specification</a> */
 specifier|public
 specifier|static
 specifier|final
@@ -884,6 +971,7 @@ name|ALOAD_1
 init|=
 literal|43
 decl_stmt|;
+comment|/** Java VM opcode.    * @see<a href="http://java.sun.com/docs/books/jvms/second_edition/html/Instructions2.doc.html">Opcode definitions in The Java Virtual Machine Specification</a> */
 specifier|public
 specifier|static
 specifier|final
@@ -892,6 +980,7 @@ name|ALOAD_2
 init|=
 literal|44
 decl_stmt|;
+comment|/** Java VM opcode.    * @see<a href="http://java.sun.com/docs/books/jvms/second_edition/html/Instructions2.doc.html">Opcode definitions in The Java Virtual Machine Specification</a> */
 specifier|public
 specifier|static
 specifier|final
@@ -900,6 +989,7 @@ name|ALOAD_3
 init|=
 literal|45
 decl_stmt|;
+comment|/** Java VM opcode.    * @see<a href="http://java.sun.com/docs/books/jvms/second_edition/html/Instructions2.doc.html">Opcode definitions in The Java Virtual Machine Specification</a> */
 specifier|public
 specifier|static
 specifier|final
@@ -908,6 +998,7 @@ name|IALOAD
 init|=
 literal|46
 decl_stmt|;
+comment|/** Java VM opcode.    * @see<a href="http://java.sun.com/docs/books/jvms/second_edition/html/Instructions2.doc.html">Opcode definitions in The Java Virtual Machine Specification</a> */
 specifier|public
 specifier|static
 specifier|final
@@ -916,6 +1007,7 @@ name|LALOAD
 init|=
 literal|47
 decl_stmt|;
+comment|/** Java VM opcode.    * @see<a href="http://java.sun.com/docs/books/jvms/second_edition/html/Instructions2.doc.html">Opcode definitions in The Java Virtual Machine Specification</a> */
 specifier|public
 specifier|static
 specifier|final
@@ -924,6 +1016,7 @@ name|FALOAD
 init|=
 literal|48
 decl_stmt|;
+comment|/** Java VM opcode.    * @see<a href="http://java.sun.com/docs/books/jvms/second_edition/html/Instructions2.doc.html">Opcode definitions in The Java Virtual Machine Specification</a> */
 specifier|public
 specifier|static
 specifier|final
@@ -932,6 +1025,7 @@ name|DALOAD
 init|=
 literal|49
 decl_stmt|;
+comment|/** Java VM opcode.    * @see<a href="http://java.sun.com/docs/books/jvms/second_edition/html/Instructions2.doc.html">Opcode definitions in The Java Virtual Machine Specification</a> */
 specifier|public
 specifier|static
 specifier|final
@@ -940,6 +1034,7 @@ name|AALOAD
 init|=
 literal|50
 decl_stmt|;
+comment|/** Java VM opcode.    * @see<a href="http://java.sun.com/docs/books/jvms/second_edition/html/Instructions2.doc.html">Opcode definitions in The Java Virtual Machine Specification</a> */
 specifier|public
 specifier|static
 specifier|final
@@ -948,6 +1043,7 @@ name|BALOAD
 init|=
 literal|51
 decl_stmt|;
+comment|/** Java VM opcode.    * @see<a href="http://java.sun.com/docs/books/jvms/second_edition/html/Instructions2.doc.html">Opcode definitions in The Java Virtual Machine Specification</a> */
 specifier|public
 specifier|static
 specifier|final
@@ -956,6 +1052,7 @@ name|CALOAD
 init|=
 literal|52
 decl_stmt|;
+comment|/** Java VM opcode.    * @see<a href="http://java.sun.com/docs/books/jvms/second_edition/html/Instructions2.doc.html">Opcode definitions in The Java Virtual Machine Specification</a> */
 specifier|public
 specifier|static
 specifier|final
@@ -964,6 +1061,7 @@ name|SALOAD
 init|=
 literal|53
 decl_stmt|;
+comment|/** Java VM opcode.    * @see<a href="http://java.sun.com/docs/books/jvms/second_edition/html/Instructions2.doc.html">Opcode definitions in The Java Virtual Machine Specification</a> */
 specifier|public
 specifier|static
 specifier|final
@@ -972,6 +1070,7 @@ name|ISTORE
 init|=
 literal|54
 decl_stmt|;
+comment|/** Java VM opcode.    * @see<a href="http://java.sun.com/docs/books/jvms/second_edition/html/Instructions2.doc.html">Opcode definitions in The Java Virtual Machine Specification</a> */
 specifier|public
 specifier|static
 specifier|final
@@ -980,6 +1079,7 @@ name|LSTORE
 init|=
 literal|55
 decl_stmt|;
+comment|/** Java VM opcode.    * @see<a href="http://java.sun.com/docs/books/jvms/second_edition/html/Instructions2.doc.html">Opcode definitions in The Java Virtual Machine Specification</a> */
 specifier|public
 specifier|static
 specifier|final
@@ -988,6 +1088,7 @@ name|FSTORE
 init|=
 literal|56
 decl_stmt|;
+comment|/** Java VM opcode.    * @see<a href="http://java.sun.com/docs/books/jvms/second_edition/html/Instructions2.doc.html">Opcode definitions in The Java Virtual Machine Specification</a> */
 specifier|public
 specifier|static
 specifier|final
@@ -996,6 +1097,7 @@ name|DSTORE
 init|=
 literal|57
 decl_stmt|;
+comment|/** Java VM opcode.    * @see<a href="http://java.sun.com/docs/books/jvms/second_edition/html/Instructions2.doc.html">Opcode definitions in The Java Virtual Machine Specification</a> */
 specifier|public
 specifier|static
 specifier|final
@@ -1004,6 +1106,7 @@ name|ASTORE
 init|=
 literal|58
 decl_stmt|;
+comment|/** Java VM opcode.    * @see<a href="http://java.sun.com/docs/books/jvms/second_edition/html/Instructions2.doc.html">Opcode definitions in The Java Virtual Machine Specification</a> */
 specifier|public
 specifier|static
 specifier|final
@@ -1012,6 +1115,7 @@ name|ISTORE_0
 init|=
 literal|59
 decl_stmt|;
+comment|/** Java VM opcode.    * @see<a href="http://java.sun.com/docs/books/jvms/second_edition/html/Instructions2.doc.html">Opcode definitions in The Java Virtual Machine Specification</a> */
 specifier|public
 specifier|static
 specifier|final
@@ -1020,6 +1124,7 @@ name|ISTORE_1
 init|=
 literal|60
 decl_stmt|;
+comment|/** Java VM opcode.    * @see<a href="http://java.sun.com/docs/books/jvms/second_edition/html/Instructions2.doc.html">Opcode definitions in The Java Virtual Machine Specification</a> */
 specifier|public
 specifier|static
 specifier|final
@@ -1028,6 +1133,7 @@ name|ISTORE_2
 init|=
 literal|61
 decl_stmt|;
+comment|/** Java VM opcode.    * @see<a href="http://java.sun.com/docs/books/jvms/second_edition/html/Instructions2.doc.html">Opcode definitions in The Java Virtual Machine Specification</a> */
 specifier|public
 specifier|static
 specifier|final
@@ -1036,6 +1142,7 @@ name|ISTORE_3
 init|=
 literal|62
 decl_stmt|;
+comment|/** Java VM opcode.    * @see<a href="http://java.sun.com/docs/books/jvms/second_edition/html/Instructions2.doc.html">Opcode definitions in The Java Virtual Machine Specification</a> */
 specifier|public
 specifier|static
 specifier|final
@@ -1044,6 +1151,7 @@ name|LSTORE_0
 init|=
 literal|63
 decl_stmt|;
+comment|/** Java VM opcode.    * @see<a href="http://java.sun.com/docs/books/jvms/second_edition/html/Instructions2.doc.html">Opcode definitions in The Java Virtual Machine Specification</a> */
 specifier|public
 specifier|static
 specifier|final
@@ -1052,6 +1160,7 @@ name|LSTORE_1
 init|=
 literal|64
 decl_stmt|;
+comment|/** Java VM opcode.    * @see<a href="http://java.sun.com/docs/books/jvms/second_edition/html/Instructions2.doc.html">Opcode definitions in The Java Virtual Machine Specification</a> */
 specifier|public
 specifier|static
 specifier|final
@@ -1060,6 +1169,7 @@ name|LSTORE_2
 init|=
 literal|65
 decl_stmt|;
+comment|/** Java VM opcode.    * @see<a href="http://java.sun.com/docs/books/jvms/second_edition/html/Instructions2.doc.html">Opcode definitions in The Java Virtual Machine Specification</a> */
 specifier|public
 specifier|static
 specifier|final
@@ -1068,6 +1178,7 @@ name|LSTORE_3
 init|=
 literal|66
 decl_stmt|;
+comment|/** Java VM opcode.    * @see<a href="http://java.sun.com/docs/books/jvms/second_edition/html/Instructions2.doc.html">Opcode definitions in The Java Virtual Machine Specification</a> */
 specifier|public
 specifier|static
 specifier|final
@@ -1076,6 +1187,7 @@ name|FSTORE_0
 init|=
 literal|67
 decl_stmt|;
+comment|/** Java VM opcode.    * @see<a href="http://java.sun.com/docs/books/jvms/second_edition/html/Instructions2.doc.html">Opcode definitions in The Java Virtual Machine Specification</a> */
 specifier|public
 specifier|static
 specifier|final
@@ -1084,6 +1196,7 @@ name|FSTORE_1
 init|=
 literal|68
 decl_stmt|;
+comment|/** Java VM opcode.    * @see<a href="http://java.sun.com/docs/books/jvms/second_edition/html/Instructions2.doc.html">Opcode definitions in The Java Virtual Machine Specification</a> */
 specifier|public
 specifier|static
 specifier|final
@@ -1092,6 +1205,7 @@ name|FSTORE_2
 init|=
 literal|69
 decl_stmt|;
+comment|/** Java VM opcode.    * @see<a href="http://java.sun.com/docs/books/jvms/second_edition/html/Instructions2.doc.html">Opcode definitions in The Java Virtual Machine Specification</a> */
 specifier|public
 specifier|static
 specifier|final
@@ -1100,6 +1214,7 @@ name|FSTORE_3
 init|=
 literal|70
 decl_stmt|;
+comment|/** Java VM opcode.    * @see<a href="http://java.sun.com/docs/books/jvms/second_edition/html/Instructions2.doc.html">Opcode definitions in The Java Virtual Machine Specification</a> */
 specifier|public
 specifier|static
 specifier|final
@@ -1108,6 +1223,7 @@ name|DSTORE_0
 init|=
 literal|71
 decl_stmt|;
+comment|/** Java VM opcode.    * @see<a href="http://java.sun.com/docs/books/jvms/second_edition/html/Instructions2.doc.html">Opcode definitions in The Java Virtual Machine Specification</a> */
 specifier|public
 specifier|static
 specifier|final
@@ -1116,6 +1232,7 @@ name|DSTORE_1
 init|=
 literal|72
 decl_stmt|;
+comment|/** Java VM opcode.    * @see<a href="http://java.sun.com/docs/books/jvms/second_edition/html/Instructions2.doc.html">Opcode definitions in The Java Virtual Machine Specification</a> */
 specifier|public
 specifier|static
 specifier|final
@@ -1124,6 +1241,7 @@ name|DSTORE_2
 init|=
 literal|73
 decl_stmt|;
+comment|/** Java VM opcode.    * @see<a href="http://java.sun.com/docs/books/jvms/second_edition/html/Instructions2.doc.html">Opcode definitions in The Java Virtual Machine Specification</a> */
 specifier|public
 specifier|static
 specifier|final
@@ -1132,6 +1250,7 @@ name|DSTORE_3
 init|=
 literal|74
 decl_stmt|;
+comment|/** Java VM opcode.    * @see<a href="http://java.sun.com/docs/books/jvms/second_edition/html/Instructions2.doc.html">Opcode definitions in The Java Virtual Machine Specification</a> */
 specifier|public
 specifier|static
 specifier|final
@@ -1140,6 +1259,7 @@ name|ASTORE_0
 init|=
 literal|75
 decl_stmt|;
+comment|/** Java VM opcode.    * @see<a href="http://java.sun.com/docs/books/jvms/second_edition/html/Instructions2.doc.html">Opcode definitions in The Java Virtual Machine Specification</a> */
 specifier|public
 specifier|static
 specifier|final
@@ -1148,6 +1268,7 @@ name|ASTORE_1
 init|=
 literal|76
 decl_stmt|;
+comment|/** Java VM opcode.    * @see<a href="http://java.sun.com/docs/books/jvms/second_edition/html/Instructions2.doc.html">Opcode definitions in The Java Virtual Machine Specification</a> */
 specifier|public
 specifier|static
 specifier|final
@@ -1156,6 +1277,7 @@ name|ASTORE_2
 init|=
 literal|77
 decl_stmt|;
+comment|/** Java VM opcode.    * @see<a href="http://java.sun.com/docs/books/jvms/second_edition/html/Instructions2.doc.html">Opcode definitions in The Java Virtual Machine Specification</a> */
 specifier|public
 specifier|static
 specifier|final
@@ -1164,6 +1286,7 @@ name|ASTORE_3
 init|=
 literal|78
 decl_stmt|;
+comment|/** Java VM opcode.    * @see<a href="http://java.sun.com/docs/books/jvms/second_edition/html/Instructions2.doc.html">Opcode definitions in The Java Virtual Machine Specification</a> */
 specifier|public
 specifier|static
 specifier|final
@@ -1172,6 +1295,7 @@ name|IASTORE
 init|=
 literal|79
 decl_stmt|;
+comment|/** Java VM opcode.    * @see<a href="http://java.sun.com/docs/books/jvms/second_edition/html/Instructions2.doc.html">Opcode definitions in The Java Virtual Machine Specification</a> */
 specifier|public
 specifier|static
 specifier|final
@@ -1180,6 +1304,7 @@ name|LASTORE
 init|=
 literal|80
 decl_stmt|;
+comment|/** Java VM opcode.    * @see<a href="http://java.sun.com/docs/books/jvms/second_edition/html/Instructions2.doc.html">Opcode definitions in The Java Virtual Machine Specification</a> */
 specifier|public
 specifier|static
 specifier|final
@@ -1188,6 +1313,7 @@ name|FASTORE
 init|=
 literal|81
 decl_stmt|;
+comment|/** Java VM opcode.    * @see<a href="http://java.sun.com/docs/books/jvms/second_edition/html/Instructions2.doc.html">Opcode definitions in The Java Virtual Machine Specification</a> */
 specifier|public
 specifier|static
 specifier|final
@@ -1196,6 +1322,7 @@ name|DASTORE
 init|=
 literal|82
 decl_stmt|;
+comment|/** Java VM opcode.    * @see<a href="http://java.sun.com/docs/books/jvms/second_edition/html/Instructions2.doc.html">Opcode definitions in The Java Virtual Machine Specification</a> */
 specifier|public
 specifier|static
 specifier|final
@@ -1204,6 +1331,7 @@ name|AASTORE
 init|=
 literal|83
 decl_stmt|;
+comment|/** Java VM opcode.    * @see<a href="http://java.sun.com/docs/books/jvms/second_edition/html/Instructions2.doc.html">Opcode definitions in The Java Virtual Machine Specification</a> */
 specifier|public
 specifier|static
 specifier|final
@@ -1212,6 +1340,7 @@ name|BASTORE
 init|=
 literal|84
 decl_stmt|;
+comment|/** Java VM opcode.    * @see<a href="http://java.sun.com/docs/books/jvms/second_edition/html/Instructions2.doc.html">Opcode definitions in The Java Virtual Machine Specification</a> */
 specifier|public
 specifier|static
 specifier|final
@@ -1220,6 +1349,7 @@ name|CASTORE
 init|=
 literal|85
 decl_stmt|;
+comment|/** Java VM opcode.    * @see<a href="http://java.sun.com/docs/books/jvms/second_edition/html/Instructions2.doc.html">Opcode definitions in The Java Virtual Machine Specification</a> */
 specifier|public
 specifier|static
 specifier|final
@@ -1228,6 +1358,7 @@ name|SASTORE
 init|=
 literal|86
 decl_stmt|;
+comment|/** Java VM opcode.    * @see<a href="http://java.sun.com/docs/books/jvms/second_edition/html/Instructions2.doc.html">Opcode definitions in The Java Virtual Machine Specification</a> */
 specifier|public
 specifier|static
 specifier|final
@@ -1236,6 +1367,7 @@ name|POP
 init|=
 literal|87
 decl_stmt|;
+comment|/** Java VM opcode.    * @see<a href="http://java.sun.com/docs/books/jvms/second_edition/html/Instructions2.doc.html">Opcode definitions in The Java Virtual Machine Specification</a> */
 specifier|public
 specifier|static
 specifier|final
@@ -1244,6 +1376,7 @@ name|POP2
 init|=
 literal|88
 decl_stmt|;
+comment|/** Java VM opcode.    * @see<a href="http://java.sun.com/docs/books/jvms/second_edition/html/Instructions2.doc.html">Opcode definitions in The Java Virtual Machine Specification</a> */
 specifier|public
 specifier|static
 specifier|final
@@ -1252,6 +1385,7 @@ name|DUP
 init|=
 literal|89
 decl_stmt|;
+comment|/** Java VM opcode.    * @see<a href="http://java.sun.com/docs/books/jvms/second_edition/html/Instructions2.doc.html">Opcode definitions in The Java Virtual Machine Specification</a> */
 specifier|public
 specifier|static
 specifier|final
@@ -1260,6 +1394,7 @@ name|DUP_X1
 init|=
 literal|90
 decl_stmt|;
+comment|/** Java VM opcode.    * @see<a href="http://java.sun.com/docs/books/jvms/second_edition/html/Instructions2.doc.html">Opcode definitions in The Java Virtual Machine Specification</a> */
 specifier|public
 specifier|static
 specifier|final
@@ -1268,6 +1403,7 @@ name|DUP_X2
 init|=
 literal|91
 decl_stmt|;
+comment|/** Java VM opcode.    * @see<a href="http://java.sun.com/docs/books/jvms/second_edition/html/Instructions2.doc.html">Opcode definitions in The Java Virtual Machine Specification</a> */
 specifier|public
 specifier|static
 specifier|final
@@ -1276,6 +1412,7 @@ name|DUP2
 init|=
 literal|92
 decl_stmt|;
+comment|/** Java VM opcode.    * @see<a href="http://java.sun.com/docs/books/jvms/second_edition/html/Instructions2.doc.html">Opcode definitions in The Java Virtual Machine Specification</a> */
 specifier|public
 specifier|static
 specifier|final
@@ -1284,6 +1421,7 @@ name|DUP2_X1
 init|=
 literal|93
 decl_stmt|;
+comment|/** Java VM opcode.    * @see<a href="http://java.sun.com/docs/books/jvms/second_edition/html/Instructions2.doc.html">Opcode definitions in The Java Virtual Machine Specification</a> */
 specifier|public
 specifier|static
 specifier|final
@@ -1292,6 +1430,7 @@ name|DUP2_X2
 init|=
 literal|94
 decl_stmt|;
+comment|/** Java VM opcode.    * @see<a href="http://java.sun.com/docs/books/jvms/second_edition/html/Instructions2.doc.html">Opcode definitions in The Java Virtual Machine Specification</a> */
 specifier|public
 specifier|static
 specifier|final
@@ -1300,6 +1439,7 @@ name|SWAP
 init|=
 literal|95
 decl_stmt|;
+comment|/** Java VM opcode.    * @see<a href="http://java.sun.com/docs/books/jvms/second_edition/html/Instructions2.doc.html">Opcode definitions in The Java Virtual Machine Specification</a> */
 specifier|public
 specifier|static
 specifier|final
@@ -1308,6 +1448,7 @@ name|IADD
 init|=
 literal|96
 decl_stmt|;
+comment|/** Java VM opcode.    * @see<a href="http://java.sun.com/docs/books/jvms/second_edition/html/Instructions2.doc.html">Opcode definitions in The Java Virtual Machine Specification</a> */
 specifier|public
 specifier|static
 specifier|final
@@ -1316,6 +1457,7 @@ name|LADD
 init|=
 literal|97
 decl_stmt|;
+comment|/** Java VM opcode.    * @see<a href="http://java.sun.com/docs/books/jvms/second_edition/html/Instructions2.doc.html">Opcode definitions in The Java Virtual Machine Specification</a> */
 specifier|public
 specifier|static
 specifier|final
@@ -1324,6 +1466,7 @@ name|FADD
 init|=
 literal|98
 decl_stmt|;
+comment|/** Java VM opcode.    * @see<a href="http://java.sun.com/docs/books/jvms/second_edition/html/Instructions2.doc.html">Opcode definitions in The Java Virtual Machine Specification</a> */
 specifier|public
 specifier|static
 specifier|final
@@ -1332,6 +1475,7 @@ name|DADD
 init|=
 literal|99
 decl_stmt|;
+comment|/** Java VM opcode.    * @see<a href="http://java.sun.com/docs/books/jvms/second_edition/html/Instructions2.doc.html">Opcode definitions in The Java Virtual Machine Specification</a> */
 specifier|public
 specifier|static
 specifier|final
@@ -1340,6 +1484,7 @@ name|ISUB
 init|=
 literal|100
 decl_stmt|;
+comment|/** Java VM opcode.    * @see<a href="http://java.sun.com/docs/books/jvms/second_edition/html/Instructions2.doc.html">Opcode definitions in The Java Virtual Machine Specification</a> */
 specifier|public
 specifier|static
 specifier|final
@@ -1348,6 +1493,7 @@ name|LSUB
 init|=
 literal|101
 decl_stmt|;
+comment|/** Java VM opcode.    * @see<a href="http://java.sun.com/docs/books/jvms/second_edition/html/Instructions2.doc.html">Opcode definitions in The Java Virtual Machine Specification</a> */
 specifier|public
 specifier|static
 specifier|final
@@ -1356,6 +1502,7 @@ name|FSUB
 init|=
 literal|102
 decl_stmt|;
+comment|/** Java VM opcode.    * @see<a href="http://java.sun.com/docs/books/jvms/second_edition/html/Instructions2.doc.html">Opcode definitions in The Java Virtual Machine Specification</a> */
 specifier|public
 specifier|static
 specifier|final
@@ -1364,6 +1511,7 @@ name|DSUB
 init|=
 literal|103
 decl_stmt|;
+comment|/** Java VM opcode.    * @see<a href="http://java.sun.com/docs/books/jvms/second_edition/html/Instructions2.doc.html">Opcode definitions in The Java Virtual Machine Specification</a> */
 specifier|public
 specifier|static
 specifier|final
@@ -1372,6 +1520,7 @@ name|IMUL
 init|=
 literal|104
 decl_stmt|;
+comment|/** Java VM opcode.    * @see<a href="http://java.sun.com/docs/books/jvms/second_edition/html/Instructions2.doc.html">Opcode definitions in The Java Virtual Machine Specification</a> */
 specifier|public
 specifier|static
 specifier|final
@@ -1380,6 +1529,7 @@ name|LMUL
 init|=
 literal|105
 decl_stmt|;
+comment|/** Java VM opcode.    * @see<a href="http://java.sun.com/docs/books/jvms/second_edition/html/Instructions2.doc.html">Opcode definitions in The Java Virtual Machine Specification</a> */
 specifier|public
 specifier|static
 specifier|final
@@ -1388,6 +1538,7 @@ name|FMUL
 init|=
 literal|106
 decl_stmt|;
+comment|/** Java VM opcode.    * @see<a href="http://java.sun.com/docs/books/jvms/second_edition/html/Instructions2.doc.html">Opcode definitions in The Java Virtual Machine Specification</a> */
 specifier|public
 specifier|static
 specifier|final
@@ -1396,6 +1547,7 @@ name|DMUL
 init|=
 literal|107
 decl_stmt|;
+comment|/** Java VM opcode.    * @see<a href="http://java.sun.com/docs/books/jvms/second_edition/html/Instructions2.doc.html">Opcode definitions in The Java Virtual Machine Specification</a> */
 specifier|public
 specifier|static
 specifier|final
@@ -1404,6 +1556,7 @@ name|IDIV
 init|=
 literal|108
 decl_stmt|;
+comment|/** Java VM opcode.    * @see<a href="http://java.sun.com/docs/books/jvms/second_edition/html/Instructions2.doc.html">Opcode definitions in The Java Virtual Machine Specification</a> */
 specifier|public
 specifier|static
 specifier|final
@@ -1412,6 +1565,7 @@ name|LDIV
 init|=
 literal|109
 decl_stmt|;
+comment|/** Java VM opcode.    * @see<a href="http://java.sun.com/docs/books/jvms/second_edition/html/Instructions2.doc.html">Opcode definitions in The Java Virtual Machine Specification</a> */
 specifier|public
 specifier|static
 specifier|final
@@ -1420,6 +1574,7 @@ name|FDIV
 init|=
 literal|110
 decl_stmt|;
+comment|/** Java VM opcode.    * @see<a href="http://java.sun.com/docs/books/jvms/second_edition/html/Instructions2.doc.html">Opcode definitions in The Java Virtual Machine Specification</a> */
 specifier|public
 specifier|static
 specifier|final
@@ -1428,6 +1583,7 @@ name|DDIV
 init|=
 literal|111
 decl_stmt|;
+comment|/** Java VM opcode.    * @see<a href="http://java.sun.com/docs/books/jvms/second_edition/html/Instructions2.doc.html">Opcode definitions in The Java Virtual Machine Specification</a> */
 specifier|public
 specifier|static
 specifier|final
@@ -1436,6 +1592,7 @@ name|IREM
 init|=
 literal|112
 decl_stmt|;
+comment|/** Java VM opcode.    * @see<a href="http://java.sun.com/docs/books/jvms/second_edition/html/Instructions2.doc.html">Opcode definitions in The Java Virtual Machine Specification</a> */
 specifier|public
 specifier|static
 specifier|final
@@ -1444,6 +1601,7 @@ name|LREM
 init|=
 literal|113
 decl_stmt|;
+comment|/** Java VM opcode.    * @see<a href="http://java.sun.com/docs/books/jvms/second_edition/html/Instructions2.doc.html">Opcode definitions in The Java Virtual Machine Specification</a> */
 specifier|public
 specifier|static
 specifier|final
@@ -1452,6 +1610,7 @@ name|FREM
 init|=
 literal|114
 decl_stmt|;
+comment|/** Java VM opcode.    * @see<a href="http://java.sun.com/docs/books/jvms/second_edition/html/Instructions2.doc.html">Opcode definitions in The Java Virtual Machine Specification</a> */
 specifier|public
 specifier|static
 specifier|final
@@ -1460,6 +1619,7 @@ name|DREM
 init|=
 literal|115
 decl_stmt|;
+comment|/** Java VM opcode.    * @see<a href="http://java.sun.com/docs/books/jvms/second_edition/html/Instructions2.doc.html">Opcode definitions in The Java Virtual Machine Specification</a> */
 specifier|public
 specifier|static
 specifier|final
@@ -1468,6 +1628,7 @@ name|INEG
 init|=
 literal|116
 decl_stmt|;
+comment|/** Java VM opcode.    * @see<a href="http://java.sun.com/docs/books/jvms/second_edition/html/Instructions2.doc.html">Opcode definitions in The Java Virtual Machine Specification</a> */
 specifier|public
 specifier|static
 specifier|final
@@ -1476,6 +1637,7 @@ name|LNEG
 init|=
 literal|117
 decl_stmt|;
+comment|/** Java VM opcode.    * @see<a href="http://java.sun.com/docs/books/jvms/second_edition/html/Instructions2.doc.html">Opcode definitions in The Java Virtual Machine Specification</a> */
 specifier|public
 specifier|static
 specifier|final
@@ -1484,6 +1646,7 @@ name|FNEG
 init|=
 literal|118
 decl_stmt|;
+comment|/** Java VM opcode.    * @see<a href="http://java.sun.com/docs/books/jvms/second_edition/html/Instructions2.doc.html">Opcode definitions in The Java Virtual Machine Specification</a> */
 specifier|public
 specifier|static
 specifier|final
@@ -1492,6 +1655,7 @@ name|DNEG
 init|=
 literal|119
 decl_stmt|;
+comment|/** Java VM opcode.    * @see<a href="http://java.sun.com/docs/books/jvms/second_edition/html/Instructions2.doc.html">Opcode definitions in The Java Virtual Machine Specification</a> */
 specifier|public
 specifier|static
 specifier|final
@@ -1500,6 +1664,7 @@ name|ISHL
 init|=
 literal|120
 decl_stmt|;
+comment|/** Java VM opcode.    * @see<a href="http://java.sun.com/docs/books/jvms/second_edition/html/Instructions2.doc.html">Opcode definitions in The Java Virtual Machine Specification</a> */
 specifier|public
 specifier|static
 specifier|final
@@ -1508,6 +1673,7 @@ name|LSHL
 init|=
 literal|121
 decl_stmt|;
+comment|/** Java VM opcode.    * @see<a href="http://java.sun.com/docs/books/jvms/second_edition/html/Instructions2.doc.html">Opcode definitions in The Java Virtual Machine Specification</a> */
 specifier|public
 specifier|static
 specifier|final
@@ -1516,6 +1682,7 @@ name|ISHR
 init|=
 literal|122
 decl_stmt|;
+comment|/** Java VM opcode.    * @see<a href="http://java.sun.com/docs/books/jvms/second_edition/html/Instructions2.doc.html">Opcode definitions in The Java Virtual Machine Specification</a> */
 specifier|public
 specifier|static
 specifier|final
@@ -1524,6 +1691,7 @@ name|LSHR
 init|=
 literal|123
 decl_stmt|;
+comment|/** Java VM opcode.    * @see<a href="http://java.sun.com/docs/books/jvms/second_edition/html/Instructions2.doc.html">Opcode definitions in The Java Virtual Machine Specification</a> */
 specifier|public
 specifier|static
 specifier|final
@@ -1532,6 +1700,7 @@ name|IUSHR
 init|=
 literal|124
 decl_stmt|;
+comment|/** Java VM opcode.    * @see<a href="http://java.sun.com/docs/books/jvms/second_edition/html/Instructions2.doc.html">Opcode definitions in The Java Virtual Machine Specification</a> */
 specifier|public
 specifier|static
 specifier|final
@@ -1540,6 +1709,7 @@ name|LUSHR
 init|=
 literal|125
 decl_stmt|;
+comment|/** Java VM opcode.    * @see<a href="http://java.sun.com/docs/books/jvms/second_edition/html/Instructions2.doc.html">Opcode definitions in The Java Virtual Machine Specification</a> */
 specifier|public
 specifier|static
 specifier|final
@@ -1548,6 +1718,7 @@ name|IAND
 init|=
 literal|126
 decl_stmt|;
+comment|/** Java VM opcode.    * @see<a href="http://java.sun.com/docs/books/jvms/second_edition/html/Instructions2.doc.html">Opcode definitions in The Java Virtual Machine Specification</a> */
 specifier|public
 specifier|static
 specifier|final
@@ -1556,6 +1727,7 @@ name|LAND
 init|=
 literal|127
 decl_stmt|;
+comment|/** Java VM opcode.    * @see<a href="http://java.sun.com/docs/books/jvms/second_edition/html/Instructions2.doc.html">Opcode definitions in The Java Virtual Machine Specification</a> */
 specifier|public
 specifier|static
 specifier|final
@@ -1564,6 +1736,7 @@ name|IOR
 init|=
 literal|128
 decl_stmt|;
+comment|/** Java VM opcode.    * @see<a href="http://java.sun.com/docs/books/jvms/second_edition/html/Instructions2.doc.html">Opcode definitions in The Java Virtual Machine Specification</a> */
 specifier|public
 specifier|static
 specifier|final
@@ -1572,6 +1745,7 @@ name|LOR
 init|=
 literal|129
 decl_stmt|;
+comment|/** Java VM opcode.    * @see<a href="http://java.sun.com/docs/books/jvms/second_edition/html/Instructions2.doc.html">Opcode definitions in The Java Virtual Machine Specification</a> */
 specifier|public
 specifier|static
 specifier|final
@@ -1580,6 +1754,7 @@ name|IXOR
 init|=
 literal|130
 decl_stmt|;
+comment|/** Java VM opcode.    * @see<a href="http://java.sun.com/docs/books/jvms/second_edition/html/Instructions2.doc.html">Opcode definitions in The Java Virtual Machine Specification</a> */
 specifier|public
 specifier|static
 specifier|final
@@ -1588,6 +1763,7 @@ name|LXOR
 init|=
 literal|131
 decl_stmt|;
+comment|/** Java VM opcode.    * @see<a href="http://java.sun.com/docs/books/jvms/second_edition/html/Instructions2.doc.html">Opcode definitions in The Java Virtual Machine Specification</a> */
 specifier|public
 specifier|static
 specifier|final
@@ -1596,6 +1772,7 @@ name|IINC
 init|=
 literal|132
 decl_stmt|;
+comment|/** Java VM opcode.    * @see<a href="http://java.sun.com/docs/books/jvms/second_edition/html/Instructions2.doc.html">Opcode definitions in The Java Virtual Machine Specification</a> */
 specifier|public
 specifier|static
 specifier|final
@@ -1604,6 +1781,7 @@ name|I2L
 init|=
 literal|133
 decl_stmt|;
+comment|/** Java VM opcode.    * @see<a href="http://java.sun.com/docs/books/jvms/second_edition/html/Instructions2.doc.html">Opcode definitions in The Java Virtual Machine Specification</a> */
 specifier|public
 specifier|static
 specifier|final
@@ -1612,6 +1790,7 @@ name|I2F
 init|=
 literal|134
 decl_stmt|;
+comment|/** Java VM opcode.    * @see<a href="http://java.sun.com/docs/books/jvms/second_edition/html/Instructions2.doc.html">Opcode definitions in The Java Virtual Machine Specification</a> */
 specifier|public
 specifier|static
 specifier|final
@@ -1620,6 +1799,7 @@ name|I2D
 init|=
 literal|135
 decl_stmt|;
+comment|/** Java VM opcode.    * @see<a href="http://java.sun.com/docs/books/jvms/second_edition/html/Instructions2.doc.html">Opcode definitions in The Java Virtual Machine Specification</a> */
 specifier|public
 specifier|static
 specifier|final
@@ -1628,6 +1808,7 @@ name|L2I
 init|=
 literal|136
 decl_stmt|;
+comment|/** Java VM opcode.    * @see<a href="http://java.sun.com/docs/books/jvms/second_edition/html/Instructions2.doc.html">Opcode definitions in The Java Virtual Machine Specification</a> */
 specifier|public
 specifier|static
 specifier|final
@@ -1636,6 +1817,7 @@ name|L2F
 init|=
 literal|137
 decl_stmt|;
+comment|/** Java VM opcode.    * @see<a href="http://java.sun.com/docs/books/jvms/second_edition/html/Instructions2.doc.html">Opcode definitions in The Java Virtual Machine Specification</a> */
 specifier|public
 specifier|static
 specifier|final
@@ -1644,6 +1826,7 @@ name|L2D
 init|=
 literal|138
 decl_stmt|;
+comment|/** Java VM opcode.    * @see<a href="http://java.sun.com/docs/books/jvms/second_edition/html/Instructions2.doc.html">Opcode definitions in The Java Virtual Machine Specification</a> */
 specifier|public
 specifier|static
 specifier|final
@@ -1652,6 +1835,7 @@ name|F2I
 init|=
 literal|139
 decl_stmt|;
+comment|/** Java VM opcode.    * @see<a href="http://java.sun.com/docs/books/jvms/second_edition/html/Instructions2.doc.html">Opcode definitions in The Java Virtual Machine Specification</a> */
 specifier|public
 specifier|static
 specifier|final
@@ -1660,6 +1844,7 @@ name|F2L
 init|=
 literal|140
 decl_stmt|;
+comment|/** Java VM opcode.    * @see<a href="http://java.sun.com/docs/books/jvms/second_edition/html/Instructions2.doc.html">Opcode definitions in The Java Virtual Machine Specification</a> */
 specifier|public
 specifier|static
 specifier|final
@@ -1668,6 +1853,7 @@ name|F2D
 init|=
 literal|141
 decl_stmt|;
+comment|/** Java VM opcode.    * @see<a href="http://java.sun.com/docs/books/jvms/second_edition/html/Instructions2.doc.html">Opcode definitions in The Java Virtual Machine Specification</a> */
 specifier|public
 specifier|static
 specifier|final
@@ -1676,6 +1862,7 @@ name|D2I
 init|=
 literal|142
 decl_stmt|;
+comment|/** Java VM opcode.    * @see<a href="http://java.sun.com/docs/books/jvms/second_edition/html/Instructions2.doc.html">Opcode definitions in The Java Virtual Machine Specification</a> */
 specifier|public
 specifier|static
 specifier|final
@@ -1684,6 +1871,7 @@ name|D2L
 init|=
 literal|143
 decl_stmt|;
+comment|/** Java VM opcode.    * @see<a href="http://java.sun.com/docs/books/jvms/second_edition/html/Instructions2.doc.html">Opcode definitions in The Java Virtual Machine Specification</a> */
 specifier|public
 specifier|static
 specifier|final
@@ -1692,6 +1880,7 @@ name|D2F
 init|=
 literal|144
 decl_stmt|;
+comment|/** Java VM opcode.    * @see<a href="http://java.sun.com/docs/books/jvms/second_edition/html/Instructions2.doc.html">Opcode definitions in The Java Virtual Machine Specification</a> */
 specifier|public
 specifier|static
 specifier|final
@@ -1700,6 +1889,7 @@ name|I2B
 init|=
 literal|145
 decl_stmt|;
+comment|/** Java VM opcode.    * @see<a href="http://java.sun.com/docs/books/jvms/second_edition/html/Instructions2.doc.html">Opcode definitions in The Java Virtual Machine Specification</a> */
 specifier|public
 specifier|static
 specifier|final
@@ -1709,6 +1899,7 @@ init|=
 literal|145
 decl_stmt|;
 comment|// Old notion
+comment|/** Java VM opcode.    * @see<a href="http://java.sun.com/docs/books/jvms/second_edition/html/Instructions2.doc.html">Opcode definitions in The Java Virtual Machine Specification</a> */
 specifier|public
 specifier|static
 specifier|final
@@ -1717,6 +1908,7 @@ name|I2C
 init|=
 literal|146
 decl_stmt|;
+comment|/** Java VM opcode.    * @see<a href="http://java.sun.com/docs/books/jvms/second_edition/html/Instructions2.doc.html">Opcode definitions in The Java Virtual Machine Specification</a> */
 specifier|public
 specifier|static
 specifier|final
@@ -1726,6 +1918,7 @@ init|=
 literal|146
 decl_stmt|;
 comment|// Old notion
+comment|/** Java VM opcode.    * @see<a href="http://java.sun.com/docs/books/jvms/second_edition/html/Instructions2.doc.html">Opcode definitions in The Java Virtual Machine Specification</a> */
 specifier|public
 specifier|static
 specifier|final
@@ -1734,6 +1927,7 @@ name|I2S
 init|=
 literal|147
 decl_stmt|;
+comment|/** Java VM opcode.    * @see<a href="http://java.sun.com/docs/books/jvms/second_edition/html/Instructions2.doc.html">Opcode definitions in The Java Virtual Machine Specification</a> */
 specifier|public
 specifier|static
 specifier|final
@@ -1743,6 +1937,7 @@ init|=
 literal|147
 decl_stmt|;
 comment|// Old notion
+comment|/** Java VM opcode.    * @see<a href="http://java.sun.com/docs/books/jvms/second_edition/html/Instructions2.doc.html">Opcode definitions in The Java Virtual Machine Specification</a> */
 specifier|public
 specifier|static
 specifier|final
@@ -1751,6 +1946,7 @@ name|LCMP
 init|=
 literal|148
 decl_stmt|;
+comment|/** Java VM opcode.    * @see<a href="http://java.sun.com/docs/books/jvms/second_edition/html/Instructions2.doc.html">Opcode definitions in The Java Virtual Machine Specification</a> */
 specifier|public
 specifier|static
 specifier|final
@@ -1759,6 +1955,7 @@ name|FCMPL
 init|=
 literal|149
 decl_stmt|;
+comment|/** Java VM opcode.    * @see<a href="http://java.sun.com/docs/books/jvms/second_edition/html/Instructions2.doc.html">Opcode definitions in The Java Virtual Machine Specification</a> */
 specifier|public
 specifier|static
 specifier|final
@@ -1767,6 +1964,7 @@ name|FCMPG
 init|=
 literal|150
 decl_stmt|;
+comment|/** Java VM opcode.    * @see<a href="http://java.sun.com/docs/books/jvms/second_edition/html/Instructions2.doc.html">Opcode definitions in The Java Virtual Machine Specification</a> */
 specifier|public
 specifier|static
 specifier|final
@@ -1775,6 +1973,7 @@ name|DCMPL
 init|=
 literal|151
 decl_stmt|;
+comment|/** Java VM opcode.    * @see<a href="http://java.sun.com/docs/books/jvms/second_edition/html/Instructions2.doc.html">Opcode definitions in The Java Virtual Machine Specification</a> */
 specifier|public
 specifier|static
 specifier|final
@@ -1783,6 +1982,7 @@ name|DCMPG
 init|=
 literal|152
 decl_stmt|;
+comment|/** Java VM opcode.    * @see<a href="http://java.sun.com/docs/books/jvms/second_edition/html/Instructions2.doc.html">Opcode definitions in The Java Virtual Machine Specification</a> */
 specifier|public
 specifier|static
 specifier|final
@@ -1791,6 +1991,7 @@ name|IFEQ
 init|=
 literal|153
 decl_stmt|;
+comment|/** Java VM opcode.    * @see<a href="http://java.sun.com/docs/books/jvms/second_edition/html/Instructions2.doc.html">Opcode definitions in The Java Virtual Machine Specification</a> */
 specifier|public
 specifier|static
 specifier|final
@@ -1799,6 +2000,7 @@ name|IFNE
 init|=
 literal|154
 decl_stmt|;
+comment|/** Java VM opcode.    * @see<a href="http://java.sun.com/docs/books/jvms/second_edition/html/Instructions2.doc.html">Opcode definitions in The Java Virtual Machine Specification</a> */
 specifier|public
 specifier|static
 specifier|final
@@ -1807,6 +2009,7 @@ name|IFLT
 init|=
 literal|155
 decl_stmt|;
+comment|/** Java VM opcode.    * @see<a href="http://java.sun.com/docs/books/jvms/second_edition/html/Instructions2.doc.html">Opcode definitions in The Java Virtual Machine Specification</a> */
 specifier|public
 specifier|static
 specifier|final
@@ -1815,6 +2018,7 @@ name|IFGE
 init|=
 literal|156
 decl_stmt|;
+comment|/** Java VM opcode.    * @see<a href="http://java.sun.com/docs/books/jvms/second_edition/html/Instructions2.doc.html">Opcode definitions in The Java Virtual Machine Specification</a> */
 specifier|public
 specifier|static
 specifier|final
@@ -1823,6 +2027,7 @@ name|IFGT
 init|=
 literal|157
 decl_stmt|;
+comment|/** Java VM opcode.    * @see<a href="http://java.sun.com/docs/books/jvms/second_edition/html/Instructions2.doc.html">Opcode definitions in The Java Virtual Machine Specification</a> */
 specifier|public
 specifier|static
 specifier|final
@@ -1831,6 +2036,7 @@ name|IFLE
 init|=
 literal|158
 decl_stmt|;
+comment|/** Java VM opcode.    * @see<a href="http://java.sun.com/docs/books/jvms/second_edition/html/Instructions2.doc.html">Opcode definitions in The Java Virtual Machine Specification</a> */
 specifier|public
 specifier|static
 specifier|final
@@ -1839,6 +2045,7 @@ name|IF_ICMPEQ
 init|=
 literal|159
 decl_stmt|;
+comment|/** Java VM opcode.    * @see<a href="http://java.sun.com/docs/books/jvms/second_edition/html/Instructions2.doc.html">Opcode definitions in The Java Virtual Machine Specification</a> */
 specifier|public
 specifier|static
 specifier|final
@@ -1847,6 +2054,7 @@ name|IF_ICMPNE
 init|=
 literal|160
 decl_stmt|;
+comment|/** Java VM opcode.    * @see<a href="http://java.sun.com/docs/books/jvms/second_edition/html/Instructions2.doc.html">Opcode definitions in The Java Virtual Machine Specification</a> */
 specifier|public
 specifier|static
 specifier|final
@@ -1855,6 +2063,7 @@ name|IF_ICMPLT
 init|=
 literal|161
 decl_stmt|;
+comment|/** Java VM opcode.    * @see<a href="http://java.sun.com/docs/books/jvms/second_edition/html/Instructions2.doc.html">Opcode definitions in The Java Virtual Machine Specification</a> */
 specifier|public
 specifier|static
 specifier|final
@@ -1863,6 +2072,7 @@ name|IF_ICMPGE
 init|=
 literal|162
 decl_stmt|;
+comment|/** Java VM opcode.    * @see<a href="http://java.sun.com/docs/books/jvms/second_edition/html/Instructions2.doc.html">Opcode definitions in The Java Virtual Machine Specification</a> */
 specifier|public
 specifier|static
 specifier|final
@@ -1871,6 +2081,7 @@ name|IF_ICMPGT
 init|=
 literal|163
 decl_stmt|;
+comment|/** Java VM opcode.    * @see<a href="http://java.sun.com/docs/books/jvms/second_edition/html/Instructions2.doc.html">Opcode definitions in The Java Virtual Machine Specification</a> */
 specifier|public
 specifier|static
 specifier|final
@@ -1879,6 +2090,7 @@ name|IF_ICMPLE
 init|=
 literal|164
 decl_stmt|;
+comment|/** Java VM opcode.    * @see<a href="http://java.sun.com/docs/books/jvms/second_edition/html/Instructions2.doc.html">Opcode definitions in The Java Virtual Machine Specification</a> */
 specifier|public
 specifier|static
 specifier|final
@@ -1887,6 +2099,7 @@ name|IF_ACMPEQ
 init|=
 literal|165
 decl_stmt|;
+comment|/** Java VM opcode.    * @see<a href="http://java.sun.com/docs/books/jvms/second_edition/html/Instructions2.doc.html">Opcode definitions in The Java Virtual Machine Specification</a> */
 specifier|public
 specifier|static
 specifier|final
@@ -1895,6 +2108,7 @@ name|IF_ACMPNE
 init|=
 literal|166
 decl_stmt|;
+comment|/** Java VM opcode.    * @see<a href="http://java.sun.com/docs/books/jvms/second_edition/html/Instructions2.doc.html">Opcode definitions in The Java Virtual Machine Specification</a> */
 specifier|public
 specifier|static
 specifier|final
@@ -1903,6 +2117,7 @@ name|GOTO
 init|=
 literal|167
 decl_stmt|;
+comment|/** Java VM opcode.    * @see<a href="http://java.sun.com/docs/books/jvms/second_edition/html/Instructions2.doc.html">Opcode definitions in The Java Virtual Machine Specification</a> */
 specifier|public
 specifier|static
 specifier|final
@@ -1911,6 +2126,7 @@ name|JSR
 init|=
 literal|168
 decl_stmt|;
+comment|/** Java VM opcode.    * @see<a href="http://java.sun.com/docs/books/jvms/second_edition/html/Instructions2.doc.html">Opcode definitions in The Java Virtual Machine Specification</a> */
 specifier|public
 specifier|static
 specifier|final
@@ -1919,6 +2135,7 @@ name|RET
 init|=
 literal|169
 decl_stmt|;
+comment|/** Java VM opcode.    * @see<a href="http://java.sun.com/docs/books/jvms/second_edition/html/Instructions2.doc.html">Opcode definitions in The Java Virtual Machine Specification</a> */
 specifier|public
 specifier|static
 specifier|final
@@ -1927,6 +2144,7 @@ name|TABLESWITCH
 init|=
 literal|170
 decl_stmt|;
+comment|/** Java VM opcode.    * @see<a href="http://java.sun.com/docs/books/jvms/second_edition/html/Instructions2.doc.html">Opcode definitions in The Java Virtual Machine Specification</a> */
 specifier|public
 specifier|static
 specifier|final
@@ -1935,6 +2153,7 @@ name|LOOKUPSWITCH
 init|=
 literal|171
 decl_stmt|;
+comment|/** Java VM opcode.    * @see<a href="http://java.sun.com/docs/books/jvms/second_edition/html/Instructions2.doc.html">Opcode definitions in The Java Virtual Machine Specification</a> */
 specifier|public
 specifier|static
 specifier|final
@@ -1943,6 +2162,7 @@ name|IRETURN
 init|=
 literal|172
 decl_stmt|;
+comment|/** Java VM opcode.    * @see<a href="http://java.sun.com/docs/books/jvms/second_edition/html/Instructions2.doc.html">Opcode definitions in The Java Virtual Machine Specification</a> */
 specifier|public
 specifier|static
 specifier|final
@@ -1951,6 +2171,7 @@ name|LRETURN
 init|=
 literal|173
 decl_stmt|;
+comment|/** Java VM opcode.    * @see<a href="http://java.sun.com/docs/books/jvms/second_edition/html/Instructions2.doc.html">Opcode definitions in The Java Virtual Machine Specification</a> */
 specifier|public
 specifier|static
 specifier|final
@@ -1959,6 +2180,7 @@ name|FRETURN
 init|=
 literal|174
 decl_stmt|;
+comment|/** Java VM opcode.    * @see<a href="http://java.sun.com/docs/books/jvms/second_edition/html/Instructions2.doc.html">Opcode definitions in The Java Virtual Machine Specification</a> */
 specifier|public
 specifier|static
 specifier|final
@@ -1967,6 +2189,7 @@ name|DRETURN
 init|=
 literal|175
 decl_stmt|;
+comment|/** Java VM opcode.    * @see<a href="http://java.sun.com/docs/books/jvms/second_edition/html/Instructions2.doc.html">Opcode definitions in The Java Virtual Machine Specification</a> */
 specifier|public
 specifier|static
 specifier|final
@@ -1975,6 +2198,7 @@ name|ARETURN
 init|=
 literal|176
 decl_stmt|;
+comment|/** Java VM opcode.    * @see<a href="http://java.sun.com/docs/books/jvms/second_edition/html/Instructions2.doc.html">Opcode definitions in The Java Virtual Machine Specification</a> */
 specifier|public
 specifier|static
 specifier|final
@@ -1983,6 +2207,7 @@ name|RETURN
 init|=
 literal|177
 decl_stmt|;
+comment|/** Java VM opcode.    * @see<a href="http://java.sun.com/docs/books/jvms/second_edition/html/Instructions2.doc.html">Opcode definitions in The Java Virtual Machine Specification</a> */
 specifier|public
 specifier|static
 specifier|final
@@ -1991,6 +2216,7 @@ name|GETSTATIC
 init|=
 literal|178
 decl_stmt|;
+comment|/** Java VM opcode.    * @see<a href="http://java.sun.com/docs/books/jvms/second_edition/html/Instructions2.doc.html">Opcode definitions in The Java Virtual Machine Specification</a> */
 specifier|public
 specifier|static
 specifier|final
@@ -1999,6 +2225,7 @@ name|PUTSTATIC
 init|=
 literal|179
 decl_stmt|;
+comment|/** Java VM opcode.    * @see<a href="http://java.sun.com/docs/books/jvms/second_edition/html/Instructions2.doc.html">Opcode definitions in The Java Virtual Machine Specification</a> */
 specifier|public
 specifier|static
 specifier|final
@@ -2007,6 +2234,7 @@ name|GETFIELD
 init|=
 literal|180
 decl_stmt|;
+comment|/** Java VM opcode.    * @see<a href="http://java.sun.com/docs/books/jvms/second_edition/html/Instructions2.doc.html">Opcode definitions in The Java Virtual Machine Specification</a> */
 specifier|public
 specifier|static
 specifier|final
@@ -2015,6 +2243,7 @@ name|PUTFIELD
 init|=
 literal|181
 decl_stmt|;
+comment|/** Java VM opcode.    * @see<a href="http://java.sun.com/docs/books/jvms/second_edition/html/Instructions2.doc.html">Opcode definitions in The Java Virtual Machine Specification</a> */
 specifier|public
 specifier|static
 specifier|final
@@ -2023,6 +2252,7 @@ name|INVOKEVIRTUAL
 init|=
 literal|182
 decl_stmt|;
+comment|/** Java VM opcode.    * @see<a href="http://java.sun.com/docs/books/jvms/second_edition/html/Instructions2.doc.html">Opcode definitions in The Java Virtual Machine Specification</a> */
 specifier|public
 specifier|static
 specifier|final
@@ -2031,6 +2261,7 @@ name|INVOKESPECIAL
 init|=
 literal|183
 decl_stmt|;
+comment|/** Java VM opcode.    * @see<a href="http://java.sun.com/docs/books/jvms/second_edition/html/Instructions2.doc.html">Opcode definitions in The Java Virtual Machine Specification</a> */
 specifier|public
 specifier|static
 specifier|final
@@ -2040,6 +2271,7 @@ init|=
 literal|183
 decl_stmt|;
 comment|// Old name in JDK 1.0
+comment|/** Java VM opcode.    * @see<a href="http://java.sun.com/docs/books/jvms/second_edition/html/Instructions2.doc.html">Opcode definitions in The Java Virtual Machine Specification</a> */
 specifier|public
 specifier|static
 specifier|final
@@ -2048,6 +2280,7 @@ name|INVOKESTATIC
 init|=
 literal|184
 decl_stmt|;
+comment|/** Java VM opcode.    * @see<a href="http://java.sun.com/docs/books/jvms/second_edition/html/Instructions2.doc.html">Opcode definitions in The Java Virtual Machine Specification</a> */
 specifier|public
 specifier|static
 specifier|final
@@ -2056,6 +2289,7 @@ name|INVOKEINTERFACE
 init|=
 literal|185
 decl_stmt|;
+comment|/** Java VM opcode.    * @see<a href="http://java.sun.com/docs/books/jvms/second_edition/html/Instructions2.doc.html">Opcode definitions in The Java Virtual Machine Specification</a> */
 specifier|public
 specifier|static
 specifier|final
@@ -2064,6 +2298,7 @@ name|NEW
 init|=
 literal|187
 decl_stmt|;
+comment|/** Java VM opcode.    * @see<a href="http://java.sun.com/docs/books/jvms/second_edition/html/Instructions2.doc.html">Opcode definitions in The Java Virtual Machine Specification</a> */
 specifier|public
 specifier|static
 specifier|final
@@ -2072,6 +2307,7 @@ name|NEWARRAY
 init|=
 literal|188
 decl_stmt|;
+comment|/** Java VM opcode.    * @see<a href="http://java.sun.com/docs/books/jvms/second_edition/html/Instructions2.doc.html">Opcode definitions in The Java Virtual Machine Specification</a> */
 specifier|public
 specifier|static
 specifier|final
@@ -2080,6 +2316,7 @@ name|ANEWARRAY
 init|=
 literal|189
 decl_stmt|;
+comment|/** Java VM opcode.    * @see<a href="http://java.sun.com/docs/books/jvms/second_edition/html/Instructions2.doc.html">Opcode definitions in The Java Virtual Machine Specification</a> */
 specifier|public
 specifier|static
 specifier|final
@@ -2088,6 +2325,7 @@ name|ARRAYLENGTH
 init|=
 literal|190
 decl_stmt|;
+comment|/** Java VM opcode.    * @see<a href="http://java.sun.com/docs/books/jvms/second_edition/html/Instructions2.doc.html">Opcode definitions in The Java Virtual Machine Specification</a> */
 specifier|public
 specifier|static
 specifier|final
@@ -2096,6 +2334,7 @@ name|ATHROW
 init|=
 literal|191
 decl_stmt|;
+comment|/** Java VM opcode.    * @see<a href="http://java.sun.com/docs/books/jvms/second_edition/html/Instructions2.doc.html">Opcode definitions in The Java Virtual Machine Specification</a> */
 specifier|public
 specifier|static
 specifier|final
@@ -2104,6 +2343,7 @@ name|CHECKCAST
 init|=
 literal|192
 decl_stmt|;
+comment|/** Java VM opcode.    * @see<a href="http://java.sun.com/docs/books/jvms/second_edition/html/Instructions2.doc.html">Opcode definitions in The Java Virtual Machine Specification</a> */
 specifier|public
 specifier|static
 specifier|final
@@ -2112,6 +2352,7 @@ name|INSTANCEOF
 init|=
 literal|193
 decl_stmt|;
+comment|/** Java VM opcode.    * @see<a href="http://java.sun.com/docs/books/jvms/second_edition/html/Instructions2.doc.html">Opcode definitions in The Java Virtual Machine Specification</a> */
 specifier|public
 specifier|static
 specifier|final
@@ -2120,6 +2361,7 @@ name|MONITORENTER
 init|=
 literal|194
 decl_stmt|;
+comment|/** Java VM opcode.    * @see<a href="http://java.sun.com/docs/books/jvms/second_edition/html/Instructions2.doc.html">Opcode definitions in The Java Virtual Machine Specification</a> */
 specifier|public
 specifier|static
 specifier|final
@@ -2128,6 +2370,7 @@ name|MONITOREXIT
 init|=
 literal|195
 decl_stmt|;
+comment|/** Java VM opcode.    * @see<a href="http://java.sun.com/docs/books/jvms/second_edition/html/Instructions2.doc.html">Opcode definitions in The Java Virtual Machine Specification</a> */
 specifier|public
 specifier|static
 specifier|final
@@ -2136,6 +2379,7 @@ name|WIDE
 init|=
 literal|196
 decl_stmt|;
+comment|/** Java VM opcode.    * @see<a href="http://java.sun.com/docs/books/jvms/second_edition/html/Instructions2.doc.html">Opcode definitions in The Java Virtual Machine Specification</a> */
 specifier|public
 specifier|static
 specifier|final
@@ -2144,6 +2388,7 @@ name|MULTIANEWARRAY
 init|=
 literal|197
 decl_stmt|;
+comment|/** Java VM opcode.    * @see<a href="http://java.sun.com/docs/books/jvms/second_edition/html/Instructions2.doc.html">Opcode definitions in The Java Virtual Machine Specification</a> */
 specifier|public
 specifier|static
 specifier|final
@@ -2152,6 +2397,7 @@ name|IFNULL
 init|=
 literal|198
 decl_stmt|;
+comment|/** Java VM opcode.    * @see<a href="http://java.sun.com/docs/books/jvms/second_edition/html/Instructions2.doc.html">Opcode definitions in The Java Virtual Machine Specification</a> */
 specifier|public
 specifier|static
 specifier|final
@@ -2160,6 +2406,7 @@ name|IFNONNULL
 init|=
 literal|199
 decl_stmt|;
+comment|/** Java VM opcode.    * @see<a href="http://java.sun.com/docs/books/jvms/second_edition/html/Instructions2.doc.html">Opcode definitions in The Java Virtual Machine Specification</a> */
 specifier|public
 specifier|static
 specifier|final
@@ -2168,6 +2415,7 @@ name|GOTO_W
 init|=
 literal|200
 decl_stmt|;
+comment|/** Java VM opcode.    * @see<a href="http://java.sun.com/docs/books/jvms/second_edition/html/Instructions2.doc.html">Opcode definitions in The Java Virtual Machine Specification</a> */
 specifier|public
 specifier|static
 specifier|final
@@ -2176,7 +2424,7 @@ name|JSR_W
 init|=
 literal|201
 decl_stmt|;
-comment|/**    * Non-legal opcodes, may be used by JVM internally.    */
+comment|/** JVM internal opcode.    * @see<a href="http://java.sun.com/docs/books/jvms/second_edition/html/Instructions.doc.html#60105">Reserved opcodes in the Java Virtual Machine Specification</a> */
 specifier|public
 specifier|static
 specifier|final
@@ -2185,6 +2433,7 @@ name|BREAKPOINT
 init|=
 literal|202
 decl_stmt|;
+comment|/** JVM internal opcode.    * @see<a href="http://java.sun.com/docs/books/jvms/first_edition/html/Quick.doc.html#10673">Specification of _quick opcodes in the Java Virtual Machine Specification (version 1)</a>    * @see<a href="http://java.sun.com/docs/books/jvms/second_edition/html/ChangesAppendix.doc.html#448885">Why the _quick opcodes were removed from the second version of the Java Virtual Machine Specification.</a> */
 specifier|public
 specifier|static
 specifier|final
@@ -2193,6 +2442,7 @@ name|LDC_QUICK
 init|=
 literal|203
 decl_stmt|;
+comment|/** JVM internal opcode.    * @see<a href="http://java.sun.com/docs/books/jvms/first_edition/html/Quick.doc.html#10673">Specification of _quick opcodes in the Java Virtual Machine Specification (version 1)</a>    * @see<a href="http://java.sun.com/docs/books/jvms/second_edition/html/ChangesAppendix.doc.html#448885">Why the _quick opcodes were removed from the second version of the Java Virtual Machine Specification.</a> */
 specifier|public
 specifier|static
 specifier|final
@@ -2201,6 +2451,7 @@ name|LDC_W_QUICK
 init|=
 literal|204
 decl_stmt|;
+comment|/** JVM internal opcode.    * @see<a href="http://java.sun.com/docs/books/jvms/first_edition/html/Quick.doc.html#10673">Specification of _quick opcodes in the Java Virtual Machine Specification (version 1)</a>    * @see<a href="http://java.sun.com/docs/books/jvms/second_edition/html/ChangesAppendix.doc.html#448885">Why the _quick opcodes were removed from the second version of the Java Virtual Machine Specification.</a> */
 specifier|public
 specifier|static
 specifier|final
@@ -2209,6 +2460,7 @@ name|LDC2_W_QUICK
 init|=
 literal|205
 decl_stmt|;
+comment|/** JVM internal opcode.    * @see<a href="http://java.sun.com/docs/books/jvms/first_edition/html/Quick.doc.html#10673">Specification of _quick opcodes in the Java Virtual Machine Specification (version 1)</a>    * @see<a href="http://java.sun.com/docs/books/jvms/second_edition/html/ChangesAppendix.doc.html#448885">Why the _quick opcodes were removed from the second version of the Java Virtual Machine Specification.</a> */
 specifier|public
 specifier|static
 specifier|final
@@ -2217,6 +2469,7 @@ name|GETFIELD_QUICK
 init|=
 literal|206
 decl_stmt|;
+comment|/** JVM internal opcode.    * @see<a href="http://java.sun.com/docs/books/jvms/first_edition/html/Quick.doc.html#10673">Specification of _quick opcodes in the Java Virtual Machine Specification (version 1)</a>    * @see<a href="http://java.sun.com/docs/books/jvms/second_edition/html/ChangesAppendix.doc.html#448885">Why the _quick opcodes were removed from the second version of the Java Virtual Machine Specification.</a> */
 specifier|public
 specifier|static
 specifier|final
@@ -2225,6 +2478,7 @@ name|PUTFIELD_QUICK
 init|=
 literal|207
 decl_stmt|;
+comment|/** JVM internal opcode.    * @see<a href="http://java.sun.com/docs/books/jvms/first_edition/html/Quick.doc.html#10673">Specification of _quick opcodes in the Java Virtual Machine Specification (version 1)</a>    * @see<a href="http://java.sun.com/docs/books/jvms/second_edition/html/ChangesAppendix.doc.html#448885">Why the _quick opcodes were removed from the second version of the Java Virtual Machine Specification.</a> */
 specifier|public
 specifier|static
 specifier|final
@@ -2233,6 +2487,7 @@ name|GETFIELD2_QUICK
 init|=
 literal|208
 decl_stmt|;
+comment|/** JVM internal opcode.    * @see<a href="http://java.sun.com/docs/books/jvms/first_edition/html/Quick.doc.html#10673">Specification of _quick opcodes in the Java Virtual Machine Specification (version 1)</a>    * @see<a href="http://java.sun.com/docs/books/jvms/second_edition/html/ChangesAppendix.doc.html#448885">Why the _quick opcodes were removed from the second version of the Java Virtual Machine Specification.</a> */
 specifier|public
 specifier|static
 specifier|final
@@ -2241,6 +2496,7 @@ name|PUTFIELD2_QUICK
 init|=
 literal|209
 decl_stmt|;
+comment|/** JVM internal opcode.    * @see<a href="http://java.sun.com/docs/books/jvms/first_edition/html/Quick.doc.html#10673">Specification of _quick opcodes in the Java Virtual Machine Specification (version 1)</a>    * @see<a href="http://java.sun.com/docs/books/jvms/second_edition/html/ChangesAppendix.doc.html#448885">Why the _quick opcodes were removed from the second version of the Java Virtual Machine Specification.</a> */
 specifier|public
 specifier|static
 specifier|final
@@ -2249,6 +2505,7 @@ name|GETSTATIC_QUICK
 init|=
 literal|210
 decl_stmt|;
+comment|/** JVM internal opcode.    * @see<a href="http://java.sun.com/docs/books/jvms/first_edition/html/Quick.doc.html#10673">Specification of _quick opcodes in the Java Virtual Machine Specification (version 1)</a>    * @see<a href="http://java.sun.com/docs/books/jvms/second_edition/html/ChangesAppendix.doc.html#448885">Why the _quick opcodes were removed from the second version of the Java Virtual Machine Specification.</a> */
 specifier|public
 specifier|static
 specifier|final
@@ -2257,6 +2514,7 @@ name|PUTSTATIC_QUICK
 init|=
 literal|211
 decl_stmt|;
+comment|/** JVM internal opcode.    * @see<a href="http://java.sun.com/docs/books/jvms/first_edition/html/Quick.doc.html#10673">Specification of _quick opcodes in the Java Virtual Machine Specification (version 1)</a>    * @see<a href="http://java.sun.com/docs/books/jvms/second_edition/html/ChangesAppendix.doc.html#448885">Why the _quick opcodes were removed from the second version of the Java Virtual Machine Specification.</a> */
 specifier|public
 specifier|static
 specifier|final
@@ -2265,6 +2523,7 @@ name|GETSTATIC2_QUICK
 init|=
 literal|212
 decl_stmt|;
+comment|/** JVM internal opcode.    * @see<a href="http://java.sun.com/docs/books/jvms/first_edition/html/Quick.doc.html#10673">Specification of _quick opcodes in the Java Virtual Machine Specification (version 1)</a>    * @see<a href="http://java.sun.com/docs/books/jvms/second_edition/html/ChangesAppendix.doc.html#448885">Why the _quick opcodes were removed from the second version of the Java Virtual Machine Specification.</a> */
 specifier|public
 specifier|static
 specifier|final
@@ -2273,6 +2532,7 @@ name|PUTSTATIC2_QUICK
 init|=
 literal|213
 decl_stmt|;
+comment|/** JVM internal opcode.    * @see<a href="http://java.sun.com/docs/books/jvms/first_edition/html/Quick.doc.html#10673">Specification of _quick opcodes in the Java Virtual Machine Specification (version 1)</a>    * @see<a href="http://java.sun.com/docs/books/jvms/second_edition/html/ChangesAppendix.doc.html#448885">Why the _quick opcodes were removed from the second version of the Java Virtual Machine Specification.</a> */
 specifier|public
 specifier|static
 specifier|final
@@ -2281,6 +2541,7 @@ name|INVOKEVIRTUAL_QUICK
 init|=
 literal|214
 decl_stmt|;
+comment|/** JVM internal opcode.    * @see<a href="http://java.sun.com/docs/books/jvms/first_edition/html/Quick.doc.html#10673">Specification of _quick opcodes in the Java Virtual Machine Specification (version 1)</a>    * @see<a href="http://java.sun.com/docs/books/jvms/second_edition/html/ChangesAppendix.doc.html#448885">Why the _quick opcodes were removed from the second version of the Java Virtual Machine Specification.</a> */
 specifier|public
 specifier|static
 specifier|final
@@ -2289,6 +2550,7 @@ name|INVOKENONVIRTUAL_QUICK
 init|=
 literal|215
 decl_stmt|;
+comment|/** JVM internal opcode.    * @see<a href="http://java.sun.com/docs/books/jvms/first_edition/html/Quick.doc.html#10673">Specification of _quick opcodes in the Java Virtual Machine Specification (version 1)</a>    * @see<a href="http://java.sun.com/docs/books/jvms/second_edition/html/ChangesAppendix.doc.html#448885">Why the _quick opcodes were removed from the second version of the Java Virtual Machine Specification.</a> */
 specifier|public
 specifier|static
 specifier|final
@@ -2297,6 +2559,7 @@ name|INVOKESUPER_QUICK
 init|=
 literal|216
 decl_stmt|;
+comment|/** JVM internal opcode.    * @see<a href="http://java.sun.com/docs/books/jvms/first_edition/html/Quick.doc.html#10673">Specification of _quick opcodes in the Java Virtual Machine Specification (version 1)</a>    * @see<a href="http://java.sun.com/docs/books/jvms/second_edition/html/ChangesAppendix.doc.html#448885">Why the _quick opcodes were removed from the second version of the Java Virtual Machine Specification.</a> */
 specifier|public
 specifier|static
 specifier|final
@@ -2305,6 +2568,7 @@ name|INVOKESTATIC_QUICK
 init|=
 literal|217
 decl_stmt|;
+comment|/** JVM internal opcode.    * @see<a href="http://java.sun.com/docs/books/jvms/first_edition/html/Quick.doc.html#10673">Specification of _quick opcodes in the Java Virtual Machine Specification (version 1)</a>    * @see<a href="http://java.sun.com/docs/books/jvms/second_edition/html/ChangesAppendix.doc.html#448885">Why the _quick opcodes were removed from the second version of the Java Virtual Machine Specification.</a> */
 specifier|public
 specifier|static
 specifier|final
@@ -2313,6 +2577,7 @@ name|INVOKEINTERFACE_QUICK
 init|=
 literal|218
 decl_stmt|;
+comment|/** JVM internal opcode.    * @see<a href="http://java.sun.com/docs/books/jvms/first_edition/html/Quick.doc.html#10673">Specification of _quick opcodes in the Java Virtual Machine Specification (version 1)</a>    * @see<a href="http://java.sun.com/docs/books/jvms/second_edition/html/ChangesAppendix.doc.html#448885">Why the _quick opcodes were removed from the second version of the Java Virtual Machine Specification.</a> */
 specifier|public
 specifier|static
 specifier|final
@@ -2321,6 +2586,7 @@ name|INVOKEVIRTUALOBJECT_QUICK
 init|=
 literal|219
 decl_stmt|;
+comment|/** JVM internal opcode.    * @see<a href="http://java.sun.com/docs/books/jvms/first_edition/html/Quick.doc.html#10673">Specification of _quick opcodes in the Java Virtual Machine Specification (version 1)</a>    * @see<a href="http://java.sun.com/docs/books/jvms/second_edition/html/ChangesAppendix.doc.html#448885">Why the _quick opcodes were removed from the second version of the Java Virtual Machine Specification.</a> */
 specifier|public
 specifier|static
 specifier|final
@@ -2329,6 +2595,7 @@ name|NEW_QUICK
 init|=
 literal|221
 decl_stmt|;
+comment|/** JVM internal opcode.    * @see<a href="http://java.sun.com/docs/books/jvms/first_edition/html/Quick.doc.html#10673">Specification of _quick opcodes in the Java Virtual Machine Specification (version 1)</a>    * @see<a href="http://java.sun.com/docs/books/jvms/second_edition/html/ChangesAppendix.doc.html#448885">Why the _quick opcodes were removed from the second version of the Java Virtual Machine Specification.</a> */
 specifier|public
 specifier|static
 specifier|final
@@ -2337,6 +2604,7 @@ name|ANEWARRAY_QUICK
 init|=
 literal|222
 decl_stmt|;
+comment|/** JVM internal opcode.    * @see<a href="http://java.sun.com/docs/books/jvms/first_edition/html/Quick.doc.html#10673">Specification of _quick opcodes in the Java Virtual Machine Specification (version 1)</a>    * @see<a href="http://java.sun.com/docs/books/jvms/second_edition/html/ChangesAppendix.doc.html#448885">Why the _quick opcodes were removed from the second version of the Java Virtual Machine Specification.</a> */
 specifier|public
 specifier|static
 specifier|final
@@ -2345,6 +2613,7 @@ name|MULTIANEWARRAY_QUICK
 init|=
 literal|223
 decl_stmt|;
+comment|/** JVM internal opcode.    * @see<a href="http://java.sun.com/docs/books/jvms/first_edition/html/Quick.doc.html#10673">Specification of _quick opcodes in the Java Virtual Machine Specification (version 1)</a>    * @see<a href="http://java.sun.com/docs/books/jvms/second_edition/html/ChangesAppendix.doc.html#448885">Why the _quick opcodes were removed from the second version of the Java Virtual Machine Specification.</a> */
 specifier|public
 specifier|static
 specifier|final
@@ -2353,6 +2622,7 @@ name|CHECKCAST_QUICK
 init|=
 literal|224
 decl_stmt|;
+comment|/** JVM internal opcode.    * @see<a href="http://java.sun.com/docs/books/jvms/first_edition/html/Quick.doc.html#10673">Specification of _quick opcodes in the Java Virtual Machine Specification (version 1)</a>    * @see<a href="http://java.sun.com/docs/books/jvms/second_edition/html/ChangesAppendix.doc.html#448885">Why the _quick opcodes were removed from the second version of the Java Virtual Machine Specification.</a> */
 specifier|public
 specifier|static
 specifier|final
@@ -2361,6 +2631,7 @@ name|INSTANCEOF_QUICK
 init|=
 literal|225
 decl_stmt|;
+comment|/** JVM internal opcode.    * @see<a href="http://java.sun.com/docs/books/jvms/first_edition/html/Quick.doc.html#10673">Specification of _quick opcodes in the Java Virtual Machine Specification (version 1)</a>    * @see<a href="http://java.sun.com/docs/books/jvms/second_edition/html/ChangesAppendix.doc.html#448885">Why the _quick opcodes were removed from the second version of the Java Virtual Machine Specification.</a> */
 specifier|public
 specifier|static
 specifier|final
@@ -2369,6 +2640,7 @@ name|INVOKEVIRTUAL_QUICK_W
 init|=
 literal|226
 decl_stmt|;
+comment|/** JVM internal opcode.    * @see<a href="http://java.sun.com/docs/books/jvms/first_edition/html/Quick.doc.html#10673">Specification of _quick opcodes in the Java Virtual Machine Specification (version 1)</a>    * @see<a href="http://java.sun.com/docs/books/jvms/second_edition/html/ChangesAppendix.doc.html#448885">Why the _quick opcodes were removed from the second version of the Java Virtual Machine Specification.</a> */
 specifier|public
 specifier|static
 specifier|final
@@ -2377,6 +2649,7 @@ name|GETFIELD_QUICK_W
 init|=
 literal|227
 decl_stmt|;
+comment|/** JVM internal opcode.    * @see<a href="http://java.sun.com/docs/books/jvms/first_edition/html/Quick.doc.html#10673">Specification of _quick opcodes in the Java Virtual Machine Specification (version 1)</a>    * @see<a href="http://java.sun.com/docs/books/jvms/second_edition/html/ChangesAppendix.doc.html#448885">Why the _quick opcodes were removed from the second version of the Java Virtual Machine Specification.</a> */
 specifier|public
 specifier|static
 specifier|final
@@ -2385,6 +2658,7 @@ name|PUTFIELD_QUICK_W
 init|=
 literal|228
 decl_stmt|;
+comment|/** JVM internal opcode.    * @see<a href="http://java.sun.com/docs/books/jvms/second_edition/html/Instructions.doc.html#60105">Reserved opcodes in the Java Virtual Machine Specification</a> */
 specifier|public
 specifier|static
 specifier|final
@@ -2393,6 +2667,7 @@ name|IMPDEP1
 init|=
 literal|254
 decl_stmt|;
+comment|/** JVM internal opcode.    * @see<a href="http://java.sun.com/docs/books/jvms/second_edition/html/Instructions.doc.html#60105">Reserved opcodes in the Java Virtual Machine Specification</a> */
 specifier|public
 specifier|static
 specifier|final
@@ -2401,7 +2676,7 @@ name|IMPDEP2
 init|=
 literal|255
 decl_stmt|;
-comment|/**    * For internal purposes only.    */
+comment|/**    * BCEL virtual instruction for pushing an arbitrary data type onto the stack.  Will be converted to the appropriate JVM    * opcode when the class is dumped.    */
 specifier|public
 specifier|static
 specifier|final
@@ -2410,6 +2685,7 @@ name|PUSH
 init|=
 literal|4711
 decl_stmt|;
+comment|/**    * BCEL virtual instruction for either LOOKUPSWITCH or TABLESWITCH.  Will be converted to the appropriate JVM    * opcode when the class is dumped.    */
 specifier|public
 specifier|static
 specifier|final
@@ -2418,7 +2694,7 @@ name|SWITCH
 init|=
 literal|4712
 decl_stmt|;
-comment|/**    * Illegal codes    */
+comment|/** Illegal opcode. */
 specifier|public
 specifier|static
 specifier|final
@@ -2428,6 +2704,7 @@ init|=
 operator|-
 literal|1
 decl_stmt|;
+comment|/** Illegal opcode. */
 specifier|public
 specifier|static
 specifier|final
@@ -2437,6 +2714,7 @@ init|=
 operator|-
 literal|2
 decl_stmt|;
+comment|/** Illegal opcode. */
 specifier|public
 specifier|static
 specifier|final
@@ -2446,6 +2724,7 @@ init|=
 operator|-
 literal|3
 decl_stmt|;
+comment|/** Mnemonic for an illegal opcode. */
 specifier|public
 specifier|static
 specifier|final
@@ -2454,6 +2733,7 @@ name|ILLEGAL_OPCODE
 init|=
 literal|"<illegal opcode>"
 decl_stmt|;
+comment|/** Mnemonic for an illegal type. */
 specifier|public
 specifier|static
 specifier|final
@@ -2462,6 +2742,7 @@ name|ILLEGAL_TYPE
 init|=
 literal|"<illegal type>"
 decl_stmt|;
+comment|/** Boolean data type. */
 specifier|public
 specifier|static
 specifier|final
@@ -2470,6 +2751,7 @@ name|T_BOOLEAN
 init|=
 literal|4
 decl_stmt|;
+comment|/** Char data type. */
 specifier|public
 specifier|static
 specifier|final
@@ -2478,6 +2760,7 @@ name|T_CHAR
 init|=
 literal|5
 decl_stmt|;
+comment|/** Float data type. */
 specifier|public
 specifier|static
 specifier|final
@@ -2486,6 +2769,7 @@ name|T_FLOAT
 init|=
 literal|6
 decl_stmt|;
+comment|/** Double data type. */
 specifier|public
 specifier|static
 specifier|final
@@ -2494,6 +2778,7 @@ name|T_DOUBLE
 init|=
 literal|7
 decl_stmt|;
+comment|/** Byte data type. */
 specifier|public
 specifier|static
 specifier|final
@@ -2502,6 +2787,7 @@ name|T_BYTE
 init|=
 literal|8
 decl_stmt|;
+comment|/** Short data type. */
 specifier|public
 specifier|static
 specifier|final
@@ -2510,6 +2796,7 @@ name|T_SHORT
 init|=
 literal|9
 decl_stmt|;
+comment|/** Int data type. */
 specifier|public
 specifier|static
 specifier|final
@@ -2518,6 +2805,7 @@ name|T_INT
 init|=
 literal|10
 decl_stmt|;
+comment|/** Long data type. */
 specifier|public
 specifier|static
 specifier|final
@@ -2526,6 +2814,7 @@ name|T_LONG
 init|=
 literal|11
 decl_stmt|;
+comment|/** Void data type (non-standard). */
 specifier|public
 specifier|static
 specifier|final
@@ -2535,6 +2824,7 @@ init|=
 literal|12
 decl_stmt|;
 comment|// Non-standard
+comment|/** Array data type. */
 specifier|public
 specifier|static
 specifier|final
@@ -2543,6 +2833,7 @@ name|T_ARRAY
 init|=
 literal|13
 decl_stmt|;
+comment|/** Object data type. */
 specifier|public
 specifier|static
 specifier|final
@@ -2551,6 +2842,7 @@ name|T_OBJECT
 init|=
 literal|14
 decl_stmt|;
+comment|/** Reference data type (deprecated). */
 specifier|public
 specifier|static
 specifier|final
@@ -2560,6 +2852,7 @@ init|=
 literal|14
 decl_stmt|;
 comment|// Deprecated
+comment|/** Unknown data type. */
 specifier|public
 specifier|static
 specifier|final
@@ -2568,6 +2861,7 @@ name|T_UNKNOWN
 init|=
 literal|15
 decl_stmt|;
+comment|/** Address data type. */
 specifier|public
 specifier|static
 specifier|final
@@ -2616,7 +2910,8 @@ block|,
 literal|"object"
 block|,
 literal|"unknown"
-comment|// Non-standard
+block|,
+literal|"address"
 block|}
 decl_stmt|;
 comment|/** The primitive class names corresponding to the T_XX constants,    * e.g., CLASS_TYPE_NAMES[T_INT] = "java.lang.Integer"    */
@@ -2653,6 +2948,8 @@ block|,
 literal|"java.lang.Long"
 block|,
 literal|"java.lang.Void"
+block|,
+name|ILLEGAL_TYPE
 block|,
 name|ILLEGAL_TYPE
 block|,
@@ -2703,7 +3000,7 @@ block|,
 name|ILLEGAL_TYPE
 block|}
 decl_stmt|;
-comment|/**    * Number of byte code operands, i.e., number of bytes after the tag byte    * itself.    */
+comment|/**    * Number of byte code operands for each opcode, i.e., number of bytes after the tag byte    * itself.  Indexed by opcode, so NO_OF_OPERANDS[BIPUSH] = the number of operands for a bipush    * instruction.    */
 specifier|public
 specifier|static
 specifier|final
@@ -3429,7 +3726,7 @@ name|RESERVED
 comment|/*impdep2*/
 block|}
 decl_stmt|;
-comment|/**    * How the byte code operands are to be interpreted.    */
+comment|/**    * How the byte code operands are to be interpreted for each opcode.    * Indexed by opcode.  TYPE_OF_OPERANDS[ILOAD] = an array of shorts    * describing the data types for the instruction.    */
 specifier|public
 specifier|static
 specifier|final
@@ -4268,7 +4565,7 @@ block|{}
 comment|/*impdep2*/
 block|}
 decl_stmt|;
-comment|/**    * Names of opcodes.    */
+comment|/**    * Names of opcodes.  Indexed by opcode.  OPCODE_NAMES[ALOAD] = "aload".    */
 specifier|public
 specifier|static
 specifier|final
@@ -4790,7 +5087,7 @@ block|,
 literal|"impdep2"
 block|}
 decl_stmt|;
-comment|/**    * Number of words consumed on operand stack by instructions.    */
+comment|/**    * Number of words consumed on operand stack by instructions.    * Indexed by opcode.  CONSUME_STACK[FALOAD] = number of words    * consumed from the stack by a faload instruction.    */
 specifier|public
 specifier|static
 specifier|final
@@ -5516,7 +5813,7 @@ name|UNPREDICTABLE
 comment|/*impdep2*/
 block|}
 decl_stmt|;
-comment|/**    * Number of words produced onto operand stack by instructions.    */
+comment|/**    * Number of words produced onto operand stack by instructions.    * Indexed by opcode.  CONSUME_STACK[DALOAD] = number of words    * consumed from the stack by a daload instruction.    */
 specifier|public
 specifier|static
 specifier|final
