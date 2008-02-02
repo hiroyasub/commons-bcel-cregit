@@ -751,20 +751,8 @@ operator|.
 name|getName
 argument_list|()
 decl_stmt|;
-name|Function
-name|f
-init|=
-name|function
-decl_stmt|;
-name|ASTIdent
-index|[]
-name|args
-init|=
-name|f
-operator|.
-name|getArgs
-argument_list|()
-decl_stmt|;
+comment|//    Function   f     = function;
+comment|//    ASTIdent[] args  = f.getArgs();
 if|if
 condition|(
 name|fname
@@ -975,21 +963,9 @@ operator|.
 name|getName
 argument_list|()
 decl_stmt|;
-name|Function
-name|f
-init|=
-name|function
-decl_stmt|;
+comment|//    Function   f     = function;
 comment|//ASTIdent   fun   = f.getName();
-name|ASTIdent
-index|[]
-name|args
-init|=
-name|f
-operator|.
-name|getArgs
-argument_list|()
-decl_stmt|;
+comment|//    ASTIdent[] args  = f.getArgs();
 name|String
 name|class_name
 init|=

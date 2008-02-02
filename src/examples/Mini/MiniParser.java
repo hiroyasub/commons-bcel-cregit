@@ -3609,11 +3609,7 @@ name|lookingAhead
 init|=
 literal|false
 decl_stmt|;
-specifier|static
-specifier|private
-name|boolean
-name|jj_semLA
-decl_stmt|;
+comment|//  static private boolean jj_semLA;
 specifier|static
 specifier|private
 name|int

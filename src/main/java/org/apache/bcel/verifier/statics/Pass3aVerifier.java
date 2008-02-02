@@ -3284,9 +3284,6 @@ else|else
 block|{
 comment|/* TODO: Check if assignment compatibility is sufficient. 				   What does Sun do? */
 name|Type
-name|f_type
-init|=
-name|Type
 operator|.
 name|getType
 argument_list|(
@@ -3295,17 +3292,16 @@ operator|.
 name|getSignature
 argument_list|()
 argument_list|)
-decl_stmt|;
-name|Type
-name|o_type
-init|=
+expr_stmt|;
 name|o
 operator|.
 name|getType
 argument_list|(
 name|cpg
 argument_list|)
-decl_stmt|;
+expr_stmt|;
+comment|//				Type f_type = Type.getType(f.getSignature());
+comment|//				Type o_type = o.getType(cpg);
 comment|// Argh. Sun's implementation allows us to have multiple fields of
 comment|// the same name but with a different signature.
 comment|//if (! f_type.equals(o_type)){

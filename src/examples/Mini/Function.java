@@ -39,11 +39,7 @@ index|[]
 name|args
 decl_stmt|;
 comment|// Reference to argument identifiers
-specifier|private
-name|ASTExpr
-name|body
-decl_stmt|;
-comment|// Reference to function expression body
+comment|//  private ASTExpr    body;         // Reference to function expression body
 specifier|private
 name|boolean
 name|reserved

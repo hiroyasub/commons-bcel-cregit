@@ -133,68 +133,17 @@ name|state2
 argument_list|)
 expr_stmt|;
 block|}
-specifier|static
-specifier|private
-specifier|final
-name|void
-name|jjCheckNAddStates
-parameter_list|(
-name|int
-name|start
-parameter_list|,
-name|int
-name|end
-parameter_list|)
-block|{
-do|do
-block|{
-name|jjCheckNAdd
-argument_list|(
-name|jjnextStates
-index|[
-name|start
-index|]
-argument_list|)
-expr_stmt|;
-block|}
-do|while
-condition|(
-name|start
-operator|++
-operator|!=
-name|end
-condition|)
-do|;
-block|}
-specifier|static
-specifier|private
-specifier|final
-name|void
-name|jjCheckNAddStates
-parameter_list|(
-name|int
-name|start
-parameter_list|)
-block|{
-name|jjCheckNAdd
-argument_list|(
-name|jjnextStates
-index|[
-name|start
-index|]
-argument_list|)
-expr_stmt|;
-name|jjCheckNAdd
-argument_list|(
-name|jjnextStates
-index|[
-name|start
-operator|+
-literal|1
-index|]
-argument_list|)
-expr_stmt|;
-block|}
+comment|//static private final void jjCheckNAddStates(int start, int end)
+comment|//{
+comment|//   do {
+comment|//      jjCheckNAdd(jjnextStates[start]);
+comment|//   } while (start++ != end);
+comment|//}
+comment|//static private final void jjCheckNAddStates(int start)
+comment|//{
+comment|//   jjCheckNAdd(jjnextStates[start]);
+comment|//   jjCheckNAdd(jjnextStates[start + 1]);
+comment|//}
 specifier|static
 specifier|private
 specifier|final

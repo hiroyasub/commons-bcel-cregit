@@ -106,17 +106,7 @@ name|SyntheticRepository
 implements|implements
 name|Repository
 block|{
-specifier|private
-specifier|static
-specifier|final
-name|String
-name|DEFAULT_PATH
-init|=
-name|ClassPath
-operator|.
-name|getClassPath
-argument_list|()
-decl_stmt|;
+comment|//private static final String DEFAULT_PATH = ClassPath.getClassPath();
 specifier|private
 specifier|static
 name|Map

@@ -245,12 +245,7 @@ name|String
 name|class_name
 decl_stmt|;
 comment|// name of current class
-specifier|private
-name|Method
-index|[]
-name|methods
-decl_stmt|;
-comment|// Methods to print
+comment|//    private Method[] methods; // Methods to print
 specifier|private
 name|PrintWriter
 name|file
@@ -302,12 +297,7 @@ name|class_name
 operator|=
 name|class_name
 expr_stmt|;
-name|this
-operator|.
-name|methods
-operator|=
-name|methods
-expr_stmt|;
+comment|//        this.methods = methods;
 name|this
 operator|.
 name|constant_pool
@@ -1474,24 +1464,20 @@ name|INVOKEINTERFACE
 condition|)
 block|{
 comment|// Special treatment needed
-name|int
-name|nargs
-init|=
 name|bytes
 operator|.
 name|readUnsignedByte
 argument_list|()
-decl_stmt|;
+expr_stmt|;
 comment|// Redundant
-name|int
-name|reserved
-init|=
 name|bytes
 operator|.
 name|readUnsignedByte
 argument_list|()
-decl_stmt|;
+expr_stmt|;
 comment|// Reserved
+comment|//                    int nargs = bytes.readUnsignedByte(); // Redundant
+comment|//                    int reserved = bytes.readUnsignedByte(); // Reserved
 name|ConstantInterfaceMethodref
 name|c
 init|=
@@ -2654,14 +2640,12 @@ name|j
 operator|++
 control|)
 block|{
-name|int
-name|match
-init|=
+comment|//                            int match = bytes.readInt();
 name|bytes
 operator|.
 name|readInt
 argument_list|()
-decl_stmt|;
+expr_stmt|;
 name|index
 operator|=
 name|offset

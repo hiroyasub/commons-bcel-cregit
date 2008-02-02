@@ -373,11 +373,7 @@ name|boolean
 name|is_recursive
 decl_stmt|;
 comment|// Not used yet, TODO
-specifier|private
-name|int
-name|max_depth
-decl_stmt|;
-comment|// max. expression tree depth
+comment|//  private int         max_depth; // max. expression tree depth
 specifier|private
 name|Environment
 name|env

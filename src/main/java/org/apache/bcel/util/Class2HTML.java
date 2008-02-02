@@ -309,28 +309,8 @@ argument_list|,
 name|constant_html
 argument_list|)
 decl_stmt|;
-name|MethodHTML
-name|method_html
-init|=
-operator|new
-name|MethodHTML
-argument_list|(
-name|dir
-argument_list|,
-name|class_name
-argument_list|,
-name|methods
-argument_list|,
-name|java_class
-operator|.
-name|getFields
-argument_list|()
-argument_list|,
-name|constant_html
-argument_list|,
-name|attribute_html
-argument_list|)
-decl_stmt|;
+comment|//        MethodHTML method_html = new MethodHTML(dir, class_name, methods, java_class.getFields(),
+comment|//                constant_html, attribute_html);
 comment|// Write main file (with frames, yuk)
 name|writeMainHTML
 argument_list|(

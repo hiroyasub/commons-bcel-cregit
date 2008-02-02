@@ -23,16 +23,6 @@ begin_import
 import|import
 name|java
 operator|.
-name|io
-operator|.
-name|IOException
-import|;
-end_import
-
-begin_import
-import|import
-name|java
-operator|.
 name|util
 operator|.
 name|ArrayList
@@ -229,6 +219,7 @@ end_import
 
 begin_class
 specifier|public
+specifier|abstract
 class|class
 name|AbstractTestCase
 extends|extends
