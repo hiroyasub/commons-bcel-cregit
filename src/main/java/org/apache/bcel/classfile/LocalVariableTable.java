@@ -435,7 +435,7 @@ operator|)
 operator|&&
 operator|(
 name|pc
-operator|<
+operator|<=
 name|end_pc
 operator|)
 condition|)
