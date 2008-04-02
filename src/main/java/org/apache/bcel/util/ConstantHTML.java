@@ -612,16 +612,6 @@ name|Utility
 operator|.
 name|compactClassName
 argument_list|(
-name|method_class
-argument_list|)
-expr_stmt|;
-comment|// I.e., remove java.lang.
-name|short_method_class
-operator|=
-name|Utility
-operator|.
-name|compactClassName
-argument_list|(
 name|short_method_class
 argument_list|,
 name|class_package
