@@ -3305,7 +3305,7 @@ operator|<<
 name|n
 return|;
 block|}
-comment|/**      * Replace all occurences of<em>old</em> in<em>str</em> with<em>new</em>.      *      * @param str String to permute      * @param old String to be replaced      * @param new_ Replacement string      * @return new String object      */
+comment|/**      * Replace all occurrences of<em>old</em> in<em>str</em> with<em>new</em>.      *      * @param str String to permute      * @param old String to be replaced      * @param new_ Replacement string      * @return new String object      */
 specifier|public
 specifier|static
 specifier|final
@@ -3327,13 +3327,6 @@ name|index
 decl_stmt|,
 name|old_index
 decl_stmt|;
-name|StringBuffer
-name|buf
-init|=
-operator|new
-name|StringBuffer
-argument_list|()
-decl_stmt|;
 try|try
 block|{
 if|if
@@ -3354,6 +3347,13 @@ literal|1
 condition|)
 block|{
 comment|// `old' found in str
+name|StringBuffer
+name|buf
+init|=
+operator|new
+name|StringBuffer
+argument_list|()
+decl_stmt|;
 name|old_index
 operator|=
 literal|0
