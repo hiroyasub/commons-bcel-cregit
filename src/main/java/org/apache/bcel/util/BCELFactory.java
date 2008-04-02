@@ -1378,10 +1378,7 @@ name|Utility
 operator|.
 name|convertString
 argument_list|(
-name|value
-operator|.
-name|toString
-argument_list|()
+name|embed
 argument_list|)
 operator|+
 literal|'"'
