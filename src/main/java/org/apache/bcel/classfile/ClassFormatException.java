@@ -47,6 +47,24 @@ name|s
 argument_list|)
 expr_stmt|;
 block|}
+specifier|public
+name|ClassFormatException
+parameter_list|(
+name|String
+name|s
+parameter_list|,
+name|Throwable
+name|initCause
+parameter_list|)
+block|{
+name|super
+argument_list|(
+name|s
+argument_list|,
+name|initCause
+argument_list|)
+expr_stmt|;
+block|}
 block|}
 end_class
 

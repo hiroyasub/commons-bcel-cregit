@@ -2395,6 +2395,8 @@ argument_list|(
 literal|"Could not find instruction: "
 operator|+
 name|name
+argument_list|,
+name|e
 argument_list|)
 throw|;
 block|}

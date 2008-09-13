@@ -703,6 +703,8 @@ argument_list|(
 literal|"Byte code error: "
 operator|+
 name|e
+argument_list|,
+name|e
 argument_list|)
 throw|;
 block|}
@@ -2786,6 +2788,8 @@ argument_list|(
 literal|"Invalid method signature: "
 operator|+
 name|signature
+argument_list|,
+name|e
 argument_list|)
 throw|;
 block|}
@@ -2896,6 +2900,8 @@ argument_list|(
 literal|"Invalid method signature: "
 operator|+
 name|signature
+argument_list|,
+name|e
 argument_list|)
 throw|;
 block|}
@@ -3224,6 +3230,8 @@ argument_list|(
 literal|"Invalid method signature: "
 operator|+
 name|signature
+argument_list|,
+name|e
 argument_list|)
 throw|;
 block|}
@@ -3757,11 +3765,9 @@ name|ClassFormatException
 argument_list|(
 literal|"Invalid signature: "
 operator|+
-name|e
-operator|+
-literal|":"
-operator|+
 name|signature
+argument_list|,
+name|e
 argument_list|)
 throw|;
 block|}
@@ -4274,6 +4280,8 @@ argument_list|(
 literal|"Invalid method signature: "
 operator|+
 name|signature
+argument_list|,
+name|e
 argument_list|)
 throw|;
 block|}
@@ -4416,6 +4424,8 @@ argument_list|(
 literal|"Invalid method signature: "
 operator|+
 name|signature
+argument_list|,
+name|e
 argument_list|)
 throw|;
 block|}
