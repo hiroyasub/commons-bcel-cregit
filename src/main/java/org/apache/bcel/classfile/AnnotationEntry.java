@@ -49,6 +49,16 @@ begin_import
 import|import
 name|java
 operator|.
+name|io
+operator|.
+name|Serializable
+import|;
+end_import
+
+begin_import
+import|import
+name|java
+operator|.
 name|util
 operator|.
 name|ArrayList
@@ -78,7 +88,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * represents one annotation in the annotation table  *   * @version $Id: AnnotationEntry  * @author<A HREF="mailto:dbrosius@qis.net">D. Brosius</A>  * @since 5.3  */
+comment|/**  * represents one annotation in the annotation table  *   * @version $Id: AnnotationEntry  * @author<A HREF="mailto:dbrosius@mebigfatguy.com">D. Brosius</A>  * @since 5.3  */
 end_comment
 
 begin_class
@@ -89,6 +99,8 @@ implements|implements
 name|Node
 implements|,
 name|Constants
+implements|,
+name|Serializable
 block|{
 specifier|private
 name|int
