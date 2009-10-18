@@ -1097,10 +1097,8 @@ if|if
 condition|(
 name|annotation_vec
 operator|.
-name|size
+name|isEmpty
 argument_list|()
-operator|==
-literal|0
 condition|)
 block|{
 name|attributes

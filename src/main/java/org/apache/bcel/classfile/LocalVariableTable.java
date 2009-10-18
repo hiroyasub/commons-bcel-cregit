@@ -496,9 +496,7 @@ name|buf
 init|=
 operator|new
 name|StringBuffer
-argument_list|(
-literal|""
-argument_list|)
+argument_list|()
 decl_stmt|;
 for|for
 control|(
