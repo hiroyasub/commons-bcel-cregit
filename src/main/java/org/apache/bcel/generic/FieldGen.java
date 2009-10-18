@@ -1047,13 +1047,6 @@ argument_list|,
 name|annotation_vec
 argument_list|)
 decl_stmt|;
-if|if
-condition|(
-name|attrs
-operator|!=
-literal|null
-condition|)
-block|{
 for|for
 control|(
 name|int
@@ -1079,7 +1072,6 @@ name|i
 index|]
 argument_list|)
 expr_stmt|;
-block|}
 block|}
 block|}
 specifier|private
