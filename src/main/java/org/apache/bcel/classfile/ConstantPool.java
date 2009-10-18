@@ -367,8 +367,10 @@ name|CONSTANT_Double
 case|:
 name|str
 operator|=
-literal|""
-operator|+
+name|String
+operator|.
+name|valueOf
+argument_list|(
 operator|(
 operator|(
 name|ConstantDouble
@@ -378,6 +380,7 @@ operator|)
 operator|.
 name|getBytes
 argument_list|()
+argument_list|)
 expr_stmt|;
 break|break;
 case|case
@@ -387,8 +390,10 @@ name|CONSTANT_Float
 case|:
 name|str
 operator|=
-literal|""
-operator|+
+name|String
+operator|.
+name|valueOf
+argument_list|(
 operator|(
 operator|(
 name|ConstantFloat
@@ -398,6 +403,7 @@ operator|)
 operator|.
 name|getBytes
 argument_list|()
+argument_list|)
 expr_stmt|;
 break|break;
 case|case
@@ -407,8 +413,10 @@ name|CONSTANT_Long
 case|:
 name|str
 operator|=
-literal|""
-operator|+
+name|String
+operator|.
+name|valueOf
+argument_list|(
 operator|(
 operator|(
 name|ConstantLong
@@ -418,6 +426,7 @@ operator|)
 operator|.
 name|getBytes
 argument_list|()
+argument_list|)
 expr_stmt|;
 break|break;
 case|case
@@ -427,8 +436,10 @@ name|CONSTANT_Integer
 case|:
 name|str
 operator|=
-literal|""
-operator|+
+name|String
+operator|.
+name|valueOf
+argument_list|(
 operator|(
 operator|(
 name|ConstantInteger
@@ -438,6 +449,7 @@ operator|)
 operator|.
 name|getBytes
 argument_list|()
+argument_list|)
 expr_stmt|;
 break|break;
 case|case
