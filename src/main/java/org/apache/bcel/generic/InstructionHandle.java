@@ -526,7 +526,11 @@ argument_list|()
 condition|)
 block|{
 return|return
-literal|null
+operator|new
+name|InstructionTargeter
+index|[
+literal|0
+index|]
 return|;
 block|}
 name|InstructionTargeter
