@@ -3301,7 +3301,11 @@ name|e
 argument_list|)
 expr_stmt|;
 return|return
-literal|null
+operator|new
+name|byte
+index|[
+literal|0
+index|]
 return|;
 block|}
 return|return
