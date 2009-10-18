@@ -807,7 +807,9 @@ throw|throw
 operator|new
 name|IllegalStateException
 argument_list|(
-literal|"Ooops! default case reached."
+literal|"Unrecognized attribute type tag parsed: "
+operator|+
+name|tag
 argument_list|)
 throw|;
 block|}

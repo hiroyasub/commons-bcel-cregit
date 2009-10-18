@@ -149,7 +149,9 @@ throw|throw
 operator|new
 name|ClassGenException
 argument_list|(
-literal|"Branch target offset too large for short"
+literal|"Branch target offset too large for short: "
+operator|+
+name|index
 argument_list|)
 throw|;
 block|}

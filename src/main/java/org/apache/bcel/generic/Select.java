@@ -191,7 +191,17 @@ throw|throw
 operator|new
 name|ClassGenException
 argument_list|(
-literal|"Match and target array have not the same length"
+literal|"Match and target array have not the same length: Match length: "
+operator|+
+name|match
+operator|.
+name|length
+operator|+
+literal|" Target length: "
+operator|+
+name|targets
+operator|.
+name|length
 argument_list|)
 throw|;
 block|}

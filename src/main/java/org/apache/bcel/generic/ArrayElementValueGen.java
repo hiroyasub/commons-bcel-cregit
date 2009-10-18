@@ -155,7 +155,9 @@ throw|throw
 operator|new
 name|RuntimeException
 argument_list|(
-literal|"Only element values of type array can be built with this ctor"
+literal|"Only element values of type array can be built with this ctor - type specified: "
+operator|+
+name|type
 argument_list|)
 throw|;
 name|this

@@ -1666,7 +1666,9 @@ throw|throw
 operator|new
 name|ClassGenException
 argument_list|(
-literal|"Illegal opcode detected."
+literal|"Illegal opcode detected: "
+operator|+
+name|opcode
 argument_list|)
 throw|;
 block|}

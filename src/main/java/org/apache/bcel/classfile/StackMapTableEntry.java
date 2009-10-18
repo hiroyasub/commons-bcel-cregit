@@ -58,7 +58,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * This class represents a stack map entry recording the types of  * local variables and the the of stack items at a given byte code offset.  * See CLDC specification À?5.3.1.2  *  * @version $Id$  * @author<A HREF="mailto:m.dahm@gmx.de">M. Dahm</A>  * @see     StackMap  * @see     StackMapType  */
+comment|/**  * This class represents a stack map entry recording the types of  * local variables and the the of stack items at a given byte code offset.  * See CLDC specification ï¿½ï¿½?5.3.1.2  *  * @version $Id$  * @author<A HREF="mailto:m.dahm@gmx.de">M. Dahm</A>  * @see     StackMap  * @see     StackMapType  */
 end_comment
 
 begin_class
@@ -467,7 +467,9 @@ throw|throw
 operator|new
 name|ClassFormatException
 argument_list|(
-literal|"Illegal Tag"
+literal|"Invalid frame type found while parsing stack map table: "
+operator|+
+name|frame_type
 argument_list|)
 throw|;
 block|}
@@ -793,7 +795,9 @@ throw|throw
 operator|new
 name|ClassFormatException
 argument_list|(
-literal|"Illegal Tag"
+literal|"Invalid Stack map table tag: "
+operator|+
+name|frame_type
 argument_list|)
 throw|;
 block|}
