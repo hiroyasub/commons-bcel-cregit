@@ -122,7 +122,7 @@ specifier|private
 name|boolean
 name|isRuntimeVisible
 decl_stmt|;
-comment|/**      * Construct object from file stream.      * @param file Input stream      * @throws IOException      */
+comment|/**      * Construct object from file stream.      * @param file Input stream      */
 specifier|public
 name|AnnotationEntry
 parameter_list|(
