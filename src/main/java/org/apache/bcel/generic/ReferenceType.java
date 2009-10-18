@@ -1,6 +1,6 @@
 begin_unit|revision:1.0.0;language:Java;cregit-version:0.0.1
 begin_comment
-comment|/*  * Copyright  2000-2004 The Apache Software Foundation  *  *  Licensed under the Apache License, Version 2.0 (the "License");   *  you may not use this file except in compliance with the License.  *  You may obtain a copy of the License at  *  *      http://www.apache.org/licenses/LICENSE-2.0  *  *  Unless required by applicable law or agreed to in writing, software  *  distributed under the License is distributed on an "AS IS" BASIS,  *  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.  *  See the License for the specific language governing permissions and  *  limitations under the License.   *  */
+comment|/*  * Copyright  2000-2009 The Apache Software Foundation  *  *  Licensed under the Apache License, Version 2.0 (the "License");   *  you may not use this file except in compliance with the License.  *  You may obtain a copy of the License at  *  *      http://www.apache.org/licenses/LICENSE-2.0  *  *  Unless required by applicable law or agreed to in writing, software  *  distributed under the License is distributed on an "AS IS" BASIS,  *  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.  *  See the License for the specific language governing permissions and  *  limitations under the License.   *  */
 end_comment
 
 begin_package
@@ -352,7 +352,7 @@ argument_list|()
 operator|)
 condition|)
 block|{
-comment|/* If T is a class type, then T must be Object (§2.4.7).              */
+comment|/* If T is a class type, then T must be Object (ï¿½2.4.7).              */
 if|if
 condition|(
 operator|(
@@ -391,7 +391,7 @@ literal|true
 return|;
 block|}
 block|}
-comment|/* If T is an interface type, then T must be the same interface              * as this or a superinterface of this (§2.13.2).              */
+comment|/* If T is an interface type, then T must be the same interface              * as this or a superinterface of this (ï¿½2.13.2).              */
 if|if
 condition|(
 operator|(
@@ -469,7 +469,7 @@ operator|instanceof
 name|ArrayType
 condition|)
 block|{
-comment|/* If T is a class type, then T must be Object (§2.4.7).              */
+comment|/* If T is a class type, then T must be Object (ï¿½2.4.7).              */
 if|if
 condition|(
 operator|(
@@ -516,7 +516,7 @@ operator|instanceof
 name|ArrayType
 condition|)
 block|{
-comment|/* TC and SC are the same primitive type (§2.4.1).                  */
+comment|/* TC and SC are the same primitive type (ï¿½2.4.1).                  */
 name|Type
 name|sc
 init|=
@@ -565,7 +565,7 @@ return|return
 literal|true
 return|;
 block|}
-comment|/* TC and SC are reference types (§2.4.6), and type SC is                  * assignable to TC by these runtime rules.                  */
+comment|/* TC and SC are reference types (ï¿½2.4.6), and type SC is                  * assignable to TC by these runtime rules.                  */
 if|if
 condition|(
 name|tc
@@ -594,7 +594,7 @@ literal|true
 return|;
 block|}
 block|}
-comment|/* If T is an interface type, T must be one of the interfaces implemented by arrays (§2.15). */
+comment|/* If T is an interface type, T must be one of the interfaces implemented by arrays (ï¿½2.15). */
 comment|// TODO: Check if this is still valid or find a way to dynamically find out which
 comment|// interfaces arrays implement. However, as of the JVM specification edition 2, there
 comment|// are at least two different pages where assignment compatibility is defined and
@@ -671,7 +671,7 @@ literal|false
 return|;
 comment|// default.
 block|}
-comment|/**      * This commutative operation returns the first common superclass (narrowest ReferenceType      * referencing a class, not an interface).      * If one of the types is a superclass of the other, the former is returned.      * If "this" is Type.NULL, then t is returned.      * If t is Type.NULL, then "this" is returned.      * If "this" equals t ['this.equals(t)'] "this" is returned.      * If "this" or t is an ArrayType, then Type.OBJECT is returned;      * unless their dimensions match. Then an ArrayType of the same      * number of dimensions is returned, with its basic type being the      * first common super class of the basic types of "this" and t.      * If "this" or t is a ReferenceType referencing an interface, then Type.OBJECT is returned.      * If not all of the two classes' superclasses cannot be found, "null" is returned.      * See the JVM specification edition 2, "§4.9.2 The Bytecode Verifier".      *      * @throws ClassNotFoundException on failure to find superclasses of this      *  type, or the type passed as a parameter      */
+comment|/**      * This commutative operation returns the first common superclass (narrowest ReferenceType      * referencing a class, not an interface).      * If one of the types is a superclass of the other, the former is returned.      * If "this" is Type.NULL, then t is returned.      * If t is Type.NULL, then "this" is returned.      * If "this" equals t ['this.equals(t)'] "this" is returned.      * If "this" or t is an ArrayType, then Type.OBJECT is returned;      * unless their dimensions match. Then an ArrayType of the same      * number of dimensions is returned, with its basic type being the      * first common super class of the basic types of "this" and t.      * If "this" or t is a ReferenceType referencing an interface, then Type.OBJECT is returned.      * If not all of the two classes' superclasses cannot be found, "null" is returned.      * See the JVM specification edition 2, "ï¿½4.9.2 The Bytecode Verifier".      *      * @throws ClassNotFoundException on failure to find superclasses of this      *  type, or the type passed as a parameter      */
 specifier|public
 name|ReferenceType
 name|getFirstCommonSuperclass
@@ -1121,7 +1121,7 @@ return|return
 literal|null
 return|;
 block|}
-comment|/**      * This commutative operation returns the first common superclass (narrowest ReferenceType      * referencing a class, not an interface).      * If one of the types is a superclass of the other, the former is returned.      * If "this" is Type.NULL, then t is returned.      * If t is Type.NULL, then "this" is returned.      * If "this" equals t ['this.equals(t)'] "this" is returned.      * If "this" or t is an ArrayType, then Type.OBJECT is returned.      * If "this" or t is a ReferenceType referencing an interface, then Type.OBJECT is returned.      * If not all of the two classes' superclasses cannot be found, "null" is returned.      * See the JVM specification edition 2, "§4.9.2 The Bytecode Verifier".      *      * @deprecated use getFirstCommonSuperclass(ReferenceType t) which has      *             slightly changed semantics.      * @throws ClassNotFoundException on failure to find superclasses of this      *  type, or the type passed as a parameter      */
+comment|/**      * This commutative operation returns the first common superclass (narrowest ReferenceType      * referencing a class, not an interface).      * If one of the types is a superclass of the other, the former is returned.      * If "this" is Type.NULL, then t is returned.      * If t is Type.NULL, then "this" is returned.      * If "this" equals t ['this.equals(t)'] "this" is returned.      * If "this" or t is an ArrayType, then Type.OBJECT is returned.      * If "this" or t is a ReferenceType referencing an interface, then Type.OBJECT is returned.      * If not all of the two classes' superclasses cannot be found, "null" is returned.      * See the JVM specification edition 2, "ï¿½4.9.2 The Bytecode Verifier".      *      * @deprecated use getFirstCommonSuperclass(ReferenceType t) which has      *             slightly changed semantics.      * @throws ClassNotFoundException on failure to find superclasses of this      *  type, or the type passed as a parameter      */
 specifier|public
 name|ReferenceType
 name|firstCommonSuperclass

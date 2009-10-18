@@ -1,6 +1,6 @@
 begin_unit|revision:1.0.0;language:Java;cregit-version:0.0.1
 begin_comment
-comment|/*  * Copyright  2000-2004 The Apache Software Foundation  *  *  Licensed under the Apache License, Version 2.0 (the "License");   *  you may not use this file except in compliance with the License.  *  You may obtain a copy of the License at  *  *      http://www.apache.org/licenses/LICENSE-2.0  *  *  Unless required by applicable law or agreed to in writing, software  *  distributed under the License is distributed on an "AS IS" BASIS,  *  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.  *  See the License for the specific language governing permissions and  *  limitations under the License.   *  */
+comment|/*  * Copyright  2000-2009 The Apache Software Foundation  *  *  Licensed under the Apache License, Version 2.0 (the "License");   *  you may not use this file except in compliance with the License.  *  You may obtain a copy of the License at  *  *      http://www.apache.org/licenses/LICENSE-2.0  *  *  Unless required by applicable law or agreed to in writing, software  *  distributed under the License is distributed on an "AS IS" BASIS,  *  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.  *  See the License for the specific language governing permissions and  *  limitations under the License.   *  */
 end_comment
 
 begin_package
@@ -58,7 +58,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * This class represents a stack map attribute used for  * preverification of Java classes for the<a  * href="http://java.sun.com/j2me/"> Java 2 Micro Edition</a>  * (J2ME). This attribute is used by the<a  * href="http://java.sun.com/products/cldc/">KVM</a> and contained  * within the Code attribute of a method. See CLDC specification  * §5.3.1.2  *  * @version $Id$  * @author<A HREF="mailto:m.dahm@gmx.de">M. Dahm</A>  * @see     Code  * @see     StackMapEntry  * @see     StackMapType  */
+comment|/**  * This class represents a stack map attribute used for  * preverification of Java classes for the<a  * href="http://java.sun.com/j2me/"> Java 2 Micro Edition</a>  * (J2ME). This attribute is used by the<a  * href="http://java.sun.com/products/cldc/">KVM</a> and contained  * within the Code attribute of a method. See CLDC specification  * ï¿½5.3.1.2  *  * @version $Id$  * @author<A HREF="mailto:m.dahm@gmx.de">M. Dahm</A>  * @see     Code  * @see     StackMapEntry  * @see     StackMapType  */
 end_comment
 
 begin_class
