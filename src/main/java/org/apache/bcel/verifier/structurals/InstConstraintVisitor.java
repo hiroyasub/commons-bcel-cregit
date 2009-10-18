@@ -2049,6 +2049,8 @@ name|e
 operator|.
 name|toString
 argument_list|()
+argument_list|,
+name|e
 argument_list|)
 throw|;
 block|}
@@ -2446,6 +2448,8 @@ name|e
 operator|.
 name|toString
 argument_list|()
+argument_list|,
+name|e
 argument_list|)
 throw|;
 block|}
@@ -2926,7 +2930,7 @@ comment|//else{
 comment|//	referenceTypeIsInitialized(o, (ReferenceType) objectref);
 comment|//}
 comment|// The unsigned indexbyte1 and indexbyte2 are used to construct an index into the runtime constant pool of the
-comment|// current class (§3.6), where the value of the index is (indexbyte1<< 8) | indexbyte2. The runtime constant
+comment|// current class (ï¿½3.6), where the value of the index is (indexbyte1<< 8) | indexbyte2. The runtime constant
 comment|// pool item at the index must be a symbolic reference to a class, array, or interface type.
 name|Constant
 name|c
@@ -6181,6 +6185,8 @@ name|e
 operator|.
 name|toString
 argument_list|()
+argument_list|,
+name|e
 argument_list|)
 throw|;
 block|}
@@ -8153,7 +8159,7 @@ comment|//else{
 comment|//	referenceTypeIsInitialized(o, (ReferenceType) objectref);
 comment|//}
 comment|// The unsigned indexbyte1 and indexbyte2 are used to construct an index into the runtime constant pool of the
-comment|// current class (§3.6), where the value of the index is (indexbyte1<< 8) | indexbyte2. The runtime constant
+comment|// current class (ï¿½3.6), where the value of the index is (indexbyte1<< 8) | indexbyte2. The runtime constant
 comment|// pool item at the index must be a symbolic reference to a class, array, or interface type.
 name|Constant
 name|c
@@ -9187,6 +9193,8 @@ name|e
 operator|.
 name|toString
 argument_list|()
+argument_list|,
+name|e
 argument_list|)
 throw|;
 block|}
@@ -9491,6 +9499,8 @@ name|e
 operator|.
 name|toString
 argument_list|()
+argument_list|,
+name|e
 argument_list|)
 throw|;
 block|}
@@ -9942,6 +9952,8 @@ name|e
 operator|.
 name|toString
 argument_list|()
+argument_list|,
+name|e
 argument_list|)
 throw|;
 block|}
@@ -13032,6 +13044,8 @@ name|e
 operator|.
 name|toString
 argument_list|()
+argument_list|,
+name|e
 argument_list|)
 throw|;
 block|}
@@ -13373,6 +13387,8 @@ name|e
 operator|.
 name|toString
 argument_list|()
+argument_list|,
+name|e
 argument_list|)
 throw|;
 block|}

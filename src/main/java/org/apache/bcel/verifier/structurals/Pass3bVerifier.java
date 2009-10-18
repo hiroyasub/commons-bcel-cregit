@@ -1794,6 +1794,8 @@ name|e
 operator|.
 name|toString
 argument_list|()
+argument_list|,
+name|e
 argument_list|)
 throw|;
 block|}
@@ -2277,6 +2279,8 @@ operator|+
 name|sw
 operator|+
 literal|"---\n"
+argument_list|,
+name|re
 argument_list|)
 throw|;
 block|}

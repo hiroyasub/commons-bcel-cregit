@@ -51,6 +51,25 @@ name|message
 argument_list|)
 expr_stmt|;
 block|}
+comment|/** 	 * Constructs a new ClassConstraintException with the specified error message and cause 	 */
+specifier|public
+name|ClassConstraintException
+parameter_list|(
+name|String
+name|message
+parameter_list|,
+name|Throwable
+name|initCause
+parameter_list|)
+block|{
+name|super
+argument_list|(
+name|message
+argument_list|,
+name|initCause
+argument_list|)
+expr_stmt|;
+block|}
 block|}
 end_class
 
