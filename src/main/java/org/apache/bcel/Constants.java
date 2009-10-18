@@ -2294,6 +2294,15 @@ specifier|public
 specifier|static
 specifier|final
 name|short
+name|INVOKEDYNAMIC
+init|=
+literal|186
+decl_stmt|;
+comment|/** Java VM opcode.    * @see<a href="http://java.sun.com/docs/books/jvms/second_edition/html/Instructions2.doc.html">Opcode definitions in The Java Virtual Machine Specification</a> */
+specifier|public
+specifier|static
+specifier|final
+name|short
 name|NEW
 init|=
 literal|187
