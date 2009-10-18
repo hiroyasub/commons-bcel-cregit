@@ -21,7 +21,7 @@ name|java
 operator|.
 name|io
 operator|.
-name|DataInputStream
+name|DataInput
 import|;
 end_import
 
@@ -88,7 +88,7 @@ decl_stmt|;
 comment|/**      * Construct object from file stream.      * @param file Input stream      * @throws IOException      */
 name|StackMapType
 parameter_list|(
-name|DataInputStream
+name|DataInput
 name|file
 parameter_list|,
 name|ConstantPool

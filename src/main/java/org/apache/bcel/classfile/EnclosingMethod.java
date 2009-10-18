@@ -21,7 +21,7 @@ name|java
 operator|.
 name|io
 operator|.
-name|DataInputStream
+name|DataInput
 import|;
 end_import
 
@@ -96,7 +96,7 @@ parameter_list|,
 name|int
 name|len
 parameter_list|,
-name|DataInputStream
+name|DataInput
 name|dis
 parameter_list|,
 name|ConstantPool

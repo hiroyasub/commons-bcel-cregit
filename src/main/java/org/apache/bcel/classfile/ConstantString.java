@@ -21,7 +21,7 @@ name|java
 operator|.
 name|io
 operator|.
-name|DataInputStream
+name|DataInput
 import|;
 end_import
 
@@ -96,7 +96,7 @@ block|}
 comment|/**       * Initialize instance from file data.      *      * @param file Input stream      * @throws IOException      */
 name|ConstantString
 parameter_list|(
-name|DataInputStream
+name|DataInput
 name|file
 parameter_list|)
 throws|throws

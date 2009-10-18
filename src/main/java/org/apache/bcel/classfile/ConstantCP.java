@@ -21,7 +21,7 @@ name|java
 operator|.
 name|io
 operator|.
-name|DataInputStream
+name|DataInput
 import|;
 end_import
 
@@ -109,7 +109,7 @@ parameter_list|(
 name|byte
 name|tag
 parameter_list|,
-name|DataInputStream
+name|DataInput
 name|file
 parameter_list|)
 throws|throws
