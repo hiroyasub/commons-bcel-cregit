@@ -1411,6 +1411,30 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
+if|else if
+condition|(
+name|value
+operator|instanceof
+name|Float
+condition|)
+block|{
+name|embed
+operator|+=
+literal|"f"
+expr_stmt|;
+block|}
+if|else if
+condition|(
+name|value
+operator|instanceof
+name|Long
+condition|)
+block|{
+name|embed
+operator|+=
+literal|"L"
+expr_stmt|;
+block|}
 name|_out
 operator|.
 name|println
