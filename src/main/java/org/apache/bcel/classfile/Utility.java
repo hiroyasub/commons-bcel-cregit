@@ -4362,6 +4362,9 @@ return|;
 case|case
 literal|'L'
 case|:
+case|case
+literal|'T'
+case|:
 return|return
 name|Constants
 operator|.
