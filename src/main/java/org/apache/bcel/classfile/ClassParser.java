@@ -373,6 +373,25 @@ argument_list|(
 name|file_name
 argument_list|)
 decl_stmt|;
+if|if
+condition|(
+name|entry
+operator|==
+literal|null
+condition|)
+block|{
+throw|throw
+operator|new
+name|IOException
+argument_list|(
+literal|"File "
+operator|+
+name|file_name
+operator|+
+literal|" not found"
+argument_list|)
+throw|;
+block|}
 name|file
 operator|=
 operator|new
