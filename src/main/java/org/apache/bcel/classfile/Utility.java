@@ -491,7 +491,7 @@ name|trim
 argument_list|()
 return|;
 block|}
-comment|/**      * @return "class" or "interface", depending on the ACC_INTERFACE flag      */
+comment|/**      * @param access_flags the class flags      *       * @return "class" or "interface", depending on the ACC_INTERFACE flag      */
 specifier|public
 specifier|static
 specifier|final
@@ -750,7 +750,7 @@ literal|true
 argument_list|)
 return|;
 block|}
-comment|/**      * Disassemble a stream of byte codes and return the      * string representation.      *      * @param  bytes stream of bytes      * @param  constant_pool Array of constants      * @param  verbose be verbose, e.g. print constant pool index      * @return String representation of byte code      */
+comment|/**      * Disassemble a stream of byte codes and return the      * string representation.      *      * @param  bytes stream of bytes      * @param  constant_pool Array of constants      * @param  verbose be verbose, e.g. print constant pool index      * @return String representation of byte code      *       * @throws IOException if a failure from reading from the bytes argument occurs      */
 specifier|public
 specifier|static
 specifier|final
@@ -2533,7 +2533,7 @@ operator|!=
 literal|0
 return|;
 block|}
-comment|/**      * Converts string containing the method return and argument types       * to a byte code method signature.      *      * @param  ret Return type of method      * @param  argv Types of method arguments      * @return Byte code representation of method signature      */
+comment|/**      * Converts string containing the method return and argument types       * to a byte code method signature.      *      * @param  ret Return type of method      * @param  argv Types of method arguments      * @return Byte code representation of method signature      *       * @throws ClassFormatException if the signature is for Void      */
 specifier|public
 specifier|final
 specifier|static
@@ -2973,7 +2973,7 @@ literal|null
 argument_list|)
 return|;
 block|}
-comment|/**      * A returntype signature represents the return value from a method.      * It is a series of bytes in the following grammar:      *      *<return_signature> ::=<field_type> | V      *      * The character V indicates that the method returns no value. Otherwise, the      * signature indicates the type of the return value.      * An argument signature represents an argument passed to a method:      *      *<argument_signature> ::=<field_type>      *      * A method signature represents the arguments that the method expects, and      * the value that it returns.      *<method_signature> ::= (<arguments_signature>)<return_signature>      *<arguments_signature>::=<argument_signature>*      *      * This method converts such a string into a Java type declaration like      * `void main(String[])' and throws a `ClassFormatException' when the parsed       * type is invalid.      *      * @param  signature    Method signature      * @param  name         Method name      * @param  access       Method access rights      * @return Java type declaration      * @throws  ClassFormatException        */
+comment|/**      * A returntype signature represents the return value from a method.      * It is a series of bytes in the following grammar:      *      *<return_signature> ::=<field_type> | V      *      * The character V indicates that the method returns no value. Otherwise, the      * signature indicates the type of the return value.      * An argument signature represents an argument passed to a method:      *      *<argument_signature> ::=<field_type>      *      * A method signature represents the arguments that the method expects, and      * the value that it returns.      *<method_signature> ::= (<arguments_signature>)<return_signature>      *<arguments_signature>::=<argument_signature>*      *      * This method converts such a string into a Java type declaration like      * `void main(String[])' and throws a `ClassFormatException' when the parsed       * type is invalid.      *      * @param  signature    Method signature      * @param  name         Method name      * @param  access       Method access rights      * @param chopit      * @param vars      * @return Java type declaration      * @throws  ClassFormatException        */
 specifier|public
 specifier|static
 specifier|final
@@ -3339,16 +3339,12 @@ try|try
 block|{
 if|if
 condition|(
-operator|(
-name|index
-operator|=
 name|str
 operator|.
 name|indexOf
 argument_list|(
 name|old
 argument_list|)
-operator|)
 operator|!=
 operator|-
 literal|1
@@ -4204,7 +4200,7 @@ return|return
 name|count
 return|;
 block|}
-comment|/**      * Return type of method signature as a byte value as defined in<em>Constants</em>      *      * @param  signature in format described above      * @return type of method signature      * @see    Constants      */
+comment|/**      * Return type of method signature as a byte value as defined in<em>Constants</em>      *      * @param  signature in format described above      * @return type of method signature      * @see    Constants      *       * @throws ClassFormatException if signature is not a method signature      */
 specifier|public
 specifier|static
 specifier|final
@@ -4286,7 +4282,7 @@ argument_list|)
 throw|;
 block|}
 block|}
-comment|/**      * Return type of signature as a byte value as defined in<em>Constants</em>      *      * @param  signature in format described above      * @return type of signature      * @see    Constants      */
+comment|/**      * Return type of signature as a byte value as defined in<em>Constants</em>      *      * @param  signature in format described above      * @return type of signature      * @see    Constants      *       * @throws ClassFormatException if signature isn't a known type      */
 specifier|public
 specifier|static
 specifier|final
@@ -4531,7 +4527,7 @@ operator|)
 name|b
 return|;
 block|}
-comment|/** Convert bytes into hexidecimal string      *      * @return bytes as hexidecimal string, e.g. 00 FA 12 ...      */
+comment|/** Convert bytes into hexadecimal string      *      * @param bytes an array of bytes to convert to hexadecimal      *       * @return bytes as hexadecimal string, e.g. 00 FA 12 ...      */
 specifier|public
 specifier|static
 specifier|final
@@ -5108,7 +5104,7 @@ name|toString
 argument_list|()
 return|;
 block|}
-comment|/** @return true, if character is one of (a, ... z, A, ... Z, 0, ... 9, _)      */
+comment|/**       * @param ch the character to test if it's part of an identifier      *       * @return true, if character is one of (a, ... z, A, ... Z, 0, ... 9, _)      */
 specifier|public
 specifier|static
 name|boolean
@@ -5168,7 +5164,7 @@ literal|'_'
 operator|)
 return|;
 block|}
-comment|/** Encode byte array it into Java identifier string, i.e., a string      * that only contains the following characters: (a, ... z, A, ... Z,      * 0, ... 9, _, $).  The encoding algorithm itself is not too      * clever: if the current byte's ASCII value already is a valid Java      * identifier part, leave it as it is. Otherwise it writes the      * escape character($) followed by<p><ul><li> the ASCII value as a      * hexadecimal string, if the value is not in the range      * 200..247</li><li>a Java identifier char not used in a lowercase      * hexadecimal string, if the value is in the range      * 200..247</li><ul></p>      *      *<p>This operation inflates the original byte array by roughly 40-50%</p>      *      * @param bytes the byte array to convert      * @param compress use gzip to minimize string      */
+comment|/** Encode byte array it into Java identifier string, i.e., a string      * that only contains the following characters: (a, ... z, A, ... Z,      * 0, ... 9, _, $).  The encoding algorithm itself is not too      * clever: if the current byte's ASCII value already is a valid Java      * identifier part, leave it as it is. Otherwise it writes the      * escape character($) followed by<p><ul><li> the ASCII value as a      * hexadecimal string, if the value is not in the range      * 200..247</li><li>a Java identifier char not used in a lowercase      * hexadecimal string, if the value is in the range      * 200..247</li><ul></p>      *      *<p>This operation inflates the original byte array by roughly 40-50%</p>      *      * @param bytes the byte array to convert      * @param compress use gzip to minimize string      *       * @throws IOException if there's a gzip exception      */
 specifier|public
 specifier|static
 name|String
@@ -5295,7 +5291,7 @@ name|toString
 argument_list|()
 return|;
 block|}
-comment|/** Decode a string back to a byte array.      *      * @param s the string to convert      * @param uncompress use gzip to uncompress the stream of bytes      */
+comment|/** Decode a string back to a byte array.      *      * @param s the string to convert      * @param uncompress use gzip to uncompress the stream of bytes      *       * @throws IOException if there's a gzip exception      */
 specifier|public
 specifier|static
 name|byte
