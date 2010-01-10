@@ -255,7 +255,7 @@ operator|=
 name|parent
 expr_stmt|;
 block|}
-comment|/**      * Search for classes in given path.      */
+comment|/**      * Search for classes in given path.      *       * @param class_path      */
 specifier|public
 name|ClassPath
 parameter_list|(
@@ -520,9 +520,6 @@ name|o
 decl_stmt|;
 return|return
 name|class_path
-operator|.
-name|toString
-argument_list|()
 operator|.
 name|equals
 argument_list|(
