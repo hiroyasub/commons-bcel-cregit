@@ -569,6 +569,23 @@ name|frame_type
 operator|>=
 name|Constants
 operator|.
+name|SAME_FRAME
+operator|&&
+name|frame_type
+operator|<=
+name|Constants
+operator|.
+name|SAME_FRAME_MAX
+condition|)
+block|{
+comment|// nothing to be done
+block|}
+if|else if
+condition|(
+name|frame_type
+operator|>=
+name|Constants
+operator|.
 name|SAME_LOCALS_1_STACK_ITEM_FRAME
 operator|&&
 name|frame_type
@@ -600,7 +617,7 @@ condition|)
 block|{
 name|file
 operator|.
-name|write
+name|writeShort
 argument_list|(
 name|byte_code_offset_delta
 argument_list|)
@@ -633,7 +650,7 @@ condition|)
 block|{
 name|file
 operator|.
-name|write
+name|writeShort
 argument_list|(
 name|byte_code_offset_delta
 argument_list|)
@@ -650,7 +667,7 @@ condition|)
 block|{
 name|file
 operator|.
-name|write
+name|writeShort
 argument_list|(
 name|byte_code_offset_delta
 argument_list|)
@@ -673,7 +690,7 @@ condition|)
 block|{
 name|file
 operator|.
-name|write
+name|writeShort
 argument_list|(
 name|byte_code_offset_delta
 argument_list|)
