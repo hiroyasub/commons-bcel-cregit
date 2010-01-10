@@ -122,11 +122,16 @@ block|{
 return|return
 name|Type
 operator|.
+name|size
+argument_list|(
+name|Type
+operator|.
 name|getTypeSize
 argument_list|(
 name|getSignature
 argument_list|(
 name|cpg
+argument_list|)
 argument_list|)
 argument_list|)
 return|;

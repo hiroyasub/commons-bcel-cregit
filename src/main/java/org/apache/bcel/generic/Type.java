@@ -1427,7 +1427,6 @@ name|toString
 argument_list|()
 return|;
 block|}
-specifier|private
 specifier|static
 name|int
 name|size
@@ -1442,7 +1441,6 @@ operator|&
 literal|3
 return|;
 block|}
-specifier|private
 specifier|static
 name|int
 name|consumed
@@ -1457,7 +1455,6 @@ operator|>>
 literal|2
 return|;
 block|}
-specifier|private
 specifier|static
 name|int
 name|encode
