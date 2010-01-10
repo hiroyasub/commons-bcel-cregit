@@ -191,14 +191,20 @@ name|Constants
 operator|.
 name|JSR_W
 expr_stmt|;
+name|short
+name|old_length
+init|=
+name|length
+decl_stmt|;
 name|length
 operator|=
 literal|5
 expr_stmt|;
 return|return
-literal|2
+name|length
+operator|-
+name|old_length
 return|;
-comment|// 5 - 3
 block|}
 return|return
 literal|0
