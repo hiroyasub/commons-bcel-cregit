@@ -103,58 +103,33 @@ implements|,
 name|Serializable
 block|{
 specifier|private
+specifier|static
+specifier|final
+name|long
+name|serialVersionUID
+init|=
+literal|1L
+decl_stmt|;
+specifier|private
+specifier|final
 name|int
 name|type_index
 decl_stmt|;
 specifier|private
-name|int
-name|num_element_value_pairs
+specifier|final
+name|ConstantPool
+name|constant_pool
+decl_stmt|;
+specifier|private
+specifier|final
+name|boolean
+name|isRuntimeVisible
 decl_stmt|;
 specifier|private
 name|List
 name|element_value_pairs
 decl_stmt|;
-specifier|private
-name|ConstantPool
-name|constant_pool
-decl_stmt|;
-specifier|private
-name|boolean
-name|isRuntimeVisible
-decl_stmt|;
-comment|/**      * Construct object from file stream.      * @param file Input stream      */
-specifier|public
-name|AnnotationEntry
-parameter_list|(
-name|int
-name|type_index
-parameter_list|,
-name|ConstantPool
-name|constant_pool
-parameter_list|,
-name|boolean
-name|isRuntimeVisible
-parameter_list|)
-block|{
-name|this
-operator|.
-name|type_index
-operator|=
-name|type_index
-expr_stmt|;
-name|this
-operator|.
-name|constant_pool
-operator|=
-name|constant_pool
-expr_stmt|;
-name|this
-operator|.
-name|isRuntimeVisible
-operator|=
-name|isRuntimeVisible
-expr_stmt|;
-block|}
+comment|/**      * Factory method to create an AnnotionEntry from a DataInputStream      *       * @param file      * @param constant_pool      * @param isRuntimeVisible      * @return      * @throws IOException      */
 specifier|public
 specifier|static
 name|AnnotationEntry
@@ -172,6 +147,7 @@ parameter_list|)
 throws|throws
 name|IOException
 block|{
+specifier|final
 name|AnnotationEntry
 name|annotationEntry
 init|=
@@ -188,17 +164,17 @@ argument_list|,
 name|isRuntimeVisible
 argument_list|)
 decl_stmt|;
-name|annotationEntry
-operator|.
+specifier|final
+name|int
 name|num_element_value_pairs
-operator|=
+init|=
 operator|(
 name|file
 operator|.
 name|readUnsignedShort
 argument_list|()
 operator|)
-expr_stmt|;
+decl_stmt|;
 name|annotationEntry
 operator|.
 name|element_value_pairs
@@ -216,8 +192,6 @@ literal|0
 init|;
 name|i
 operator|<
-name|annotationEntry
-operator|.
 name|num_element_value_pairs
 condition|;
 name|i
@@ -256,7 +230,67 @@ return|return
 name|annotationEntry
 return|;
 block|}
-comment|/**      * Called by objects that are traversing the nodes of the tree implicitely      * defined by the contents of a Java class. I.e., the hierarchy of methods,      * fields, attributes, etc. spawns a tree of objects.      *      * @param v Visitor object      */
+comment|/**      * Construct object from file stream.      *       * @param file Input stream      */
+specifier|public
+name|AnnotationEntry
+parameter_list|(
+name|int
+name|type_index
+parameter_list|,
+name|ConstantPool
+name|constant_pool
+parameter_list|,
+name|boolean
+name|isRuntimeVisible
+parameter_list|)
+block|{
+name|this
+operator|.
+name|type_index
+operator|=
+name|type_index
+expr_stmt|;
+name|this
+operator|.
+name|constant_pool
+operator|=
+name|constant_pool
+expr_stmt|;
+name|this
+operator|.
+name|isRuntimeVisible
+operator|=
+name|isRuntimeVisible
+expr_stmt|;
+block|}
+specifier|public
+name|int
+name|getTypeIndex
+parameter_list|()
+block|{
+return|return
+name|type_index
+return|;
+block|}
+specifier|public
+name|ConstantPool
+name|getConstantPool
+parameter_list|()
+block|{
+return|return
+name|constant_pool
+return|;
+block|}
+specifier|public
+name|boolean
+name|isRuntimeVisible
+parameter_list|()
+block|{
+return|return
+name|isRuntimeVisible
+return|;
+block|}
+comment|/**      * Called by objects that are traversing the nodes of the tree implicitely defined by the contents of a Java class.      * I.e., the hierarchy of methods, fields, attributes, etc. spawns a tree of objects.      *       * @param v Visitor object      */
 specifier|public
 name|void
 name|accept
@@ -265,7 +299,7 @@ name|Visitor
 name|v
 parameter_list|)
 block|{
-comment|//	    v.visitAnnotationEntry(this);
+comment|// v.visitAnnotationEntry(this);
 block|}
 comment|/**      * @return the annotation type name      */
 specifier|public
@@ -273,11 +307,10 @@ name|String
 name|getAnnotationType
 parameter_list|()
 block|{
+specifier|final
 name|ConstantUtf8
 name|c
-decl_stmt|;
-name|c
-operator|=
+init|=
 operator|(
 name|ConstantUtf8
 operator|)
@@ -289,7 +322,7 @@ name|type_index
 argument_list|,
 name|CONSTANT_Utf8
 argument_list|)
-expr_stmt|;
+decl_stmt|;
 return|return
 name|c
 operator|.
@@ -315,7 +348,10 @@ name|getNumElementValuePairs
 parameter_list|()
 block|{
 return|return
-name|num_element_value_pairs
+name|element_value_pairs
+operator|.
+name|size
+argument_list|()
 return|;
 block|}
 comment|/**      * @return the element value pairs in this annotation entry      */
@@ -325,7 +361,7 @@ index|[]
 name|getElementValuePairs
 parameter_list|()
 block|{
-comment|// TOFO return List
+comment|// TODO return List
 return|return
 operator|(
 name|ElementValuePair
@@ -374,7 +410,8 @@ name|size
 argument_list|()
 argument_list|)
 expr_stmt|;
-comment|// u2 element_value pair count
+comment|// u2 element_value pair
+comment|// count
 for|for
 control|(
 name|int
@@ -393,6 +430,7 @@ name|i
 operator|++
 control|)
 block|{
+specifier|final
 name|ElementValuePair
 name|envp
 init|=
@@ -416,15 +454,6 @@ expr_stmt|;
 block|}
 block|}
 specifier|public
-name|boolean
-name|isRuntimeVisible
-parameter_list|()
-block|{
-return|return
-name|isRuntimeVisible
-return|;
-block|}
-specifier|public
 name|void
 name|addElementNameValuePair
 parameter_list|(
@@ -445,6 +474,7 @@ name|String
 name|toShortString
 parameter_list|()
 block|{
+specifier|final
 name|StringBuffer
 name|result
 init|=
@@ -502,6 +532,7 @@ name|i
 operator|++
 control|)
 block|{
+specifier|final
 name|ElementValuePair
 name|element
 init|=

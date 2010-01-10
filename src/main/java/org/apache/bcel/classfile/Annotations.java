@@ -58,16 +58,20 @@ extends|extends
 name|Attribute
 block|{
 specifier|private
-name|int
-name|annotation_table_length
+specifier|static
+specifier|final
+name|long
+name|serialVersionUID
+init|=
+literal|1L
 decl_stmt|;
 specifier|private
 name|AnnotationEntry
 index|[]
 name|annotation_table
 decl_stmt|;
-comment|// Table of annotations
 specifier|private
+specifier|final
 name|boolean
 name|isRuntimeVisible
 decl_stmt|;
@@ -115,15 +119,17 @@ argument_list|,
 name|isRuntimeVisible
 argument_list|)
 expr_stmt|;
+specifier|final
+name|int
 name|annotation_table_length
-operator|=
+init|=
 operator|(
 name|file
 operator|.
 name|readUnsignedShort
 argument_list|()
 operator|)
-expr_stmt|;
+decl_stmt|;
 name|annotation_table
 operator|=
 operator|new
@@ -212,7 +218,7 @@ operator|=
 name|isRuntimeVisible
 expr_stmt|;
 block|}
-comment|/**      * Called by objects that are traversing the nodes of the tree implicitely      * defined by the contents of a Java class. I.e., the hierarchy of methods,      * fields, attributes, etc. spawns a tree of objects.      *      * @param v Visitor object      */
+comment|/**      * Called by objects that are traversing the nodes of the tree implicitely defined by the contents of a Java class.      * I.e., the hierarchy of methods, fields, attributes, etc. spawns a tree of objects.      *       * @param v Visitor object      */
 specifier|public
 name|void
 name|accept
@@ -246,24 +252,7 @@ name|annotation_table
 operator|=
 name|annotation_table
 expr_stmt|;
-name|annotation_table_length
-operator|=
-operator|(
-name|annotation_table
-operator|==
-literal|null
-operator|)
-condition|?
-literal|0
-else|:
-name|annotation_table
-operator|.
-name|length
-expr_stmt|;
 block|}
-comment|// TODO: update method names
-comment|/**      * @return the annotation entry table      */
-comment|/*     public final AnnotationEntry[] getAnnotationTable() {         return annotation_table;     }*/
 comment|/**      * returns the array of annotation entries in this annotation      */
 specifier|public
 name|AnnotationEntry
@@ -282,8 +271,21 @@ name|int
 name|getNumAnnotations
 parameter_list|()
 block|{
+if|if
+condition|(
+name|annotation_table
+operator|==
+literal|null
+condition|)
+block|{
 return|return
-name|annotation_table_length
+literal|0
+return|;
+block|}
+return|return
+name|annotation_table
+operator|.
+name|length
 return|;
 block|}
 specifier|public
@@ -305,11 +307,22 @@ parameter_list|)
 throws|throws
 name|IOException
 block|{
+if|if
+condition|(
+name|annotation_table
+operator|==
+literal|null
+condition|)
+block|{
+return|return;
+block|}
 name|dos
 operator|.
 name|writeShort
 argument_list|(
-name|annotation_table_length
+name|annotation_table
+operator|.
+name|length
 argument_list|)
 expr_stmt|;
 for|for
@@ -321,11 +334,14 @@ literal|0
 init|;
 name|i
 operator|<
-name|annotation_table_length
+name|annotation_table
+operator|.
+name|length
 condition|;
 name|i
 operator|++
 control|)
+block|{
 name|annotation_table
 index|[
 name|i
@@ -336,6 +352,7 @@ argument_list|(
 name|dos
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 block|}
 end_class
