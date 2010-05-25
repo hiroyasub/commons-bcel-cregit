@@ -109,6 +109,7 @@ block|{
 comment|//private static final String DEFAULT_PATH = ClassPath.getClassPath();
 specifier|private
 specifier|static
+specifier|final
 name|Map
 name|_instances
 init|=

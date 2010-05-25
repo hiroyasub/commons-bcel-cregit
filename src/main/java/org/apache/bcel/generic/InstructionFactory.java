@@ -610,6 +610,7 @@ return|;
 block|}
 specifier|private
 specifier|static
+specifier|final
 name|MethodObject
 index|[]
 name|append_mos

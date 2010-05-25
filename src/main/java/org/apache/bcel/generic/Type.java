@@ -600,6 +600,7 @@ return|;
 block|}
 specifier|private
 specifier|static
+specifier|final
 name|ThreadLocal
 name|consumed_chars
 init|=

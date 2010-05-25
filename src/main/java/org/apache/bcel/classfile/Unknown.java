@@ -110,6 +110,7 @@ name|name
 decl_stmt|;
 specifier|private
 specifier|static
+specifier|final
 name|Map
 name|unknown_attributes
 init|=

@@ -77,6 +77,7 @@ block|{
 comment|/**      * The HashMap that holds the data about the already-constructed Verifier instances.      */
 specifier|private
 specifier|static
+specifier|final
 name|Map
 name|hashMap
 init|=
@@ -87,6 +88,7 @@ decl_stmt|;
 comment|/**      * The VerifierFactoryObserver instances that observe the VerifierFactory.      */
 specifier|private
 specifier|static
+specifier|final
 name|List
 name|observers
 init|=

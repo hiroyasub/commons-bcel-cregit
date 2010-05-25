@@ -58,6 +58,7 @@ block|{
 comment|/** The one and only instance of this class. */
 specifier|private
 specifier|static
+specifier|final
 name|LONG_Upper
 name|singleInstance
 init|=

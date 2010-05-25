@@ -215,6 +215,7 @@ expr_stmt|;
 block|}
 specifier|private
 specifier|static
+specifier|final
 name|Map
 name|readers
 init|=

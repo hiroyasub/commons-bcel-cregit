@@ -292,6 +292,7 @@ name|Visitor
 block|{
 specifier|private
 specifier|static
+specifier|final
 name|ObjectType
 name|GENERIC_ARRAY
 init|=
