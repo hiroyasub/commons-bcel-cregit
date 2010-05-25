@@ -71,7 +71,7 @@ block|{
 name|ElementValue
 name|default_value
 decl_stmt|;
-comment|/** 	 * @param annotation_type 	 *            the subclass type of the annotation 	 * @param name_index 	 *            Index pointing to the name<em>Code</em> 	 * @param length 	 *            Content length in bytes 	 * @param file 	 *            Input stream 	 * @param constant_pool 	 *            Array of constants 	 */
+comment|/** 	 * @param name_index 	 *            Index pointing to the name<em>Code</em> 	 * @param length 	 *            Content length in bytes 	 * @param file 	 *            Input stream 	 * @param constant_pool 	 *            Array of constants 	 */
 specifier|public
 name|AnnotationDefault
 parameter_list|(
@@ -116,7 +116,7 @@ name|constant_pool
 argument_list|)
 expr_stmt|;
 block|}
-comment|/** 	 * @param annotation_type 	 *            the subclass type of the annotation 	 * @param name_index 	 *            Index pointing to the name<em>Code</em> 	 * @param length 	 *            Content length in bytes 	 * @param defaultValue 	 *            the annotation's default value 	 * @param constant_pool 	 *            Array of constants 	 */
+comment|/** 	 * @param name_index 	 *            Index pointing to the name<em>Code</em> 	 * @param length 	 *            Content length in bytes 	 * @param defaultValue 	 *            the annotation's default value 	 * @param constant_pool 	 *            Array of constants 	 */
 specifier|public
 name|AnnotationDefault
 parameter_list|(

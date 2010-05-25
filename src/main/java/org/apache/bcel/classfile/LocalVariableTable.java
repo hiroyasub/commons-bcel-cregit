@@ -310,7 +310,7 @@ return|return
 name|local_variable_table
 return|;
 block|}
-comment|/**       * @return first matching variable using index      *       * @param index the variable slot      *       * @return the first LocalVariable that matches the slot or null if not found      *       * @deprecated since 5.2 because multiple variables can share the      *             same slot, use getLocalVariable(int index, int pc) instead.      */
+comment|/**       *       * @param index the variable slot      *       * @return the first LocalVariable that matches the slot or null if not found      *       * @deprecated since 5.2 because multiple variables can share the      *             same slot, use getLocalVariable(int index, int pc) instead.      */
 specifier|public
 specifier|final
 name|LocalVariable
@@ -360,7 +360,7 @@ return|return
 literal|null
 return|;
 block|}
-comment|/**       * @return matching variable using index when variable is used at supplied pc      *       * @param index the variable slot      * @param pc the current pc that this variable is alive      *       * @return the LocalVariable that matches or null if not found      */
+comment|/**       *       * @param index the variable slot      * @param pc the current pc that this variable is alive      *       * @return the LocalVariable that matches or null if not found      */
 specifier|public
 specifier|final
 name|LocalVariable
