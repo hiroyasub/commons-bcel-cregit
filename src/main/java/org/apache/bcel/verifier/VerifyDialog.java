@@ -275,9 +275,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-empty_stmt|;
 block|}
-empty_stmt|;
 comment|/** Machine-generated. */
 specifier|private
 name|javax
@@ -1973,7 +1971,6 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-empty_stmt|;
 block|}
 argument_list|)
 expr_stmt|;

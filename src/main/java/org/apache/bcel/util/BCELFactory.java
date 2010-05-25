@@ -1283,7 +1283,7 @@ operator|.
 name|getDimensions
 argument_list|()
 expr_stmt|;
-comment|/* FALL THRU */
+comment|//$FALL-THROUGH$
 case|case
 name|Constants
 operator|.

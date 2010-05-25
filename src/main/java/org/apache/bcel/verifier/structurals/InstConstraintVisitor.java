@@ -649,9 +649,6 @@ condition|)
 block|{
 name|constraintViolated
 argument_list|(
-operator|(
-name|Instruction
-operator|)
 name|o
 argument_list|,
 literal|"Cannot consume "
@@ -683,12 +680,7 @@ argument_list|(
 name|cpg
 argument_list|)
 operator|-
-operator|(
-operator|(
-name|Instruction
-operator|)
 name|o
-operator|)
 operator|.
 name|consumeStack
 argument_list|(
@@ -715,9 +707,6 @@ condition|)
 block|{
 name|constraintViolated
 argument_list|(
-operator|(
-name|Instruction
-operator|)
 name|o
 argument_list|,
 literal|"Cannot produce "
@@ -1049,9 +1038,6 @@ condition|)
 block|{
 name|constraintViolated
 argument_list|(
-operator|(
-name|Instruction
-operator|)
 name|o
 argument_list|,
 literal|"Class '"

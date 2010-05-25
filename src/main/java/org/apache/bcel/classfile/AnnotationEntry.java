@@ -230,7 +230,6 @@ return|return
 name|annotationEntry
 return|;
 block|}
-comment|/**      * Construct object from file stream.      *       * @param file Input stream      */
 specifier|public
 name|AnnotationEntry
 parameter_list|(

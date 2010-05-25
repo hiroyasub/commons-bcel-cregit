@@ -254,9 +254,6 @@ block|{
 name|ElementValuePair
 name|nvp
 init|=
-operator|(
-name|ElementValuePair
-operator|)
 name|in
 index|[
 name|i

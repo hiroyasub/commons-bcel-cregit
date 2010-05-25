@@ -1011,9 +1011,6 @@ case|:
 name|index
 operator|=
 operator|(
-name|int
-operator|)
-operator|(
 name|bytes
 operator|.
 name|getIndex
@@ -2372,9 +2369,6 @@ decl_stmt|;
 name|int
 name|end
 init|=
-operator|(
-name|int
-operator|)
 operator|(
 name|start
 operator|+
