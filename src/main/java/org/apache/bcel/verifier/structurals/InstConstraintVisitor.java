@@ -1992,9 +1992,6 @@ operator|.
 name|isAssignmentCompatibleWith
 argument_list|(
 operator|(
-name|ReferenceType
-operator|)
-operator|(
 operator|(
 name|ArrayType
 operator|)
