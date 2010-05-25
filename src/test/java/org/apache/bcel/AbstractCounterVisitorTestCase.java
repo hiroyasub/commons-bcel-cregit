@@ -77,6 +77,8 @@ name|visitor
 init|=
 literal|null
 decl_stmt|;
+annotation|@
+name|Override
 specifier|public
 name|void
 name|setUp

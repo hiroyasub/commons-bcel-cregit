@@ -34,6 +34,8 @@ name|CounterVisitorTestCase
 extends|extends
 name|AbstractCounterVisitorTestCase
 block|{
+annotation|@
+name|Override
 specifier|protected
 name|JavaClass
 name|getTestClass

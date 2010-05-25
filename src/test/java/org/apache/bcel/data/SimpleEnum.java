@@ -36,9 +36,5 @@ name|Violet
 block|}
 end_enum
 
-begin_empty_stmt
-empty_stmt|;
-end_empty_stmt
-
 end_unit
 

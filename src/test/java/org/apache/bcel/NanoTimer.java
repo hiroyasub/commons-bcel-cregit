@@ -79,6 +79,8 @@ literal|0
 expr_stmt|;
 block|}
 comment|/** 	 * May ony be called after stop has been called as many times as start. 	 */
+annotation|@
+name|Override
 specifier|public
 name|String
 name|toString

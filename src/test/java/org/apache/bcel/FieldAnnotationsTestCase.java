@@ -35,16 +35,6 @@ end_import
 
 begin_import
 import|import
-name|java
-operator|.
-name|util
-operator|.
-name|Iterator
-import|;
-end_import
-
-begin_import
-import|import
 name|org
 operator|.
 name|apache
@@ -274,16 +264,13 @@ argument_list|(
 literal|"."
 argument_list|)
 decl_stmt|;
-name|JavaClass
-name|clazz2
-init|=
 name|repos2
 operator|.
 name|loadClass
 argument_list|(
 literal|"AnnotatedFields"
 argument_list|)
-decl_stmt|;
+expr_stmt|;
 name|checkAnnotatedField
 argument_list|(
 name|clazz
@@ -326,8 +313,6 @@ name|testFieldAnnotationModification
 parameter_list|()
 throws|throws
 name|ClassNotFoundException
-throws|,
-name|IOException
 block|{
 name|boolean
 name|dbg
@@ -743,9 +728,6 @@ expr_stmt|;
 name|ElementValuePair
 name|envp
 init|=
-operator|(
-name|ElementValuePair
-operator|)
 name|a
 operator|.
 name|getElementValuePairs

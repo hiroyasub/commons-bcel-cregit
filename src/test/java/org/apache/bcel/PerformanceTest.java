@@ -29,16 +29,6 @@ name|java
 operator|.
 name|io
 operator|.
-name|File
-import|;
-end_import
-
-begin_import
-import|import
-name|java
-operator|.
-name|io
-operator|.
 name|IOException
 import|;
 end_import
@@ -60,16 +50,6 @@ operator|.
 name|util
 operator|.
 name|Enumeration
-import|;
-end_import
-
-begin_import
-import|import
-name|java
-operator|.
-name|util
-operator|.
-name|Locale
 import|;
 end_import
 
@@ -448,6 +428,9 @@ literal|"/lib/dt.jar"
 argument_list|)
 decl_stmt|;
 name|Enumeration
+argument_list|<
+name|?
+argument_list|>
 name|en
 init|=
 name|jar

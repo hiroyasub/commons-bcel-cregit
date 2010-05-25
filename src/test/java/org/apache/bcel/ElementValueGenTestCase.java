@@ -552,9 +552,6 @@ name|PRIMITIVE_CHAR
 argument_list|,
 name|cp
 argument_list|,
-operator|(
-name|char
-operator|)
 literal|'t'
 argument_list|)
 decl_stmt|;
@@ -567,9 +564,6 @@ name|cp
 operator|.
 name|lookupInteger
 argument_list|(
-operator|(
-name|char
-operator|)
 literal|'t'
 argument_list|)
 decl_stmt|;
