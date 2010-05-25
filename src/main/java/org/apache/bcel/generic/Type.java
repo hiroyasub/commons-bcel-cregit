@@ -1760,6 +1760,10 @@ operator|+
 literal|1
 decl_stmt|;
 return|return
+name|Type
+operator|.
+name|size
+argument_list|(
 name|getTypeSize
 argument_list|(
 name|signature
@@ -1767,6 +1771,7 @@ operator|.
 name|substring
 argument_list|(
 name|index
+argument_list|)
 argument_list|)
 argument_list|)
 return|;
