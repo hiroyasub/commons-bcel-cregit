@@ -396,6 +396,46 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
+comment|/**      *       * @param cp      * @param value      */
+specifier|public
+name|PUSH
+parameter_list|(
+name|ConstantPoolGen
+name|cp
+parameter_list|,
+name|ObjectType
+name|value
+parameter_list|)
+block|{
+if|if
+condition|(
+name|value
+operator|==
+literal|null
+condition|)
+block|{
+name|instruction
+operator|=
+name|ACONST_NULL
+expr_stmt|;
+block|}
+else|else
+block|{
+name|instruction
+operator|=
+operator|new
+name|LDC
+argument_list|(
+name|cp
+operator|.
+name|addClass
+argument_list|(
+name|value
+argument_list|)
+argument_list|)
+expr_stmt|;
+block|}
+block|}
 comment|/**      * @param cp Constant pool      * @param value to be pushed       */
 specifier|public
 name|PUSH
@@ -595,6 +635,8 @@ name|instruction
 return|;
 block|}
 comment|/**      * @return mnemonic for instruction      */
+annotation|@
+name|Override
 specifier|public
 name|String
 name|toString

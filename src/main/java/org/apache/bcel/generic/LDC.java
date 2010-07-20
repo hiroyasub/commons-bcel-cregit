@@ -158,6 +158,8 @@ expr_stmt|;
 block|}
 block|}
 comment|/**      * Dump instruction as byte code to stream out.      * @param out Output stream      */
+annotation|@
+name|Override
 specifier|public
 name|void
 name|dump
@@ -202,6 +204,8 @@ expr_stmt|;
 block|}
 block|}
 comment|/**      * Set the index to constant pool and adjust size.      */
+annotation|@
+name|Override
 specifier|public
 specifier|final
 name|void
@@ -223,6 +227,8 @@ argument_list|()
 expr_stmt|;
 block|}
 comment|/**      * Read needed data (e.g. index) from file.      */
+annotation|@
+name|Override
 specifier|protected
 name|void
 name|initFromFile
@@ -427,8 +433,61 @@ name|Constants
 operator|.
 name|CONSTANT_Class
 case|:
-return|return
+name|int
+name|nameIndex
+init|=
+operator|(
+operator|(
+name|org
+operator|.
+name|apache
+operator|.
+name|bcel
+operator|.
+name|classfile
+operator|.
+name|ConstantClass
+operator|)
 name|c
+operator|)
+operator|.
+name|getNameIndex
+argument_list|()
+decl_stmt|;
+name|c
+operator|=
+name|cpg
+operator|.
+name|getConstantPool
+argument_list|()
+operator|.
+name|getConstant
+argument_list|(
+name|nameIndex
+argument_list|)
+expr_stmt|;
+return|return
+operator|new
+name|ObjectType
+argument_list|(
+operator|(
+operator|(
+name|org
+operator|.
+name|apache
+operator|.
+name|bcel
+operator|.
+name|classfile
+operator|.
+name|ConstantUtf8
+operator|)
+name|c
+operator|)
+operator|.
+name|getBytes
+argument_list|()
+argument_list|)
 return|;
 default|default:
 comment|// Never reached
@@ -443,6 +502,8 @@ argument_list|)
 throw|;
 block|}
 block|}
+annotation|@
+name|Override
 specifier|public
 name|Type
 name|getType
@@ -563,6 +624,8 @@ name|EXCS_STRING_RESOLUTION
 return|;
 block|}
 comment|/**      * Call corresponding visitor method(s). The order is:      * Call visitor methods of implemented interfaces first, then      * call methods according to the class hierarchy in descending order,      * i.e., the most specific visitXXX() call comes last.      *      * @param v Visitor object      */
+annotation|@
+name|Override
 specifier|public
 name|void
 name|accept

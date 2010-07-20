@@ -528,14 +528,17 @@ extends|extends
 name|EmptyVisitor
 block|{
 specifier|private
+specifier|final
 name|MethodGen
 name|_mg
 decl_stmt|;
 specifier|private
+specifier|final
 name|PrintWriter
 name|_out
 decl_stmt|;
 specifier|private
+specifier|final
 name|ConstantPoolGen
 name|_cp
 decl_stmt|;
@@ -565,6 +568,7 @@ name|out
 expr_stmt|;
 block|}
 specifier|private
+specifier|final
 name|Map
 name|branch_map
 init|=
@@ -802,6 +806,8 @@ return|return
 literal|false
 return|;
 block|}
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitLocalVariableInstruction
@@ -910,6 +916,8 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitArrayInstruction
@@ -972,6 +980,8 @@ literal|"));"
 argument_list|)
 expr_stmt|;
 block|}
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitFieldInstruction
@@ -1061,6 +1071,8 @@ literal|"));"
 argument_list|)
 expr_stmt|;
 block|}
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitInvokeInstruction
@@ -1170,6 +1182,8 @@ literal|"));"
 argument_list|)
 expr_stmt|;
 block|}
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitAllocationInstruction
@@ -1435,6 +1449,33 @@ operator|+=
 literal|"L"
 expr_stmt|;
 block|}
+if|else if
+condition|(
+name|value
+operator|instanceof
+name|ObjectType
+condition|)
+block|{
+name|ObjectType
+name|ot
+init|=
+operator|(
+name|ObjectType
+operator|)
+name|value
+decl_stmt|;
+name|embed
+operator|=
+literal|"new ObjectType(\""
+operator|+
+name|ot
+operator|.
+name|getClassName
+argument_list|()
+operator|+
+literal|"\")"
+expr_stmt|;
+block|}
 name|_out
 operator|.
 name|println
@@ -1447,6 +1488,8 @@ literal|"));"
 argument_list|)
 expr_stmt|;
 block|}
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitLDC
@@ -1466,6 +1509,8 @@ argument_list|)
 argument_list|)
 expr_stmt|;
 block|}
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitLDC2_W
@@ -1485,6 +1530,8 @@ argument_list|)
 argument_list|)
 expr_stmt|;
 block|}
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitConstantPushInstruction
@@ -1502,6 +1549,8 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitINSTANCEOF
@@ -1537,6 +1586,8 @@ literal|")));"
 argument_list|)
 expr_stmt|;
 block|}
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitCHECKCAST
@@ -1572,6 +1623,8 @@ literal|"));"
 argument_list|)
 expr_stmt|;
 block|}
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitReturnInstruction
@@ -1609,6 +1662,7 @@ expr_stmt|;
 block|}
 comment|// Memorize BranchInstructions that need an update
 specifier|private
+specifier|final
 name|List
 name|branches
 init|=
@@ -1616,6 +1670,8 @@ operator|new
 name|ArrayList
 argument_list|()
 decl_stmt|;
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitBranchInstruction
@@ -1947,6 +2003,8 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitRET
