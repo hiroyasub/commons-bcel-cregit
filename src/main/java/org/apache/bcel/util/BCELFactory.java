@@ -806,8 +806,6 @@ return|return
 literal|false
 return|;
 block|}
-annotation|@
-name|Override
 specifier|public
 name|void
 name|visitLocalVariableInstruction
@@ -916,8 +914,6 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-annotation|@
-name|Override
 specifier|public
 name|void
 name|visitArrayInstruction
@@ -980,8 +976,6 @@ literal|"));"
 argument_list|)
 expr_stmt|;
 block|}
-annotation|@
-name|Override
 specifier|public
 name|void
 name|visitFieldInstruction
@@ -1071,8 +1065,6 @@ literal|"));"
 argument_list|)
 expr_stmt|;
 block|}
-annotation|@
-name|Override
 specifier|public
 name|void
 name|visitInvokeInstruction
@@ -1182,8 +1174,6 @@ literal|"));"
 argument_list|)
 expr_stmt|;
 block|}
-annotation|@
-name|Override
 specifier|public
 name|void
 name|visitAllocationInstruction
@@ -1488,8 +1478,6 @@ literal|"));"
 argument_list|)
 expr_stmt|;
 block|}
-annotation|@
-name|Override
 specifier|public
 name|void
 name|visitLDC
@@ -1509,8 +1497,6 @@ argument_list|)
 argument_list|)
 expr_stmt|;
 block|}
-annotation|@
-name|Override
 specifier|public
 name|void
 name|visitLDC2_W
@@ -1530,8 +1516,6 @@ argument_list|)
 argument_list|)
 expr_stmt|;
 block|}
-annotation|@
-name|Override
 specifier|public
 name|void
 name|visitConstantPushInstruction
@@ -1549,8 +1533,6 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
-annotation|@
-name|Override
 specifier|public
 name|void
 name|visitINSTANCEOF
@@ -1586,8 +1568,6 @@ literal|")));"
 argument_list|)
 expr_stmt|;
 block|}
-annotation|@
-name|Override
 specifier|public
 name|void
 name|visitCHECKCAST
@@ -1623,8 +1603,6 @@ literal|"));"
 argument_list|)
 expr_stmt|;
 block|}
-annotation|@
-name|Override
 specifier|public
 name|void
 name|visitReturnInstruction
@@ -1670,8 +1648,6 @@ operator|new
 name|ArrayList
 argument_list|()
 decl_stmt|;
-annotation|@
-name|Override
 specifier|public
 name|void
 name|visitBranchInstruction
@@ -2003,8 +1979,6 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-annotation|@
-name|Override
 specifier|public
 name|void
 name|visitRET

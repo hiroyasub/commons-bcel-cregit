@@ -635,8 +635,6 @@ name|instruction
 return|;
 block|}
 comment|/**      * @return mnemonic for instruction      */
-annotation|@
-name|Override
 specifier|public
 name|String
 name|toString
