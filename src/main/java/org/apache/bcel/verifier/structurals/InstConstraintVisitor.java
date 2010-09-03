@@ -8270,9 +8270,6 @@ condition|)
 block|{
 name|constraintViolated
 argument_list|(
-operator|(
-name|Instruction
-operator|)
 name|o
 argument_list|,
 literal|"Class '"
@@ -8729,9 +8726,6 @@ condition|)
 block|{
 name|constraintViolated
 argument_list|(
-operator|(
-name|Instruction
-operator|)
 name|o
 argument_list|,
 literal|"Class '"
@@ -9247,9 +9241,6 @@ condition|)
 block|{
 name|constraintViolated
 argument_list|(
-operator|(
-name|Instruction
-operator|)
 name|o
 argument_list|,
 literal|"Class '"
@@ -9553,9 +9544,6 @@ condition|)
 block|{
 name|constraintViolated
 argument_list|(
-operator|(
-name|Instruction
-operator|)
 name|o
 argument_list|,
 literal|"Class '"
