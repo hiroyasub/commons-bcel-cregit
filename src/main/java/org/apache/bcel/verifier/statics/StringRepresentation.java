@@ -541,8 +541,6 @@ operator|.
 name|classfile
 operator|.
 name|EmptyVisitor
-implements|implements
-name|Visitor
 block|{
 comment|/** The string representation, created by a visitXXX() method, output by toString(). */
 specifier|private

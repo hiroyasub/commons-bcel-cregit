@@ -151,8 +151,6 @@ class|class
 name|ExecutionVisitor
 extends|extends
 name|EmptyVisitor
-implements|implements
-name|Visitor
 block|{
 comment|/** 	 * The executionframe we're operating on. 	 */
 specifier|private

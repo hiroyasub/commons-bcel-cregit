@@ -279,16 +279,6 @@ class|class
 name|InstConstraintVisitor
 extends|extends
 name|EmptyVisitor
-implements|implements
-name|org
-operator|.
-name|apache
-operator|.
-name|bcel
-operator|.
-name|generic
-operator|.
-name|Visitor
 block|{
 specifier|private
 specifier|static

@@ -68,8 +68,6 @@ class|class
 name|StackMap
 extends|extends
 name|Attribute
-implements|implements
-name|Node
 block|{
 specifier|private
 name|int

@@ -40,8 +40,6 @@ class|class
 name|FieldInstruction
 extends|extends
 name|FieldOrMethod
-implements|implements
-name|TypedInstruction
 block|{
 comment|/**      * Empty constructor needed for the Class.newInstance() statement in      * Instruction.readInstruction(). Not to be used otherwise.      */
 name|FieldInstruction

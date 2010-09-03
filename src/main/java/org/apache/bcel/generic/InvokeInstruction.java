@@ -79,8 +79,6 @@ name|FieldOrMethod
 implements|implements
 name|ExceptionThrower
 implements|,
-name|TypedInstruction
-implements|,
 name|StackConsumer
 implements|,
 name|StackProducer

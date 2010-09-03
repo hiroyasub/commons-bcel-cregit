@@ -1541,8 +1541,6 @@ operator|.
 name|classfile
 operator|.
 name|EmptyVisitor
-implements|implements
-name|Visitor
 block|{
 specifier|private
 name|Class
@@ -7274,8 +7272,6 @@ class|class
 name|FAMRAV_Visitor
 extends|extends
 name|EmptyVisitor
-implements|implements
-name|Visitor
 block|{
 specifier|private
 specifier|final

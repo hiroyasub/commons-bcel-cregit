@@ -27,8 +27,6 @@ extends|extends
 name|Instruction
 implements|implements
 name|ConstantPushInstruction
-implements|,
-name|TypedInstruction
 block|{
 specifier|private
 name|double
