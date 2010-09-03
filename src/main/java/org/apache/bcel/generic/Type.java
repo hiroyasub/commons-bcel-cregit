@@ -1518,10 +1518,6 @@ decl_stmt|;
 name|int
 name|index
 decl_stmt|;
-name|Type
-index|[]
-name|types
-decl_stmt|;
 try|try
 block|{
 comment|// Read all declarations between for `(' and `)'
