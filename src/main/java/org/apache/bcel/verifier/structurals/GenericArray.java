@@ -44,6 +44,14 @@ name|io
 operator|.
 name|Serializable
 block|{
+specifier|private
+specifier|static
+specifier|final
+name|long
+name|serialVersionUID
+init|=
+literal|1991183963515237894L
+decl_stmt|;
 specifier|protected
 name|Object
 name|clone

@@ -64,6 +64,15 @@ name|PushInstruction
 implements|,
 name|ExceptionThrower
 block|{
+specifier|private
+specifier|static
+specifier|final
+name|long
+name|serialVersionUID
+init|=
+operator|-
+literal|972820476154330719L
+decl_stmt|;
 comment|/**      * Empty constructor needed for the Class.newInstance() statement in      * Instruction.readInstruction(). Not to be used otherwise.      */
 name|LDC
 parameter_list|()

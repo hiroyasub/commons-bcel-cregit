@@ -28,6 +28,14 @@ name|ArithmeticInstruction
 implements|implements
 name|ExceptionThrower
 block|{
+specifier|private
+specifier|static
+specifier|final
+name|long
+name|serialVersionUID
+init|=
+literal|834504719616513910L
+decl_stmt|;
 comment|/** Remainder of ints      */
 specifier|public
 name|IREM

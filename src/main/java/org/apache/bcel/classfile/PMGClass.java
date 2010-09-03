@@ -70,6 +70,15 @@ extends|extends
 name|Attribute
 block|{
 specifier|private
+specifier|static
+specifier|final
+name|long
+name|serialVersionUID
+init|=
+operator|-
+literal|7075964153234211509L
+decl_stmt|;
+specifier|private
 name|int
 name|pmg_class_index
 decl_stmt|,

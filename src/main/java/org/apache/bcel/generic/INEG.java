@@ -26,6 +26,14 @@ name|INEG
 extends|extends
 name|ArithmeticInstruction
 block|{
+specifier|private
+specifier|static
+specifier|final
+name|long
+name|serialVersionUID
+init|=
+literal|6175987548738672934L
+decl_stmt|;
 specifier|public
 name|INEG
 parameter_list|()

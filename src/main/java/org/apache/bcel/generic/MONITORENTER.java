@@ -30,6 +30,14 @@ name|ExceptionThrower
 implements|,
 name|StackConsumer
 block|{
+specifier|private
+specifier|static
+specifier|final
+name|long
+name|serialVersionUID
+init|=
+literal|4537302966975402521L
+decl_stmt|;
 specifier|public
 name|MONITORENTER
 parameter_list|()

@@ -28,6 +28,15 @@ extends|extends
 name|InstructionHandle
 block|{
 specifier|private
+specifier|static
+specifier|final
+name|long
+name|serialVersionUID
+init|=
+operator|-
+literal|2520878285698255956L
+decl_stmt|;
+specifier|private
 name|BranchInstruction
 name|bi
 decl_stmt|;

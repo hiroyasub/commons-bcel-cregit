@@ -77,6 +77,14 @@ name|TypedInstruction
 implements|,
 name|IndexedInstruction
 block|{
+specifier|private
+specifier|static
+specifier|final
+name|long
+name|serialVersionUID
+init|=
+literal|8322269736316122743L
+decl_stmt|;
 specifier|protected
 name|int
 name|n

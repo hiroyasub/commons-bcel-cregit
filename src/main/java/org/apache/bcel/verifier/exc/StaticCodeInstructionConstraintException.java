@@ -28,6 +28,14 @@ name|StaticCodeInstructionConstraintException
 extends|extends
 name|StaticCodeConstraintException
 block|{
+specifier|private
+specifier|static
+specifier|final
+name|long
+name|serialVersionUID
+init|=
+literal|4987255974346614794L
+decl_stmt|;
 specifier|public
 name|StaticCodeInstructionConstraintException
 parameter_list|(

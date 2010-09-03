@@ -28,6 +28,14 @@ name|ArrayInstruction
 implements|implements
 name|StackProducer
 block|{
+specifier|private
+specifier|static
+specifier|final
+name|long
+name|serialVersionUID
+init|=
+literal|3369925718821219472L
+decl_stmt|;
 comment|/** Load float from array      */
 specifier|public
 name|FALOAD

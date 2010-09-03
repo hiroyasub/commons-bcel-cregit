@@ -30,6 +30,15 @@ name|PushInstruction
 implements|,
 name|TypedInstruction
 block|{
+specifier|private
+specifier|static
+specifier|final
+name|long
+name|serialVersionUID
+init|=
+operator|-
+literal|4127036801984829715L
+decl_stmt|;
 comment|/**       * Push null reference      */
 specifier|public
 name|ACONST_NULL

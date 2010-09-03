@@ -26,6 +26,14 @@ name|ISUB
 extends|extends
 name|ArithmeticInstruction
 block|{
+specifier|private
+specifier|static
+specifier|final
+name|long
+name|serialVersionUID
+init|=
+literal|1878271684888856459L
+decl_stmt|;
 comment|/** Substract ints      */
 specifier|public
 name|ISUB

@@ -26,6 +26,15 @@ name|BREAKPOINT
 extends|extends
 name|Instruction
 block|{
+specifier|private
+specifier|static
+specifier|final
+name|long
+name|serialVersionUID
+init|=
+operator|-
+literal|4186956277760244254L
+decl_stmt|;
 specifier|public
 name|BREAKPOINT
 parameter_list|()

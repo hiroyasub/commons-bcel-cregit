@@ -75,6 +75,15 @@ operator|.
 name|Serializable
 block|{
 specifier|private
+specifier|static
+specifier|final
+name|long
+name|serialVersionUID
+init|=
+operator|-
+literal|7476907380350035254L
+decl_stmt|;
+specifier|private
 name|Map
 name|_map
 init|=

@@ -26,6 +26,14 @@ name|DMUL
 extends|extends
 name|ArithmeticInstruction
 block|{
+specifier|private
+specifier|static
+specifier|final
+name|long
+name|serialVersionUID
+init|=
+literal|7491480641611951432L
+decl_stmt|;
 comment|/** Multiply doubles      */
 specifier|public
 name|DMUL

@@ -26,6 +26,14 @@ name|IMPDEP2
 extends|extends
 name|Instruction
 block|{
+specifier|private
+specifier|static
+specifier|final
+name|long
+name|serialVersionUID
+init|=
+literal|4097564761941607538L
+decl_stmt|;
 specifier|public
 name|IMPDEP2
 parameter_list|()

@@ -31,6 +31,14 @@ name|RuntimeException
 block|{
 comment|// /** The name of the offending class that did not pass the verifier. */
 comment|// String name_of_offending_class;
+specifier|private
+specifier|static
+specifier|final
+name|long
+name|serialVersionUID
+init|=
+literal|2946136970490179465L
+decl_stmt|;
 comment|/** The specified error message. */
 specifier|private
 name|String

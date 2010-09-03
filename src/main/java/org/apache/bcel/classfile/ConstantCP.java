@@ -69,6 +69,15 @@ name|ConstantCP
 extends|extends
 name|Constant
 block|{
+specifier|private
+specifier|static
+specifier|final
+name|long
+name|serialVersionUID
+init|=
+operator|-
+literal|6275762995206209402L
+decl_stmt|;
 comment|/** References to the constants containing the class and the field signature      */
 specifier|protected
 name|int

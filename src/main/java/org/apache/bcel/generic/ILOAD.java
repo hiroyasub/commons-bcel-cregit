@@ -26,6 +26,14 @@ name|ILOAD
 extends|extends
 name|LoadInstruction
 block|{
+specifier|private
+specifier|static
+specifier|final
+name|long
+name|serialVersionUID
+init|=
+literal|7568563453093184347L
+decl_stmt|;
 comment|/**      * Empty constructor needed for the Class.newInstance() statement in      * Instruction.readInstruction(). Not to be used otherwise.      */
 name|ILOAD
 parameter_list|()

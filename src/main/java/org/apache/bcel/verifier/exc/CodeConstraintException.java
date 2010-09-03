@@ -29,6 +29,15 @@ name|CodeConstraintException
 extends|extends
 name|VerificationException
 block|{
+specifier|private
+specifier|static
+specifier|final
+name|long
+name|serialVersionUID
+init|=
+operator|-
+literal|7265388214714996640L
+decl_stmt|;
 comment|/** 	 * Constructs a new CodeConstraintException with null as its error message string. 	 */
 name|CodeConstraintException
 parameter_list|()

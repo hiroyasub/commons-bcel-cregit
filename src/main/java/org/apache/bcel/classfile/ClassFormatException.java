@@ -26,6 +26,15 @@ name|ClassFormatException
 extends|extends
 name|RuntimeException
 block|{
+specifier|private
+specifier|static
+specifier|final
+name|long
+name|serialVersionUID
+init|=
+operator|-
+literal|3569097343160139969L
+decl_stmt|;
 specifier|public
 name|ClassFormatException
 parameter_list|()

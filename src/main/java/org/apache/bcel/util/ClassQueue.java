@@ -54,6 +54,14 @@ name|io
 operator|.
 name|Serializable
 block|{
+specifier|private
+specifier|static
+specifier|final
+name|long
+name|serialVersionUID
+init|=
+literal|685144104322420292L
+decl_stmt|;
 specifier|protected
 name|LinkedList
 name|vec

@@ -258,6 +258,15 @@ name|VerifierAppFrame
 extends|extends
 name|JFrame
 block|{
+specifier|private
+specifier|static
+specifier|final
+name|long
+name|serialVersionUID
+init|=
+operator|-
+literal|542458133073307640L
+decl_stmt|;
 name|JPanel
 name|contentPane
 decl_stmt|;

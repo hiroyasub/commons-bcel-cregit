@@ -63,6 +63,15 @@ operator|.
 name|Serializable
 block|{
 specifier|private
+specifier|static
+specifier|final
+name|long
+name|serialVersionUID
+init|=
+operator|-
+literal|3810966319065955534L
+decl_stmt|;
+specifier|private
 name|int
 name|index
 decl_stmt|;

@@ -26,6 +26,15 @@ name|IF_ACMPEQ
 extends|extends
 name|IfInstruction
 block|{
+specifier|private
+specifier|static
+specifier|final
+name|long
+name|serialVersionUID
+init|=
+operator|-
+literal|4528733406576671849L
+decl_stmt|;
 comment|/**      * Empty constructor needed for the Class.newInstance() statement in      * Instruction.readInstruction(). Not to be used otherwise.      */
 name|IF_ACMPEQ
 parameter_list|()

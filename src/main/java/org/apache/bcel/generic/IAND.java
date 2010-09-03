@@ -26,6 +26,15 @@ name|IAND
 extends|extends
 name|ArithmeticInstruction
 block|{
+specifier|private
+specifier|static
+specifier|final
+name|long
+name|serialVersionUID
+init|=
+operator|-
+literal|3190292062305201816L
+decl_stmt|;
 specifier|public
 name|IAND
 parameter_list|()

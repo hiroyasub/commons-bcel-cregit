@@ -27,6 +27,15 @@ name|StackInstruction
 extends|extends
 name|Instruction
 block|{
+specifier|private
+specifier|static
+specifier|final
+name|long
+name|serialVersionUID
+init|=
+operator|-
+literal|8542057001831958935L
+decl_stmt|;
 comment|/**      * Empty constructor needed for the Class.newInstance() statement in      * Instruction.readInstruction(). Not to be used otherwise.      */
 name|StackInstruction
 parameter_list|()

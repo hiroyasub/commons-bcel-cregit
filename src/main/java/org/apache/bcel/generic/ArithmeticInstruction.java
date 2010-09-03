@@ -45,6 +45,14 @@ name|StackProducer
 implements|,
 name|StackConsumer
 block|{
+specifier|private
+specifier|static
+specifier|final
+name|long
+name|serialVersionUID
+init|=
+literal|5027221136148765144L
+decl_stmt|;
 comment|/**      * Empty constructor needed for the Class.newInstance() statement in      * Instruction.readInstruction(). Not to be used otherwise.      */
 name|ArithmeticInstruction
 parameter_list|()

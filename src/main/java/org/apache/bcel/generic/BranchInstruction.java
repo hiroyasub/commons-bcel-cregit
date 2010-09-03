@@ -63,6 +63,14 @@ name|Instruction
 implements|implements
 name|InstructionTargeter
 block|{
+specifier|private
+specifier|static
+specifier|final
+name|long
+name|serialVersionUID
+init|=
+literal|3225905281842405051L
+decl_stmt|;
 specifier|protected
 name|int
 name|index

@@ -106,6 +106,14 @@ name|SyntheticRepository
 implements|implements
 name|Repository
 block|{
+specifier|private
+specifier|static
+specifier|final
+name|long
+name|serialVersionUID
+init|=
+literal|2923440730410019444L
+decl_stmt|;
 comment|//private static final String DEFAULT_PATH = ClassPath.getClassPath();
 specifier|private
 specifier|static

@@ -28,6 +28,15 @@ name|ArrayInstruction
 implements|implements
 name|StackProducer
 block|{
+specifier|private
+specifier|static
+specifier|final
+name|long
+name|serialVersionUID
+init|=
+operator|-
+literal|849061295095748102L
+decl_stmt|;
 comment|/** Load byte or boolean from array      */
 specifier|public
 name|BALOAD

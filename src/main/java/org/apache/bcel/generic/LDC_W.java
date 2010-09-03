@@ -50,6 +50,15 @@ name|LDC_W
 extends|extends
 name|LDC
 block|{
+specifier|private
+specifier|static
+specifier|final
+name|long
+name|serialVersionUID
+init|=
+operator|-
+literal|8040188785844554411L
+decl_stmt|;
 comment|/**      * Empty constructor needed for the Class.newInstance() statement in      * Instruction.readInstruction(). Not to be used otherwise.      */
 name|LDC_W
 parameter_list|()

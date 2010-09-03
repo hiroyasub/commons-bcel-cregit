@@ -26,6 +26,15 @@ name|IFNONNULL
 extends|extends
 name|IfInstruction
 block|{
+specifier|private
+specifier|static
+specifier|final
+name|long
+name|serialVersionUID
+init|=
+operator|-
+literal|6378085152112796792L
+decl_stmt|;
 comment|/**      * Empty constructor needed for the Class.newInstance() statement in      * Instruction.readInstruction(). Not to be used otherwise.      */
 name|IFNONNULL
 parameter_list|()

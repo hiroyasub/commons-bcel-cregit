@@ -26,6 +26,15 @@ name|DDIV
 extends|extends
 name|ArithmeticInstruction
 block|{
+specifier|private
+specifier|static
+specifier|final
+name|long
+name|serialVersionUID
+init|=
+operator|-
+literal|2241740228269641540L
+decl_stmt|;
 comment|/** Divide doubles      */
 specifier|public
 name|DDIV

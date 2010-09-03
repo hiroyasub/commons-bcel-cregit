@@ -28,6 +28,15 @@ name|ArrayInstruction
 implements|implements
 name|StackProducer
 block|{
+specifier|private
+specifier|static
+specifier|final
+name|long
+name|serialVersionUID
+init|=
+operator|-
+literal|8606835203239531080L
+decl_stmt|;
 comment|/** Load reference from array      */
 specifier|public
 name|AALOAD

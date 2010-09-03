@@ -70,6 +70,15 @@ name|ReferenceType
 implements|implements
 name|Constants
 block|{
+specifier|private
+specifier|static
+specifier|final
+name|long
+name|serialVersionUID
+init|=
+operator|-
+literal|1228341777713117641L
+decl_stmt|;
 comment|/** The "initialized" version. */
 specifier|private
 name|ObjectType

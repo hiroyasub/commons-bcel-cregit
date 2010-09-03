@@ -28,6 +28,15 @@ name|InvalidMethodException
 extends|extends
 name|RuntimeException
 block|{
+specifier|private
+specifier|static
+specifier|final
+name|long
+name|serialVersionUID
+init|=
+operator|-
+literal|7060302743724808051L
+decl_stmt|;
 comment|/** Constructs an InvalidMethodException with the specified detail message. */
 specifier|public
 name|InvalidMethodException

@@ -65,6 +65,14 @@ name|VariableLengthInstruction
 implements|,
 name|StackProducer
 block|{
+specifier|private
+specifier|static
+specifier|final
+name|long
+name|serialVersionUID
+init|=
+literal|2806771744559217250L
+decl_stmt|;
 specifier|protected
 name|int
 index|[]

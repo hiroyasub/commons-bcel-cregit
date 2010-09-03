@@ -26,6 +26,14 @@ name|LADD
 extends|extends
 name|ArithmeticInstruction
 block|{
+specifier|private
+specifier|static
+specifier|final
+name|long
+name|serialVersionUID
+init|=
+literal|2093272772688460551L
+decl_stmt|;
 specifier|public
 name|LADD
 parameter_list|()

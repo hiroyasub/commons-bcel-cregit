@@ -54,6 +54,15 @@ name|PushInstruction
 implements|,
 name|ExceptionThrower
 block|{
+specifier|private
+specifier|static
+specifier|final
+name|long
+name|serialVersionUID
+init|=
+operator|-
+literal|477185594622953478L
+decl_stmt|;
 comment|/**      * Empty constructor needed for the Class.newInstance() statement in      * Instruction.readInstruction(). Not to be used otherwise.      */
 name|GETSTATIC
 parameter_list|()

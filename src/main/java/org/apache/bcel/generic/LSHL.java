@@ -26,6 +26,14 @@ name|LSHL
 extends|extends
 name|ArithmeticInstruction
 block|{
+specifier|private
+specifier|static
+specifier|final
+name|long
+name|serialVersionUID
+init|=
+literal|7855322471731877312L
+decl_stmt|;
 specifier|public
 name|LSHL
 parameter_list|()

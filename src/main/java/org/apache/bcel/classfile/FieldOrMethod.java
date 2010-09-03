@@ -121,6 +121,15 @@ name|Cloneable
 implements|,
 name|Node
 block|{
+specifier|private
+specifier|static
+specifier|final
+name|long
+name|serialVersionUID
+init|=
+operator|-
+literal|1833306330869469714L
+decl_stmt|;
 specifier|protected
 name|int
 name|name_index

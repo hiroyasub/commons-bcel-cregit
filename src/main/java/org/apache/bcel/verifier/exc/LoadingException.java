@@ -28,6 +28,15 @@ name|LoadingException
 extends|extends
 name|VerifierConstraintViolatedException
 block|{
+specifier|private
+specifier|static
+specifier|final
+name|long
+name|serialVersionUID
+init|=
+operator|-
+literal|7911901533049018823L
+decl_stmt|;
 comment|/** 	 * Constructs a new LoadingException with null as its error message string. 	 */
 specifier|public
 name|LoadingException

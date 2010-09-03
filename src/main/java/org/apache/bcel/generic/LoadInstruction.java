@@ -29,6 +29,14 @@ name|LocalVariableInstruction
 implements|implements
 name|PushInstruction
 block|{
+specifier|private
+specifier|static
+specifier|final
+name|long
+name|serialVersionUID
+init|=
+literal|3661924741022212247L
+decl_stmt|;
 comment|/**      * Empty constructor needed for the Class.newInstance() statement in      * Instruction.readInstruction(). Not to be used otherwise.      * tag and length are defined in readInstruction and initFromFile, respectively.      */
 name|LoadInstruction
 parameter_list|(

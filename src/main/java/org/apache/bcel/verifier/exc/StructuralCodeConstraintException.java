@@ -28,6 +28,14 @@ name|StructuralCodeConstraintException
 extends|extends
 name|CodeConstraintException
 block|{
+specifier|private
+specifier|static
+specifier|final
+name|long
+name|serialVersionUID
+init|=
+literal|5406842000007181420L
+decl_stmt|;
 comment|/** 	 * Constructs a new StructuralCodeConstraintException with the specified error message. 	 */
 specifier|public
 name|StructuralCodeConstraintException

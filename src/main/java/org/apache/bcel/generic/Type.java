@@ -91,6 +91,15 @@ name|io
 operator|.
 name|Serializable
 block|{
+specifier|private
+specifier|static
+specifier|final
+name|long
+name|serialVersionUID
+init|=
+operator|-
+literal|1985077286871826895L
+decl_stmt|;
 specifier|protected
 name|byte
 name|type
@@ -309,7 +318,16 @@ init|=
 operator|new
 name|ReferenceType
 argument_list|()
-block|{     }
+block|{
+specifier|private
+specifier|static
+specifier|final
+name|long
+name|serialVersionUID
+init|=
+literal|4526765862386946282L
+decl_stmt|;
+block|}
 decl_stmt|;
 specifier|public
 specifier|static
@@ -326,7 +344,16 @@ name|T_UNKNOWN
 argument_list|,
 literal|"<unknown object>"
 argument_list|)
-block|{     }
+block|{
+specifier|private
+specifier|static
+specifier|final
+name|long
+name|serialVersionUID
+init|=
+literal|1321113605813486066L
+decl_stmt|;
+block|}
 decl_stmt|;
 specifier|protected
 name|Type

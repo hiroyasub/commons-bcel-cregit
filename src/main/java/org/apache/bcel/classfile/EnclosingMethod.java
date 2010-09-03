@@ -68,6 +68,14 @@ name|EnclosingMethod
 extends|extends
 name|Attribute
 block|{
+specifier|private
+specifier|static
+specifier|final
+name|long
+name|serialVersionUID
+init|=
+literal|9136852385761725494L
+decl_stmt|;
 comment|// Pointer to the CONSTANT_Class_info structure representing the
 comment|// innermost class that encloses the declaration of the current class.
 specifier|private

@@ -26,6 +26,14 @@ name|LAND
 extends|extends
 name|ArithmeticInstruction
 block|{
+specifier|private
+specifier|static
+specifier|final
+name|long
+name|serialVersionUID
+init|=
+literal|2429077463161192057L
+decl_stmt|;
 specifier|public
 name|LAND
 parameter_list|()

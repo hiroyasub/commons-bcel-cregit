@@ -60,6 +60,15 @@ name|TABLESWITCH
 extends|extends
 name|Select
 block|{
+specifier|private
+specifier|static
+specifier|final
+name|long
+name|serialVersionUID
+init|=
+operator|-
+literal|1178229029789923698L
+decl_stmt|;
 comment|/**      * Empty constructor needed for the Class.newInstance() statement in      * Instruction.readInstruction(). Not to be used otherwise.      */
 name|TABLESWITCH
 parameter_list|()

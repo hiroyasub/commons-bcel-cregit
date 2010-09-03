@@ -28,6 +28,15 @@ extends|extends
 name|Exception
 block|{
 specifier|private
+specifier|static
+specifier|final
+name|long
+name|serialVersionUID
+init|=
+operator|-
+literal|6857272667645328384L
+decl_stmt|;
+specifier|private
 name|InstructionHandle
 index|[]
 name|targets

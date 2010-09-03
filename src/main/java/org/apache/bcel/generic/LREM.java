@@ -28,6 +28,15 @@ name|ArithmeticInstruction
 implements|implements
 name|ExceptionThrower
 block|{
+specifier|private
+specifier|static
+specifier|final
+name|long
+name|serialVersionUID
+init|=
+operator|-
+literal|3646771608200042527L
+decl_stmt|;
 specifier|public
 name|LREM
 parameter_list|()

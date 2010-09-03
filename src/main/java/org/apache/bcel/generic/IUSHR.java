@@ -26,6 +26,15 @@ name|IUSHR
 extends|extends
 name|ArithmeticInstruction
 block|{
+specifier|private
+specifier|static
+specifier|final
+name|long
+name|serialVersionUID
+init|=
+operator|-
+literal|4507658555921269426L
+decl_stmt|;
 specifier|public
 name|IUSHR
 parameter_list|()

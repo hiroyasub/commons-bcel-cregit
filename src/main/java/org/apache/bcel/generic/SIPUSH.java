@@ -63,6 +63,15 @@ implements|implements
 name|ConstantPushInstruction
 block|{
 specifier|private
+specifier|static
+specifier|final
+name|long
+name|serialVersionUID
+init|=
+operator|-
+literal|5670145672311191256L
+decl_stmt|;
+specifier|private
 name|short
 name|b
 decl_stmt|;

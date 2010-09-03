@@ -55,6 +55,14 @@ operator|.
 name|Serializable
 block|{
 specifier|private
+specifier|static
+specifier|final
+name|long
+name|serialVersionUID
+init|=
+literal|6126079269396985982L
+decl_stmt|;
+specifier|private
 name|Stack
 name|stack
 init|=

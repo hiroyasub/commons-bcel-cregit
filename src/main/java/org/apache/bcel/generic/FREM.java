@@ -26,6 +26,15 @@ name|FREM
 extends|extends
 name|ArithmeticInstruction
 block|{
+specifier|private
+specifier|static
+specifier|final
+name|long
+name|serialVersionUID
+init|=
+operator|-
+literal|9122754212888086133L
+decl_stmt|;
 comment|/** Remainder of floats      */
 specifier|public
 name|FREM

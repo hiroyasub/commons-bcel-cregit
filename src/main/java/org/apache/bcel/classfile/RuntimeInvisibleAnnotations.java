@@ -68,6 +68,14 @@ name|RuntimeInvisibleAnnotations
 extends|extends
 name|Annotations
 block|{
+specifier|private
+specifier|static
+specifier|final
+name|long
+name|serialVersionUID
+init|=
+literal|5274986004117955967L
+decl_stmt|;
 comment|/** 	 * @param name_index 	 *            Index pointing to the name<em>Code</em> 	 * @param length 	 *            Content length in bytes 	 * @param file 	 *            Input stream 	 * @param constant_pool 	 *            Array of constants 	 */
 name|RuntimeInvisibleAnnotations
 parameter_list|(

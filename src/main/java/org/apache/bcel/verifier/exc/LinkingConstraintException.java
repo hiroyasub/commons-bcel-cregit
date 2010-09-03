@@ -27,7 +27,17 @@ class|class
 name|LinkingConstraintException
 extends|extends
 name|StructuralCodeConstraintException
-block|{ }
+block|{
+specifier|private
+specifier|static
+specifier|final
+name|long
+name|serialVersionUID
+init|=
+operator|-
+literal|5239226345026321126L
+decl_stmt|;
+block|}
 end_class
 
 end_unit

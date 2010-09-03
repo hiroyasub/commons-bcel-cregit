@@ -60,6 +60,15 @@ name|LOOKUPSWITCH
 extends|extends
 name|Select
 block|{
+specifier|private
+specifier|static
+specifier|final
+name|long
+name|serialVersionUID
+init|=
+operator|-
+literal|8263209830709467636L
+decl_stmt|;
 comment|/**      * Empty constructor needed for the Class.newInstance() statement in      * Instruction.readInstruction(). Not to be used otherwise.      */
 name|LOOKUPSWITCH
 parameter_list|()

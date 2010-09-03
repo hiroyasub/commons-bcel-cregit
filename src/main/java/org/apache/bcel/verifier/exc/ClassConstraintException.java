@@ -28,6 +28,15 @@ name|ClassConstraintException
 extends|extends
 name|VerificationException
 block|{
+specifier|private
+specifier|static
+specifier|final
+name|long
+name|serialVersionUID
+init|=
+operator|-
+literal|4745598983569128296L
+decl_stmt|;
 comment|/** 	 * Constructs a new ClassConstraintException with null as its error message string. 	 */
 specifier|public
 name|ClassConstraintException

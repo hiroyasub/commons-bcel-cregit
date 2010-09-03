@@ -80,6 +80,14 @@ extends|extends
 name|Attribute
 block|{
 specifier|private
+specifier|static
+specifier|final
+name|long
+name|serialVersionUID
+init|=
+literal|5808807822688827177L
+decl_stmt|;
+specifier|private
 name|int
 name|signature_index
 decl_stmt|;

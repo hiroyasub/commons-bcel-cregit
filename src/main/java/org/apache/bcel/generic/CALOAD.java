@@ -28,6 +28,15 @@ name|ArrayInstruction
 implements|implements
 name|StackProducer
 block|{
+specifier|private
+specifier|static
+specifier|final
+name|long
+name|serialVersionUID
+init|=
+operator|-
+literal|2085721349377637959L
+decl_stmt|;
 comment|/** Load char from array      */
 specifier|public
 name|CALOAD

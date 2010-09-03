@@ -65,6 +65,15 @@ extends|extends
 name|ReferenceType
 block|{
 specifier|private
+specifier|static
+specifier|final
+name|long
+name|serialVersionUID
+init|=
+operator|-
+literal|2819379966444533294L
+decl_stmt|;
+specifier|private
 name|String
 name|class_name
 decl_stmt|;

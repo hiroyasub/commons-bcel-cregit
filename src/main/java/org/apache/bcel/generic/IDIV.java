@@ -28,6 +28,15 @@ name|ArithmeticInstruction
 implements|implements
 name|ExceptionThrower
 block|{
+specifier|private
+specifier|static
+specifier|final
+name|long
+name|serialVersionUID
+init|=
+operator|-
+literal|7104037931993634172L
+decl_stmt|;
 comment|/** Divide ints      */
 specifier|public
 name|IDIV

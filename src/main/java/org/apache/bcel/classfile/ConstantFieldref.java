@@ -59,6 +59,15 @@ name|ConstantFieldref
 extends|extends
 name|ConstantCP
 block|{
+specifier|private
+specifier|static
+specifier|final
+name|long
+name|serialVersionUID
+init|=
+operator|-
+literal|3993784840787819802L
+decl_stmt|;
 comment|/**      * Initialize from another object.      */
 specifier|public
 name|ConstantFieldref

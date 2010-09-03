@@ -29,6 +29,14 @@ name|VerificationException
 extends|extends
 name|VerifierConstraintViolatedException
 block|{
+specifier|private
+specifier|static
+specifier|final
+name|long
+name|serialVersionUID
+init|=
+literal|8012776320318623652L
+decl_stmt|;
 comment|/** 	 * Constructs a new VerificationException with null as its error message string. 	 */
 name|VerificationException
 parameter_list|()

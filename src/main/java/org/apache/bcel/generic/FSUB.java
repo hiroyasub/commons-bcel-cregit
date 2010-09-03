@@ -26,6 +26,14 @@ name|FSUB
 extends|extends
 name|ArithmeticInstruction
 block|{
+specifier|private
+specifier|static
+specifier|final
+name|long
+name|serialVersionUID
+init|=
+literal|8403880233375858501L
+decl_stmt|;
 comment|/** Substract floats      */
 specifier|public
 name|FSUB

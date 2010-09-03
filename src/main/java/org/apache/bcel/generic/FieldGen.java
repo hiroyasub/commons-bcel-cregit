@@ -209,6 +209,15 @@ extends|extends
 name|FieldGenOrMethodGen
 block|{
 specifier|private
+specifier|static
+specifier|final
+name|long
+name|serialVersionUID
+init|=
+operator|-
+literal|6050448955000008261L
+decl_stmt|;
+specifier|private
 name|Object
 name|value
 init|=

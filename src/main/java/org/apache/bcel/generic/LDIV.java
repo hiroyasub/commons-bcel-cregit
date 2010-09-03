@@ -28,6 +28,14 @@ name|ArithmeticInstruction
 implements|implements
 name|ExceptionThrower
 block|{
+specifier|private
+specifier|static
+specifier|final
+name|long
+name|serialVersionUID
+init|=
+literal|8188185695825749727L
+decl_stmt|;
 specifier|public
 name|LDIV
 parameter_list|()

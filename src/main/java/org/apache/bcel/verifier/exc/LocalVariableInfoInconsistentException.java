@@ -28,6 +28,15 @@ name|LocalVariableInfoInconsistentException
 extends|extends
 name|ClassConstraintException
 block|{
+specifier|private
+specifier|static
+specifier|final
+name|long
+name|serialVersionUID
+init|=
+operator|-
+literal|2833180480144304190L
+decl_stmt|;
 comment|/** 	 * Constructs a new LocalVariableInfoInconsistentException with null as its error message string. 	 */
 specifier|public
 name|LocalVariableInfoInconsistentException

@@ -26,6 +26,15 @@ name|IXOR
 extends|extends
 name|ArithmeticInstruction
 block|{
+specifier|private
+specifier|static
+specifier|final
+name|long
+name|serialVersionUID
+init|=
+operator|-
+literal|6524415552072672532L
+decl_stmt|;
 specifier|public
 name|IXOR
 parameter_list|()

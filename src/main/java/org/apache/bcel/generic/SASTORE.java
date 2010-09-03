@@ -28,6 +28,15 @@ name|ArrayInstruction
 implements|implements
 name|StackConsumer
 block|{
+specifier|private
+specifier|static
+specifier|final
+name|long
+name|serialVersionUID
+init|=
+operator|-
+literal|5187452948601765872L
+decl_stmt|;
 specifier|public
 name|SASTORE
 parameter_list|()

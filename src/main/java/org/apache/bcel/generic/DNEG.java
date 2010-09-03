@@ -26,6 +26,15 @@ name|DNEG
 extends|extends
 name|ArithmeticInstruction
 block|{
+specifier|private
+specifier|static
+specifier|final
+name|long
+name|serialVersionUID
+init|=
+operator|-
+literal|8860107731099493429L
+decl_stmt|;
 specifier|public
 name|DNEG
 parameter_list|()

@@ -29,6 +29,15 @@ name|AssertionViolatedException
 extends|extends
 name|RuntimeException
 block|{
+specifier|private
+specifier|static
+specifier|final
+name|long
+name|serialVersionUID
+init|=
+operator|-
+literal|129822266349567409L
+decl_stmt|;
 comment|/** The error message. */
 specifier|private
 name|String

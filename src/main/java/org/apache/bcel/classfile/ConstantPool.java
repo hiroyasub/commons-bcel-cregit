@@ -83,6 +83,15 @@ implements|,
 name|Serializable
 block|{
 specifier|private
+specifier|static
+specifier|final
+name|long
+name|serialVersionUID
+init|=
+operator|-
+literal|9093478476423540196L
+decl_stmt|;
+specifier|private
 name|int
 name|constant_pool_count
 decl_stmt|;

@@ -65,6 +65,15 @@ implements|,
 name|TypedInstruction
 block|{
 specifier|private
+specifier|static
+specifier|final
+name|long
+name|serialVersionUID
+init|=
+operator|-
+literal|3751746568458761719L
+decl_stmt|;
+specifier|private
 name|boolean
 name|wide
 decl_stmt|;

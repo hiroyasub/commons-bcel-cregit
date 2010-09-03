@@ -28,6 +28,14 @@ name|StackInstruction
 implements|implements
 name|PushInstruction
 block|{
+specifier|private
+specifier|static
+specifier|final
+name|long
+name|serialVersionUID
+init|=
+literal|2297553463589366154L
+decl_stmt|;
 specifier|public
 name|DUP
 parameter_list|()

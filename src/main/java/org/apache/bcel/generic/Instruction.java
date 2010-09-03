@@ -99,6 +99,15 @@ name|Cloneable
 implements|,
 name|Serializable
 block|{
+specifier|private
+specifier|static
+specifier|final
+name|long
+name|serialVersionUID
+init|=
+operator|-
+literal|2518741982574515847L
+decl_stmt|;
 specifier|protected
 name|short
 name|length

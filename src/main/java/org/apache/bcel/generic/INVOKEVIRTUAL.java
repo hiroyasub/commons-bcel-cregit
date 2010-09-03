@@ -50,6 +50,15 @@ name|INVOKEVIRTUAL
 extends|extends
 name|InvokeInstruction
 block|{
+specifier|private
+specifier|static
+specifier|final
+name|long
+name|serialVersionUID
+init|=
+operator|-
+literal|7355623307528443725L
+decl_stmt|;
 comment|/**      * Empty constructor needed for the Class.newInstance() statement in      * Instruction.readInstruction(). Not to be used otherwise.      */
 name|INVOKEVIRTUAL
 parameter_list|()

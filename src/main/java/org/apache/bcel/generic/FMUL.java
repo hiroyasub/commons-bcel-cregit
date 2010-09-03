@@ -26,6 +26,15 @@ name|FMUL
 extends|extends
 name|ArithmeticInstruction
 block|{
+specifier|private
+specifier|static
+specifier|final
+name|long
+name|serialVersionUID
+init|=
+operator|-
+literal|1981818566663824251L
+decl_stmt|;
 comment|/** Multiply floats      */
 specifier|public
 name|FMUL

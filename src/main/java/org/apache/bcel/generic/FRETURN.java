@@ -26,6 +26,15 @@ name|FRETURN
 extends|extends
 name|ReturnInstruction
 block|{
+specifier|private
+specifier|static
+specifier|final
+name|long
+name|serialVersionUID
+init|=
+operator|-
+literal|3630453809574277966L
+decl_stmt|;
 comment|/** Return float from method      */
 specifier|public
 name|FRETURN

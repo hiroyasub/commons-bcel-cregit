@@ -26,6 +26,15 @@ name|F2D
 extends|extends
 name|ConversionInstruction
 block|{
+specifier|private
+specifier|static
+specifier|final
+name|long
+name|serialVersionUID
+init|=
+operator|-
+literal|4668119344425861047L
+decl_stmt|;
 comment|/** Convert float to double      */
 specifier|public
 name|F2D

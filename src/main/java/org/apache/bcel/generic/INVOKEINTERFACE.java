@@ -100,6 +100,14 @@ extends|extends
 name|InvokeInstruction
 block|{
 specifier|private
+specifier|static
+specifier|final
+name|long
+name|serialVersionUID
+init|=
+literal|8198753714085379482L
+decl_stmt|;
+specifier|private
 name|int
 name|nargs
 decl_stmt|;

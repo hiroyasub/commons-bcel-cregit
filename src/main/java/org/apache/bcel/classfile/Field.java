@@ -89,6 +89,15 @@ name|FieldOrMethod
 block|{
 specifier|private
 specifier|static
+specifier|final
+name|long
+name|serialVersionUID
+init|=
+operator|-
+literal|4604082205545049134L
+decl_stmt|;
+specifier|private
+specifier|static
 name|BCELComparator
 name|_cmp
 init|=

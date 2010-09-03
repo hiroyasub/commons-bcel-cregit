@@ -26,6 +26,15 @@ name|DREM
 extends|extends
 name|ArithmeticInstruction
 block|{
+specifier|private
+specifier|static
+specifier|final
+name|long
+name|serialVersionUID
+init|=
+operator|-
+literal|3984082114153729887L
+decl_stmt|;
 comment|/** Remainder of doubles      */
 specifier|public
 name|DREM

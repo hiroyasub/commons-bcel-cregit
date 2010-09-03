@@ -94,6 +94,15 @@ name|io
 operator|.
 name|Serializable
 block|{
+specifier|private
+specifier|static
+specifier|final
+name|long
+name|serialVersionUID
+init|=
+operator|-
+literal|3585254135692924106L
+decl_stmt|;
 name|InstructionHandle
 name|next
 decl_stmt|,

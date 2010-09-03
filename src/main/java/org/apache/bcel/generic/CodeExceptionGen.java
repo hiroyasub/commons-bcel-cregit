@@ -50,6 +50,14 @@ operator|.
 name|Serializable
 block|{
 specifier|private
+specifier|static
+specifier|final
+name|long
+name|serialVersionUID
+init|=
+literal|6548901422158960190L
+decl_stmt|;
+specifier|private
 name|InstructionHandle
 name|start_pc
 decl_stmt|;

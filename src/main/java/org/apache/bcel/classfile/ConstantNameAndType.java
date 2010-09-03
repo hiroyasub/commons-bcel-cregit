@@ -70,6 +70,15 @@ extends|extends
 name|Constant
 block|{
 specifier|private
+specifier|static
+specifier|final
+name|long
+name|serialVersionUID
+init|=
+operator|-
+literal|7913354727264034451L
+decl_stmt|;
+specifier|private
 name|int
 name|name_index
 decl_stmt|;

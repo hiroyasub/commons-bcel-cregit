@@ -95,6 +95,15 @@ implements|implements
 name|Repository
 block|{
 specifier|private
+specifier|static
+specifier|final
+name|long
+name|serialVersionUID
+init|=
+operator|-
+literal|1052781833503868187L
+decl_stmt|;
+specifier|private
 name|java
 operator|.
 name|lang

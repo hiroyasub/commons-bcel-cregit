@@ -26,6 +26,15 @@ name|D2L
 extends|extends
 name|ConversionInstruction
 block|{
+specifier|private
+specifier|static
+specifier|final
+name|long
+name|serialVersionUID
+init|=
+operator|-
+literal|1985923584192796706L
+decl_stmt|;
 comment|/** Convert double to long      */
 specifier|public
 name|D2L

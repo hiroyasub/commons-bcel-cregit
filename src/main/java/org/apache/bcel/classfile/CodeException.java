@@ -86,6 +86,14 @@ implements|,
 name|Serializable
 block|{
 specifier|private
+specifier|static
+specifier|final
+name|long
+name|serialVersionUID
+init|=
+literal|2972500041254967221L
+decl_stmt|;
+specifier|private
 name|int
 name|start_pc
 decl_stmt|;

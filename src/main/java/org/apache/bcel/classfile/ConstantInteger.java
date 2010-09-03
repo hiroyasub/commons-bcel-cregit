@@ -72,6 +72,15 @@ implements|implements
 name|ConstantObject
 block|{
 specifier|private
+specifier|static
+specifier|final
+name|long
+name|serialVersionUID
+init|=
+operator|-
+literal|7040676276945754375L
+decl_stmt|;
+specifier|private
 name|int
 name|bytes
 decl_stmt|;

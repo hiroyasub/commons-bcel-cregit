@@ -70,6 +70,14 @@ extends|extends
 name|Attribute
 block|{
 specifier|private
+specifier|static
+specifier|final
+name|long
+name|serialVersionUID
+init|=
+literal|2045358830660883220L
+decl_stmt|;
+specifier|private
 name|int
 name|number_of_exceptions
 decl_stmt|;

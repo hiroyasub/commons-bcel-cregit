@@ -26,6 +26,15 @@ name|L2F
 extends|extends
 name|ConversionInstruction
 block|{
+specifier|private
+specifier|static
+specifier|final
+name|long
+name|serialVersionUID
+init|=
+operator|-
+literal|7181529985408901328L
+decl_stmt|;
 specifier|public
 name|L2F
 parameter_list|()

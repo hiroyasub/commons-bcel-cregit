@@ -26,6 +26,14 @@ name|DUP2_X1
 extends|extends
 name|StackInstruction
 block|{
+specifier|private
+specifier|static
+specifier|final
+name|long
+name|serialVersionUID
+init|=
+literal|4940667268525283202L
+decl_stmt|;
 specifier|public
 name|DUP2_X1
 parameter_list|()

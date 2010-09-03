@@ -41,6 +41,15 @@ name|FieldInstruction
 extends|extends
 name|FieldOrMethod
 block|{
+specifier|private
+specifier|static
+specifier|final
+name|long
+name|serialVersionUID
+init|=
+operator|-
+literal|7870956226459765817L
+decl_stmt|;
 comment|/**      * Empty constructor needed for the Class.newInstance() statement in      * Instruction.readInstruction(). Not to be used otherwise.      */
 name|FieldInstruction
 parameter_list|()

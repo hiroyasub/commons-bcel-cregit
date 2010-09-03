@@ -28,6 +28,15 @@ name|ArrayInstruction
 implements|implements
 name|StackConsumer
 block|{
+specifier|private
+specifier|static
+specifier|final
+name|long
+name|serialVersionUID
+init|=
+operator|-
+literal|3570157505504012648L
+decl_stmt|;
 comment|/**       * Store into int array      */
 specifier|public
 name|IASTORE

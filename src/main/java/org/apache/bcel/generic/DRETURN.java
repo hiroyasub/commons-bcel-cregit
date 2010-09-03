@@ -26,6 +26,14 @@ name|DRETURN
 extends|extends
 name|ReturnInstruction
 block|{
+specifier|private
+specifier|static
+specifier|final
+name|long
+name|serialVersionUID
+init|=
+literal|7442064109402271402L
+decl_stmt|;
 comment|/** Return double from method      */
 specifier|public
 name|DRETURN

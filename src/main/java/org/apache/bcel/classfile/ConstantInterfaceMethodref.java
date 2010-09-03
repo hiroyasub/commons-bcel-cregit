@@ -59,6 +59,15 @@ name|ConstantInterfaceMethodref
 extends|extends
 name|ConstantCP
 block|{
+specifier|private
+specifier|static
+specifier|final
+name|long
+name|serialVersionUID
+init|=
+operator|-
+literal|5311546335360612639L
+decl_stmt|;
 comment|/**      * Initialize from another object.      */
 specifier|public
 name|ConstantInterfaceMethodref

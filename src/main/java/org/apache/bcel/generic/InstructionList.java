@@ -167,6 +167,14 @@ implements|implements
 name|Serializable
 block|{
 specifier|private
+specifier|static
+specifier|final
+name|long
+name|serialVersionUID
+init|=
+literal|2651389055345707857L
+decl_stmt|;
+specifier|private
 name|InstructionHandle
 name|start
 init|=

@@ -47,6 +47,15 @@ block|{
 specifier|private
 specifier|static
 specifier|final
+name|long
+name|serialVersionUID
+init|=
+operator|-
+literal|1210011499635580258L
+decl_stmt|;
+specifier|private
+specifier|static
+specifier|final
 name|String
 index|[]
 name|short_names
