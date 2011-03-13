@@ -63,7 +63,7 @@ name|BranchInstruction
 implements|implements
 name|VariableLengthInstruction
 implements|,
-name|StackProducer
+name|StackConsumer
 block|{
 specifier|private
 specifier|static
