@@ -855,6 +855,12 @@ name|code
 operator|.
 name|length
 expr_stmt|;
+name|length
+operator|=
+name|calculateLength
+argument_list|()
+expr_stmt|;
+comment|// Adjust length
 block|}
 comment|/**      * @param exception_table exception table      */
 specifier|public
@@ -887,6 +893,12 @@ name|exception_table
 operator|.
 name|length
 expr_stmt|;
+name|length
+operator|=
+name|calculateLength
+argument_list|()
+expr_stmt|;
+comment|// Adjust length
 block|}
 comment|/**      * @param max_locals maximum number of local variables      */
 specifier|public
