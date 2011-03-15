@@ -378,7 +378,7 @@ argument_list|)
 expr_stmt|;
 name|v
 operator|.
-name|visitStackProducer
+name|visitStackConsumer
 argument_list|(
 name|this
 argument_list|)
