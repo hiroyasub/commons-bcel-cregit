@@ -43,11 +43,11 @@ expr_stmt|;
 block|}
 class|class
 name|X
-block|{ 	}
+block|{     }
 specifier|static
 class|class
 name|Y
-block|{ 	}
+block|{     }
 block|}
 end_class
 
