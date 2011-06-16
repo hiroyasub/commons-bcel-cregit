@@ -479,8 +479,8 @@ comment|//        int bytes = file.available();
 comment|//        byte[] buf = new byte[bytes];
 comment|//        file.read(buf);
 comment|//        if(!(is_zip&& (buf.length == 1))) {
-comment|//  	System.err.println("WARNING: Trailing garbage at end of " + file_name);
-comment|//  	System.err.println(bytes + " extra bytes: " + Utility.toHexString(buf));
+comment|//      System.err.println("WARNING: Trailing garbage at end of " + file_name);
+comment|//      System.err.println(bytes + " extra bytes: " + Utility.toHexString(buf));
 comment|//        }
 comment|//      }
 block|}
