@@ -370,7 +370,7 @@ name|getClassNames
 argument_list|()
 return|;
 block|}
-comment|/** 	 * Start traversal using DescendingVisitor pattern. 	 */
+comment|/**      * Start traversal using DescendingVisitor pattern.      */
 specifier|public
 name|void
 name|start
@@ -789,7 +789,7 @@ return|return
 name|_ignored
 return|;
 block|}
-comment|/** 	 * Set the value of _ignored. 	 *  	 * @param v 	 *          Value to assign to _ignored. 	 */
+comment|/**      * Set the value of _ignored.      *       * @param v      *          Value to assign to _ignored.      */
 specifier|public
 name|void
 name|setIgnored

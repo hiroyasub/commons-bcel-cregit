@@ -402,7 +402,7 @@ argument_list|,
 literal|"(Ljava/lang/String;)V"
 argument_list|)
 expr_stmt|;
-comment|/* Patch all methods. 	   */
+comment|/* Patch all methods.        */
 name|Method
 index|[]
 name|methods
@@ -443,7 +443,7 @@ index|]
 argument_list|)
 expr_stmt|;
 block|}
-comment|/* Finally dump it back to a file. 	   */
+comment|/* Finally dump it back to a file.        */
 name|java_class
 operator|.
 name|setConstantPool
