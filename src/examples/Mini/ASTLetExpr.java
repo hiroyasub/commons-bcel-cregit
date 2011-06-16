@@ -231,7 +231,7 @@ name|length
 operator|/
 literal|2
 decl_stmt|;
-comment|/* length must be a multiple of  					 * two (ident = expr) + 1 (body expr) */
+comment|/* length must be a multiple of                                           * two (ident = expr) + 1 (body expr) */
 name|idents
 operator|=
 operator|new
