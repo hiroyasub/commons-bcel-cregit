@@ -401,8 +401,9 @@ operator|.
 name|CONSTANT_Integer
 case|:
 return|return
-operator|new
 name|Integer
+operator|.
+name|valueOf
 argument_list|(
 operator|(
 operator|(

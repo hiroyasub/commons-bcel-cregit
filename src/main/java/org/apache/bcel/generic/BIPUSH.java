@@ -193,8 +193,9 @@ name|getValue
 parameter_list|()
 block|{
 return|return
-operator|new
 name|Integer
+operator|.
+name|valueOf
 argument_list|(
 name|b
 argument_list|)

@@ -663,8 +663,9 @@ condition|)
 block|{
 name|value
 operator|=
-operator|new
 name|Integer
+operator|.
+name|valueOf
 argument_list|(
 name|i
 argument_list|)
@@ -695,8 +696,9 @@ condition|)
 block|{
 name|value
 operator|=
-operator|new
 name|Integer
+operator|.
+name|valueOf
 argument_list|(
 name|s
 argument_list|)
@@ -727,8 +729,9 @@ condition|)
 block|{
 name|value
 operator|=
-operator|new
 name|Integer
+operator|.
+name|valueOf
 argument_list|(
 name|c
 argument_list|)
@@ -759,8 +762,9 @@ condition|)
 block|{
 name|value
 operator|=
-operator|new
 name|Integer
+operator|.
+name|valueOf
 argument_list|(
 name|b
 argument_list|)
@@ -789,8 +793,9 @@ condition|)
 block|{
 name|value
 operator|=
-operator|new
 name|Integer
+operator|.
+name|valueOf
 argument_list|(
 literal|1
 argument_list|)

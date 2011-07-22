@@ -182,8 +182,9 @@ operator|.
 name|CONSTANT_Long
 case|:
 return|return
-operator|new
 name|Long
+operator|.
+name|valueOf
 argument_list|(
 operator|(
 operator|(

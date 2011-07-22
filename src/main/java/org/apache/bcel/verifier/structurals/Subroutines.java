@@ -1096,8 +1096,9 @@ name|s
 operator|.
 name|add
 argument_list|(
-operator|new
 name|Integer
+operator|.
+name|valueOf
 argument_list|(
 name|lvs
 index|[
@@ -1246,8 +1247,9 @@ name|acc
 operator|.
 name|add
 argument_list|(
-operator|new
 name|Integer
+operator|.
+name|valueOf
 argument_list|(
 name|idx
 argument_list|)
@@ -1300,8 +1302,9 @@ name|acc
 operator|.
 name|add
 argument_list|(
-operator|new
 name|Integer
+operator|.
+name|valueOf
 argument_list|(
 name|idx
 operator|+
@@ -1542,8 +1545,9 @@ specifier|final
 name|Integer
 name|WHITE
 init|=
-operator|new
 name|Integer
+operator|.
+name|valueOf
 argument_list|(
 literal|0
 argument_list|)
@@ -1554,8 +1558,9 @@ specifier|final
 name|Integer
 name|GRAY
 init|=
-operator|new
 name|Integer
+operator|.
+name|valueOf
 argument_list|(
 literal|1
 argument_list|)
@@ -1566,8 +1571,9 @@ specifier|final
 name|Integer
 name|BLACK
 init|=
-operator|new
 name|Integer
+operator|.
+name|valueOf
 argument_list|(
 literal|2
 argument_list|)
@@ -2493,8 +2499,9 @@ name|set
 operator|.
 name|add
 argument_list|(
-operator|new
 name|Integer
+operator|.
+name|valueOf
 argument_list|(
 name|index
 argument_list|)
@@ -2553,8 +2560,9 @@ name|set
 operator|.
 name|remove
 argument_list|(
-operator|new
 name|Integer
+operator|.
+name|valueOf
 argument_list|(
 name|index
 argument_list|)

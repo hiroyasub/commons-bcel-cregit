@@ -314,8 +314,9 @@ name|tl
 operator|.
 name|set
 argument_list|(
-operator|new
 name|Integer
+operator|.
+name|valueOf
 argument_list|(
 name|value
 argument_list|)

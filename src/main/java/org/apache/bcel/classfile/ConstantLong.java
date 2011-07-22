@@ -242,8 +242,9 @@ name|cp
 parameter_list|)
 block|{
 return|return
-operator|new
 name|Long
+operator|.
+name|valueOf
 argument_list|(
 name|bytes
 argument_list|)
