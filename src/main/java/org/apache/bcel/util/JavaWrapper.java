@@ -183,6 +183,9 @@ throws|throws
 name|ClassNotFoundException
 block|{
 name|Class
+argument_list|<
+name|?
+argument_list|>
 name|cl
 init|=
 name|loader
@@ -228,6 +231,9 @@ name|getModifiers
 argument_list|()
 decl_stmt|;
 name|Class
+argument_list|<
+name|?
+argument_list|>
 name|r
 init|=
 name|method

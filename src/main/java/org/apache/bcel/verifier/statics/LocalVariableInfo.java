@@ -69,19 +69,39 @@ block|{
 comment|/** The types database. KEY: String representing the offset integer. */
 specifier|private
 name|Hashtable
+argument_list|<
+name|String
+argument_list|,
+name|Type
+argument_list|>
 name|types
 init|=
 operator|new
 name|Hashtable
+argument_list|<
+name|String
+argument_list|,
+name|Type
+argument_list|>
 argument_list|()
 decl_stmt|;
 comment|/** The names database. KEY: String representing the offset integer. */
 specifier|private
 name|Hashtable
+argument_list|<
+name|String
+argument_list|,
+name|String
+argument_list|>
 name|names
 init|=
 operator|new
 name|Hashtable
+argument_list|<
+name|String
+argument_list|,
+name|String
+argument_list|>
 argument_list|()
 decl_stmt|;
 comment|/** 	 * Adds a name of a local variable and a certain slot to our 'names' 	 * (Hashtable) database. 	 */
@@ -156,9 +176,6 @@ name|offset
 parameter_list|)
 block|{
 return|return
-operator|(
-name|Type
-operator|)
 name|types
 operator|.
 name|get
@@ -182,9 +199,6 @@ name|offset
 parameter_list|)
 block|{
 return|return
-operator|(
-name|String
-operator|)
 operator|(
 name|names
 operator|.

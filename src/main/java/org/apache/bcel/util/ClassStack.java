@@ -64,10 +64,16 @@ literal|6126079269396985982L
 decl_stmt|;
 specifier|private
 name|Stack
+argument_list|<
+name|JavaClass
+argument_list|>
 name|stack
 init|=
 operator|new
 name|Stack
+argument_list|<
+name|JavaClass
+argument_list|>
 argument_list|()
 decl_stmt|;
 specifier|public
@@ -92,9 +98,6 @@ name|pop
 parameter_list|()
 block|{
 return|return
-operator|(
-name|JavaClass
-operator|)
 name|stack
 operator|.
 name|pop
@@ -107,9 +110,6 @@ name|top
 parameter_list|()
 block|{
 return|return
-operator|(
-name|JavaClass
-operator|)
 name|stack
 operator|.
 name|peek

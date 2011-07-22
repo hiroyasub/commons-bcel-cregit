@@ -29,6 +29,16 @@ end_import
 
 begin_import
 import|import
+name|java
+operator|.
+name|util
+operator|.
+name|List
+import|;
+end_import
+
+begin_import
+import|import
 name|org
 operator|.
 name|apache
@@ -73,6 +83,9 @@ name|Frame
 name|inFrame
 parameter_list|,
 name|ArrayList
+argument_list|<
+name|InstructionContext
+argument_list|>
 name|executionPredecessors
 parameter_list|,
 name|InstConstraintVisitor
@@ -90,7 +103,10 @@ comment|/** 	 * This method returns the outgoing execution frame situation; 	 * 
 name|Frame
 name|getOutFrame
 parameter_list|(
-name|ArrayList
+name|List
+argument_list|<
+name|InstructionContext
+argument_list|>
 name|executionPredecessors
 parameter_list|)
 function_decl|;

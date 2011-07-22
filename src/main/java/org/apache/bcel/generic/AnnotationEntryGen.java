@@ -128,7 +128,9 @@ name|typeIndex
 decl_stmt|;
 specifier|private
 name|List
-comment|/* ElementNameValuePairGen */
+argument_list|<
+name|ElementValuePairGen
+argument_list|>
 name|evs
 decl_stmt|;
 specifier|private
@@ -213,6 +215,9 @@ expr_stmt|;
 block|}
 specifier|private
 name|List
+argument_list|<
+name|ElementValuePairGen
+argument_list|>
 name|copyValues
 parameter_list|(
 name|ElementValuePair
@@ -227,10 +232,16 @@ name|copyPoolEntries
 parameter_list|)
 block|{
 name|List
+argument_list|<
+name|ElementValuePairGen
+argument_list|>
 name|out
 init|=
 operator|new
 name|ArrayList
+argument_list|<
+name|ElementValuePairGen
+argument_list|>
 argument_list|()
 decl_stmt|;
 name|int
@@ -322,6 +333,9 @@ decl_stmt|;
 for|for
 control|(
 name|Iterator
+argument_list|<
+name|ElementValuePairGen
+argument_list|>
 name|iter
 init|=
 name|evs
@@ -339,9 +353,6 @@ block|{
 name|ElementValuePairGen
 name|element
 init|=
-operator|(
-name|ElementValuePairGen
-operator|)
 name|iter
 operator|.
 name|next
@@ -369,7 +380,9 @@ name|ObjectType
 name|type
 parameter_list|,
 name|List
-comment|/* ElementNameValuePairGen */
+argument_list|<
+name|ElementValuePairGen
+argument_list|>
 name|elements
 parameter_list|,
 name|boolean
@@ -558,9 +571,6 @@ block|{
 name|ElementValuePairGen
 name|envp
 init|=
-operator|(
-name|ElementValuePairGen
-operator|)
 name|evs
 operator|.
 name|get
@@ -595,6 +605,9 @@ name|evs
 operator|=
 operator|new
 name|ArrayList
+argument_list|<
+name|ElementValuePairGen
+argument_list|>
 argument_list|()
 expr_stmt|;
 name|evs
@@ -658,6 +671,9 @@ block|}
 comment|/** 	 * Returns list of ElementNameValuePair objects 	 */
 specifier|public
 name|List
+argument_list|<
+name|ElementValuePairGen
+argument_list|>
 name|getValues
 parameter_list|()
 block|{

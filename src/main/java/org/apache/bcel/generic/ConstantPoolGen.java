@@ -1050,10 +1050,20 @@ block|}
 block|}
 specifier|private
 name|Map
+argument_list|<
+name|String
+argument_list|,
+name|Index
+argument_list|>
 name|string_table
 init|=
 operator|new
 name|HashMap
+argument_list|<
+name|String
+argument_list|,
+name|Index
+argument_list|>
 argument_list|()
 decl_stmt|;
 comment|/**       * Look for ConstantString in ConstantPool containing String `str'.      *      * @param str String to search for      * @return index on success, -1 otherwise      */
@@ -1068,9 +1078,6 @@ block|{
 name|Index
 name|index
 init|=
-operator|(
-name|Index
-operator|)
 name|string_table
 operator|.
 name|get
@@ -1188,10 +1195,20 @@ return|;
 block|}
 specifier|private
 name|Map
+argument_list|<
+name|String
+argument_list|,
+name|Index
+argument_list|>
 name|class_table
 init|=
 operator|new
 name|HashMap
+argument_list|<
+name|String
+argument_list|,
+name|Index
+argument_list|>
 argument_list|()
 decl_stmt|;
 comment|/**      * Look for ConstantClass in ConstantPool named `str'.      *      * @param str String to search for      * @return index on success, -1 otherwise      */
@@ -1206,9 +1223,6 @@ block|{
 name|Index
 name|index
 init|=
-operator|(
-name|Index
-operator|)
 name|class_table
 operator|.
 name|get
@@ -1645,10 +1659,20 @@ return|;
 block|}
 specifier|private
 name|Map
+argument_list|<
+name|String
+argument_list|,
+name|Index
+argument_list|>
 name|utf8_table
 init|=
 operator|new
 name|HashMap
+argument_list|<
+name|String
+argument_list|,
+name|Index
+argument_list|>
 argument_list|()
 decl_stmt|;
 comment|/**       * Look for ConstantUtf8 in ConstantPool.      *      * @param n Utf8 string to look for      * @return index on success, -1 otherwise      */
@@ -1663,9 +1687,6 @@ block|{
 name|Index
 name|index
 init|=
-operator|(
-name|Index
-operator|)
 name|utf8_table
 operator|.
 name|get
@@ -2035,10 +2056,20 @@ return|;
 block|}
 specifier|private
 name|Map
+argument_list|<
+name|String
+argument_list|,
+name|Index
+argument_list|>
 name|n_a_t_table
 init|=
 operator|new
 name|HashMap
+argument_list|<
+name|String
+argument_list|,
+name|Index
+argument_list|>
 argument_list|()
 decl_stmt|;
 comment|/**       * Look for ConstantNameAndType in ConstantPool.      *      * @param name of variable/method      * @param signature of variable/method      * @return index on success, -1 otherwise      */
@@ -2056,9 +2087,6 @@ block|{
 name|Index
 name|_index
 init|=
-operator|(
-name|Index
-operator|)
 name|n_a_t_table
 operator|.
 name|get
@@ -2202,10 +2230,20 @@ return|;
 block|}
 specifier|private
 name|Map
+argument_list|<
+name|String
+argument_list|,
+name|Index
+argument_list|>
 name|cp_table
 init|=
 operator|new
 name|HashMap
+argument_list|<
+name|String
+argument_list|,
+name|Index
+argument_list|>
 argument_list|()
 decl_stmt|;
 comment|/**       * Look for ConstantMethodref in ConstantPool.      *      * @param class_name Where to find method      * @param method_name Guess what      * @param signature return and argument types      * @return index on success, -1 otherwise      */
@@ -2226,9 +2264,6 @@ block|{
 name|Index
 name|index
 init|=
-operator|(
-name|Index
-operator|)
 name|cp_table
 operator|.
 name|get
@@ -2458,9 +2493,6 @@ block|{
 name|Index
 name|index
 init|=
-operator|(
-name|Index
-operator|)
 name|cp_table
 operator|.
 name|get
@@ -2690,9 +2722,6 @@ block|{
 name|Index
 name|index
 init|=
-operator|(
-name|Index
-operator|)
 name|cp_table
 operator|.
 name|get

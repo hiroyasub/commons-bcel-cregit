@@ -48,13 +48,18 @@ block|{
 comment|/** The (warning) messages. */
 specifier|private
 name|List
+argument_list|<
+name|String
+argument_list|>
 name|messages
 init|=
 operator|new
 name|ArrayList
+argument_list|<
+name|String
+argument_list|>
 argument_list|()
 decl_stmt|;
-comment|//Type of elements: String
 comment|/** The VerificationResult cache. */
 specifier|private
 name|VerificationResult
@@ -121,10 +126,6 @@ argument_list|()
 expr_stmt|;
 comment|// create messages if not already done (cached!)
 return|return
-operator|(
-name|String
-index|[]
-operator|)
 name|messages
 operator|.
 name|toArray

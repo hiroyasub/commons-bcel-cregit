@@ -79,10 +79,20 @@ specifier|private
 specifier|static
 specifier|final
 name|Map
+argument_list|<
+name|String
+argument_list|,
+name|Verifier
+argument_list|>
 name|hashMap
 init|=
 operator|new
 name|HashMap
+argument_list|<
+name|String
+argument_list|,
+name|Verifier
+argument_list|>
 argument_list|()
 decl_stmt|;
 comment|/**      * The VerifierFactoryObserver instances that observe the VerifierFactory.      */
@@ -90,10 +100,16 @@ specifier|private
 specifier|static
 specifier|final
 name|List
+argument_list|<
+name|VerifierFactoryObserver
+argument_list|>
 name|observers
 init|=
 operator|new
 name|Vector
+argument_list|<
+name|VerifierFactoryObserver
+argument_list|>
 argument_list|()
 decl_stmt|;
 comment|/**      * The VerifierFactory is not instantiable.      */
@@ -115,17 +131,12 @@ block|{
 name|Verifier
 name|v
 init|=
-operator|(
-name|Verifier
-operator|)
-operator|(
 name|hashMap
 operator|.
 name|get
 argument_list|(
 name|fully_qualified_classname
 argument_list|)
-operator|)
 decl_stmt|;
 if|if
 condition|(
@@ -173,6 +184,9 @@ parameter_list|)
 block|{
 comment|// notify the observers
 name|Iterator
+argument_list|<
+name|VerifierFactoryObserver
+argument_list|>
 name|i
 init|=
 name|observers
@@ -191,9 +205,6 @@ block|{
 name|VerifierFactoryObserver
 name|vfo
 init|=
-operator|(
-name|VerifierFactoryObserver
-operator|)
 name|i
 operator|.
 name|next
@@ -233,11 +244,6 @@ argument_list|()
 index|]
 decl_stmt|;
 return|return
-operator|(
-name|Verifier
-index|[]
-operator|)
-operator|(
 name|hashMap
 operator|.
 name|values
@@ -247,7 +253,6 @@ name|toArray
 argument_list|(
 name|vs
 argument_list|)
-operator|)
 return|;
 comment|// Because vs is big enough, vs is used to store the values into and returned!
 block|}

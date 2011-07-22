@@ -74,10 +74,16 @@ literal|5600397075672780806L
 decl_stmt|;
 specifier|protected
 name|List
+argument_list|<
+name|JavaClass
+argument_list|>
 name|vec
 init|=
 operator|new
 name|ArrayList
+argument_list|<
+name|JavaClass
+argument_list|>
 argument_list|()
 decl_stmt|;
 specifier|public
@@ -105,9 +111,6 @@ name|index
 parameter_list|)
 block|{
 return|return
-operator|(
-name|JavaClass
-operator|)
 name|vec
 operator|.
 name|get

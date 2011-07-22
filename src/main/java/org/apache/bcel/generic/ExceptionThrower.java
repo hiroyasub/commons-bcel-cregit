@@ -30,6 +30,9 @@ operator|.
 name|lang
 operator|.
 name|Class
+argument_list|<
+name|?
+argument_list|>
 index|[]
 name|getExceptions
 parameter_list|()

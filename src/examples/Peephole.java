@@ -374,6 +374,10 @@ decl_stmt|;
 for|for
 control|(
 name|Iterator
+argument_list|<
+name|InstructionHandle
+index|[]
+argument_list|>
 name|e
 init|=
 name|f
@@ -394,10 +398,6 @@ name|InstructionHandle
 index|[]
 name|match
 init|=
-operator|(
-name|InstructionHandle
-index|[]
-operator|)
 name|e
 operator|.
 name|next

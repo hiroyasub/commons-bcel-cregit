@@ -63,6 +63,16 @@ name|java
 operator|.
 name|util
 operator|.
+name|List
+import|;
+end_import
+
+begin_import
+import|import
+name|java
+operator|.
+name|util
+operator|.
 name|Map
 import|;
 end_import
@@ -341,10 +351,16 @@ decl_stmt|;
 comment|/** The instructions that belong to this subroutine. */
 specifier|private
 name|Set
+argument_list|<
+name|InstructionHandle
+argument_list|>
 name|instructions
 init|=
 operator|new
 name|HashSet
+argument_list|<
+name|InstructionHandle
+argument_list|>
 argument_list|()
 decl_stmt|;
 comment|// Elements: InstructionHandle
@@ -369,10 +385,16 @@ block|}
 comment|/** 		 * The JSR or JSR_W instructions that define this 		 * subroutine by targeting it. 		 */
 specifier|private
 name|Set
+argument_list|<
+name|InstructionHandle
+argument_list|>
 name|theJSRs
 init|=
 operator|new
 name|HashSet
+argument_list|<
+name|InstructionHandle
+argument_list|>
 argument_list|()
 decl_stmt|;
 comment|/** 		 * The RET instruction that leaves this subroutine. 		 */
@@ -517,6 +539,9 @@ argument_list|)
 throw|;
 block|}
 name|Iterator
+argument_list|<
+name|InstructionHandle
+argument_list|>
 name|iter
 init|=
 name|instructions
@@ -540,9 +565,6 @@ block|{
 name|InstructionHandle
 name|actual
 init|=
-operator|(
-name|InstructionHandle
-operator|)
 name|iter
 operator|.
 name|next
@@ -680,18 +702,12 @@ argument_list|()
 index|]
 decl_stmt|;
 return|return
-operator|(
-name|InstructionHandle
-index|[]
-operator|)
-operator|(
 name|theJSRs
 operator|.
 name|toArray
 argument_list|(
 name|jsrs
 argument_list|)
-operator|)
 return|;
 block|}
 comment|/** 		 * Adds a new JSR or JSR_W that has this subroutine as its target. 		 */
@@ -846,10 +862,6 @@ argument_list|()
 index|]
 decl_stmt|;
 return|return
-operator|(
-name|InstructionHandle
-index|[]
-operator|)
 name|instructions
 operator|.
 name|toArray
@@ -897,10 +909,16 @@ name|getRecursivelyAccessedLocalsIndices
 parameter_list|()
 block|{
 name|Set
+argument_list|<
+name|Integer
+argument_list|>
 name|s
 init|=
 operator|new
 name|HashSet
+argument_list|<
+name|Integer
+argument_list|>
 argument_list|()
 decl_stmt|;
 name|int
@@ -931,8 +949,9 @@ name|s
 operator|.
 name|add
 argument_list|(
-operator|new
 name|Integer
+operator|.
+name|valueOf
 argument_list|(
 name|lvs
 index|[
@@ -966,6 +985,9 @@ argument_list|()
 index|]
 decl_stmt|;
 name|Iterator
+argument_list|<
+name|Integer
+argument_list|>
 name|i
 init|=
 name|s
@@ -995,15 +1017,10 @@ index|[
 name|j
 index|]
 operator|=
-operator|(
-operator|(
-name|Integer
-operator|)
 name|i
 operator|.
 name|next
 argument_list|()
-operator|)
 operator|.
 name|intValue
 argument_list|()
@@ -1019,6 +1036,9 @@ name|void
 name|_getRecursivelyAccessedLocalsIndicesHelper
 parameter_list|(
 name|Set
+argument_list|<
+name|Integer
+argument_list|>
 name|s
 parameter_list|,
 name|Subroutine
@@ -1127,10 +1147,16 @@ parameter_list|()
 block|{
 comment|//TODO: Implement caching.
 name|Set
+argument_list|<
+name|Integer
+argument_list|>
 name|acc
 init|=
 operator|new
 name|HashSet
+argument_list|<
+name|Integer
+argument_list|>
 argument_list|()
 decl_stmt|;
 if|if
@@ -1152,7 +1178,11 @@ literal|"This subroutine object must be built up completely before calculating a
 argument_list|)
 throw|;
 block|}
+block|{
 name|Iterator
+argument_list|<
+name|InstructionHandle
+argument_list|>
 name|i
 init|=
 name|instructions
@@ -1171,9 +1201,6 @@ block|{
 name|InstructionHandle
 name|ih
 init|=
-operator|(
-name|InstructionHandle
-operator|)
 name|i
 operator|.
 name|next
@@ -1303,6 +1330,8 @@ throw|;
 block|}
 block|}
 block|}
+block|}
+block|{
 name|int
 index|[]
 name|ret
@@ -1316,13 +1345,17 @@ name|size
 argument_list|()
 index|]
 decl_stmt|;
+name|Iterator
+argument_list|<
+name|Integer
+argument_list|>
 name|i
-operator|=
+init|=
 name|acc
 operator|.
 name|iterator
 argument_list|()
-expr_stmt|;
+decl_stmt|;
 name|int
 name|j
 init|=
@@ -1345,15 +1378,10 @@ index|[
 name|j
 index|]
 operator|=
-operator|(
-operator|(
-name|Integer
-operator|)
 name|i
 operator|.
 name|next
 argument_list|()
-operator|)
 operator|.
 name|intValue
 argument_list|()
@@ -1363,6 +1391,7 @@ return|return
 name|ret
 return|;
 block|}
+block|}
 comment|/* 		 * Satisfies Subroutine.subSubs(). 		 */
 specifier|public
 name|Subroutine
@@ -1371,13 +1400,22 @@ name|subSubs
 parameter_list|()
 block|{
 name|Set
+argument_list|<
+name|Subroutine
+argument_list|>
 name|h
 init|=
 operator|new
 name|HashSet
+argument_list|<
+name|Subroutine
+argument_list|>
 argument_list|()
 decl_stmt|;
 name|Iterator
+argument_list|<
+name|InstructionHandle
+argument_list|>
 name|i
 init|=
 name|instructions
@@ -1396,15 +1434,10 @@ block|{
 name|Instruction
 name|inst
 init|=
-operator|(
-operator|(
-name|InstructionHandle
-operator|)
 name|i
 operator|.
 name|next
 argument_list|()
-operator|)
 operator|.
 name|getInstruction
 argument_list|()
@@ -1455,10 +1488,6 @@ argument_list|()
 index|]
 decl_stmt|;
 return|return
-operator|(
-name|Subroutine
-index|[]
-operator|)
 name|h
 operator|.
 name|toArray
@@ -1546,10 +1575,20 @@ decl_stmt|;
 comment|/** 	 * The map containing the subroutines found. 	 * Key: InstructionHandle of the leader of the subroutine. 	 * Elements: SubroutineImpl objects. 	 */
 specifier|private
 name|Map
+argument_list|<
+name|InstructionHandle
+argument_list|,
+name|Subroutine
+argument_list|>
 name|subroutines
 init|=
 operator|new
 name|HashMap
+argument_list|<
+name|InstructionHandle
+argument_list|,
+name|Subroutine
+argument_list|>
 argument_list|()
 decl_stmt|;
 comment|/** 	 * This is referring to a special subroutine, namely the 	 * top level. This is not really a subroutine but we use 	 * it to distinguish between top level instructions and 	 * unreachable instructions. 	 */
@@ -1596,10 +1635,16 @@ argument_list|()
 expr_stmt|;
 comment|// Calculate "real" subroutines.
 name|Set
+argument_list|<
+name|InstructionHandle
+argument_list|>
 name|sub_leaders
 init|=
 operator|new
 name|HashSet
+argument_list|<
+name|InstructionHandle
+argument_list|>
 argument_list|()
 decl_stmt|;
 comment|// Elements: InstructionHandle
@@ -1657,6 +1702,9 @@ block|}
 block|}
 comment|// Build up the database.
 name|Iterator
+argument_list|<
+name|InstructionHandle
+argument_list|>
 name|iter
 init|=
 name|sub_leaders
@@ -1682,15 +1730,10 @@ decl_stmt|;
 name|InstructionHandle
 name|astore
 init|=
-operator|(
-name|InstructionHandle
-operator|)
-operator|(
 name|iter
 operator|.
 name|next
 argument_list|()
-operator|)
 decl_stmt|;
 name|sr
 operator|.
@@ -1821,18 +1864,34 @@ block|}
 comment|// Now do a BFS from every subroutine leader to find all the
 comment|// instructions that belong to a subroutine.
 name|Set
+argument_list|<
+name|InstructionHandle
+argument_list|>
 name|instructions_assigned
 init|=
 operator|new
 name|HashSet
+argument_list|<
+name|InstructionHandle
+argument_list|>
 argument_list|()
 decl_stmt|;
 comment|// we don't want to assign an instruction to two or more Subroutine objects.
 name|Map
+argument_list|<
+name|InstructionHandle
+argument_list|,
+name|Integer
+argument_list|>
 name|colors
 init|=
 operator|new
 name|HashMap
+argument_list|<
+name|InstructionHandle
+argument_list|,
+name|Integer
+argument_list|>
 argument_list|()
 decl_stmt|;
 comment|//Graph colouring. Key: InstructionHandle, Value: Integer .
@@ -1855,15 +1914,10 @@ comment|// Do some BFS with "actual" as the root of the graph.
 name|InstructionHandle
 name|actual
 init|=
-operator|(
-name|InstructionHandle
-operator|)
-operator|(
 name|iter
 operator|.
 name|next
 argument_list|()
-operator|)
 decl_stmt|;
 comment|// Init colors
 for|for
@@ -1906,11 +1960,17 @@ name|GRAY
 argument_list|)
 expr_stmt|;
 comment|// Init Queue
-name|ArrayList
+name|List
+argument_list|<
+name|InstructionHandle
+argument_list|>
 name|Q
 init|=
 operator|new
 name|ArrayList
+argument_list|<
+name|InstructionHandle
+argument_list|>
 argument_list|()
 decl_stmt|;
 name|Q
@@ -1994,9 +2054,6 @@ block|{
 name|InstructionHandle
 name|u
 init|=
-operator|(
-name|InstructionHandle
-operator|)
 name|Q
 operator|.
 name|remove
@@ -2032,10 +2089,6 @@ control|)
 block|{
 if|if
 condition|(
-operator|(
-operator|(
-name|Integer
-operator|)
 name|colors
 operator|.
 name|get
@@ -2045,7 +2098,6 @@ index|[
 name|i
 index|]
 argument_list|)
-operator|)
 operator|==
 name|WHITE
 condition|)
@@ -2264,6 +2316,9 @@ condition|)
 block|{
 comment|// Note the inclusive/inclusive notation of "generic API" exception handlers!
 name|Iterator
+argument_list|<
+name|Subroutine
+argument_list|>
 name|subs
 init|=
 name|subroutines
@@ -2285,9 +2340,6 @@ block|{
 name|Subroutine
 name|sub
 init|=
-operator|(
-name|Subroutine
-operator|)
 name|subs
 operator|.
 name|next
@@ -2362,6 +2414,9 @@ argument_list|()
 argument_list|,
 operator|new
 name|HashSet
+argument_list|<
+name|Integer
+argument_list|>
 argument_list|()
 argument_list|)
 expr_stmt|;
@@ -2375,6 +2430,9 @@ name|Subroutine
 name|sub
 parameter_list|,
 name|Set
+argument_list|<
+name|Integer
+argument_list|>
 name|set
 parameter_list|)
 block|{
@@ -2516,9 +2574,6 @@ block|{
 name|Subroutine
 name|ret
 init|=
-operator|(
-name|Subroutine
-operator|)
 name|subroutines
 operator|.
 name|get
@@ -2570,6 +2625,9 @@ name|any
 parameter_list|)
 block|{
 name|Iterator
+argument_list|<
+name|Subroutine
+argument_list|>
 name|i
 init|=
 name|subroutines
@@ -2591,9 +2649,6 @@ block|{
 name|Subroutine
 name|s
 init|=
-operator|(
-name|Subroutine
-operator|)
 name|i
 operator|.
 name|next

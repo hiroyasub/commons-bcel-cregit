@@ -64,10 +64,16 @@ literal|685144104322420292L
 decl_stmt|;
 specifier|protected
 name|LinkedList
+argument_list|<
+name|JavaClass
+argument_list|>
 name|vec
 init|=
 operator|new
 name|LinkedList
+argument_list|<
+name|JavaClass
+argument_list|>
 argument_list|()
 decl_stmt|;
 specifier|public
@@ -92,9 +98,6 @@ name|dequeue
 parameter_list|()
 block|{
 return|return
-operator|(
-name|JavaClass
-operator|)
 name|vec
 operator|.
 name|removeFirst

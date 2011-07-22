@@ -43,6 +43,16 @@ name|java
 operator|.
 name|util
 operator|.
+name|List
+import|;
+end_import
+
+begin_import
+import|import
+name|java
+operator|.
+name|util
+operator|.
 name|Map
 import|;
 end_import
@@ -248,18 +258,31 @@ decl_stmt|;
 comment|/** 		 * The 'incoming' execution Frames. 		 */
 specifier|private
 name|Map
+argument_list|<
+name|InstructionContext
+argument_list|,
+name|Frame
+argument_list|>
 name|inFrames
 decl_stmt|;
 comment|// key: the last-executed JSR
 comment|/** 		 * The 'outgoing' execution Frames. 		 */
 specifier|private
 name|Map
+argument_list|<
+name|InstructionContext
+argument_list|,
+name|Frame
+argument_list|>
 name|outFrames
 decl_stmt|;
 comment|// key: the last-executed JSR
 comment|/** 		 * The 'execution predecessors' - a list of type InstructionContext  		 * of those instances that have been execute()d before in that order. 		 */
 specifier|private
-name|ArrayList
+name|List
+argument_list|<
+name|InstructionContext
+argument_list|>
 name|executionPredecessors
 init|=
 literal|null
@@ -295,21 +318,23 @@ expr_stmt|;
 name|inFrames
 operator|=
 operator|new
-name|java
-operator|.
-name|util
-operator|.
 name|HashMap
+argument_list|<
+name|InstructionContext
+argument_list|,
+name|Frame
+argument_list|>
 argument_list|()
 expr_stmt|;
 name|outFrames
 operator|=
 operator|new
-name|java
-operator|.
-name|util
-operator|.
 name|HashMap
+argument_list|<
+name|InstructionContext
+argument_list|,
+name|Frame
+argument_list|>
 argument_list|()
 expr_stmt|;
 block|}
@@ -359,7 +384,10 @@ specifier|public
 name|Frame
 name|getOutFrame
 parameter_list|(
-name|ArrayList
+name|List
+argument_list|<
+name|InstructionContext
+argument_list|>
 name|execChain
 parameter_list|)
 block|{
@@ -378,9 +406,6 @@ argument_list|()
 decl_stmt|;
 name|org
 operator|=
-operator|(
-name|Frame
-operator|)
 name|outFrames
 operator|.
 name|get
@@ -439,9 +464,6 @@ argument_list|()
 decl_stmt|;
 name|org
 operator|=
-operator|(
-name|Frame
-operator|)
 name|inFrames
 operator|.
 name|get
@@ -488,6 +510,9 @@ name|Frame
 name|inFrame
 parameter_list|,
 name|ArrayList
+argument_list|<
+name|InstructionContext
+argument_list|>
 name|execPreds
 parameter_list|,
 name|InstConstraintVisitor
@@ -500,7 +525,10 @@ block|{
 name|executionPredecessors
 operator|=
 operator|(
-name|ArrayList
+name|List
+argument_list|<
+name|InstructionContext
+argument_list|>
 operator|)
 name|execPreds
 operator|.
@@ -585,9 +613,6 @@ block|}
 name|Frame
 name|inF
 init|=
-operator|(
-name|Frame
-operator|)
 name|inFrames
 operator|.
 name|get
@@ -796,9 +821,6 @@ comment|// TODO: Can be performance-improved.
 name|Frame
 name|inF
 init|=
-operator|(
-name|Frame
-operator|)
 name|inFrames
 operator|.
 name|get
@@ -1481,10 +1503,20 @@ decl_stmt|;
 comment|/** All InstructionContext instances of this ControlFlowGraph. */
 specifier|private
 name|Map
+argument_list|<
+name|InstructionHandle
+argument_list|,
+name|InstructionContext
+argument_list|>
 name|instructionContexts
 init|=
 operator|new
 name|HashMap
+argument_list|<
+name|InstructionHandle
+argument_list|,
+name|InstructionContext
+argument_list|>
 argument_list|()
 decl_stmt|;
 comment|//keys: InstructionHandle, values: InstructionContextImpl
@@ -1575,9 +1607,6 @@ block|{
 name|InstructionContext
 name|ic
 init|=
-operator|(
-name|InstructionContext
-operator|)
 name|instructionContexts
 operator|.
 name|get
@@ -1686,10 +1715,6 @@ argument_list|()
 index|]
 decl_stmt|;
 return|return
-operator|(
-name|InstructionContext
-index|[]
-operator|)
 name|instructionContexts
 operator|.
 name|values

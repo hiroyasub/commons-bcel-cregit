@@ -86,11 +86,17 @@ block|}
 comment|/** @return exceptions this instruction may cause      */
 specifier|public
 name|Class
+argument_list|<
+name|?
+argument_list|>
 index|[]
 name|getExceptions
 parameter_list|()
 block|{
 name|Class
+argument_list|<
+name|?
+argument_list|>
 index|[]
 name|cs
 init|=

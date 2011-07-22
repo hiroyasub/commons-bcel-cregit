@@ -49,6 +49,9 @@ block|{
 comment|/** The int are stored as Integer objects here. */
 specifier|private
 name|List
+argument_list|<
+name|Integer
+argument_list|>
 name|theList
 decl_stmt|;
 comment|/** This constructor creates an empty list. */
@@ -59,6 +62,9 @@ name|theList
 operator|=
 operator|new
 name|ArrayList
+argument_list|<
+name|Integer
+argument_list|>
 argument_list|()
 expr_stmt|;
 block|}
@@ -74,8 +80,9 @@ name|theList
 operator|.
 name|add
 argument_list|(
-operator|new
 name|Integer
+operator|.
+name|valueOf
 argument_list|(
 name|i
 argument_list|)

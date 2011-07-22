@@ -122,6 +122,9 @@ decl_stmt|;
 comment|// byte code offset of instruction
 specifier|private
 name|Set
+argument_list|<
+name|InstructionTargeter
+argument_list|>
 name|targeters
 decl_stmt|;
 specifier|private

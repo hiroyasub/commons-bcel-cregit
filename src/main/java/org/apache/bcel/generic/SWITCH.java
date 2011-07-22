@@ -68,10 +68,6 @@ name|this
 operator|.
 name|match
 operator|=
-operator|(
-name|int
-index|[]
-operator|)
 name|match
 operator|.
 name|clone
@@ -81,10 +77,6 @@ name|this
 operator|.
 name|targets
 operator|=
-operator|(
-name|InstructionHandle
-index|[]
-operator|)
 name|targets
 operator|.
 name|clone

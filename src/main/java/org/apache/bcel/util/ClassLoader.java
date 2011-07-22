@@ -163,10 +163,26 @@ block|}
 decl_stmt|;
 specifier|private
 name|Hashtable
+argument_list|<
+name|String
+argument_list|,
+name|Class
+argument_list|<
+name|?
+argument_list|>
+argument_list|>
 name|classes
 init|=
 operator|new
 name|Hashtable
+argument_list|<
+name|String
+argument_list|,
+name|Class
+argument_list|<
+name|?
+argument_list|>
+argument_list|>
 argument_list|()
 decl_stmt|;
 comment|// Hashtable is synchronized thus thread-safe
@@ -279,6 +295,9 @@ expr_stmt|;
 block|}
 specifier|protected
 name|Class
+argument_list|<
+name|?
+argument_list|>
 name|loadClass
 parameter_list|(
 name|String
@@ -291,6 +310,9 @@ throws|throws
 name|ClassNotFoundException
 block|{
 name|Class
+argument_list|<
+name|?
+argument_list|>
 name|cl
 init|=
 literal|null
@@ -301,9 +323,6 @@ condition|(
 operator|(
 name|cl
 operator|=
-operator|(
-name|Class
-operator|)
 name|classes
 operator|.
 name|get

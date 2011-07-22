@@ -1010,6 +1010,11 @@ expr_stmt|;
 block|}
 specifier|private
 name|Hashtable
+argument_list|<
+name|InstructionHandle
+argument_list|,
+name|String
+argument_list|>
 name|map
 decl_stmt|;
 specifier|public
@@ -1084,6 +1089,11 @@ name|map
 operator|=
 operator|new
 name|Hashtable
+argument_list|<
+name|InstructionHandle
+argument_list|,
+name|String
+argument_list|>
 argument_list|()
 expr_stmt|;
 for|for
@@ -1542,9 +1552,6 @@ decl_stmt|;
 name|String
 name|str
 init|=
-operator|(
-name|String
-operator|)
 name|map
 operator|.
 name|get
@@ -1933,9 +1940,6 @@ init|=
 operator|new
 name|StringTokenizer
 argument_list|(
-operator|(
-name|String
-operator|)
 name|map
 operator|.
 name|get
@@ -1980,9 +1984,6 @@ block|{
 name|String
 name|str
 init|=
-operator|(
-name|String
-operator|)
 name|map
 operator|.
 name|get

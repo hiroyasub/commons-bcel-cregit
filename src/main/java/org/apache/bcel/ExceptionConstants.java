@@ -27,6 +27,9 @@ specifier|public
 specifier|static
 specifier|final
 name|Class
+argument_list|<
+name|Throwable
+argument_list|>
 name|THROWABLE
 init|=
 name|Throwable
@@ -38,6 +41,9 @@ specifier|public
 specifier|static
 specifier|final
 name|Class
+argument_list|<
+name|RuntimeException
+argument_list|>
 name|RUNTIME_EXCEPTION
 init|=
 name|RuntimeException
@@ -49,6 +55,9 @@ specifier|public
 specifier|static
 specifier|final
 name|Class
+argument_list|<
+name|LinkageError
+argument_list|>
 name|LINKING_EXCEPTION
 init|=
 name|LinkageError
@@ -60,6 +69,9 @@ specifier|public
 specifier|static
 specifier|final
 name|Class
+argument_list|<
+name|ClassCircularityError
+argument_list|>
 name|CLASS_CIRCULARITY_ERROR
 init|=
 name|ClassCircularityError
@@ -70,6 +82,9 @@ specifier|public
 specifier|static
 specifier|final
 name|Class
+argument_list|<
+name|ClassFormatError
+argument_list|>
 name|CLASS_FORMAT_ERROR
 init|=
 name|ClassFormatError
@@ -80,6 +95,9 @@ specifier|public
 specifier|static
 specifier|final
 name|Class
+argument_list|<
+name|ExceptionInInitializerError
+argument_list|>
 name|EXCEPTION_IN_INITIALIZER_ERROR
 init|=
 name|ExceptionInInitializerError
@@ -90,6 +108,9 @@ specifier|public
 specifier|static
 specifier|final
 name|Class
+argument_list|<
+name|IncompatibleClassChangeError
+argument_list|>
 name|INCOMPATIBLE_CLASS_CHANGE_ERROR
 init|=
 name|IncompatibleClassChangeError
@@ -100,6 +121,9 @@ specifier|public
 specifier|static
 specifier|final
 name|Class
+argument_list|<
+name|AbstractMethodError
+argument_list|>
 name|ABSTRACT_METHOD_ERROR
 init|=
 name|AbstractMethodError
@@ -110,6 +134,9 @@ specifier|public
 specifier|static
 specifier|final
 name|Class
+argument_list|<
+name|IllegalAccessError
+argument_list|>
 name|ILLEGAL_ACCESS_ERROR
 init|=
 name|IllegalAccessError
@@ -120,6 +147,9 @@ specifier|public
 specifier|static
 specifier|final
 name|Class
+argument_list|<
+name|InstantiationError
+argument_list|>
 name|INSTANTIATION_ERROR
 init|=
 name|InstantiationError
@@ -130,6 +160,9 @@ specifier|public
 specifier|static
 specifier|final
 name|Class
+argument_list|<
+name|NoSuchFieldError
+argument_list|>
 name|NO_SUCH_FIELD_ERROR
 init|=
 name|NoSuchFieldError
@@ -140,6 +173,9 @@ specifier|public
 specifier|static
 specifier|final
 name|Class
+argument_list|<
+name|NoSuchMethodError
+argument_list|>
 name|NO_SUCH_METHOD_ERROR
 init|=
 name|NoSuchMethodError
@@ -150,6 +186,9 @@ specifier|public
 specifier|static
 specifier|final
 name|Class
+argument_list|<
+name|NoClassDefFoundError
+argument_list|>
 name|NO_CLASS_DEF_FOUND_ERROR
 init|=
 name|NoClassDefFoundError
@@ -160,6 +199,9 @@ specifier|public
 specifier|static
 specifier|final
 name|Class
+argument_list|<
+name|UnsatisfiedLinkError
+argument_list|>
 name|UNSATISFIED_LINK_ERROR
 init|=
 name|UnsatisfiedLinkError
@@ -170,6 +212,9 @@ specifier|public
 specifier|static
 specifier|final
 name|Class
+argument_list|<
+name|VerifyError
+argument_list|>
 name|VERIFY_ERROR
 init|=
 name|VerifyError
@@ -183,6 +228,9 @@ specifier|public
 specifier|static
 specifier|final
 name|Class
+argument_list|<
+name|NullPointerException
+argument_list|>
 name|NULL_POINTER_EXCEPTION
 init|=
 name|NullPointerException
@@ -193,6 +241,9 @@ specifier|public
 specifier|static
 specifier|final
 name|Class
+argument_list|<
+name|ArrayIndexOutOfBoundsException
+argument_list|>
 name|ARRAY_INDEX_OUT_OF_BOUNDS_EXCEPTION
 init|=
 name|ArrayIndexOutOfBoundsException
@@ -203,6 +254,9 @@ specifier|public
 specifier|static
 specifier|final
 name|Class
+argument_list|<
+name|ArithmeticException
+argument_list|>
 name|ARITHMETIC_EXCEPTION
 init|=
 name|ArithmeticException
@@ -213,6 +267,9 @@ specifier|public
 specifier|static
 specifier|final
 name|Class
+argument_list|<
+name|NegativeArraySizeException
+argument_list|>
 name|NEGATIVE_ARRAY_SIZE_EXCEPTION
 init|=
 name|NegativeArraySizeException
@@ -223,6 +280,9 @@ specifier|public
 specifier|static
 specifier|final
 name|Class
+argument_list|<
+name|ClassCastException
+argument_list|>
 name|CLASS_CAST_EXCEPTION
 init|=
 name|ClassCastException
@@ -233,6 +293,9 @@ specifier|public
 specifier|static
 specifier|final
 name|Class
+argument_list|<
+name|IllegalMonitorStateException
+argument_list|>
 name|ILLEGAL_MONITOR_STATE
 init|=
 name|IllegalMonitorStateException
@@ -244,6 +307,9 @@ specifier|public
 specifier|static
 specifier|final
 name|Class
+argument_list|<
+name|?
+argument_list|>
 index|[]
 name|EXCS_CLASS_AND_INTERFACE_RESOLUTION
 init|=
@@ -266,6 +332,9 @@ specifier|public
 specifier|static
 specifier|final
 name|Class
+argument_list|<
+name|?
+argument_list|>
 index|[]
 name|EXCS_FIELD_AND_METHOD_RESOLUTION
 init|=
@@ -282,6 +351,9 @@ specifier|public
 specifier|static
 specifier|final
 name|Class
+argument_list|<
+name|?
+argument_list|>
 index|[]
 name|EXCS_INTERFACE_METHOD_RESOLUTION
 init|=
@@ -296,6 +368,9 @@ specifier|public
 specifier|static
 specifier|final
 name|Class
+argument_list|<
+name|?
+argument_list|>
 index|[]
 name|EXCS_STRING_RESOLUTION
 init|=
@@ -310,6 +385,9 @@ specifier|public
 specifier|static
 specifier|final
 name|Class
+argument_list|<
+name|?
+argument_list|>
 index|[]
 name|EXCS_ARRAY_EXCEPTION
 init|=

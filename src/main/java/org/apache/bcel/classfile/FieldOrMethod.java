@@ -719,10 +719,16 @@ name|getAttributes
 argument_list|()
 decl_stmt|;
 name|List
+argument_list|<
+name|AnnotationEntry
+argument_list|>
 name|accumulatedAnnotations
 init|=
 operator|new
 name|ArrayList
+argument_list|<
+name|AnnotationEntry
+argument_list|>
 argument_list|()
 decl_stmt|;
 for|for
@@ -803,10 +809,6 @@ block|}
 block|}
 name|annotationEntries
 operator|=
-operator|(
-name|AnnotationEntry
-index|[]
-operator|)
 name|accumulatedAnnotations
 operator|.
 name|toArray

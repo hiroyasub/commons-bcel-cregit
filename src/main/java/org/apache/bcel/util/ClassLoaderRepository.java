@@ -113,10 +113,20 @@ name|loader
 decl_stmt|;
 specifier|private
 name|Map
+argument_list|<
+name|String
+argument_list|,
+name|JavaClass
+argument_list|>
 name|loadedClasses
 init|=
 operator|new
 name|HashMap
+argument_list|<
+name|String
+argument_list|,
+name|JavaClass
+argument_list|>
 argument_list|()
 decl_stmt|;
 comment|// CLASSNAME X JAVACLASS
@@ -207,9 +217,6 @@ argument_list|)
 condition|)
 block|{
 return|return
-operator|(
-name|JavaClass
-operator|)
 name|loadedClasses
 operator|.
 name|get
@@ -354,6 +361,9 @@ name|JavaClass
 name|loadClass
 parameter_list|(
 name|Class
+argument_list|<
+name|?
+argument_list|>
 name|clazz
 parameter_list|)
 throws|throws

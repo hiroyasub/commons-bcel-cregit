@@ -121,10 +121,20 @@ specifier|private
 specifier|static
 specifier|final
 name|Map
+argument_list|<
+name|String
+argument_list|,
+name|Unknown
+argument_list|>
 name|unknown_attributes
 init|=
 operator|new
 name|HashMap
+argument_list|<
+name|String
+argument_list|,
+name|Unknown
+argument_list|>
 argument_list|()
 decl_stmt|;
 comment|/** @return array of unknown attributes, but just one for each kind.      */
@@ -148,6 +158,9 @@ argument_list|()
 index|]
 decl_stmt|;
 name|Iterator
+argument_list|<
+name|Unknown
+argument_list|>
 name|entries
 init|=
 name|unknown_attributes
@@ -179,9 +192,6 @@ index|[
 name|i
 index|]
 operator|=
-operator|(
-name|Unknown
-operator|)
 name|entries
 operator|.
 name|next

@@ -1247,6 +1247,9 @@ return|;
 block|}
 specifier|private
 name|List
+argument_list|<
+name|FieldObserver
+argument_list|>
 name|observers
 decl_stmt|;
 comment|/** Add observer for this object.      */
@@ -1269,6 +1272,9 @@ name|observers
 operator|=
 operator|new
 name|ArrayList
+argument_list|<
+name|FieldObserver
+argument_list|>
 argument_list|()
 expr_stmt|;
 block|}
@@ -1321,6 +1327,9 @@ block|{
 for|for
 control|(
 name|Iterator
+argument_list|<
+name|FieldObserver
+argument_list|>
 name|e
 init|=
 name|observers
@@ -1335,15 +1344,10 @@ argument_list|()
 condition|;
 control|)
 block|{
-operator|(
-operator|(
-name|FieldObserver
-operator|)
 name|e
 operator|.
 name|next
 argument_list|()
-operator|)
 operator|.
 name|notify
 argument_list|(

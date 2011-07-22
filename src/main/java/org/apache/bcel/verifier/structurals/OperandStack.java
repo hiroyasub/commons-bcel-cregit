@@ -113,10 +113,16 @@ block|{
 comment|/** We hold the stack information here. */
 specifier|private
 name|ArrayList
+argument_list|<
+name|Type
+argument_list|>
 name|stack
 init|=
 operator|new
 name|ArrayList
+argument_list|<
+name|Type
+argument_list|>
 argument_list|()
 decl_stmt|;
 comment|/** The maximum number of stack slots this OperandStack instance may hold. */
@@ -187,6 +193,9 @@ name|stack
 operator|=
 operator|(
 name|ArrayList
+argument_list|<
+name|Type
+argument_list|>
 operator|)
 name|this
 operator|.
@@ -209,6 +218,9 @@ name|stack
 operator|=
 operator|new
 name|ArrayList
+argument_list|<
+name|Type
+argument_list|>
 argument_list|()
 expr_stmt|;
 block|}
@@ -333,9 +345,6 @@ name|i
 parameter_list|)
 block|{
 return|return
-operator|(
-name|Type
-operator|)
 name|stack
 operator|.
 name|get
@@ -358,9 +367,6 @@ block|{
 name|Type
 name|e
 init|=
-operator|(
-name|Type
-operator|)
 name|stack
 operator|.
 name|remove

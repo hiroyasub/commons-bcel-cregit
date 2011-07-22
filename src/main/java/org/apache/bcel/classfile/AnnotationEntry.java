@@ -127,6 +127,9 @@ name|isRuntimeVisible
 decl_stmt|;
 specifier|private
 name|List
+argument_list|<
+name|ElementValuePair
+argument_list|>
 name|element_value_pairs
 decl_stmt|;
 comment|/**      * Factory method to create an AnnotionEntry from a DataInputStream      *       * @param file      * @param constant_pool      * @param isRuntimeVisible      * @return      * @throws IOException      */
@@ -181,6 +184,9 @@ name|element_value_pairs
 operator|=
 operator|new
 name|ArrayList
+argument_list|<
+name|ElementValuePair
+argument_list|>
 argument_list|()
 expr_stmt|;
 for|for
@@ -362,10 +368,6 @@ parameter_list|()
 block|{
 comment|// TODO return List
 return|return
-operator|(
-name|ElementValuePair
-index|[]
-operator|)
 name|element_value_pairs
 operator|.
 name|toArray
@@ -433,9 +435,6 @@ specifier|final
 name|ElementValuePair
 name|envp
 init|=
-operator|(
-name|ElementValuePair
-operator|)
 name|element_value_pairs
 operator|.
 name|get
