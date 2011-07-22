@@ -104,7 +104,9 @@ comment|// J5TODO: Should we make this an array or a list? A list would be easie
 comment|// modify ...
 specifier|private
 name|List
-comment|/* ElementValueGen */
+argument_list|<
+name|ElementValueGen
+argument_list|>
 name|evalues
 decl_stmt|;
 specifier|public
@@ -125,6 +127,9 @@ name|evalues
 operator|=
 operator|new
 name|ArrayList
+argument_list|<
+name|ElementValueGen
+argument_list|>
 argument_list|()
 expr_stmt|;
 block|}
@@ -170,6 +175,9 @@ name|evalues
 operator|=
 operator|new
 name|ArrayList
+argument_list|<
+name|ElementValueGen
+argument_list|>
 argument_list|()
 expr_stmt|;
 for|for
@@ -193,10 +201,19 @@ name|evalues
 operator|.
 name|add
 argument_list|(
+name|ElementValueGen
+operator|.
+name|copy
+argument_list|(
 name|datums
 index|[
 name|i
 index|]
+argument_list|,
+name|cpool
+argument_list|,
+literal|true
+argument_list|)
 argument_list|)
 expr_stmt|;
 block|}
@@ -228,6 +245,9 @@ decl_stmt|;
 for|for
 control|(
 name|Iterator
+argument_list|<
+name|ElementValueGen
+argument_list|>
 name|iter
 init|=
 name|evalues
@@ -245,9 +265,6 @@ block|{
 name|ElementValueGen
 name|element
 init|=
-operator|(
-name|ElementValueGen
-operator|)
 name|iter
 operator|.
 name|next
@@ -305,6 +322,9 @@ name|evalues
 operator|=
 operator|new
 name|ArrayList
+argument_list|<
+name|ElementValueGen
+argument_list|>
 argument_list|()
 expr_stmt|;
 name|ElementValue
@@ -385,6 +405,9 @@ expr_stmt|;
 for|for
 control|(
 name|Iterator
+argument_list|<
+name|ElementValueGen
+argument_list|>
 name|iter
 init|=
 name|evalues
@@ -402,9 +425,6 @@ block|{
 name|ElementValueGen
 name|element
 init|=
-operator|(
-name|ElementValueGen
-operator|)
 name|iter
 operator|.
 name|next
@@ -441,6 +461,9 @@ expr_stmt|;
 for|for
 control|(
 name|Iterator
+argument_list|<
+name|ElementValueGen
+argument_list|>
 name|iter
 init|=
 name|evalues
@@ -458,9 +481,6 @@ block|{
 name|ElementValueGen
 name|element
 init|=
-operator|(
-name|ElementValueGen
-operator|)
 name|iter
 operator|.
 name|next
@@ -507,6 +527,9 @@ return|;
 block|}
 specifier|public
 name|List
+argument_list|<
+name|ElementValueGen
+argument_list|>
 name|getElementValues
 parameter_list|()
 block|{
