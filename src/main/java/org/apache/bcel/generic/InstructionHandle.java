@@ -129,6 +129,11 @@ name|targeters
 decl_stmt|;
 specifier|private
 name|Map
+argument_list|<
+name|Object
+argument_list|,
+name|Object
+argument_list|>
 name|attributes
 decl_stmt|;
 specifier|public
@@ -489,6 +494,9 @@ name|targeters
 operator|=
 operator|new
 name|HashSet
+argument_list|<
+name|InstructionTargeter
+argument_list|>
 argument_list|()
 expr_stmt|;
 block|}
@@ -638,6 +646,11 @@ name|attributes
 operator|=
 operator|new
 name|HashMap
+argument_list|<
+name|Object
+argument_list|,
+name|Object
+argument_list|>
 argument_list|(
 literal|3
 argument_list|)
@@ -710,6 +723,9 @@ block|}
 comment|/** @return all attributes associated with this handle      */
 specifier|public
 name|Collection
+argument_list|<
+name|Object
+argument_list|>
 name|getAttributes
 parameter_list|()
 block|{
@@ -724,6 +740,11 @@ name|attributes
 operator|=
 operator|new
 name|HashMap
+argument_list|<
+name|Object
+argument_list|,
+name|Object
+argument_list|>
 argument_list|(
 literal|3
 argument_list|)
