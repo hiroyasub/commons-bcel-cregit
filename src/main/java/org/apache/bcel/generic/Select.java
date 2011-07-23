@@ -733,10 +733,6 @@ name|copy
 operator|.
 name|match
 operator|=
-operator|(
-name|int
-index|[]
-operator|)
 name|match
 operator|.
 name|clone
@@ -746,10 +742,6 @@ name|copy
 operator|.
 name|indices
 operator|=
-operator|(
-name|int
-index|[]
-operator|)
 name|indices
 operator|.
 name|clone
@@ -759,10 +751,6 @@ name|copy
 operator|.
 name|targets
 operator|=
-operator|(
-name|InstructionHandle
-index|[]
-operator|)
 name|targets
 operator|.
 name|clone

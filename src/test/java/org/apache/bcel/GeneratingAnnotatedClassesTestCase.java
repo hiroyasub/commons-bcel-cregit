@@ -1388,9 +1388,6 @@ expr_stmt|;
 name|ElementValuePairGen
 name|nvp
 init|=
-operator|(
-name|ElementValuePairGen
-operator|)
 name|a
 operator|.
 name|getValues
@@ -1448,9 +1445,6 @@ expr_stmt|;
 name|ElementValueGen
 name|innerValue
 init|=
-operator|(
-name|ElementValueGen
-operator|)
 name|arrayValue
 operator|.
 name|getElementValues
