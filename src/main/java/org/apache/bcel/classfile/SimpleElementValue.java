@@ -771,15 +771,7 @@ condition|)
 return|return
 literal|"false"
 return|;
-if|if
-condition|(
-name|bo
-operator|.
-name|getBytes
-argument_list|()
-operator|!=
-literal|0
-condition|)
+else|else
 return|return
 literal|"true"
 return|;
