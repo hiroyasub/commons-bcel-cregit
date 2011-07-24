@@ -168,7 +168,7 @@ init|=
 literal|255
 decl_stmt|;
 comment|// 2^8 - 1
-comment|/** One of the access flags for fields, methods, or classes.    *  @see<a href='http://java.sun.com/docs/books/jvms/second_edition/html/ClassFile.doc.html#2877'>Flag definitions for Fields in the Java Virtual Machine Specification (2nd edition).</a>    *  @see<a href='http://java.sun.com/docs/books/jvms/second_edition/html/ClassFile.doc.html#1513'>Flag definitions for Methods in the Java Virtual Machine Specification (2nd edition).</a>    *  @see<a href='http://java.sun.com/docs/books/jvms/second_edition/html/ClassFile.doc.html#88478'>Flag definitions for Classes in the Java Virtual Machine Specification (2nd edition).</a>    */
+comment|/** One of the access flags for fields, methods, or classes.    *  @see "<a href='http://java.sun.com/docs/books/jvms/second_edition/html/ClassFile.doc.html#2877'>Flag definitions for Fields in the Java Virtual Machine Specification (2nd edition).</a>"    *  @see "<a href='http://java.sun.com/docs/books/jvms/second_edition/html/ClassFile.doc.html#1513'>Flag definitions for Methods in the Java Virtual Machine Specification (2nd edition).</a>"    *  @see "<a href='http://java.sun.com/docs/books/jvms/second_edition/html/ClassFile.doc.html#88478'>Flag definitions for Classes in the Java Virtual Machine Specification (2nd edition).</a>"    */
 specifier|public
 specifier|final
 specifier|static
