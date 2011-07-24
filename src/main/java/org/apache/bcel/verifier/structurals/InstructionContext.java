@@ -75,7 +75,7 @@ name|int
 name|tag
 parameter_list|)
 function_decl|;
-comment|/** 	 * This method symbolically executes the Instruction 	 * held in the InstructionContext. 	 * It "merges in" the incoming execution frame situation 	 * (see The Java Virtual Machine Specification, 2nd 	 * edition, page 146). 	 * By so doing, the outgoing execution frame situation 	 * is calculated. 	 * 	 * This method is JustIce-specific and is usually of 	 * no sense for users of the ControlFlowGraph class. 	 * They should use getInstruction().accept(Visitor), 	 * possibly in conjunction with the ExecutionVisitor. 	 *  	 * 	 * @see ControlFlowGraph 	 * @see ExecutionVisitor 	 * @see #getOutFrame(ArrayList) 	 * @return true -  if and only if the "outgoing" frame situation 	 * changed from the one before execute()ing. 	 */
+comment|/** 	 * This method symbolically executes the Instruction 	 * held in the InstructionContext. 	 * It "merges in" the incoming execution frame situation 	 * (see The Java Virtual Machine Specification, 2nd 	 * edition, page 146). 	 * By so doing, the outgoing execution frame situation 	 * is calculated. 	 * 	 * This method is JustIce-specific and is usually of 	 * no sense for users of the ControlFlowGraph class. 	 * They should use getInstruction().accept(Visitor), 	 * possibly in conjunction with the ExecutionVisitor. 	 *  	 * 	 * @see ControlFlowGraph 	 * @see ExecutionVisitor 	 * @see #getOutFrame(List) 	 * @return true -  if and only if the "outgoing" frame situation 	 * changed from the one before execute()ing. 	 */
 name|boolean
 name|execute
 parameter_list|(

@@ -828,7 +828,7 @@ return|return
 name|this
 return|;
 block|}
-comment|/**     * Second pass, determine type of each node, if possible.    * @return type of expression    */
+comment|/**     * Second pass, determine type of each node, if possible.    */
 specifier|public
 name|void
 name|eval

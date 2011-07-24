@@ -132,7 +132,7 @@ name|ElementValuePair
 argument_list|>
 name|element_value_pairs
 decl_stmt|;
-comment|/**      * Factory method to create an AnnotionEntry from a DataInputStream      *       * @param file      * @param constant_pool      * @param isRuntimeVisible      * @return      * @throws IOException      */
+comment|/**      * Factory method to create an AnnotionEntry from a DataInputStream      *       * @param file      * @param constant_pool      * @param isRuntimeVisible      * @return the entry      * @throws IOException      */
 specifier|public
 specifier|static
 name|AnnotationEntry
