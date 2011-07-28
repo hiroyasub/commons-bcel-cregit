@@ -3491,7 +3491,7 @@ name|toString
 argument_list|()
 return|;
 block|}
-comment|/**      * @return Enumeration that lists all instructions (handles)      */
+comment|/**      * @return iterator that lists all instructions (handles)      */
 specifier|public
 name|Iterator
 argument_list|<
@@ -4514,28 +4514,13 @@ condition|)
 block|{
 for|for
 control|(
-name|Iterator
-argument_list|<
 name|InstructionListObserver
-argument_list|>
-name|e
-init|=
+name|observer
+range|:
 name|observers
-operator|.
-name|iterator
-argument_list|()
-init|;
-name|e
-operator|.
-name|hasNext
-argument_list|()
-condition|;
 control|)
 block|{
-name|e
-operator|.
-name|next
-argument_list|()
+name|observer
 operator|.
 name|notify
 argument_list|(
