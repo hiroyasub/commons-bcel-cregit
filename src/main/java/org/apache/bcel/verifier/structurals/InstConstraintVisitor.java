@@ -11156,6 +11156,12 @@ name|c
 operator|instanceof
 name|ConstantString
 operator|)
+operator|||
+operator|(
+name|c
+operator|instanceof
+name|ConstantClass
+operator|)
 operator|)
 condition|)
 block|{
@@ -11163,7 +11169,7 @@ name|constraintViolated
 argument_list|(
 name|o
 argument_list|,
-literal|"Referenced constant should be a CONSTANT_Integer, a CONSTANT_Float or a CONSTANT_String, but is '"
+literal|"Referenced constant should be a CONSTANT_Integer, a CONSTANT_Float, a CONSTANT_String or a CONSTANT_Class, but is '"
 operator|+
 name|c
 operator|+
@@ -11216,6 +11222,12 @@ name|c
 operator|instanceof
 name|ConstantString
 operator|)
+operator|||
+operator|(
+name|c
+operator|instanceof
+name|ConstantClass
+operator|)
 operator|)
 condition|)
 block|{
@@ -11223,7 +11235,7 @@ name|constraintViolated
 argument_list|(
 name|o
 argument_list|,
-literal|"Referenced constant should be a CONSTANT_Integer, a CONSTANT_Float or a CONSTANT_String, but is '"
+literal|"Referenced constant should be a CONSTANT_Integer, a CONSTANT_Float, a CONSTANT_String or a CONSTANT_Class, but is '"
 operator|+
 name|c
 operator|+
