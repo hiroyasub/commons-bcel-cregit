@@ -112,7 +112,7 @@ name|MINOR_1_5
 init|=
 literal|0
 decl_stmt|;
-comment|/** Major version number of class files for Java 1.5.    *  @see #MINOR_1_5    *  */
+comment|/** Major version number of class files for Java 1.6.    *  @see #MINOR_1_6    *  */
 specifier|public
 specifier|final
 specifier|static
@@ -127,6 +127,24 @@ specifier|final
 specifier|static
 name|short
 name|MINOR_1_6
+init|=
+literal|0
+decl_stmt|;
+comment|/** Major version number of class files for Java 1.7.    *  @see #MINOR_1_7    *  */
+specifier|public
+specifier|final
+specifier|static
+name|short
+name|MAJOR_1_7
+init|=
+literal|51
+decl_stmt|;
+comment|/** Minor version number of class files for Java 1.7.    *  @see #MAJOR_1_7    *  */
+specifier|public
+specifier|final
+specifier|static
+name|short
+name|MINOR_1_7
 init|=
 literal|0
 decl_stmt|;
