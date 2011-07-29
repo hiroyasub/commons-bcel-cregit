@@ -323,6 +323,12 @@ name|local_variable_table
 return|;
 block|}
 comment|/**       *       * @param index the variable slot      *       * @return the first LocalVariable that matches the slot or null if not found      *       * @deprecated since 5.2 because multiple variables can share the      *             same slot, use getLocalVariable(int index, int pc) instead.      */
+annotation|@
+name|java
+operator|.
+name|lang
+operator|.
+name|Deprecated
 specifier|public
 specifier|final
 name|LocalVariable

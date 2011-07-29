@@ -849,6 +849,8 @@ operator|)
 return|;
 block|}
 comment|/**    * @deprecated     * @see #getEndColumn    */
+annotation|@
+name|Deprecated
 specifier|static
 specifier|public
 specifier|final
@@ -864,6 +866,8 @@ index|]
 return|;
 block|}
 comment|/**    * @deprecated     * @see #getEndLine    */
+annotation|@
+name|Deprecated
 specifier|static
 specifier|public
 specifier|final
