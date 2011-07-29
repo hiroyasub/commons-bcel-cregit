@@ -544,6 +544,8 @@ name|close
 argument_list|()
 expr_stmt|;
 block|}
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitJavaClass
@@ -709,6 +711,8 @@ literal|"\n"
 argument_list|)
 expr_stmt|;
 block|}
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitField
@@ -769,6 +773,8 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitConstantValue
@@ -833,6 +839,8 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitDeprecated
@@ -847,6 +855,8 @@ name|attribute
 argument_list|)
 expr_stmt|;
 block|}
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitSynthetic
@@ -869,6 +879,8 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitMethod
@@ -948,6 +960,8 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitExceptionTable
@@ -1017,6 +1031,8 @@ name|String
 argument_list|>
 name|map
 decl_stmt|;
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitCode

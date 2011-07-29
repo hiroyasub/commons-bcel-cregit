@@ -495,6 +495,8 @@ operator|-
 literal|1
 return|;
 block|}
+annotation|@
+name|Override
 specifier|public
 name|Object
 name|clone
@@ -563,6 +565,8 @@ name|copy
 argument_list|)
 return|;
 block|}
+annotation|@
+name|Override
 specifier|public
 name|String
 name|toString

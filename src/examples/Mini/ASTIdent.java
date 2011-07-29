@@ -221,6 +221,8 @@ expr_stmt|;
 block|}
 comment|// closeNode, dump inherited
 comment|/**    * @return identifier and line/column number of appearance    */
+annotation|@
+name|Override
 specifier|public
 name|String
 name|toString
@@ -238,6 +240,8 @@ name|name
 return|;
 block|}
 comment|/**    * Overrides ASTExpr.traverse()    */
+annotation|@
+name|Override
 specifier|public
 name|ASTExpr
 name|traverse
@@ -316,6 +320,8 @@ return|;
 comment|// Nothing to reduce/traverse further here
 block|}
 comment|/**    * Overrides AstExpr.eval()    */
+annotation|@
+name|Override
 specifier|public
 name|int
 name|eval
@@ -432,6 +438,8 @@ name|type
 return|;
 block|}
 comment|/**    * Fourth pass, produce Java code.    */
+annotation|@
+name|Override
 specifier|public
 name|void
 name|code
@@ -494,6 +502,8 @@ expr_stmt|;
 block|}
 block|}
 comment|/**    * Fifth pass, produce Java byte code.    */
+annotation|@
+name|Override
 specifier|public
 name|void
 name|byte_code

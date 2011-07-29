@@ -206,6 +206,8 @@ operator|=
 name|exprs
 expr_stmt|;
 block|}
+annotation|@
+name|Override
 specifier|public
 name|String
 name|toString
@@ -226,6 +228,8 @@ argument_list|()
 return|;
 block|}
 comment|/**    * Overrides ASTExpr.closeNode()    */
+annotation|@
+name|Override
 specifier|public
 name|void
 name|closeNode
@@ -289,6 +293,8 @@ expr_stmt|;
 comment|// Throw away old reference
 block|}
 comment|/**    * Overrides ASTExpr.traverse()    */
+annotation|@
+name|Override
 specifier|public
 name|ASTExpr
 name|traverse
@@ -515,6 +521,8 @@ name|this
 return|;
 block|}
 comment|/**    * Second pass    * Overrides AstExpr.eval()    * @return type of expression    * @param expected type    */
+annotation|@
+name|Override
 specifier|public
 name|int
 name|eval
@@ -735,6 +743,8 @@ name|t
 return|;
 block|}
 comment|/**    * Fourth pass, produce Java code.    */
+annotation|@
+name|Override
 specifier|public
 name|void
 name|code
@@ -941,6 +951,8 @@ expr_stmt|;
 block|}
 block|}
 comment|/**    * Fifth pass, produce Java byte code.    */
+annotation|@
+name|Override
 specifier|public
 name|void
 name|byte_code

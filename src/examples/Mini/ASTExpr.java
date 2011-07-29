@@ -414,6 +414,8 @@ name|children
 expr_stmt|;
 block|}
 comment|/**    * @return name of node, its kind and the number of children.    */
+annotation|@
+name|Override
 specifier|public
 name|String
 name|toString
@@ -502,6 +504,8 @@ name|column
 return|;
 block|}
 comment|/**    * Overrides SimpleNode.closeNode(). Overridden by some subclasses.    *    * Called by the parser when the construction of this node is finished.    * Casts children Node[] to precise ASTExpr[] type.    */
+annotation|@
+name|Override
 specifier|public
 name|void
 name|closeNode
@@ -1895,6 +1899,8 @@ operator|=
 name|column
 expr_stmt|;
 block|}
+annotation|@
+name|Override
 specifier|public
 name|void
 name|dump

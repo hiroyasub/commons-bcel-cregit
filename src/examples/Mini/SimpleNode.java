@@ -233,6 +233,8 @@ name|length
 return|;
 block|}
 comment|/* You can override these two methods in subclasses of SimpleNode to      customize the way the node appears when the tree is dumped.  If      your output uses more than one line you should override      toString(String), otherwise overriding toString() is probably all      you need to do. */
+annotation|@
+name|Override
 specifier|public
 name|String
 name|toString

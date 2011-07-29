@@ -526,6 +526,8 @@ argument_list|)
 return|;
 block|}
 comment|/**    * Overrides SimpleNode.closeNode().    * Cast children to appropiate type.    */
+annotation|@
+name|Override
 specifier|public
 name|void
 name|closeNode
@@ -1831,6 +1833,8 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
+annotation|@
+name|Override
 specifier|public
 name|void
 name|dump

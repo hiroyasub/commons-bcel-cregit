@@ -82,6 +82,8 @@ return|;
 block|}
 comment|// Inherited closeNode(), dump()
 comment|/**    * Drop this node, if kind == -1, because then it has just one child node    * and may be safely replaced with it.    */
+annotation|@
+name|Override
 specifier|public
 name|ASTExpr
 name|traverse

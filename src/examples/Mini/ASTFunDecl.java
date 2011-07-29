@@ -477,6 +477,8 @@ name|type
 expr_stmt|;
 block|}
 comment|/**    * Overrides SimpleNode.closeNode()    * Cast children to appropiate type.    */
+annotation|@
+name|Override
 specifier|public
 name|void
 name|closeNode
@@ -1914,6 +1916,8 @@ block|}
 block|}
 block|}
 comment|/**    * Overrides SimpleNode.toString()    */
+annotation|@
+name|Override
 specifier|public
 name|String
 name|toString
@@ -2151,6 +2155,8 @@ name|column
 expr_stmt|;
 block|}
 comment|/**    * Overrides SimpleNode.dump()    */
+annotation|@
+name|Override
 specifier|public
 name|void
 name|dump
