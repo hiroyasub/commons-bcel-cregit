@@ -95,6 +95,8 @@ name|stack
 expr_stmt|;
 block|}
 comment|/** 	 * 	 */
+annotation|@
+name|Override
 specifier|protected
 name|Object
 name|clone
@@ -156,6 +158,8 @@ name|stack
 return|;
 block|}
 comment|/** @return a hash code value for the object.      */
+annotation|@
+name|Override
 specifier|public
 name|int
 name|hashCode
@@ -174,6 +178,8 @@ argument_list|()
 return|;
 block|}
 comment|/** 	 * 	 */
+annotation|@
+name|Override
 specifier|public
 name|boolean
 name|equals
@@ -230,6 +236,8 @@ argument_list|)
 return|;
 block|}
 comment|/** 	 * Returns a String representation of the Frame instance. 	 */
+annotation|@
+name|Override
 specifier|public
 name|String
 name|toString

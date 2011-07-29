@@ -197,6 +197,8 @@ throw|;
 block|}
 block|}
 comment|/** @return a hash code value for the object.      */
+annotation|@
+name|Override
 specifier|public
 name|int
 name|hashCode
@@ -207,6 +209,8 @@ name|type
 return|;
 block|}
 comment|/** @return true if both type objects refer to the same type      */
+annotation|@
+name|Override
 specifier|public
 name|boolean
 name|equals

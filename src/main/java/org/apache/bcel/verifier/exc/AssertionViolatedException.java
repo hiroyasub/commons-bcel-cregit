@@ -160,6 +160,8 @@ name|post
 expr_stmt|;
 block|}
 comment|/** 	 * Returns the error message string of this AssertionViolatedException object. 	 * @return the error message string of this AssertionViolatedException. 	 */
+annotation|@
+name|Override
 specifier|public
 name|String
 name|getMessage

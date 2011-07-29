@@ -611,6 +611,8 @@ argument_list|)
 return|;
 block|}
 comment|/** @return a string representation of the contained instruction.       */
+annotation|@
+name|Override
 specifier|public
 name|String
 name|toString

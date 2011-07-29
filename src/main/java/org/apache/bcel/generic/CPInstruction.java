@@ -153,6 +153,8 @@ argument_list|)
 expr_stmt|;
 block|}
 comment|/**      * Dump instruction as byte code to stream out.      * @param out Output stream      */
+annotation|@
+name|Override
 specifier|public
 name|void
 name|dump
@@ -179,6 +181,8 @@ argument_list|)
 expr_stmt|;
 block|}
 comment|/**      * Long output format:      *      *&lt;name of opcode&gt; "["&lt;opcode number&gt;"]"       * "("&lt;length of instruction&gt;")" "&lt;"&lt; constant pool index&gt;"&gt;"      *      * @param verbose long/short format switch      * @return mnemonic for instruction      */
+annotation|@
+name|Override
 specifier|public
 name|String
 name|toString
@@ -201,6 +205,8 @@ name|index
 return|;
 block|}
 comment|/**      * @return mnemonic for instruction with symbolic references resolved      */
+annotation|@
+name|Override
 specifier|public
 name|String
 name|toString
@@ -268,6 +274,8 @@ name|str
 return|;
 block|}
 comment|/**      * Read needed data (i.e., index) from file.      * @param bytes input stream      * @param wide wide prefix?      */
+annotation|@
+name|Override
 specifier|protected
 name|void
 name|initFromFile

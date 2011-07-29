@@ -328,6 +328,8 @@ name|Integer
 argument_list|>
 argument_list|()
 block|{
+annotation|@
+name|Override
 specifier|protected
 name|Integer
 name|initialValue
@@ -5652,6 +5654,8 @@ name|in
 argument_list|)
 expr_stmt|;
 block|}
+annotation|@
+name|Override
 specifier|public
 name|int
 name|read
@@ -5793,6 +5797,8 @@ name|i
 index|]
 return|;
 block|}
+annotation|@
+name|Override
 specifier|public
 name|int
 name|read
@@ -5865,6 +5871,8 @@ name|out
 argument_list|)
 expr_stmt|;
 block|}
+annotation|@
+name|Override
 specifier|public
 name|void
 name|write
@@ -6003,6 +6011,8 @@ block|}
 block|}
 block|}
 block|}
+annotation|@
+name|Override
 specifier|public
 name|void
 name|write
@@ -6047,6 +6057,8 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
+annotation|@
+name|Override
 specifier|public
 name|void
 name|write

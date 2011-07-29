@@ -135,6 +135,8 @@ expr_stmt|;
 block|}
 block|}
 comment|/** 	 * Returns a deep copy of this object; i.e. the clone 	 * operates on a new local variable array. 	 * However, the Type objects in the array are shared. 	 */
+annotation|@
+name|Override
 specifier|protected
 name|Object
 name|clone
@@ -291,6 +293,8 @@ name|type
 expr_stmt|;
 block|}
 comment|/** @return a hash code value for the object.      */
+annotation|@
+name|Override
 specifier|public
 name|int
 name|hashCode
@@ -303,6 +307,8 @@ name|length
 return|;
 block|}
 comment|/* 	 * Fulfills the general contract of Object.equals(). 	 */
+annotation|@
+name|Override
 specifier|public
 name|boolean
 name|equals
@@ -783,6 +789,8 @@ throw|;
 block|}
 block|}
 comment|/** 	 * Returns a String representation of this object. 	 */
+annotation|@
+name|Override
 specifier|public
 name|String
 name|toString

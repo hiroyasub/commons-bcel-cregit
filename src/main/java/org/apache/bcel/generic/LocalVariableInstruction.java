@@ -195,6 +195,8 @@ argument_list|)
 expr_stmt|;
 block|}
 comment|/**      * Dump instruction as byte code to stream out.      * @param out Output stream      */
+annotation|@
+name|Override
 specifier|public
 name|void
 name|dump
@@ -263,6 +265,8 @@ block|}
 block|}
 block|}
 comment|/**      * Long output format:      *      *&lt;name of opcode&gt; "["&lt;opcode number&gt;"]"       * "("&lt;length of instruction&gt;")" "&lt;"&lt; local variable index&gt;"&gt;"      *      * @param verbose long/short format switch      * @return mnemonic for instruction      */
+annotation|@
+name|Override
 specifier|public
 name|String
 name|toString
@@ -336,6 +340,8 @@ return|;
 block|}
 block|}
 comment|/**      * Read needed data (e.g. index) from file.      * PRE: (ILOAD<= tag<= ALOAD_3) || (ISTORE<= tag<= ASTORE_3)      */
+annotation|@
+name|Override
 specifier|protected
 name|void
 name|initFromFile

@@ -957,6 +957,8 @@ name|constant_pool
 expr_stmt|;
 block|}
 comment|/** 	 * Use copy() if you want to have a deep copy(), i.e., with all references 	 * copied correctly. 	 *  	 * @return shallow copy of this attribute 	 */
+annotation|@
+name|Override
 specifier|public
 name|Object
 name|clone
@@ -1005,6 +1007,8 @@ name|_constant_pool
 parameter_list|)
 function_decl|;
 comment|/** 	 * @return attribute name. 	 */
+annotation|@
+name|Override
 specifier|public
 name|String
 name|toString

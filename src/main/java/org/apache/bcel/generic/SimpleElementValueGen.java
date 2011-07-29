@@ -689,6 +689,8 @@ block|}
 block|}
 block|}
 comment|/** 	 * Return immutable variant 	 */
+annotation|@
+name|Override
 specifier|public
 name|ElementValue
 name|getElementValue
@@ -795,6 +797,8 @@ argument_list|()
 return|;
 block|}
 comment|// Whatever kind of value it is, return it as a string
+annotation|@
+name|Override
 specifier|public
 name|String
 name|stringifyValue
@@ -1060,6 +1064,8 @@ argument_list|)
 throw|;
 block|}
 block|}
+annotation|@
+name|Override
 specifier|public
 name|void
 name|dump

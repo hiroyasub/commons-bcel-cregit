@@ -502,6 +502,8 @@ operator|)
 return|;
 block|}
 comment|/** @return a hash code value for the object.      */
+annotation|@
+name|Override
 specifier|public
 name|int
 name|hashCode
@@ -528,6 +530,8 @@ name|hc
 return|;
 block|}
 comment|/**      * We consider to local variables to be equal, if the use the same index and      * are valid in the same range.      */
+annotation|@
+name|Override
 specifier|public
 name|boolean
 name|equals
@@ -584,6 +588,8 @@ name|end
 operator|)
 return|;
 block|}
+annotation|@
+name|Override
 specifier|public
 name|String
 name|toString
@@ -609,6 +615,8 @@ operator|+
 literal|")"
 return|;
 block|}
+annotation|@
+name|Override
 specifier|public
 name|Object
 name|clone

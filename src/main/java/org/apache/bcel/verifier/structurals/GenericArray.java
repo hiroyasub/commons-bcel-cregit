@@ -52,6 +52,8 @@ name|serialVersionUID
 init|=
 literal|1991183963515237894L
 decl_stmt|;
+annotation|@
+name|Override
 specifier|protected
 name|Object
 name|clone

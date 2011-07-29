@@ -48,6 +48,8 @@ name|ElementValue
 index|[]
 name|evalues
 decl_stmt|;
+annotation|@
+name|Override
 specifier|public
 name|String
 name|toString
@@ -174,6 +176,8 @@ operator|=
 name|datums
 expr_stmt|;
 block|}
+annotation|@
+name|Override
 specifier|public
 name|void
 name|dump
@@ -230,6 +234,8 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
+annotation|@
+name|Override
 specifier|public
 name|String
 name|stringifyValue

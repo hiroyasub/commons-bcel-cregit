@@ -119,6 +119,8 @@ argument_list|)
 expr_stmt|;
 block|}
 comment|/**      * Dump instruction as byte code to stream out.      * @param out Output stream      */
+annotation|@
+name|Override
 specifier|public
 name|void
 name|dump
@@ -283,6 +285,8 @@ literal|0
 return|;
 block|}
 comment|/**      * Long output format:      *      *&lt;position in byte code&gt;      *&lt;name of opcode&gt; "["&lt;opcode number&gt;"]"       * "("&lt;length of instruction&gt;")"      * "&lt;"&lt;target instruction&gt;"&gt;" "@"&lt;branch target offset&gt;      *      * @param verbose long/short format switch      * @return mnemonic for instruction      */
+annotation|@
+name|Override
 specifier|public
 name|String
 name|toString
@@ -401,6 +405,8 @@ name|t
 return|;
 block|}
 comment|/**      * Read needed data (e.g. index) from file. Conversion to a InstructionHandle      * is done in InstructionList(byte[]).      *      * @param bytes input stream      * @param wide wide prefix?      * @see InstructionList      */
+annotation|@
+name|Override
 specifier|protected
 name|void
 name|initFromFile
@@ -581,6 +587,8 @@ operator|)
 return|;
 block|}
 comment|/**      * Inform target that it's not targeted anymore.      */
+annotation|@
+name|Override
 name|void
 name|dispose
 parameter_list|()

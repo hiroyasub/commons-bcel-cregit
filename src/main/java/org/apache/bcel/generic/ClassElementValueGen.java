@@ -193,6 +193,8 @@ argument_list|)
 expr_stmt|;
 block|}
 comment|/** 	 * Return immutable variant of this ClassElementValueGen 	 */
+annotation|@
+name|Override
 specifier|public
 name|ElementValue
 name|getElementValue
@@ -302,6 +304,8 @@ comment|// ConstantUtf8 utf8 =
 comment|// (ConstantUtf8)getConstantPool().getConstant(c.getNameIndex());
 comment|// return utf8.getBytes();
 block|}
+annotation|@
+name|Override
 specifier|public
 name|String
 name|stringifyValue
@@ -312,6 +316,8 @@ name|getClassString
 argument_list|()
 return|;
 block|}
+annotation|@
+name|Override
 specifier|public
 name|void
 name|dump

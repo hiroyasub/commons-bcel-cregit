@@ -562,6 +562,8 @@ expr_stmt|;
 comment|// assign a string representation to field 'tostring' if we know n's class.
 block|}
 comment|/**      * Returns the String representation.      */
+annotation|@
+name|Override
 specifier|public
 name|String
 name|toString
@@ -678,6 +680,8 @@ comment|////////////////////////////////
 comment|// We don't of course need to call some default implementation:
 comment|// e.g. we could also simply output "Code" instead of a possibly
 comment|// lengthy Code attribute's toString().
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitCode
@@ -693,6 +697,8 @@ literal|"<CODE>"
 expr_stmt|;
 comment|// We don't need real code outputs.
 block|}
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitAnnotation
@@ -711,6 +717,8 @@ name|obj
 argument_list|)
 expr_stmt|;
 block|}
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitLocalVariableTypeTable
@@ -729,6 +737,8 @@ name|obj
 argument_list|)
 expr_stmt|;
 block|}
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitCodeException
@@ -745,6 +755,8 @@ name|obj
 argument_list|)
 expr_stmt|;
 block|}
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitConstantClass
@@ -761,6 +773,8 @@ name|obj
 argument_list|)
 expr_stmt|;
 block|}
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitConstantDouble
@@ -777,6 +791,8 @@ name|obj
 argument_list|)
 expr_stmt|;
 block|}
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitConstantFieldref
@@ -793,6 +809,8 @@ name|obj
 argument_list|)
 expr_stmt|;
 block|}
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitConstantFloat
@@ -809,6 +827,8 @@ name|obj
 argument_list|)
 expr_stmt|;
 block|}
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitConstantInteger
@@ -825,6 +845,8 @@ name|obj
 argument_list|)
 expr_stmt|;
 block|}
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitConstantInterfaceMethodref
@@ -841,6 +863,8 @@ name|obj
 argument_list|)
 expr_stmt|;
 block|}
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitConstantLong
@@ -857,6 +881,8 @@ name|obj
 argument_list|)
 expr_stmt|;
 block|}
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitConstantMethodref
@@ -873,6 +899,8 @@ name|obj
 argument_list|)
 expr_stmt|;
 block|}
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitConstantNameAndType
@@ -889,6 +917,8 @@ name|obj
 argument_list|)
 expr_stmt|;
 block|}
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitConstantPool
@@ -905,6 +935,8 @@ name|obj
 argument_list|)
 expr_stmt|;
 block|}
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitConstantString
@@ -921,6 +953,8 @@ name|obj
 argument_list|)
 expr_stmt|;
 block|}
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitConstantUtf8
@@ -937,6 +971,8 @@ name|obj
 argument_list|)
 expr_stmt|;
 block|}
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitConstantValue
@@ -953,6 +989,8 @@ name|obj
 argument_list|)
 expr_stmt|;
 block|}
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitDeprecated
@@ -969,6 +1007,8 @@ name|obj
 argument_list|)
 expr_stmt|;
 block|}
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitExceptionTable
@@ -985,6 +1025,8 @@ name|obj
 argument_list|)
 expr_stmt|;
 block|}
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitField
@@ -1001,6 +1043,8 @@ name|obj
 argument_list|)
 expr_stmt|;
 block|}
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitInnerClass
@@ -1017,6 +1061,8 @@ name|obj
 argument_list|)
 expr_stmt|;
 block|}
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitInnerClasses
@@ -1033,6 +1079,8 @@ name|obj
 argument_list|)
 expr_stmt|;
 block|}
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitJavaClass
@@ -1049,6 +1097,8 @@ name|obj
 argument_list|)
 expr_stmt|;
 block|}
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitLineNumber
@@ -1065,6 +1115,8 @@ name|obj
 argument_list|)
 expr_stmt|;
 block|}
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitLineNumberTable
@@ -1085,6 +1137,8 @@ operator|+
 literal|">"
 expr_stmt|;
 block|}
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitLocalVariable
@@ -1101,6 +1155,8 @@ name|obj
 argument_list|)
 expr_stmt|;
 block|}
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitLocalVariableTable
@@ -1121,6 +1177,8 @@ operator|+
 literal|">"
 expr_stmt|;
 block|}
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitMethod
@@ -1137,6 +1195,8 @@ name|obj
 argument_list|)
 expr_stmt|;
 block|}
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitSignature
@@ -1153,6 +1213,8 @@ name|obj
 argument_list|)
 expr_stmt|;
 block|}
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitSourceFile
@@ -1169,6 +1231,8 @@ name|obj
 argument_list|)
 expr_stmt|;
 block|}
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitStackMap
@@ -1185,6 +1249,8 @@ name|obj
 argument_list|)
 expr_stmt|;
 block|}
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitSynthetic
@@ -1201,6 +1267,8 @@ name|obj
 argument_list|)
 expr_stmt|;
 block|}
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitUnknown

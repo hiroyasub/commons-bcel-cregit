@@ -78,6 +78,8 @@ argument_list|)
 expr_stmt|;
 block|}
 comment|/**      * Read needed data (i.e., index) from file.      */
+annotation|@
+name|Override
 specifier|protected
 name|void
 name|initFromFile

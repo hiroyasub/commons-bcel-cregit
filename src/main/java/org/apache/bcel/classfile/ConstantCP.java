@@ -173,6 +173,8 @@ name|name_and_type_index
 expr_stmt|;
 block|}
 comment|/**       * Dump constant field reference to file stream in binary format.      *      * @param file Output file stream      * @throws IOException      */
+annotation|@
+name|Override
 specifier|public
 specifier|final
 name|void
@@ -285,6 +287,8 @@ name|name_and_type_index
 expr_stmt|;
 block|}
 comment|/**      * @return String representation.      */
+annotation|@
+name|Override
 specifier|public
 specifier|final
 name|String

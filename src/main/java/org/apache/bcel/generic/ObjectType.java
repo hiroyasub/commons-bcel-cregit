@@ -131,6 +131,8 @@ name|class_name
 return|;
 block|}
 comment|/** @return a hash code value for the object.      */
+annotation|@
+name|Override
 specifier|public
 name|int
 name|hashCode
@@ -144,6 +146,8 @@ argument_list|()
 return|;
 block|}
 comment|/** @return true if both type objects refer to the same class.      */
+annotation|@
+name|Override
 specifier|public
 name|boolean
 name|equals
@@ -177,6 +181,8 @@ literal|false
 return|;
 block|}
 comment|/**      * If "this" doesn't reference a class, it references an interface      * or a non-existant entity.      * @deprecated this method returns an inaccurate result      *   if the class or interface referenced cannot      *   be found: use referencesClassExact() instead      */
+annotation|@
+name|Deprecated
 specifier|public
 name|boolean
 name|referencesClass
@@ -213,6 +219,8 @@ return|;
 block|}
 block|}
 comment|/**      * If "this" doesn't reference an interface, it references a class      * or a non-existant entity.      * @deprecated this method returns an inaccurate result      *   if the class or interface referenced cannot      *   be found: use referencesInterfaceExact() instead      */
+annotation|@
+name|Deprecated
 specifier|public
 name|boolean
 name|referencesInterface

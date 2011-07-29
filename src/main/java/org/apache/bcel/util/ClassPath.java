@@ -427,6 +427,8 @@ argument_list|)
 expr_stmt|;
 block|}
 comment|/**      * Search for classes in CLASSPATH.      * @deprecated Use SYSTEM_CLASS_PATH constant      */
+annotation|@
+name|Deprecated
 specifier|public
 name|ClassPath
 parameter_list|()
@@ -439,6 +441,8 @@ argument_list|)
 expr_stmt|;
 block|}
 comment|/** @return used class path string      */
+annotation|@
+name|Override
 specifier|public
 name|String
 name|toString
@@ -468,6 +472,8 @@ return|return
 name|class_path
 return|;
 block|}
+annotation|@
+name|Override
 specifier|public
 name|int
 name|hashCode
@@ -499,6 +505,8 @@ name|hashCode
 argument_list|()
 return|;
 block|}
+annotation|@
+name|Override
 specifier|public
 name|boolean
 name|equals
@@ -1664,6 +1672,8 @@ operator|=
 name|d
 expr_stmt|;
 block|}
+annotation|@
+name|Override
 name|URL
 name|getResource
 parameter_list|(
@@ -1724,6 +1734,8 @@ literal|null
 return|;
 block|}
 block|}
+annotation|@
+name|Override
 name|InputStream
 name|getResourceAsStream
 parameter_list|(
@@ -1785,6 +1797,8 @@ literal|null
 return|;
 block|}
 block|}
+annotation|@
+name|Override
 name|ClassFile
 name|getClassFile
 parameter_list|(
@@ -1912,6 +1926,8 @@ else|:
 literal|null
 return|;
 block|}
+annotation|@
+name|Override
 specifier|public
 name|String
 name|toString
@@ -1953,6 +1969,8 @@ operator|=
 name|z
 expr_stmt|;
 block|}
+annotation|@
+name|Override
 name|URL
 name|getResource
 parameter_list|(
@@ -2009,6 +2027,8 @@ literal|null
 return|;
 block|}
 block|}
+annotation|@
+name|Override
 name|InputStream
 name|getResourceAsStream
 parameter_list|(
@@ -2057,6 +2077,8 @@ literal|null
 return|;
 block|}
 block|}
+annotation|@
+name|Override
 name|ClassFile
 name|getClassFile
 parameter_list|(

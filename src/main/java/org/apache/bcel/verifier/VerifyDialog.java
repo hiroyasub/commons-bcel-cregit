@@ -1947,6 +1947,8 @@ operator|.
 name|WindowAdapter
 argument_list|()
 block|{
+annotation|@
+name|Override
 specifier|public
 name|void
 name|windowClosing

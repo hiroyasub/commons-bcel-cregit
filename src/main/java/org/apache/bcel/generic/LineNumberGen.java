@@ -194,6 +194,8 @@ operator|=
 name|ih
 expr_stmt|;
 block|}
+annotation|@
+name|Override
 specifier|public
 name|Object
 name|clone

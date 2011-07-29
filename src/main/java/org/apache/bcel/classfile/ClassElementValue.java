@@ -126,6 +126,8 @@ name|getBytes
 argument_list|()
 return|;
 block|}
+annotation|@
+name|Override
 specifier|public
 name|String
 name|stringifyValue
@@ -155,6 +157,8 @@ name|getBytes
 argument_list|()
 return|;
 block|}
+annotation|@
+name|Override
 specifier|public
 name|void
 name|dump

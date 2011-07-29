@@ -171,6 +171,8 @@ argument_list|)
 expr_stmt|;
 block|}
 comment|/** 	 * Returns a deep copy of this object; that means, the clone operates 	 * on a new stack. However, the Type objects on the stack are 	 * shared. 	 */
+annotation|@
+name|Override
 specifier|protected
 name|Object
 name|clone
@@ -225,6 +227,8 @@ argument_list|()
 expr_stmt|;
 block|}
 comment|/** @return a hash code value for the object.      */
+annotation|@
+name|Override
 specifier|public
 name|int
 name|hashCode
@@ -238,6 +242,8 @@ argument_list|()
 return|;
 block|}
 comment|/** 	 * Returns true if and only if this OperandStack 	 * equals another, meaning equal lengths and equal 	 * objects on the stacks. 	 */
+annotation|@
+name|Override
 specifier|public
 name|boolean
 name|equals
@@ -561,6 +567,8 @@ name|slots
 return|;
 block|}
 comment|/** 	 * Returns a String representation of this OperandStack instance. 	 */
+annotation|@
+name|Override
 specifier|public
 name|String
 name|toString

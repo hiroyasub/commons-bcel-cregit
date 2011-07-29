@@ -1184,6 +1184,8 @@ name|method_no
 expr_stmt|;
 block|}
 comment|/** 	 * Pass 3a is the verification of static constraints of 	 * JVM code (such as legal targets of branch instructions). 	 * This is the part of pass 3 where you do not need data 	 * flow analysis. 	 * JustIce also delays the checks for a correct exception 	 * table of a Code attribute and correct line number entries 	 * in a LineNumberTable attribute of a Code attribute (which 	 * conceptually belong to pass 2) to this pass. Also, most 	 * of the check for valid local variable entries in a 	 * LocalVariableTable attribute of a Code attribute is 	 * delayed until this pass. 	 * All these checks need access to the code array of the 	 * Code attribute. 	 * 	 * @throws InvalidMethodException if the method to verify does not exist. 	 */
+annotation|@
+name|Override
 specifier|public
 name|VerificationResult
 name|do_verify
@@ -2649,6 +2651,8 @@ comment|///////////////////////////////////////////////////////////
 comment|// The Java Virtual Machine Specification, pages 134-137 //
 comment|///////////////////////////////////////////////////////////
 comment|/** 		 * Assures the generic preconditions of a LoadClass instance. 		 * The referenced class is loaded and pass2-verified. 		 */
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitLoadClass
@@ -2743,6 +2747,8 @@ comment|// tableswitch: BCEL will do it, supposedly.
 comment|// lookupswitch: BCEL will do it, supposedly.
 comment|/** Checks if the constraints of operands of the said instruction(s) are satisfied. */
 comment|// LDC and LDC_W (LDC_W is a subclass of LDC in BCEL's model)
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitLDC
@@ -2833,6 +2839,8 @@ block|}
 block|}
 comment|/** Checks if the constraints of operands of the said instruction(s) are satisfied. */
 comment|// LDC2_W
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitLDC2_W
@@ -2928,6 +2936,8 @@ block|}
 block|}
 comment|/** Checks if the constraints of operands of the said instruction(s) are satisfied. */
 comment|//getfield, putfield, getstatic, putstatic
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitFieldInstruction
@@ -3342,6 +3352,8 @@ throw|;
 block|}
 block|}
 comment|/** Checks if the constraints of operands of the said instruction(s) are satisfied. */
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitInvokeInstruction
@@ -3887,6 +3899,8 @@ block|}
 block|}
 block|}
 comment|/** Checks if the constraints of operands of the said instruction(s) are satisfied. */
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitINSTANCEOF
@@ -3942,6 +3956,8 @@ expr_stmt|;
 block|}
 block|}
 comment|/** Checks if the constraints of operands of the said instruction(s) are satisfied. */
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitCHECKCAST
@@ -3997,6 +4013,8 @@ expr_stmt|;
 block|}
 block|}
 comment|/** Checks if the constraints of operands of the said instruction(s) are satisfied. */
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitNEW
@@ -4110,6 +4128,8 @@ block|}
 block|}
 block|}
 comment|/** Checks if the constraints of operands of the said instruction(s) are satisfied. */
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitMULTIANEWARRAY
@@ -4248,6 +4268,8 @@ expr_stmt|;
 block|}
 block|}
 comment|/** Checks if the constraints of operands of the said instruction(s) are satisfied. */
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitANEWARRAY
@@ -4349,6 +4371,8 @@ block|}
 block|}
 block|}
 comment|/** Checks if the constraints of operands of the said instruction(s) are satisfied. */
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitNEWARRAY
@@ -4445,6 +4469,8 @@ expr_stmt|;
 block|}
 block|}
 comment|/** Checks if the constraints of operands of the said instruction(s) are satisfied. */
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitILOAD
@@ -4516,6 +4542,8 @@ block|}
 block|}
 block|}
 comment|/** Checks if the constraints of operands of the said instruction(s) are satisfied. */
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitFLOAD
@@ -4587,6 +4615,8 @@ block|}
 block|}
 block|}
 comment|/** Checks if the constraints of operands of the said instruction(s) are satisfied. */
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitALOAD
@@ -4658,6 +4688,8 @@ block|}
 block|}
 block|}
 comment|/** Checks if the constraints of operands of the said instruction(s) are satisfied. */
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitISTORE
@@ -4729,6 +4761,8 @@ block|}
 block|}
 block|}
 comment|/** Checks if the constraints of operands of the said instruction(s) are satisfied. */
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitFSTORE
@@ -4800,6 +4834,8 @@ block|}
 block|}
 block|}
 comment|/** Checks if the constraints of operands of the said instruction(s) are satisfied. */
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitASTORE
@@ -4871,6 +4907,8 @@ block|}
 block|}
 block|}
 comment|/** Checks if the constraints of operands of the said instruction(s) are satisfied. */
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitIINC
@@ -4942,6 +4980,8 @@ block|}
 block|}
 block|}
 comment|/** Checks if the constraints of operands of the said instruction(s) are satisfied. */
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitRET
@@ -5013,6 +5053,8 @@ block|}
 block|}
 block|}
 comment|/** Checks if the constraints of operands of the said instruction(s) are satisfied. */
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitLLOAD
@@ -5084,6 +5126,8 @@ block|}
 block|}
 block|}
 comment|/** Checks if the constraints of operands of the said instruction(s) are satisfied. */
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitDLOAD
@@ -5155,6 +5199,8 @@ block|}
 block|}
 block|}
 comment|/** Checks if the constraints of operands of the said instruction(s) are satisfied. */
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitLSTORE
@@ -5226,6 +5272,8 @@ block|}
 block|}
 block|}
 comment|/** Checks if the constraints of operands of the said instruction(s) are satisfied. */
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitDSTORE
@@ -5297,6 +5345,8 @@ block|}
 block|}
 block|}
 comment|/** Checks if the constraints of operands of the said instruction(s) are satisfied. */
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitLOOKUPSWITCH
@@ -5398,6 +5448,8 @@ block|}
 block|}
 block|}
 comment|/** Checks if the constraints of operands of the said instruction(s) are satisfied. */
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitTABLESWITCH
@@ -5410,6 +5462,8 @@ comment|// "high" must be>= "low". We cannot check this, as BCEL hides
 comment|// it from us.
 block|}
 comment|/** Checks if the constraints of operands of the said instruction(s) are satisfied. */
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitPUTSTATIC
@@ -5700,6 +5754,8 @@ throw|;
 block|}
 block|}
 comment|/** Checks if the constraints of operands of the said instruction(s) are satisfied. */
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitGETSTATIC
@@ -5866,6 +5922,8 @@ comment|//public void visitGETFIELD(GETFIELD o){
 comment|// for performance reasons done in Pass 3b
 comment|//}
 comment|/** Checks if the constraints of operands of the said instruction(s) are satisfied. */
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitINVOKEINTERFACE
@@ -6102,6 +6160,8 @@ throw|;
 block|}
 block|}
 comment|/** Checks if the constraints of operands of the said instruction(s) are satisfied. */
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitINVOKESPECIAL
@@ -6564,6 +6624,8 @@ throw|;
 block|}
 block|}
 comment|/** Checks if the constraints of operands of the said instruction(s) are satisfied. */
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitINVOKESTATIC
@@ -6806,6 +6868,8 @@ throw|;
 block|}
 block|}
 comment|/** Checks if the constraints of operands of the said instruction(s) are satisfied. */
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitINVOKEVIRTUAL

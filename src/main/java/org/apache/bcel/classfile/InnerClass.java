@@ -386,6 +386,8 @@ name|outer_class_index
 expr_stmt|;
 block|}
 comment|/**      * @return String representation.      */
+annotation|@
+name|Override
 specifier|public
 specifier|final
 name|String

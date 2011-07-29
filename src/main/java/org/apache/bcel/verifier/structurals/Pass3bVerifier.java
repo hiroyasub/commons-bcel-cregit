@@ -1760,6 +1760,8 @@ condition|)
 do|;
 block|}
 comment|/** 	 * Pass 3b implements the data flow analysis as described in the Java Virtual 	 * Machine Specification, Second Edition.  	 * Later versions will use LocalVariablesInfo objects to verify if the  	 * verifier-inferred types and the class file's debug information (LocalVariables  	 * attributes) match [TODO].  	 *  	 * @see org.apache.bcel.verifier.statics.LocalVariablesInfo  	 * @see org.apache.bcel.verifier.statics.Pass2Verifier#getLocalVariablesInfo(int)  	 */
+annotation|@
+name|Override
 specifier|public
 name|VerificationResult
 name|do_verify

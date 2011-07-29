@@ -177,6 +177,8 @@ name|copyPoolEntries
 argument_list|)
 expr_stmt|;
 block|}
+annotation|@
+name|Override
 specifier|public
 name|void
 name|dump
@@ -203,6 +205,8 @@ name|dos
 argument_list|)
 expr_stmt|;
 block|}
+annotation|@
+name|Override
 specifier|public
 name|String
 name|stringifyValue
@@ -217,6 +221,8 @@ argument_list|)
 throw|;
 block|}
 comment|/** 	 * Return immutable variant of this AnnotationElementValueGen 	 */
+annotation|@
+name|Override
 specifier|public
 name|ElementValue
 name|getElementValue

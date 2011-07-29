@@ -1486,6 +1486,8 @@ argument_list|)
 expr_stmt|;
 block|}
 comment|/** Overridden to stop the application on a closing window. */
+annotation|@
+name|Override
 specifier|protected
 name|void
 name|processWindowEvent

@@ -102,6 +102,8 @@ literal|5
 expr_stmt|;
 block|}
 comment|/**      * Dump instruction as byte code to stream out.      * @param out Output stream      */
+annotation|@
+name|Override
 specifier|public
 name|void
 name|dump
@@ -133,6 +135,8 @@ argument_list|)
 expr_stmt|;
 block|}
 comment|/**      * Read needed data (e.g. index) from file.      */
+annotation|@
+name|Override
 specifier|protected
 name|void
 name|initFromFile
@@ -159,6 +163,8 @@ literal|5
 expr_stmt|;
 block|}
 comment|/**      * Call corresponding visitor method(s). The order is:      * Call visitor methods of implemented interfaces first, then      * call methods according to the class hierarchy in descending order,      * i.e., the most specific visitXXX() call comes last.      *      * @param v Visitor object      */
+annotation|@
+name|Override
 specifier|public
 name|void
 name|accept

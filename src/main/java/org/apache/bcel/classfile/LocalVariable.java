@@ -563,6 +563,8 @@ name|start_pc
 expr_stmt|;
 block|}
 comment|/**      * @return string representation.      */
+annotation|@
+name|Override
 specifier|public
 specifier|final
 name|String

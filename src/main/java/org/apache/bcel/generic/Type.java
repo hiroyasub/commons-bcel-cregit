@@ -375,6 +375,8 @@ name|s
 expr_stmt|;
 block|}
 comment|/**      * @return hashcode of Type      */
+annotation|@
+name|Override
 specifier|public
 name|int
 name|hashCode
@@ -390,6 +392,8 @@ argument_list|()
 return|;
 block|}
 comment|/**      * @return whether the Types are equal      */
+annotation|@
+name|Override
 specifier|public
 name|boolean
 name|equals
@@ -495,6 +499,8 @@ return|;
 block|}
 block|}
 comment|/**      * @return Type string, e.g. `int[]'      */
+annotation|@
+name|Override
 specifier|public
 name|String
 name|toString
@@ -641,6 +647,8 @@ name|Integer
 argument_list|>
 argument_list|()
 block|{
+annotation|@
+name|Override
 specifier|protected
 name|Integer
 name|initialValue

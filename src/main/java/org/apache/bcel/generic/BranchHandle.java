@@ -117,6 +117,8 @@ name|bh
 return|;
 block|}
 comment|/** Handle adds itself to the list of resuable handles.      */
+annotation|@
+name|Override
 specifier|protected
 name|void
 name|addHandle
@@ -132,6 +134,8 @@ name|this
 expr_stmt|;
 block|}
 comment|/* Override InstructionHandle methods: delegate to branch instruction.      * Through this overriding all access to the private i_position field should      * be prevented.      */
+annotation|@
+name|Override
 specifier|public
 name|int
 name|getPosition
@@ -143,6 +147,8 @@ operator|.
 name|position
 return|;
 block|}
+annotation|@
+name|Override
 name|void
 name|setPosition
 parameter_list|(
@@ -159,6 +165,8 @@ operator|=
 name|pos
 expr_stmt|;
 block|}
+annotation|@
+name|Override
 specifier|protected
 name|int
 name|updatePosition
@@ -245,6 +253,8 @@ argument_list|()
 return|;
 block|}
 comment|/**       * Set new contents. Old instruction is disposed and may not be used anymore.      */
+annotation|@
+name|Override
 specifier|public
 name|void
 name|setInstruction

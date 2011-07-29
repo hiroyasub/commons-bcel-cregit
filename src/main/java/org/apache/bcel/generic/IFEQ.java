@@ -64,6 +64,8 @@ argument_list|)
 expr_stmt|;
 block|}
 comment|/**      * @return negation of instruction, e.g. IFEQ.negate() == IFNE      */
+annotation|@
+name|Override
 specifier|public
 name|IfInstruction
 name|negate
@@ -78,6 +80,8 @@ argument_list|)
 return|;
 block|}
 comment|/**      * Call corresponding visitor method(s). The order is:      * Call visitor methods of implemented interfaces first, then      * call methods according to the class hierarchy in descending order,      * i.e., the most specific visitXXX() call comes last.      *      * @param v Visitor object      */
+annotation|@
+name|Override
 specifier|public
 name|void
 name|accept

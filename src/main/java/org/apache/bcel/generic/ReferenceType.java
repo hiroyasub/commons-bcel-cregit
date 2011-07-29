@@ -1131,6 +1131,8 @@ literal|null
 return|;
 block|}
 comment|/**      * This commutative operation returns the first common superclass (narrowest ReferenceType      * referencing a class, not an interface).      * If one of the types is a superclass of the other, the former is returned.      * If "this" is Type.NULL, then t is returned.      * If t is Type.NULL, then "this" is returned.      * If "this" equals t ['this.equals(t)'] "this" is returned.      * If "this" or t is an ArrayType, then Type.OBJECT is returned.      * If "this" or t is a ReferenceType referencing an interface, then Type.OBJECT is returned.      * If not all of the two classes' superclasses cannot be found, "null" is returned.      * See the JVM specification edition 2, "ï¿½4.9.2 The Bytecode Verifier".      *      * @deprecated use getFirstCommonSuperclass(ReferenceType t) which has      *             slightly changed semantics.      * @throws ClassNotFoundException on failure to find superclasses of this      *  type, or the type passed as a parameter      */
+annotation|@
+name|Deprecated
 specifier|public
 name|ReferenceType
 name|firstCommonSuperclass

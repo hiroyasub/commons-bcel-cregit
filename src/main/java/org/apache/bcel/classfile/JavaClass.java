@@ -2063,6 +2063,8 @@ name|superclass_name_index
 expr_stmt|;
 block|}
 comment|/**      * @return String representing class contents.      */
+annotation|@
+name|Override
 specifier|public
 name|String
 name|toString
@@ -3679,6 +3681,8 @@ name|comparator
 expr_stmt|;
 block|}
 comment|/**      * Return value as defined by given BCELComparator strategy.      * By default two JavaClass objects are said to be equal when      * their class names are equal.      *       * @see java.lang.Object#equals(java.lang.Object)      */
+annotation|@
+name|Override
 specifier|public
 name|boolean
 name|equals
@@ -3721,6 +3725,8 @@ argument_list|)
 return|;
 block|}
 comment|/**      * Return value as defined by given BCELComparator strategy.      * By default return the hashcode of the class name.      *       * @see java.lang.Object#hashCode()      */
+annotation|@
+name|Override
 specifier|public
 name|int
 name|hashCode

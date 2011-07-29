@@ -223,6 +223,8 @@ index|]
 expr_stmt|;
 block|}
 comment|/**      * Since this is a variable length instruction, it may shift the following      * instructions which then need to update their position.      *      * Called by InstructionList.setPositions when setting the position for every      * instruction. In the presence of variable length instructions `setPositions'      * performs multiple passes over the instruction list to calculate the      * correct (byte) positions and offsets by calling this function.      *      * @param offset additional offset caused by preceding (variable length) instructions      * @param max_offset the maximum offset that may be caused by these instructions      * @return additional offset caused by possible change of this instruction's length      */
+annotation|@
+name|Override
 specifier|protected
 name|int
 name|updatePosition
@@ -282,6 +284,8 @@ name|old_length
 return|;
 block|}
 comment|/**      * Dump instruction as byte code to stream out.      * @param out Output stream      */
+annotation|@
+name|Override
 specifier|public
 name|void
 name|dump
@@ -337,6 +341,8 @@ argument_list|)
 expr_stmt|;
 block|}
 comment|/**      * Read needed data (e.g. index) from file.      */
+annotation|@
+name|Override
 specifier|protected
 name|void
 name|initFromFile
@@ -399,6 +405,8 @@ argument_list|()
 expr_stmt|;
 block|}
 comment|/**      * @return mnemonic for instruction      */
+annotation|@
+name|Override
 specifier|public
 name|String
 name|toString
@@ -565,6 +573,8 @@ name|target
 expr_stmt|;
 block|}
 comment|/**      * @param old_ih old target      * @param new_ih new target      */
+annotation|@
+name|Override
 specifier|public
 name|void
 name|updateTarget
@@ -656,6 +666,8 @@ throw|;
 block|}
 block|}
 comment|/**      * @return true, if ih is target of this instruction      */
+annotation|@
+name|Override
 specifier|public
 name|boolean
 name|containsTarget
@@ -711,6 +723,8 @@ return|return
 literal|false
 return|;
 block|}
+annotation|@
+name|Override
 specifier|protected
 name|Object
 name|clone
@@ -761,6 +775,8 @@ name|copy
 return|;
 block|}
 comment|/**      * Inform targets that they're not targeted anymore.      */
+annotation|@
+name|Override
 name|void
 name|dispose
 parameter_list|()

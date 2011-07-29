@@ -308,6 +308,8 @@ name|cpool
 argument_list|)
 expr_stmt|;
 block|}
+annotation|@
+name|Override
 specifier|public
 name|void
 name|accept
@@ -324,6 +326,8 @@ name|this
 argument_list|)
 expr_stmt|;
 block|}
+annotation|@
+name|Override
 specifier|public
 specifier|final
 name|void
@@ -462,6 +466,8 @@ name|length
 expr_stmt|;
 block|}
 comment|/**    * @return String representation.    */
+annotation|@
+name|Override
 specifier|public
 specifier|final
 name|String
@@ -529,6 +535,8 @@ argument_list|()
 return|;
 block|}
 comment|/**    * @return deep copy of this attribute    */
+annotation|@
+name|Override
 specifier|public
 name|Attribute
 name|copy

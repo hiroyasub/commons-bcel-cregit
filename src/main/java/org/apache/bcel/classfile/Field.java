@@ -337,6 +337,8 @@ literal|null
 return|;
 block|}
 comment|/**      * Return string representation close to declaration format,      * `public static final short MAX = 100', e.g..      *      * @return String representation of field, including the signature.      */
+annotation|@
+name|Override
 specifier|public
 specifier|final
 name|String
@@ -575,6 +577,8 @@ name|comparator
 expr_stmt|;
 block|}
 comment|/**      * Return value as defined by given BCELComparator strategy.      * By default two Field objects are said to be equal when      * their names and signatures are equal.      *       * @see java.lang.Object#equals(java.lang.Object)      */
+annotation|@
+name|Override
 specifier|public
 name|boolean
 name|equals
@@ -595,6 +599,8 @@ argument_list|)
 return|;
 block|}
 comment|/**      * Return value as defined by given BCELComparator strategy.      * By default return the hashcode of the field's name XOR signature.      *       * @see java.lang.Object#hashCode()      */
+annotation|@
+name|Override
 specifier|public
 name|int
 name|hashCode

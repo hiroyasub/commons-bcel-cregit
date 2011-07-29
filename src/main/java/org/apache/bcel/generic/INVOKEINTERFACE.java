@@ -165,6 +165,8 @@ name|nargs
 expr_stmt|;
 block|}
 comment|/**      * Dump instruction as byte code to stream out.      * @param out Output stream      */
+annotation|@
+name|Override
 specifier|public
 name|void
 name|dump
@@ -215,6 +217,8 @@ name|nargs
 return|;
 block|}
 comment|/**      * Read needed data (i.e., index) from file.      */
+annotation|@
+name|Override
 specifier|protected
 name|void
 name|initFromFile
@@ -256,6 +260,8 @@ expr_stmt|;
 comment|// Skip 0 byte
 block|}
 comment|/**      * @return mnemonic for instruction with symbolic references resolved      */
+annotation|@
+name|Override
 specifier|public
 name|String
 name|toString
@@ -277,6 +283,8 @@ operator|+
 name|nargs
 return|;
 block|}
+annotation|@
+name|Override
 specifier|public
 name|int
 name|consumeStack
@@ -403,6 +411,8 @@ name|cs
 return|;
 block|}
 comment|/**      * Call corresponding visitor method(s). The order is:      * Call visitor methods of implemented interfaces first, then      * call methods according to the class hierarchy in descending order,      * i.e., the most specific visitXXX() call comes last.      *      * @param v Visitor object      */
+annotation|@
+name|Override
 specifier|public
 name|void
 name|accept

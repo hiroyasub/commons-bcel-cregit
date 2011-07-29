@@ -840,6 +840,8 @@ throw|;
 block|}
 block|}
 comment|/**      * @return String representation.      */
+annotation|@
+name|Override
 specifier|public
 specifier|final
 name|String

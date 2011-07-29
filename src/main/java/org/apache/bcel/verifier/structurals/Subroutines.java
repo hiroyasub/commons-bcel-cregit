@@ -393,6 +393,8 @@ name|InstructionHandle
 name|theRET
 decl_stmt|;
 comment|/** 		 * Returns a String representation of this object, merely 		 * for debugging purposes. 		 * (Internal) Warning: Verbosity on a problematic subroutine may cause 		 * stack overflow errors due to recursive subSubs() calls. 		 * Don't use this, then. 		 */
+annotation|@
+name|Override
 specifier|public
 name|String
 name|toString
@@ -2812,6 +2814,8 @@ name|single
 return|;
 block|}
 comment|/** 	 * Returns a String representation of this object; merely for debugging puposes. 	 */
+annotation|@
+name|Override
 specifier|public
 name|String
 name|toString

@@ -150,6 +150,8 @@ name|detailMessage
 return|;
 block|}
 comment|/** @return a hash code value for the object.      */
+annotation|@
+name|Override
 specifier|public
 name|int
 name|hashCode
@@ -165,6 +167,8 @@ argument_list|()
 return|;
 block|}
 comment|/**      * Returns if two VerificationResult instances are equal.      */
+annotation|@
+name|Override
 specifier|public
 name|boolean
 name|equals
@@ -223,6 +227,8 @@ operator|)
 return|;
 block|}
 comment|/**      * Returns a String representation of the VerificationResult.      */
+annotation|@
+name|Override
 specifier|public
 name|String
 name|toString

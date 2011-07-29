@@ -174,6 +174,8 @@ operator|=
 name|methodIdx
 expr_stmt|;
 block|}
+annotation|@
+name|Override
 specifier|public
 name|void
 name|accept
@@ -190,6 +192,8 @@ name|this
 argument_list|)
 expr_stmt|;
 block|}
+annotation|@
+name|Override
 specifier|public
 name|Attribute
 name|copy
@@ -320,6 +324,8 @@ return|return
 name|nat
 return|;
 block|}
+annotation|@
+name|Override
 specifier|public
 specifier|final
 name|void

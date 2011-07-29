@@ -436,6 +436,8 @@ return|return
 name|handler_pc
 return|;
 block|}
+annotation|@
+name|Override
 specifier|public
 name|String
 name|toString
@@ -457,6 +459,8 @@ operator|+
 literal|")"
 return|;
 block|}
+annotation|@
+name|Override
 specifier|public
 name|Object
 name|clone

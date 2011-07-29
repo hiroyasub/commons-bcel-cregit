@@ -293,6 +293,8 @@ name|deferTo
 argument_list|)
 expr_stmt|;
 block|}
+annotation|@
+name|Override
 specifier|protected
 name|Class
 argument_list|<

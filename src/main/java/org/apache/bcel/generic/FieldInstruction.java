@@ -75,6 +75,8 @@ argument_list|)
 expr_stmt|;
 block|}
 comment|/**      * @return mnemonic for instruction with symbolic references resolved      */
+annotation|@
+name|Override
 specifier|public
 name|String
 name|toString
@@ -144,6 +146,8 @@ argument_list|)
 return|;
 block|}
 comment|/** @return return type of referenced field      */
+annotation|@
+name|Override
 specifier|public
 name|Type
 name|getType

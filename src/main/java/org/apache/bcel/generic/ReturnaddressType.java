@@ -104,6 +104,8 @@ name|returnTarget
 expr_stmt|;
 block|}
 comment|/** @return a hash code value for the object.      */
+annotation|@
+name|Override
 specifier|public
 name|int
 name|hashCode
@@ -128,6 +130,8 @@ argument_list|()
 return|;
 block|}
 comment|/**      * Returns if the two Returnaddresses refer to the same target.      */
+annotation|@
+name|Override
 specifier|public
 name|boolean
 name|equals

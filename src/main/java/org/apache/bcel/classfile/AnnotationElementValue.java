@@ -89,6 +89,8 @@ operator|=
 name|annotationEntry
 expr_stmt|;
 block|}
+annotation|@
+name|Override
 specifier|public
 name|void
 name|dump
@@ -115,6 +117,8 @@ name|dos
 argument_list|)
 expr_stmt|;
 block|}
+annotation|@
+name|Override
 specifier|public
 name|String
 name|stringifyValue
@@ -144,6 +148,8 @@ name|toString
 argument_list|()
 return|;
 block|}
+annotation|@
+name|Override
 specifier|public
 name|String
 name|toString

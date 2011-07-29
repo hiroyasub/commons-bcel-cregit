@@ -820,6 +820,8 @@ index|]
 return|;
 block|}
 comment|/** 	 * Pass 2 is the pass where static properties of the 	 * class file are checked without looking into "Code" 	 * arrays of methods. 	 * This verification pass is usually invoked when 	 * a class is resolved; and it may be possible that 	 * this verification pass has to load in other classes 	 * such as superclasses or implemented interfaces. 	 * Therefore, Pass 1 is run on them.<BR> 	 * Note that most referenced classes are<B>not</B> loaded 	 * in for verification or for an existance check by this 	 * pass; only the syntactical correctness of their names 	 * and descriptors (a.k.a. signatures) is checked.<BR> 	 * Very few checks that conceptually belong here 	 * are delayed until pass 3a in JustIce. JustIce does 	 * not only check for syntactical correctness but also 	 * for semantical sanity - therefore it needs access to 	 * the "Code" array of methods in a few cases. Please 	 * see the pass 3a documentation, too. 	 * 	 * @see org.apache.bcel.verifier.statics.Pass3aVerifier 	 */
+annotation|@
+name|Override
 specifier|public
 name|VerificationResult
 name|do_verify
@@ -1925,6 +1927,8 @@ block|}
 comment|///////////////////////////////////////
 comment|// ClassFile structure (vmspec2 4.1) //
 comment|///////////////////////////////////////
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitJavaClass
@@ -2196,6 +2200,8 @@ block|}
 comment|/////////////////////////////
 comment|// CONSTANTS (vmspec2 4.4) //
 comment|/////////////////////////////
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitConstantClass
@@ -2244,6 +2250,8 @@ name|CONST_Utf8
 argument_list|)
 expr_stmt|;
 block|}
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitConstantFieldref
@@ -2304,6 +2312,8 @@ name|CONST_NameAndType
 argument_list|)
 expr_stmt|;
 block|}
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitConstantMethodref
@@ -2364,6 +2374,8 @@ name|CONST_NameAndType
 argument_list|)
 expr_stmt|;
 block|}
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitConstantInterfaceMethodref
@@ -2424,6 +2436,8 @@ name|CONST_NameAndType
 argument_list|)
 expr_stmt|;
 block|}
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitConstantString
@@ -2472,6 +2486,8 @@ name|CONST_Utf8
 argument_list|)
 expr_stmt|;
 block|}
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitConstantInteger
@@ -2509,6 +2525,8 @@ throw|;
 block|}
 comment|// no indices to check
 block|}
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitConstantFloat
@@ -2546,6 +2564,8 @@ throw|;
 block|}
 comment|//no indices to check
 block|}
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitConstantLong
@@ -2583,6 +2603,8 @@ throw|;
 block|}
 comment|//no indices to check
 block|}
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitConstantDouble
@@ -2620,6 +2642,8 @@ throw|;
 block|}
 comment|//no indices to check
 block|}
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitConstantNameAndType
@@ -2681,6 +2705,8 @@ name|CONST_Utf8
 argument_list|)
 expr_stmt|;
 block|}
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitConstantUtf8
@@ -2721,6 +2747,8 @@ block|}
 comment|//////////////////////////
 comment|// FIELDS (vmspec2 4.5) //
 comment|//////////////////////////
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitField
@@ -3270,6 +3298,8 @@ block|}
 comment|///////////////////////////
 comment|// METHODS (vmspec2 4.6) //
 comment|///////////////////////////
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitMethod
@@ -4462,6 +4492,8 @@ block|}
 comment|///////////////////////////////////////////////////////
 comment|// ClassFile-structure-ATTRIBUTES (vmspec2 4.1, 4.7) //
 comment|///////////////////////////////////////////////////////
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitSourceFile
@@ -4650,6 +4682,8 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitDeprecated
@@ -4723,6 +4757,8 @@ argument_list|)
 throw|;
 block|}
 block|}
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitSynthetic
@@ -4796,6 +4832,8 @@ argument_list|)
 throw|;
 block|}
 block|}
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitInnerClasses
@@ -5037,6 +5075,8 @@ block|}
 comment|////////////////////////////////////////////////////////
 comment|// field_info-structure-ATTRIBUTES (vmspec2 4.5, 4.7) //
 comment|////////////////////////////////////////////////////////
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitConstantValue
@@ -5392,6 +5432,8 @@ comment|// DEPRECATED: see above
 comment|/////////////////////////////////////////////////////////
 comment|// method_info-structure-ATTRIBUTES (vmspec2 4.6, 4.7) //
 comment|/////////////////////////////////////////////////////////
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitCode
@@ -6639,6 +6681,8 @@ throw|;
 block|}
 block|}
 comment|// visitCode(Code) END
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitExceptionTable
@@ -7057,6 +7101,8 @@ comment|// DEPRECATED: see above
 comment|//////////////////////////////////////////////////////////////
 comment|// code_attribute-structure-ATTRIBUTES (vmspec2 4.7.3, 4.7) //
 comment|//////////////////////////////////////////////////////////////
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitLineNumberTable
@@ -7133,6 +7179,8 @@ comment|//In JustIce,this check is delayed to Pass 3a.
 comment|//LineNumber[] linenumbers = obj.getLineNumberTable();
 comment|// ...validity check...
 block|}
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitLocalVariableTable
@@ -7148,6 +7196,8 @@ block|}
 comment|////////////////////////////////////////////////////
 comment|// MISC-structure-ATTRIBUTES (vmspec2 4.7.1, 4.7) //
 comment|////////////////////////////////////////////////////
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitUnknown
@@ -7187,6 +7237,8 @@ block|}
 comment|//////////
 comment|// BCEL //
 comment|//////////
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitLocalVariable
@@ -7199,6 +7251,8 @@ comment|// This does not represent an Attribute but is only
 comment|// related to internal BCEL data representation.
 comment|// see visitLocalVariableTable(LocalVariableTable)
 block|}
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitCodeException
@@ -7212,6 +7266,8 @@ comment|// This does not represent an Attribute but is only
 comment|// related to internal BCEL data representation.
 comment|// see visitCode(Code)
 block|}
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitConstantPool
@@ -7224,6 +7280,8 @@ comment|// No need to. We're piggybacked by the DescendingVisitor.
 comment|// This does not represent an Attribute but is only
 comment|// related to internal BCEL data representation.
 block|}
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitInnerClass
@@ -7235,6 +7293,8 @@ block|{
 comment|// This does not represent an Attribute but is only
 comment|// related to internal BCEL data representation.
 block|}
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitLineNumber
@@ -7341,6 +7401,8 @@ name|getConstantPool
 argument_list|()
 expr_stmt|;
 block|}
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitConstantFieldref
@@ -7589,6 +7651,8 @@ argument_list|)
 throw|;
 block|}
 block|}
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitConstantMethodref
@@ -7865,6 +7929,8 @@ argument_list|)
 throw|;
 block|}
 block|}
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitConstantInterfaceMethodref
@@ -8521,6 +8587,8 @@ name|hasInnerClass
 return|;
 block|}
 comment|/** This method casually visits ConstantClass references. */
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitConstantClass

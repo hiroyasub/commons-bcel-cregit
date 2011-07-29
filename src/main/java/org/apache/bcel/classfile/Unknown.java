@@ -324,6 +324,8 @@ expr_stmt|;
 block|}
 block|}
 comment|/**      * Called by objects that are traversing the nodes of the tree implicitely      * defined by the contents of a Java class. I.e., the hierarchy of methods,      * fields, attributes, etc. spawns a tree of objects.      *      * @param v Visitor object      */
+annotation|@
+name|Override
 specifier|public
 name|void
 name|accept
@@ -341,6 +343,8 @@ argument_list|)
 expr_stmt|;
 block|}
 comment|/**      * Dump unknown bytes to file stream.      *      * @param file Output file stream      * @throws IOException      */
+annotation|@
+name|Override
 specifier|public
 specifier|final
 name|void
@@ -392,6 +396,8 @@ name|bytes
 return|;
 block|}
 comment|/**      * @return name of attribute.      */
+annotation|@
+name|Override
 specifier|public
 specifier|final
 name|String
@@ -421,6 +427,8 @@ name|bytes
 expr_stmt|;
 block|}
 comment|/**      * @return String representation.      */
+annotation|@
+name|Override
 specifier|public
 specifier|final
 name|String
@@ -518,6 +526,8 @@ literal|")"
 return|;
 block|}
 comment|/**      * @return deep copy of this attribute      */
+annotation|@
+name|Override
 specifier|public
 name|Attribute
 name|copy

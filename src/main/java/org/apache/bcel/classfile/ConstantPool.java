@@ -1106,6 +1106,8 @@ name|length
 expr_stmt|;
 block|}
 comment|/**      * @return String representation.      */
+annotation|@
+name|Override
 specifier|public
 name|String
 name|toString

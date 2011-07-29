@@ -734,6 +734,8 @@ comment|/* therefore, we don't know the order of visiting; but we know */
 comment|/* these methods are called before the visitYYYY methods below */
 comment|/***************************************************************/
 comment|/** 	 * Assures the generic preconditions of a LoadClass instance. 	 * The referenced class is loaded and pass2-verified. 	 */
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitLoadClass
@@ -823,6 +825,8 @@ block|}
 block|}
 block|}
 comment|/** 	 * Ensures the general preconditions of a StackConsumer instance. 	 */
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitStackConsumer
@@ -841,6 +845,8 @@ argument_list|)
 expr_stmt|;
 block|}
 comment|/** 	 * Ensures the general preconditions of a StackProducer instance. 	 */
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitStackProducer
@@ -864,6 +870,8 @@ comment|/* therefore, we know the order of visiting; we know           */
 comment|/* these methods are called after the visitXXXX methods above. */
 comment|/***************************************************************/
 comment|/** 	 * Ensures the general preconditions of a CPInstruction instance. 	 */
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitCPInstruction
@@ -912,6 +920,8 @@ throw|;
 block|}
 block|}
 comment|/** 	 * Ensures the general preconditions of a FieldInstruction instance. 	 */
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitFieldInstruction
@@ -1046,6 +1056,8 @@ block|}
 block|}
 block|}
 comment|/** 	 * Ensures the general preconditions of an InvokeInstruction instance. 	 */
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitInvokeInstruction
@@ -1060,6 +1072,8 @@ comment|// visitCPInstruction(o) has been called before.
 comment|//TODO
 block|}
 comment|/** 	 * Ensures the general preconditions of a StackInstruction instance. 	 */
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitStackInstruction
@@ -1075,6 +1089,8 @@ argument_list|)
 expr_stmt|;
 block|}
 comment|/** 	 * Assures the generic preconditions of a LocalVariableInstruction instance. 	 * That is, the index of the local variable must be valid. 	 */
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitLocalVariableInstruction
@@ -1128,6 +1144,8 @@ expr_stmt|;
 block|}
 block|}
 comment|/** 	 * Assures the generic preconditions of a LoadInstruction instance. 	 */
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitLoadInstruction
@@ -1392,6 +1410,8 @@ expr_stmt|;
 block|}
 block|}
 comment|/** 	 * Assures the generic preconditions of a StoreInstruction instance. 	 */
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitStoreInstruction
@@ -1532,6 +1552,8 @@ comment|//}
 block|}
 block|}
 comment|/** 	 * Assures the generic preconditions of a ReturnInstruction instance. 	 */
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitReturnInstruction
@@ -1741,6 +1763,8 @@ comment|/***************************************************************/
 comment|/* "special"visitXXXX methods for one type of instruction each */
 comment|/***************************************************************/
 comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitAALOAD
@@ -1830,6 +1854,8 @@ comment|//referenceTypeIsInitialized(o, (ReferenceType) (((ArrayType) arrayref).
 block|}
 block|}
 comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitAASTORE
@@ -2030,6 +2056,8 @@ throw|;
 block|}
 block|}
 comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitACONST_NULL
@@ -2041,6 +2069,8 @@ block|{
 comment|// Nothing needs to be done here.
 block|}
 comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitALOAD
@@ -2053,6 +2083,8 @@ comment|//visitLoadInstruction(LoadInstruction) is called before.
 comment|// Nothing else needs to be done here.
 block|}
 comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitANEWARRAY
@@ -2104,6 +2136,8 @@ comment|// array, or interface type. See Pass 3a.
 block|}
 block|}
 comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitARETURN
@@ -2171,6 +2205,8 @@ comment|//	constraintViolated(o, "The 'objectref' type "+objectref+" at the stac
 comment|//}
 block|}
 comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitARRAYLENGTH
@@ -2199,6 +2235,8 @@ argument_list|)
 expr_stmt|;
 block|}
 comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitASTORE
@@ -2254,6 +2292,8 @@ comment|//	referenceTypeIsInitialized(o, (ReferenceType) (stack().peek()) );
 comment|//}
 block|}
 comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitATHROW
@@ -2429,6 +2469,8 @@ throw|;
 block|}
 block|}
 comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitBALOAD
@@ -2543,6 +2585,8 @@ block|}
 block|}
 block|}
 comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitBASTORE
@@ -2675,6 +2719,8 @@ block|}
 block|}
 block|}
 comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitBIPUSH
@@ -2686,6 +2732,8 @@ block|{
 comment|// Nothing to do...
 block|}
 comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitBREAKPOINT
@@ -2703,6 +2751,8 @@ argument_list|)
 throw|;
 block|}
 comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitCALOAD
@@ -2749,6 +2799,8 @@ argument_list|)
 expr_stmt|;
 block|}
 comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitCASTORE
@@ -2858,6 +2910,8 @@ block|}
 block|}
 block|}
 comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitCHECKCAST
@@ -2943,6 +2997,8 @@ expr_stmt|;
 block|}
 block|}
 comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitD2F
@@ -2982,6 +3038,8 @@ expr_stmt|;
 block|}
 block|}
 comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitD2I
@@ -3021,6 +3079,8 @@ expr_stmt|;
 block|}
 block|}
 comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitD2L
@@ -3060,6 +3120,8 @@ expr_stmt|;
 block|}
 block|}
 comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitDADD
@@ -3132,6 +3194,8 @@ expr_stmt|;
 block|}
 block|}
 comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitDALOAD
@@ -3252,6 +3316,8 @@ expr_stmt|;
 block|}
 block|}
 comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitDASTORE
@@ -3403,6 +3469,8 @@ expr_stmt|;
 block|}
 block|}
 comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitDCMPG
@@ -3475,6 +3543,8 @@ expr_stmt|;
 block|}
 block|}
 comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitDCMPL
@@ -3547,6 +3617,8 @@ expr_stmt|;
 block|}
 block|}
 comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitDCONST
@@ -3558,6 +3630,8 @@ block|{
 comment|// There's nothing to be done here.
 block|}
 comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitDDIV
@@ -3630,6 +3704,8 @@ expr_stmt|;
 block|}
 block|}
 comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitDLOAD
@@ -3642,6 +3718,8 @@ comment|//visitLoadInstruction(LoadInstruction) is called before.
 comment|// Nothing else needs to be done here.
 block|}
 comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitDMUL
@@ -3714,6 +3792,8 @@ expr_stmt|;
 block|}
 block|}
 comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitDNEG
@@ -3753,6 +3833,8 @@ expr_stmt|;
 block|}
 block|}
 comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitDREM
@@ -3825,6 +3907,8 @@ expr_stmt|;
 block|}
 block|}
 comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitDRETURN
@@ -3864,6 +3948,8 @@ expr_stmt|;
 block|}
 block|}
 comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitDSTORE
@@ -3876,6 +3962,8 @@ comment|//visitStoreInstruction(StoreInstruction) is called before.
 comment|// Nothing else needs to be done here.
 block|}
 comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitDSUB
@@ -3948,6 +4036,8 @@ expr_stmt|;
 block|}
 block|}
 comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitDUP
@@ -3999,6 +4089,8 @@ expr_stmt|;
 block|}
 block|}
 comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitDUP_X1
@@ -4097,6 +4189,8 @@ expr_stmt|;
 block|}
 block|}
 comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitDUP_X2
@@ -4218,6 +4312,8 @@ block|}
 block|}
 block|}
 comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitDUP2
@@ -4296,6 +4392,8 @@ block|}
 block|}
 block|}
 comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitDUP2_X1
@@ -4471,6 +4569,8 @@ block|}
 block|}
 block|}
 comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitDUP2_X2
@@ -4642,6 +4742,8 @@ argument_list|)
 expr_stmt|;
 block|}
 comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitF2D
@@ -4681,6 +4783,8 @@ expr_stmt|;
 block|}
 block|}
 comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitF2I
@@ -4720,6 +4824,8 @@ expr_stmt|;
 block|}
 block|}
 comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitF2L
@@ -4759,6 +4865,8 @@ expr_stmt|;
 block|}
 block|}
 comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitFADD
@@ -4831,6 +4939,8 @@ expr_stmt|;
 block|}
 block|}
 comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitFALOAD
@@ -4951,6 +5061,8 @@ expr_stmt|;
 block|}
 block|}
 comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitFASTORE
@@ -5102,6 +5214,8 @@ expr_stmt|;
 block|}
 block|}
 comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitFCMPG
@@ -5174,6 +5288,8 @@ expr_stmt|;
 block|}
 block|}
 comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitFCMPL
@@ -5246,6 +5362,8 @@ expr_stmt|;
 block|}
 block|}
 comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitFCONST
@@ -5257,6 +5375,8 @@ block|{
 comment|// nothing to do here.
 block|}
 comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitFDIV
@@ -5329,6 +5449,8 @@ expr_stmt|;
 block|}
 block|}
 comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitFLOAD
@@ -5341,6 +5463,8 @@ comment|//visitLoadInstruction(LoadInstruction) is called before.
 comment|// Nothing else needs to be done here.
 block|}
 comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitFMUL
@@ -5413,6 +5537,8 @@ expr_stmt|;
 block|}
 block|}
 comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitFNEG
@@ -5452,6 +5578,8 @@ expr_stmt|;
 block|}
 block|}
 comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitFREM
@@ -5524,6 +5652,8 @@ expr_stmt|;
 block|}
 block|}
 comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitFRETURN
@@ -5563,6 +5693,8 @@ expr_stmt|;
 block|}
 block|}
 comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitFSTORE
@@ -5575,6 +5707,8 @@ comment|//visitStoreInstruction(StoreInstruction) is called before.
 comment|// Nothing else needs to be done here.
 block|}
 comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitFSUB
@@ -5647,6 +5781,8 @@ expr_stmt|;
 block|}
 block|}
 comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitGETFIELD
@@ -6166,6 +6302,8 @@ throw|;
 block|}
 block|}
 comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitGETSTATIC
@@ -6177,6 +6315,8 @@ block|{
 comment|// Field must be static: see Pass 3a.
 block|}
 comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitGOTO
@@ -6188,6 +6328,8 @@ block|{
 comment|// nothing to do here.
 block|}
 comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitGOTO_W
@@ -6199,6 +6341,8 @@ block|{
 comment|// nothing to do here.
 block|}
 comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitI2B
@@ -6238,6 +6382,8 @@ expr_stmt|;
 block|}
 block|}
 comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitI2C
@@ -6277,6 +6423,8 @@ expr_stmt|;
 block|}
 block|}
 comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitI2D
@@ -6316,6 +6464,8 @@ expr_stmt|;
 block|}
 block|}
 comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitI2F
@@ -6355,6 +6505,8 @@ expr_stmt|;
 block|}
 block|}
 comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitI2L
@@ -6394,6 +6546,8 @@ expr_stmt|;
 block|}
 block|}
 comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitI2S
@@ -6433,6 +6587,8 @@ expr_stmt|;
 block|}
 block|}
 comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitIADD
@@ -6505,6 +6661,8 @@ expr_stmt|;
 block|}
 block|}
 comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitIALOAD
@@ -6625,6 +6783,8 @@ expr_stmt|;
 block|}
 block|}
 comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitIAND
@@ -6697,6 +6857,8 @@ expr_stmt|;
 block|}
 block|}
 comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitIASTORE
@@ -6848,6 +7010,8 @@ expr_stmt|;
 block|}
 block|}
 comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitICONST
@@ -6859,6 +7023,8 @@ block|{
 comment|//nothing to do here.
 block|}
 comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitIDIV
@@ -6931,6 +7097,8 @@ expr_stmt|;
 block|}
 block|}
 comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitIF_ACMPEQ
@@ -7007,6 +7175,8 @@ block|}
 comment|//referenceTypeIsInitialized(o, (ReferenceType) (stack().peek(1)) );
 block|}
 comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitIF_ACMPNE
@@ -7083,6 +7253,8 @@ comment|//referenceTypeIsInitialized(o, (ReferenceType) (stack().peek(1)) );
 block|}
 block|}
 comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitIF_ICMPEQ
@@ -7155,6 +7327,8 @@ expr_stmt|;
 block|}
 block|}
 comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitIF_ICMPGE
@@ -7227,6 +7401,8 @@ expr_stmt|;
 block|}
 block|}
 comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitIF_ICMPGT
@@ -7299,6 +7475,8 @@ expr_stmt|;
 block|}
 block|}
 comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitIF_ICMPLE
@@ -7371,6 +7549,8 @@ expr_stmt|;
 block|}
 block|}
 comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitIF_ICMPLT
@@ -7443,6 +7623,8 @@ expr_stmt|;
 block|}
 block|}
 comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitIF_ICMPNE
@@ -7515,6 +7697,8 @@ expr_stmt|;
 block|}
 block|}
 comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitIFEQ
@@ -7554,6 +7738,8 @@ expr_stmt|;
 block|}
 block|}
 comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitIFGE
@@ -7593,6 +7779,8 @@ expr_stmt|;
 block|}
 block|}
 comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitIFGT
@@ -7632,6 +7820,8 @@ expr_stmt|;
 block|}
 block|}
 comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitIFLE
@@ -7671,6 +7861,8 @@ expr_stmt|;
 block|}
 block|}
 comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitIFLT
@@ -7710,6 +7902,8 @@ expr_stmt|;
 block|}
 block|}
 comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitIFNE
@@ -7749,6 +7943,8 @@ expr_stmt|;
 block|}
 block|}
 comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitIFNONNULL
@@ -7805,6 +8001,8 @@ argument_list|)
 expr_stmt|;
 block|}
 comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitIFNULL
@@ -7861,6 +8059,8 @@ argument_list|)
 expr_stmt|;
 block|}
 comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitIINC
@@ -7931,6 +8131,8 @@ argument_list|)
 expr_stmt|;
 block|}
 comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitILOAD
@@ -7942,6 +8144,8 @@ block|{
 comment|// All done by visitLocalVariableInstruction(), visitLoadInstruction()
 block|}
 comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitIMPDEP1
@@ -7959,6 +8163,8 @@ argument_list|)
 throw|;
 block|}
 comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitIMPDEP2
@@ -7976,6 +8182,8 @@ argument_list|)
 throw|;
 block|}
 comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitIMUL
@@ -8048,6 +8256,8 @@ expr_stmt|;
 block|}
 block|}
 comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitINEG
@@ -8087,6 +8297,8 @@ expr_stmt|;
 block|}
 block|}
 comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitINSTANCEOF
@@ -8172,6 +8384,8 @@ expr_stmt|;
 block|}
 block|}
 comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitINVOKEINTERFACE
@@ -8603,6 +8817,8 @@ expr_stmt|;
 block|}
 block|}
 comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitINVOKESPECIAL
@@ -9168,6 +9384,8 @@ throw|;
 block|}
 block|}
 comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitINVOKESTATIC
@@ -9471,6 +9689,8 @@ throw|;
 block|}
 block|}
 comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitINVOKEVIRTUAL
@@ -9921,6 +10141,8 @@ throw|;
 block|}
 block|}
 comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitIOR
@@ -9993,6 +10215,8 @@ expr_stmt|;
 block|}
 block|}
 comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitIREM
@@ -10065,6 +10289,8 @@ expr_stmt|;
 block|}
 block|}
 comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitIRETURN
@@ -10104,6 +10330,8 @@ expr_stmt|;
 block|}
 block|}
 comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitISHL
@@ -10176,6 +10404,8 @@ expr_stmt|;
 block|}
 block|}
 comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitISHR
@@ -10248,6 +10478,8 @@ expr_stmt|;
 block|}
 block|}
 comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitISTORE
@@ -10260,6 +10492,8 @@ comment|//visitStoreInstruction(StoreInstruction) is called before.
 comment|// Nothing else needs to be done here.
 block|}
 comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitISUB
@@ -10332,6 +10566,8 @@ expr_stmt|;
 block|}
 block|}
 comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitIUSHR
@@ -10404,6 +10640,8 @@ expr_stmt|;
 block|}
 block|}
 comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitIXOR
@@ -10476,6 +10714,8 @@ expr_stmt|;
 block|}
 block|}
 comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitJSR
@@ -10487,6 +10727,8 @@ block|{
 comment|// nothing to do here.
 block|}
 comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitJSR_W
@@ -10498,6 +10740,8 @@ block|{
 comment|// nothing to do here.
 block|}
 comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitL2D
@@ -10537,6 +10781,8 @@ expr_stmt|;
 block|}
 block|}
 comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitL2F
@@ -10576,6 +10822,8 @@ expr_stmt|;
 block|}
 block|}
 comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitL2I
@@ -10615,6 +10863,8 @@ expr_stmt|;
 block|}
 block|}
 comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitLADD
@@ -10687,6 +10937,8 @@ expr_stmt|;
 block|}
 block|}
 comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitLALOAD
@@ -10807,6 +11059,8 @@ expr_stmt|;
 block|}
 block|}
 comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitLAND
@@ -10879,6 +11133,8 @@ expr_stmt|;
 block|}
 block|}
 comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitLASTORE
@@ -11030,6 +11286,8 @@ expr_stmt|;
 block|}
 block|}
 comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitLCMP
@@ -11102,6 +11360,8 @@ expr_stmt|;
 block|}
 block|}
 comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitLCONST
@@ -11113,6 +11373,8 @@ block|{
 comment|// Nothing to do here.
 block|}
 comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitLDC
@@ -11245,6 +11507,8 @@ expr_stmt|;
 block|}
 block|}
 comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitLDC2_W
@@ -11299,6 +11563,8 @@ expr_stmt|;
 block|}
 block|}
 comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitLDIV
@@ -11371,6 +11637,8 @@ expr_stmt|;
 block|}
 block|}
 comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitLLOAD
@@ -11383,6 +11651,8 @@ comment|//visitLoadInstruction(LoadInstruction) is called before.
 comment|// Nothing else needs to be done here.
 block|}
 comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitLMUL
@@ -11455,6 +11725,8 @@ expr_stmt|;
 block|}
 block|}
 comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitLNEG
@@ -11494,6 +11766,8 @@ expr_stmt|;
 block|}
 block|}
 comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitLOOKUPSWITCH
@@ -11534,6 +11808,8 @@ block|}
 comment|// See also pass 3a.
 block|}
 comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitLOR
@@ -11606,6 +11882,8 @@ expr_stmt|;
 block|}
 block|}
 comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitLREM
@@ -11678,6 +11956,8 @@ expr_stmt|;
 block|}
 block|}
 comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitLRETURN
@@ -11717,6 +11997,8 @@ expr_stmt|;
 block|}
 block|}
 comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitLSHL
@@ -11789,6 +12071,8 @@ expr_stmt|;
 block|}
 block|}
 comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitLSHR
@@ -11861,6 +12145,8 @@ expr_stmt|;
 block|}
 block|}
 comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitLSTORE
@@ -11873,6 +12159,8 @@ comment|//visitStoreInstruction(StoreInstruction) is called before.
 comment|// Nothing else needs to be done here.
 block|}
 comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitLSUB
@@ -11945,6 +12233,8 @@ expr_stmt|;
 block|}
 block|}
 comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitLUSHR
@@ -12017,6 +12307,8 @@ expr_stmt|;
 block|}
 block|}
 comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitLXOR
@@ -12089,6 +12381,8 @@ expr_stmt|;
 block|}
 block|}
 comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitMONITORENTER
@@ -12132,6 +12426,8 @@ block|}
 comment|//referenceTypeIsInitialized(o, (ReferenceType) (stack().peek()) );
 block|}
 comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitMONITOREXIT
@@ -12175,6 +12471,8 @@ block|}
 comment|//referenceTypeIsInitialized(o, (ReferenceType) (stack().peek()) );
 block|}
 comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitMULTIANEWARRAY
@@ -12239,6 +12537,8 @@ comment|// The runtime constant pool item at that index must be a symbolic refer
 comment|// array, or interface type. See Pass 3a.
 block|}
 comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitNEW
@@ -12331,6 +12631,8 @@ expr_stmt|;
 block|}
 block|}
 comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitNEWARRAY
@@ -12370,6 +12672,8 @@ expr_stmt|;
 block|}
 block|}
 comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitNOP
@@ -12381,6 +12685,8 @@ block|{
 comment|// nothing is to be done here.
 block|}
 comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitPOP
@@ -12432,6 +12738,8 @@ expr_stmt|;
 block|}
 block|}
 comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitPOP2
@@ -12483,6 +12791,8 @@ expr_stmt|;
 block|}
 block|}
 comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitPUTFIELD
@@ -13025,6 +13335,8 @@ throw|;
 block|}
 block|}
 comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitPUTSTATIC
@@ -13368,6 +13680,8 @@ throw|;
 block|}
 block|}
 comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitRET
@@ -13440,6 +13754,8 @@ comment|// Other constraints such as non-allowed overlapping subroutines are enf
 comment|// while building the Subroutines data structure.
 block|}
 comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitRETURN
@@ -13506,6 +13822,8 @@ block|}
 block|}
 block|}
 comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitSALOAD
@@ -13626,6 +13944,8 @@ expr_stmt|;
 block|}
 block|}
 comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitSASTORE
@@ -13777,6 +14097,8 @@ expr_stmt|;
 block|}
 block|}
 comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitSIPUSH
@@ -13788,6 +14110,8 @@ block|{
 comment|// nothing to do here. Generic visitXXX() methods did the trick before.
 block|}
 comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitSWAP
@@ -13868,6 +14192,8 @@ expr_stmt|;
 block|}
 block|}
 comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitTABLESWITCH

@@ -114,6 +114,8 @@ argument_list|)
 expr_stmt|;
 block|}
 comment|/** 	 * @return deep copy of this attribute 	 */
+annotation|@
+name|Override
 specifier|public
 name|Attribute
 name|copy
@@ -135,6 +137,8 @@ return|return
 name|c
 return|;
 block|}
+annotation|@
+name|Override
 specifier|public
 specifier|final
 name|void

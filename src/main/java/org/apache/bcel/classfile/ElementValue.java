@@ -63,6 +63,8 @@ specifier|protected
 name|ConstantPool
 name|cpool
 decl_stmt|;
+annotation|@
+name|Override
 specifier|public
 name|String
 name|toString

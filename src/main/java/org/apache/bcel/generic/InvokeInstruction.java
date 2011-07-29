@@ -116,6 +116,8 @@ argument_list|)
 expr_stmt|;
 block|}
 comment|/**      * @return mnemonic for instruction with symbolic references resolved      */
+annotation|@
+name|Override
 specifier|public
 name|String
 name|toString
@@ -177,6 +179,8 @@ argument_list|()
 return|;
 block|}
 comment|/**      * Also works for instructions whose stack effect depends on the      * constant pool entry they reference.      * @return Number of words consumed from stack by this instruction      */
+annotation|@
+name|Override
 specifier|public
 name|int
 name|consumeStack
@@ -232,6 +236,8 @@ name|sum
 return|;
 block|}
 comment|/**      * Also works for instructions whose stack effect depends on the      * constant pool entry they reference.      * @return Number of words produced onto stack by this instruction      */
+annotation|@
+name|Override
 specifier|public
 name|int
 name|produceStack
@@ -258,6 +264,8 @@ argument_list|)
 return|;
 block|}
 comment|/** @return return type of referenced method.      */
+annotation|@
+name|Override
 specifier|public
 name|Type
 name|getType
