@@ -2099,11 +2099,11 @@ operator|+
 literal|" "
 operator|)
 expr_stmt|;
-name|StringBuffer
+name|StringBuilder
 name|buf
 init|=
 operator|new
-name|StringBuffer
+name|StringBuilder
 argument_list|(
 literal|128
 argument_list|)
@@ -2615,11 +2615,11 @@ argument_list|,
 literal|"\n"
 argument_list|)
 decl_stmt|;
-name|StringBuffer
+name|StringBuilder
 name|buf
 init|=
 operator|new
-name|StringBuffer
+name|StringBuilder
 argument_list|()
 decl_stmt|;
 while|while

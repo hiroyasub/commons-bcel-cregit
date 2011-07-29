@@ -437,11 +437,11 @@ operator|.
 name|ENGLISH
 argument_list|)
 decl_stmt|;
-name|StringBuffer
+name|StringBuilder
 name|buf
 init|=
 operator|new
-name|StringBuffer
+name|StringBuilder
 argument_list|()
 decl_stmt|;
 name|int
@@ -487,11 +487,11 @@ name|ch
 argument_list|)
 condition|)
 block|{
-name|StringBuffer
+name|StringBuilder
 name|name
 init|=
 operator|new
-name|StringBuffer
+name|StringBuilder
 argument_list|()
 decl_stmt|;
 while|while
@@ -1636,11 +1636,11 @@ comment|// patterns
 block|}
 block|}
 comment|// Add instruction alias to match anything
-name|StringBuffer
+name|StringBuilder
 name|buf
 init|=
 operator|new
-name|StringBuffer
+name|StringBuilder
 argument_list|(
 literal|"("
 argument_list|)
@@ -1742,11 +1742,11 @@ name|short
 name|extra
 parameter_list|)
 block|{
-name|StringBuffer
+name|StringBuilder
 name|buf
 init|=
 operator|new
-name|StringBuffer
+name|StringBuilder
 argument_list|(
 literal|"("
 argument_list|)

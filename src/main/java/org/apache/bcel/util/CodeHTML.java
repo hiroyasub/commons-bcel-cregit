@@ -400,7 +400,7 @@ operator|.
 name|readUnsignedByte
 argument_list|()
 decl_stmt|;
-name|StringBuffer
+name|StringBuilder
 name|buf
 decl_stmt|;
 name|String
@@ -440,7 +440,7 @@ decl_stmt|;
 name|buf
 operator|=
 operator|new
-name|StringBuffer
+name|StringBuilder
 argument_list|(
 literal|256
 argument_list|)

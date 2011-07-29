@@ -466,7 +466,7 @@ decl_stmt|,
 name|access
 decl_stmt|;
 comment|// Short cuts to constant pool
-name|StringBuffer
+name|StringBuilder
 name|buf
 decl_stmt|;
 name|access
@@ -546,7 +546,7 @@ expr_stmt|;
 name|buf
 operator|=
 operator|new
-name|StringBuffer
+name|StringBuilder
 argument_list|(
 name|signature
 argument_list|)

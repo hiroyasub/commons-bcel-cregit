@@ -153,11 +153,11 @@ name|String
 name|toShortString
 parameter_list|()
 block|{
-name|StringBuffer
+name|StringBuilder
 name|result
 init|=
 operator|new
-name|StringBuffer
+name|StringBuilder
 argument_list|()
 decl_stmt|;
 name|result

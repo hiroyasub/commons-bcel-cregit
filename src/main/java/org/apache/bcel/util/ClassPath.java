@@ -827,11 +827,11 @@ expr_stmt|;
 block|}
 block|}
 block|}
-name|StringBuffer
+name|StringBuilder
 name|buf
 init|=
 operator|new
-name|StringBuffer
+name|StringBuilder
 argument_list|()
 decl_stmt|;
 name|String

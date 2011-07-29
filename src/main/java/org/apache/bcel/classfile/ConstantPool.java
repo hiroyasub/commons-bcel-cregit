@@ -597,11 +597,11 @@ operator|.
 name|length
 argument_list|()
 decl_stmt|;
-name|StringBuffer
+name|StringBuilder
 name|buf
 init|=
 operator|new
-name|StringBuffer
+name|StringBuilder
 argument_list|(
 name|len
 operator|+
@@ -1113,11 +1113,11 @@ name|String
 name|toString
 parameter_list|()
 block|{
-name|StringBuffer
+name|StringBuilder
 name|buf
 init|=
 operator|new
-name|StringBuffer
+name|StringBuilder
 argument_list|()
 decl_stmt|;
 for|for

@@ -1174,11 +1174,11 @@ return|return
 literal|"0"
 return|;
 block|}
-name|StringBuffer
+name|StringBuilder
 name|buf
 init|=
 operator|new
-name|StringBuffer
+name|StringBuilder
 argument_list|()
 decl_stmt|;
 for|for
@@ -1372,11 +1372,11 @@ return|return
 literal|"Type.NO_ARGS"
 return|;
 block|}
-name|StringBuffer
+name|StringBuilder
 name|args
 init|=
 operator|new
-name|StringBuffer
+name|StringBuilder
 argument_list|()
 decl_stmt|;
 for|for

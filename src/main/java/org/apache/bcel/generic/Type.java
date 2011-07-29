@@ -554,11 +554,11 @@ index|[]
 name|arg_types
 parameter_list|)
 block|{
-name|StringBuffer
+name|StringBuilder
 name|buf
 init|=
 operator|new
-name|StringBuffer
+name|StringBuilder
 argument_list|(
 literal|"("
 argument_list|)
@@ -1401,11 +1401,11 @@ name|Method
 name|meth
 parameter_list|)
 block|{
-name|StringBuffer
+name|StringBuilder
 name|sb
 init|=
 operator|new
-name|StringBuffer
+name|StringBuilder
 argument_list|(
 literal|"("
 argument_list|)

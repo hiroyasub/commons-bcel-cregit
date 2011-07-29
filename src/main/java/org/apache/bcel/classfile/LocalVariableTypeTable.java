@@ -474,14 +474,12 @@ name|String
 name|toString
 parameter_list|()
 block|{
-name|StringBuffer
+name|StringBuilder
 name|buf
 init|=
 operator|new
-name|StringBuffer
-argument_list|(
-literal|""
-argument_list|)
+name|StringBuilder
+argument_list|()
 decl_stmt|;
 for|for
 control|(

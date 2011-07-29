@@ -2316,11 +2316,11 @@ argument_list|()
 expr_stmt|;
 comment|// e.g. BranchInstructions release their targets
 block|}
-name|StringBuffer
+name|StringBuilder
 name|buf
 init|=
 operator|new
-name|StringBuffer
+name|StringBuilder
 argument_list|(
 literal|"{ "
 argument_list|)
@@ -3443,11 +3443,11 @@ name|boolean
 name|verbose
 parameter_list|)
 block|{
-name|StringBuffer
+name|StringBuilder
 name|buf
 init|=
 operator|new
-name|StringBuffer
+name|StringBuilder
 argument_list|()
 decl_stmt|;
 for|for

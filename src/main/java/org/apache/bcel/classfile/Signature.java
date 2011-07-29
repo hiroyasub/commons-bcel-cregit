@@ -542,11 +542,11 @@ block|}
 block|}
 return|return;
 block|}
-name|StringBuffer
+name|StringBuilder
 name|buf2
 init|=
 operator|new
-name|StringBuffer
+name|StringBuilder
 argument_list|()
 decl_stmt|;
 name|ch

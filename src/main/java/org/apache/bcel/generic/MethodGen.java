@@ -4815,11 +4815,11 @@ name|cp
 argument_list|)
 argument_list|)
 expr_stmt|;
-name|StringBuffer
+name|StringBuilder
 name|buf
 init|=
 operator|new
-name|StringBuffer
+name|StringBuilder
 argument_list|(
 name|signature
 argument_list|)
