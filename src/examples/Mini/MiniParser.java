@@ -132,7 +132,6 @@ block|{
 case|case
 literal|9
 case|:
-empty_stmt|;
 break|break;
 default|default:
 name|jj_la1
@@ -398,7 +397,6 @@ block|{
 case|case
 name|COMMA
 case|:
-empty_stmt|;
 break|break;
 default|default:
 name|jj_la1
@@ -430,7 +428,6 @@ index|]
 operator|=
 name|jj_gen
 expr_stmt|;
-empty_stmt|;
 block|}
 name|jj_consume_token
 argument_list|(
@@ -711,7 +708,6 @@ index|]
 operator|=
 name|jj_gen
 expr_stmt|;
-empty_stmt|;
 block|}
 break|break;
 case|case
@@ -981,7 +977,6 @@ index|]
 operator|=
 name|jj_gen
 expr_stmt|;
-empty_stmt|;
 block|}
 name|jj_consume_token
 argument_list|(
@@ -1214,7 +1209,6 @@ case|:
 case|case
 name|IDENT
 case|:
-empty_stmt|;
 break|break;
 default|default:
 name|jj_la1
@@ -1494,7 +1488,6 @@ block|{
 case|case
 name|COMMA
 case|:
-empty_stmt|;
 break|break;
 default|default:
 name|jj_la1
@@ -1526,7 +1519,6 @@ index|]
 operator|=
 name|jj_gen
 expr_stmt|;
-empty_stmt|;
 block|}
 name|jj_consume_token
 argument_list|(
@@ -1782,7 +1774,6 @@ index|]
 operator|=
 name|jj_gen
 expr_stmt|;
-empty_stmt|;
 block|}
 name|jjtree
 operator|.
@@ -2034,7 +2025,6 @@ index|]
 operator|=
 name|jj_gen
 expr_stmt|;
-empty_stmt|;
 block|}
 name|jjtree
 operator|.
