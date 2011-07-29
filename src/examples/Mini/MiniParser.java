@@ -4876,6 +4876,10 @@ operator|.
 name|util
 operator|.
 name|Vector
+argument_list|<
+name|int
+index|[]
+argument_list|>
 name|jj_expentries
 init|=
 operator|new
@@ -4884,6 +4888,10 @@ operator|.
 name|util
 operator|.
 name|Vector
+argument_list|<
+name|int
+index|[]
+argument_list|>
 argument_list|()
 decl_stmt|;
 specifier|static
@@ -5009,6 +5017,10 @@ operator|.
 name|util
 operator|.
 name|Enumeration
+argument_list|<
+name|int
+index|[]
+argument_list|>
 name|e
 init|=
 name|jj_expentries
@@ -5027,10 +5039,6 @@ name|int
 index|[]
 name|oldentry
 init|=
-operator|(
-name|int
-index|[]
-operator|)
 operator|(
 name|e
 operator|.
@@ -5397,10 +5405,6 @@ index|[
 name|i
 index|]
 operator|=
-operator|(
-name|int
-index|[]
-operator|)
 name|jj_expentries
 operator|.
 name|elementAt
