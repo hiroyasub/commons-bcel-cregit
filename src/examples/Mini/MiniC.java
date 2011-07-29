@@ -355,7 +355,7 @@ expr_stmt|;
 block|}
 else|else
 block|{
-name|parser
+name|MiniParser
 operator|.
 name|ReInit
 argument_list|(
@@ -465,7 +465,7 @@ argument_list|(
 literal|"Parsing ..."
 argument_list|)
 expr_stmt|;
-name|parser
+name|MiniParser
 operator|.
 name|Program
 argument_list|()
@@ -476,7 +476,7 @@ init|=
 operator|(
 name|ASTProgram
 operator|)
-name|parser
+name|MiniParser
 operator|.
 name|jjtree
 operator|.

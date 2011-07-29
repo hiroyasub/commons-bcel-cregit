@@ -3894,7 +3894,7 @@ name|InputStream
 name|stream
 parameter_list|)
 block|{
-name|jj_input_stream
+name|ASCII_CharStream
 operator|.
 name|ReInit
 argument_list|(
@@ -3905,7 +3905,7 @@ argument_list|,
 literal|1
 argument_list|)
 expr_stmt|;
-name|token_source
+name|MiniParserTokenManager
 operator|.
 name|ReInit
 argument_list|(
@@ -4137,7 +4137,7 @@ name|Reader
 name|stream
 parameter_list|)
 block|{
-name|jj_input_stream
+name|ASCII_CharStream
 operator|.
 name|ReInit
 argument_list|(
@@ -4148,7 +4148,7 @@ argument_list|,
 literal|1
 argument_list|)
 expr_stmt|;
-name|token_source
+name|MiniParserTokenManager
 operator|.
 name|ReInit
 argument_list|(
@@ -4474,7 +4474,7 @@ name|token
 operator|.
 name|next
 operator|=
-name|token_source
+name|MiniParserTokenManager
 operator|.
 name|getNextToken
 argument_list|()
@@ -4620,7 +4620,7 @@ name|jj_scanpos
 operator|.
 name|next
 operator|=
-name|token_source
+name|MiniParserTokenManager
 operator|.
 name|getNextToken
 argument_list|()
@@ -4740,7 +4740,7 @@ name|token
 operator|.
 name|next
 operator|=
-name|token_source
+name|MiniParserTokenManager
 operator|.
 name|getNextToken
 argument_list|()
@@ -4816,7 +4816,7 @@ name|t
 operator|.
 name|next
 operator|=
-name|token_source
+name|MiniParserTokenManager
 operator|.
 name|getNextToken
 argument_list|()
@@ -4856,7 +4856,7 @@ name|token
 operator|.
 name|next
 operator|=
-name|token_source
+name|MiniParserTokenManager
 operator|.
 name|getNextToken
 argument_list|()

@@ -429,7 +429,7 @@ try|try
 block|{
 name|curChar
 operator|=
-name|input_stream
+name|ASCII_CharStream
 operator|.
 name|readChar
 argument_list|()
@@ -721,7 +721,7 @@ try|try
 block|{
 name|curChar
 operator|=
-name|input_stream
+name|ASCII_CharStream
 operator|.
 name|readChar
 argument_list|()
@@ -1014,7 +1014,7 @@ try|try
 block|{
 name|curChar
 operator|=
-name|input_stream
+name|ASCII_CharStream
 operator|.
 name|readChar
 argument_list|()
@@ -1378,7 +1378,7 @@ try|try
 block|{
 name|curChar
 operator|=
-name|input_stream
+name|ASCII_CharStream
 operator|.
 name|readChar
 argument_list|()
@@ -1605,7 +1605,7 @@ try|try
 block|{
 name|curChar
 operator|=
-name|input_stream
+name|ASCII_CharStream
 operator|.
 name|readChar
 argument_list|()
@@ -1810,7 +1810,7 @@ try|try
 block|{
 name|curChar
 operator|=
-name|input_stream
+name|ASCII_CharStream
 operator|.
 name|readChar
 argument_list|()
@@ -2438,7 +2438,7 @@ try|try
 block|{
 name|curChar
 operator|=
-name|input_stream
+name|ASCII_CharStream
 operator|.
 name|readChar
 argument_list|()
@@ -3027,7 +3027,7 @@ operator|==
 literal|null
 operator|)
 condition|?
-name|input_stream
+name|ASCII_CharStream
 operator|.
 name|GetImage
 argument_list|()
@@ -3038,7 +3038,7 @@ name|t
 operator|.
 name|beginLine
 operator|=
-name|input_stream
+name|ASCII_CharStream
 operator|.
 name|getBeginLine
 argument_list|()
@@ -3047,7 +3047,7 @@ name|t
 operator|.
 name|beginColumn
 operator|=
-name|input_stream
+name|ASCII_CharStream
 operator|.
 name|getBeginColumn
 argument_list|()
@@ -3056,7 +3056,7 @@ name|t
 operator|.
 name|endLine
 operator|=
-name|input_stream
+name|ASCII_CharStream
 operator|.
 name|getEndLine
 argument_list|()
@@ -3065,7 +3065,7 @@ name|t
 operator|.
 name|endColumn
 operator|=
-name|input_stream
+name|ASCII_CharStream
 operator|.
 name|getEndColumn
 argument_list|()
@@ -3134,7 +3134,7 @@ try|try
 block|{
 name|curChar
 operator|=
-name|input_stream
+name|ASCII_CharStream
 operator|.
 name|BeginToken
 argument_list|()
@@ -3193,7 +3193,7 @@ literal|0
 case|:
 try|try
 block|{
-name|input_stream
+name|ASCII_CharStream
 operator|.
 name|backup
 argument_list|(
@@ -3221,7 +3221,7 @@ condition|)
 block|{
 name|curChar
 operator|=
-name|input_stream
+name|ASCII_CharStream
 operator|.
 name|BeginToken
 argument_list|()
@@ -3306,7 +3306,7 @@ operator|<
 name|curPos
 condition|)
 block|{
-name|input_stream
+name|ASCII_CharStream
 operator|.
 name|backup
 argument_list|(
@@ -3534,7 +3534,7 @@ try|try
 block|{
 name|curChar
 operator|=
-name|input_stream
+name|ASCII_CharStream
 operator|.
 name|readChar
 argument_list|()
@@ -3556,7 +3556,7 @@ block|}
 name|int
 name|error_line
 init|=
-name|input_stream
+name|ASCII_CharStream
 operator|.
 name|getEndLine
 argument_list|()
@@ -3564,7 +3564,7 @@ decl_stmt|;
 name|int
 name|error_column
 init|=
-name|input_stream
+name|ASCII_CharStream
 operator|.
 name|getEndColumn
 argument_list|()
@@ -3581,12 +3581,12 @@ literal|false
 decl_stmt|;
 try|try
 block|{
-name|input_stream
+name|ASCII_CharStream
 operator|.
 name|readChar
 argument_list|()
 expr_stmt|;
-name|input_stream
+name|ASCII_CharStream
 operator|.
 name|backup
 argument_list|(
@@ -3616,7 +3616,7 @@ literal|1
 condition|?
 literal|""
 else|:
-name|input_stream
+name|ASCII_CharStream
 operator|.
 name|GetImage
 argument_list|()
@@ -3653,7 +3653,7 @@ operator|!
 name|EOFSeen
 condition|)
 block|{
-name|input_stream
+name|ASCII_CharStream
 operator|.
 name|backup
 argument_list|(
@@ -3668,7 +3668,7 @@ literal|1
 condition|?
 literal|""
 else|:
-name|input_stream
+name|ASCII_CharStream
 operator|.
 name|GetImage
 argument_list|()
