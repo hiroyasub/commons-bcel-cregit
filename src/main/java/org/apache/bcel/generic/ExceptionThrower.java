@@ -24,7 +24,6 @@ specifier|public
 interface|interface
 name|ExceptionThrower
 block|{
-specifier|public
 name|java
 operator|.
 name|lang

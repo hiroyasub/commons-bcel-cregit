@@ -41,27 +41,23 @@ interface|interface
 name|Subroutine
 block|{
 comment|/** 	 * Returns all the JsrInstructions that have the 	 * first instruction of this subroutine as their target. 	 *<B>Must not be invoked on the 'top-level subroutine'.</B> 	 */
-specifier|public
 name|InstructionHandle
 index|[]
 name|getEnteringJsrInstructions
 parameter_list|()
 function_decl|;
 comment|/** 	 * Returns the one and only RET that leaves the subroutine. 	 * Note that JustIce has a pretty rigid notion of a subroutine. 	 *<B>Must not be invoked on the 'top-level subroutine'.</B> 	 * 	 * @see org.apache.bcel.verifier.structurals.Subroutines 	 */
-specifier|public
 name|InstructionHandle
 name|getLeavingRET
 parameter_list|()
 function_decl|;
 comment|/** 	 * Returns all instructions that together form this subroutine. 	 * Note that an instruction is part of exactly one subroutine 	 * (the top-level code is considered to be a special subroutine) - 	 * else it is not reachable at all (dead code). 	 */
-specifier|public
 name|InstructionHandle
 index|[]
 name|getInstructions
 parameter_list|()
 function_decl|;
 comment|/** 	 * Returns if the given InstructionHandle refers to an instruction 	 * that is part of this subroutine. This is a convenience method 	 * that saves iteration over the InstructionHandle objects returned 	 * by getInstructions(). 	 * 	 * @see #getInstructions() 	 */
-specifier|public
 name|boolean
 name|contains
 parameter_list|(
@@ -70,21 +66,18 @@ name|inst
 parameter_list|)
 function_decl|;
 comment|/** 	 * Returns an int[] containing the indices of the local variable slots 	 * accessed by this Subroutine (read-accessed, write-accessed or both); 	 * local variables referenced by subroutines of this subroutine are 	 * not included. 	 * 	 * @see #getRecursivelyAccessedLocalsIndices() 	 */
-specifier|public
 name|int
 index|[]
 name|getAccessedLocalsIndices
 parameter_list|()
 function_decl|;
 comment|/** 	 * Returns an int[] containing the indices of the local variable slots 	 * accessed by this Subroutine (read-accessed, write-accessed or both); 	 * local variables referenced by subroutines of this subroutine are 	 * included. 	 * 	 * @see #getAccessedLocalsIndices() 	 */
-specifier|public
 name|int
 index|[]
 name|getRecursivelyAccessedLocalsIndices
 parameter_list|()
 function_decl|;
 comment|/** 	 * Returns the subroutines that are directly called from this subroutine. 	 */
-specifier|public
 name|Subroutine
 index|[]
 name|subSubs

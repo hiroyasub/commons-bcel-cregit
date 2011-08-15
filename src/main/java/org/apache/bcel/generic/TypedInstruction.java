@@ -24,7 +24,6 @@ specifier|public
 interface|interface
 name|TypedInstruction
 block|{
-specifier|public
 name|Type
 name|getType
 parameter_list|(

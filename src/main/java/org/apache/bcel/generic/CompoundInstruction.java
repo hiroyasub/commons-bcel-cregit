@@ -24,7 +24,6 @@ specifier|public
 interface|interface
 name|CompoundInstruction
 block|{
-specifier|public
 name|InstructionList
 name|getInstructionList
 parameter_list|()

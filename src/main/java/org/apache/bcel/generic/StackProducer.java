@@ -25,7 +25,6 @@ interface|interface
 name|StackProducer
 block|{
 comment|/** @return how many words are produced on stack      */
-specifier|public
 name|int
 name|produceStack
 parameter_list|(

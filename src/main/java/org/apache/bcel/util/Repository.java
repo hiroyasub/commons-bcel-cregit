@@ -45,7 +45,6 @@ operator|.
 name|Serializable
 block|{
 comment|/**      * Store the provided class under "clazz.getClassName()"       */
-specifier|public
 name|void
 name|storeClass
 parameter_list|(
@@ -54,7 +53,6 @@ name|clazz
 parameter_list|)
 function_decl|;
 comment|/**      * Remove class from repository      */
-specifier|public
 name|void
 name|removeClass
 parameter_list|(
@@ -63,7 +61,6 @@ name|clazz
 parameter_list|)
 function_decl|;
 comment|/**      * Find the class with the name provided, if the class      * isn't there, return NULL.      */
-specifier|public
 name|JavaClass
 name|findClass
 parameter_list|(
@@ -72,7 +69,6 @@ name|className
 parameter_list|)
 function_decl|;
 comment|/**      * Find the class with the name provided, if the class      * isn't there, make an attempt to load it.      */
-specifier|public
 name|JavaClass
 name|loadClass
 parameter_list|(
@@ -87,7 +83,6 @@ operator|.
 name|ClassNotFoundException
 function_decl|;
 comment|/**      * Find the JavaClass instance for the given run-time class object      */
-specifier|public
 name|JavaClass
 name|loadClass
 parameter_list|(
@@ -105,13 +100,11 @@ operator|.
 name|ClassNotFoundException
 function_decl|;
 comment|/** Clear all entries from cache.      */
-specifier|public
 name|void
 name|clear
 parameter_list|()
 function_decl|;
 comment|/** Get the ClassPath associated with this Repository      */
-specifier|public
 name|ClassPath
 name|getClassPath
 parameter_list|()

@@ -24,12 +24,10 @@ specifier|public
 interface|interface
 name|IndexedInstruction
 block|{
-specifier|public
 name|int
 name|getIndex
 parameter_list|()
 function_decl|;
-specifier|public
 name|void
 name|setIndex
 parameter_list|(

@@ -61,13 +61,11 @@ interface|interface
 name|InstructionContext
 block|{
 comment|/** 	 * The getTag and setTag methods may be used for 	 * temporary flagging, such as graph colouring. 	 * Nothing in the InstructionContext object depends 	 * on the value of the tag. JustIce does not use it. 	 *  	 * @see #setTag(int tag) 	 */
-specifier|public
 name|int
 name|getTag
 parameter_list|()
 function_decl|;
 comment|/** 	 * The getTag and setTag methods may be used for 	 * temporary flagging, such as graph colouring. 	 * Nothing in the InstructionContext object depends 	 * on the value of the tag. JustIce does not use it. 	 *  	 * @see #getTag() 	 */
-specifier|public
 name|void
 name|setTag
 parameter_list|(

@@ -24,7 +24,6 @@ specifier|public
 interface|interface
 name|InstructionTargeter
 block|{
-specifier|public
 name|boolean
 name|containsTarget
 parameter_list|(
@@ -32,7 +31,6 @@ name|InstructionHandle
 name|ih
 parameter_list|)
 function_decl|;
-specifier|public
 name|void
 name|updateTarget
 parameter_list|(

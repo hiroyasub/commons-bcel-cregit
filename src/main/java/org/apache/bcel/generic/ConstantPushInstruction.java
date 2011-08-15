@@ -28,7 +28,6 @@ name|PushInstruction
 extends|,
 name|TypedInstruction
 block|{
-specifier|public
 name|Number
 name|getValue
 parameter_list|()

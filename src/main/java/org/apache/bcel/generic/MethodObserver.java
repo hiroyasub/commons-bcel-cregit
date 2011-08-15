@@ -24,7 +24,6 @@ specifier|public
 interface|interface
 name|MethodObserver
 block|{
-specifier|public
 name|void
 name|notify
 parameter_list|(

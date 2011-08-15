@@ -272,7 +272,6 @@ return|;
 block|}
 block|}
 decl_stmt|;
-specifier|public
 name|boolean
 name|equals
 parameter_list|(

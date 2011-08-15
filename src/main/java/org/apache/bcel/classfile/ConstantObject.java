@@ -25,8 +25,6 @@ interface|interface
 name|ConstantObject
 block|{
 comment|/** @return object representing the constant, e.g., Long for ConstantLong      */
-specifier|public
-specifier|abstract
 name|Object
 name|getConstantValue
 parameter_list|(

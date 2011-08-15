@@ -25,7 +25,6 @@ interface|interface
 name|BCELComparator
 block|{
 comment|/**      * Compare two objects and return what THIS.equals(THAT) should return      *       * @param THIS      * @param THAT      * @return true if and only if THIS equals THAT      */
-specifier|public
 name|boolean
 name|equals
 parameter_list|(
@@ -37,7 +36,6 @@ name|THAT
 parameter_list|)
 function_decl|;
 comment|/**      * Return hashcode for THIS.hashCode()      *       * @param THIS      * @return hashcode for THIS.hashCode()      */
-specifier|public
 name|int
 name|hashCode
 parameter_list|(

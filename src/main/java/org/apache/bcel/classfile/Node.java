@@ -24,7 +24,6 @@ specifier|public
 interface|interface
 name|Node
 block|{
-specifier|public
 name|void
 name|accept
 parameter_list|(

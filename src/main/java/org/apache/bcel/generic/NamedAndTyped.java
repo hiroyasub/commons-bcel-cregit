@@ -24,17 +24,14 @@ specifier|public
 interface|interface
 name|NamedAndTyped
 block|{
-specifier|public
 name|String
 name|getName
 parameter_list|()
 function_decl|;
-specifier|public
 name|Type
 name|getType
 parameter_list|()
 function_decl|;
-specifier|public
 name|void
 name|setName
 parameter_list|(
@@ -42,7 +39,6 @@ name|String
 name|name
 parameter_list|)
 function_decl|;
-specifier|public
 name|void
 name|setType
 parameter_list|(
