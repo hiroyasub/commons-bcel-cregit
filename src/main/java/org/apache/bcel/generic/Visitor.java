@@ -20,6 +20,7 @@ comment|/**  * Interface implementing the Visitor pattern programming style.  * 
 end_comment
 
 begin_interface
+specifier|public
 interface|interface
 name|Visitor
 block|{
