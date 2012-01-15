@@ -194,9 +194,12 @@ name|start_pc
 decl_stmt|;
 if|if
 condition|(
-name|length
-operator|>
-literal|0
+name|end
+operator|.
+name|getNext
+argument_list|()
+operator|==
+literal|null
 condition|)
 block|{
 name|length
