@@ -415,8 +415,6 @@ parameter_list|,
 name|String
 name|anchor
 parameter_list|)
-throws|throws
-name|IOException
 block|{
 name|writeAttribute
 argument_list|(
@@ -441,8 +439,6 @@ parameter_list|,
 name|int
 name|method_number
 parameter_list|)
-throws|throws
-name|IOException
 block|{
 name|byte
 name|tag
