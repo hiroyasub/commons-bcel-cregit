@@ -55,6 +55,9 @@ decl_stmt|;
 comment|// The table is an array of
 specifier|private
 name|Vector
+argument_list|<
+name|EnvEntry
+argument_list|>
 index|[]
 name|table
 decl_stmt|;
@@ -91,6 +94,9 @@ specifier|private
 name|Environment
 parameter_list|(
 name|Vector
+argument_list|<
+name|EnvEntry
+argument_list|>
 index|[]
 name|table
 parameter_list|)
@@ -154,6 +160,9 @@ name|int
 name|hash
 decl_stmt|;
 name|Vector
+argument_list|<
+name|EnvEntry
+argument_list|>
 name|v
 decl_stmt|;
 name|String
@@ -198,6 +207,9 @@ name|v
 operator|=
 operator|new
 name|Vector
+argument_list|<
+name|EnvEntry
+argument_list|>
 argument_list|(
 name|SLOTS
 argument_list|)
@@ -267,6 +279,9 @@ name|int
 name|hash
 decl_stmt|;
 name|Vector
+argument_list|<
+name|EnvEntry
+argument_list|>
 name|v
 decl_stmt|;
 name|EnvEntry
@@ -320,9 +335,6 @@ condition|)
 block|{
 name|entry
 operator|=
-operator|(
-name|EnvEntry
-operator|)
 name|v
 operator|.
 name|elementAt
@@ -356,6 +368,9 @@ name|int
 name|hash
 decl_stmt|;
 name|Vector
+argument_list|<
+name|EnvEntry
+argument_list|>
 name|v
 decl_stmt|;
 name|hash
@@ -428,6 +443,9 @@ name|int
 name|lookup
 parameter_list|(
 name|Vector
+argument_list|<
+name|EnvEntry
+argument_list|>
 name|v
 parameter_list|,
 name|String
@@ -462,9 +480,6 @@ block|{
 name|EnvEntry
 name|entry
 init|=
-operator|(
-name|EnvEntry
-operator|)
 name|v
 operator|.
 name|elementAt
@@ -503,6 +518,9 @@ name|clone
 parameter_list|()
 block|{
 name|Vector
+argument_list|<
+name|EnvEntry
+argument_list|>
 index|[]
 name|copy
 init|=
@@ -647,6 +665,9 @@ init|=
 literal|0
 decl_stmt|;
 name|Vector
+argument_list|<
+name|EnvEntry
+argument_list|>
 name|v
 decl_stmt|;
 for|for
@@ -709,9 +730,6 @@ name|k
 operator|++
 index|]
 operator|=
-operator|(
-name|EnvEntry
-operator|)
 name|v
 operator|.
 name|elementAt
