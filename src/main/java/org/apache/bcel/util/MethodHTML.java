@@ -563,8 +563,6 @@ parameter_list|,
 name|int
 name|method_number
 parameter_list|)
-throws|throws
-name|IOException
 block|{
 comment|// Get raw signature
 name|String
