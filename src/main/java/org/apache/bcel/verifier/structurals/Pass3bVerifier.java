@@ -762,6 +762,12 @@ literal|0
 argument_list|)
 expr_stmt|;
 block|}
+annotation|@
+name|SuppressWarnings
+argument_list|(
+literal|"unchecked"
+argument_list|)
+comment|// ec is of type ArrayList<InstructionContext>
 name|ArrayList
 argument_list|<
 name|InstructionContext
@@ -781,6 +787,12 @@ name|clone
 argument_list|()
 operator|)
 decl_stmt|;
+annotation|@
+name|SuppressWarnings
+argument_list|(
+literal|"unchecked"
+argument_list|)
+comment|// ec is of type ArrayList<InstructionContext>
 name|ArrayList
 argument_list|<
 name|InstructionContext
@@ -1099,12 +1111,18 @@ name|ev
 argument_list|)
 condition|)
 block|{
-name|icq
-operator|.
-name|add
+annotation|@
+name|SuppressWarnings
 argument_list|(
-name|theSuccessor
-argument_list|,
+literal|"unchecked"
+argument_list|)
+comment|// newchain is already of type ArrayList<InstructionContext>
+name|ArrayList
+argument_list|<
+name|InstructionContext
+argument_list|>
+name|newchainClone
+init|=
 operator|(
 name|ArrayList
 argument_list|<
@@ -1115,6 +1133,14 @@ name|newchain
 operator|.
 name|clone
 argument_list|()
+decl_stmt|;
+name|icq
+operator|.
+name|add
+argument_list|(
+name|theSuccessor
+argument_list|,
+name|newchainClone
 argument_list|)
 expr_stmt|;
 block|}
@@ -1178,12 +1204,18 @@ name|ev
 argument_list|)
 condition|)
 block|{
-name|icq
-operator|.
-name|add
+annotation|@
+name|SuppressWarnings
 argument_list|(
-name|v
-argument_list|,
+literal|"unchecked"
+argument_list|)
+comment|// newchain is already of type ArrayList<InstructionContext>
+name|ArrayList
+argument_list|<
+name|InstructionContext
+argument_list|>
+name|newchainClone
+init|=
 operator|(
 name|ArrayList
 argument_list|<
@@ -1194,6 +1226,14 @@ name|newchain
 operator|.
 name|clone
 argument_list|()
+decl_stmt|;
+name|icq
+operator|.
+name|add
+argument_list|(
+name|v
+argument_list|,
+name|newchainClone
 argument_list|)
 expr_stmt|;
 block|}
