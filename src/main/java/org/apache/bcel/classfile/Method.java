@@ -196,6 +196,12 @@ return|;
 block|}
 block|}
 decl_stmt|;
+comment|// annotations defined on the parameters of a method
+specifier|private
+name|ParameterAnnotationEntry
+index|[]
+name|parameterAnnotationEntries
+decl_stmt|;
 comment|/**      * Empty constructor, all attributes have to be defined via `setXXX'      * methods. Use at your own risk.      */
 specifier|public
 name|Method
@@ -783,6 +789,35 @@ name|hashCode
 argument_list|(
 name|this
 argument_list|)
+return|;
+block|}
+comment|/**      * @return Annotations on the parameters of a method      */
+specifier|public
+name|ParameterAnnotationEntry
+index|[]
+name|getParameterAnnotationEntries
+parameter_list|()
+block|{
+if|if
+condition|(
+name|parameterAnnotationEntries
+operator|==
+literal|null
+condition|)
+block|{
+name|parameterAnnotationEntries
+operator|=
+name|ParameterAnnotationEntry
+operator|.
+name|createParameterAnnotationEntries
+argument_list|(
+name|getAttributes
+argument_list|()
+argument_list|)
+expr_stmt|;
+block|}
+return|return
+name|parameterAnnotationEntries
 return|;
 block|}
 block|}

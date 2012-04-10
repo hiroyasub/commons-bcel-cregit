@@ -47,6 +47,36 @@ end_import
 
 begin_import
 import|import
+name|java
+operator|.
+name|util
+operator|.
+name|ArrayList
+import|;
+end_import
+
+begin_import
+import|import
+name|java
+operator|.
+name|util
+operator|.
+name|Collections
+import|;
+end_import
+
+begin_import
+import|import
+name|java
+operator|.
+name|util
+operator|.
+name|List
+import|;
+end_import
+
+begin_import
+import|import
 name|org
 operator|.
 name|apache
@@ -58,7 +88,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * represents one parameter annotation in the parameter annotation table  *   * @version $Id: ParameterAnnotationEntry  * @author<A HREF="mailto:dbrosius@qis.net">D. Brosius</A>  * @since 5.3  */
+comment|/**  * represents one parameter annotation in the parameter annotation table  *  * @version $Id: ParameterAnnotationEntry  * @author<A HREF="mailto:dbrosius@qis.net">D. Brosius</A>  * @since 5.3  */
 end_comment
 
 begin_class
@@ -123,7 +153,7 @@ name|i
 operator|++
 control|)
 block|{
-comment|//        	 TODO isRuntimeVisible
+comment|// TODO isRuntimeVisible
 name|annotation_table
 index|[
 name|i
@@ -151,7 +181,7 @@ name|Visitor
 name|v
 parameter_list|)
 block|{
-comment|//	    v.visitParameterAnnotationEntry(this);
+comment|// v.visitParameterAnnotationEntry(this);
 block|}
 comment|/**      * @return the number of annotation entries in this parameter annotation      */
 specifier|public
@@ -218,6 +248,88 @@ name|dos
 argument_list|)
 expr_stmt|;
 block|}
+block|}
+specifier|public
+specifier|static
+name|ParameterAnnotationEntry
+index|[]
+name|createParameterAnnotationEntries
+parameter_list|(
+name|Attribute
+index|[]
+name|attrs
+parameter_list|)
+block|{
+comment|// Find attributes that contain parameter annotation data
+name|List
+argument_list|<
+name|ParameterAnnotationEntry
+argument_list|>
+name|accumulatedAnnotations
+init|=
+operator|new
+name|ArrayList
+argument_list|<
+name|ParameterAnnotationEntry
+argument_list|>
+argument_list|(
+name|attrs
+operator|.
+name|length
+argument_list|)
+decl_stmt|;
+for|for
+control|(
+name|Attribute
+name|attribute
+range|:
+name|attrs
+control|)
+block|{
+if|if
+condition|(
+name|attribute
+operator|instanceof
+name|ParameterAnnotations
+condition|)
+block|{
+name|ParameterAnnotations
+name|runtimeAnnotations
+init|=
+operator|(
+name|ParameterAnnotations
+operator|)
+name|attribute
+decl_stmt|;
+name|Collections
+operator|.
+name|addAll
+argument_list|(
+name|accumulatedAnnotations
+argument_list|,
+name|runtimeAnnotations
+operator|.
+name|getParameterAnnotationEntries
+argument_list|()
+argument_list|)
+expr_stmt|;
+block|}
+block|}
+return|return
+name|accumulatedAnnotations
+operator|.
+name|toArray
+argument_list|(
+operator|new
+name|ParameterAnnotationEntry
+index|[
+name|accumulatedAnnotations
+operator|.
+name|size
+argument_list|()
+index|]
+argument_list|)
+return|;
 block|}
 block|}
 end_class
