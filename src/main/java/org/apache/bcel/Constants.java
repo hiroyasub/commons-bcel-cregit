@@ -506,10 +506,37 @@ name|CONSTANT_NameAndType
 init|=
 literal|12
 decl_stmt|;
+comment|/** Marks a constant pool entry as a Method Handle.  */
+specifier|public
+specifier|static
+specifier|final
+name|byte
+name|CONSTANT_MethodHandle
+init|=
+literal|15
+decl_stmt|;
+comment|/** Marks a constant pool entry as a Method Type.    */
+specifier|public
+specifier|static
+specifier|final
+name|byte
+name|CONSTANT_MethodType
+init|=
+literal|16
+decl_stmt|;
+comment|/** Marks a constant pool entry as an Invoke Dynamic */
+specifier|public
+specifier|static
+specifier|final
+name|byte
+name|CONSTANT_InvokeDynamic
+init|=
+literal|18
+decl_stmt|;
 comment|/** The names of the types of entries in a constant pool. */
 specifier|public
-specifier|final
 specifier|static
+specifier|final
 name|String
 index|[]
 name|CONSTANT_NAMES
@@ -540,6 +567,12 @@ block|,
 literal|"CONSTANT_InterfaceMethodref"
 block|,
 literal|"CONSTANT_NameAndType"
+block|,
+literal|"CONSTANT_MethodHandle"
+block|,
+literal|"CONSTANT_MethodType"
+block|,
+literal|"CONSTANT_InvokeDynamic"
 block|}
 decl_stmt|;
 comment|/** The name of the static initializer, also called&quot;class    *  initialization method&quot; or&quot;interface initialization    *   method&quot;. This is&quot;&lt;clinit&gt;&quot;.    */
