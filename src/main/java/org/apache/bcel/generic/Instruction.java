@@ -329,7 +329,7 @@ return|return
 name|i
 return|;
 block|}
-comment|/**      * Read needed data (e.g. index) from file.      *      * @param bytes byte sequence to read from      * @param wide "wide" instruction flag      */
+comment|/**      * Read needed data (e.g. index) from file.      *      * @param bytes byte sequence to read from      * @param wide "wide" instruction flag      * @throws IOException may be thrown if the implementation needs to read data from the file      */
 specifier|protected
 name|void
 name|initFromFile
