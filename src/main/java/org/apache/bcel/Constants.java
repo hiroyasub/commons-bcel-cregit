@@ -1,6 +1,6 @@
 begin_unit|revision:1.0.0;language:Java;cregit-version:0.0.1
 begin_comment
-comment|/*  * Licensed to the Apache Software Foundation (ASF) under one or more  * contributor license agreements.  See the NOTICE file distributed with  * this work for additional information regarding copyright ownership.  * The ASF licenses this file to You under the Apache License, Version 2.0  * (the "License"); you may not use this file except in compliance with  * the License.  You may obtain a copy of the License at  *  *      http://www.apache.org/licenses/LICENSE-2.0  *  *  Unless required by applicable law or agreed to in writing, software  *  distributed under the License is distributed on an "AS IS" BASIS,  *  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.  *  See the License for the specific language governing permissions and  *  limitations under the License.   *  */
+comment|/*  * Licensed to the Apache Software Foundation (ASF) under one or more  * contributor license agreements.  See the NOTICE file distributed with  * this work for additional information regarding copyright ownership.  * The ASF licenses this file to You under the Apache License, Version 2.0  * (the "License"); you may not use this file except in compliance with  * the License.  You may obtain a copy of the License at  *  *      http://www.apache.org/licenses/LICENSE-2.0  *  *  Unless required by applicable law or agreed to in writing, software  *  distributed under the License is distributed on an "AS IS" BASIS,  *  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.  *  See the License for the specific language governing permissions and  *  limitations under the License.  *  */
 end_comment
 
 begin_package
@@ -145,6 +145,24 @@ specifier|final
 specifier|static
 name|short
 name|MINOR_1_7
+init|=
+literal|0
+decl_stmt|;
+comment|/** Major version number of class files for Java 1.8.    *  @see #MINOR_1_8    *  */
+specifier|public
+specifier|final
+specifier|static
+name|short
+name|MAJOR_1_8
+init|=
+literal|52
+decl_stmt|;
+comment|/** Minor version number of class files for Java 1.8.    *  @see #MAJOR_1_8    *  */
+specifier|public
+specifier|final
+specifier|static
+name|short
+name|MINOR_1_8
 init|=
 literal|0
 decl_stmt|;
@@ -6927,7 +6945,7 @@ block|,
 literal|"NewObject"
 block|}
 decl_stmt|;
-comment|/** Constants used to identify StackMapEntry types.    *     * For those types which can specify a range, the     * constant names the lowest value.    */
+comment|/** Constants used to identify StackMapEntry types.    *    * For those types which can specify a range, the    * constant names the lowest value.    */
 specifier|public
 specifier|static
 specifier|final
@@ -6984,7 +7002,7 @@ name|FULL_FRAME
 init|=
 literal|255
 decl_stmt|;
-comment|/** Constants that define the maximum value of     * those constants which store ranges. */
+comment|/** Constants that define the maximum value of    * those constants which store ranges. */
 specifier|public
 specifier|static
 specifier|final
