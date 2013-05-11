@@ -80,12 +80,12 @@ init|=
 literal|169537400672820016L
 decl_stmt|;
 specifier|private
-name|int
+name|short
 name|start_pc
 decl_stmt|;
 comment|// Program Counter (PC) corresponds to line
 specifier|private
-name|int
+name|short
 name|line_number
 decl_stmt|;
 comment|// number in source file
@@ -149,12 +149,18 @@ name|this
 operator|.
 name|start_pc
 operator|=
+operator|(
+name|short
+operator|)
 name|start_pc
 expr_stmt|;
 name|this
 operator|.
 name|line_number
 operator|=
+operator|(
+name|short
+operator|)
 name|line_number
 expr_stmt|;
 block|}
@@ -210,6 +216,8 @@ name|getLineNumber
 parameter_list|()
 block|{
 return|return
+literal|0xffff
+operator|&
 name|line_number
 return|;
 block|}
@@ -221,6 +229,8 @@ name|getStartPC
 parameter_list|()
 block|{
 return|return
+literal|0xffff
+operator|&
 name|start_pc
 return|;
 block|}
@@ -238,6 +248,9 @@ name|this
 operator|.
 name|line_number
 operator|=
+operator|(
+name|short
+operator|)
 name|line_number
 expr_stmt|;
 block|}
@@ -255,6 +268,9 @@ name|this
 operator|.
 name|start_pc
 operator|=
+operator|(
+name|short
+operator|)
 name|start_pc
 expr_stmt|;
 block|}

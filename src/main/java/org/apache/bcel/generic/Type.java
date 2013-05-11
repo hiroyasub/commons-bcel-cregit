@@ -101,6 +101,7 @@ operator|-
 literal|1985077286871826895L
 decl_stmt|;
 specifier|protected
+specifier|final
 name|byte
 name|type
 decl_stmt|;
@@ -242,8 +243,9 @@ specifier|final
 name|ObjectType
 name|OBJECT
 init|=
-operator|new
 name|ObjectType
+operator|.
+name|getInstance
 argument_list|(
 literal|"java.lang.Object"
 argument_list|)
@@ -254,8 +256,9 @@ specifier|final
 name|ObjectType
 name|CLASS
 init|=
-operator|new
 name|ObjectType
+operator|.
+name|getInstance
 argument_list|(
 literal|"java.lang.Class"
 argument_list|)
@@ -266,8 +269,9 @@ specifier|final
 name|ObjectType
 name|STRING
 init|=
-operator|new
 name|ObjectType
+operator|.
+name|getInstance
 argument_list|(
 literal|"java.lang.String"
 argument_list|)
@@ -278,8 +282,9 @@ specifier|final
 name|ObjectType
 name|STRINGBUFFER
 init|=
-operator|new
 name|ObjectType
+operator|.
+name|getInstance
 argument_list|(
 literal|"java.lang.StringBuffer"
 argument_list|)
@@ -290,8 +295,9 @@ specifier|final
 name|ObjectType
 name|THROWABLE
 init|=
-operator|new
 name|ObjectType
+operator|.
+name|getInstance
 argument_list|(
 literal|"java.lang.Throwable"
 argument_list|)
@@ -867,8 +873,9 @@ argument_list|)
 expr_stmt|;
 comment|// "Lblabla;" `L' and `;' are removed
 return|return
-operator|new
 name|ObjectType
+operator|.
+name|getInstance
 argument_list|(
 name|signature
 operator|.
@@ -1292,8 +1299,9 @@ else|else
 block|{
 comment|// "Real" class
 return|return
-operator|new
 name|ObjectType
+operator|.
+name|getInstance
 argument_list|(
 name|cl
 operator|.

@@ -2028,8 +2028,9 @@ operator|=
 operator|new
 name|UninitializedObjectType
 argument_list|(
-operator|new
 name|ObjectType
+operator|.
+name|getInstance
 argument_list|(
 name|jc
 operator|.
@@ -2070,8 +2071,9 @@ name|set
 argument_list|(
 literal|0
 argument_list|,
-operator|new
 name|ObjectType
+operator|.
+name|getInstance
 argument_list|(
 name|jc
 operator|.

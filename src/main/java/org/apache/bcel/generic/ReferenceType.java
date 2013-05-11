@@ -655,8 +655,9 @@ name|T
 operator|.
 name|equals
 argument_list|(
-operator|new
 name|ObjectType
+operator|.
+name|getInstance
 argument_list|(
 name|Constants
 operator|.
@@ -1110,8 +1111,9 @@ argument_list|)
 condition|)
 block|{
 return|return
-operator|new
 name|ObjectType
+operator|.
+name|getInstance
 argument_list|(
 name|this_sups
 index|[
@@ -1468,8 +1470,9 @@ argument_list|)
 condition|)
 block|{
 return|return
-operator|new
 name|ObjectType
+operator|.
+name|getInstance
 argument_list|(
 name|this_sups
 index|[

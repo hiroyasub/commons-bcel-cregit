@@ -2711,8 +2711,9 @@ block|{
 return|return
 name|createNew
 argument_list|(
-operator|new
 name|ObjectType
+operator|.
+name|getInstance
 argument_list|(
 name|s
 argument_list|)

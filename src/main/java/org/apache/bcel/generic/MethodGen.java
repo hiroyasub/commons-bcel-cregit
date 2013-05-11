@@ -695,8 +695,9 @@ name|addLocalVariable
 argument_list|(
 literal|"this"
 argument_list|,
-operator|new
 name|ObjectType
+operator|.
+name|getInstance
 argument_list|(
 name|class_name
 argument_list|)
@@ -1110,8 +1111,9 @@ argument_list|)
 decl_stmt|;
 name|c_type
 operator|=
-operator|new
 name|ObjectType
+operator|.
+name|getInstance
 argument_list|(
 name|cen
 argument_list|)

@@ -342,8 +342,9 @@ name|cpg
 parameter_list|)
 block|{
 return|return
-operator|new
 name|ObjectType
+operator|.
+name|getInstance
 argument_list|(
 name|getClassName
 argument_list|(
@@ -441,8 +442,9 @@ literal|'.'
 argument_list|)
 expr_stmt|;
 return|return
-operator|new
 name|ObjectType
+operator|.
+name|getInstance
 argument_list|(
 name|className
 argument_list|)

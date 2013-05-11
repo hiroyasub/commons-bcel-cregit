@@ -92,8 +92,9 @@ parameter_list|)
 block|{
 name|this
 argument_list|(
-operator|new
 name|ObjectType
+operator|.
+name|getInstance
 argument_list|(
 name|class_name
 argument_list|)

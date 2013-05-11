@@ -456,8 +456,9 @@ operator|.
 name|CONSTANT_Utf8
 case|:
 return|return
-operator|new
 name|ConstantUtf8
+operator|.
+name|getInstance
 argument_list|(
 name|file
 argument_list|)

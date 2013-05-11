@@ -577,8 +577,9 @@ parameter_list|)
 block|{
 name|checkType
 argument_list|(
-operator|new
 name|ObjectType
+operator|.
+name|getInstance
 argument_list|(
 literal|"java.lang.String"
 argument_list|)

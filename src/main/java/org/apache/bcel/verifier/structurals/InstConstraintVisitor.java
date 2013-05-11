@@ -286,8 +286,9 @@ specifier|final
 name|ObjectType
 name|GENERIC_ARRAY
 init|=
-operator|new
 name|ObjectType
+operator|.
+name|getInstance
 argument_list|(
 literal|"org.apache.bcel.verifier.structurals.GenericArray"
 argument_list|)
@@ -6153,8 +6154,9 @@ decl_stmt|;
 name|ObjectType
 name|curr
 init|=
-operator|new
 name|ObjectType
+operator|.
+name|getInstance
 argument_list|(
 name|mg
 operator|.
@@ -13173,8 +13175,9 @@ decl_stmt|;
 name|ObjectType
 name|curr
 init|=
-operator|new
 name|ObjectType
+operator|.
+name|getInstance
 argument_list|(
 name|mg
 operator|.
