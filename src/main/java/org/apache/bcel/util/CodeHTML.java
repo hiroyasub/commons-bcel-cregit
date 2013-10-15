@@ -2176,9 +2176,6 @@ parameter_list|(
 name|ByteSequence
 name|bytes
 parameter_list|,
-name|Method
-name|method
-parameter_list|,
 name|Code
 name|code
 parameter_list|)
@@ -3240,8 +3237,6 @@ expr_stmt|;
 name|findGotos
 argument_list|(
 name|stream
-argument_list|,
-name|method
 argument_list|,
 name|c
 argument_list|)
