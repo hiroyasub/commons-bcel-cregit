@@ -415,9 +415,6 @@ name|_constant_pool
 parameter_list|)
 block|{
 return|return
-operator|(
-name|PMGClass
-operator|)
 name|clone
 argument_list|()
 return|;

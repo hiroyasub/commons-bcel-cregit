@@ -321,9 +321,6 @@ name|_constant_pool
 parameter_list|)
 block|{
 return|return
-operator|(
-name|SourceFile
-operator|)
 name|clone
 argument_list|()
 return|;
