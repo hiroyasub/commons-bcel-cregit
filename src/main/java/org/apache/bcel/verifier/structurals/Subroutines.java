@@ -1791,6 +1791,19 @@ argument_list|>
 argument_list|()
 decl_stmt|;
 comment|//Graph colouring. Key: InstructionHandle, Value: Integer .
+name|List
+argument_list|<
+name|InstructionHandle
+argument_list|>
+name|Q
+init|=
+operator|new
+name|ArrayList
+argument_list|<
+name|InstructionHandle
+argument_list|>
+argument_list|()
+decl_stmt|;
 for|for
 control|(
 name|InstructionHandle
@@ -1841,19 +1854,11 @@ name|GRAY
 argument_list|)
 expr_stmt|;
 comment|// Init Queue
-name|List
-argument_list|<
-name|InstructionHandle
-argument_list|>
 name|Q
-init|=
-operator|new
-name|ArrayList
-argument_list|<
-name|InstructionHandle
-argument_list|>
+operator|.
+name|clear
 argument_list|()
-decl_stmt|;
+expr_stmt|;
 name|Q
 operator|.
 name|add
