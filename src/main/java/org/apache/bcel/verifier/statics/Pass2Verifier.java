@@ -944,9 +944,6 @@ argument_list|(
 literal|"Missing class: "
 operator|+
 name|e
-operator|.
-name|toString
-argument_list|()
 argument_list|,
 name|e
 argument_list|)
@@ -1172,9 +1169,6 @@ argument_list|(
 literal|"Missing class: "
 operator|+
 name|e
-operator|.
-name|toString
-argument_list|()
 argument_list|,
 name|e
 argument_list|)
@@ -1467,9 +1461,6 @@ argument_list|(
 literal|"Missing class: "
 operator|+
 name|e
-operator|.
-name|toString
-argument_list|()
 argument_list|,
 name|e
 argument_list|)
@@ -1506,7 +1497,7 @@ argument_list|(
 name|jc
 argument_list|)
 expr_stmt|;
-comment|// constructor implicitely traverses jc
+comment|// constructor implicitly traverses jc
 block|}
 catch|catch
 parameter_list|(
@@ -1522,9 +1513,6 @@ argument_list|(
 literal|"Missing class: "
 operator|+
 name|e
-operator|.
-name|toString
-argument_list|()
 argument_list|,
 name|e
 argument_list|)
@@ -6671,9 +6659,6 @@ argument_list|(
 literal|"Missing class: "
 operator|+
 name|e
-operator|.
-name|toString
-argument_list|()
 argument_list|,
 name|e
 argument_list|)
@@ -7087,9 +7072,6 @@ argument_list|(
 literal|"Missing class: "
 operator|+
 name|e
-operator|.
-name|toString
-argument_list|()
 argument_list|,
 name|e
 argument_list|)
@@ -7364,9 +7346,6 @@ argument_list|(
 literal|"Missing class: "
 operator|+
 name|e
-operator|.
-name|toString
-argument_list|()
 argument_list|,
 name|e
 argument_list|)

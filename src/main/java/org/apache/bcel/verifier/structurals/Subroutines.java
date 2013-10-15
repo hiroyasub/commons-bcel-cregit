@@ -418,9 +418,6 @@ operator|+
 literal|"', Instructions: '"
 operator|+
 name|instructions
-operator|.
-name|toString
-argument_list|()
 operator|+
 literal|"'."
 decl_stmt|;
@@ -2825,9 +2822,6 @@ return|return
 literal|"---\n"
 operator|+
 name|subroutines
-operator|.
-name|toString
-argument_list|()
 operator|+
 literal|"\n---\n"
 return|;

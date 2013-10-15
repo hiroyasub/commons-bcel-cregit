@@ -1316,9 +1316,6 @@ argument_list|(
 literal|"<P>"
 operator|+
 name|attribute
-operator|.
-name|toString
-argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
