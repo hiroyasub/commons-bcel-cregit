@@ -960,19 +960,22 @@ comment|/** 	 * Use copy() if you want to have a deep copy(), i.e., with all ref
 annotation|@
 name|Override
 specifier|public
-name|Object
+name|Attribute
 name|clone
 parameter_list|()
 block|{
-name|Object
-name|o
+name|Attribute
+name|attr
 init|=
 literal|null
 decl_stmt|;
 try|try
 block|{
-name|o
+name|attr
 operator|=
+operator|(
+name|Attribute
+operator|)
 name|super
 operator|.
 name|clone
@@ -985,15 +988,17 @@ name|CloneNotSupportedException
 name|e
 parameter_list|)
 block|{
-name|e
-operator|.
-name|printStackTrace
-argument_list|()
-expr_stmt|;
-comment|// Never occurs
+throw|throw
+operator|new
+name|Error
+argument_list|(
+literal|"Clone Not Supported"
+argument_list|)
+throw|;
+comment|// never happens
 block|}
 return|return
-name|o
+name|attr
 return|;
 block|}
 comment|/** 	 * @return deep copy of this attribute 	 */

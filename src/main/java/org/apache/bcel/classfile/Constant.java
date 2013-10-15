@@ -289,18 +289,37 @@ block|}
 annotation|@
 name|Override
 specifier|public
-name|Object
+name|Constant
 name|clone
 parameter_list|()
-throws|throws
-name|CloneNotSupportedException
+block|{
+try|try
 block|{
 return|return
+operator|(
+name|Constant
+operator|)
 name|super
 operator|.
 name|clone
 argument_list|()
 return|;
+block|}
+catch|catch
+parameter_list|(
+name|CloneNotSupportedException
+name|e
+parameter_list|)
+block|{
+throw|throw
+operator|new
+name|Error
+argument_list|(
+literal|"Clone Not Supported"
+argument_list|)
+throw|;
+comment|// never happens
+block|}
 block|}
 comment|/**      * Read one constant from the given file, the type depends on a tag byte.      *      * @param file Input stream      * @return Constant object      */
 specifier|static

@@ -400,13 +400,16 @@ function_decl|;
 annotation|@
 name|Override
 specifier|public
-name|Object
+name|FieldGenOrMethodGen
 name|clone
 parameter_list|()
 block|{
 try|try
 block|{
 return|return
+operator|(
+name|FieldGenOrMethodGen
+operator|)
 name|super
 operator|.
 name|clone
@@ -419,18 +422,14 @@ name|CloneNotSupportedException
 name|e
 parameter_list|)
 block|{
-name|System
-operator|.
-name|err
-operator|.
-name|println
+throw|throw
+operator|new
+name|Error
 argument_list|(
-name|e
+literal|"Clone Not Supported"
 argument_list|)
-expr_stmt|;
-return|return
-literal|null
-return|;
+throw|;
+comment|// never happens
 block|}
 block|}
 block|}
