@@ -1881,6 +1881,18 @@ else|:
 literal|false
 return|;
 block|}
+comment|/** calculate the hashCode of this object      * @return the hashCode      */
+annotation|@
+name|Override
+specifier|public
+name|int
+name|hashCode
+parameter_list|()
+block|{
+return|return
+name|opcode
+return|;
+block|}
 block|}
 end_class
 
