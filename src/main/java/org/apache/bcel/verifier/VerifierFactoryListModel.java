@@ -103,6 +103,9 @@ operator|.
 name|swing
 operator|.
 name|ListModel
+argument_list|<
+name|String
+argument_list|>
 block|{
 specifier|private
 name|List
@@ -320,7 +323,7 @@ return|;
 block|}
 specifier|public
 specifier|synchronized
-name|Object
+name|String
 name|getElementAt
 parameter_list|(
 name|int
@@ -332,7 +335,16 @@ operator|(
 name|cache
 operator|.
 name|toArray
+argument_list|(
+operator|new
+name|String
+index|[
+name|cache
+operator|.
+name|size
 argument_list|()
+index|]
+argument_list|)
 operator|)
 index|[
 name|index

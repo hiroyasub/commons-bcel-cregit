@@ -336,6 +336,11 @@ parameter_list|(
 name|Map
 operator|.
 name|Entry
+argument_list|<
+name|String
+argument_list|,
+name|ConstantUtf8
+argument_list|>
 name|eldest
 parameter_list|)
 block|{
