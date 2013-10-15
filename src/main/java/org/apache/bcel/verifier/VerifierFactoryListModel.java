@@ -103,9 +103,6 @@ operator|.
 name|swing
 operator|.
 name|ListModel
-argument_list|<
-name|String
-argument_list|>
 block|{
 specifier|private
 name|List
