@@ -25,7 +25,7 @@ specifier|abstract
 class|class
 name|EmptyVisitor
 implements|implements
-name|Visitor
+name|VisitorSupportsInvokeDynamic
 block|{
 specifier|public
 name|void
@@ -1643,6 +1643,15 @@ name|void
 name|visitBREAKPOINT
 parameter_list|(
 name|BREAKPOINT
+name|obj
+parameter_list|)
+block|{
+block|}
+specifier|public
+name|void
+name|visitINVOKEDYNAMIC
+parameter_list|(
+name|INVOKEDYNAMIC
 name|obj
 parameter_list|)
 block|{
