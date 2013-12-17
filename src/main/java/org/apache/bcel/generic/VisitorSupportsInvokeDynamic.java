@@ -19,6 +19,13 @@ extends|extends
 name|Visitor
 block|{
 name|void
+name|visitNameSignatureInstruction
+parameter_list|(
+name|NameSignatureInstruction
+name|obj
+parameter_list|)
+function_decl|;
+name|void
 name|visitINVOKEDYNAMIC
 parameter_list|(
 name|INVOKEDYNAMIC

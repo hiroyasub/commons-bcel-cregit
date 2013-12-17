@@ -1649,6 +1649,15 @@ block|{
 block|}
 specifier|public
 name|void
+name|visitNameSignatureInstruction
+parameter_list|(
+name|NameSignatureInstruction
+name|obj
+parameter_list|)
+block|{
+block|}
+specifier|public
+name|void
 name|visitINVOKEDYNAMIC
 parameter_list|(
 name|INVOKEDYNAMIC
