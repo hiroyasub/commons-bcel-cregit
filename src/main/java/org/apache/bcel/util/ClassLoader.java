@@ -339,19 +339,10 @@ block|{
 comment|/* Second try: Load system class using system class loader. You better              * don't mess around with them.              */
 for|for
 control|(
-name|int
-name|i
-init|=
-literal|0
-init|;
-name|i
-operator|<
+name|String
+name|ignored_package
+range|:
 name|ignored_packages
-operator|.
-name|length
-condition|;
-name|i
-operator|++
 control|)
 block|{
 if|if
@@ -360,10 +351,7 @@ name|class_name
 operator|.
 name|startsWith
 argument_list|(
-name|ignored_packages
-index|[
-name|i
-index|]
+name|ignored_package
 argument_list|)
 condition|)
 block|{

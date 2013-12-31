@@ -1416,19 +1416,13 @@ decl_stmt|;
 comment|// avoid clone
 for|for
 control|(
-name|int
-name|j
-init|=
-literal|0
-init|;
-name|j
-operator|<
+name|Class
+argument_list|<
+name|?
+argument_list|>
+name|param
+range|:
 name|params
-operator|.
-name|length
-condition|;
-name|j
-operator|++
 control|)
 block|{
 name|sb
@@ -1437,10 +1431,7 @@ name|append
 argument_list|(
 name|getType
 argument_list|(
-name|params
-index|[
-name|j
-index|]
+name|param
 argument_list|)
 operator|.
 name|getSignature
