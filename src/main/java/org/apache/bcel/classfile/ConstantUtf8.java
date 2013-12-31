@@ -226,6 +226,8 @@ operator|new
 name|Thread
 argument_list|()
 block|{
+annotation|@
+name|Override
 specifier|public
 name|void
 name|run
@@ -331,6 +333,8 @@ argument_list|,
 literal|true
 argument_list|)
 block|{
+annotation|@
+name|Override
 specifier|protected
 name|boolean
 name|removeEldestEntry
