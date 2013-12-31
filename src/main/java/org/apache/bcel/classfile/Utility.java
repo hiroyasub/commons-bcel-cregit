@@ -1754,6 +1754,7 @@ name|Constants
 operator|.
 name|CONSTANT_InterfaceMethodref
 condition|)
+block|{
 throw|throw
 operator|new
 name|ClassFormatException
@@ -1767,6 +1768,7 @@ operator|+
 name|c
 argument_list|)
 throw|;
+block|}
 name|buf
 operator|.
 name|append
@@ -1945,6 +1947,7 @@ if|if
 condition|(
 name|verbose
 condition|)
+block|{
 name|buf
 operator|.
 name|append
@@ -1963,6 +1966,7 @@ operator|+
 literal|")"
 argument_list|)
 expr_stmt|;
+block|}
 break|break;
 comment|/* Operands are references to items in constant pool              */
 case|case
@@ -6315,6 +6319,7 @@ operator|.
 name|isEmpty
 argument_list|()
 condition|)
+block|{
 return|return
 operator|new
 name|Attribute
@@ -6322,6 +6327,7 @@ index|[
 literal|0
 index|]
 return|;
+block|}
 try|try
 block|{
 name|int
@@ -6350,13 +6356,17 @@ operator|.
 name|isRuntimeVisible
 argument_list|()
 condition|)
+block|{
 name|countVisible
 operator|++
 expr_stmt|;
+block|}
 else|else
+block|{
 name|countInvisible
 operator|++
 expr_stmt|;
+block|}
 block|}
 name|ByteArrayOutputStream
 name|rvaBytes
@@ -6420,6 +6430,7 @@ operator|.
 name|isRuntimeVisible
 argument_list|()
 condition|)
+block|{
 name|a
 operator|.
 name|dump
@@ -6427,7 +6438,9 @@ argument_list|(
 name|rvaDos
 argument_list|)
 expr_stmt|;
+block|}
 else|else
+block|{
 name|a
 operator|.
 name|dump
@@ -6435,6 +6448,7 @@ argument_list|(
 name|riaDos
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 name|rvaDos
 operator|.
@@ -6484,6 +6498,7 @@ name|length
 operator|>
 literal|2
 condition|)
+block|{
 name|rvaIndex
 operator|=
 name|cp
@@ -6493,6 +6508,7 @@ argument_list|(
 literal|"RuntimeVisibleAnnotations"
 argument_list|)
 expr_stmt|;
+block|}
 if|if
 condition|(
 name|riaData
@@ -6501,6 +6517,7 @@ name|length
 operator|>
 literal|2
 condition|)
+block|{
 name|riaIndex
 operator|=
 name|cp
@@ -6510,6 +6527,7 @@ argument_list|(
 literal|"RuntimeInvisibleAnnotations"
 argument_list|)
 expr_stmt|;
+block|}
 name|List
 argument_list|<
 name|Attribute
@@ -6852,6 +6870,7 @@ operator|.
 name|isRuntimeVisible
 argument_list|()
 condition|)
+block|{
 name|element
 operator|.
 name|dump
@@ -6859,6 +6878,7 @@ argument_list|(
 name|rvaDos
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 block|}
 block|}
@@ -6950,6 +6970,7 @@ operator|.
 name|isRuntimeVisible
 argument_list|()
 condition|)
+block|{
 name|element
 operator|.
 name|dump
@@ -6957,6 +6978,7 @@ argument_list|(
 name|riaDos
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 block|}
 block|}
@@ -7001,6 +7023,7 @@ name|totalVisCount
 operator|>
 literal|0
 condition|)
+block|{
 name|rvaIndex
 operator|=
 name|cp
@@ -7010,12 +7033,14 @@ argument_list|(
 literal|"RuntimeVisibleParameterAnnotations"
 argument_list|)
 expr_stmt|;
+block|}
 if|if
 condition|(
 name|totalInvisCount
 operator|>
 literal|0
 condition|)
+block|{
 name|riaIndex
 operator|=
 name|cp
@@ -7025,6 +7050,7 @@ argument_list|(
 literal|"RuntimeInvisibleParameterAnnotations"
 argument_list|)
 expr_stmt|;
+block|}
 name|List
 argument_list|<
 name|Attribute

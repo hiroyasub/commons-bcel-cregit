@@ -411,6 +411,7 @@ if|if
 condition|(
 name|value
 condition|)
+block|{
 name|idx
 operator|=
 name|cpGen
@@ -420,7 +421,9 @@ argument_list|(
 literal|1
 argument_list|)
 expr_stmt|;
+block|}
 else|else
+block|{
 name|idx
 operator|=
 name|cpGen
@@ -430,6 +433,7 @@ argument_list|(
 literal|0
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 specifier|public
 name|SimpleElementValueGen
@@ -731,6 +735,7 @@ name|type
 operator|!=
 name|STRING
 condition|)
+block|{
 throw|throw
 operator|new
 name|RuntimeException
@@ -738,6 +743,7 @@ argument_list|(
 literal|"Dont call getValueString() on a non STRING ElementValue"
 argument_list|)
 throw|;
+block|}
 name|ConstantUtf8
 name|c
 init|=
@@ -769,6 +775,7 @@ name|type
 operator|!=
 name|PRIMITIVE_INT
 condition|)
+block|{
 throw|throw
 operator|new
 name|RuntimeException
@@ -776,6 +783,7 @@ argument_list|(
 literal|"Dont call getValueString() on a non STRING ElementValue"
 argument_list|)
 throw|;
+block|}
 name|ConstantInteger
 name|c
 init|=
@@ -1023,13 +1031,17 @@ argument_list|()
 operator|==
 literal|0
 condition|)
+block|{
 return|return
 literal|"false"
 return|;
+block|}
 else|else
+block|{
 return|return
 literal|"true"
 return|;
+block|}
 case|case
 name|STRING
 case|:

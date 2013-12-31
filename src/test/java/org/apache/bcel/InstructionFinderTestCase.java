@@ -186,6 +186,7 @@ name|searchM
 operator|==
 literal|null
 condition|)
+block|{
 throw|throw
 operator|new
 name|Exception
@@ -193,6 +194,7 @@ argument_list|(
 literal|"search method not found"
 argument_list|)
 throw|;
+block|}
 name|byte
 index|[]
 name|bytes

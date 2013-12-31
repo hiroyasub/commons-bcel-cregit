@@ -221,6 +221,7 @@ name|v
 operator|instanceof
 name|VisitorSupportsInvokeDynamic
 condition|)
+block|{
 operator|(
 operator|(
 name|VisitorSupportsInvokeDynamic
@@ -233,6 +234,7 @@ argument_list|(
 name|this
 argument_list|)
 expr_stmt|;
+block|}
 name|v
 operator|.
 name|visitFieldOrMethod

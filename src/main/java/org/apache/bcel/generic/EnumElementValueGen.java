@@ -122,6 +122,7 @@ name|type
 operator|!=
 name|ENUM_CONSTANT
 condition|)
+block|{
 throw|throw
 operator|new
 name|RuntimeException
@@ -131,6 +132,7 @@ operator|+
 name|type
 argument_list|)
 throw|;
+block|}
 name|this
 operator|.
 name|typeIdx

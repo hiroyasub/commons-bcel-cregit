@@ -121,6 +121,7 @@ name|type
 operator|!=
 name|STRING
 condition|)
+block|{
 throw|throw
 operator|new
 name|RuntimeException
@@ -128,6 +129,7 @@ argument_list|(
 literal|"Dont call getValueString() on a non STRING ElementValue"
 argument_list|)
 throw|;
+block|}
 name|ConstantUtf8
 name|c
 init|=
@@ -164,6 +166,7 @@ name|type
 operator|!=
 name|PRIMITIVE_INT
 condition|)
+block|{
 throw|throw
 operator|new
 name|RuntimeException
@@ -171,6 +174,7 @@ argument_list|(
 literal|"Dont call getValueString() on a non STRING ElementValue"
 argument_list|)
 throw|;
+block|}
 name|ConstantInteger
 name|c
 init|=
@@ -207,6 +211,7 @@ name|type
 operator|!=
 name|PRIMITIVE_BYTE
 condition|)
+block|{
 throw|throw
 operator|new
 name|RuntimeException
@@ -214,6 +219,7 @@ argument_list|(
 literal|"Dont call getValueByte() on a non BYTE ElementValue"
 argument_list|)
 throw|;
+block|}
 name|ConstantInteger
 name|c
 init|=
@@ -253,6 +259,7 @@ name|type
 operator|!=
 name|PRIMITIVE_CHAR
 condition|)
+block|{
 throw|throw
 operator|new
 name|RuntimeException
@@ -260,6 +267,7 @@ argument_list|(
 literal|"Dont call getValueChar() on a non CHAR ElementValue"
 argument_list|)
 throw|;
+block|}
 name|ConstantInteger
 name|c
 init|=
@@ -299,6 +307,7 @@ name|type
 operator|!=
 name|PRIMITIVE_LONG
 condition|)
+block|{
 throw|throw
 operator|new
 name|RuntimeException
@@ -306,6 +315,7 @@ argument_list|(
 literal|"Dont call getValueLong() on a non LONG ElementValue"
 argument_list|)
 throw|;
+block|}
 name|ConstantLong
 name|j
 init|=
@@ -338,6 +348,7 @@ name|type
 operator|!=
 name|PRIMITIVE_FLOAT
 condition|)
+block|{
 throw|throw
 operator|new
 name|RuntimeException
@@ -345,6 +356,7 @@ argument_list|(
 literal|"Dont call getValueFloat() on a non FLOAT ElementValue"
 argument_list|)
 throw|;
+block|}
 name|ConstantFloat
 name|f
 init|=
@@ -377,6 +389,7 @@ name|type
 operator|!=
 name|PRIMITIVE_DOUBLE
 condition|)
+block|{
 throw|throw
 operator|new
 name|RuntimeException
@@ -384,6 +397,7 @@ argument_list|(
 literal|"Dont call getValueDouble() on a non DOUBLE ElementValue"
 argument_list|)
 throw|;
+block|}
 name|ConstantDouble
 name|d
 init|=
@@ -416,6 +430,7 @@ name|type
 operator|!=
 name|PRIMITIVE_BOOLEAN
 condition|)
+block|{
 throw|throw
 operator|new
 name|RuntimeException
@@ -423,6 +438,7 @@ argument_list|(
 literal|"Dont call getValueBoolean() on a non BOOLEAN ElementValue"
 argument_list|)
 throw|;
+block|}
 name|ConstantInteger
 name|bo
 init|=
@@ -459,6 +475,7 @@ name|type
 operator|!=
 name|PRIMITIVE_SHORT
 condition|)
+block|{
 throw|throw
 operator|new
 name|RuntimeException
@@ -466,6 +483,7 @@ argument_list|(
 literal|"Dont call getValueShort() on a non SHORT ElementValue"
 argument_list|)
 throw|;
+block|}
 name|ConstantInteger
 name|s
 init|=
@@ -772,13 +790,17 @@ argument_list|()
 operator|==
 literal|0
 condition|)
+block|{
 return|return
 literal|"false"
 return|;
+block|}
 else|else
+block|{
 return|return
 literal|"true"
 return|;
+block|}
 case|case
 name|STRING
 case|:

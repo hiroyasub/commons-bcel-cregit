@@ -150,6 +150,7 @@ name|type
 operator|!=
 name|ARRAY
 condition|)
+block|{
 throw|throw
 operator|new
 name|RuntimeException
@@ -159,6 +160,7 @@ operator|+
 name|type
 argument_list|)
 throw|;
+block|}
 name|this
 operator|.
 name|evalues

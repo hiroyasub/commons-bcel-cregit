@@ -117,12 +117,14 @@ name|visitor
 operator|==
 literal|null
 condition|)
+block|{
 name|visitor
 operator|=
 operator|new
 name|CounterVisitor
 argument_list|()
 expr_stmt|;
+block|}
 return|return
 name|visitor
 return|;

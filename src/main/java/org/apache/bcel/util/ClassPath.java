@@ -455,6 +455,7 @@ argument_list|(
 literal|".jar"
 argument_list|)
 condition|)
+block|{
 name|System
 operator|.
 name|err
@@ -470,6 +471,7 @@ operator|+
 name|e
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 block|}
 block|}
@@ -2075,9 +2077,11 @@ name|entry
 operator|==
 literal|null
 condition|)
+block|{
 return|return
 literal|null
 return|;
+block|}
 return|return
 operator|new
 name|ClassFile

@@ -294,6 +294,7 @@ condition|;
 name|i
 operator|++
 control|)
+block|{
 name|local_variable_type_table
 index|[
 name|i
@@ -307,6 +308,7 @@ argument_list|,
 name|cpool
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 annotation|@
 name|Override
@@ -367,6 +369,7 @@ condition|;
 name|i
 operator|++
 control|)
+block|{
 name|local_variable_type_table
 index|[
 name|i
@@ -377,6 +380,7 @@ argument_list|(
 name|file
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 specifier|public
 specifier|final
@@ -412,6 +416,7 @@ condition|;
 name|i
 operator|++
 control|)
+block|{
 if|if
 condition|(
 name|local_variable_type_table
@@ -424,12 +429,15 @@ argument_list|()
 operator|==
 name|index
 condition|)
+block|{
 return|return
 name|local_variable_type_table
 index|[
 name|i
 index|]
 return|;
+block|}
+block|}
 return|return
 literal|null
 return|;
@@ -517,6 +525,7 @@ name|local_variable_type_table_length
 operator|-
 literal|1
 condition|)
+block|{
 name|buf
 operator|.
 name|append
@@ -524,6 +533,7 @@ argument_list|(
 literal|'\n'
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 return|return
 name|buf
@@ -576,6 +586,7 @@ condition|;
 name|i
 operator|++
 control|)
+block|{
 name|c
 operator|.
 name|local_variable_type_table
@@ -591,6 +602,7 @@ operator|.
 name|copy
 argument_list|()
 expr_stmt|;
+block|}
 name|c
 operator|.
 name|constant_pool

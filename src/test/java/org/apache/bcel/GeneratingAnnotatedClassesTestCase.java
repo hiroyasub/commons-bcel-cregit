@@ -2053,10 +2053,12 @@ argument_list|(
 literal|"33.4"
 argument_list|)
 condition|)
+block|{
 name|found
 operator|=
 literal|true
 expr_stmt|;
+block|}
 block|}
 block|}
 name|assertTrue

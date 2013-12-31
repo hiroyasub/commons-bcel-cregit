@@ -158,6 +158,7 @@ name|cache
 operator|==
 literal|null
 condition|)
+block|{
 name|cache
 operator|=
 operator|new
@@ -199,6 +200,7 @@ return|;
 block|}
 block|}
 expr_stmt|;
+block|}
 name|ObjectType
 name|result
 init|=
@@ -215,9 +217,11 @@ name|result
 operator|!=
 literal|null
 condition|)
+block|{
 return|return
 name|result
 return|;
+block|}
 name|result
 operator|=
 operator|new

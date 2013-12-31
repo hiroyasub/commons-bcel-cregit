@@ -520,6 +520,7 @@ if|if
 condition|(
 name|verbose
 condition|)
+block|{
 name|System
 operator|.
 name|err
@@ -534,6 +535,7 @@ name|getName
 argument_list|()
 argument_list|)
 expr_stmt|;
+block|}
 if|if
 condition|(
 name|element
@@ -546,6 +548,7 @@ argument_list|(
 name|name
 argument_list|)
 condition|)
+block|{
 name|chosenAttrsList
 operator|.
 name|add
@@ -553,6 +556,7 @@ argument_list|(
 name|element
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 return|return
 name|chosenAttrsList
@@ -603,6 +607,7 @@ if|if
 condition|(
 name|verbose
 condition|)
+block|{
 name|System
 operator|.
 name|err
@@ -617,6 +622,7 @@ name|getName
 argument_list|()
 argument_list|)
 expr_stmt|;
+block|}
 if|if
 condition|(
 name|element
@@ -629,6 +635,7 @@ argument_list|(
 name|name
 argument_list|)
 condition|)
+block|{
 name|chosenAttrsList
 operator|.
 name|add
@@ -636,6 +643,7 @@ argument_list|(
 name|element
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 name|assertTrue
 argument_list|(
@@ -731,6 +739,7 @@ name|as
 operator|.
 name|length
 condition|)
+block|{
 name|result
 operator|.
 name|append
@@ -738,6 +747,7 @@ argument_list|(
 literal|","
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 name|result
 operator|.
@@ -821,6 +831,7 @@ name|as
 operator|.
 name|length
 condition|)
+block|{
 name|result
 operator|.
 name|append
@@ -828,6 +839,7 @@ argument_list|(
 literal|","
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 name|result
 operator|.
@@ -911,6 +923,7 @@ name|as
 operator|.
 name|length
 condition|)
+block|{
 name|result
 operator|.
 name|append
@@ -918,6 +931,7 @@ argument_list|(
 literal|","
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 name|result
 operator|.

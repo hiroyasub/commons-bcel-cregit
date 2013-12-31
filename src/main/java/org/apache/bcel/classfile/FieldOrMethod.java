@@ -678,6 +678,7 @@ condition|;
 name|i
 operator|++
 control|)
+block|{
 name|c
 operator|.
 name|attributes
@@ -695,6 +696,7 @@ argument_list|(
 name|constant_pool
 argument_list|)
 expr_stmt|;
+block|}
 return|return
 name|c
 return|;

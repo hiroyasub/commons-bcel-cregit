@@ -300,9 +300,11 @@ name|methodIndex
 operator|==
 literal|0
 condition|)
+block|{
 return|return
 literal|null
 return|;
+block|}
 name|ConstantNameAndType
 name|nat
 init|=

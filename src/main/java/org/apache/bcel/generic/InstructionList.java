@@ -3517,11 +3517,13 @@ name|ih
 operator|==
 literal|null
 condition|)
+block|{
 throw|throw
 operator|new
 name|NoSuchElementException
 argument_list|()
 throw|;
+block|}
 name|InstructionHandle
 name|i
 init|=

@@ -214,6 +214,7 @@ if|if
 condition|(
 name|BCEL_STATISTICS
 condition|)
+block|{
 name|Runtime
 operator|.
 name|getRuntime
@@ -268,6 +269,7 @@ block|}
 block|}
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 specifier|public
 specifier|static

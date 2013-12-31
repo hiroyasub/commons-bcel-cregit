@@ -1423,6 +1423,7 @@ condition|;
 name|j
 operator|++
 control|)
+block|{
 name|accumulatedAnnotations
 operator|.
 name|add
@@ -1436,6 +1437,7 @@ name|j
 index|]
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 block|}
 name|annotations
@@ -2318,6 +2320,7 @@ name|annotation
 range|:
 name|annotations
 control|)
+block|{
 name|buf
 operator|.
 name|append
@@ -2328,6 +2331,7 @@ name|annotation
 argument_list|)
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 if|if
 condition|(
@@ -2796,7 +2800,9 @@ if|if
 condition|(
 name|computedNestedTypeStatus
 condition|)
+block|{
 return|return;
+block|}
 for|for
 control|(
 name|Attribute

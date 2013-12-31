@@ -351,6 +351,7 @@ if|if
 condition|(
 name|dbg
 condition|)
+block|{
 name|System
 operator|.
 name|err
@@ -362,10 +363,12 @@ operator|+
 name|f
 argument_list|)
 expr_stmt|;
+block|}
 if|if
 condition|(
 name|dbg
 condition|)
+block|{
 name|System
 operator|.
 name|err
@@ -383,6 +386,7 @@ argument_list|()
 argument_list|)
 argument_list|)
 expr_stmt|;
+block|}
 name|AnnotationEntryGen
 name|fruitBasedAnnotationEntry
 init|=
@@ -416,6 +420,7 @@ if|if
 condition|(
 name|dbg
 condition|)
+block|{
 name|System
 operator|.
 name|err
@@ -425,6 +430,7 @@ argument_list|(
 literal|"Adding AnnotationEntry to the field"
 argument_list|)
 expr_stmt|;
+block|}
 name|fg
 operator|.
 name|addAnnotationEntry
@@ -436,6 +442,7 @@ if|if
 condition|(
 name|dbg
 condition|)
+block|{
 name|System
 operator|.
 name|err
@@ -447,10 +454,12 @@ operator|+
 name|fg
 argument_list|)
 expr_stmt|;
+block|}
 if|if
 condition|(
 name|dbg
 condition|)
+block|{
 name|System
 operator|.
 name|err
@@ -468,10 +477,12 @@ argument_list|()
 argument_list|)
 argument_list|)
 expr_stmt|;
+block|}
 if|if
 condition|(
 name|dbg
 condition|)
+block|{
 name|System
 operator|.
 name|err
@@ -481,6 +492,7 @@ argument_list|(
 literal|"Replacing original field with new field that has extra AnnotationEntry"
 argument_list|)
 expr_stmt|;
+block|}
 name|clg
 operator|.
 name|removeField
@@ -515,6 +527,7 @@ if|if
 condition|(
 name|dbg
 condition|)
+block|{
 name|System
 operator|.
 name|err
@@ -526,10 +539,12 @@ operator|+
 name|f
 argument_list|)
 expr_stmt|;
+block|}
 if|if
 condition|(
 name|dbg
 condition|)
+block|{
 name|System
 operator|.
 name|err
@@ -547,6 +562,7 @@ argument_list|()
 argument_list|)
 argument_list|)
 expr_stmt|;
+block|}
 name|assertTrue
 argument_list|(
 literal|"Should be 2 AnnotationEntrys on this field, but there are "
