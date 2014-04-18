@@ -6806,10 +6806,18 @@ decl_stmt|;
 specifier|public
 specifier|static
 specifier|final
+name|byte
+name|ATTR_BOOTSTRAP_METHODS
+init|=
+literal|20
+decl_stmt|;
+specifier|public
+specifier|static
+specifier|final
 name|short
 name|KNOWN_ATTRIBUTES
 init|=
-literal|20
+literal|21
 decl_stmt|;
 comment|// TOFO: FIXXXXX
 specifier|public
@@ -6859,6 +6867,8 @@ block|,
 literal|"EnclosingMethod"
 block|,
 literal|"StackMapTable"
+block|,
+literal|"BootstrapMethods"
 block|}
 decl_stmt|;
 comment|/** Constants used in the StackMap attribute.    */

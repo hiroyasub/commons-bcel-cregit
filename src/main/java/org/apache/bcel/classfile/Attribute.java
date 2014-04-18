@@ -818,6 +818,24 @@ argument_list|,
 name|constant_pool
 argument_list|)
 return|;
+case|case
+name|Constants
+operator|.
+name|ATTR_BOOTSTRAP_METHODS
+case|:
+return|return
+operator|new
+name|BootstrapMethods
+argument_list|(
+name|name_index
+argument_list|,
+name|length
+argument_list|,
+name|file
+argument_list|,
+name|constant_pool
+argument_list|)
+return|;
 default|default:
 comment|// Never reached
 throw|throw

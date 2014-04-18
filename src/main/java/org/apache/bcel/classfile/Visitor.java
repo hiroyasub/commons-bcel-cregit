@@ -304,6 +304,13 @@ name|EnclosingMethod
 name|obj
 parameter_list|)
 function_decl|;
+name|void
+name|visitBootstrapMethods
+parameter_list|(
+name|BootstrapMethods
+name|obj
+parameter_list|)
+function_decl|;
 block|}
 end_interface
 

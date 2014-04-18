@@ -391,6 +391,15 @@ name|obj
 parameter_list|)
 block|{
 block|}
+specifier|public
+name|void
+name|visitBootstrapMethods
+parameter_list|(
+name|BootstrapMethods
+name|obj
+parameter_list|)
+block|{
+block|}
 block|}
 end_class
 
