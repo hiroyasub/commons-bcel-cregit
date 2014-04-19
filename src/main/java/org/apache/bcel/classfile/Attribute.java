@@ -695,7 +695,7 @@ return|;
 case|case
 name|Constants
 operator|.
-name|ATTR_RUNTIMEIN_VISIBLE_ANNOTATIONS
+name|ATTR_RUNTIME_INVISIBLE_ANNOTATIONS
 case|:
 return|return
 operator|new
@@ -731,7 +731,7 @@ return|;
 case|case
 name|Constants
 operator|.
-name|ATTR_RUNTIMEIN_VISIBLE_PARAMETER_ANNOTATIONS
+name|ATTR_RUNTIME_INVISIBLE_PARAMETER_ANNOTATIONS
 case|:
 return|return
 operator|new

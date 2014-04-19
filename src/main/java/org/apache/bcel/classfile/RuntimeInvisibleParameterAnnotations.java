@@ -88,7 +88,7 @@ name|super
 argument_list|(
 name|Constants
 operator|.
-name|ATTR_RUNTIMEIN_VISIBLE_PARAMETER_ANNOTATIONS
+name|ATTR_RUNTIME_INVISIBLE_PARAMETER_ANNOTATIONS
 argument_list|,
 name|name_index
 argument_list|,

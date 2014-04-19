@@ -6751,7 +6751,7 @@ specifier|public
 specifier|static
 specifier|final
 name|byte
-name|ATTR_RUNTIMEIN_VISIBLE_ANNOTATIONS
+name|ATTR_RUNTIME_INVISIBLE_ANNOTATIONS
 init|=
 literal|13
 decl_stmt|;
@@ -6767,7 +6767,7 @@ specifier|public
 specifier|static
 specifier|final
 name|byte
-name|ATTR_RUNTIMEIN_VISIBLE_PARAMETER_ANNOTATIONS
+name|ATTR_RUNTIME_INVISIBLE_PARAMETER_ANNOTATIONS
 init|=
 literal|15
 decl_stmt|;
