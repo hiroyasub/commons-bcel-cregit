@@ -400,6 +400,15 @@ name|obj
 parameter_list|)
 block|{
 block|}
+specifier|public
+name|void
+name|visitMethodParameters
+parameter_list|(
+name|MethodParameters
+name|obj
+parameter_list|)
+block|{
+block|}
 block|}
 end_class
 

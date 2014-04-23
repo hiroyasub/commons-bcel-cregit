@@ -835,6 +835,24 @@ argument_list|,
 name|constant_pool
 argument_list|)
 return|;
+case|case
+name|Constants
+operator|.
+name|ATTR_METHOD_PARAMETERS
+case|:
+return|return
+operator|new
+name|MethodParameters
+argument_list|(
+name|name_index
+argument_list|,
+name|length
+argument_list|,
+name|file
+argument_list|,
+name|constant_pool
+argument_list|)
+return|;
 default|default:
 comment|// Never reached
 throw|throw

@@ -311,6 +311,13 @@ name|BootstrapMethods
 name|obj
 parameter_list|)
 function_decl|;
+name|void
+name|visitMethodParameters
+parameter_list|(
+name|MethodParameters
+name|obj
+parameter_list|)
+function_decl|;
 block|}
 end_interface
 

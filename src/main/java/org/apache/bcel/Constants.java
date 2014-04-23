@@ -366,6 +366,18 @@ name|ACC_ENUM
 init|=
 literal|0x4000
 decl_stmt|;
+comment|/** One of the access flags for fields, methods, or classes.    *  @see #ACC_PUBLIC    */
+specifier|public
+specifier|final
+specifier|static
+name|short
+name|ACC_MANDATED
+init|=
+operator|(
+name|short
+operator|)
+literal|0x8000
+decl_stmt|;
 comment|// Applies to classes compiled by new compilers only
 comment|/** One of the access flags for fields, methods, or classes.    *  @see #ACC_PUBLIC    */
 specifier|public
@@ -6814,10 +6826,18 @@ decl_stmt|;
 specifier|public
 specifier|static
 specifier|final
+name|byte
+name|ATTR_METHOD_PARAMETERS
+init|=
+literal|21
+decl_stmt|;
+specifier|public
+specifier|static
+specifier|final
 name|short
 name|KNOWN_ATTRIBUTES
 init|=
-literal|21
+literal|22
 decl_stmt|;
 comment|// TOFO: FIXXXXX
 specifier|public
@@ -6869,6 +6889,8 @@ block|,
 literal|"StackMapTable"
 block|,
 literal|"BootstrapMethods"
+block|,
+literal|"MethodParameters"
 block|}
 decl_stmt|;
 comment|/** Constants used in the StackMap attribute.    */
