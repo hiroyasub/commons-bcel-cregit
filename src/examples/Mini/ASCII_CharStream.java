@@ -122,7 +122,6 @@ literal|0
 decl_stmt|;
 specifier|static
 specifier|private
-specifier|final
 name|void
 name|ExpandBuff
 parameter_list|(
@@ -407,7 +406,6 @@ expr_stmt|;
 block|}
 specifier|static
 specifier|private
-specifier|final
 name|void
 name|FillBuff
 parameter_list|()
@@ -632,7 +630,6 @@ return|;
 block|}
 specifier|static
 specifier|private
-specifier|final
 name|void
 name|UpdateLineColumn
 parameter_list|(

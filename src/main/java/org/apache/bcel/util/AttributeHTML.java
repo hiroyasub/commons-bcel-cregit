@@ -356,7 +356,6 @@ argument_list|)
 expr_stmt|;
 block|}
 specifier|private
-specifier|final
 name|String
 name|codeLink
 parameter_list|(

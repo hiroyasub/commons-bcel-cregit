@@ -572,7 +572,6 @@ return|;
 block|}
 comment|/**      * Read information about the attributes of the class.      * @throws  IOException      * @throws  ClassFormatException      */
 specifier|private
-specifier|final
 name|void
 name|readAttributes
 parameter_list|()
@@ -632,7 +631,6 @@ block|}
 block|}
 comment|/**      * Read information about the class and its super class.      * @throws  IOException      * @throws  ClassFormatException      */
 specifier|private
-specifier|final
 name|void
 name|readClassInfo
 parameter_list|()
@@ -725,7 +723,6 @@ expr_stmt|;
 block|}
 comment|/**      * Read constant pool entries.      * @throws  IOException      * @throws  ClassFormatException      */
 specifier|private
-specifier|final
 name|void
 name|readConstantPool
 parameter_list|()
@@ -745,7 +742,6 @@ expr_stmt|;
 block|}
 comment|/**      * Read information about the fields of the class, i.e., its variables.      * @throws  IOException      * @throws  ClassFormatException      */
 specifier|private
-specifier|final
 name|void
 name|readFields
 parameter_list|()
@@ -805,7 +801,6 @@ block|}
 comment|/******************** Private utility methods **********************/
 comment|/**      * Check whether the header of the file is ok.      * Of course, this has to be the first action on successive file reads.      * @throws  IOException      * @throws  ClassFormatException      */
 specifier|private
-specifier|final
 name|void
 name|readID
 parameter_list|()
@@ -842,7 +837,6 @@ block|}
 block|}
 comment|/**      * Read information about the interfaces implemented by this class.      * @throws  IOException      * @throws  ClassFormatException      */
 specifier|private
-specifier|final
 name|void
 name|readInterfaces
 parameter_list|()
@@ -898,7 +892,6 @@ block|}
 block|}
 comment|/**      * Read information about the methods of the class.      * @throws  IOException      * @throws  ClassFormatException      */
 specifier|private
-specifier|final
 name|void
 name|readMethods
 parameter_list|()
@@ -957,7 +950,6 @@ block|}
 block|}
 comment|/**      * Read major and minor version of compiler which created the file.      * @throws  IOException      * @throws  ClassFormatException      */
 specifier|private
-specifier|final
 name|void
 name|readVersion
 parameter_list|()

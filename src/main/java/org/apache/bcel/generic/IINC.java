@@ -212,7 +212,6 @@ expr_stmt|;
 block|}
 block|}
 specifier|private
-specifier|final
 name|void
 name|setWide
 parameter_list|()

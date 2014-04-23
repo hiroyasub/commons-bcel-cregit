@@ -713,7 +713,6 @@ return|;
 block|}
 comment|/**      * @return the internal length of this code attribute (minus the first 6 bytes)       * and excluding all its attributes      */
 specifier|private
-specifier|final
 name|int
 name|getInternalLength
 parameter_list|()
@@ -745,7 +744,6 @@ return|;
 block|}
 comment|/**      * @return the full size of this code attribute, minus its first 6 bytes,      * including the size of all its contained attributes      */
 specifier|private
-specifier|final
 name|int
 name|calculateLength
 parameter_list|()

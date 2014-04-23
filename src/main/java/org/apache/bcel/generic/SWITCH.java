@@ -200,7 +200,6 @@ argument_list|)
 expr_stmt|;
 block|}
 specifier|private
-specifier|final
 name|void
 name|fillup
 parameter_list|(
@@ -408,7 +407,6 @@ expr_stmt|;
 block|}
 comment|/**      * Sort match and targets array with QuickSort.      */
 specifier|private
-specifier|final
 name|void
 name|sort
 parameter_list|(
@@ -582,7 +580,6 @@ block|}
 block|}
 comment|/**      * @return match is sorted in ascending order with no gap bigger than max_gap?      */
 specifier|private
-specifier|final
 name|boolean
 name|matchIsOrdered
 parameter_list|(

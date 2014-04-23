@@ -1373,7 +1373,6 @@ block|}
 comment|// switch
 block|}
 specifier|private
-specifier|final
 name|int
 name|getMethodNumber
 parameter_list|(

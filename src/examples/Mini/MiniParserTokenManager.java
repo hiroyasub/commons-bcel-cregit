@@ -22,7 +22,6 @@ name|MiniParserConstants
 block|{
 specifier|static
 specifier|private
-specifier|final
 name|int
 name|jjMoveStringLiteralDfa0_1
 parameter_list|()
@@ -38,7 +37,6 @@ return|;
 block|}
 specifier|static
 specifier|private
-specifier|final
 name|void
 name|jjCheckNAdd
 parameter_list|(
@@ -75,7 +73,6 @@ block|}
 block|}
 specifier|static
 specifier|private
-specifier|final
 name|void
 name|jjAddStates
 parameter_list|(
@@ -111,7 +108,6 @@ do|;
 block|}
 specifier|static
 specifier|private
-specifier|final
 name|void
 name|jjCheckNAddTwoStates
 parameter_list|(
@@ -133,20 +129,19 @@ name|state2
 argument_list|)
 expr_stmt|;
 block|}
-comment|//static private final void jjCheckNAddStates(int start, int end)
+comment|//static private void jjCheckNAddStates(int start, int end)
 comment|//{
 comment|//   do {
 comment|//      jjCheckNAdd(jjnextStates[start]);
 comment|//   } while (start++ != end);
 comment|//}
-comment|//static private final void jjCheckNAddStates(int start)
+comment|//static private void jjCheckNAddStates(int start)
 comment|//{
 comment|//   jjCheckNAdd(jjnextStates[start]);
 comment|//   jjCheckNAdd(jjnextStates[start + 1]);
 comment|//}
 specifier|static
 specifier|private
-specifier|final
 name|int
 name|jjMoveNfa_1
 parameter_list|(
@@ -668,7 +663,6 @@ return|;
 block|}
 specifier|static
 specifier|private
-specifier|final
 name|int
 name|jjStopAtPos
 parameter_list|(
@@ -695,7 +689,6 @@ return|;
 block|}
 specifier|static
 specifier|private
-specifier|final
 name|int
 name|jjStartNfaWithStates_0
 parameter_list|(
@@ -756,7 +749,6 @@ return|;
 block|}
 specifier|static
 specifier|private
-specifier|final
 name|int
 name|jjMoveStringLiteralDfa0_0
 parameter_list|()
@@ -1002,7 +994,6 @@ block|}
 block|}
 specifier|static
 specifier|private
-specifier|final
 name|int
 name|jjMoveStringLiteralDfa1_0
 parameter_list|(
@@ -1341,7 +1332,6 @@ return|;
 block|}
 specifier|static
 specifier|private
-specifier|final
 name|int
 name|jjMoveStringLiteralDfa2_0
 parameter_list|(
@@ -1568,7 +1558,6 @@ return|;
 block|}
 specifier|static
 specifier|private
-specifier|final
 name|int
 name|jjMoveStringLiteralDfa3_0
 parameter_list|(
@@ -1773,7 +1762,6 @@ return|;
 block|}
 specifier|static
 specifier|private
-specifier|final
 name|int
 name|jjMoveStringLiteralDfa4_0
 parameter_list|(
@@ -1920,7 +1908,6 @@ block|}
 decl_stmt|;
 specifier|static
 specifier|private
-specifier|final
 name|int
 name|jjMoveNfa_0
 parameter_list|(
@@ -2885,7 +2872,6 @@ expr_stmt|;
 block|}
 specifier|static
 specifier|private
-specifier|final
 name|void
 name|ReInitRounds
 parameter_list|()
@@ -2988,7 +2974,6 @@ block|}
 block|}
 specifier|static
 specifier|private
-specifier|final
 name|Token
 name|jjFillToken
 parameter_list|()

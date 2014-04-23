@@ -110,7 +110,6 @@ literal|1
 decl_stmt|;
 comment|// canonical tag such as ILOAD
 specifier|private
-specifier|final
 name|boolean
 name|wide
 parameter_list|()

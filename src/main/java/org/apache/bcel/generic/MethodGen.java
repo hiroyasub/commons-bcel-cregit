@@ -3903,7 +3903,6 @@ literal|null
 return|;
 block|}
 specifier|private
-specifier|final
 name|BranchTarget
 name|visit
 parameter_list|(
@@ -3939,7 +3938,6 @@ name|bt
 return|;
 block|}
 specifier|private
-specifier|final
 name|boolean
 name|visited
 parameter_list|(

@@ -376,7 +376,6 @@ expr_stmt|;
 block|}
 comment|/**      * Disassemble a stream of byte codes and return the      * string representation.      *      * @param  stream data input stream      * @return String representation of byte code      */
 specifier|private
-specifier|final
 name|String
 name|codeToHTML
 parameter_list|(
@@ -2154,7 +2153,6 @@ return|;
 block|}
 comment|/**      * Find all target addresses in code, so that they can be marked      * with&lt;A NAME = ...&gt;. Target addresses are kept in an BitSet object.      */
 specifier|private
-specifier|final
 name|void
 name|findGotos
 parameter_list|(

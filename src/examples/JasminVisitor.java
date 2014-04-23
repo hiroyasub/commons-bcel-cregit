@@ -799,7 +799,6 @@ name|_method
 decl_stmt|;
 comment|/**    * Unfortunately Jasmin expects ".end method" after each method. Thus we've to check    * for every of the method's attributes if it's the last one and print ".end method"    * then.    */
 specifier|private
-specifier|final
 name|void
 name|printEndMethod
 parameter_list|(
@@ -1942,7 +1941,6 @@ argument_list|)
 expr_stmt|;
 block|}
 specifier|private
-specifier|final
 name|String
 name|get
 parameter_list|(
@@ -1986,7 +1984,6 @@ argument_list|)
 return|;
 block|}
 specifier|private
-specifier|final
 name|void
 name|put
 parameter_list|(

@@ -2791,7 +2791,6 @@ name|isNested
 return|;
 block|}
 specifier|private
-specifier|final
 name|void
 name|computeNestedTypeStatus
 parameter_list|()

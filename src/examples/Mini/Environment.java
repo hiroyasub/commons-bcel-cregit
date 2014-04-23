@@ -125,7 +125,6 @@ argument_list|)
 expr_stmt|;
 block|}
 specifier|private
-specifier|final
 name|int
 name|hashCode
 parameter_list|(
