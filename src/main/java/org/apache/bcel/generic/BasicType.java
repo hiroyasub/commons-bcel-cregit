@@ -99,7 +99,6 @@ block|}
 block|}
 specifier|public
 specifier|static
-specifier|final
 name|BasicType
 name|getType
 parameter_list|(

@@ -893,7 +893,6 @@ return|;
 block|}
 specifier|public
 specifier|static
-specifier|final
 name|boolean
 name|isFormalParameterList
 parameter_list|(
@@ -923,7 +922,6 @@ return|;
 block|}
 specifier|public
 specifier|static
-specifier|final
 name|boolean
 name|isActualParameterList
 parameter_list|(

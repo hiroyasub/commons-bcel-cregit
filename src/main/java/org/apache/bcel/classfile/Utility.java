@@ -358,7 +358,6 @@ comment|/* The `WIDE' instruction is used in the      * byte code to allow 16-bi
 comment|/**      * Convert bit field of flags into string such as `static final'.      *      * @param  access_flags Access flags      * @return String representation of flags      */
 specifier|public
 specifier|static
-specifier|final
 name|String
 name|accessToString
 parameter_list|(
@@ -378,7 +377,6 @@ block|}
 comment|/**      * Convert bit field of flags into string such as `static final'.      *      * Special case: Classes compiled with new compilers and with the      * `ACC_SUPER' flag would be said to be "synchronized". This is      * because SUN used the same value for the flags `ACC_SUPER' and      * `ACC_SYNCHRONIZED'.       *      * @param  access_flags Access flags      * @param  for_class access flags are for class qualifiers ?      * @return String representation of flags      */
 specifier|public
 specifier|static
-specifier|final
 name|String
 name|accessToString
 parameter_list|(
@@ -495,7 +493,6 @@ block|}
 comment|/**      * @param access_flags the class flags      *       * @return "class" or "interface", depending on the ACC_INTERFACE flag      */
 specifier|public
 specifier|static
-specifier|final
 name|String
 name|classOrInterface
 parameter_list|(
@@ -524,7 +521,6 @@ block|}
 comment|/**      * Disassemble a byte array of JVM byte codes starting from code line       * `index' and return the disassembled string representation. Decode only      * `num' opcodes (including their operands), use -1 if you want to      * decompile everything.      *      * @param  code byte code array      * @param  constant_pool Array of constants      * @param  index offset in `code' array      *<EM>(number of opcodes, not bytes!)</EM>      * @param  length number of opcodes to decompile, -1 for all      * @param  verbose be verbose, e.g. print constant pool index      * @return String representation of byte codes      */
 specifier|public
 specifier|static
-specifier|final
 name|String
 name|codeToString
 parameter_list|(
@@ -718,7 +714,6 @@ return|;
 block|}
 specifier|public
 specifier|static
-specifier|final
 name|String
 name|codeToString
 parameter_list|(
@@ -754,7 +749,6 @@ block|}
 comment|/**      * Disassemble a stream of byte codes and return the      * string representation.      *      * @param  bytes stream of bytes      * @param  constant_pool Array of constants      * @param  verbose be verbose, e.g. print constant pool index      * @return String representation of byte code      *       * @throws IOException if a failure from reading from the bytes argument occurs      */
 specifier|public
 specifier|static
-specifier|final
 name|String
 name|codeToString
 parameter_list|(
@@ -2424,7 +2418,6 @@ return|;
 block|}
 specifier|public
 specifier|static
-specifier|final
 name|String
 name|codeToString
 parameter_list|(
@@ -2451,7 +2444,6 @@ block|}
 comment|/**      * Shorten long class names,<em>java/lang/String</em> becomes       *<em>String</em>.      *      * @param str The long class name      * @return Compacted class name      */
 specifier|public
 specifier|static
-specifier|final
 name|String
 name|compactClassName
 parameter_list|(
@@ -2471,7 +2463,6 @@ block|}
 comment|/**      * Shorten long class name<em>str</em>, i.e., chop off the<em>prefix</em>,      * if the      * class name starts with this string and the flag<em>chopit</em> is true.      * Slashes<em>/</em> are converted to dots<em>.</em>.      *      * @param str The long class name      * @param prefix The prefix the get rid off      * @param chopit Flag that determines whether chopping is executed or not      * @return Compacted class name      */
 specifier|public
 specifier|static
-specifier|final
 name|String
 name|compactClassName
 parameter_list|(
@@ -2556,7 +2547,6 @@ block|}
 comment|/**      * Shorten long class names,<em>java/lang/String</em> becomes       *<em>java.lang.String</em>,      * e.g.. If<em>chopit</em> is<em>true</em> the prefix<em>java.lang</em>      * is also removed.      *      * @param str The long class name      * @param chopit Flag that determines whether chopping is executed or not      * @return Compacted class name      */
 specifier|public
 specifier|static
-specifier|final
 name|String
 name|compactClassName
 parameter_list|(
@@ -2581,7 +2571,6 @@ block|}
 comment|/**      * @return `flag' with bit `i' set to 1      */
 specifier|public
 specifier|static
-specifier|final
 name|int
 name|setBit
 parameter_list|(
@@ -2604,7 +2593,6 @@ block|}
 comment|/**      * @return `flag' with bit `i' set to 0      */
 specifier|public
 specifier|static
-specifier|final
 name|int
 name|clearBit
 parameter_list|(
@@ -2642,7 +2630,6 @@ block|}
 comment|/**      * @return true, if bit `i' in `flag' is set      */
 specifier|public
 specifier|static
-specifier|final
 name|boolean
 name|isSet
 parameter_list|(
@@ -2668,7 +2655,6 @@ return|;
 block|}
 comment|/**      * Converts string containing the method return and argument types       * to a byte code method signature.      *      * @param  ret Return type of method      * @param  argv Types of method arguments      * @return Byte code representation of method signature      *       * @throws ClassFormatException if the signature is for Void      */
 specifier|public
-specifier|final
 specifier|static
 name|String
 name|methodTypeToSignature
@@ -2775,7 +2761,6 @@ block|}
 comment|/**      * @param  signature    Method signature      * @return Array of argument types      * @throws  ClassFormatException        */
 specifier|public
 specifier|static
-specifier|final
 name|String
 index|[]
 name|methodSignatureArgumentTypes
@@ -2798,7 +2783,6 @@ block|}
 comment|/**      * @param  signature    Method signature      * @param chopit Shorten class names ?      * @return Array of argument types      * @throws  ClassFormatException        */
 specifier|public
 specifier|static
-specifier|final
 name|String
 index|[]
 name|methodSignatureArgumentTypes
@@ -2936,7 +2920,6 @@ block|}
 comment|/**      * @param  signature    Method signature      * @return return type of method      * @throws  ClassFormatException        */
 specifier|public
 specifier|static
-specifier|final
 name|String
 name|methodSignatureReturnType
 parameter_list|(
@@ -2958,7 +2941,6 @@ block|}
 comment|/**      * @param  signature    Method signature      * @param chopit Shorten class names ?      * @return return type of method      * @throws  ClassFormatException        */
 specifier|public
 specifier|static
-specifier|final
 name|String
 name|methodSignatureReturnType
 parameter_list|(
@@ -3032,7 +3014,6 @@ block|}
 comment|/**      * Converts method signature to string with all class names compacted.      *      * @param signature to convert      * @param name of method      * @param access flags of method      * @return Human readable signature      */
 specifier|public
 specifier|static
-specifier|final
 name|String
 name|methodSignatureToString
 parameter_list|(
@@ -3061,7 +3042,6 @@ return|;
 block|}
 specifier|public
 specifier|static
-specifier|final
 name|String
 name|methodSignatureToString
 parameter_list|(
@@ -3096,7 +3076,6 @@ block|}
 comment|/**      * A returntype signature represents the return value from a method.      * It is a series of bytes in the following grammar:      *      *<return_signature> ::=<field_type> | V      *      * The character V indicates that the method returns no value. Otherwise, the      * signature indicates the type of the return value.      * An argument signature represents an argument passed to a method:      *      *<argument_signature> ::=<field_type>      *      * A method signature represents the arguments that the method expects, and      * the value that it returns.      *<method_signature> ::= (<arguments_signature>)<return_signature>      *<arguments_signature>::=<argument_signature>*      *      * This method converts such a string into a Java type declaration like      * `void main(String[])' and throws a `ClassFormatException' when the parsed       * type is invalid.      *      * @param  signature    Method signature      * @param  name         Method name      * @param  access       Method access rights      * @param chopit      * @param vars      * @return Java type declaration      * @throws  ClassFormatException        */
 specifier|public
 specifier|static
-specifier|final
 name|String
 name|methodSignatureToString
 parameter_list|(
@@ -3435,7 +3414,6 @@ block|}
 comment|/**      * Replace all occurrences of<em>old</em> in<em>str</em> with<em>new</em>.      *      * @param str String to permute      * @param old String to be replaced      * @param new_ Replacement string      * @return new String object      */
 specifier|public
 specifier|static
-specifier|final
 name|String
 name|replace
 parameter_list|(
@@ -3582,7 +3560,6 @@ block|}
 comment|/**      * Converts signature to string with all class names compacted.      *      * @param signature to convert      * @return Human readable signature      */
 specifier|public
 specifier|static
-specifier|final
 name|String
 name|signatureToString
 parameter_list|(
@@ -3602,7 +3579,6 @@ block|}
 comment|/**      * The field signature represents the value of an argument to a function or       * the value of a variable. It is a series of bytes generated by the       * following grammar:      *      *<PRE>      *<field_signature> ::=<field_type>      *<field_type>      ::=<base_type>|<object_type>|<array_type>      *<base_type>       ::= B|C|D|F|I|J|S|Z      *<object_type>     ::= L<fullclassname>;      *<array_type>      ::= [<field_type>      *      * The meaning of the base types is as follows:      * B byte signed byte      * C char character      * D double double precision IEEE float      * F float single precision IEEE float      * I int integer      * J long long integer      * L<fullclassname>; ... an object of the given class      * S short signed short      * Z boolean true or false      * [<field sig> ... array      *</PRE>      *      * This method converts this string into a Java type declaration such as      * `String[]' and throws a `ClassFormatException' when the parsed type is       * invalid.      *      * @param  signature  Class signature      * @param chopit Flag that determines whether chopping is executed or not      * @return Java type declaration      * @throws ClassFormatException      */
 specifier|public
 specifier|static
-specifier|final
 name|String
 name|signatureToString
 parameter_list|(
@@ -4310,7 +4286,6 @@ block|}
 comment|/**      * Return type of method signature as a byte value as defined in<em>Constants</em>      *      * @param  signature in format described above      * @return type of method signature      * @see    Constants      *       * @throws ClassFormatException if signature is not a method signature      */
 specifier|public
 specifier|static
-specifier|final
 name|byte
 name|typeOfMethodSignature
 parameter_list|(
@@ -4392,7 +4367,6 @@ block|}
 comment|/**      * Return type of signature as a byte value as defined in<em>Constants</em>      *      * @param  signature in format described above      * @return type of signature      * @see    Constants      *       * @throws ClassFormatException if signature isn't a known type      */
 specifier|public
 specifier|static
-specifier|final
 name|byte
 name|typeOfSignature
 parameter_list|(
@@ -4636,7 +4610,6 @@ block|}
 comment|/** Convert bytes into hexadecimal string      *      * @param bytes an array of bytes to convert to hexadecimal      *       * @return bytes as hexadecimal string, e.g. 00 FA 12 ...      */
 specifier|public
 specifier|static
-specifier|final
 name|String
 name|toHexString
 parameter_list|(
@@ -4744,7 +4717,6 @@ block|}
 comment|/**      * Return a string for an integer justified left or right and filled up with      * `fill' characters if necessary.      *      * @param i integer to format      * @param length length of desired string      * @param left_justify format left or right      * @param fill fill character      * @return formatted int      */
 specifier|public
 specifier|static
-specifier|final
 name|String
 name|format
 parameter_list|(
@@ -4782,7 +4754,6 @@ block|}
 comment|/**      * Fillup char with up to length characters with char `fill' and justify it left or right.      *      * @param str string to format      * @param length length of desired string      * @param left_justify format left or right      * @param fill fill character      * @return formatted string      */
 specifier|public
 specifier|static
-specifier|final
 name|String
 name|fillup
 parameter_list|(
@@ -4878,7 +4849,6 @@ name|str
 return|;
 block|}
 specifier|static
-specifier|final
 name|boolean
 name|equals
 parameter_list|(
@@ -4952,7 +4922,6 @@ return|;
 block|}
 specifier|public
 specifier|static
-specifier|final
 name|void
 name|printArray
 parameter_list|(
@@ -4979,7 +4948,6 @@ expr_stmt|;
 block|}
 specifier|public
 specifier|static
-specifier|final
 name|void
 name|printArray
 parameter_list|(
@@ -5006,7 +4974,6 @@ expr_stmt|;
 block|}
 specifier|public
 specifier|static
-specifier|final
 name|String
 name|printArray
 parameter_list|(
@@ -5026,7 +4993,6 @@ return|;
 block|}
 specifier|public
 specifier|static
-specifier|final
 name|String
 name|printArray
 parameter_list|(
@@ -5051,7 +5017,6 @@ return|;
 block|}
 specifier|public
 specifier|static
-specifier|final
 name|String
 name|printArray
 parameter_list|(
@@ -6183,7 +6148,6 @@ block|}
 comment|/**      * Escape all occurences of newline chars '\n', quotes \", etc.      */
 specifier|public
 specifier|static
-specifier|final
 name|String
 name|convertString
 parameter_list|(

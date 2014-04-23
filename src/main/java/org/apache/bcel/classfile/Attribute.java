@@ -286,7 +286,6 @@ block|}
 comment|/* 	 * Class method reads one attribute from the input data stream. This method 	 * must not be accessible from the outside. It is called by the Field and 	 * Method constructor methods. 	 *  	 * @see Field 	 * @see Method @param file Input stream @param constant_pool Array of 	 *      constants @return Attribute @throws IOException @throws 	 *      ClassFormatException 	 */
 specifier|public
 specifier|static
-specifier|final
 name|Attribute
 name|readAttribute
 parameter_list|(

@@ -708,7 +708,6 @@ block|}
 comment|/**      * Convert signature to a Type object.      * @param signature signature string such as Ljava/lang/String;      * @return type object      */
 specifier|public
 specifier|static
-specifier|final
 name|Type
 name|getType
 parameter_list|(
@@ -1627,7 +1626,6 @@ name|res
 return|;
 block|}
 specifier|static
-specifier|final
 name|int
 name|getTypeSize
 parameter_list|(
