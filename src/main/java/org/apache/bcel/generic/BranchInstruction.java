@@ -482,7 +482,6 @@ expr_stmt|;
 block|}
 comment|/**      * Used by BranchInstruction, LocalVariableGen, CodeExceptionGen      */
 specifier|static
-specifier|final
 name|void
 name|notifyTarget
 parameter_list|(

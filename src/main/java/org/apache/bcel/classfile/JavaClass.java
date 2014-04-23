@@ -932,7 +932,6 @@ expr_stmt|;
 block|}
 comment|/* Print debug information depending on `JavaClass.debug'      */
 specifier|static
-specifier|final
 name|void
 name|Debug
 parameter_list|(

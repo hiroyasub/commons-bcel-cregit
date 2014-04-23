@@ -70,7 +70,6 @@ expr_stmt|;
 block|}
 comment|/* A program consists of a number of function declarations with a  * distinguished function `main' that starts the program.  */
 specifier|static
-specifier|final
 specifier|public
 name|void
 name|Program
@@ -271,7 +270,6 @@ block|}
 block|}
 comment|/* "FUN" Ident() "(" NameList() ")" = Expr()  */
 specifier|static
-specifier|final
 specifier|public
 name|void
 name|FunDecl
@@ -558,7 +556,6 @@ block|}
 block|}
 block|}
 specifier|static
-specifier|final
 specifier|public
 name|void
 name|Expr
@@ -869,7 +866,6 @@ block|}
 block|}
 comment|/*  * The disambiguating algorithm of JavaCC automatically binds dangling  * else's to the innermost if statement. The LOOKAHEAD specification  * is to tell JavaCC that we know what we are doing.  */
 specifier|static
-specifier|final
 specifier|public
 name|void
 name|IfExpr
@@ -1099,7 +1095,6 @@ block|}
 block|}
 block|}
 specifier|static
-specifier|final
 specifier|public
 name|void
 name|LetExpr
@@ -1347,7 +1342,6 @@ block|}
 block|}
 block|}
 specifier|static
-specifier|final
 specifier|public
 name|Token
 name|FunAppl
@@ -1677,7 +1671,6 @@ argument_list|)
 throw|;
 block|}
 specifier|static
-specifier|final
 specifier|public
 name|void
 name|Term
@@ -1922,7 +1915,6 @@ block|}
 block|}
 block|}
 specifier|static
-specifier|final
 specifier|public
 name|void
 name|Factor
@@ -2173,7 +2165,6 @@ block|}
 block|}
 block|}
 specifier|static
-specifier|final
 specifier|public
 name|void
 name|Element
@@ -2284,7 +2275,6 @@ block|}
 block|}
 block|}
 specifier|static
-specifier|final
 specifier|public
 name|Token
 name|Integer
@@ -2420,7 +2410,6 @@ argument_list|)
 throw|;
 block|}
 specifier|static
-specifier|final
 specifier|public
 name|Token
 name|Ident
@@ -2634,7 +2623,6 @@ argument_list|)
 throw|;
 block|}
 specifier|static
-specifier|final
 specifier|public
 name|int
 name|AddOp
@@ -2737,7 +2725,6 @@ argument_list|)
 throw|;
 block|}
 specifier|static
-specifier|final
 specifier|public
 name|int
 name|MultOp
@@ -2851,7 +2838,6 @@ argument_list|)
 throw|;
 block|}
 specifier|static
-specifier|final
 specifier|public
 name|int
 name|CmpOp
@@ -3079,7 +3065,6 @@ argument_list|)
 throw|;
 block|}
 specifier|static
-specifier|final
 specifier|private
 name|boolean
 name|jj_2_1
@@ -3117,7 +3102,6 @@ name|retval
 return|;
 block|}
 specifier|static
-specifier|final
 specifier|private
 name|boolean
 name|jj_3R_8
@@ -3155,7 +3139,6 @@ literal|false
 return|;
 block|}
 specifier|static
-specifier|final
 specifier|private
 name|boolean
 name|jj_3R_11
@@ -3193,7 +3176,6 @@ literal|false
 return|;
 block|}
 specifier|static
-specifier|final
 specifier|private
 name|boolean
 name|jj_3R_7
@@ -3231,7 +3213,6 @@ literal|false
 return|;
 block|}
 specifier|static
-specifier|final
 specifier|private
 name|boolean
 name|jj_3R_6
@@ -3378,7 +3359,6 @@ literal|false
 return|;
 block|}
 specifier|static
-specifier|final
 specifier|private
 name|boolean
 name|jj_3_1
@@ -3414,7 +3394,6 @@ literal|false
 return|;
 block|}
 specifier|static
-specifier|final
 specifier|private
 name|boolean
 name|jj_3R_5
@@ -3477,7 +3456,6 @@ literal|false
 return|;
 block|}
 specifier|static
-specifier|final
 specifier|private
 name|boolean
 name|jj_3R_10
@@ -3515,7 +3493,6 @@ literal|false
 return|;
 block|}
 specifier|static
-specifier|final
 specifier|private
 name|boolean
 name|jj_3R_9
@@ -4422,7 +4399,6 @@ expr_stmt|;
 block|}
 block|}
 specifier|static
-specifier|final
 specifier|private
 name|Token
 name|jj_consume_token
@@ -4574,7 +4550,6 @@ argument_list|()
 throw|;
 block|}
 specifier|static
-specifier|final
 specifier|private
 name|boolean
 name|jj_scan_token
@@ -4700,7 +4675,6 @@ operator|)
 return|;
 block|}
 specifier|static
-specifier|final
 specifier|public
 name|Token
 name|getNextToken
@@ -4749,7 +4723,6 @@ name|token
 return|;
 block|}
 specifier|static
-specifier|final
 specifier|public
 name|Token
 name|getToken
@@ -4818,7 +4791,6 @@ name|t
 return|;
 block|}
 specifier|static
-specifier|final
 specifier|private
 name|int
 name|jj_ntk
@@ -5145,7 +5117,6 @@ block|}
 block|}
 block|}
 specifier|static
-specifier|final
 specifier|public
 name|ParseException
 name|generateParseException
@@ -5426,7 +5397,6 @@ argument_list|)
 return|;
 block|}
 specifier|static
-specifier|final
 specifier|public
 name|void
 name|enable_tracing
@@ -5434,7 +5404,6 @@ parameter_list|()
 block|{
 block|}
 specifier|static
-specifier|final
 specifier|public
 name|void
 name|disable_tracing
@@ -5442,7 +5411,6 @@ parameter_list|()
 block|{
 block|}
 specifier|static
-specifier|final
 specifier|private
 name|void
 name|jj_rescan_token
@@ -5535,7 +5503,6 @@ literal|false
 expr_stmt|;
 block|}
 specifier|static
-specifier|final
 specifier|private
 name|void
 name|jj_save

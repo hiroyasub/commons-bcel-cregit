@@ -3087,7 +3087,6 @@ name|jjmatchedKind
 decl_stmt|;
 specifier|public
 specifier|static
-specifier|final
 name|Token
 name|getNextToken
 parameter_list|()
@@ -3682,7 +3681,6 @@ block|}
 block|}
 block|}
 specifier|static
-specifier|final
 name|void
 name|SkipLexicalActions
 parameter_list|(

@@ -696,7 +696,6 @@ block|}
 comment|/** Checks for class path components in the following properties:      * "java.class.path", "sun.boot.class.path", "java.ext.dirs"      *      * @return class path as used by default by BCEL      */
 specifier|public
 specifier|static
-specifier|final
 name|String
 name|getClassPath
 parameter_list|()

@@ -287,7 +287,6 @@ decl_stmt|;
 comment|// List of reusable handles
 comment|/** Factory method.      */
 specifier|static
-specifier|final
 name|InstructionHandle
 name|getInstructionHandle
 parameter_list|(

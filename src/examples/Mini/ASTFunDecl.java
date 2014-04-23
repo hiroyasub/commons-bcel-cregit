@@ -2224,7 +2224,6 @@ decl_stmt|,
 name|max_size
 decl_stmt|;
 specifier|static
-specifier|final
 name|void
 name|reset
 parameter_list|()
@@ -2309,7 +2308,6 @@ return|;
 block|}
 comment|/** Used by byte_code()    */
 specifier|static
-specifier|final
 name|void
 name|pop
 parameter_list|(
@@ -2323,7 +2321,6 @@ name|s
 expr_stmt|;
 block|}
 specifier|static
-specifier|final
 name|void
 name|push
 parameter_list|(
@@ -2349,7 +2346,6 @@ expr_stmt|;
 block|}
 block|}
 specifier|static
-specifier|final
 name|void
 name|push
 parameter_list|()
@@ -2362,7 +2358,6 @@ expr_stmt|;
 block|}
 comment|/** Used byte code()    */
 specifier|static
-specifier|final
 name|void
 name|push
 parameter_list|(
@@ -2395,7 +2390,6 @@ argument_list|)
 expr_stmt|;
 block|}
 specifier|static
-specifier|final
 name|String
 name|pop
 parameter_list|()

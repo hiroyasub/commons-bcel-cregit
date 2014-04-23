@@ -60,7 +60,6 @@ decl_stmt|;
 comment|/**     * Replaces unprintable characters by their espaced (or unicode escaped)     * equivalents in the given string     */
 specifier|protected
 specifier|static
-specifier|final
 name|String
 name|addEscapes
 parameter_list|(

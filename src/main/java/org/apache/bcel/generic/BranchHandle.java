@@ -68,7 +68,6 @@ literal|null
 decl_stmt|;
 comment|// List of reusable handles
 specifier|static
-specifier|final
 name|BranchHandle
 name|getBranchHandle
 parameter_list|(

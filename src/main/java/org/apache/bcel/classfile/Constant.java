@@ -323,7 +323,6 @@ block|}
 block|}
 comment|/**      * Read one constant from the given file, the type depends on a tag byte.      *      * @param file Input stream      * @return Constant object      */
 specifier|static
-specifier|final
 name|Constant
 name|readConstant
 parameter_list|(

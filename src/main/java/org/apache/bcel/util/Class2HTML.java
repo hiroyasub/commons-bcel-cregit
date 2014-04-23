@@ -750,7 +750,6 @@ literal|"</A>"
 return|;
 block|}
 specifier|static
-specifier|final
 name|String
 name|referenceType
 parameter_list|(
