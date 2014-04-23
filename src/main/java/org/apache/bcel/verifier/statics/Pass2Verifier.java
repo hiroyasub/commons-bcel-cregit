@@ -3938,7 +3938,7 @@ argument_list|(
 name|obj
 argument_list|)
 operator|+
-literal|"' must have the ACC_STATIC modifier set but hasn't!"
+literal|"' must have the ACC_ABSTRACT modifier set but hasn't!"
 argument_list|)
 throw|;
 block|}
