@@ -1070,13 +1070,10 @@ operator|.
 name|getClassString
 argument_list|()
 operator|.
-name|indexOf
+name|contains
 argument_list|(
 literal|"Integer"
 argument_list|)
-operator|!=
-operator|-
-literal|1
 argument_list|)
 expr_stmt|;
 name|checkSerialize

@@ -385,12 +385,10 @@ if|if
 condition|(
 name|class_name
 operator|.
-name|indexOf
+name|contains
 argument_list|(
 literal|"$$BCEL$$"
 argument_list|)
-operator|>=
-literal|0
 condition|)
 block|{
 name|clazz

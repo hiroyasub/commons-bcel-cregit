@@ -3115,16 +3115,12 @@ decl_stmt|;
 name|int
 name|var_index
 init|=
-operator|(
 name|access
 operator|.
-name|indexOf
+name|contains
 argument_list|(
 literal|"static"
 argument_list|)
-operator|>=
-literal|0
-operator|)
 condition|?
 literal|0
 else|:
@@ -3438,13 +3434,10 @@ if|if
 condition|(
 name|str
 operator|.
-name|indexOf
+name|contains
 argument_list|(
 name|old
 argument_list|)
-operator|!=
-operator|-
-literal|1
 condition|)
 block|{
 comment|// `old' found in str
