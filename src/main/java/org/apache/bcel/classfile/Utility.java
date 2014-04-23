@@ -3470,11 +3470,11 @@ literal|1
 condition|)
 block|{
 comment|// `old' found in str
-name|StringBuffer
+name|StringBuilder
 name|buf
 init|=
 operator|new
-name|StringBuffer
+name|StringBuilder
 argument_list|()
 decl_stmt|;
 name|old_index

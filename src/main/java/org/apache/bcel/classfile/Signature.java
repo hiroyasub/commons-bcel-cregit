@@ -383,7 +383,7 @@ parameter_list|(
 name|MyByteArrayInputStream
 name|in
 parameter_list|,
-name|StringBuffer
+name|StringBuilder
 name|buf
 parameter_list|)
 block|{
@@ -430,11 +430,11 @@ name|ch
 argument_list|)
 condition|)
 block|{
-name|StringBuffer
+name|StringBuilder
 name|buf2
 init|=
 operator|new
-name|StringBuffer
+name|StringBuilder
 argument_list|()
 decl_stmt|;
 name|int
@@ -645,7 +645,7 @@ parameter_list|(
 name|MyByteArrayInputStream
 name|in
 parameter_list|,
-name|StringBuffer
+name|StringBuilder
 name|buf
 parameter_list|)
 block|{
@@ -866,11 +866,11 @@ name|s
 parameter_list|)
 block|{
 comment|//System.out.println("Sig:" + s);
-name|StringBuffer
+name|StringBuilder
 name|buf
 init|=
 operator|new
-name|StringBuffer
+name|StringBuilder
 argument_list|()
 decl_stmt|;
 name|matchGJIdent
