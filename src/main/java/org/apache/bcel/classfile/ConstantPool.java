@@ -581,7 +581,6 @@ return|;
 block|}
 specifier|private
 specifier|static
-specifier|final
 name|String
 name|escape
 parameter_list|(

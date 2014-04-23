@@ -865,7 +865,6 @@ return|;
 block|}
 specifier|private
 specifier|static
-specifier|final
 name|String
 name|toBool
 parameter_list|(
@@ -883,7 +882,6 @@ return|;
 block|}
 specifier|private
 specifier|static
-specifier|final
 name|String
 name|toInt
 parameter_list|(

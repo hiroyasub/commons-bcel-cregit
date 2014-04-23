@@ -3419,7 +3419,6 @@ block|}
 comment|// Guess what this does
 specifier|private
 specifier|static
-specifier|final
 name|int
 name|pow2
 parameter_list|(
@@ -4605,7 +4604,6 @@ block|}
 comment|/**      * Convert (signed) byte to (unsigned) short value, i.e., all negative      * values become positive.      */
 specifier|private
 specifier|static
-specifier|final
 name|short
 name|byteToShort
 parameter_list|(

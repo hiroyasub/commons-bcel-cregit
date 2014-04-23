@@ -7959,7 +7959,6 @@ block|}
 comment|/** 	 * This method returns true if and only if the supplied String 	 * represents a valid Java class name. 	 */
 specifier|private
 specifier|static
-specifier|final
 name|boolean
 name|validClassName
 parameter_list|(

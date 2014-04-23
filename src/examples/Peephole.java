@@ -330,7 +330,6 @@ block|}
 block|}
 specifier|private
 specifier|static
-specifier|final
 name|Method
 name|removeNOPs
 parameter_list|(

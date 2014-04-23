@@ -616,7 +616,6 @@ return|;
 block|}
 specifier|private
 specifier|static
-specifier|final
 name|void
 name|getPathComponents
 parameter_list|(

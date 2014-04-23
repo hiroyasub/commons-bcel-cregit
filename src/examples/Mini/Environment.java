@@ -437,7 +437,6 @@ block|}
 block|}
 specifier|private
 specifier|static
-specifier|final
 name|int
 name|lookup
 parameter_list|(

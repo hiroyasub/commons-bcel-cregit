@@ -334,7 +334,6 @@ block|}
 comment|/**      * Map symbolic instruction names like "getfield" to a single character.      *       * @param pattern      *          instruction pattern in lower case      * @return encoded string for a pattern such as "BranchInstruction".      */
 specifier|private
 specifier|static
-specifier|final
 name|String
 name|mapName
 parameter_list|(
@@ -416,7 +415,6 @@ block|}
 comment|/**      * Replace symbolic names of instructions with the appropiate character and      * remove all white space from string. Meta characters such as +, * are      * ignored.      *       * @param pattern      *          The pattern to compile      * @return translated regular expression string      */
 specifier|private
 specifier|static
-specifier|final
 name|String
 name|compilePattern
 parameter_list|(
@@ -933,7 +931,6 @@ block|}
 comment|/**      * Convert opcode number to char.      */
 specifier|private
 specifier|static
-specifier|final
 name|char
 name|makeChar
 parameter_list|(

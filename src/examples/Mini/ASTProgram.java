@@ -980,7 +980,7 @@ name|out
 operator|.
 name|println
 argument_list|(
-literal|"  private static final int _readInt() throws IOException {\n"
+literal|"  private static int _readInt() throws IOException {\n"
 operator|+
 literal|"    System.out.print(\"Please enter a number> \");\n"
 operator|+
@@ -991,7 +991,7 @@ name|out
 operator|.
 name|println
 argument_list|(
-literal|"  private static final int _writeInt(int n) {\n"
+literal|"  private static int _writeInt(int n) {\n"
 operator|+
 literal|"    System.out.println(\"Result: \" + n);\n    return 0;\n  }\n"
 argument_list|)
@@ -1230,7 +1230,7 @@ operator|.
 name|IRETURN
 argument_list|)
 expr_stmt|;
-comment|/* private static final int _readInt() throws IOException      */
+comment|/* private static int _readInt() throws IOException      */
 name|method
 operator|=
 operator|new
@@ -1285,7 +1285,7 @@ name|getMethod
 argument_list|()
 argument_list|)
 expr_stmt|;
-comment|/* private static final int _writeInt(int i) throws IOException      */
+comment|/* private static int _writeInt(int i) throws IOException      */
 name|Type
 index|[]
 name|args

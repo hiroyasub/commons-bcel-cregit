@@ -823,7 +823,6 @@ block|}
 decl_stmt|;
 specifier|private
 specifier|static
-specifier|final
 name|boolean
 name|isString
 parameter_list|(
@@ -1214,7 +1213,6 @@ block|}
 block|}
 specifier|private
 specifier|static
-specifier|final
 name|ArithmeticInstruction
 name|createBinaryIntOp
 parameter_list|(
@@ -1319,7 +1317,6 @@ block|}
 block|}
 specifier|private
 specifier|static
-specifier|final
 name|ArithmeticInstruction
 name|createBinaryLongOp
 parameter_list|(
@@ -1424,7 +1421,6 @@ block|}
 block|}
 specifier|private
 specifier|static
-specifier|final
 name|ArithmeticInstruction
 name|createBinaryFloatOp
 parameter_list|(
@@ -1481,7 +1477,6 @@ block|}
 block|}
 specifier|private
 specifier|static
-specifier|final
 name|ArithmeticInstruction
 name|createBinaryDoubleOp
 parameter_list|(

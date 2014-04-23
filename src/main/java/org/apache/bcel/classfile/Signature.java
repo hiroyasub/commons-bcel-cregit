@@ -377,7 +377,6 @@ return|;
 block|}
 specifier|private
 specifier|static
-specifier|final
 name|void
 name|matchIdent
 parameter_list|(
@@ -640,7 +639,6 @@ block|}
 block|}
 specifier|private
 specifier|static
-specifier|final
 name|void
 name|matchGJIdent
 parameter_list|(

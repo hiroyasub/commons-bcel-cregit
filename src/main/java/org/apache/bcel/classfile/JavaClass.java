@@ -2452,7 +2452,6 @@ return|;
 block|}
 specifier|private
 specifier|static
-specifier|final
 name|String
 name|indent
 parameter_list|(

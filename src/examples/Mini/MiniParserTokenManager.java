@@ -448,7 +448,6 @@ block|}
 block|}
 specifier|private
 specifier|static
-specifier|final
 name|int
 name|jjStopStringLiteralDfa_0
 parameter_list|(
@@ -634,7 +633,6 @@ block|}
 block|}
 specifier|private
 specifier|static
-specifier|final
 name|int
 name|jjStartNfa_0
 parameter_list|(
