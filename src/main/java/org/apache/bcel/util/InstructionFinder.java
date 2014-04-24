@@ -422,7 +422,7 @@ name|String
 name|pattern
 parameter_list|)
 block|{
-comment|//Bug: 38787 - Instructions are assumed to be english, to avoid odd Locale issues
+comment|//Bug: BCEL-77 - Instructions are assumed to be english, to avoid odd Locale issues
 name|String
 name|lower
 init|=
