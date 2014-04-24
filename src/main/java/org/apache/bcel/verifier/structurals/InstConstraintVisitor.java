@@ -6074,7 +6074,12 @@ literal|"Field '"
 operator|+
 name|field_name
 operator|+
-literal|"' not found?!?"
+literal|"' not found in "
+operator|+
+name|jc
+operator|.
+name|getClassName
+argument_list|()
 argument_list|)
 throw|;
 block|}
@@ -12898,7 +12903,16 @@ throw|throw
 operator|new
 name|AssertionViolatedException
 argument_list|(
-literal|"Field not found?!?"
+literal|"Field '"
+operator|+
+name|field_name
+operator|+
+literal|"' not found in "
+operator|+
+name|jc
+operator|.
+name|getClassName
+argument_list|()
 argument_list|)
 throw|;
 block|}
@@ -13379,7 +13393,16 @@ throw|throw
 operator|new
 name|AssertionViolatedException
 argument_list|(
-literal|"Field not found?!?"
+literal|"Field '"
+operator|+
+name|field_name
+operator|+
+literal|"' not found in "
+operator|+
+name|jc
+operator|.
+name|getClassName
+argument_list|()
 argument_list|)
 throw|;
 block|}
