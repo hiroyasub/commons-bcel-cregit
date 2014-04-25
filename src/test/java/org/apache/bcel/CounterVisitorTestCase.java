@@ -55,16 +55,16 @@ name|void
 name|testAnnotationsCount
 parameter_list|()
 block|{
-comment|// System.out
-comment|// .println("AnnotationsCount = " + getVisitor().annotationCount);
-name|assertTrue
+name|assertEquals
 argument_list|(
+literal|"annotationCount"
+argument_list|,
+literal|2
+argument_list|,
 name|getVisitor
 argument_list|()
 operator|.
 name|annotationCount
-operator|==
-literal|2
 argument_list|)
 expr_stmt|;
 block|}
@@ -73,16 +73,16 @@ name|void
 name|testAnnotationDefaultCount
 parameter_list|()
 block|{
-comment|// System.out.println("AnnotationDefaultCount = "
-comment|// + getVisitor().annotationDefaultCount);
-name|assertTrue
+name|assertEquals
 argument_list|(
+literal|"annotationDefaultCount"
+argument_list|,
+literal|0
+argument_list|,
 name|getVisitor
 argument_list|()
 operator|.
 name|annotationDefaultCount
-operator|==
-literal|0
 argument_list|)
 expr_stmt|;
 block|}
@@ -91,16 +91,16 @@ name|void
 name|testAnnotationEntryCount
 parameter_list|()
 block|{
-comment|// System.out.println("AnnotationEntryCount = "
-comment|// + getVisitor().annotationEntryCount);
-name|assertTrue
+name|assertEquals
 argument_list|(
+literal|"annotationEntryCount"
+argument_list|,
+literal|0
+argument_list|,
 name|getVisitor
 argument_list|()
 operator|.
 name|annotationEntryCount
-operator|==
-literal|0
 argument_list|)
 expr_stmt|;
 block|}
@@ -109,15 +109,16 @@ name|void
 name|testCodeCount
 parameter_list|()
 block|{
-comment|// System.out.println("CodeCount = " + getVisitor().codeCount);
-name|assertTrue
+name|assertEquals
 argument_list|(
+literal|"codeCount"
+argument_list|,
+literal|1
+argument_list|,
 name|getVisitor
 argument_list|()
 operator|.
 name|codeCount
-operator|==
-literal|1
 argument_list|)
 expr_stmt|;
 block|}
@@ -126,16 +127,16 @@ name|void
 name|testCodeExceptionCount
 parameter_list|()
 block|{
-comment|// System.out.println("CodeExceptionCount = "
-comment|// + getVisitor().codeExceptionCount);
-name|assertTrue
+name|assertEquals
 argument_list|(
+literal|"codeExceptionCount"
+argument_list|,
+literal|0
+argument_list|,
 name|getVisitor
 argument_list|()
 operator|.
 name|codeExceptionCount
-operator|==
-literal|0
 argument_list|)
 expr_stmt|;
 block|}
@@ -144,16 +145,16 @@ name|void
 name|testConstantClassCount
 parameter_list|()
 block|{
-comment|// System.out.println("ConstantClassCount = "
-comment|// + getVisitor().constantClassCount);
-name|assertTrue
+name|assertEquals
 argument_list|(
+literal|"constantClassCount"
+argument_list|,
+literal|2
+argument_list|,
 name|getVisitor
 argument_list|()
 operator|.
 name|constantClassCount
-operator|==
-literal|2
 argument_list|)
 expr_stmt|;
 block|}
@@ -162,16 +163,16 @@ name|void
 name|testConstantDoubleCount
 parameter_list|()
 block|{
-comment|// System.out.println("ConstantDoubleCount = "
-comment|// + getVisitor().constantDoubleCount);
-name|assertTrue
+name|assertEquals
 argument_list|(
+literal|"constantDoubleCount"
+argument_list|,
+literal|0
+argument_list|,
 name|getVisitor
 argument_list|()
 operator|.
 name|constantDoubleCount
-operator|==
-literal|0
 argument_list|)
 expr_stmt|;
 block|}
@@ -180,16 +181,16 @@ name|void
 name|testConstantFieldrefCount
 parameter_list|()
 block|{
-comment|// System.out.println("ConstantFieldrefCount = "
-comment|// + getVisitor().constantFieldrefCount);
-name|assertTrue
+name|assertEquals
 argument_list|(
+literal|"constantFieldrefCount"
+argument_list|,
+literal|0
+argument_list|,
 name|getVisitor
 argument_list|()
 operator|.
 name|constantFieldrefCount
-operator|==
-literal|0
 argument_list|)
 expr_stmt|;
 block|}
@@ -198,16 +199,16 @@ name|void
 name|testConstantFloatCount
 parameter_list|()
 block|{
-comment|// System.out.println("ConstantFloatCount = "
-comment|// + getVisitor().constantFloatCount);
-name|assertTrue
+name|assertEquals
 argument_list|(
+literal|"constantFloatCount"
+argument_list|,
+literal|0
+argument_list|,
 name|getVisitor
 argument_list|()
 operator|.
 name|constantFloatCount
-operator|==
-literal|0
 argument_list|)
 expr_stmt|;
 block|}
@@ -216,16 +217,16 @@ name|void
 name|testConstantIntegerCount
 parameter_list|()
 block|{
-comment|// System.out.println("ConstantIntegerCount = "
-comment|// + getVisitor().constantIntegerCount);
-name|assertTrue
+name|assertEquals
 argument_list|(
+literal|"constantIntegerCount"
+argument_list|,
+literal|0
+argument_list|,
 name|getVisitor
 argument_list|()
 operator|.
 name|constantIntegerCount
-operator|==
-literal|0
 argument_list|)
 expr_stmt|;
 block|}
@@ -234,16 +235,16 @@ name|void
 name|testConstantInterfaceMethodrefCount
 parameter_list|()
 block|{
-comment|// System.out.println("ConstantInterfaceMethodrefCount = "
-comment|// + getVisitor().constantInterfaceMethodrefCount);
-name|assertTrue
+name|assertEquals
 argument_list|(
+literal|"constantInterfaceMethodrefCount"
+argument_list|,
+literal|0
+argument_list|,
 name|getVisitor
 argument_list|()
 operator|.
 name|constantInterfaceMethodrefCount
-operator|==
-literal|0
 argument_list|)
 expr_stmt|;
 block|}
@@ -252,16 +253,16 @@ name|void
 name|testConstantLongCount
 parameter_list|()
 block|{
-comment|// System.out.println("ConstantLongCount = "
-comment|// + getVisitor().constantLongCount);
-name|assertTrue
+name|assertEquals
 argument_list|(
+literal|"constantLongCount"
+argument_list|,
+literal|0
+argument_list|,
 name|getVisitor
 argument_list|()
 operator|.
 name|constantLongCount
-operator|==
-literal|0
 argument_list|)
 expr_stmt|;
 block|}
@@ -270,16 +271,16 @@ name|void
 name|testConstantMethodrefCount
 parameter_list|()
 block|{
-comment|// System.out.println("ConstantMethodrefCount = "
-comment|// + getVisitor().constantMethodrefCount);
-name|assertTrue
+name|assertEquals
 argument_list|(
+literal|"constantMethodrefCount"
+argument_list|,
+literal|1
+argument_list|,
 name|getVisitor
 argument_list|()
 operator|.
 name|constantMethodrefCount
-operator|==
-literal|1
 argument_list|)
 expr_stmt|;
 block|}
@@ -288,16 +289,16 @@ name|void
 name|testConstantNameAndTypeCount
 parameter_list|()
 block|{
-comment|// System.out.println("ConstantNameAndTypeCount = "
-comment|// + getVisitor().constantNameAndTypeCount);
-name|assertTrue
+name|assertEquals
 argument_list|(
+literal|"constantNameAndTypeCount"
+argument_list|,
+literal|1
+argument_list|,
 name|getVisitor
 argument_list|()
 operator|.
 name|constantNameAndTypeCount
-operator|==
-literal|1
 argument_list|)
 expr_stmt|;
 block|}
@@ -306,16 +307,16 @@ name|void
 name|testConstantPoolCount
 parameter_list|()
 block|{
-comment|// System.out.println("ConstantPoolCount = "
-comment|// + getVisitor().constantPoolCount);
-name|assertTrue
+name|assertEquals
 argument_list|(
+literal|"constantPoolCount"
+argument_list|,
+literal|1
+argument_list|,
 name|getVisitor
 argument_list|()
 operator|.
 name|constantPoolCount
-operator|==
-literal|1
 argument_list|)
 expr_stmt|;
 block|}
@@ -324,16 +325,16 @@ name|void
 name|testConstantStringCount
 parameter_list|()
 block|{
-comment|// System.out.println("ConstantStringCount = "
-comment|// + getVisitor().constantStringCount);
-name|assertTrue
+name|assertEquals
 argument_list|(
+literal|"constantStringCount"
+argument_list|,
+literal|0
+argument_list|,
 name|getVisitor
 argument_list|()
 operator|.
 name|constantStringCount
-operator|==
-literal|0
 argument_list|)
 expr_stmt|;
 block|}
@@ -342,16 +343,16 @@ name|void
 name|testConstantValueCount
 parameter_list|()
 block|{
-comment|// System.out.println("ConstantValueCount = "
-comment|// + getVisitor().constantValueCount);
-name|assertTrue
+name|assertEquals
 argument_list|(
+literal|"constantValueCount"
+argument_list|,
+literal|0
+argument_list|,
 name|getVisitor
 argument_list|()
 operator|.
 name|constantValueCount
-operator|==
-literal|0
 argument_list|)
 expr_stmt|;
 block|}
@@ -360,16 +361,16 @@ name|void
 name|testDeprecatedCount
 parameter_list|()
 block|{
-comment|// System.out.println("DeprecatedCount = " +
-comment|// getVisitor().deprecatedCount);
-name|assertTrue
+name|assertEquals
 argument_list|(
+literal|"deprecatedCount"
+argument_list|,
+literal|0
+argument_list|,
 name|getVisitor
 argument_list|()
 operator|.
 name|deprecatedCount
-operator|==
-literal|0
 argument_list|)
 expr_stmt|;
 block|}
@@ -378,16 +379,16 @@ name|void
 name|testEnclosingMethodCount
 parameter_list|()
 block|{
-comment|// System.out.println("EnclosingMethodCount = "
-comment|// + getVisitor().enclosingMethodCount);
-name|assertTrue
+name|assertEquals
 argument_list|(
+literal|"enclosingMethodCount"
+argument_list|,
+literal|0
+argument_list|,
 name|getVisitor
 argument_list|()
 operator|.
 name|enclosingMethodCount
-operator|==
-literal|0
 argument_list|)
 expr_stmt|;
 block|}
@@ -396,16 +397,16 @@ name|void
 name|testExceptionTableCount
 parameter_list|()
 block|{
-comment|// System.out.println("ExceptionTableCount = "
-comment|// + getVisitor().exceptionTableCount);
-name|assertTrue
+name|assertEquals
 argument_list|(
+literal|"exceptionTableCount"
+argument_list|,
+literal|0
+argument_list|,
 name|getVisitor
 argument_list|()
 operator|.
 name|exceptionTableCount
-operator|==
-literal|0
 argument_list|)
 expr_stmt|;
 block|}
@@ -414,15 +415,16 @@ name|void
 name|testFieldCount
 parameter_list|()
 block|{
-comment|// System.out.println("FieldCount = " + getVisitor().fieldCount);
-name|assertTrue
+name|assertEquals
 argument_list|(
+literal|"fieldCount"
+argument_list|,
+literal|0
+argument_list|,
 name|getVisitor
 argument_list|()
 operator|.
 name|fieldCount
-operator|==
-literal|0
 argument_list|)
 expr_stmt|;
 block|}
@@ -431,16 +433,16 @@ name|void
 name|testInnerClassCount
 parameter_list|()
 block|{
-comment|// System.out.println("InnerClassCount = " +
-comment|// getVisitor().innerClassCount);
-name|assertTrue
+name|assertEquals
 argument_list|(
+literal|"innerClassCount"
+argument_list|,
+literal|0
+argument_list|,
 name|getVisitor
 argument_list|()
 operator|.
 name|innerClassCount
-operator|==
-literal|0
 argument_list|)
 expr_stmt|;
 block|}
@@ -449,16 +451,16 @@ name|void
 name|testInnerClassesCount
 parameter_list|()
 block|{
-comment|// System.out.println("InnerClassesCount = "
-comment|// + getVisitor().innerClassesCount);
-name|assertTrue
+name|assertEquals
 argument_list|(
+literal|"innerClassesCount"
+argument_list|,
+literal|0
+argument_list|,
 name|getVisitor
 argument_list|()
 operator|.
 name|innerClassesCount
-operator|==
-literal|0
 argument_list|)
 expr_stmt|;
 block|}
@@ -467,16 +469,16 @@ name|void
 name|testJavaClassCount
 parameter_list|()
 block|{
-comment|// System.out.println("JavaClassCount = " +
-comment|// getVisitor().javaClassCount);
-name|assertTrue
+name|assertEquals
 argument_list|(
+literal|"javaClassCount"
+argument_list|,
+literal|1
+argument_list|,
 name|getVisitor
 argument_list|()
 operator|.
 name|javaClassCount
-operator|==
-literal|1
 argument_list|)
 expr_stmt|;
 block|}
@@ -485,16 +487,16 @@ name|void
 name|testLineNumberCount
 parameter_list|()
 block|{
-comment|// System.out.println("LineNumberCount = " +
-comment|// getVisitor().lineNumberCount);
-name|assertTrue
+name|assertEquals
 argument_list|(
+literal|"lineNumberCount"
+argument_list|,
+literal|1
+argument_list|,
 name|getVisitor
 argument_list|()
 operator|.
 name|lineNumberCount
-operator|==
-literal|1
 argument_list|)
 expr_stmt|;
 block|}
@@ -503,16 +505,16 @@ name|void
 name|testLineNumberTableCount
 parameter_list|()
 block|{
-comment|// System.out.println("LineNumberTableCount = "
-comment|// + getVisitor().lineNumberTableCount);
-name|assertTrue
+name|assertEquals
 argument_list|(
+literal|"lineNumberTableCount"
+argument_list|,
+literal|1
+argument_list|,
 name|getVisitor
 argument_list|()
 operator|.
 name|lineNumberTableCount
-operator|==
-literal|1
 argument_list|)
 expr_stmt|;
 block|}
@@ -521,16 +523,16 @@ name|void
 name|testLocalVariableCount
 parameter_list|()
 block|{
-comment|// System.out.println("LocalVariableCount = "
-comment|// + getVisitor().localVariableCount);
-name|assertTrue
+name|assertEquals
 argument_list|(
+literal|"localVariableCount"
+argument_list|,
+literal|1
+argument_list|,
 name|getVisitor
 argument_list|()
 operator|.
 name|localVariableCount
-operator|==
-literal|1
 argument_list|)
 expr_stmt|;
 block|}
@@ -539,16 +541,16 @@ name|void
 name|testLocalVariableTableCount
 parameter_list|()
 block|{
-comment|// System.out.println("LocalVariableTableCount = "
-comment|// + getVisitor().localVariableTableCount);
-name|assertTrue
+name|assertEquals
 argument_list|(
+literal|"localVariableTableCount"
+argument_list|,
+literal|1
+argument_list|,
 name|getVisitor
 argument_list|()
 operator|.
 name|localVariableTableCount
-operator|==
-literal|1
 argument_list|)
 expr_stmt|;
 block|}
@@ -557,16 +559,16 @@ name|void
 name|testLocalVariableTypeTableCount
 parameter_list|()
 block|{
-comment|// System.out.println("LocalVariableTypeTableCount = "
-comment|// + getVisitor().localVariableTypeTableCount);
-name|assertTrue
+name|assertEquals
 argument_list|(
+literal|"localVariableTypeTableCount"
+argument_list|,
+literal|0
+argument_list|,
 name|getVisitor
 argument_list|()
 operator|.
 name|localVariableTypeTableCount
-operator|==
-literal|0
 argument_list|)
 expr_stmt|;
 block|}
@@ -575,15 +577,16 @@ name|void
 name|testMethodCount
 parameter_list|()
 block|{
-comment|// System.out.println("MethodCount = " + getVisitor().methodCount);
-name|assertTrue
+name|assertEquals
 argument_list|(
+literal|"methodCount"
+argument_list|,
+literal|1
+argument_list|,
 name|getVisitor
 argument_list|()
 operator|.
 name|methodCount
-operator|==
-literal|1
 argument_list|)
 expr_stmt|;
 block|}
@@ -592,16 +595,16 @@ name|void
 name|testParameterAnnotationCount
 parameter_list|()
 block|{
-comment|// System.out.println("ParameterAnnotationCount = "
-comment|// + getVisitor().methodCount);
-name|assertTrue
+name|assertEquals
 argument_list|(
+literal|"parameterAnnotationCount"
+argument_list|,
+literal|0
+argument_list|,
 name|getVisitor
 argument_list|()
 operator|.
-name|methodCount
-operator|==
-literal|1
+name|parameterAnnotationCount
 argument_list|)
 expr_stmt|;
 block|}
@@ -610,16 +613,16 @@ name|void
 name|testSignatureCount
 parameter_list|()
 block|{
-comment|// System.out.println("SignatureCount = "
-comment|// + getVisitor().signatureAnnotationCount);
-name|assertTrue
+name|assertEquals
 argument_list|(
+literal|"signatureAnnotationCount"
+argument_list|,
+literal|0
+argument_list|,
 name|getVisitor
 argument_list|()
 operator|.
 name|signatureAnnotationCount
-operator|==
-literal|0
 argument_list|)
 expr_stmt|;
 block|}
@@ -628,16 +631,16 @@ name|void
 name|testSourceFileCount
 parameter_list|()
 block|{
-comment|// System.out.println("SourceFileCount = " +
-comment|// getVisitor().sourceFileCount);
-name|assertTrue
+name|assertEquals
 argument_list|(
+literal|"sourceFileCount"
+argument_list|,
+literal|1
+argument_list|,
 name|getVisitor
 argument_list|()
 operator|.
 name|sourceFileCount
-operator|==
-literal|1
 argument_list|)
 expr_stmt|;
 block|}
@@ -646,15 +649,16 @@ name|void
 name|testStackMapCount
 parameter_list|()
 block|{
-comment|// System.out.println("StackMapCount = " + getVisitor().stackMapCount);
-name|assertTrue
+name|assertEquals
 argument_list|(
+literal|"stackMapCount"
+argument_list|,
+literal|0
+argument_list|,
 name|getVisitor
 argument_list|()
 operator|.
 name|stackMapCount
-operator|==
-literal|0
 argument_list|)
 expr_stmt|;
 block|}
@@ -663,16 +667,16 @@ name|void
 name|testStackMapEntryCount
 parameter_list|()
 block|{
-comment|// System.out.println("StackMapEntryCount = "
-comment|// + getVisitor().stackMapEntryCount);
-name|assertTrue
+name|assertEquals
 argument_list|(
+literal|"stackMapEntryCount"
+argument_list|,
+literal|0
+argument_list|,
 name|getVisitor
 argument_list|()
 operator|.
 name|stackMapEntryCount
-operator|==
-literal|0
 argument_list|)
 expr_stmt|;
 block|}
@@ -681,16 +685,16 @@ name|void
 name|testSyntheticCount
 parameter_list|()
 block|{
-comment|// System.out.println("SyntheticCount = " +
-comment|// getVisitor().syntheticCount);
-name|assertTrue
+name|assertEquals
 argument_list|(
+literal|"syntheticCount"
+argument_list|,
+literal|0
+argument_list|,
 name|getVisitor
 argument_list|()
 operator|.
 name|syntheticCount
-operator|==
-literal|0
 argument_list|)
 expr_stmt|;
 block|}
@@ -699,15 +703,16 @@ name|void
 name|testUnknownCount
 parameter_list|()
 block|{
-comment|// System.out.println("UnknownCount = " + getVisitor().unknownCount);
-name|assertTrue
+name|assertEquals
 argument_list|(
+literal|"unknownCount"
+argument_list|,
+literal|0
+argument_list|,
 name|getVisitor
 argument_list|()
 operator|.
 name|unknownCount
-operator|==
-literal|0
 argument_list|)
 expr_stmt|;
 block|}
