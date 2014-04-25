@@ -321,6 +321,9 @@ name|_constant_pool
 parameter_list|)
 block|{
 return|return
+operator|(
+name|Attribute
+operator|)
 name|clone
 argument_list|()
 return|;
