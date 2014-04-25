@@ -263,15 +263,6 @@ specifier|public
 specifier|final
 specifier|static
 name|short
-name|ACC_SYPER
-init|=
-literal|0x0020
-decl_stmt|;
-comment|/** One of the access flags for fields, methods, or classes.    *  @see #ACC_PUBLIC    */
-specifier|public
-specifier|final
-specifier|static
-name|short
 name|ACC_VOLATILE
 init|=
 literal|0x0040
