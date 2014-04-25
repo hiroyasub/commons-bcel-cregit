@@ -58,7 +58,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * represents an annotation that is represented in the class file but is not  * provided to the JVM.  *   * @version $Id: RuntimeInvisibleAnnotations  * @author<A HREF="mailto:dbrosius@qis.net">D. Brosius</A>  * @since 5.3  */
+comment|/**  * represents an annotation that is represented in the class file but is not  * provided to the JVM.  *   * @version $Id: RuntimeInvisibleAnnotations  * @author<A HREF="mailto:dbrosius@qis.net">D. Brosius</A>  * @since 6.0  */
 end_comment
 
 begin_class

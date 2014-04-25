@@ -88,7 +88,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * represents one parameter annotation in the parameter annotation table  *  * @version $Id: ParameterAnnotationEntry  * @author<A HREF="mailto:dbrosius@qis.net">D. Brosius</A>  * @since 5.3  */
+comment|/**  * represents one parameter annotation in the parameter annotation table  *  * @version $Id: ParameterAnnotationEntry  * @author<A HREF="mailto:dbrosius@qis.net">D. Brosius</A>  * @since 6.0  */
 end_comment
 
 begin_class

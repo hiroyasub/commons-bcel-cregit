@@ -46,7 +46,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * base class for parameter annotations  *   * @version $Id: ParameterAnnotations  * @author<A HREF="mailto:dbrosius@qis.net">D. Brosius</A>  * @since 5.3  */
+comment|/**  * base class for parameter annotations  *   * @version $Id: ParameterAnnotations  * @author<A HREF="mailto:dbrosius@qis.net">D. Brosius</A>  * @since 6.0  */
 end_comment
 
 begin_class
