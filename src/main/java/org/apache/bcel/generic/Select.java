@@ -64,6 +64,8 @@ implements|implements
 name|VariableLengthInstruction
 implements|,
 name|StackConsumer
+implements|,
+name|StackProducer
 block|{
 specifier|private
 specifier|static
