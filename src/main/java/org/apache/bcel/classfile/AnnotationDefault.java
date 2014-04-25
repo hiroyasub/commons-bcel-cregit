@@ -172,7 +172,13 @@ name|Visitor
 name|v
 parameter_list|)
 block|{
-comment|// v.visitAnnotationDefault(this);
+name|v
+operator|.
+name|visitAnnotationDefault
+argument_list|(
+name|this
+argument_list|)
+expr_stmt|;
 block|}
 comment|/**          * @param defaultValue          *            the default value of this methodinfo's annotation          */
 specifier|public

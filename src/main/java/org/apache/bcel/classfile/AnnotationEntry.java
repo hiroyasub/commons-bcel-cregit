@@ -304,7 +304,13 @@ name|Visitor
 name|v
 parameter_list|)
 block|{
-comment|// v.visitAnnotationEntry(this);
+name|v
+operator|.
+name|visitAnnotationEntry
+argument_list|(
+name|this
+argument_list|)
+expr_stmt|;
 block|}
 comment|/**      * @return the annotation type name      */
 specifier|public

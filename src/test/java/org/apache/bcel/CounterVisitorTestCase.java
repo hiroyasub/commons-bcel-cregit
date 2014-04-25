@@ -95,7 +95,7 @@ name|assertEquals
 argument_list|(
 literal|"annotationEntryCount"
 argument_list|,
-literal|0
+literal|2
 argument_list|,
 name|getVisitor
 argument_list|()
