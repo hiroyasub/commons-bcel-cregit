@@ -101,7 +101,6 @@ operator|-
 literal|1985077286871826895L
 decl_stmt|;
 specifier|protected
-specifier|final
 name|byte
 name|type
 decl_stmt|;

@@ -101,7 +101,7 @@ comment|/** 	 * This method returns the outgoing execution frame situation; 	 * 
 name|Frame
 name|getOutFrame
 parameter_list|(
-name|List
+name|ArrayList
 argument_list|<
 name|InstructionContext
 argument_list|>

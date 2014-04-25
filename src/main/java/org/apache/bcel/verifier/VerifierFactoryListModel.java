@@ -298,7 +298,7 @@ return|;
 block|}
 specifier|public
 specifier|synchronized
-name|String
+name|Object
 name|getElementAt
 parameter_list|(
 name|int
