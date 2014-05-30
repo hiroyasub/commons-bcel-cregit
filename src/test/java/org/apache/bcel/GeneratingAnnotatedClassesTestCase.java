@@ -591,22 +591,6 @@ operator|==
 literal|2
 argument_list|)
 expr_stmt|;
-name|AnnotationEntry
-name|one
-init|=
-name|as
-index|[
-literal|0
-index|]
-decl_stmt|;
-name|AnnotationEntry
-name|two
-init|=
-name|as
-index|[
-literal|1
-index|]
-decl_stmt|;
 comment|// TODO L??;
 name|assertTrue
 argument_list|(
