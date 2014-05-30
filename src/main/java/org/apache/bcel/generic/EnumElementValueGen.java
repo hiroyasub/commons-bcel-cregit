@@ -93,7 +93,7 @@ specifier|private
 name|int
 name|valueIdx
 decl_stmt|;
-comment|/** 	 * This ctor assumes the constant pool already contains the right type and 	 * value - as indicated by typeIdx and valueIdx. This ctor is used for 	 * deserialization 	 */
+comment|/**      * This ctor assumes the constant pool already contains the right type and      * value - as indicated by typeIdx and valueIdx. This ctor is used for      * deserialization      */
 specifier|protected
 name|EnumElementValueGen
 parameter_list|(
@@ -146,7 +146,7 @@ operator|=
 name|valueIdx
 expr_stmt|;
 block|}
-comment|/** 	 * Return immutable variant of this EnumElementValue 	 */
+comment|/**      * Return immutable variant of this EnumElementValue      */
 annotation|@
 name|Override
 specifier|public

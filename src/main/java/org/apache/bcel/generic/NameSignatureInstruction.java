@@ -157,7 +157,7 @@ argument_list|()
 argument_list|)
 return|;
 block|}
-comment|/** @return signature of referenced method/field. 	 */
+comment|/** @return signature of referenced method/field.      */
 specifier|public
 name|String
 name|getSignature
@@ -202,7 +202,7 @@ name|getBytes
 argument_list|()
 return|;
 block|}
-comment|/** @return name of referenced method/field. 	 */
+comment|/** @return name of referenced method/field.      */
 specifier|public
 name|String
 name|getName

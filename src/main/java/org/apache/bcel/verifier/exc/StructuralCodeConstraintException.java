@@ -36,7 +36,7 @@ name|serialVersionUID
 init|=
 literal|5406842000007181420L
 decl_stmt|;
-comment|/** 	 * Constructs a new StructuralCodeConstraintException with the specified error message. 	 */
+comment|/**      * Constructs a new StructuralCodeConstraintException with the specified error message.      */
 specifier|public
 name|StructuralCodeConstraintException
 parameter_list|(
@@ -50,7 +50,7 @@ name|message
 argument_list|)
 expr_stmt|;
 block|}
-comment|/** 	 * Constructs a new StructuralCodeConstraintException with null as its error message string. 	 */
+comment|/**      * Constructs a new StructuralCodeConstraintException with null as its error message string.      */
 specifier|public
 name|StructuralCodeConstraintException
 parameter_list|()

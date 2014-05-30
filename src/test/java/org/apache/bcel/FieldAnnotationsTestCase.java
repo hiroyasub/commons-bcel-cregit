@@ -152,7 +152,7 @@ name|FieldAnnotationsTestCase
 extends|extends
 name|AbstractTestCase
 block|{
-comment|/** 	 * Check field AnnotationEntrys are retrievable. 	 */
+comment|/**      * Check field AnnotationEntrys are retrievable.      */
 specifier|public
 name|void
 name|testFieldAnnotationEntrys
@@ -196,7 +196,7 @@ literal|"2"
 argument_list|)
 expr_stmt|;
 block|}
-comment|/** 	 * Check field AnnotationEntrys (de)serialize ok. 	 */
+comment|/**      * Check field AnnotationEntrys (de)serialize ok.      */
 specifier|public
 name|void
 name|testFieldAnnotationEntrysReadWrite
@@ -306,7 +306,7 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
-comment|/** 	 * Check we can load in a class, modify its field AnnotationEntrys, save it, 	 * reload it and everything is correct. 	 */
+comment|/**      * Check we can load in a class, modify its field AnnotationEntrys, save it,      * reload it and everything is correct.      */
 specifier|public
 name|void
 name|testFieldAnnotationModification

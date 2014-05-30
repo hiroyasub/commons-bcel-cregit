@@ -180,7 +180,7 @@ operator|=
 name|cpGen
 expr_stmt|;
 block|}
-comment|/** 	 * Subtypes return an immutable variant of the ElementValueGen 	 */
+comment|/**      * Subtypes return an immutable variant of the ElementValueGen      */
 specifier|public
 specifier|abstract
 name|ElementValue
@@ -667,7 +667,7 @@ return|return
 name|cpGen
 return|;
 block|}
-comment|/** 	 * Creates an (modifiable) ElementValueGen copy of an (immutable) 	 * ElementValue - constant pool is assumed correct. 	 */
+comment|/**      * Creates an (modifiable) ElementValueGen copy of an (immutable)      * ElementValue - constant pool is assumed correct.      */
 specifier|public
 specifier|static
 name|ElementValueGen

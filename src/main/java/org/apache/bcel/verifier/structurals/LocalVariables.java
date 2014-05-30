@@ -92,7 +92,7 @@ name|Type
 index|[]
 name|locals
 decl_stmt|;
-comment|/** 	 * Creates a new LocalVariables object. 	 */
+comment|/**      * Creates a new LocalVariables object.      */
 specifier|public
 name|LocalVariables
 parameter_list|(
@@ -134,7 +134,7 @@ name|UNKNOWN
 expr_stmt|;
 block|}
 block|}
-comment|/** 	 * Returns a deep copy of this object; i.e. the clone 	 * operates on a new local variable array. 	 * However, the Type objects in the array are shared. 	 */
+comment|/**      * Returns a deep copy of this object; i.e. the clone      * operates on a new local variable array.      * However, the Type objects in the array are shared.      */
 annotation|@
 name|Override
 specifier|protected
@@ -189,7 +189,7 @@ return|return
 name|lvs
 return|;
 block|}
-comment|/** 	 * Returns the type of the local variable slot i. 	 */
+comment|/**      * Returns the type of the local variable slot i.      */
 specifier|public
 name|Type
 name|get
@@ -205,7 +205,7 @@ name|i
 index|]
 return|;
 block|}
-comment|/** 	 * Returns a (correctly typed) clone of this object. 	 * This is equivalent to ((LocalVariables) this.clone()). 	 */
+comment|/**      * Returns a (correctly typed) clone of this object.      * This is equivalent to ((LocalVariables) this.clone()).      */
 specifier|public
 name|LocalVariables
 name|getClone
@@ -221,7 +221,7 @@ name|clone
 argument_list|()
 return|;
 block|}
-comment|/** 	 * Returns the number of local variable slots this 	 * LocalVariables instance has. 	 */
+comment|/**      * Returns the number of local variable slots this      * LocalVariables instance has.      */
 specifier|public
 name|int
 name|maxLocals
@@ -233,7 +233,7 @@ operator|.
 name|length
 return|;
 block|}
-comment|/** 	 * Sets a new Type for the given local variable slot. 	 */
+comment|/**      * Sets a new Type for the given local variable slot.      */
 specifier|public
 name|void
 name|set
@@ -306,7 +306,7 @@ operator|.
 name|length
 return|;
 block|}
-comment|/* 	 * Fulfills the general contract of Object.equals(). 	 */
+comment|/*      * Fulfills the general contract of Object.equals().      */
 annotation|@
 name|Override
 specifier|public
@@ -408,7 +408,7 @@ return|return
 literal|true
 return|;
 block|}
-comment|/** 	 * Merges two local variables sets as described in the Java Virtual Machine Specification, 	 * Second Edition, section 4.9.2, page 146. 	 */
+comment|/**      * Merges two local variables sets as described in the Java Virtual Machine Specification,      * Second Edition, section 4.9.2, page 146.      */
 specifier|public
 name|void
 name|merge
@@ -466,7 +466,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/** 	 * Merges a single local variable. 	 * 	 * @see #merge(LocalVariables) 	 */
+comment|/**      * Merges a single local variable.      *      * @see #merge(LocalVariables)      */
 specifier|private
 name|void
 name|merge
@@ -752,7 +752,7 @@ argument_list|)
 operator|)
 condition|)
 block|{
-comment|/*TODO 				if ((locals[i] instanceof org.apache.bcel.generic.ReturnaddressType)&& (lv.locals[i] instanceof org.apache.bcel.generic.ReturnaddressType)){ 					//System.err.println("merging "+locals[i]+" and "+lv.locals[i]); 					throw new AssertionViolatedException("Merging different ReturnAddresses: '"+locals[i]+"' and '"+lv.locals[i]+"'."); 				} */
+comment|/*TODO                 if ((locals[i] instanceof org.apache.bcel.generic.ReturnaddressType)&& (lv.locals[i] instanceof org.apache.bcel.generic.ReturnaddressType)){                     //System.err.println("merging "+locals[i]+" and "+lv.locals[i]);                     throw new AssertionViolatedException("Merging different ReturnAddresses: '"+locals[i]+"' and '"+lv.locals[i]+"'.");                 } */
 name|locals
 index|[
 name|i
@@ -785,7 +785,7 @@ argument_list|)
 throw|;
 block|}
 block|}
-comment|/** 	 * Returns a String representation of this object. 	 */
+comment|/**      * Returns a String representation of this object.      */
 annotation|@
 name|Override
 specifier|public
@@ -861,7 +861,7 @@ name|toString
 argument_list|()
 return|;
 block|}
-comment|/** 	 * Replaces all occurences of u in this local variables set 	 * with an "initialized" ObjectType. 	 */
+comment|/**      * Replaces all occurences of u in this local variables set      * with an "initialized" ObjectType.      */
 specifier|public
 name|void
 name|initializeObject

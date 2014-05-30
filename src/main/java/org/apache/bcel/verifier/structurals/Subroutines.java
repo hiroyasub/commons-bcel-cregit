@@ -306,7 +306,7 @@ import|;
 end_import
 
 begin_comment
-comment|/** 	 * Instances of this class contain information about the subroutines 	 * found in a code array of a method. 	 * This implementation considers the top-level (the instructions 	 * reachable without a JSR or JSR_W starting off from the first 	 * instruction in a code array of a method) being a special subroutine; 	 * see getTopLevel() for that. 	 * Please note that the definition of subroutines in the Java Virtual 	 * Machine Specification, Second Edition is somewhat incomplete. 	 * Therefore, JustIce uses an own, more rigid notion. 	 * Basically, a subroutine is a piece of code that starts at the target 	 * of a JSR of JSR_W instruction and ends at a corresponding RET 	 * instruction. Note also that the control flow of a subroutine 	 * may be complex and non-linear; and that subroutines may be nested. 	 * JustIce also mandates subroutines not to be protected by exception 	 * handling code (for the sake of control flow predictability). 	 * To understand JustIce's notion of subroutines, please read    * 	 * TODO: refer to the paper. 	 * 	 * @version $Id$ 	 * @author Enver Haase 	 * @see #getTopLevel() 	 */
+comment|/**      * Instances of this class contain information about the subroutines      * found in a code array of a method.      * This implementation considers the top-level (the instructions      * reachable without a JSR or JSR_W starting off from the first      * instruction in a code array of a method) being a special subroutine;      * see getTopLevel() for that.      * Please note that the definition of subroutines in the Java Virtual      * Machine Specification, Second Edition is somewhat incomplete.      * Therefore, JustIce uses an own, more rigid notion.      * Basically, a subroutine is a piece of code that starts at the target      * of a JSR of JSR_W instruction and ends at a corresponding RET      * instruction. Note also that the control flow of a subroutine      * may be complex and non-linear; and that subroutines may be nested.      * JustIce also mandates subroutines not to be protected by exception      * handling code (for the sake of control flow predictability).      * To understand JustIce's notion of subroutines, please read    *      * TODO: refer to the paper.      *      * @version $Id$      * @author Enver Haase      * @see #getTopLevel()      */
 end_comment
 
 begin_class
@@ -314,14 +314,14 @@ specifier|public
 class|class
 name|Subroutines
 block|{
-comment|/** 	 * This inner class implements the Subroutine interface. 	 */
+comment|/**      * This inner class implements the Subroutine interface.      */
 specifier|private
 class|class
 name|SubroutineImpl
 implements|implements
 name|Subroutine
 block|{
-comment|/** 		 * UNSET, a symbol for an uninitialized localVariable 		 * field. This is used for the "top-level" Subroutine; 		 * i.e. no subroutine. 		 */
+comment|/**          * UNSET, a symbol for an uninitialized localVariable          * field. This is used for the "top-level" Subroutine;          * i.e. no subroutine.          */
 specifier|private
 specifier|static
 specifier|final
@@ -331,7 +331,7 @@ init|=
 operator|-
 literal|1
 decl_stmt|;
-comment|/** 		 * The Local Variable slot where the first 		 * instruction of this subroutine (an ASTORE) stores 		 * the JsrInstruction's ReturnAddress in and 		 * the RET of this subroutine operates on. 		 */
+comment|/**          * The Local Variable slot where the first          * instruction of this subroutine (an ASTORE) stores          * the JsrInstruction's ReturnAddress in and          * the RET of this subroutine operates on.          */
 specifier|private
 name|int
 name|localVariable
@@ -354,7 +354,7 @@ argument_list|>
 argument_list|()
 decl_stmt|;
 comment|// Elements: InstructionHandle
-comment|/* 		 * Refer to the Subroutine interface for documentation. 		 */
+comment|/*          * Refer to the Subroutine interface for documentation.          */
 specifier|public
 name|boolean
 name|contains
@@ -372,7 +372,7 @@ name|inst
 argument_list|)
 return|;
 block|}
-comment|/** 		 * The JSR or JSR_W instructions that define this 		 * subroutine by targeting it. 		 */
+comment|/**          * The JSR or JSR_W instructions that define this          * subroutine by targeting it.          */
 specifier|private
 name|Set
 argument_list|<
@@ -387,12 +387,12 @@ name|InstructionHandle
 argument_list|>
 argument_list|()
 decl_stmt|;
-comment|/** 		 * The RET instruction that leaves this subroutine. 		 */
+comment|/**          * The RET instruction that leaves this subroutine.          */
 specifier|private
 name|InstructionHandle
 name|theRET
 decl_stmt|;
-comment|/** 		 * Returns a String representation of this object, merely 		 * for debugging purposes. 		 * (Internal) Warning: Verbosity on a problematic subroutine may cause 		 * stack overflow errors due to recursive subSubs() calls. 		 * Don't use this, then. 		 */
+comment|/**          * Returns a String representation of this object, merely          * for debugging purposes.          * (Internal) Warning: Verbosity on a problematic subroutine may cause          * stack overflow errors due to recursive subSubs() calls.          * Don't use this, then.          */
 annotation|@
 name|Override
 specifier|public
@@ -483,7 +483,7 @@ return|return
 name|ret
 return|;
 block|}
-comment|/** 		 * Sets the leaving RET instruction. Must be invoked after all instructions are added. 		 * Must not be invoked for top-level 'subroutine'. 		 */
+comment|/**          * Sets the leaving RET instruction. Must be invoked after all instructions are added.          * Must not be invoked for top-level 'subroutine'.          */
 name|void
 name|setLeavingRET
 parameter_list|()
@@ -612,7 +612,7 @@ operator|=
 name|ret
 expr_stmt|;
 block|}
-comment|/* 		 * Refer to the Subroutine interface for documentation. 		 */
+comment|/*          * Refer to the Subroutine interface for documentation.          */
 specifier|public
 name|InstructionHandle
 index|[]
@@ -656,7 +656,7 @@ name|jsrs
 argument_list|)
 return|;
 block|}
-comment|/** 		 * Adds a new JSR or JSR_W that has this subroutine as its target. 		 */
+comment|/**          * Adds a new JSR or JSR_W that has this subroutine as its target.          */
 specifier|public
 name|void
 name|addEnteringJsrInstruction
@@ -762,7 +762,7 @@ name|jsrInst
 argument_list|)
 expr_stmt|;
 block|}
-comment|/* 		 * Refer to the Subroutine interface for documentation. 		 */
+comment|/*          * Refer to the Subroutine interface for documentation.          */
 specifier|public
 name|InstructionHandle
 name|getLeavingRET
@@ -787,7 +787,7 @@ return|return
 name|theRET
 return|;
 block|}
-comment|/* 		 * Refer to the Subroutine interface for documentation. 		 */
+comment|/*          * Refer to the Subroutine interface for documentation.          */
 specifier|public
 name|InstructionHandle
 index|[]
@@ -816,7 +816,7 @@ name|ret
 argument_list|)
 return|;
 block|}
-comment|/* 		 * Adds an instruction to this subroutine. 		 * All instructions must have been added before invoking setLeavingRET(). 		 * @see #setLeavingRET 		 */
+comment|/*          * Adds an instruction to this subroutine.          * All instructions must have been added before invoking setLeavingRET().          * @see #setLeavingRET          */
 name|void
 name|addInstruction
 parameter_list|(
@@ -950,7 +950,7 @@ return|return
 name|ret
 return|;
 block|}
-comment|/** 		 * A recursive helper method for getRecursivelyAccessedLocalsIndices(). 		 * @see #getRecursivelyAccessedLocalsIndices() 		 */
+comment|/**          * A recursive helper method for getRecursivelyAccessedLocalsIndices().          * @see #getRecursivelyAccessedLocalsIndices()          */
 specifier|private
 name|void
 name|_getRecursivelyAccessedLocalsIndicesHelper
@@ -1029,7 +1029,7 @@ expr_stmt|;
 block|}
 block|}
 block|}
-comment|/* 		 * Satisfies Subroutine.getAccessedLocalIndices(). 		 */
+comment|/*          * Satisfies Subroutine.getAccessedLocalIndices().          */
 specifier|public
 name|int
 index|[]
@@ -1252,7 +1252,7 @@ name|ret
 return|;
 block|}
 block|}
-comment|/* 		 * Satisfies Subroutine.subSubs(). 		 */
+comment|/*          * Satisfies Subroutine.subSubs().          */
 specifier|public
 name|Subroutine
 index|[]
@@ -1342,7 +1342,7 @@ name|ret
 argument_list|)
 return|;
 block|}
-comment|/* 		 * Sets the local variable slot the ASTORE that is targeted 		 * by the JsrInstructions of this subroutine operates on. 		 * This subroutine's RET operates on that same local variable 		 * slot, of course. 		 */
+comment|/*          * Sets the local variable slot the ASTORE that is targeted          * by the JsrInstructions of this subroutine operates on.          * This subroutine's RET operates on that same local variable          * slot, of course.          */
 name|void
 name|setLocalVariable
 parameter_list|(
@@ -1373,7 +1373,7 @@ name|i
 expr_stmt|;
 block|}
 block|}
-comment|/** 		 * The default constructor. 		 */
+comment|/**          * The default constructor.          */
 specifier|public
 name|SubroutineImpl
 parameter_list|()
@@ -1421,7 +1421,7 @@ argument_list|(
 literal|2
 argument_list|)
 decl_stmt|;
-comment|/** 	 * The map containing the subroutines found. 	 * Key: InstructionHandle of the leader of the subroutine. 	 * Elements: SubroutineImpl objects. 	 */
+comment|/**      * The map containing the subroutines found.      * Key: InstructionHandle of the leader of the subroutine.      * Elements: SubroutineImpl objects.      */
 specifier|private
 name|Map
 argument_list|<
@@ -1440,13 +1440,13 @@ name|Subroutine
 argument_list|>
 argument_list|()
 decl_stmt|;
-comment|/** 	 * This is referring to a special subroutine, namely the 	 * top level. This is not really a subroutine but we use 	 * it to distinguish between top level instructions and 	 * unreachable instructions. 	 */
+comment|/**      * This is referring to a special subroutine, namely the      * top level. This is not really a subroutine but we use      * it to distinguish between top level instructions and      * unreachable instructions.      */
 specifier|public
 specifier|final
 name|Subroutine
 name|TOPLEVEL
 decl_stmt|;
-comment|/** 	 * Constructor. 	 * @param mg A MethodGen object representing method to 	 * create the Subroutine objects of. 	 */
+comment|/**      * Constructor.      * @param mg A MethodGen object representing method to      * create the Subroutine objects of.      */
 specifier|public
 name|Subroutines
 parameter_list|(
@@ -2108,7 +2108,7 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
-comment|/** 	 * This (recursive) utility method makes sure that 	 * no subroutine is calling a subroutine 	 * that uses the same local variable for the RET as themselves 	 * (recursively). 	 * This includes that subroutines may not call themselves 	 * recursively, even not through intermediate calls to other 	 * subroutines. 	 * 	 * @throws StructuralCodeConstraintException if the above constraint is not satisfied. 	 */
+comment|/**      * This (recursive) utility method makes sure that      * no subroutine is calling a subroutine      * that uses the same local variable for the RET as themselves      * (recursively).      * This includes that subroutines may not call themselves      * recursively, even not through intermediate calls to other      * subroutines.      *      * @throws StructuralCodeConstraintException if the above constraint is not satisfied.      */
 specifier|private
 name|void
 name|noRecursiveCalls
@@ -2233,7 +2233,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/** 	 * Returns the Subroutine object associated with the given 	 * leader (that is, the first instruction of the subroutine). 	 * You must not use this to get the top-level instructions 	 * modeled as a Subroutine object. 	 * 	 * @see #getTopLevel() 	 */
+comment|/**      * Returns the Subroutine object associated with the given      * leader (that is, the first instruction of the subroutine).      * You must not use this to get the top-level instructions      * modeled as a Subroutine object.      *      * @see #getTopLevel()      */
 specifier|public
 name|Subroutine
 name|getSubroutine
@@ -2286,7 +2286,7 @@ return|return
 name|ret
 return|;
 block|}
-comment|/** 	 * Returns the subroutine object associated with the 	 * given instruction. This is a costly operation, you 	 * should consider using getSubroutine(InstructionHandle). 	 * Returns 'null' if the given InstructionHandle lies 	 * in so-called 'dead code', i.e. code that can never 	 * be executed. 	 * 	 * @see #getSubroutine(InstructionHandle) 	 * @see #getTopLevel() 	 */
+comment|/**      * Returns the subroutine object associated with the      * given instruction. This is a costly operation, you      * should consider using getSubroutine(InstructionHandle).      * Returns 'null' if the given InstructionHandle lies      * in so-called 'dead code', i.e. code that can never      * be executed.      *      * @see #getSubroutine(InstructionHandle)      * @see #getTopLevel()      */
 specifier|public
 name|Subroutine
 name|subroutineOf
@@ -2344,7 +2344,7 @@ literal|null
 return|;
 comment|//throw new AssertionViolatedException("No subroutine for InstructionHandle found (DEAD CODE?).");
 block|}
-comment|/** 	 * For easy handling, the piece of code that is<B>not</B> a 	 * subroutine, the top-level, is also modeled as a Subroutine 	 * object. 	 * It is a special Subroutine object where<B>you must not invoke 	 * getEnteringJsrInstructions() or getLeavingRET()</B>. 	 * 	 * @see Subroutine#getEnteringJsrInstructions() 	 * @see Subroutine#getLeavingRET() 	 */
+comment|/**      * For easy handling, the piece of code that is<B>not</B> a      * subroutine, the top-level, is also modeled as a Subroutine      * object.      * It is a special Subroutine object where<B>you must not invoke      * getEnteringJsrInstructions() or getLeavingRET()</B>.      *      * @see Subroutine#getEnteringJsrInstructions()      * @see Subroutine#getLeavingRET()      */
 specifier|public
 name|Subroutine
 name|getTopLevel
@@ -2354,7 +2354,7 @@ return|return
 name|TOPLEVEL
 return|;
 block|}
-comment|/** 	 * A utility method that calculates the successors of a given InstructionHandle 	 *<B>in the same subroutine</B>. That means, a RET does not have any successors 	 * as defined here. A JsrInstruction has its physical successor as its successor 	 * (opposed to its target) as defined here. 	 */
+comment|/**      * A utility method that calculates the successors of a given InstructionHandle      *<B>in the same subroutine</B>. That means, a RET does not have any successors      * as defined here. A JsrInstruction has its physical successor as its successor      * (opposed to its target) as defined here.      */
 specifier|private
 specifier|static
 name|InstructionHandle
@@ -2617,7 +2617,7 @@ return|return
 name|single
 return|;
 block|}
-comment|/** 	 * Returns a String representation of this object; merely for debugging puposes. 	 */
+comment|/**      * Returns a String representation of this object; merely for debugging puposes.      */
 annotation|@
 name|Override
 specifier|public

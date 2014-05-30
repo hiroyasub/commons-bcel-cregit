@@ -83,7 +83,7 @@ operator|=
 name|handler_pc
 expr_stmt|;
 block|}
-comment|/** 	 * Returns the type of the exception that's handled.<B>'null' means 'ANY'.</B> 	 */
+comment|/**      * Returns the type of the exception that's handled.<B>'null' means 'ANY'.</B>      */
 specifier|public
 name|ObjectType
 name|getExceptionType
@@ -93,7 +93,7 @@ return|return
 name|catchtype
 return|;
 block|}
-comment|/** 	 * Returns the InstructionHandle where the handler starts off. 	 */
+comment|/**      * Returns the InstructionHandle where the handler starts off.      */
 specifier|public
 name|InstructionHandle
 name|getHandlerStart

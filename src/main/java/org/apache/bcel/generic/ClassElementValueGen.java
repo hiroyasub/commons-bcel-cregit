@@ -192,7 +192,7 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
-comment|/** 	 * Return immutable variant of this ClassElementValueGen 	 */
+comment|/**      * Return immutable variant of this ClassElementValueGen      */
 annotation|@
 name|Override
 specifier|public

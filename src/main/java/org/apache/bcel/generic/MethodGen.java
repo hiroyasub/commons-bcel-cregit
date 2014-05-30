@@ -4684,7 +4684,7 @@ name|i
 index|]
 return|;
 block|}
-comment|/** 	 * Goes through the attributes on the method and identifies any that are 	 * RuntimeParameterAnnotations, extracting their contents and storing them 	 * as parameter annotations. There are two kinds of parameter annotation - 	 * visible and invisible. Once they have been unpacked, these attributes are 	 * deleted. (The annotations will be rebuilt as attributes when someone 	 * builds a Method object out of this MethodGen object). 	 */
+comment|/**      * Goes through the attributes on the method and identifies any that are      * RuntimeParameterAnnotations, extracting their contents and storing them      * as parameter annotations. There are two kinds of parameter annotation -      * visible and invisible. Once they have been unpacked, these attributes are      * deleted. (The annotations will be rebuilt as attributes when someone      * builds a Method object out of this MethodGen object).      */
 specifier|private
 name|void
 name|ensureExistingParameterAnnotationsUnpacked
@@ -5044,7 +5044,7 @@ name|l
 expr_stmt|;
 block|}
 block|}
-comment|/** 	 * @return Comparison strategy object 	 */
+comment|/**      * @return Comparison strategy object      */
 specifier|public
 specifier|static
 name|BCELComparator

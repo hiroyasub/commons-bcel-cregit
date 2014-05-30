@@ -156,7 +156,7 @@ name|slot
 index|]
 return|;
 block|}
-comment|/** 	 * Adds information about the local variable in slot 'slot'. Automatically  	 * adds information for slot+1 if 't' is Type.LONG or Type.DOUBLE. 	 * @throws LocalVariableInfoInconsistentException if the new information conflicts 	 *         with already gathered information. 	 */
+comment|/**      * Adds information about the local variable in slot 'slot'. Automatically       * adds information for slot+1 if 't' is Type.LONG or Type.DOUBLE.      * @throws LocalVariableInfoInconsistentException if the new information conflicts      *         with already gathered information.      */
 specifier|public
 name|void
 name|add

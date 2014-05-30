@@ -1148,7 +1148,7 @@ specifier|private
 name|Verifier
 name|myOwner
 decl_stmt|;
-comment|/**  	 * The method number to verify. 	 * This is the index in the array returned 	 * by JavaClass.getMethods(). 	 */
+comment|/**       * The method number to verify.      * This is the index in the array returned      * by JavaClass.getMethods().      */
 specifier|private
 name|int
 name|method_no
@@ -1183,7 +1183,7 @@ operator|=
 name|method_no
 expr_stmt|;
 block|}
-comment|/** 	 * Pass 3a is the verification of static constraints of 	 * JVM code (such as legal targets of branch instructions). 	 * This is the part of pass 3 where you do not need data 	 * flow analysis. 	 * JustIce also delays the checks for a correct exception 	 * table of a Code attribute and correct line number entries 	 * in a LineNumberTable attribute of a Code attribute (which 	 * conceptually belong to pass 2) to this pass. Also, most 	 * of the check for valid local variable entries in a 	 * LocalVariableTable attribute of a Code attribute is 	 * delayed until this pass. 	 * All these checks need access to the code array of the 	 * Code attribute. 	 * 	 * @throws InvalidMethodException if the method to verify does not exist. 	 */
+comment|/**      * Pass 3a is the verification of static constraints of      * JVM code (such as legal targets of branch instructions).      * This is the part of pass 3 where you do not need data      * flow analysis.      * JustIce also delays the checks for a correct exception      * table of a Code attribute and correct line number entries      * in a LineNumberTable attribute of a Code attribute (which      * conceptually belong to pass 2) to this pass. Also, most      * of the check for valid local variable entries in a      * LocalVariableTable attribute of a Code attribute is      * delayed until this pass.      * All these checks need access to the code array of the      * Code attribute.      *      * @throws InvalidMethodException if the method to verify does not exist.      */
 annotation|@
 name|Override
 specifier|public
@@ -1469,7 +1469,7 @@ argument_list|)
 throw|;
 block|}
 block|}
-comment|/** 	 * These are the checks that could be done in pass 2 but are delayed to pass 3 	 * for performance reasons. Also, these checks need access to the code array 	 * of the Code attribute of a Method so it's okay to perform them here. 	 * Also see the description of the do_verify() method. 	 * 	 * @throws ClassConstraintException if the verification fails. 	 * @see #do_verify() 	 */
+comment|/**      * These are the checks that could be done in pass 2 but are delayed to pass 3      * for performance reasons. Also, these checks need access to the code array      * of the Code attribute of a Method so it's okay to perform them here.      * Also see the description of the do_verify() method.      *      * @throws ClassConstraintException if the verification fails.      * @see #do_verify()      */
 specifier|private
 name|void
 name|delayedPass2Checks
@@ -1635,7 +1635,7 @@ block|}
 comment|///////////////////////////
 comment|// LocalVariableTable(s) //
 comment|///////////////////////////
-comment|/* We cannot use code.getLocalVariableTable() because there could be more 		   than only one. This is a bug in BCEL. */
+comment|/* We cannot use code.getLocalVariableTable() because there could be more            than only one. This is a bug in BCEL. */
 name|Attribute
 index|[]
 name|atts
@@ -1981,7 +1981,7 @@ throw|;
 block|}
 block|}
 block|}
-comment|/** 	 * These are the checks if constraints are satisfied which are described in the 	 * Java Virtual Machine Specification, Second Edition as Static Constraints on 	 * the instructions of Java Virtual Machine Code (chapter 4.8.1). 	 * 	 * @throws StaticCodeConstraintException if the verification fails. 	 */
+comment|/**      * These are the checks if constraints are satisfied which are described in the      * Java Virtual Machine Specification, Second Edition as Static Constraints on      * the instructions of Java Virtual Machine Code (chapter 4.8.1).      *      * @throws StaticCodeConstraintException if the verification fails.      */
 specifier|private
 name|void
 name|pass3StaticInstructionChecks
@@ -2160,7 +2160,7 @@ argument_list|)
 throw|;
 block|}
 block|}
-comment|/** 	 * These are the checks for the satisfaction of constraints which are described in the 	 * Java Virtual Machine Specification, Second Edition as Static Constraints on 	 * the operands of instructions of Java Virtual Machine Code (chapter 4.8.1). 	 * BCEL parses the code array to create an InstructionList and therefore has to check 	 * some of these constraints. Additional checks are also implemented here. 	 * 	 * @throws StaticCodeConstraintException if the verification fails. 	 */
+comment|/**      * These are the checks for the satisfaction of constraints which are described in the      * Java Virtual Machine Specification, Second Edition as Static Constraints on      * the operands of instructions of Java Virtual Machine Code (chapter 4.8.1).      * BCEL parses the code array to create an InstructionList and therefore has to check      * some of these constraints. Additional checks are also implemented here.      *      * @throws StaticCodeConstraintException if the verification fails.      */
 specifier|private
 name|void
 name|pass3StaticInstructionOperandsChecks
@@ -2388,7 +2388,7 @@ return|return
 name|method_no
 return|;
 block|}
-comment|/** 	 * This visitor class does the actual checking for the instruction 	 * operand's constraints. 	 */
+comment|/**      * This visitor class does the actual checking for the instruction      * operand's constraints.      */
 specifier|private
 class|class
 name|InstOperandConstraintVisitor
@@ -2422,7 +2422,7 @@ operator|=
 name|cpg
 expr_stmt|;
 block|}
-comment|/** 		 * Utility method to return the max_locals value of the method verified 		 * by the surrounding Pass3aVerifier instance. 		 */
+comment|/**          * Utility method to return the max_locals value of the method verified          * by the surrounding Pass3aVerifier instance.          */
 specifier|private
 name|int
 name|max_locals
@@ -2474,7 +2474,7 @@ argument_list|)
 throw|;
 block|}
 block|}
-comment|/** 		 * A utility method to always raise an exeption. 		 */
+comment|/**          * A utility method to always raise an exeption.          */
 specifier|private
 name|void
 name|constraintViolated
@@ -2500,7 +2500,7 @@ name|message
 argument_list|)
 throw|;
 block|}
-comment|/** 		 * A utility method to raise an exception if the index is not 		 * a valid constant pool index. 		 */
+comment|/**          * A utility method to raise an exception if the index is not          * a valid constant pool index.          */
 specifier|private
 name|void
 name|indexValid
@@ -2542,7 +2542,7 @@ block|}
 comment|///////////////////////////////////////////////////////////
 comment|// The Java Virtual Machine Specification, pages 134-137 //
 comment|///////////////////////////////////////////////////////////
-comment|/** 		 * Assures the generic preconditions of a LoadClass instance. 		 * The referenced class is loaded and pass2-verified. 		 */
+comment|/**          * Assures the generic preconditions of a LoadClass instance.          * The referenced class is loaded and pass2-verified.          */
 annotation|@
 name|Override
 specifier|public
@@ -2971,7 +2971,7 @@ argument_list|(
 name|cpg
 argument_list|)
 decl_stmt|;
-comment|/* TODO: Check if assignment compatibility is sufficient. 				   * What does Sun do? 				   */
+comment|/* TODO: Check if assignment compatibility is sufficient.                    * What does Sun do?                    */
 if|if
 condition|(
 name|f_type
@@ -3144,7 +3144,7 @@ block|}
 block|}
 else|else
 block|{
-comment|/* TODO: Check if assignment compatibility is sufficient. 				   What does Sun do? */
+comment|/* TODO: Check if assignment compatibility is sufficient.                    What does Sun do? */
 name|Type
 operator|.
 name|getType
@@ -3162,12 +3162,12 @@ argument_list|(
 name|cpg
 argument_list|)
 expr_stmt|;
-comment|//				Type f_type = Type.getType(f.getSignature());
-comment|//				Type o_type = o.getType(cpg);
+comment|//                Type f_type = Type.getType(f.getSignature());
+comment|//                Type o_type = o.getType(cpg);
 comment|// Argh. Sun's implementation allows us to have multiple fields of
 comment|// the same name but with a different signature.
 comment|//if (! f_type.equals(o_type)){
-comment|//	constraintViolated(o, "Referenced field '"+field_name+"' has type '"+f_type+"' instead of '"+o_type+"' as expected.");
+comment|//    constraintViolated(o, "Referenced field '"+field_name+"' has type '"+f_type+"' instead of '"+o_type+"' as expected.");
 comment|//}
 comment|/* TODO: Check for access modifiers here. */
 block|}
@@ -6803,7 +6803,7 @@ throw|;
 block|}
 block|}
 comment|// WIDE stuff is BCEL-internal and cannot be checked here.
-comment|/** 		 * A utility method like equals(Object) for arrays. 		 * The equality of the elements is based on their equals(Object) 		 * method instead of their object identity. 		 */
+comment|/**          * A utility method like equals(Object) for arrays.          * The equality of the elements is based on their equals(Object)          * method instead of their object identity.          */
 specifier|private
 name|boolean
 name|objarrayequals

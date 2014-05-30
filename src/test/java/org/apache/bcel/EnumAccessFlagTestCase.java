@@ -34,7 +34,7 @@ name|EnumAccessFlagTestCase
 extends|extends
 name|AbstractTestCase
 block|{
-comment|/** 	 * An enumerated type, once compiled, should result in a class file that is 	 * marked such that we can determine from the access flags (through BCEL) 	 * that it was originally an enum type declaration. 	 */
+comment|/**      * An enumerated type, once compiled, should result in a class file that is      * marked such that we can determine from the access flags (through BCEL)      * that it was originally an enum type declaration.      */
 specifier|public
 name|void
 name|testEnumClassSaysItIs

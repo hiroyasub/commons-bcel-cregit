@@ -133,7 +133,7 @@ name|isRuntimeVisible
 init|=
 literal|false
 decl_stmt|;
-comment|/** 	 * Here we are taking a fixed annotation of type Annotation and building a 	 * modifiable AnnotationGen object. If the pool passed in is for a different 	 * class file, then copyPoolEntries should have been passed as true as that 	 * will force us to do a deep copy of the annotation and move the cpool 	 * entries across. We need to copy the type and the element name value pairs 	 * and the visibility. 	 */
+comment|/**      * Here we are taking a fixed annotation of type Annotation and building a      * modifiable AnnotationGen object. If the pool passed in is for a different      * class file, then copyPoolEntries should have been passed as true as that      * will force us to do a deep copy of the annotation and move the cpool      * entries across. We need to copy the type and the element name value pairs      * and the visibility.      */
 specifier|public
 name|AnnotationEntryGen
 parameter_list|(
@@ -283,7 +283,7 @@ operator|=
 name|cpool
 expr_stmt|;
 block|}
-comment|/** 	 * Retrieve an immutable version of this AnnotationGen 	 */
+comment|/**      * Retrieve an immutable version of this AnnotationGen      */
 specifier|public
 name|AnnotationEntry
 name|getAnnotation
@@ -605,7 +605,7 @@ return|;
 comment|// BCELBUG: Should I use this instead?
 comment|// Utility.signatureToString(getTypeSignature());
 block|}
-comment|/** 	 * Returns list of ElementNameValuePair objects 	 */
+comment|/**      * Returns list of ElementNameValuePair objects      */
 specifier|public
 name|List
 argument_list|<

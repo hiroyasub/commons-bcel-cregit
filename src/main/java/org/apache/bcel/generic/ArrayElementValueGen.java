@@ -198,7 +198,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/** 	 * Return immutable variant of this ArrayElementValueGen 	 */
+comment|/**      * Return immutable variant of this ArrayElementValueGen      */
 annotation|@
 name|Override
 specifier|public
@@ -259,7 +259,7 @@ argument_list|()
 argument_list|)
 return|;
 block|}
-comment|/** 	 * @param value 	 * @param cpool 	 */
+comment|/**      * @param value      * @param cpool      */
 specifier|public
 name|ArrayElementValueGen
 parameter_list|(

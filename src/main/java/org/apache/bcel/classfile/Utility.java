@@ -6617,7 +6617,7 @@ return|return
 literal|null
 return|;
 block|}
-comment|/** 	 * Annotations against a class are stored in one of four attribute kinds: 	 * - RuntimeVisibleParameterAnnotations 	 * - RuntimeInvisibleParameterAnnotations 	 */
+comment|/**      * Annotations against a class are stored in one of four attribute kinds:      * - RuntimeVisibleParameterAnnotations      * - RuntimeInvisibleParameterAnnotations      */
 specifier|public
 specifier|static
 name|Attribute

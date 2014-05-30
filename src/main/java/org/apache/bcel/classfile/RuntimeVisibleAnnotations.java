@@ -76,7 +76,7 @@ name|serialVersionUID
 init|=
 literal|8992333017010665281L
 decl_stmt|;
-comment|/** 	 * @param name_index 	 *            Index pointing to the name<em>Code</em> 	 * @param length 	 *            Content length in bytes 	 * @param file 	 *            Input stream 	 * @param constant_pool 	 *            Array of constants 	 */
+comment|/**      * @param name_index      *            Index pointing to the name<em>Code</em>      * @param length      *            Content length in bytes      * @param file      *            Input stream      * @param constant_pool      *            Array of constants      */
 specifier|public
 name|RuntimeVisibleAnnotations
 parameter_list|(
@@ -113,7 +113,7 @@ literal|true
 argument_list|)
 expr_stmt|;
 block|}
-comment|/** 	 * @return deep copy of this attribute 	 */
+comment|/**      * @return deep copy of this attribute      */
 annotation|@
 name|Override
 specifier|public

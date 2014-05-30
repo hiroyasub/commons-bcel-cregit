@@ -293,34 +293,34 @@ argument_list|(
 literal|"org.apache.bcel.verifier.structurals.GenericArray"
 argument_list|)
 decl_stmt|;
-comment|/** 	 * The constructor. Constructs a new instance of this class. 	 */
+comment|/**      * The constructor. Constructs a new instance of this class.      */
 specifier|public
 name|InstConstraintVisitor
 parameter_list|()
 block|{
 block|}
-comment|/** 	 * The Execution Frame we're working on. 	 * 	 * @see #setFrame(Frame f) 	 * @see #locals() 	 * @see #stack() 	 */
+comment|/**      * The Execution Frame we're working on.      *      * @see #setFrame(Frame f)      * @see #locals()      * @see #stack()      */
 specifier|private
 name|Frame
 name|frame
 init|=
 literal|null
 decl_stmt|;
-comment|/** 	 * The ConstantPoolGen we're working on. 	 *  	 * @see #setConstantPoolGen(ConstantPoolGen cpg) 	 */
+comment|/**      * The ConstantPoolGen we're working on.      *       * @see #setConstantPoolGen(ConstantPoolGen cpg)      */
 specifier|private
 name|ConstantPoolGen
 name|cpg
 init|=
 literal|null
 decl_stmt|;
-comment|/** 	 * The MethodGen we're working on. 	 *  	 * @see #setMethodGen(MethodGen mg) 	 */
+comment|/**      * The MethodGen we're working on.      *       * @see #setMethodGen(MethodGen mg)      */
 specifier|private
 name|MethodGen
 name|mg
 init|=
 literal|null
 decl_stmt|;
-comment|/** 	 * The OperandStack we're working on. 	 * 	 * @see #setFrame(Frame f) 	 */
+comment|/**      * The OperandStack we're working on.      *      * @see #setFrame(Frame f)      */
 specifier|private
 name|OperandStack
 name|stack
@@ -333,7 +333,7 @@ name|getStack
 argument_list|()
 return|;
 block|}
-comment|/** 	 * The LocalVariables we're working on. 	 * 	 * @see #setFrame(Frame f) 	 */
+comment|/**      * The LocalVariables we're working on.      *      * @see #setFrame(Frame f)      */
 specifier|private
 name|LocalVariables
 name|locals
@@ -395,7 +395,7 @@ name|description
 argument_list|)
 throw|;
 block|}
-comment|/** 	 * This returns the single instance of the InstConstraintVisitor class. 	 * To operate correctly, other values must have been set before actually 	 * using the instance. 	 * Use this method for performance reasons. 	 * 	 * @see #setConstantPoolGen(ConstantPoolGen cpg) 	 * @see #setMethodGen(MethodGen mg) 	 */
+comment|/**      * This returns the single instance of the InstConstraintVisitor class.      * To operate correctly, other values must have been set before actually      * using the instance.      * Use this method for performance reasons.      *      * @see #setConstantPoolGen(ConstantPoolGen cpg)      * @see #setMethodGen(MethodGen mg)      */
 specifier|public
 name|void
 name|setFrame
@@ -412,7 +412,7 @@ name|f
 expr_stmt|;
 comment|//if (singleInstance.mg == null || singleInstance.cpg == null) throw new AssertionViolatedException("Forgot to set important values first.");
 block|}
-comment|/** 	 * Sets the ConstantPoolGen instance needed for constraint 	 * checking prior to execution. 	 */
+comment|/**      * Sets the ConstantPoolGen instance needed for constraint      * checking prior to execution.      */
 specifier|public
 name|void
 name|setConstantPoolGen
@@ -428,7 +428,7 @@ operator|=
 name|cpg
 expr_stmt|;
 block|}
-comment|/** 	 * Sets the MethodGen instance needed for constraint 	 * checking prior to execution. 	 */
+comment|/**      * Sets the MethodGen instance needed for constraint      * checking prior to execution.      */
 specifier|public
 name|void
 name|setMethodGen
@@ -444,7 +444,7 @@ operator|=
 name|mg
 expr_stmt|;
 block|}
-comment|/** 	 * Assures index is of type INT. 	 * @throws org.apache.bcel.verifier.exc.StructuralCodeConstraintException if the above constraint is not satisfied. 	 */
+comment|/**      * Assures index is of type INT.      * @throws org.apache.bcel.verifier.exc.StructuralCodeConstraintException if the above constraint is not satisfied.      */
 specifier|private
 name|void
 name|indexOfInt
@@ -482,7 +482,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/** 	 * Assures the ReferenceType r is initialized (or Type.NULL). 	 * Formally, this means (!(r instanceof UninitializedObjectType)), because 	 * there are no uninitialized array types. 	 * @throws org.apache.bcel.verifier.exc.StructuralCodeConstraintException if the above constraint is not satisfied. 	 */
+comment|/**      * Assures the ReferenceType r is initialized (or Type.NULL).      * Formally, this means (!(r instanceof UninitializedObjectType)), because      * there are no uninitialized array types.      * @throws org.apache.bcel.verifier.exc.StructuralCodeConstraintException if the above constraint is not satisfied.      */
 specifier|private
 name|void
 name|referenceTypeIsInitialized
@@ -552,7 +552,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/** 	 * Assures arrayref is of ArrayType or NULL; 	 * returns true if and only if arrayref is non-NULL. 	 * @throws org.apache.bcel.verifier.exc.StructuralCodeConstraintException if the above constraint is violated.  	 */
+comment|/**      * Assures arrayref is of ArrayType or NULL;      * returns true if and only if arrayref is non-NULL.      * @throws org.apache.bcel.verifier.exc.StructuralCodeConstraintException if the above constraint is violated.       */
 specifier|private
 name|boolean
 name|arrayrefOfArrayType
@@ -608,7 +608,7 @@ block|}
 comment|/***************************************************************/
 comment|/* MISC                                                        */
 comment|/***************************************************************/
-comment|/** 	 * Ensures the general preconditions of an instruction that accesses the stack. 	 * This method is here because BCEL has no such superinterface for the stack 	 * accessing instructions; and there are funny unexpected exceptions in the 	 * semantices of the superinterfaces and superclasses provided. 	 * E.g. SWAP is a StackConsumer, but DUP_X1 is not a StackProducer. 	 * Therefore, this method is called by all StackProducer, StackConsumer, 	 * and StackInstruction instances via their visitXXX() method. 	 * Unfortunately, as the superclasses and superinterfaces overlap, some instructions 	 * cause this method to be called two or three times. [TODO: Fix this.] 	 * 	 * @see #visitStackConsumer(StackConsumer o) 	 * @see #visitStackProducer(StackProducer o) 	 * @see #visitStackInstruction(StackInstruction o) 	 */
+comment|/**      * Ensures the general preconditions of an instruction that accesses the stack.      * This method is here because BCEL has no such superinterface for the stack      * accessing instructions; and there are funny unexpected exceptions in the      * semantices of the superinterfaces and superclasses provided.      * E.g. SWAP is a StackConsumer, but DUP_X1 is not a StackProducer.      * Therefore, this method is called by all StackProducer, StackConsumer,      * and StackInstruction instances via their visitXXX() method.      * Unfortunately, as the superclasses and superinterfaces overlap, some instructions      * cause this method to be called two or three times. [TODO: Fix this.]      *      * @see #visitStackConsumer(StackConsumer o)      * @see #visitStackProducer(StackProducer o)      * @see #visitStackInstruction(StackInstruction o)      */
 specifier|private
 name|void
 name|_visitStackAccessor
@@ -734,7 +734,7 @@ comment|/* "generic"visitXXXX methods where XXXX is an interface       */
 comment|/* therefore, we don't know the order of visiting; but we know */
 comment|/* these methods are called before the visitYYYY methods below */
 comment|/***************************************************************/
-comment|/** 	 * Assures the generic preconditions of a LoadClass instance. 	 * The referenced class is loaded and pass2-verified. 	 */
+comment|/**      * Assures the generic preconditions of a LoadClass instance.      * The referenced class is loaded and pass2-verified.      */
 annotation|@
 name|Override
 specifier|public
@@ -825,7 +825,7 @@ expr_stmt|;
 block|}
 block|}
 block|}
-comment|/** 	 * Ensures the general preconditions of a StackConsumer instance. 	 */
+comment|/**      * Ensures the general preconditions of a StackConsumer instance.      */
 annotation|@
 name|Override
 specifier|public
@@ -845,7 +845,7 @@ name|o
 argument_list|)
 expr_stmt|;
 block|}
-comment|/** 	 * Ensures the general preconditions of a StackProducer instance. 	 */
+comment|/**      * Ensures the general preconditions of a StackProducer instance.      */
 annotation|@
 name|Override
 specifier|public
@@ -870,7 +870,7 @@ comment|/* "generic" visitYYYY methods where YYYY is a superclass.     */
 comment|/* therefore, we know the order of visiting; we know           */
 comment|/* these methods are called after the visitXXXX methods above. */
 comment|/***************************************************************/
-comment|/** 	 * Ensures the general preconditions of a CPInstruction instance. 	 */
+comment|/**      * Ensures the general preconditions of a CPInstruction instance.      */
 annotation|@
 name|Override
 specifier|public
@@ -920,7 +920,7 @@ argument_list|)
 throw|;
 block|}
 block|}
-comment|/** 	 * Ensures the general preconditions of a FieldInstruction instance. 	 */
+comment|/**      * Ensures the general preconditions of a FieldInstruction instance.      */
 annotation|@
 name|Override
 specifier|public
@@ -1056,7 +1056,7 @@ expr_stmt|;
 block|}
 block|}
 block|}
-comment|/** 	 * Ensures the general preconditions of an InvokeInstruction instance. 	 */
+comment|/**      * Ensures the general preconditions of an InvokeInstruction instance.      */
 annotation|@
 name|Override
 specifier|public
@@ -1072,7 +1072,7 @@ comment|// implements LoadClass.
 comment|// visitCPInstruction(o) has been called before.
 comment|//TODO
 block|}
-comment|/** 	 * Ensures the general preconditions of a StackInstruction instance. 	 */
+comment|/**      * Ensures the general preconditions of a StackInstruction instance.      */
 annotation|@
 name|Override
 specifier|public
@@ -1089,7 +1089,7 @@ name|o
 argument_list|)
 expr_stmt|;
 block|}
-comment|/** 	 * Assures the generic preconditions of a LocalVariableInstruction instance. 	 * That is, the index of the local variable must be valid. 	 */
+comment|/**      * Assures the generic preconditions of a LocalVariableInstruction instance.      * That is, the index of the local variable must be valid.      */
 annotation|@
 name|Override
 specifier|public
@@ -1144,7 +1144,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/** 	 * Assures the generic preconditions of a LoadInstruction instance. 	 */
+comment|/**      * Assures the generic preconditions of a LoadInstruction instance.      */
 annotation|@
 name|Override
 specifier|public
@@ -1410,7 +1410,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/** 	 * Assures the generic preconditions of a StoreInstruction instance. 	 */
+comment|/**      * Assures the generic preconditions of a StoreInstruction instance.      */
 annotation|@
 name|Override
 specifier|public
@@ -1548,11 +1548,11 @@ argument_list|)
 expr_stmt|;
 block|}
 comment|//if (stacktop instanceof ReferenceType){
-comment|//	referenceTypeIsInitialized(o, (ReferenceType) stacktop);
+comment|//    referenceTypeIsInitialized(o, (ReferenceType) stacktop);
 comment|//}
 block|}
 block|}
-comment|/** 	 * Assures the generic preconditions of a ReturnInstruction instance. 	 */
+comment|/**      * Assures the generic preconditions of a ReturnInstruction instance.      */
 annotation|@
 name|Override
 specifier|public
@@ -1708,7 +1708,7 @@ comment|//ReferenceType objectref = (ReferenceType) (stack().peek());
 comment|// TODO: This can only be checked if using Staerk-et-al's "set of object types" instead of a
 comment|// "wider cast object type" created during verification.
 comment|//if (! (objectref.isAssignmentCompatibleWith(mg.getType())) ){
-comment|//	constraintViolated(o, "Type on stack top which should be returned is a '"+stack().peek()+"' which is not assignment compatible with the return type of this method, '"+mg.getType()+"'.");
+comment|//    constraintViolated(o, "Type on stack top which should be returned is a '"+stack().peek()+"' which is not assignment compatible with the return type of this method, '"+mg.getType()+"'.");
 comment|//}
 block|}
 block|}
@@ -1763,7 +1763,7 @@ block|}
 comment|/***************************************************************/
 comment|/* "special"visitXXXX methods for one type of instruction each */
 comment|/***************************************************************/
-comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+comment|/**      * Ensures the specific preconditions of the said instruction.      */
 annotation|@
 name|Override
 specifier|public
@@ -1854,7 +1854,7 @@ block|}
 comment|//referenceTypeIsInitialized(o, (ReferenceType) (((ArrayType) arrayref).getElementType()));
 block|}
 block|}
-comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+comment|/**      * Ensures the specific preconditions of the said instruction.      */
 annotation|@
 name|Override
 specifier|public
@@ -2053,7 +2053,7 @@ argument_list|)
 throw|;
 block|}
 block|}
-comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+comment|/**      * Ensures the specific preconditions of the said instruction.      */
 annotation|@
 name|Override
 specifier|public
@@ -2066,7 +2066,7 @@ parameter_list|)
 block|{
 comment|// Nothing needs to be done here.
 block|}
-comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+comment|/**      * Ensures the specific preconditions of the said instruction.      */
 annotation|@
 name|Override
 specifier|public
@@ -2080,7 +2080,7 @@ block|{
 comment|//visitLoadInstruction(LoadInstruction) is called before.
 comment|// Nothing else needs to be done here.
 block|}
-comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+comment|/**      * Ensures the specific preconditions of the said instruction.      */
 annotation|@
 name|Override
 specifier|public
@@ -2133,7 +2133,7 @@ comment|// The runtime constant pool item at that index must be a symbolic refer
 comment|// array, or interface type. See Pass 3a.
 block|}
 block|}
-comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+comment|/**      * Ensures the specific preconditions of the said instruction.      */
 annotation|@
 name|Override
 specifier|public
@@ -2199,10 +2199,10 @@ comment|// The check below should already done via visitReturnInstruction(Return
 comment|// It cannot be done using Staerk-et-al's "set of object types" instead of a
 comment|// "wider cast object type", anyway.
 comment|//if (! objectref.isAssignmentCompatibleWith(mg.getReturnType() )){
-comment|//	constraintViolated(o, "The 'objectref' type "+objectref+" at the stack top is not assignment compatible with the return type '"+mg.getReturnType()+"' of the method.");
+comment|//    constraintViolated(o, "The 'objectref' type "+objectref+" at the stack top is not assignment compatible with the return type '"+mg.getReturnType()+"' of the method.");
 comment|//}
 block|}
-comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+comment|/**      * Ensures the specific preconditions of the said instruction.      */
 annotation|@
 name|Override
 specifier|public
@@ -2232,7 +2232,7 @@ name|arrayref
 argument_list|)
 expr_stmt|;
 block|}
-comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+comment|/**      * Ensures the specific preconditions of the said instruction.      */
 annotation|@
 name|Override
 specifier|public
@@ -2286,10 +2286,10 @@ argument_list|)
 expr_stmt|;
 block|}
 comment|//if (stack().peek() instanceof ReferenceType){
-comment|//	referenceTypeIsInitialized(o, (ReferenceType) (stack().peek()) );
+comment|//    referenceTypeIsInitialized(o, (ReferenceType) (stack().peek()) );
 comment|//}
 block|}
-comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+comment|/**      * Ensures the specific preconditions of the said instruction.      */
 annotation|@
 name|Override
 specifier|public
@@ -2463,7 +2463,7 @@ argument_list|)
 throw|;
 block|}
 block|}
-comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+comment|/**      * Ensures the specific preconditions of the said instruction.      */
 annotation|@
 name|Override
 specifier|public
@@ -2579,7 +2579,7 @@ expr_stmt|;
 block|}
 block|}
 block|}
-comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+comment|/**      * Ensures the specific preconditions of the said instruction.      */
 annotation|@
 name|Override
 specifier|public
@@ -2713,7 +2713,7 @@ expr_stmt|;
 block|}
 block|}
 block|}
-comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+comment|/**      * Ensures the specific preconditions of the said instruction.      */
 annotation|@
 name|Override
 specifier|public
@@ -2726,7 +2726,7 @@ parameter_list|)
 block|{
 comment|// Nothing to do...
 block|}
-comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+comment|/**      * Ensures the specific preconditions of the said instruction.      */
 annotation|@
 name|Override
 specifier|public
@@ -2745,7 +2745,7 @@ literal|"In this JustIce verification pass there should not occur an illegal ins
 argument_list|)
 throw|;
 block|}
-comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+comment|/**      * Ensures the specific preconditions of the said instruction.      */
 annotation|@
 name|Override
 specifier|public
@@ -2793,7 +2793,7 @@ name|arrayref
 argument_list|)
 expr_stmt|;
 block|}
-comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+comment|/**      * Ensures the specific preconditions of the said instruction.      */
 annotation|@
 name|Override
 specifier|public
@@ -2904,7 +2904,7 @@ expr_stmt|;
 block|}
 block|}
 block|}
-comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+comment|/**      * Ensures the specific preconditions of the said instruction.      */
 annotation|@
 name|Override
 specifier|public
@@ -2950,7 +2950,7 @@ argument_list|)
 expr_stmt|;
 block|}
 comment|//else{
-comment|//	referenceTypeIsInitialized(o, (ReferenceType) objectref);
+comment|//    referenceTypeIsInitialized(o, (ReferenceType) objectref);
 comment|//}
 comment|// The unsigned indexbyte1 and indexbyte2 are used to construct an index into the runtime constant pool of the
 comment|// current class (ï¿½3.6), where the value of the index is (indexbyte1<< 8) | indexbyte2. The runtime constant
@@ -2991,7 +2991,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+comment|/**      * Ensures the specific preconditions of the said instruction.      */
 annotation|@
 name|Override
 specifier|public
@@ -3032,7 +3032,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+comment|/**      * Ensures the specific preconditions of the said instruction.      */
 annotation|@
 name|Override
 specifier|public
@@ -3073,7 +3073,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+comment|/**      * Ensures the specific preconditions of the said instruction.      */
 annotation|@
 name|Override
 specifier|public
@@ -3114,7 +3114,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+comment|/**      * Ensures the specific preconditions of the said instruction.      */
 annotation|@
 name|Override
 specifier|public
@@ -3188,7 +3188,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+comment|/**      * Ensures the specific preconditions of the said instruction.      */
 annotation|@
 name|Override
 specifier|public
@@ -3310,7 +3310,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+comment|/**      * Ensures the specific preconditions of the said instruction.      */
 annotation|@
 name|Override
 specifier|public
@@ -3463,7 +3463,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+comment|/**      * Ensures the specific preconditions of the said instruction.      */
 annotation|@
 name|Override
 specifier|public
@@ -3537,7 +3537,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+comment|/**      * Ensures the specific preconditions of the said instruction.      */
 annotation|@
 name|Override
 specifier|public
@@ -3611,7 +3611,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+comment|/**      * Ensures the specific preconditions of the said instruction.      */
 annotation|@
 name|Override
 specifier|public
@@ -3624,7 +3624,7 @@ parameter_list|)
 block|{
 comment|// There's nothing to be done here.
 block|}
-comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+comment|/**      * Ensures the specific preconditions of the said instruction.      */
 annotation|@
 name|Override
 specifier|public
@@ -3698,7 +3698,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+comment|/**      * Ensures the specific preconditions of the said instruction.      */
 annotation|@
 name|Override
 specifier|public
@@ -3712,7 +3712,7 @@ block|{
 comment|//visitLoadInstruction(LoadInstruction) is called before.
 comment|// Nothing else needs to be done here.
 block|}
-comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+comment|/**      * Ensures the specific preconditions of the said instruction.      */
 annotation|@
 name|Override
 specifier|public
@@ -3786,7 +3786,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+comment|/**      * Ensures the specific preconditions of the said instruction.      */
 annotation|@
 name|Override
 specifier|public
@@ -3827,7 +3827,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+comment|/**      * Ensures the specific preconditions of the said instruction.      */
 annotation|@
 name|Override
 specifier|public
@@ -3901,7 +3901,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+comment|/**      * Ensures the specific preconditions of the said instruction.      */
 annotation|@
 name|Override
 specifier|public
@@ -3942,7 +3942,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+comment|/**      * Ensures the specific preconditions of the said instruction.      */
 annotation|@
 name|Override
 specifier|public
@@ -3956,7 +3956,7 @@ block|{
 comment|//visitStoreInstruction(StoreInstruction) is called before.
 comment|// Nothing else needs to be done here.
 block|}
-comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+comment|/**      * Ensures the specific preconditions of the said instruction.      */
 annotation|@
 name|Override
 specifier|public
@@ -4030,7 +4030,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+comment|/**      * Ensures the specific preconditions of the said instruction.      */
 annotation|@
 name|Override
 specifier|public
@@ -4083,7 +4083,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+comment|/**      * Ensures the specific preconditions of the said instruction.      */
 annotation|@
 name|Override
 specifier|public
@@ -4183,7 +4183,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+comment|/**      * Ensures the specific preconditions of the said instruction.      */
 annotation|@
 name|Override
 specifier|public
@@ -4306,7 +4306,7 @@ expr_stmt|;
 block|}
 block|}
 block|}
-comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+comment|/**      * Ensures the specific preconditions of the said instruction.      */
 annotation|@
 name|Override
 specifier|public
@@ -4386,7 +4386,7 @@ expr_stmt|;
 block|}
 block|}
 block|}
-comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+comment|/**      * Ensures the specific preconditions of the said instruction.      */
 annotation|@
 name|Override
 specifier|public
@@ -4563,7 +4563,7 @@ expr_stmt|;
 block|}
 block|}
 block|}
-comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+comment|/**      * Ensures the specific preconditions of the said instruction.      */
 annotation|@
 name|Override
 specifier|public
@@ -4736,7 +4736,7 @@ literal|"The operand sizes on the stack do not match any of the four forms of us
 argument_list|)
 expr_stmt|;
 block|}
-comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+comment|/**      * Ensures the specific preconditions of the said instruction.      */
 annotation|@
 name|Override
 specifier|public
@@ -4777,7 +4777,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+comment|/**      * Ensures the specific preconditions of the said instruction.      */
 annotation|@
 name|Override
 specifier|public
@@ -4818,7 +4818,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+comment|/**      * Ensures the specific preconditions of the said instruction.      */
 annotation|@
 name|Override
 specifier|public
@@ -4859,7 +4859,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+comment|/**      * Ensures the specific preconditions of the said instruction.      */
 annotation|@
 name|Override
 specifier|public
@@ -4933,7 +4933,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+comment|/**      * Ensures the specific preconditions of the said instruction.      */
 annotation|@
 name|Override
 specifier|public
@@ -5055,7 +5055,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+comment|/**      * Ensures the specific preconditions of the said instruction.      */
 annotation|@
 name|Override
 specifier|public
@@ -5208,7 +5208,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+comment|/**      * Ensures the specific preconditions of the said instruction.      */
 annotation|@
 name|Override
 specifier|public
@@ -5282,7 +5282,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+comment|/**      * Ensures the specific preconditions of the said instruction.      */
 annotation|@
 name|Override
 specifier|public
@@ -5356,7 +5356,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+comment|/**      * Ensures the specific preconditions of the said instruction.      */
 annotation|@
 name|Override
 specifier|public
@@ -5369,7 +5369,7 @@ parameter_list|)
 block|{
 comment|// nothing to do here.
 block|}
-comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+comment|/**      * Ensures the specific preconditions of the said instruction.      */
 annotation|@
 name|Override
 specifier|public
@@ -5443,7 +5443,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+comment|/**      * Ensures the specific preconditions of the said instruction.      */
 annotation|@
 name|Override
 specifier|public
@@ -5457,7 +5457,7 @@ block|{
 comment|//visitLoadInstruction(LoadInstruction) is called before.
 comment|// Nothing else needs to be done here.
 block|}
-comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+comment|/**      * Ensures the specific preconditions of the said instruction.      */
 annotation|@
 name|Override
 specifier|public
@@ -5531,7 +5531,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+comment|/**      * Ensures the specific preconditions of the said instruction.      */
 annotation|@
 name|Override
 specifier|public
@@ -5572,7 +5572,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+comment|/**      * Ensures the specific preconditions of the said instruction.      */
 annotation|@
 name|Override
 specifier|public
@@ -5646,7 +5646,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+comment|/**      * Ensures the specific preconditions of the said instruction.      */
 annotation|@
 name|Override
 specifier|public
@@ -5687,7 +5687,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+comment|/**      * Ensures the specific preconditions of the said instruction.      */
 annotation|@
 name|Override
 specifier|public
@@ -5701,7 +5701,7 @@ block|{
 comment|//visitStoreInstruction(StoreInstruction) is called before.
 comment|// Nothing else needs to be done here.
 block|}
-comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+comment|/**      * Ensures the specific preconditions of the said instruction.      */
 annotation|@
 name|Override
 specifier|public
@@ -5775,7 +5775,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+comment|/**      * Ensures the specific preconditions of the said instruction.      */
 annotation|@
 name|Override
 specifier|public
@@ -5915,7 +5915,7 @@ argument_list|(
 name|cpg
 argument_list|)
 decl_stmt|;
-comment|/* TODO: Check if assignment compatibility is sufficient. 				   * What does Sun do? 				   */
+comment|/* TODO: Check if assignment compatibility is sufficient.                    * What does Sun do?                    */
 if|if
 condition|(
 name|f_type
@@ -6251,7 +6251,7 @@ argument_list|)
 throw|;
 block|}
 block|}
-comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+comment|/**      * Ensures the specific preconditions of the said instruction.      */
 annotation|@
 name|Override
 specifier|public
@@ -6264,7 +6264,7 @@ parameter_list|)
 block|{
 comment|// Field must be static: see Pass 3a.
 block|}
-comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+comment|/**      * Ensures the specific preconditions of the said instruction.      */
 annotation|@
 name|Override
 specifier|public
@@ -6277,7 +6277,7 @@ parameter_list|)
 block|{
 comment|// nothing to do here.
 block|}
-comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+comment|/**      * Ensures the specific preconditions of the said instruction.      */
 annotation|@
 name|Override
 specifier|public
@@ -6290,7 +6290,7 @@ parameter_list|)
 block|{
 comment|// nothing to do here.
 block|}
-comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+comment|/**      * Ensures the specific preconditions of the said instruction.      */
 annotation|@
 name|Override
 specifier|public
@@ -6331,7 +6331,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+comment|/**      * Ensures the specific preconditions of the said instruction.      */
 annotation|@
 name|Override
 specifier|public
@@ -6372,7 +6372,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+comment|/**      * Ensures the specific preconditions of the said instruction.      */
 annotation|@
 name|Override
 specifier|public
@@ -6413,7 +6413,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+comment|/**      * Ensures the specific preconditions of the said instruction.      */
 annotation|@
 name|Override
 specifier|public
@@ -6454,7 +6454,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+comment|/**      * Ensures the specific preconditions of the said instruction.      */
 annotation|@
 name|Override
 specifier|public
@@ -6495,7 +6495,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+comment|/**      * Ensures the specific preconditions of the said instruction.      */
 annotation|@
 name|Override
 specifier|public
@@ -6536,7 +6536,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+comment|/**      * Ensures the specific preconditions of the said instruction.      */
 annotation|@
 name|Override
 specifier|public
@@ -6610,7 +6610,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+comment|/**      * Ensures the specific preconditions of the said instruction.      */
 annotation|@
 name|Override
 specifier|public
@@ -6732,7 +6732,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+comment|/**      * Ensures the specific preconditions of the said instruction.      */
 annotation|@
 name|Override
 specifier|public
@@ -6806,7 +6806,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+comment|/**      * Ensures the specific preconditions of the said instruction.      */
 annotation|@
 name|Override
 specifier|public
@@ -6959,7 +6959,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+comment|/**      * Ensures the specific preconditions of the said instruction.      */
 annotation|@
 name|Override
 specifier|public
@@ -6972,7 +6972,7 @@ parameter_list|)
 block|{
 comment|//nothing to do here.
 block|}
-comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+comment|/**      * Ensures the specific preconditions of the said instruction.      */
 annotation|@
 name|Override
 specifier|public
@@ -7046,7 +7046,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+comment|/**      * Ensures the specific preconditions of the said instruction.      */
 annotation|@
 name|Override
 specifier|public
@@ -7124,7 +7124,7 @@ expr_stmt|;
 block|}
 comment|//referenceTypeIsInitialized(o, (ReferenceType) (stack().peek(1)) );
 block|}
-comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+comment|/**      * Ensures the specific preconditions of the said instruction.      */
 annotation|@
 name|Override
 specifier|public
@@ -7202,7 +7202,7 @@ expr_stmt|;
 comment|//referenceTypeIsInitialized(o, (ReferenceType) (stack().peek(1)) );
 block|}
 block|}
-comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+comment|/**      * Ensures the specific preconditions of the said instruction.      */
 annotation|@
 name|Override
 specifier|public
@@ -7276,7 +7276,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+comment|/**      * Ensures the specific preconditions of the said instruction.      */
 annotation|@
 name|Override
 specifier|public
@@ -7350,7 +7350,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+comment|/**      * Ensures the specific preconditions of the said instruction.      */
 annotation|@
 name|Override
 specifier|public
@@ -7424,7 +7424,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+comment|/**      * Ensures the specific preconditions of the said instruction.      */
 annotation|@
 name|Override
 specifier|public
@@ -7498,7 +7498,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+comment|/**      * Ensures the specific preconditions of the said instruction.      */
 annotation|@
 name|Override
 specifier|public
@@ -7572,7 +7572,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+comment|/**      * Ensures the specific preconditions of the said instruction.      */
 annotation|@
 name|Override
 specifier|public
@@ -7646,7 +7646,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+comment|/**      * Ensures the specific preconditions of the said instruction.      */
 annotation|@
 name|Override
 specifier|public
@@ -7687,7 +7687,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+comment|/**      * Ensures the specific preconditions of the said instruction.      */
 annotation|@
 name|Override
 specifier|public
@@ -7728,7 +7728,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+comment|/**      * Ensures the specific preconditions of the said instruction.      */
 annotation|@
 name|Override
 specifier|public
@@ -7769,7 +7769,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+comment|/**      * Ensures the specific preconditions of the said instruction.      */
 annotation|@
 name|Override
 specifier|public
@@ -7810,7 +7810,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+comment|/**      * Ensures the specific preconditions of the said instruction.      */
 annotation|@
 name|Override
 specifier|public
@@ -7851,7 +7851,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+comment|/**      * Ensures the specific preconditions of the said instruction.      */
 annotation|@
 name|Override
 specifier|public
@@ -7892,7 +7892,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+comment|/**      * Ensures the specific preconditions of the said instruction.      */
 annotation|@
 name|Override
 specifier|public
@@ -7950,7 +7950,7 @@ operator|)
 argument_list|)
 expr_stmt|;
 block|}
-comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+comment|/**      * Ensures the specific preconditions of the said instruction.      */
 annotation|@
 name|Override
 specifier|public
@@ -8008,7 +8008,7 @@ operator|)
 argument_list|)
 expr_stmt|;
 block|}
-comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+comment|/**      * Ensures the specific preconditions of the said instruction.      */
 annotation|@
 name|Override
 specifier|public
@@ -8080,7 +8080,7 @@ argument_list|)
 argument_list|)
 expr_stmt|;
 block|}
-comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+comment|/**      * Ensures the specific preconditions of the said instruction.      */
 annotation|@
 name|Override
 specifier|public
@@ -8093,7 +8093,7 @@ parameter_list|)
 block|{
 comment|// All done by visitLocalVariableInstruction(), visitLoadInstruction()
 block|}
-comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+comment|/**      * Ensures the specific preconditions of the said instruction.      */
 annotation|@
 name|Override
 specifier|public
@@ -8112,7 +8112,7 @@ literal|"In this JustIce verification pass there should not occur an illegal ins
 argument_list|)
 throw|;
 block|}
-comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+comment|/**      * Ensures the specific preconditions of the said instruction.      */
 annotation|@
 name|Override
 specifier|public
@@ -8131,7 +8131,7 @@ literal|"In this JustIce verification pass there should not occur an illegal ins
 argument_list|)
 throw|;
 block|}
-comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+comment|/**      * Ensures the specific preconditions of the said instruction.      */
 annotation|@
 name|Override
 specifier|public
@@ -8205,7 +8205,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+comment|/**      * Ensures the specific preconditions of the said instruction.      */
 annotation|@
 name|Override
 specifier|public
@@ -8246,7 +8246,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+comment|/**      * Ensures the specific preconditions of the said instruction.      */
 annotation|@
 name|Override
 specifier|public
@@ -8292,7 +8292,7 @@ argument_list|)
 expr_stmt|;
 block|}
 comment|//else{
-comment|//	referenceTypeIsInitialized(o, (ReferenceType) objectref);
+comment|//    referenceTypeIsInitialized(o, (ReferenceType) objectref);
 comment|//}
 comment|// The unsigned indexbyte1 and indexbyte2 are used to construct an index into the runtime constant pool of the
 comment|// current class (ï¿½3.6), where the value of the index is (indexbyte1<< 8) | indexbyte2. The runtime constant
@@ -8333,7 +8333,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+comment|/**      * Ensures the specific preconditions of the said instruction.      */
 annotation|@
 name|Override
 specifier|public
@@ -8578,7 +8578,7 @@ comment|//ReferenceType rFromDesc = (ReferenceType) fromDesc;
 comment|// TODO: This can only be checked when using Staerk-et-al's "set of object types"
 comment|// instead of a "wider cast object type" created during verification.
 comment|//if ( ! rFromStack.isAssignmentCompatibleWith(rFromDesc) ){
-comment|//	constraintViolated(o, "Expecting a '"+fromDesc+"' but found a '"+fromStack+"' on the stack (which is not assignment compatible).");
+comment|//    constraintViolated(o, "Expecting a '"+fromDesc+"' but found a '"+fromStack+"' on the stack (which is not assignment compatible).");
 comment|//}
 name|referenceTypeIsInitialized
 argument_list|(
@@ -8708,7 +8708,7 @@ comment|// String theInterface = o.getClassName(cpg);
 comment|// TODO: This can only be checked if we're using Staerk-et-al's "set of object types"
 comment|//       instead of "wider cast object types" generated during verification.
 comment|//if ( ! Repository.implementationOf(objref_classname, theInterface) ){
-comment|//	constraintViolated(o, "The 'objref' item '"+objref+"' does not implement '"+theInterface+"' as expected.");
+comment|//    constraintViolated(o, "The 'objref' item '"+objref+"' does not implement '"+theInterface+"' as expected.");
 comment|//}
 name|int
 name|counted_count
@@ -8766,7 +8766,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+comment|/**      * Ensures the specific preconditions of the said instruction.      */
 annotation|@
 name|Override
 specifier|public
@@ -9330,7 +9330,7 @@ argument_list|)
 throw|;
 block|}
 block|}
-comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+comment|/**      * Ensures the specific preconditions of the said instruction.      */
 annotation|@
 name|Override
 specifier|public
@@ -9632,7 +9632,7 @@ argument_list|)
 throw|;
 block|}
 block|}
-comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+comment|/**      * Ensures the specific preconditions of the said instruction.      */
 annotation|@
 name|Override
 specifier|public
@@ -10081,7 +10081,7 @@ argument_list|)
 throw|;
 block|}
 block|}
-comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+comment|/**      * Ensures the specific preconditions of the said instruction.      */
 annotation|@
 name|Override
 specifier|public
@@ -10155,7 +10155,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+comment|/**      * Ensures the specific preconditions of the said instruction.      */
 annotation|@
 name|Override
 specifier|public
@@ -10229,7 +10229,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+comment|/**      * Ensures the specific preconditions of the said instruction.      */
 annotation|@
 name|Override
 specifier|public
@@ -10270,7 +10270,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+comment|/**      * Ensures the specific preconditions of the said instruction.      */
 annotation|@
 name|Override
 specifier|public
@@ -10344,7 +10344,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+comment|/**      * Ensures the specific preconditions of the said instruction.      */
 annotation|@
 name|Override
 specifier|public
@@ -10418,7 +10418,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+comment|/**      * Ensures the specific preconditions of the said instruction.      */
 annotation|@
 name|Override
 specifier|public
@@ -10432,7 +10432,7 @@ block|{
 comment|//visitStoreInstruction(StoreInstruction) is called before.
 comment|// Nothing else needs to be done here.
 block|}
-comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+comment|/**      * Ensures the specific preconditions of the said instruction.      */
 annotation|@
 name|Override
 specifier|public
@@ -10506,7 +10506,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+comment|/**      * Ensures the specific preconditions of the said instruction.      */
 annotation|@
 name|Override
 specifier|public
@@ -10580,7 +10580,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+comment|/**      * Ensures the specific preconditions of the said instruction.      */
 annotation|@
 name|Override
 specifier|public
@@ -10654,7 +10654,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+comment|/**      * Ensures the specific preconditions of the said instruction.      */
 annotation|@
 name|Override
 specifier|public
@@ -10667,7 +10667,7 @@ parameter_list|)
 block|{
 comment|// nothing to do here.
 block|}
-comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+comment|/**      * Ensures the specific preconditions of the said instruction.      */
 annotation|@
 name|Override
 specifier|public
@@ -10680,7 +10680,7 @@ parameter_list|)
 block|{
 comment|// nothing to do here.
 block|}
-comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+comment|/**      * Ensures the specific preconditions of the said instruction.      */
 annotation|@
 name|Override
 specifier|public
@@ -10721,7 +10721,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+comment|/**      * Ensures the specific preconditions of the said instruction.      */
 annotation|@
 name|Override
 specifier|public
@@ -10762,7 +10762,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+comment|/**      * Ensures the specific preconditions of the said instruction.      */
 annotation|@
 name|Override
 specifier|public
@@ -10803,7 +10803,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+comment|/**      * Ensures the specific preconditions of the said instruction.      */
 annotation|@
 name|Override
 specifier|public
@@ -10877,7 +10877,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+comment|/**      * Ensures the specific preconditions of the said instruction.      */
 annotation|@
 name|Override
 specifier|public
@@ -10999,7 +10999,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+comment|/**      * Ensures the specific preconditions of the said instruction.      */
 annotation|@
 name|Override
 specifier|public
@@ -11073,7 +11073,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+comment|/**      * Ensures the specific preconditions of the said instruction.      */
 annotation|@
 name|Override
 specifier|public
@@ -11226,7 +11226,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+comment|/**      * Ensures the specific preconditions of the said instruction.      */
 annotation|@
 name|Override
 specifier|public
@@ -11300,7 +11300,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+comment|/**      * Ensures the specific preconditions of the said instruction.      */
 annotation|@
 name|Override
 specifier|public
@@ -11313,7 +11313,7 @@ parameter_list|)
 block|{
 comment|// Nothing to do here.
 block|}
-comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+comment|/**      * Ensures the specific preconditions of the said instruction.      */
 annotation|@
 name|Override
 specifier|public
@@ -11381,7 +11381,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+comment|/**      * Ensures the specific preconditions of the said instruction.      */
 specifier|public
 name|void
 name|visitLDC_W
@@ -11447,7 +11447,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+comment|/**      * Ensures the specific preconditions of the said instruction.      */
 annotation|@
 name|Override
 specifier|public
@@ -11503,7 +11503,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+comment|/**      * Ensures the specific preconditions of the said instruction.      */
 annotation|@
 name|Override
 specifier|public
@@ -11577,7 +11577,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+comment|/**      * Ensures the specific preconditions of the said instruction.      */
 annotation|@
 name|Override
 specifier|public
@@ -11591,7 +11591,7 @@ block|{
 comment|//visitLoadInstruction(LoadInstruction) is called before.
 comment|// Nothing else needs to be done here.
 block|}
-comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+comment|/**      * Ensures the specific preconditions of the said instruction.      */
 annotation|@
 name|Override
 specifier|public
@@ -11665,7 +11665,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+comment|/**      * Ensures the specific preconditions of the said instruction.      */
 annotation|@
 name|Override
 specifier|public
@@ -11706,7 +11706,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+comment|/**      * Ensures the specific preconditions of the said instruction.      */
 annotation|@
 name|Override
 specifier|public
@@ -11748,7 +11748,7 @@ expr_stmt|;
 block|}
 comment|// See also pass 3a.
 block|}
-comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+comment|/**      * Ensures the specific preconditions of the said instruction.      */
 annotation|@
 name|Override
 specifier|public
@@ -11822,7 +11822,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+comment|/**      * Ensures the specific preconditions of the said instruction.      */
 annotation|@
 name|Override
 specifier|public
@@ -11896,7 +11896,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+comment|/**      * Ensures the specific preconditions of the said instruction.      */
 annotation|@
 name|Override
 specifier|public
@@ -11937,7 +11937,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+comment|/**      * Ensures the specific preconditions of the said instruction.      */
 annotation|@
 name|Override
 specifier|public
@@ -12011,7 +12011,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+comment|/**      * Ensures the specific preconditions of the said instruction.      */
 annotation|@
 name|Override
 specifier|public
@@ -12085,7 +12085,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+comment|/**      * Ensures the specific preconditions of the said instruction.      */
 annotation|@
 name|Override
 specifier|public
@@ -12099,7 +12099,7 @@ block|{
 comment|//visitStoreInstruction(StoreInstruction) is called before.
 comment|// Nothing else needs to be done here.
 block|}
-comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+comment|/**      * Ensures the specific preconditions of the said instruction.      */
 annotation|@
 name|Override
 specifier|public
@@ -12173,7 +12173,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+comment|/**      * Ensures the specific preconditions of the said instruction.      */
 annotation|@
 name|Override
 specifier|public
@@ -12247,7 +12247,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+comment|/**      * Ensures the specific preconditions of the said instruction.      */
 annotation|@
 name|Override
 specifier|public
@@ -12321,7 +12321,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+comment|/**      * Ensures the specific preconditions of the said instruction.      */
 annotation|@
 name|Override
 specifier|public
@@ -12366,7 +12366,7 @@ expr_stmt|;
 block|}
 comment|//referenceTypeIsInitialized(o, (ReferenceType) (stack().peek()) );
 block|}
-comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+comment|/**      * Ensures the specific preconditions of the said instruction.      */
 annotation|@
 name|Override
 specifier|public
@@ -12411,7 +12411,7 @@ expr_stmt|;
 block|}
 comment|//referenceTypeIsInitialized(o, (ReferenceType) (stack().peek()) );
 block|}
-comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+comment|/**      * Ensures the specific preconditions of the said instruction.      */
 annotation|@
 name|Override
 specifier|public
@@ -12477,7 +12477,7 @@ block|}
 comment|// The runtime constant pool item at that index must be a symbolic reference to a class,
 comment|// array, or interface type. See Pass 3a.
 block|}
-comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+comment|/**      * Ensures the specific preconditions of the said instruction.      */
 annotation|@
 name|Override
 specifier|public
@@ -12571,7 +12571,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+comment|/**      * Ensures the specific preconditions of the said instruction.      */
 annotation|@
 name|Override
 specifier|public
@@ -12612,7 +12612,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+comment|/**      * Ensures the specific preconditions of the said instruction.      */
 annotation|@
 name|Override
 specifier|public
@@ -12625,7 +12625,7 @@ parameter_list|)
 block|{
 comment|// nothing is to be done here.
 block|}
-comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+comment|/**      * Ensures the specific preconditions of the said instruction.      */
 annotation|@
 name|Override
 specifier|public
@@ -12678,7 +12678,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+comment|/**      * Ensures the specific preconditions of the said instruction.      */
 annotation|@
 name|Override
 specifier|public
@@ -12731,7 +12731,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+comment|/**      * Ensures the specific preconditions of the said instruction.      */
 annotation|@
 name|Override
 specifier|public
@@ -12873,7 +12873,7 @@ argument_list|(
 name|cpg
 argument_list|)
 decl_stmt|;
-comment|/* TODO: Check if assignment compatibility is sufficient. 				   * What does Sun do? 				   */
+comment|/* TODO: Check if assignment compatibility is sufficient.                    * What does Sun do?                    */
 if|if
 condition|(
 name|f_type
@@ -13264,7 +13264,7 @@ argument_list|)
 throw|;
 block|}
 block|}
-comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+comment|/**      * Ensures the specific preconditions of the said instruction.      */
 annotation|@
 name|Override
 specifier|public
@@ -13363,7 +13363,7 @@ argument_list|(
 name|cpg
 argument_list|)
 decl_stmt|;
-comment|/* TODO: Check if assignment compatibility is sufficient. 				   * What does Sun do? 				   */
+comment|/* TODO: Check if assignment compatibility is sufficient.                    * What does Sun do?                    */
 if|if
 condition|(
 name|f_type
@@ -13597,7 +13597,7 @@ argument_list|)
 throw|;
 block|}
 block|}
-comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+comment|/**      * Ensures the specific preconditions of the said instruction.      */
 annotation|@
 name|Override
 specifier|public
@@ -13671,7 +13671,7 @@ block|}
 comment|// Other constraints such as non-allowed overlapping subroutines are enforced
 comment|// while building the Subroutines data structure.
 block|}
-comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+comment|/**      * Ensures the specific preconditions of the said instruction.      */
 annotation|@
 name|Override
 specifier|public
@@ -13739,7 +13739,7 @@ expr_stmt|;
 block|}
 block|}
 block|}
-comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+comment|/**      * Ensures the specific preconditions of the said instruction.      */
 annotation|@
 name|Override
 specifier|public
@@ -13861,7 +13861,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+comment|/**      * Ensures the specific preconditions of the said instruction.      */
 annotation|@
 name|Override
 specifier|public
@@ -14014,7 +14014,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+comment|/**      * Ensures the specific preconditions of the said instruction.      */
 annotation|@
 name|Override
 specifier|public
@@ -14027,7 +14027,7 @@ parameter_list|)
 block|{
 comment|// nothing to do here. Generic visitXXX() methods did the trick before.
 block|}
-comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+comment|/**      * Ensures the specific preconditions of the said instruction.      */
 annotation|@
 name|Override
 specifier|public
@@ -14109,7 +14109,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/** 	 * Ensures the specific preconditions of the said instruction. 	 */
+comment|/**      * Ensures the specific preconditions of the said instruction.      */
 annotation|@
 name|Override
 specifier|public

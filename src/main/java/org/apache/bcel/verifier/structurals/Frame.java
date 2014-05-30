@@ -26,23 +26,23 @@ specifier|public
 class|class
 name|Frame
 block|{
-comment|/** 	 * For instance initialization methods, it is important to remember 	 * which instance it is that is not initialized yet. It will be 	 * initialized invoking another constructor later. 	 * NULL means the instance already *is* initialized. 	 */
+comment|/**      * For instance initialization methods, it is important to remember      * which instance it is that is not initialized yet. It will be      * initialized invoking another constructor later.      * NULL means the instance already *is* initialized.      */
 specifier|protected
 specifier|static
 name|UninitializedObjectType
 name|_this
 decl_stmt|;
-comment|/** 	 * 	 */
+comment|/**      *      */
 specifier|private
 name|LocalVariables
 name|locals
 decl_stmt|;
-comment|/** 	 * 	 */
+comment|/**      *      */
 specifier|private
 name|OperandStack
 name|stack
 decl_stmt|;
-comment|/** 	 * 	 */
+comment|/**      *      */
 specifier|public
 name|Frame
 parameter_list|(
@@ -70,7 +70,7 @@ name|maxStack
 argument_list|)
 expr_stmt|;
 block|}
-comment|/** 	 * 	 */
+comment|/**      *      */
 specifier|public
 name|Frame
 parameter_list|(
@@ -94,7 +94,7 @@ operator|=
 name|stack
 expr_stmt|;
 block|}
-comment|/** 	 * 	 */
+comment|/**      *      */
 annotation|@
 name|Override
 specifier|protected
@@ -123,7 +123,7 @@ return|return
 name|f
 return|;
 block|}
-comment|/** 	 * 	 */
+comment|/**      *      */
 specifier|public
 name|Frame
 name|getClone
@@ -137,7 +137,7 @@ name|clone
 argument_list|()
 return|;
 block|}
-comment|/** 	 * 	 */
+comment|/**      *      */
 specifier|public
 name|LocalVariables
 name|getLocals
@@ -147,7 +147,7 @@ return|return
 name|locals
 return|;
 block|}
-comment|/** 	 * 	 */
+comment|/**      *      */
 specifier|public
 name|OperandStack
 name|getStack
@@ -177,7 +177,7 @@ name|hashCode
 argument_list|()
 return|;
 block|}
-comment|/** 	 * 	 */
+comment|/**      *      */
 annotation|@
 name|Override
 specifier|public
@@ -235,7 +235,7 @@ name|locals
 argument_list|)
 return|;
 block|}
-comment|/** 	 * Returns a String representation of the Frame instance. 	 */
+comment|/**      * Returns a String representation of the Frame instance.      */
 annotation|@
 name|Override
 specifier|public

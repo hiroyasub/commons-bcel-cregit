@@ -108,7 +108,7 @@ specifier|public
 class|class
 name|ExceptionHandlers
 block|{
-comment|/** 	 * The ExceptionHandler instances. 	 * Key: InstructionHandle objects, Values: HashSet<ExceptionHandler> instances. 	 */
+comment|/**      * The ExceptionHandler instances.      * Key: InstructionHandle objects, Values: HashSet<ExceptionHandler> instances.      */
 specifier|private
 name|Map
 argument_list|<
@@ -121,7 +121,7 @@ argument_list|>
 argument_list|>
 name|exceptionhandlers
 decl_stmt|;
-comment|/** 	 * Constructor. Creates a new ExceptionHandlers instance. 	 */
+comment|/**      * Constructor. Creates a new ExceptionHandlers instance.      */
 specifier|public
 name|ExceptionHandlers
 parameter_list|(
@@ -256,7 +256,7 @@ expr_stmt|;
 block|}
 block|}
 block|}
-comment|/** 	 * Returns all the ExceptionHandler instances representing exception 	 * handlers that protect the instruction ih. 	 */
+comment|/**      * Returns all the ExceptionHandler instances representing exception      * handlers that protect the instruction ih.      */
 specifier|public
 name|ExceptionHandler
 index|[]

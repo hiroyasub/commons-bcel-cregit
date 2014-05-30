@@ -46,43 +46,43 @@ comment|//LocalVariableTable_attribute {
 end_comment
 
 begin_comment
-comment|//	   u2 attribute_name_index;
+comment|//       u2 attribute_name_index;
 end_comment
 
 begin_comment
-comment|//	   u4 attribute_length;
+comment|//       u4 attribute_length;
 end_comment
 
 begin_comment
-comment|//	   u2 local_variable_table_length;
+comment|//       u2 local_variable_table_length;
 end_comment
 
 begin_comment
-comment|//	   {  u2 start_pc;
+comment|//       {  u2 start_pc;
 end_comment
 
 begin_comment
-comment|//	      u2 length;
+comment|//          u2 length;
 end_comment
 
 begin_comment
-comment|//	      u2 name_index;
+comment|//          u2 name_index;
 end_comment
 
 begin_comment
-comment|//	      u2 descriptor_index;
+comment|//          u2 descriptor_index;
 end_comment
 
 begin_comment
-comment|//	      u2 index;
+comment|//          u2 index;
 end_comment
 
 begin_comment
-comment|//	   } local_variable_table[local_variable_table_length];
+comment|//       } local_variable_table[local_variable_table_length];
 end_comment
 
 begin_comment
-comment|//	 }
+comment|//     }
 end_comment
 
 begin_comment

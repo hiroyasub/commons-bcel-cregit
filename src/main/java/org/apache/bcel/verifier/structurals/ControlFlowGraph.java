@@ -238,24 +238,24 @@ specifier|public
 class|class
 name|ControlFlowGraph
 block|{
-comment|/** 	 * Objects of this class represent a node in a ControlFlowGraph. 	 * These nodes are instructions, not basic blocks. 	 */
+comment|/**      * Objects of this class represent a node in a ControlFlowGraph.      * These nodes are instructions, not basic blocks.      */
 specifier|private
 class|class
 name|InstructionContextImpl
 implements|implements
 name|InstructionContext
 block|{
-comment|/** 		 * The TAG field is here for external temporary flagging, such 		 * as graph colouring. 		 * 		 * @see #getTag() 		 * @see #setTag(int) 		 */
+comment|/**          * The TAG field is here for external temporary flagging, such          * as graph colouring.          *          * @see #getTag()          * @see #setTag(int)          */
 specifier|private
 name|int
 name|TAG
 decl_stmt|;
-comment|/** 		 * The InstructionHandle this InstructionContext is wrapped around. 		 */
+comment|/**          * The InstructionHandle this InstructionContext is wrapped around.          */
 specifier|private
 name|InstructionHandle
 name|instruction
 decl_stmt|;
-comment|/** 		 * The 'incoming' execution Frames. 		 */
+comment|/**          * The 'incoming' execution Frames.          */
 specifier|private
 name|Map
 argument_list|<
@@ -266,7 +266,7 @@ argument_list|>
 name|inFrames
 decl_stmt|;
 comment|// key: the last-executed JSR
-comment|/** 		 * The 'outgoing' execution Frames. 		 */
+comment|/**          * The 'outgoing' execution Frames.          */
 specifier|private
 name|Map
 argument_list|<
@@ -277,7 +277,7 @@ argument_list|>
 name|outFrames
 decl_stmt|;
 comment|// key: the last-executed JSR
-comment|/** 		 * The 'execution predecessors' - a list of type InstructionContext  		 * of those instances that have been execute()d before in that order. 		 */
+comment|/**          * The 'execution predecessors' - a list of type InstructionContext           * of those instances that have been execute()d before in that order.          */
 specifier|private
 name|List
 argument_list|<
@@ -288,7 +288,7 @@ init|=
 literal|null
 decl_stmt|;
 comment|// Type: InstructionContext
-comment|/** 		 * Creates an InstructionHandleImpl object from an InstructionHandle. 		 * Creation of one per InstructionHandle suffices. Don't create more. 		 */
+comment|/**          * Creates an InstructionHandleImpl object from an InstructionHandle.          * Creation of one per InstructionHandle suffices. Don't create more.          */
 specifier|public
 name|InstructionContextImpl
 parameter_list|(
@@ -362,7 +362,7 @@ operator|=
 name|tag
 expr_stmt|;
 block|}
-comment|/** 		 * Returns the exception handlers of this instruction. 		 */
+comment|/**          * Returns the exception handlers of this instruction.          */
 specifier|public
 name|ExceptionHandler
 index|[]
@@ -379,7 +379,7 @@ argument_list|()
 argument_list|)
 return|;
 block|}
-comment|/** 		 * Returns a clone of the "outgoing" frame situation with respect to the given ExecutionChain. 		 */
+comment|/**          * Returns a clone of the "outgoing" frame situation with respect to the given ExecutionChain.          */
 specifier|public
 name|Frame
 name|getOutFrame
@@ -501,7 +501,7 @@ name|getClone
 argument_list|()
 return|;
 block|}
-comment|/** 		 * "Merges in" (vmspec2, page 146) the "incoming" frame situation; 		 * executes the instructions symbolically 		 * and therefore calculates the "outgoing" frame situation. 		 * Returns: True iff the "incoming" frame situation changed after 		 * merging with "inFrame". 		 * The execPreds ArrayList must contain the InstructionContext 		 * objects executed so far in the correct order. This is just 		 * one execution path [out of many]. This is needed to correctly 		 * "merge" in the special case of a RET's successor. 		 *<B>The InstConstraintVisitor and ExecutionVisitor instances 		 * must be set up correctly.</B> 		 * @return true - if and only if the "outgoing" frame situation 		 * changed from the one before execute()ing. 		 */
+comment|/**          * "Merges in" (vmspec2, page 146) the "incoming" frame situation;          * executes the instructions symbolically          * and therefore calculates the "outgoing" frame situation.          * Returns: True iff the "incoming" frame situation changed after          * merging with "inFrame".          * The execPreds ArrayList must contain the InstructionContext          * objects executed so far in the correct order. This is just          * one execution path [out of many]. This is needed to correctly          * "merge" in the special case of a RET's successor.          *<B>The InstConstraintVisitor and ExecutionVisitor instances          * must be set up correctly.</B>          * @return true - if and only if the "outgoing" frame situation          * changed from the one before execute()ing.          */
 specifier|public
 name|boolean
 name|execute
@@ -782,7 +782,7 @@ return|;
 comment|// new inFrame was different from old inFrame so merging them
 comment|// yielded a different this.inFrame.
 block|}
-comment|/** 		 * Returns a simple String representation of this InstructionContext. 		 */
+comment|/**          * Returns a simple String representation of this InstructionContext.          */
 annotation|@
 name|Override
 specifier|public
@@ -810,7 +810,7 @@ return|return
 name|ret
 return|;
 block|}
-comment|/** 		 * Does the actual merging (vmspec2, page 146). 		 * Returns true IFF this.inFrame was changed in course of merging with inFrame. 		 */
+comment|/**          * Does the actual merging (vmspec2, page 146).          * Returns true IFF this.inFrame was changed in course of merging with inFrame.          */
 specifier|private
 name|boolean
 name|mergeInFrames
@@ -931,7 +931,7 @@ literal|true
 return|;
 block|}
 block|}
-comment|/** 		 * Returns the control flow execution chain. This is built 		 * while execute(Frame, ArrayList)-ing the code represented 		 * by the surrounding ControlFlowGraph. 		 */
+comment|/**          * Returns the control flow execution chain. This is built          * while execute(Frame, ArrayList)-ing the code represented          * by the surrounding ControlFlowGraph.          */
 specifier|private
 name|String
 name|getExecutionChain
@@ -983,7 +983,7 @@ return|return
 name|s
 return|;
 block|}
-comment|/** 		 * Extends the StructuralCodeConstraintException ("e") object with an at-the-end-extended message. 		 * This extended message will then reflect the execution flow needed to get to the constraint 		 * violation that triggered the throwing of the "e" object. 		 */
+comment|/**          * Extends the StructuralCodeConstraintException ("e") object with an at-the-end-extended message.          * This extended message will then reflect the execution flow needed to get to the constraint          * violation that triggered the throwing of the "e" object.          */
 specifier|private
 name|void
 name|extendMessageWithFlow
@@ -1010,7 +1010,7 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
-comment|/* 		 * Fulfils the contract of InstructionContext.getInstruction(). 		 */
+comment|/*          * Fulfils the contract of InstructionContext.getInstruction().          */
 specifier|public
 name|InstructionHandle
 name|getInstruction
@@ -1020,7 +1020,7 @@ return|return
 name|instruction
 return|;
 block|}
-comment|/** 		 * Returns the InstructionContextImpl with an JSR/JSR_W 		 * that was last in the ExecutionChain, without 		 * a corresponding RET, i.e. 		 * we were called by this one. 		 * Returns null if we were called from the top level. 		 */
+comment|/**          * Returns the InstructionContextImpl with an JSR/JSR_W          * that was last in the ExecutionChain, without          * a corresponding RET, i.e.          * we were called by this one.          * Returns null if we were called from the top level.          */
 specifier|private
 name|InstructionContextImpl
 name|lastExecutionJSR
@@ -1136,7 +1136,7 @@ argument_list|()
 argument_list|)
 return|;
 block|}
-comment|/** 		 * A utility method that calculates the successors of a given InstructionHandle 		 * That means, a RET does have successors as defined here. 		 * A JsrInstruction has its target as its successor 		 * (opposed to its physical successor) as defined here. 		 */
+comment|/**          * A utility method that calculates the successors of a given InstructionHandle          * That means, a RET does have successors as defined here.          * A JsrInstruction has its target as its successor          * (opposed to its physical successor) as defined here.          */
 comment|// TODO: implement caching!
 specifier|private
 name|InstructionHandle
@@ -1522,7 +1522,7 @@ argument_list|>
 argument_list|()
 decl_stmt|;
 comment|//keys: InstructionHandle, values: InstructionContextImpl
-comment|/**  	 * A Control Flow Graph. 	 */
+comment|/**       * A Control Flow Graph.      */
 specifier|public
 name|ControlFlowGraph
 parameter_list|(
@@ -1582,7 +1582,7 @@ expr_stmt|;
 block|}
 comment|//this.method_gen = method_gen;
 block|}
-comment|/** 	 * Returns the InstructionContext of a given instruction. 	 */
+comment|/**      * Returns the InstructionContext of a given instruction.      */
 specifier|public
 name|InstructionContext
 name|contextOf
@@ -1620,7 +1620,7 @@ return|return
 name|ic
 return|;
 block|}
-comment|/** 	 * Returns the InstructionContext[] of a given InstructionHandle[], 	 * in a naturally ordered manner. 	 */
+comment|/**      * Returns the InstructionContext[] of a given InstructionHandle[],      * in a naturally ordered manner.      */
 specifier|public
 name|InstructionContext
 index|[]
@@ -1678,7 +1678,7 @@ return|return
 name|ret
 return|;
 block|}
-comment|/** 	 * Returns an InstructionContext[] with all the InstructionContext instances 	 * for the method whose control flow is represented by this ControlFlowGraph 	 *<B>(NOT ORDERED!)</B>. 	 */
+comment|/**      * Returns an InstructionContext[] with all the InstructionContext instances      * for the method whose control flow is represented by this ControlFlowGraph      *<B>(NOT ORDERED!)</B>.      */
 specifier|public
 name|InstructionContext
 index|[]
@@ -1713,7 +1713,7 @@ name|ret
 argument_list|)
 return|;
 block|}
-comment|/** 	 * Returns true, if and only if the said instruction is not reachable; that means, 	 * if it is not part of this ControlFlowGraph. 	 */
+comment|/**      * Returns true, if and only if the said instruction is not reachable; that means,      * if it is not part of this ControlFlowGraph.      */
 specifier|public
 name|boolean
 name|isDead

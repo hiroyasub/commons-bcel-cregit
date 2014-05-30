@@ -222,7 +222,7 @@ literal|"Not implemented yet"
 argument_list|)
 throw|;
 block|}
-comment|/** 	 * Return immutable variant of this AnnotationElementValueGen 	 */
+comment|/**      * Return immutable variant of this AnnotationElementValueGen      */
 annotation|@
 name|Override
 specifier|public

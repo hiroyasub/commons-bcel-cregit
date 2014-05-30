@@ -210,7 +210,7 @@ literal|null
 argument_list|)
 return|;
 block|}
-comment|/** 	 * Create primitive element values 	 */
+comment|/**      * Create primitive element values      */
 specifier|public
 name|void
 name|testCreateIntegerElementValue

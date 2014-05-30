@@ -399,8 +399,8 @@ name|Pass3bVerifier
 extends|extends
 name|PassVerifier
 block|{
-comment|/* TODO:	Throughout pass 3b, upper halves of LONG and DOUBLE 						are represented by Type.UNKNOWN. This should be changed 						in favour of LONG_Upper and DOUBLE_Upper as in pass 2. */
-comment|/** 	 * An InstructionContextQueue is a utility class that holds 	 * (InstructionContext, ArrayList) pairs in a Queue data structure. 	 * This is used to hold information about InstructionContext objects 	 * externally --- i.e. that information is not saved inside the 	 * InstructionContext object itself. This is useful to save the 	 * execution path of the symbolic execution of the 	 * Pass3bVerifier - this is not information 	 * that belongs into the InstructionContext object itself. 	 * Only at "execute()"ing 	 * time, an InstructionContext object will get the current information 	 * we have about its symbolic execution predecessors. 	 */
+comment|/* TODO:    Throughout pass 3b, upper halves of LONG and DOUBLE                         are represented by Type.UNKNOWN. This should be changed                         in favour of LONG_Upper and DOUBLE_Upper as in pass 2. */
+comment|/**      * An InstructionContextQueue is a utility class that holds      * (InstructionContext, ArrayList) pairs in a Queue data structure.      * This is used to hold information about InstructionContext objects      * externally --- i.e. that information is not saved inside the      * InstructionContext object itself. This is useful to save the      * execution path of the symbolic execution of the      * Pass3bVerifier - this is not information      * that belongs into the InstructionContext object itself.      * Only at "execute()"ing      * time, an InstructionContext object will get the current information      * we have about its symbolic execution predecessors.      */
 specifier|private
 specifier|static
 specifier|final
@@ -575,7 +575,7 @@ specifier|private
 name|int
 name|method_no
 decl_stmt|;
-comment|/** 	 * This class should only be instantiated by a Verifier. 	 * 	 * @see org.apache.bcel.verifier.Verifier 	 */
+comment|/**      * This class should only be instantiated by a Verifier.      *      * @see org.apache.bcel.verifier.Verifier      */
 specifier|public
 name|Pass3bVerifier
 parameter_list|(
@@ -597,7 +597,7 @@ operator|=
 name|method_no
 expr_stmt|;
 block|}
-comment|/** 	 * Whenever the outgoing frame 	 * situation of an InstructionContext changes, all its successors are 	 * put [back] into the queue [as if they were unvisited].    * The proof of termination is about the existence of a    * fix point of frame merging. 	 */
+comment|/**      * Whenever the outgoing frame      * situation of an InstructionContext changes, all its successors are      * put [back] into the queue [as if they were unvisited].    * The proof of termination is about the existence of a    * fix point of frame merging.      */
 specifier|private
 name|void
 name|circulationPump
@@ -654,8 +654,8 @@ argument_list|,
 name|ev
 argument_list|)
 expr_stmt|;
-comment|// new ArrayList()<=>	no Instruction was executed before
-comment|//									=> Top-Level routine (no jsr call before)
+comment|// new ArrayList()<=>    no Instruction was executed before
+comment|//                                    => Top-Level routine (no jsr call before)
 name|icq
 operator|.
 name|add
@@ -1764,7 +1764,7 @@ literal|null
 condition|)
 do|;
 block|}
-comment|/** 	 * Pass 3b implements the data flow analysis as described in the Java Virtual 	 * Machine Specification, Second Edition.  	 * Later versions will use LocalVariablesInfo objects to verify if the  	 * verifier-inferred types and the class file's debug information (LocalVariables  	 * attributes) match [TODO].  	 *  	 * @see org.apache.bcel.verifier.statics.LocalVariablesInfo  	 * @see org.apache.bcel.verifier.statics.Pass2Verifier#getLocalVariablesInfo(int)  	 */
+comment|/**      * Pass 3b implements the data flow analysis as described in the Java Virtual      * Machine Specification, Second Edition.       * Later versions will use LocalVariablesInfo objects to verify if the       * verifier-inferred types and the class file's debug information (LocalVariables       * attributes) match [TODO].       *       * @see org.apache.bcel.verifier.statics.LocalVariablesInfo       * @see org.apache.bcel.verifier.statics.Pass2Verifier#getLocalVariablesInfo(int)       */
 annotation|@
 name|Override
 specifier|public

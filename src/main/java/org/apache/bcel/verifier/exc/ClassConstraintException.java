@@ -37,7 +37,7 @@ init|=
 operator|-
 literal|4745598983569128296L
 decl_stmt|;
-comment|/** 	 * Constructs a new ClassConstraintException with null as its error message string. 	 */
+comment|/**      * Constructs a new ClassConstraintException with null as its error message string.      */
 specifier|public
 name|ClassConstraintException
 parameter_list|()
@@ -46,7 +46,7 @@ name|super
 argument_list|()
 expr_stmt|;
 block|}
-comment|/** 	 * Constructs a new ClassConstraintException with the specified error message. 	 */
+comment|/**      * Constructs a new ClassConstraintException with the specified error message.      */
 specifier|public
 name|ClassConstraintException
 parameter_list|(
@@ -60,7 +60,7 @@ name|message
 argument_list|)
 expr_stmt|;
 block|}
-comment|/** 	 * Constructs a new ClassConstraintException with the specified error message and cause 	 */
+comment|/**      * Constructs a new ClassConstraintException with the specified error message and cause      */
 specifier|public
 name|ClassConstraintException
 parameter_list|(

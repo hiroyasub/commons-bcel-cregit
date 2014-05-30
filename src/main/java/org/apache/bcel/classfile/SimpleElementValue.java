@@ -85,7 +85,7 @@ operator|=
 name|index
 expr_stmt|;
 block|}
-comment|/** 	 * @return Value entry index in the cpool 	 */
+comment|/**      * @return Value entry index in the cpool      */
 specifier|public
 name|int
 name|getIndex

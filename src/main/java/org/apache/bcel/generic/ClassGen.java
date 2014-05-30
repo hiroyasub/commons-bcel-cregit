@@ -814,7 +814,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/** 	 * Look for attributes representing annotations and unpack them. 	 */
+comment|/**      * Look for attributes representing annotations and unpack them.      */
 specifier|private
 name|AnnotationEntryGen
 index|[]
@@ -896,7 +896,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-if|else 				if
+if|else                 if
 condition|(
 name|attr
 operator|instanceof

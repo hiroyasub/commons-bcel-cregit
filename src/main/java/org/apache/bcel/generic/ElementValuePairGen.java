@@ -166,7 +166,7 @@ name|copyPoolEntries
 argument_list|)
 expr_stmt|;
 block|}
-comment|/** 	 * Retrieve an immutable version of this ElementNameValuePairGen 	 */
+comment|/**      * Retrieve an immutable version of this ElementNameValuePairGen      */
 specifier|public
 name|ElementValuePair
 name|getElementNameValuePair

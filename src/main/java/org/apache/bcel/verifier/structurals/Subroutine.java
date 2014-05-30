@@ -40,24 +40,24 @@ specifier|public
 interface|interface
 name|Subroutine
 block|{
-comment|/** 	 * Returns all the JsrInstructions that have the 	 * first instruction of this subroutine as their target. 	 *<B>Must not be invoked on the 'top-level subroutine'.</B> 	 */
+comment|/**      * Returns all the JsrInstructions that have the      * first instruction of this subroutine as their target.      *<B>Must not be invoked on the 'top-level subroutine'.</B>      */
 name|InstructionHandle
 index|[]
 name|getEnteringJsrInstructions
 parameter_list|()
 function_decl|;
-comment|/** 	 * Returns the one and only RET that leaves the subroutine. 	 * Note that JustIce has a pretty rigid notion of a subroutine. 	 *<B>Must not be invoked on the 'top-level subroutine'.</B> 	 * 	 * @see org.apache.bcel.verifier.structurals.Subroutines 	 */
+comment|/**      * Returns the one and only RET that leaves the subroutine.      * Note that JustIce has a pretty rigid notion of a subroutine.      *<B>Must not be invoked on the 'top-level subroutine'.</B>      *      * @see org.apache.bcel.verifier.structurals.Subroutines      */
 name|InstructionHandle
 name|getLeavingRET
 parameter_list|()
 function_decl|;
-comment|/** 	 * Returns all instructions that together form this subroutine. 	 * Note that an instruction is part of exactly one subroutine 	 * (the top-level code is considered to be a special subroutine) - 	 * else it is not reachable at all (dead code). 	 */
+comment|/**      * Returns all instructions that together form this subroutine.      * Note that an instruction is part of exactly one subroutine      * (the top-level code is considered to be a special subroutine) -      * else it is not reachable at all (dead code).      */
 name|InstructionHandle
 index|[]
 name|getInstructions
 parameter_list|()
 function_decl|;
-comment|/** 	 * Returns if the given InstructionHandle refers to an instruction 	 * that is part of this subroutine. This is a convenience method 	 * that saves iteration over the InstructionHandle objects returned 	 * by getInstructions(). 	 * 	 * @see #getInstructions() 	 */
+comment|/**      * Returns if the given InstructionHandle refers to an instruction      * that is part of this subroutine. This is a convenience method      * that saves iteration over the InstructionHandle objects returned      * by getInstructions().      *      * @see #getInstructions()      */
 name|boolean
 name|contains
 parameter_list|(
@@ -65,19 +65,19 @@ name|InstructionHandle
 name|inst
 parameter_list|)
 function_decl|;
-comment|/** 	 * Returns an int[] containing the indices of the local variable slots 	 * accessed by this Subroutine (read-accessed, write-accessed or both); 	 * local variables referenced by subroutines of this subroutine are 	 * not included. 	 * 	 * @see #getRecursivelyAccessedLocalsIndices() 	 */
+comment|/**      * Returns an int[] containing the indices of the local variable slots      * accessed by this Subroutine (read-accessed, write-accessed or both);      * local variables referenced by subroutines of this subroutine are      * not included.      *      * @see #getRecursivelyAccessedLocalsIndices()      */
 name|int
 index|[]
 name|getAccessedLocalsIndices
 parameter_list|()
 function_decl|;
-comment|/** 	 * Returns an int[] containing the indices of the local variable slots 	 * accessed by this Subroutine (read-accessed, write-accessed or both); 	 * local variables referenced by subroutines of this subroutine are 	 * included. 	 * 	 * @see #getAccessedLocalsIndices() 	 */
+comment|/**      * Returns an int[] containing the indices of the local variable slots      * accessed by this Subroutine (read-accessed, write-accessed or both);      * local variables referenced by subroutines of this subroutine are      * included.      *      * @see #getAccessedLocalsIndices()      */
 name|int
 index|[]
 name|getRecursivelyAccessedLocalsIndices
 parameter_list|()
 function_decl|;
-comment|/** 	 * Returns the subroutines that are directly called from this subroutine. 	 */
+comment|/**      * Returns the subroutines that are directly called from this subroutine.      */
 name|Subroutine
 index|[]
 name|subSubs

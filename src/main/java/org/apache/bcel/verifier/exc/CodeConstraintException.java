@@ -38,7 +38,7 @@ init|=
 operator|-
 literal|7265388214714996640L
 decl_stmt|;
-comment|/** 	 * Constructs a new CodeConstraintException with null as its error message string. 	 */
+comment|/**      * Constructs a new CodeConstraintException with null as its error message string.      */
 name|CodeConstraintException
 parameter_list|()
 block|{
@@ -46,7 +46,7 @@ name|super
 argument_list|()
 expr_stmt|;
 block|}
-comment|/** 	 * Constructs a new CodeConstraintException with the specified error message. 	 */
+comment|/**      * Constructs a new CodeConstraintException with the specified error message.      */
 name|CodeConstraintException
 parameter_list|(
 name|String

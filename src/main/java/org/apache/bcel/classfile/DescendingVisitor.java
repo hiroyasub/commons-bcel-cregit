@@ -58,7 +58,7 @@ name|Object
 argument_list|>
 argument_list|()
 decl_stmt|;
-comment|/** 	 * @return container of current entitity, i.e., predecessor during traversal 	 */
+comment|/**      * @return container of current entitity, i.e., predecessor during traversal      */
 specifier|public
 name|Object
 name|predecessor
@@ -71,7 +71,7 @@ literal|0
 argument_list|)
 return|;
 block|}
-comment|/** 	 * @param level 	 *            nesting level, i.e., 0 returns the direct predecessor 	 * @return container of current entitity, i.e., predecessor during traversal 	 */
+comment|/**      * @param level      *            nesting level, i.e., 0 returns the direct predecessor      * @return container of current entitity, i.e., predecessor during traversal      */
 specifier|public
 name|Object
 name|predecessor
@@ -126,7 +126,7 @@ return|;
 comment|// size - 1 == current
 block|}
 block|}
-comment|/** 	 * @return current object 	 */
+comment|/**      * @return current object      */
 specifier|public
 name|Object
 name|current
@@ -139,7 +139,7 @@ name|peek
 argument_list|()
 return|;
 block|}
-comment|/** 	 * @param clazz 	 *            Class to traverse 	 * @param visitor 	 *            visitor object to apply to all components 	 */
+comment|/**      * @param clazz      *            Class to traverse      * @param visitor      *            visitor object to apply to all components      */
 specifier|public
 name|DescendingVisitor
 parameter_list|(
@@ -163,7 +163,7 @@ operator|=
 name|visitor
 expr_stmt|;
 block|}
-comment|/** 	 * Start traversal. 	 */
+comment|/**      * Start traversal.      */
 specifier|public
 name|void
 name|visit

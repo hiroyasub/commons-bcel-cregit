@@ -104,7 +104,7 @@ name|String
 argument_list|>
 argument_list|()
 decl_stmt|;
-comment|/** 	 * Adds a name of a local variable and a certain slot to our 'names' 	 * (Hashtable) database. 	 */
+comment|/**      * Adds a name of a local variable and a certain slot to our 'names'      * (Hashtable) database.      */
 specifier|private
 name|void
 name|setName
@@ -135,7 +135,7 @@ name|name
 argument_list|)
 expr_stmt|;
 block|}
-comment|/** 	 * Adds a type of a local variable and a certain slot to our 'types' 	 * (Hashtable) database. 	 */
+comment|/**      * Adds a type of a local variable and a certain slot to our 'types'      * (Hashtable) database.      */
 specifier|private
 name|void
 name|setType
@@ -166,7 +166,7 @@ name|t
 argument_list|)
 expr_stmt|;
 block|}
-comment|/** 	 * Returns the type of the local variable that uses this local 	 * variable slot at the given bytecode offset. 	 * Care for legal bytecode offsets yourself, otherwise the return value 	 * might be wrong. 	 * May return 'null' if nothing is known about the type of this local 	 * variable slot at the given bytecode offset. 	 */
+comment|/**      * Returns the type of the local variable that uses this local      * variable slot at the given bytecode offset.      * Care for legal bytecode offsets yourself, otherwise the return value      * might be wrong.      * May return 'null' if nothing is known about the type of this local      * variable slot at the given bytecode offset.      */
 specifier|public
 name|Type
 name|getType
@@ -189,7 +189,7 @@ argument_list|)
 argument_list|)
 return|;
 block|}
-comment|/** 	 * Returns the name of the local variable that uses this local 	 * variable slot at the given bytecode offset. 	 * Care for legal bytecode offsets yourself, otherwise the return value 	 * might be wrong. 	 * May return 'null' if nothing is known about the type of this local 	 * variable slot at the given bytecode offset. 	 */
+comment|/**      * Returns the name of the local variable that uses this local      * variable slot at the given bytecode offset.      * Care for legal bytecode offsets yourself, otherwise the return value      * might be wrong.      * May return 'null' if nothing is known about the type of this local      * variable slot at the given bytecode offset.      */
 specifier|public
 name|String
 name|getName
@@ -214,7 +214,7 @@ argument_list|)
 operator|)
 return|;
 block|}
-comment|/** 	 * Adds some information about this local variable (slot). 	 * @throws LocalVariableInfoInconsistentException if the new information conflicts 	 *         with already gathered information. 	 */
+comment|/**      * Adds some information about this local variable (slot).      * @throws LocalVariableInfoInconsistentException if the new information conflicts      *         with already gathered information.      */
 specifier|public
 name|void
 name|add
@@ -263,7 +263,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/** 	 * Adds information about name and type for a given offset. 	 * @throws LocalVariableInfoInconsistentException if the new information conflicts 	 *         with already gathered information. 	 */
+comment|/**      * Adds information about name and type for a given offset.      * @throws LocalVariableInfoInconsistentException if the new information conflicts      *         with already gathered information.      */
 specifier|private
 name|void
 name|add

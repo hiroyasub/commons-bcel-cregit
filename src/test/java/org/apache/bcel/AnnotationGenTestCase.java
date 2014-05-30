@@ -298,7 +298,7 @@ literal|null
 argument_list|)
 return|;
 block|}
-comment|/** 	 * Programmatically construct an mutable annotation (AnnotationGen) object. 	 */
+comment|/**      * Programmatically construct an mutable annotation (AnnotationGen) object.      */
 specifier|public
 name|void
 name|testConstructMutableAnnotation

@@ -52,7 +52,7 @@ name|super
 argument_list|()
 expr_stmt|;
 block|}
-comment|/** 	 * Constructs a new AssertionViolatedException with the specified error message preceded 	 * by&quot;INTERNAL ERROR:&quot;. 	 */
+comment|/**      * Constructs a new AssertionViolatedException with the specified error message preceded      * by&quot;INTERNAL ERROR:&quot;.      */
 specifier|public
 name|AssertionViolatedException
 parameter_list|(
@@ -75,7 +75,7 @@ operator|=
 name|message
 expr_stmt|;
 block|}
-comment|/** 	 * Constructs a new AssertionViolationException with the specified error message and initial cause 	 */
+comment|/**      * Constructs a new AssertionViolationException with the specified error message and initial cause      */
 specifier|public
 name|AssertionViolatedException
 parameter_list|(
@@ -102,7 +102,7 @@ operator|=
 name|message
 expr_stmt|;
 block|}
-comment|/** Extends the error message with a string before ("pre") and after ("post") the 	    'old' error message. All of these three strings are allowed to be null, and null 	    is always replaced by the empty string (""). In particular, after invoking this 	    method, the error message of this object can no longer be null. 	*/
+comment|/** Extends the error message with a string before ("pre") and after ("post") the         'old' error message. All of these three strings are allowed to be null, and null         is always replaced by the empty string (""). In particular, after invoking this         method, the error message of this object can no longer be null.     */
 specifier|public
 name|void
 name|extendMessage
@@ -159,7 +159,7 @@ operator|+
 name|post
 expr_stmt|;
 block|}
-comment|/** 	 * Returns the error message string of this AssertionViolatedException object. 	 * @return the error message string of this AssertionViolatedException. 	 */
+comment|/**      * Returns the error message string of this AssertionViolatedException object.      * @return the error message string of this AssertionViolatedException.      */
 annotation|@
 name|Override
 specifier|public
@@ -171,7 +171,7 @@ return|return
 name|detailMessage
 return|;
 block|}
-comment|/**  	 * DO NOT USE. It's for experimental testing during development only. 	 */
+comment|/**       * DO NOT USE. It's for experimental testing during development only.      */
 specifier|public
 specifier|static
 name|void

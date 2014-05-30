@@ -44,7 +44,7 @@ specifier|private
 name|String
 name|detailMessage
 decl_stmt|;
-comment|/** 	 * Constructs a new VerifierConstraintViolatedException with null as its error message string. 	 */
+comment|/**      * Constructs a new VerifierConstraintViolatedException with null as its error message string.      */
 name|VerifierConstraintViolatedException
 parameter_list|()
 block|{
@@ -52,7 +52,7 @@ name|super
 argument_list|()
 expr_stmt|;
 block|}
-comment|/** 	 * Constructs a new VerifierConstraintViolatedException with the specified error message. 	 */
+comment|/**      * Constructs a new VerifierConstraintViolatedException with the specified error message.      */
 name|VerifierConstraintViolatedException
 parameter_list|(
 name|String
@@ -70,7 +70,7 @@ operator|=
 name|message
 expr_stmt|;
 block|}
-comment|/** 	 * Constructs a new VerifierConstraintViolationException with the specified error message and cause 	 */
+comment|/**      * Constructs a new VerifierConstraintViolationException with the specified error message and cause      */
 name|VerifierConstraintViolatedException
 parameter_list|(
 name|String
@@ -92,7 +92,7 @@ operator|=
 name|message
 expr_stmt|;
 block|}
-comment|/** Extends the error message with a string before ("pre") and after ("post") the 	    'old' error message. All of these three strings are allowed to be null, and null 	    is always replaced by the empty string (""). In particular, after invoking this 	    method, the error message of this object can no longer be null. 	*/
+comment|/** Extends the error message with a string before ("pre") and after ("post") the         'old' error message. All of these three strings are allowed to be null, and null         is always replaced by the empty string (""). In particular, after invoking this         method, the error message of this object can no longer be null.     */
 specifier|public
 name|void
 name|extendMessage
@@ -149,7 +149,7 @@ operator|+
 name|post
 expr_stmt|;
 block|}
-comment|/** 	 * Returns the error message string of this VerifierConstraintViolatedException object. 	 * @return the error message string of this VerifierConstraintViolatedException. 	 */
+comment|/**      * Returns the error message string of this VerifierConstraintViolatedException object.      * @return the error message string of this VerifierConstraintViolatedException.      */
 annotation|@
 name|Override
 specifier|public

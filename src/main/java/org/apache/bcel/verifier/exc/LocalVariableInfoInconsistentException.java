@@ -37,7 +37,7 @@ init|=
 operator|-
 literal|2833180480144304190L
 decl_stmt|;
-comment|/** 	 * Constructs a new LocalVariableInfoInconsistentException with null as its error message string. 	 */
+comment|/**      * Constructs a new LocalVariableInfoInconsistentException with null as its error message string.      */
 specifier|public
 name|LocalVariableInfoInconsistentException
 parameter_list|()
@@ -46,7 +46,7 @@ name|super
 argument_list|()
 expr_stmt|;
 block|}
-comment|/** 	 * Constructs a new LocalVariableInfoInconsistentException with the specified error message. 	 */
+comment|/**      * Constructs a new LocalVariableInfoInconsistentException with the specified error message.      */
 specifier|public
 name|LocalVariableInfoInconsistentException
 parameter_list|(

@@ -37,7 +37,7 @@ name|serialVersionUID
 init|=
 literal|8012776320318623652L
 decl_stmt|;
-comment|/** 	 * Constructs a new VerificationException with null as its error message string. 	 */
+comment|/**      * Constructs a new VerificationException with null as its error message string.      */
 name|VerificationException
 parameter_list|()
 block|{
@@ -45,7 +45,7 @@ name|super
 argument_list|()
 expr_stmt|;
 block|}
-comment|/** 	 * Constructs a new VerificationException with the specified error message. 	 */
+comment|/**      * Constructs a new VerificationException with the specified error message.      */
 name|VerificationException
 parameter_list|(
 name|String
@@ -58,7 +58,7 @@ name|message
 argument_list|)
 expr_stmt|;
 block|}
-comment|/** 	 * Constructs a new VerificationException with the specified error message and exception 	 */
+comment|/**      * Constructs a new VerificationException with the specified error message and exception      */
 name|VerificationException
 parameter_list|(
 name|String

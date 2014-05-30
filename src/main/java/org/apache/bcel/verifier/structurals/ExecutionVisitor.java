@@ -152,27 +152,27 @@ name|ExecutionVisitor
 extends|extends
 name|EmptyVisitor
 block|{
-comment|/** 	 * The executionframe we're operating on. 	 */
+comment|/**      * The executionframe we're operating on.      */
 specifier|private
 name|Frame
 name|frame
 init|=
 literal|null
 decl_stmt|;
-comment|/** 	 * The ConstantPoolGen we're working with. 	 * @see #setConstantPoolGen(ConstantPoolGen) 	 */
+comment|/**      * The ConstantPoolGen we're working with.      * @see #setConstantPoolGen(ConstantPoolGen)      */
 specifier|private
 name|ConstantPoolGen
 name|cpg
 init|=
 literal|null
 decl_stmt|;
-comment|/** 	 * Constructor. Constructs a new instance of this class. 	 */
+comment|/**      * Constructor. Constructs a new instance of this class.      */
 specifier|public
 name|ExecutionVisitor
 parameter_list|()
 block|{
 block|}
-comment|/** 	 * The OperandStack from the current Frame we're operating on. 	 * @see #setFrame(Frame) 	 */
+comment|/**      * The OperandStack from the current Frame we're operating on.      * @see #setFrame(Frame)      */
 specifier|private
 name|OperandStack
 name|stack
@@ -185,7 +185,7 @@ name|getStack
 argument_list|()
 return|;
 block|}
-comment|/** 	 * The LocalVariables from the current Frame we're operating on. 	 * @see #setFrame(Frame) 	 */
+comment|/**      * The LocalVariables from the current Frame we're operating on.      * @see #setFrame(Frame)      */
 specifier|private
 name|LocalVariables
 name|locals
@@ -198,7 +198,7 @@ name|getLocals
 argument_list|()
 return|;
 block|}
-comment|/** 	 * Sets the ConstantPoolGen needed for symbolic execution. 	 */
+comment|/**      * Sets the ConstantPoolGen needed for symbolic execution.      */
 specifier|public
 name|void
 name|setConstantPoolGen
@@ -214,7 +214,7 @@ operator|=
 name|cpg
 expr_stmt|;
 block|}
-comment|/** 	 * The only method granting access to the single instance of 	 * the ExecutionVisitor class. Before actively using this 	 * instance,<B>SET THE ConstantPoolGen FIRST</B>. 	 * @see #setConstantPoolGen(ConstantPoolGen) 	 */
+comment|/**      * The only method granting access to the single instance of      * the ExecutionVisitor class. Before actively using this      * instance,<B>SET THE ConstantPoolGen FIRST</B>.      * @see #setConstantPoolGen(ConstantPoolGen)      */
 specifier|public
 name|void
 name|setFrame
@@ -505,7 +505,7 @@ name|pop
 argument_list|()
 argument_list|)
 expr_stmt|;
-comment|//System.err.println("TODO-DEBUG:	set LV '"+o.getIndex()+"' to '"+locals().get(o.getIndex())+"'.");
+comment|//System.err.println("TODO-DEBUG:    set LV '"+o.getIndex()+"' to '"+locals().get(o.getIndex())+"'.");
 block|}
 comment|/** Symbolically executes the corresponding Java Virtual Machine instruction. */
 annotation|@

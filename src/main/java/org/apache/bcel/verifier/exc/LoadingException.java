@@ -37,7 +37,7 @@ init|=
 operator|-
 literal|7911901533049018823L
 decl_stmt|;
-comment|/** 	 * Constructs a new LoadingException with null as its error message string. 	 */
+comment|/**      * Constructs a new LoadingException with null as its error message string.      */
 specifier|public
 name|LoadingException
 parameter_list|()
@@ -46,7 +46,7 @@ name|super
 argument_list|()
 expr_stmt|;
 block|}
-comment|/** 	 * Constructs a new LoadingException with the specified error message. 	 */
+comment|/**      * Constructs a new LoadingException with the specified error message.      */
 specifier|public
 name|LoadingException
 parameter_list|(

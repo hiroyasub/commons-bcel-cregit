@@ -701,7 +701,7 @@ return|return
 name|c
 return|;
 block|}
-comment|/** 	 * Ensure we have unpacked any attributes that contain annotations. 	 * We don't remove these annotation attributes from the attributes list, they 	 * remain there. 	 */
+comment|/**      * Ensure we have unpacked any attributes that contain annotations.      * We don't remove these annotation attributes from the attributes list, they      * remain there.      */
 specifier|private
 name|void
 name|ensureAnnotationsUpToDate
@@ -884,7 +884,7 @@ operator|=
 name|newAnnotations
 expr_stmt|;
 block|}
-comment|/** 	 * Hunts for a signature attribute on the member and returns its contents.  So where the 'regular' signature 	 * may be (Ljava/util/Vector;)V the signature attribute may in fact say 'Ljava/lang/Vector<Ljava/lang/String>;' 	 * Coded for performance - searches for the attribute only when requested - only searches for it once. 	 */
+comment|/**      * Hunts for a signature attribute on the member and returns its contents.  So where the 'regular' signature      * may be (Ljava/util/Vector;)V the signature attribute may in fact say 'Ljava/lang/Vector<Ljava/lang/String>;'      * Coded for performance - searches for the attribute only when requested - only searches for it once.      */
 specifier|public
 specifier|final
 name|String

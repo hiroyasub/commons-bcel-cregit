@@ -149,7 +149,7 @@ name|idx
 decl_stmt|;
 comment|// ctors for each supported type... type could be inferred but for now lets
 comment|// force it to be passed
-comment|/** 	 * Protected ctor used for deserialization, doesn't *put* an entry in the 	 * constant pool, assumes the one at the supplied index is correct. 	 */
+comment|/**      * Protected ctor used for deserialization, doesn't *put* an entry in the      * constant pool, assumes the one at the supplied index is correct.      */
 specifier|protected
 name|SimpleElementValueGen
 parameter_list|(
@@ -465,7 +465,7 @@ name|value
 argument_list|)
 expr_stmt|;
 block|}
-comment|/** 	 * The boolean controls whether we copy info from the 'old' constant pool to 	 * the 'new'. You need to use this ctor if the annotation is being copied 	 * from one file to another. 	 */
+comment|/**      * The boolean controls whether we copy info from the 'old' constant pool to      * the 'new'. You need to use this ctor if the annotation is being copied      * from one file to another.      */
 specifier|public
 name|SimpleElementValueGen
 parameter_list|(
@@ -692,7 +692,7 @@ throw|;
 block|}
 block|}
 block|}
-comment|/** 	 * Return immutable variant 	 */
+comment|/**      * Return immutable variant      */
 annotation|@
 name|Override
 specifier|public

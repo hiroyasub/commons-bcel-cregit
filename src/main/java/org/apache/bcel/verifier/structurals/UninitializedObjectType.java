@@ -111,7 +111,7 @@ operator|=
 name|t
 expr_stmt|;
 block|}
-comment|/** 	 * Returns the ObjectType of the same class as the one of the uninitialized object 	 * represented by this UninitializedObjectType instance. 	 */
+comment|/**      * Returns the ObjectType of the same class as the one of the uninitialized object      * represented by this UninitializedObjectType instance.      */
 specifier|public
 name|ObjectType
 name|getInitialized
@@ -136,7 +136,7 @@ name|hashCode
 argument_list|()
 return|;
 block|}
-comment|/** 	 * Returns true on equality of this and o. 	 * Equality means the ObjectType instances of "initialized" 	 * equal one another in this and the o instance. 	 * 	 */
+comment|/**      * Returns true on equality of this and o.      * Equality means the ObjectType instances of "initialized"      * equal one another in this and the o instance.      *      */
 annotation|@
 name|Override
 specifier|public

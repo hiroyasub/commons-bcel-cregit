@@ -130,7 +130,7 @@ specifier|private
 name|int
 name|maxStack
 decl_stmt|;
-comment|/** 	 * Creates an empty stack with a maximum of maxStack slots. 	 */
+comment|/**      * Creates an empty stack with a maximum of maxStack slots.      */
 specifier|public
 name|OperandStack
 parameter_list|(
@@ -145,7 +145,7 @@ operator|=
 name|maxStack
 expr_stmt|;
 block|}
-comment|/** 	 * Creates an otherwise empty stack with a maximum of maxStack slots and 	 * the ObjectType 'obj' at the top. 	 */
+comment|/**      * Creates an otherwise empty stack with a maximum of maxStack slots and      * the ObjectType 'obj' at the top.      */
 specifier|public
 name|OperandStack
 parameter_list|(
@@ -170,7 +170,7 @@ name|obj
 argument_list|)
 expr_stmt|;
 block|}
-comment|/** 	 * Returns a deep copy of this object; that means, the clone operates 	 * on a new stack. However, the Type objects on the stack are 	 * shared. 	 */
+comment|/**      * Returns a deep copy of this object; that means, the clone operates      * on a new stack. However, the Type objects on the stack are      * shared.      */
 annotation|@
 name|Override
 specifier|protected
@@ -210,7 +210,7 @@ return|return
 name|newstack
 return|;
 block|}
-comment|/** 	 * Clears the stack. 	 */
+comment|/**      * Clears the stack.      */
 specifier|public
 name|void
 name|clear
@@ -241,7 +241,7 @@ name|hashCode
 argument_list|()
 return|;
 block|}
-comment|/** 	 * Returns true if and only if this OperandStack 	 * equals another, meaning equal lengths and equal 	 * objects on the stacks. 	 */
+comment|/**      * Returns true if and only if this OperandStack      * equals another, meaning equal lengths and equal      * objects on the stacks.      */
 annotation|@
 name|Override
 specifier|public
@@ -287,7 +287,7 @@ name|stack
 argument_list|)
 return|;
 block|}
-comment|/** 	 * Returns a (typed!) clone of this. 	 * 	 * @see #clone() 	 */
+comment|/**      * Returns a (typed!) clone of this.      *      * @see #clone()      */
 specifier|public
 name|OperandStack
 name|getClone
@@ -303,7 +303,7 @@ name|clone
 argument_list|()
 return|;
 block|}
-comment|/** 	 * Returns true IFF this OperandStack is empty.    */
+comment|/**      * Returns true IFF this OperandStack is empty.    */
 specifier|public
 name|boolean
 name|isEmpty
@@ -316,7 +316,7 @@ name|isEmpty
 argument_list|()
 return|;
 block|}
-comment|/** 	 * Returns the number of stack slots this stack can hold. 	 */
+comment|/**      * Returns the number of stack slots this stack can hold.      */
 specifier|public
 name|int
 name|maxStack
@@ -328,7 +328,7 @@ operator|.
 name|maxStack
 return|;
 block|}
-comment|/** 	 * Returns the element on top of the stack. The element is not popped off the stack! 	 */
+comment|/**      * Returns the element on top of the stack. The element is not popped off the stack!      */
 specifier|public
 name|Type
 name|peek
@@ -364,7 +364,7 @@ literal|1
 argument_list|)
 return|;
 block|}
-comment|/** 	 * Returns the element on top of the stack. The element is popped off the stack. 	 */
+comment|/**      * Returns the element on top of the stack. The element is popped off the stack.      */
 specifier|public
 name|Type
 name|pop
@@ -387,7 +387,7 @@ return|return
 name|e
 return|;
 block|}
-comment|/** 	 * Pops i elements off the stack. ALWAYS RETURNS "null"!!! 	 */
+comment|/**      * Pops i elements off the stack. ALWAYS RETURNS "null"!!!      */
 specifier|public
 name|Type
 name|pop
@@ -419,7 +419,7 @@ return|return
 literal|null
 return|;
 block|}
-comment|/** 	 * Pushes a Type object onto the stack. 	 */
+comment|/**      * Pushes a Type object onto the stack.      */
 specifier|public
 name|void
 name|push
@@ -508,7 +508,7 @@ name|type
 argument_list|)
 expr_stmt|;
 block|}
-comment|/** 	 * Returns the size of this OperandStack; that means, how many Type objects there are. 	 */
+comment|/**      * Returns the size of this OperandStack; that means, how many Type objects there are.      */
 specifier|public
 name|int
 name|size
@@ -521,13 +521,13 @@ name|size
 argument_list|()
 return|;
 block|}
-comment|/** 	 * Returns the number of stack slots used. 	 * @see #maxStack() 	 */
+comment|/**      * Returns the number of stack slots used.      * @see #maxStack()      */
 specifier|public
 name|int
 name|slotsUsed
 parameter_list|()
 block|{
-comment|/*  XXX change this to a better implementation using a variable 		    that keeps track of the actual slotsUsed()-value monitoring 		    all push()es and pop()s. 		*/
+comment|/*  XXX change this to a better implementation using a variable             that keeps track of the actual slotsUsed()-value monitoring             all push()es and pop()s.         */
 name|int
 name|slots
 init|=
@@ -566,7 +566,7 @@ return|return
 name|slots
 return|;
 block|}
-comment|/** 	 * Returns a String representation of this OperandStack instance. 	 */
+comment|/**      * Returns a String representation of this OperandStack instance.      */
 annotation|@
 name|Override
 specifier|public
@@ -683,7 +683,7 @@ name|toString
 argument_list|()
 return|;
 block|}
-comment|/** 	 * Merges another stack state into this instance's stack state. 	 * See the Java Virtual Machine Specification, Second Edition, page 146: 4.9.2 	 * for details. 	 */
+comment|/**      * Merges another stack state into this instance's stack state.      * See the Java Virtual Machine Specification, Second Edition, page 146: 4.9.2      * for details.      */
 specifier|public
 name|void
 name|merge
@@ -1036,7 +1036,7 @@ argument_list|)
 throw|;
 block|}
 block|}
-comment|/** 	 * Replaces all occurences of u in this OperandStack instance 	 * with an "initialized" ObjectType. 	 */
+comment|/**      * Replaces all occurences of u in this OperandStack instance      * with an "initialized" ObjectType.      */
 specifier|public
 name|void
 name|initializeObject

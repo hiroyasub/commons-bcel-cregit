@@ -110,7 +110,7 @@ name|EnclosingMethodAttributeTestCase
 extends|extends
 name|AbstractTestCase
 block|{
-comment|/** 	 * Verify for an inner class declared inside the 'main' method that the 	 * enclosing method attribute is set correctly. 	 */
+comment|/**      * Verify for an inner class declared inside the 'main' method that the      * enclosing method attribute is set correctly.      */
 specifier|public
 name|void
 name|testCheckMethodLevelNamedInnerClass
@@ -226,7 +226,7 @@ argument_list|)
 argument_list|)
 expr_stmt|;
 block|}
-comment|/** 	 * Verify for an inner class declared at the type level that the 	 * EnclosingMethod attribute is set correctly (i.e. to a null value) 	 */
+comment|/**      * Verify for an inner class declared at the type level that the      * EnclosingMethod attribute is set correctly (i.e. to a null value)      */
 specifier|public
 name|void
 name|testCheckClassLevelNamedInnerClass
@@ -332,7 +332,7 @@ argument_list|)
 argument_list|)
 expr_stmt|;
 block|}
-comment|/** 	 * Check that we can save and load the attribute correctly. 	 */
+comment|/**      * Check that we can save and load the attribute correctly.      */
 specifier|public
 name|void
 name|testAttributeSerializtion

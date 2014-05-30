@@ -1805,7 +1805,7 @@ name|toString
 argument_list|()
 return|;
 block|}
-comment|/* 	 * Internal debugging routines. 	 */
+comment|/*      * Internal debugging routines.      */
 comment|//    private static final String pattern2string( String pattern ) {
 comment|//        return pattern2string(pattern, true);
 comment|//    }
