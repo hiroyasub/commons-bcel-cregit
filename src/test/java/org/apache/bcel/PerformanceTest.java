@@ -674,6 +674,11 @@ argument_list|()
 expr_stmt|;
 block|}
 block|}
+name|jar
+operator|.
+name|close
+argument_list|()
+expr_stmt|;
 name|total
 operator|.
 name|stop
