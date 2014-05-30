@@ -5336,6 +5336,11 @@ name|in
 argument_list|)
 expr_stmt|;
 block|}
+name|jw
+operator|.
+name|close
+argument_list|()
+expr_stmt|;
 return|return
 name|caw
 operator|.
