@@ -159,14 +159,6 @@ name|String
 name|s
 parameter_list|)
 block|{
-name|int
-name|size
-init|=
-name|listeners
-operator|.
-name|size
-argument_list|()
-decl_stmt|;
 name|Verifier
 index|[]
 name|verifiers

@@ -2199,13 +2199,6 @@ operator|.
 name|getExceptionTable
 argument_list|()
 decl_stmt|;
-name|int
-name|len
-init|=
-name|ce
-operator|.
-name|length
-decl_stmt|;
 for|for
 control|(
 name|CodeException
@@ -2337,10 +2330,6 @@ block|}
 comment|// Get target addresses from GOTO, JSR, TABLESWITCH, etc.
 for|for
 control|(
-name|int
-name|i
-init|=
-literal|0
 init|;
 name|bytes
 operator|.
@@ -2349,8 +2338,6 @@ argument_list|()
 operator|>
 literal|0
 condition|;
-name|i
-operator|++
 control|)
 block|{
 name|opcode
@@ -3194,10 +3181,6 @@ argument_list|)
 expr_stmt|;
 for|for
 control|(
-name|int
-name|i
-init|=
-literal|0
 init|;
 name|stream
 operator|.
@@ -3206,8 +3189,6 @@ argument_list|()
 operator|>
 literal|0
 condition|;
-name|i
-operator|++
 control|)
 block|{
 name|int

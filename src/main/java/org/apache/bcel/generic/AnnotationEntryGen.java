@@ -234,13 +234,6 @@ name|ElementValuePairGen
 argument_list|>
 argument_list|()
 decl_stmt|;
-name|int
-name|l
-init|=
-name|in
-operator|.
-name|length
-decl_stmt|;
 for|for
 control|(
 name|ElementValuePair
