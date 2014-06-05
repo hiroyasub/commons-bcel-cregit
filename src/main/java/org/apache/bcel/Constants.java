@@ -6823,6 +6823,8 @@ init|=
 literal|21
 decl_stmt|;
 comment|/** @deprecated Use {@link #ATTR_RUNTIME_VISIBLE_ANNOTATIONS} instead */
+annotation|@
+name|Deprecated
 specifier|public
 specifier|static
 specifier|final
@@ -6832,6 +6834,8 @@ init|=
 name|ATTR_RUNTIME_VISIBLE_ANNOTATIONS
 decl_stmt|;
 comment|/** @deprecated Use {@link #ATTR_RUNTIME_INVISIBLE_ANNOTATIONS} instead */
+annotation|@
+name|Deprecated
 specifier|public
 specifier|static
 specifier|final
@@ -6841,6 +6845,8 @@ init|=
 name|ATTR_RUNTIME_INVISIBLE_ANNOTATIONS
 decl_stmt|;
 comment|/** @deprecated Use {@link #ATTR_RUNTIME_VISIBLE_PARAMETER_ANNOTATIONS} instead */
+annotation|@
+name|Deprecated
 specifier|public
 specifier|static
 specifier|final
@@ -6850,6 +6856,8 @@ init|=
 name|ATTR_RUNTIME_VISIBLE_PARAMETER_ANNOTATIONS
 decl_stmt|;
 comment|/** @deprecated Use {@link #ATTR_RUNTIME_INVISIBLE_PARAMETER_ANNOTATIONS} instead */
+annotation|@
+name|Deprecated
 specifier|public
 specifier|static
 specifier|final

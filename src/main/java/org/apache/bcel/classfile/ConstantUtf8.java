@@ -586,6 +586,12 @@ name|bytes
 return|;
 block|}
 comment|/**      * @param bytes the raw bytes of this Utf-8      * @deprecated      */
+annotation|@
+name|java
+operator|.
+name|lang
+operator|.
+name|Deprecated
 specifier|public
 specifier|final
 name|void
