@@ -333,6 +333,15 @@ argument_list|,
 literal|true
 argument_list|)
 block|{
+specifier|private
+specifier|static
+specifier|final
+name|long
+name|serialVersionUID
+init|=
+operator|-
+literal|8506975356158971766L
+decl_stmt|;
 annotation|@
 name|Override
 specifier|protected
