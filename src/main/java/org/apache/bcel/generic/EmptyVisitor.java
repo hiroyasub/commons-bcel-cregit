@@ -25,7 +25,7 @@ specifier|abstract
 class|class
 name|EmptyVisitor
 implements|implements
-name|VisitorSupportsInvokeDynamic
+name|Visitor
 block|{
 specifier|public
 name|void
