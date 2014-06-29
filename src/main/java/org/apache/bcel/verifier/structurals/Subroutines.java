@@ -1945,8 +1945,6 @@ literal|"' is part of more than one subroutine (or of the top level and a subrou
 argument_list|)
 throw|;
 block|}
-else|else
-block|{
 name|instructions_assigned
 operator|.
 name|add
@@ -1954,7 +1952,6 @@ argument_list|(
 name|element
 argument_list|)
 expr_stmt|;
-block|}
 block|}
 block|}
 if|if
