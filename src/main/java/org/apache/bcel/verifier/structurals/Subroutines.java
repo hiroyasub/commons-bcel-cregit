@@ -1365,13 +1365,10 @@ literal|"localVariable set twice."
 argument_list|)
 throw|;
 block|}
-else|else
-block|{
 name|localVariable
 operator|=
 name|i
 expr_stmt|;
-block|}
 block|}
 comment|/**          * The default constructor.          */
 specifier|public
