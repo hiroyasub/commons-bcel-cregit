@@ -975,12 +975,9 @@ argument_list|)
 expr_stmt|;
 break|break;
 block|}
-else|else
-block|{
 name|skip_jsr
 operator|--
 expr_stmt|;
-block|}
 block|}
 if|if
 condition|(
