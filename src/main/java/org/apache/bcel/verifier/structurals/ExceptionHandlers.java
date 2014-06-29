@@ -294,8 +294,6 @@ literal|0
 index|]
 return|;
 block|}
-else|else
-block|{
 return|return
 name|hsSet
 operator|.
@@ -311,7 +309,6 @@ argument_list|()
 index|]
 argument_list|)
 return|;
-block|}
 block|}
 block|}
 end_class
