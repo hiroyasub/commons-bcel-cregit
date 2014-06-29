@@ -270,7 +270,7 @@ name|Set
 argument_list|<
 name|ExceptionHandler
 argument_list|>
-name|hs
+name|hsSet
 init|=
 name|exceptionhandlers
 operator|.
@@ -281,7 +281,7 @@ argument_list|)
 decl_stmt|;
 if|if
 condition|(
-name|hs
+name|hsSet
 operator|==
 literal|null
 condition|)
@@ -297,14 +297,14 @@ block|}
 else|else
 block|{
 return|return
-name|hs
+name|hsSet
 operator|.
 name|toArray
 argument_list|(
 operator|new
 name|ExceptionHandler
 index|[
-name|hs
+name|hsSet
 operator|.
 name|size
 argument_list|()
