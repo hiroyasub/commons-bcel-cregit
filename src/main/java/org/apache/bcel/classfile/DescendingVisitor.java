@@ -107,8 +107,6 @@ return|return
 literal|null
 return|;
 block|}
-else|else
-block|{
 return|return
 name|stack
 operator|.
@@ -124,7 +122,6 @@ operator|)
 argument_list|)
 return|;
 comment|// size - 1 == current
-block|}
 block|}
 comment|/**      * @return current object      */
 specifier|public
