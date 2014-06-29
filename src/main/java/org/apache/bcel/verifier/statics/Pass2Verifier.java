@@ -921,14 +921,11 @@ return|return
 name|vr
 return|;
 block|}
-else|else
-block|{
 return|return
 name|VerificationResult
 operator|.
 name|VR_NOTYET
 return|;
-block|}
 block|}
 catch|catch
 parameter_list|(
@@ -1322,8 +1319,6 @@ literal|"'."
 argument_list|)
 throw|;
 block|}
-else|else
-block|{
 name|addMessage
 argument_list|(
 literal|"Method '"
@@ -1349,7 +1344,6 @@ operator|+
 literal|"'. This is okay, as the original definition was private; however this constraint leverage was introduced by JLS 8.4.6 (not vmspec2) and the behaviour of the Sun verifiers."
 argument_list|)
 expr_stmt|;
-block|}
 block|}
 else|else
 block|{
@@ -5456,8 +5450,6 @@ argument_list|)
 expr_stmt|;
 return|return;
 block|}
-else|else
-block|{
 name|m
 operator|=
 operator|(
@@ -5470,7 +5462,6 @@ argument_list|()
 expr_stmt|;
 comment|// we can assume this method was visited before;
 comment|// i.e. the data consistency was verified.
-block|}
 if|if
 condition|(
 name|obj
@@ -5660,8 +5651,6 @@ name|vr
 argument_list|)
 throw|;
 block|}
-else|else
-block|{
 comment|// We cannot safely trust any other "instanceof" mechanism. We need to transitively verify
 comment|// the ancestor hierarchy.
 name|JavaClass
@@ -5788,8 +5777,6 @@ name|vr
 argument_list|)
 throw|;
 block|}
-else|else
-block|{
 name|e
 operator|=
 name|Repository
@@ -5802,7 +5789,6 @@ name|getSuperclassName
 argument_list|()
 argument_list|)
 expr_stmt|;
-block|}
 block|}
 if|if
 condition|(
@@ -5847,7 +5833,6 @@ operator|+
 literal|"'."
 argument_list|)
 throw|;
-block|}
 block|}
 block|}
 block|}
