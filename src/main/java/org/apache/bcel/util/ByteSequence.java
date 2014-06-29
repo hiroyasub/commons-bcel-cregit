@@ -49,7 +49,7 @@ name|DataInputStream
 block|{
 specifier|private
 name|ByteArrayStream
-name|byte_stream
+name|byteStream
 decl_stmt|;
 specifier|public
 name|ByteSequence
@@ -68,7 +68,7 @@ name|bytes
 argument_list|)
 argument_list|)
 expr_stmt|;
-name|byte_stream
+name|byteStream
 operator|=
 operator|(
 name|ByteArrayStream
@@ -83,7 +83,7 @@ name|getIndex
 parameter_list|()
 block|{
 return|return
-name|byte_stream
+name|byteStream
 operator|.
 name|getPosition
 argument_list|()
@@ -94,7 +94,7 @@ name|void
 name|unreadByte
 parameter_list|()
 block|{
-name|byte_stream
+name|byteStream
 operator|.
 name|unreadByte
 argument_list|()
