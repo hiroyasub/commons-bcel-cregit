@@ -372,8 +372,6 @@ operator|.
 name|VR_OK
 return|;
 block|}
-else|else
-block|{
 comment|//TODO: Maybe change Repository's behaviour to throw a LoadingException instead of just returning "null"
 comment|//      if a class file cannot be found or in another way be looked up.
 return|return
@@ -387,7 +385,6 @@ argument_list|,
 literal|"Repository.lookup() failed. FILE NOT FOUND?"
 argument_list|)
 return|;
-block|}
 block|}
 comment|/**      * Currently this returns an empty array of String.      * One could parse the error messages of BCEL      * (written to java.lang.System.err) when loading      * a class file such as detecting unknown attributes      * or trailing garbage at the end of a class file.      * However, Markus Dahm does not like the idea so this      * method is currently useless and therefore marked as      *<B>TODO</B>.      */
 annotation|@
