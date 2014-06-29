@@ -1665,13 +1665,6 @@ name|LocalVariableTable
 operator|)
 name|att
 decl_stmt|;
-if|if
-condition|(
-name|lvt
-operator|!=
-literal|null
-condition|)
-block|{
 name|LocalVariable
 index|[]
 name|localVariables
@@ -1788,7 +1781,6 @@ operator|+
 literal|"') that does not exist."
 argument_list|)
 throw|;
-block|}
 block|}
 block|}
 block|}
