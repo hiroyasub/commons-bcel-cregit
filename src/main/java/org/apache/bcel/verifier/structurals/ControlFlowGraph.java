@@ -1426,8 +1426,6 @@ return|return
 name|ret
 return|;
 block|}
-else|else
-block|{
 specifier|final
 name|InstructionHandle
 index|[]
@@ -1468,7 +1466,6 @@ expr_stmt|;
 return|return
 name|pair
 return|;
-block|}
 block|}
 comment|// default case: Fall through.
 name|single
