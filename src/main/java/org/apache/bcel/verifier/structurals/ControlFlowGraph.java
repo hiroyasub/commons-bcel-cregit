@@ -897,8 +897,9 @@ throw|throw
 name|sce
 throw|;
 block|}
-if|if
-condition|(
+return|return
+operator|!
+operator|(
 name|oldstack
 operator|.
 name|equals
@@ -918,18 +919,8 @@ operator|.
 name|getLocals
 argument_list|()
 argument_list|)
-condition|)
-block|{
-return|return
-literal|false
+operator|)
 return|;
-block|}
-else|else
-block|{
-return|return
-literal|true
-return|;
-block|}
 block|}
 comment|/**          * Returns the control flow execution chain. This is built          * while execute(Frame, ArrayList)-ing the code represented          * by the surrounding ControlFlowGraph.          */
 specifier|private
