@@ -706,8 +706,6 @@ literal|"Set the localVariable first!"
 argument_list|)
 throw|;
 block|}
-else|else
-block|{
 comment|// Something is wrong when an ASTORE is targeted that does not operate on the same local variable than the rest of the
 comment|// JsrInstruction-targets and the RET.
 comment|// (We don't know out leader here so we cannot check if we're really targeted!)
@@ -749,7 +747,6 @@ argument_list|(
 literal|"Setting a wrong JsrInstruction."
 argument_list|)
 throw|;
-block|}
 block|}
 name|theJSRs
 operator|.
