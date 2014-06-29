@@ -1656,8 +1656,6 @@ condition|)
 block|{
 return|return;
 block|}
-else|else
-block|{
 if|if
 condition|(
 operator|!
@@ -1710,7 +1708,6 @@ comment|// "wider cast object type" created during verification.
 comment|//if (! (objectref.isAssignmentCompatibleWith(mg.getType())) ){
 comment|//    constraintViolated(o, "Type on stack top which should be returned is a '"+stack().peek()+"' which is not assignment compatible with the return type of this method, '"+mg.getType()+"'.");
 comment|//}
-block|}
 block|}
 else|else
 block|{
@@ -4254,8 +4251,6 @@ block|{
 return|return;
 comment|// Form 2, okay.
 block|}
-else|else
-block|{
 comment|//stack().peek(1).getSize == 1.
 if|if
 condition|(
@@ -4305,7 +4300,6 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-block|}
 comment|/**      * Ensures the specific preconditions of the said instruction.      */
 annotation|@
 name|Override
@@ -4334,8 +4328,6 @@ block|{
 return|return;
 comment|// Form 2, okay.
 block|}
-else|else
-block|{
 comment|//stack().peek().getSize() == 1.
 if|if
 condition|(
@@ -4383,7 +4375,6 @@ operator|+
 literal|"'."
 argument_list|)
 expr_stmt|;
-block|}
 block|}
 block|}
 comment|/**      * Ensures the specific preconditions of the said instruction.      */
@@ -4609,8 +4600,6 @@ block|{
 return|return;
 comment|// Form 4
 block|}
-else|else
-block|{
 comment|// stack top size is 2, next-to-top's size is 1
 if|if
 condition|(
@@ -4665,7 +4654,6 @@ return|return;
 comment|// Form 2
 block|}
 block|}
-block|}
 else|else
 block|{
 comment|// stack top is of size 1
@@ -4704,8 +4692,6 @@ block|{
 return|return;
 comment|// Form 3
 block|}
-else|else
-block|{
 if|if
 condition|(
 name|stack
@@ -4724,7 +4710,6 @@ condition|)
 block|{
 return|return;
 comment|// Form 1
-block|}
 block|}
 block|}
 block|}
