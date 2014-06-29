@@ -126,11 +126,11 @@ name|int
 name|getPosition
 parameter_list|()
 block|{
+comment|// pos is protected in ByteArrayInputStream
 return|return
 name|pos
 return|;
 block|}
-comment|// is protected in ByteArrayInputStream
 specifier|final
 name|void
 name|unreadByte
