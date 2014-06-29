@@ -1439,15 +1439,12 @@ return|return
 name|vr
 return|;
 block|}
-else|else
-block|{
 comment|//did not pass Pass 2.
 return|return
 name|VerificationResult
 operator|.
 name|VR_NOTYET
 return|;
-block|}
 block|}
 catch|catch
 parameter_list|(
