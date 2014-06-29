@@ -894,8 +894,6 @@ operator|+
 literal|"</FONT>"
 return|;
 block|}
-else|else
-block|{
 return|return
 literal|"<A HREF=\""
 operator|+
@@ -907,7 +905,6 @@ name|short_type
 operator|+
 literal|"</A>"
 return|;
-block|}
 block|}
 specifier|static
 name|String
