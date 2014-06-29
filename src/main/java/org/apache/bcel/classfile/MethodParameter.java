@@ -171,8 +171,6 @@ return|return
 literal|null
 return|;
 block|}
-else|else
-block|{
 return|return
 operator|(
 operator|(
@@ -193,7 +191,6 @@ operator|.
 name|getBytes
 argument_list|()
 return|;
-block|}
 block|}
 specifier|public
 name|int
