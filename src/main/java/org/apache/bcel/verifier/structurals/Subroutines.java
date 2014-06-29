@@ -549,13 +549,10 @@ literal|"'."
 argument_list|)
 throw|;
 block|}
-else|else
-block|{
 name|ret
 operator|=
 name|actual
 expr_stmt|;
-block|}
 block|}
 block|}
 if|if
