@@ -4004,7 +4004,7 @@ operator|=
 literal|0
 expr_stmt|;
 block|}
-comment|/**      * Delete contents of list. Provides besser memory utilization,      * because the system then may reuse the instruction handles. This      * method is typically called right after      *<href="MethodGen.html#getMethod()">MethodGen.getMethod()</a>.      */
+comment|/**      * Delete contents of list. Provides besser memory utilization,      * because the system then may reuse the instruction handles. This      * method is typically called right after {@link MethodGen#getMethod()}.      */
 specifier|public
 name|void
 name|dispose

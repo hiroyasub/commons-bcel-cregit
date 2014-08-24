@@ -16,7 +16,7 @@ package|;
 end_package
 
 begin_comment
-comment|/**   * LLOAD - Load long from local variable  *<PRE>Stack ... -&GT; ..., result.word1, result.word2</PRE>  *  * @version $Id$  * @author<A HREF="mailto:m.dahm@gmx.de">M. Dahm</A>  */
+comment|/**   * LLOAD - Load long from local variable  *<PRE>Stack ... -&gt; ..., result.word1, result.word2</PRE>  *  * @version $Id$  * @author<A HREF="mailto:m.dahm@gmx.de">M. Dahm</A>  */
 end_comment
 
 begin_class

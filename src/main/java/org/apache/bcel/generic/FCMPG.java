@@ -16,7 +16,7 @@ package|;
 end_package
 
 begin_comment
-comment|/**   * FCMPG - Compare floats: value1> value2  *<PRE>Stack: ..., value1, value2 -&gt; ..., result</PRE>  *  * @version $Id$  * @author<A HREF="mailto:m.dahm@gmx.de">M. Dahm</A>  */
+comment|/**   * FCMPG - Compare floats: value1&gt; value2  *<PRE>Stack: ..., value1, value2 -&gt; ..., result</PRE>  *  * @version $Id$  * @author<A HREF="mailto:m.dahm@gmx.de">M. Dahm</A>  */
 end_comment
 
 begin_class

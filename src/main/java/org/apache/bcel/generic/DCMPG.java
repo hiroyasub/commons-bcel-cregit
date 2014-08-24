@@ -16,7 +16,7 @@ package|;
 end_package
 
 begin_comment
-comment|/**   * DCMPG - Compare doubles: value1> value2  *<PRE>Stack: ..., value1.word1, value1.word2, value2.word1, value2.word2 -&gt;</PRE>  *        ..., result  *  * @version $Id$  * @author<A HREF="mailto:m.dahm@gmx.de">M. Dahm</A>  */
+comment|/**   * DCMPG - Compare doubles: value1&gt; value2  *<PRE>Stack: ..., value1.word1, value1.word2, value2.word1, value2.word2 -&gt; ..., result</PRE>  *  * @version $Id$  * @author<A HREF="mailto:m.dahm@gmx.de">M. Dahm</A>  */
 end_comment
 
 begin_class
