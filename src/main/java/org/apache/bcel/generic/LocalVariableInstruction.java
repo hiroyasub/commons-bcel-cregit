@@ -338,7 +338,7 @@ name|n
 return|;
 block|}
 block|}
-comment|/**      * Read needed data (e.g. index) from file.      * PRE: (ILOAD<= tag<= ALOAD_3) || (ISTORE<= tag<= ASTORE_3)      */
+comment|/**      * Read needed data (e.g. index) from file.      *<pre>      * (ILOAD&lt;= tag&lt;= ALOAD_3) || (ISTORE&lt;= tag&lt;= ASTORE_3)      *</pre>      */
 annotation|@
 name|Override
 specifier|protected

@@ -1531,7 +1531,7 @@ argument_list|)
 throw|;
 block|}
 block|}
-comment|/**      * Create binary operation for simple basic types, such as int and float.      *      * @param op operation, such as "+", "*", "<<", etc.      */
+comment|/**      * Create binary operation for simple basic types, such as int and float.      *      * @param op operation, such as "+", "*", "&lt;&lt;", etc.      */
 specifier|public
 specifier|static
 name|ArithmeticInstruction

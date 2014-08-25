@@ -79,17 +79,17 @@ name|serialVersionUID
 init|=
 literal|169537400672820016L
 decl_stmt|;
+comment|/** Program Counter (PC) corresponds to line */
 specifier|private
 name|short
 name|start_pc
 decl_stmt|;
-comment|// Program Counter (PC) corresponds to line
+comment|/** number in source file */
 specifier|private
 name|short
 name|line_number
 decl_stmt|;
-comment|// number in source file
-comment|/**      * Initialize from another object.      */
+comment|/**      * Initialize from another object.      *       * @param c the object to copy      */
 specifier|public
 name|LineNumber
 parameter_list|(
@@ -111,7 +111,7 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Construct object from file stream.      * @param file Input stream      * @throws IOException      */
+comment|/**      * Construct object from file stream.      *       * @param file Input stream      */
 name|LineNumber
 parameter_list|(
 name|DataInput
@@ -181,7 +181,7 @@ name|this
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Dump line number/pc pair to file stream in binary format.      *      * @param file Output file stream      * @throws IOException      */
+comment|/**      * Dump line number/pc pair to file stream in binary format.      *      * @param file Output file stream      */
 specifier|public
 specifier|final
 name|void

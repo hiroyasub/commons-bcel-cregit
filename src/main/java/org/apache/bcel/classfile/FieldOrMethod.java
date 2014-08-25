@@ -884,7 +884,7 @@ operator|=
 name|newAnnotations
 expr_stmt|;
 block|}
-comment|/**      * Hunts for a signature attribute on the member and returns its contents.  So where the 'regular' signature      * may be (Ljava/util/Vector;)V the signature attribute may in fact say 'Ljava/lang/Vector<Ljava/lang/String>;'      * Coded for performance - searches for the attribute only when requested - only searches for it once.      */
+comment|/**      * Hunts for a signature attribute on the member and returns its contents.  So where the 'regular' signature      * may be (Ljava/util/Vector;)V the signature attribute may in fact say 'Ljava/lang/Vector&lt;Ljava/lang/String&gt;;'      * Coded for performance - searches for the attribute only when requested - only searches for it once.      */
 specifier|public
 specifier|final
 name|String

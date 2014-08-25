@@ -254,7 +254,7 @@ name|this
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Dump line number table attribute to file stream in binary format.      *      * @param file Output file stream      * @throws IOException      */
+comment|/**      * Dump line number table attribute to file stream in binary format.      *      * @param file Output file stream      */
 annotation|@
 name|Override
 specifier|public
