@@ -83,10 +83,12 @@ specifier|protected
 name|int
 name|class_index
 decl_stmt|;
+comment|// TODO make private (has getter& setter)
 specifier|protected
 name|int
 name|name_and_type_index
 decl_stmt|;
+comment|// TODO make private (has getter& setter)
 comment|/**      * Initialize from another object.      */
 specifier|public
 name|ConstantCP

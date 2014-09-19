@@ -55,6 +55,7 @@ specifier|protected
 name|int
 name|access_flags
 decl_stmt|;
+comment|// TODO make private (has getter& setter)
 specifier|public
 name|AccessFlags
 parameter_list|()

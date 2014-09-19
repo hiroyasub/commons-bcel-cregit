@@ -189,6 +189,7 @@ specifier|protected
 name|byte
 name|tag
 decl_stmt|;
+comment|// TODO should be private& final
 name|Constant
 parameter_list|(
 name|byte
