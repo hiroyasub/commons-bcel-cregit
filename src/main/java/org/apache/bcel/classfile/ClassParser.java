@@ -116,10 +116,12 @@ name|DataInputStream
 name|file
 decl_stmt|;
 specifier|private
+specifier|final
 name|boolean
 name|fileOwned
 decl_stmt|;
 specifier|private
+specifier|final
 name|String
 name|file_name
 decl_stmt|;
