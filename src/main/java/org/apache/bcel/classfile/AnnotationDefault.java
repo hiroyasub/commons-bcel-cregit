@@ -77,6 +77,7 @@ init|=
 operator|-
 literal|4017327188724019487L
 decl_stmt|;
+specifier|private
 name|ElementValue
 name|default_value
 decl_stmt|;
