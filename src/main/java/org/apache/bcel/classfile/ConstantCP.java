@@ -82,7 +82,9 @@ comment|/** References to the constants containing the class and the field signa
 specifier|protected
 name|int
 name|class_index
-decl_stmt|,
+decl_stmt|;
+specifier|protected
+name|int
 name|name_and_type_index
 decl_stmt|;
 comment|/**      * Initialize from another object.      */
