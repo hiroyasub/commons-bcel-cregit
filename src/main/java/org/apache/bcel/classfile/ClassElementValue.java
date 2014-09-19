@@ -58,6 +58,7 @@ comment|// For primitive types and string type, this points to the value entry i
 comment|// the cpool
 comment|// For 'class' this points to the class entry in the cpool
 specifier|private
+specifier|final
 name|int
 name|idx
 decl_stmt|;
