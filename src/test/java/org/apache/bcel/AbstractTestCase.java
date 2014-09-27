@@ -230,6 +230,7 @@ extends|extends
 name|TestCase
 block|{
 specifier|private
+specifier|final
 name|boolean
 name|verbose
 init|=
