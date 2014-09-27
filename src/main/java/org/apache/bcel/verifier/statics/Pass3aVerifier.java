@@ -1145,11 +1145,13 @@ name|PassVerifier
 block|{
 comment|/** The Verifier that created this. */
 specifier|private
+specifier|final
 name|Verifier
 name|myOwner
 decl_stmt|;
 comment|/**       * The method number to verify.      * This is the index in the array returned      * by JavaClass.getMethods().      */
 specifier|private
+specifier|final
 name|int
 name|method_no
 decl_stmt|;
@@ -2394,6 +2396,7 @@ name|EmptyVisitor
 block|{
 comment|/** The ConstantPoolGen instance this Visitor operates on. */
 specifier|private
+specifier|final
 name|ConstantPoolGen
 name|cpg
 decl_stmt|;

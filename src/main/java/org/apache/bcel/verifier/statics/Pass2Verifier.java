@@ -749,6 +749,7 @@ name|localVariablesInfos
 decl_stmt|;
 comment|/** The Verifier that created this. */
 specifier|private
+specifier|final
 name|Verifier
 name|myOwner
 decl_stmt|;
@@ -1502,6 +1503,7 @@ operator|.
 name|EmptyVisitor
 block|{
 specifier|private
+specifier|final
 name|Class
 argument_list|<
 name|?
@@ -1510,6 +1512,7 @@ name|CONST_Class
 decl_stmt|;
 comment|/*         private Class<?> CONST_Fieldref;         private Class<?> CONST_Methodref;         private Class<?> CONST_InterfaceMethodref;         */
 specifier|private
+specifier|final
 name|Class
 argument_list|<
 name|?
@@ -1517,6 +1520,7 @@ argument_list|>
 name|CONST_String
 decl_stmt|;
 specifier|private
+specifier|final
 name|Class
 argument_list|<
 name|?
@@ -1524,6 +1528,7 @@ argument_list|>
 name|CONST_Integer
 decl_stmt|;
 specifier|private
+specifier|final
 name|Class
 argument_list|<
 name|?
@@ -1531,6 +1536,7 @@ argument_list|>
 name|CONST_Float
 decl_stmt|;
 specifier|private
+specifier|final
 name|Class
 argument_list|<
 name|?
@@ -1538,6 +1544,7 @@ argument_list|>
 name|CONST_Long
 decl_stmt|;
 specifier|private
+specifier|final
 name|Class
 argument_list|<
 name|?
@@ -1545,6 +1552,7 @@ argument_list|>
 name|CONST_Double
 decl_stmt|;
 specifier|private
+specifier|final
 name|Class
 argument_list|<
 name|?
@@ -1552,6 +1560,7 @@ argument_list|>
 name|CONST_NameAndType
 decl_stmt|;
 specifier|private
+specifier|final
 name|Class
 argument_list|<
 name|?
@@ -1576,10 +1585,12 @@ name|cplen
 decl_stmt|;
 comment|// == cp.getLength() -- to save computing power.
 specifier|private
+specifier|final
 name|DescendingVisitor
 name|carrier
 decl_stmt|;
 specifier|private
+specifier|final
 name|Set
 argument_list|<
 name|String
@@ -1594,6 +1605,7 @@ argument_list|>
 argument_list|()
 decl_stmt|;
 specifier|private
+specifier|final
 name|Set
 argument_list|<
 name|String
@@ -1608,6 +1620,7 @@ argument_list|>
 argument_list|()
 decl_stmt|;
 specifier|private
+specifier|final
 name|Set
 argument_list|<
 name|String
@@ -8345,10 +8358,12 @@ init|=
 literal|false
 decl_stmt|;
 specifier|private
+specifier|final
 name|JavaClass
 name|jc
 decl_stmt|;
 specifier|private
+specifier|final
 name|ConstantPool
 name|cp
 decl_stmt|;

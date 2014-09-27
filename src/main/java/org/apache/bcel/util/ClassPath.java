@@ -269,11 +269,13 @@ block|}
 block|}
 decl_stmt|;
 specifier|private
+specifier|final
 name|PathEntry
 index|[]
 name|paths
 decl_stmt|;
 specifier|private
+specifier|final
 name|String
 name|class_path
 decl_stmt|;
@@ -1613,6 +1615,7 @@ init|=
 literal|4374062802142373088L
 decl_stmt|;
 specifier|private
+specifier|final
 name|String
 name|dir
 decl_stmt|;
@@ -1913,6 +1916,7 @@ operator|-
 literal|2210747632897905532L
 decl_stmt|;
 specifier|private
+specifier|final
 name|ZipFile
 name|zip
 decl_stmt|;

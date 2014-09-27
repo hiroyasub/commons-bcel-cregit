@@ -44,6 +44,7 @@ name|ElementValue
 block|{
 comment|// For array types, this is the array
 specifier|private
+specifier|final
 name|ElementValue
 index|[]
 name|evalues

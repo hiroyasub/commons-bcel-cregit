@@ -591,6 +591,7 @@ name|tostring
 decl_stmt|;
 comment|/** The node we ask for its string representation. Not really needed; only for debug output. */
 specifier|private
+specifier|final
 name|Node
 name|n
 decl_stmt|;

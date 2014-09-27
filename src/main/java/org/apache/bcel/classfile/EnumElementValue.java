@@ -56,10 +56,12 @@ name|ElementValue
 block|{
 comment|// For enum types, these two indices point to the type and value
 specifier|private
+specifier|final
 name|int
 name|typeIdx
 decl_stmt|;
 specifier|private
+specifier|final
 name|int
 name|valueIdx
 decl_stmt|;

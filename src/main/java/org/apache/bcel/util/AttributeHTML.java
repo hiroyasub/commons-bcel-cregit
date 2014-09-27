@@ -273,11 +273,13 @@ operator|.
 name|Constants
 block|{
 specifier|private
+specifier|final
 name|String
 name|class_name
 decl_stmt|;
 comment|// name of current class
 specifier|private
+specifier|final
 name|PrintWriter
 name|file
 decl_stmt|;
@@ -289,10 +291,12 @@ init|=
 literal|0
 decl_stmt|;
 specifier|private
+specifier|final
 name|ConstantHTML
 name|constant_html
 decl_stmt|;
 specifier|private
+specifier|final
 name|ConstantPool
 name|constant_pool
 decl_stmt|;

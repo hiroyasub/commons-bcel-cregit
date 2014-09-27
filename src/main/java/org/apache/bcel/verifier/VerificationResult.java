@@ -101,11 +101,13 @@ argument_list|)
 decl_stmt|;
 comment|/** The numeric status. */
 specifier|private
+specifier|final
 name|int
 name|numeric
 decl_stmt|;
 comment|/** The detailed message. */
 specifier|private
+specifier|final
 name|String
 name|detailMessage
 decl_stmt|;

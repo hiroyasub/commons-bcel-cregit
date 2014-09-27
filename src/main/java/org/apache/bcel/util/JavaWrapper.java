@@ -49,6 +49,7 @@ class|class
 name|JavaWrapper
 block|{
 specifier|private
+specifier|final
 name|java
 operator|.
 name|lang

@@ -90,6 +90,7 @@ init|=
 literal|1L
 decl_stmt|;
 specifier|private
+specifier|final
 name|int
 name|frame_type
 decl_stmt|;

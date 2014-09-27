@@ -252,11 +252,13 @@ name|TAG
 decl_stmt|;
 comment|/**          * The InstructionHandle this InstructionContext is wrapped around.          */
 specifier|private
+specifier|final
 name|InstructionHandle
 name|instruction
 decl_stmt|;
 comment|/**          * The 'incoming' execution Frames.          */
 specifier|private
+specifier|final
 name|Map
 argument_list|<
 name|InstructionContext
@@ -268,6 +270,7 @@ decl_stmt|;
 comment|// key: the last-executed JSR
 comment|/**          * The 'outgoing' execution Frames.          */
 specifier|private
+specifier|final
 name|Map
 argument_list|<
 name|InstructionContext
@@ -1492,6 +1495,7 @@ name|exceptionhandlers
 decl_stmt|;
 comment|/** All InstructionContext instances of this ControlFlowGraph. */
 specifier|private
+specifier|final
 name|Map
 argument_list|<
 name|InstructionHandle

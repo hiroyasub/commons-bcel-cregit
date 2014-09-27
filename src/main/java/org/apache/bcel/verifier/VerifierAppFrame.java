@@ -402,6 +402,7 @@ name|CardLayout
 argument_list|()
 decl_stmt|;
 specifier|private
+specifier|final
 name|String
 name|JUSTICE_VERSION
 init|=

@@ -162,6 +162,7 @@ literal|"sun."
 block|}
 decl_stmt|;
 specifier|private
+specifier|final
 name|Hashtable
 argument_list|<
 name|String
@@ -187,6 +188,7 @@ argument_list|()
 decl_stmt|;
 comment|// Hashtable is synchronized thus thread-safe
 specifier|private
+specifier|final
 name|String
 index|[]
 name|ignored_packages

@@ -104,6 +104,7 @@ operator|-
 literal|1052781833503868187L
 decl_stmt|;
 specifier|private
+specifier|final
 name|java
 operator|.
 name|lang
@@ -112,6 +113,7 @@ name|ClassLoader
 name|loader
 decl_stmt|;
 specifier|private
+specifier|final
 name|Map
 argument_list|<
 name|String

@@ -48,6 +48,7 @@ name|IntList
 block|{
 comment|/** The int are stored as Integer objects here. */
 specifier|private
+specifier|final
 name|List
 argument_list|<
 name|Integer

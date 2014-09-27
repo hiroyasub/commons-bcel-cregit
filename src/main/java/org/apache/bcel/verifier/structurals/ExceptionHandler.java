@@ -56,11 +56,13 @@ name|ExceptionHandler
 block|{
 comment|/** The type of the exception to catch. NULL means ANY. */
 specifier|private
+specifier|final
 name|ObjectType
 name|catchtype
 decl_stmt|;
 comment|/** The InstructionHandle where the handling begins. */
 specifier|private
+specifier|final
 name|InstructionHandle
 name|handlerpc
 decl_stmt|;

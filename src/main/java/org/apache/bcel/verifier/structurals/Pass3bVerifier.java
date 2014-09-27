@@ -408,6 +408,7 @@ class|class
 name|InstructionContextQueue
 block|{
 specifier|private
+specifier|final
 name|List
 argument_list|<
 name|InstructionContext
@@ -422,6 +423,7 @@ argument_list|>
 argument_list|()
 decl_stmt|;
 specifier|private
+specifier|final
 name|List
 argument_list|<
 name|ArrayList
@@ -567,11 +569,13 @@ literal|true
 decl_stmt|;
 comment|/** The Verifier that created this. */
 specifier|private
+specifier|final
 name|Verifier
 name|myOwner
 decl_stmt|;
 comment|/** The method number to verify. */
 specifier|private
+specifier|final
 name|int
 name|method_no
 decl_stmt|;

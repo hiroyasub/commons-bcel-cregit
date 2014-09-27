@@ -47,6 +47,7 @@ name|PassVerifier
 block|{
 comment|/** The (warning) messages. */
 specifier|private
+specifier|final
 name|List
 argument_list|<
 name|String

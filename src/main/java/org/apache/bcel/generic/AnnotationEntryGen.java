@@ -124,6 +124,7 @@ argument_list|>
 name|evs
 decl_stmt|;
 specifier|private
+specifier|final
 name|ConstantPoolGen
 name|cpool
 decl_stmt|;

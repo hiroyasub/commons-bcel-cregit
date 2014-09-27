@@ -376,6 +376,7 @@ name|boolean
 name|strip_attributes
 decl_stmt|;
 specifier|private
+specifier|final
 name|List
 argument_list|<
 name|LocalVariableGen
@@ -390,6 +391,7 @@ argument_list|>
 argument_list|()
 decl_stmt|;
 specifier|private
+specifier|final
 name|List
 argument_list|<
 name|LineNumberGen
@@ -404,6 +406,7 @@ argument_list|>
 argument_list|()
 decl_stmt|;
 specifier|private
+specifier|final
 name|List
 argument_list|<
 name|CodeExceptionGen
@@ -418,6 +421,7 @@ argument_list|>
 argument_list|()
 decl_stmt|;
 specifier|private
+specifier|final
 name|List
 argument_list|<
 name|String
@@ -432,6 +436,7 @@ argument_list|>
 argument_list|()
 decl_stmt|;
 specifier|private
+specifier|final
 name|List
 argument_list|<
 name|Attribute

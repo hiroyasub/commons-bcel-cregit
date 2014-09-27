@@ -203,38 +203,45 @@ operator|.
 name|Constants
 block|{
 specifier|private
+specifier|final
 name|String
 name|class_name
 decl_stmt|;
 comment|// name of current class
 specifier|private
+specifier|final
 name|String
 name|class_package
 decl_stmt|;
 comment|// name of package
 specifier|private
+specifier|final
 name|ConstantPool
 name|constant_pool
 decl_stmt|;
 comment|// reference to constant pool
 specifier|private
+specifier|final
 name|PrintWriter
 name|file
 decl_stmt|;
 comment|// file to write to
 specifier|private
+specifier|final
 name|String
 index|[]
 name|constant_ref
 decl_stmt|;
 comment|// String to return for cp[i]
 specifier|private
+specifier|final
 name|Constant
 index|[]
 name|constants
 decl_stmt|;
 comment|// The constants in the cp
 specifier|private
+specifier|final
 name|Method
 index|[]
 name|methods

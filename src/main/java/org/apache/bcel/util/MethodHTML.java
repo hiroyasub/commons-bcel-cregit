@@ -161,20 +161,24 @@ operator|.
 name|Constants
 block|{
 specifier|private
+specifier|final
 name|String
 name|class_name
 decl_stmt|;
 comment|// name of current class
 specifier|private
+specifier|final
 name|PrintWriter
 name|file
 decl_stmt|;
 comment|// file to write to
 specifier|private
+specifier|final
 name|ConstantHTML
 name|constant_html
 decl_stmt|;
 specifier|private
+specifier|final
 name|AttributeHTML
 name|attribute_html
 decl_stmt|;

@@ -143,6 +143,7 @@ init|=
 literal|null
 decl_stmt|;
 specifier|private
+specifier|final
 name|Map
 argument_list|<
 name|String

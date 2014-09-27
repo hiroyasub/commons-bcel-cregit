@@ -68,6 +68,7 @@ name|LocalVariableInfo
 block|{
 comment|/** The types database. KEY: String representing the offset integer. */
 specifier|private
+specifier|final
 name|Hashtable
 argument_list|<
 name|String
@@ -87,6 +88,7 @@ argument_list|()
 decl_stmt|;
 comment|/** The names database. KEY: String representing the offset integer. */
 specifier|private
+specifier|final
 name|Hashtable
 argument_list|<
 name|String

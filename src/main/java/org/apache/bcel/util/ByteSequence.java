@@ -48,6 +48,7 @@ extends|extends
 name|DataInputStream
 block|{
 specifier|private
+specifier|final
 name|ByteArrayStream
 name|byteStream
 decl_stmt|;

@@ -1049,6 +1049,7 @@ expr_stmt|;
 block|}
 block|}
 specifier|private
+specifier|final
 name|Map
 argument_list|<
 name|String
@@ -1194,6 +1195,7 @@ name|ret
 return|;
 block|}
 specifier|private
+specifier|final
 name|Map
 argument_list|<
 name|String
@@ -1658,6 +1660,7 @@ name|ret
 return|;
 block|}
 specifier|private
+specifier|final
 name|Map
 argument_list|<
 name|String
@@ -2055,6 +2058,7 @@ name|ret
 return|;
 block|}
 specifier|private
+specifier|final
 name|Map
 argument_list|<
 name|String
@@ -2229,6 +2233,7 @@ name|ret
 return|;
 block|}
 specifier|private
+specifier|final
 name|Map
 argument_list|<
 name|String

@@ -163,11 +163,13 @@ implements|implements
 name|Constants
 block|{
 specifier|private
+specifier|final
 name|JavaClass
 name|java_class
 decl_stmt|;
 comment|// current class object
 specifier|private
+specifier|final
 name|String
 name|dir
 decl_stmt|;

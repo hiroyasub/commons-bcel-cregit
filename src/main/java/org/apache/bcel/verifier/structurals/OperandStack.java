@@ -127,6 +127,7 @@ argument_list|()
 decl_stmt|;
 comment|/** The maximum number of stack slots this OperandStack instance may hold. */
 specifier|private
+specifier|final
 name|int
 name|maxStack
 decl_stmt|;

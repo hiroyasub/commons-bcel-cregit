@@ -150,6 +150,7 @@ name|jc
 decl_stmt|;
 comment|/**      * The Verifier that created this.      */
 specifier|private
+specifier|final
 name|Verifier
 name|myOwner
 decl_stmt|;

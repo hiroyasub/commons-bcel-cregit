@@ -87,10 +87,12 @@ name|int
 name|nameIdx
 decl_stmt|;
 specifier|private
+specifier|final
 name|ElementValueGen
 name|value
 decl_stmt|;
 specifier|private
+specifier|final
 name|ConstantPoolGen
 name|cpool
 decl_stmt|;

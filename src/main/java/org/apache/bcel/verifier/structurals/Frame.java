@@ -34,11 +34,13 @@ name|_this
 decl_stmt|;
 comment|/**      *      */
 specifier|private
+specifier|final
 name|LocalVariables
 name|locals
 decl_stmt|;
 comment|/**      *      */
 specifier|private
+specifier|final
 name|OperandStack
 name|stack
 decl_stmt|;

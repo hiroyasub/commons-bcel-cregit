@@ -177,6 +177,7 @@ name|attributes
 decl_stmt|;
 comment|// attributes defined in the class
 specifier|private
+specifier|final
 name|boolean
 name|is_zip
 decl_stmt|;

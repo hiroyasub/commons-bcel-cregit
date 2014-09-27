@@ -160,6 +160,7 @@ name|p2v
 decl_stmt|;
 comment|/** The Pass3aVerifiers for this Verifier instance. Key: Interned string specifying the method number. */
 specifier|private
+specifier|final
 name|Map
 argument_list|<
 name|String
@@ -179,6 +180,7 @@ argument_list|()
 decl_stmt|;
 comment|/** The Pass3bVerifiers for this Verifier instance. Key: Interned string specifying the method number. */
 specifier|private
+specifier|final
 name|Map
 argument_list|<
 name|String

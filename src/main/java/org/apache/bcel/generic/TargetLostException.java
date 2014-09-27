@@ -37,6 +37,7 @@ operator|-
 literal|6857272667645328384L
 decl_stmt|;
 specifier|private
+specifier|final
 name|InstructionHandle
 index|[]
 name|targets

@@ -93,6 +93,7 @@ block|{
 comment|// J5TODO: Should we make this an array or a list? A list would be easier to
 comment|// modify ...
 specifier|private
+specifier|final
 name|List
 argument_list|<
 name|ElementValueGen

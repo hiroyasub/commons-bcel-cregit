@@ -340,6 +340,7 @@ name|UNSET
 decl_stmt|;
 comment|/** The instructions that belong to this subroutine. */
 specifier|private
+specifier|final
 name|Set
 argument_list|<
 name|InstructionHandle
@@ -374,6 +375,7 @@ return|;
 block|}
 comment|/**          * The JSR or JSR_W instructions that define this          * subroutine by targeting it.          */
 specifier|private
+specifier|final
 name|Set
 argument_list|<
 name|InstructionHandle
@@ -1414,6 +1416,7 @@ argument_list|)
 decl_stmt|;
 comment|/**      * The map containing the subroutines found.      * Key: InstructionHandle of the leader of the subroutine.      * Elements: SubroutineImpl objects.      */
 specifier|private
+specifier|final
 name|Map
 argument_list|<
 name|InstructionHandle

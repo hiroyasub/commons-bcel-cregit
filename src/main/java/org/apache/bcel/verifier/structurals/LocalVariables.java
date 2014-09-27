@@ -88,6 +88,7 @@ name|LocalVariables
 block|{
 comment|/** The Type[] containing the local variable slots. */
 specifier|private
+specifier|final
 name|Type
 index|[]
 name|locals

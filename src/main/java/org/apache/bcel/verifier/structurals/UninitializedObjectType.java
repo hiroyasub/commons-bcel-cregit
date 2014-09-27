@@ -81,6 +81,7 @@ literal|1228341777713117641L
 decl_stmt|;
 comment|/** The "initialized" version. */
 specifier|private
+specifier|final
 name|ObjectType
 name|initialized
 decl_stmt|;

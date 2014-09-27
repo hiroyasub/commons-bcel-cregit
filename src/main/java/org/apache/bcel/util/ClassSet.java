@@ -84,6 +84,7 @@ operator|-
 literal|7476907380350035254L
 decl_stmt|;
 specifier|private
+specifier|final
 name|Map
 argument_list|<
 name|String

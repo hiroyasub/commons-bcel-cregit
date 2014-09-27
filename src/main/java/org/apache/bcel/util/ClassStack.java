@@ -63,6 +63,7 @@ init|=
 literal|6126079269396985982L
 decl_stmt|;
 specifier|private
+specifier|final
 name|Stack
 argument_list|<
 name|JavaClass

@@ -101,10 +101,12 @@ implements|,
 name|Constants
 block|{
 specifier|private
+specifier|final
 name|int
 name|annotation_table_length
 decl_stmt|;
 specifier|private
+specifier|final
 name|AnnotationEntry
 index|[]
 name|annotation_table

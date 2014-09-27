@@ -254,14 +254,17 @@ init|=
 literal|1
 decl_stmt|;
 specifier|private
+specifier|final
 name|JavaClass
 name|_clazz
 decl_stmt|;
 specifier|private
+specifier|final
 name|PrintWriter
 name|_out
 decl_stmt|;
 specifier|private
+specifier|final
 name|ConstantPoolGen
 name|_cp
 decl_stmt|;

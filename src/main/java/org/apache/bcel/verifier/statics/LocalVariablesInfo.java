@@ -74,6 +74,7 @@ name|LocalVariablesInfo
 block|{
 comment|/** The information about the local variables is stored here. */
 specifier|private
+specifier|final
 name|LocalVariableInfo
 index|[]
 name|localVariableInfos

@@ -72,6 +72,7 @@ name|ElementValueGen
 block|{
 comment|// For annotation element values, this is the annotation
 specifier|private
+specifier|final
 name|AnnotationEntryGen
 name|a
 decl_stmt|;

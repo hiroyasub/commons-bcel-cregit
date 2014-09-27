@@ -256,7 +256,10 @@ name|String
 name|class_name
 decl_stmt|,
 name|super_class_name
-decl_stmt|,
+decl_stmt|;
+specifier|private
+specifier|final
+name|String
 name|file_name
 decl_stmt|;
 specifier|private
@@ -292,6 +295,7 @@ decl_stmt|;
 comment|// Template for building up constant pool
 comment|// ArrayLists instead of arrays to gather fields, methods, etc.
 specifier|private
+specifier|final
 name|List
 argument_list|<
 name|Field
@@ -306,6 +310,7 @@ argument_list|>
 argument_list|()
 decl_stmt|;
 specifier|private
+specifier|final
 name|List
 argument_list|<
 name|Method
@@ -320,6 +325,7 @@ argument_list|>
 argument_list|()
 decl_stmt|;
 specifier|private
+specifier|final
 name|List
 argument_list|<
 name|Attribute
@@ -334,6 +340,7 @@ argument_list|>
 argument_list|()
 decl_stmt|;
 specifier|private
+specifier|final
 name|List
 argument_list|<
 name|String
@@ -348,6 +355,7 @@ argument_list|>
 argument_list|()
 decl_stmt|;
 specifier|private
+specifier|final
 name|List
 argument_list|<
 name|AnnotationEntryGen

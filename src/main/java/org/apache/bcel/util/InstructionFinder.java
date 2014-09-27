@@ -218,6 +218,7 @@ argument_list|>
 argument_list|()
 decl_stmt|;
 specifier|private
+specifier|final
 name|InstructionList
 name|il
 decl_stmt|;

@@ -113,6 +113,7 @@ name|ConstantPoolGen
 name|cp
 decl_stmt|;
 specifier|private
+specifier|final
 name|List
 argument_list|<
 name|Attribute

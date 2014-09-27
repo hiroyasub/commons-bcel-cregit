@@ -105,6 +105,7 @@ operator|.
 name|ListModel
 block|{
 specifier|private
+specifier|final
 name|List
 argument_list|<
 name|ListDataListener
@@ -119,6 +120,7 @@ argument_list|>
 argument_list|()
 decl_stmt|;
 specifier|private
+specifier|final
 name|Set
 argument_list|<
 name|String

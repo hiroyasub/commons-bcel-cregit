@@ -110,6 +110,7 @@ name|ExceptionHandlers
 block|{
 comment|/**      * The ExceptionHandler instances.      * Key: InstructionHandle objects, Values: HashSet<ExceptionHandler> instances.      */
 specifier|private
+specifier|final
 name|Map
 argument_list|<
 name|InstructionHandle

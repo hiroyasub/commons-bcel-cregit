@@ -44,6 +44,7 @@ name|ElementValue
 block|{
 comment|// For annotation element values, this is the annotation
 specifier|private
+specifier|final
 name|AnnotationEntry
 name|annotationEntry
 decl_stmt|;

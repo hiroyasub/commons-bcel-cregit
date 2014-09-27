@@ -37,14 +37,17 @@ implements|implements
 name|Visitor
 block|{
 specifier|private
+specifier|final
 name|JavaClass
 name|clazz
 decl_stmt|;
 specifier|private
+specifier|final
 name|Visitor
 name|visitor
 decl_stmt|;
 specifier|private
+specifier|final
 name|Stack
 argument_list|<
 name|Object
