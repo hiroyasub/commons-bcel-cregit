@@ -113,7 +113,7 @@ name|ClassParser
 block|{
 specifier|private
 name|DataInputStream
-name|file
+name|dataInputStream
 decl_stmt|;
 specifier|private
 specifier|final
@@ -248,7 +248,7 @@ condition|)
 block|{
 name|this
 operator|.
-name|file
+name|dataInputStream
 operator|=
 operator|(
 name|DataInputStream
@@ -260,7 +260,7 @@ else|else
 block|{
 name|this
 operator|.
-name|file
+name|dataInputStream
 operator|=
 operator|new
 name|DataInputStream
@@ -395,7 +395,7 @@ literal|" not found"
 argument_list|)
 throw|;
 block|}
-name|file
+name|dataInputStream
 operator|=
 operator|new
 name|DataInputStream
@@ -417,7 +417,7 @@ expr_stmt|;
 block|}
 else|else
 block|{
-name|file
+name|dataInputStream
 operator|=
 operator|new
 name|DataInputStream
@@ -499,12 +499,12 @@ try|try
 block|{
 if|if
 condition|(
-name|file
+name|dataInputStream
 operator|!=
 literal|null
 condition|)
 block|{
-name|file
+name|dataInputStream
 operator|.
 name|close
 argument_list|()
@@ -588,7 +588,7 @@ name|attributes_count
 decl_stmt|;
 name|attributes_count
 operator|=
-name|file
+name|dataInputStream
 operator|.
 name|readUnsignedShort
 argument_list|()
@@ -625,7 +625,7 @@ name|Attribute
 operator|.
 name|readAttribute
 argument_list|(
-name|file
+name|dataInputStream
 argument_list|,
 name|constant_pool
 argument_list|)
@@ -644,7 +644,7 @@ name|ClassFormatException
 block|{
 name|access_flags
 operator|=
-name|file
+name|dataInputStream
 operator|.
 name|readUnsignedShort
 argument_list|()
@@ -711,14 +711,14 @@ throw|;
 block|}
 name|class_name_index
 operator|=
-name|file
+name|dataInputStream
 operator|.
 name|readUnsignedShort
 argument_list|()
 expr_stmt|;
 name|superclass_name_index
 operator|=
-name|file
+name|dataInputStream
 operator|.
 name|readUnsignedShort
 argument_list|()
@@ -739,7 +739,7 @@ operator|=
 operator|new
 name|ConstantPool
 argument_list|(
-name|file
+name|dataInputStream
 argument_list|)
 expr_stmt|;
 block|}
@@ -758,7 +758,7 @@ name|fields_count
 decl_stmt|;
 name|fields_count
 operator|=
-name|file
+name|dataInputStream
 operator|.
 name|readUnsignedShort
 argument_list|()
@@ -794,7 +794,7 @@ operator|=
 operator|new
 name|Field
 argument_list|(
-name|file
+name|dataInputStream
 argument_list|,
 name|constant_pool
 argument_list|)
@@ -819,7 +819,7 @@ literal|0xCAFEBABE
 decl_stmt|;
 if|if
 condition|(
-name|file
+name|dataInputStream
 operator|.
 name|readInt
 argument_list|()
@@ -853,7 +853,7 @@ name|interfaces_count
 decl_stmt|;
 name|interfaces_count
 operator|=
-name|file
+name|dataInputStream
 operator|.
 name|readUnsignedShort
 argument_list|()
@@ -886,7 +886,7 @@ index|[
 name|i
 index|]
 operator|=
-name|file
+name|dataInputStream
 operator|.
 name|readUnsignedShort
 argument_list|()
@@ -908,7 +908,7 @@ name|methods_count
 decl_stmt|;
 name|methods_count
 operator|=
-name|file
+name|dataInputStream
 operator|.
 name|readUnsignedShort
 argument_list|()
@@ -944,7 +944,7 @@ operator|=
 operator|new
 name|Method
 argument_list|(
-name|file
+name|dataInputStream
 argument_list|,
 name|constant_pool
 argument_list|)
@@ -963,14 +963,14 @@ name|ClassFormatException
 block|{
 name|minor
 operator|=
-name|file
+name|dataInputStream
 operator|.
 name|readUnsignedShort
 argument_list|()
 expr_stmt|;
 name|major
 operator|=
-name|file
+name|dataInputStream
 operator|.
 name|readUnsignedShort
 argument_list|()
