@@ -299,6 +299,8 @@ literal|" not found."
 argument_list|)
 throw|;
 block|}
+try|try
+block|{
 name|ClassParser
 name|parser
 init|=
@@ -325,6 +327,15 @@ expr_stmt|;
 return|return
 name|RC
 return|;
+block|}
+finally|finally
+block|{
+name|is
+operator|.
+name|close
+argument_list|()
+expr_stmt|;
+block|}
 block|}
 catch|catch
 parameter_list|(
