@@ -190,12 +190,12 @@ name|BUFSIZE
 init|=
 literal|8192
 decl_stmt|;
-comment|/**      * Parse class from the given stream.      *      * @param file Input stream      * @param file_name File name      */
+comment|/**      * Parse class from the given stream.      *      * @param inputStream Input stream      * @param file_name File name      */
 specifier|public
 name|ClassParser
 parameter_list|(
 name|InputStream
-name|file
+name|inputStream
 parameter_list|,
 name|String
 name|file_name
@@ -214,7 +214,7 @@ expr_stmt|;
 name|String
 name|clazz
 init|=
-name|file
+name|inputStream
 operator|.
 name|getClass
 argument_list|()
@@ -241,7 +241,7 @@ argument_list|)
 expr_stmt|;
 if|if
 condition|(
-name|file
+name|inputStream
 operator|instanceof
 name|DataInputStream
 condition|)
@@ -253,7 +253,7 @@ operator|=
 operator|(
 name|DataInputStream
 operator|)
-name|file
+name|inputStream
 expr_stmt|;
 block|}
 else|else
@@ -268,7 +268,7 @@ argument_list|(
 operator|new
 name|BufferedInputStream
 argument_list|(
-name|file
+name|inputStream
 argument_list|,
 name|BUFSIZE
 argument_list|)
