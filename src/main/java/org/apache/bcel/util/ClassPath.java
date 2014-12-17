@@ -342,12 +342,9 @@ name|StringTokenizer
 argument_list|(
 name|class_path
 argument_list|,
-name|System
+name|File
 operator|.
-name|getProperty
-argument_list|(
-literal|"path.separator"
-argument_list|)
+name|pathSeparator
 argument_list|)
 init|;
 name|tok
