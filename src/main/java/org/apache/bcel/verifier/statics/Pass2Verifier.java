@@ -3798,6 +3798,63 @@ argument_list|)
 throw|;
 block|}
 block|}
+comment|// A specific instance initialization method... (vmspec2,Page 116).
+if|if
+condition|(
+name|name
+operator|.
+name|equals
+argument_list|(
+name|CONSTRUCTOR_NAME
+argument_list|)
+condition|)
+block|{
+comment|//..may have at most one of ACC_PRIVATE, ACC_PROTECTED, ACC_PUBLIC set: is checked above.
+comment|//..may also have ACC_STRICT set, but none of the other flags in table 4.5 (vmspec2, page 115)
+if|if
+condition|(
+name|obj
+operator|.
+name|isStatic
+argument_list|()
+operator|||
+name|obj
+operator|.
+name|isFinal
+argument_list|()
+operator|||
+name|obj
+operator|.
+name|isSynchronized
+argument_list|()
+operator|||
+name|obj
+operator|.
+name|isNative
+argument_list|()
+operator|||
+name|obj
+operator|.
+name|isAbstract
+argument_list|()
+condition|)
+block|{
+throw|throw
+operator|new
+name|ClassConstraintException
+argument_list|(
+literal|"Instance initialization method '"
+operator|+
+name|tostring
+argument_list|(
+name|obj
+argument_list|)
+operator|+
+literal|"' must not have any of the ACC_STATIC, ACC_FINAL, ACC_SYNCHRONIZED, ACC_NATIVE, ACC_ABSTRACT modifiers set."
+argument_list|)
+throw|;
+block|}
+block|}
 block|}
 else|else
 block|{
@@ -3998,63 +4055,6 @@ argument_list|)
 throw|;
 block|}
 block|}
-block|}
-block|}
-comment|// A specific instance initialization method... (vmspec2,Page 116).
-if|if
-condition|(
-name|name
-operator|.
-name|equals
-argument_list|(
-name|CONSTRUCTOR_NAME
-argument_list|)
-condition|)
-block|{
-comment|//..may have at most one of ACC_PRIVATE, ACC_PROTECTED, ACC_PUBLIC set: is checked above.
-comment|//..may also have ACC_STRICT set, but none of the other flags in table 4.5 (vmspec2, page 115)
-if|if
-condition|(
-name|obj
-operator|.
-name|isStatic
-argument_list|()
-operator|||
-name|obj
-operator|.
-name|isFinal
-argument_list|()
-operator|||
-name|obj
-operator|.
-name|isSynchronized
-argument_list|()
-operator|||
-name|obj
-operator|.
-name|isNative
-argument_list|()
-operator|||
-name|obj
-operator|.
-name|isAbstract
-argument_list|()
-condition|)
-block|{
-throw|throw
-operator|new
-name|ClassConstraintException
-argument_list|(
-literal|"Instance initialization method '"
-operator|+
-name|tostring
-argument_list|(
-name|obj
-argument_list|)
-operator|+
-literal|"' must not have any of the ACC_STATIC, ACC_FINAL, ACC_SYNCHRONIZED, ACC_NATIVE, ACC_ABSTRACT modifiers set."
-argument_list|)
-throw|;
 block|}
 block|}
 comment|// Class and interface initialization methods...
