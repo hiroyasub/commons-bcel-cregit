@@ -424,7 +424,7 @@ name|JarFile
 argument_list|(
 name|javaHome
 operator|+
-literal|"/lib/dt.jar"
+literal|"/lib/rt.jar"
 argument_list|)
 decl_stmt|;
 name|Enumeration
