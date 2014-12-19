@@ -1,6 +1,6 @@
 begin_unit|revision:1.0.0;language:Java;cregit-version:0.0.1
 begin_comment
-comment|/*  * Licensed to the Apache Software Foundation (ASF) under one or more  * contributor license agreements.  See the NOTICE file distributed with  * this work for additional information regarding copyright ownership.  * The ASF licenses this file to You under the Apache License, Version 2.0  * (the "License"); you may not use this file except in compliance with  * the License.  You may obtain a copy of the License at  *  *      http://www.apache.org/licenses/LICENSE-2.0  *  *  Unless required by applicable law or agreed to in writing, software  *  distributed under the License is distributed on an "AS IS" BASIS,  *  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.  *  See the License for the specific language governing permissions and  *  limitations under the License.  *  */
+comment|/*  * Licensed to the Apache Software Foundation (ASF) under one or more  * contributor license agreements.  See the NOTICE file distributed with  * this work for additional information regarding copyright ownership.  * The ASF licenses this file to You under the Apache License, Version 2.0  * (the "License"); you may not use this file except in compliance with  * the License.  You may obtain a copy of the License at  *  *      http://www.apache.org/licenses/LICENSE-2.0  *  *  Unless required by applicable law or agreed to in writing, software  *  distributed under the License is distributed on an "AS IS" BASIS,  *  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.  *  See the License for the specific language governing permissions and  *  limitations under the License.  */
 end_comment
 
 begin_package
@@ -129,7 +129,7 @@ function_decl|;
 specifier|public
 specifier|static
 specifier|final
-name|int
+name|byte
 name|STRING
 init|=
 literal|'s'
@@ -137,7 +137,7 @@ decl_stmt|;
 specifier|public
 specifier|static
 specifier|final
-name|int
+name|byte
 name|ENUM_CONSTANT
 init|=
 literal|'e'
@@ -145,7 +145,7 @@ decl_stmt|;
 specifier|public
 specifier|static
 specifier|final
-name|int
+name|byte
 name|CLASS
 init|=
 literal|'c'
@@ -153,7 +153,7 @@ decl_stmt|;
 specifier|public
 specifier|static
 specifier|final
-name|int
+name|byte
 name|ANNOTATION
 init|=
 literal|'@'
@@ -161,7 +161,7 @@ decl_stmt|;
 specifier|public
 specifier|static
 specifier|final
-name|int
+name|byte
 name|ARRAY
 init|=
 literal|'['
@@ -169,7 +169,7 @@ decl_stmt|;
 specifier|public
 specifier|static
 specifier|final
-name|int
+name|byte
 name|PRIMITIVE_INT
 init|=
 literal|'I'
@@ -177,7 +177,7 @@ decl_stmt|;
 specifier|public
 specifier|static
 specifier|final
-name|int
+name|byte
 name|PRIMITIVE_BYTE
 init|=
 literal|'B'
@@ -185,7 +185,7 @@ decl_stmt|;
 specifier|public
 specifier|static
 specifier|final
-name|int
+name|byte
 name|PRIMITIVE_CHAR
 init|=
 literal|'C'
@@ -193,7 +193,7 @@ decl_stmt|;
 specifier|public
 specifier|static
 specifier|final
-name|int
+name|byte
 name|PRIMITIVE_DOUBLE
 init|=
 literal|'D'
@@ -201,7 +201,7 @@ decl_stmt|;
 specifier|public
 specifier|static
 specifier|final
-name|int
+name|byte
 name|PRIMITIVE_FLOAT
 init|=
 literal|'F'
@@ -209,7 +209,7 @@ decl_stmt|;
 specifier|public
 specifier|static
 specifier|final
-name|int
+name|byte
 name|PRIMITIVE_LONG
 init|=
 literal|'J'
@@ -217,7 +217,7 @@ decl_stmt|;
 specifier|public
 specifier|static
 specifier|final
-name|int
+name|byte
 name|PRIMITIVE_SHORT
 init|=
 literal|'S'
@@ -225,7 +225,7 @@ decl_stmt|;
 specifier|public
 specifier|static
 specifier|final
-name|int
+name|byte
 name|PRIMITIVE_BOOLEAN
 init|=
 literal|'Z'
@@ -258,158 +258,37 @@ name|type
 condition|)
 block|{
 case|case
-literal|'B'
-case|:
-comment|// byte
-return|return
-operator|new
-name|SimpleElementValue
-argument_list|(
 name|PRIMITIVE_BYTE
-argument_list|,
-name|input
-operator|.
-name|readUnsignedShort
-argument_list|()
-argument_list|,
-name|cpool
-argument_list|)
-return|;
-case|case
-literal|'C'
 case|:
-comment|// char
-return|return
-operator|new
-name|SimpleElementValue
-argument_list|(
+case|case
 name|PRIMITIVE_CHAR
-argument_list|,
-name|input
-operator|.
-name|readUnsignedShort
-argument_list|()
-argument_list|,
-name|cpool
-argument_list|)
-return|;
-case|case
-literal|'D'
 case|:
-comment|// double
-return|return
-operator|new
-name|SimpleElementValue
-argument_list|(
+case|case
 name|PRIMITIVE_DOUBLE
-argument_list|,
-name|input
-operator|.
-name|readUnsignedShort
-argument_list|()
-argument_list|,
-name|cpool
-argument_list|)
-return|;
-case|case
-literal|'F'
 case|:
-comment|// float
-return|return
-operator|new
-name|SimpleElementValue
-argument_list|(
+case|case
 name|PRIMITIVE_FLOAT
-argument_list|,
-name|input
-operator|.
-name|readUnsignedShort
-argument_list|()
-argument_list|,
-name|cpool
-argument_list|)
-return|;
-case|case
-literal|'I'
 case|:
-comment|// int
-return|return
-operator|new
-name|SimpleElementValue
-argument_list|(
+case|case
 name|PRIMITIVE_INT
-argument_list|,
-name|input
-operator|.
-name|readUnsignedShort
-argument_list|()
-argument_list|,
-name|cpool
-argument_list|)
-return|;
-case|case
-literal|'J'
 case|:
-comment|// long
-return|return
-operator|new
-name|SimpleElementValue
-argument_list|(
+case|case
 name|PRIMITIVE_LONG
-argument_list|,
-name|input
-operator|.
-name|readUnsignedShort
-argument_list|()
-argument_list|,
-name|cpool
-argument_list|)
-return|;
-case|case
-literal|'S'
 case|:
-comment|// short
-return|return
-operator|new
-name|SimpleElementValue
-argument_list|(
+case|case
 name|PRIMITIVE_SHORT
-argument_list|,
-name|input
-operator|.
-name|readUnsignedShort
-argument_list|()
-argument_list|,
-name|cpool
-argument_list|)
-return|;
-case|case
-literal|'Z'
 case|:
-comment|// boolean
-return|return
-operator|new
-name|SimpleElementValue
-argument_list|(
+case|case
 name|PRIMITIVE_BOOLEAN
-argument_list|,
-name|input
-operator|.
-name|readUnsignedShort
-argument_list|()
-argument_list|,
-name|cpool
-argument_list|)
-return|;
-case|case
-literal|'s'
 case|:
-comment|// String
+case|case
+name|STRING
+case|:
 return|return
 operator|new
 name|SimpleElementValue
 argument_list|(
-name|STRING
+name|type
 argument_list|,
 name|input
 operator|.
@@ -420,9 +299,8 @@ name|cpool
 argument_list|)
 return|;
 case|case
-literal|'e'
+name|ENUM_CONSTANT
 case|:
-comment|// Enum constant
 return|return
 operator|new
 name|EnumElementValue
@@ -443,9 +321,8 @@ name|cpool
 argument_list|)
 return|;
 case|case
-literal|'c'
+name|CLASS
 case|:
-comment|// Class
 return|return
 operator|new
 name|ClassElementValue
@@ -461,9 +338,8 @@ name|cpool
 argument_list|)
 return|;
 case|case
-literal|'@'
+name|ANNOTATION
 case|:
-comment|// Annotation
 comment|// TODO isRuntimeVisible
 return|return
 operator|new
@@ -486,9 +362,8 @@ name|cpool
 argument_list|)
 return|;
 case|case
-literal|'['
+name|ARRAY
 case|:
-comment|// Array
 name|int
 name|numArrayVals
 init|=
