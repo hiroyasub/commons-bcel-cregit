@@ -21,7 +21,7 @@ name|java
 operator|.
 name|io
 operator|.
-name|DataInputStream
+name|DataInput
 import|;
 end_import
 
@@ -111,11 +111,11 @@ name|AnnotationEntry
 index|[]
 name|annotation_table
 decl_stmt|;
-comment|/**      * Construct object from file stream.      * @param file Input stream      * @throws IOException      */
+comment|/**      * Construct object from input stream.      *       * @param input Input stream      * @throws IOException      */
 name|ParameterAnnotationEntry
 parameter_list|(
-name|DataInputStream
-name|file
+name|DataInput
+name|input
 parameter_list|,
 name|ConstantPool
 name|constant_pool
@@ -126,7 +126,7 @@ block|{
 name|annotation_table_length
 operator|=
 operator|(
-name|file
+name|input
 operator|.
 name|readUnsignedShort
 argument_list|()
@@ -165,7 +165,7 @@ name|AnnotationEntry
 operator|.
 name|read
 argument_list|(
-name|file
+name|input
 argument_list|,
 name|constant_pool
 argument_list|,

@@ -21,7 +21,7 @@ name|java
 operator|.
 name|io
 operator|.
-name|DataInputStream
+name|DataInput
 import|;
 end_import
 
@@ -267,7 +267,7 @@ name|this
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Construct object from file stream.      * @param name_index Index in constant pool      * @param length Content length in bytes      * @param file Input stream      * @param constant_pool Array of constants      * @throws IOException      */
+comment|/**      * Construct object from input stream.      *       * @param name_index Index in constant pool      * @param length Content length in bytes      * @param input Input stream      * @param constant_pool Array of constants      * @throws IOException      */
 name|Unknown
 parameter_list|(
 name|int
@@ -276,8 +276,8 @@ parameter_list|,
 name|int
 name|length
 parameter_list|,
-name|DataInputStream
-name|file
+name|DataInput
+name|input
 parameter_list|,
 name|ConstantPool
 name|constant_pool
@@ -315,7 +315,7 @@ index|[
 name|length
 index|]
 expr_stmt|;
-name|file
+name|input
 operator|.
 name|readFully
 argument_list|(

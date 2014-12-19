@@ -21,6 +21,16 @@ name|java
 operator|.
 name|io
 operator|.
+name|DataInput
+import|;
+end_import
+
+begin_import
+import|import
+name|java
+operator|.
+name|io
+operator|.
 name|DataInputStream
 import|;
 end_import
@@ -319,13 +329,13 @@ throw|;
 comment|// never happens
 block|}
 block|}
-comment|/**      * Read one constant from the given file, the type depends on a tag byte.      *      * @param file Input stream      * @return Constant object      */
+comment|/**      * Read one constant from the given input, the type depends on a tag byte.      *      * @param input Input stream      * @return Constant object      */
 specifier|static
 name|Constant
 name|readConstant
 parameter_list|(
-name|DataInputStream
-name|file
+name|DataInput
+name|input
 parameter_list|)
 throws|throws
 name|IOException
@@ -335,7 +345,7 @@ block|{
 name|byte
 name|b
 init|=
-name|file
+name|input
 operator|.
 name|readByte
 argument_list|()
@@ -355,7 +365,7 @@ return|return
 operator|new
 name|ConstantClass
 argument_list|(
-name|file
+name|input
 argument_list|)
 return|;
 case|case
@@ -367,7 +377,7 @@ return|return
 operator|new
 name|ConstantFieldref
 argument_list|(
-name|file
+name|input
 argument_list|)
 return|;
 case|case
@@ -379,7 +389,7 @@ return|return
 operator|new
 name|ConstantMethodref
 argument_list|(
-name|file
+name|input
 argument_list|)
 return|;
 case|case
@@ -391,7 +401,7 @@ return|return
 operator|new
 name|ConstantInterfaceMethodref
 argument_list|(
-name|file
+name|input
 argument_list|)
 return|;
 case|case
@@ -403,7 +413,7 @@ return|return
 operator|new
 name|ConstantString
 argument_list|(
-name|file
+name|input
 argument_list|)
 return|;
 case|case
@@ -415,7 +425,7 @@ return|return
 operator|new
 name|ConstantInteger
 argument_list|(
-name|file
+name|input
 argument_list|)
 return|;
 case|case
@@ -427,7 +437,7 @@ return|return
 operator|new
 name|ConstantFloat
 argument_list|(
-name|file
+name|input
 argument_list|)
 return|;
 case|case
@@ -439,7 +449,7 @@ return|return
 operator|new
 name|ConstantLong
 argument_list|(
-name|file
+name|input
 argument_list|)
 return|;
 case|case
@@ -451,7 +461,7 @@ return|return
 operator|new
 name|ConstantDouble
 argument_list|(
-name|file
+name|input
 argument_list|)
 return|;
 case|case
@@ -463,7 +473,7 @@ return|return
 operator|new
 name|ConstantNameAndType
 argument_list|(
-name|file
+name|input
 argument_list|)
 return|;
 case|case
@@ -476,7 +486,7 @@ name|ConstantUtf8
 operator|.
 name|getInstance
 argument_list|(
-name|file
+name|input
 argument_list|)
 return|;
 case|case
@@ -488,7 +498,7 @@ return|return
 operator|new
 name|ConstantMethodHandle
 argument_list|(
-name|file
+name|input
 argument_list|)
 return|;
 case|case
@@ -500,7 +510,7 @@ return|return
 operator|new
 name|ConstantMethodType
 argument_list|(
-name|file
+name|input
 argument_list|)
 return|;
 case|case
@@ -512,7 +522,7 @@ return|return
 operator|new
 name|ConstantInvokeDynamic
 argument_list|(
-name|file
+name|input
 argument_list|)
 return|;
 default|default:

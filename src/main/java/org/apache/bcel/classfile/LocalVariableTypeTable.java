@@ -239,8 +239,8 @@ parameter_list|,
 name|int
 name|len
 parameter_list|,
-name|DataInputStream
-name|dis
+name|DataInput
+name|input
 parameter_list|,
 name|ConstantPool
 name|cpool
@@ -266,7 +266,7 @@ expr_stmt|;
 name|local_variable_type_table_length
 operator|=
 operator|(
-name|dis
+name|input
 operator|.
 name|readUnsignedShort
 argument_list|()
@@ -303,7 +303,7 @@ operator|=
 operator|new
 name|LocalVariable
 argument_list|(
-name|dis
+name|input
 argument_list|,
 name|cpool
 argument_list|)

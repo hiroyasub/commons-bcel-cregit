@@ -21,7 +21,7 @@ name|java
 operator|.
 name|io
 operator|.
-name|DataInputStream
+name|DataInput
 import|;
 end_import
 
@@ -75,7 +75,7 @@ specifier|final
 name|boolean
 name|isRuntimeVisible
 decl_stmt|;
-comment|/**      * @param annotation_type the subclass type of the annotation      * @param name_index Index pointing to the name<em>Code</em>      * @param length Content length in bytes      * @param file Input stream      * @param constant_pool Array of constants      */
+comment|/**      * @param annotation_type the subclass type of the annotation      * @param name_index Index pointing to the name<em>Code</em>      * @param length Content length in bytes      * @param input Input stream      * @param constant_pool Array of constants      */
 specifier|public
 name|Annotations
 parameter_list|(
@@ -88,8 +88,8 @@ parameter_list|,
 name|int
 name|length
 parameter_list|,
-name|DataInputStream
-name|file
+name|DataInput
+name|input
 parameter_list|,
 name|ConstantPool
 name|constant_pool
@@ -124,7 +124,7 @@ name|int
 name|annotation_table_length
 init|=
 operator|(
-name|file
+name|input
 operator|.
 name|readUnsignedShort
 argument_list|()
@@ -162,7 +162,7 @@ name|AnnotationEntry
 operator|.
 name|read
 argument_list|(
-name|file
+name|input
 argument_list|,
 name|constant_pool
 argument_list|,

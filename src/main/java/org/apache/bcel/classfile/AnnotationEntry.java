@@ -21,7 +21,7 @@ name|java
 operator|.
 name|io
 operator|.
-name|DataInputStream
+name|DataInput
 import|;
 end_import
 
@@ -132,14 +132,14 @@ name|ElementValuePair
 argument_list|>
 name|element_value_pairs
 decl_stmt|;
-comment|/**      * Factory method to create an AnnotionEntry from a DataInputStream      *       * @param file      * @param constant_pool      * @param isRuntimeVisible      * @return the entry      * @throws IOException      */
+comment|/**      * Factory method to create an AnnotionEntry from a DataInputStream      *       * @param input      * @param constant_pool      * @param isRuntimeVisible      * @return the entry      * @throws IOException      */
 specifier|public
 specifier|static
 name|AnnotationEntry
 name|read
 parameter_list|(
-name|DataInputStream
-name|file
+name|DataInput
+name|input
 parameter_list|,
 name|ConstantPool
 name|constant_pool
@@ -157,7 +157,7 @@ init|=
 operator|new
 name|AnnotationEntry
 argument_list|(
-name|file
+name|input
 operator|.
 name|readUnsignedShort
 argument_list|()
@@ -172,7 +172,7 @@ name|int
 name|num_element_value_pairs
 init|=
 operator|(
-name|file
+name|input
 operator|.
 name|readUnsignedShort
 argument_list|()
@@ -213,7 +213,7 @@ argument_list|(
 operator|new
 name|ElementValuePair
 argument_list|(
-name|file
+name|input
 operator|.
 name|readUnsignedShort
 argument_list|()
@@ -222,7 +222,7 @@ name|ElementValue
 operator|.
 name|readElementValue
 argument_list|(
-name|file
+name|input
 argument_list|,
 name|constant_pool
 argument_list|)

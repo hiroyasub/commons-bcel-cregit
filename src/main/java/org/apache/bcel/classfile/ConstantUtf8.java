@@ -31,16 +31,6 @@ name|java
 operator|.
 name|io
 operator|.
-name|DataInputStream
-import|;
-end_import
-
-begin_import
-import|import
-name|java
-operator|.
-name|io
-operator|.
 name|DataOutputStream
 import|;
 end_import
@@ -435,8 +425,8 @@ specifier|static
 name|ConstantUtf8
 name|getInstance
 parameter_list|(
-name|DataInputStream
-name|file
+name|DataInput
+name|input
 parameter_list|)
 throws|throws
 name|IOException
@@ -444,7 +434,7 @@ block|{
 return|return
 name|getInstance
 argument_list|(
-name|file
+name|input
 operator|.
 name|readUTF
 argument_list|()

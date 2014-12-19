@@ -21,7 +21,7 @@ name|java
 operator|.
 name|io
 operator|.
-name|DataInputStream
+name|DataInput
 import|;
 end_import
 
@@ -66,7 +66,7 @@ name|serialVersionUID
 init|=
 literal|270153155050617200L
 decl_stmt|;
-comment|/**      * @param name_index Index pointing to the name<em>Code</em>      * @param length Content length in bytes      * @param file Input stream      * @param constant_pool Array of constants      */
+comment|/**      * @param name_index Index pointing to the name<em>Code</em>      * @param length Content length in bytes      * @param input Input stream      * @param constant_pool Array of constants      */
 name|RuntimeInvisibleParameterAnnotations
 parameter_list|(
 name|int
@@ -75,8 +75,8 @@ parameter_list|,
 name|int
 name|length
 parameter_list|,
-name|DataInputStream
-name|file
+name|DataInput
+name|input
 parameter_list|,
 name|ConstantPool
 name|constant_pool
@@ -94,7 +94,7 @@ name|name_index
 argument_list|,
 name|length
 argument_list|,
-name|file
+name|input
 argument_list|,
 name|constant_pool
 argument_list|)

@@ -21,7 +21,7 @@ name|java
 operator|.
 name|io
 operator|.
-name|DataInputStream
+name|DataInput
 import|;
 end_import
 
@@ -235,8 +235,8 @@ specifier|static
 name|ElementValue
 name|readElementValue
 parameter_list|(
-name|DataInputStream
-name|dis
+name|DataInput
+name|input
 parameter_list|,
 name|ConstantPool
 name|cpool
@@ -247,7 +247,7 @@ block|{
 name|byte
 name|type
 init|=
-name|dis
+name|input
 operator|.
 name|readByte
 argument_list|()
@@ -267,7 +267,7 @@ name|SimpleElementValue
 argument_list|(
 name|PRIMITIVE_BYTE
 argument_list|,
-name|dis
+name|input
 operator|.
 name|readUnsignedShort
 argument_list|()
@@ -285,7 +285,7 @@ name|SimpleElementValue
 argument_list|(
 name|PRIMITIVE_CHAR
 argument_list|,
-name|dis
+name|input
 operator|.
 name|readUnsignedShort
 argument_list|()
@@ -303,7 +303,7 @@ name|SimpleElementValue
 argument_list|(
 name|PRIMITIVE_DOUBLE
 argument_list|,
-name|dis
+name|input
 operator|.
 name|readUnsignedShort
 argument_list|()
@@ -321,7 +321,7 @@ name|SimpleElementValue
 argument_list|(
 name|PRIMITIVE_FLOAT
 argument_list|,
-name|dis
+name|input
 operator|.
 name|readUnsignedShort
 argument_list|()
@@ -339,7 +339,7 @@ name|SimpleElementValue
 argument_list|(
 name|PRIMITIVE_INT
 argument_list|,
-name|dis
+name|input
 operator|.
 name|readUnsignedShort
 argument_list|()
@@ -357,7 +357,7 @@ name|SimpleElementValue
 argument_list|(
 name|PRIMITIVE_LONG
 argument_list|,
-name|dis
+name|input
 operator|.
 name|readUnsignedShort
 argument_list|()
@@ -375,7 +375,7 @@ name|SimpleElementValue
 argument_list|(
 name|PRIMITIVE_SHORT
 argument_list|,
-name|dis
+name|input
 operator|.
 name|readUnsignedShort
 argument_list|()
@@ -393,7 +393,7 @@ name|SimpleElementValue
 argument_list|(
 name|PRIMITIVE_BOOLEAN
 argument_list|,
-name|dis
+name|input
 operator|.
 name|readUnsignedShort
 argument_list|()
@@ -411,7 +411,7 @@ name|SimpleElementValue
 argument_list|(
 name|STRING
 argument_list|,
-name|dis
+name|input
 operator|.
 name|readUnsignedShort
 argument_list|()
@@ -429,12 +429,12 @@ name|EnumElementValue
 argument_list|(
 name|ENUM_CONSTANT
 argument_list|,
-name|dis
+name|input
 operator|.
 name|readUnsignedShort
 argument_list|()
 argument_list|,
-name|dis
+name|input
 operator|.
 name|readUnsignedShort
 argument_list|()
@@ -452,7 +452,7 @@ name|ClassElementValue
 argument_list|(
 name|CLASS
 argument_list|,
-name|dis
+name|input
 operator|.
 name|readUnsignedShort
 argument_list|()
@@ -475,7 +475,7 @@ name|AnnotationEntry
 operator|.
 name|read
 argument_list|(
-name|dis
+name|input
 argument_list|,
 name|cpool
 argument_list|,
@@ -492,7 +492,7 @@ comment|// Array
 name|int
 name|numArrayVals
 init|=
-name|dis
+name|input
 operator|.
 name|readUnsignedShort
 argument_list|()
@@ -531,7 +531,7 @@ name|ElementValue
 operator|.
 name|readElementValue
 argument_list|(
-name|dis
+name|input
 argument_list|,
 name|cpool
 argument_list|)

@@ -21,7 +21,7 @@ name|java
 operator|.
 name|io
 operator|.
-name|DataInputStream
+name|DataInput
 import|;
 end_import
 
@@ -115,11 +115,11 @@ name|constant_pool
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Read constants from given file stream.      *      * @param file Input stream      * @throws IOException      * @throws ClassFormatException      */
+comment|/**      * Read constants from given input stream.      *      * @param input Input stream      * @throws IOException      * @throws ClassFormatException      */
 name|ConstantPool
 parameter_list|(
-name|DataInputStream
-name|file
+name|DataInput
+name|input
 parameter_list|)
 throws|throws
 name|IOException
@@ -131,7 +131,7 @@ name|tag
 decl_stmt|;
 name|constant_pool_count
 operator|=
-name|file
+name|input
 operator|.
 name|readUnsignedShort
 argument_list|()
@@ -169,7 +169,7 @@ name|Constant
 operator|.
 name|readConstant
 argument_list|(
-name|file
+name|input
 argument_list|)
 expr_stmt|;
 comment|/* Quote from the JVM specification:              * "All eight byte constants take up two spots in the constant pool.              * If this is the n'th byte in the constant pool, then the next item              * will be numbered n+2"              *               * Thus we have to increment the index counter.              */

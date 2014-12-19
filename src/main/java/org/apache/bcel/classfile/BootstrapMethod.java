@@ -21,7 +21,7 @@ name|java
 operator|.
 name|io
 operator|.
-name|DataInputStream
+name|DataInput
 import|;
 end_import
 
@@ -93,11 +93,11 @@ name|BootstrapMethod
 parameter_list|()
 block|{
 block|}
-comment|/**      * Construct object from file stream.      *       * @param file Input stream      * @throws IOException      * @throws ClassFormatException      */
+comment|/**      * Construct object from input stream.      *       * @param input Input stream      * @throws IOException      * @throws ClassFormatException      */
 name|BootstrapMethod
 parameter_list|(
-name|DataInputStream
-name|file
+name|DataInput
+name|input
 parameter_list|)
 throws|throws
 name|IOException
@@ -106,7 +106,7 @@ name|ClassFormatException
 block|{
 name|bootstrap_method_ref
 operator|=
-name|file
+name|input
 operator|.
 name|readUnsignedShort
 argument_list|()
@@ -114,7 +114,7 @@ expr_stmt|;
 name|int
 name|num_bootstrap_methods
 init|=
-name|file
+name|input
 operator|.
 name|readUnsignedShort
 argument_list|()
@@ -147,7 +147,7 @@ index|[
 name|i
 index|]
 operator|=
-name|file
+name|input
 operator|.
 name|readUnsignedShort
 argument_list|()

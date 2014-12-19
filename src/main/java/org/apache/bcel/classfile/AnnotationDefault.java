@@ -21,7 +21,7 @@ name|java
 operator|.
 name|io
 operator|.
-name|DataInputStream
+name|DataInput
 import|;
 end_import
 
@@ -81,7 +81,7 @@ specifier|private
 name|ElementValue
 name|default_value
 decl_stmt|;
-comment|/**          * @param name_index          *            Index pointing to the name<em>Code</em>          * @param length          *            Content length in bytes          * @param file          *            Input stream          * @param constant_pool          *            Array of constants          */
+comment|/**          * @param name_index          *            Index pointing to the name<em>Code</em>          * @param length          *            Content length in bytes          * @param input          *            Input stream          * @param constant_pool          *            Array of constants          */
 specifier|public
 name|AnnotationDefault
 parameter_list|(
@@ -91,8 +91,8 @@ parameter_list|,
 name|int
 name|length
 parameter_list|,
-name|DataInputStream
-name|file
+name|DataInput
+name|input
 parameter_list|,
 name|ConstantPool
 name|constant_pool
@@ -120,7 +120,7 @@ name|ElementValue
 operator|.
 name|readElementValue
 argument_list|(
-name|file
+name|input
 argument_list|,
 name|constant_pool
 argument_list|)

@@ -21,7 +21,7 @@ name|java
 operator|.
 name|io
 operator|.
-name|DataInputStream
+name|DataInput
 import|;
 end_import
 
@@ -103,11 +103,11 @@ specifier|private
 name|ConstantPool
 name|constant_pool
 decl_stmt|;
-comment|/**      * Construct object from file stream.      * @param file Input stream      * @throws IOException      */
+comment|/**      * Construct object from input stream.      *       * @param input Input stream      * @throws IOException      */
 name|StackMapEntry
 parameter_list|(
-name|DataInputStream
-name|file
+name|DataInput
+name|input
 parameter_list|,
 name|ConstantPool
 name|constant_pool
@@ -117,12 +117,12 @@ name|IOException
 block|{
 name|this
 argument_list|(
-name|file
+name|input
 operator|.
 name|readShort
 argument_list|()
 argument_list|,
-name|file
+name|input
 operator|.
 name|readShort
 argument_list|()
@@ -168,7 +168,7 @@ operator|=
 operator|new
 name|StackMapType
 argument_list|(
-name|file
+name|input
 argument_list|,
 name|constant_pool
 argument_list|)
@@ -176,7 +176,7 @@ expr_stmt|;
 block|}
 name|number_of_stack_items
 operator|=
-name|file
+name|input
 operator|.
 name|readShort
 argument_list|()
@@ -212,7 +212,7 @@ operator|=
 operator|new
 name|StackMapType
 argument_list|(
-name|file
+name|input
 argument_list|,
 name|constant_pool
 argument_list|)

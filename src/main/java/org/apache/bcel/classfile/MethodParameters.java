@@ -21,7 +21,7 @@ name|java
 operator|.
 name|io
 operator|.
-name|DataInputStream
+name|DataInput
 import|;
 end_import
 
@@ -95,8 +95,8 @@ parameter_list|,
 name|int
 name|length
 parameter_list|,
-name|DataInputStream
-name|file
+name|DataInput
+name|input
 parameter_list|,
 name|ConstantPool
 name|constant_pool
@@ -129,7 +129,7 @@ expr_stmt|;
 name|int
 name|parameters_count
 init|=
-name|file
+name|input
 operator|.
 name|readUnsignedByte
 argument_list|()
@@ -165,7 +165,7 @@ operator|=
 operator|new
 name|MethodParameter
 argument_list|(
-name|file
+name|input
 argument_list|)
 expr_stmt|;
 block|}

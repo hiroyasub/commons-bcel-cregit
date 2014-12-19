@@ -21,7 +21,7 @@ name|java
 operator|.
 name|io
 operator|.
-name|DataInputStream
+name|DataInput
 import|;
 end_import
 
@@ -104,8 +104,8 @@ parameter_list|,
 name|int
 name|len
 parameter_list|,
-name|DataInputStream
-name|dis
+name|DataInput
+name|input
 parameter_list|,
 name|ConstantPool
 name|cpool
@@ -119,12 +119,12 @@ name|nameIndex
 argument_list|,
 name|len
 argument_list|,
-name|dis
+name|input
 operator|.
 name|readUnsignedShort
 argument_list|()
 argument_list|,
-name|dis
+name|input
 operator|.
 name|readUnsignedShort
 argument_list|()

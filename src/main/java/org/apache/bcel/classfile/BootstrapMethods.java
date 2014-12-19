@@ -21,7 +21,7 @@ name|java
 operator|.
 name|io
 operator|.
-name|DataInputStream
+name|DataInput
 import|;
 end_import
 
@@ -127,8 +127,8 @@ parameter_list|,
 name|int
 name|length
 parameter_list|,
-name|DataInputStream
-name|file
+name|DataInput
+name|input
 parameter_list|,
 name|ConstantPool
 name|constant_pool
@@ -154,7 +154,7 @@ expr_stmt|;
 name|int
 name|num_bootstrap_methods
 init|=
-name|file
+name|input
 operator|.
 name|readUnsignedShort
 argument_list|()
@@ -190,7 +190,7 @@ operator|=
 operator|new
 name|BootstrapMethod
 argument_list|(
-name|file
+name|input
 argument_list|)
 expr_stmt|;
 block|}
