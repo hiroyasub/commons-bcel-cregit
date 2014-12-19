@@ -1487,7 +1487,7 @@ argument_list|)
 throw|;
 block|}
 block|}
-comment|/**      * A Visitor class that ensures the constant pool satisfies the static      * constraints.    * The visitXXX() methods throw ClassConstraintException instances otherwise.    *    * @see #constant_pool_entries_satisfy_static_constraints()      */
+comment|/**      * A Visitor class that ensures the constant pool satisfies the static      * constraints.      * The visitXXX() methods throw ClassConstraintException instances otherwise.      *      * @see #constant_pool_entries_satisfy_static_constraints()      */
 specifier|private
 class|class
 name|CPESSC_Visitor
@@ -7069,7 +7069,7 @@ comment|// related to internal BCEL data representation.
 comment|// see visitLineNumberTable(LineNumberTable)
 block|}
 block|}
-comment|/**      * Ensures that the ConstantCP-subclassed entries of the constant      * pool are valid. According to "Yellin: Low Level Security in Java",      * this method does not verify the existence of referenced entities      * (such as classes) but only the formal correctness (such as well-formed      * signatures).    * The visitXXX() methods throw ClassConstraintException instances otherwise.      *<B>Precondition: index-style cross referencing in the constant      * pool must be valid. Simply invoke constant_pool_entries_satisfy_static_constraints()      * before.</B>      *      * @throws ClassConstraintException otherwise.      * @see #constant_pool_entries_satisfy_static_constraints()      */
+comment|/**      * Ensures that the ConstantCP-subclassed entries of the constant      * pool are valid. According to "Yellin: Low Level Security in Java",      * this method does not verify the existence of referenced entities      * (such as classes) but only the formal correctness (such as well-formed      * signatures).      * The visitXXX() methods throw ClassConstraintException instances otherwise.      *<B>Precondition: index-style cross referencing in the constant      * pool must be valid. Simply invoke constant_pool_entries_satisfy_static_constraints()      * before.</B>      *      * @throws ClassConstraintException otherwise.      * @see #constant_pool_entries_satisfy_static_constraints()      */
 specifier|private
 name|void
 name|field_and_method_refs_are_valid
@@ -7131,7 +7131,7 @@ argument_list|)
 throw|;
 block|}
 block|}
-comment|/**      * A Visitor class that ensures the ConstantCP-subclassed entries      * of the constant pool are valid.    *<B>Precondition: index-style cross referencing in the constant    * pool must be valid.</B>      *    * @see #constant_pool_entries_satisfy_static_constraints()      * @see org.apache.bcel.classfile.ConstantCP      */
+comment|/**      * A Visitor class that ensures the ConstantCP-subclassed entries      * of the constant pool are valid.      *<B>Precondition: index-style cross referencing in the constant      * pool must be valid.</B>      *      * @see #constant_pool_entries_satisfy_static_constraints()      * @see org.apache.bcel.classfile.ConstantCP      */
 specifier|private
 class|class
 name|FAMRAV_Visitor
