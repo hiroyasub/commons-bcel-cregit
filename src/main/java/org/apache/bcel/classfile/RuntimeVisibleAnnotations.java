@@ -77,7 +77,6 @@ init|=
 literal|8992333017010665281L
 decl_stmt|;
 comment|/**      * @param name_index      *            Index pointing to the name<em>Code</em>      * @param length      *            Content length in bytes      * @param input      *            Input stream      * @param constant_pool      *            Array of constants      */
-specifier|public
 name|RuntimeVisibleAnnotations
 parameter_list|(
 name|int
@@ -124,17 +123,12 @@ name|ConstantPool
 name|constant_pool
 parameter_list|)
 block|{
-name|Annotations
-name|c
-init|=
+return|return
 operator|(
 name|Annotations
 operator|)
 name|clone
 argument_list|()
-decl_stmt|;
-return|return
-name|c
 return|;
 block|}
 annotation|@

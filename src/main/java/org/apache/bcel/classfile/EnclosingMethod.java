@@ -95,7 +95,6 @@ name|int
 name|methodIndex
 decl_stmt|;
 comment|// Ctors - and code to read an attribute in.
-specifier|public
 name|EnclosingMethod
 parameter_list|(
 name|int

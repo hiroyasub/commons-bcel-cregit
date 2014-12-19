@@ -76,7 +76,6 @@ name|boolean
 name|isRuntimeVisible
 decl_stmt|;
 comment|/**      * @param annotation_type the subclass type of the annotation      * @param name_index Index pointing to the name<em>Code</em>      * @param length Content length in bytes      * @param input Input stream      * @param constant_pool Array of constants      */
-specifier|public
 name|Annotations
 parameter_list|(
 name|byte
