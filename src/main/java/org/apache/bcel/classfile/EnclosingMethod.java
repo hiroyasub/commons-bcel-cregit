@@ -58,7 +58,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * This attribute exists for local or   * anonymous classes and ... there can be only one.  */
+comment|/**  * This attribute exists for local or   * anonymous classes and ... there can be only one.  *   * @since 6.0  */
 end_comment
 
 begin_class
