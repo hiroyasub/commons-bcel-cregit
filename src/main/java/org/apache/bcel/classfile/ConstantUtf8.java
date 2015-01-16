@@ -414,7 +414,8 @@ name|s
 parameter_list|)
 block|{
 return|return
-name|getCachedInstance
+operator|new
+name|ConstantUtf8
 argument_list|(
 name|s
 argument_list|)
