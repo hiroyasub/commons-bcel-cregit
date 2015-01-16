@@ -174,8 +174,8 @@ name|created
 init|=
 literal|0
 decl_stmt|;
-specifier|final
 specifier|static
+specifier|final
 name|boolean
 name|BCEL_STATISTICS
 init|=
@@ -186,8 +186,8 @@ argument_list|(
 literal|"bcel.statistics"
 argument_list|)
 decl_stmt|;
-specifier|final
 specifier|static
+specifier|final
 name|boolean
 name|BCEL_DONT_CACHE
 init|=
