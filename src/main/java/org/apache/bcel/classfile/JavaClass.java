@@ -354,11 +354,14 @@ init|=
 literal|false
 decl_stmt|;
 comment|// Debugging on/off
+specifier|final
 specifier|static
 name|char
 name|sep
 init|=
-literal|'/'
+name|File
+operator|.
+name|separatorChar
 decl_stmt|;
 comment|// directory separator
 comment|//  Annotations are collected from certain attributes, don't do it more than necessary!
@@ -1694,13 +1697,6 @@ name|getBoolean
 argument_list|(
 literal|"JavaClass.debug"
 argument_list|)
-expr_stmt|;
-comment|// Get path separator either / or \ usually
-name|sep
-operator|=
-name|File
-operator|.
-name|separatorChar
 expr_stmt|;
 block|}
 comment|/**      * @param attributes .      */
