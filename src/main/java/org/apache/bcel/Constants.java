@@ -6822,6 +6822,15 @@ name|ATTR_METHOD_PARAMETERS
 init|=
 literal|21
 decl_stmt|;
+specifier|public
+specifier|static
+specifier|final
+name|short
+name|KNOWN_ATTRIBUTES
+init|=
+literal|22
+decl_stmt|;
+comment|// count of attributes
 comment|/** @deprecated Use {@link #ATTR_RUNTIME_VISIBLE_ANNOTATIONS} instead */
 annotation|@
 name|Deprecated
@@ -6866,15 +6875,7 @@ name|ATTR_RUNTIMEINVISIBLE_PARAMETER_ANNOTATIONS
 init|=
 name|ATTR_RUNTIME_INVISIBLE_PARAMETER_ANNOTATIONS
 decl_stmt|;
-specifier|public
-specifier|static
-specifier|final
-name|short
-name|KNOWN_ATTRIBUTES
-init|=
-literal|22
-decl_stmt|;
-comment|// TOFO: FIXXXXX
+comment|// TODO: mutable public array!!
 specifier|public
 specifier|static
 specifier|final
@@ -7118,7 +7119,7 @@ name|APPEND_FRAME_MAX
 init|=
 literal|254
 decl_stmt|;
-comment|// Constants defining the behavior of the Method Handles (JVMS §5.4.3.5)
+comment|// Constants defining the behavior of the Method Handles (JVMS ï¿½5.4.3.5)
 specifier|public
 specifier|static
 specifier|final
