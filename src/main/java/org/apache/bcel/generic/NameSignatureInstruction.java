@@ -72,7 +72,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Super class for FieldOrMethod and INVOKEDYNAMIC, since they both have  * names and signatures   *  * @version $Id: FieldOrMethod.java 1481383 2013-05-11 17:34:32Z dbrosius $  * @author<A HREF="mailto:bill.pugh@gmail.com">Bill Pugh</A>  */
+comment|/**  * Super class for FieldOrMethod and INVOKEDYNAMIC, since they both have  * names and signatures   *  * @version $Id: FieldOrMethod.java 1481383 2013-05-11 17:34:32Z dbrosius $  * @author<A HREF="mailto:bill.pugh@gmail.com">Bill Pugh</A>  * @since 6.0  */
 end_comment
 
 begin_class

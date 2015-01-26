@@ -130,7 +130,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Class for INVOKEDYNAMIC. Not an instance of InvokeInstruction, since that class  * expects to be able to get the class of the method. Ignores the bootstrap  * mechanism entirely.  *  * @version $Id: InvokeInstruction.java 1152072 2011-07-29 01:54:05Z dbrosius $  * @author  Bill Pugh  */
+comment|/**  * Class for INVOKEDYNAMIC. Not an instance of InvokeInstruction, since that class  * expects to be able to get the class of the method. Ignores the bootstrap  * mechanism entirely.  *  * @version $Id: InvokeInstruction.java 1152072 2011-07-29 01:54:05Z dbrosius $  * @author  Bill Pugh  * @since 6.0  */
 end_comment
 
 begin_class

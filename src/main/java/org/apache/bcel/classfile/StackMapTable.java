@@ -58,7 +58,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * This class represents a stack map attribute used for  * preverification of Java classes for the<a  * href="http://java.sun.com/j2me/"> Java 2 Micro Edition</a>  * (J2ME). This attribute is used by the<a  * href="http://java.sun.com/products/cldc/">KVM</a> and contained  * within the Code attribute of a method. See CLDC specification  * ï¿½ï¿½?5.3.1.2  *  * @version $Id$  * @author<A HREF="mailto:m.dahm@gmx.de">M. Dahm</A>  * @see     Code  * @see     StackMapEntry  * @see     StackMapType  */
+comment|/**  * This class represents a stack map attribute used for  * preverification of Java classes for the<a  * href="http://java.sun.com/j2me/"> Java 2 Micro Edition</a>  * (J2ME). This attribute is used by the<a  * href="http://java.sun.com/products/cldc/">KVM</a> and contained  * within the Code attribute of a method. See CLDC specification  * ï¿½ï¿½?5.3.1.2  *  * @version $Id$  * @author<A HREF="mailto:m.dahm@gmx.de">M. Dahm</A>  * @see     Code  * @see     StackMapEntry  * @see     StackMapType  * @since 6.0  */
 end_comment
 
 begin_class
