@@ -78,7 +78,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * This class represents a reference to an unknown (i.e.,  * application-specific) attribute of a class.  It is instantiated from the  * {@link Attribute#readAttribute(java.io.DataInputStream, ConstantPool)} method.  * Applications that need to read in application-specific attributes should create an  * {@link AttributeReader} implementation and attach it via  * {@link Attribute#addAttributeReader(String, AttributeReader)}.   *  * @version $Id$  * @see org.apache.bcel.classfile.Attribute  * @see org.apache.bcel.classfile.AttributeReader  * @author<A HREF="mailto:m.dahm@gmx.de">M. Dahm</A>  */
+comment|/**  * This class represents a reference to an unknown (i.e.,  * application-specific) attribute of a class.  It is instantiated from the  * {@link Attribute#readAttribute(java.io.DataInput, ConstantPool)} method.  * Applications that need to read in application-specific attributes should create an  * {@link AttributeReader} implementation and attach it via  * {@link Attribute#addAttributeReader(String, AttributeReader)}.   *  * @version $Id$  * @see org.apache.bcel.classfile.Attribute  * @see org.apache.bcel.classfile.AttributeReader  * @author<A HREF="mailto:m.dahm@gmx.de">M. Dahm</A>  */
 end_comment
 
 begin_class

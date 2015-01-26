@@ -21,7 +21,7 @@ name|java
 operator|.
 name|io
 operator|.
-name|DataInputStream
+name|DataInput
 import|;
 end_import
 
@@ -379,7 +379,7 @@ specifier|static
 name|AnnotationEntryGen
 name|read
 parameter_list|(
-name|DataInputStream
+name|DataInput
 name|dis
 parameter_list|,
 name|ConstantPoolGen
