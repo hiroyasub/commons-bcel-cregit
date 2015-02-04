@@ -504,7 +504,6 @@ name|ih
 operator|)
 return|;
 block|}
-comment|/** @return a hash code value for the object.      */
 annotation|@
 name|Override
 specifier|public
@@ -512,12 +511,9 @@ name|int
 name|hashCode
 parameter_list|()
 block|{
-comment|//If the user changes the name or type, problems with the targeter hashmap will occur
-name|int
-name|hc
-init|=
-name|index
-operator|^
+comment|// If the user changes the name or type, problems with the targeter hashmap will occur.
+comment|// Note: index cannot be part of hash as it may be changed by the user.
+return|return
 name|name
 operator|.
 name|hashCode
@@ -527,9 +523,6 @@ name|type
 operator|.
 name|hashCode
 argument_list|()
-decl_stmt|;
-return|return
-name|hc
 return|;
 block|}
 comment|/**      * We consider to local variables to be equal, if the use the same index and      * are valid in the same range.      */
