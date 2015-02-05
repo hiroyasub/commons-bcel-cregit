@@ -199,7 +199,7 @@ return|return
 name|bytes
 return|;
 block|}
-comment|/**      * @param bytes thr raw bytes that represent this long      */
+comment|/**      * @param bytes the raw bytes that represent this long      */
 specifier|public
 specifier|final
 name|void
