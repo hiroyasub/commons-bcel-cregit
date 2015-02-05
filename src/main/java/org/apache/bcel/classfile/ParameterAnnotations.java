@@ -328,6 +328,30 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
+comment|/**      * @return deep copy of this attribute      */
+annotation|@
+name|Override
+specifier|public
+name|Attribute
+name|copy
+parameter_list|(
+name|ConstantPool
+name|constant_pool
+parameter_list|)
+block|{
+name|ParameterAnnotations
+name|c
+init|=
+operator|(
+name|ParameterAnnotations
+operator|)
+name|clone
+argument_list|()
+decl_stmt|;
+return|return
+name|c
+return|;
+block|}
 block|}
 end_class
 

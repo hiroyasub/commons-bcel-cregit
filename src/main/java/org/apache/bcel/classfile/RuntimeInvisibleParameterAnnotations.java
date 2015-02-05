@@ -48,7 +48,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * represents a parameter annotation that is represented in the class file  * but is not provided to the JVM.  *   * @version $Id: RuntimeInvisibleParameterAnnotations  * @author<A HREF="mailto:dbrosius@qis.net">D. Brosius</A>  * @since 6.0  */
+comment|/**  * Represents a parameter annotation that is represented in the class file  * but is not provided to the JVM.  *   * @version $Id: RuntimeInvisibleParameterAnnotations  * @author<A HREF="mailto:dbrosius@qis.net">D. Brosius</A>  * @since 6.0  */
 end_comment
 
 begin_class
@@ -99,30 +99,6 @@ argument_list|,
 name|constant_pool
 argument_list|)
 expr_stmt|;
-block|}
-comment|/**      * @return deep copy of this attribute      */
-annotation|@
-name|Override
-specifier|public
-name|Attribute
-name|copy
-parameter_list|(
-name|ConstantPool
-name|constant_pool
-parameter_list|)
-block|{
-name|Annotations
-name|c
-init|=
-operator|(
-name|Annotations
-operator|)
-name|clone
-argument_list|()
-decl_stmt|;
-return|return
-name|c
-return|;
 block|}
 block|}
 end_class
