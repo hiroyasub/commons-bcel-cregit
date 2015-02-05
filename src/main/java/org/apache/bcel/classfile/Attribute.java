@@ -87,20 +87,6 @@ name|Constants
 import|;
 end_import
 
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|bcel
-operator|.
-name|classfile
-operator|.
-name|ConstantUtf8
-import|;
-end_import
-
 begin_comment
 comment|/**  * Abstract super class for<em>Attribute</em> objects. Currently the  *<em>ConstantValue</em>,<em>SourceFile</em>,<em>Code</em>,  *<em>Exceptiontable</em>,<em>LineNumberTable</em>,  *<em>LocalVariableTable</em>,<em>InnerClasses</em> and  *<em>Synthetic</em> attributes are supported. The<em>Unknown</em>  * attribute stands for non-standard-attributes.  *   * @version $Id$  * @author<A HREF="mailto:m.dahm@gmx.de">M. Dahm</A>  * @see ConstantValue  * @see SourceFile  * @see Code  * @see Unknown  * @see ExceptionTable  * @see LineNumberTable  * @see LocalVariableTable  * @see InnerClasses  * @see Synthetic  * @see Deprecated  * @see Signature  */
 end_comment
@@ -243,7 +229,7 @@ name|AttributeReader
 argument_list|>
 argument_list|()
 decl_stmt|;
-comment|/**      * Add an Attribute reader capable of parsing (user-defined) attributes      * named "name". You should not add readers for the standard attributes such      * as "LineNumberTable", because those are handled internally.      *       * @param name      *            the name of the attribute as stored in the class file      * @param r      *            the reader object      */
+comment|/**      * Add an Attribute reader capable of parsing (user-defined) attributes      * named "name". You should not add readers for the standard attributes such      * as "LineNumberTable", because those are handled internally.      *       * @param name the name of the attribute as stored in the class file      * @param r    the reader object      */
 specifier|public
 specifier|static
 name|void
@@ -266,7 +252,7 @@ name|r
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Remove attribute reader      *       * @param name      *            the name of the attribute as stored in the class file      */
+comment|/**      * Remove attribute reader      *       * @param name the name of the attribute as stored in the class file      */
 specifier|public
 specifier|static
 name|void
@@ -301,18 +287,6 @@ name|IOException
 throws|,
 name|ClassFormatException
 block|{
-name|ConstantUtf8
-name|c
-decl_stmt|;
-name|String
-name|name
-decl_stmt|;
-name|int
-name|name_index
-decl_stmt|;
-name|int
-name|length
-decl_stmt|;
 name|byte
 name|tag
 init|=
@@ -322,15 +296,17 @@ name|ATTR_UNKNOWN
 decl_stmt|;
 comment|// Unknown attribute
 comment|// Get class name from constant pool via `name_index' indirection
+name|int
 name|name_index
-operator|=
+init|=
 name|file
 operator|.
 name|readUnsignedShort
 argument_list|()
-expr_stmt|;
+decl_stmt|;
+name|ConstantUtf8
 name|c
-operator|=
+init|=
 operator|(
 name|ConstantUtf8
 operator|)
@@ -344,24 +320,25 @@ name|Constants
 operator|.
 name|CONSTANT_Utf8
 argument_list|)
-expr_stmt|;
+decl_stmt|;
+name|String
 name|name
-operator|=
+init|=
 name|c
 operator|.
 name|getBytes
 argument_list|()
-expr_stmt|;
+decl_stmt|;
 comment|// Length of data in bytes
+name|int
 name|length
-operator|=
+init|=
 name|file
 operator|.
 name|readInt
 argument_list|()
-expr_stmt|;
+decl_stmt|;
 comment|// Compare strings to find known attribute
-comment|// System.out.println(name);
 for|for
 control|(
 name|byte
@@ -908,7 +885,7 @@ return|return
 name|length
 return|;
 block|}
-comment|/**      * @param length      *            length in bytes.      */
+comment|/**      * @param length length in bytes.      */
 specifier|public
 specifier|final
 name|void
@@ -925,7 +902,7 @@ operator|=
 name|length
 expr_stmt|;
 block|}
-comment|/**      * @param name_index      *            of attribute.      */
+comment|/**      * @param name_index of attribute.      */
 specifier|public
 specifier|final
 name|void
@@ -953,7 +930,7 @@ return|return
 name|name_index
 return|;
 block|}
-comment|/**      * @return Tag of attribute, i.e., its type. Value may not be altered, thus      *         there is no setTag() method.      */
+comment|/**      * @return Tag of attribute, i.e., its type. Value may not be altered, thus there is no setTag() method.      */
 specifier|public
 specifier|final
 name|byte
@@ -975,7 +952,7 @@ return|return
 name|constant_pool
 return|;
 block|}
-comment|/**      * @param constant_pool      *            Constant pool to be used for this object.      * @see ConstantPool      */
+comment|/**      * @param constant_pool Constant pool to be used for this object.      * @see ConstantPool      */
 specifier|public
 specifier|final
 name|void
