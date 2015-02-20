@@ -174,6 +174,21 @@ name|InstructionHandle
 name|ih
 parameter_list|)
 block|{
+if|if
+condition|(
+name|ih
+operator|==
+literal|null
+condition|)
+block|{
+throw|throw
+operator|new
+name|NullPointerException
+argument_list|(
+literal|"InstructionHandle may not be null"
+argument_list|)
+throw|;
+block|}
 name|BranchInstruction
 operator|.
 name|notifyTarget
