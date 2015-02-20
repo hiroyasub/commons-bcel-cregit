@@ -21,7 +21,7 @@ name|java
 operator|.
 name|io
 operator|.
-name|DataInputStream
+name|DataInput
 import|;
 end_import
 
@@ -213,7 +213,7 @@ block|}
 comment|/**      * Construct object from file stream.      * @param file Input stream      */
 name|Field
 parameter_list|(
-name|DataInputStream
+name|DataInput
 name|file
 parameter_list|,
 name|ConstantPool
