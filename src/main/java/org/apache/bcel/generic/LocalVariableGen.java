@@ -481,6 +481,22 @@ argument_list|)
 throw|;
 block|}
 block|}
+comment|/**      * Clear the references from and to this variable when it's removed.      */
+name|void
+name|dispose
+parameter_list|()
+block|{
+name|setStart
+argument_list|(
+literal|null
+argument_list|)
+expr_stmt|;
+name|setEnd
+argument_list|(
+literal|null
+argument_list|)
+expr_stmt|;
+block|}
 comment|/**      * @return true, if ih is target of this variable      */
 specifier|public
 name|boolean
