@@ -1155,15 +1155,6 @@ parameter_list|)
 throws|throws
 name|IOException
 block|{
-for|for
-control|(
-name|PathEntry
-name|path
-range|:
-name|paths
-control|)
-block|{
-comment|// TODO why is path not used??
 name|ClassFile
 name|cf
 init|=
@@ -1215,7 +1206,6 @@ block|{
 return|return
 name|cf
 return|;
-block|}
 block|}
 throw|throw
 operator|new
