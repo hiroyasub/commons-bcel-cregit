@@ -240,7 +240,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Read class file(s) and patch all of its methods, so that they print  * "hello" and their name and signature before doing anything else.  *  * @version $Id$  * @author<A HREF="mailto:m.dahm@gmx.de">M. Dahm</A>  */
+comment|/**  * Read class file(s) and patch all of its methods, so that they print  * "hello" and their name and signature before doing anything else.  *  * @author<A HREF="mailto:m.dahm@gmx.de">M. Dahm</A>  * @version $Id$  */
 end_comment
 
 begin_class
@@ -282,32 +282,20 @@ name|String
 index|[]
 name|argv
 parameter_list|)
-block|{
-try|try
+throws|throws
+name|Exception
 block|{
 for|for
 control|(
-name|int
-name|i
-init|=
-literal|0
-init|;
-name|i
-operator|<
+name|String
+name|arg
+range|:
 name|argv
-operator|.
-name|length
-condition|;
-name|i
-operator|++
 control|)
 block|{
 if|if
 condition|(
-name|argv
-index|[
-name|i
-index|]
+name|arg
 operator|.
 name|endsWith
 argument_list|(
@@ -321,10 +309,7 @@ init|=
 operator|new
 name|ClassParser
 argument_list|(
-name|argv
-index|[
-name|i
-index|]
+name|arg
 argument_list|)
 operator|.
 name|parse
@@ -341,19 +326,13 @@ decl_stmt|;
 name|String
 name|file_name
 init|=
-name|argv
-index|[
-name|i
-index|]
+name|arg
 operator|.
 name|substring
 argument_list|(
 literal|0
 argument_list|,
-name|argv
-index|[
-name|i
-index|]
+name|arg
 operator|.
 name|length
 argument_list|()
@@ -402,7 +381,7 @@ argument_list|,
 literal|"(Ljava/lang/String;)V"
 argument_list|)
 expr_stmt|;
-comment|/* Patch all methods.        */
+comment|// Patch all methods.
 name|Method
 index|[]
 name|methods
@@ -443,7 +422,7 @@ index|]
 argument_list|)
 expr_stmt|;
 block|}
-comment|/* Finally dump it back to a file.        */
+comment|// Finally dump it back to a file.
 name|java_class
 operator|.
 name|setConstantPool
@@ -464,20 +443,7 @@ expr_stmt|;
 block|}
 block|}
 block|}
-catch|catch
-parameter_list|(
-name|Exception
-name|e
-parameter_list|)
-block|{
-name|e
-operator|.
-name|printStackTrace
-argument_list|()
-expr_stmt|;
-block|}
-block|}
-comment|/** Change class name to<old_name>_hello    */
+comment|/**      * Change class name to<old_name>_hello      */
 specifier|private
 specifier|static
 name|void
@@ -542,7 +508,7 @@ argument_list|)
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**    * Patch a method.    */
+comment|/**      * Patch a method.      */
 specifier|private
 specifier|static
 name|Method
@@ -600,7 +566,7 @@ return|return
 name|m
 return|;
 block|}
-comment|/* Create instruction list to be inserted at method start.      */
+comment|// Create instruction list to be inserted at method start.
 name|String
 name|mesg
 init|=
@@ -770,7 +736,7 @@ name|patch
 argument_list|)
 expr_stmt|;
 block|}
-comment|/* Stack size must be at least 2, since the println method takes 2 argument.      */
+comment|// Stack size must be at least 2, since the println method takes 2 argument.
 if|if
 condition|(
 name|code

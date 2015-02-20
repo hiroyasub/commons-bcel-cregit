@@ -152,7 +152,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Remove NOPs from given class  *  * @version $Id$  * @author<A HREF="mailto:m.dahm@gmx.de">M. Dahm</A>  */
+comment|/**  * Remove NOPs from given class  *  * @author<A HREF="mailto:m.dahm@gmx.de">M. Dahm</A>  * @version $Id$  */
 end_comment
 
 begin_class
@@ -172,7 +172,7 @@ parameter_list|)
 block|{
 try|try
 block|{
-comment|/* Load the class from CLASSPATH.        */
+comment|// Load the class from CLASSPATH.
 name|JavaClass
 name|clazz
 init|=
@@ -291,7 +291,7 @@ comment|// Overwrite with stripped method
 block|}
 block|}
 block|}
-comment|/* Dump the class to<class name>_.class        */
+comment|// Dump the class to<class name>_.class
 name|clazz
 operator|.
 name|setConstantPool
@@ -422,7 +422,7 @@ operator|-
 literal|1
 index|]
 decl_stmt|;
-comment|/* Some nasty Java compilers may add NOP at end of method.        */
+comment|// Some nasty Java compilers may add NOP at end of method.
 if|if
 condition|(
 operator|(
@@ -445,7 +445,7 @@ name|match
 operator|.
 name|length
 expr_stmt|;
-comment|/* Delete NOPs and redirect any references to them to the following        * (non-nop) instruction.        */
+comment|// Delete NOPs and redirect any references to them to the following (non-nop) instruction.
 try|try
 block|{
 name|il
@@ -464,72 +464,33 @@ name|TargetLostException
 name|e2
 parameter_list|)
 block|{
+for|for
+control|(
 name|InstructionHandle
-index|[]
-name|targets
-init|=
+name|target
+range|:
 name|e2
 operator|.
 name|getTargets
 argument_list|()
-decl_stmt|;
-for|for
-control|(
-name|int
-name|i
-init|=
-literal|0
-init|;
-name|i
-operator|<
-name|targets
-operator|.
-name|length
-condition|;
-name|i
-operator|++
 control|)
 block|{
+for|for
+control|(
 name|InstructionTargeter
-index|[]
-name|targeters
-init|=
-name|targets
-index|[
-name|i
-index|]
+name|targeter
+range|:
+name|target
 operator|.
 name|getTargeters
 argument_list|()
-decl_stmt|;
-for|for
-control|(
-name|int
-name|j
-init|=
-literal|0
-init|;
-name|j
-operator|<
-name|targeters
-operator|.
-name|length
-condition|;
-name|j
-operator|++
 control|)
 block|{
-name|targeters
-index|[
-name|j
-index|]
+name|targeter
 operator|.
 name|updateTarget
 argument_list|(
-name|targets
-index|[
-name|i
-index|]
+name|target
 argument_list|,
 name|next
 argument_list|)

@@ -5,6 +5,16 @@ end_comment
 
 begin_import
 import|import
+name|java
+operator|.
+name|io
+operator|.
+name|IOException
+import|;
+end_import
+
+begin_import
+import|import
 name|org
 operator|.
 name|apache
@@ -226,7 +236,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Create HelloWorld class:  *<PRE>  * import java.io.*;  *  * public class HelloWorld {  *   public static void main(String[] argv) {  *     BufferedReader in   = new BufferedReader(new InputStreamReader(System.in));  *     String name = null;  *   *     try {  *       System.out.print("Please enter your name> ");  *       name = in.readLine();  *     } catch(IOException e) {   *       System.out.println(e);  *     return;   *     }  *   *     System.out.println("Hello, " + name);  *   }  * }  *</PRE>  *  * @version $Id$  * @author<A HREF="mailto:m.dahm@gmx.de">M. Dahm</A>  */
+comment|/**  * Create HelloWorld class:  *<PRE>  * import java.io.*;  *  * public class HelloWorld {  *     public static void main(String[] argv) {  *         BufferedReader in   = new BufferedReader(new InputStreamReader(System.in));  *         String name = null;  *   *         try {  *             System.out.print("Please enter your name> ");  *             name = in.readLine();  *         } catch(IOException e) {   *             System.out.println(e);  *             return;   *         }  *   *         System.out.println("Hello, " + name);  *     }  * }  *</PRE>  *  * @author<A HREF="mailto:m.dahm@gmx.de">M. Dahm</A>  * @version $Id$  */
 end_comment
 
 begin_class
@@ -364,7 +374,7 @@ argument_list|(
 literal|"java.io.PrintStream"
 argument_list|)
 decl_stmt|;
-comment|/* Create BufferedReader object and store it in local variable `in'.      */
+comment|// Create BufferedReader object and store it in local variable `in'.
 name|il
 operator|.
 name|append
@@ -428,7 +438,7 @@ name|GETSTATIC
 argument_list|)
 argument_list|)
 expr_stmt|;
-comment|/* Call constructors, i.e. BufferedReader(InputStreamReader())      */
+comment|// Call constructors, i.e. BufferedReader(InputStreamReader())
 name|il
 operator|.
 name|append
@@ -491,7 +501,7 @@ name|INVOKESPECIAL
 argument_list|)
 argument_list|)
 expr_stmt|;
-comment|/* Create local variable `in'      */
+comment|// Create local variable `in'
 name|LocalVariableGen
 name|lg
 init|=
@@ -537,7 +547,7 @@ argument_list|)
 argument_list|)
 expr_stmt|;
 comment|// `i' valid from here
-comment|/* Create local variable `name'      */
+comment|// Create local variable `name'
 name|lg
 operator|=
 name|mg
@@ -589,7 +599,7 @@ argument_list|)
 argument_list|)
 expr_stmt|;
 comment|// `name' valid from here
-comment|/* try { ...      */
+comment|// try { ...
 name|InstructionHandle
 name|try_start
 init|=
@@ -705,7 +715,7 @@ name|name
 argument_list|)
 argument_list|)
 expr_stmt|;
-comment|/* Upon normal execution we jump behind exception handler,       * the target address is not known yet.      */
+comment|// Upon normal execution we jump behind exception handler, the target address is not known yet.
 name|GOTO
 name|g
 init|=
@@ -725,7 +735,7 @@ argument_list|(
 name|g
 argument_list|)
 decl_stmt|;
-comment|/* } catch() { ... }      * Add exception handler: print exception and return from method      */
+comment|/* } catch() { ... }          * Add exception handler: print exception and return from method          */
 name|InstructionHandle
 name|handler
 init|=
@@ -816,7 +826,7 @@ literal|"java.io.IOException"
 argument_list|)
 argument_list|)
 expr_stmt|;
-comment|/* Normal code continues, now we can set the branch target of the GOTO      * that jumps over the handler code.      */
+comment|// Normal code continues, now we can set the branch target of the GOTO that jumps over the handler code.
 name|InstructionHandle
 name|ih
 init|=
@@ -847,7 +857,7 @@ argument_list|(
 name|ih
 argument_list|)
 expr_stmt|;
-comment|/* String concatenation compiles to StringBuffer operations.      */
+comment|// String concatenation compiles to StringBuffer operations.
 name|il
 operator|.
 name|append
@@ -926,7 +936,7 @@ name|name
 argument_list|)
 argument_list|)
 expr_stmt|;
-comment|/* Concatenate strings using a StringBuffer and print them.      */
+comment|// Concatenate strings using a StringBuffer and print them.
 name|il
 operator|.
 name|append
@@ -1048,7 +1058,7 @@ name|dispose
 argument_list|()
 expr_stmt|;
 comment|// Reuse instruction handles
-comment|/* Add public<init> method, i.e. empty constructor      */
+comment|// Add public<init> method, i.e. empty constructor
 name|cg
 operator|.
 name|addEmptyConstructor
@@ -1058,7 +1068,7 @@ operator|.
 name|ACC_PUBLIC
 argument_list|)
 expr_stmt|;
-comment|/* Get JavaClass object and dump it to file.      */
+comment|// Get JavaClass object and dump it to file.
 try|try
 block|{
 name|cg
@@ -1074,10 +1084,6 @@ expr_stmt|;
 block|}
 catch|catch
 parameter_list|(
-name|java
-operator|.
-name|io
-operator|.
 name|IOException
 name|e
 parameter_list|)

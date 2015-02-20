@@ -19,7 +19,7 @@ name|java
 operator|.
 name|util
 operator|.
-name|Hashtable
+name|ArrayList
 import|;
 end_import
 
@@ -29,7 +29,27 @@ name|java
 operator|.
 name|util
 operator|.
-name|Vector
+name|HashMap
+import|;
+end_import
+
+begin_import
+import|import
+name|java
+operator|.
+name|util
+operator|.
+name|List
+import|;
+end_import
+
+begin_import
+import|import
+name|java
+operator|.
+name|util
+operator|.
+name|Map
 import|;
 end_import
 
@@ -170,7 +190,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Read class file(s) and display its contents. The command line usage is:  *  *<pre>java listclass [-constants] [-code] [-brief] [-dependencies] [-nocontents] [-recurse] class... [-exclude<list>]</pre>  * where  *<ul>  *<li>{@code -code} List byte code of methods</li>  *<li>{@code -brief} List byte codes briefly</li>  *<li>{@code -constants} Print constants table (constant pool)</li>  *<li>{@code -recurse}  Usually intended to be used along with  * {@code -dependencies}  When this flag is set, listclass will also print information  * about all classes which the target class depends on.</li>  *   *<li>{@code -dependencies}  Setting this flag makes listclass print a list of all  * classes which the target class depends on.  Generated from getting all  * CONSTANT_Class constants from the constant pool.</li>  *   *<li>{@code -exclude}  All non-flag arguments after this flag are added to an  * 'exclusion list'.  Target classes are compared with the members of the  * exclusion list.  Any target class whose fully qualified name begins with a  * name in the exclusion list will not be analyzed/listed.  This is meant  * primarily when using both {@code -recurse} to exclude java, javax, and sun classes,  * and is recommended as otherwise the output from {@code -recurse} gets quite long and  * most of it is not interesting.  Note that {@code -exclude} prevents listing of  * classes, it does not prevent class names from being printed in the  * {@code -dependencies} list.</li>  *<li>{@code -nocontents} Do not print JavaClass.toString() for the class. I added  * this because sometimes I'm only interested in dependency information.</li>  *</ul>  *<p>Here's a couple examples of how I typically use listclass:<br>  *<pre>java listclass -code MyClass</pre>  * Print information about the class and the byte code of the methods  *<pre>java listclass -nocontents -dependencies MyClass</pre>  * Print a list of all classes which MyClass depends on.  *<pre>java listclass -nocontents -recurse MyClass -exclude java. javax. sun.</pre>  * Print a recursive listing of all classes which MyClass depends on.  Do not  * analyze classes beginning with "java.", "javax.", or "sun.".  *<pre>java listclass -nocontents -dependencies -recurse MyClass -exclude java.javax. sun.</pre>  * Print a recursive listing of dependency information for MyClass and its  * dependents.  Do not analyze classes beginning with "java.", "javax.", or "sun."  *</p>  *  * @version $Id$  * @author<A HREF="mailto:m.dahm@gmx.de">M. Dahm</A>,  *<a href="mailto:twheeler@objectspace.com">Thomas Wheeler</A>  */
+comment|/**  * Read class file(s) and display its contents. The command line usage is:  *  *<pre>java listclass [-constants] [-code] [-brief] [-dependencies] [-nocontents] [-recurse] class... [-exclude<list>]</pre>  * where  *<ul>  *<li>{@code -code} List byte code of methods</li>  *<li>{@code -brief} List byte codes briefly</li>  *<li>{@code -constants} Print constants table (constant pool)</li>  *<li>{@code -recurse}  Usually intended to be used along with  * {@code -dependencies}  When this flag is set, listclass will also print information  * about all classes which the target class depends on.</li>  *  *<li>{@code -dependencies}  Setting this flag makes listclass print a list of all  * classes which the target class depends on.  Generated from getting all  * CONSTANT_Class constants from the constant pool.</li>  *  *<li>{@code -exclude}  All non-flag arguments after this flag are added to an  * 'exclusion list'.  Target classes are compared with the members of the  * exclusion list.  Any target class whose fully qualified name begins with a  * name in the exclusion list will not be analyzed/listed.  This is meant  * primarily when using both {@code -recurse} to exclude java, javax, and sun classes,  * and is recommended as otherwise the output from {@code -recurse} gets quite long and  * most of it is not interesting.  Note that {@code -exclude} prevents listing of  * classes, it does not prevent class names from being printed in the  * {@code -dependencies} list.</li>  *<li>{@code -nocontents} Do not print JavaClass.toString() for the class. I added  * this because sometimes I'm only interested in dependency information.</li>  *</ul>  *<p>Here's a couple examples of how I typically use listclass:<br>  *<pre>java listclass -code MyClass</pre>  * Print information about the class and the byte code of the methods  *<pre>java listclass -nocontents -dependencies MyClass</pre>  * Print a list of all classes which MyClass depends on.  *<pre>java listclass -nocontents -recurse MyClass -exclude java. javax. sun.</pre>  * Print a recursive listing of all classes which MyClass depends on.  Do not  * analyze classes beginning with "java.", "javax.", or "sun.".  *<pre>java listclass -nocontents -dependencies -recurse MyClass -exclude java.javax. sun.</pre>  * Print a recursive listing of dependency information for MyClass and its  * dependents.  Do not analyze classes beginning with "java.", "javax.", or "sun."  *</p>  *  * @author<A HREF="mailto:m.dahm@gmx.de">M. Dahm</A>,  *<a href="mailto:twheeler@objectspace.com">Thomas Wheeler</A>  * @version $Id$  */
 end_comment
 
 begin_class
@@ -180,18 +200,23 @@ name|listclass
 block|{
 name|boolean
 name|code
-decl_stmt|,
+decl_stmt|;
+name|boolean
 name|constants
-decl_stmt|,
+decl_stmt|;
+name|boolean
 name|verbose
-decl_stmt|,
+decl_stmt|;
+name|boolean
 name|classdep
-decl_stmt|,
+decl_stmt|;
+name|boolean
 name|nocontents
-decl_stmt|,
+decl_stmt|;
+name|boolean
 name|recurse
 decl_stmt|;
-name|Hashtable
+name|Map
 argument_list|<
 name|String
 argument_list|,
@@ -199,7 +224,7 @@ name|String
 argument_list|>
 name|listedClasses
 decl_stmt|;
-name|Vector
+name|List
 argument_list|<
 name|String
 argument_list|>
@@ -215,27 +240,27 @@ index|[]
 name|argv
 parameter_list|)
 block|{
-name|Vector
+name|List
 argument_list|<
 name|String
 argument_list|>
 name|file_name
 init|=
 operator|new
-name|Vector
+name|ArrayList
 argument_list|<
 name|String
 argument_list|>
 argument_list|()
 decl_stmt|;
-name|Vector
+name|List
 argument_list|<
 name|String
 argument_list|>
 name|exclude_name
 init|=
 operator|new
-name|Vector
+name|ArrayList
 argument_list|<
 name|String
 argument_list|>
@@ -245,60 +270,52 @@ name|boolean
 name|code
 init|=
 literal|false
-decl_stmt|,
+decl_stmt|;
+name|boolean
 name|constants
 init|=
 literal|false
-decl_stmt|,
+decl_stmt|;
+name|boolean
 name|verbose
 init|=
 literal|true
-decl_stmt|,
+decl_stmt|;
+name|boolean
 name|classdep
 init|=
 literal|false
-decl_stmt|,
+decl_stmt|;
+name|boolean
 name|nocontents
 init|=
 literal|false
-decl_stmt|,
+decl_stmt|;
+name|boolean
 name|recurse
 init|=
 literal|false
-decl_stmt|,
+decl_stmt|;
+name|boolean
 name|exclude
 init|=
 literal|false
 decl_stmt|;
 name|String
 name|name
-init|=
-literal|null
 decl_stmt|;
-comment|/* Parse command line arguments.      */
+comment|// Parse command line arguments.
 for|for
 control|(
-name|int
-name|i
-init|=
-literal|0
-init|;
-name|i
-operator|<
+name|String
+name|arg
+range|:
 name|argv
-operator|.
-name|length
-condition|;
-name|i
-operator|++
 control|)
 block|{
 if|if
 condition|(
-name|argv
-index|[
-name|i
-index|]
+name|arg
 operator|.
 name|charAt
 argument_list|(
@@ -311,10 +328,7 @@ block|{
 comment|// command line switch
 if|if
 condition|(
-name|argv
-index|[
-name|i
-index|]
+name|arg
 operator|.
 name|equals
 argument_list|(
@@ -329,10 +343,7 @@ expr_stmt|;
 block|}
 if|else if
 condition|(
-name|argv
-index|[
-name|i
-index|]
+name|arg
 operator|.
 name|equals
 argument_list|(
@@ -347,10 +358,7 @@ expr_stmt|;
 block|}
 if|else if
 condition|(
-name|argv
-index|[
-name|i
-index|]
+name|arg
 operator|.
 name|equals
 argument_list|(
@@ -365,10 +373,7 @@ expr_stmt|;
 block|}
 if|else if
 condition|(
-name|argv
-index|[
-name|i
-index|]
+name|arg
 operator|.
 name|equals
 argument_list|(
@@ -383,10 +388,7 @@ expr_stmt|;
 block|}
 if|else if
 condition|(
-name|argv
-index|[
-name|i
-index|]
+name|arg
 operator|.
 name|equals
 argument_list|(
@@ -401,10 +403,7 @@ expr_stmt|;
 block|}
 if|else if
 condition|(
-name|argv
-index|[
-name|i
-index|]
+name|arg
 operator|.
 name|equals
 argument_list|(
@@ -419,10 +418,7 @@ expr_stmt|;
 block|}
 if|else if
 condition|(
-name|argv
-index|[
-name|i
-index|]
+name|arg
 operator|.
 name|equals
 argument_list|(
@@ -437,10 +433,7 @@ expr_stmt|;
 block|}
 if|else if
 condition|(
-name|argv
-index|[
-name|i
-index|]
+name|arg
 operator|.
 name|equals
 argument_list|(
@@ -495,10 +488,7 @@ name|println
 argument_list|(
 literal|"Unknown switch "
 operator|+
-name|argv
-index|[
-name|i
-index|]
+name|arg
 operator|+
 literal|" ignored."
 argument_list|)
@@ -515,12 +505,9 @@ condition|)
 block|{
 name|exclude_name
 operator|.
-name|addElement
+name|add
 argument_list|(
-name|argv
-index|[
-name|i
-index|]
+name|arg
 argument_list|)
 expr_stmt|;
 block|}
@@ -528,12 +515,9 @@ else|else
 block|{
 name|file_name
 operator|.
-name|addElement
+name|add
 argument_list|(
-name|argv
-index|[
-name|i
-index|]
+name|arg
 argument_list|)
 expr_stmt|;
 block|}
@@ -604,7 +588,7 @@ name|name
 operator|=
 name|file_name
 operator|.
-name|elementAt
+name|get
 argument_list|(
 name|i
 argument_list|)
@@ -640,7 +624,7 @@ parameter_list|,
 name|boolean
 name|recurse
 parameter_list|,
-name|Vector
+name|List
 argument_list|<
 name|String
 argument_list|>
@@ -688,7 +672,7 @@ operator|.
 name|listedClasses
 operator|=
 operator|new
-name|Hashtable
+name|HashMap
 argument_list|<
 name|String
 argument_list|,
@@ -703,7 +687,7 @@ operator|=
 name|exclude_name
 expr_stmt|;
 block|}
-comment|/** Print the given class on screen    */
+comment|/**      * Print the given class on screen      */
 specifier|public
 name|void
 name|list
@@ -766,7 +750,7 @@ name|startsWith
 argument_list|(
 name|exclude_name
 operator|.
-name|elementAt
+name|get
 argument_list|(
 name|idx
 argument_list|)
@@ -918,27 +902,15 @@ argument_list|)
 decl_stmt|;
 for|for
 control|(
-name|int
-name|idx
-init|=
-literal|0
-init|;
-name|idx
-operator|<
+name|String
+name|dependency
+range|:
 name|dependencies
-operator|.
-name|length
-condition|;
-name|idx
-operator|++
 control|)
 block|{
 name|list
 argument_list|(
-name|dependencies
-index|[
-name|idx
-index|]
+name|dependency
 argument_list|)
 expr_stmt|;
 block|}
@@ -999,7 +971,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/**    * Dump the list of classes this class is dependent on    */
+comment|/**      * Dump the list of classes this class is dependent on      */
 specifier|public
 specifier|static
 name|void
@@ -1009,15 +981,6 @@ name|ConstantPool
 name|pool
 parameter_list|)
 block|{
-name|String
-index|[]
-name|names
-init|=
-name|getClassDependencies
-argument_list|(
-name|pool
-argument_list|)
-decl_stmt|;
 name|System
 operator|.
 name|out
@@ -1029,19 +992,13 @@ argument_list|)
 expr_stmt|;
 for|for
 control|(
-name|int
-name|idx
-init|=
-literal|0
-init|;
-name|idx
-operator|<
-name|names
-operator|.
-name|length
-condition|;
-name|idx
-operator|++
+name|String
+name|name
+range|:
+name|getClassDependencies
+argument_list|(
+name|pool
+argument_list|)
 control|)
 block|{
 name|System
@@ -1052,10 +1009,7 @@ name|println
 argument_list|(
 literal|"\t"
 operator|+
-name|names
-index|[
-name|idx
-index|]
+name|name
 argument_list|)
 expr_stmt|;
 block|}
@@ -1088,11 +1042,11 @@ name|size
 init|=
 literal|0
 decl_stmt|;
-name|StringBuffer
+name|StringBuilder
 name|buf
 init|=
 operator|new
-name|StringBuffer
+name|StringBuilder
 argument_list|()
 decl_stmt|;
 for|for
@@ -1260,7 +1214,7 @@ return|return
 name|dependencies
 return|;
 block|}
-comment|/**    * Dump the disassembled code of all methods in the class.    */
+comment|/**      * Dump the disassembled code of all methods in the class.      */
 specifier|public
 specifier|static
 name|void
@@ -1276,19 +1230,10 @@ parameter_list|)
 block|{
 for|for
 control|(
-name|int
-name|i
-init|=
-literal|0
-init|;
-name|i
-operator|<
+name|Method
+name|method
+range|:
 name|methods
-operator|.
-name|length
-condition|;
-name|i
-operator|++
 control|)
 block|{
 name|System
@@ -1297,19 +1242,13 @@ name|out
 operator|.
 name|println
 argument_list|(
-name|methods
-index|[
-name|i
-index|]
+name|method
 argument_list|)
 expr_stmt|;
 name|Code
 name|code
 init|=
-name|methods
-index|[
-name|i
-index|]
+name|method
 operator|.
 name|getCode
 argument_list|()

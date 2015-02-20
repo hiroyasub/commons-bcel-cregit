@@ -218,7 +218,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Package the client. Creates a jar file in the current directory   * that contains a minimal set of classes needed to run the client.  *  * Use BCEL to extract class names and read/write classes  * @author First Hop Ltd / Torsten Rueger  */
+comment|/**  * Package the client. Creates a jar file in the current directory  * that contains a minimal set of classes needed to run the client.  *  * Use BCEL to extract class names and read/write classes  *  * @author First Hop Ltd / Torsten Rueger  */
 end_comment
 
 begin_class
@@ -226,14 +226,14 @@ specifier|public
 class|class
 name|Package
 block|{
-comment|/**    * The name of the resulting jar is Client.jar    */
+comment|/**      * The name of the resulting jar is Client.jar      */
 specifier|static
 name|String
 name|defaultJar
 init|=
 literal|"Client.jar"
 decl_stmt|;
-comment|/*    * See usage() for arguments. Create an instance and run that    *(just so not all members have to be static)    */
+comment|/*      * See usage() for arguments. Create an instance and run that      *(just so not all members have to be static)      */
 specifier|static
 name|void
 name|main
@@ -278,7 +278,7 @@ argument_list|()
 expr_stmt|;
 block|}
 block|}
-comment|/**    * We use a "default ClassPath object which uses the environments     * CLASSPATH    */
+comment|/**      * We use a "default ClassPath object which uses the environments      * CLASSPATH      */
 name|ClassPath
 name|classPath
 init|=
@@ -286,7 +286,7 @@ name|ClassPath
 operator|.
 name|SYSTEM_CLASS_PATH
 decl_stmt|;
-comment|/**    * A map for all Classes, the ones we're going to package.    * Store class name against the JavaClass. From the JavaClass    * we get the bytes to create the jar.    */
+comment|/**      * A map for all Classes, the ones we're going to package.      * Store class name against the JavaClass. From the JavaClass      * we get the bytes to create the jar.      */
 name|Map
 argument_list|<
 name|String
@@ -304,7 +304,7 @@ name|JavaClass
 argument_list|>
 argument_list|()
 decl_stmt|;
-comment|/**    * We start at the root classes, put them in here, then go through     * this list, putting dependent classes in here and from there    * into allClasses. Store class names against class names of their dependents    */
+comment|/**      * We start at the root classes, put them in here, then go through      * this list, putting dependent classes in here and from there      * into allClasses. Store class names against class names of their dependents      */
 name|TreeMap
 argument_list|<
 name|String
@@ -322,7 +322,7 @@ name|String
 argument_list|>
 argument_list|()
 decl_stmt|;
-comment|/**     * Collect all classes that could not be found in the classpath.    * Store class names against class names of their dependents    */
+comment|/**      * Collect all classes that could not be found in the classpath.      * Store class names against class names of their dependents      */
 name|TreeMap
 argument_list|<
 name|String
@@ -340,19 +340,19 @@ name|String
 argument_list|>
 argument_list|()
 decl_stmt|;
-comment|/**    * See wheather we print the classes that were not found (default = false)    */
+comment|/**      * See wheather we print the classes that were not found (default = false)      */
 name|boolean
 name|showNotFound
 init|=
 literal|false
 decl_stmt|;
-comment|/**    * Remember wheather to print allClasses at the end (default = false)    */
+comment|/**      * Remember wheather to print allClasses at the end (default = false)      */
 name|boolean
 name|printClasses
 init|=
 literal|false
 decl_stmt|;
-comment|/**    * Wheather we log classes during processing (default = false)    */
+comment|/**      * Wheather we log classes during processing (default = false)      */
 name|boolean
 name|log
 init|=
@@ -517,7 +517,7 @@ literal|"   for the most part."
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**    * the main of this class    */
+comment|/**      * the main of this class      */
 name|void
 name|go
 parameter_list|(
@@ -534,27 +534,15 @@ decl_stmt|;
 comment|// sort the options
 for|for
 control|(
-name|int
-name|i
-init|=
-literal|0
-init|;
-name|i
-operator|<
+name|String
+name|arg
+range|:
 name|args
-operator|.
-name|length
-condition|;
-name|i
-operator|++
 control|)
 block|{
 if|if
 condition|(
-name|args
-index|[
-name|i
-index|]
+name|arg
 operator|.
 name|startsWith
 argument_list|(
@@ -570,10 +558,7 @@ continue|continue;
 block|}
 if|if
 condition|(
-name|args
-index|[
-name|i
-index|]
+name|arg
 operator|.
 name|startsWith
 argument_list|(
@@ -589,10 +574,7 @@ continue|continue;
 block|}
 if|if
 condition|(
-name|args
-index|[
-name|i
-index|]
+name|arg
 operator|.
 name|startsWith
 argument_list|(
@@ -609,10 +591,7 @@ block|}
 name|String
 name|clName
 init|=
-name|args
-index|[
-name|i
-index|]
+name|arg
 decl_stmt|;
 if|if
 condition|(
@@ -699,7 +678,7 @@ block|{
 name|usage
 argument_list|()
 expr_stmt|;
-return|return ;
+return|return;
 block|}
 name|System
 operator|.
@@ -1020,7 +999,7 @@ expr_stmt|;
 block|}
 block|}
 block|}
-comment|/**    * Print all classes that were packaged. Sort alphabetically for better     * overview. Enabled by -s option     */
+comment|/**      * Print all classes that were packaged. Sort alphabetically for better      * overview. Enabled by -s option      */
 name|void
 name|printAllClasses
 parameter_list|()
@@ -1089,7 +1068,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/**     *Add this class to allClasses. Then go through all its dependents    * and add them to the dependents list if they are not in allClasses    */
+comment|/**      * Add this class to allClasses. Then go through all its dependents      * and add them to the dependents list if they are not in allClasses      */
 name|void
 name|addDependents
 parameter_list|(
@@ -1222,7 +1201,7 @@ expr_stmt|;
 block|}
 block|}
 block|}
-comment|/**    * add given class to dependents (from is where its dependent from)    * some fiddeling to be done because of array class notation    */
+comment|/**      * add given class to dependents (from is where its dependent from)      * some fiddeling to be done because of array class notation      */
 name|void
 name|addClassString
 parameter_list|(
@@ -1340,7 +1319,7 @@ argument_list|,
 name|from
 argument_list|)
 expr_stmt|;
-return|return ;
+return|return;
 block|}
 throw|throw
 operator|new

@@ -60,7 +60,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Patch all Utf8 constants in the given class file<em>file</em>.class  * and save the result in _<em>file</em>.class.  *  * Usage: patch<oldstring><newstring> files  *  * @version $Id$  * @author<A HREF="mailto:m.dahm@gmx.de">M. Dahm</A>  */
+comment|/**  * Patch all Utf8 constants in the given class file<em>file</em>.class  * and save the result in _<em>file</em>.class.  *  * Usage: patch<oldstring><newstring> files  *  * @author<A HREF="mailto:m.dahm@gmx.de">M. Dahm</A>  * @version $Id$  */
 end_comment
 
 begin_class
@@ -77,6 +77,8 @@ name|String
 index|[]
 name|argv
 parameter_list|)
+throws|throws
+name|Exception
 block|{
 name|String
 index|[]
@@ -94,14 +96,6 @@ name|int
 name|files
 init|=
 literal|0
-decl_stmt|;
-name|ClassParser
-name|parser
-init|=
-literal|null
-decl_stmt|;
-name|JavaClass
-name|java_class
 decl_stmt|;
 if|if
 condition|(
@@ -130,8 +124,6 @@ literal|1
 argument_list|)
 expr_stmt|;
 block|}
-try|try
-block|{
 for|for
 control|(
 name|int
@@ -176,8 +168,9 @@ name|i
 operator|++
 control|)
 block|{
+name|ClassParser
 name|parser
-operator|=
+init|=
 operator|new
 name|ClassParser
 argument_list|(
@@ -186,14 +179,15 @@ index|[
 name|i
 index|]
 argument_list|)
-expr_stmt|;
+decl_stmt|;
+name|JavaClass
 name|java_class
-operator|=
+init|=
 name|parser
 operator|.
 name|parse
 argument_list|()
-expr_stmt|;
+decl_stmt|;
 name|patchIt
 argument_list|(
 name|argv
@@ -244,24 +238,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-catch|catch
-parameter_list|(
-name|Exception
-name|e
-parameter_list|)
-block|{
-name|System
-operator|.
-name|err
-operator|.
-name|println
-argument_list|(
-name|e
-argument_list|)
-expr_stmt|;
-block|}
-block|}
-comment|/*    * Replace all occurences of string "<em>old</em>" with     * "<em>replacement</em>" in all Utf8 constants    */
+comment|/*      * Replace all occurences of string "<em>old</em>" with       * "<em>replacement</em>" in all Utf8 constants      */
 specifier|private
 specifier|static
 name|void
@@ -292,7 +269,7 @@ decl_stmt|;
 name|StringBuffer
 name|buf
 decl_stmt|;
-comment|/* Loop through constant pool      */
+comment|// Loop through constant pool
 for|for
 control|(
 name|short
