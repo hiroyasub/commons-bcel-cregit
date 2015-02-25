@@ -1025,7 +1025,7 @@ name|Attribute
 index|[]
 name|annAttributes
 init|=
-name|Utility
+name|AnnotationEntryGen
 operator|.
 name|getAnnotationAttributes
 argument_list|(

@@ -1002,7 +1002,7 @@ name|Attribute
 index|[]
 name|attrs
 init|=
-name|Utility
+name|AnnotationEntryGen
 operator|.
 name|getAnnotationAttributes
 argument_list|(
