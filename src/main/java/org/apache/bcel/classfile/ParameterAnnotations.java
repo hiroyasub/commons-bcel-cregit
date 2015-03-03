@@ -65,16 +65,12 @@ name|serialVersionUID
 init|=
 literal|5234607357644462705L
 decl_stmt|;
-specifier|private
-name|int
-name|num_parameters
-decl_stmt|;
+comment|/** Table of parameter annotations */
 specifier|private
 name|ParameterAnnotationEntry
 index|[]
 name|parameter_annotation_table
 decl_stmt|;
-comment|// Table of parameter annotations
 comment|/**      * @param parameter_annotation_type the subclass type of the parameter annotation      * @param name_index Index pointing to the name<em>Code</em>      * @param length Content length in bytes      * @param input Input stream      * @param constant_pool Array of constants      */
 name|ParameterAnnotations
 parameter_list|(
@@ -113,15 +109,16 @@ argument_list|,
 name|constant_pool
 argument_list|)
 expr_stmt|;
+name|int
 name|num_parameters
-operator|=
+init|=
 operator|(
 name|input
 operator|.
 name|readUnsignedByte
 argument_list|()
 operator|)
-expr_stmt|;
+decl_stmt|;
 name|parameter_annotation_table
 operator|=
 operator|new
@@ -234,20 +231,6 @@ name|parameter_annotation_table
 operator|=
 name|parameter_annotation_table
 expr_stmt|;
-name|num_parameters
-operator|=
-operator|(
-name|parameter_annotation_table
-operator|==
-literal|null
-operator|)
-condition|?
-literal|0
-else|:
-name|parameter_annotation_table
-operator|.
-name|length
-expr_stmt|;
 block|}
 comment|/**      * @return the parameter annotation entry table      */
 specifier|public
@@ -270,17 +253,6 @@ parameter_list|()
 block|{
 return|return
 name|parameter_annotation_table
-return|;
-block|}
-comment|/**      * @return the number of parameter annotation entries in this parameter annotation      */
-specifier|public
-specifier|final
-name|int
-name|getNumParameterAnnotation
-parameter_list|()
-block|{
-return|return
-name|num_parameters
 return|;
 block|}
 annotation|@
