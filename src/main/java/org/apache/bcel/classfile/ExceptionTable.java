@@ -1,6 +1,6 @@
 begin_unit|revision:1.0.0;language:Java;cregit-version:0.0.1
 begin_comment
-comment|/*  * Licensed to the Apache Software Foundation (ASF) under one or more  * contributor license agreements.  See the NOTICE file distributed with  * this work for additional information regarding copyright ownership.  * The ASF licenses this file to You under the Apache License, Version 2.0  * (the "License"); you may not use this file except in compliance with  * the License.  You may obtain a copy of the License at  *  *      http://www.apache.org/licenses/LICENSE-2.0  *  *  Unless required by applicable law or agreed to in writing, software  *  distributed under the License is distributed on an "AS IS" BASIS,  *  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.  *  See the License for the specific language governing permissions and  *  limitations under the License.  *  */
+comment|/*  * Licensed to the Apache Software Foundation (ASF) under one or more  * contributor license agreements.  See the NOTICE file distributed with  * this work for additional information regarding copyright ownership.  * The ASF licenses this file to You under the Apache License, Version 2.0  * (the "License"); you may not use this file except in compliance with  * the License.  You may obtain a copy of the License at  *  *      http://www.apache.org/licenses/LICENSE-2.0  *  *  Unless required by applicable law or agreed to in writing, software  *  distributed under the License is distributed on an "AS IS" BASIS,  *  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.  *  See the License for the specific language governing permissions and  *  limitations under the License.  */
 end_comment
 
 begin_package
@@ -77,11 +77,6 @@ name|serialVersionUID
 init|=
 literal|2045358830660883220L
 decl_stmt|;
-specifier|private
-name|int
-name|number_of_exceptions
-decl_stmt|;
-comment|// Table of indices into
 specifier|private
 name|int
 index|[]
@@ -190,13 +185,14 @@ argument_list|,
 name|constant_pool
 argument_list|)
 expr_stmt|;
+name|int
 name|number_of_exceptions
-operator|=
+init|=
 name|input
 operator|.
 name|readUnsignedShort
 argument_list|()
-expr_stmt|;
+decl_stmt|;
 name|exception_index_table
 operator|=
 operator|new
@@ -276,32 +272,24 @@ name|file
 operator|.
 name|writeShort
 argument_list|(
-name|number_of_exceptions
+name|exception_index_table
+operator|.
+name|length
 argument_list|)
 expr_stmt|;
 for|for
 control|(
 name|int
-name|i
-init|=
-literal|0
-init|;
-name|i
-operator|<
-name|number_of_exceptions
-condition|;
-name|i
-operator|++
+name|index
+range|:
+name|exception_index_table
 control|)
 block|{
 name|file
 operator|.
 name|writeShort
 argument_list|(
-name|exception_index_table
-index|[
-name|i
-index|]
+name|index
 argument_list|)
 expr_stmt|;
 block|}
@@ -326,7 +314,15 @@ name|getNumberOfExceptions
 parameter_list|()
 block|{
 return|return
-name|number_of_exceptions
+name|exception_index_table
+operator|==
+literal|null
+condition|?
+literal|0
+else|:
+name|exception_index_table
+operator|.
+name|length
 return|;
 block|}
 comment|/**      * @return class names of thrown exceptions      */
@@ -344,7 +340,9 @@ init|=
 operator|new
 name|String
 index|[
-name|number_of_exceptions
+name|exception_index_table
+operator|.
+name|length
 index|]
 decl_stmt|;
 for|for
@@ -356,7 +354,9 @@ literal|0
 init|;
 name|i
 operator|<
-name|number_of_exceptions
+name|exception_index_table
+operator|.
+name|length
 condition|;
 name|i
 operator|++
@@ -409,20 +409,16 @@ operator|.
 name|exception_index_table
 operator|=
 name|exception_index_table
-expr_stmt|;
-name|number_of_exceptions
-operator|=
-operator|(
-name|exception_index_table
-operator|==
+operator|!=
 literal|null
-operator|)
 condition|?
-literal|0
-else|:
 name|exception_index_table
-operator|.
-name|length
+else|:
+operator|new
+name|int
+index|[
+literal|0
+index|]
 expr_stmt|;
 block|}
 comment|/**      * @return String representation, i.e., a list of thrown exceptions.      */
@@ -453,7 +449,9 @@ literal|0
 init|;
 name|i
 operator|<
-name|number_of_exceptions
+name|exception_index_table
+operator|.
+name|length
 condition|;
 name|i
 operator|++
@@ -493,7 +491,9 @@ if|if
 condition|(
 name|i
 operator|<
-name|number_of_exceptions
+name|exception_index_table
+operator|.
+name|length
 operator|-
 literal|1
 condition|)
