@@ -1643,6 +1643,23 @@ condition|)
 block|{
 if|if
 condition|(
+name|method_type
+operator|==
+name|Type
+operator|.
+name|VOID
+condition|)
+block|{
+name|constraintViolated
+argument_list|(
+name|o
+argument_list|,
+literal|"ARETURN instruction in void method."
+argument_list|)
+expr_stmt|;
+block|}
+if|if
+condition|(
 name|stack
 argument_list|()
 operator|.
