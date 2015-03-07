@@ -21,16 +21,6 @@ name|java
 operator|.
 name|util
 operator|.
-name|HashMap
-import|;
-end_import
-
-begin_import
-import|import
-name|java
-operator|.
-name|util
-operator|.
 name|LinkedHashMap
 import|;
 end_import
@@ -134,7 +124,7 @@ operator|)
 decl_stmt|;
 specifier|private
 specifier|static
-name|HashMap
+name|Map
 argument_list|<
 name|String
 argument_list|,
