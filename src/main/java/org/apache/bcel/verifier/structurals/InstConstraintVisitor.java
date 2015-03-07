@@ -306,14 +306,14 @@ name|frame
 init|=
 literal|null
 decl_stmt|;
-comment|/**      * The ConstantPoolGen we're working on.      *       * @see #setConstantPoolGen(ConstantPoolGen cpg)      */
+comment|/**      * The ConstantPoolGen we're working on.      *      * @see #setConstantPoolGen(ConstantPoolGen cpg)      */
 specifier|private
 name|ConstantPoolGen
 name|cpg
 init|=
 literal|null
 decl_stmt|;
-comment|/**      * The MethodGen we're working on.      *       * @see #setMethodGen(MethodGen mg)      */
+comment|/**      * The MethodGen we're working on.      *      * @see #setMethodGen(MethodGen mg)      */
 specifier|private
 name|MethodGen
 name|mg
@@ -1879,8 +1879,6 @@ name|AASTORE
 name|o
 parameter_list|)
 block|{
-try|try
-block|{
 name|Type
 name|arrayref
 init|=
@@ -1997,74 +1995,7 @@ literal|"."
 argument_list|)
 expr_stmt|;
 block|}
-if|if
-condition|(
-operator|!
-operator|(
-operator|(
-name|ReferenceType
-operator|)
-name|value
-operator|)
-operator|.
-name|isAssignmentCompatibleWith
-argument_list|(
-operator|(
-operator|(
-name|ArrayType
-operator|)
-name|arrayref
-operator|)
-operator|.
-name|getElementType
-argument_list|()
-argument_list|)
-condition|)
-block|{
-name|constraintViolated
-argument_list|(
-name|o
-argument_list|,
-literal|"The type of 'value' ('"
-operator|+
-name|value
-operator|+
-literal|"') is not assignment compatible to the components of the array 'arrayref' refers to. ('"
-operator|+
-operator|(
-operator|(
-name|ArrayType
-operator|)
-name|arrayref
-operator|)
-operator|.
-name|getElementType
-argument_list|()
-operator|+
-literal|"')"
-argument_list|)
-expr_stmt|;
-block|}
-block|}
-block|}
-catch|catch
-parameter_list|(
-name|ClassNotFoundException
-name|e
-parameter_list|)
-block|{
-comment|// FIXME: maybe not the best way to handle this
-throw|throw
-operator|new
-name|AssertionViolatedException
-argument_list|(
-literal|"Missing class: "
-operator|+
-name|e
-argument_list|,
-name|e
-argument_list|)
-throw|;
+comment|// No check for array element assignment compatibility. This is done at runtime.
 block|}
 block|}
 comment|/**      * Ensures the specific preconditions of the said instruction.      */
