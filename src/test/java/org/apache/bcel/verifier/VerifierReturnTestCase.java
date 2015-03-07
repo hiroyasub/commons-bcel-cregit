@@ -34,6 +34,33 @@ argument_list|,
 literal|"Verification of a void method that returns an object must fail."
 argument_list|)
 expr_stmt|;
+name|assertVerifyRejected
+argument_list|(
+literal|"TestReturn03"
+argument_list|,
+literal|"Verification of an int method that returns null must fail."
+argument_list|)
+expr_stmt|;
+block|}
+specifier|public
+name|void
+name|testValidReturn
+parameter_list|()
+block|{
+name|assertVerifyOK
+argument_list|(
+literal|"TestReturn02"
+argument_list|,
+literal|"Verification of a method that returns a newly created object must pass."
+argument_list|)
+expr_stmt|;
+name|assertVerifyOK
+argument_list|(
+literal|"TestArray01"
+argument_list|,
+literal|"Verification of a method that returns an array must pass."
+argument_list|)
+expr_stmt|;
 block|}
 block|}
 end_class

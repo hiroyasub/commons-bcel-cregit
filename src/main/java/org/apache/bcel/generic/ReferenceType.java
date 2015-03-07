@@ -130,7 +130,9 @@ argument_list|)
 condition|)
 block|{
 return|return
-literal|true
+name|t
+operator|instanceof
+name|ReferenceType
 return|;
 comment|// If this is ever changed in isAssignmentCompatible()
 block|}
