@@ -483,7 +483,7 @@ operator|.
 name|CONSTANT_Utf8
 argument_list|)
 operator|+
-literal|" "
+literal|":"
 operator|+
 name|constantToString
 argument_list|(
@@ -565,6 +565,8 @@ name|Constants
 operator|.
 name|CONSTANT_MethodHandle
 case|:
+comment|// Note that the ReferenceIndex may point to a Fieldref, Methodref or
+comment|// InterfaceMethodref - so we need to peek ahead to get the actual type.
 name|ConstantMethodHandle
 name|cmh
 init|=
@@ -577,7 +579,7 @@ name|str
 operator|=
 name|Constants
 operator|.
-name|REF_NAMES
+name|METHODHANDLE_NAMES
 index|[
 name|cmh
 operator|.
@@ -589,13 +591,21 @@ literal|" "
 operator|+
 name|constantToString
 argument_list|(
-name|constant_pool
-index|[
 name|cmh
 operator|.
 name|getReferenceIndex
 argument_list|()
-index|]
+argument_list|,
+name|getConstant
+argument_list|(
+name|cmh
+operator|.
+name|getReferenceIndex
+argument_list|()
+argument_list|)
+operator|.
+name|getTag
+argument_list|()
 argument_list|)
 expr_stmt|;
 break|break;
@@ -649,7 +659,7 @@ operator|.
 name|getBootstrapMethodAttrIndex
 argument_list|()
 operator|+
-literal|": "
+literal|":"
 operator|+
 name|constantToString
 argument_list|(

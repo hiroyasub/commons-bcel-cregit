@@ -254,13 +254,6 @@ argument_list|)
 expr_stmt|;
 name|v
 operator|.
-name|visitNameSignatureInstruction
-argument_list|(
-name|this
-argument_list|)
-expr_stmt|;
-name|v
-operator|.
 name|visitInvokeInstruction
 argument_list|(
 name|this

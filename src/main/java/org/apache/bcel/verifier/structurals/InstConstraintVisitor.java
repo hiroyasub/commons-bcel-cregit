@@ -8271,6 +8271,25 @@ annotation|@
 name|Override
 specifier|public
 name|void
+name|visitINVOKEDYNAMIC
+parameter_list|(
+name|INVOKEDYNAMIC
+name|o
+parameter_list|)
+block|{
+throw|throw
+operator|new
+name|RuntimeException
+argument_list|(
+literal|"INVOKEDYNAMIC instruction is not supported at this time"
+argument_list|)
+throw|;
+block|}
+comment|/**      * Ensures the specific preconditions of the said instruction.      */
+annotation|@
+name|Override
+specifier|public
+name|void
 name|visitINVOKEINTERFACE
 parameter_list|(
 name|INVOKEINTERFACE

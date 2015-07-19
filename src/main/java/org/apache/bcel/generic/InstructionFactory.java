@@ -142,7 +142,7 @@ name|cp
 argument_list|)
 expr_stmt|;
 block|}
-comment|/** Create an invoke instruction.      *      * @param class_name name of the called class      * @param name name of the called method      * @param ret_type return type of method      * @param arg_types argument types of method      * @param kind how to invoke, i.e., INVOKEINTERFACE, INVOKESTATIC, INVOKEVIRTUAL,      * or INVOKESPECIAL      * @see Constants      */
+comment|/** Create an invoke instruction. (Except for invokedynamic.)      *      * @param class_name name of the called class      * @param name name of the called method      * @param ret_type return type of method      * @param arg_types argument types of method      * @param kind how to invoke, i.e., INVOKEINTERFACE, INVOKESTATIC, INVOKEVIRTUAL,      * or INVOKESPECIAL      * @see Constants      */
 specifier|public
 name|InvokeInstruction
 name|createInvoke
@@ -308,6 +308,8 @@ argument_list|)
 throw|;
 block|}
 block|}
+comment|/** Create an invokedynamic instruction.      *      * @param bootstrap_index index into the bootstrap_methods array      * @param name name of the called method      * @param ret_type return type of method      * @param arg_types argument types of method      * @see Constants      */
+comment|/*  * createInvokeDynamic only needed if instrumention code wants to generate  * a new invokedynamic instruction.  I don't think we need.  (markro)  *     public InvokeInstruction createInvokeDynamic( int bootstrap_index, String name, Type ret_type,             Type[] arg_types) {         int index;         int nargs = 0;         String signature = Type.getMethodSignature(ret_type, arg_types);         for (int i = 0; i< arg_types.length; i++) {             nargs += arg_types[i].getSize();         }         // UNDONE - needs to be added to ConstantPoolGen         //index = cp.addInvokeDynamic(bootstrap_index, name, signature);         index = 0;         return new INVOKEDYNAMIC(index);     }  */
 comment|/** Create a call to the most popular System.out.println() method.      *      * @param s the string to print      */
 specifier|public
 name|InstructionList

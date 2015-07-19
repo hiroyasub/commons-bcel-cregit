@@ -247,13 +247,6 @@ argument_list|)
 expr_stmt|;
 name|v
 operator|.
-name|visitNameSignatureInstruction
-argument_list|(
-name|this
-argument_list|)
-expr_stmt|;
-name|v
-operator|.
 name|visitFieldOrMethod
 argument_list|(
 name|this

@@ -58,7 +58,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**   * Abstract super class for Fieldref and Methodref constants.  *  * @version $Id$  * @author<A HREF="mailto:m.dahm@gmx.de">M. Dahm</A>  * @see     ConstantFieldref  * @see     ConstantMethodref  * @see     ConstantInterfaceMethodref  */
+comment|/**   * Abstract super class for Fieldref, Methodref, InterfaceMethodref and  *                          InvokeDynamic constants.  *  * @version $Id$  * @author<A HREF="mailto:m.dahm@gmx.de">M. Dahm</A>  * @see     ConstantFieldref  * @see     ConstantMethodref  * @see     ConstantInterfaceMethodref  * @see     ConstantInvokeDynamic  */
 end_comment
 
 begin_class
@@ -79,11 +79,14 @@ operator|-
 literal|6275762995206209402L
 decl_stmt|;
 comment|/** References to the constants containing the class and the field signature      */
+comment|// Note that this field is used to store the
+comment|// bootstrap_method_attr_index of a ConstantInvokeDynamic.
 specifier|protected
 name|int
 name|class_index
 decl_stmt|;
 comment|// TODO make private (has getter& setter)
+comment|// This field has the same meaning for all subclasses.
 specifier|protected
 name|int
 name|name_and_type_index
@@ -212,7 +215,7 @@ name|name_and_type_index
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * @return Reference (index) to class this field or method belongs to.      */
+comment|/**      * @return Reference (index) to class this constant refers to.      */
 specifier|public
 specifier|final
 name|int
@@ -223,16 +226,17 @@ return|return
 name|class_index
 return|;
 block|}
-comment|/**      * @return Reference (index) to signature of the field.      */
+comment|/**      * @return Reference (index) to bootstrap method this constant refers to.      *      * Note that this method is a functional duplicate of getClassIndex      * for use by ConstantInvokeDynamic.      */
 specifier|public
 specifier|final
 name|int
-name|getNameAndTypeIndex
+name|getBootstrapMethodAttrIndex
 parameter_list|()
 block|{
 return|return
-name|name_and_type_index
+name|class_index
 return|;
+comment|// AKA bootstrap_method_attr_index
 block|}
 comment|/**      * @param class_index points to Constant_class       */
 specifier|public
@@ -249,6 +253,51 @@ operator|.
 name|class_index
 operator|=
 name|class_index
+expr_stmt|;
+block|}
+comment|/**      * @param bootstrap_method_attr_index points to a BootstrapMethod.       *      * Note that this method is a functional duplicate of setClassIndex      * for use by ConstantInvokeDynamic.      */
+specifier|public
+specifier|final
+name|void
+name|setBootstrapMethodAttrIndex
+parameter_list|(
+name|int
+name|bootstrap_method_attr_index
+parameter_list|)
+block|{
+name|this
+operator|.
+name|class_index
+operator|=
+name|bootstrap_method_attr_index
+expr_stmt|;
+block|}
+comment|/**      * @return Reference (index) to signature of the field.      */
+specifier|public
+specifier|final
+name|int
+name|getNameAndTypeIndex
+parameter_list|()
+block|{
+return|return
+name|name_and_type_index
+return|;
+block|}
+comment|/**      * @param name_and_type_index points to Constant_NameAndType      */
+specifier|public
+specifier|final
+name|void
+name|setNameAndTypeIndex
+parameter_list|(
+name|int
+name|name_and_type_index
+parameter_list|)
+block|{
+name|this
+operator|.
+name|name_and_type_index
+operator|=
+name|name_and_type_index
 expr_stmt|;
 block|}
 comment|/**      * @return Class this field belongs to.      */
@@ -273,28 +322,10 @@ name|CONSTANT_Class
 argument_list|)
 return|;
 block|}
-comment|/**      * @param name_and_type_index points to Constant_NameAndType      */
-specifier|public
-specifier|final
-name|void
-name|setNameAndTypeIndex
-parameter_list|(
-name|int
-name|name_and_type_index
-parameter_list|)
-block|{
-name|this
-operator|.
-name|name_and_type_index
-operator|=
-name|name_and_type_index
-expr_stmt|;
-block|}
-comment|/**      * @return String representation.      */
+comment|/**      * @return String representation.      *      * not final as ConstantInvokeDynamic needs to modify      */
 annotation|@
 name|Override
 specifier|public
-specifier|final
 name|String
 name|toString
 parameter_list|()

@@ -81,6 +81,13 @@ name|obj
 parameter_list|)
 function_decl|;
 name|void
+name|visitConstantInvokeDynamic
+parameter_list|(
+name|ConstantInvokeDynamic
+name|obj
+parameter_list|)
+function_decl|;
+name|void
 name|visitConstantLong
 parameter_list|(
 name|ConstantLong

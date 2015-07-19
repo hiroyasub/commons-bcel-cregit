@@ -639,6 +639,20 @@ name|bcel
 operator|.
 name|generic
 operator|.
+name|INVOKEDYNAMIC
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|bcel
+operator|.
+name|generic
+operator|.
 name|INVOKEINTERFACE
 import|;
 end_import
@@ -5724,6 +5738,25 @@ comment|/* Checks if the constraints of operands of the said instruction(s) are 
 comment|//public void visitGETFIELD(GETFIELD o){
 comment|// for performance reasons done in Pass 3b
 comment|//}
+comment|/** Checks if the constraints of operands of the said instruction(s) are satisfied. */
+annotation|@
+name|Override
+specifier|public
+name|void
+name|visitINVOKEDYNAMIC
+parameter_list|(
+name|INVOKEDYNAMIC
+name|o
+parameter_list|)
+block|{
+throw|throw
+operator|new
+name|RuntimeException
+argument_list|(
+literal|"INVOKEDYNAMIC instruction is not supported at this time"
+argument_list|)
+throw|;
+block|}
 comment|/** Checks if the constraints of operands of the said instruction(s) are satisfied. */
 annotation|@
 name|Override
