@@ -112,6 +112,7 @@ argument_list|)
 expr_stmt|;
 block|}
 comment|/**      * Read constants from given input stream.      *      * @param input Input stream      * @throws IOException      * @throws ClassFormatException      */
+specifier|public
 name|ConstantPool
 parameter_list|(
 name|DataInput
