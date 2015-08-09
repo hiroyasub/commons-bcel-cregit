@@ -113,7 +113,9 @@ name|org
 operator|.
 name|apache
 operator|.
-name|bcel
+name|commons
+operator|.
+name|bcel6
 operator|.
 name|Constants
 import|;
@@ -125,7 +127,9 @@ name|org
 operator|.
 name|apache
 operator|.
-name|bcel
+name|commons
+operator|.
+name|bcel6
 operator|.
 name|classfile
 operator|.
@@ -139,7 +143,9 @@ name|org
 operator|.
 name|apache
 operator|.
-name|bcel
+name|commons
+operator|.
+name|bcel6
 operator|.
 name|classfile
 operator|.
@@ -153,7 +159,9 @@ name|org
 operator|.
 name|apache
 operator|.
-name|bcel
+name|commons
+operator|.
+name|bcel6
 operator|.
 name|classfile
 operator|.
@@ -167,7 +175,9 @@ name|org
 operator|.
 name|apache
 operator|.
-name|bcel
+name|commons
+operator|.
+name|bcel6
 operator|.
 name|classfile
 operator|.
@@ -181,7 +191,9 @@ name|org
 operator|.
 name|apache
 operator|.
-name|bcel
+name|commons
+operator|.
+name|bcel6
 operator|.
 name|classfile
 operator|.
@@ -195,7 +207,9 @@ name|org
 operator|.
 name|apache
 operator|.
-name|bcel
+name|commons
+operator|.
+name|bcel6
 operator|.
 name|classfile
 operator|.
@@ -209,7 +223,9 @@ name|org
 operator|.
 name|apache
 operator|.
-name|bcel
+name|commons
+operator|.
+name|bcel6
 operator|.
 name|util
 operator|.
