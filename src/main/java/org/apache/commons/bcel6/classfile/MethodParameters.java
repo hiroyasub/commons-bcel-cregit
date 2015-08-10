@@ -91,6 +91,7 @@ index|[
 literal|0
 index|]
 decl_stmt|;
+comment|// TODO could be final (setter unused)
 name|MethodParameters
 parameter_list|(
 name|int
@@ -119,15 +120,6 @@ argument_list|,
 name|length
 argument_list|,
 name|constant_pool
-argument_list|)
-expr_stmt|;
-name|System
-operator|.
-name|out
-operator|.
-name|println
-argument_list|(
-literal|"new MethodParameters"
 argument_list|)
 expr_stmt|;
 name|int
@@ -193,6 +185,7 @@ index|[]
 name|parameters
 parameter_list|)
 block|{
+comment|// TODO unused
 name|this
 operator|.
 name|parameters

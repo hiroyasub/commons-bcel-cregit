@@ -97,11 +97,13 @@ specifier|private
 name|int
 name|name_index
 decl_stmt|;
+comment|// TODO could be final (setter unused)
 comment|/** The access flags */
 specifier|private
 name|int
 name|access_flags
 decl_stmt|;
+comment|// TODO could be final (setter unused)
 specifier|public
 name|MethodParameter
 parameter_list|()
@@ -148,6 +150,7 @@ name|int
 name|name_index
 parameter_list|)
 block|{
+comment|// TODO unused
 name|this
 operator|.
 name|name_index
@@ -213,6 +216,7 @@ name|int
 name|access_flags
 parameter_list|)
 block|{
+comment|// TODO unused
 name|this
 operator|.
 name|access_flags
