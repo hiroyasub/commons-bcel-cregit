@@ -6185,11 +6185,6 @@ operator|.
 name|getMethods
 argument_list|()
 decl_stmt|;
-name|Method
-name|m
-init|=
-literal|null
-decl_stmt|;
 for|for
 control|(
 name|Method
