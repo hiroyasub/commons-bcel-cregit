@@ -474,6 +474,7 @@ name|ConstantPool
 name|constant_pool
 parameter_list|)
 block|{
+comment|// TODO unused
 name|this
 operator|.
 name|constant_pool
@@ -491,6 +492,7 @@ name|int
 name|length
 parameter_list|)
 block|{
+comment|// TODO unused
 name|this
 operator|.
 name|length
@@ -508,6 +510,7 @@ name|int
 name|name_index
 parameter_list|)
 block|{
+comment|// TODO unused
 name|this
 operator|.
 name|name_index
@@ -525,6 +528,7 @@ name|int
 name|signature_index
 parameter_list|)
 block|{
+comment|// TODO unused
 name|this
 operator|.
 name|signature_index
@@ -542,6 +546,7 @@ name|int
 name|index
 parameter_list|)
 block|{
+comment|// TODO unused
 name|this
 operator|.
 name|index
@@ -559,6 +564,7 @@ name|int
 name|start_pc
 parameter_list|)
 block|{
+comment|// TODO unused
 name|this
 operator|.
 name|start_pc
