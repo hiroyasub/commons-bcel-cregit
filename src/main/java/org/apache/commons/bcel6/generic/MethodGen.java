@@ -4793,8 +4793,20 @@ operator|!
 name|hasParameterAnnotations
 condition|)
 block|{
-name|param_annotations
-operator|=
+annotation|@
+name|SuppressWarnings
+argument_list|(
+literal|"unchecked"
+argument_list|)
+comment|// OK
+specifier|final
+name|List
+argument_list|<
+name|AnnotationEntryGen
+argument_list|>
+index|[]
+name|parmList
+init|=
 operator|new
 name|List
 index|[
@@ -4802,6 +4814,10 @@ name|arg_types
 operator|.
 name|length
 index|]
+decl_stmt|;
+name|param_annotations
+operator|=
+name|parmList
 expr_stmt|;
 for|for
 control|(
@@ -5028,8 +5044,20 @@ operator|!
 name|hasParameterAnnotations
 condition|)
 block|{
-name|param_annotations
-operator|=
+annotation|@
+name|SuppressWarnings
+argument_list|(
+literal|"unchecked"
+argument_list|)
+comment|// OK
+specifier|final
+name|List
+argument_list|<
+name|AnnotationEntryGen
+argument_list|>
+index|[]
+name|parmList
+init|=
 operator|new
 name|List
 index|[
@@ -5037,6 +5065,10 @@ name|arg_types
 operator|.
 name|length
 index|]
+decl_stmt|;
+name|param_annotations
+operator|=
+name|parmList
 expr_stmt|;
 name|hasParameterAnnotations
 operator|=
