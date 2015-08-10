@@ -385,6 +385,7 @@ operator|new
 name|BCELComparator
 argument_list|()
 block|{
+comment|// TODO could be final (setter unused)
 specifier|public
 name|boolean
 name|equals
@@ -3362,6 +3363,7 @@ name|BCELComparator
 name|comparator
 parameter_list|)
 block|{
+comment|// TODO unused
 name|_cmp
 operator|=
 name|comparator

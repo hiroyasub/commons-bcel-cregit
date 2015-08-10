@@ -86,11 +86,13 @@ specifier|private
 name|short
 name|start_pc
 decl_stmt|;
+comment|// TODO could be final (setter unused)
 comment|/** number in source file */
 specifier|private
 name|short
 name|line_number
 decl_stmt|;
+comment|// TODO could be final (setter unused)
 comment|/**      * Initialize from another object.      *       * @param c the object to copy      */
 specifier|public
 name|LineNumber
@@ -246,6 +248,7 @@ name|int
 name|line_number
 parameter_list|)
 block|{
+comment|// TODO unused
 name|this
 operator|.
 name|line_number
@@ -266,6 +269,7 @@ name|int
 name|start_pc
 parameter_list|)
 block|{
+comment|// TODO unused
 name|this
 operator|.
 name|start_pc
