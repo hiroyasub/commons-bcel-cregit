@@ -83,20 +83,24 @@ specifier|private
 name|int
 name|byte_code_offset
 decl_stmt|;
+comment|// TODO could be final (setter unused)
 specifier|private
 name|StackMapType
 index|[]
 name|types_of_locals
 decl_stmt|;
+comment|// TODO could be final (setter unused)
 specifier|private
 name|StackMapType
 index|[]
 name|types_of_stack_items
 decl_stmt|;
+comment|// TODO could be final (setter unused)
 specifier|private
 name|ConstantPool
 name|constant_pool
 decl_stmt|;
+comment|// TODO could be final (setter unused)
 comment|/**      * Construct object from input stream.      *       * @param input Input stream      * @throws IOException      */
 name|StackMapEntry
 parameter_list|(
@@ -245,15 +249,37 @@ name|byte_code_offset
 operator|=
 name|byte_code_offset
 expr_stmt|;
-name|setTypesOfLocals
-argument_list|(
+name|this
+operator|.
 name|types_of_locals
-argument_list|)
+operator|=
+name|types_of_locals
+operator|!=
+literal|null
+condition|?
+name|types_of_locals
+else|:
+operator|new
+name|StackMapType
+index|[
+literal|0
+index|]
 expr_stmt|;
-name|setTypesOfStackItems
-argument_list|(
+name|this
+operator|.
 name|types_of_stack_items
-argument_list|)
+operator|=
+name|types_of_stack_items
+operator|!=
+literal|null
+condition|?
+name|types_of_stack_items
+else|:
+operator|new
+name|StackMapType
+index|[
+literal|0
+index|]
 expr_stmt|;
 name|this
 operator|.
@@ -526,6 +552,7 @@ name|int
 name|b
 parameter_list|)
 block|{
+comment|// TODO unused
 name|byte_code_offset
 operator|=
 name|b
@@ -554,6 +581,7 @@ name|int
 name|n
 parameter_list|)
 block|{
+comment|// TODO unused
 block|}
 specifier|public
 name|int
@@ -581,6 +609,7 @@ index|[]
 name|types
 parameter_list|)
 block|{
+comment|// TODO unused
 name|types_of_locals
 operator|=
 name|types
@@ -620,6 +649,7 @@ name|int
 name|n
 parameter_list|)
 block|{
+comment|// TODO unused
 block|}
 specifier|public
 name|int
@@ -737,6 +767,7 @@ name|ConstantPool
 name|constant_pool
 parameter_list|)
 block|{
+comment|// TODO unused
 name|this
 operator|.
 name|constant_pool
