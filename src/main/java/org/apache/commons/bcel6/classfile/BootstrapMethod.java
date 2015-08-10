@@ -98,7 +98,9 @@ specifier|private
 name|int
 name|bootstrap_method_ref
 decl_stmt|;
+comment|// TODO this could be made final (setter is not used)
 specifier|private
+specifier|final
 name|int
 name|num_bootstrap_arguments
 decl_stmt|;
@@ -108,6 +110,7 @@ name|int
 index|[]
 name|bootstrap_arguments
 decl_stmt|;
+comment|// TODO this could be made final (setter is not used)
 comment|/**      * Initialize from another object.      */
 specifier|public
 name|BootstrapMethod

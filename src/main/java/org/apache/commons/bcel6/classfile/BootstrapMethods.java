@@ -86,6 +86,7 @@ name|BootstrapMethod
 index|[]
 name|bootstrap_methods
 decl_stmt|;
+comment|// TODO this could be made final (setter is not used)
 comment|/**      * Initialize from another object. Note that both objects use the same      * references (shallow copy). Use clone() for a physical copy.      */
 specifier|public
 name|BootstrapMethods
