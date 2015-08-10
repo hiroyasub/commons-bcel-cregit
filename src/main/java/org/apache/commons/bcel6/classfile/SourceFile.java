@@ -86,6 +86,7 @@ specifier|private
 name|int
 name|sourcefile_index
 decl_stmt|;
+comment|// TODO could be final (setter unused)
 comment|/**      * Initialize from another object. Note that both objects use the same      * references (shallow copy). Use clone() for a physical copy.      */
 specifier|public
 name|SourceFile
@@ -257,6 +258,7 @@ name|int
 name|sourcefile_index
 parameter_list|)
 block|{
+comment|// TODO unused
 name|this
 operator|.
 name|sourcefile_index

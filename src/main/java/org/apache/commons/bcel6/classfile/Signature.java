@@ -95,6 +95,7 @@ specifier|private
 name|int
 name|signature_index
 decl_stmt|;
+comment|// TODO could be final (setter unused)
 comment|/**      * Initialize from another object. Note that both objects use the same      * references (shallow copy). Use clone() for a physical copy.      */
 specifier|public
 name|Signature
@@ -267,6 +268,7 @@ name|int
 name|signature_index
 parameter_list|)
 block|{
+comment|// TODO unused
 name|this
 operator|.
 name|signature_index

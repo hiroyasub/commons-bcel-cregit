@@ -88,7 +88,8 @@ name|pmg_class_index
 decl_stmt|,
 name|pmg_index
 decl_stmt|;
-comment|/**      * Initialize from another object. Note that both objects use the same      * references (shallow copy). Use clone() for a physical copy.      */
+comment|// TODO could be final (setter unused)
+comment|/**      * Initialize from another object. Note that both objects use the same      * references (shallow copy). Use copy() for a physical copy.      */
 specifier|public
 name|PMGClass
 parameter_list|(
@@ -287,6 +288,7 @@ name|int
 name|pmg_class_index
 parameter_list|)
 block|{
+comment|// TODO unused
 name|this
 operator|.
 name|pmg_class_index
@@ -315,6 +317,7 @@ name|int
 name|pmg_index
 parameter_list|)
 block|{
+comment|// TODO unused
 name|this
 operator|.
 name|pmg_index

@@ -66,6 +66,7 @@ specifier|private
 name|int
 name|index
 decl_stmt|;
+comment|// TODO could be final (setter unused)
 specifier|public
 name|SimpleElementValue
 parameter_list|(
@@ -110,6 +111,7 @@ parameter_list|(
 name|int
 name|index
 parameter_list|)
+comment|// TODO unused
 block|{
 name|this
 operator|.
