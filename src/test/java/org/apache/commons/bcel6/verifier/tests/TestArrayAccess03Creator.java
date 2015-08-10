@@ -213,6 +213,16 @@ name|Type
 import|;
 end_import
 
+begin_import
+import|import
+name|org
+operator|.
+name|junit
+operator|.
+name|Assert
+import|;
+end_import
+
 begin_class
 specifier|public
 class|class
@@ -365,6 +375,14 @@ literal|0
 argument_list|)
 argument_list|)
 decl_stmt|;
+name|Assert
+operator|.
+name|assertNotNull
+argument_list|(
+name|ih_0
+argument_list|)
+expr_stmt|;
+comment|// TODO why is this not used
 name|il
 operator|.
 name|append
@@ -408,6 +426,14 @@ name|VOID
 argument_list|)
 argument_list|)
 decl_stmt|;
+name|Assert
+operator|.
+name|assertNotNull
+argument_list|(
+name|ih_4
+argument_list|)
+expr_stmt|;
+comment|// TODO why is this not used
 name|method
 operator|.
 name|setMaxStack
@@ -501,6 +527,14 @@ literal|1
 argument_list|)
 argument_list|)
 decl_stmt|;
+name|Assert
+operator|.
+name|assertNotNull
+argument_list|(
+name|ih_0
+argument_list|)
+expr_stmt|;
+comment|// TODO why is this not used
 name|il
 operator|.
 name|append
@@ -557,6 +591,14 @@ literal|0
 argument_list|)
 argument_list|)
 decl_stmt|;
+name|Assert
+operator|.
+name|assertNotNull
+argument_list|(
+name|ih_5
+argument_list|)
+expr_stmt|;
+comment|// TODO why is this not used
 name|il
 operator|.
 name|append
@@ -643,6 +685,14 @@ name|VOID
 argument_list|)
 argument_list|)
 decl_stmt|;
+name|Assert
+operator|.
+name|assertNotNull
+argument_list|(
+name|ih_15
+argument_list|)
+expr_stmt|;
+comment|// TODO why is this not used
 name|method
 operator|.
 name|setMaxStack
