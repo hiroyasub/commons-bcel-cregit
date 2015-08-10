@@ -248,10 +248,11 @@ argument_list|,
 name|constant_pool
 argument_list|)
 expr_stmt|;
-name|setLocalVariableTable
-argument_list|(
+name|this
+operator|.
+name|local_variable_type_table
+operator|=
 name|local_variable_table
-argument_list|)
 expr_stmt|;
 block|}
 name|LocalVariableTypeTable
@@ -455,6 +456,7 @@ index|[]
 name|local_variable_table
 parameter_list|)
 block|{
+comment|// TODO unused
 name|this
 operator|.
 name|local_variable_type_table

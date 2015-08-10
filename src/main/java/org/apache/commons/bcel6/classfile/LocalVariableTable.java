@@ -149,10 +149,11 @@ argument_list|,
 name|constant_pool
 argument_list|)
 expr_stmt|;
-name|setLocalVariableTable
-argument_list|(
+name|this
+operator|.
 name|local_variable_table
-argument_list|)
+operator|=
+name|local_variable_table
 expr_stmt|;
 block|}
 comment|/**      * Construct object from input stream.      * @param name_index Index in constant pool      * @param length Content length in bytes      * @param input Input stream      * @param constant_pool Array of constants      * @throws IOException      */
@@ -441,6 +442,7 @@ index|[]
 name|local_variable_table
 parameter_list|)
 block|{
+comment|// TODO unused
 name|this
 operator|.
 name|local_variable_table

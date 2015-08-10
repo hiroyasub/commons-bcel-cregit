@@ -73,6 +73,7 @@ name|ParameterAnnotationEntry
 index|[]
 name|parameter_annotation_table
 decl_stmt|;
+comment|// TODO could be final (setter unused)
 comment|/**      * @param parameter_annotation_type the subclass type of the parameter annotation      * @param name_index Index pointing to the name<em>Code</em>      * @param length Content length in bytes      * @param input Input stream      * @param constant_pool Array of constants      */
 name|ParameterAnnotations
 parameter_list|(
@@ -191,10 +192,11 @@ argument_list|,
 name|constant_pool
 argument_list|)
 expr_stmt|;
-name|setParameterAnnotationTable
-argument_list|(
+name|this
+operator|.
 name|parameter_annotation_table
-argument_list|)
+operator|=
+name|parameter_annotation_table
 expr_stmt|;
 block|}
 comment|/**      * Called by objects that are traversing the nodes of the tree implicitely      * defined by the contents of a Java class. I.e., the hierarchy of methods,      * fields, attributes, etc. spawns a tree of objects.      *      * @param v Visitor object      */
@@ -227,6 +229,7 @@ index|[]
 name|parameter_annotation_table
 parameter_list|)
 block|{
+comment|// TODO unused
 name|this
 operator|.
 name|parameter_annotation_table

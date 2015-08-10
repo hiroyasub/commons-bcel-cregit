@@ -87,7 +87,7 @@ name|LineNumber
 index|[]
 name|line_number_table
 decl_stmt|;
-comment|// Table of line/numbers pairs
+comment|// Table of line/numbers pairs // TODO could be final (unused setter; copy() would need adjusting)
 comment|/*      * Initialize from another object. Note that both objects use the same      * references (shallow copy). Use copy() for a physical copy.      */
 specifier|public
 name|LineNumberTable
@@ -151,10 +151,11 @@ argument_list|,
 name|constant_pool
 argument_list|)
 expr_stmt|;
-name|setLineNumberTable
-argument_list|(
+name|this
+operator|.
 name|line_number_table
-argument_list|)
+operator|=
+name|line_number_table
 expr_stmt|;
 block|}
 comment|/**      * Construct object from input stream.      * @param name_index Index of name      * @param length Content length in bytes      * @param input Input stream      * @param constant_pool Array of constants      * @throws IOException      */
@@ -325,6 +326,7 @@ index|[]
 name|line_number_table
 parameter_list|)
 block|{
+comment|// TODO unused
 name|this
 operator|.
 name|line_number_table
@@ -639,6 +641,8 @@ name|ConstantPool
 name|_constant_pool
 parameter_list|)
 block|{
+comment|// TODO could use the lower level constructor and thereby allow
+comment|// line_number_table to be made final
 name|LineNumberTable
 name|c
 init|=

@@ -87,7 +87,7 @@ name|StackMapTableEntry
 index|[]
 name|map
 decl_stmt|;
-comment|// Table of stack map entries
+comment|// Table of stack map entries // TODO could be final (setter unused)
 comment|/*      * @param name_index Index of name      * @param length Content length in bytes      * @param map Table of stack map entries      * @param constant_pool Array of constants      */
 specifier|public
 name|StackMapTable
@@ -119,10 +119,11 @@ argument_list|,
 name|constant_pool
 argument_list|)
 expr_stmt|;
-name|setStackMapTable
-argument_list|(
+name|this
+operator|.
 name|map
-argument_list|)
+operator|=
+name|map
 expr_stmt|;
 block|}
 comment|/**      * Construct object from file stream.      * @param name_index Index of name      * @param length Content length in bytes      * @param file Input stream      * @param constant_pool Array of constants      * @throws IOException      */
@@ -274,6 +275,7 @@ index|[]
 name|map
 parameter_list|)
 block|{
+comment|// TODO unused
 name|this
 operator|.
 name|map
