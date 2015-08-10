@@ -110,10 +110,11 @@ index|[]
 name|constant_pool
 parameter_list|)
 block|{
-name|setConstantPool
-argument_list|(
+name|this
+operator|.
 name|constant_pool
-argument_list|)
+operator|=
+name|constant_pool
 expr_stmt|;
 block|}
 comment|/**      * Read constants from given input stream.      *      * @param input Input stream      * @throws IOException      * @throws ClassFormatException      */
@@ -1212,6 +1213,7 @@ index|[]
 name|constant_pool
 parameter_list|)
 block|{
+comment|// TODO unused
 name|this
 operator|.
 name|constant_pool
