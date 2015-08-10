@@ -85,6 +85,7 @@ specifier|private
 name|ElementValue
 name|default_value
 decl_stmt|;
+comment|// TODO could this be made final?
 comment|/**      * @param name_index    Index pointing to the name<em>Code</em>      * @param length        Content length in bytes      * @param input         Input stream      * @param constant_pool Array of constants      */
 name|AnnotationDefault
 parameter_list|(
@@ -159,10 +160,11 @@ argument_list|,
 name|constant_pool
 argument_list|)
 expr_stmt|;
-name|setDefaultValue
-argument_list|(
+name|this
+operator|.
+name|default_value
+operator|=
 name|defaultValue
-argument_list|)
 expr_stmt|;
 block|}
 comment|/**      * Called by objects that are traversing the nodes of the tree implicitely      * defined by the contents of a Java class. I.e., the hierarchy of methods,      * fields, attributes, etc. spawns a tree of objects.      *      * @param v Visitor object      */
