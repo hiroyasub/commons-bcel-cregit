@@ -176,6 +176,9 @@ name|MethodGen
 name|getMethod
 parameter_list|(
 name|Class
+argument_list|<
+name|?
+argument_list|>
 name|cls
 parameter_list|,
 name|String
