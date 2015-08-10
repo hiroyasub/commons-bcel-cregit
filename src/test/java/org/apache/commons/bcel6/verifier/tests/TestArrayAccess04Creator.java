@@ -337,7 +337,7 @@ name|il
 operator|.
 name|append
 argument_list|(
-name|_factory
+name|InstructionFactory
 operator|.
 name|createLoad
 argument_list|(
@@ -382,7 +382,7 @@ name|il
 operator|.
 name|append
 argument_list|(
-name|_factory
+name|InstructionFactory
 operator|.
 name|createReturn
 argument_list|(
@@ -508,7 +508,7 @@ name|il
 operator|.
 name|append
 argument_list|(
-name|_factory
+name|InstructionFactory
 operator|.
 name|createStore
 argument_list|(
@@ -540,7 +540,7 @@ name|il
 operator|.
 name|append
 argument_list|(
-name|_factory
+name|InstructionFactory
 operator|.
 name|createStore
 argument_list|(
@@ -559,7 +559,7 @@ name|il
 operator|.
 name|append
 argument_list|(
-name|_factory
+name|InstructionFactory
 operator|.
 name|createLoad
 argument_list|(
@@ -588,7 +588,7 @@ name|il
 operator|.
 name|append
 argument_list|(
-name|_factory
+name|InstructionFactory
 operator|.
 name|createLoad
 argument_list|(
@@ -616,7 +616,7 @@ name|il
 operator|.
 name|append
 argument_list|(
-name|_factory
+name|InstructionFactory
 operator|.
 name|createReturn
 argument_list|(
