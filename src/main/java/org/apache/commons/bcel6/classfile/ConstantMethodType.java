@@ -85,6 +85,7 @@ specifier|private
 name|int
 name|descriptor_index
 decl_stmt|;
+comment|// TODO could be final (setter unused)
 comment|/**      * Initialize from another object.      */
 specifier|public
 name|ConstantMethodType
@@ -203,6 +204,7 @@ name|int
 name|descriptor_index
 parameter_list|)
 block|{
+comment|// TODO unused
 name|this
 operator|.
 name|descriptor_index

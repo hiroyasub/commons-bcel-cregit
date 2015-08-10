@@ -87,7 +87,7 @@ specifier|private
 name|int
 name|string_index
 decl_stmt|;
-comment|// Identical to ConstantClass except for this name
+comment|// Identical to ConstantClass except for this name // TODO could be final (setter unused)
 comment|/**      * Initialize from another object.      */
 specifier|public
 name|ConstantString
@@ -217,6 +217,7 @@ name|int
 name|string_index
 parameter_list|)
 block|{
+comment|// TODO unused
 name|this
 operator|.
 name|string_index

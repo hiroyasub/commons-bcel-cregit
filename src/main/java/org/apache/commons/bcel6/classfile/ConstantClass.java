@@ -88,7 +88,7 @@ specifier|private
 name|int
 name|name_index
 decl_stmt|;
-comment|// Identical to ConstantString except for the name
+comment|// Identical to ConstantString except for the name TODO could be final (setter unused)
 comment|/**      * Initialize from another object.      */
 specifier|public
 name|ConstantClass

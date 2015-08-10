@@ -86,6 +86,7 @@ specifier|private
 name|int
 name|classIndex
 decl_stmt|;
+comment|// TODO could be final (setter unused)
 comment|// If the current class is not immediately enclosed by a method or
 comment|// constructor, then the value of the method_index item must be zero.
 comment|// Otherwise, the value of the  method_index item must point to a
@@ -98,6 +99,7 @@ specifier|private
 name|int
 name|methodIndex
 decl_stmt|;
+comment|// TODO could be final (setter unused)
 comment|// Ctors - and code to read an attribute in.
 name|EnclosingMethod
 parameter_list|(
@@ -250,6 +252,7 @@ operator|=
 name|idx
 expr_stmt|;
 block|}
+comment|// TODO unused
 specifier|public
 specifier|final
 name|void
@@ -264,6 +267,7 @@ operator|=
 name|idx
 expr_stmt|;
 block|}
+comment|// TODO unused
 specifier|public
 specifier|final
 name|ConstantClass

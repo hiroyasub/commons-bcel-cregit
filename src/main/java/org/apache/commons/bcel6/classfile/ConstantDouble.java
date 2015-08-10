@@ -88,6 +88,7 @@ specifier|private
 name|double
 name|bytes
 decl_stmt|;
+comment|// TODO could be final (setter not used)
 comment|/**       * @param bytes Data      */
 specifier|public
 name|ConstantDouble
@@ -217,6 +218,7 @@ name|double
 name|bytes
 parameter_list|)
 block|{
+comment|// TODO unused
 name|this
 operator|.
 name|bytes

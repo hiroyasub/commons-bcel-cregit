@@ -86,6 +86,7 @@ specifier|private
 name|int
 name|constantvalue_index
 decl_stmt|;
+comment|// TODO could be final (setter unused)
 comment|/**      * Initialize from another object. Note that both objects use the same      * references (shallow copy). Use clone() for a physical copy.      */
 specifier|public
 name|ConstantValue
@@ -257,6 +258,7 @@ name|int
 name|constantvalue_index
 parameter_list|)
 block|{
+comment|// TODO unused
 name|this
 operator|.
 name|constantvalue_index

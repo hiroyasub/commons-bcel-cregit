@@ -86,12 +86,12 @@ specifier|private
 name|int
 name|name_index
 decl_stmt|;
-comment|// Name of field/method
+comment|// Name of field/method // TODO could be final (setter unused)
 specifier|private
 name|int
 name|signature_index
 decl_stmt|;
-comment|// and its signature.
+comment|// and its signature. // TODO could be final (setter unused)
 comment|/**      * Initialize from another object.      */
 specifier|public
 name|ConstantNameAndType
@@ -306,6 +306,7 @@ name|int
 name|name_index
 parameter_list|)
 block|{
+comment|// TODO unused
 name|this
 operator|.
 name|name_index
@@ -323,6 +324,7 @@ name|int
 name|signature_index
 parameter_list|)
 block|{
+comment|// TODO unused
 name|this
 operator|.
 name|signature_index

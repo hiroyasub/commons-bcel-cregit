@@ -100,18 +100,22 @@ specifier|private
 name|int
 name|inner_class_index
 decl_stmt|;
+comment|// TODO could be final (setter unused)
 specifier|private
 name|int
 name|outer_class_index
 decl_stmt|;
+comment|// TODO could be final (setter unused)
 specifier|private
 name|int
 name|inner_name_index
 decl_stmt|;
+comment|// TODO could be final (setter unused)
 specifier|private
 name|int
 name|inner_access_flags
 decl_stmt|;
+comment|// TODO could be final (setter unused)
 comment|/**      * Initialize from another object.      */
 specifier|public
 name|InnerClass
@@ -331,6 +335,7 @@ name|int
 name|inner_access_flags
 parameter_list|)
 block|{
+comment|// TODO unused
 name|this
 operator|.
 name|inner_access_flags
@@ -348,6 +353,7 @@ name|int
 name|inner_class_index
 parameter_list|)
 block|{
+comment|// TODO unused
 name|this
 operator|.
 name|inner_class_index
@@ -365,6 +371,7 @@ name|int
 name|inner_name_index
 parameter_list|)
 block|{
+comment|// TODO unused
 name|this
 operator|.
 name|inner_name_index
@@ -382,6 +389,7 @@ name|int
 name|outer_class_index
 parameter_list|)
 block|{
+comment|// TODO unused
 name|this
 operator|.
 name|outer_class_index

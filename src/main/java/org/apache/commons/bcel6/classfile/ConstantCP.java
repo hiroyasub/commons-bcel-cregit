@@ -89,13 +89,13 @@ specifier|protected
 name|int
 name|class_index
 decl_stmt|;
-comment|// TODO make private (has getter& setter)
+comment|// TODO make private (has getter& setter) could be final (setter unused)
 comment|// This field has the same meaning for all subclasses.
 specifier|protected
 name|int
 name|name_and_type_index
 decl_stmt|;
-comment|// TODO make private (has getter& setter)
+comment|// TODO make private (has getter& setter) could be final (setter unused)
 comment|/**      * Initialize from another object.      */
 specifier|public
 name|ConstantCP
@@ -255,6 +255,7 @@ name|int
 name|class_index
 parameter_list|)
 block|{
+comment|// TODO unused
 name|this
 operator|.
 name|class_index
@@ -272,6 +273,7 @@ name|int
 name|bootstrap_method_attr_index
 parameter_list|)
 block|{
+comment|// TODO unused
 name|this
 operator|.
 name|class_index

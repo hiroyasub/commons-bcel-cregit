@@ -101,22 +101,22 @@ specifier|private
 name|int
 name|start_pc
 decl_stmt|;
-comment|// Range in the code the exception handler is
+comment|// Range in the code the exception handler is TODO could be final (setter unused)
 specifier|private
 name|int
 name|end_pc
 decl_stmt|;
-comment|// active. start_pc is inclusive, end_pc exclusive
+comment|// active. start_pc is inclusive, end_pc exclusive TODO could be final (setter unused)
 specifier|private
 name|int
 name|handler_pc
 decl_stmt|;
-comment|/* Starting address of exception handler, i.e.,      * an offset from start of code.      */
+comment|/* Starting address of exception handler, i.e., TODO could be final (setter unused)      * an offset from start of code.      */
 specifier|private
 name|int
 name|catch_type
 decl_stmt|;
-comment|/* If this is zero the handler catches any      * exception, otherwise it points to the      * exception class which is to be caught.      */
+comment|/* If this is zero the handler catches any TODO could be final (setter unused)      * exception, otherwise it points to the      * exception class which is to be caught.      */
 comment|/**      * Initialize from another object.      */
 specifier|public
 name|CodeException
@@ -336,6 +336,7 @@ name|int
 name|catch_type
 parameter_list|)
 block|{
+comment|// TODO unused
 name|this
 operator|.
 name|catch_type
@@ -353,6 +354,7 @@ name|int
 name|end_pc
 parameter_list|)
 block|{
+comment|// TODO unused
 name|this
 operator|.
 name|end_pc
@@ -370,6 +372,7 @@ name|int
 name|handler_pc
 parameter_list|)
 block|{
+comment|// TODO unused
 name|this
 operator|.
 name|handler_pc
@@ -387,6 +390,7 @@ name|int
 name|start_pc
 parameter_list|)
 block|{
+comment|// TODO unused
 name|this
 operator|.
 name|start_pc

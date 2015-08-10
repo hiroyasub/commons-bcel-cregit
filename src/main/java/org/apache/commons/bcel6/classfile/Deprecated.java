@@ -87,6 +87,7 @@ name|byte
 index|[]
 name|bytes
 decl_stmt|;
+comment|// TODO could be final (setter unused)
 comment|/**      * Initialize from another object. Note that both objects use the same      * references (shallow copy). Use clone() for a physical copy.      */
 specifier|public
 name|Deprecated
@@ -312,6 +313,7 @@ index|[]
 name|bytes
 parameter_list|)
 block|{
+comment|// TODO unused
 name|this
 operator|.
 name|bytes

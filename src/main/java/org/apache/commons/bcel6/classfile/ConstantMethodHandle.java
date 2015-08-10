@@ -86,10 +86,12 @@ specifier|private
 name|int
 name|reference_kind
 decl_stmt|;
+comment|// TODO could be final (setter unused)
 specifier|private
 name|int
 name|reference_index
 decl_stmt|;
+comment|// TODO could be final (setter unused)
 comment|/**      * Initialize from another object.      */
 specifier|public
 name|ConstantMethodHandle
@@ -234,6 +236,7 @@ name|int
 name|reference_kind
 parameter_list|)
 block|{
+comment|// TODO unused
 name|this
 operator|.
 name|reference_kind
@@ -258,6 +261,7 @@ name|int
 name|reference_index
 parameter_list|)
 block|{
+comment|// TODO unused
 name|this
 operator|.
 name|reference_index

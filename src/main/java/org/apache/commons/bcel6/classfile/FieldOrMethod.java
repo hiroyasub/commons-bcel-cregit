@@ -96,6 +96,7 @@ init|=
 operator|-
 literal|1833306330869469714L
 decl_stmt|;
+comment|// TODO should be made private
 specifier|protected
 name|int
 name|name_index
@@ -476,6 +477,7 @@ name|int
 name|name_index
 parameter_list|)
 block|{
+comment|// TODO unused
 name|this
 operator|.
 name|name_index
@@ -504,6 +506,7 @@ name|int
 name|signature_index
 parameter_list|)
 block|{
+comment|// TODO unused
 name|this
 operator|.
 name|signature_index
