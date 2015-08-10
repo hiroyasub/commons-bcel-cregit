@@ -102,20 +102,24 @@ specifier|private
 name|int
 name|byte_code_offset_delta
 decl_stmt|;
+comment|// TODO could be final (setter unused)
 specifier|private
 name|StackMapType
 index|[]
 name|types_of_locals
 decl_stmt|;
+comment|// TODO could be final (setter unused)
 specifier|private
 name|StackMapType
 index|[]
 name|types_of_stack_items
 decl_stmt|;
+comment|// TODO could be final (setter unused)
 specifier|private
 name|ConstantPool
 name|constant_pool
 decl_stmt|;
+comment|// TODO could be final (setter unused)
 comment|/**      * Construct object from file stream.      * *       * @param file Input stream      * @throws IOException      */
 name|StackMapTableEntry
 parameter_list|(
@@ -515,15 +519,37 @@ name|byte_code_offset_delta
 operator|=
 name|byte_code_offset_delta
 expr_stmt|;
-name|setTypesOfLocals
-argument_list|(
+name|this
+operator|.
 name|types_of_locals
-argument_list|)
+operator|=
+name|types_of_locals
+operator|!=
+literal|null
+condition|?
+name|types_of_locals
+else|:
+operator|new
+name|StackMapType
+index|[
+literal|0
+index|]
 expr_stmt|;
-name|setTypesOfStackItems
-argument_list|(
+name|this
+operator|.
 name|types_of_stack_items
-argument_list|)
+operator|=
+name|types_of_stack_items
+operator|!=
+literal|null
+condition|?
+name|types_of_stack_items
+else|:
+operator|new
+name|StackMapType
+index|[
+literal|0
+index|]
 expr_stmt|;
 name|this
 operator|.
@@ -1147,6 +1173,7 @@ name|int
 name|b
 parameter_list|)
 block|{
+comment|// TODO unused
 name|byte_code_offset_delta
 operator|=
 name|b
@@ -1181,6 +1208,7 @@ index|[]
 name|types
 parameter_list|)
 block|{
+comment|// TODO unused
 name|types_of_locals
 operator|=
 name|types
@@ -1226,6 +1254,7 @@ index|[]
 name|types
 parameter_list|)
 block|{
+comment|// TODO unused
 name|types_of_stack_items
 operator|=
 name|types
