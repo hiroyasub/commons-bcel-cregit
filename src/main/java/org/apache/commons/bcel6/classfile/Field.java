@@ -113,6 +113,7 @@ operator|new
 name|BCELComparator
 argument_list|()
 block|{
+comment|// TODO could be final (setter unused)
 specifier|public
 name|boolean
 name|equals
@@ -304,7 +305,10 @@ control|(
 name|Attribute
 name|attribute
 range|:
-name|attributes
+name|super
+operator|.
+name|getAttributes
+argument_list|()
 control|)
 block|{
 if|if
@@ -455,7 +459,10 @@ control|(
 name|Attribute
 name|attribute
 range|:
-name|attributes
+name|super
+operator|.
+name|getAttributes
+argument_list|()
 control|)
 block|{
 if|if
@@ -554,6 +561,7 @@ name|BCELComparator
 name|comparator
 parameter_list|)
 block|{
+comment|// TODO unused
 name|_cmp
 operator|=
 name|comparator
