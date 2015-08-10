@@ -162,6 +162,14 @@ name|lang
 operator|.
 name|ClassLoader
 block|{
+specifier|private
+specifier|static
+specifier|final
+name|String
+name|BCEL_TOKEN
+init|=
+literal|"$$BCEL$$"
+decl_stmt|;
 specifier|public
 specifier|static
 specifier|final
@@ -405,7 +413,7 @@ name|class_name
 operator|.
 name|contains
 argument_list|(
-literal|"$$BCEL$$"
+name|BCEL_TOKEN
 argument_list|)
 condition|)
 block|{
@@ -554,7 +562,7 @@ name|class_name
 operator|.
 name|indexOf
 argument_list|(
-literal|"$$BCEL$$"
+name|BCEL_TOKEN
 argument_list|)
 decl_stmt|;
 name|String
@@ -566,7 +574,10 @@ name|substring
 argument_list|(
 name|index
 operator|+
-literal|8
+name|BCEL_TOKEN
+operator|.
+name|length
+argument_list|()
 argument_list|)
 decl_stmt|;
 name|JavaClass
