@@ -551,8 +551,19 @@ name|ExecutionVisitor
 name|ev
 parameter_list|)
 block|{
-name|executionPredecessors
-operator|=
+annotation|@
+name|SuppressWarnings
+argument_list|(
+literal|"unchecked"
+argument_list|)
+comment|// OK because execPreds is compatible type
+specifier|final
+name|List
+argument_list|<
+name|InstructionContext
+argument_list|>
+name|clone
+init|=
 operator|(
 name|List
 argument_list|<
@@ -563,6 +574,10 @@ name|execPreds
 operator|.
 name|clone
 argument_list|()
+decl_stmt|;
+name|executionPredecessors
+operator|=
+name|clone
 expr_stmt|;
 comment|//sanity check
 if|if
