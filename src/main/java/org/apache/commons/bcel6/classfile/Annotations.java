@@ -72,6 +72,7 @@ name|AnnotationEntry
 index|[]
 name|annotation_table
 decl_stmt|;
+comment|// TODO could this be final?
 specifier|private
 specifier|final
 name|boolean
@@ -207,10 +208,11 @@ argument_list|,
 name|constant_pool
 argument_list|)
 expr_stmt|;
-name|setAnnotationTable
-argument_list|(
+name|this
+operator|.
 name|annotation_table
-argument_list|)
+operator|=
+name|annotation_table
 expr_stmt|;
 name|this
 operator|.
