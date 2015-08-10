@@ -276,7 +276,10 @@ block|{
 name|Constant
 name|c
 init|=
-name|constant_pool
+name|super
+operator|.
+name|getConstantPool
+argument_list|()
 operator|.
 name|getConstant
 argument_list|(
@@ -409,7 +412,10 @@ argument_list|()
 expr_stmt|;
 name|c
 operator|=
-name|constant_pool
+name|super
+operator|.
+name|getConstantPool
+argument_list|()
 operator|.
 name|getConstant
 argument_list|(
@@ -479,9 +485,10 @@ argument_list|()
 decl_stmt|;
 name|c
 operator|.
-name|constant_pool
-operator|=
+name|setConstantPool
+argument_list|(
 name|_constant_pool
+argument_list|)
 expr_stmt|;
 return|return
 name|c

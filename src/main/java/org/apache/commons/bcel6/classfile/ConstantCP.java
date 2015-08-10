@@ -201,7 +201,10 @@ name|file
 operator|.
 name|writeByte
 argument_list|(
-name|tag
+name|super
+operator|.
+name|getTag
+argument_list|()
 argument_list|)
 expr_stmt|;
 name|file

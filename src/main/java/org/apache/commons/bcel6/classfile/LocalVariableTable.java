@@ -588,9 +588,10 @@ expr_stmt|;
 block|}
 name|c
 operator|.
-name|constant_pool
-operator|=
+name|setConstantPool
+argument_list|(
 name|_constant_pool
+argument_list|)
 expr_stmt|;
 return|return
 name|c

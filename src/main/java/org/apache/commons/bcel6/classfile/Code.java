@@ -334,11 +334,12 @@ argument_list|)
 expr_stmt|;
 block|}
 comment|/* Adjust length, because of setAttributes in this(), s.b.  length          * is incorrect, because it didn't take the internal attributes          * into account yet! Very subtle bug, fixed in 3.1.1.          */
-name|this
+name|super
 operator|.
+name|setLength
+argument_list|(
 name|length
-operator|=
-name|length
+argument_list|)
 expr_stmt|;
 block|}
 comment|/**      * @param name_index Index pointing to the name<em>Code</em>      * @param length Content length in bytes      * @param max_stack Maximum size of stack      * @param max_locals Number of local variables      * @param code Actual byte code      * @param exception_table Table of handled exceptions      * @param attributes Attributes of code: LineNumber or LocalVariable      * @param constant_pool Array of constants      */
@@ -739,7 +740,8 @@ name|len
 operator|+=
 name|attribute
 operator|.
-name|length
+name|getLength
+argument_list|()
 operator|+
 literal|6
 comment|/*attribute header size*/
@@ -780,10 +782,13 @@ index|[
 literal|0
 index|]
 expr_stmt|;
-name|length
-operator|=
+name|super
+operator|.
+name|setLength
+argument_list|(
 name|calculateLength
 argument_list|()
+argument_list|)
 expr_stmt|;
 comment|// Adjust length
 block|}
@@ -814,10 +819,13 @@ index|[
 literal|0
 index|]
 expr_stmt|;
-name|length
-operator|=
+name|super
+operator|.
+name|setLength
+argument_list|(
 name|calculateLength
 argument_list|()
+argument_list|)
 expr_stmt|;
 comment|// Adjust length
 block|}
@@ -848,10 +856,13 @@ index|[
 literal|0
 index|]
 expr_stmt|;
-name|length
-operator|=
+name|super
+operator|.
+name|setLength
+argument_list|(
 name|calculateLength
 argument_list|()
+argument_list|)
 expr_stmt|;
 comment|// Adjust length
 block|}
@@ -955,7 +966,10 @@ name|codeToString
 argument_list|(
 name|code
 argument_list|,
-name|constant_pool
+name|super
+operator|.
+name|getConstantPool
+argument_list|()
 argument_list|,
 literal|0
 argument_list|,
@@ -1003,7 +1017,10 @@ name|exception
 operator|.
 name|toString
 argument_list|(
-name|constant_pool
+name|super
+operator|.
+name|getConstantPool
+argument_list|()
 argument_list|,
 name|verbose
 argument_list|)
@@ -1141,9 +1158,10 @@ expr_stmt|;
 block|}
 name|c
 operator|.
-name|constant_pool
-operator|=
+name|setConstantPool
+argument_list|(
 name|_constant_pool
+argument_list|)
 expr_stmt|;
 name|c
 operator|.

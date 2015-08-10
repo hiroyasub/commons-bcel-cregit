@@ -276,7 +276,10 @@ init|=
 operator|(
 name|ConstantClass
 operator|)
-name|constant_pool
+name|super
+operator|.
+name|getConstantPool
+argument_list|()
 operator|.
 name|getConstant
 argument_list|(
@@ -314,7 +317,10 @@ init|=
 operator|(
 name|ConstantNameAndType
 operator|)
-name|constant_pool
+name|super
+operator|.
+name|getConstantPool
+argument_list|()
 operator|.
 name|getConstant
 argument_list|(

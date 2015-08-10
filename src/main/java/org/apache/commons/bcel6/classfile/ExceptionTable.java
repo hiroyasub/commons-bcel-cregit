@@ -371,7 +371,10 @@ index|[
 name|i
 index|]
 operator|=
-name|constant_pool
+name|super
+operator|.
+name|getConstantPool
+argument_list|()
 operator|.
 name|getConstantString
 argument_list|(
@@ -463,7 +466,10 @@ control|)
 block|{
 name|str
 operator|=
-name|constant_pool
+name|super
+operator|.
+name|getConstantPool
+argument_list|()
 operator|.
 name|getConstantString
 argument_list|(
@@ -579,9 +585,10 @@ expr_stmt|;
 block|}
 name|c
 operator|.
-name|constant_pool
-operator|=
+name|setConstantPool
+argument_list|(
 name|_constant_pool
+argument_list|)
 expr_stmt|;
 return|return
 name|c

@@ -998,7 +998,10 @@ return|return
 operator|new
 name|Field
 argument_list|(
-name|access_flags
+name|super
+operator|.
+name|getAccessFlags
+argument_list|()
 argument_list|,
 name|name_index
 argument_list|,
@@ -1360,7 +1363,10 @@ name|Utility
 operator|.
 name|accessToString
 argument_list|(
-name|access_flags
+name|super
+operator|.
+name|getAccessFlags
+argument_list|()
 argument_list|)
 expr_stmt|;
 name|access

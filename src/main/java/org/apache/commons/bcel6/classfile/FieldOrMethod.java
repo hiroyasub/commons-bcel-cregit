@@ -306,11 +306,12 @@ name|ConstantPool
 name|constant_pool
 parameter_list|)
 block|{
-name|this
+name|super
 operator|.
+name|setAccessFlags
+argument_list|(
 name|access_flags
-operator|=
-name|access_flags
+argument_list|)
 expr_stmt|;
 name|this
 operator|.
@@ -352,7 +353,10 @@ name|file
 operator|.
 name|writeShort
 argument_list|(
-name|access_flags
+name|super
+operator|.
+name|getAccessFlags
+argument_list|()
 argument_list|)
 expr_stmt|;
 name|file

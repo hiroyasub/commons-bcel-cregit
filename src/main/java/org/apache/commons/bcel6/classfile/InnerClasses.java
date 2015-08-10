@@ -370,7 +370,10 @@ name|inner_class
 operator|.
 name|toString
 argument_list|(
-name|constant_pool
+name|super
+operator|.
+name|getConstantPool
+argument_list|()
 argument_list|)
 argument_list|)
 operator|.
@@ -454,9 +457,10 @@ expr_stmt|;
 block|}
 name|c
 operator|.
-name|constant_pool
-operator|=
+name|setConstantPool
+argument_list|(
 name|_constant_pool
+argument_list|)
 expr_stmt|;
 return|return
 name|c

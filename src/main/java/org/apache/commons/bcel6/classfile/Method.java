@@ -463,7 +463,10 @@ name|Utility
 operator|.
 name|accessToString
 argument_list|(
-name|access_flags
+name|super
+operator|.
+name|getAccessFlags
+argument_list|()
 argument_list|)
 expr_stmt|;
 comment|// Get name and signature from constant pool
