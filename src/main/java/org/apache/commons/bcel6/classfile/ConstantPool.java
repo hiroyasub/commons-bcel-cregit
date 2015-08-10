@@ -100,6 +100,7 @@ name|Constant
 index|[]
 name|constant_pool
 decl_stmt|;
+comment|// TODO this could be final; the setConstantPool method is not called externally
 comment|/**      * @param constant_pool Array of constants      */
 specifier|public
 name|ConstantPool
