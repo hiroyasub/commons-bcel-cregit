@@ -354,7 +354,7 @@ name|ConstantPoolGen
 name|cp
 parameter_list|)
 block|{
-name|setAccessFlags
+name|super
 argument_list|(
 name|access_flags
 argument_list|)

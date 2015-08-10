@@ -307,8 +307,6 @@ name|constant_pool
 parameter_list|)
 block|{
 name|super
-operator|.
-name|setAccessFlags
 argument_list|(
 name|access_flags
 argument_list|)

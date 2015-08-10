@@ -521,6 +521,11 @@ name|byte
 name|source
 parameter_list|)
 block|{
+name|super
+argument_list|(
+name|access_flags
+argument_list|)
+expr_stmt|;
 if|if
 condition|(
 name|interfaces
@@ -614,13 +619,6 @@ operator|.
 name|minor
 operator|=
 name|minor
-expr_stmt|;
-name|super
-operator|.
-name|setAccessFlags
-argument_list|(
-name|access_flags
-argument_list|)
 expr_stmt|;
 name|this
 operator|.
