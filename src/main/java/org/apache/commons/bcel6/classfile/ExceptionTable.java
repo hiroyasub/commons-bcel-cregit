@@ -86,7 +86,7 @@ name|int
 index|[]
 name|exception_index_table
 decl_stmt|;
-comment|// constant pool
+comment|// constant pool // TODO could be final (setter unused)
 comment|/**      * Initialize from another object. Note that both objects use the same      * references (shallow copy). Use copy() for a physical copy.      */
 specifier|public
 name|ExceptionTable
@@ -150,10 +150,21 @@ argument_list|,
 name|constant_pool
 argument_list|)
 expr_stmt|;
-name|setExceptionIndexTable
-argument_list|(
+name|this
+operator|.
 name|exception_index_table
-argument_list|)
+operator|=
+name|exception_index_table
+operator|!=
+literal|null
+condition|?
+name|exception_index_table
+else|:
+operator|new
+name|int
+index|[
+literal|0
+index|]
 expr_stmt|;
 block|}
 comment|/**      * Construct object from input stream.      * @param name_index Index in constant pool      * @param length Content length in bytes      * @param input Input stream      * @param constant_pool Array of constants      * @throws IOException      */
@@ -411,6 +422,7 @@ index|[]
 name|exception_index_table
 parameter_list|)
 block|{
+comment|// TODO unused
 name|this
 operator|.
 name|exception_index_table
