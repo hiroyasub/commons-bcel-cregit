@@ -202,10 +202,19 @@ operator|.
 name|maxStack
 argument_list|)
 decl_stmt|;
-name|newstack
-operator|.
-name|stack
-operator|=
+annotation|@
+name|SuppressWarnings
+argument_list|(
+literal|"unchecked"
+argument_list|)
+comment|// OK because this.stack is the same type
+specifier|final
+name|ArrayList
+argument_list|<
+name|Type
+argument_list|>
+name|clone
+init|=
 operator|(
 name|ArrayList
 argument_list|<
@@ -218,6 +227,12 @@ name|stack
 operator|.
 name|clone
 argument_list|()
+decl_stmt|;
+name|newstack
+operator|.
+name|stack
+operator|=
+name|clone
 expr_stmt|;
 return|return
 name|newstack
