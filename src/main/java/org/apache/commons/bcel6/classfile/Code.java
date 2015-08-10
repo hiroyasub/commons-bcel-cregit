@@ -86,12 +86,12 @@ specifier|private
 name|int
 name|max_stack
 decl_stmt|;
-comment|// Maximum size of stack used by this method
+comment|// Maximum size of stack used by this method  // TODO this could be made final (setter is not used)
 specifier|private
 name|int
 name|max_locals
 decl_stmt|;
-comment|// Number of local variables
+comment|// Number of local variables  // TODO this could be made final (setter is not used)
 specifier|private
 name|byte
 index|[]
@@ -399,22 +399,63 @@ name|max_locals
 operator|=
 name|max_locals
 expr_stmt|;
-name|setCode
-argument_list|(
+name|this
+operator|.
 name|code
-argument_list|)
+operator|=
+name|code
+operator|!=
+literal|null
+condition|?
+name|code
+else|:
+operator|new
+name|byte
+index|[
+literal|0
+index|]
 expr_stmt|;
-name|setExceptionTable
-argument_list|(
+name|this
+operator|.
 name|exception_table
-argument_list|)
+operator|=
+name|exception_table
+operator|!=
+literal|null
+condition|?
+name|exception_table
+else|:
+operator|new
+name|CodeException
+index|[
+literal|0
+index|]
 expr_stmt|;
-name|setAttributes
-argument_list|(
+name|this
+operator|.
 name|attributes
+operator|=
+name|attributes
+operator|!=
+literal|null
+condition|?
+name|attributes
+else|:
+operator|new
+name|Attribute
+index|[
+literal|0
+index|]
+expr_stmt|;
+name|super
+operator|.
+name|setLength
+argument_list|(
+name|calculateLength
+argument_list|()
 argument_list|)
 expr_stmt|;
-comment|// Overwrites length!
+comment|// Adjust length
 block|}
 comment|/**      * Called by objects that are traversing the nodes of the tree implicitely      * defined by the contents of a Java class. I.e., the hierarchy of methods,      * fields, attributes, etc. spawns a tree of objects.      *      * @param v Visitor object      */
 annotation|@
