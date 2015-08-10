@@ -86,6 +86,7 @@ name|InnerClass
 index|[]
 name|inner_classes
 decl_stmt|;
+comment|// TODO could be final (setter unused; would need to recode the copy method)
 comment|/**      * Initialize from another object. Note that both objects use the same      * references (shallow copy). Use clone() for a physical copy.      */
 specifier|public
 name|InnerClasses
@@ -149,10 +150,21 @@ argument_list|,
 name|constant_pool
 argument_list|)
 expr_stmt|;
-name|setInnerClasses
-argument_list|(
+name|this
+operator|.
 name|inner_classes
-argument_list|)
+operator|=
+name|inner_classes
+operator|!=
+literal|null
+condition|?
+name|inner_classes
+else|:
+operator|new
+name|InnerClass
+index|[
+literal|0
+index|]
 expr_stmt|;
 block|}
 comment|/**      * Construct object from input stream.      *      * @param name_index Index in constant pool to CONSTANT_Utf8      * @param length Content length in bytes      * @param input Input stream      * @param constant_pool Array of constants      * @throws IOException      */
@@ -321,6 +333,7 @@ index|[]
 name|inner_classes
 parameter_list|)
 block|{
+comment|// TODO unused
 name|this
 operator|.
 name|inner_classes
@@ -401,6 +414,7 @@ name|ConstantPool
 name|_constant_pool
 parameter_list|)
 block|{
+comment|// TODO this could be recoded to use a lower level constructor after creating a copy of the inner classes
 name|InnerClasses
 name|c
 init|=
