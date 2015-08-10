@@ -32,6 +32,11 @@ index|[]
 name|argv
 parameter_list|)
 block|{
+annotation|@
+name|SuppressWarnings
+argument_list|(
+literal|"unused"
+argument_list|)
 class|class
 name|S
 block|{

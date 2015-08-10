@@ -164,6 +164,11 @@ name|void
 name|bar
 parameter_list|()
 block|{
+annotation|@
+name|SuppressWarnings
+argument_list|(
+literal|"unused"
+argument_list|)
 name|int
 name|a
 init|=
