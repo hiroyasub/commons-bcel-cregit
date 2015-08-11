@@ -2384,7 +2384,10 @@ name|toString
 argument_list|(
 literal|true
 argument_list|)
-operator|+
+argument_list|)
+operator|.
+name|append
+argument_list|(
 literal|" "
 argument_list|)
 expr_stmt|;

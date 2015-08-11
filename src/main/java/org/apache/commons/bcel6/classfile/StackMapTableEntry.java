@@ -915,12 +915,18 @@ operator|.
 name|append
 argument_list|(
 literal|"CHOP "
-operator|+
-operator|(
+argument_list|)
+operator|.
+name|append
+argument_list|(
+name|String
+operator|.
+name|valueOf
+argument_list|(
 literal|251
 operator|-
 name|frame_type
-operator|)
+argument_list|)
 argument_list|)
 expr_stmt|;
 block|}
@@ -961,12 +967,18 @@ operator|.
 name|append
 argument_list|(
 literal|"APPEND "
-operator|+
-operator|(
+argument_list|)
+operator|.
+name|append
+argument_list|(
+name|String
+operator|.
+name|valueOf
+argument_list|(
 name|frame_type
 operator|-
 literal|251
-operator|)
+argument_list|)
 argument_list|)
 expr_stmt|;
 block|}
