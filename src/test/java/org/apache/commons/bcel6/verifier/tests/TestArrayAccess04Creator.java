@@ -213,8 +213,6 @@ class|class
 name|TestArrayAccess04Creator
 extends|extends
 name|TestCreator
-implements|implements
-name|Constants
 block|{
 specifier|private
 name|InstructionFactory
@@ -243,8 +241,12 @@ literal|"java.lang.Object"
 argument_list|,
 literal|"TestArrayAccess04.java"
 argument_list|,
+name|Constants
+operator|.
 name|ACC_PUBLIC
 operator||
+name|Constants
+operator|.
 name|ACC_SUPER
 argument_list|,
 operator|new
@@ -316,6 +318,8 @@ init|=
 operator|new
 name|MethodGen
 argument_list|(
+name|Constants
+operator|.
 name|ACC_PUBLIC
 argument_list|,
 name|Type
@@ -462,8 +466,12 @@ init|=
 operator|new
 name|MethodGen
 argument_list|(
+name|Constants
+operator|.
 name|ACC_PUBLIC
 operator||
+name|Constants
+operator|.
 name|ACC_STATIC
 argument_list|,
 name|Type

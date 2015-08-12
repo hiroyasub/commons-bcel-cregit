@@ -112,8 +112,6 @@ name|AnnotationEntry
 implements|implements
 name|Node
 implements|,
-name|Constants
-implements|,
 name|Serializable
 block|{
 specifier|private
@@ -146,7 +144,7 @@ name|ElementValuePair
 argument_list|>
 name|element_value_pairs
 decl_stmt|;
-comment|/**      * Factory method to create an AnnotionEntry from a DataInput      *       * @param input      * @param constant_pool      * @param isRuntimeVisible      * @return the entry      * @throws IOException      */
+comment|/*      * Factory method to create an AnnotionEntry from a DataInput      *       * @param input      * @param constant_pool      * @param isRuntimeVisible      * @return the entry      * @throws IOException      */
 specifier|public
 specifier|static
 name|AnnotationEntry
@@ -345,6 +343,8 @@ name|getConstant
 argument_list|(
 name|type_index
 argument_list|,
+name|Constants
+operator|.
 name|CONSTANT_Utf8
 argument_list|)
 decl_stmt|;

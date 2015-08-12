@@ -57,6 +57,20 @@ name|commons
 operator|.
 name|bcel6
 operator|.
+name|Constants
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|commons
+operator|.
+name|bcel6
+operator|.
 name|classfile
 operator|.
 name|Attribute
@@ -295,16 +309,6 @@ begin_class
 specifier|final
 class|class
 name|AttributeHTML
-implements|implements
-name|org
-operator|.
-name|apache
-operator|.
-name|commons
-operator|.
-name|bcel6
-operator|.
-name|Constants
 block|{
 specifier|private
 specifier|final
@@ -492,6 +496,8 @@ if|if
 condition|(
 name|tag
 operator|==
+name|Constants
+operator|.
 name|ATTR_UNKNOWN
 condition|)
 block|{
@@ -542,6 +548,8 @@ name|attr_count
 operator|+
 literal|" "
 operator|+
+name|Constants
+operator|.
 name|ATTRIBUTE_NAMES
 index|[
 name|tag
@@ -557,6 +565,8 @@ name|tag
 condition|)
 block|{
 case|case
+name|Constants
+operator|.
 name|ATTR_CODE
 case|:
 name|Code
@@ -737,6 +747,8 @@ expr_stmt|;
 block|}
 break|break;
 case|case
+name|Constants
+operator|.
 name|ATTR_CONSTANT_VALUE
 case|:
 name|index
@@ -773,6 +785,8 @@ argument_list|)
 expr_stmt|;
 break|break;
 case|case
+name|Constants
+operator|.
 name|ATTR_SOURCE_FILE
 case|:
 name|index
@@ -809,6 +823,8 @@ argument_list|)
 expr_stmt|;
 break|break;
 case|case
+name|Constants
+operator|.
 name|ATTR_EXCEPTIONS
 case|:
 comment|// List thrown exceptions
@@ -870,6 +886,8 @@ argument_list|)
 expr_stmt|;
 break|break;
 case|case
+name|Constants
+operator|.
 name|ATTR_LINE_NUMBER_TABLE
 case|:
 name|LineNumber
@@ -961,6 +979,8 @@ block|}
 block|}
 break|break;
 case|case
+name|Constants
+operator|.
 name|ATTR_LOCAL_VARIABLE_TABLE
 case|:
 name|LocalVariable
@@ -1013,6 +1033,8 @@ name|getConstant
 argument_list|(
 name|index
 argument_list|,
+name|Constants
+operator|.
 name|CONSTANT_Utf8
 argument_list|)
 operator|)
@@ -1127,6 +1149,8 @@ argument_list|)
 expr_stmt|;
 break|break;
 case|case
+name|Constants
+operator|.
 name|ATTR_INNER_CLASSES
 case|:
 name|InnerClass
@@ -1190,6 +1214,8 @@ name|getConstant
 argument_list|(
 name|index
 argument_list|,
+name|Constants
+operator|.
 name|CONSTANT_Utf8
 argument_list|)
 operator|)

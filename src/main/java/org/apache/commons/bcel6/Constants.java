@@ -19,9 +19,9 @@ begin_comment
 comment|/**  * Constants for the project, mostly defined in the JVM specification.  *  * @version $Id$  */
 end_comment
 
-begin_interface
+begin_class
 specifier|public
-interface|interface
+class|class
 name|Constants
 block|{
 comment|/** Major version number of class files for Java 1.1.    *  @see #MINOR_1_1    *  */
@@ -7181,7 +7181,7 @@ literal|"invokeInterface"
 block|}
 decl_stmt|;
 block|}
-end_interface
+end_class
 
 end_unit
 

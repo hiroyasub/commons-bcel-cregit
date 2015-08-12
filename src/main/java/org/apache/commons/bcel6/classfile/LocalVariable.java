@@ -81,8 +81,6 @@ specifier|final
 class|class
 name|LocalVariable
 implements|implements
-name|Constants
-implements|,
 name|Cloneable
 implements|,
 name|Node
@@ -384,6 +382,8 @@ name|getConstant
 argument_list|(
 name|name_index
 argument_list|,
+name|Constants
+operator|.
 name|CONSTANT_Utf8
 argument_list|)
 expr_stmt|;
@@ -426,6 +426,8 @@ name|getConstant
 argument_list|(
 name|signature_index
 argument_list|,
+name|Constants
+operator|.
 name|CONSTANT_Utf8
 argument_list|)
 expr_stmt|;

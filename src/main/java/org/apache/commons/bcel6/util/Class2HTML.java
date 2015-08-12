@@ -175,8 +175,6 @@ begin_class
 specifier|public
 class|class
 name|Class2HTML
-implements|implements
-name|Constants
 block|{
 specifier|private
 specifier|final
@@ -715,6 +713,8 @@ name|getConstantString
 argument_list|(
 name|index
 argument_list|,
+name|Constants
+operator|.
 name|CONSTANT_Class
 argument_list|)
 decl_stmt|;

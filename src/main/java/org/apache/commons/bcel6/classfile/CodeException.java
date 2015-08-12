@@ -83,8 +83,6 @@ name|CodeException
 implements|implements
 name|Cloneable
 implements|,
-name|Constants
-implements|,
 name|Node
 implements|,
 name|Serializable
@@ -401,6 +399,8 @@ name|getConstantString
 argument_list|(
 name|catch_type
 argument_list|,
+name|Constants
+operator|.
 name|CONSTANT_Class
 argument_list|)
 argument_list|,

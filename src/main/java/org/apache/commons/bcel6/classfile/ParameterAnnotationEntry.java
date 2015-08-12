@@ -77,20 +77,6 @@ name|List
 import|;
 end_import
 
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|commons
-operator|.
-name|bcel6
-operator|.
-name|Constants
-import|;
-end_import
-
 begin_comment
 comment|/**  * represents one parameter annotation in the parameter annotation table  *  * @version $Id: ParameterAnnotationEntry  * @since 6.0  */
 end_comment
@@ -101,8 +87,6 @@ class|class
 name|ParameterAnnotationEntry
 implements|implements
 name|Node
-implements|,
-name|Constants
 block|{
 specifier|private
 specifier|final

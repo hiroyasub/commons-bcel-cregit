@@ -57,6 +57,20 @@ name|commons
 operator|.
 name|bcel6
 operator|.
+name|Constants
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|commons
+operator|.
+name|bcel6
+operator|.
 name|classfile
 operator|.
 name|Constant
@@ -215,16 +229,6 @@ begin_class
 specifier|final
 class|class
 name|ConstantHTML
-implements|implements
-name|org
-operator|.
-name|apache
-operator|.
-name|commons
-operator|.
-name|bcel6
-operator|.
-name|Constants
 block|{
 specifier|private
 specifier|final
@@ -500,6 +504,8 @@ name|index
 operator|+
 literal|"</A> "
 operator|+
+name|Constants
+operator|.
 name|CONSTANT_NAMES
 index|[
 name|tag
@@ -515,9 +521,13 @@ name|tag
 condition|)
 block|{
 case|case
+name|Constants
+operator|.
 name|CONSTANT_InterfaceMethodref
 case|:
 case|case
+name|Constants
+operator|.
 name|CONSTANT_Methodref
 case|:
 comment|// Get class_index and name_and_type_index, depending on type
@@ -525,6 +535,8 @@ if|if
 condition|(
 name|tag
 operator|==
+name|Constants
+operator|.
 name|CONSTANT_Methodref
 condition|)
 block|{
@@ -540,6 +552,8 @@ name|getConstant
 argument_list|(
 name|index
 argument_list|,
+name|Constants
+operator|.
 name|CONSTANT_Methodref
 argument_list|)
 decl_stmt|;
@@ -572,6 +586,8 @@ name|getConstant
 argument_list|(
 name|index
 argument_list|,
+name|Constants
+operator|.
 name|CONSTANT_InterfaceMethodref
 argument_list|)
 decl_stmt|;
@@ -600,6 +616,8 @@ name|constantToString
 argument_list|(
 name|name_index
 argument_list|,
+name|Constants
+operator|.
 name|CONSTANT_NameAndType
 argument_list|)
 decl_stmt|;
@@ -623,6 +641,8 @@ name|constantToString
 argument_list|(
 name|class_index
 argument_list|,
+name|Constants
+operator|.
 name|CONSTANT_Class
 argument_list|)
 decl_stmt|;
@@ -666,6 +686,8 @@ name|getConstant
 argument_list|(
 name|name_index
 argument_list|,
+name|Constants
+operator|.
 name|CONSTANT_NameAndType
 argument_list|)
 decl_stmt|;
@@ -681,6 +703,8 @@ operator|.
 name|getSignatureIndex
 argument_list|()
 argument_list|,
+name|Constants
+operator|.
 name|CONSTANT_Utf8
 argument_list|)
 decl_stmt|;
@@ -922,6 +946,8 @@ argument_list|)
 expr_stmt|;
 break|break;
 case|case
+name|Constants
+operator|.
 name|CONSTANT_Fieldref
 case|:
 comment|// Get class_index and name_and_type_index
@@ -937,6 +963,8 @@ name|getConstant
 argument_list|(
 name|index
 argument_list|,
+name|Constants
+operator|.
 name|CONSTANT_Fieldref
 argument_list|)
 decl_stmt|;
@@ -964,6 +992,8 @@ name|constantToString
 argument_list|(
 name|class_index
 argument_list|,
+name|Constants
+operator|.
 name|CONSTANT_Class
 argument_list|)
 decl_stmt|;
@@ -1003,6 +1033,8 @@ name|constantToString
 argument_list|(
 name|name_index
 argument_list|,
+name|Constants
+operator|.
 name|CONSTANT_NameAndType
 argument_list|)
 decl_stmt|;
@@ -1118,6 +1150,8 @@ argument_list|)
 expr_stmt|;
 break|break;
 case|case
+name|Constants
+operator|.
 name|CONSTANT_Class
 case|:
 name|ConstantClass
@@ -1132,6 +1166,8 @@ name|getConstant
 argument_list|(
 name|index
 argument_list|,
+name|Constants
+operator|.
 name|CONSTANT_Class
 argument_list|)
 decl_stmt|;
@@ -1236,6 +1272,8 @@ argument_list|)
 expr_stmt|;
 break|break;
 case|case
+name|Constants
+operator|.
 name|CONSTANT_String
 case|:
 name|ConstantString
@@ -1250,6 +1288,8 @@ name|getConstant
 argument_list|(
 name|index
 argument_list|,
+name|Constants
+operator|.
 name|CONSTANT_String
 argument_list|)
 decl_stmt|;
@@ -1300,6 +1340,8 @@ argument_list|)
 expr_stmt|;
 break|break;
 case|case
+name|Constants
+operator|.
 name|CONSTANT_NameAndType
 case|:
 name|ConstantNameAndType
@@ -1314,6 +1356,8 @@ name|getConstant
 argument_list|(
 name|index
 argument_list|,
+name|Constants
+operator|.
 name|CONSTANT_NameAndType
 argument_list|)
 decl_stmt|;

@@ -75,8 +75,6 @@ class|class
 name|UninitializedObjectType
 extends|extends
 name|ReferenceType
-implements|implements
-name|Constants
 block|{
 specifier|private
 specifier|static
@@ -103,6 +101,8 @@ parameter_list|)
 block|{
 name|super
 argument_list|(
+name|Constants
+operator|.
 name|T_UNKNOWN
 argument_list|,
 literal|"<UNINITIALIZED OBJECT OF TYPE '"
