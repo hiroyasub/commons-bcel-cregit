@@ -101,10 +101,13 @@ parameter_list|)
 throws|throws
 name|IOException
 block|{
-name|index
-operator|=
+name|super
+operator|.
+name|setIndex
+argument_list|(
 name|getTargetOffset
 argument_list|()
+argument_list|)
 expr_stmt|;
 if|if
 condition|(
@@ -134,10 +137,13 @@ block|}
 else|else
 block|{
 comment|// GOTO_W
-name|index
-operator|=
+name|super
+operator|.
+name|setIndex
+argument_list|(
 name|getTargetOffset
 argument_list|()
+argument_list|)
 expr_stmt|;
 name|out
 operator|.
@@ -150,7 +156,10 @@ name|out
 operator|.
 name|writeInt
 argument_list|(
-name|index
+name|super
+operator|.
+name|getIndex
+argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
@@ -176,9 +185,13 @@ name|getTargetOffset
 argument_list|()
 decl_stmt|;
 comment|// Depending on old position value
-name|position
-operator|+=
+name|setGetPosition
+argument_list|(
+name|getPosition
+argument_list|()
+operator|+
 name|offset
+argument_list|)
 expr_stmt|;
 comment|// Position may be shifted by preceding expansions
 if|if

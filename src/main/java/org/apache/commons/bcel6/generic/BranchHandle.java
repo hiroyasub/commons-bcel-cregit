@@ -145,7 +145,8 @@ block|{
 return|return
 name|bi
 operator|.
-name|position
+name|getPosition
+argument_list|()
 return|;
 block|}
 annotation|@
@@ -161,9 +162,10 @@ name|i_position
 operator|=
 name|bi
 operator|.
-name|position
-operator|=
+name|setGetPosition
+argument_list|(
 name|pos
+argument_list|)
 expr_stmt|;
 block|}
 annotation|@
@@ -195,7 +197,8 @@ name|i_position
 operator|=
 name|bi
 operator|.
-name|position
+name|getPosition
+argument_list|()
 expr_stmt|;
 return|return
 name|x

@@ -230,9 +230,13 @@ name|int
 name|max_offset
 parameter_list|)
 block|{
-name|position
-operator|+=
+name|setGetPosition
+argument_list|(
+name|getPosition
+argument_list|()
+operator|+
 name|offset
+argument_list|)
 expr_stmt|;
 comment|// Additional offset caused by preceding SWITCHs, GOTOs, etc.
 name|short
@@ -248,7 +252,8 @@ literal|4
 operator|-
 operator|(
 operator|(
-name|position
+name|getPosition
+argument_list|()
 operator|+
 literal|1
 operator|)
@@ -320,17 +325,23 @@ literal|0
 argument_list|)
 expr_stmt|;
 block|}
-name|index
-operator|=
+name|super
+operator|.
+name|setIndex
+argument_list|(
 name|getTargetOffset
 argument_list|()
+argument_list|)
 expr_stmt|;
 comment|// Write default target offset
 name|out
 operator|.
 name|writeInt
 argument_list|(
-name|index
+name|super
+operator|.
+name|getIndex
+argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
@@ -390,12 +401,15 @@ argument_list|()
 expr_stmt|;
 block|}
 comment|// Default branch target common for both cases (TABLESWITCH, LOOKUPSWITCH)
-name|index
-operator|=
+name|super
+operator|.
+name|setIndex
+argument_list|(
 name|bytes
 operator|.
 name|readInt
 argument_list|()
+argument_list|)
 expr_stmt|;
 block|}
 comment|/**      * @return mnemonic for instruction      */
@@ -587,7 +601,10 @@ literal|false
 decl_stmt|;
 if|if
 condition|(
-name|target
+name|super
+operator|.
+name|getTarget
+argument_list|()
 operator|==
 name|old_ih
 condition|)
@@ -672,7 +689,10 @@ parameter_list|)
 block|{
 if|if
 condition|(
-name|target
+name|super
+operator|.
+name|getTarget
+argument_list|()
 operator|==
 name|ih
 condition|)

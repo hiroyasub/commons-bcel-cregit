@@ -93,9 +93,10 @@ block|{
 name|InstructionHandle
 name|ih
 init|=
-name|this
+name|super
 operator|.
-name|target
+name|getTarget
+argument_list|()
 decl_stmt|;
 comment|// Rewind!
 while|while

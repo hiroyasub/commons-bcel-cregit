@@ -159,7 +159,8 @@ operator|)
 name|i1
 operator|)
 operator|.
-name|target
+name|getTarget
+argument_list|()
 operator|==
 operator|(
 operator|(
@@ -168,7 +169,8 @@ operator|)
 name|i2
 operator|)
 operator|.
-name|target
+name|getTarget
+argument_list|()
 return|;
 block|}
 if|else if

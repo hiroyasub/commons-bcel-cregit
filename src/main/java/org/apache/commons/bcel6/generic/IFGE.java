@@ -78,7 +78,10 @@ return|return
 operator|new
 name|IFLT
 argument_list|(
-name|target
+name|super
+operator|.
+name|getTarget
+argument_list|()
 argument_list|)
 return|;
 block|}

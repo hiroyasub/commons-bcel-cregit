@@ -79,7 +79,10 @@ return|return
 operator|new
 name|IF_ICMPEQ
 argument_list|(
-name|target
+name|super
+operator|.
+name|getTarget
+argument_list|()
 argument_list|)
 return|;
 block|}

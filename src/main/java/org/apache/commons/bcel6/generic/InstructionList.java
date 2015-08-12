@@ -658,7 +658,8 @@ name|target
 init|=
 name|bi
 operator|.
-name|position
+name|getPosition
+argument_list|()
 operator|+
 name|bi
 operator|.
@@ -753,7 +754,8 @@ name|target
 operator|=
 name|bi
 operator|.
-name|position
+name|getPosition
+argument_list|()
 operator|+
 name|indices
 index|[

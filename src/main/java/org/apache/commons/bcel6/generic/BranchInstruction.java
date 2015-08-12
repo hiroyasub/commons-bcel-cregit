@@ -75,17 +75,17 @@ name|serialVersionUID
 init|=
 literal|3225905281842405051L
 decl_stmt|;
-specifier|protected
+specifier|private
 name|int
 name|index
 decl_stmt|;
 comment|// Branch target relative to this instruction
-specifier|protected
+specifier|private
 name|InstructionHandle
 name|target
 decl_stmt|;
 comment|// Target object in instruction list
-specifier|protected
+specifier|private
 name|int
 name|position
 decl_stmt|;
@@ -610,6 +610,51 @@ name|position
 operator|=
 operator|-
 literal|1
+expr_stmt|;
+block|}
+comment|/**      * @return the position      */
+specifier|public
+name|int
+name|getPosition
+parameter_list|()
+block|{
+return|return
+name|position
+return|;
+block|}
+comment|/**      * @param position the position to set      * @return the new position      */
+specifier|public
+name|int
+name|setGetPosition
+parameter_list|(
+name|int
+name|position
+parameter_list|)
+block|{
+name|this
+operator|.
+name|position
+operator|=
+name|position
+expr_stmt|;
+return|return
+name|position
+return|;
+block|}
+comment|/**      * @param index the index to set      */
+specifier|protected
+name|void
+name|setIndex
+parameter_list|(
+name|int
+name|index
+parameter_list|)
+block|{
+name|this
+operator|.
+name|index
+operator|=
+name|index
 expr_stmt|;
 block|}
 block|}
