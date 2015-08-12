@@ -349,29 +349,6 @@ literal|'.'
 argument_list|)
 return|;
 block|}
-comment|/** @return type of the referenced class/interface      * @deprecated If the instruction references an array class,      *    the ObjectType returned will be invalid.  Use      *    getReferenceType() instead.      */
-annotation|@
-name|Deprecated
-specifier|public
-name|ObjectType
-name|getClassType
-parameter_list|(
-name|ConstantPoolGen
-name|cpg
-parameter_list|)
-block|{
-return|return
-name|ObjectType
-operator|.
-name|getInstance
-argument_list|(
-name|getClassName
-argument_list|(
-name|cpg
-argument_list|)
-argument_list|)
-return|;
-block|}
 comment|/**      * Return the reference type representing the class, interface,      * or array class referenced by the instruction.      * @param cpg the ConstantPoolGen used to create the instruction      * @return an ObjectType (if the referenced class type is a class      *   or interface), or an ArrayType (if the referenced class      *   type is an array class)      */
 specifier|public
 name|ReferenceType
@@ -482,7 +459,10 @@ name|cpg
 parameter_list|)
 block|{
 return|return
-name|getClassType
+operator|(
+name|ObjectType
+operator|)
+name|getReferenceType
 argument_list|(
 name|cpg
 argument_list|)
