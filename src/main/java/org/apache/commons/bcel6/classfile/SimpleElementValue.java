@@ -63,10 +63,10 @@ extends|extends
 name|ElementValue
 block|{
 specifier|private
+specifier|final
 name|int
 name|index
 decl_stmt|;
-comment|// TODO could be final (setter unused)
 specifier|public
 name|SimpleElementValue
 parameter_list|(
@@ -103,22 +103,6 @@ block|{
 return|return
 name|index
 return|;
-block|}
-specifier|public
-name|void
-name|setIndex
-parameter_list|(
-name|int
-name|index
-parameter_list|)
-comment|// TODO unused
-block|{
-name|this
-operator|.
-name|index
-operator|=
-name|index
-expr_stmt|;
 block|}
 specifier|public
 name|String

@@ -99,25 +99,30 @@ operator|-
 literal|51081099265972179L
 decl_stmt|;
 specifier|private
+specifier|final
 name|int
 name|start_pc
 decl_stmt|;
 comment|// Range in which the variable is valid
 specifier|private
+specifier|final
 name|int
 name|length
 decl_stmt|;
 specifier|private
+specifier|final
 name|int
 name|name_index
 decl_stmt|;
 comment|// Index in constant pool of variable name
 specifier|private
+specifier|final
 name|int
 name|signature_index
 decl_stmt|;
 comment|// Index of variable signature
 specifier|private
+specifier|final
 name|int
 name|index
 decl_stmt|;
@@ -463,114 +468,6 @@ block|{
 return|return
 name|start_pc
 return|;
-block|}
-comment|/**      * @param constant_pool Constant pool to be used for this object.      */
-specifier|public
-specifier|final
-name|void
-name|setConstantPool
-parameter_list|(
-name|ConstantPool
-name|constant_pool
-parameter_list|)
-block|{
-comment|// TODO unused
-name|this
-operator|.
-name|constant_pool
-operator|=
-name|constant_pool
-expr_stmt|;
-block|}
-comment|/**      * @param length the length of this local variable      */
-specifier|public
-specifier|final
-name|void
-name|setLength
-parameter_list|(
-name|int
-name|length
-parameter_list|)
-block|{
-comment|// TODO unused
-name|this
-operator|.
-name|length
-operator|=
-name|length
-expr_stmt|;
-block|}
-comment|/**      * @param name_index the index into the constant pool for the name of this variable      */
-specifier|public
-specifier|final
-name|void
-name|setNameIndex
-parameter_list|(
-name|int
-name|name_index
-parameter_list|)
-block|{
-comment|// TODO unused
-name|this
-operator|.
-name|name_index
-operator|=
-name|name_index
-expr_stmt|;
-block|}
-comment|/**      * @param signature_index the index into the constant pool for the signature of this variable      */
-specifier|public
-specifier|final
-name|void
-name|setSignatureIndex
-parameter_list|(
-name|int
-name|signature_index
-parameter_list|)
-block|{
-comment|// TODO unused
-name|this
-operator|.
-name|signature_index
-operator|=
-name|signature_index
-expr_stmt|;
-block|}
-comment|/**      * @param index the index in the local variable table of this variable      */
-specifier|public
-specifier|final
-name|void
-name|setIndex
-parameter_list|(
-name|int
-name|index
-parameter_list|)
-block|{
-comment|// TODO unused
-name|this
-operator|.
-name|index
-operator|=
-name|index
-expr_stmt|;
-block|}
-comment|/**      * @param start_pc Specify range where the local variable is valid.      */
-specifier|public
-specifier|final
-name|void
-name|setStartPC
-parameter_list|(
-name|int
-name|start_pc
-parameter_list|)
-block|{
-comment|// TODO unused
-name|this
-operator|.
-name|start_pc
-operator|=
-name|start_pc
-expr_stmt|;
 block|}
 comment|/**      * @return string representation.      */
 annotation|@

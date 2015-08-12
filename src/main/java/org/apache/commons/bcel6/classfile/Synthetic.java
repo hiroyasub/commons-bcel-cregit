@@ -87,6 +87,7 @@ name|byte
 index|[]
 name|bytes
 decl_stmt|;
+comment|// TODO could be final if copy() and ctor were recoded
 comment|/**      * Initialize from another object. Note that both objects use the same      * references (shallow copy). Use copy() for a physical copy.      */
 specifier|public
 name|Synthetic
@@ -300,25 +301,6 @@ block|{
 return|return
 name|bytes
 return|;
-block|}
-comment|/**      * @param bytes      */
-specifier|public
-specifier|final
-name|void
-name|setBytes
-parameter_list|(
-name|byte
-index|[]
-name|bytes
-parameter_list|)
-block|{
-comment|// TODO unused
-name|this
-operator|.
-name|bytes
-operator|=
-name|bytes
-expr_stmt|;
 block|}
 comment|/**      * @return String representation.      */
 annotation|@

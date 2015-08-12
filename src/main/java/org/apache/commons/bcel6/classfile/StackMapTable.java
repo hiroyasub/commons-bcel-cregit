@@ -87,7 +87,7 @@ name|StackMapTableEntry
 index|[]
 name|map
 decl_stmt|;
-comment|// Table of stack map entries // TODO could be final (setter unused)
+comment|// Table of stack map entries TODO could be final if copy() and ctor were rewritten
 comment|/*      * @param name_index Index of name      * @param length Content length in bytes      * @param map Table of stack map entries      * @param constant_pool Array of constants      */
 specifier|public
 name|StackMapTable
@@ -263,25 +263,6 @@ block|{
 return|return
 name|map
 return|;
-block|}
-comment|/**      * @param map Array of stack map entries      */
-specifier|public
-specifier|final
-name|void
-name|setStackMapTable
-parameter_list|(
-name|StackMapTableEntry
-index|[]
-name|map
-parameter_list|)
-block|{
-comment|// TODO unused
-name|this
-operator|.
-name|map
-operator|=
-name|map
-expr_stmt|;
 block|}
 comment|/**      * @return String representation.      */
 annotation|@

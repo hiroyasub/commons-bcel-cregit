@@ -80,27 +80,27 @@ init|=
 literal|1L
 decl_stmt|;
 specifier|private
+specifier|final
 name|int
 name|byte_code_offset
 decl_stmt|;
-comment|// TODO could be final (setter unused)
 specifier|private
+specifier|final
 name|StackMapType
 index|[]
 name|types_of_locals
 decl_stmt|;
-comment|// TODO could be final (setter unused)
 specifier|private
+specifier|final
 name|StackMapType
 index|[]
 name|types_of_stack_items
 decl_stmt|;
-comment|// TODO could be final (setter unused)
 specifier|private
+specifier|final
 name|ConstantPool
 name|constant_pool
 decl_stmt|;
-comment|// TODO could be final (setter unused)
 comment|/**      * Construct object from input stream.      *       * @param input Input stream      * @throws IOException      */
 name|StackMapEntry
 parameter_list|(
@@ -545,20 +545,6 @@ argument_list|()
 return|;
 block|}
 specifier|public
-name|void
-name|setByteCodeOffset
-parameter_list|(
-name|int
-name|b
-parameter_list|)
-block|{
-comment|// TODO unused
-name|byte_code_offset
-operator|=
-name|b
-expr_stmt|;
-block|}
-specifier|public
 name|int
 name|getByteCodeOffset
 parameter_list|()
@@ -583,31 +569,6 @@ name|types_of_locals
 operator|.
 name|length
 return|;
-block|}
-specifier|public
-name|void
-name|setTypesOfLocals
-parameter_list|(
-name|StackMapType
-index|[]
-name|types
-parameter_list|)
-block|{
-comment|// TODO unused
-name|types_of_locals
-operator|=
-name|types
-operator|!=
-literal|null
-condition|?
-name|types
-else|:
-operator|new
-name|StackMapType
-index|[
-literal|0
-index|]
-expr_stmt|;
 block|}
 specifier|public
 name|StackMapType
@@ -635,30 +596,6 @@ name|types_of_stack_items
 operator|.
 name|length
 return|;
-block|}
-specifier|public
-name|void
-name|setTypesOfStackItems
-parameter_list|(
-name|StackMapType
-index|[]
-name|types
-parameter_list|)
-block|{
-name|types_of_stack_items
-operator|=
-name|types
-operator|!=
-literal|null
-condition|?
-name|types
-else|:
-operator|new
-name|StackMapType
-index|[
-literal|0
-index|]
-expr_stmt|;
 block|}
 specifier|public
 name|StackMapType
@@ -724,24 +661,6 @@ block|{
 return|return
 name|constant_pool
 return|;
-block|}
-comment|/**      * @param constant_pool Constant pool to be used for this object.      */
-specifier|public
-specifier|final
-name|void
-name|setConstantPool
-parameter_list|(
-name|ConstantPool
-name|constant_pool
-parameter_list|)
-block|{
-comment|// TODO unused
-name|this
-operator|.
-name|constant_pool
-operator|=
-name|constant_pool
-expr_stmt|;
 block|}
 block|}
 end_class

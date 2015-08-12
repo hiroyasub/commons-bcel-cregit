@@ -83,12 +83,12 @@ operator|-
 literal|7075964153234211509L
 decl_stmt|;
 specifier|private
+specifier|final
 name|int
 name|pmg_class_index
 decl_stmt|,
 name|pmg_index
 decl_stmt|;
-comment|// TODO could be final (setter unused)
 comment|/**      * Initialize from another object. Note that both objects use the same      * references (shallow copy). Use copy() for a physical copy.      */
 specifier|public
 name|PMGClass
@@ -278,24 +278,6 @@ return|return
 name|pmg_class_index
 return|;
 block|}
-comment|/**      * @param pmg_class_index      */
-specifier|public
-specifier|final
-name|void
-name|setPMGClassIndex
-parameter_list|(
-name|int
-name|pmg_class_index
-parameter_list|)
-block|{
-comment|// TODO unused
-name|this
-operator|.
-name|pmg_class_index
-operator|=
-name|pmg_class_index
-expr_stmt|;
-block|}
 comment|/**      * @return Index in constant pool of source file name.      */
 specifier|public
 specifier|final
@@ -306,24 +288,6 @@ block|{
 return|return
 name|pmg_index
 return|;
-block|}
-comment|/**      * @param pmg_index      */
-specifier|public
-specifier|final
-name|void
-name|setPMGIndex
-parameter_list|(
-name|int
-name|pmg_index
-parameter_list|)
-block|{
-comment|// TODO unused
-name|this
-operator|.
-name|pmg_index
-operator|=
-name|pmg_index
-expr_stmt|;
 block|}
 comment|/**      * @return PMG name.      */
 specifier|public

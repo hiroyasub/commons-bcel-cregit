@@ -107,6 +107,7 @@ name|byte
 index|[]
 name|bytes
 decl_stmt|;
+comment|// TODO could be final if copy() were adjusted
 specifier|private
 specifier|final
 name|String
@@ -418,25 +419,6 @@ block|{
 return|return
 name|name
 return|;
-block|}
-comment|/**      * @param bytes the bytes to set      */
-specifier|public
-specifier|final
-name|void
-name|setBytes
-parameter_list|(
-name|byte
-index|[]
-name|bytes
-parameter_list|)
-block|{
-comment|// TODO unused
-name|this
-operator|.
-name|bytes
-operator|=
-name|bytes
-expr_stmt|;
 block|}
 comment|/**      * @return String representation.      */
 annotation|@

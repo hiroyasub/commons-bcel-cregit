@@ -1203,24 +1203,6 @@ operator|=
 name|constant
 expr_stmt|;
 block|}
-comment|/**      * @param constant_pool      */
-specifier|public
-name|void
-name|setConstantPool
-parameter_list|(
-name|Constant
-index|[]
-name|constant_pool
-parameter_list|)
-block|{
-comment|// TODO unused
-name|this
-operator|.
-name|constant_pool
-operator|=
-name|constant_pool
-expr_stmt|;
-block|}
 comment|/**      * @return String representation.      */
 annotation|@
 name|Override

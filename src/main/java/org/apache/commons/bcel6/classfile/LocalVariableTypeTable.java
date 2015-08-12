@@ -446,24 +446,6 @@ return|return
 literal|null
 return|;
 block|}
-specifier|public
-specifier|final
-name|void
-name|setLocalVariableTable
-parameter_list|(
-name|LocalVariable
-index|[]
-name|local_variable_table
-parameter_list|)
-block|{
-comment|// TODO unused
-name|this
-operator|.
-name|local_variable_type_table
-operator|=
-name|local_variable_table
-expr_stmt|;
-block|}
 comment|/**      * @return String representation.      */
 annotation|@
 name|Override

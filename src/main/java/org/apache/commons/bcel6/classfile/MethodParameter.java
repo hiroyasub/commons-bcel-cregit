@@ -94,20 +94,32 @@ literal|6014494029439440326L
 decl_stmt|;
 comment|/** Index of the CONSTANT_Utf8_info structure in the constant_pool table representing the name of the parameter */
 specifier|private
+specifier|final
 name|int
 name|name_index
 decl_stmt|;
-comment|// TODO could be final (setter unused)
 comment|/** The access flags */
 specifier|private
+specifier|final
 name|int
 name|access_flags
 decl_stmt|;
-comment|// TODO could be final (setter unused)
 specifier|public
 name|MethodParameter
 parameter_list|()
 block|{
+name|this
+operator|.
+name|access_flags
+operator|=
+literal|0
+expr_stmt|;
+name|this
+operator|.
+name|name_index
+operator|=
+literal|0
+expr_stmt|;
 block|}
 comment|/**      * Construct object from input stream.      *       * @param input Input stream      * @throws java.io.IOException      * @throws ClassFormatException      */
 name|MethodParameter
@@ -141,22 +153,6 @@ block|{
 return|return
 name|name_index
 return|;
-block|}
-specifier|public
-name|void
-name|setNameIndex
-parameter_list|(
-name|int
-name|name_index
-parameter_list|)
-block|{
-comment|// TODO unused
-name|this
-operator|.
-name|name_index
-operator|=
-name|name_index
-expr_stmt|;
 block|}
 comment|/**      * Returns the name of the parameter.      */
 specifier|public
@@ -207,22 +203,6 @@ block|{
 return|return
 name|access_flags
 return|;
-block|}
-specifier|public
-name|void
-name|setAccessFlags
-parameter_list|(
-name|int
-name|access_flags
-parameter_list|)
-block|{
-comment|// TODO unused
-name|this
-operator|.
-name|access_flags
-operator|=
-name|access_flags
-expr_stmt|;
 block|}
 specifier|public
 name|boolean

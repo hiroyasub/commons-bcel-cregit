@@ -86,7 +86,7 @@ name|int
 index|[]
 name|exception_index_table
 decl_stmt|;
-comment|// constant pool // TODO could be final (setter unused)
+comment|// constant pool
 comment|/**      * Initialize from another object. Note that both objects use the same      * references (shallow copy). Use copy() for a physical copy.      */
 specifier|public
 name|ExceptionTable
@@ -410,35 +410,6 @@ block|}
 return|return
 name|names
 return|;
-block|}
-comment|/**      * @param exception_index_table the list of exception indexes      * Also redefines number_of_exceptions according to table length.      */
-specifier|public
-specifier|final
-name|void
-name|setExceptionIndexTable
-parameter_list|(
-name|int
-index|[]
-name|exception_index_table
-parameter_list|)
-block|{
-comment|// TODO unused
-name|this
-operator|.
-name|exception_index_table
-operator|=
-name|exception_index_table
-operator|!=
-literal|null
-condition|?
-name|exception_index_table
-else|:
-operator|new
-name|int
-index|[
-literal|0
-index|]
-expr_stmt|;
 block|}
 comment|/**      * @return String representation, i.e., a list of thrown exceptions.      */
 annotation|@

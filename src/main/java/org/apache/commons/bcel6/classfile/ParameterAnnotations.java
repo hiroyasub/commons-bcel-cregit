@@ -73,7 +73,7 @@ name|ParameterAnnotationEntry
 index|[]
 name|parameter_annotation_table
 decl_stmt|;
-comment|// TODO could be final (setter unused)
+comment|// TODO could be final would need to recode ctor and copy method
 comment|/**      * @param parameter_annotation_type the subclass type of the parameter annotation      * @param name_index Index pointing to the name<em>Code</em>      * @param length Content length in bytes      * @param input Input stream      * @param constant_pool Array of constants      */
 name|ParameterAnnotations
 parameter_list|(
@@ -216,25 +216,6 @@ name|visitParameterAnnotation
 argument_list|(
 name|this
 argument_list|)
-expr_stmt|;
-block|}
-comment|/**      * @param parameter_annotation_table the entries to set in this parameter annotation      */
-specifier|public
-specifier|final
-name|void
-name|setParameterAnnotationTable
-parameter_list|(
-name|ParameterAnnotationEntry
-index|[]
-name|parameter_annotation_table
-parameter_list|)
-block|{
-comment|// TODO unused
-name|this
-operator|.
-name|parameter_annotation_table
-operator|=
-name|parameter_annotation_table
 expr_stmt|;
 block|}
 comment|/**      * @return the parameter annotation entry table      */

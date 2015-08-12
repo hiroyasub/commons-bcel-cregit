@@ -92,10 +92,10 @@ init|=
 literal|5808807822688827177L
 decl_stmt|;
 specifier|private
+specifier|final
 name|int
 name|signature_index
 decl_stmt|;
-comment|// TODO could be final (setter unused)
 comment|/**      * Initialize from another object. Note that both objects use the same      * references (shallow copy). Use clone() for a physical copy.      */
 specifier|public
 name|Signature
@@ -257,24 +257,6 @@ block|{
 return|return
 name|signature_index
 return|;
-block|}
-comment|/**      * @param signature_index the index info the constant pool of this signature      */
-specifier|public
-specifier|final
-name|void
-name|setSignatureIndex
-parameter_list|(
-name|int
-name|signature_index
-parameter_list|)
-block|{
-comment|// TODO unused
-name|this
-operator|.
-name|signature_index
-operator|=
-name|signature_index
-expr_stmt|;
 block|}
 comment|/**      * @return GJ signature.      */
 specifier|public

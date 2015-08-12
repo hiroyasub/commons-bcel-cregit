@@ -83,10 +83,10 @@ operator|-
 literal|804226255663222912L
 decl_stmt|;
 specifier|private
+specifier|final
 name|int
 name|sourcefile_index
 decl_stmt|;
-comment|// TODO could be final (setter unused)
 comment|/**      * Initialize from another object. Note that both objects use the same      * references (shallow copy). Use clone() for a physical copy.      */
 specifier|public
 name|SourceFile
@@ -247,24 +247,6 @@ block|{
 return|return
 name|sourcefile_index
 return|;
-block|}
-comment|/**      * @param sourcefile_index      */
-specifier|public
-specifier|final
-name|void
-name|setSourceFileIndex
-parameter_list|(
-name|int
-name|sourcefile_index
-parameter_list|)
-block|{
-comment|// TODO unused
-name|this
-operator|.
-name|sourcefile_index
-operator|=
-name|sourcefile_index
-expr_stmt|;
 block|}
 comment|/**      * @return Source file name.      */
 specifier|public
