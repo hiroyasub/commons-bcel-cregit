@@ -572,7 +572,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Factory creates il.append() statements, and sets instruction targets.  * A helper class for BCELifier.  *  * @see BCELifier  * @version $Id$  * @author<A HREF="mailto:m.dahm@gmx.de">M. Dahm</A>  */
+comment|/**  * Factory creates il.append() statements, and sets instruction targets.  * A helper class for BCELifier.  *  * @see BCELifier  * @version $Id$  */
 end_comment
 
 begin_class

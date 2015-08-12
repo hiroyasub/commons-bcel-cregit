@@ -34,7 +34,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Super class for the GET/PUTxxx family of instructions.  *  * @version $Id$  * @author<A HREF="mailto:m.dahm@gmx.de">M. Dahm</A>  */
+comment|/**  * Super class for the GET/PUTxxx family of instructions.  *  * @version $Id$  */
 end_comment
 
 begin_class

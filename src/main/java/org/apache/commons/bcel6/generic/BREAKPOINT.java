@@ -18,7 +18,7 @@ package|;
 end_package
 
 begin_comment
-comment|/**  * BREAKPOINT, JVM dependent, ignored by default  *  * @version $Id$  * @author<A HREF="mailto:m.dahm@gmx.de">M. Dahm</A>  */
+comment|/**  * BREAKPOINT, JVM dependent, ignored by default  *  * @version $Id$  */
 end_comment
 
 begin_class

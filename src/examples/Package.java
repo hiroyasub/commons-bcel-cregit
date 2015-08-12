@@ -234,7 +234,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Package the client. Creates a jar file in the current directory  * that contains a minimal set of classes needed to run the client.  *  * Use BCEL to extract class names and read/write classes  *  * @author First Hop Ltd / Torsten Rueger  */
+comment|/**  * Package the client. Creates a jar file in the current directory  * that contains a minimal set of classes needed to run the client.  *  * Use BCEL to extract class names and read/write classes  *  */
 end_comment
 
 begin_class

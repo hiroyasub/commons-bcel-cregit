@@ -20,7 +20,7 @@ package|;
 end_package
 
 begin_comment
-comment|/**  * Instances of this class are thrown by BCEL's class file verifier "JustIce" when  * a class file does not pass the verification pass 3. Note that the pass 3 used by  * "JustIce" involves verification that is usually delayed to pass 4.  *  * @version $Id$  * @author Enver Haase  */
+comment|/**  * Instances of this class are thrown by BCEL's class file verifier "JustIce" when  * a class file does not pass the verification pass 3. Note that the pass 3 used by  * "JustIce" involves verification that is usually delayed to pass 4.  *  * @version $Id$  */
 end_comment
 
 begin_class

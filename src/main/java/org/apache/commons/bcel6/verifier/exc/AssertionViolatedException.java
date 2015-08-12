@@ -20,7 +20,7 @@ package|;
 end_package
 
 begin_comment
-comment|/**  * Instances of this class should never be thrown. When such an instance is thrown,  * this is due to an INTERNAL ERROR of BCEL's class file verifier&quot;JustIce&quot;.  *  * @version $Id$  * @author Enver Haase  */
+comment|/**  * Instances of this class should never be thrown. When such an instance is thrown,  * this is due to an INTERNAL ERROR of BCEL's class file verifier&quot;JustIce&quot;.  *  * @version $Id$  */
 end_comment
 
 begin_class

@@ -18,7 +18,7 @@ package|;
 end_package
 
 begin_comment
-comment|/**  * FMUL - Multiply floats  *<PRE>Stack: ..., value1, value2 -&gt; result</PRE>  *  * @version $Id$  * @author<A HREF="mailto:m.dahm@gmx.de">M. Dahm</A>  */
+comment|/**  * FMUL - Multiply floats  *<PRE>Stack: ..., value1, value2 -&gt; result</PRE>  *  * @version $Id$  */
 end_comment
 
 begin_class

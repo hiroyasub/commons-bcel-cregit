@@ -18,7 +18,7 @@ package|;
 end_package
 
 begin_comment
-comment|/**   * D2I - Convert double to int  *<PRE>Stack: ..., value.word1, value.word2 -&gt; ..., result</PRE>  *  * @version $Id$  * @author<A HREF="mailto:m.dahm@gmx.de">M. Dahm</A>  */
+comment|/**   * D2I - Convert double to int  *<PRE>Stack: ..., value.word1, value.word2 -&gt; ..., result</PRE>  *  * @version $Id$  */
 end_comment
 
 begin_class

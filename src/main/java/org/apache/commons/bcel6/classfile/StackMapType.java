@@ -72,7 +72,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * This class represents the type of a local variable or item on stack  * used in the StackMap entries.  *  * @version $Id$  * @author<A HREF="mailto:m.dahm@gmx.de">M. Dahm</A>  * @see     StackMapEntry  * @see     StackMap  * @see     Constants  */
+comment|/**  * This class represents the type of a local variable or item on stack  * used in the StackMap entries.  *  * @version $Id$  * @see     StackMapEntry  * @see     StackMap  * @see     Constants  */
 end_comment
 
 begin_class

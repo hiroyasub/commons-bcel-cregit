@@ -18,7 +18,7 @@ package|;
 end_package
 
 begin_comment
-comment|/**   * BALOAD - Load byte or boolean from array  *<PRE>Stack: ..., arrayref, index -&gt; ..., value</PRE>  *  * @version $Id$  * @author<A HREF="mailto:m.dahm@gmx.de">M. Dahm</A>  */
+comment|/**   * BALOAD - Load byte or boolean from array  *<PRE>Stack: ..., arrayref, index -&gt; ..., value</PRE>  *  * @version $Id$  */
 end_comment
 
 begin_class

@@ -46,7 +46,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**   * INVOKESPECIAL - Invoke instance method; special handling for superclass, private  * and instance initialization method invocations  *  *<PRE>Stack: ..., objectref, [arg1, [arg2 ...]] -&gt; ...</PRE>  *  * @version $Id$  * @author<A HREF="mailto:m.dahm@gmx.de">M. Dahm</A>  */
+comment|/**   * INVOKESPECIAL - Invoke instance method; special handling for superclass, private  * and instance initialization method invocations  *  *<PRE>Stack: ..., objectref, [arg1, [arg2 ...]] -&gt; ...</PRE>  *  * @version $Id$  */
 end_comment
 
 begin_class

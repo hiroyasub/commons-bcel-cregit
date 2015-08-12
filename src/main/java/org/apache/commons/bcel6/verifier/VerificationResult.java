@@ -18,7 +18,7 @@ package|;
 end_package
 
 begin_comment
-comment|/**  * A VerificationResult is what a PassVerifier returns  * after verifying.  *  * @version $Id$  * @author Enver Haase  */
+comment|/**  * A VerificationResult is what a PassVerifier returns  * after verifying.  *  * @version $Id$  */
 end_comment
 
 begin_class

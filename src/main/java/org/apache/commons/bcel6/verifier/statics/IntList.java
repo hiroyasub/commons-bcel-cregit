@@ -40,7 +40,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * A small utility class representing a set of basic int values.  *  * @version $Id$  * @author Enver Haase  */
+comment|/**  * A small utility class representing a set of basic int values.  *  * @version $Id$  */
 end_comment
 
 begin_class

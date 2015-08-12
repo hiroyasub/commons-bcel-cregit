@@ -18,7 +18,7 @@ package|;
 end_package
 
 begin_comment
-comment|/**   * AASTORE -  Store into reference array  *<PRE>Stack: ..., arrayref, index, value -&gt; ...</PRE>  *  * @version $Id$  * @author<A HREF="mailto:m.dahm@gmx.de">M. Dahm</A>  */
+comment|/**   * AASTORE -  Store into reference array  *<PRE>Stack: ..., arrayref, index, value -&gt; ...</PRE>  *  * @version $Id$  */
 end_comment
 
 begin_class

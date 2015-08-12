@@ -18,7 +18,7 @@ package|;
 end_package
 
 begin_comment
-comment|/**  * Denotes a push instruction that produces a literal on the stack  * such as  SIPUSH, BIPUSH, ICONST, etc.  *  * @version $Id$  * @author<A HREF="mailto:m.dahm@gmx.de">M. Dahm</A>   * @see ICONST  * @see SIPUSH  */
+comment|/**  * Denotes a push instruction that produces a literal on the stack  * such as  SIPUSH, BIPUSH, ICONST, etc.  *  * @version $Id$   * @see ICONST  * @see SIPUSH  */
 end_comment
 
 begin_interface

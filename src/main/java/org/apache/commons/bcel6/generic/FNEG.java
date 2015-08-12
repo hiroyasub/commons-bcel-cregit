@@ -18,7 +18,7 @@ package|;
 end_package
 
 begin_comment
-comment|/**   * FNEG - Negate float  *<PRE>Stack: ..., value -&gt; ..., result</PRE>  *  * @version $Id$  * @author<A HREF="mailto:m.dahm@gmx.de">M. Dahm</A>  */
+comment|/**   * FNEG - Negate float  *<PRE>Stack: ..., value -&gt; ..., result</PRE>  *  * @version $Id$  */
 end_comment
 
 begin_class

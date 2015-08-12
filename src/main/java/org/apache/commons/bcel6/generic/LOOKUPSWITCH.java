@@ -54,7 +54,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**   * LOOKUPSWITCH - Switch with unordered set of values  *  * @version $Id$  * @author<A HREF="mailto:m.dahm@gmx.de">M. Dahm</A>  * @see SWITCH  */
+comment|/**   * LOOKUPSWITCH - Switch with unordered set of values  *  * @version $Id$  * @see SWITCH  */
 end_comment
 
 begin_class

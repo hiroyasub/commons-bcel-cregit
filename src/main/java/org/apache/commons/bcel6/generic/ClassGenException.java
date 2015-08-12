@@ -18,7 +18,7 @@ package|;
 end_package
 
 begin_comment
-comment|/**   * Thrown on internal errors. Extends RuntimeException so it hasn't to be declared  * in the throws clause every time.  *  * @version $Id$  * @author<A HREF="mailto:m.dahm@gmx.de">M. Dahm</A>  */
+comment|/**   * Thrown on internal errors. Extends RuntimeException so it hasn't to be declared  * in the throws clause every time.  *  * @version $Id$  */
 end_comment
 
 begin_class

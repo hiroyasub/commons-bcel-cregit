@@ -18,7 +18,7 @@ package|;
 end_package
 
 begin_comment
-comment|/**  * VerifierFactoryObserver instances are notified when new Verifier  * instances are created.  *  * @version $Id$  * @author Enver Haase  *  * @see VerifierFactory#getVerifier(String)  * @see VerifierFactory#getVerifiers()  * @see VerifierFactory#attach(VerifierFactoryObserver)  * @see VerifierFactory#detach(VerifierFactoryObserver)  */
+comment|/**  * VerifierFactoryObserver instances are notified when new Verifier  * instances are created.  *  * @version $Id$  *  * @see VerifierFactory#getVerifier(String)  * @see VerifierFactory#getVerifiers()  * @see VerifierFactory#attach(VerifierFactoryObserver)  * @see VerifierFactory#detach(VerifierFactoryObserver)  */
 end_comment
 
 begin_interface

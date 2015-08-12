@@ -90,7 +90,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * The repository maintains information about which classes have  * been loaded.  *  * It loads its data from the ClassLoader implementation  * passed into its constructor.  *  * @see org.apache.commons.bcel6.Repository  *  * @version $Id$  * @author<A HREF="mailto:m.dahm@gmx.de">M. Dahm</A>  * @author David Dixon-Peugh  */
+comment|/**  * The repository maintains information about which classes have  * been loaded.  *  * It loads its data from the ClassLoader implementation  * passed into its constructor.  *  * @see org.apache.commons.bcel6.Repository  *  * @version $Id$  */
 end_comment
 
 begin_class

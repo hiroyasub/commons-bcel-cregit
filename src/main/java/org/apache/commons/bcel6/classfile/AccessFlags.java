@@ -32,7 +32,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Super class for all objects that have modifiers like private, final, ...  * I.e. classes, fields, and methods.  *  * @version $Id$  * @author<A HREF="mailto:m.dahm@gmx.de">M. Dahm</A>  */
+comment|/**  * Super class for all objects that have modifiers like private, final, ...  * I.e. classes, fields, and methods.  *  * @version $Id$  */
 end_comment
 
 begin_class

@@ -16,7 +16,7 @@ package|;
 end_package
 
 begin_comment
-comment|/**  * Exception constants.  *  * @version $Id$  * @author  E. Haase  */
+comment|/**  * Exception constants.  *  * @version $Id$  */
 end_comment
 
 begin_interface

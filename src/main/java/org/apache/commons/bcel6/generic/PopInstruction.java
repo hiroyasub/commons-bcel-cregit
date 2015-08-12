@@ -18,7 +18,7 @@ package|;
 end_package
 
 begin_comment
-comment|/**  * Denotes an unparameterized instruction to pop a value on top from the stack,  * such as ISTORE, POP, PUTSTATIC.  *  * @version $Id$  * @author<A HREF="mailto:m.dahm@gmx.de">M. Dahm</A>  * @see ISTORE  * @see POP  */
+comment|/**  * Denotes an unparameterized instruction to pop a value on top from the stack,  * such as ISTORE, POP, PUTSTATIC.  *  * @version $Id$  * @see ISTORE  * @see POP  */
 end_comment
 
 begin_interface

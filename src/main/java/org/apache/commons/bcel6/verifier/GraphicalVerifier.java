@@ -64,7 +64,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * A graphical user interface application demonstrating JustIce.  *  * @version $Id$  * @author Enver Haase  */
+comment|/**  * A graphical user interface application demonstrating JustIce.  *  * @version $Id$  */
 end_comment
 
 begin_class

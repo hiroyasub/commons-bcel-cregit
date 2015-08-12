@@ -46,7 +46,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**   * GETSTATIC - Fetch static field from class  *<PRE>Stack: ..., -&gt; ..., value</PRE>  * OR  *<PRE>Stack: ..., -&gt; ..., value.word1, value.word2</PRE>  *  * @version $Id$  * @author<A HREF="mailto:m.dahm@gmx.de">M. Dahm</A>  */
+comment|/**   * GETSTATIC - Fetch static field from class  *<PRE>Stack: ..., -&gt; ..., value</PRE>  * OR  *<PRE>Stack: ..., -&gt; ..., value.word1, value.word2</PRE>  *  * @version $Id$  */
 end_comment
 
 begin_class

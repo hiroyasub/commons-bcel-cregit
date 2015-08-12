@@ -92,7 +92,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**   * This class is derived from the abstract   *<A HREF="org.apache.commons.bcel6.classfile.Constant.html">Constant</A> class   * and represents a reference to a Utf8 encoded string.  *  * @version $Id$  * @author<A HREF="mailto:m.dahm@gmx.de">M. Dahm</A>  * @see     Constant  */
+comment|/**   * This class is derived from the abstract   *<A HREF="org.apache.commons.bcel6.classfile.Constant.html">Constant</A> class   * and represents a reference to a Utf8 encoded string.  *  * @version $Id$  * @see     Constant  */
 end_comment
 
 begin_class

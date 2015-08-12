@@ -18,7 +18,7 @@ package|;
 end_package
 
 begin_comment
-comment|/**   * LAND - Bitwise AND longs  *<PRE>Stack: ..., value1.word1, value1.word2, value2.word1, value2.word2 -&gt;</PRE>  *        ..., result.word1, result.word2  *  * @version $Id$  * @author<A HREF="mailto:m.dahm@gmx.de">M. Dahm</A>  */
+comment|/**   * LAND - Bitwise AND longs  *<PRE>Stack: ..., value1.word1, value1.word2, value2.word1, value2.word2 -&gt;</PRE>  *        ..., result.word1, result.word2  *  * @version $Id$  */
 end_comment
 
 begin_class

@@ -18,7 +18,7 @@ package|;
 end_package
 
 begin_comment
-comment|/**   * SALOAD - Load short from array  *<PRE>Stack: ..., arrayref, index -&gt; ..., value</PRE>  *  * @version $Id$  * @author<A HREF="mailto:m.dahm@gmx.de">M. Dahm</A>  */
+comment|/**   * SALOAD - Load short from array  *<PRE>Stack: ..., arrayref, index -&gt; ..., value</PRE>  *  * @version $Id$  */
 end_comment
 
 begin_class

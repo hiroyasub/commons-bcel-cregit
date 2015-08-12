@@ -88,7 +88,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Abstract superclass for classes to represent the different constant types  * in the constant pool of a class file. The classes keep closely to  * the JVM specification.  *  * @version $Id$  * @author<A HREF="mailto:m.dahm@gmx.de">M. Dahm</A>  */
+comment|/**  * Abstract superclass for classes to represent the different constant types  * in the constant pool of a class file. The classes keep closely to  * the JVM specification.  *  * @version $Id$  */
 end_comment
 
 begin_class

@@ -18,7 +18,7 @@ package|;
 end_package
 
 begin_comment
-comment|/**  * Denote class to have an accept method();  *  * @version $Id$  * @author<A HREF="mailto:m.dahm@gmx.de">M. Dahm</A>  */
+comment|/**  * Denote class to have an accept method();  *  * @version $Id$  */
 end_comment
 
 begin_interface

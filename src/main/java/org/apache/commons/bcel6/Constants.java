@@ -16,7 +16,7 @@ package|;
 end_package
 
 begin_comment
-comment|/**  * Constants for the project, mostly defined in the JVM specification.  *  * @version $Id$  * @author<A HREF="mailto:m.dahm@gmx.de">M. Dahm</A>  */
+comment|/**  * Constants for the project, mostly defined in the JVM specification.  *  * @version $Id$  */
 end_comment
 
 begin_interface

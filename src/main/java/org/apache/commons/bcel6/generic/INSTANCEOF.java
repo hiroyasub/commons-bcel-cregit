@@ -18,7 +18,7 @@ package|;
 end_package
 
 begin_comment
-comment|/**   * INSTANCEOF - Determine if object is of given type  *<PRE>Stack: ..., objectref -&gt; ..., result</PRE>  *  * @version $Id$  * @author<A HREF="mailto:m.dahm@gmx.de">M. Dahm</A>  */
+comment|/**   * INSTANCEOF - Determine if object is of given type  *<PRE>Stack: ..., objectref -&gt; ..., result</PRE>  *  * @version $Id$  */
 end_comment
 
 begin_class

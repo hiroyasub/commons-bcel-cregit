@@ -18,7 +18,7 @@ package|;
 end_package
 
 begin_comment
-comment|/**   * ARRAYLENGTH -  Get length of array  *<PRE>Stack: ..., arrayref -&gt; ..., length</PRE>  *  * @version $Id$  * @author<A HREF="mailto:m.dahm@gmx.de">M. Dahm</A>  */
+comment|/**   * ARRAYLENGTH -  Get length of array  *<PRE>Stack: ..., arrayref -&gt; ..., length</PRE>  *  * @version $Id$  */
 end_comment
 
 begin_class

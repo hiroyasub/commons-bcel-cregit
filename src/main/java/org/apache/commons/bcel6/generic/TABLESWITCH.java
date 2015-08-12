@@ -54,7 +54,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**   * TABLESWITCH - Switch within given range of values, i.e., low..high  *  * @version $Id$  * @author<A HREF="mailto:m.dahm@gmx.de">M. Dahm</A>  * @see SWITCH  */
+comment|/**   * TABLESWITCH - Switch within given range of values, i.e., low..high  *  * @version $Id$  * @see SWITCH  */
 end_comment
 
 begin_class

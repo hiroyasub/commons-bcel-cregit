@@ -90,7 +90,7 @@ comment|// it with our tools and want to remove warnings.  (markro)
 end_comment
 
 begin_comment
-comment|/**  * Super class for InvokeInstruction and FieldInstruction, since they have  * some methods in common!  *  * @version $Id$  * @author<A HREF="mailto:m.dahm@gmx.de">M. Dahm</A>  */
+comment|/**  * Super class for InvokeInstruction and FieldInstruction, since they have  * some methods in common!  *  * @version $Id$  */
 end_comment
 
 begin_class

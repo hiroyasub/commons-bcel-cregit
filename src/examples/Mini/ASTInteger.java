@@ -82,7 +82,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  *  * @version $Id$  * @author<A HREF="mailto:m.dahm@gmx.de">M. Dahm</A>  */
+comment|/**  *  * @version $Id$  */
 end_comment
 
 begin_class

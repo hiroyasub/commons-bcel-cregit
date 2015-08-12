@@ -68,7 +68,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Abstract super class for instructions dealing with local variables.  *  * @version $Id$  * @author<A HREF="mailto:m.dahm@gmx.de">M. Dahm</A>  */
+comment|/**  * Abstract super class for instructions dealing with local variables.  *  * @version $Id$  */
 end_comment
 
 begin_class

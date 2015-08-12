@@ -62,7 +62,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**   * Denotes reference such as java.lang.String.  *  * @version $Id$  * @author<A HREF="mailto:m.dahm@gmx.de">M. Dahm</A>  */
+comment|/**   * Denotes reference such as java.lang.String.  *  * @version $Id$  */
 end_comment
 
 begin_class

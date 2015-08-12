@@ -18,7 +18,7 @@ package|;
 end_package
 
 begin_comment
-comment|/**   * Thrown when the BCEL attempts to read a class file and determines  * that the file is malformed or otherwise cannot be interpreted as a  * class file.  *  * @version $Id$  * @author<A HREF="mailto:m.dahm@gmx.de">M. Dahm</A>  */
+comment|/**   * Thrown when the BCEL attempts to read a class file and determines  * that the file is malformed or otherwise cannot be interpreted as a  * class file.  *  * @version $Id$  */
 end_comment
 
 begin_class

@@ -212,7 +212,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Utility functions that do not really belong to any class in particular.  *  * @version $Id$  * @author<A HREF="mailto:m.dahm@gmx.de">M. Dahm</A>  */
+comment|/**  * Utility functions that do not really belong to any class in particular.  *  * @version $Id$  */
 end_comment
 
 begin_class

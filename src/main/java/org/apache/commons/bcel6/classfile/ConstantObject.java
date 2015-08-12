@@ -18,7 +18,7 @@ package|;
 end_package
 
 begin_comment
-comment|/**   * This interface denotes those constants that have a "natural" value,  * such as ConstantLong, ConstantString, etc..  *  * @version $Id$  * @author<A HREF="mailto:m.dahm@gmx.de">M. Dahm</A>  * @see     Constant  */
+comment|/**   * This interface denotes those constants that have a "natural" value,  * such as ConstantLong, ConstantString, etc..  *  * @version $Id$  * @see     Constant  */
 end_comment
 
 begin_interface

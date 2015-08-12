@@ -256,7 +256,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * This class represents a control flow graph of a method.  *  * @version $Id$  * @author Enver Haase  */
+comment|/**  * This class represents a control flow graph of a method.  *  * @version $Id$  */
 end_comment
 
 begin_class

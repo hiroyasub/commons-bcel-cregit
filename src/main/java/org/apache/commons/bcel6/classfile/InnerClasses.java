@@ -62,7 +62,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * This class is derived from<em>Attribute</em> and denotes that this class  * is an Inner class of another.  * to the source file of this class.  * It is instantiated from the<em>Attribute.readAttribute()</em> method.  *  * @version $Id$  * @author<A HREF="mailto:m.dahm@gmx.de">M. Dahm</A>  * @see     Attribute  */
+comment|/**  * This class is derived from<em>Attribute</em> and denotes that this class  * is an Inner class of another.  * to the source file of this class.  * It is instantiated from the<em>Attribute.readAttribute()</em> method.  *  * @version $Id$  * @see     Attribute  */
 end_comment
 
 begin_class

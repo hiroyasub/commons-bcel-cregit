@@ -94,7 +94,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**   * Abstract super class for all Java byte codes.  *  * @version $Id$  * @author<A HREF="mailto:m.dahm@gmx.de">M. Dahm</A>  */
+comment|/**   * Abstract super class for all Java byte codes.  *  * @version $Id$  */
 end_comment
 
 begin_class

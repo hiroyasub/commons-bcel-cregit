@@ -48,7 +48,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * This class has a main method implementing a demonstration program  * of how to use the VerifierFactoryObserver. It transitively verifies  * all class files encountered; this may take up a lot of time and,  * more notably, memory.  *  * @version $Id$  * @author Enver Haase  */
+comment|/**  * This class has a main method implementing a demonstration program  * of how to use the VerifierFactoryObserver. It transitively verifies  * all class files encountered; this may take up a lot of time and,  * more notably, memory.  *  * @version $Id$  */
 end_comment
 
 begin_class

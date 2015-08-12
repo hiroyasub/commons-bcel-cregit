@@ -172,7 +172,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Remove NOPs from given class  *  * @author<A HREF="mailto:m.dahm@gmx.de">M. Dahm</A>  * @version $Id$  */
+comment|/**  * Remove NOPs from given class  *  * @version $Id$  */
 end_comment
 
 begin_class

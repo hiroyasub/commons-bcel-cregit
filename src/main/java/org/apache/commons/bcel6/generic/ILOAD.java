@@ -18,7 +18,7 @@ package|;
 end_package
 
 begin_comment
-comment|/**   * ILOAD - Load int from local variable onto stack  *<PRE>Stack: ... -&gt; ..., result</PRE>  *  * @version $Id$  * @author<A HREF="mailto:m.dahm@gmx.de">M. Dahm</A>  */
+comment|/**   * ILOAD - Load int from local variable onto stack  *<PRE>Stack: ... -&gt; ..., result</PRE>  *  * @version $Id$  */
 end_comment
 
 begin_class

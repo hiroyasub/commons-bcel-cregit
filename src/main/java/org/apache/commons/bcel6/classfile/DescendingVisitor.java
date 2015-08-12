@@ -28,7 +28,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Traverses a JavaClass with another Visitor object 'piggy-backed' that is  * applied to all components of a JavaClass object. I.e. this class supplies the  * traversal strategy, other classes can make use of it.  *   * @version $Id$  * @author<A HREF="mailto:m.dahm@gmx.de">M. Dahm</A>  */
+comment|/**  * Traverses a JavaClass with another Visitor object 'piggy-backed' that is  * applied to all components of a JavaClass object. I.e. this class supplies the  * traversal strategy, other classes can make use of it.  *   * @version $Id$  */
 end_comment
 
 begin_class

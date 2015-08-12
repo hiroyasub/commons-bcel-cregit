@@ -160,7 +160,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Convert methods and fields into HTML file.  *  * @version $Id$  * @author<A HREF="mailto:m.dahm@gmx.de">M. Dahm</A>  *   */
+comment|/**  * Convert methods and fields into HTML file.  *  * @version $Id$  *   */
 end_comment
 
 begin_class

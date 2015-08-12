@@ -34,7 +34,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Abstract definition of a class repository. Instances may be used  * to load classes from different sources and may be used in the  * Repository.setRepository method.  *  * @see org.apache.commons.bcel6.Repository  * @version $Id$  * @author<A HREF="mailto:m.dahm@gmx.de">M. Dahm</A>  * @author David Dixon-Peugh  */
+comment|/**  * Abstract definition of a class repository. Instances may be used  * to load classes from different sources and may be used in the  * Repository.setRepository method.  *  * @see org.apache.commons.bcel6.Repository  * @version $Id$  */
 end_comment
 
 begin_interface

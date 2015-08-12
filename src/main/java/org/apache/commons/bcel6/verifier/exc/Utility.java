@@ -40,7 +40,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * A utility class providing convenience methods concerning Throwable instances.  * @version $Id$  * @author Enver Haase  * @see java.lang.Throwable  */
+comment|/**  * A utility class providing convenience methods concerning Throwable instances.  * @version $Id$  * @see java.lang.Throwable  */
 end_comment
 
 begin_class

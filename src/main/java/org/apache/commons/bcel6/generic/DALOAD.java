@@ -18,7 +18,7 @@ package|;
 end_package
 
 begin_comment
-comment|/**   * DALOAD - Load double from array  *<PRE>Stack: ..., arrayref, index -&gt; ..., result.word1, result.word2</PRE>  *  * @version $Id$  * @author<A HREF="mailto:m.dahm@gmx.de">M. Dahm</A>  */
+comment|/**   * DALOAD - Load double from array  *<PRE>Stack: ..., arrayref, index -&gt; ..., result.word1, result.word2</PRE>  *  * @version $Id$  */
 end_comment
 
 begin_class

@@ -18,7 +18,7 @@ package|;
 end_package
 
 begin_comment
-comment|/**  * IDIV - Divide ints  *<PRE>Stack: ..., value1, value2 -&gt; result</PRE>  *  * @version $Id$  * @author<A HREF="mailto:m.dahm@gmx.de">M. Dahm</A>  */
+comment|/**  * IDIV - Divide ints  *<PRE>Stack: ..., value1, value2 -&gt; result</PRE>  *  * @version $Id$  */
 end_comment
 
 begin_class

@@ -84,7 +84,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * This class represents the method info structure, i.e., the representation   * for a method in the class. See JVM specification for details.  * A method has access flags, a name, a signature and a number of attributes.  *  * @version $Id$  * @author<A HREF="mailto:m.dahm@gmx.de">M. Dahm</A>  */
+comment|/**  * This class represents the method info structure, i.e., the representation   * for a method in the class. See JVM specification for details.  * A method has access flags, a name, a signature and a number of attributes.  *  * @version $Id$  */
 end_comment
 
 begin_class

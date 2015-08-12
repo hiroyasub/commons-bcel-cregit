@@ -18,7 +18,7 @@ package|;
 end_package
 
 begin_comment
-comment|/**  * Denote an instruction that may consume a value from the stack.  *  * @version $Id$  * @author<A HREF="mailto:m.dahm@gmx.de">M. Dahm</A>  */
+comment|/**  * Denote an instruction that may consume a value from the stack.  *  * @version $Id$  */
 end_comment
 
 begin_interface

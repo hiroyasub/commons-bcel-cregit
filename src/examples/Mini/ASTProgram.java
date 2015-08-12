@@ -300,7 +300,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Root node of everything, direct children are nodes of type FunDecl  *  * @version $Id$  * @author<A HREF="mailto:m.dahm@gmx.de">M. Dahm</A>  */
+comment|/**  * Root node of everything, direct children are nodes of type FunDecl  *  * @version $Id$  */
 end_comment
 
 begin_class

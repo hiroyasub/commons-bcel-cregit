@@ -130,7 +130,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Test BCEL if an input file is identical to the outfile generated  * with BCEL. Of course there may some small differences, e.g., because  * BCEL generates local variable tables by default.  *  * Try to:  *<pre>  * % java id<someclass>  * % java listclass -code<someclass>&gt; foo  * % java listclass -code<someclass>.clazz&gt; bar  * % diff foo bar | more  *<pre>  *  * @author<A HREF="mailto:m.dahm@gmx.de">M. Dahm</A>  * @version $Id$  */
+comment|/**  * Test BCEL if an input file is identical to the outfile generated  * with BCEL. Of course there may some small differences, e.g., because  * BCEL generates local variable tables by default.  *  * Try to:  *<pre>  * % java id<someclass>  * % java listclass -code<someclass>&gt; foo  * % java listclass -code<someclass>.clazz&gt; bar  * % diff foo bar | more  *<pre>  *  * @version $Id$  */
 end_comment
 
 begin_class

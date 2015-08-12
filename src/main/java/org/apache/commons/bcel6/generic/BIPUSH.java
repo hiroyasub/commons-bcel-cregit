@@ -54,7 +54,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**   * BIPUSH - Push byte on stack  *  *<PRE>Stack: ... -&gt; ..., value</PRE>  *  * @version $Id$  * @author<A HREF="mailto:m.dahm@gmx.de">M. Dahm</A>  */
+comment|/**   * BIPUSH - Push byte on stack  *  *<PRE>Stack: ... -&gt; ..., value</PRE>  *  * @version $Id$  */
 end_comment
 
 begin_class

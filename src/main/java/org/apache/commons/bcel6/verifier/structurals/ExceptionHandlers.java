@@ -108,7 +108,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * This class allows easy access to ExceptionHandler objects.  *  * @version $Id$  * @author Enver Haase  */
+comment|/**  * This class allows easy access to ExceptionHandler objects.  *  * @version $Id$  */
 end_comment
 
 begin_class

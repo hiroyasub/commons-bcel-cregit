@@ -18,7 +18,7 @@ package|;
 end_package
 
 begin_comment
-comment|/**   * ATHROW -  Throw exception  *<PRE>Stack: ..., objectref -&gt; objectref</PRE>  *  * @version $Id$  * @author<A HREF="mailto:m.dahm@gmx.de">M. Dahm</A>  */
+comment|/**   * ATHROW -  Throw exception  *<PRE>Stack: ..., objectref -&gt; objectref</PRE>  *  * @version $Id$  */
 end_comment
 
 begin_class

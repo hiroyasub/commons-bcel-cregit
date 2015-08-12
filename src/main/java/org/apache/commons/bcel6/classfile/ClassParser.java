@@ -106,7 +106,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Wrapper class that parses a given Java .class file. The method<A  * href ="#parse">parse</A> returns a<A href ="JavaClass.html">  * JavaClass</A> object on success. When an I/O error or an  * inconsistency occurs an appropiate exception is propagated back to  * the caller.  *  * The structure and the names comply, except for a few conveniences,  * exactly with the<A href="http://docs.oracle.com/javase/specs/">  * JVM specification 1.0</a>. See this paper for  * further details about the structure of a bytecode file.  *  * @version $Id$  * @author<A HREF="mailto:m.dahm@gmx.de">M. Dahm</A>   */
+comment|/**  * Wrapper class that parses a given Java .class file. The method<A  * href ="#parse">parse</A> returns a<A href ="JavaClass.html">  * JavaClass</A> object on success. When an I/O error or an  * inconsistency occurs an appropiate exception is propagated back to  * the caller.  *  * The structure and the names comply, except for a few conveniences,  * exactly with the<A href="http://docs.oracle.com/javase/specs/">  * JVM specification 1.0</a>. See this paper for  * further details about the structure of a bytecode file.  *  * @version $Id$  */
 end_comment
 
 begin_class

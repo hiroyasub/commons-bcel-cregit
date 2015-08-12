@@ -26,7 +26,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Represents a variable declared in a LET expression or a FUN declaration.  *  * @version $Id$  * @author<A HREF="mailto:m.dahm@gmx.de">M. Dahm</A>  */
+comment|/**  * Represents a variable declared in a LET expression or a FUN declaration.  *  * @version $Id$  */
 end_comment
 
 begin_class

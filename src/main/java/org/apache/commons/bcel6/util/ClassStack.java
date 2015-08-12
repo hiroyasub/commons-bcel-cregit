@@ -44,7 +44,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**   * Utility class implementing a (typesafe) stack of JavaClass objects.  *  * @version $Id$  * @author<A HREF="mailto:m.dahm@gmx.de">M. Dahm</A>   * @see Stack  */
+comment|/**   * Utility class implementing a (typesafe) stack of JavaClass objects.  *  * @version $Id$  * @see Stack  */
 end_comment
 
 begin_class

@@ -84,7 +84,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Super class for FieldGen and MethodGen objects, since they have  * some methods in common!  *  * @version $Id$  * @author<A HREF="mailto:m.dahm@gmx.de">M. Dahm</A>  */
+comment|/**  * Super class for FieldGen and MethodGen objects, since they have  * some methods in common!  *  * @version $Id$  */
 end_comment
 
 begin_class

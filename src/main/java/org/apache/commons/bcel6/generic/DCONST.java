@@ -18,7 +18,7 @@ package|;
 end_package
 
 begin_comment
-comment|/**   * DCONST - Push 0.0 or 1.0, other values cause an exception  *  *<PRE>Stack: ... -&gt; ...,</PRE>  *  * @version $Id$  * @author<A HREF="mailto:m.dahm@gmx.de">M. Dahm</A>  */
+comment|/**   * DCONST - Push 0.0 or 1.0, other values cause an exception  *  *<PRE>Stack: ... -&gt; ...,</PRE>  *  * @version $Id$  */
 end_comment
 
 begin_class

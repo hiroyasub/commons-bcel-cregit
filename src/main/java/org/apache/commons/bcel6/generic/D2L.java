@@ -18,7 +18,7 @@ package|;
 end_package
 
 begin_comment
-comment|/**   * D2L - Convert double to long  *<PRE>Stack: ..., value.word1, value.word2 -&gt; ..., result.word1, result.word2</PRE>  *  * @version $Id$  * @author<A HREF="mailto:m.dahm@gmx.de">M. Dahm</A>  */
+comment|/**   * D2L - Convert double to long  *<PRE>Stack: ..., value.word1, value.word2 -&gt; ..., result.word1, result.word2</PRE>  *  * @version $Id$  */
 end_comment
 
 begin_class

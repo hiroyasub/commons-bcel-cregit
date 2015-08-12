@@ -58,7 +58,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * A class for simple graphical class file verification.  * Use the main(String []) method with fully qualified  * class names as arguments to use it as a stand-alone  * application.  * Use the VerifyDialog(String) constructor to use this  * class in your application.  * [This class was created using VisualAge for Java,  * but it does not work under VAJ itself (Version 3.02 JDK 1.2)]  * @version $Id$  * @author Enver Haase  * @see #main(String[])  * @see #VerifyDialog(String)  */
+comment|/**  * A class for simple graphical class file verification.  * Use the main(String []) method with fully qualified  * class names as arguments to use it as a stand-alone  * application.  * Use the VerifyDialog(String) constructor to use this  * class in your application.  * [This class was created using VisualAge for Java,  * but it does not work under VAJ itself (Version 3.02 JDK 1.2)]  * @version $Id$  * @see #main(String[])  * @see #VerifyDialog(String)  */
 end_comment
 
 begin_class

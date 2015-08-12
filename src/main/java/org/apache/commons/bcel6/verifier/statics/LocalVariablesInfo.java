@@ -72,7 +72,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * A utility class holding the information about  * the names and the types of the local variables in  * a given method.  *  * @version $Id$  * @author Enver Haase  */
+comment|/**  * A utility class holding the information about  * the names and the types of the local variables in  * a given method.  *  * @version $Id$  */
 end_comment
 
 begin_class

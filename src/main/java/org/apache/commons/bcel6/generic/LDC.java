@@ -54,7 +54,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**   * LDC - Push item from constant pool.  *  *<PRE>Stack: ... -&gt; ..., item</PRE>  *  * @version $Id$  * @author<A HREF="mailto:m.dahm@gmx.de">M. Dahm</A>  */
+comment|/**   * LDC - Push item from constant pool.  *  *<PRE>Stack: ... -&gt; ..., item</PRE>  *  * @version $Id$  */
 end_comment
 
 begin_class

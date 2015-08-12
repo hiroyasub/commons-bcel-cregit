@@ -64,7 +64,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * A utility class holding the information about  * the name and the type of a local variable in  * a given slot (== index). This information  * often changes in course of byte code offsets.  *  * @version $Id$  * @author Enver Haase  */
+comment|/**  * A utility class holding the information about  * the name and the type of a local variable in  * a given slot (== index). This information  * often changes in course of byte code offsets.  *  * @version $Id$  */
 end_comment
 
 begin_class

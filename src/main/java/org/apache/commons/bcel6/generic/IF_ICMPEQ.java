@@ -18,7 +18,7 @@ package|;
 end_package
 
 begin_comment
-comment|/**   * IF_ICMPEQ - Branch if int comparison succeeds  *  *<PRE>Stack: ..., value1, value2 -&gt; ...</PRE>  *  * @version $Id$  * @author<A HREF="mailto:m.dahm@gmx.de">M. Dahm</A>  */
+comment|/**   * IF_ICMPEQ - Branch if int comparison succeeds  *  *<PRE>Stack: ..., value1, value2 -&gt; ...</PRE>  *  * @version $Id$  */
 end_comment
 
 begin_class

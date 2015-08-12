@@ -18,7 +18,7 @@ package|;
 end_package
 
 begin_comment
-comment|/**   * IFNONNULL - Branch if reference is not null  *  *<PRE>Stack: ..., reference -&gt; ...</PRE>  *  * @version $Id$  * @author<A HREF="mailto:m.dahm@gmx.de">M. Dahm</A>  */
+comment|/**   * IFNONNULL - Branch if reference is not null  *  *<PRE>Stack: ..., reference -&gt; ...</PRE>  *  * @version $Id$  */
 end_comment
 
 begin_class

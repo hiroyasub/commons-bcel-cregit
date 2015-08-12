@@ -18,7 +18,7 @@ package|;
 end_package
 
 begin_comment
-comment|/**  * Denotes an unparameterized instruction to store a value into a local variable,  * e.g. ISTORE.  *  * @version $Id$  * @author<A HREF="mailto:m.dahm@gmx.de">M. Dahm</A>  */
+comment|/**  * Denotes an unparameterized instruction to store a value into a local variable,  * e.g. ISTORE.  *  * @version $Id$  */
 end_comment
 
 begin_class

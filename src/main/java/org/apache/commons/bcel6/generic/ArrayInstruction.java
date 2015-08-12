@@ -18,7 +18,7 @@ package|;
 end_package
 
 begin_comment
-comment|/**  * Super class for instructions dealing with array access such as IALOAD.  *  * @version $Id$  * @author<A HREF="mailto:m.dahm@gmx.de">M. Dahm</A>  */
+comment|/**  * Super class for instructions dealing with array access such as IALOAD.  *  * @version $Id$  */
 end_comment
 
 begin_class

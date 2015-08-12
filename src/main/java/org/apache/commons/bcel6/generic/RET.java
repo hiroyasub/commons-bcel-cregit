@@ -54,7 +54,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**   * RET - Return from subroutine  *  *<PRE>Stack: ... -&gt; ...</PRE>  *  * @version $Id$  * @author<A HREF="mailto:m.dahm@gmx.de">M. Dahm</A>  */
+comment|/**   * RET - Return from subroutine  *  *<PRE>Stack: ... -&gt; ...</PRE>  *  * @version $Id$  */
 end_comment
 
 begin_class

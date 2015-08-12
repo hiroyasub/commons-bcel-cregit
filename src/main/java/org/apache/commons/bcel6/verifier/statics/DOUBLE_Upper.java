@@ -50,7 +50,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * This class represents the upper half of a DOUBLE variable.  * @version $Id$  * @author Enver Haase  */
+comment|/**  * This class represents the upper half of a DOUBLE variable.  * @version $Id$  */
 end_comment
 
 begin_class

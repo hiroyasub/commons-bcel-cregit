@@ -18,7 +18,7 @@ package|;
 end_package
 
 begin_comment
-comment|/**   * ACONST_NULL - Push null reference  *<PRE>Stack: ... -&gt; ..., null</PRE>  *  * @version $Id$  * @author<A HREF="mailto:m.dahm@gmx.de">M. Dahm</A>  */
+comment|/**   * ACONST_NULL - Push null reference  *<PRE>Stack: ... -&gt; ..., null</PRE>  *  * @version $Id$  */
 end_comment
 
 begin_class

@@ -84,7 +84,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * This class represents the field info structure, i.e., the representation   * for a variable in the class. See JVM specification for details.  *  * @version $Id$  * @author<A HREF="mailto:m.dahm@gmx.de">M. Dahm</A>  */
+comment|/**  * This class represents the field info structure, i.e., the representation   * for a variable in the class. See JVM specification for details.  *  * @version $Id$  */
 end_comment
 
 begin_class

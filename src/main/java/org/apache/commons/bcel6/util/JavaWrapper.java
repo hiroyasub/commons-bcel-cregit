@@ -42,7 +42,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Java interpreter replacement, i.e., wrapper that uses its own ClassLoader  * to modify/generate classes as they're requested. You can take this as a template  * for your own applications.<br>  * Call this wrapper with:  *   *<pre>java org.apache.commons.bcel6.util.JavaWrapper&lt;real.class.name&gt; [arguments]</pre>  *   *<p>To use your own class loader you can set the "bcel.classloader" system property  * which defaults to "org.apache.commons.bcel6.util.ClassLoader", e.g., with:</p>  *<pre>java org.apache.commons.bcel6.util.JavaWrapper -Dbcel.classloader=foo.MyLoader&lt;real.class.name&gt; [arguments]</pre>  *  * @version $Id$  * @author<A HREF="mailto:m.dahm@gmx.de">M. Dahm</A>  * @see ClassLoader  */
+comment|/**  * Java interpreter replacement, i.e., wrapper that uses its own ClassLoader  * to modify/generate classes as they're requested. You can take this as a template  * for your own applications.<br>  * Call this wrapper with:  *   *<pre>java org.apache.commons.bcel6.util.JavaWrapper&lt;real.class.name&gt; [arguments]</pre>  *   *<p>To use your own class loader you can set the "bcel.classloader" system property  * which defaults to "org.apache.commons.bcel6.util.ClassLoader", e.g., with:</p>  *<pre>java org.apache.commons.bcel6.util.JavaWrapper -Dbcel.classloader=foo.MyLoader&lt;real.class.name&gt; [arguments]</pre>  *  * @version $Id$  * @see ClassLoader  */
 end_comment
 
 begin_class

@@ -52,7 +52,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * an annotation's element value pair  *   * @version $Id: ElementValuePair  * @author<A HREF="mailto:dbrosius@qis.net">D. Brosius</A>  * @since 6.0  */
+comment|/**  * an annotation's element value pair  *   * @version $Id: ElementValuePair  * @since 6.0  */
 end_comment
 
 begin_class

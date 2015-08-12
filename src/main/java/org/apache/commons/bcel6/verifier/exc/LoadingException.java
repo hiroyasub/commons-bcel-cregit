@@ -20,7 +20,7 @@ package|;
 end_package
 
 begin_comment
-comment|/**  * When loading a class file, BCEL will throw an instance of LoadingException if  * the class file is malformed; so it is not conforming to the "Pass 1" verification  * process as described in the Java Virtual Machine specification, 2nd. edition.  * @version $Id$  * @author Enver Haase  */
+comment|/**  * When loading a class file, BCEL will throw an instance of LoadingException if  * the class file is malformed; so it is not conforming to the "Pass 1" verification  * process as described in the Java Virtual Machine specification, 2nd. edition.  * @version $Id$  */
 end_comment
 
 begin_class

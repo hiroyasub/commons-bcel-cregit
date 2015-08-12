@@ -18,7 +18,7 @@ package|;
 end_package
 
 begin_comment
-comment|/**  * Supplies empty method bodies to be overridden by subclasses.  *  * @version $Id$  * @author<A HREF="mailto:m.dahm@gmx.de">M. Dahm</A>  */
+comment|/**  * Supplies empty method bodies to be overridden by subclasses.  *  * @version $Id$  */
 end_comment
 
 begin_class

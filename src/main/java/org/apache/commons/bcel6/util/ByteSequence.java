@@ -38,7 +38,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Utility class that implements a sequence of bytes which can be read  * via the `readByte()' method. This is used to implement a wrapper for the   * Java byte code stream to gain some more readability.  *  * @version $Id$  * @author<A HREF="mailto:m.dahm@gmx.de">M. Dahm</A>  */
+comment|/**  * Utility class that implements a sequence of bytes which can be read  * via the `readByte()' method. This is used to implement a wrapper for the   * Java byte code stream to gain some more readability.  *  * @version $Id$  */
 end_comment
 
 begin_class

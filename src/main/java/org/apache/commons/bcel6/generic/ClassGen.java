@@ -244,7 +244,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**   * Template class for building up a java class. May be initialized with an  * existing java class (file).  *  * @see JavaClass  * @version $Id$  * @author<A HREF="mailto:m.dahm@gmx.de">M. Dahm</A>  */
+comment|/**   * Template class for building up a java class. May be initialized with an  * existing java class (file).  *  * @see JavaClass  * @version $Id$  */
 end_comment
 
 begin_class

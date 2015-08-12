@@ -20,7 +20,7 @@ package|;
 end_package
 
 begin_comment
-comment|/**  * A placeholder class that can be used to create an ObjectType of which  * has some of the properties arrays have. They implement java.lang.Cloneable  * and java.io.Serializable and they extend java.lang.Object.  *  * @version $Id$  * @author Enver Haase  */
+comment|/**  * A placeholder class that can be used to create an ObjectType of which  * has some of the properties arrays have. They implement java.lang.Cloneable  * and java.io.Serializable and they extend java.lang.Object.  *  * @version $Id$  */
 end_comment
 
 begin_class

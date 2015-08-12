@@ -18,7 +18,7 @@ package|;
 end_package
 
 begin_comment
-comment|/**  * IMPDEP2 - Implementation dependent  *  * @version $Id$  * @author<A HREF="mailto:m.dahm@gmx.de">M. Dahm</A>  */
+comment|/**  * IMPDEP2 - Implementation dependent  *  * @version $Id$  */
 end_comment
 
 begin_class

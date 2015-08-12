@@ -168,7 +168,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Read class file(s) and convert them into HTML files.  *  * Given a JavaClass object "class" that is in package "package" five files  * will be created in the specified directory.  *  *<OL>  *<LI> "package"."class".html as the main file which defines the frames for  * the following subfiles.  *<LI>  "package"."class"_attributes.html contains all (known) attributes found in the file  *<LI>  "package"."class"_cp.html contains the constant pool  *<LI>  "package"."class"_code.html contains the byte code  *<LI>  "package"."class"_methods.html contains references to all methods and fields of the class  *</OL>  *  * All subfiles reference each other appropiately, e.g. clicking on a  * method in the Method's frame will jump to the appropiate method in  * the Code frame.  *  * @version $Id$  * @author<A HREF="mailto:m.dahm@gmx.de">M. Dahm</A>   */
+comment|/**  * Read class file(s) and convert them into HTML files.  *  * Given a JavaClass object "class" that is in package "package" five files  * will be created in the specified directory.  *  *<OL>  *<LI> "package"."class".html as the main file which defines the frames for  * the following subfiles.  *<LI>  "package"."class"_attributes.html contains all (known) attributes found in the file  *<LI>  "package"."class"_cp.html contains the constant pool  *<LI>  "package"."class"_code.html contains the byte code  *<LI>  "package"."class"_methods.html contains references to all methods and fields of the class  *</OL>  *  * All subfiles reference each other appropiately, e.g. clicking on a  * method in the Method's frame will jump to the appropiate method in  * the Code frame.  *  * @version $Id$  */
 end_comment
 
 begin_class

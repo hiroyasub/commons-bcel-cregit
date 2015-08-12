@@ -486,7 +486,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Disassemble Java class object into the<a href="http://jasmin.sourceforge.net">  * Jasmin</a> format.  *  * @author<A HREF="mailto:m.dahm@gmx.de">M. Dahm</A>  * @version $Id$  */
+comment|/**  * Disassemble Java class object into the<a href="http://jasmin.sourceforge.net">  * Jasmin</a> format.  *  * @version $Id$  */
 end_comment
 
 begin_class

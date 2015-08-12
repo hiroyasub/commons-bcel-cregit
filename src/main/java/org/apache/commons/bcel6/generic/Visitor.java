@@ -18,7 +18,7 @@ package|;
 end_package
 
 begin_comment
-comment|/**  * Interface implementing the Visitor pattern programming style.  * I.e., a class that implements this interface can handle all types of  * instructions with the properly typed methods just by calling the accept()  * method.  *  * @version $Id$  * @author<A HREF="mailto:m.dahm@gmx.de">M. Dahm</A>  */
+comment|/**  * Interface implementing the Visitor pattern programming style.  * I.e., a class that implements this interface can handle all types of  * instructions with the properly typed methods just by calling the accept()  * method.  *  * @version $Id$  */
 end_comment
 
 begin_interface

@@ -18,7 +18,7 @@ package|;
 end_package
 
 begin_comment
-comment|/**  * POP - Pop top operand stack word  *  *<PRE>Stack: ..., word -&gt; ...</PRE>  *  * @version $Id$  * @author<A HREF="mailto:m.dahm@gmx.de">M. Dahm</A>  */
+comment|/**  * POP - Pop top operand stack word  *  *<PRE>Stack: ..., word -&gt; ...</PRE>  *  * @version $Id$  */
 end_comment
 
 begin_class

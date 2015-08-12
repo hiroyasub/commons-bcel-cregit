@@ -274,7 +274,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Read class file(s) and patch all of its methods, so that they print  * "hello" and their name and signature before doing anything else.  *  * @author<A HREF="mailto:m.dahm@gmx.de">M. Dahm</A>  * @version $Id$  */
+comment|/**  * Read class file(s) and patch all of its methods, so that they print  * "hello" and their name and signature before doing anything else.  *  * @version $Id$  */
 end_comment
 
 begin_class

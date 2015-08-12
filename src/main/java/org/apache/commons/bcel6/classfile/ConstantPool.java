@@ -72,7 +72,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * This class represents the constant pool, i.e., a table of constants, of  * a parsed classfile. It may contain null references, due to the JVM  * specification that skips an entry after an 8-byte constant (double,  * long) entry.  Those interested in generating constant pools  * programatically should see<a href="../generic/ConstantPoolGen.html">  * ConstantPoolGen</a>.   * @version $Id$  * @see     Constant  * @see     org.apache.commons.bcel6.generic.ConstantPoolGen  * @author<A HREF="mailto:m.dahm@gmx.de">M. Dahm</A>  */
+comment|/**  * This class represents the constant pool, i.e., a table of constants, of  * a parsed classfile. It may contain null references, due to the JVM  * specification that skips an entry after an 8-byte constant (double,  * long) entry.  Those interested in generating constant pools  * programatically should see<a href="../generic/ConstantPoolGen.html">  * ConstantPoolGen</a>.   * @version $Id$  * @see     Constant  * @see     org.apache.commons.bcel6.generic.ConstantPoolGen  */
 end_comment
 
 begin_class

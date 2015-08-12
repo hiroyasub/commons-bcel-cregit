@@ -18,7 +18,7 @@ package|;
 end_package
 
 begin_comment
-comment|/**   * IFGT - Branch if int comparison with zero succeeds  *  *<PRE>Stack: ..., value -&gt; ...</PRE>  *  * @version $Id$  * @author<A HREF="mailto:m.dahm@gmx.de">M. Dahm</A>  */
+comment|/**   * IFGT - Branch if int comparison with zero succeeds  *  *<PRE>Stack: ..., value -&gt; ...</PRE>  *  * @version $Id$  */
 end_comment
 
 begin_class

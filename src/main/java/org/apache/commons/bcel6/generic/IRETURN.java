@@ -18,7 +18,7 @@ package|;
 end_package
 
 begin_comment
-comment|/**   * IRETURN -  Return int from method  *<PRE>Stack: ..., value -&gt;&lt;empty&gt;</PRE>  *  * @version $Id$  * @author<A HREF="mailto:m.dahm@gmx.de">M. Dahm</A>  */
+comment|/**   * IRETURN -  Return int from method  *<PRE>Stack: ..., value -&gt;&lt;empty&gt;</PRE>  *  * @version $Id$  */
 end_comment
 
 begin_class
