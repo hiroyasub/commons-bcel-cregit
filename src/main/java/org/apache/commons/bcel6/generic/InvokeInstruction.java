@@ -141,7 +141,10 @@ name|cp
 operator|.
 name|getConstant
 argument_list|(
-name|index
+name|super
+operator|.
+name|getIndex
+argument_list|()
 argument_list|)
 decl_stmt|;
 name|StringTokenizer

@@ -111,7 +111,10 @@ name|cp
 operator|.
 name|constantToString
 argument_list|(
-name|index
+name|super
+operator|.
+name|getIndex
+argument_list|()
 argument_list|,
 name|org
 operator|.

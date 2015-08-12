@@ -87,7 +87,10 @@ argument_list|()
 operator|.
 name|getConstant
 argument_list|(
-name|index
+name|super
+operator|.
+name|getIndex
+argument_list|()
 argument_list|)
 operator|.
 name|getTag
@@ -171,7 +174,10 @@ argument_list|()
 operator|.
 name|getConstant
 argument_list|(
-name|index
+name|super
+operator|.
+name|getIndex
+argument_list|()
 argument_list|)
 decl_stmt|;
 switch|switch
@@ -267,7 +273,10 @@ name|RuntimeException
 argument_list|(
 literal|"Unknown or invalid constant type at "
 operator|+
-name|index
+name|super
+operator|.
+name|getIndex
+argument_list|()
 argument_list|)
 throw|;
 block|}

@@ -133,7 +133,10 @@ parameter_list|()
 block|{
 if|if
 condition|(
-name|index
+name|super
+operator|.
+name|getIndex
+argument_list|()
 operator|<=
 name|org
 operator|.
@@ -221,7 +224,10 @@ name|out
 operator|.
 name|writeByte
 argument_list|(
-name|index
+name|super
+operator|.
+name|getIndex
+argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
@@ -231,7 +237,10 @@ name|out
 operator|.
 name|writeShort
 argument_list|(
-name|index
+name|super
+operator|.
+name|getIndex
+argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
@@ -279,12 +288,15 @@ name|length
 operator|=
 literal|2
 expr_stmt|;
-name|index
-operator|=
+name|super
+operator|.
+name|setIndex
+argument_list|(
 name|bytes
 operator|.
 name|readUnsignedByte
 argument_list|()
+argument_list|)
 expr_stmt|;
 block|}
 specifier|public
@@ -315,7 +327,10 @@ argument_list|()
 operator|.
 name|getConstant
 argument_list|(
-name|index
+name|super
+operator|.
+name|getIndex
+argument_list|()
 argument_list|)
 decl_stmt|;
 switch|switch
@@ -553,7 +568,10 @@ name|RuntimeException
 argument_list|(
 literal|"Unknown or invalid constant type at "
 operator|+
-name|index
+name|super
+operator|.
+name|getIndex
+argument_list|()
 argument_list|)
 throw|;
 block|}
@@ -577,7 +595,10 @@ argument_list|()
 operator|.
 name|getConstant
 argument_list|(
-name|index
+name|super
+operator|.
+name|getIndex
+argument_list|()
 argument_list|)
 operator|.
 name|getTag
@@ -664,7 +685,10 @@ name|RuntimeException
 argument_list|(
 literal|"Unknown or invalid constant type at "
 operator|+
-name|index
+name|super
+operator|.
+name|getIndex
+argument_list|()
 argument_list|)
 throw|;
 block|}

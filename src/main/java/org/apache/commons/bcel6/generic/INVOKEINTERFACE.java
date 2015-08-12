@@ -198,7 +198,10 @@ name|out
 operator|.
 name|writeShort
 argument_list|(
-name|index
+name|super
+operator|.
+name|getIndex
+argument_list|()
 argument_list|)
 expr_stmt|;
 name|out
