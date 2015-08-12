@@ -31,6 +31,16 @@ begin_import
 import|import
 name|java
 operator|.
+name|io
+operator|.
+name|IOException
+import|;
+end_import
+
+begin_import
+import|import
+name|java
+operator|.
 name|util
 operator|.
 name|Hashtable
@@ -625,7 +635,7 @@ expr_stmt|;
 block|}
 catch|catch
 parameter_list|(
-name|Throwable
+name|IOException
 name|e
 parameter_list|)
 block|{

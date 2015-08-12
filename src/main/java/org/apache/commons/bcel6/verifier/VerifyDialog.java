@@ -1744,6 +1744,35 @@ operator|.
 name|out
 argument_list|)
 expr_stmt|;
+comment|// manually added code
+if|if
+condition|(
+name|exception
+operator|instanceof
+name|ThreadDeath
+condition|)
+block|{
+throw|throw
+operator|(
+name|ThreadDeath
+operator|)
+name|exception
+throw|;
+block|}
+if|if
+condition|(
+name|exception
+operator|instanceof
+name|VirtualMachineError
+condition|)
+block|{
+throw|throw
+operator|(
+name|VirtualMachineError
+operator|)
+name|exception
+throw|;
+block|}
 block|}
 comment|/** Machine-generated. */
 specifier|private

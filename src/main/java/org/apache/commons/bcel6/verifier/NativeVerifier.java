@@ -255,13 +255,14 @@ name|Throwable
 name|t
 parameter_list|)
 block|{
+comment|// OK to catch Throwable here as we call exit.
 name|System
 operator|.
 name|out
 operator|.
 name|println
 argument_list|(
-literal|"NativeVerifier: Unspecified verification error on'"
+literal|"NativeVerifier: Unspecified verification error on '"
 operator|+
 name|args
 index|[
