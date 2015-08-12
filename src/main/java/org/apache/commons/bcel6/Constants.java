@@ -6833,50 +6833,6 @@ init|=
 literal|22
 decl_stmt|;
 comment|// count of attributes
-comment|/** @deprecated Use {@link #ATTR_RUNTIME_VISIBLE_ANNOTATIONS} instead */
-annotation|@
-name|Deprecated
-specifier|public
-specifier|static
-specifier|final
-name|byte
-name|ATTR_RUNTIMEVISIBLE_ANNOTATIONS
-init|=
-name|ATTR_RUNTIME_VISIBLE_ANNOTATIONS
-decl_stmt|;
-comment|/** @deprecated Use {@link #ATTR_RUNTIME_INVISIBLE_ANNOTATIONS} instead */
-annotation|@
-name|Deprecated
-specifier|public
-specifier|static
-specifier|final
-name|byte
-name|ATTR_RUNTIMEINVISIBLE_ANNOTATIONS
-init|=
-name|ATTR_RUNTIME_INVISIBLE_ANNOTATIONS
-decl_stmt|;
-comment|/** @deprecated Use {@link #ATTR_RUNTIME_VISIBLE_PARAMETER_ANNOTATIONS} instead */
-annotation|@
-name|Deprecated
-specifier|public
-specifier|static
-specifier|final
-name|byte
-name|ATTR_RUNTIMEVISIBLE_PARAMETER_ANNOTATIONS
-init|=
-name|ATTR_RUNTIME_VISIBLE_PARAMETER_ANNOTATIONS
-decl_stmt|;
-comment|/** @deprecated Use {@link #ATTR_RUNTIME_INVISIBLE_PARAMETER_ANNOTATIONS} instead */
-annotation|@
-name|Deprecated
-specifier|public
-specifier|static
-specifier|final
-name|byte
-name|ATTR_RUNTIMEINVISIBLE_PARAMETER_ANNOTATIONS
-init|=
-name|ATTR_RUNTIME_INVISIBLE_PARAMETER_ANNOTATIONS
-decl_stmt|;
 comment|// TODO: mutable public array!!
 specifier|public
 specifier|static
