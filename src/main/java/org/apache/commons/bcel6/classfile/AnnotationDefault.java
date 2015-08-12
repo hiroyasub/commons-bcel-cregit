@@ -82,6 +82,7 @@ operator|-
 literal|4017327188724019487L
 decl_stmt|;
 specifier|private
+specifier|final
 name|ElementValue
 name|default_value
 decl_stmt|;
@@ -110,21 +111,14 @@ name|name_index
 argument_list|,
 name|length
 argument_list|,
-operator|(
-name|ElementValue
-operator|)
-literal|null
-argument_list|,
-name|constant_pool
-argument_list|)
-expr_stmt|;
-name|default_value
-operator|=
 name|ElementValue
 operator|.
 name|readElementValue
 argument_list|(
 name|input
+argument_list|,
+name|constant_pool
+argument_list|)
 argument_list|,
 name|constant_pool
 argument_list|)
@@ -184,21 +178,6 @@ name|visitAnnotationDefault
 argument_list|(
 name|this
 argument_list|)
-expr_stmt|;
-block|}
-comment|/**      * @param defaultValue the default value of this methodinfo's annotation      */
-specifier|public
-specifier|final
-name|void
-name|setDefaultValue
-parameter_list|(
-name|ElementValue
-name|defaultValue
-parameter_list|)
-block|{
-name|default_value
-operator|=
-name|defaultValue
 expr_stmt|;
 block|}
 comment|/**      * @return the default value      */
