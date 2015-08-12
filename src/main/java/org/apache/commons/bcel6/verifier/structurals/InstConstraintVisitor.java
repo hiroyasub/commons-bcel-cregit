@@ -12580,12 +12580,14 @@ operator|)
 name|t
 decl_stmt|;
 comment|//e.g.: Don't instantiate interfaces
+try|try
+block|{
 if|if
 condition|(
 operator|!
 name|obj
 operator|.
-name|referencesClass
+name|referencesClassExact
 argument_list|()
 condition|)
 block|{
@@ -12598,6 +12600,29 @@ operator|+
 name|obj
 operator|+
 literal|"'."
+argument_list|)
+expr_stmt|;
+block|}
+block|}
+catch|catch
+parameter_list|(
+name|ClassNotFoundException
+name|e
+parameter_list|)
+block|{
+name|constraintViolated
+argument_list|(
+name|o
+argument_list|,
+literal|"Expecting a class type (ObjectType) to work on. Found: '"
+operator|+
+name|obj
+operator|+
+literal|"'."
+operator|+
+literal|" which threw "
+operator|+
+name|e
 argument_list|)
 expr_stmt|;
 block|}
