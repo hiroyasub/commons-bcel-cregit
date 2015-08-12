@@ -1307,22 +1307,7 @@ index|[
 literal|256
 index|]
 decl_stmt|;
-comment|/** Interfaces may have no static initializers, so we simulate this      * with an inner class.      */
-specifier|static
-specifier|final
-name|Clinit
-name|bla
-init|=
-operator|new
-name|Clinit
-argument_list|()
-decl_stmt|;
-specifier|static
-class|class
-name|Clinit
-block|{
-name|Clinit
-parameter_list|()
+static|static
 block|{
 name|INSTRUCTIONS
 index|[
@@ -2287,7 +2272,6 @@ index|]
 operator|=
 name|MONITOREXIT
 expr_stmt|;
-block|}
 block|}
 block|}
 end_class
