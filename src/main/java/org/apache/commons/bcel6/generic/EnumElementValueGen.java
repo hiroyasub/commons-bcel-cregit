@@ -130,7 +130,10 @@ argument_list|)
 expr_stmt|;
 if|if
 condition|(
-name|type
+name|super
+operator|.
+name|getElementValueType
+argument_list|()
 operator|!=
 name|ENUM_CONSTANT
 condition|)
@@ -141,7 +144,10 @@ name|RuntimeException
 argument_list|(
 literal|"Only element values of type enum can be built with this ctor - type specified: "
 operator|+
-name|type
+name|super
+operator|.
+name|getElementValueType
+argument_list|()
 argument_list|)
 throw|;
 block|}
@@ -187,13 +193,17 @@ return|return
 operator|new
 name|EnumElementValue
 argument_list|(
-name|type
+name|super
+operator|.
+name|getElementValueType
+argument_list|()
 argument_list|,
 name|typeIdx
 argument_list|,
 name|valueIdx
 argument_list|,
-name|cpGen
+name|getConstantPoolgen
+argument_list|()
 operator|.
 name|getConstantPool
 argument_list|()
@@ -334,7 +344,10 @@ name|dos
 operator|.
 name|writeByte
 argument_list|(
-name|type
+name|super
+operator|.
+name|getElementValueType
+argument_list|()
 argument_list|)
 expr_stmt|;
 comment|// u1 type of value (ENUM_CONSTANT == 'e')
@@ -368,7 +381,7 @@ init|=
 operator|(
 name|ConstantUtf8
 operator|)
-name|getConstantPool
+name|getConstantPoolgen
 argument_list|()
 operator|.
 name|getConstant
@@ -404,7 +417,7 @@ operator|(
 operator|(
 name|ConstantUtf8
 operator|)
-name|getConstantPool
+name|getConstantPoolgen
 argument_list|()
 operator|.
 name|getConstant
@@ -428,7 +441,7 @@ operator|(
 operator|(
 name|ConstantUtf8
 operator|)
-name|getConstantPool
+name|getConstantPoolgen
 argument_list|()
 operator|.
 name|getConstant

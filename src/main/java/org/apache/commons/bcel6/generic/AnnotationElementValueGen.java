@@ -206,7 +206,10 @@ name|dos
 operator|.
 name|writeByte
 argument_list|(
-name|type
+name|super
+operator|.
+name|getElementValueType
+argument_list|()
 argument_list|)
 expr_stmt|;
 comment|// u1 type of value (ANNOTATION == '@')
@@ -245,16 +248,18 @@ return|return
 operator|new
 name|AnnotationElementValue
 argument_list|(
-name|this
+name|super
 operator|.
-name|type
+name|getElementValueType
+argument_list|()
 argument_list|,
 name|a
 operator|.
 name|getAnnotation
 argument_list|()
 argument_list|,
-name|cpGen
+name|getConstantPoolgen
+argument_list|()
 operator|.
 name|getConstantPool
 argument_list|()

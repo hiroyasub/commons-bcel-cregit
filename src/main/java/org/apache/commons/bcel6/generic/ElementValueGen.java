@@ -169,11 +169,13 @@ specifier|abstract
 class|class
 name|ElementValueGen
 block|{
-specifier|protected
+specifier|private
+specifier|final
 name|int
 name|type
 decl_stmt|;
-specifier|protected
+specifier|private
+specifier|final
 name|ConstantPoolGen
 name|cpGen
 decl_stmt|;
@@ -680,7 +682,7 @@ block|}
 block|}
 specifier|protected
 name|ConstantPoolGen
-name|getConstantPool
+name|getConstantPoolgen
 parameter_list|()
 block|{
 return|return

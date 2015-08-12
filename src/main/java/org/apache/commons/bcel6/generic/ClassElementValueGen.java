@@ -222,11 +222,15 @@ return|return
 operator|new
 name|ClassElementValue
 argument_list|(
-name|type
+name|super
+operator|.
+name|getElementValueType
+argument_list|()
 argument_list|,
 name|idx
 argument_list|,
-name|cpGen
+name|getConstantPoolgen
+argument_list|()
 operator|.
 name|getConstantPool
 argument_list|()
@@ -303,7 +307,7 @@ init|=
 operator|(
 name|ConstantUtf8
 operator|)
-name|getConstantPool
+name|getConstantPoolgen
 argument_list|()
 operator|.
 name|getConstant
@@ -350,7 +354,10 @@ name|dos
 operator|.
 name|writeByte
 argument_list|(
-name|type
+name|super
+operator|.
+name|getElementValueType
+argument_list|()
 argument_list|)
 expr_stmt|;
 comment|// u1 kind of value

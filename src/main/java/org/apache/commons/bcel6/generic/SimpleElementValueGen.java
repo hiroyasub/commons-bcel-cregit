@@ -706,7 +706,10 @@ literal|"SimpleElementValueGen class does not know how "
 operator|+
 literal|"to copy this type "
 operator|+
-name|type
+name|super
+operator|.
+name|getElementValueType
+argument_list|()
 argument_list|)
 throw|;
 block|}
@@ -724,11 +727,15 @@ return|return
 operator|new
 name|SimpleElementValue
 argument_list|(
-name|type
+name|super
+operator|.
+name|getElementValueType
+argument_list|()
 argument_list|,
 name|idx
 argument_list|,
-name|cpGen
+name|getConstantPoolgen
+argument_list|()
 operator|.
 name|getConstantPool
 argument_list|()
@@ -751,7 +758,10 @@ parameter_list|()
 block|{
 if|if
 condition|(
-name|type
+name|super
+operator|.
+name|getElementValueType
+argument_list|()
 operator|!=
 name|STRING
 condition|)
@@ -770,7 +780,8 @@ init|=
 operator|(
 name|ConstantUtf8
 operator|)
-name|cpGen
+name|getConstantPoolgen
+argument_list|()
 operator|.
 name|getConstant
 argument_list|(
@@ -791,7 +802,10 @@ parameter_list|()
 block|{
 if|if
 condition|(
-name|type
+name|super
+operator|.
+name|getElementValueType
+argument_list|()
 operator|!=
 name|PRIMITIVE_INT
 condition|)
@@ -810,7 +824,8 @@ init|=
 operator|(
 name|ConstantInteger
 operator|)
-name|cpGen
+name|getConstantPoolgen
+argument_list|()
 operator|.
 name|getConstant
 argument_list|(
@@ -834,7 +849,10 @@ parameter_list|()
 block|{
 switch|switch
 condition|(
-name|type
+name|super
+operator|.
+name|getElementValueType
+argument_list|()
 condition|)
 block|{
 case|case
@@ -846,7 +864,8 @@ init|=
 operator|(
 name|ConstantInteger
 operator|)
-name|cpGen
+name|getConstantPoolgen
+argument_list|()
 operator|.
 name|getConstant
 argument_list|(
@@ -873,7 +892,8 @@ init|=
 operator|(
 name|ConstantLong
 operator|)
-name|cpGen
+name|getConstantPoolgen
+argument_list|()
 operator|.
 name|getConstant
 argument_list|(
@@ -900,7 +920,8 @@ init|=
 operator|(
 name|ConstantDouble
 operator|)
-name|cpGen
+name|getConstantPoolgen
+argument_list|()
 operator|.
 name|getConstant
 argument_list|(
@@ -927,7 +948,8 @@ init|=
 operator|(
 name|ConstantFloat
 operator|)
-name|cpGen
+name|getConstantPoolgen
+argument_list|()
 operator|.
 name|getConstant
 argument_list|(
@@ -954,7 +976,8 @@ init|=
 operator|(
 name|ConstantInteger
 operator|)
-name|cpGen
+name|getConstantPoolgen
+argument_list|()
 operator|.
 name|getConstant
 argument_list|(
@@ -981,7 +1004,8 @@ init|=
 operator|(
 name|ConstantInteger
 operator|)
-name|cpGen
+name|getConstantPoolgen
+argument_list|()
 operator|.
 name|getConstant
 argument_list|(
@@ -1008,7 +1032,8 @@ init|=
 operator|(
 name|ConstantInteger
 operator|)
-name|cpGen
+name|getConstantPoolgen
+argument_list|()
 operator|.
 name|getConstant
 argument_list|(
@@ -1035,7 +1060,8 @@ init|=
 operator|(
 name|ConstantInteger
 operator|)
-name|cpGen
+name|getConstantPoolgen
+argument_list|()
 operator|.
 name|getConstant
 argument_list|(
@@ -1071,7 +1097,8 @@ init|=
 operator|(
 name|ConstantUtf8
 operator|)
-name|cpGen
+name|getConstantPoolgen
+argument_list|()
 operator|.
 name|getConstant
 argument_list|(
@@ -1091,7 +1118,10 @@ name|RuntimeException
 argument_list|(
 literal|"SimpleElementValueGen class does not know how to stringify type "
 operator|+
-name|type
+name|super
+operator|.
+name|getElementValueType
+argument_list|()
 argument_list|)
 throw|;
 block|}
@@ -1112,13 +1142,19 @@ name|dos
 operator|.
 name|writeByte
 argument_list|(
-name|type
+name|super
+operator|.
+name|getElementValueType
+argument_list|()
 argument_list|)
 expr_stmt|;
 comment|// u1 kind of value
 switch|switch
 condition|(
-name|type
+name|super
+operator|.
+name|getElementValueType
+argument_list|()
 condition|)
 block|{
 case|case
@@ -1163,7 +1199,10 @@ name|RuntimeException
 argument_list|(
 literal|"SimpleElementValueGen doesnt know how to write out type "
 operator|+
-name|type
+name|super
+operator|.
+name|getElementValueType
+argument_list|()
 argument_list|)
 throw|;
 block|}
