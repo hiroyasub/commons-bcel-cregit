@@ -44,8 +44,6 @@ implements|implements
 name|CompoundInstruction
 implements|,
 name|VariableLengthInstruction
-implements|,
-name|InstructionConstants
 block|{
 specifier|private
 name|Instruction
@@ -80,6 +78,8 @@ condition|)
 block|{
 name|instruction
 operator|=
+name|InstructionConstants
+operator|.
 name|INSTRUCTIONS
 index|[
 name|Constants
@@ -176,6 +176,8 @@ parameter_list|)
 block|{
 name|instruction
 operator|=
+name|InstructionConstants
+operator|.
 name|INSTRUCTIONS
 index|[
 name|Constants
@@ -212,6 +214,8 @@ condition|)
 block|{
 name|instruction
 operator|=
+name|InstructionConstants
+operator|.
 name|FCONST_0
 expr_stmt|;
 block|}
@@ -224,6 +228,8 @@ condition|)
 block|{
 name|instruction
 operator|=
+name|InstructionConstants
+operator|.
 name|FCONST_1
 expr_stmt|;
 block|}
@@ -236,6 +242,8 @@ condition|)
 block|{
 name|instruction
 operator|=
+name|InstructionConstants
+operator|.
 name|FCONST_2
 expr_stmt|;
 block|}
@@ -276,6 +284,8 @@ condition|)
 block|{
 name|instruction
 operator|=
+name|InstructionConstants
+operator|.
 name|LCONST_0
 expr_stmt|;
 block|}
@@ -288,6 +298,8 @@ condition|)
 block|{
 name|instruction
 operator|=
+name|InstructionConstants
+operator|.
 name|LCONST_1
 expr_stmt|;
 block|}
@@ -328,6 +340,8 @@ condition|)
 block|{
 name|instruction
 operator|=
+name|InstructionConstants
+operator|.
 name|DCONST_0
 expr_stmt|;
 block|}
@@ -340,6 +354,8 @@ condition|)
 block|{
 name|instruction
 operator|=
+name|InstructionConstants
+operator|.
 name|DCONST_1
 expr_stmt|;
 block|}
@@ -380,6 +396,8 @@ condition|)
 block|{
 name|instruction
 operator|=
+name|InstructionConstants
+operator|.
 name|ACONST_NULL
 expr_stmt|;
 block|}
@@ -420,6 +438,8 @@ condition|)
 block|{
 name|instruction
 operator|=
+name|InstructionConstants
+operator|.
 name|ACONST_NULL
 expr_stmt|;
 block|}
