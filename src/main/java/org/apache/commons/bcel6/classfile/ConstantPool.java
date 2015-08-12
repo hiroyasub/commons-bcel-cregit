@@ -100,7 +100,7 @@ name|Constant
 index|[]
 name|constant_pool
 decl_stmt|;
-comment|// TODO this could be final; the setConstantPool method is not called externally
+comment|// TODO this could be final if the copy() method were rewritten
 comment|/**      * @param constant_pool Array of constants      */
 specifier|public
 name|ConstantPool
@@ -1182,26 +1182,6 @@ name|constant_pool
 operator|.
 name|length
 return|;
-block|}
-comment|/**      * @param constant Constant to set      */
-specifier|public
-name|void
-name|setConstant
-parameter_list|(
-name|int
-name|index
-parameter_list|,
-name|Constant
-name|constant
-parameter_list|)
-block|{
-name|constant_pool
-index|[
-name|index
-index|]
-operator|=
-name|constant
-expr_stmt|;
 block|}
 comment|/**      * @return String representation.      */
 annotation|@
