@@ -58,15 +58,15 @@ class|class
 name|ElementValue
 block|{
 specifier|protected
+specifier|final
 name|int
 name|type
 decl_stmt|;
-comment|// TODO should be final
 specifier|protected
+specifier|final
 name|ConstantPool
 name|cpool
 decl_stmt|;
-comment|// TODO should be final
 annotation|@
 name|Override
 specifier|public
