@@ -85,10 +85,10 @@ operator|-
 literal|7394764537394782136L
 decl_stmt|;
 specifier|private
+specifier|final
 name|double
 name|bytes
 decl_stmt|;
-comment|// TODO could be final (setter not used)
 comment|/**       * @param bytes Data      */
 specifier|public
 name|ConstantDouble
@@ -207,24 +207,6 @@ block|{
 return|return
 name|bytes
 return|;
-block|}
-comment|/**      * @param bytes the raw bytes that represent the double value      */
-specifier|public
-specifier|final
-name|void
-name|setBytes
-parameter_list|(
-name|double
-name|bytes
-parameter_list|)
-block|{
-comment|// TODO unused
-name|this
-operator|.
-name|bytes
-operator|=
-name|bytes
-expr_stmt|;
 block|}
 comment|/**      * @return String representation.      */
 annotation|@

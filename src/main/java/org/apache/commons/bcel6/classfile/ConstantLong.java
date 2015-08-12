@@ -84,10 +84,10 @@ init|=
 literal|8495971186433816161L
 decl_stmt|;
 specifier|private
+specifier|final
 name|long
 name|bytes
 decl_stmt|;
-comment|// TODO could be final (setter unused)
 comment|/**       * @param bytes Data      */
 specifier|public
 name|ConstantLong
@@ -206,24 +206,6 @@ block|{
 return|return
 name|bytes
 return|;
-block|}
-comment|/**      * @param bytes the raw bytes that represent this long      */
-specifier|public
-specifier|final
-name|void
-name|setBytes
-parameter_list|(
-name|long
-name|bytes
-parameter_list|)
-block|{
-comment|// TODO unused
-name|this
-operator|.
-name|bytes
-operator|=
-name|bytes
-expr_stmt|;
 block|}
 comment|/**      * @return String representation.      */
 annotation|@

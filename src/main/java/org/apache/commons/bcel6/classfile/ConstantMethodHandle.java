@@ -83,15 +83,15 @@ operator|-
 literal|7875124116920198044L
 decl_stmt|;
 specifier|private
+specifier|final
 name|int
 name|reference_kind
 decl_stmt|;
-comment|// TODO could be final (setter unused)
 specifier|private
+specifier|final
 name|int
 name|reference_index
 decl_stmt|;
-comment|// TODO could be final (setter unused)
 comment|/**      * Initialize from another object.      */
 specifier|public
 name|ConstantMethodHandle
@@ -229,22 +229,6 @@ name|reference_kind
 return|;
 block|}
 specifier|public
-name|void
-name|setReferenceKind
-parameter_list|(
-name|int
-name|reference_kind
-parameter_list|)
-block|{
-comment|// TODO unused
-name|this
-operator|.
-name|reference_kind
-operator|=
-name|reference_kind
-expr_stmt|;
-block|}
-specifier|public
 name|int
 name|getReferenceIndex
 parameter_list|()
@@ -252,22 +236,6 @@ block|{
 return|return
 name|reference_index
 return|;
-block|}
-specifier|public
-name|void
-name|setReferenceIndex
-parameter_list|(
-name|int
-name|reference_index
-parameter_list|)
-block|{
-comment|// TODO unused
-name|this
-operator|.
-name|reference_index
-operator|=
-name|reference_index
-expr_stmt|;
 block|}
 comment|/**      * @return String representation      */
 annotation|@

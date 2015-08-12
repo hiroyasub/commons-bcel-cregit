@@ -85,10 +85,10 @@ operator|-
 literal|2316732495687628398L
 decl_stmt|;
 specifier|private
+specifier|final
 name|float
 name|bytes
 decl_stmt|;
-comment|// TODO could be final (setter unused)
 comment|/**       * @param bytes Data      */
 specifier|public
 name|ConstantFloat
@@ -207,24 +207,6 @@ block|{
 return|return
 name|bytes
 return|;
-block|}
-comment|/**      * @param bytes the raw bytes that represent this float      */
-specifier|public
-specifier|final
-name|void
-name|setBytes
-parameter_list|(
-name|float
-name|bytes
-parameter_list|)
-block|{
-comment|// TODO unused
-name|this
-operator|.
-name|bytes
-operator|=
-name|bytes
-expr_stmt|;
 block|}
 comment|/**      * @return String representation.      */
 annotation|@

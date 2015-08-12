@@ -82,10 +82,10 @@ init|=
 literal|6750768220616618881L
 decl_stmt|;
 specifier|private
+specifier|final
 name|int
 name|descriptor_index
 decl_stmt|;
-comment|// TODO could be final (setter unused)
 comment|/**      * Initialize from another object.      */
 specifier|public
 name|ConstantMethodType
@@ -195,22 +195,6 @@ block|{
 return|return
 name|descriptor_index
 return|;
-block|}
-specifier|public
-name|void
-name|setDescriptorIndex
-parameter_list|(
-name|int
-name|descriptor_index
-parameter_list|)
-block|{
-comment|// TODO unused
-name|this
-operator|.
-name|descriptor_index
-operator|=
-name|descriptor_index
-expr_stmt|;
 block|}
 comment|/**      * @return String representation      */
 annotation|@
