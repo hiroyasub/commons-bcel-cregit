@@ -80,14 +80,14 @@ name|instruction
 operator|=
 name|InstructionConstants
 operator|.
-name|INSTRUCTIONS
-index|[
+name|getInstruction
+argument_list|(
 name|Constants
 operator|.
 name|ICONST_0
 operator|+
 name|value
-index|]
+argument_list|)
 expr_stmt|;
 block|}
 if|else if
@@ -178,8 +178,8 @@ name|instruction
 operator|=
 name|InstructionConstants
 operator|.
-name|INSTRUCTIONS
-index|[
+name|getInstruction
+argument_list|(
 name|Constants
 operator|.
 name|ICONST_0
@@ -191,7 +191,7 @@ literal|1
 else|:
 literal|0
 operator|)
-index|]
+argument_list|)
 expr_stmt|;
 block|}
 comment|/**      * @param cp Constant pool      * @param value to be pushed       */

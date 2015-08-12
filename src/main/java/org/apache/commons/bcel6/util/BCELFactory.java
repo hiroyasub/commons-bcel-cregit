@@ -816,10 +816,10 @@ condition|(
 operator|(
 name|InstructionConstants
 operator|.
-name|INSTRUCTIONS
-index|[
+name|getInstruction
+argument_list|(
 name|opcode
-index|]
+argument_list|)
 operator|!=
 literal|null
 operator|)

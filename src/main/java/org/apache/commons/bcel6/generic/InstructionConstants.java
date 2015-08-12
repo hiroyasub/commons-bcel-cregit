@@ -1294,7 +1294,7 @@ literal|2
 argument_list|)
 decl_stmt|;
 comment|/** Get object via its opcode, for immutable instructions like      * branch instructions entries are set to null.      */
-specifier|public
+specifier|private
 specifier|static
 specifier|final
 name|Instruction
@@ -2272,6 +2272,23 @@ index|]
 operator|=
 name|MONITOREXIT
 expr_stmt|;
+block|}
+comment|/**      * Gets the Instruction.      * @param index the index, e.g. {@link Constants#RETURN}      * @return the entry from the private INSTRUCTIONS table      */
+specifier|public
+specifier|static
+name|Instruction
+name|getInstruction
+parameter_list|(
+name|int
+name|index
+parameter_list|)
+block|{
+return|return
+name|INSTRUCTIONS
+index|[
+name|index
+index|]
+return|;
 block|}
 block|}
 end_class
