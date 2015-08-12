@@ -144,11 +144,12 @@ init|=
 operator|-
 literal|1985077286871826895L
 decl_stmt|;
-specifier|protected
+specifier|private
+specifier|final
 name|byte
 name|type
 decl_stmt|;
-specifier|protected
+specifier|private
 name|String
 name|signature
 decl_stmt|;
@@ -1897,6 +1898,22 @@ argument_list|)
 argument_list|)
 argument_list|)
 return|;
+block|}
+comment|/**      * @param signature the signature to set      */
+specifier|public
+name|void
+name|setSignature
+parameter_list|(
+name|String
+name|signature
+parameter_list|)
+block|{
+name|this
+operator|.
+name|signature
+operator|=
+name|signature
+expr_stmt|;
 block|}
 block|}
 end_class

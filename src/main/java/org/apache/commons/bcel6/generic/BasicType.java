@@ -208,7 +208,10 @@ name|hashCode
 parameter_list|()
 block|{
 return|return
-name|type
+name|super
+operator|.
+name|getType
+argument_list|()
 return|;
 block|}
 comment|/** @return true if both type objects refer to the same type      */
@@ -236,11 +239,13 @@ operator|)
 name|_type
 operator|)
 operator|.
-name|type
+name|getType
+argument_list|()
 operator|==
 name|this
 operator|.
-name|type
+name|getType
+argument_list|()
 else|:
 literal|false
 return|;

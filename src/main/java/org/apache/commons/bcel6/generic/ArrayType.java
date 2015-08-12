@@ -260,12 +260,13 @@ name|getSignature
 argument_list|()
 argument_list|)
 expr_stmt|;
-name|signature
-operator|=
+name|setSignature
+argument_list|(
 name|buf
 operator|.
 name|toString
 argument_list|()
+argument_list|)
 expr_stmt|;
 block|}
 comment|/**      * @return basic type of array, i.e., for int[][][] the basic type is int      */
