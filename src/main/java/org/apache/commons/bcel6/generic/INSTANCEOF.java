@@ -17,6 +17,20 @@ name|generic
 package|;
 end_package
 
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|commons
+operator|.
+name|bcel6
+operator|.
+name|ExceptionConstants
+import|;
+end_import
+
 begin_comment
 comment|/**   * INSTANCEOF - Determine if object is of given type  *<PRE>Stack: ..., objectref -&gt; ..., result</PRE>  *  * @version $Id$  */
 end_comment
@@ -85,17 +99,16 @@ name|getExceptions
 parameter_list|()
 block|{
 return|return
-name|org
-operator|.
-name|apache
-operator|.
-name|commons
-operator|.
-name|bcel6
-operator|.
 name|ExceptionConstants
 operator|.
+name|createExceptions
+argument_list|(
+name|ExceptionConstants
+operator|.
+name|EXCS
+operator|.
 name|EXCS_CLASS_AND_INTERFACE_RESOLUTION
+argument_list|)
 return|;
 block|}
 specifier|public

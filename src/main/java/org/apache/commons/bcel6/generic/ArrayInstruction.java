@@ -17,6 +17,20 @@ name|generic
 package|;
 end_package
 
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|commons
+operator|.
+name|bcel6
+operator|.
+name|ExceptionConstants
+import|;
+end_import
+
 begin_comment
 comment|/**  * Super class for instructions dealing with array access such as IALOAD.  *  * @version $Id$  */
 end_comment
@@ -75,17 +89,16 @@ name|getExceptions
 parameter_list|()
 block|{
 return|return
-name|org
-operator|.
-name|apache
-operator|.
-name|commons
-operator|.
-name|bcel6
-operator|.
 name|ExceptionConstants
 operator|.
+name|createExceptions
+argument_list|(
+name|ExceptionConstants
+operator|.
+name|EXCS
+operator|.
 name|EXCS_ARRAY_EXCEPTION
+argument_list|)
 return|;
 block|}
 comment|/** @return type associated with the instruction      */
