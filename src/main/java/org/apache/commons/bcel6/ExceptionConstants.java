@@ -19,9 +19,9 @@ begin_comment
 comment|/**  * Exception constants.  *  * @version $Id$  */
 end_comment
 
-begin_interface
+begin_class
 specifier|public
-interface|interface
+class|class
 name|ExceptionConstants
 block|{
 comment|/** The mother of all exceptions      */
@@ -224,7 +224,7 @@ operator|.
 name|class
 decl_stmt|;
 comment|/* UnsupportedClassVersionError is new in JDK 1.2 */
-comment|//public static final Class UnsupportedClassVersionError = UnsupportedClassVersionError.class;
+comment|//    public static final Class UnsupportedClassVersionError = UnsupportedClassVersionError.class;
 comment|/** Run-Time Exceptions       */
 specifier|public
 specifier|static
@@ -400,7 +400,7 @@ name|ARRAY_INDEX_OUT_OF_BOUNDS_EXCEPTION
 block|}
 decl_stmt|;
 block|}
-end_interface
+end_class
 
 end_unit
 
