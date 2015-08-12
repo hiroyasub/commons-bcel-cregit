@@ -867,7 +867,7 @@ operator|)
 name|this
 operator|)
 operator|.
-name|referencesInterface
+name|referencesInterfaceExact
 argument_list|()
 operator|)
 operator|||
@@ -885,7 +885,7 @@ operator|)
 name|t
 operator|)
 operator|.
-name|referencesInterface
+name|referencesInterfaceExact
 argument_list|()
 operator|)
 condition|)
