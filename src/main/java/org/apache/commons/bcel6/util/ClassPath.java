@@ -218,7 +218,10 @@ name|SYSTEM_CLASS_PATH
 init|=
 operator|new
 name|ClassPath
+argument_list|(
+name|getClassPath
 argument_list|()
+argument_list|)
 decl_stmt|;
 specifier|private
 specifier|static
@@ -492,20 +495,6 @@ operator|.
 name|toArray
 argument_list|(
 name|paths
-argument_list|)
-expr_stmt|;
-block|}
-comment|/**      * Search for classes in CLASSPATH.      * @deprecated Use SYSTEM_CLASS_PATH constant      */
-annotation|@
-name|Deprecated
-specifier|public
-name|ClassPath
-parameter_list|()
-block|{
-name|this
-argument_list|(
-name|getClassPath
-argument_list|()
 argument_list|)
 expr_stmt|;
 block|}

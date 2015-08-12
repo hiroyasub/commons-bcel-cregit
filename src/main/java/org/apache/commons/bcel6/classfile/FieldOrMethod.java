@@ -176,32 +176,6 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Construct object from file stream.      * @param file Input stream      * @throws IOException      * @throws ClassFormatException      * @deprecated Use {@link #FieldOrMethod(java.io.DataInput, ConstantPool)} instead.      */
-specifier|protected
-name|FieldOrMethod
-parameter_list|(
-name|DataInputStream
-name|file
-parameter_list|,
-name|ConstantPool
-name|constant_pool
-parameter_list|)
-throws|throws
-name|IOException
-throws|,
-name|ClassFormatException
-block|{
-name|this
-argument_list|(
-operator|(
-name|DataInput
-operator|)
-name|file
-argument_list|,
-name|constant_pool
-argument_list|)
-expr_stmt|;
-block|}
 comment|/**      * Construct object from file stream.      * @param file Input stream      * @throws IOException      * @throws ClassFormatException      */
 specifier|protected
 name|FieldOrMethod

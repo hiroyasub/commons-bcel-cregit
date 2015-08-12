@@ -567,22 +567,6 @@ return|return
 name|byte_code_offset
 return|;
 block|}
-annotation|@
-name|java
-operator|.
-name|lang
-operator|.
-name|Deprecated
-specifier|public
-name|void
-name|setNumberOfLocals
-parameter_list|(
-name|int
-name|n
-parameter_list|)
-block|{
-comment|// TODO unused
-block|}
 specifier|public
 name|int
 name|getNumberOfLocals
@@ -634,22 +618,6 @@ block|{
 return|return
 name|types_of_locals
 return|;
-block|}
-annotation|@
-name|java
-operator|.
-name|lang
-operator|.
-name|Deprecated
-specifier|public
-name|void
-name|setNumberOfStackItems
-parameter_list|(
-name|int
-name|n
-parameter_list|)
-block|{
-comment|// TODO unused
 block|}
 specifier|public
 name|int

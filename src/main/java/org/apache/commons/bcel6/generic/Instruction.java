@@ -1837,36 +1837,6 @@ name|Visitor
 name|v
 parameter_list|)
 function_decl|;
-comment|/** Get Comparator object used in the equals() method to determine      * equality of instructions.      *      * @return currently used comparator for equals()      * @deprecated use the built in comparator, or wrap this class in another object that implements these methods      */
-annotation|@
-name|Deprecated
-specifier|public
-specifier|static
-name|InstructionComparator
-name|getComparator
-parameter_list|()
-block|{
-return|return
-name|cmp
-return|;
-block|}
-comment|/** Set comparator to be used for equals().       * @deprecated use the built in comparator, or wrap this class in another object that implements these methods      */
-annotation|@
-name|Deprecated
-specifier|public
-specifier|static
-name|void
-name|setComparator
-parameter_list|(
-name|InstructionComparator
-name|c
-parameter_list|)
-block|{
-name|cmp
-operator|=
-name|c
-expr_stmt|;
-block|}
 comment|/** Check for equality, delegated to comparator      * @return true if that is an Instruction and has the same opcode      */
 annotation|@
 name|Override
