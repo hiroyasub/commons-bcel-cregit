@@ -3256,7 +3256,7 @@ return|return
 name|m
 return|;
 block|}
-comment|/**      * Remove all NOPs from the instruction list (if possible) and update every      * object refering to them, i.e., branch instructions, local variables and      * exception handlers.      */
+comment|/**      * Remove all NOPs from the instruction list (if possible) and update every      * object referring to them, i.e., branch instructions, local variables and      * exception handlers.      */
 specifier|public
 name|void
 name|removeNOPs
