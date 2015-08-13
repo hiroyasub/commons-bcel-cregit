@@ -3153,6 +3153,8 @@ operator|.
 name|getLocalVariable
 argument_list|(
 name|var_index
+argument_list|,
+literal|0
 argument_list|)
 decl_stmt|;
 if|if
