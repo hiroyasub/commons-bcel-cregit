@@ -1186,6 +1186,7 @@ name|int
 name|major
 parameter_list|)
 block|{
+comment|// TODO could be package-protected - only called by test code
 name|this
 operator|.
 name|major
@@ -1202,6 +1203,7 @@ name|int
 name|minor
 parameter_list|)
 block|{
+comment|// TODO could be package-protected - only called by test code
 name|this
 operator|.
 name|minor
@@ -1708,6 +1710,7 @@ name|String
 name|name
 parameter_list|)
 block|{
+comment|// TODO unused
 name|class_name
 operator|=
 name|name
@@ -1737,6 +1740,7 @@ name|String
 name|name
 parameter_list|)
 block|{
+comment|// TODO unused
 name|super_class_name
 operator|=
 name|name
@@ -1789,6 +1793,7 @@ index|[]
 name|methods
 parameter_list|)
 block|{
+comment|// TODO unused
 name|method_vec
 operator|.
 name|clear
@@ -1820,6 +1825,7 @@ name|int
 name|pos
 parameter_list|)
 block|{
+comment|// TODO unused
 name|method_vec
 operator|.
 name|set
@@ -2027,6 +2033,7 @@ name|ConstantPoolGen
 name|constant_pool
 parameter_list|)
 block|{
+comment|// TODO unused
 name|cp
 operator|=
 name|constant_pool
@@ -2040,6 +2047,7 @@ name|int
 name|class_name_index
 parameter_list|)
 block|{
+comment|// TODO unused
 name|this
 operator|.
 name|class_name_index
@@ -2078,6 +2086,7 @@ name|int
 name|superclass_name_index
 parameter_list|)
 block|{
+comment|// TODO unused
 name|this
 operator|.
 name|superclass_name_index
