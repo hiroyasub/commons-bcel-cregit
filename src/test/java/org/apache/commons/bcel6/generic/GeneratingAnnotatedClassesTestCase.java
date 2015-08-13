@@ -12,6 +12,8 @@ operator|.
 name|commons
 operator|.
 name|bcel6
+operator|.
+name|generic
 package|;
 end_package
 
@@ -42,6 +44,20 @@ operator|.
 name|util
 operator|.
 name|List
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|commons
+operator|.
+name|bcel6
+operator|.
+name|AbstractTestCase
 import|;
 end_import
 
