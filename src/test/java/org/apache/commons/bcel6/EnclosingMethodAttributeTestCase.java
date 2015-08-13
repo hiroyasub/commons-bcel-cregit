@@ -115,6 +115,16 @@ name|SyntheticRepository
 import|;
 end_import
 
+begin_import
+import|import
+name|org
+operator|.
+name|junit
+operator|.
+name|Assert
+import|;
+end_import
+
 begin_class
 specifier|public
 class|class
@@ -421,11 +431,6 @@ argument_list|(
 literal|"."
 argument_list|)
 decl_stmt|;
-annotation|@
-name|SuppressWarnings
-argument_list|(
-literal|"unused"
-argument_list|)
 name|JavaClass
 name|clazz2
 init|=
@@ -436,6 +441,14 @@ argument_list|(
 literal|"AttributeTestClassEM02$1"
 argument_list|)
 decl_stmt|;
+name|Assert
+operator|.
+name|assertNotNull
+argument_list|(
+name|clazz2
+argument_list|)
+expr_stmt|;
+comment|// Use the variable to avoid a warning
 name|EnclosingMethod
 name|em
 init|=
