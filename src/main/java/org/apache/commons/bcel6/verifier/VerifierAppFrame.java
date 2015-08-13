@@ -408,6 +408,7 @@ name|CardLayout
 argument_list|()
 decl_stmt|;
 specifier|private
+specifier|static
 specifier|final
 name|String
 name|JUSTICE_VERSION
