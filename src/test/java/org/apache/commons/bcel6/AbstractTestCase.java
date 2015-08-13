@@ -256,6 +256,7 @@ extends|extends
 name|TestCase
 block|{
 specifier|private
+specifier|static
 specifier|final
 name|boolean
 name|verbose
