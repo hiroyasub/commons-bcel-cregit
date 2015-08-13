@@ -1171,6 +1171,7 @@ name|FLAG_FOR_UNKNOWN
 argument_list|)
 return|;
 block|}
+specifier|public
 specifier|static
 name|String
 name|printFlags
@@ -1309,6 +1310,16 @@ expr_stmt|;
 block|}
 else|else
 block|{
+if|if
+condition|(
+name|i
+operator|<
+name|Constants
+operator|.
+name|ACCESS_NAMES
+operator|.
+name|length
+condition|)
 name|buf
 operator|.
 name|append
@@ -1336,6 +1347,21 @@ operator|.
 name|append
 argument_list|(
 literal|" | "
+argument_list|)
+expr_stmt|;
+else|else
+name|buf
+operator|.
+name|append
+argument_list|(
+name|String
+operator|.
+name|format
+argument_list|(
+literal|"ACC_BIT %x | "
+argument_list|,
+name|pow
+argument_list|)
 argument_list|)
 expr_stmt|;
 block|}

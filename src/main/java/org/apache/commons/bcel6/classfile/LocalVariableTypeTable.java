@@ -488,8 +488,10 @@ index|[
 name|i
 index|]
 operator|.
-name|toString
-argument_list|()
+name|toStringShared
+argument_list|(
+literal|true
+argument_list|)
 argument_list|)
 expr_stmt|;
 if|if

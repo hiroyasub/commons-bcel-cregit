@@ -417,6 +417,8 @@ argument_list|)
 expr_stmt|;
 name|outer_class_name
 operator|=
+literal|" of class "
+operator|+
 name|Utility
 operator|.
 name|compactClassName
@@ -429,7 +431,7 @@ else|else
 block|{
 name|outer_class_name
 operator|=
-literal|"<not a member>"
+literal|""
 expr_stmt|;
 block|}
 if|if
@@ -465,7 +467,7 @@ else|else
 block|{
 name|inner_name
 operator|=
-literal|"<anonymous>"
+literal|"(anonymous)"
 expr_stmt|;
 block|}
 name|access
@@ -497,21 +499,17 @@ literal|" "
 operator|)
 expr_stmt|;
 return|return
-literal|"InnerClass:"
+literal|"  "
 operator|+
 name|access
 operator|+
-name|inner_class_name
-operator|+
-literal|"(\""
-operator|+
-name|outer_class_name
-operator|+
-literal|"\", \""
-operator|+
 name|inner_name
 operator|+
-literal|"\")"
+literal|"=class "
+operator|+
+name|inner_class_name
+operator|+
+name|outer_class_name
 return|;
 block|}
 comment|/**      * @return deep copy of this object      */

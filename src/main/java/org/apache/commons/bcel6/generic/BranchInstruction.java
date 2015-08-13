@@ -358,19 +358,18 @@ expr_stmt|;
 block|}
 else|else
 block|{
+comment|// I'm more interested in the address of the target then
+comment|// the instruction located there.
+comment|//t = target.getInstruction().toString(false); // Avoid circles
 name|t
 operator|=
+literal|""
+operator|+
 name|target
 operator|.
-name|getInstruction
+name|getPosition
 argument_list|()
-operator|.
-name|toString
-argument_list|(
-literal|false
-argument_list|)
 expr_stmt|;
-comment|// Avoid circles
 block|}
 block|}
 block|}
@@ -385,18 +384,18 @@ condition|)
 block|{
 name|index
 operator|=
-name|getTargetOffset
+name|target
+operator|.
+name|getPosition
 argument_list|()
 expr_stmt|;
+comment|// index = getTargetOffset();  crashes if positions haven't been set
+comment|// t = "" + (index + position);
 name|t
 operator|=
 literal|""
 operator|+
-operator|(
 name|index
-operator|+
-name|position
-operator|)
 expr_stmt|;
 block|}
 block|}

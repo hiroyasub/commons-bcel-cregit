@@ -471,14 +471,14 @@ return|return
 name|start_pc
 return|;
 block|}
-comment|/**      * @return string representation.      */
-annotation|@
-name|Override
-specifier|public
+comment|/*      * Helper method shared with LocalVariableTypeTable      */
 specifier|final
 name|String
-name|toString
-parameter_list|()
+name|toStringShared
+parameter_list|(
+name|boolean
+name|typeTable
+parameter_list|)
 block|{
 name|String
 name|name
@@ -494,10 +494,27 @@ name|signatureToString
 argument_list|(
 name|getSignature
 argument_list|()
+argument_list|,
+literal|false
 argument_list|)
 decl_stmt|;
+name|String
+name|label
+init|=
+literal|"LocalVariable"
+operator|+
+operator|(
+name|typeTable
+condition|?
+literal|"Types"
+else|:
+literal|""
+operator|)
+decl_stmt|;
 return|return
-literal|"LocalVariable(start_pc = "
+name|label
+operator|+
+literal|"(start_pc = "
 operator|+
 name|start_pc
 operator|+
@@ -518,6 +535,22 @@ operator|+
 name|name
 operator|+
 literal|")"
+return|;
+block|}
+comment|/**      * @return string representation.      */
+annotation|@
+name|Override
+specifier|public
+specifier|final
+name|String
+name|toString
+parameter_list|()
+block|{
+return|return
+name|toStringShared
+argument_list|(
+literal|false
+argument_list|)
 return|;
 block|}
 comment|/**      * @return deep copy of this object      */
