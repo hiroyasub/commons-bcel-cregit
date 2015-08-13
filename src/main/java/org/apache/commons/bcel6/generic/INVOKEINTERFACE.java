@@ -312,6 +312,8 @@ name|nargs
 return|;
 comment|// nargs includes this reference
 block|}
+annotation|@
+name|Override
 specifier|public
 name|Class
 argument_list|<

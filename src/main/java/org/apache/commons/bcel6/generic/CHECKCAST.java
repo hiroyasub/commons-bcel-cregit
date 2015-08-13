@@ -90,6 +90,8 @@ argument_list|)
 expr_stmt|;
 block|}
 comment|/** @return exceptions this instruction may cause      */
+annotation|@
+name|Override
 specifier|public
 name|Class
 argument_list|<
@@ -116,6 +118,8 @@ name|CLASS_CAST_EXCEPTION
 argument_list|)
 return|;
 block|}
+annotation|@
+name|Override
 specifier|public
 name|ObjectType
 name|getLoadClassType

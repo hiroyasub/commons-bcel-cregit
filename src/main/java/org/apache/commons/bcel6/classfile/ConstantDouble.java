@@ -231,6 +231,8 @@ literal|")"
 return|;
 block|}
 comment|/** @return Double object      */
+annotation|@
+name|Override
 specifier|public
 name|Object
 name|getConstantValue

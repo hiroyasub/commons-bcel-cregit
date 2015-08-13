@@ -67,6 +67,8 @@ parameter_list|()
 block|{
 block|}
 comment|/** @return return address type      */
+annotation|@
+name|Override
 specifier|public
 name|Type
 name|getType

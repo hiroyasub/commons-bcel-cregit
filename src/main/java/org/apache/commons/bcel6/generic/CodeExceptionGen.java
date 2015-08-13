@@ -260,6 +260,8 @@ name|handler_pc
 expr_stmt|;
 block|}
 comment|/**      * @param old_ih old target, either start or end      * @param new_ih new target      */
+annotation|@
+name|Override
 specifier|public
 name|void
 name|updateTarget
@@ -359,6 +361,8 @@ throw|;
 block|}
 block|}
 comment|/**      * @return true, if ih is target of this handler      */
+annotation|@
+name|Override
 specifier|public
 name|boolean
 name|containsTarget

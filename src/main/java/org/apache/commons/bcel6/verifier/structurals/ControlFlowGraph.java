@@ -368,6 +368,8 @@ argument_list|()
 expr_stmt|;
 block|}
 comment|/* Satisfies InstructionContext.getTag(). */
+annotation|@
+name|Override
 specifier|public
 name|int
 name|getTag
@@ -378,6 +380,8 @@ name|TAG
 return|;
 block|}
 comment|/* Satisfies InstructionContext.setTag(int). */
+annotation|@
+name|Override
 specifier|public
 name|void
 name|setTag
@@ -393,6 +397,8 @@ name|tag
 expr_stmt|;
 block|}
 comment|/**          * Returns the exception handlers of this instruction.          */
+annotation|@
+name|Override
 specifier|public
 name|ExceptionHandler
 index|[]
@@ -410,6 +416,8 @@ argument_list|)
 return|;
 block|}
 comment|/**          * Returns a clone of the "outgoing" frame situation with respect to the given ExecutionChain.          */
+annotation|@
+name|Override
 specifier|public
 name|Frame
 name|getOutFrame
@@ -478,6 +486,8 @@ name|getClone
 argument_list|()
 return|;
 block|}
+annotation|@
+name|Override
 specifier|public
 name|Frame
 name|getInFrame
@@ -532,6 +542,8 @@ argument_list|()
 return|;
 block|}
 comment|/**          * "Merges in" (vmspec2, page 146) the "incoming" frame situation;          * executes the instructions symbolically          * and therefore calculates the "outgoing" frame situation.          * Returns: True iff the "incoming" frame situation changed after          * merging with "inFrame".          * The execPreds ArrayList must contain the InstructionContext          * objects executed so far in the correct order. This is just          * one execution path [out of many]. This is needed to correctly          * "merge" in the special case of a RET's successor.          *<B>The InstConstraintVisitor and ExecutionVisitor instances          * must be set up correctly.</B>          * @return true - if and only if the "outgoing" frame situation          * changed from the one before execute()ing.          */
+annotation|@
+name|Override
 specifier|public
 name|boolean
 name|execute
@@ -1047,6 +1059,8 @@ argument_list|)
 expr_stmt|;
 block|}
 comment|/*          * Fulfils the contract of InstructionContext.getInstruction().          */
+annotation|@
+name|Override
 specifier|public
 name|InstructionHandle
 name|getInstruction
@@ -1158,6 +1172,8 @@ literal|null
 return|;
 block|}
 comment|/* Satisfies InstructionContext.getSuccessors(). */
+annotation|@
+name|Override
 specifier|public
 name|InstructionContext
 index|[]

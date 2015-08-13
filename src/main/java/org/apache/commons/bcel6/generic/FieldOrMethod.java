@@ -462,6 +462,8 @@ return|;
 block|}
 block|}
 comment|/** @return type of the referenced class/interface      */
+annotation|@
+name|Override
 specifier|public
 name|ObjectType
 name|getLoadClassType

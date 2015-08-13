@@ -477,6 +477,8 @@ expr_stmt|;
 block|}
 block|}
 comment|/**      * @return local variable index  referred by this instruction.      */
+annotation|@
+name|Override
 specifier|public
 specifier|final
 name|int
@@ -488,6 +490,8 @@ name|n
 return|;
 block|}
 comment|/**      * Set the local variable index      */
+annotation|@
+name|Override
 specifier|public
 name|void
 name|setIndex
@@ -595,6 +599,8 @@ name|canon_tag
 return|;
 block|}
 comment|/**      * Returns the type associated with the instruction -       * in case of ALOAD or ASTORE Type.OBJECT is returned.      * This is just a bit incorrect, because ALOAD and ASTORE      * may work on every ReferenceType (including Type.NULL) and      * ASTORE may even work on a ReturnaddressType .      * @return type associated with the instruction      */
+annotation|@
+name|Override
 specifier|public
 name|Type
 name|getType

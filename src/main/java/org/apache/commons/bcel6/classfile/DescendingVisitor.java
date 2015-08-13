@@ -179,6 +179,8 @@ name|this
 argument_list|)
 expr_stmt|;
 block|}
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitJavaClass
@@ -292,6 +294,8 @@ name|pop
 argument_list|()
 expr_stmt|;
 block|}
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitAnnotation
@@ -345,6 +349,8 @@ name|pop
 argument_list|()
 expr_stmt|;
 block|}
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitAnnotationEntry
@@ -373,6 +379,8 @@ name|pop
 argument_list|()
 expr_stmt|;
 block|}
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitField
@@ -426,6 +434,8 @@ name|pop
 argument_list|()
 expr_stmt|;
 block|}
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitConstantValue
@@ -454,6 +464,8 @@ name|pop
 argument_list|()
 expr_stmt|;
 block|}
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitMethod
@@ -507,6 +519,8 @@ name|pop
 argument_list|()
 expr_stmt|;
 block|}
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitExceptionTable
@@ -535,6 +549,8 @@ name|pop
 argument_list|()
 expr_stmt|;
 block|}
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitCode
@@ -613,6 +629,8 @@ name|pop
 argument_list|()
 expr_stmt|;
 block|}
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitCodeException
@@ -641,6 +659,8 @@ name|pop
 argument_list|()
 expr_stmt|;
 block|}
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitLineNumberTable
@@ -694,6 +714,8 @@ name|pop
 argument_list|()
 expr_stmt|;
 block|}
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitLineNumber
@@ -722,6 +744,8 @@ name|pop
 argument_list|()
 expr_stmt|;
 block|}
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitLocalVariableTable
@@ -775,6 +799,8 @@ name|pop
 argument_list|()
 expr_stmt|;
 block|}
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitStackMap
@@ -828,6 +854,8 @@ name|pop
 argument_list|()
 expr_stmt|;
 block|}
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitStackMapEntry
@@ -856,6 +884,8 @@ name|pop
 argument_list|()
 expr_stmt|;
 block|}
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitStackMapTable
@@ -909,6 +939,8 @@ name|pop
 argument_list|()
 expr_stmt|;
 block|}
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitStackMapTableEntry
@@ -937,6 +969,8 @@ name|pop
 argument_list|()
 expr_stmt|;
 block|}
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitLocalVariable
@@ -965,6 +999,8 @@ name|pop
 argument_list|()
 expr_stmt|;
 block|}
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitConstantPool
@@ -1041,6 +1077,8 @@ name|pop
 argument_list|()
 expr_stmt|;
 block|}
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitConstantClass
@@ -1069,6 +1107,8 @@ name|pop
 argument_list|()
 expr_stmt|;
 block|}
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitConstantDouble
@@ -1097,6 +1137,8 @@ name|pop
 argument_list|()
 expr_stmt|;
 block|}
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitConstantFieldref
@@ -1125,6 +1167,8 @@ name|pop
 argument_list|()
 expr_stmt|;
 block|}
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitConstantFloat
@@ -1153,6 +1197,8 @@ name|pop
 argument_list|()
 expr_stmt|;
 block|}
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitConstantInteger
@@ -1181,6 +1227,8 @@ name|pop
 argument_list|()
 expr_stmt|;
 block|}
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitConstantInterfaceMethodref
@@ -1209,6 +1257,8 @@ name|pop
 argument_list|()
 expr_stmt|;
 block|}
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitConstantInvokeDynamic
@@ -1237,6 +1287,8 @@ name|pop
 argument_list|()
 expr_stmt|;
 block|}
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitConstantLong
@@ -1265,6 +1317,8 @@ name|pop
 argument_list|()
 expr_stmt|;
 block|}
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitConstantMethodref
@@ -1293,6 +1347,8 @@ name|pop
 argument_list|()
 expr_stmt|;
 block|}
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitConstantNameAndType
@@ -1321,6 +1377,8 @@ name|pop
 argument_list|()
 expr_stmt|;
 block|}
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitConstantString
@@ -1349,6 +1407,8 @@ name|pop
 argument_list|()
 expr_stmt|;
 block|}
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitConstantUtf8
@@ -1377,6 +1437,8 @@ name|pop
 argument_list|()
 expr_stmt|;
 block|}
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitInnerClasses
@@ -1430,6 +1492,8 @@ name|pop
 argument_list|()
 expr_stmt|;
 block|}
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitInnerClass
@@ -1458,6 +1522,8 @@ name|pop
 argument_list|()
 expr_stmt|;
 block|}
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitBootstrapMethods
@@ -1491,6 +1557,8 @@ name|pop
 argument_list|()
 expr_stmt|;
 block|}
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitDeprecated
@@ -1519,6 +1587,8 @@ name|pop
 argument_list|()
 expr_stmt|;
 block|}
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitSignature
@@ -1547,6 +1617,8 @@ name|pop
 argument_list|()
 expr_stmt|;
 block|}
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitSourceFile
@@ -1575,6 +1647,8 @@ name|pop
 argument_list|()
 expr_stmt|;
 block|}
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitSynthetic
@@ -1603,6 +1677,8 @@ name|pop
 argument_list|()
 expr_stmt|;
 block|}
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitUnknown
@@ -1631,6 +1707,8 @@ name|pop
 argument_list|()
 expr_stmt|;
 block|}
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitAnnotationDefault
@@ -1659,6 +1737,8 @@ name|pop
 argument_list|()
 expr_stmt|;
 block|}
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitEnclosingMethod
@@ -1687,6 +1767,8 @@ name|pop
 argument_list|()
 expr_stmt|;
 block|}
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitLocalVariableTypeTable
@@ -1715,6 +1797,8 @@ name|pop
 argument_list|()
 expr_stmt|;
 block|}
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitParameterAnnotation
@@ -1743,6 +1827,8 @@ name|pop
 argument_list|()
 expr_stmt|;
 block|}
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitMethodParameters

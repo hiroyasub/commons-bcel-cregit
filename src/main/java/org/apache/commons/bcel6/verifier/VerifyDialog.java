@@ -191,6 +191,8 @@ name|event
 operator|.
 name|ActionListener
 block|{
+annotation|@
+name|Override
 specifier|public
 name|void
 name|actionPerformed

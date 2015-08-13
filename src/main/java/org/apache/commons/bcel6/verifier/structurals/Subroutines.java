@@ -390,6 +390,8 @@ argument_list|()
 decl_stmt|;
 comment|// Elements: InstructionHandle
 comment|/*          * Refer to the Subroutine interface for documentation.          */
+annotation|@
+name|Override
 specifier|public
 name|boolean
 name|contains
@@ -646,6 +648,8 @@ name|ret
 expr_stmt|;
 block|}
 comment|/*          * Refer to the Subroutine interface for documentation.          */
+annotation|@
+name|Override
 specifier|public
 name|InstructionHandle
 index|[]
@@ -793,6 +797,8 @@ argument_list|)
 expr_stmt|;
 block|}
 comment|/*          * Refer to the Subroutine interface for documentation.          */
+annotation|@
+name|Override
 specifier|public
 name|InstructionHandle
 name|getLeavingRET
@@ -818,6 +824,8 @@ name|theRET
 return|;
 block|}
 comment|/*          * Refer to the Subroutine interface for documentation.          */
+annotation|@
+name|Override
 specifier|public
 name|InstructionHandle
 index|[]
@@ -878,6 +886,8 @@ argument_list|)
 expr_stmt|;
 block|}
 comment|/* Satisfies Subroutine.getRecursivelyAccessedLocalsIndices(). */
+annotation|@
+name|Override
 specifier|public
 name|int
 index|[]
@@ -1060,6 +1070,8 @@ block|}
 block|}
 block|}
 comment|/*          * Satisfies Subroutine.getAccessedLocalIndices().          */
+annotation|@
+name|Override
 specifier|public
 name|int
 index|[]
@@ -1283,6 +1295,8 @@ return|;
 block|}
 block|}
 comment|/*          * Satisfies Subroutine.subSubs().          */
+annotation|@
+name|Override
 specifier|public
 name|Subroutine
 index|[]

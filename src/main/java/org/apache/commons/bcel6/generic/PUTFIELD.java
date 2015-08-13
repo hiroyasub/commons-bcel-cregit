@@ -110,6 +110,8 @@ operator|+
 literal|1
 return|;
 block|}
+annotation|@
+name|Override
 specifier|public
 name|Class
 argument_list|<

@@ -233,6 +233,8 @@ operator|new
 name|FilenameFilter
 argument_list|()
 block|{
+annotation|@
+name|Override
 specifier|public
 name|boolean
 name|accept
@@ -1788,6 +1790,8 @@ operator|new
 name|ClassFile
 argument_list|()
 block|{
+annotation|@
+name|Override
 specifier|public
 name|InputStream
 name|getInputStream
@@ -1803,6 +1807,8 @@ name|file
 argument_list|)
 return|;
 block|}
+annotation|@
+name|Override
 specifier|public
 name|String
 name|getPath
@@ -1828,6 +1834,8 @@ literal|null
 return|;
 block|}
 block|}
+annotation|@
+name|Override
 specifier|public
 name|long
 name|getTime
@@ -1840,6 +1848,8 @@ name|lastModified
 argument_list|()
 return|;
 block|}
+annotation|@
+name|Override
 specifier|public
 name|long
 name|getSize
@@ -1852,6 +1862,8 @@ name|length
 argument_list|()
 return|;
 block|}
+annotation|@
+name|Override
 specifier|public
 name|String
 name|getBase
@@ -2068,6 +2080,8 @@ operator|new
 name|ClassFile
 argument_list|()
 block|{
+annotation|@
+name|Override
 specifier|public
 name|InputStream
 name|getInputStream
@@ -2084,6 +2098,8 @@ name|entry
 argument_list|)
 return|;
 block|}
+annotation|@
+name|Override
 specifier|public
 name|String
 name|getPath
@@ -2096,6 +2112,8 @@ name|toString
 argument_list|()
 return|;
 block|}
+annotation|@
+name|Override
 specifier|public
 name|long
 name|getTime
@@ -2108,6 +2126,8 @@ name|getTime
 argument_list|()
 return|;
 block|}
+annotation|@
+name|Override
 specifier|public
 name|long
 name|getSize
@@ -2120,6 +2140,8 @@ name|getSize
 argument_list|()
 return|;
 block|}
+annotation|@
+name|Override
 specifier|public
 name|String
 name|getBase

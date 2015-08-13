@@ -34,6 +34,8 @@ parameter_list|()
 block|{
 block|}
 comment|/**      * @since 6.0      */
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitAnnotation
@@ -44,6 +46,8 @@ parameter_list|)
 block|{
 block|}
 comment|/**      * @since 6.0      */
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitParameterAnnotation
@@ -54,6 +58,8 @@ parameter_list|)
 block|{
 block|}
 comment|/**      * @since 6.0      */
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitAnnotationEntry
@@ -64,6 +70,8 @@ parameter_list|)
 block|{
 block|}
 comment|/**      * @since 6.0      */
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitAnnotationDefault
@@ -73,6 +81,8 @@ name|obj
 parameter_list|)
 block|{
 block|}
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitCode
@@ -82,6 +92,8 @@ name|obj
 parameter_list|)
 block|{
 block|}
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitCodeException
@@ -91,6 +103,8 @@ name|obj
 parameter_list|)
 block|{
 block|}
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitConstantClass
@@ -100,6 +114,8 @@ name|obj
 parameter_list|)
 block|{
 block|}
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitConstantDouble
@@ -109,6 +125,8 @@ name|obj
 parameter_list|)
 block|{
 block|}
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitConstantFieldref
@@ -118,6 +136,8 @@ name|obj
 parameter_list|)
 block|{
 block|}
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitConstantFloat
@@ -127,6 +147,8 @@ name|obj
 parameter_list|)
 block|{
 block|}
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitConstantInteger
@@ -136,6 +158,8 @@ name|obj
 parameter_list|)
 block|{
 block|}
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitConstantInterfaceMethodref
@@ -145,6 +169,8 @@ name|obj
 parameter_list|)
 block|{
 block|}
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitConstantInvokeDynamic
@@ -154,6 +180,8 @@ name|obj
 parameter_list|)
 block|{
 block|}
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitConstantLong
@@ -163,6 +191,8 @@ name|obj
 parameter_list|)
 block|{
 block|}
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitConstantMethodref
@@ -172,6 +202,8 @@ name|obj
 parameter_list|)
 block|{
 block|}
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitConstantNameAndType
@@ -181,6 +213,8 @@ name|obj
 parameter_list|)
 block|{
 block|}
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitConstantPool
@@ -190,6 +224,8 @@ name|obj
 parameter_list|)
 block|{
 block|}
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitConstantString
@@ -199,6 +235,8 @@ name|obj
 parameter_list|)
 block|{
 block|}
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitConstantUtf8
@@ -208,6 +246,8 @@ name|obj
 parameter_list|)
 block|{
 block|}
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitConstantValue
@@ -217,6 +257,8 @@ name|obj
 parameter_list|)
 block|{
 block|}
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitDeprecated
@@ -226,6 +268,8 @@ name|obj
 parameter_list|)
 block|{
 block|}
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitExceptionTable
@@ -235,6 +279,8 @@ name|obj
 parameter_list|)
 block|{
 block|}
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitField
@@ -244,6 +290,8 @@ name|obj
 parameter_list|)
 block|{
 block|}
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitInnerClass
@@ -253,6 +301,8 @@ name|obj
 parameter_list|)
 block|{
 block|}
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitInnerClasses
@@ -263,6 +313,8 @@ parameter_list|)
 block|{
 block|}
 comment|/**      * @since 6.0      */
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitBootstrapMethods
@@ -272,6 +324,8 @@ name|obj
 parameter_list|)
 block|{
 block|}
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitJavaClass
@@ -281,6 +335,8 @@ name|obj
 parameter_list|)
 block|{
 block|}
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitLineNumber
@@ -290,6 +346,8 @@ name|obj
 parameter_list|)
 block|{
 block|}
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitLineNumberTable
@@ -299,6 +357,8 @@ name|obj
 parameter_list|)
 block|{
 block|}
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitLocalVariable
@@ -308,6 +368,8 @@ name|obj
 parameter_list|)
 block|{
 block|}
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitLocalVariableTable
@@ -317,6 +379,8 @@ name|obj
 parameter_list|)
 block|{
 block|}
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitMethod
@@ -326,6 +390,8 @@ name|obj
 parameter_list|)
 block|{
 block|}
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitSignature
@@ -335,6 +401,8 @@ name|obj
 parameter_list|)
 block|{
 block|}
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitSourceFile
@@ -344,6 +412,8 @@ name|obj
 parameter_list|)
 block|{
 block|}
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitSynthetic
@@ -353,6 +423,8 @@ name|obj
 parameter_list|)
 block|{
 block|}
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitUnknown
@@ -362,6 +434,8 @@ name|obj
 parameter_list|)
 block|{
 block|}
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitStackMap
@@ -371,6 +445,8 @@ name|obj
 parameter_list|)
 block|{
 block|}
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitStackMapEntry
@@ -381,6 +457,8 @@ parameter_list|)
 block|{
 block|}
 comment|/**      * @since 6.0      */
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitStackMapTable
@@ -391,6 +469,8 @@ parameter_list|)
 block|{
 block|}
 comment|/**      * @since 6.0      */
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitStackMapTableEntry
@@ -401,6 +481,8 @@ parameter_list|)
 block|{
 block|}
 comment|/**      * @since 6.0      */
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitEnclosingMethod
@@ -411,6 +493,8 @@ parameter_list|)
 block|{
 block|}
 comment|/**      * @since 6.0      */
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitLocalVariableTypeTable
@@ -421,6 +505,8 @@ parameter_list|)
 block|{
 block|}
 comment|/**      * @since 6.0      */
+annotation|@
+name|Override
 specifier|public
 name|void
 name|visitMethodParameters

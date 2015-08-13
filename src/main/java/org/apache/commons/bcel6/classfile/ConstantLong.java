@@ -230,6 +230,8 @@ literal|")"
 return|;
 block|}
 comment|/** @return Long object      */
+annotation|@
+name|Override
 specifier|public
 name|Object
 name|getConstantValue

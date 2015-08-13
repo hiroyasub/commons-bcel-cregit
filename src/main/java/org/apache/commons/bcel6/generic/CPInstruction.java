@@ -315,6 +315,8 @@ literal|3
 expr_stmt|;
 block|}
 comment|/**      * @return index in constant pool referred by this instruction.      */
+annotation|@
+name|Override
 specifier|public
 specifier|final
 name|int
@@ -326,6 +328,8 @@ name|index
 return|;
 block|}
 comment|/**      * Set the index to constant pool.      * @param index in  constant pool.      */
+annotation|@
+name|Override
 specifier|public
 name|void
 name|setIndex
@@ -360,6 +364,8 @@ name|index
 expr_stmt|;
 block|}
 comment|/** @return type related with this instruction.      */
+annotation|@
+name|Override
 specifier|public
 name|Type
 name|getType

@@ -120,6 +120,8 @@ operator|new
 name|BCELComparator
 argument_list|()
 block|{
+annotation|@
+name|Override
 specifier|public
 name|boolean
 name|equals
@@ -162,6 +164,8 @@ argument_list|()
 argument_list|)
 return|;
 block|}
+annotation|@
+name|Override
 specifier|public
 name|int
 name|hashCode
@@ -210,6 +214,8 @@ name|tag
 expr_stmt|;
 block|}
 comment|/**      * Called by objects that are traversing the nodes of the tree implicitely      * defined by the contents of a Java class. I.e., the hierarchy of methods,      * fields, attributes, etc. spawns a tree of objects.      *      * @param v Visitor object      */
+annotation|@
+name|Override
 specifier|public
 specifier|abstract
 name|void

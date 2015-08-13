@@ -72,6 +72,8 @@ parameter_list|()
 block|{
 block|}
 comment|/* Implementing VerifierFactoryObserver. */
+annotation|@
+name|Override
 specifier|public
 name|void
 name|update

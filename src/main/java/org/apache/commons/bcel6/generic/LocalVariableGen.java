@@ -312,6 +312,8 @@ return|return
 name|index
 return|;
 block|}
+annotation|@
+name|Override
 specifier|public
 name|void
 name|setName
@@ -328,6 +330,8 @@ operator|=
 name|name
 expr_stmt|;
 block|}
+annotation|@
+name|Override
 specifier|public
 name|String
 name|getName
@@ -337,6 +341,8 @@ return|return
 name|name
 return|;
 block|}
+annotation|@
+name|Override
 specifier|public
 name|void
 name|setType
@@ -353,6 +359,8 @@ operator|=
 name|type
 expr_stmt|;
 block|}
+annotation|@
+name|Override
 specifier|public
 name|Type
 name|getType
@@ -439,6 +447,8 @@ name|end
 expr_stmt|;
 block|}
 comment|/**      * @param old_ih old target, either start or end      * @param new_ih new target      */
+annotation|@
+name|Override
 specifier|public
 name|void
 name|updateTarget
@@ -533,6 +543,8 @@ argument_list|)
 expr_stmt|;
 block|}
 comment|/**      * @return true, if ih is target of this variable      */
+annotation|@
+name|Override
 specifier|public
 name|boolean
 name|containsTarget

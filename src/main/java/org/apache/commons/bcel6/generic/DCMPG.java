@@ -68,6 +68,8 @@ argument_list|)
 expr_stmt|;
 block|}
 comment|/** @return Type.DOUBLE      */
+annotation|@
+name|Override
 specifier|public
 name|Type
 name|getType

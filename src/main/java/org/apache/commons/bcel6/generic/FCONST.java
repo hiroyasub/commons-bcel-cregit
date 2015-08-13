@@ -157,6 +157,8 @@ operator|=
 name|f
 expr_stmt|;
 block|}
+annotation|@
+name|Override
 specifier|public
 name|Number
 name|getValue
@@ -171,6 +173,8 @@ argument_list|)
 return|;
 block|}
 comment|/** @return Type.FLOAT      */
+annotation|@
+name|Override
 specifier|public
 name|Type
 name|getType

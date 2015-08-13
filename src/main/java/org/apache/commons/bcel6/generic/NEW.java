@@ -88,6 +88,8 @@ name|index
 argument_list|)
 expr_stmt|;
 block|}
+annotation|@
+name|Override
 specifier|public
 name|Class
 argument_list|<
@@ -118,6 +120,8 @@ name|INSTANTIATION_ERROR
 argument_list|)
 return|;
 block|}
+annotation|@
+name|Override
 specifier|public
 name|ObjectType
 name|getLoadClassType

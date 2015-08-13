@@ -3519,6 +3519,8 @@ name|ih
 init|=
 name|start
 decl_stmt|;
+annotation|@
+name|Override
 specifier|public
 name|InstructionHandle
 name|next
@@ -3554,6 +3556,8 @@ return|return
 name|i
 return|;
 block|}
+annotation|@
+name|Override
 specifier|public
 name|void
 name|remove
@@ -3565,6 +3569,8 @@ name|UnsupportedOperationException
 argument_list|()
 throw|;
 block|}
+annotation|@
+name|Override
 specifier|public
 name|boolean
 name|hasNext

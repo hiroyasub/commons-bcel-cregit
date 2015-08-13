@@ -68,6 +68,8 @@ argument_list|)
 expr_stmt|;
 block|}
 comment|/** @return exceptions this instruction may cause      */
+annotation|@
+name|Override
 specifier|public
 name|Class
 argument_list|<

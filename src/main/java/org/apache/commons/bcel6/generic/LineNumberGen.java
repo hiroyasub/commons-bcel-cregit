@@ -91,6 +91,8 @@ argument_list|)
 expr_stmt|;
 block|}
 comment|/**      * @return true, if ih is target of this line number      */
+annotation|@
+name|Override
 specifier|public
 name|boolean
 name|containsTarget
@@ -108,6 +110,8 @@ name|ih
 return|;
 block|}
 comment|/**      * @param old_ih old target      * @param new_ih new target      */
+annotation|@
+name|Override
 specifier|public
 name|void
 name|updateTarget

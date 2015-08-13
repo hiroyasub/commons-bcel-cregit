@@ -530,6 +530,8 @@ expr_stmt|;
 block|}
 block|}
 comment|/**      * @param old_ih old target      * @param new_ih new target      */
+annotation|@
+name|Override
 specifier|public
 name|void
 name|updateTarget
@@ -572,6 +574,8 @@ throw|;
 block|}
 block|}
 comment|/**      * @return true, if ih is target of this instruction      */
+annotation|@
+name|Override
 specifier|public
 name|boolean
 name|containsTarget

@@ -83,6 +83,8 @@ argument_list|)
 expr_stmt|;
 block|}
 comment|/** @return type associated with the instruction      */
+annotation|@
+name|Override
 specifier|public
 name|Type
 name|getType

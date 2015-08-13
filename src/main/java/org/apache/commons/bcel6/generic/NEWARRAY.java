@@ -263,6 +263,8 @@ operator|=
 literal|2
 expr_stmt|;
 block|}
+annotation|@
+name|Override
 specifier|public
 name|Class
 argument_list|<

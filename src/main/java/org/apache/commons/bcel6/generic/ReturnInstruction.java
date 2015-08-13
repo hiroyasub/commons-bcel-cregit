@@ -179,6 +179,8 @@ argument_list|)
 throw|;
 block|}
 block|}
+annotation|@
+name|Override
 specifier|public
 name|Class
 argument_list|<
@@ -200,6 +202,8 @@ block|}
 return|;
 block|}
 comment|/** @return type associated with the instruction      */
+annotation|@
+name|Override
 specifier|public
 name|Type
 name|getType

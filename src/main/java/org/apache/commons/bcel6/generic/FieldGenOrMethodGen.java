@@ -167,6 +167,8 @@ name|access_flags
 argument_list|)
 expr_stmt|;
 block|}
+annotation|@
+name|Override
 specifier|public
 name|void
 name|setType
@@ -205,6 +207,8 @@ operator|=
 name|type
 expr_stmt|;
 block|}
+annotation|@
+name|Override
 specifier|public
 name|Type
 name|getType
@@ -215,6 +219,8 @@ name|type
 return|;
 block|}
 comment|/** @return name of method/field.      */
+annotation|@
+name|Override
 specifier|public
 name|String
 name|getName
@@ -224,6 +230,8 @@ return|return
 name|name
 return|;
 block|}
+annotation|@
+name|Override
 specifier|public
 name|void
 name|setName

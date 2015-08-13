@@ -68,6 +68,8 @@ argument_list|)
 expr_stmt|;
 block|}
 comment|/** @return Type.LONG      */
+annotation|@
+name|Override
 specifier|public
 name|Type
 name|getType

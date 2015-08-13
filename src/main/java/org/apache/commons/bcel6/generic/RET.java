@@ -287,6 +287,8 @@ expr_stmt|;
 block|}
 block|}
 comment|/**      * @return index of local variable containg the return address      */
+annotation|@
+name|Override
 specifier|public
 specifier|final
 name|int
@@ -298,6 +300,8 @@ name|index
 return|;
 block|}
 comment|/**      * Set index of local variable containg the return address      */
+annotation|@
+name|Override
 specifier|public
 specifier|final
 name|void
@@ -357,6 +361,8 @@ name|index
 return|;
 block|}
 comment|/** @return return address type      */
+annotation|@
+name|Override
 specifier|public
 name|Type
 name|getType

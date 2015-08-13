@@ -157,6 +157,8 @@ name|loader
 expr_stmt|;
 block|}
 comment|/**      * Store a new JavaClass into this Repository.      */
+annotation|@
+name|Override
 specifier|public
 name|void
 name|storeClass
@@ -186,6 +188,8 @@ argument_list|)
 expr_stmt|;
 block|}
 comment|/**      * Remove class from repository      */
+annotation|@
+name|Override
 specifier|public
 name|void
 name|removeClass
@@ -206,6 +210,8 @@ argument_list|)
 expr_stmt|;
 block|}
 comment|/**      * Find an already defined JavaClass.      */
+annotation|@
+name|Override
 specifier|public
 name|JavaClass
 name|findClass
@@ -233,6 +239,8 @@ literal|null
 return|;
 block|}
 comment|/**      * Lookup a JavaClass object from the Class Name provided.      */
+annotation|@
+name|Override
 specifier|public
 name|JavaClass
 name|loadClass
@@ -364,6 +372,8 @@ argument_list|)
 throw|;
 block|}
 block|}
+annotation|@
+name|Override
 specifier|public
 name|JavaClass
 name|loadClass
@@ -388,6 +398,8 @@ argument_list|)
 return|;
 block|}
 comment|/** Clear all entries from cache.      */
+annotation|@
+name|Override
 specifier|public
 name|void
 name|clear
@@ -400,6 +412,8 @@ argument_list|()
 expr_stmt|;
 block|}
 comment|/*      * @return null      */
+annotation|@
+name|Override
 specifier|public
 name|ClassPath
 name|getClassPath

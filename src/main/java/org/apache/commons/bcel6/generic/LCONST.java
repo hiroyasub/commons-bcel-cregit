@@ -135,6 +135,8 @@ operator|=
 name|l
 expr_stmt|;
 block|}
+annotation|@
+name|Override
 specifier|public
 name|Number
 name|getValue
@@ -150,6 +152,8 @@ argument_list|)
 return|;
 block|}
 comment|/** @return Type.LONG      */
+annotation|@
+name|Override
 specifier|public
 name|Type
 name|getType

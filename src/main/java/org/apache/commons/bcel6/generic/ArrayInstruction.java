@@ -79,6 +79,8 @@ literal|1
 argument_list|)
 expr_stmt|;
 block|}
+annotation|@
+name|Override
 specifier|public
 name|Class
 argument_list|<
@@ -102,6 +104,8 @@ argument_list|)
 return|;
 block|}
 comment|/** @return type associated with the instruction      */
+annotation|@
+name|Override
 specifier|public
 name|Type
 name|getType

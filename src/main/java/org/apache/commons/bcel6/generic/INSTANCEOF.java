@@ -89,6 +89,8 @@ name|index
 argument_list|)
 expr_stmt|;
 block|}
+annotation|@
+name|Override
 specifier|public
 name|Class
 argument_list|<
@@ -111,6 +113,8 @@ name|EXCS_CLASS_AND_INTERFACE_RESOLUTION
 argument_list|)
 return|;
 block|}
+annotation|@
+name|Override
 specifier|public
 name|ObjectType
 name|getLoadClassType

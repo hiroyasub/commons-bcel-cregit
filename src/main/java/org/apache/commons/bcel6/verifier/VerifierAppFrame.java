@@ -814,6 +814,8 @@ operator|.
 name|ListSelectionListener
 argument_list|()
 block|{
+annotation|@
+name|Override
 specifier|public
 name|void
 name|valueChanged
@@ -1016,6 +1018,8 @@ operator|.
 name|ActionListener
 argument_list|()
 block|{
+annotation|@
+name|Override
 specifier|public
 name|void
 name|actionPerformed
@@ -1061,6 +1065,8 @@ operator|.
 name|ListSelectionListener
 argument_list|()
 block|{
+annotation|@
+name|Override
 specifier|public
 name|void
 name|valueChanged
@@ -1092,6 +1098,8 @@ operator|.
 name|ListSelectionListener
 argument_list|()
 block|{
+annotation|@
+name|Override
 specifier|public
 name|void
 name|valueChanged
@@ -1137,6 +1145,8 @@ operator|.
 name|ActionListener
 argument_list|()
 block|{
+annotation|@
+name|Override
 specifier|public
 name|void
 name|actionPerformed
@@ -1175,6 +1185,8 @@ operator|.
 name|ActionListener
 argument_list|()
 block|{
+annotation|@
+name|Override
 specifier|public
 name|void
 name|actionPerformed
