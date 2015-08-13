@@ -107,8 +107,10 @@ operator|.
 name|swing
 operator|.
 name|ListModel
+argument_list|<
+name|String
+argument_list|>
 block|{
-comment|// TODO Java7 makes ListModel generic
 specifier|private
 specifier|final
 name|List
@@ -297,7 +299,7 @@ return|;
 block|}
 specifier|public
 specifier|synchronized
-name|Object
+name|String
 name|getElementAt
 parameter_list|(
 name|int
