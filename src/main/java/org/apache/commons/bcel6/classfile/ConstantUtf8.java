@@ -117,6 +117,7 @@ specifier|final
 name|String
 name|bytes
 decl_stmt|;
+comment|// TODO these should perhaps be AtomicInt?
 specifier|private
 specifier|static
 specifier|volatile
