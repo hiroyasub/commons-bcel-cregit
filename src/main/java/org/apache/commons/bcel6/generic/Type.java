@@ -1899,8 +1899,7 @@ argument_list|)
 argument_list|)
 return|;
 block|}
-comment|/**      * @param signature the signature to set      */
-specifier|public
+comment|/*      * Currently only used by the ArrayType constructor.      * The signature has a complicated dependency on other parameter      * so it's tricky to do it in a call to the super ctor.      */
 name|void
 name|setSignature
 parameter_list|(
