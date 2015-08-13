@@ -179,7 +179,7 @@ name|Instruction
 name|i
 parameter_list|)
 block|{
-comment|// Overridden in BranchHandle
+comment|// Overridden in BranchHandle TODO could be package-protected?
 if|if
 condition|(
 name|i

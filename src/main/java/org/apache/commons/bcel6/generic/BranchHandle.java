@@ -213,6 +213,7 @@ name|InstructionHandle
 name|ih
 parameter_list|)
 block|{
+comment|// TODO unused
 name|bi
 operator|.
 name|setTarget
@@ -267,6 +268,7 @@ name|Instruction
 name|i
 parameter_list|)
 block|{
+comment|// TODO could be package-protected?
 name|super
 operator|.
 name|setInstruction
