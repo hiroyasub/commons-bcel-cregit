@@ -430,6 +430,13 @@ decl_stmt|;
 name|String
 name|str
 decl_stmt|;
+name|buf
+operator|.
+name|append
+argument_list|(
+literal|"Exceptions: "
+argument_list|)
+expr_stmt|;
 for|for
 control|(
 name|int

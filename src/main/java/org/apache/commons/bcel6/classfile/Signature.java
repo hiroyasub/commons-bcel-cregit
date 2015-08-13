@@ -952,11 +952,9 @@ name|getSignature
 argument_list|()
 decl_stmt|;
 return|return
-literal|"Signature("
+literal|"Signature: "
 operator|+
 name|s
-operator|+
-literal|")"
 return|;
 block|}
 comment|/**      * @return deep copy of this attribute      */

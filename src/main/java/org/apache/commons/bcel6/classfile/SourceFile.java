@@ -292,12 +292,10 @@ name|toString
 parameter_list|()
 block|{
 return|return
-literal|"SourceFile("
+literal|"SourceFile: "
 operator|+
 name|getSourceFileName
 argument_list|()
-operator|+
-literal|")"
 return|;
 block|}
 comment|/**      * @return deep copy of this attribute      */
