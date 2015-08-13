@@ -438,8 +438,6 @@ name|className
 argument_list|)
 return|;
 block|}
-else|else
-block|{
 name|className
 operator|=
 name|className
@@ -459,7 +457,6 @@ argument_list|(
 name|className
 argument_list|)
 return|;
-block|}
 block|}
 comment|/** @return type of the referenced class/interface      */
 annotation|@
