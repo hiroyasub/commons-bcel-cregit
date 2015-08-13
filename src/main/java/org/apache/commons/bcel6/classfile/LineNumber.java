@@ -115,7 +115,7 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Construct object from file stream.      *       * @param file Input stream      */
+comment|/**      * Construct object from file stream.      *       * @param file Input stream      * @throws IOEXception if an I/O Exception occurs in readUnsignedShort      */
 name|LineNumber
 parameter_list|(
 name|DataInput
@@ -185,7 +185,7 @@ name|this
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Dump line number/pc pair to file stream in binary format.      *      * @param file Output file stream      */
+comment|/**      * Dump line number/pc pair to file stream in binary format.      *      * @param file Output file stream      * @throws IOEXception if an I/O Exception occurs in writeShort      */
 specifier|public
 specifier|final
 name|void
