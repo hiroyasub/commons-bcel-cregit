@@ -3841,9 +3841,7 @@ operator|+
 literal|"? extends "
 expr_stmt|;
 name|consumed_chars
-operator|=
 operator|++
-name|consumed_chars
 expr_stmt|;
 block|}
 if|else if
@@ -3865,9 +3863,7 @@ operator|+
 literal|"? super "
 expr_stmt|;
 name|consumed_chars
-operator|=
 operator|++
-name|consumed_chars
 expr_stmt|;
 block|}
 if|else if
