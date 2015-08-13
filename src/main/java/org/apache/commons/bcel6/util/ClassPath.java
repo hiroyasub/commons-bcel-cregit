@@ -1080,9 +1080,7 @@ name|results
 init|=
 operator|new
 name|Vector
-argument_list|<
-name|URL
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 for|for

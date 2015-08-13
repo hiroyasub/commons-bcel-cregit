@@ -246,9 +246,7 @@ name|stack
 operator|=
 operator|new
 name|ArrayList
-argument_list|<
-name|Type
-argument_list|>
+argument_list|<>
 argument_list|()
 expr_stmt|;
 block|}

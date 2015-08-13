@@ -95,9 +95,7 @@ name|observers
 init|=
 operator|new
 name|Vector
-argument_list|<
-name|VerifierFactoryObserver
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 comment|/**      * The VerifierFactory is not instantiable.      */
