@@ -1649,6 +1649,7 @@ name|obj
 parameter_list|)
 block|{
 block|}
+comment|/**      * @since 6.0      */
 specifier|public
 name|void
 name|visitINVOKEDYNAMIC

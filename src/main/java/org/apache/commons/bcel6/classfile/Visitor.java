@@ -257,6 +257,7 @@ name|StackMapEntry
 name|obj
 parameter_list|)
 function_decl|;
+comment|/**      * @since 6.0      */
 name|void
 name|visitStackMapTable
 parameter_list|(
@@ -264,6 +265,7 @@ name|StackMapTable
 name|obj
 parameter_list|)
 function_decl|;
+comment|/**      * @since 6.0      */
 name|void
 name|visitStackMapTableEntry
 parameter_list|(
@@ -271,6 +273,7 @@ name|StackMapTableEntry
 name|obj
 parameter_list|)
 function_decl|;
+comment|/**      * @since 6.0      */
 name|void
 name|visitAnnotation
 parameter_list|(
@@ -278,6 +281,7 @@ name|Annotations
 name|obj
 parameter_list|)
 function_decl|;
+comment|/**      * @since 6.0      */
 name|void
 name|visitParameterAnnotation
 parameter_list|(
@@ -285,6 +289,7 @@ name|ParameterAnnotations
 name|obj
 parameter_list|)
 function_decl|;
+comment|/**      * @since 6.0      */
 name|void
 name|visitAnnotationEntry
 parameter_list|(
@@ -292,6 +297,7 @@ name|AnnotationEntry
 name|obj
 parameter_list|)
 function_decl|;
+comment|/**      * @since 6.0      */
 name|void
 name|visitAnnotationDefault
 parameter_list|(
@@ -299,6 +305,7 @@ name|AnnotationDefault
 name|obj
 parameter_list|)
 function_decl|;
+comment|/**      * @since 6.0      */
 name|void
 name|visitLocalVariableTypeTable
 parameter_list|(
@@ -306,6 +313,7 @@ name|LocalVariableTypeTable
 name|obj
 parameter_list|)
 function_decl|;
+comment|/**      * @since 6.0      */
 name|void
 name|visitEnclosingMethod
 parameter_list|(
@@ -313,6 +321,7 @@ name|EnclosingMethod
 name|obj
 parameter_list|)
 function_decl|;
+comment|/**      * @since 6.0      */
 name|void
 name|visitBootstrapMethods
 parameter_list|(
@@ -320,6 +329,7 @@ name|BootstrapMethods
 name|obj
 parameter_list|)
 function_decl|;
+comment|/**      * @since 6.0      */
 name|void
 name|visitMethodParameters
 parameter_list|(

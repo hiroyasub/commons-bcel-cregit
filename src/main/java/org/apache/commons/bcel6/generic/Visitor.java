@@ -1006,6 +1006,7 @@ name|INVOKEVIRTUAL
 name|obj
 parameter_list|)
 function_decl|;
+comment|/**      * @since 6.0      */
 name|void
 name|visitINVOKEDYNAMIC
 parameter_list|(

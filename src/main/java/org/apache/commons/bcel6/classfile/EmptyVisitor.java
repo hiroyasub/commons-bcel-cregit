@@ -33,6 +33,7 @@ name|EmptyVisitor
 parameter_list|()
 block|{
 block|}
+comment|/**      * @since 6.0      */
 specifier|public
 name|void
 name|visitAnnotation
@@ -42,6 +43,7 @@ name|obj
 parameter_list|)
 block|{
 block|}
+comment|/**      * @since 6.0      */
 specifier|public
 name|void
 name|visitParameterAnnotation
@@ -51,6 +53,7 @@ name|obj
 parameter_list|)
 block|{
 block|}
+comment|/**      * @since 6.0      */
 specifier|public
 name|void
 name|visitAnnotationEntry
@@ -60,6 +63,7 @@ name|obj
 parameter_list|)
 block|{
 block|}
+comment|/**      * @since 6.0      */
 specifier|public
 name|void
 name|visitAnnotationDefault
@@ -258,6 +262,7 @@ name|obj
 parameter_list|)
 block|{
 block|}
+comment|/**      * @since 6.0      */
 specifier|public
 name|void
 name|visitBootstrapMethods
@@ -375,6 +380,7 @@ name|obj
 parameter_list|)
 block|{
 block|}
+comment|/**      * @since 6.0      */
 specifier|public
 name|void
 name|visitStackMapTable
@@ -384,6 +390,7 @@ name|obj
 parameter_list|)
 block|{
 block|}
+comment|/**      * @since 6.0      */
 specifier|public
 name|void
 name|visitStackMapTableEntry
@@ -393,6 +400,7 @@ name|obj
 parameter_list|)
 block|{
 block|}
+comment|/**      * @since 6.0      */
 specifier|public
 name|void
 name|visitEnclosingMethod
@@ -402,6 +410,7 @@ name|obj
 parameter_list|)
 block|{
 block|}
+comment|/**      * @since 6.0      */
 specifier|public
 name|void
 name|visitLocalVariableTypeTable
@@ -411,6 +420,7 @@ name|obj
 parameter_list|)
 block|{
 block|}
+comment|/**      * @since 6.0      */
 specifier|public
 name|void
 name|visitMethodParameters
