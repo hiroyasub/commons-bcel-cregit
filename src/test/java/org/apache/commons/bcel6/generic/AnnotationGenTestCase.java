@@ -419,9 +419,7 @@ name|elements
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|ElementValuePairGen
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|elements
@@ -547,9 +545,7 @@ name|elements
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|ElementValuePairGen
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|elements
@@ -584,9 +580,7 @@ name|v
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|AnnotationEntryGen
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|v
@@ -680,9 +674,7 @@ name|v2
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|AnnotationEntryGen
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|v2

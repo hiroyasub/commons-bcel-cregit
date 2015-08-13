@@ -130,9 +130,7 @@ name|attribute_vec
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|Attribute
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 specifier|protected
@@ -144,9 +142,7 @@ name|annotation_vec
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|AnnotationEntryGen
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 specifier|protected

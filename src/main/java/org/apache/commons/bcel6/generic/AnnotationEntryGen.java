@@ -352,9 +352,7 @@ name|out
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|ElementValuePairGen
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 for|for
@@ -657,9 +655,7 @@ name|evs
 operator|=
 operator|new
 name|ArrayList
-argument_list|<
-name|ElementValuePairGen
-argument_list|>
+argument_list|<>
 argument_list|()
 expr_stmt|;
 block|}
@@ -1203,9 +1199,7 @@ name|newAttributes
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|Attribute
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 if|if
@@ -1725,9 +1719,7 @@ name|newAttributes
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|Attribute
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 if|if

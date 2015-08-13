@@ -531,9 +531,7 @@ name|chosenAttrsList
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|Attribute
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 for|for
@@ -618,9 +616,7 @@ name|chosenAttrsList
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|Attribute
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 for|for
@@ -1034,9 +1030,7 @@ name|elements
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|ElementValuePairGen
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|elements

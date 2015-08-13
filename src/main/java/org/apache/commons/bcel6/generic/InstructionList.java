@@ -2293,9 +2293,7 @@ name|target_vec
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|InstructionHandle
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 for|for
@@ -3357,9 +3355,7 @@ name|instructions
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|Instruction
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 try|try
@@ -3667,11 +3663,7 @@ name|map
 init|=
 operator|new
 name|HashMap
-argument_list|<
-name|InstructionHandle
-argument_list|,
-name|InstructionHandle
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|InstructionList
@@ -4425,9 +4417,7 @@ name|observers
 operator|=
 operator|new
 name|ArrayList
-argument_list|<
-name|InstructionListObserver
-argument_list|>
+argument_list|<>
 argument_list|()
 expr_stmt|;
 block|}

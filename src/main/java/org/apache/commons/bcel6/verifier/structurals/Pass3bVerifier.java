@@ -431,9 +431,7 @@ name|ics
 init|=
 operator|new
 name|Vector
-argument_list|<
-name|InstructionContext
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 specifier|private
@@ -449,12 +447,7 @@ name|ecs
 init|=
 operator|new
 name|Vector
-argument_list|<
-name|ArrayList
-argument_list|<
-name|InstructionContext
-argument_list|>
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 specifier|public

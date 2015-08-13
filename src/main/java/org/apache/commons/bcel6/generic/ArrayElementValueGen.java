@@ -128,9 +128,7 @@ name|evalues
 operator|=
 operator|new
 name|ArrayList
-argument_list|<
-name|ElementValueGen
-argument_list|>
+argument_list|<>
 argument_list|()
 expr_stmt|;
 block|}
@@ -178,9 +176,7 @@ name|evalues
 operator|=
 operator|new
 name|ArrayList
-argument_list|<
-name|ElementValueGen
-argument_list|>
+argument_list|<>
 argument_list|()
 expr_stmt|;
 for|for
@@ -299,9 +295,7 @@ name|evalues
 operator|=
 operator|new
 name|ArrayList
-argument_list|<
-name|ElementValueGen
-argument_list|>
+argument_list|<>
 argument_list|()
 expr_stmt|;
 name|ElementValue

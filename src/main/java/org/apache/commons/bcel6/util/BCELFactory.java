@@ -633,11 +633,7 @@ name|branch_map
 init|=
 operator|new
 name|HashMap
-argument_list|<
-name|Instruction
-argument_list|,
-name|InstructionHandle
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 specifier|public
@@ -1734,9 +1730,7 @@ name|branches
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|BranchInstruction
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 annotation|@

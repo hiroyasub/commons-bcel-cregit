@@ -85,11 +85,7 @@ name|types
 init|=
 operator|new
 name|Hashtable
-argument_list|<
-name|String
-argument_list|,
-name|Type
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 comment|/** The names database. KEY: String representing the offset integer. */
@@ -105,11 +101,7 @@ name|names
 init|=
 operator|new
 name|Hashtable
-argument_list|<
-name|String
-argument_list|,
-name|String
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 comment|/**      * Adds a name of a local variable and a certain slot to our 'names'      * (Hashtable) database.      */

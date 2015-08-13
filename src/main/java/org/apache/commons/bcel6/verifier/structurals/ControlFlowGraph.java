@@ -348,22 +348,14 @@ name|inFrames
 operator|=
 operator|new
 name|HashMap
-argument_list|<
-name|InstructionContext
-argument_list|,
-name|Frame
-argument_list|>
+argument_list|<>
 argument_list|()
 expr_stmt|;
 name|outFrames
 operator|=
 operator|new
 name|HashMap
-argument_list|<
-name|InstructionContext
-argument_list|,
-name|Frame
-argument_list|>
+argument_list|<>
 argument_list|()
 expr_stmt|;
 block|}
@@ -1564,11 +1556,7 @@ name|instructionContexts
 init|=
 operator|new
 name|HashMap
-argument_list|<
-name|InstructionHandle
-argument_list|,
-name|InstructionContext
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 comment|//keys: InstructionHandle, values: InstructionContextImpl

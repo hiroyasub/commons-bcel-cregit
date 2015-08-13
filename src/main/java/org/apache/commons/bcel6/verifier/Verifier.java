@@ -183,11 +183,7 @@ name|p3avs
 init|=
 operator|new
 name|HashMap
-argument_list|<
-name|String
-argument_list|,
-name|Pass3aVerifier
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 comment|/** The Pass3bVerifiers for this Verifier instance. Key: Interned string specifying the method number. */
@@ -203,11 +199,7 @@ name|p3bvs
 init|=
 operator|new
 name|HashMap
-argument_list|<
-name|String
-argument_list|,
-name|Pass3bVerifier
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 comment|/** Returns the VerificationResult for the given pass. */
@@ -476,9 +468,7 @@ name|messages
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|String
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 if|if

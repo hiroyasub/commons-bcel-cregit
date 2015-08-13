@@ -58,9 +58,7 @@ name|stack
 init|=
 operator|new
 name|Stack
-argument_list|<
-name|Object
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 comment|/**      * @return container of current entitity, i.e., predecessor during traversal      */

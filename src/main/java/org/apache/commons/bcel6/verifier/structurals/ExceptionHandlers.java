@@ -142,14 +142,7 @@ name|exceptionhandlers
 operator|=
 operator|new
 name|HashMap
-argument_list|<
-name|InstructionHandle
-argument_list|,
-name|Set
-argument_list|<
-name|ExceptionHandler
-argument_list|>
-argument_list|>
+argument_list|<>
 argument_list|()
 expr_stmt|;
 name|CodeExceptionGen
@@ -240,9 +233,7 @@ name|hs
 operator|=
 operator|new
 name|HashSet
-argument_list|<
-name|ExceptionHandler
-argument_list|>
+argument_list|<>
 argument_list|()
 expr_stmt|;
 name|exceptionhandlers

@@ -2869,9 +2869,7 @@ name|allSuperClasses
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|JavaClass
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 for|for
@@ -3008,9 +3006,7 @@ name|allInterfaces
 init|=
 operator|new
 name|TreeSet
-argument_list|<
-name|JavaClass
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|queue

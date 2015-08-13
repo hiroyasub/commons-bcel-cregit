@@ -80,11 +80,7 @@ name|hashMap
 init|=
 operator|new
 name|HashMap
-argument_list|<
-name|String
-argument_list|,
-name|Verifier
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 comment|/**      * The VerifierFactoryObserver instances that observe the VerifierFactory.      */

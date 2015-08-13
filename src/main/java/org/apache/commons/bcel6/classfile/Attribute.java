@@ -239,11 +239,7 @@ name|readers
 init|=
 operator|new
 name|HashMap
-argument_list|<
-name|String
-argument_list|,
-name|Object
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 comment|/**      * Add an Attribute reader capable of parsing (user-defined) attributes      * named "name". You should not add readers for the standard attributes such      * as "LineNumberTable", because those are handled internally.      *       * @param name the name of the attribute as stored in the class file      * @param r    the reader object      */

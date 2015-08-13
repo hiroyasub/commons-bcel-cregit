@@ -318,9 +318,7 @@ name|field_vec
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|Field
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 specifier|private
@@ -333,9 +331,7 @@ name|method_vec
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|Method
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 specifier|private
@@ -348,9 +344,7 @@ name|attribute_vec
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|Attribute
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 specifier|private
@@ -363,9 +357,7 @@ name|interface_vec
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|String
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 specifier|private
@@ -378,9 +370,7 @@ name|annotation_vec
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|AnnotationEntryGen
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 specifier|private
@@ -859,9 +849,7 @@ name|annotationGenObjs
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|AnnotationEntryGen
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 for|for
@@ -2166,9 +2154,7 @@ name|observers
 operator|=
 operator|new
 name|ArrayList
-argument_list|<
-name|ClassObserver
-argument_list|>
+argument_list|<>
 argument_list|()
 expr_stmt|;
 block|}

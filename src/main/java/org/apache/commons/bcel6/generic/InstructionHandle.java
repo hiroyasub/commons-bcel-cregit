@@ -497,9 +497,7 @@ name|targeters
 operator|=
 operator|new
 name|HashSet
-argument_list|<
-name|InstructionTargeter
-argument_list|>
+argument_list|<>
 argument_list|()
 expr_stmt|;
 block|}
@@ -651,11 +649,7 @@ name|attributes
 operator|=
 operator|new
 name|HashMap
-argument_list|<
-name|Object
-argument_list|,
-name|Object
-argument_list|>
+argument_list|<>
 argument_list|(
 literal|3
 argument_list|)
@@ -745,11 +739,7 @@ name|attributes
 operator|=
 operator|new
 name|HashMap
-argument_list|<
-name|Object
-argument_list|,
-name|Object
-argument_list|>
+argument_list|<>
 argument_list|(
 literal|3
 argument_list|)

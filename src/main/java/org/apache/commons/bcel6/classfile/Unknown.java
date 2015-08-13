@@ -126,11 +126,7 @@ name|unknown_attributes
 init|=
 operator|new
 name|HashMap
-argument_list|<
-name|String
-argument_list|,
-name|Unknown
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 comment|/** @return array of unknown attributes, but just one for each kind.      */

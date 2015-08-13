@@ -196,9 +196,7 @@ name|element_value_pairs
 operator|=
 operator|new
 name|ArrayList
-argument_list|<
-name|ElementValuePair
-argument_list|>
+argument_list|<>
 argument_list|()
 expr_stmt|;
 for|for
@@ -588,9 +586,7 @@ name|accumulatedAnnotations
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|AnnotationEntry
-argument_list|>
+argument_list|<>
 argument_list|(
 name|attrs
 operator|.

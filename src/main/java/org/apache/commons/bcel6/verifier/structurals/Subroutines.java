@@ -383,9 +383,7 @@ name|instructions
 init|=
 operator|new
 name|HashSet
-argument_list|<
-name|InstructionHandle
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 comment|// Elements: InstructionHandle
@@ -420,9 +418,7 @@ name|theJSRs
 init|=
 operator|new
 name|HashSet
-argument_list|<
-name|InstructionHandle
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 comment|/**          * The RET instruction that leaves this subroutine.          */
@@ -902,9 +898,7 @@ name|s
 init|=
 operator|new
 name|HashSet
-argument_list|<
-name|Integer
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|int
@@ -1087,9 +1081,7 @@ name|acc
 init|=
 operator|new
 name|HashSet
-argument_list|<
-name|Integer
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 if|if
@@ -1311,9 +1303,7 @@ name|h
 init|=
 operator|new
 name|HashSet
-argument_list|<
-name|Subroutine
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 for|for
@@ -1475,11 +1465,7 @@ name|subroutines
 init|=
 operator|new
 name|HashMap
-argument_list|<
-name|InstructionHandle
-argument_list|,
-name|Subroutine
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 comment|/**      * This is referring to a special subroutine, namely the      * top level. This is not really a subroutine but we use      * it to distinguish between top level instructions and      * unreachable instructions.      */
@@ -1533,9 +1519,7 @@ name|sub_leaders
 init|=
 operator|new
 name|HashSet
-argument_list|<
-name|InstructionHandle
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 comment|// Elements: InstructionHandle
@@ -1716,9 +1700,7 @@ name|instructions_assigned
 init|=
 operator|new
 name|HashSet
-argument_list|<
-name|InstructionHandle
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 comment|// we don't want to assign an instruction to two or more Subroutine objects.
@@ -1732,11 +1714,7 @@ name|colors
 init|=
 operator|new
 name|HashMap
-argument_list|<
-name|InstructionHandle
-argument_list|,
-name|Integer
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 comment|//Graph colouring. Key: InstructionHandle, Value: Integer .
@@ -1748,9 +1726,7 @@ name|Q
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|InstructionHandle
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 for|for

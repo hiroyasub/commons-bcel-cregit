@@ -134,11 +134,7 @@ name|_instances
 init|=
 operator|new
 name|HashMap
-argument_list|<
-name|ClassPath
-argument_list|,
-name|SyntheticRepository
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 comment|// CLASSPATH X REPOSITORY
@@ -163,14 +159,7 @@ name|_loadedClasses
 init|=
 operator|new
 name|HashMap
-argument_list|<
-name|String
-argument_list|,
-name|SoftReference
-argument_list|<
-name|JavaClass
-argument_list|>
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 comment|// CLASSNAME X JAVACLASS
@@ -271,9 +260,7 @@ argument_list|()
 argument_list|,
 operator|new
 name|SoftReference
-argument_list|<
-name|JavaClass
-argument_list|>
+argument_list|<>
 argument_list|(
 name|clazz
 argument_list|)
