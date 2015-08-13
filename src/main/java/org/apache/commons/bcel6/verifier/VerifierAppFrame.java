@@ -331,9 +331,7 @@ name|classNamesJList
 init|=
 operator|new
 name|JList
-argument_list|<
-name|String
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|GridLayout
@@ -510,9 +508,7 @@ name|pass3aJList
 init|=
 operator|new
 name|JList
-argument_list|<
-name|String
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|JList
@@ -523,9 +519,7 @@ name|pass3bJList
 init|=
 operator|new
 name|JList
-argument_list|<
-name|String
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|JTextPane
