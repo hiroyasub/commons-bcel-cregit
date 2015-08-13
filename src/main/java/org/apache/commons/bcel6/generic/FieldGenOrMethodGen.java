@@ -175,6 +175,7 @@ name|Type
 name|type
 parameter_list|)
 block|{
+comment|// TODO could be package-protected?
 if|if
 condition|(
 name|type
@@ -231,6 +232,7 @@ name|String
 name|name
 parameter_list|)
 block|{
+comment|// TODO could be package-protected?
 name|this
 operator|.
 name|name
@@ -255,6 +257,7 @@ name|ConstantPoolGen
 name|cp
 parameter_list|)
 block|{
+comment|// TODO could be package-protected?
 name|this
 operator|.
 name|cp

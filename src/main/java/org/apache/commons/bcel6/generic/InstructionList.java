@@ -2802,6 +2802,7 @@ name|void
 name|setPositions
 parameter_list|()
 block|{
+comment|// TODO could be package-protected? (some test code would need to be repackaged)
 name|setPositions
 argument_list|(
 literal|false
@@ -2817,6 +2818,7 @@ name|boolean
 name|check
 parameter_list|)
 block|{
+comment|// called by code in other packages
 name|int
 name|max_additional_bytes
 init|=

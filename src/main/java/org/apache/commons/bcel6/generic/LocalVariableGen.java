@@ -271,6 +271,7 @@ name|int
 name|index
 parameter_list|)
 block|{
+comment|// TODO unused
 name|this
 operator|.
 name|index
@@ -295,6 +296,7 @@ name|String
 name|name
 parameter_list|)
 block|{
+comment|// TODO unused
 name|this
 operator|.
 name|name
@@ -319,6 +321,7 @@ name|Type
 name|type
 parameter_list|)
 block|{
+comment|// TODO unused
 name|this
 operator|.
 name|type
@@ -361,6 +364,7 @@ name|InstructionHandle
 name|start
 parameter_list|)
 block|{
+comment|// TODO could be package-protected?
 name|BranchInstruction
 operator|.
 name|notifyTarget
@@ -389,6 +393,7 @@ name|InstructionHandle
 name|end
 parameter_list|)
 block|{
+comment|// TODO could be package-protected?
 name|BranchInstruction
 operator|.
 name|notifyTarget

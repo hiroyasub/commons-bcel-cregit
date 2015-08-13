@@ -386,6 +386,7 @@ name|int
 name|tag
 parameter_list|)
 block|{
+comment|// part of InstructionContext interface
 name|TAG
 operator|=
 name|tag

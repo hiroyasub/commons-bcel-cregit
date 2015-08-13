@@ -178,6 +178,7 @@ name|InstructionHandle
 name|ih
 parameter_list|)
 block|{
+comment|// TODO could be package-protected?
 if|if
 condition|(
 name|ih
@@ -262,6 +263,7 @@ name|int
 name|src_line
 parameter_list|)
 block|{
+comment|// TODO could be package-protected?
 name|this
 operator|.
 name|src_line

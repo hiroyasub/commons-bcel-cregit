@@ -496,6 +496,7 @@ name|int
 name|n
 parameter_list|)
 block|{
+comment|// TODO could be package-protected?
 if|if
 condition|(
 operator|(

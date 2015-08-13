@@ -3380,6 +3380,7 @@ name|int
 name|m
 parameter_list|)
 block|{
+comment|// TODO could be package-protected?
 name|max_stack
 operator|=
 name|m
@@ -3412,6 +3413,7 @@ name|String
 name|class_name
 parameter_list|)
 block|{
+comment|// TODO could be package-protected?
 name|this
 operator|.
 name|class_name
@@ -3427,6 +3429,7 @@ name|Type
 name|return_type
 parameter_list|)
 block|{
+comment|// TODO unused
 name|setType
 argument_list|(
 name|return_type
@@ -3452,6 +3455,7 @@ index|[]
 name|arg_types
 parameter_list|)
 block|{
+comment|// TODO could be package-protected?
 name|this
 operator|.
 name|arg_types
@@ -3483,6 +3487,7 @@ name|Type
 name|type
 parameter_list|)
 block|{
+comment|// TODO unused
 name|arg_types
 index|[
 name|i
@@ -3515,6 +3520,7 @@ index|[]
 name|arg_names
 parameter_list|)
 block|{
+comment|// TODO could be package-protected?
 name|this
 operator|.
 name|arg_names
@@ -3546,6 +3552,7 @@ name|String
 name|name
 parameter_list|)
 block|{
+comment|// TODO unused
 name|arg_names
 index|[
 name|i
@@ -3586,6 +3593,7 @@ name|InstructionList
 name|il
 parameter_list|)
 block|{
+comment|// TODO could be package-protected?
 name|this
 operator|.
 name|il
@@ -3617,6 +3625,7 @@ name|void
 name|setMaxStack
 parameter_list|()
 block|{
+comment|// TODO could be package-protected? (some tests would need repackaging)
 if|if
 condition|(
 name|il
@@ -3651,6 +3660,7 @@ name|void
 name|setMaxLocals
 parameter_list|()
 block|{
+comment|// TODO could be package-protected? (some tests would need repackaging)
 if|if
 condition|(
 name|il

@@ -178,6 +178,7 @@ name|InstructionHandle
 name|start_pc
 parameter_list|)
 block|{
+comment|// TODO could be package-protected?
 name|BranchInstruction
 operator|.
 name|notifyTarget
@@ -207,6 +208,7 @@ name|InstructionHandle
 name|end_pc
 parameter_list|)
 block|{
+comment|// TODO could be package-protected?
 name|BranchInstruction
 operator|.
 name|notifyTarget
@@ -236,6 +238,7 @@ name|InstructionHandle
 name|handler_pc
 parameter_list|)
 block|{
+comment|// TODO could be package-protected?
 name|BranchInstruction
 operator|.
 name|notifyTarget
@@ -393,6 +396,7 @@ name|ObjectType
 name|catch_type
 parameter_list|)
 block|{
+comment|// TODO unused
 name|this
 operator|.
 name|catch_type

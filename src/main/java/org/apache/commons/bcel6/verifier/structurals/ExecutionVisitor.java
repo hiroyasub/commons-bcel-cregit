@@ -227,6 +227,7 @@ name|ConstantPoolGen
 name|cpg
 parameter_list|)
 block|{
+comment|// TODO could be package-protected?
 name|this
 operator|.
 name|cpg
@@ -243,6 +244,7 @@ name|Frame
 name|f
 parameter_list|)
 block|{
+comment|// TODO could be package-protected?
 name|this
 operator|.
 name|frame

@@ -560,6 +560,7 @@ name|InstructionHandle
 name|target
 parameter_list|)
 block|{
+comment|// TODO could be package-protected?
 name|notifyTarget
 argument_list|(
 name|targets

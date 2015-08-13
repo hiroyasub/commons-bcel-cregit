@@ -589,6 +589,7 @@ name|long
 name|l
 parameter_list|)
 block|{
+comment|// TODO unused
 name|checkType
 argument_list|(
 name|Type
@@ -621,6 +622,7 @@ name|int
 name|i
 parameter_list|)
 block|{
+comment|// TODO unused
 name|checkType
 argument_list|(
 name|Type
@@ -654,6 +656,7 @@ name|short
 name|s
 parameter_list|)
 block|{
+comment|// TODO unused
 name|checkType
 argument_list|(
 name|Type
@@ -687,6 +690,7 @@ name|char
 name|c
 parameter_list|)
 block|{
+comment|// TODO unused
 name|checkType
 argument_list|(
 name|Type
@@ -720,6 +724,7 @@ name|byte
 name|b
 parameter_list|)
 block|{
+comment|// TODO unused
 name|checkType
 argument_list|(
 name|Type
@@ -753,6 +758,7 @@ name|boolean
 name|b
 parameter_list|)
 block|{
+comment|// TODO unused
 name|checkType
 argument_list|(
 name|Type
@@ -784,6 +790,7 @@ name|float
 name|f
 parameter_list|)
 block|{
+comment|// TODO unused
 name|checkType
 argument_list|(
 name|Type
@@ -816,6 +823,7 @@ name|double
 name|d
 parameter_list|)
 block|{
+comment|// TODO unused
 name|checkType
 argument_list|(
 name|Type
@@ -846,6 +854,7 @@ name|void
 name|cancelInitValue
 parameter_list|()
 block|{
+comment|// TODO unused
 name|value
 operator|=
 literal|null

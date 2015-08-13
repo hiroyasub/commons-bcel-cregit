@@ -256,6 +256,7 @@ name|Type
 name|type
 parameter_list|)
 block|{
+comment|// TODO could be package-protected?
 if|if
 condition|(
 name|type
