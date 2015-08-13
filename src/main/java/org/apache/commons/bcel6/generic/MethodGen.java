@@ -1911,6 +1911,7 @@ control|)
 block|{
 if|if
 condition|(
+operator|(
 name|lg
 index|[
 name|i
@@ -1920,6 +1921,13 @@ name|getStart
 argument_list|()
 operator|==
 literal|null
+operator|)
+operator|&&
+operator|(
+name|il
+operator|!=
+literal|null
+operator|)
 condition|)
 block|{
 name|lg
@@ -1938,6 +1946,7 @@ expr_stmt|;
 block|}
 if|if
 condition|(
+operator|(
 name|lg
 index|[
 name|i
@@ -1947,6 +1956,13 @@ name|getEnd
 argument_list|()
 operator|==
 literal|null
+operator|)
+operator|&&
+operator|(
+name|il
+operator|!=
+literal|null
+operator|)
 condition|)
 block|{
 name|lg
