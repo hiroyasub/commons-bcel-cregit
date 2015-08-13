@@ -330,6 +330,7 @@ operator|new
 name|JList
 argument_list|()
 decl_stmt|;
+comment|// TODO Java7 makes this generic
 name|GridLayout
 name|gridLayout1
 init|=

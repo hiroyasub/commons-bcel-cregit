@@ -108,6 +108,7 @@ name|swing
 operator|.
 name|ListModel
 block|{
+comment|// TODO Java7 makes ListModel generic
 specifier|private
 specifier|final
 name|List
