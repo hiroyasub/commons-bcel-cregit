@@ -232,13 +232,10 @@ operator|+
 literal|")"
 return|;
 block|}
-else|else
-block|{
 return|return
 name|getName
 argument_list|()
 return|;
-block|}
 block|}
 comment|/**      * @return mnemonic for instruction in verbose format      */
 annotation|@

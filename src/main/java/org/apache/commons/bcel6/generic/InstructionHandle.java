@@ -313,8 +313,6 @@ name|i
 argument_list|)
 return|;
 block|}
-else|else
-block|{
 name|InstructionHandle
 name|ih
 init|=
@@ -336,7 +334,6 @@ expr_stmt|;
 return|return
 name|ih
 return|;
-block|}
 block|}
 comment|/**      * Called by InstructionList.setPositions when setting the position for every      * instruction. In the presence of variable length instructions `setPositions()'      * performs multiple passes over the instruction list to calculate the      * correct (byte) positions and offsets by calling this function.      *      * @param offset additional offset caused by preceding (variable length) instructions      * @param max_offset the maximum offset that may be caused by these instructions      * @return additional offset caused by possible change of this instruction's length      */
 specifier|protected

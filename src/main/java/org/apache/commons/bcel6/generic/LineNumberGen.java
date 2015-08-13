@@ -146,14 +146,11 @@ literal|"}"
 argument_list|)
 throw|;
 block|}
-else|else
-block|{
 name|setInstruction
 argument_list|(
 name|new_ih
 argument_list|)
 expr_stmt|;
-block|}
 block|}
 comment|/**      * Get LineNumber attribute .      *      * This relies on that the instruction list has already been dumped to byte code or      * or that the `setPositions' methods has been called for the instruction list.      */
 specifier|public

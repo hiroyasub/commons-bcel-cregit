@@ -6822,8 +6822,6 @@ name|vr
 argument_list|)
 throw|;
 block|}
-else|else
-block|{
 comment|// We cannot safely trust any other "instanceof" mechanism. We need to transitively verify
 comment|// the ancestor hierarchy.
 name|JavaClass
@@ -6939,8 +6937,6 @@ name|vr
 argument_list|)
 throw|;
 block|}
-else|else
-block|{
 name|e
 operator|=
 name|Repository
@@ -6953,7 +6949,6 @@ name|getSuperclassName
 argument_list|()
 argument_list|)
 expr_stmt|;
-block|}
 block|}
 if|if
 condition|(
@@ -6987,7 +6982,6 @@ operator|+
 literal|"'."
 argument_list|)
 throw|;
-block|}
 block|}
 block|}
 block|}
@@ -8199,8 +8193,6 @@ argument_list|)
 operator|)
 return|;
 block|}
-else|else
-block|{
 return|return
 name|name
 operator|.
@@ -8211,7 +8203,6 @@ operator|.
 name|CONSTRUCTOR_NAME
 argument_list|)
 return|;
-block|}
 block|}
 comment|/**      * This method returns true if and only if the supplied String      * represents a valid method name that may be referenced by      * ConstantMethodref objects.      */
 specifier|private

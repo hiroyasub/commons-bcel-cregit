@@ -328,8 +328,6 @@ name|verbose
 argument_list|)
 return|;
 block|}
-else|else
-block|{
 return|return
 name|super
 operator|.
@@ -342,7 +340,6 @@ literal|" "
 operator|+
 name|n
 return|;
-block|}
 block|}
 comment|/**      * Read needed data (e.g. index) from file.      *<pre>      * (ILOAD&lt;= tag&lt;= ALOAD_3) || (ISTORE&lt;= tag&lt;= ASTORE_3)      *</pre>      */
 annotation|@

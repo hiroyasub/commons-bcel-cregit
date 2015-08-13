@@ -333,8 +333,6 @@ return|return
 literal|true
 return|;
 block|}
-else|else
-block|{
 name|JavaClass
 name|acc
 init|=
@@ -361,7 +359,6 @@ name|getPackageName
 argument_list|()
 argument_list|)
 return|;
-block|}
 block|}
 block|}
 end_class

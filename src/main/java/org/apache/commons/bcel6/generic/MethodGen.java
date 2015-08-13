@@ -1760,8 +1760,6 @@ return|return
 name|l
 return|;
 block|}
-else|else
-block|{
 throw|throw
 operator|new
 name|IllegalArgumentException
@@ -1773,7 +1771,6 @@ operator|+
 literal|" as type for local variable"
 argument_list|)
 throw|;
-block|}
 block|}
 comment|/**      * Adds a local variable to this method and assigns an index automatically.      *      * @param name variable name      * @param type variable type      * @param start from where the variable is valid, if this is null,      * it is valid from the start      * @param end until where the variable is valid, if this is null,      * it is valid to the end      * @return new local variable object      * @see LocalVariable      */
 specifier|public

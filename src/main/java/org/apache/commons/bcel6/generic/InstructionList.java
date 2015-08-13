@@ -1044,8 +1044,6 @@ return|return
 name|start
 return|;
 block|}
-else|else
-block|{
 return|return
 name|append
 argument_list|(
@@ -1055,7 +1053,6 @@ name|il
 argument_list|)
 return|;
 comment|// was end.instruction
-block|}
 block|}
 comment|/**      * Append an instruction to the end of this list.      *      * @param ih instruction to append      */
 specifier|private
@@ -1482,8 +1479,6 @@ return|return
 name|start
 return|;
 block|}
-else|else
-block|{
 return|return
 name|insert
 argument_list|(
@@ -1492,7 +1487,6 @@ argument_list|,
 name|il
 argument_list|)
 return|;
-block|}
 block|}
 comment|/**      * Insert an instruction at start of this list.      *      * @param ih instruction to insert      */
 specifier|private

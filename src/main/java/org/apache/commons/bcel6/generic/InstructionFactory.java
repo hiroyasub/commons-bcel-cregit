@@ -2477,8 +2477,6 @@ argument_list|)
 argument_list|)
 return|;
 block|}
-else|else
-block|{
 return|return
 operator|new
 name|CHECKCAST
@@ -2499,7 +2497,6 @@ argument_list|()
 argument_list|)
 argument_list|)
 return|;
-block|}
 block|}
 else|else
 block|{
@@ -2685,8 +2682,6 @@ argument_list|)
 argument_list|)
 return|;
 block|}
-else|else
-block|{
 return|return
 operator|new
 name|CHECKCAST
@@ -2702,7 +2697,6 @@ name|t
 argument_list|)
 argument_list|)
 return|;
-block|}
 block|}
 specifier|public
 name|INSTANCEOF
@@ -2735,8 +2729,6 @@ argument_list|)
 argument_list|)
 return|;
 block|}
-else|else
-block|{
 return|return
 operator|new
 name|INSTANCEOF
@@ -2752,7 +2744,6 @@ name|t
 argument_list|)
 argument_list|)
 return|;
-block|}
 block|}
 specifier|public
 name|NEW
@@ -2874,8 +2865,6 @@ argument_list|)
 return|;
 block|}
 block|}
-else|else
-block|{
 name|ArrayType
 name|at
 decl_stmt|;
@@ -2921,7 +2910,6 @@ argument_list|,
 name|dim
 argument_list|)
 return|;
-block|}
 block|}
 comment|/** Create "null" value for reference types, 0 for basic types like int      */
 specifier|public
