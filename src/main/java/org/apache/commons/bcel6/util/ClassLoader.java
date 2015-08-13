@@ -172,6 +172,7 @@ name|lang
 operator|.
 name|ClassLoader
 block|{
+comment|// TODO rename this class to reduce confusion with parent
 specifier|private
 specifier|static
 specifier|final
@@ -180,7 +181,7 @@ name|BCEL_TOKEN
 init|=
 literal|"$$BCEL$$"
 decl_stmt|;
-specifier|public
+specifier|private
 specifier|static
 specifier|final
 name|String
