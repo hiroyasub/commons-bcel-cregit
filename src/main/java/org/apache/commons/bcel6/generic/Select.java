@@ -84,36 +84,36 @@ name|int
 index|[]
 name|match
 decl_stmt|;
-comment|// matches, i.e., case 1: ...
+comment|// matches, i.e., case 1: ... TODO could be package-protected?
 specifier|protected
 name|int
 index|[]
 name|indices
 decl_stmt|;
-comment|// target offsets
+comment|// target offsets TODO could be package-protected?
 specifier|protected
 name|InstructionHandle
 index|[]
 name|targets
 decl_stmt|;
-comment|// target objects in instruction list
+comment|// target objects in instruction list TODO could be package-protected?
 specifier|protected
 name|int
 name|fixed_length
 decl_stmt|;
-comment|// fixed length defined by subclasses
+comment|// fixed length defined by subclasses TODO could be package-protected?
 specifier|protected
 name|int
 name|match_length
 decl_stmt|;
-comment|// number of cases
+comment|// number of cases TODO could be package-protected?
 specifier|protected
 name|int
 name|padding
 init|=
 literal|0
 decl_stmt|;
-comment|// number of pad bytes for alignment
+comment|// number of pad bytes for alignment TODO could be package-protected?
 comment|/**      * Empty constructor needed for the Class.newInstance() statement in      * Instruction.readInstruction(). Not to be used otherwise.      */
 name|Select
 parameter_list|()
