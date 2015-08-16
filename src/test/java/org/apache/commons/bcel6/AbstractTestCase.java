@@ -279,6 +279,22 @@ operator|.
 name|getName
 argument_list|()
 decl_stmt|;
+comment|// package base name in signature format, i.e. with '/' separators instead of '.'
+specifier|protected
+specifier|static
+specifier|final
+name|String
+name|PACKAGE_BASE_SIG
+init|=
+name|PACKAGE_BASE_NAME
+operator|.
+name|replace
+argument_list|(
+literal|'.'
+argument_list|,
+literal|'/'
+argument_list|)
+decl_stmt|;
 specifier|protected
 name|File
 name|createTestdataFile

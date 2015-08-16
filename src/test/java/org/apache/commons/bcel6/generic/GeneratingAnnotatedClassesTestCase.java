@@ -1590,7 +1590,11 @@ name|innerValue
 decl_stmt|;
 name|assertTrue
 argument_list|(
-literal|"Should be called Lorg/apache/commons/bcel6/data/SimpleAnnotation; but is called: "
+literal|"Should be called L"
+operator|+
+name|PACKAGE_BASE_SIG
+operator|+
+literal|"/data/SimpleAnnotation; but is called: "
 operator|+
 name|innerAnnotationValue
 operator|.
@@ -1610,7 +1614,11 @@ argument_list|()
 operator|.
 name|equals
 argument_list|(
-literal|"Lorg/apache/commons/bcel6/data/SimpleAnnotation;"
+literal|"L"
+operator|+
+name|PACKAGE_BASE_SIG
+operator|+
+literal|"/data/SimpleAnnotation;"
 argument_list|)
 argument_list|)
 expr_stmt|;

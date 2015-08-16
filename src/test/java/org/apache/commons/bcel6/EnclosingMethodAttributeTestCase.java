@@ -223,7 +223,11 @@ argument_list|)
 decl_stmt|;
 name|assertTrue
 argument_list|(
-literal|"Expected class name to be 'org/apache/commons/bcel6/data/AttributeTestClassEM01' but was "
+literal|"Expected class name to be '"
+operator|+
+name|PACKAGE_BASE_SIG
+operator|+
+literal|"/data/AttributeTestClassEM01' but was "
 operator|+
 name|enclosingClassName
 argument_list|,
@@ -231,7 +235,9 @@ name|enclosingClassName
 operator|.
 name|equals
 argument_list|(
-literal|"org/apache/commons/bcel6/data/AttributeTestClassEM01"
+name|PACKAGE_BASE_SIG
+operator|+
+literal|"/data/AttributeTestClassEM01"
 argument_list|)
 argument_list|)
 expr_stmt|;
@@ -345,7 +351,11 @@ argument_list|)
 expr_stmt|;
 name|assertTrue
 argument_list|(
-literal|"Expected class name to be 'org/apache/commons/bcel6/data/AttributeTestClassEM02' but was "
+literal|"Expected class name to be '"
+operator|+
+name|PACKAGE_BASE_SIG
+operator|+
+literal|"/data/AttributeTestClassEM02' but was "
 operator|+
 name|enclosingClassName
 argument_list|,
@@ -353,7 +363,9 @@ name|enclosingClassName
 operator|.
 name|equals
 argument_list|(
-literal|"org/apache/commons/bcel6/data/AttributeTestClassEM02"
+name|PACKAGE_BASE_SIG
+operator|+
+literal|"/data/AttributeTestClassEM02"
 argument_list|)
 argument_list|)
 expr_stmt|;
@@ -498,7 +510,11 @@ argument_list|)
 expr_stmt|;
 name|assertTrue
 argument_list|(
-literal|"Expected class name to be 'org/apache/commons/bcel6/data/AttributeTestClassEM02' but was "
+literal|"Expected class name to be '"
+operator|+
+name|PACKAGE_BASE_SIG
+operator|+
+literal|"/data/AttributeTestClassEM02' but was "
 operator|+
 name|enclosingClassName
 argument_list|,
@@ -506,7 +522,9 @@ name|enclosingClassName
 operator|.
 name|equals
 argument_list|(
-literal|"org/apache/commons/bcel6/data/AttributeTestClassEM02"
+name|PACKAGE_BASE_SIG
+operator|+
+literal|"/data/AttributeTestClassEM02"
 argument_list|)
 argument_list|)
 expr_stmt|;
