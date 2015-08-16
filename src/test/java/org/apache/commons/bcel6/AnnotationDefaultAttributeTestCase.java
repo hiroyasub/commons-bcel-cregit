@@ -115,7 +115,9 @@ name|clazz
 init|=
 name|getTestClass
 argument_list|(
-literal|"org.apache.commons.bcel6.data.SimpleAnnotation"
+name|PACKAGE_BASE_NAME
+operator|+
+literal|".data.SimpleAnnotation"
 argument_list|)
 decl_stmt|;
 name|Method

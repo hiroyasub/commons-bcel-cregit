@@ -50,7 +50,9 @@ name|clazz
 init|=
 name|getTestClass
 argument_list|(
-literal|"org.apache.commons.bcel6.data.AnonymousClassTest"
+name|PACKAGE_BASE_NAME
+operator|+
+literal|".data.AnonymousClassTest"
 argument_list|)
 decl_stmt|;
 name|assertFalse

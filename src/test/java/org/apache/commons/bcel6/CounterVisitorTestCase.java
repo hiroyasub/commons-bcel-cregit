@@ -50,7 +50,9 @@ block|{
 return|return
 name|getTestClass
 argument_list|(
-literal|"org.apache.commons.bcel6.data.MarkedType"
+name|PACKAGE_BASE_NAME
+operator|+
+literal|".data.MarkedType"
 argument_list|)
 return|;
 block|}
