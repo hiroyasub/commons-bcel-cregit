@@ -235,7 +235,9 @@ operator|=
 operator|new
 name|ClassGen
 argument_list|(
-literal|"org.apache.commons.bcel6.verifier.tests.TestArrayAccess04"
+name|TEST_PACKAGE
+operator|+
+literal|".TestArrayAccess04"
 argument_list|,
 literal|"java.lang.Object"
 argument_list|,
@@ -339,7 +341,9 @@ block|{  }
 argument_list|,
 literal|"<init>"
 argument_list|,
-literal|"org.apache.commons.bcel6.verifier.tests.TestArrayAccess04"
+name|TEST_PACKAGE
+operator|+
+literal|".TestArrayAccess04"
 argument_list|,
 name|il
 argument_list|,
@@ -498,7 +502,9 @@ block|}
 argument_list|,
 literal|"test"
 argument_list|,
-literal|"org.apache.commons.bcel6.verifier.tests.TestArrayAccess04"
+name|TEST_PACKAGE
+operator|+
+literal|".TestArrayAccess04"
 argument_list|,
 name|il
 argument_list|,

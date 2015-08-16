@@ -251,7 +251,9 @@ operator|=
 operator|new
 name|ClassGen
 argument_list|(
-literal|"org.apache.commons.bcel6.verifier.tests.TestArrayAccess02"
+name|TEST_PACKAGE
+operator|+
+literal|".TestArrayAccess02"
 argument_list|,
 literal|"java.lang.Object"
 argument_list|,
@@ -355,7 +357,9 @@ block|{  }
 argument_list|,
 literal|"<init>"
 argument_list|,
-literal|"org.apache.commons.bcel6.verifier.tests.TestArrayAccess02"
+name|TEST_PACKAGE
+operator|+
+literal|".TestArrayAccess02"
 argument_list|,
 name|il
 argument_list|,
@@ -507,7 +511,9 @@ block|{  }
 argument_list|,
 literal|"test"
 argument_list|,
-literal|"org.apache.commons.bcel6.verifier.tests.TestArrayAccess02"
+name|TEST_PACKAGE
+operator|+
+literal|".TestArrayAccess02"
 argument_list|,
 name|il
 argument_list|,
@@ -549,7 +555,9 @@ argument_list|(
 operator|new
 name|ObjectType
 argument_list|(
-literal|"org.apache.commons.bcel6.verifier.tests.TestArrayAccess02"
+name|TEST_PACKAGE
+operator|+
+literal|".TestArrayAccess02"
 argument_list|)
 argument_list|,
 operator|(
@@ -682,7 +690,9 @@ name|_factory
 operator|.
 name|createNew
 argument_list|(
-literal|"org.apache.commons.bcel6.verifier.tests.TestArrayAccess02"
+name|TEST_PACKAGE
+operator|+
+literal|".TestArrayAccess02"
 argument_list|)
 argument_list|)
 expr_stmt|;
@@ -703,7 +713,9 @@ name|_factory
 operator|.
 name|createInvoke
 argument_list|(
-literal|"org.apache.commons.bcel6.verifier.tests.TestArrayAccess02"
+name|TEST_PACKAGE
+operator|+
+literal|".TestArrayAccess02"
 argument_list|,
 literal|"<init>"
 argument_list|,

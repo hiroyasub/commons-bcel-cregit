@@ -219,7 +219,9 @@ operator|=
 operator|new
 name|ClassGen
 argument_list|(
-literal|"org.apache.commons.bcel6.verifier.tests.TestReturn03"
+name|TEST_PACKAGE
+operator|+
+literal|".TestReturn03"
 argument_list|,
 literal|"java.lang.Object"
 argument_list|,
@@ -323,7 +325,9 @@ block|{  }
 argument_list|,
 literal|"<init>"
 argument_list|,
-literal|"org.apache.commons.bcel6.verifier.tests.TestReturn03"
+name|TEST_PACKAGE
+operator|+
+literal|".TestReturn03"
 argument_list|,
 name|il
 argument_list|,
@@ -475,7 +479,9 @@ block|{  }
 argument_list|,
 literal|"test3"
 argument_list|,
-literal|"org.apache.commons.bcel6.verifier.tests.TestReturn03"
+name|TEST_PACKAGE
+operator|+
+literal|".TestReturn03"
 argument_list|,
 name|il
 argument_list|,

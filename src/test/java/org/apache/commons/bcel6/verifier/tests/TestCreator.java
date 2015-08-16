@@ -75,6 +75,23 @@ specifier|abstract
 class|class
 name|TestCreator
 block|{
+comment|// Common package base name for generated test classes
+specifier|protected
+specifier|static
+specifier|final
+name|String
+name|TEST_PACKAGE
+init|=
+name|TestCreator
+operator|.
+name|class
+operator|.
+name|getPackage
+argument_list|()
+operator|.
+name|getName
+argument_list|()
+decl_stmt|;
 specifier|public
 name|void
 name|create
