@@ -281,6 +281,23 @@ name|FLAG_FOR_METHOD
 init|=
 literal|1
 decl_stmt|;
+comment|// The base package name for imports; assumes Constants is at the top level
+specifier|private
+specifier|static
+specifier|final
+name|String
+name|BASE_PACKAGE
+init|=
+name|Constants
+operator|.
+name|class
+operator|.
+name|getPackage
+argument_list|()
+operator|.
+name|getName
+argument_list|()
+decl_stmt|;
 specifier|private
 specifier|final
 name|JavaClass
@@ -445,21 +462,33 @@ name|_out
 operator|.
 name|println
 argument_list|(
-literal|"import org.apache.commons.bcel6.generic.*;"
+literal|"import "
+operator|+
+name|BASE_PACKAGE
+operator|+
+literal|".generic.*;"
 argument_list|)
 expr_stmt|;
 name|_out
 operator|.
 name|println
 argument_list|(
-literal|"import org.apache.commons.bcel6.classfile.*;"
+literal|"import "
+operator|+
+name|BASE_PACKAGE
+operator|+
+literal|".classfile.*;"
 argument_list|)
 expr_stmt|;
 name|_out
 operator|.
 name|println
 argument_list|(
-literal|"import org.apache.commons.bcel6.*;"
+literal|"import "
+operator|+
+name|BASE_PACKAGE
+operator|+
+literal|".*;"
 argument_list|)
 expr_stmt|;
 name|_out
