@@ -353,6 +353,7 @@ literal|"class org.apache.commons.bcel6.util.ClassLoader"
 argument_list|)
 condition|)
 block|{
+comment|// TODO this is broken; cannot ever be true
 comment|// Real class name will be set by the class loader
 name|ClassGen
 name|cg
