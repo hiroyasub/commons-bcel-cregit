@@ -328,7 +328,12 @@ name|ObjectType
 operator|.
 name|getInstance
 argument_list|(
-literal|"org.apache.commons.bcel6.verifier.structurals.GenericArray"
+name|GenericArray
+operator|.
+name|class
+operator|.
+name|getName
+argument_list|()
 argument_list|)
 decl_stmt|;
 comment|/**      * The constructor. Constructs a new instance of this class.      */
