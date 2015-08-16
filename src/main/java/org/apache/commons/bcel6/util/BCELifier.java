@@ -1044,23 +1044,6 @@ argument_list|,
 name|_cp
 argument_list|)
 decl_stmt|;
-name|Type
-name|result_type
-init|=
-name|mg
-operator|.
-name|getReturnType
-argument_list|()
-decl_stmt|;
-name|Type
-index|[]
-name|arg_types
-init|=
-name|mg
-operator|.
-name|getArgumentTypes
-argument_list|()
-decl_stmt|;
 name|_out
 operator|.
 name|println
@@ -1088,14 +1071,20 @@ literal|", "
 operator|+
 name|printType
 argument_list|(
-name|result_type
+name|mg
+operator|.
+name|getReturnType
+argument_list|()
 argument_list|)
 operator|+
 literal|", "
 operator|+
 name|printArgumentTypes
 argument_list|(
-name|arg_types
+name|mg
+operator|.
+name|getArgumentTypes
+argument_list|()
 argument_list|)
 operator|+
 literal|", "
