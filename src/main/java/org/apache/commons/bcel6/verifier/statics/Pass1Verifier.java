@@ -216,7 +216,7 @@ return|return
 name|jc
 return|;
 block|}
-comment|/**      * Should only be instantiated by a Verifier.      *      * @see org.apache.commons.bcel6.verifier.Verifier      */
+comment|/**      * Should only be instantiated by a Verifier.      *      * @see Verifier      */
 specifier|public
 name|Pass1Verifier
 parameter_list|(

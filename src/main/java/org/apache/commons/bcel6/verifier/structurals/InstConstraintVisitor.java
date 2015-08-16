@@ -489,7 +489,7 @@ operator|=
 name|mg
 expr_stmt|;
 block|}
-comment|/**      * Assures index is of type INT.      * @throws org.apache.commons.bcel6.verifier.exc.StructuralCodeConstraintException if the above constraint is not satisfied.      */
+comment|/**      * Assures index is of type INT.      * @throws StructuralCodeConstraintException if the above constraint is not satisfied.      */
 specifier|private
 name|void
 name|indexOfInt
@@ -527,7 +527,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/**      * Assures the ReferenceType r is initialized (or Type.NULL).      * Formally, this means (!(r instanceof UninitializedObjectType)), because      * there are no uninitialized array types.      * @throws org.apache.commons.bcel6.verifier.exc.StructuralCodeConstraintException if the above constraint is not satisfied.      */
+comment|/**      * Assures the ReferenceType r is initialized (or Type.NULL).      * Formally, this means (!(r instanceof UninitializedObjectType)), because      * there are no uninitialized array types.      * @throws StructuralCodeConstraintException if the above constraint is not satisfied.      */
 specifier|private
 name|void
 name|referenceTypeIsInitialized
@@ -597,7 +597,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/**      * Assures arrayref is of ArrayType or NULL;      * returns true if and only if arrayref is non-NULL.      * @throws org.apache.commons.bcel6.verifier.exc.StructuralCodeConstraintException if the above constraint is violated.       */
+comment|/**      * Assures arrayref is of ArrayType or NULL;      * returns true if and only if arrayref is non-NULL.      * @throws StructuralCodeConstraintException if the above constraint is violated.       */
 specifier|private
 name|boolean
 name|arrayrefOfArrayType

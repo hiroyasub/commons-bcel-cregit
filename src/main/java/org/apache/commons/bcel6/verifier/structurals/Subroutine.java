@@ -50,7 +50,7 @@ index|[]
 name|getEnteringJsrInstructions
 parameter_list|()
 function_decl|;
-comment|/**      * Returns the one and only RET that leaves the subroutine.      * Note that JustIce has a pretty rigid notion of a subroutine.      *<B>Must not be invoked on the 'top-level subroutine'.</B>      *      * @see org.apache.commons.bcel6.verifier.structurals.Subroutines      */
+comment|/**      * Returns the one and only RET that leaves the subroutine.      * Note that JustIce has a pretty rigid notion of a subroutine.      *<B>Must not be invoked on the 'top-level subroutine'.</B>      *      * @see Subroutines      */
 name|InstructionHandle
 name|getLeavingRET
 parameter_list|()

@@ -1497,7 +1497,7 @@ return|return
 name|methods
 return|;
 block|}
-comment|/**      * @return A org.apache.commons.bcel6.classfile.Method corresponding to      * java.lang.reflect.Method if any      */
+comment|/**      * @return A {@link Method} corresponding to      * java.lang.reflect.Method if any      */
 specifier|public
 name|Method
 name|getMethod

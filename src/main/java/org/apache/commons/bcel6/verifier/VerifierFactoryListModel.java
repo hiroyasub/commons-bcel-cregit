@@ -90,16 +90,6 @@ specifier|public
 class|class
 name|VerifierFactoryListModel
 implements|implements
-name|org
-operator|.
-name|apache
-operator|.
-name|commons
-operator|.
-name|bcel6
-operator|.
-name|verifier
-operator|.
 name|VerifierFactoryObserver
 implements|,
 name|javax
