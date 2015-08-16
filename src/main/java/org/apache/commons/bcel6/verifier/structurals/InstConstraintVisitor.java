@@ -308,7 +308,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * A Visitor class testing for valid preconditions of JVM instructions.  * The instance of this class will throw a StructuralCodeConstraintException  * instance if an instruction is visitXXX()ed which has preconditions that are  * not satisfied.  * TODO: Currently, the JVM's behaviour concerning monitors (MONITORENTER,  * MONITOREXIT) is not modeled in JustIce.  *  * @version $Id$  * @see org.apache.commons.bcel6.verifier.exc.StructuralCodeConstraintException  * @see org.apache.commons.bcel6.verifier.exc.LinkingConstraintException  */
+comment|/**  * A Visitor class testing for valid preconditions of JVM instructions.  * The instance of this class will throw a StructuralCodeConstraintException  * instance if an instruction is visitXXX()ed which has preconditions that are  * not satisfied.  * TODO: Currently, the JVM's behaviour concerning monitors (MONITORENTER,  * MONITOREXIT) is not modeled in JustIce.  *  * @version $Id$  * @see StructuralCodeConstraintException  * @see org.apache.commons.bcel6.verifier.exc.LinkingConstraintException  */
 end_comment
 
 begin_class
@@ -389,7 +389,7 @@ name|getLocals
 argument_list|()
 return|;
 block|}
-comment|/**    * This method is called by the visitXXX() to notify the acceptor of this InstConstraintVisitor    * that a constraint violation has occured. This is done by throwing an instance of a    * StructuralCodeConstraintException.    * @throws org.apache.commons.bcel6.verifier.exc.StructuralCodeConstraintException always.    */
+comment|/**    * This method is called by the visitXXX() to notify the acceptor of this InstConstraintVisitor    * that a constraint violation has occured. This is done by throwing an instance of a    * StructuralCodeConstraintException.    * @throws StructuralCodeConstraintException always.    */
 specifier|private
 name|void
 name|constraintViolated
