@@ -86,7 +86,9 @@ name|clazz
 init|=
 name|getTestClass
 argument_list|(
-literal|"org.apache.commons.bcel6.data.AnonymousClassTest$X"
+name|PACKAGE_BASE_NAME
+operator|+
+literal|".data.AnonymousClassTest$X"
 argument_list|)
 decl_stmt|;
 name|assertFalse
@@ -122,7 +124,9 @@ name|clazz
 init|=
 name|getTestClass
 argument_list|(
-literal|"org.apache.commons.bcel6.data.AnonymousClassTest$Y"
+name|PACKAGE_BASE_NAME
+operator|+
+literal|".data.AnonymousClassTest$Y"
 argument_list|)
 decl_stmt|;
 name|assertFalse
@@ -158,7 +162,9 @@ name|clazz
 init|=
 name|getTestClass
 argument_list|(
-literal|"org.apache.commons.bcel6.data.AnonymousClassTest$1"
+name|PACKAGE_BASE_NAME
+operator|+
+literal|".data.AnonymousClassTest$1"
 argument_list|)
 decl_stmt|;
 name|assertTrue

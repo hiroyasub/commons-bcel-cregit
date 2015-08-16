@@ -138,7 +138,9 @@ name|clazz
 init|=
 name|getTestClass
 argument_list|(
-literal|"org.apache.commons.bcel6.util.InstructionFinder"
+name|PACKAGE_BASE_NAME
+operator|+
+literal|".util.InstructionFinder"
 argument_list|)
 decl_stmt|;
 name|Method

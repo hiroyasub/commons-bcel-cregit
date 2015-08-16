@@ -147,7 +147,9 @@ name|clazz
 init|=
 name|getTestClass
 argument_list|(
-literal|"org.apache.commons.bcel6.data.PLSETestClass"
+name|PACKAGE_BASE_NAME
+operator|+
+literal|".data.PLSETestClass"
 argument_list|)
 decl_stmt|;
 name|ClassGen
@@ -237,7 +239,9 @@ name|clazz
 init|=
 name|getTestClass
 argument_list|(
-literal|"org.apache.commons.bcel6.data.PLSETestClass"
+name|PACKAGE_BASE_NAME
+operator|+
+literal|".data.PLSETestClass"
 argument_list|)
 decl_stmt|;
 name|ClassGen

@@ -183,7 +183,9 @@ name|clazz
 init|=
 name|getTestClass
 argument_list|(
-literal|"org.apache.commons.bcel6.data.AnnotatedFields"
+name|PACKAGE_BASE_NAME
+operator|+
+literal|".data.AnnotatedFields"
 argument_list|)
 decl_stmt|;
 comment|// TODO L...;?
@@ -229,7 +231,9 @@ name|clazz
 init|=
 name|getTestClass
 argument_list|(
-literal|"org.apache.commons.bcel6.data.AnnotatedFields"
+name|PACKAGE_BASE_NAME
+operator|+
+literal|".data.AnnotatedFields"
 argument_list|)
 decl_stmt|;
 name|checkAnnotatedField
@@ -342,7 +346,9 @@ name|clazz
 init|=
 name|getTestClass
 argument_list|(
-literal|"org.apache.commons.bcel6.data.AnnotatedFields"
+name|PACKAGE_BASE_NAME
+operator|+
+literal|".data.AnnotatedFields"
 argument_list|)
 decl_stmt|;
 name|ClassGen

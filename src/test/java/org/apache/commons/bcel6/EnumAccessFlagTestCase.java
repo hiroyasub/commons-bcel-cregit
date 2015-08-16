@@ -51,7 +51,9 @@ name|clazz
 init|=
 name|getTestClass
 argument_list|(
-literal|"org.apache.commons.bcel6.data.SimpleEnum"
+name|PACKAGE_BASE_NAME
+operator|+
+literal|".data.SimpleEnum"
 argument_list|)
 decl_stmt|;
 name|assertTrue
@@ -68,7 +70,9 @@ name|clazz
 operator|=
 name|getTestClass
 argument_list|(
-literal|"org.apache.commons.bcel6.data.SimpleClass"
+name|PACKAGE_BASE_NAME
+operator|+
+literal|".data.SimpleClass"
 argument_list|)
 expr_stmt|;
 name|assertTrue

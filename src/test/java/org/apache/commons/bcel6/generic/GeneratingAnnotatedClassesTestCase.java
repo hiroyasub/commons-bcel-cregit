@@ -1323,7 +1323,9 @@ name|jc
 init|=
 name|getTestClass
 argument_list|(
-literal|"org.apache.commons.bcel6.data.SimpleAnnotatedClass"
+name|PACKAGE_BASE_NAME
+operator|+
+literal|".data.SimpleAnnotatedClass"
 argument_list|)
 decl_stmt|;
 name|ClassGen
@@ -1374,7 +1376,9 @@ name|jc
 init|=
 name|getTestClass
 argument_list|(
-literal|"org.apache.commons.bcel6.data.AnnotatedWithEnumClass"
+name|PACKAGE_BASE_NAME
+operator|+
+literal|".data.AnnotatedWithEnumClass"
 argument_list|)
 decl_stmt|;
 name|ClassGen
@@ -1425,7 +1429,9 @@ name|jc
 init|=
 name|getTestClass
 argument_list|(
-literal|"org.apache.commons.bcel6.data.AnnotatedWithCombinedAnnotation"
+name|PACKAGE_BASE_NAME
+operator|+
+literal|".data.AnnotatedWithCombinedAnnotation"
 argument_list|)
 decl_stmt|;
 name|ClassGen
@@ -2024,7 +2030,9 @@ name|jc
 init|=
 name|getTestClass
 argument_list|(
-literal|"org.apache.commons.bcel6.data.ComplexAnnotatedClass"
+name|PACKAGE_BASE_NAME
+operator|+
+literal|".data.ComplexAnnotatedClass"
 argument_list|)
 decl_stmt|;
 name|ClassGen
@@ -2158,7 +2166,9 @@ name|jc
 init|=
 name|getTestClass
 argument_list|(
-literal|"org.apache.commons.bcel6.data.SimpleAnnotatedClass"
+name|PACKAGE_BASE_NAME
+operator|+
+literal|".data.SimpleAnnotatedClass"
 argument_list|)
 decl_stmt|;
 name|ClassGen
@@ -2240,7 +2250,9 @@ name|jc
 init|=
 name|getTestClass
 argument_list|(
-literal|"org.apache.commons.bcel6.data.SimpleAnnotatedClass"
+name|PACKAGE_BASE_NAME
+operator|+
+literal|".data.SimpleAnnotatedClass"
 argument_list|)
 decl_stmt|;
 name|ClassGen

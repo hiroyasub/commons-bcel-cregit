@@ -145,7 +145,9 @@ name|clazz
 init|=
 name|getTestClass
 argument_list|(
-literal|"org.apache.commons.bcel6.data.AttributeTestClassEM01$1S"
+name|PACKAGE_BASE_NAME
+operator|+
+literal|".data.AttributeTestClassEM01$1S"
 argument_list|)
 decl_stmt|;
 name|ConstantPool
@@ -261,7 +263,9 @@ name|clazz
 init|=
 name|getTestClass
 argument_list|(
-literal|"org.apache.commons.bcel6.data.AttributeTestClassEM02$1"
+name|PACKAGE_BASE_NAME
+operator|+
+literal|".data.AttributeTestClassEM02$1"
 argument_list|)
 decl_stmt|;
 name|ConstantPool
@@ -369,7 +373,9 @@ name|clazz
 init|=
 name|getTestClass
 argument_list|(
-literal|"org.apache.commons.bcel6.data.AttributeTestClassEM02$1"
+name|PACKAGE_BASE_NAME
+operator|+
+literal|".data.AttributeTestClassEM02$1"
 argument_list|)
 decl_stmt|;
 name|ConstantPool
