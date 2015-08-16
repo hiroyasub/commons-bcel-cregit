@@ -62,7 +62,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**   * This class is derived from the abstract   *<A HREF="org.apache.commons.bcel6.classfile.Constant.html">Constant</A> class   * and represents a reference to a long object.  *  * @version $Id$  * @see     Constant  */
+comment|/**   * This class is derived from the abstract {@link Constant}  * and represents a reference to a long object.  *  * @version $Id$  * @see     Constant  */
 end_comment
 
 begin_class

@@ -52,7 +52,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**   * This class is derived from the abstract   *<A HREF="org.apache.commons.bcel6.classfile.Constant.html">Constant</A> class   * and represents a reference to a invoke dynamic.  *   * @see     Constant  * @since 6.0  */
+comment|/**   * This class is derived from the abstract {@link Constant}  * and represents a reference to a invoke dynamic.  *   * @see     Constant  * @since 6.0  */
 end_comment
 
 begin_class
