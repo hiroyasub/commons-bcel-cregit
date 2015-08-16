@@ -119,7 +119,17 @@ specifier|final
 name|String
 name|TEST_PACKAGE
 init|=
-literal|"org.apache.commons.bcel6.verifier.tests."
+name|AbstractVerifierTestCase
+operator|.
+name|class
+operator|.
+name|getPackage
+argument_list|()
+operator|.
+name|getName
+argument_list|()
+operator|+
+literal|".tests."
 decl_stmt|;
 comment|/**      * Asserts that the verification of the given class is OK. If it isn't it throws an AssertionFailedError with the given message.      *      * @param classname simple classname of the class to verify      * @param message   message displayed if assertion fails      */
 specifier|public
