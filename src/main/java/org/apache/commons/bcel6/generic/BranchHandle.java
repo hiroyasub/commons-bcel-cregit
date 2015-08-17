@@ -213,7 +213,6 @@ name|InstructionHandle
 name|ih
 parameter_list|)
 block|{
-comment|// TODO unused
 name|bi
 operator|.
 name|setTarget

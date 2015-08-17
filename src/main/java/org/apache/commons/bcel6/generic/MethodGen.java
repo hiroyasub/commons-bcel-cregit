@@ -3299,7 +3299,6 @@ name|Type
 name|return_type
 parameter_list|)
 block|{
-comment|// TODO unused
 name|setType
 argument_list|(
 name|return_type
@@ -3325,7 +3324,6 @@ index|[]
 name|arg_types
 parameter_list|)
 block|{
-comment|// TODO could be package-protected?
 name|this
 operator|.
 name|arg_types
@@ -3357,7 +3355,6 @@ name|Type
 name|type
 parameter_list|)
 block|{
-comment|// TODO unused
 name|arg_types
 index|[
 name|i
@@ -3390,7 +3387,6 @@ index|[]
 name|arg_names
 parameter_list|)
 block|{
-comment|// TODO could be package-protected?
 name|this
 operator|.
 name|arg_names
@@ -3422,7 +3418,6 @@ name|String
 name|name
 parameter_list|)
 block|{
-comment|// TODO unused
 name|arg_names
 index|[
 name|i

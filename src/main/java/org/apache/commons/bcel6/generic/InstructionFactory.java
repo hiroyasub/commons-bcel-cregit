@@ -3304,7 +3304,6 @@ name|ClassGen
 name|c
 parameter_list|)
 block|{
-comment|// TODO unused
 name|cg
 operator|=
 name|c
@@ -3327,7 +3326,6 @@ name|ConstantPoolGen
 name|c
 parameter_list|)
 block|{
-comment|// TODO unused
 name|cp
 operator|=
 name|c

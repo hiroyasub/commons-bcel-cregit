@@ -400,7 +400,6 @@ name|ObjectType
 name|catch_type
 parameter_list|)
 block|{
-comment|// TODO unused
 name|this
 operator|.
 name|catch_type

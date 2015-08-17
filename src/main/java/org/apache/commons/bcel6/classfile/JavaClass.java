@@ -386,7 +386,6 @@ operator|new
 name|BCELComparator
 argument_list|()
 block|{
-comment|// TODO could be final (setter unused)
 annotation|@
 name|Override
 specifier|public
