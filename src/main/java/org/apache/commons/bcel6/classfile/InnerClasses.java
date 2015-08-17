@@ -86,7 +86,6 @@ name|InnerClass
 index|[]
 name|inner_classes
 decl_stmt|;
-comment|// TODO could be final (would need to recode the copy method)
 comment|/**      * Initialize from another object. Note that both objects use the same      * references (shallow copy). Use clone() for a physical copy.      */
 specifier|public
 name|InnerClasses
@@ -321,6 +320,34 @@ block|{
 return|return
 name|inner_classes
 return|;
+block|}
+comment|/**      * @param inner_classes the array of inner classes      */
+specifier|public
+specifier|final
+name|void
+name|setInnerClasses
+parameter_list|(
+name|InnerClass
+index|[]
+name|inner_classes
+parameter_list|)
+block|{
+name|this
+operator|.
+name|inner_classes
+operator|=
+name|inner_classes
+operator|!=
+literal|null
+condition|?
+name|inner_classes
+else|:
+operator|new
+name|InnerClass
+index|[
+literal|0
+index|]
+expr_stmt|;
 block|}
 comment|/**      * @return String representation.      */
 annotation|@

@@ -91,7 +91,6 @@ index|[
 literal|0
 index|]
 decl_stmt|;
-comment|// TODO could be final if copy() were recoded
 name|MethodParameters
 parameter_list|(
 name|int
@@ -175,6 +174,22 @@ block|{
 return|return
 name|parameters
 return|;
+block|}
+specifier|public
+name|void
+name|setParameters
+parameter_list|(
+name|MethodParameter
+index|[]
+name|parameters
+parameter_list|)
+block|{
+name|this
+operator|.
+name|parameters
+operator|=
+name|parameters
+expr_stmt|;
 block|}
 annotation|@
 name|Override

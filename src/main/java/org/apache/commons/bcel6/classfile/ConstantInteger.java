@@ -85,7 +85,6 @@ operator|-
 literal|7040676276945754375L
 decl_stmt|;
 specifier|private
-specifier|final
 name|int
 name|bytes
 decl_stmt|;
@@ -207,6 +206,23 @@ block|{
 return|return
 name|bytes
 return|;
+block|}
+comment|/**      * @param bytes the raw bytes that represent this integer      */
+specifier|public
+specifier|final
+name|void
+name|setBytes
+parameter_list|(
+name|int
+name|bytes
+parameter_list|)
+block|{
+name|this
+operator|.
+name|bytes
+operator|=
+name|bytes
+expr_stmt|;
 block|}
 comment|/**      * @return String representation.      */
 annotation|@

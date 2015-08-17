@@ -85,7 +85,7 @@ name|LocalVariable
 index|[]
 name|local_variable_table
 decl_stmt|;
-comment|// variables TODO could be final if copy() were recoded
+comment|// variables
 comment|/**      * Initialize from another object. Note that both objects use the same      * references (shallow copy). Use copy() for a physical copy.      */
 specifier|public
 name|LocalVariableTable
@@ -388,6 +388,23 @@ block|}
 return|return
 literal|null
 return|;
+block|}
+specifier|public
+specifier|final
+name|void
+name|setLocalVariableTable
+parameter_list|(
+name|LocalVariable
+index|[]
+name|local_variable_table
+parameter_list|)
+block|{
+name|this
+operator|.
+name|local_variable_table
+operator|=
+name|local_variable_table
+expr_stmt|;
 block|}
 comment|/**      * @return String representation.      */
 annotation|@

@@ -92,7 +92,6 @@ init|=
 literal|5808807822688827177L
 decl_stmt|;
 specifier|private
-specifier|final
 name|int
 name|signature_index
 decl_stmt|;
@@ -257,6 +256,23 @@ block|{
 return|return
 name|signature_index
 return|;
+block|}
+comment|/**      * @param signature_index the index info the constant pool of this signature      */
+specifier|public
+specifier|final
+name|void
+name|setSignatureIndex
+parameter_list|(
+name|int
+name|signature_index
+parameter_list|)
+block|{
+name|this
+operator|.
+name|signature_index
+operator|=
+name|signature_index
+expr_stmt|;
 block|}
 comment|/**      * @return GJ signature.      */
 specifier|public

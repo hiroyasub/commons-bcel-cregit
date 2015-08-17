@@ -318,7 +318,7 @@ specifier|private
 name|int
 name|size
 decl_stmt|;
-specifier|private
+specifier|protected
 name|Constant
 index|[]
 name|constants
@@ -2955,6 +2955,26 @@ index|[
 name|i
 index|]
 return|;
+block|}
+comment|/**      * Use with care!      *      * @param i index in constant pool      * @param c new constant pool entry at index i      */
+specifier|public
+name|void
+name|setConstant
+parameter_list|(
+name|int
+name|i
+parameter_list|,
+name|Constant
+name|c
+parameter_list|)
+block|{
+name|constants
+index|[
+name|i
+index|]
+operator|=
+name|c
+expr_stmt|;
 block|}
 comment|/**      * @return intermediate constant pool      */
 specifier|public

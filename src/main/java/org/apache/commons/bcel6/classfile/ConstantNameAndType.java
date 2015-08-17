@@ -83,13 +83,11 @@ operator|-
 literal|7913354727264034451L
 decl_stmt|;
 specifier|private
-specifier|final
 name|int
 name|name_index
 decl_stmt|;
 comment|// Name of field/method
 specifier|private
-specifier|final
 name|int
 name|signature_index
 decl_stmt|;
@@ -297,6 +295,40 @@ operator|.
 name|CONSTANT_Utf8
 argument_list|)
 return|;
+block|}
+comment|/**      * @param name_index the name index of this constant      */
+specifier|public
+specifier|final
+name|void
+name|setNameIndex
+parameter_list|(
+name|int
+name|name_index
+parameter_list|)
+block|{
+name|this
+operator|.
+name|name_index
+operator|=
+name|name_index
+expr_stmt|;
+block|}
+comment|/**      * @param signature_index the signature index in the constant pool of this type      */
+specifier|public
+specifier|final
+name|void
+name|setSignatureIndex
+parameter_list|(
+name|int
+name|signature_index
+parameter_list|)
+block|{
+name|this
+operator|.
+name|signature_index
+operator|=
+name|signature_index
+expr_stmt|;
 block|}
 comment|/**      * @return String representation      */
 annotation|@

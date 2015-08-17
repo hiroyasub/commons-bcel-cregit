@@ -84,7 +84,6 @@ init|=
 literal|6603144389219397225L
 decl_stmt|;
 specifier|private
-specifier|final
 name|int
 name|string_index
 decl_stmt|;
@@ -207,6 +206,23 @@ block|{
 return|return
 name|string_index
 return|;
+block|}
+comment|/**      * @param string_index the index into the constant of the string value      */
+specifier|public
+specifier|final
+name|void
+name|setStringIndex
+parameter_list|(
+name|int
+name|string_index
+parameter_list|)
+block|{
+name|this
+operator|.
+name|string_index
+operator|=
+name|string_index
+expr_stmt|;
 block|}
 comment|/**      * @return String representation.      */
 annotation|@

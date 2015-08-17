@@ -87,7 +87,7 @@ name|LineNumber
 index|[]
 name|line_number_table
 decl_stmt|;
-comment|// Table of line/numbers pairs // TODO could be final (copy() would need adjusting)
+comment|// Table of line/numbers pairs
 comment|/*      * Initialize from another object. Note that both objects use the same      * references (shallow copy). Use copy() for a physical copy.      */
 specifier|public
 name|LineNumberTable
@@ -314,6 +314,24 @@ block|{
 return|return
 name|line_number_table
 return|;
+block|}
+comment|/**      * @param line_number_table the line number entries for this table      */
+specifier|public
+specifier|final
+name|void
+name|setLineNumberTable
+parameter_list|(
+name|LineNumber
+index|[]
+name|line_number_table
+parameter_list|)
+block|{
+name|this
+operator|.
+name|line_number_table
+operator|=
+name|line_number_table
+expr_stmt|;
 block|}
 comment|/**      * @return String representation.      */
 annotation|@

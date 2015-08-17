@@ -83,13 +83,11 @@ literal|169537400672820016L
 decl_stmt|;
 comment|/** Program Counter (PC) corresponds to line */
 specifier|private
-specifier|final
 name|short
 name|start_pc
 decl_stmt|;
 comment|/** number in source file */
 specifier|private
-specifier|final
 name|short
 name|line_number
 decl_stmt|;
@@ -239,6 +237,46 @@ literal|0xffff
 operator|&
 name|start_pc
 return|;
+block|}
+comment|/**      * @param line_number the source line number      */
+specifier|public
+specifier|final
+name|void
+name|setLineNumber
+parameter_list|(
+name|int
+name|line_number
+parameter_list|)
+block|{
+name|this
+operator|.
+name|line_number
+operator|=
+operator|(
+name|short
+operator|)
+name|line_number
+expr_stmt|;
+block|}
+comment|/**      * @param start_pc the pc for this line number      */
+specifier|public
+specifier|final
+name|void
+name|setStartPC
+parameter_list|(
+name|int
+name|start_pc
+parameter_list|)
+block|{
+name|this
+operator|.
+name|start_pc
+operator|=
+operator|(
+name|short
+operator|)
+name|start_pc
+expr_stmt|;
 block|}
 comment|/**      * @return String representation      */
 annotation|@

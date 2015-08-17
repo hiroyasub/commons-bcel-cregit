@@ -83,7 +83,6 @@ operator|-
 literal|5668999920978520157L
 decl_stmt|;
 specifier|private
-specifier|final
 name|int
 name|constantvalue_index
 decl_stmt|;
@@ -247,6 +246,23 @@ block|{
 return|return
 name|constantvalue_index
 return|;
+block|}
+comment|/**      * @param constantvalue_index the index info the constant pool of this constant value      */
+specifier|public
+specifier|final
+name|void
+name|setConstantValueIndex
+parameter_list|(
+name|int
+name|constantvalue_index
+parameter_list|)
+block|{
+name|this
+operator|.
+name|constantvalue_index
+operator|=
+name|constantvalue_index
+expr_stmt|;
 block|}
 comment|/**      * @return String representation of constant value.      */
 annotation|@

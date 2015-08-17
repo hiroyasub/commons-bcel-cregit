@@ -82,11 +82,9 @@ operator|-
 literal|4017327188724019487L
 decl_stmt|;
 specifier|private
-specifier|final
 name|ElementValue
 name|default_value
 decl_stmt|;
-comment|// TODO could this be made final?
 comment|/**      * @param name_index    Index pointing to the name<em>Code</em>      * @param length        Content length in bytes      * @param input         Input stream      * @param constant_pool Array of constants      */
 name|AnnotationDefault
 parameter_list|(
@@ -111,14 +109,21 @@ name|name_index
 argument_list|,
 name|length
 argument_list|,
+operator|(
+name|ElementValue
+operator|)
+literal|null
+argument_list|,
+name|constant_pool
+argument_list|)
+expr_stmt|;
+name|default_value
+operator|=
 name|ElementValue
 operator|.
 name|readElementValue
 argument_list|(
 name|input
-argument_list|,
-name|constant_pool
-argument_list|)
 argument_list|,
 name|constant_pool
 argument_list|)
@@ -178,6 +183,21 @@ name|visitAnnotationDefault
 argument_list|(
 name|this
 argument_list|)
+expr_stmt|;
+block|}
+comment|/**      * @param defaultValue the default value of this methodinfo's annotation      */
+specifier|public
+specifier|final
+name|void
+name|setDefaultValue
+parameter_list|(
+name|ElementValue
+name|defaultValue
+parameter_list|)
+block|{
+name|default_value
+operator|=
+name|defaultValue
 expr_stmt|;
 block|}
 comment|/**      * @return the default value      */

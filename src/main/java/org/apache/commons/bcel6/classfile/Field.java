@@ -106,7 +106,6 @@ literal|4604082205545049134L
 decl_stmt|;
 specifier|private
 specifier|static
-specifier|final
 name|BCELComparator
 name|_cmp
 init|=
@@ -556,6 +555,21 @@ block|{
 return|return
 name|_cmp
 return|;
+block|}
+comment|/**      * @param comparator Comparison strategy object      */
+specifier|public
+specifier|static
+name|void
+name|setComparator
+parameter_list|(
+name|BCELComparator
+name|comparator
+parameter_list|)
+block|{
+name|_cmp
+operator|=
+name|comparator
+expr_stmt|;
 block|}
 comment|/**      * Return value as defined by given BCELComparator strategy.      * By default two Field objects are said to be equal when      * their names and signatures are equal.      *       * @see java.lang.Object#equals(java.lang.Object)      */
 annotation|@

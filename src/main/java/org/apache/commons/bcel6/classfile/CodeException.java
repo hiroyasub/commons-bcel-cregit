@@ -96,25 +96,21 @@ init|=
 literal|2972500041254967221L
 decl_stmt|;
 specifier|private
-specifier|final
 name|int
 name|start_pc
 decl_stmt|;
 comment|// Range in the code the exception handler is
 specifier|private
-specifier|final
 name|int
 name|end_pc
 decl_stmt|;
 comment|// active. start_pc is inclusive, end_pc exclusive
 specifier|private
-specifier|final
 name|int
 name|handler_pc
 decl_stmt|;
 comment|/* Starting address of exception handler, i.e.,      * an offset from start of code.      */
 specifier|private
-specifier|final
 name|int
 name|catch_type
 decl_stmt|;
@@ -329,6 +325,76 @@ block|{
 return|return
 name|start_pc
 return|;
+block|}
+comment|/**      * @param catch_type the type of exception that is caught      */
+specifier|public
+specifier|final
+name|void
+name|setCatchType
+parameter_list|(
+name|int
+name|catch_type
+parameter_list|)
+block|{
+name|this
+operator|.
+name|catch_type
+operator|=
+name|catch_type
+expr_stmt|;
+block|}
+comment|/**      * @param end_pc end of handled block      */
+specifier|public
+specifier|final
+name|void
+name|setEndPC
+parameter_list|(
+name|int
+name|end_pc
+parameter_list|)
+block|{
+name|this
+operator|.
+name|end_pc
+operator|=
+name|end_pc
+expr_stmt|;
+block|}
+comment|/**      * @param handler_pc where the actual code is      */
+specifier|public
+specifier|final
+name|void
+name|setHandlerPC
+parameter_list|(
+name|int
+name|handler_pc
+parameter_list|)
+block|{
+comment|// TODO unused
+name|this
+operator|.
+name|handler_pc
+operator|=
+name|handler_pc
+expr_stmt|;
+block|}
+comment|/**      * @param start_pc start of handled block      */
+specifier|public
+specifier|final
+name|void
+name|setStartPC
+parameter_list|(
+name|int
+name|start_pc
+parameter_list|)
+block|{
+comment|// TODO unused
+name|this
+operator|.
+name|start_pc
+operator|=
+name|start_pc
+expr_stmt|;
 block|}
 comment|/**      * @return String representation.      */
 annotation|@

@@ -127,7 +127,6 @@ operator|-
 literal|1707826820310002955L
 decl_stmt|;
 specifier|private
-specifier|final
 name|int
 name|name_index
 decl_stmt|;
@@ -947,6 +946,23 @@ operator|.
 name|length
 operator|=
 name|length
+expr_stmt|;
+block|}
+comment|/**      * @param name_index of attribute.      */
+specifier|public
+specifier|final
+name|void
+name|setNameIndex
+parameter_list|(
+name|int
+name|name_index
+parameter_list|)
+block|{
+name|this
+operator|.
+name|name_index
+operator|=
+name|name_index
 expr_stmt|;
 block|}
 comment|/**      * @return Name index in constant pool of attribute name.      */

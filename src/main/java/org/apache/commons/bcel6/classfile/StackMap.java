@@ -87,7 +87,7 @@ name|StackMapEntry
 index|[]
 name|map
 decl_stmt|;
-comment|// Table of stack map entries // TODO could be final if ctor and copy() were recoded
+comment|// Table of stack map entries
 comment|/*      * @param name_index Index of name      * @param length Content length in bytes      * @param map Table of stack map entries      * @param constant_pool Array of constants      */
 specifier|public
 name|StackMap
@@ -263,6 +263,24 @@ block|{
 return|return
 name|map
 return|;
+block|}
+comment|/**      * @param map Array of stack map entries      */
+specifier|public
+specifier|final
+name|void
+name|setStackMap
+parameter_list|(
+name|StackMapEntry
+index|[]
+name|map
+parameter_list|)
+block|{
+name|this
+operator|.
+name|map
+operator|=
+name|map
+expr_stmt|;
 block|}
 comment|/**      * @return String representation.      */
 annotation|@

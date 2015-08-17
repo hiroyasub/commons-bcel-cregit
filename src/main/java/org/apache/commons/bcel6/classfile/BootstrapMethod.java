@@ -95,7 +95,6 @@ literal|4517534834047695344L
 decl_stmt|;
 comment|/** Index of the CONSTANT_MethodHandle_info structure in the constant_pool table */
 specifier|private
-specifier|final
 name|int
 name|bootstrap_method_ref
 decl_stmt|;
@@ -106,7 +105,6 @@ name|num_bootstrap_arguments
 decl_stmt|;
 comment|/** Array of references to the constant_pool table */
 specifier|private
-specifier|final
 name|int
 index|[]
 name|bootstrap_arguments
@@ -148,25 +146,24 @@ throws|throws
 name|IOException
 block|{
 name|this
-operator|.
-name|bootstrap_method_ref
-operator|=
+argument_list|(
 name|input
 operator|.
 name|readUnsignedShort
 argument_list|()
-expr_stmt|;
-name|this
-operator|.
-name|num_bootstrap_arguments
-operator|=
+argument_list|,
 name|input
 operator|.
 name|readUnsignedShort
 argument_list|()
+argument_list|,
+operator|(
+name|int
+index|[]
+operator|)
+literal|null
+argument_list|)
 expr_stmt|;
-name|this
-operator|.
 name|bootstrap_arguments
 operator|=
 operator|new
@@ -246,6 +243,22 @@ return|return
 name|bootstrap_method_ref
 return|;
 block|}
+comment|/**      * @param bootstrap_method_ref int index into constant_pool of CONSTANT_MethodHandle      */
+specifier|public
+name|void
+name|setBootstrapMethodRef
+parameter_list|(
+name|int
+name|bootstrap_method_ref
+parameter_list|)
+block|{
+name|this
+operator|.
+name|bootstrap_method_ref
+operator|=
+name|bootstrap_method_ref
+expr_stmt|;
+block|}
 comment|/**      * @return int[] of bootstrap_method indices into constant_pool of CONSTANT_<type>_info      */
 specifier|public
 name|int
@@ -266,6 +279,23 @@ block|{
 return|return
 name|num_bootstrap_arguments
 return|;
+block|}
+comment|/**      * @param bootstrap_arguments int[] indices into constant_pool of CONSTANT_<type>_info      */
+specifier|public
+name|void
+name|setBootstrapArguments
+parameter_list|(
+name|int
+index|[]
+name|bootstrap_arguments
+parameter_list|)
+block|{
+name|this
+operator|.
+name|bootstrap_arguments
+operator|=
+name|bootstrap_arguments
+expr_stmt|;
 block|}
 comment|/**      * @return String representation.      */
 annotation|@

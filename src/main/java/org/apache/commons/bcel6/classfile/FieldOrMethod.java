@@ -87,13 +87,11 @@ operator|-
 literal|1833306330869469714L
 decl_stmt|;
 specifier|private
-specifier|final
 name|int
 name|name_index
 decl_stmt|;
 comment|// Points to field name in constant pool
 specifier|private
-specifier|final
 name|int
 name|signature_index
 decl_stmt|;
@@ -129,19 +127,6 @@ decl_stmt|;
 name|FieldOrMethod
 parameter_list|()
 block|{
-comment|// TODO is this ctor needed?
-name|this
-operator|.
-name|name_index
-operator|=
-literal|0
-expr_stmt|;
-name|this
-operator|.
-name|signature_index
-operator|=
-literal|0
-expr_stmt|;
 block|}
 comment|/**      * Initialize from another object. Note that both objects use the same      * references (shallow copy). Use clone() for a physical copy.      */
 specifier|protected
@@ -445,6 +430,23 @@ return|return
 name|name_index
 return|;
 block|}
+comment|/**      * @param name_index Index in constant pool of object's name.      */
+specifier|public
+specifier|final
+name|void
+name|setNameIndex
+parameter_list|(
+name|int
+name|name_index
+parameter_list|)
+block|{
+name|this
+operator|.
+name|name_index
+operator|=
+name|name_index
+expr_stmt|;
+block|}
 comment|/**      * @return Index in constant pool of field signature.      */
 specifier|public
 specifier|final
@@ -455,6 +457,23 @@ block|{
 return|return
 name|signature_index
 return|;
+block|}
+comment|/**      * @param signature_index Index in constant pool of field signature.      */
+specifier|public
+specifier|final
+name|void
+name|setSignatureIndex
+parameter_list|(
+name|int
+name|signature_index
+parameter_list|)
+block|{
+name|this
+operator|.
+name|signature_index
+operator|=
+name|signature_index
+expr_stmt|;
 block|}
 comment|/**      * @return Name of object, i.e., method name or field name      */
 specifier|public

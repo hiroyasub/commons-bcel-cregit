@@ -87,7 +87,6 @@ name|byte
 index|[]
 name|bytes
 decl_stmt|;
-comment|// TODO could be final if copy() were rewritten
 comment|/**      * Initialize from another object. Note that both objects use the same      * references (shallow copy). Use clone() for a physical copy.      */
 specifier|public
 name|Deprecated
@@ -301,6 +300,24 @@ block|{
 return|return
 name|bytes
 return|;
+block|}
+comment|/**      * @param bytes the raw bytes that represents this byte array      */
+specifier|public
+specifier|final
+name|void
+name|setBytes
+parameter_list|(
+name|byte
+index|[]
+name|bytes
+parameter_list|)
+block|{
+name|this
+operator|.
+name|bytes
+operator|=
+name|bytes
+expr_stmt|;
 block|}
 comment|/**      * @return attribute name      */
 annotation|@

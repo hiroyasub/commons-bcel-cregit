@@ -85,7 +85,6 @@ operator|-
 literal|1083450233715258720L
 decl_stmt|;
 specifier|private
-specifier|final
 name|int
 name|name_index
 decl_stmt|;
@@ -208,6 +207,23 @@ block|{
 return|return
 name|name_index
 return|;
+block|}
+comment|/**      * @param name_index the name index in the constant pool of this Constant Class      */
+specifier|public
+specifier|final
+name|void
+name|setNameIndex
+parameter_list|(
+name|int
+name|name_index
+parameter_list|)
+block|{
+name|this
+operator|.
+name|name_index
+operator|=
+name|name_index
+expr_stmt|;
 block|}
 comment|/** @return String object      */
 annotation|@

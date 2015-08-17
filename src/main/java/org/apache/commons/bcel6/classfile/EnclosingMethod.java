@@ -83,7 +83,6 @@ decl_stmt|;
 comment|// Pointer to the CONSTANT_Class_info structure representing the
 comment|// innermost class that encloses the declaration of the current class.
 specifier|private
-specifier|final
 name|int
 name|classIndex
 decl_stmt|;
@@ -96,7 +95,6 @@ comment|// to in the class_index.  *It is the compiler responsibility* to
 comment|// ensure that the method identified by this index is the closest
 comment|// lexically enclosing method that includes the local/anonymous class.
 specifier|private
-specifier|final
 name|int
 name|methodIndex
 decl_stmt|;
@@ -237,6 +235,34 @@ block|{
 return|return
 name|methodIndex
 return|;
+block|}
+specifier|public
+specifier|final
+name|void
+name|setEnclosingClassIndex
+parameter_list|(
+name|int
+name|idx
+parameter_list|)
+block|{
+name|classIndex
+operator|=
+name|idx
+expr_stmt|;
+block|}
+specifier|public
+specifier|final
+name|void
+name|setEnclosingMethodIndex
+parameter_list|(
+name|int
+name|idx
+parameter_list|)
+block|{
+name|methodIndex
+operator|=
+name|idx
+expr_stmt|;
 block|}
 specifier|public
 specifier|final
