@@ -1087,7 +1087,7 @@ name|buf
 operator|.
 name|append
 argument_list|(
-literal|"\nAttribute(s) = \n"
+literal|"\nAttribute(s) = "
 argument_list|)
 expr_stmt|;
 for|for
@@ -1102,15 +1102,15 @@ name|buf
 operator|.
 name|append
 argument_list|(
-name|attribute
-operator|.
-name|toString
-argument_list|()
+literal|"\n"
 argument_list|)
 operator|.
 name|append
 argument_list|(
-literal|"\n"
+name|attribute
+operator|.
+name|toString
+argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
