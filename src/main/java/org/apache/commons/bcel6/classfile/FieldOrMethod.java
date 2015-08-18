@@ -103,7 +103,8 @@ index|[]
 name|attributes
 decl_stmt|;
 comment|// Collection of attributes
-specifier|protected
+comment|// @since 6.0
+specifier|private
 name|AnnotationEntry
 index|[]
 name|annotationEntries
@@ -631,7 +632,7 @@ return|return
 name|c
 return|;
 block|}
-comment|/**      * @return Annotations on the field or method      */
+comment|/**      * @return Annotations on the field or method      * @since 6.0      */
 specifier|public
 name|AnnotationEntry
 index|[]
@@ -660,7 +661,7 @@ return|return
 name|annotationEntries
 return|;
 block|}
-comment|/**      * Hunts for a signature attribute on the member and returns its contents.  So where the 'regular' signature      * may be (Ljava/util/Vector;)V the signature attribute may in fact say 'Ljava/lang/Vector&lt;Ljava/lang/String&gt;;'      * Coded for performance - searches for the attribute only when requested - only searches for it once.      */
+comment|/**      * Hunts for a signature attribute on the member and returns its contents.  So where the 'regular' signature      * may be (Ljava/util/Vector;)V the signature attribute may in fact say 'Ljava/lang/Vector&lt;Ljava/lang/String&gt;;'      * Coded for performance - searches for the attribute only when requested - only searches for it once.      * @since 6.0      */
 specifier|public
 specifier|final
 name|String
