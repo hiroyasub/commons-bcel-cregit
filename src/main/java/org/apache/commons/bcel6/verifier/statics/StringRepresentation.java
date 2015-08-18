@@ -836,6 +836,7 @@ literal|"<CODE>"
 expr_stmt|;
 comment|// We don't need real code outputs.
 block|}
+comment|/**      * @since 6.0      */
 annotation|@
 name|Override
 specifier|public
@@ -856,6 +857,7 @@ name|obj
 argument_list|)
 expr_stmt|;
 block|}
+comment|/**      * @since 6.0      */
 annotation|@
 name|Override
 specifier|public
@@ -1388,6 +1390,7 @@ name|obj
 argument_list|)
 expr_stmt|;
 block|}
+comment|/**      * @since 6.0      */
 annotation|@
 name|Override
 specifier|public
@@ -1442,6 +1445,7 @@ name|obj
 argument_list|)
 expr_stmt|;
 block|}
+comment|/**      * @since 6.0      */
 annotation|@
 name|Override
 specifier|public
@@ -1460,6 +1464,7 @@ name|obj
 argument_list|)
 expr_stmt|;
 block|}
+comment|/**      * @since 6.0      */
 annotation|@
 name|Override
 specifier|public
@@ -1478,6 +1483,7 @@ name|obj
 argument_list|)
 expr_stmt|;
 block|}
+comment|/**      * @since 6.0      */
 annotation|@
 name|Override
 specifier|public

@@ -350,6 +350,7 @@ name|IOException
 block|{
 block|}
 comment|/**      * Read an instruction from (byte code) input stream and return the      * appropiate object.      *      * @param bytes input stream bytes      * @return instruction object being read      */
+comment|// @since 6.0 no longer final
 specifier|public
 specifier|static
 name|Instruction
@@ -1867,7 +1868,7 @@ else|:
 literal|false
 return|;
 block|}
-comment|/** calculate the hashCode of this object      * @return the hashCode      */
+comment|/** calculate the hashCode of this object      * @return the hashCode      * @since 6.0      */
 annotation|@
 name|Override
 specifier|public

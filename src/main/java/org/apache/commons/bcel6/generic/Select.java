@@ -68,6 +68,7 @@ implements|implements
 name|VariableLengthInstruction
 implements|,
 name|StackConsumer
+comment|/* @since 6.0 */
 implements|,
 name|StackProducer
 block|{

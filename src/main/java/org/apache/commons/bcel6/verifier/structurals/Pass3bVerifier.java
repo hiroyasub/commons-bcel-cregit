@@ -1676,7 +1676,7 @@ literal|null
 condition|)
 do|;
 block|}
-comment|/**      * Throws an exception indicating the returned type is not compatible with the return type of the given method      * @throws StructuralCodeConstraintException always      */
+comment|/**      * Throws an exception indicating the returned type is not compatible with the return type of the given method      * @throws StructuralCodeConstraintException always      * @since 6.0      */
 specifier|public
 name|void
 name|invalidReturnTypeError

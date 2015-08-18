@@ -3480,7 +3480,7 @@ name|INT
 argument_list|)
 expr_stmt|;
 block|}
-comment|/** Symbolically executes the corresponding Java Virtual Machine instruction. */
+comment|/**      * Symbolically executes the corresponding Java Virtual Machine instruction.      * @since 6.0      */
 annotation|@
 name|Override
 specifier|public

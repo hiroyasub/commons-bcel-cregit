@@ -77,7 +77,7 @@ operator|=
 name|message
 expr_stmt|;
 block|}
-comment|/**      * Constructs a new AssertionViolationException with the specified error message and initial cause      */
+comment|/**      * Constructs a new AssertionViolationException with the specified error message and initial cause      * @since 6.0      */
 specifier|public
 name|AssertionViolatedException
 parameter_list|(

@@ -684,6 +684,7 @@ block|}
 block|}
 block|}
 comment|/** Checks for class path components in the following properties:      * "java.class.path", "sun.boot.class.path", "java.ext.dirs"      *      * @return class path as used by default by BCEL      */
+comment|// @since 6.0 no longer final
 specifier|public
 specifier|static
 name|String
@@ -970,7 +971,7 @@ name|getInputStream
 argument_list|()
 return|;
 block|}
-comment|/**      * @param name fully qualified resource name, e.g. java/lang/String.class      * @return InputStream supplying the resource, or null if no resource with that name.      */
+comment|/**      * @param name fully qualified resource name, e.g. java/lang/String.class      * @return InputStream supplying the resource, or null if no resource with that name.      * @since 6.0      */
 specifier|public
 name|InputStream
 name|getResourceAsStream
@@ -1015,7 +1016,7 @@ return|return
 literal|null
 return|;
 block|}
-comment|/**      * @param name fully qualified resource name, e.g. java/lang/String.class      * @return URL supplying the resource, or null if no resource with that name.      */
+comment|/**      * @param name fully qualified resource name, e.g. java/lang/String.class      * @return URL supplying the resource, or null if no resource with that name.      * @since 6.0      */
 specifier|public
 name|URL
 name|getResource
@@ -1060,7 +1061,7 @@ return|return
 literal|null
 return|;
 block|}
-comment|/**      * @param name fully qualified resource name, e.g. java/lang/String.class      * @return An Enumeration of URLs supplying the resource, or an      * empty Enumeration if no resource with that name.      */
+comment|/**      * @param name fully qualified resource name, e.g. java/lang/String.class      * @return An Enumeration of URLs supplying the resource, or an      * empty Enumeration if no resource with that name.      * @since 6.0      */
 specifier|public
 name|Enumeration
 argument_list|<

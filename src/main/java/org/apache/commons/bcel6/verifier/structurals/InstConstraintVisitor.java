@@ -8352,7 +8352,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/**      * Ensures the specific preconditions of the said instruction.      */
+comment|/**      * Ensures the specific preconditions of the said instruction.      * @since 6.0      */
 annotation|@
 name|Override
 specifier|public

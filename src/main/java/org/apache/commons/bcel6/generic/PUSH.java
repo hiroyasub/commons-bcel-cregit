@@ -418,7 +418,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/**      *       * @param cp      * @param value      */
+comment|/**      *       * @param cp      * @param value      * @since 6.0      */
 specifier|public
 name|PUSH
 parameter_list|(

@@ -101,6 +101,7 @@ argument_list|)
 throw|;
 block|}
 block|}
+comment|// @since 6.0 no longer final
 specifier|public
 specifier|static
 name|BasicType

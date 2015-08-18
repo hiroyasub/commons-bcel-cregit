@@ -33,6 +33,7 @@ implements|,
 name|StackProducer
 implements|,
 name|StackConsumer
+comment|/* since 6.0 */
 block|{
 specifier|private
 specifier|static

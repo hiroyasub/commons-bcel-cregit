@@ -87,6 +87,7 @@ name|String
 name|class_name
 decl_stmt|;
 comment|// Class name of type
+comment|/**      * @since 6.0      */
 specifier|public
 specifier|static
 name|ObjectType

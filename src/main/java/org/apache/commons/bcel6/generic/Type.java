@@ -510,7 +510,7 @@ return|return
 name|type
 return|;
 block|}
-comment|/**      * boolean, short and char variable are considered as int in the stack or local variable area.      * Returns {@link Type#INT} for {@link Type#BOOLEAN}, {@link Type#SHORT} or {@link Type#CHAR}, otherwise      * returns the given type.      * @see OperandStack#push(Type)      * @see LocalVariables#set(int, Type)      */
+comment|/**      * boolean, short and char variable are considered as int in the stack or local variable area.      * Returns {@link Type#INT} for {@link Type#BOOLEAN}, {@link Type#SHORT} or {@link Type#CHAR}, otherwise      * returns the given type.      * @see OperandStack#push(Type)      * @see LocalVariables#set(int, Type)      * @since 6.0      */
 specifier|public
 name|Type
 name|normalizeForStackOrLocal
@@ -793,6 +793,7 @@ argument_list|)
 expr_stmt|;
 block|}
 comment|/**      * Convert signature to a Type object.      * @param signature signature string such as Ljava/lang/String;      * @return type object      */
+comment|// @since 6.0 no longer final
 specifier|public
 specifier|static
 name|Type
