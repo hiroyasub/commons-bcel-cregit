@@ -1189,7 +1189,6 @@ name|FLAG_FOR_UNKNOWN
 argument_list|)
 return|;
 block|}
-specifier|public
 specifier|static
 name|String
 name|printFlags
