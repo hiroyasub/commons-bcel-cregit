@@ -2628,6 +2628,7 @@ return|return
 name|attributes
 return|;
 block|}
+comment|/**      * @since 6.0      */
 specifier|public
 name|void
 name|addAnnotationsAsAttribute
@@ -2646,7 +2647,10 @@ name|getAnnotationAttributes
 argument_list|(
 name|cp
 argument_list|,
-name|annotation_vec
+name|super
+operator|.
+name|getAnnotationEntries
+argument_list|()
 argument_list|)
 decl_stmt|;
 for|for
@@ -2664,6 +2668,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
+comment|/**      * @since 6.0      */
 specifier|public
 name|void
 name|addParameterAnnotationsAsAttribute
@@ -4569,7 +4574,7 @@ return|;
 block|}
 comment|//J5TODO: Should param_annotations be an array of arrays? Rather than an array of lists, this
 comment|// is more likely to suggest to the caller it is readonly (which a List does not).
-comment|/**      * Return a list of AnnotationGen objects representing parameter annotations      */
+comment|/**      * Return a list of AnnotationGen objects representing parameter annotations      * @since 6.0      */
 specifier|public
 name|List
 argument_list|<

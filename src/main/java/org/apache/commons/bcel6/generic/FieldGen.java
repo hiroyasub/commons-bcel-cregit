@@ -1039,7 +1039,10 @@ name|getAnnotationAttributes
 argument_list|(
 name|cp
 argument_list|,
-name|annotation_vec
+name|super
+operator|.
+name|getAnnotationEntries
+argument_list|()
 argument_list|)
 decl_stmt|;
 for|for

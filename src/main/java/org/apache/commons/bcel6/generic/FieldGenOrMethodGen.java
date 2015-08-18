@@ -133,7 +133,8 @@ name|ArrayList
 argument_list|<>
 argument_list|()
 decl_stmt|;
-specifier|protected
+comment|// @since 6.0
+specifier|private
 name|List
 argument_list|<
 name|AnnotationEntryGen
@@ -150,13 +151,15 @@ name|FieldGenOrMethodGen
 parameter_list|()
 block|{
 block|}
-specifier|public
+comment|/**      * @since 6.0      */
+specifier|protected
 name|FieldGenOrMethodGen
 parameter_list|(
 name|int
 name|access_flags
 parameter_list|)
 block|{
+comment|// TODO could this be package protected?
 name|super
 argument_list|(
 name|access_flags
@@ -286,13 +289,15 @@ name|a
 argument_list|)
 expr_stmt|;
 block|}
-specifier|public
+comment|/**      * @since 6.0      */
+specifier|protected
 name|void
 name|addAnnotationEntry
 parameter_list|(
 name|AnnotationEntryGen
 name|ag
 parameter_list|)
+comment|// TODO could this be package protected?
 block|{
 name|annotation_vec
 operator|.
@@ -319,13 +324,15 @@ name|a
 argument_list|)
 expr_stmt|;
 block|}
-specifier|public
+comment|/**      * @since 6.0      */
+specifier|protected
 name|void
 name|removeAnnotationEntry
 parameter_list|(
 name|AnnotationEntryGen
 name|ag
 parameter_list|)
+comment|// TODO could this be package protected?
 block|{
 name|annotation_vec
 operator|.
@@ -347,10 +354,12 @@ name|clear
 argument_list|()
 expr_stmt|;
 block|}
-specifier|public
+comment|/**      * @since 6.0      */
+specifier|protected
 name|void
 name|removeAnnotationEntries
 parameter_list|()
+comment|// TODO could this be package protected?
 block|{
 name|annotation_vec
 operator|.

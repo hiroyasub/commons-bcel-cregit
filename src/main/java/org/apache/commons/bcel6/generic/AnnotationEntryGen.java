@@ -959,7 +959,7 @@ return|return
 name|isRuntimeVisible
 return|;
 block|}
-comment|/**      * Converts a list of AnnotationGen objects into a set of attributes      * that can be attached to the class file.      *      * @param cp  The constant pool gen where we can create the necessary name refs      * @param vec A list of AnnotationGen objects      */
+comment|/**      * Converts a list of AnnotationGen objects into a set of attributes      * that can be attached to the class file.      *      * @param cp  The constant pool gen where we can create the necessary name refs      * @param annotationEntryGens An array of AnnotationGen objects      */
 specifier|static
 name|Attribute
 index|[]
@@ -968,19 +968,18 @@ parameter_list|(
 name|ConstantPoolGen
 name|cp
 parameter_list|,
-name|List
-argument_list|<
 name|AnnotationEntryGen
-argument_list|>
-name|vec
+index|[]
+name|annotationEntryGens
 parameter_list|)
 block|{
 if|if
 condition|(
-name|vec
+name|annotationEntryGens
 operator|.
-name|isEmpty
-argument_list|()
+name|length
+operator|==
+literal|0
 condition|)
 block|{
 return|return
@@ -1009,7 +1008,7 @@ control|(
 name|AnnotationEntryGen
 name|a
 range|:
-name|vec
+name|annotationEntryGens
 control|)
 block|{
 if|if
@@ -1083,7 +1082,7 @@ control|(
 name|AnnotationEntryGen
 name|a
 range|:
-name|vec
+name|annotationEntryGens
 control|)
 block|{
 if|if
