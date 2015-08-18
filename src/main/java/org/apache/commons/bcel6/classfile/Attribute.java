@@ -126,26 +126,26 @@ init|=
 operator|-
 literal|1707826820310002955L
 decl_stmt|;
-specifier|private
+specifier|protected
 name|int
 name|name_index
 decl_stmt|;
-comment|// Points to attribute name in constant pool
-specifier|private
+comment|// Points to attribute name in constant pool TODO make private (has getter& setter)
+specifier|protected
 name|int
 name|length
 decl_stmt|;
-comment|// Content length of attribute field
-specifier|private
-specifier|final
+comment|// Content length of attribute field TODO make private (has getter& setter)
+specifier|protected
 name|byte
 name|tag
 decl_stmt|;
-comment|// Tag to distinguish subclasses
-specifier|private
+comment|// Tag to distinguish subclasses TODO make private& final; supposed to be immutable
+specifier|protected
 name|ConstantPool
 name|constant_pool
 decl_stmt|;
+comment|// TODO make private (has getter& setter)
 specifier|protected
 name|Attribute
 parameter_list|(

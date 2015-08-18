@@ -86,29 +86,30 @@ init|=
 operator|-
 literal|1833306330869469714L
 decl_stmt|;
-specifier|private
+comment|// TODO should be made private
+specifier|protected
 name|int
 name|name_index
 decl_stmt|;
 comment|// Points to field name in constant pool
-specifier|private
+specifier|protected
 name|int
 name|signature_index
 decl_stmt|;
 comment|// Points to encoded signature
-specifier|private
+specifier|protected
 name|Attribute
 index|[]
 name|attributes
 decl_stmt|;
 comment|// Collection of attributes
-specifier|private
+specifier|protected
 name|AnnotationEntry
 index|[]
 name|annotationEntries
 decl_stmt|;
 comment|// annotations defined on the field or method
-specifier|private
+specifier|protected
 name|ConstantPool
 name|constant_pool
 decl_stmt|;

@@ -229,7 +229,7 @@ argument_list|()
 argument_list|,
 name|idx
 argument_list|,
-name|getConstantPoolgen
+name|getConstantPool
 argument_list|()
 operator|.
 name|getConstantPool
@@ -307,7 +307,7 @@ init|=
 operator|(
 name|ConstantUtf8
 operator|)
-name|getConstantPoolgen
+name|getConstantPool
 argument_list|()
 operator|.
 name|getConstant

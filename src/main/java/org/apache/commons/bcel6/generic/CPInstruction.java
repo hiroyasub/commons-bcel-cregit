@@ -125,7 +125,7 @@ name|serialVersionUID
 init|=
 literal|2968547649792233082L
 decl_stmt|;
-specifier|private
+specifier|protected
 name|int
 name|index
 decl_stmt|;

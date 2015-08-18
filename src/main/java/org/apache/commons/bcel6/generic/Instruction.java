@@ -1803,8 +1803,7 @@ return|return
 name|length
 return|;
 block|}
-comment|/**      * Needed in readInstruction.      */
-specifier|private
+comment|/**      * Needed in readInstruction and subclasses in this package      */
 name|void
 name|setOpcode
 parameter_list|(

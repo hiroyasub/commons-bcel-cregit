@@ -219,7 +219,8 @@ argument_list|)
 expr_stmt|;
 name|idx
 operator|=
-name|cpGen
+name|getConstantPool
+argument_list|()
 operator|.
 name|addInteger
 argument_list|(
@@ -249,7 +250,8 @@ argument_list|)
 expr_stmt|;
 name|idx
 operator|=
-name|cpGen
+name|getConstantPool
+argument_list|()
 operator|.
 name|addLong
 argument_list|(
@@ -279,7 +281,8 @@ argument_list|)
 expr_stmt|;
 name|idx
 operator|=
-name|cpGen
+name|getConstantPool
+argument_list|()
 operator|.
 name|addDouble
 argument_list|(
@@ -309,7 +312,8 @@ argument_list|)
 expr_stmt|;
 name|idx
 operator|=
-name|cpGen
+name|getConstantPool
+argument_list|()
 operator|.
 name|addFloat
 argument_list|(
@@ -339,7 +343,8 @@ argument_list|)
 expr_stmt|;
 name|idx
 operator|=
-name|cpGen
+name|getConstantPool
+argument_list|()
 operator|.
 name|addInteger
 argument_list|(
@@ -369,7 +374,8 @@ argument_list|)
 expr_stmt|;
 name|idx
 operator|=
-name|cpGen
+name|getConstantPool
+argument_list|()
 operator|.
 name|addInteger
 argument_list|(
@@ -399,7 +405,8 @@ argument_list|)
 expr_stmt|;
 name|idx
 operator|=
-name|cpGen
+name|getConstantPool
+argument_list|()
 operator|.
 name|addInteger
 argument_list|(
@@ -434,7 +441,8 @@ condition|)
 block|{
 name|idx
 operator|=
-name|cpGen
+name|getConstantPool
+argument_list|()
 operator|.
 name|addInteger
 argument_list|(
@@ -446,7 +454,8 @@ else|else
 block|{
 name|idx
 operator|=
-name|cpGen
+name|getConstantPool
+argument_list|()
 operator|.
 name|addInteger
 argument_list|(
@@ -477,7 +486,8 @@ argument_list|)
 expr_stmt|;
 name|idx
 operator|=
-name|cpGen
+name|getConstantPool
+argument_list|()
 operator|.
 name|addUtf8
 argument_list|(
@@ -734,7 +744,7 @@ argument_list|()
 argument_list|,
 name|idx
 argument_list|,
-name|getConstantPoolgen
+name|getConstantPool
 argument_list|()
 operator|.
 name|getConstantPool
@@ -780,7 +790,7 @@ init|=
 operator|(
 name|ConstantUtf8
 operator|)
-name|getConstantPoolgen
+name|getConstantPool
 argument_list|()
 operator|.
 name|getConstant
@@ -824,7 +834,7 @@ init|=
 operator|(
 name|ConstantInteger
 operator|)
-name|getConstantPoolgen
+name|getConstantPool
 argument_list|()
 operator|.
 name|getConstant
@@ -864,7 +874,7 @@ init|=
 operator|(
 name|ConstantInteger
 operator|)
-name|getConstantPoolgen
+name|getConstantPool
 argument_list|()
 operator|.
 name|getConstant
@@ -892,7 +902,7 @@ init|=
 operator|(
 name|ConstantLong
 operator|)
-name|getConstantPoolgen
+name|getConstantPool
 argument_list|()
 operator|.
 name|getConstant
@@ -920,7 +930,7 @@ init|=
 operator|(
 name|ConstantDouble
 operator|)
-name|getConstantPoolgen
+name|getConstantPool
 argument_list|()
 operator|.
 name|getConstant
@@ -948,7 +958,7 @@ init|=
 operator|(
 name|ConstantFloat
 operator|)
-name|getConstantPoolgen
+name|getConstantPool
 argument_list|()
 operator|.
 name|getConstant
@@ -976,7 +986,7 @@ init|=
 operator|(
 name|ConstantInteger
 operator|)
-name|getConstantPoolgen
+name|getConstantPool
 argument_list|()
 operator|.
 name|getConstant
@@ -1004,7 +1014,7 @@ init|=
 operator|(
 name|ConstantInteger
 operator|)
-name|getConstantPoolgen
+name|getConstantPool
 argument_list|()
 operator|.
 name|getConstant
@@ -1032,7 +1042,7 @@ init|=
 operator|(
 name|ConstantInteger
 operator|)
-name|getConstantPoolgen
+name|getConstantPool
 argument_list|()
 operator|.
 name|getConstant
@@ -1060,7 +1070,7 @@ init|=
 operator|(
 name|ConstantInteger
 operator|)
-name|getConstantPoolgen
+name|getConstantPool
 argument_list|()
 operator|.
 name|getConstant
@@ -1094,7 +1104,7 @@ init|=
 operator|(
 name|ConstantUtf8
 operator|)
-name|getConstantPoolgen
+name|getConstantPool
 argument_list|()
 operator|.
 name|getConstant

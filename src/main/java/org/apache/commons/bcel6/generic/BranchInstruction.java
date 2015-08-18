@@ -75,17 +75,17 @@ name|serialVersionUID
 init|=
 literal|3225905281842405051L
 decl_stmt|;
-specifier|private
+specifier|protected
 name|int
 name|index
 decl_stmt|;
 comment|// Branch target relative to this instruction
-specifier|private
+specifier|protected
 name|InstructionHandle
 name|target
 decl_stmt|;
 comment|// Target object in instruction list
-specifier|private
+specifier|protected
 name|int
 name|position
 decl_stmt|;

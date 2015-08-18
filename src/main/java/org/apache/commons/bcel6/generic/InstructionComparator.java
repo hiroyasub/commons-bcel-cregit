@@ -161,8 +161,7 @@ operator|)
 name|i1
 operator|)
 operator|.
-name|getTarget
-argument_list|()
+name|target
 operator|==
 operator|(
 operator|(
@@ -171,8 +170,7 @@ operator|)
 name|i2
 operator|)
 operator|.
-name|getTarget
-argument_list|()
+name|target
 return|;
 block|}
 if|else if

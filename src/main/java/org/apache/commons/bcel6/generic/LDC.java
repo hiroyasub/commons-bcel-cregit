@@ -152,8 +152,10 @@ name|MAX_BYTE
 condition|)
 block|{
 comment|// Fits in one byte?
-name|opcode
-operator|=
+name|super
+operator|.
+name|setOpcode
+argument_list|(
 name|org
 operator|.
 name|apache
@@ -165,6 +167,7 @@ operator|.
 name|Constants
 operator|.
 name|LDC
+argument_list|)
 expr_stmt|;
 name|length
 operator|=
@@ -173,8 +176,10 @@ expr_stmt|;
 block|}
 else|else
 block|{
-name|opcode
-operator|=
+name|super
+operator|.
+name|setOpcode
+argument_list|(
 name|org
 operator|.
 name|apache
@@ -186,6 +191,7 @@ operator|.
 name|Constants
 operator|.
 name|LDC_W
+argument_list|)
 expr_stmt|;
 name|length
 operator|=

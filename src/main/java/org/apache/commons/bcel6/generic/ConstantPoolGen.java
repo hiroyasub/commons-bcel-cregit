@@ -314,7 +314,7 @@ name|serialVersionUID
 init|=
 literal|6664071417323174824L
 decl_stmt|;
-specifier|private
+specifier|protected
 name|int
 name|size
 decl_stmt|;
@@ -323,7 +323,7 @@ name|Constant
 index|[]
 name|constants
 decl_stmt|;
-specifier|private
+specifier|protected
 name|int
 name|index
 init|=

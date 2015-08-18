@@ -144,16 +144,16 @@ init|=
 operator|-
 literal|1985077286871826895L
 decl_stmt|;
-specifier|private
-specifier|final
+specifier|protected
 name|byte
 name|type
 decl_stmt|;
-specifier|private
+comment|// TODO should be final (and private)
+specifier|protected
 name|String
 name|signature
 decl_stmt|;
-comment|// signature for the type
+comment|// signature for the type TODO should be private
 comment|/** Predefined constants      */
 specifier|public
 specifier|static

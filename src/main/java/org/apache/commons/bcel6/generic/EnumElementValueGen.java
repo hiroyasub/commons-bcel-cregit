@@ -202,7 +202,7 @@ name|typeIdx
 argument_list|,
 name|valueIdx
 argument_list|,
-name|getConstantPoolgen
+name|getConstantPool
 argument_list|()
 operator|.
 name|getConstantPool
@@ -381,7 +381,7 @@ init|=
 operator|(
 name|ConstantUtf8
 operator|)
-name|getConstantPoolgen
+name|getConstantPool
 argument_list|()
 operator|.
 name|getConstant
@@ -417,7 +417,7 @@ operator|(
 operator|(
 name|ConstantUtf8
 operator|)
-name|getConstantPoolgen
+name|getConstantPool
 argument_list|()
 operator|.
 name|getConstant
@@ -441,7 +441,7 @@ operator|(
 operator|(
 name|ConstantUtf8
 operator|)
-name|getConstantPoolgen
+name|getConstantPool
 argument_list|()
 operator|.
 name|getConstant

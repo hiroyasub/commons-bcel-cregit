@@ -260,6 +260,8 @@ name|getSignature
 argument_list|()
 argument_list|)
 expr_stmt|;
+name|super
+operator|.
 name|setSignature
 argument_list|(
 name|buf
