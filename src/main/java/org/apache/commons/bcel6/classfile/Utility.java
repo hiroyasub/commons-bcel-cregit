@@ -215,6 +215,10 @@ begin_comment
 comment|/**  * Utility functions that do not really belong to any class in particular.  *  * @version $Id$  */
 end_comment
 
+begin_comment
+comment|// @since 6.0 methods are no longer final
+end_comment
+
 begin_class
 specifier|public
 specifier|abstract

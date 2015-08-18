@@ -292,6 +292,7 @@ name|pop
 argument_list|()
 expr_stmt|;
 block|}
+comment|/**      * @since 6.0      */
 annotation|@
 name|Override
 specifier|public
@@ -347,6 +348,7 @@ name|pop
 argument_list|()
 expr_stmt|;
 block|}
+comment|/**      * @since 6.0      */
 annotation|@
 name|Override
 specifier|public
@@ -882,6 +884,7 @@ name|pop
 argument_list|()
 expr_stmt|;
 block|}
+comment|/**      * @since 6.0      */
 annotation|@
 name|Override
 specifier|public
@@ -937,6 +940,7 @@ name|pop
 argument_list|()
 expr_stmt|;
 block|}
+comment|/**      * @since 6.0      */
 annotation|@
 name|Override
 specifier|public
@@ -1255,6 +1259,7 @@ name|pop
 argument_list|()
 expr_stmt|;
 block|}
+comment|/**      * @since 6.0      */
 annotation|@
 name|Override
 specifier|public
@@ -1520,6 +1525,7 @@ name|pop
 argument_list|()
 expr_stmt|;
 block|}
+comment|/**      * @since 6.0      */
 annotation|@
 name|Override
 specifier|public
@@ -1705,6 +1711,7 @@ name|pop
 argument_list|()
 expr_stmt|;
 block|}
+comment|/**      * @since 6.0      */
 annotation|@
 name|Override
 specifier|public
@@ -1735,6 +1742,7 @@ name|pop
 argument_list|()
 expr_stmt|;
 block|}
+comment|/**      * @since 6.0      */
 annotation|@
 name|Override
 specifier|public
@@ -1765,6 +1773,7 @@ name|pop
 argument_list|()
 expr_stmt|;
 block|}
+comment|/**      * @since 6.0      */
 annotation|@
 name|Override
 specifier|public
@@ -1795,6 +1804,7 @@ name|pop
 argument_list|()
 expr_stmt|;
 block|}
+comment|/**      * @since 6.0      */
 annotation|@
 name|Override
 specifier|public
@@ -1825,6 +1835,7 @@ name|pop
 argument_list|()
 expr_stmt|;
 block|}
+comment|/**      * @since 6.0      */
 annotation|@
 name|Override
 specifier|public

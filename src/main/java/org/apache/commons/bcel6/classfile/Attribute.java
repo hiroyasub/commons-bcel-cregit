@@ -311,7 +311,7 @@ name|constant_pool
 argument_list|)
 return|;
 block|}
-comment|/**      * Class method reads one attribute from the input data stream. This method      * must not be accessible from the outside. It is called by the Field and      * Method constructor methods.      *       * @see Field      * @see Method      *       * @param file Input stream      * @param constant_pool Array of constants      * @return Attribute      * @throws IOException      * @throws ClassFormatException      */
+comment|/**      * Class method reads one attribute from the input data stream. This method      * must not be accessible from the outside. It is called by the Field and      * Method constructor methods.      *       * @see Field      * @see Method      *       * @param file Input stream      * @param constant_pool Array of constants      * @return Attribute      * @throws IOException      * @throws ClassFormatException      * @since 6.0      */
 specifier|public
 specifier|static
 name|Attribute
@@ -890,7 +890,7 @@ argument_list|)
 throw|;
 block|}
 block|}
-comment|/**      * @return Name of attribute      */
+comment|/**      * @return Name of attribute      * @since 6.0      */
 specifier|public
 name|String
 name|getName

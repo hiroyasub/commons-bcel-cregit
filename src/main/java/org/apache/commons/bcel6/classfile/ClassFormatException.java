@@ -58,21 +58,22 @@ name|s
 argument_list|)
 expr_stmt|;
 block|}
+comment|/**      * {@inheritDoc}      * @since 6.0      */
 specifier|public
 name|ClassFormatException
 parameter_list|(
 name|String
-name|s
+name|message
 parameter_list|,
 name|Throwable
-name|initCause
+name|cause
 parameter_list|)
 block|{
 name|super
 argument_list|(
-name|s
+name|message
 argument_list|,
-name|initCause
+name|cause
 argument_list|)
 expr_stmt|;
 block|}

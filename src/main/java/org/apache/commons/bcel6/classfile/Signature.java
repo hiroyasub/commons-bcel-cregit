@@ -898,6 +898,7 @@ name|toString
 argument_list|()
 return|;
 block|}
+comment|// @since 6.0 is no longer final
 specifier|public
 specifier|static
 name|boolean
@@ -927,6 +928,7 @@ literal|0
 operator|)
 return|;
 block|}
+comment|// @since 6.0 is no longer final
 specifier|public
 specifier|static
 name|boolean

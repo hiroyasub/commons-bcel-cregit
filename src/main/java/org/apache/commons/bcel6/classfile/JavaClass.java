@@ -1362,7 +1362,7 @@ return|return
 name|attributes
 return|;
 block|}
-comment|/**      * @return Annotations on the class      */
+comment|/**      * @return Annotations on the class      * @since 6.0      */
 specifier|public
 name|AnnotationEntry
 index|[]
@@ -2659,6 +2659,7 @@ operator|==
 literal|0
 return|;
 block|}
+comment|/**      * @since 6.0      */
 specifier|public
 specifier|final
 name|boolean
@@ -2674,6 +2675,7 @@ operator|.
 name|isAnonymous
 return|;
 block|}
+comment|/**      * @since 6.0      */
 specifier|public
 specifier|final
 name|boolean
@@ -3392,7 +3394,7 @@ name|obj
 argument_list|)
 return|;
 block|}
-comment|/**      * Return the natural ordering of two JavaClasses.      * This ordering is based on the class name      */
+comment|/**      * Return the natural ordering of two JavaClasses.      * This ordering is based on the class name      * @since 6.0      */
 annotation|@
 name|Override
 specifier|public

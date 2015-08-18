@@ -364,6 +364,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
+comment|/**      * @since 6.0      */
 specifier|public
 specifier|static
 name|ConstantUtf8
@@ -455,6 +456,7 @@ name|result
 return|;
 block|}
 block|}
+comment|/**      * @since 6.0      */
 specifier|public
 specifier|static
 name|ConstantUtf8
@@ -472,6 +474,7 @@ name|s
 argument_list|)
 return|;
 block|}
+comment|/**      * @since 6.0      */
 specifier|public
 specifier|static
 name|ConstantUtf8

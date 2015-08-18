@@ -70,6 +70,7 @@ implements|implements
 name|Cloneable
 implements|,
 name|Serializable
+comment|/* since 6.0 */
 block|{
 specifier|private
 specifier|static

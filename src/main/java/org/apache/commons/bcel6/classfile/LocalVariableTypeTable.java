@@ -162,7 +162,7 @@ comment|// J5TODO: Needs some testing !
 end_comment
 
 begin_comment
-comment|/**  * since 6.0  */
+comment|/**  * @since 6.0  */
 end_comment
 
 begin_class

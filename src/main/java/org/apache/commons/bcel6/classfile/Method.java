@@ -788,7 +788,7 @@ name|this
 argument_list|)
 return|;
 block|}
-comment|/**      * @return Annotations on the parameters of a method      */
+comment|/**      * @return Annotations on the parameters of a method      * @since 6.0      */
 specifier|public
 name|ParameterAnnotationEntry
 index|[]

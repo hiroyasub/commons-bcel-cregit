@@ -18,7 +18,7 @@ package|;
 end_package
 
 begin_comment
-comment|/**  * Unknown (non-standard) attributes may be read via user-defined factory  * objects that can be registered with the Attribute.addAttributeReader  * method. These factory objects should implement this interface.  *   * @see Attribute  * @version $Id$  */
+comment|/**  * Unknown (non-standard) attributes may be read via user-defined factory  * objects that can be registered with the Attribute.addAttributeReader  * method. These factory objects should implement this interface.  *   * @see Attribute  * @version $Id$  * @since 6.0  */
 end_comment
 
 begin_interface
