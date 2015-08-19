@@ -205,15 +205,13 @@ name|ConstantPool
 name|constant_pool
 parameter_list|)
 block|{
-throw|throw
-operator|new
-name|RuntimeException
-argument_list|(
-literal|"Not implemented yet!"
-argument_list|)
-throw|;
-comment|// is this next line sufficient?
-comment|// return (EnclosingMethod)clone();
+return|return
+operator|(
+name|EnclosingMethod
+operator|)
+name|clone
+argument_list|()
+return|;
 block|}
 comment|// Accessors
 specifier|public

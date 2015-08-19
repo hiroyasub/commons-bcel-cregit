@@ -221,13 +221,13 @@ name|ConstantPool
 name|_constant_pool
 parameter_list|)
 block|{
-throw|throw
-operator|new
-name|RuntimeException
-argument_list|(
-literal|"Not implemented yet!"
-argument_list|)
-throw|;
+return|return
+operator|(
+name|AnnotationDefault
+operator|)
+name|clone
+argument_list|()
+return|;
 block|}
 annotation|@
 name|Override
