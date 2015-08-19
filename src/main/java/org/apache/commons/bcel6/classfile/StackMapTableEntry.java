@@ -100,7 +100,7 @@ name|frame_type
 decl_stmt|;
 specifier|private
 name|int
-name|byte_code_offset_delta
+name|byte_code_offset
 decl_stmt|;
 specifier|private
 name|StackMapType
@@ -116,11 +116,11 @@ specifier|private
 name|ConstantPool
 name|constant_pool
 decl_stmt|;
-comment|/**      * Construct object from file stream.      * *       * @param file Input stream      * @throws IOException      */
+comment|/**      * Construct object from input stream.      *       * @param input Input stream      * @throws IOException      */
 name|StackMapTableEntry
 parameter_list|(
 name|DataInput
-name|file
+name|input
 parameter_list|,
 name|ConstantPool
 name|constant_pool
@@ -130,7 +130,7 @@ name|IOException
 block|{
 name|this
 argument_list|(
-name|file
+name|input
 operator|.
 name|readByte
 argument_list|()
@@ -162,7 +162,7 @@ operator|.
 name|SAME_FRAME_MAX
 condition|)
 block|{
-name|byte_code_offset_delta
+name|byte_code_offset
 operator|=
 name|frame_type
 operator|-
@@ -186,7 +186,7 @@ operator|.
 name|SAME_LOCALS_1_STACK_ITEM_FRAME_MAX
 condition|)
 block|{
-name|byte_code_offset_delta
+name|byte_code_offset
 operator|=
 name|frame_type
 operator|-
@@ -210,7 +210,7 @@ operator|=
 operator|new
 name|StackMapType
 argument_list|(
-name|file
+name|input
 argument_list|,
 name|constant_pool
 argument_list|)
@@ -225,9 +225,9 @@ operator|.
 name|SAME_LOCALS_1_STACK_ITEM_FRAME_EXTENDED
 condition|)
 block|{
-name|byte_code_offset_delta
+name|byte_code_offset
 operator|=
-name|file
+name|input
 operator|.
 name|readShort
 argument_list|()
@@ -248,7 +248,7 @@ operator|=
 operator|new
 name|StackMapType
 argument_list|(
-name|file
+name|input
 argument_list|,
 name|constant_pool
 argument_list|)
@@ -269,9 +269,9 @@ operator|.
 name|CHOP_FRAME_MAX
 condition|)
 block|{
-name|byte_code_offset_delta
+name|byte_code_offset
 operator|=
-name|file
+name|input
 operator|.
 name|readShort
 argument_list|()
@@ -286,9 +286,9 @@ operator|.
 name|SAME_FRAME_EXTENDED
 condition|)
 block|{
-name|byte_code_offset_delta
+name|byte_code_offset
 operator|=
-name|file
+name|input
 operator|.
 name|readShort
 argument_list|()
@@ -309,9 +309,9 @@ operator|.
 name|APPEND_FRAME_MAX
 condition|)
 block|{
-name|byte_code_offset_delta
+name|byte_code_offset
 operator|=
-name|file
+name|input
 operator|.
 name|readShort
 argument_list|()
@@ -354,7 +354,7 @@ operator|=
 operator|new
 name|StackMapType
 argument_list|(
-name|file
+name|input
 argument_list|,
 name|constant_pool
 argument_list|)
@@ -370,9 +370,9 @@ operator|.
 name|FULL_FRAME
 condition|)
 block|{
-name|byte_code_offset_delta
+name|byte_code_offset
 operator|=
-name|file
+name|input
 operator|.
 name|readShort
 argument_list|()
@@ -380,7 +380,7 @@ expr_stmt|;
 name|int
 name|number_of_locals
 init|=
-name|file
+name|input
 operator|.
 name|readShort
 argument_list|()
@@ -416,7 +416,7 @@ operator|=
 operator|new
 name|StackMapType
 argument_list|(
-name|file
+name|input
 argument_list|,
 name|constant_pool
 argument_list|)
@@ -425,7 +425,7 @@ block|}
 name|int
 name|number_of_stack_items
 init|=
-name|file
+name|input
 operator|.
 name|readShort
 argument_list|()
@@ -461,7 +461,7 @@ operator|=
 operator|new
 name|StackMapType
 argument_list|(
-name|file
+name|input
 argument_list|,
 name|constant_pool
 argument_list|)
@@ -489,7 +489,7 @@ name|int
 name|tag
 parameter_list|,
 name|int
-name|byte_code_offset_delta
+name|byte_code_offset
 parameter_list|,
 name|StackMapType
 index|[]
@@ -511,9 +511,9 @@ name|tag
 expr_stmt|;
 name|this
 operator|.
-name|byte_code_offset_delta
+name|byte_code_offset
 operator|=
-name|byte_code_offset_delta
+name|byte_code_offset
 expr_stmt|;
 name|this
 operator|.
@@ -629,7 +629,7 @@ name|file
 operator|.
 name|writeShort
 argument_list|(
-name|byte_code_offset_delta
+name|byte_code_offset
 argument_list|)
 expr_stmt|;
 name|types_of_stack_items
@@ -662,7 +662,7 @@ name|file
 operator|.
 name|writeShort
 argument_list|(
-name|byte_code_offset_delta
+name|byte_code_offset
 argument_list|)
 expr_stmt|;
 block|}
@@ -679,7 +679,7 @@ name|file
 operator|.
 name|writeShort
 argument_list|(
-name|byte_code_offset_delta
+name|byte_code_offset
 argument_list|)
 expr_stmt|;
 block|}
@@ -702,7 +702,7 @@ name|file
 operator|.
 name|writeShort
 argument_list|(
-name|byte_code_offset_delta
+name|byte_code_offset
 argument_list|)
 expr_stmt|;
 for|for
@@ -735,7 +735,7 @@ name|file
 operator|.
 name|writeShort
 argument_list|(
-name|byte_code_offset_delta
+name|byte_code_offset
 argument_list|)
 expr_stmt|;
 name|file
@@ -1014,7 +1014,7 @@ argument_list|)
 operator|.
 name|append
 argument_list|(
-name|byte_code_offset_delta
+name|byte_code_offset
 argument_list|)
 expr_stmt|;
 if|if
@@ -1175,24 +1175,24 @@ return|;
 block|}
 specifier|public
 name|void
-name|setByteCodeOffsetDelta
+name|setByteCodeOffset
 parameter_list|(
 name|int
 name|b
 parameter_list|)
 block|{
-name|byte_code_offset_delta
+name|byte_code_offset
 operator|=
 name|b
 expr_stmt|;
 block|}
 specifier|public
 name|int
-name|getByteCodeOffsetDelta
+name|getByteCodeOffset
 parameter_list|()
 block|{
 return|return
-name|byte_code_offset_delta
+name|byte_code_offset
 return|;
 block|}
 specifier|public
