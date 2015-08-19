@@ -60,14 +60,6 @@ extends|extends
 name|Attribute
 block|{
 specifier|private
-specifier|static
-specifier|final
-name|long
-name|serialVersionUID
-init|=
-literal|1L
-decl_stmt|;
-specifier|private
 name|AnnotationEntry
 index|[]
 name|annotation_table

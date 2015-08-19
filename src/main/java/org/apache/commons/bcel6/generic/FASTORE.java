@@ -30,15 +30,6 @@ name|ArrayInstruction
 implements|implements
 name|StackConsumer
 block|{
-specifier|private
-specifier|static
-specifier|final
-name|long
-name|serialVersionUID
-init|=
-operator|-
-literal|1583134120388207470L
-decl_stmt|;
 comment|/** Store float into array      */
 specifier|public
 name|FASTORE

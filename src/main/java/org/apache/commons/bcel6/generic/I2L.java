@@ -28,14 +28,6 @@ name|I2L
 extends|extends
 name|ConversionInstruction
 block|{
-specifier|private
-specifier|static
-specifier|final
-name|long
-name|serialVersionUID
-init|=
-literal|8923707875178789326L
-decl_stmt|;
 comment|/** Convert int to long      */
 specifier|public
 name|I2L

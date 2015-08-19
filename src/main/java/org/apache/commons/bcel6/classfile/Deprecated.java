@@ -74,15 +74,6 @@ extends|extends
 name|Attribute
 block|{
 specifier|private
-specifier|static
-specifier|final
-name|long
-name|serialVersionUID
-init|=
-operator|-
-literal|2242528405240201000L
-decl_stmt|;
-specifier|private
 name|byte
 index|[]
 name|bytes

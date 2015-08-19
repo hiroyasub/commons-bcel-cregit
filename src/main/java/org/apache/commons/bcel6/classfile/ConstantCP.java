@@ -73,15 +73,6 @@ name|ConstantCP
 extends|extends
 name|Constant
 block|{
-specifier|private
-specifier|static
-specifier|final
-name|long
-name|serialVersionUID
-init|=
-operator|-
-literal|6275762995206209402L
-decl_stmt|;
 comment|/** References to the constants containing the class and the field signature      */
 comment|// Note that this field is used to store the
 comment|// bootstrap_method_attr_index of a ConstantInvokeDynamic.

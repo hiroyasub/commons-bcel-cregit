@@ -28,15 +28,6 @@ name|FDIV
 extends|extends
 name|ArithmeticInstruction
 block|{
-specifier|private
-specifier|static
-specifier|final
-name|long
-name|serialVersionUID
-init|=
-operator|-
-literal|8536341322669578097L
-decl_stmt|;
 comment|/** Divide floats      */
 specifier|public
 name|FDIV

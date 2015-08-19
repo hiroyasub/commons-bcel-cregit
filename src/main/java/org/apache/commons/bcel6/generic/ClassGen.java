@@ -256,14 +256,6 @@ name|AccessFlags
 implements|implements
 name|Cloneable
 block|{
-specifier|private
-specifier|static
-specifier|final
-name|long
-name|serialVersionUID
-init|=
-literal|6880879387392827211L
-decl_stmt|;
 comment|/* Corresponds to the fields found in a JavaClass object.      */
 specifier|private
 name|String

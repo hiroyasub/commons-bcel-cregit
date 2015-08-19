@@ -60,15 +60,6 @@ name|PopInstruction
 implements|,
 name|ExceptionThrower
 block|{
-specifier|private
-specifier|static
-specifier|final
-name|long
-name|serialVersionUID
-init|=
-operator|-
-literal|3931392044558815011L
-decl_stmt|;
 comment|/**      * Empty constructor needed for the Class.newInstance() statement in      * Instruction.readInstruction(). Not to be used otherwise.      */
 name|PUTFIELD
 parameter_list|()

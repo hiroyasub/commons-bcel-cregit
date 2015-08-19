@@ -28,15 +28,6 @@ name|I2B
 extends|extends
 name|ConversionInstruction
 block|{
-specifier|private
-specifier|static
-specifier|final
-name|long
-name|serialVersionUID
-init|=
-operator|-
-literal|260969101469366410L
-decl_stmt|;
 comment|/** Convert int to byte      */
 specifier|public
 name|I2B

@@ -77,15 +77,6 @@ name|Cloneable
 implements|,
 name|Node
 block|{
-specifier|private
-specifier|static
-specifier|final
-name|long
-name|serialVersionUID
-init|=
-operator|-
-literal|1833306330869469714L
-decl_stmt|;
 comment|// TODO should be made private
 specifier|protected
 name|int

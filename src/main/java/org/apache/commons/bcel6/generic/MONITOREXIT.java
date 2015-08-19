@@ -32,15 +32,6 @@ name|ExceptionThrower
 implements|,
 name|StackConsumer
 block|{
-specifier|private
-specifier|static
-specifier|final
-name|long
-name|serialVersionUID
-init|=
-operator|-
-literal|1499496577099659601L
-decl_stmt|;
 specifier|public
 name|MONITOREXIT
 parameter_list|()

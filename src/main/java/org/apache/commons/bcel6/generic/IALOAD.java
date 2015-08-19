@@ -30,15 +30,6 @@ name|ArrayInstruction
 implements|implements
 name|StackProducer
 block|{
-specifier|private
-specifier|static
-specifier|final
-name|long
-name|serialVersionUID
-init|=
-operator|-
-literal|3275094472217586613L
-decl_stmt|;
 comment|/**       * Load int from array      */
 specifier|public
 name|IALOAD

@@ -28,14 +28,6 @@ name|LMUL
 extends|extends
 name|ArithmeticInstruction
 block|{
-specifier|private
-specifier|static
-specifier|final
-name|long
-name|serialVersionUID
-init|=
-literal|3538398481425889023L
-decl_stmt|;
 specifier|public
 name|LMUL
 parameter_list|()

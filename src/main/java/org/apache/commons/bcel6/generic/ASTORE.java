@@ -28,14 +28,6 @@ name|ASTORE
 extends|extends
 name|StoreInstruction
 block|{
-specifier|private
-specifier|static
-specifier|final
-name|long
-name|serialVersionUID
-init|=
-literal|3598929416636143200L
-decl_stmt|;
 comment|/**      * Empty constructor needed for the Class.newInstance() statement in      * Instruction.readInstruction(). Not to be used otherwise.      */
 name|ASTORE
 parameter_list|()

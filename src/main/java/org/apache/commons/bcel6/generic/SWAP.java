@@ -32,14 +32,6 @@ name|StackConsumer
 implements|,
 name|StackProducer
 block|{
-specifier|private
-specifier|static
-specifier|final
-name|long
-name|serialVersionUID
-init|=
-literal|1965736870393433312L
-decl_stmt|;
 specifier|public
 name|SWAP
 parameter_list|()

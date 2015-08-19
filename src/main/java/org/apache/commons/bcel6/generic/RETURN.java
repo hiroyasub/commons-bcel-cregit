@@ -28,15 +28,6 @@ name|RETURN
 extends|extends
 name|ReturnInstruction
 block|{
-specifier|private
-specifier|static
-specifier|final
-name|long
-name|serialVersionUID
-init|=
-operator|-
-literal|7375896559820981467L
-decl_stmt|;
 specifier|public
 name|RETURN
 parameter_list|()

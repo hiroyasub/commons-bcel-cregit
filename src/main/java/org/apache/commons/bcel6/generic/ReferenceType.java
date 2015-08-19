@@ -73,15 +73,6 @@ name|ReferenceType
 extends|extends
 name|Type
 block|{
-specifier|private
-specifier|static
-specifier|final
-name|long
-name|serialVersionUID
-init|=
-operator|-
-literal|1434716548829506031L
-decl_stmt|;
 specifier|protected
 name|ReferenceType
 parameter_list|(

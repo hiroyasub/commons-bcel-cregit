@@ -30,15 +30,6 @@ name|ArrayInstruction
 implements|implements
 name|StackConsumer
 block|{
-specifier|private
-specifier|static
-specifier|final
-name|long
-name|serialVersionUID
-init|=
-operator|-
-literal|6758326777570451990L
-decl_stmt|;
 comment|/** Store long into array      */
 specifier|public
 name|LASTORE

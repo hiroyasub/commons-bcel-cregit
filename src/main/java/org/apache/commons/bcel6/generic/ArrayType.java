@@ -44,14 +44,6 @@ extends|extends
 name|ReferenceType
 block|{
 specifier|private
-specifier|static
-specifier|final
-name|long
-name|serialVersionUID
-init|=
-literal|7587687059797903734L
-decl_stmt|;
-specifier|private
 name|int
 name|dimensions
 decl_stmt|;

@@ -28,14 +28,6 @@ name|L2D
 extends|extends
 name|ConversionInstruction
 block|{
-specifier|private
-specifier|static
-specifier|final
-name|long
-name|serialVersionUID
-init|=
-literal|1166552346340922659L
-decl_stmt|;
 specifier|public
 name|L2D
 parameter_list|()

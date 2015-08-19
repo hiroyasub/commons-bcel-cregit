@@ -28,15 +28,6 @@ name|DLOAD
 extends|extends
 name|LoadInstruction
 block|{
-specifier|private
-specifier|static
-specifier|final
-name|long
-name|serialVersionUID
-init|=
-operator|-
-literal|197027701448834250L
-decl_stmt|;
 comment|/**      * Empty constructor needed for the Class.newInstance() statement in      * Instruction.readInstruction(). Not to be used otherwise.      */
 name|DLOAD
 parameter_list|()

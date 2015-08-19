@@ -34,14 +34,6 @@ name|StackProducer
 implements|,
 name|StackConsumer
 block|{
-specifier|private
-specifier|static
-specifier|final
-name|long
-name|serialVersionUID
-init|=
-literal|2981727810276161294L
-decl_stmt|;
 specifier|public
 name|LCMP
 parameter_list|()

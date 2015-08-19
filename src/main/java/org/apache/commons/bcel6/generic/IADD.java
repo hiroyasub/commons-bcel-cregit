@@ -28,14 +28,6 @@ name|IADD
 extends|extends
 name|ArithmeticInstruction
 block|{
-specifier|private
-specifier|static
-specifier|final
-name|long
-name|serialVersionUID
-init|=
-literal|8749750216946526117L
-decl_stmt|;
 comment|/** Add ints      */
 specifier|public
 name|IADD

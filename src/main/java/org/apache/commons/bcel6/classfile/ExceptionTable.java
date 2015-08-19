@@ -74,14 +74,6 @@ extends|extends
 name|Attribute
 block|{
 specifier|private
-specifier|static
-specifier|final
-name|long
-name|serialVersionUID
-init|=
-literal|2045358830660883220L
-decl_stmt|;
-specifier|private
 name|int
 index|[]
 name|exception_index_table

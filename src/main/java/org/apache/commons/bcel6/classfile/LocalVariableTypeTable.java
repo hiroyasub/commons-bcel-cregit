@@ -173,15 +173,6 @@ extends|extends
 name|Attribute
 block|{
 specifier|private
-specifier|static
-specifier|final
-name|long
-name|serialVersionUID
-init|=
-operator|-
-literal|1082157891095177114L
-decl_stmt|;
-specifier|private
 name|LocalVariable
 index|[]
 name|local_variable_type_table

@@ -28,14 +28,6 @@ name|IRETURN
 extends|extends
 name|ReturnInstruction
 block|{
-specifier|private
-specifier|static
-specifier|final
-name|long
-name|serialVersionUID
-init|=
-literal|4067606299818510584L
-decl_stmt|;
 comment|/** Return int from method      */
 specifier|public
 name|IRETURN

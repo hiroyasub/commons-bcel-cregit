@@ -73,14 +73,6 @@ extends|extends
 name|Attribute
 block|{
 specifier|private
-specifier|static
-specifier|final
-name|long
-name|serialVersionUID
-init|=
-literal|2500272580422360140L
-decl_stmt|;
-specifier|private
 name|MethodParameter
 index|[]
 name|parameters

@@ -28,15 +28,6 @@ name|D2I
 extends|extends
 name|ConversionInstruction
 block|{
-specifier|private
-specifier|static
-specifier|final
-name|long
-name|serialVersionUID
-init|=
-operator|-
-literal|1226710355146064416L
-decl_stmt|;
 comment|/** Convert double to int      */
 specifier|public
 name|D2I

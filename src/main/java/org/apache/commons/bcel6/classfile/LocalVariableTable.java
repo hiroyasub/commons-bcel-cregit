@@ -73,14 +73,6 @@ extends|extends
 name|Attribute
 block|{
 specifier|private
-specifier|static
-specifier|final
-name|long
-name|serialVersionUID
-init|=
-literal|6780929007774637689L
-decl_stmt|;
-specifier|private
 name|LocalVariable
 index|[]
 name|local_variable_table

@@ -28,15 +28,6 @@ name|IF_ICMPEQ
 extends|extends
 name|IfInstruction
 block|{
-specifier|private
-specifier|static
-specifier|final
-name|long
-name|serialVersionUID
-init|=
-operator|-
-literal|3149605608148417123L
-decl_stmt|;
 comment|/**      * Empty constructor needed for the Class.newInstance() statement in      * Instruction.readInstruction(). Not to be used otherwise.      */
 name|IF_ICMPEQ
 parameter_list|()

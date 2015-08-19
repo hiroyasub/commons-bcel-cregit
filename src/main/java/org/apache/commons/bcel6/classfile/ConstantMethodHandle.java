@@ -74,15 +74,6 @@ extends|extends
 name|Constant
 block|{
 specifier|private
-specifier|static
-specifier|final
-name|long
-name|serialVersionUID
-init|=
-operator|-
-literal|7875124116920198044L
-decl_stmt|;
-specifier|private
 name|int
 name|reference_kind
 decl_stmt|;

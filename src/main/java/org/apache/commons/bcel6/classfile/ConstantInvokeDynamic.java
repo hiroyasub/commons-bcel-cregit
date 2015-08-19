@@ -63,14 +63,6 @@ name|ConstantInvokeDynamic
 extends|extends
 name|ConstantCP
 block|{
-specifier|private
-specifier|static
-specifier|final
-name|long
-name|serialVersionUID
-init|=
-literal|4310367359017396174L
-decl_stmt|;
 comment|/**      * Initialize from another object.      */
 specifier|public
 name|ConstantInvokeDynamic

@@ -64,15 +64,6 @@ name|JSR_W
 extends|extends
 name|JsrInstruction
 block|{
-specifier|private
-specifier|static
-specifier|final
-name|long
-name|serialVersionUID
-init|=
-operator|-
-literal|7352049131416924650L
-decl_stmt|;
 comment|/**      * Empty constructor needed for the Class.newInstance() statement in      * Instruction.readInstruction(). Not to be used otherwise.      */
 name|JSR_W
 parameter_list|()

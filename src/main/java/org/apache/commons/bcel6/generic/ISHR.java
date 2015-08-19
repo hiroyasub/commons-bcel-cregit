@@ -28,14 +28,6 @@ name|ISHR
 extends|extends
 name|ArithmeticInstruction
 block|{
-specifier|private
-specifier|static
-specifier|final
-name|long
-name|serialVersionUID
-init|=
-literal|7401114050910307281L
-decl_stmt|;
 specifier|public
 name|ISHR
 parameter_list|()

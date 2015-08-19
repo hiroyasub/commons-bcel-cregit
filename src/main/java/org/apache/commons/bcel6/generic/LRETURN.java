@@ -28,14 +28,6 @@ name|LRETURN
 extends|extends
 name|ReturnInstruction
 block|{
-specifier|private
-specifier|static
-specifier|final
-name|long
-name|serialVersionUID
-init|=
-literal|6173148526583167918L
-decl_stmt|;
 specifier|public
 name|LRETURN
 parameter_list|()

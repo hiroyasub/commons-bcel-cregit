@@ -43,15 +43,6 @@ name|BasicType
 extends|extends
 name|Type
 block|{
-specifier|private
-specifier|static
-specifier|final
-name|long
-name|serialVersionUID
-init|=
-operator|-
-literal|6546010740455512176L
-decl_stmt|;
 comment|/**      * Constructor for basic types such as int, long, `void'      *      * @param type one of T_INT, T_BOOLEAN, ..., T_VOID      * @see Constants      */
 name|BasicType
 parameter_list|(

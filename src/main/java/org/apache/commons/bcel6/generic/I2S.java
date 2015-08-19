@@ -28,15 +28,6 @@ name|I2S
 extends|extends
 name|ConversionInstruction
 block|{
-specifier|private
-specifier|static
-specifier|final
-name|long
-name|serialVersionUID
-init|=
-operator|-
-literal|2414292630144687091L
-decl_stmt|;
 specifier|public
 name|I2S
 parameter_list|()

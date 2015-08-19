@@ -61,14 +61,6 @@ name|LONG_Upper
 extends|extends
 name|Type
 block|{
-specifier|private
-specifier|static
-specifier|final
-name|long
-name|serialVersionUID
-init|=
-literal|3650377550491597107L
-decl_stmt|;
 comment|/** The one and only instance of this class. */
 specifier|private
 specifier|static

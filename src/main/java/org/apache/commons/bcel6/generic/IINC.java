@@ -65,15 +65,6 @@ extends|extends
 name|LocalVariableInstruction
 block|{
 specifier|private
-specifier|static
-specifier|final
-name|long
-name|serialVersionUID
-init|=
-operator|-
-literal|8938364416647466869L
-decl_stmt|;
-specifier|private
 name|boolean
 name|wide
 decl_stmt|;

@@ -28,15 +28,6 @@ name|IMUL
 extends|extends
 name|ArithmeticInstruction
 block|{
-specifier|private
-specifier|static
-specifier|final
-name|long
-name|serialVersionUID
-init|=
-operator|-
-literal|7475024981820292461L
-decl_stmt|;
 comment|/** Multiply ints      */
 specifier|public
 name|IMUL

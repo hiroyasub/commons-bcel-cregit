@@ -30,14 +30,6 @@ name|ArrayInstruction
 implements|implements
 name|StackConsumer
 block|{
-specifier|private
-specifier|static
-specifier|final
-name|long
-name|serialVersionUID
-init|=
-literal|1127770065463906050L
-decl_stmt|;
 comment|/** Store byte or boolean into array      */
 specifier|public
 name|BASTORE

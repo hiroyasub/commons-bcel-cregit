@@ -28,14 +28,6 @@ name|DADD
 extends|extends
 name|ArithmeticInstruction
 block|{
-specifier|private
-specifier|static
-specifier|final
-name|long
-name|serialVersionUID
-init|=
-literal|241485501977646418L
-decl_stmt|;
 comment|/** Add doubles      */
 specifier|public
 name|DADD

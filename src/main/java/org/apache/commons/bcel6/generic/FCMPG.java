@@ -34,15 +34,6 @@ name|StackProducer
 implements|,
 name|StackConsumer
 block|{
-specifier|private
-specifier|static
-specifier|final
-name|long
-name|serialVersionUID
-init|=
-operator|-
-literal|715944337480121908L
-decl_stmt|;
 specifier|public
 name|FCMPG
 parameter_list|()

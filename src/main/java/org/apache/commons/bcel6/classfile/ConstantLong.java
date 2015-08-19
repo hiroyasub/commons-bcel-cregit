@@ -76,14 +76,6 @@ implements|implements
 name|ConstantObject
 block|{
 specifier|private
-specifier|static
-specifier|final
-name|long
-name|serialVersionUID
-init|=
-literal|8495971186433816161L
-decl_stmt|;
-specifier|private
 name|long
 name|bytes
 decl_stmt|;

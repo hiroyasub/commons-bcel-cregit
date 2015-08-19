@@ -28,14 +28,6 @@ name|LNEG
 extends|extends
 name|ArithmeticInstruction
 block|{
-specifier|private
-specifier|static
-specifier|final
-name|long
-name|serialVersionUID
-init|=
-literal|7749253327528155126L
-decl_stmt|;
 specifier|public
 name|LNEG
 parameter_list|()

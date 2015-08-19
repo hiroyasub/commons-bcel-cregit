@@ -99,15 +99,6 @@ name|NamedAndTyped
 implements|,
 name|Cloneable
 block|{
-specifier|private
-specifier|static
-specifier|final
-name|long
-name|serialVersionUID
-init|=
-operator|-
-literal|2549303846821589647L
-decl_stmt|;
 specifier|protected
 name|String
 name|name

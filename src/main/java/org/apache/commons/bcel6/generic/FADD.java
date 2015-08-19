@@ -28,14 +28,6 @@ name|FADD
 extends|extends
 name|ArithmeticInstruction
 block|{
-specifier|private
-specifier|static
-specifier|final
-name|long
-name|serialVersionUID
-init|=
-literal|5654582990564566355L
-decl_stmt|;
 comment|/** Add floats      */
 specifier|public
 name|FADD

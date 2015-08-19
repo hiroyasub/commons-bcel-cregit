@@ -34,14 +34,6 @@ name|StackProducer
 implements|,
 name|StackConsumer
 block|{
-specifier|private
-specifier|static
-specifier|final
-name|long
-name|serialVersionUID
-init|=
-literal|1929664840821745262L
-decl_stmt|;
 specifier|public
 name|DCMPG
 parameter_list|()

@@ -28,15 +28,6 @@ name|D2F
 extends|extends
 name|ConversionInstruction
 block|{
-specifier|private
-specifier|static
-specifier|final
-name|long
-name|serialVersionUID
-init|=
-operator|-
-literal|448595874334076240L
-decl_stmt|;
 comment|/** Convert double to float      */
 specifier|public
 name|D2F

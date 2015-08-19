@@ -101,15 +101,6 @@ implements|,
 name|ExceptionThrower
 block|{
 specifier|private
-specifier|static
-specifier|final
-name|long
-name|serialVersionUID
-init|=
-operator|-
-literal|7439639244808941662L
-decl_stmt|;
-specifier|private
 name|short
 name|dimensions
 decl_stmt|;

@@ -56,15 +56,6 @@ name|INVOKESTATIC
 extends|extends
 name|InvokeInstruction
 block|{
-specifier|private
-specifier|static
-specifier|final
-name|long
-name|serialVersionUID
-init|=
-operator|-
-literal|2160020248508943620L
-decl_stmt|;
 comment|/**      * Empty constructor needed for the Class.newInstance() statement in      * Instruction.readInstruction(). Not to be used otherwise.      */
 name|INVOKESTATIC
 parameter_list|()

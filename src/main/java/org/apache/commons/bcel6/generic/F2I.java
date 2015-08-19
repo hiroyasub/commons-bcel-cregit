@@ -28,14 +28,6 @@ name|F2I
 extends|extends
 name|ConversionInstruction
 block|{
-specifier|private
-specifier|static
-specifier|final
-name|long
-name|serialVersionUID
-init|=
-literal|6142843856130131105L
-decl_stmt|;
 comment|/** Convert float to int      */
 specifier|public
 name|F2I

@@ -61,15 +61,6 @@ name|DOUBLE_Upper
 extends|extends
 name|Type
 block|{
-specifier|private
-specifier|static
-specifier|final
-name|long
-name|serialVersionUID
-init|=
-operator|-
-literal|3046888862357818539L
-decl_stmt|;
 comment|/** The one and only instance of this class. */
 specifier|private
 specifier|static

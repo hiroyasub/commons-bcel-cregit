@@ -103,14 +103,6 @@ name|CPInstruction
 implements|implements
 name|LoadClass
 block|{
-specifier|private
-specifier|static
-specifier|final
-name|long
-name|serialVersionUID
-init|=
-literal|2036985877748835708L
-decl_stmt|;
 comment|/**      * Empty constructor needed for the Class.newInstance() statement in      * Instruction.readInstruction(). Not to be used otherwise.      */
 name|FieldOrMethod
 parameter_list|()

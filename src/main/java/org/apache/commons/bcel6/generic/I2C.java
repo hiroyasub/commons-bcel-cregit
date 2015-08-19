@@ -28,14 +28,6 @@ name|I2C
 extends|extends
 name|ConversionInstruction
 block|{
-specifier|private
-specifier|static
-specifier|final
-name|long
-name|serialVersionUID
-init|=
-literal|7396507741159927455L
-decl_stmt|;
 comment|/** Convert int to char      */
 specifier|public
 name|I2C

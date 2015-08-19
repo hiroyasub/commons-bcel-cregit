@@ -28,15 +28,6 @@ name|I2F
 extends|extends
 name|ConversionInstruction
 block|{
-specifier|private
-specifier|static
-specifier|final
-name|long
-name|serialVersionUID
-init|=
-operator|-
-literal|816875455957376859L
-decl_stmt|;
 comment|/** Convert int to float      */
 specifier|public
 name|I2F

@@ -35,14 +35,6 @@ implements|,
 name|StackConsumer
 comment|/* since 6.0 */
 block|{
-specifier|private
-specifier|static
-specifier|final
-name|long
-name|serialVersionUID
-init|=
-literal|3038891629544391578L
-decl_stmt|;
 comment|/** Get length of array      */
 specifier|public
 name|ARRAYLENGTH

@@ -28,15 +28,6 @@ name|NOP
 extends|extends
 name|Instruction
 block|{
-specifier|private
-specifier|static
-specifier|final
-name|long
-name|serialVersionUID
-init|=
-operator|-
-literal|244116825309415153L
-decl_stmt|;
 specifier|public
 name|NOP
 parameter_list|()

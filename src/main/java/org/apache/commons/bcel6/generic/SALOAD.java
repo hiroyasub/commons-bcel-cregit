@@ -30,14 +30,6 @@ name|ArrayInstruction
 implements|implements
 name|StackProducer
 block|{
-specifier|private
-specifier|static
-specifier|final
-name|long
-name|serialVersionUID
-init|=
-literal|7178769326864697416L
-decl_stmt|;
 specifier|public
 name|SALOAD
 parameter_list|()

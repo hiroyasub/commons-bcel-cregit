@@ -28,15 +28,6 @@ name|ARETURN
 extends|extends
 name|ReturnInstruction
 block|{
-specifier|private
-specifier|static
-specifier|final
-name|long
-name|serialVersionUID
-init|=
-operator|-
-literal|3497286197421151311L
-decl_stmt|;
 comment|/**       * Return reference from method      */
 specifier|public
 name|ARETURN

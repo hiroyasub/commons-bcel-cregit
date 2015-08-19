@@ -28,15 +28,6 @@ name|LXOR
 extends|extends
 name|ArithmeticInstruction
 block|{
-specifier|private
-specifier|static
-specifier|final
-name|long
-name|serialVersionUID
-init|=
-operator|-
-literal|3031187042785170579L
-decl_stmt|;
 specifier|public
 name|LXOR
 parameter_list|()

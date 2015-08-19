@@ -28,15 +28,6 @@ name|IF_ICMPLT
 extends|extends
 name|IfInstruction
 block|{
-specifier|private
-specifier|static
-specifier|final
-name|long
-name|serialVersionUID
-init|=
-operator|-
-literal|6835991395337462478L
-decl_stmt|;
 comment|/**      * Empty constructor needed for the Class.newInstance() statement in      * Instruction.readInstruction(). Not to be used otherwise.      */
 name|IF_ICMPLT
 parameter_list|()

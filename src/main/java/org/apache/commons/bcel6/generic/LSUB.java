@@ -28,15 +28,6 @@ name|LSUB
 extends|extends
 name|ArithmeticInstruction
 block|{
-specifier|private
-specifier|static
-specifier|final
-name|long
-name|serialVersionUID
-init|=
-operator|-
-literal|8379864362938353932L
-decl_stmt|;
 specifier|public
 name|LSUB
 parameter_list|()

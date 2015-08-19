@@ -32,15 +32,6 @@ name|UnconditionalBranch
 implements|,
 name|ExceptionThrower
 block|{
-specifier|private
-specifier|static
-specifier|final
-name|long
-name|serialVersionUID
-init|=
-operator|-
-literal|5072509566909688739L
-decl_stmt|;
 comment|/**       *  Throw exception      */
 specifier|public
 name|ATHROW

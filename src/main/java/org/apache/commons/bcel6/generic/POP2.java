@@ -30,15 +30,6 @@ name|StackInstruction
 implements|implements
 name|PopInstruction
 block|{
-specifier|private
-specifier|static
-specifier|final
-name|long
-name|serialVersionUID
-init|=
-operator|-
-literal|3868598204285850458L
-decl_stmt|;
 specifier|public
 name|POP2
 parameter_list|()

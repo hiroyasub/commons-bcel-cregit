@@ -28,14 +28,6 @@ name|LOR
 extends|extends
 name|ArithmeticInstruction
 block|{
-specifier|private
-specifier|static
-specifier|final
-name|long
-name|serialVersionUID
-init|=
-literal|7862213176431021916L
-decl_stmt|;
 specifier|public
 name|LOR
 parameter_list|()

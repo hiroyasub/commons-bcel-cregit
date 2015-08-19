@@ -30,15 +30,6 @@ name|ArrayInstruction
 implements|implements
 name|StackConsumer
 block|{
-specifier|private
-specifier|static
-specifier|final
-name|long
-name|serialVersionUID
-init|=
-operator|-
-literal|6440799431970565816L
-decl_stmt|;
 comment|/** Store into reference array      */
 specifier|public
 name|AASTORE

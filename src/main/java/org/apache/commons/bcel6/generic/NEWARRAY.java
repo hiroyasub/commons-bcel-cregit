@@ -71,14 +71,6 @@ implements|,
 name|StackProducer
 block|{
 specifier|private
-specifier|static
-specifier|final
-name|long
-name|serialVersionUID
-init|=
-literal|7048445841018649405L
-decl_stmt|;
-specifier|private
 name|byte
 name|type
 decl_stmt|;

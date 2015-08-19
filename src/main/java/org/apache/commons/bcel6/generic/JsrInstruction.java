@@ -35,15 +35,6 @@ name|TypedInstruction
 implements|,
 name|StackProducer
 block|{
-specifier|private
-specifier|static
-specifier|final
-name|long
-name|serialVersionUID
-init|=
-operator|-
-literal|6438850002848773481L
-decl_stmt|;
 name|JsrInstruction
 parameter_list|(
 name|short

@@ -30,15 +30,6 @@ name|ArrayInstruction
 implements|implements
 name|StackProducer
 block|{
-specifier|private
-specifier|static
-specifier|final
-name|long
-name|serialVersionUID
-init|=
-operator|-
-literal|3687594761485525620L
-decl_stmt|;
 comment|/** Load long from array      */
 specifier|public
 name|LALOAD

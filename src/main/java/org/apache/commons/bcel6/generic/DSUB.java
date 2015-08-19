@@ -28,15 +28,6 @@ name|DSUB
 extends|extends
 name|ArithmeticInstruction
 block|{
-specifier|private
-specifier|static
-specifier|final
-name|long
-name|serialVersionUID
-init|=
-operator|-
-literal|5398969227995149466L
-decl_stmt|;
 comment|/** Substract doubles      */
 specifier|public
 name|DSUB

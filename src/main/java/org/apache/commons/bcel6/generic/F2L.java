@@ -28,15 +28,6 @@ name|F2L
 extends|extends
 name|ConversionInstruction
 block|{
-specifier|private
-specifier|static
-specifier|final
-name|long
-name|serialVersionUID
-init|=
-operator|-
-literal|5583947322933513819L
-decl_stmt|;
 comment|/** Convert float to long      */
 specifier|public
 name|F2L

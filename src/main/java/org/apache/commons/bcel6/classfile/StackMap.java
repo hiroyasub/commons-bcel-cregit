@@ -74,15 +74,6 @@ extends|extends
 name|Attribute
 block|{
 specifier|private
-specifier|static
-specifier|final
-name|long
-name|serialVersionUID
-init|=
-operator|-
-literal|6238662431726968495L
-decl_stmt|;
-specifier|private
 name|StackMapEntry
 index|[]
 name|map

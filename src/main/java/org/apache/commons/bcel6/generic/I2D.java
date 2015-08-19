@@ -28,14 +28,6 @@ name|I2D
 extends|extends
 name|ConversionInstruction
 block|{
-specifier|private
-specifier|static
-specifier|final
-name|long
-name|serialVersionUID
-init|=
-literal|4267924152721121331L
-decl_stmt|;
 comment|/** Convert int to double      */
 specifier|public
 name|I2D

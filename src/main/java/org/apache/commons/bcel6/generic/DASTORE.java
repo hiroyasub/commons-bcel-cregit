@@ -30,14 +30,6 @@ name|ArrayInstruction
 implements|implements
 name|StackConsumer
 block|{
-specifier|private
-specifier|static
-specifier|final
-name|long
-name|serialVersionUID
-init|=
-literal|5236493427411303394L
-decl_stmt|;
 comment|/** Store double into array      */
 specifier|public
 name|DASTORE

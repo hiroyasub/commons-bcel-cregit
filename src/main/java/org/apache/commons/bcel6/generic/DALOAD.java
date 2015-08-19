@@ -30,15 +30,6 @@ name|ArrayInstruction
 implements|implements
 name|StackProducer
 block|{
-specifier|private
-specifier|static
-specifier|final
-name|long
-name|serialVersionUID
-init|=
-operator|-
-literal|8493938101832015094L
-decl_stmt|;
 comment|/** Load double from array      */
 specifier|public
 name|DALOAD

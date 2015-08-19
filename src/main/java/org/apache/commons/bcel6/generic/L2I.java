@@ -28,15 +28,6 @@ name|L2I
 extends|extends
 name|ConversionInstruction
 block|{
-specifier|private
-specifier|static
-specifier|final
-name|long
-name|serialVersionUID
-init|=
-operator|-
-literal|3263285222028195535L
-decl_stmt|;
 specifier|public
 name|L2I
 parameter_list|()
