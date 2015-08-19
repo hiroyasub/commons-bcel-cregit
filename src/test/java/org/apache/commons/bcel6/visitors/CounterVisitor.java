@@ -956,27 +956,38 @@ name|annotationCount
 init|=
 literal|0
 decl_stmt|;
+comment|/** @since 6.0 */
 specifier|public
 name|int
 name|stackMapTableCount
 init|=
 literal|0
 decl_stmt|;
+comment|/** @since 6.0 */
 specifier|public
 name|int
 name|stackMapTableEntryCount
 init|=
 literal|0
 decl_stmt|;
+comment|/** @since 6.0 */
 specifier|public
 name|int
 name|bootstrapMethodsCount
 init|=
 literal|0
 decl_stmt|;
+comment|/** @since 6.0 */
 specifier|public
 name|int
 name|methodParametersCount
+init|=
+literal|0
+decl_stmt|;
+comment|/** @since 6.0 */
+specifier|public
+name|int
+name|constantInvokeDynamic
 init|=
 literal|0
 decl_stmt|;
@@ -1512,6 +1523,7 @@ name|unknownCount
 operator|++
 expr_stmt|;
 block|}
+comment|/** @since 6.0 */
 annotation|@
 name|Override
 specifier|public
@@ -1526,6 +1538,7 @@ name|stackMapTableCount
 operator|++
 expr_stmt|;
 block|}
+comment|/** @since 6.0 */
 annotation|@
 name|Override
 specifier|public
@@ -1540,6 +1553,7 @@ name|stackMapTableEntryCount
 operator|++
 expr_stmt|;
 block|}
+comment|/** @since 6.0 */
 annotation|@
 name|Override
 specifier|public
@@ -1554,6 +1568,7 @@ name|bootstrapMethodsCount
 operator|++
 expr_stmt|;
 block|}
+comment|/** @since 6.0 */
 annotation|@
 name|Override
 specifier|public
@@ -1568,6 +1583,7 @@ name|methodParametersCount
 operator|++
 expr_stmt|;
 block|}
+comment|/** @since 6.0 */
 annotation|@
 name|Override
 specifier|public
@@ -1578,6 +1594,9 @@ name|ConstantInvokeDynamic
 name|obj
 parameter_list|)
 block|{
+name|constantInvokeDynamic
+operator|++
+expr_stmt|;
 block|}
 block|}
 end_class
