@@ -47,16 +47,6 @@ name|IOException
 import|;
 end_import
 
-begin_import
-import|import
-name|java
-operator|.
-name|io
-operator|.
-name|Serializable
-import|;
-end_import
-
 begin_comment
 comment|/**  * This class represents a (PC offset, line number) pair, i.e., a line number in  * the source that corresponds to a relative address in the byte code. This  * is used for debugging purposes.  *  * @version $Id$  * @see     LineNumberTable  */
 end_comment
@@ -70,17 +60,7 @@ implements|implements
 name|Cloneable
 implements|,
 name|Node
-implements|,
-name|Serializable
 block|{
-specifier|private
-specifier|static
-specifier|final
-name|long
-name|serialVersionUID
-init|=
-literal|169537400672820016L
-decl_stmt|;
 comment|/** Program Counter (PC) corresponds to line */
 specifier|private
 name|short

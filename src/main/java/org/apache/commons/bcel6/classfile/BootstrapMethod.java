@@ -49,16 +49,6 @@ end_import
 
 begin_import
 import|import
-name|java
-operator|.
-name|io
-operator|.
-name|Serializable
-import|;
-end_import
-
-begin_import
-import|import
 name|org
 operator|.
 name|apache
@@ -80,19 +70,8 @@ specifier|public
 class|class
 name|BootstrapMethod
 implements|implements
-name|Serializable
-implements|,
 name|Cloneable
 block|{
-specifier|private
-specifier|static
-specifier|final
-name|long
-name|serialVersionUID
-init|=
-operator|-
-literal|4517534834047695344L
-decl_stmt|;
 comment|/** Index of the CONSTANT_MethodHandle_info structure in the constant_pool table */
 specifier|private
 name|int

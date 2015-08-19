@@ -49,16 +49,6 @@ end_import
 
 begin_import
 import|import
-name|java
-operator|.
-name|io
-operator|.
-name|Serializable
-import|;
-end_import
-
-begin_import
-import|import
 name|org
 operator|.
 name|apache
@@ -100,17 +90,7 @@ implements|implements
 name|Cloneable
 implements|,
 name|Node
-implements|,
-name|Serializable
 block|{
-specifier|private
-specifier|static
-specifier|final
-name|long
-name|serialVersionUID
-init|=
-literal|5739037344085356353L
-decl_stmt|;
 specifier|private
 specifier|static
 name|BCELComparator

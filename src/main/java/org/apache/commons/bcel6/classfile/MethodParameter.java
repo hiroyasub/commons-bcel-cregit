@@ -49,16 +49,6 @@ end_import
 
 begin_import
 import|import
-name|java
-operator|.
-name|io
-operator|.
-name|Serializable
-import|;
-end_import
-
-begin_import
-import|import
 name|org
 operator|.
 name|apache
@@ -80,18 +70,8 @@ specifier|public
 class|class
 name|MethodParameter
 implements|implements
-name|Serializable
-implements|,
 name|Cloneable
 block|{
-specifier|private
-specifier|static
-specifier|final
-name|long
-name|serialVersionUID
-init|=
-literal|6014494029439440326L
-decl_stmt|;
 comment|/** Index of the CONSTANT_Utf8_info structure in the constant_pool table representing the name of the parameter */
 specifier|private
 name|int

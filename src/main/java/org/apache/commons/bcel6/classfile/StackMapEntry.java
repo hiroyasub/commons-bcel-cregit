@@ -47,16 +47,6 @@ name|IOException
 import|;
 end_import
 
-begin_import
-import|import
-name|java
-operator|.
-name|io
-operator|.
-name|Serializable
-import|;
-end_import
-
 begin_comment
 comment|/**  * This class represents a stack map entry recording the types of  * local variables and the the of stack items at a given byte code offset.  * See CLDC specification ï¿½5.3.1.2  *  * @version $Id$  * @see     StackMap  * @see     StackMapType  */
 end_comment
@@ -68,18 +58,7 @@ class|class
 name|StackMapEntry
 implements|implements
 name|Cloneable
-implements|,
-name|Serializable
-comment|/* since 6.0 */
 block|{
-specifier|private
-specifier|static
-specifier|final
-name|long
-name|serialVersionUID
-init|=
-literal|1L
-decl_stmt|;
 specifier|private
 name|int
 name|byte_code_offset

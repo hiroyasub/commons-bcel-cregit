@@ -39,22 +39,8 @@ begin_class
 specifier|public
 class|class
 name|InstructionFactory
-implements|implements
-name|java
-operator|.
-name|io
-operator|.
-name|Serializable
 block|{
-specifier|private
-specifier|static
-specifier|final
-name|long
-name|serialVersionUID
-init|=
-operator|-
-literal|1210011499635580258L
-decl_stmt|;
+comment|// N.N. These must agree with the order of Constants.T_CHAR through T_LONG
 specifier|private
 specifier|static
 specifier|final
