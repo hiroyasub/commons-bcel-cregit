@@ -2116,7 +2116,7 @@ name|IFLE
 init|=
 literal|158
 decl_stmt|;
-comment|/** Java VM opcode.    * @see<a href="http://docs.oracle.com/javase/specs/jvms/se8/html/jvms-6.html#jvms-6.5.if_icmpeq">Opcode definitions in The Java Virtual Machine Specification</a> */
+comment|/** Java VM opcode.    * @see<a href="http://docs.oracle.com/javase/specs/jvms/se8/html/jvms-6.html#jvms-6.5.if_icmp_cond">Opcode definitions in The Java Virtual Machine Specification</a> */
 specifier|public
 specifier|static
 specifier|final
@@ -2125,7 +2125,7 @@ name|IF_ICMPEQ
 init|=
 literal|159
 decl_stmt|;
-comment|/** Java VM opcode.    * @see<a href="http://docs.oracle.com/javase/specs/jvms/se8/html/jvms-6.html#jvms-6.5.if_icmpne">Opcode definitions in The Java Virtual Machine Specification</a> */
+comment|/** Java VM opcode.    * @see<a href="http://docs.oracle.com/javase/specs/jvms/se8/html/jvms-6.html#jvms-6.5.if_icmp_cond">Opcode definitions in The Java Virtual Machine Specification</a> */
 specifier|public
 specifier|static
 specifier|final
@@ -2134,7 +2134,7 @@ name|IF_ICMPNE
 init|=
 literal|160
 decl_stmt|;
-comment|/** Java VM opcode.    * @see<a href="http://docs.oracle.com/javase/specs/jvms/se8/html/jvms-6.html#jvms-6.5.if_icmplt">Opcode definitions in The Java Virtual Machine Specification</a> */
+comment|/** Java VM opcode.    * @see<a href="http://docs.oracle.com/javase/specs/jvms/se8/html/jvms-6.html#jvms-6.5.if_icmp_cond">Opcode definitions in The Java Virtual Machine Specification</a> */
 specifier|public
 specifier|static
 specifier|final
@@ -2143,7 +2143,7 @@ name|IF_ICMPLT
 init|=
 literal|161
 decl_stmt|;
-comment|/** Java VM opcode.    * @see<a href="http://docs.oracle.com/javase/specs/jvms/se8/html/jvms-6.html#jvms-6.5.if_icmpge">Opcode definitions in The Java Virtual Machine Specification</a> */
+comment|/** Java VM opcode.    * @see<a href="http://docs.oracle.com/javase/specs/jvms/se8/html/jvms-6.html#jvms-6.5.if_icmp_cond">Opcode definitions in The Java Virtual Machine Specification</a> */
 specifier|public
 specifier|static
 specifier|final
@@ -2152,7 +2152,7 @@ name|IF_ICMPGE
 init|=
 literal|162
 decl_stmt|;
-comment|/** Java VM opcode.    * @see<a href="http://docs.oracle.com/javase/specs/jvms/se8/html/jvms-6.html#jvms-6.5.if_icmpgt">Opcode definitions in The Java Virtual Machine Specification</a> */
+comment|/** Java VM opcode.    * @see<a href="http://docs.oracle.com/javase/specs/jvms/se8/html/jvms-6.html#jvms-6.5.if_icmp_cond">Opcode definitions in The Java Virtual Machine Specification</a> */
 specifier|public
 specifier|static
 specifier|final
@@ -2161,7 +2161,7 @@ name|IF_ICMPGT
 init|=
 literal|163
 decl_stmt|;
-comment|/** Java VM opcode.    * @see<a href="http://docs.oracle.com/javase/specs/jvms/se8/html/jvms-6.html#jvms-6.5.if_icmple">Opcode definitions in The Java Virtual Machine Specification</a> */
+comment|/** Java VM opcode.    * @see<a href="http://docs.oracle.com/javase/specs/jvms/se8/html/jvms-6.html#jvms-6.5.if_icmp_cond">Opcode definitions in The Java Virtual Machine Specification</a> */
 specifier|public
 specifier|static
 specifier|final
@@ -2170,7 +2170,7 @@ name|IF_ICMPLE
 init|=
 literal|164
 decl_stmt|;
-comment|/** Java VM opcode.    * @see<a href="http://docs.oracle.com/javase/specs/jvms/se8/html/jvms-6.html#jvms-6.5.if_acmpeq">Opcode definitions in The Java Virtual Machine Specification</a> */
+comment|/** Java VM opcode.    * @see<a href="http://docs.oracle.com/javase/specs/jvms/se8/html/jvms-6.html#jvms-6.5.if_acmp_cond">Opcode definitions in The Java Virtual Machine Specification</a> */
 specifier|public
 specifier|static
 specifier|final
@@ -2179,7 +2179,7 @@ name|IF_ACMPEQ
 init|=
 literal|165
 decl_stmt|;
-comment|/** Java VM opcode.    * @see<a href="http://docs.oracle.com/javase/specs/jvms/se8/html/jvms-6.html#jvms-6.5.if_acmpne">Opcode definitions in The Java Virtual Machine Specification</a> */
+comment|/** Java VM opcode.    * @see<a href="http://docs.oracle.com/javase/specs/jvms/se8/html/jvms-6.html#jvms-6.5.if_acmp_cond">Opcode definitions in The Java Virtual Machine Specification</a> */
 specifier|public
 specifier|static
 specifier|final
