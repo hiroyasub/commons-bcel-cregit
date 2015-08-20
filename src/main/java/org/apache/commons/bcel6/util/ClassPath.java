@@ -920,6 +920,7 @@ operator|+
 name|suffix
 argument_list|)
 expr_stmt|;
+comment|// may return null
 block|}
 catch|catch
 parameter_list|(
@@ -927,6 +928,7 @@ name|Exception
 name|e
 parameter_list|)
 block|{
+comment|// ignored
 block|}
 if|if
 condition|(
