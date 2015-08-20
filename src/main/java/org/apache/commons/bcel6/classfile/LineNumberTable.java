@@ -483,7 +483,8 @@ name|int
 name|l
 init|=
 literal|0
-decl_stmt|,
+decl_stmt|;
+name|int
 name|r
 init|=
 name|line_number_table

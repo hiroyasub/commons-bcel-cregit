@@ -136,13 +136,18 @@ decl_stmt|;
 specifier|private
 name|int
 name|class_name_index
-decl_stmt|,
+decl_stmt|;
+specifier|private
+name|int
 name|superclass_name_index
 decl_stmt|;
 specifier|private
 name|int
 name|major
-decl_stmt|,
+decl_stmt|;
+comment|// Compiler version
+specifier|private
+name|int
 name|minor
 decl_stmt|;
 comment|// Compiler version

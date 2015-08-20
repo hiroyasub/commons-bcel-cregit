@@ -258,7 +258,9 @@ decl_stmt|;
 specifier|private
 name|int
 name|major
-decl_stmt|,
+decl_stmt|;
+specifier|private
+name|int
 name|minor
 decl_stmt|;
 comment|// Compiler version

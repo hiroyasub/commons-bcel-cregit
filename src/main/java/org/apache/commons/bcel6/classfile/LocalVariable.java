@@ -461,7 +461,8 @@ name|name
 init|=
 name|getName
 argument_list|()
-decl_stmt|,
+decl_stmt|;
+name|String
 name|signature
 init|=
 name|Utility

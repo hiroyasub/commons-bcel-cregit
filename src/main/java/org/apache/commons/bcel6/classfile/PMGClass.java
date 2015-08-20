@@ -76,7 +76,9 @@ block|{
 specifier|private
 name|int
 name|pmg_class_index
-decl_stmt|,
+decl_stmt|;
+specifier|private
+name|int
 name|pmg_index
 decl_stmt|;
 comment|/**      * Initialize from another object. Note that both objects use the same      * references (shallow copy). Use copy() for a physical copy.      */
