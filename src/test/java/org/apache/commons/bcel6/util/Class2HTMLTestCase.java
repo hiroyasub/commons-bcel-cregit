@@ -55,22 +55,6 @@ end_import
 
 begin_import
 import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|commons
-operator|.
-name|bcel6
-operator|.
-name|util
-operator|.
-name|Class2HTML
-import|;
-end_import
-
-begin_import
-import|import
 name|junit
 operator|.
 name|framework

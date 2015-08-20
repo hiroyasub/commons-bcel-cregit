@@ -20,8 +20,8 @@ package|;
 end_package
 
 begin_class
-specifier|abstract
 specifier|public
+specifier|abstract
 class|class
 name|TestLegalInvokeVirtual02
 implements|implements

@@ -121,22 +121,6 @@ name|InstructionList
 import|;
 end_import
 
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|commons
-operator|.
-name|bcel6
-operator|.
-name|util
-operator|.
-name|InstructionFinder
-import|;
-end_import
-
 begin_class
 specifier|public
 class|class
