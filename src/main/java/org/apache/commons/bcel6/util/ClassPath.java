@@ -898,9 +898,15 @@ parameter_list|)
 throws|throws
 name|IOException
 block|{
+name|InputStream
+name|is
+init|=
+literal|null
+decl_stmt|;
 try|try
 block|{
-return|return
+name|is
+operator|=
 name|getClass
 argument_list|()
 operator|.
@@ -913,7 +919,7 @@ name|name
 operator|+
 name|suffix
 argument_list|)
-return|;
+expr_stmt|;
 block|}
 catch|catch
 parameter_list|(
@@ -921,6 +927,18 @@ name|Exception
 name|e
 parameter_list|)
 block|{
+block|}
+if|if
+condition|(
+name|is
+operator|!=
+literal|null
+condition|)
+block|{
+return|return
+name|is
+return|;
+block|}
 return|return
 name|getClassFile
 argument_list|(
@@ -932,7 +950,6 @@ operator|.
 name|getInputStream
 argument_list|()
 return|;
-block|}
 block|}
 comment|/**      * @param name fully qualified resource name, e.g. java/lang/String.class      * @return InputStream supplying the resource, or null if no resource with that name.      * @since 6.0      */
 specifier|public
