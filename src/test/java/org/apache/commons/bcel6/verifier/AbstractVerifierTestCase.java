@@ -162,7 +162,7 @@ argument_list|)
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Asserts that the verification of the given class is rejected. If it isn't it throws an AssertionFailedError with the given message.      *      * @param classname simple classname of the class to verify      * @param message   message displayed if assertion fails      */
+comment|/**      * Asserts that the verification of the given class is rejected.      * If it isn't it throws an AssertionFailedError with the given message.      *      * @param classname simple classname of the class to verify      * @param message   message displayed if assertion fails      */
 specifier|public
 name|void
 name|assertVerifyRejected

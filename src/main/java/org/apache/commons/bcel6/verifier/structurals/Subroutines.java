@@ -1698,6 +1698,7 @@ block|}
 block|}
 comment|// Now do a BFS from every subroutine leader to find all the
 comment|// instructions that belong to a subroutine.
+comment|// we don't want to assign an instruction to two or more Subroutine objects.
 name|Set
 argument_list|<
 name|InstructionHandle
@@ -1709,7 +1710,6 @@ name|HashSet
 argument_list|<>
 argument_list|()
 decl_stmt|;
-comment|// we don't want to assign an instruction to two or more Subroutine objects.
 name|Map
 argument_list|<
 name|InstructionHandle
@@ -1786,7 +1786,7 @@ name|actual
 argument_list|)
 expr_stmt|;
 comment|// add(Obj) adds to the end, remove(0) removes from the start.
-comment|/* BFS ALGORITHM MODIFICATION: Start out with multiple "root" nodes, as exception handlers are starting points of top-level code, too. [why top-level? TODO: Refer to the special JustIce notion of subroutines.]*/
+comment|/*              * BFS ALGORITHM MODIFICATION:              * Start out with multiple "root" nodes, as exception handlers are starting points of top-level code, too.              * [why top-level?              * TODO: Refer to the special JustIce notion of subroutines.]              */
 if|if
 condition|(
 name|actual
@@ -2229,7 +2229,9 @@ name|si
 operator|.
 name|theRET
 operator|+
-literal|"' is called by a subroutine which uses the same local variable index as itself; maybe even a recursive call? JustIce's clean definition of a subroutine forbids both."
+literal|"' is called by a subroutine which uses the same local variable index as itself; maybe even a recursive call?"
+operator|+
+literal|" JustIce's clean definition of a subroutine forbids both."
 argument_list|)
 throw|;
 block|}

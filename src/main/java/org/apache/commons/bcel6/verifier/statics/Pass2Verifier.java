@@ -1337,7 +1337,7 @@ name|methods
 control|)
 block|{
 name|String
-name|name_and_sig
+name|nameAndSig
 init|=
 operator|(
 name|method
@@ -1357,7 +1357,7 @@ name|hashmap
 operator|.
 name|containsKey
 argument_list|(
-name|name_and_sig
+name|nameAndSig
 argument_list|)
 condition|)
 block|{
@@ -1386,7 +1386,7 @@ name|ClassConstraintException
 argument_list|(
 literal|"Method '"
 operator|+
-name|name_and_sig
+name|nameAndSig
 operator|+
 literal|"' in class '"
 operator|+
@@ -1394,7 +1394,7 @@ name|hashmap
 operator|.
 name|get
 argument_list|(
-name|name_and_sig
+name|nameAndSig
 argument_list|)
 operator|+
 literal|"' overrides the final (not-overridable) definition in class '"
@@ -1412,7 +1412,7 @@ name|addMessage
 argument_list|(
 literal|"Method '"
 operator|+
-name|name_and_sig
+name|nameAndSig
 operator|+
 literal|"' in class '"
 operator|+
@@ -1420,7 +1420,7 @@ name|hashmap
 operator|.
 name|get
 argument_list|(
-name|name_and_sig
+name|nameAndSig
 argument_list|)
 operator|+
 literal|"' overrides the final (not-overridable) definition in class '"
@@ -1430,7 +1430,9 @@ operator|.
 name|getClassName
 argument_list|()
 operator|+
-literal|"'. This is okay, as the original definition was private; however this constraint leverage was introduced by JLS 8.4.6 (not vmspec2) and the behaviour of the Sun verifiers."
+literal|"'. This is okay, as the original definition was private; however this constraint leverage"
+operator|+
+literal|" was introduced by JLS 8.4.6 (not vmspec2) and the behaviour of the Sun verifiers."
 argument_list|)
 expr_stmt|;
 block|}
@@ -1450,7 +1452,7 @@ name|hashmap
 operator|.
 name|put
 argument_list|(
-name|name_and_sig
+name|nameAndSig
 argument_list|,
 name|jc
 operator|.
@@ -1477,7 +1479,7 @@ name|hashmap
 operator|.
 name|put
 argument_list|(
-name|name_and_sig
+name|nameAndSig
 argument_list|,
 name|jc
 operator|.
@@ -2099,7 +2101,11 @@ argument_list|(
 name|obj
 argument_list|)
 operator|+
-literal|"') must have exactly one InnerClasses attribute if at least one Inner Class is referenced (which is the case). More than one InnerClasses attribute was found."
+literal|"') must have exactly one InnerClasses attribute"
+operator|+
+literal|" if at least one Inner Class is referenced (which is the case)."
+operator|+
+literal|" More than one InnerClasses attribute was found."
 argument_list|)
 throw|;
 block|}
@@ -2133,7 +2139,9 @@ operator|!
 name|foundInnerClasses
 condition|)
 block|{
-comment|//throw new ClassConstraintException("A Classfile structure (like '"+tostring(obj)+"') must have exactly one InnerClasses attribute if at least one Inner Class is referenced (which is the case). No InnerClasses attribute was found.");
+comment|//throw new ClassConstraintException("A Classfile structure (like '"+tostring(obj)+
+comment|// "') must have exactly one InnerClasses attribute if at least one Inner Class is referenced (which is the case)."+
+comment|// " No InnerClasses attribute was found.");
 comment|//vmspec2, page 125 says it would be a constraint: but existing verifiers
 comment|//don't check it and javac doesn't satisfy it when it comes to anonymous
 comment|//inner classes
@@ -2146,7 +2154,9 @@ argument_list|(
 name|obj
 argument_list|)
 operator|+
-literal|"') must have exactly one InnerClasses attribute if at least one Inner Class is referenced (which is the case). No InnerClasses attribute was found."
+literal|"') must have exactly one InnerClasses attribute if at least one Inner Class is referenced (which is the case)."
+operator|+
+literal|" No InnerClasses attribute was found."
 argument_list|)
 expr_stmt|;
 block|}
@@ -2939,7 +2949,9 @@ argument_list|(
 name|obj
 argument_list|)
 operator|+
-literal|"' has access flag(s) other than ACC_PUBLIC, ACC_PRIVATE, ACC_PROTECTED, ACC_STATIC, ACC_FINAL, ACC_VOLATILE, ACC_TRANSIENT set (ignored)."
+literal|"' has access flag(s) other than ACC_PUBLIC, ACC_PRIVATE, ACC_PROTECTED,"
+operator|+
+literal|" ACC_STATIC, ACC_FINAL, ACC_VOLATILE, ACC_TRANSIENT set (ignored)."
 argument_list|)
 expr_stmt|;
 block|}
@@ -3030,7 +3042,7 @@ operator|.
 name|getBytes
 argument_list|()
 decl_stmt|;
-comment|// Field or Method signature(=descriptor)
+comment|// Field or Method sig.(=descriptor)
 try|try
 block|{
 name|Type
@@ -3611,7 +3623,11 @@ literal|"' has illegal name '"
 operator|+
 name|name
 operator|+
-literal|"'. It's name resembles the class or interface initialization method which it isn't because of its arguments (==descriptor)."
+literal|"'."
+operator|+
+literal|" Its name resembles the class or interface initialization method"
+operator|+
+literal|" which it isn't because of its arguments (==descriptor)."
 argument_list|)
 throw|;
 block|}
@@ -3887,7 +3903,9 @@ argument_list|(
 name|obj
 argument_list|)
 operator|+
-literal|"' must not have any of the ACC_STATIC, ACC_FINAL, ACC_SYNCHRONIZED, ACC_NATIVE, ACC_ABSTRACT modifiers set."
+literal|"' must not have"
+operator|+
+literal|" any of the ACC_STATIC, ACC_FINAL, ACC_SYNCHRONIZED, ACC_NATIVE, ACC_ABSTRACT modifiers set."
 argument_list|)
 throw|;
 block|}
@@ -3949,7 +3967,9 @@ argument_list|(
 name|obj
 argument_list|)
 operator|+
-literal|"' must have exactly one of its ACC_PUBLIC and ACC_PRIVATE modifiers set."
+literal|"' must have"
+operator|+
+literal|" exactly one of its ACC_PUBLIC and ACC_PRIVATE modifiers set."
 argument_list|)
 throw|;
 block|}
@@ -3987,7 +4007,9 @@ argument_list|(
 name|obj
 argument_list|)
 operator|+
-literal|"' must not have any of the ACC_PROTECTED, ACC_FINAL, ACC_SYNCHRONIZED, or ACC_NATIVE modifiers set."
+literal|"' must not have"
+operator|+
+literal|" any of the ACC_PROTECTED, ACC_FINAL, ACC_SYNCHRONIZED, or ACC_NATIVE modifiers set."
 argument_list|)
 throw|;
 block|}
@@ -4091,7 +4113,11 @@ argument_list|(
 name|obj
 argument_list|)
 operator|+
-literal|"' must not have any of the ACC_PRIVATE, ACC_PROTECTED, ACC_STATIC, ACC_FINAL, ACC_SYNCHRONIZED, ACC_NATIVE, ACC_ABSTRACT, ACC_STRICT modifiers set."
+literal|"' must not have"
+operator|+
+literal|" any of the ACC_PRIVATE, ACC_PROTECTED, ACC_STATIC, ACC_FINAL, ACC_SYNCHRONIZED,"
+operator|+
+literal|" ACC_NATIVE, ACC_ABSTRACT, ACC_STRICT modifiers set."
 argument_list|)
 throw|;
 block|}
@@ -4158,7 +4184,11 @@ argument_list|(
 name|obj
 argument_list|)
 operator|+
-literal|"' has access flag(s) other than ACC_PUBLIC, ACC_PRIVATE, ACC_PROTECTED, ACC_STATIC, ACC_FINAL, ACC_SYNCHRONIZED, ACC_NATIVE, ACC_ABSTRACT, ACC_STRICT set (ignored)."
+literal|"' has access flag(s) other than"
+operator|+
+literal|" ACC_PUBLIC, ACC_PRIVATE, ACC_PROTECTED, ACC_STATIC, ACC_FINAL,"
+operator|+
+literal|" ACC_SYNCHRONIZED, ACC_NATIVE, ACC_ABSTRACT, ACC_STRICT set (ignored)."
 argument_list|)
 expr_stmt|;
 block|}
@@ -5572,6 +5602,7 @@ name|exc_index
 argument_list|)
 operator|)
 decl_stmt|;
+comment|// cannot be sure this ConstantClass has already been visited (checked)!
 name|checkIndex
 argument_list|(
 name|cc
@@ -5584,7 +5615,6 @@ argument_list|,
 name|CONST_Utf8
 argument_list|)
 expr_stmt|;
-comment|// cannot be sure this ConstantClass has already been visited (checked)!
 name|String
 name|cname
 init|=
@@ -6271,7 +6301,7 @@ operator|.
 name|getBytes
 argument_list|()
 decl_stmt|;
-comment|// Local signature(=descriptor)
+comment|// Local sig.(=descriptor)
 name|Type
 name|t
 decl_stmt|;
@@ -6503,7 +6533,7 @@ operator|.
 name|getMaxLocals
 argument_list|()
 operator|+
-literal|"' ('There may be no more than one LocalVariableTable attribute per local variable in the Code attribute.')."
+literal|"' ('There may be at most one LocalVariableTable attribute per local variable in the Code attribute.')."
 argument_list|)
 throw|;
 block|}
@@ -6663,7 +6693,8 @@ argument_list|,
 name|CONST_Utf8
 argument_list|)
 expr_stmt|;
-comment|// cannot be sure this ConstantClass has already been visited (checked)!
+comment|// can't be sure this ConstantClass has already been visited (checked)!
+comment|//convert internal notation on-the-fly to external notation:
 name|String
 name|cname
 init|=
@@ -6692,7 +6723,6 @@ argument_list|,
 literal|'.'
 argument_list|)
 decl_stmt|;
-comment|//convert internal notation on-the-fly to external notation
 name|Verifier
 name|v
 init|=
@@ -7437,7 +7467,7 @@ operator|.
 name|getBytes
 argument_list|()
 decl_stmt|;
-comment|// Field or Method signature(=descriptor)
+comment|// Field or Method sig.(=descriptor)
 try|try
 block|{
 name|Type
@@ -7687,7 +7717,7 @@ operator|.
 name|getBytes
 argument_list|()
 decl_stmt|;
-comment|// Field or Method signature(=descriptor)
+comment|// Field or Method sig.(=descriptor)
 try|try
 block|{
 name|Type
@@ -7967,7 +7997,7 @@ operator|.
 name|getBytes
 argument_list|()
 decl_stmt|;
-comment|// Field or Method signature(=descriptor)
+comment|// Field or Method sig.(=descriptor)
 try|try
 block|{
 name|Type

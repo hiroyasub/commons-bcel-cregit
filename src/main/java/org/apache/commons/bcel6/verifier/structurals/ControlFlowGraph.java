@@ -1244,7 +1244,8 @@ operator|==
 literal|null
 condition|)
 block|{
-comment|//return empty; // RET in dead code. "empty" would be the correct answer, but we know something about the surrounding project...
+comment|//return empty;
+comment|// RET in dead code. "empty" would be the correct answer, but we know something about the surrounding project...
 throw|throw
 operator|new
 name|AssertionViolatedException
@@ -1559,7 +1560,6 @@ name|HashMap
 argument_list|<>
 argument_list|()
 decl_stmt|;
-comment|//keys: InstructionHandle, values: InstructionContextImpl
 comment|/**       * A Control Flow Graph.      */
 specifier|public
 name|ControlFlowGraph

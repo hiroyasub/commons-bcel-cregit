@@ -62,7 +62,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * This class represents a BootstrapMethods attribute.  *  * @see<a href="http://docs.oracle.com/javase/specs/jvms/se8/html/jvms-4.html#jvms-4.7.23">The class File Format : The BootstrapMethods Attribute</a>  * @since 6.0  */
+comment|/**  * This class represents a BootstrapMethods attribute.  *  * @see<a href="http://docs.oracle.com/javase/specs/jvms/se8/html/jvms-4.html#jvms-4.7.23">  * The class File Format : The BootstrapMethods Attribute</a>  * @since 6.0  */
 end_comment
 
 begin_class

@@ -1271,7 +1271,9 @@ comment|// Example: a JSR with an exception handler as its successor does not
 comment|// mean we're in a subroutine if we go to the exception handler.
 comment|// We should address this problem later; by now we simply "cut" the chain
 comment|// by using an empty chain for the exception handlers.
-comment|//if (v.execute(new Frame(u.getOutFrame(oldchain).getLocals(), new OperandStack (u.getOutFrame().getStack().maxStack(), (exc_hds[s].getExceptionType()==null? Type.THROWABLE : exc_hds[s].getExceptionType())) ), newchain), icv, ev){
+comment|//if (v.execute(new Frame(u.getOutFrame(oldchain).getLocals(),
+comment|// new OperandStack (u.getOutFrame().getStack().maxStack(),
+comment|// (exc_hds[s].getExceptionType()==null? Type.THROWABLE : exc_hds[s].getExceptionType())) ), newchain), icv, ev){
 comment|//icq.add(v, (ArrayList) newchain.clone());
 if|if
 condition|(
@@ -1403,6 +1405,8 @@ argument_list|(
 name|ih
 argument_list|)
 decl_stmt|;
+comment|// TODO: This is buggy, we check only the top-level return instructions this way.
+comment|// Maybe some maniac returns from a method when in a subroutine?
 name|Frame
 name|f
 init|=
@@ -1418,7 +1422,6 @@ argument_list|>
 argument_list|()
 argument_list|)
 decl_stmt|;
-comment|// TODO: This is buggy, we check only the top-level return instructions this way. Maybe some maniac returns from a method when in a subroutine?
 name|LocalVariables
 name|lvs
 init|=

@@ -337,6 +337,7 @@ name|getClassLoader
 argument_list|()
 decl_stmt|;
 comment|// instanceof won't work here ...
+comment|// TODO this is broken; cannot ever be true now that ClassLoader has been dropped
 if|if
 condition|(
 name|loader
@@ -353,7 +354,6 @@ literal|"class org.apache.commons.bcel6.util.ClassLoader"
 argument_list|)
 condition|)
 block|{
-comment|// TODO this is broken; cannot ever be true
 comment|// Real class name will be set by the class loader
 name|ClassGen
 name|cg

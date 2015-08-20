@@ -1347,11 +1347,11 @@ specifier|final
 name|int
 name|method_no
 decl_stmt|;
-comment|/** The one and only InstructionList object used by an instance of this class. It's here for performance reasons by do_verify() and its callees. */
+comment|/**      * The one and only InstructionList object used by an instance of this class.      * It's here for performance reasons by do_verify() and its callees.      */
 name|InstructionList
 name|instructionList
 decl_stmt|;
-comment|/** The one and only Code object used by an instance of this class. It's here for performance reasons by do_verify() and its callees. */
+comment|/**      * The one and only Code object used by an instance of this class.      *  It's here for performance reasons by do_verify() and its callees.      */
 name|Code
 name|code
 decl_stmt|;
@@ -1777,7 +1777,9 @@ literal|"' refers to the same code offset ('"
 operator|+
 name|offset
 operator|+
-literal|"') more than once which is violating the semantics [but is sometimes produced by IBM's 'jikes' compiler]."
+literal|"') more than once"
+operator|+
+literal|" which is violating the semantics [but is sometimes produced by IBM's 'jikes' compiler]."
 argument_list|)
 expr_stmt|;
 block|}
@@ -2338,7 +2340,11 @@ throw|throw
 operator|new
 name|StaticCodeInstructionConstraintException
 argument_list|(
-literal|"Execution must not fall off the bottom of the code array. This constraint is enforced statically as some existing verifiers do - so it may be a false alarm if the last instruction is not reachable."
+literal|"Execution must not fall off the bottom of the code array."
+operator|+
+literal|" This constraint is enforced statically as some existing verifiers do"
+operator|+
+literal|" - so it may be a false alarm if the last instruction is not reachable."
 argument_list|)
 throw|;
 block|}
@@ -2448,7 +2454,9 @@ throw|throw
 operator|new
 name|StaticCodeInstructionOperandConstraintException
 argument_list|(
-literal|"Due to JustIce's clear definition of subroutines, no JSR or JSR_W may have a top-level instruction (such as the very first instruction, which is targeted by instruction '"
+literal|"Due to JustIce's clear definition of subroutines, no JSR or JSR_W may have a top-level instruction"
+operator|+
+literal|" (such as the very first instruction, which is targeted by instruction '"
 operator|+
 name|ih
 operator|+
@@ -2473,7 +2481,9 @@ throw|throw
 operator|new
 name|StaticCodeInstructionOperandConstraintException
 argument_list|(
-literal|"Due to JustIce's clear definition of subroutines, no JSR or JSR_W may target anything else than an ASTORE instruction. Instruction '"
+literal|"Due to JustIce's clear definition of subroutines, no JSR or JSR_W may target anything else"
+operator|+
+literal|" than an ASTORE instruction. Instruction '"
 operator|+
 name|ih
 operator|+
@@ -3396,7 +3406,8 @@ comment|//                Type o_type = o.getType(cpg);
 comment|// Argh. Sun's implementation allows us to have multiple fields of
 comment|// the same name but with a different signature.
 comment|//if (! f_type.equals(o_type)){
-comment|//    constraintViolated(o, "Referenced field '"+field_name+"' has type '"+f_type+"' instead of '"+o_type+"' as expected.");
+comment|//    constraintViolated(o,
+comment|//        "Referenced field '"+field_name+"' has type '"+f_type+"' instead of '"+o_type+"' as expected.");
 comment|//}
 comment|/* TODO: Check for access modifiers here. */
 block|}
@@ -3610,7 +3621,9 @@ name|constraintViolated
 argument_list|(
 name|o
 argument_list|,
-literal|"No method with a name beginning with '<' other than the instance initialization methods may be called by the method invocation instructions."
+literal|"No method with a name beginning with '<' other than the instance initialization methods"
+operator|+
+literal|" may be called by the method invocation instructions."
 argument_list|)
 expr_stmt|;
 block|}
@@ -4305,7 +4318,11 @@ name|constraintViolated
 argument_list|(
 name|o
 argument_list|,
-literal|"Not allowed to create array with more dimensions ('+dimensions2create+') than the one referenced by the CONSTANT_Class '"
+literal|"Not allowed to create array with more dimensions ('"
+operator|+
+name|dimensions2create
+operator|+
+literal|"') than the one referenced by the CONSTANT_Class '"
 operator|+
 name|t
 operator|+
@@ -4320,7 +4337,9 @@ name|constraintViolated
 argument_list|(
 name|o
 argument_list|,
-literal|"Expecting a CONSTANT_Class referencing an array type. [Constraint not found in The Java Virtual Machine Specification, Second Edition, 4.8.1]"
+literal|"Expecting a CONSTANT_Class referencing an array type."
+operator|+
+literal|" [Constraint not found in The Java Virtual Machine Specification, Second Edition, 4.8.1]"
 argument_list|)
 expr_stmt|;
 block|}
@@ -5144,7 +5163,9 @@ literal|"Index '"
 operator|+
 name|idx
 operator|+
-literal|"' must be non-negative. [Constraint by JustIce as an analogon to the single-slot xLOAD/xSTORE instructions; may not happen anyway.]"
+literal|"' must be non-negative."
+operator|+
+literal|" [Constraint by JustIce as an analogon to the single-slot xLOAD/xSTORE instructions; may not happen anyway.]"
 argument_list|)
 expr_stmt|;
 block|}
@@ -5217,7 +5238,9 @@ literal|"Index '"
 operator|+
 name|idx
 operator|+
-literal|"' must be non-negative. [Constraint by JustIce as an analogon to the single-slot xLOAD/xSTORE instructions; may not happen anyway.]"
+literal|"' must be non-negative."
+operator|+
+literal|" [Constraint by JustIce as an analogon to the single-slot xLOAD/xSTORE instructions; may not happen anyway.]"
 argument_list|)
 expr_stmt|;
 block|}
@@ -5290,7 +5313,9 @@ literal|"Index '"
 operator|+
 name|idx
 operator|+
-literal|"' must be non-negative. [Constraint by JustIce as an analogon to the single-slot xLOAD/xSTORE instructions; may not happen anyway.]"
+literal|"' must be non-negative."
+operator|+
+literal|" [Constraint by JustIce as an analogon to the single-slot xLOAD/xSTORE instructions; may not happen anyway.]"
 argument_list|)
 expr_stmt|;
 block|}
@@ -5363,7 +5388,9 @@ literal|"Index '"
 operator|+
 name|idx
 operator|+
-literal|"' must be non-negative. [Constraint by JustIce as an analogon to the single-slot xLOAD/xSTORE instructions; may not happen anyway.]"
+literal|"' must be non-negative."
+operator|+
+literal|" [Constraint by JustIce as an analogon to the single-slot xLOAD/xSTORE instructions; may not happen anyway.]"
 argument_list|)
 expr_stmt|;
 block|}
@@ -6102,7 +6129,7 @@ argument_list|)
 throw|;
 block|}
 block|}
-comment|/**          * Looks for the method referenced by the given invoke instruction in the given class or its super classes and super interfaces.          * @param jc the class that defines the referenced method          * @param invoke the instruction that references the method          * @return the referenced method or null if not found.          */
+comment|/**          * Looks for the method referenced by the given invoke instruction in the given class          * or its super classes and super interfaces.          * @param jc the class that defines the referenced method          * @param invoke the instruction that references the method          * @return the referenced method or null if not found.          */
 specifier|private
 name|Method
 name|getMethodRecursive

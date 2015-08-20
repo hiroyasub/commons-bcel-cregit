@@ -462,7 +462,8 @@ name|frame
 operator|=
 name|f
 expr_stmt|;
-comment|//if (singleInstance.mg == null || singleInstance.cpg == null) throw new AssertionViolatedException("Forgot to set important values first.");
+comment|//if (singleInstance.mg == null || singleInstance.cpg == null)
+comment|// throw new AssertionViolatedException("Forgot to set important values first.");
 block|}
 comment|/**      * Sets the ConstantPoolGen instance needed for constraint      * checking prior to execution.      */
 specifier|public
@@ -1484,7 +1485,7 @@ name|isEmpty
 argument_list|()
 condition|)
 block|{
-comment|// Don't bother about 1 or 2 stack slots used. This check is implicitely done below while type checking.
+comment|// Don't bother about 1 or 2 stack slots used. This check is implicitly done below while type checking.
 name|constraintViolated
 argument_list|(
 name|o
@@ -1776,7 +1777,8 @@ comment|//ReferenceType objectref = (ReferenceType) (stack().peek());
 comment|// TODO: This can only be checked if using Staerk-et-al's "set of object types" instead of a
 comment|// "wider cast object type" created during verification.
 comment|//if (! (objectref.isAssignmentCompatibleWith(mg.getType())) ){
-comment|//    constraintViolated(o, "Type on stack top which should be returned is a '"+stack().peek()+"' which is not assignment compatible with the return type of this method, '"+mg.getType()+"'.");
+comment|//    constraintViolated(o, "Type on stack top which should be returned is a '"+stack().peek()+
+comment|//    "' which is not assignment compatible with the return type of this method, '"+mg.getType()+"'.");
 comment|//}
 block|}
 else|else
@@ -2197,7 +2199,8 @@ comment|// The check below should already done via visitReturnInstruction(Return
 comment|// It cannot be done using Staerk-et-al's "set of object types" instead of a
 comment|// "wider cast object type", anyway.
 comment|//if (! objectref.isAssignmentCompatibleWith(mg.getReturnType() )){
-comment|//    constraintViolated(o, "The 'objectref' type "+objectref+" at the stack top is not assignment compatible with the return type '"+mg.getReturnType()+"' of the method.");
+comment|//    constraintViolated(o, "The 'objectref' type "+objectref+
+comment|// " at the stack top is not assignment compatible with the return type '"+mg.getReturnType()+"' of the method.");
 comment|//}
 block|}
 comment|/**      * Ensures the specific preconditions of the said instruction.      */
@@ -4273,7 +4276,9 @@ name|constraintViolated
 argument_list|(
 name|o
 argument_list|,
-literal|"If stack top's size is 1 and stack next-to-top's size is 1, stack next-to-next-to-top's size must also be 1, but is: '"
+literal|"If stack top's size is 1 and stack next-to-top's size is 1,"
+operator|+
+literal|" stack next-to-next-to-top's size must also be 1, but is: '"
 operator|+
 name|stack
 argument_list|()
@@ -4622,7 +4627,9 @@ name|constraintViolated
 argument_list|(
 name|o
 argument_list|,
-literal|"If stack top's size is 2 and stack-next-to-top's size is 1, then stack next-to-next-to-top's size must also be 1. But it is '"
+literal|"If stack top's size is 2 and stack-next-to-top's size is 1,"
+operator|+
+literal|" then stack next-to-next-to-top's size must also be 1. But it is '"
 operator|+
 name|stack
 argument_list|()
@@ -6232,7 +6239,10 @@ block|{
 comment|//TODO: One day move to Staerk-et-al's "Set of object types" instead of "wider" object types
 comment|//      created during the verification.
 comment|//      "Wider" object types don't allow us to check for things like that below.
-comment|//constraintViolated(o, "The referenced field has the ACC_PROTECTED modifier, and it's a member of the current class or a superclass of the current class. However, the referenced object type '"+stack().peek()+"' is not the current class or a subclass of the current class.");
+comment|//constraintViolated(o, "The referenced field has the ACC_PROTECTED modifier, "+
+comment|// "and it's a member of the current class or a superclass of the current class."+
+comment|// " However, the referenced object type '"+stack().peek()+
+comment|// "' is not the current class or a subclass of the current class.");
 block|}
 block|}
 block|}
@@ -8624,7 +8634,8 @@ comment|//ReferenceType rFromDesc = (ReferenceType) fromDesc;
 comment|// TODO: This can only be checked when using Staerk-et-al's "set of object types"
 comment|// instead of a "wider cast object type" created during verification.
 comment|//if ( ! rFromStack.isAssignmentCompatibleWith(rFromDesc) ){
-comment|//    constraintViolated(o, "Expecting a '"+fromDesc+"' but found a '"+fromStack+"' on the stack (which is not assignment compatible).");
+comment|//    constraintViolated(o, "Expecting a '"+fromDesc+"' but found a '"+fromStack+
+comment|//    "' on the stack (which is not assignment compatible).");
 comment|//}
 name|referenceTypeIsInitialized
 argument_list|(
@@ -8728,6 +8739,7 @@ name|ArrayType
 operator|)
 condition|)
 block|{
+comment|// could be a ReturnaddressType
 name|constraintViolated
 argument_list|(
 name|o
@@ -8739,7 +8751,6 @@ operator|+
 literal|"'."
 argument_list|)
 expr_stmt|;
-comment|// could be a ReturnaddressType
 block|}
 else|else
 block|{
@@ -8871,7 +8882,13 @@ name|constraintViolated
 argument_list|(
 name|o
 argument_list|,
-literal|"Possibly initializing object twice. A valid instruction sequence must not have an uninitialized object on the operand stack or in a local variable during a backwards branch, or in a local variable in code protected by an exception handler. Please see The Java Virtual Machine Specification, Second Edition, 4.9.4 (pages 147 and 148) for details."
+literal|"Possibly initializing object twice."
+operator|+
+literal|" A valid instruction sequence must not have an uninitialized object on the operand stack or in a local variable"
+operator|+
+literal|" during a backwards branch, or in a local variable in code protected by an exception handler."
+operator|+
+literal|" Please see The Java Virtual Machine Specification, Second Edition, 4.9.4 (pages 147 and 148) for details."
 argument_list|)
 expr_stmt|;
 block|}
@@ -9242,6 +9259,7 @@ name|ArrayType
 operator|)
 condition|)
 block|{
+comment|// could be a ReturnaddressType
 name|constraintViolated
 argument_list|(
 name|o
@@ -9253,7 +9271,6 @@ operator|+
 literal|"'."
 argument_list|)
 expr_stmt|;
-comment|// could be a ReturnaddressType
 block|}
 else|else
 block|{
@@ -10033,6 +10050,7 @@ name|ArrayType
 operator|)
 condition|)
 block|{
+comment|// could be a ReturnaddressType
 name|constraintViolated
 argument_list|(
 name|o
@@ -10044,7 +10062,6 @@ operator|+
 literal|"'."
 argument_list|)
 expr_stmt|;
-comment|// could be a ReturnaddressType
 block|}
 else|else
 block|{
@@ -13275,7 +13292,9 @@ name|constraintViolated
 argument_list|(
 name|o
 argument_list|,
-literal|"The referenced field has the ACC_PROTECTED modifier, and it's a member of the current class or a superclass of the current class. However, the referenced object type '"
+literal|"The referenced field has the ACC_PROTECTED modifier, and it's a member of the current class or"
+operator|+
+literal|" a superclass of the current class. However, the referenced object type '"
 operator|+
 name|stack
 argument_list|()

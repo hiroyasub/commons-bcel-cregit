@@ -772,7 +772,8 @@ name|RuntimeException
 name|e
 parameter_list|)
 block|{
-comment|// including ClassFormatException, trying to convert the "signature" of a ReturnaddressType LocalVariable (shouldn't occur, but people do crazy things)
+comment|// including ClassFormatException, trying to convert the "signature" of a ReturnaddressType LocalVariable
+comment|// (shouldn't occur, but people do crazy things)
 name|String
 name|s
 init|=

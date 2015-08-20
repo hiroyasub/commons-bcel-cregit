@@ -2611,7 +2611,9 @@ name|showMessageDialog
 argument_list|(
 name|this
 argument_list|,
-literal|"JustIce is a Java class file verifier.\nIt was implemented by Enver Haase in 2001, 2002.\n<http://commons.apache.org/bcel/>"
+literal|"JustIce is a Java class file verifier.\n"
+operator|+
+literal|"It was implemented by Enver Haase in 2001, 2002.\n<http://commons.apache.org/bcel/>"
 argument_list|,
 name|JUSTICE_VERSION
 argument_list|,
@@ -2634,7 +2636,13 @@ name|showMessageDialog
 argument_list|(
 name|this
 argument_list|,
-literal|"The upper four boxes to the right reflect verification passes according to The Java Virtual Machine Specification.\nThese are (in that order): Pass one, Pass two, Pass three (before data flow analysis), Pass three (data flow analysis).\nThe bottom box to the right shows (warning) messages; warnings do not cause a class to be rejected."
+literal|"The upper four boxes to the right reflect verification passes according to"
+operator|+
+literal|" The Java Virtual Machine Specification.\nThese are (in that order):"
+operator|+
+literal|" Pass one, Pass two, Pass three (before data flow analysis), Pass three (data flow analysis).\n"
+operator|+
+literal|"The bottom box to the right shows (warning) messages; warnings do not cause a class to be rejected."
 argument_list|,
 name|JUSTICE_VERSION
 argument_list|,
