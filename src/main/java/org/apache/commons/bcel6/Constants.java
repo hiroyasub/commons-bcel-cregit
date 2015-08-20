@@ -430,7 +430,7 @@ block|,
 literal|"enum"
 block|}
 decl_stmt|;
-comment|/** Marks a constant pool entry as type UTF-8.  */
+comment|/** Marks a constant pool entry as type UTF-8.    * @see<a href="http://docs.oracle.com/javase/specs/jvms/se8/html/jvms-4.html#jvms-4.4">The Constant Pool in The Java Virtual Machine Specification</a> */
 specifier|public
 specifier|final
 specifier|static
@@ -439,7 +439,7 @@ name|CONSTANT_Utf8
 init|=
 literal|1
 decl_stmt|;
-comment|/** Marks a constant pool entry as type Integer.  */
+comment|/** Marks a constant pool entry as type Integer.    * @see<a href="http://docs.oracle.com/javase/specs/jvms/se8/html/jvms-4.html#jvms-4.4">The Constant Pool in The Java Virtual Machine Specification</a> */
 specifier|public
 specifier|final
 specifier|static
@@ -448,7 +448,7 @@ name|CONSTANT_Integer
 init|=
 literal|3
 decl_stmt|;
-comment|/** Marks a constant pool entry as type Float.  */
+comment|/** Marks a constant pool entry as type Float.    * @see<a href="http://docs.oracle.com/javase/specs/jvms/se8/html/jvms-4.html#jvms-4.4">The Constant Pool in The Java Virtual Machine Specification</a> */
 specifier|public
 specifier|final
 specifier|static
@@ -457,7 +457,7 @@ name|CONSTANT_Float
 init|=
 literal|4
 decl_stmt|;
-comment|/** Marks a constant pool entry as type Long.  */
+comment|/** Marks a constant pool entry as type Long.    * @see<a href="http://docs.oracle.com/javase/specs/jvms/se8/html/jvms-4.html#jvms-4.4">The Constant Pool in The Java Virtual Machine Specification</a> */
 specifier|public
 specifier|final
 specifier|static
@@ -466,7 +466,7 @@ name|CONSTANT_Long
 init|=
 literal|5
 decl_stmt|;
-comment|/** Marks a constant pool entry as type Double.  */
+comment|/** Marks a constant pool entry as type Double.    * @see<a href="http://docs.oracle.com/javase/specs/jvms/se8/html/jvms-4.html#jvms-4.4">The Constant Pool in The Java Virtual Machine Specification</a> */
 specifier|public
 specifier|final
 specifier|static
@@ -475,7 +475,7 @@ name|CONSTANT_Double
 init|=
 literal|6
 decl_stmt|;
-comment|/** Marks a constant pool entry as a Class.  */
+comment|/** Marks a constant pool entry as a Class    * @see<a href="http://docs.oracle.com/javase/specs/jvms/se8/html/jvms-4.html#jvms-4.4">The Constant Pool in The Java Virtual Machine Specification</a> */
 specifier|public
 specifier|final
 specifier|static
@@ -484,7 +484,7 @@ name|CONSTANT_Class
 init|=
 literal|7
 decl_stmt|;
-comment|/** Marks a constant pool entry as a Field Reference.  */
+comment|/** Marks a constant pool entry as a Field Reference.    * @see<a href="http://docs.oracle.com/javase/specs/jvms/se8/html/jvms-4.html#jvms-4.4">The Constant Pool in The Java Virtual Machine Specification</a> */
 specifier|public
 specifier|final
 specifier|static
@@ -493,7 +493,7 @@ name|CONSTANT_Fieldref
 init|=
 literal|9
 decl_stmt|;
-comment|/** Marks a constant pool entry as type String.  */
+comment|/** Marks a constant pool entry as type String    * @see<a href="http://docs.oracle.com/javase/specs/jvms/se8/html/jvms-4.html#jvms-4.4">The Constant Pool in The Java Virtual Machine Specification</a> */
 specifier|public
 specifier|final
 specifier|static
@@ -502,7 +502,7 @@ name|CONSTANT_String
 init|=
 literal|8
 decl_stmt|;
-comment|/** Marks a constant pool entry as a Method Reference.  */
+comment|/** Marks a constant pool entry as a Method Reference.    * @see<a href="http://docs.oracle.com/javase/specs/jvms/se8/html/jvms-4.html#jvms-4.4">The Constant Pool in The Java Virtual Machine Specification</a> */
 specifier|public
 specifier|final
 specifier|static
@@ -511,7 +511,7 @@ name|CONSTANT_Methodref
 init|=
 literal|10
 decl_stmt|;
-comment|/** Marks a constant pool entry as an Interface Method Reference.  */
+comment|/** Marks a constant pool entry as an Interface Method Reference.    * @see<a href="http://docs.oracle.com/javase/specs/jvms/se8/html/jvms-4.html#jvms-4.4">The Constant Pool in The Java Virtual Machine Specification</a> */
 specifier|public
 specifier|final
 specifier|static
@@ -520,7 +520,7 @@ name|CONSTANT_InterfaceMethodref
 init|=
 literal|11
 decl_stmt|;
-comment|/** Marks a constant pool entry as a name and type.  */
+comment|/** Marks a constant pool entry as a name and type.    * @see<a href="http://docs.oracle.com/javase/specs/jvms/se8/html/jvms-4.html#jvms-4.4">The Constant Pool in The Java Virtual Machine Specification</a> */
 specifier|public
 specifier|final
 specifier|static
@@ -529,7 +529,7 @@ name|CONSTANT_NameAndType
 init|=
 literal|12
 decl_stmt|;
-comment|/** Marks a constant pool entry as a Method Handle.  */
+comment|/** Marks a constant pool entry as a Method Handle.    * @see<a href="http://docs.oracle.com/javase/specs/jvms/se8/html/jvms-4.html#jvms-4.4">The Constant Pool in The Java Virtual Machine Specification</a> */
 specifier|public
 specifier|static
 specifier|final
@@ -538,7 +538,7 @@ name|CONSTANT_MethodHandle
 init|=
 literal|15
 decl_stmt|;
-comment|/** Marks a constant pool entry as a Method Type.    */
+comment|/** Marks a constant pool entry as a Method Type.    * @see<a href="http://docs.oracle.com/javase/specs/jvms/se8/html/jvms-4.html#jvms-4.4">The Constant Pool in The Java Virtual Machine Specification</a> */
 specifier|public
 specifier|static
 specifier|final
@@ -547,7 +547,7 @@ name|CONSTANT_MethodType
 init|=
 literal|16
 decl_stmt|;
-comment|/** Marks a constant pool entry as an Invoke Dynamic */
+comment|/** Marks a constant pool entry as an Invoke Dynamic    * @see<a href="http://docs.oracle.com/javase/specs/jvms/se8/html/jvms-4.html#jvms-4.4">The Constant Pool in The Java Virtual Machine Specification</a> */
 specifier|public
 specifier|static
 specifier|final
@@ -2831,7 +2831,7 @@ name|ILLEGAL_TYPE
 init|=
 literal|"<illegal type>"
 decl_stmt|;
-comment|/** Boolean data type. */
+comment|/** Boolean data type.    * @see<a href="http://docs.oracle.com/javase/specs/jvms/se8/html/jvms-4.html#jvms-4.9.1-120-P">Static Constraints in the Java Virtual Machine Specification</a> */
 specifier|public
 specifier|static
 specifier|final
@@ -2840,7 +2840,7 @@ name|T_BOOLEAN
 init|=
 literal|4
 decl_stmt|;
-comment|/** Char data type. */
+comment|/** Char data type.    * @see<a href="http://docs.oracle.com/javase/specs/jvms/se8/html/jvms-4.html#jvms-4.9.1-120-P">Static Constraints in the Java Virtual Machine Specification</a> */
 specifier|public
 specifier|static
 specifier|final
@@ -2849,7 +2849,7 @@ name|T_CHAR
 init|=
 literal|5
 decl_stmt|;
-comment|/** Float data type. */
+comment|/** Float data type.    * @see<a href="http://docs.oracle.com/javase/specs/jvms/se8/html/jvms-4.html#jvms-4.9.1-120-P">Static Constraints in the Java Virtual Machine Specification</a> */
 specifier|public
 specifier|static
 specifier|final
@@ -2858,7 +2858,7 @@ name|T_FLOAT
 init|=
 literal|6
 decl_stmt|;
-comment|/** Double data type. */
+comment|/** Double data type.    * @see<a href="http://docs.oracle.com/javase/specs/jvms/se8/html/jvms-4.html#jvms-4.9.1-120-P">Static Constraints in the Java Virtual Machine Specification</a> */
 specifier|public
 specifier|static
 specifier|final
@@ -2867,7 +2867,7 @@ name|T_DOUBLE
 init|=
 literal|7
 decl_stmt|;
-comment|/** Byte data type. */
+comment|/** Byte data type.    * @see<a href="http://docs.oracle.com/javase/specs/jvms/se8/html/jvms-4.html#jvms-4.9.1-120-P">Static Constraints in the Java Virtual Machine Specification</a> */
 specifier|public
 specifier|static
 specifier|final
@@ -2876,7 +2876,7 @@ name|T_BYTE
 init|=
 literal|8
 decl_stmt|;
-comment|/** Short data type. */
+comment|/** Short data type.    * @see<a href="http://docs.oracle.com/javase/specs/jvms/se8/html/jvms-4.html#jvms-4.9.1-120-P">Static Constraints in the Java Virtual Machine Specification</a> */
 specifier|public
 specifier|static
 specifier|final
@@ -2885,7 +2885,7 @@ name|T_SHORT
 init|=
 literal|9
 decl_stmt|;
-comment|/** Int data type. */
+comment|/** Int data type.    * @see<a href="http://docs.oracle.com/javase/specs/jvms/se8/html/jvms-4.html#jvms-4.9.1-120-P">Static Constraints in the Java Virtual Machine Specification</a> */
 specifier|public
 specifier|static
 specifier|final
@@ -2894,7 +2894,7 @@ name|T_INT
 init|=
 literal|10
 decl_stmt|;
-comment|/** Long data type. */
+comment|/** Long data type.    * @see<a href="http://docs.oracle.com/javase/specs/jvms/se8/html/jvms-4.html#jvms-4.9.1-120-P">Static Constraints in the Java Virtual Machine Specification</a> */
 specifier|public
 specifier|static
 specifier|final
