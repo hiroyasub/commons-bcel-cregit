@@ -185,12 +185,10 @@ expr_stmt|;
 name|int
 name|line_number_table_length
 init|=
-operator|(
 name|input
 operator|.
 name|readUnsignedShort
 argument_list|()
-operator|)
 decl_stmt|;
 name|line_number_table
 operator|=

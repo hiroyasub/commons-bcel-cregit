@@ -163,12 +163,10 @@ specifier|final
 name|int
 name|num_element_value_pairs
 init|=
-operator|(
 name|input
 operator|.
 name|readUnsignedShort
 argument_list|()
-operator|)
 decl_stmt|;
 name|annotationEntry
 operator|.

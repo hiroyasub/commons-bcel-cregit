@@ -1363,7 +1363,6 @@ operator|.
 name|append
 argument_list|(
 operator|(
-operator|(
 name|bytes
 operator|.
 name|getIndex
@@ -1376,7 +1375,6 @@ name|bytes
 operator|.
 name|readInt
 argument_list|()
-operator|)
 argument_list|)
 expr_stmt|;
 break|break;
@@ -1578,7 +1576,6 @@ argument_list|)
 operator|.
 name|append
 argument_list|(
-operator|(
 name|verbose
 condition|?
 literal|" ("
@@ -1588,7 +1585,6 @@ operator|+
 literal|")"
 else|:
 literal|""
-operator|)
 argument_list|)
 expr_stmt|;
 break|break;
@@ -1651,7 +1647,6 @@ argument_list|)
 operator|.
 name|append
 argument_list|(
-operator|(
 name|verbose
 condition|?
 literal|" ("
@@ -1661,7 +1656,6 @@ operator|+
 literal|")"
 else|:
 literal|""
-operator|)
 argument_list|)
 expr_stmt|;
 break|break;
@@ -1719,7 +1713,6 @@ argument_list|)
 operator|.
 name|append
 argument_list|(
-operator|(
 name|verbose
 condition|?
 literal|" ("
@@ -1729,7 +1722,6 @@ operator|+
 literal|")"
 else|:
 literal|""
-operator|)
 argument_list|)
 expr_stmt|;
 break|break;
@@ -1768,7 +1760,6 @@ argument_list|)
 operator|.
 name|append
 argument_list|(
-operator|(
 name|verbose
 condition|?
 literal|" ("
@@ -1778,7 +1769,6 @@ operator|+
 literal|")"
 else|:
 literal|""
-operator|)
 argument_list|)
 expr_stmt|;
 break|break;
@@ -1969,7 +1959,6 @@ argument_list|)
 operator|.
 name|append
 argument_list|(
-operator|(
 name|verbose
 condition|?
 literal|" ("
@@ -1979,7 +1968,6 @@ operator|+
 literal|")"
 else|:
 literal|""
-operator|)
 argument_list|)
 expr_stmt|;
 break|break;
@@ -2024,7 +2012,6 @@ argument_list|)
 operator|.
 name|append
 argument_list|(
-operator|(
 name|verbose
 condition|?
 literal|" ("
@@ -2034,7 +2021,6 @@ operator|+
 literal|")"
 else|:
 literal|""
-operator|)
 argument_list|)
 expr_stmt|;
 break|break;
@@ -2084,7 +2070,6 @@ argument_list|)
 operator|.
 name|append
 argument_list|(
-operator|(
 name|verbose
 condition|?
 literal|" ("
@@ -2094,7 +2079,6 @@ operator|+
 literal|")"
 else|:
 literal|""
-operator|)
 argument_list|)
 expr_stmt|;
 break|break;
@@ -2158,7 +2142,6 @@ argument_list|)
 operator|.
 name|append
 argument_list|(
-operator|(
 name|verbose
 condition|?
 literal|" ("
@@ -2168,7 +2151,6 @@ operator|+
 literal|")"
 else|:
 literal|""
-operator|)
 argument_list|)
 expr_stmt|;
 block|}
@@ -5477,13 +5459,11 @@ name|buf
 operator|.
 name|append
 argument_list|(
-operator|(
 name|quote
 condition|?
 literal|"\""
 else|:
 literal|""
-operator|)
 argument_list|)
 operator|.
 name|append
@@ -5499,13 +5479,11 @@ argument_list|)
 operator|.
 name|append
 argument_list|(
-operator|(
 name|quote
 condition|?
 literal|"\""
 else|:
 literal|""
-operator|)
 argument_list|)
 expr_stmt|;
 block|}

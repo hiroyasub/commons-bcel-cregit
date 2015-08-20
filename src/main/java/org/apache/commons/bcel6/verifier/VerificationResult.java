@@ -205,7 +205,6 @@ name|o
 decl_stmt|;
 return|return
 operator|(
-operator|(
 name|other
 operator|.
 name|numeric
@@ -215,7 +214,6 @@ operator|.
 name|numeric
 operator|)
 operator|&&
-operator|(
 name|other
 operator|.
 name|detailMessage
@@ -226,8 +224,6 @@ name|this
 operator|.
 name|detailMessage
 argument_list|)
-operator|)
-operator|)
 return|;
 block|}
 comment|/**      * Returns a String representation of the VerificationResult.      */

@@ -1310,7 +1310,6 @@ operator|.
 name|maxStack
 argument_list|()
 argument_list|,
-operator|(
 name|exc_hd
 operator|.
 name|getExceptionType
@@ -1326,7 +1325,6 @@ name|exc_hd
 operator|.
 name|getExceptionType
 argument_list|()
-operator|)
 argument_list|)
 argument_list|)
 argument_list|,

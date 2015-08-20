@@ -1179,11 +1179,9 @@ operator|.
 name|addString
 argument_list|(
 operator|(
-operator|(
 name|String
 operator|)
 name|value
-operator|)
 argument_list|)
 return|;
 default|default:

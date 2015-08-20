@@ -652,11 +652,9 @@ argument_list|)
 expr_stmt|;
 block|}
 return|return
-operator|(
 name|arrayref
 operator|instanceof
 name|ArrayType
-operator|)
 return|;
 block|}
 comment|/***************************************************************/
@@ -1496,13 +1494,11 @@ expr_stmt|;
 block|}
 if|if
 condition|(
-operator|(
 operator|!
 operator|(
 name|o
 operator|instanceof
 name|ASTORE
-operator|)
 operator|)
 condition|)
 block|{

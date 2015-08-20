@@ -462,14 +462,12 @@ argument_list|()
 argument_list|)
 decl_stmt|;
 return|return
-operator|(
 name|bo
 operator|.
 name|getBytes
 argument_list|()
 operator|!=
 literal|0
-operator|)
 return|;
 block|}
 specifier|public

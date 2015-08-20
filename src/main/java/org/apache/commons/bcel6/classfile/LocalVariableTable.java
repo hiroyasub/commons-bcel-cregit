@@ -184,12 +184,10 @@ expr_stmt|;
 name|int
 name|local_variable_table_length
 init|=
-operator|(
 name|input
 operator|.
 name|readUnsignedShort
 argument_list|()
-operator|)
 decl_stmt|;
 name|local_variable_table
 operator|=

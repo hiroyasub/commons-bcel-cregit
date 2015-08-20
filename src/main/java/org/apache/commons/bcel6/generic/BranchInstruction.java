@@ -574,11 +574,9 @@ name|ih
 parameter_list|)
 block|{
 return|return
-operator|(
 name|target
 operator|==
 name|ih
-operator|)
 return|;
 block|}
 comment|/**      * Inform target that it's not targeted anymore.      */

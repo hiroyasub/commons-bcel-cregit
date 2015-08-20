@@ -1339,7 +1339,6 @@ block|{
 name|String
 name|nameAndSig
 init|=
-operator|(
 name|method
 operator|.
 name|getName
@@ -1349,7 +1348,6 @@ name|method
 operator|.
 name|getSignature
 argument_list|()
-operator|)
 decl_stmt|;
 if|if
 condition|(
@@ -3084,11 +3082,9 @@ block|}
 name|String
 name|nameanddesc
 init|=
-operator|(
 name|name
 operator|+
 name|sig
-operator|)
 decl_stmt|;
 if|if
 condition|(
@@ -4195,11 +4191,9 @@ block|}
 name|String
 name|nameanddesc
 init|=
-operator|(
 name|name
 operator|+
 name|sig
-operator|)
 decl_stmt|;
 if|if
 condition|(
@@ -8122,7 +8116,6 @@ name|allowStaticInit
 condition|)
 block|{
 return|return
-operator|(
 name|name
 operator|.
 name|equals
@@ -8140,7 +8133,6 @@ name|Constants
 operator|.
 name|STATIC_INITIALIZER_NAME
 argument_list|)
-operator|)
 return|;
 block|}
 return|return

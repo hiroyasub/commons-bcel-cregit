@@ -120,16 +120,12 @@ name|names
 operator|.
 name|put
 argument_list|(
-operator|(
-operator|(
 name|Integer
 operator|.
 name|toString
 argument_list|(
 name|offset
 argument_list|)
-operator|)
-operator|)
 argument_list|,
 name|name
 argument_list|)
@@ -151,16 +147,12 @@ name|types
 operator|.
 name|put
 argument_list|(
-operator|(
-operator|(
 name|Integer
 operator|.
 name|toString
 argument_list|(
 name|offset
 argument_list|)
-operator|)
-operator|)
 argument_list|,
 name|t
 argument_list|)
@@ -199,7 +191,6 @@ name|offset
 parameter_list|)
 block|{
 return|return
-operator|(
 name|names
 operator|.
 name|get
@@ -211,7 +202,6 @@ argument_list|(
 name|offset
 argument_list|)
 argument_list|)
-operator|)
 return|;
 block|}
 comment|/**      * Adds some information about this local variable (slot).      * @throws LocalVariableInfoInconsistentException if the new information conflicts      *         with already gathered information.      */

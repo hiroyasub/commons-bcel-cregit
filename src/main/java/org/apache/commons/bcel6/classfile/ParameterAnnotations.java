@@ -106,12 +106,10 @@ expr_stmt|;
 name|int
 name|num_parameters
 init|=
-operator|(
 name|input
 operator|.
 name|readUnsignedByte
 argument_list|()
-operator|)
 decl_stmt|;
 name|parameter_annotation_table
 operator|=

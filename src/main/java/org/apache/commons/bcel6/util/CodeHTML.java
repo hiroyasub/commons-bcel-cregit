@@ -1097,7 +1097,6 @@ name|JSR
 case|:
 name|index
 operator|=
-operator|(
 name|bytes
 operator|.
 name|getIndex
@@ -1109,7 +1108,6 @@ name|readShort
 argument_list|()
 operator|-
 literal|1
-operator|)
 expr_stmt|;
 name|buf
 operator|.
@@ -2555,14 +2553,12 @@ decl_stmt|;
 name|int
 name|end
 init|=
-operator|(
 name|start
 operator|+
 name|var
 operator|.
 name|getLength
 argument_list|()
-operator|)
 decl_stmt|;
 name|goto_set
 operator|.

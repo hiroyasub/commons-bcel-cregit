@@ -773,11 +773,9 @@ decl_stmt|;
 name|int
 name|lenExpr
 init|=
-operator|(
 name|endExpr
 operator|-
 name|startExpr
-operator|)
 decl_stmt|;
 name|InstructionHandle
 index|[]

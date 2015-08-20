@@ -116,12 +116,10 @@ specifier|final
 name|int
 name|annotation_table_length
 init|=
-operator|(
 name|input
 operator|.
 name|readUnsignedShort
 argument_list|()
-operator|)
 decl_stmt|;
 name|annotation_table
 operator|=

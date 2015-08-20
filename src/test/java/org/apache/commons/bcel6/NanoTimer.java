@@ -93,9 +93,7 @@ operator|(
 operator|(
 name|double
 operator|)
-operator|(
 name|time
-operator|)
 operator|/
 literal|1000000000
 operator|)

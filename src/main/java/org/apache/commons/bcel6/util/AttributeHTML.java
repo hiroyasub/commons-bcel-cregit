@@ -1064,14 +1064,12 @@ decl_stmt|;
 name|int
 name|end
 init|=
-operator|(
 name|start
 operator|+
 name|var
 operator|.
 name|getLength
 argument_list|()
-operator|)
 decl_stmt|;
 name|file
 operator|.

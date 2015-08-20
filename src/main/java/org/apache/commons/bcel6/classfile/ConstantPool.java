@@ -452,7 +452,6 @@ name|CONSTANT_NameAndType
 case|:
 name|str
 operator|=
-operator|(
 name|constantToString
 argument_list|(
 operator|(
@@ -488,7 +487,6 @@ name|Constants
 operator|.
 name|CONSTANT_Utf8
 argument_list|)
-operator|)
 expr_stmt|;
 break|break;
 case|case
@@ -508,7 +506,6 @@ name|CONSTANT_Fieldref
 case|:
 name|str
 operator|=
-operator|(
 name|constantToString
 argument_list|(
 operator|(
@@ -544,7 +541,6 @@ name|Constants
 operator|.
 name|CONSTANT_NameAndType
 argument_list|)
-operator|)
 expr_stmt|;
 break|break;
 case|case
@@ -633,11 +629,9 @@ name|ConstantInvokeDynamic
 name|cid
 init|=
 operator|(
-operator|(
 name|ConstantInvokeDynamic
 operator|)
 name|c
-operator|)
 decl_stmt|;
 name|str
 operator|=

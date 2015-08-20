@@ -822,7 +822,6 @@ parameter_list|)
 block|{
 return|return
 operator|(
-operator|(
 name|type
 operator|instanceof
 name|ObjectType
@@ -842,7 +841,6 @@ name|equals
 argument_list|(
 literal|"java.lang.String"
 argument_list|)
-operator|)
 return|;
 block|}
 specifier|public

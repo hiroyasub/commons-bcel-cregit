@@ -2821,14 +2821,12 @@ control|)
 block|{
 name|attrs_len
 operator|+=
-operator|(
 name|code_attr
 operator|.
 name|getLength
 argument_list|()
 operator|+
 literal|6
-operator|)
 expr_stmt|;
 block|}
 name|CodeException
@@ -3823,7 +3821,6 @@ name|target
 parameter_list|)
 block|{
 return|return
-operator|(
 name|visitedTargets
 operator|.
 name|get
@@ -3832,7 +3829,6 @@ name|target
 argument_list|)
 operator|!=
 literal|null
-operator|)
 return|;
 block|}
 block|}
