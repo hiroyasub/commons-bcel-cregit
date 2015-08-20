@@ -126,6 +126,7 @@ argument_list|()
 decl_stmt|;
 comment|// @since 6.0
 specifier|private
+specifier|final
 name|List
 argument_list|<
 name|AnnotationEntryGen

@@ -215,14 +215,17 @@ extends|extends
 name|TestCreator
 block|{
 specifier|private
+specifier|final
 name|InstructionFactory
 name|_factory
 decl_stmt|;
 specifier|private
+specifier|final
 name|ConstantPoolGen
 name|_cp
 decl_stmt|;
 specifier|private
+specifier|final
 name|ClassGen
 name|_cg
 decl_stmt|;
