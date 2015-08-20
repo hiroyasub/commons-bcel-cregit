@@ -2167,7 +2167,8 @@ name|ret
 decl_stmt|;
 name|int
 name|name_index
-decl_stmt|,
+decl_stmt|;
+name|int
 name|signature_index
 decl_stmt|;
 if|if
@@ -2373,9 +2374,11 @@ parameter_list|)
 block|{
 name|int
 name|ret
-decl_stmt|,
+decl_stmt|;
+name|int
 name|class_index
-decl_stmt|,
+decl_stmt|;
+name|int
 name|name_and_type_index
 decl_stmt|;
 if|if
@@ -2602,9 +2605,11 @@ parameter_list|)
 block|{
 name|int
 name|ret
-decl_stmt|,
+decl_stmt|;
+name|int
 name|class_index
-decl_stmt|,
+decl_stmt|;
+name|int
 name|name_and_type_index
 decl_stmt|;
 if|if
@@ -2806,7 +2811,8 @@ name|ret
 decl_stmt|;
 name|int
 name|class_index
-decl_stmt|,
+decl_stmt|;
+name|int
 name|name_and_type_index
 decl_stmt|;
 if|if

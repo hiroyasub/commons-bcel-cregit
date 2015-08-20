@@ -77,7 +77,9 @@ decl_stmt|;
 specifier|private
 name|InstructionHandle
 name|start
-decl_stmt|,
+decl_stmt|;
+specifier|private
+name|InstructionHandle
 name|end
 decl_stmt|;
 comment|/**      * Generate a local variable that with index `index'. Note that double and long      * variables need two indexs. Index indices have to be provided by the user.      *      * @param index index of local variable      * @param name its name      * @param type its type      * @param start from where the instruction is valid (null means from the start)      * @param end until where the instruction is valid (null means to the end)      */

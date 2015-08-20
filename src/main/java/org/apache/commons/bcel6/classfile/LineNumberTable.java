@@ -510,7 +510,8 @@ name|min_index
 init|=
 operator|-
 literal|1
-decl_stmt|,
+decl_stmt|;
+name|int
 name|min
 init|=
 operator|-

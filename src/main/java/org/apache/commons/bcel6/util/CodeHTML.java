@@ -2647,7 +2647,8 @@ name|remainder
 decl_stmt|;
 name|int
 name|default_offset
-decl_stmt|,
+decl_stmt|;
+name|int
 name|offset
 decl_stmt|;
 for|for

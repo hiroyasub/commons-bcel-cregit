@@ -94,7 +94,8 @@ name|InstructionHandle
 block|{
 name|InstructionHandle
 name|next
-decl_stmt|,
+decl_stmt|;
+name|InstructionHandle
 name|prev
 decl_stmt|;
 comment|// Will be set from the outside

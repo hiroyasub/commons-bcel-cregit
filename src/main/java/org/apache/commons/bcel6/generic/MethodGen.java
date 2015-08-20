@@ -3899,7 +3899,8 @@ name|int
 name|stackDepth
 init|=
 literal|0
-decl_stmt|,
+decl_stmt|;
+name|int
 name|maxStackDepth
 init|=
 literal|0

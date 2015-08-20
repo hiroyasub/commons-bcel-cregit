@@ -623,7 +623,8 @@ name|method
 operator|.
 name|getName
 argument_list|()
-decl_stmt|,
+decl_stmt|;
+name|String
 name|html_name
 decl_stmt|;
 comment|// Get method's access flags

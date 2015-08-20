@@ -483,7 +483,8 @@ argument_list|()
 decl_stmt|;
 name|int
 name|class_index
-decl_stmt|,
+decl_stmt|;
+name|int
 name|name_index
 decl_stmt|;
 name|String

@@ -3385,7 +3385,8 @@ parameter_list|)
 block|{
 name|int
 name|index
-decl_stmt|,
+decl_stmt|;
+name|int
 name|old_index
 decl_stmt|;
 try|try
@@ -4275,7 +4276,8 @@ name|boolean
 name|char_found
 init|=
 literal|false
-decl_stmt|,
+decl_stmt|;
+name|boolean
 name|delim
 init|=
 literal|false

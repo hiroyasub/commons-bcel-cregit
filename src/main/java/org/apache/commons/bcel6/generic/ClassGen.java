@@ -260,7 +260,9 @@ comment|/* Corresponds to the fields found in a JavaClass object.      */
 specifier|private
 name|String
 name|class_name
-decl_stmt|,
+decl_stmt|;
+specifier|private
+name|String
 name|super_class_name
 decl_stmt|;
 specifier|private
@@ -274,7 +276,9 @@ name|class_name_index
 init|=
 operator|-
 literal|1
-decl_stmt|,
+decl_stmt|;
+specifier|private
+name|int
 name|superclass_name_index
 init|=
 operator|-
@@ -287,7 +291,9 @@ init|=
 name|Constants
 operator|.
 name|MAJOR_1_1
-decl_stmt|,
+decl_stmt|;
+specifier|private
+name|int
 name|minor
 init|=
 name|Constants

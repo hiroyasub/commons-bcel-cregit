@@ -1185,7 +1185,8 @@ control|)
 block|{
 name|String
 name|name
-decl_stmt|,
+decl_stmt|;
+name|String
 name|access
 decl_stmt|;
 name|index
