@@ -300,6 +300,14 @@ specifier|public
 class|class
 name|ConstantPoolGen
 block|{
+specifier|private
+specifier|static
+specifier|final
+name|int
+name|DEFAULT_BUFFER_SIZE
+init|=
+literal|256
+decl_stmt|;
 specifier|protected
 name|int
 name|size
@@ -384,7 +392,7 @@ init|=
 operator|new
 name|StringBuilder
 argument_list|(
-literal|256
+name|DEFAULT_BUFFER_SIZE
 argument_list|)
 decl_stmt|;
 name|size
@@ -393,7 +401,7 @@ name|Math
 operator|.
 name|max
 argument_list|(
-literal|256
+name|DEFAULT_BUFFER_SIZE
 argument_list|,
 name|cs
 operator|.
@@ -1036,7 +1044,7 @@ parameter_list|()
 block|{
 name|size
 operator|=
-literal|256
+name|DEFAULT_BUFFER_SIZE
 expr_stmt|;
 name|constants
 operator|=
