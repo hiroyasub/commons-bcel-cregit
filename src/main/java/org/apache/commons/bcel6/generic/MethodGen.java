@@ -2089,8 +2089,6 @@ index|[
 name|size
 index|]
 decl_stmt|;
-try|try
-block|{
 for|for
 control|(
 name|int
@@ -2122,15 +2120,6 @@ name|getLineNumber
 argument_list|()
 expr_stmt|;
 block|}
-block|}
-catch|catch
-parameter_list|(
-name|ArrayIndexOutOfBoundsException
-name|e
-parameter_list|)
-block|{
-block|}
-comment|// Never occurs
 return|return
 operator|new
 name|LineNumberTable
@@ -2317,8 +2306,6 @@ index|[
 name|size
 index|]
 decl_stmt|;
-try|try
-block|{
 for|for
 control|(
 name|int
@@ -2356,14 +2343,6 @@ argument_list|(
 name|cp
 argument_list|)
 expr_stmt|;
-block|}
-block|}
-catch|catch
-parameter_list|(
-name|ArrayIndexOutOfBoundsException
-name|e
-parameter_list|)
-block|{
 block|}
 return|return
 name|c_exc
@@ -2473,8 +2452,6 @@ index|[
 name|size
 index|]
 decl_stmt|;
-try|try
-block|{
 for|for
 control|(
 name|int
@@ -2507,14 +2484,6 @@ name|i
 argument_list|)
 argument_list|)
 expr_stmt|;
-block|}
-block|}
-catch|catch
-parameter_list|(
-name|ArrayIndexOutOfBoundsException
-name|e
-parameter_list|)
-block|{
 block|}
 return|return
 operator|new
