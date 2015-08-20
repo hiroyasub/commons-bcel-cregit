@@ -167,7 +167,9 @@ name|InstructionHandle
 name|start
 init|=
 literal|null
-decl_stmt|,
+decl_stmt|;
+specifier|private
+name|InstructionHandle
 name|end
 init|=
 literal|null
@@ -274,7 +276,8 @@ name|int
 name|l
 init|=
 literal|0
-decl_stmt|,
+decl_stmt|;
+name|int
 name|r
 init|=
 name|count
@@ -832,7 +835,8 @@ init|=
 name|ih
 operator|.
 name|next
-decl_stmt|,
+decl_stmt|;
+name|InstructionHandle
 name|ret
 init|=
 name|il
@@ -1361,7 +1365,8 @@ init|=
 name|ih
 operator|.
 name|prev
-decl_stmt|,
+decl_stmt|;
+name|InstructionHandle
 name|ret
 init|=
 name|il
@@ -1951,7 +1956,8 @@ init|=
 name|start
 operator|.
 name|prev
-decl_stmt|,
+decl_stmt|;
+name|InstructionHandle
 name|next
 init|=
 name|end
@@ -2145,7 +2151,8 @@ name|TargetLostException
 block|{
 name|InstructionHandle
 name|first
-decl_stmt|,
+decl_stmt|;
+name|InstructionHandle
 name|last
 decl_stmt|;
 comment|// First and last deleted instruction
@@ -2546,7 +2553,8 @@ name|TargetLostException
 block|{
 name|InstructionHandle
 name|from_ih
-decl_stmt|,
+decl_stmt|;
+name|InstructionHandle
 name|to_ih
 decl_stmt|;
 if|if
@@ -2795,7 +2803,8 @@ name|int
 name|max_additional_bytes
 init|=
 literal|0
-decl_stmt|,
+decl_stmt|;
+name|int
 name|additional_bytes
 init|=
 literal|0
@@ -2804,7 +2813,8 @@ name|int
 name|index
 init|=
 literal|0
-decl_stmt|,
+decl_stmt|;
+name|int
 name|count
 init|=
 literal|0
