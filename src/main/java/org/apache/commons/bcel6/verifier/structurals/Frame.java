@@ -28,7 +28,7 @@ specifier|public
 class|class
 name|Frame
 block|{
-comment|/**      * For instance initialization methods, it is important to remember      * which instance it is that is not initialized yet. It will be      * initialized invoking another constructor later.      * NULL means the instance already *is* initialized.      */
+comment|/**      * For instance initialization methods, it is important to remember      * which instance it is that is not initialized yet. It will be      * initialized invoking another constructor later.      * NULL means the instance already *is* initialized.      * N.B. Use the getter/setter to access the field as it may      * be made private in a later release      */
 specifier|protected
 specifier|static
 name|UninitializedObjectType
@@ -267,6 +267,34 @@ expr_stmt|;
 return|return
 name|s
 return|;
+block|}
+comment|/**      * @return the _this      */
+specifier|public
+specifier|static
+name|UninitializedObjectType
+name|get_this
+parameter_list|()
+block|{
+return|return
+name|_this
+return|;
+block|}
+comment|/**      * @param _this the _this to set      */
+specifier|public
+specifier|static
+name|void
+name|set_this
+parameter_list|(
+name|UninitializedObjectType
+name|_this
+parameter_list|)
+block|{
+name|Frame
+operator|.
+name|_this
+operator|=
+name|_this
+expr_stmt|;
 block|}
 block|}
 end_class

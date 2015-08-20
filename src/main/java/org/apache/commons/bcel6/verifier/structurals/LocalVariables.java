@@ -148,7 +148,7 @@ block|}
 comment|/**      * Returns a deep copy of this object; i.e. the clone      * operates on a new local variable array.      * However, the Type objects in the array are shared.      */
 annotation|@
 name|Override
-specifier|protected
+specifier|public
 name|Object
 name|clone
 parameter_list|()

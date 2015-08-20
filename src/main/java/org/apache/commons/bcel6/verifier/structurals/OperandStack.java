@@ -184,7 +184,7 @@ block|}
 comment|/**      * Returns a deep copy of this object; that means, the clone operates      * on a new stack. However, the Type objects on the stack are      * shared.      */
 annotation|@
 name|Override
-specifier|protected
+specifier|public
 name|Object
 name|clone
 parameter_list|()
