@@ -196,9 +196,7 @@ name|OFFSET
 init|=
 literal|32767
 decl_stmt|;
-comment|// char + OFFSET is
-comment|// outside of
-comment|// LATIN-1
+comment|// char + OFFSET is outside of LATIN-1
 specifier|private
 specifier|static
 specifier|final
@@ -207,8 +205,7 @@ name|NO_OPCODES
 init|=
 literal|256
 decl_stmt|;
-comment|// Potential number,
-comment|// some are not used
+comment|// Potential number, some are not used
 specifier|private
 specifier|static
 specifier|final
@@ -234,8 +231,7 @@ specifier|private
 name|String
 name|il_string
 decl_stmt|;
-comment|// instruction list
-comment|// as string
+comment|// instruction list as string
 specifier|private
 name|InstructionHandle
 index|[]
@@ -286,8 +282,7 @@ index|[
 name|size
 index|]
 decl_stmt|;
-comment|// Create a string with length equal to il
-comment|// length
+comment|// Create a string with length equal to il length
 name|handles
 operator|=
 name|il
@@ -1678,8 +1673,7 @@ name|value
 argument_list|)
 argument_list|)
 expr_stmt|;
-comment|// precompile all
-comment|// patterns
+comment|// precompile all patterns
 block|}
 block|}
 comment|// Add instruction alias to match anything
@@ -1721,10 +1715,7 @@ operator|.
 name|UNDEFINED
 condition|)
 block|{
-comment|// Not
-comment|// an
-comment|// invalid
-comment|// opcode
+comment|// Not an invalid opcode
 name|buf
 operator|.
 name|append
