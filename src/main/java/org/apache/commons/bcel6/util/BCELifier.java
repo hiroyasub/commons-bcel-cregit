@@ -1337,6 +1337,7 @@ name|ACCESS_NAMES
 operator|.
 name|length
 condition|)
+block|{
 name|buf
 operator|.
 name|append
@@ -1366,7 +1367,9 @@ argument_list|(
 literal|" | "
 argument_list|)
 expr_stmt|;
+block|}
 else|else
+block|{
 name|buf
 operator|.
 name|append
@@ -1381,6 +1384,7 @@ name|pow
 argument_list|)
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 block|}
 name|pow
