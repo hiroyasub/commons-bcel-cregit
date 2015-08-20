@@ -92,18 +92,12 @@ expr_stmt|;
 block|}
 if|else if
 condition|(
-operator|(
+name|Instruction
+operator|.
+name|isValidByte
+argument_list|(
 name|value
-operator|>=
-operator|-
-literal|128
-operator|)
-operator|&&
-operator|(
-name|value
-operator|<=
-literal|127
-operator|)
+argument_list|)
 condition|)
 block|{
 name|instruction
@@ -120,18 +114,12 @@ expr_stmt|;
 block|}
 if|else if
 condition|(
-operator|(
+name|Instruction
+operator|.
+name|isValidShort
+argument_list|(
 name|value
-operator|>=
-operator|-
-literal|32768
-operator|)
-operator|&&
-operator|(
-name|value
-operator|<=
-literal|32767
-operator|)
+argument_list|)
 condition|)
 block|{
 name|instruction

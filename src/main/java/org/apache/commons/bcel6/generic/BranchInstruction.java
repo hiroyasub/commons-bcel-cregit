@@ -141,14 +141,11 @@ argument_list|()
 expr_stmt|;
 if|if
 condition|(
-name|Math
-operator|.
-name|abs
+operator|!
+name|isValidShort
 argument_list|(
 name|index
 argument_list|)
-operator|>=
-literal|32767
 condition|)
 block|{
 throw|throw

@@ -195,7 +195,9 @@ name|i
 argument_list|)
 operator|>=
 operator|(
-literal|32767
+name|Short
+operator|.
+name|MAX_VALUE
 operator|-
 name|max_offset
 operator|)
