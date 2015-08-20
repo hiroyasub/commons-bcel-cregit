@@ -1465,8 +1465,8 @@ argument_list|()
 return|;
 block|}
 specifier|private
-specifier|static
 specifier|abstract
+specifier|static
 class|class
 name|PathEntry
 block|{

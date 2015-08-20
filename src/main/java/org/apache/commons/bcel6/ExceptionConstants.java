@@ -21,6 +21,7 @@ end_comment
 
 begin_class
 specifier|public
+specifier|final
 class|class
 name|ExceptionConstants
 block|{
@@ -415,6 +416,12 @@ block|,
 name|EXCS_ARRAY_EXCEPTION
 block|,     }
 empty_stmt|;
+specifier|private
+name|ExceptionConstants
+parameter_list|()
+block|{
+block|}
+comment|// not instantiable
 comment|// helper method to merge exception class arrays
 specifier|private
 specifier|static
@@ -457,8 +464,8 @@ name|Class
 argument_list|<
 name|?
 argument_list|>
-name|excs
 index|[]
+name|excs
 init|=
 operator|new
 name|Class

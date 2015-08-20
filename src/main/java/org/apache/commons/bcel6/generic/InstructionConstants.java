@@ -2273,6 +2273,12 @@ operator|=
 name|MONITOREXIT
 expr_stmt|;
 block|}
+specifier|private
+name|InstructionConstants
+parameter_list|()
+block|{
+block|}
+comment|// non-instantiable
 comment|/**      * Gets the Instruction.      * @param index the index, e.g. {@link Constants#RETURN}      * @return the entry from the private INSTRUCTIONS table      */
 specifier|public
 specifier|static

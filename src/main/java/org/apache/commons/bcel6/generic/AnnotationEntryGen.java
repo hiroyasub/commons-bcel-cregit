@@ -1341,8 +1341,8 @@ name|vec
 parameter_list|)
 block|{
 name|int
-name|visCount
 index|[]
+name|visCount
 init|=
 operator|new
 name|int
@@ -1358,8 +1358,8 @@ init|=
 literal|0
 decl_stmt|;
 name|int
-name|invisCount
 index|[]
+name|invisCount
 init|=
 operator|new
 name|int

@@ -359,8 +359,8 @@ name|void
 name|main
 parameter_list|(
 name|String
-name|argv
 index|[]
+name|argv
 parameter_list|)
 block|{
 name|String
