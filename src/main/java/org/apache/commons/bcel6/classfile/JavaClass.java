@@ -351,23 +351,21 @@ name|ZIP
 init|=
 literal|3
 decl_stmt|;
+specifier|private
 specifier|static
+specifier|final
 name|boolean
 name|debug
 init|=
-literal|false
-decl_stmt|;
-comment|// Debugging on/off
-specifier|final
-specifier|static
-name|char
-name|sep
-init|=
-name|File
+name|Boolean
 operator|.
-name|separatorChar
+name|getBoolean
+argument_list|(
+literal|"JavaClass.debug"
+argument_list|)
 decl_stmt|;
-comment|// directory separator
+empty_stmt|;
+comment|// Debugging on/off
 specifier|private
 specifier|static
 name|BCELComparator
@@ -1601,19 +1599,6 @@ block|{
 return|return
 name|superclass_name_index
 return|;
-block|}
-static|static
-block|{
-comment|// Debugging ... on/off
-name|debug
-operator|=
-name|Boolean
-operator|.
-name|getBoolean
-argument_list|(
-literal|"JavaClass.debug"
-argument_list|)
-expr_stmt|;
 block|}
 comment|/**      * @param attributes .      */
 specifier|public
