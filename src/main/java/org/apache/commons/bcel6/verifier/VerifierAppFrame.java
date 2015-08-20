@@ -285,9 +285,19 @@ init|=
 operator|-
 literal|542458133073307640L
 decl_stmt|;
+specifier|private
+specifier|static
+specifier|final
+name|String
+name|JUSTICE_VERSION
+init|=
+literal|"JustIce by Enver Haase"
+decl_stmt|;
+specifier|private
 name|JPanel
 name|contentPane
 decl_stmt|;
+specifier|private
 name|JSplitPane
 name|jSplitPane1
 init|=
@@ -295,6 +305,7 @@ operator|new
 name|JSplitPane
 argument_list|()
 decl_stmt|;
+specifier|private
 name|JPanel
 name|jPanel1
 init|=
@@ -302,6 +313,7 @@ operator|new
 name|JPanel
 argument_list|()
 decl_stmt|;
+specifier|private
 name|JPanel
 name|jPanel2
 init|=
@@ -309,6 +321,7 @@ operator|new
 name|JPanel
 argument_list|()
 decl_stmt|;
+specifier|private
 name|JSplitPane
 name|jSplitPane2
 init|=
@@ -316,6 +329,7 @@ operator|new
 name|JSplitPane
 argument_list|()
 decl_stmt|;
+specifier|private
 name|JPanel
 name|jPanel3
 init|=
@@ -323,6 +337,7 @@ operator|new
 name|JPanel
 argument_list|()
 decl_stmt|;
+specifier|private
 name|JList
 argument_list|<
 name|String
@@ -334,6 +349,7 @@ name|JList
 argument_list|<>
 argument_list|()
 decl_stmt|;
+specifier|private
 name|GridLayout
 name|gridLayout1
 init|=
@@ -341,6 +357,7 @@ operator|new
 name|GridLayout
 argument_list|()
 decl_stmt|;
+specifier|private
 name|JPanel
 name|messagesPanel
 init|=
@@ -348,6 +365,7 @@ operator|new
 name|JPanel
 argument_list|()
 decl_stmt|;
+specifier|private
 name|GridLayout
 name|gridLayout2
 init|=
@@ -355,6 +373,7 @@ operator|new
 name|GridLayout
 argument_list|()
 decl_stmt|;
+specifier|private
 name|JMenuBar
 name|jMenuBar1
 init|=
@@ -362,6 +381,7 @@ operator|new
 name|JMenuBar
 argument_list|()
 decl_stmt|;
+specifier|private
 name|JMenu
 name|jMenu1
 init|=
@@ -369,6 +389,7 @@ operator|new
 name|JMenu
 argument_list|()
 decl_stmt|;
+specifier|private
 name|JScrollPane
 name|jScrollPane1
 init|=
@@ -376,6 +397,7 @@ operator|new
 name|JScrollPane
 argument_list|()
 decl_stmt|;
+specifier|private
 name|JScrollPane
 name|messagesScrollPane
 init|=
@@ -383,6 +405,7 @@ operator|new
 name|JScrollPane
 argument_list|()
 decl_stmt|;
+specifier|private
 name|JScrollPane
 name|jScrollPane3
 init|=
@@ -390,6 +413,7 @@ operator|new
 name|JScrollPane
 argument_list|()
 decl_stmt|;
+specifier|private
 name|GridLayout
 name|gridLayout4
 init|=
@@ -397,6 +421,7 @@ operator|new
 name|GridLayout
 argument_list|()
 decl_stmt|;
+specifier|private
 name|JScrollPane
 name|jScrollPane4
 init|=
@@ -404,6 +429,7 @@ operator|new
 name|JScrollPane
 argument_list|()
 decl_stmt|;
+specifier|private
 name|CardLayout
 name|cardLayout1
 init|=
@@ -412,17 +438,10 @@ name|CardLayout
 argument_list|()
 decl_stmt|;
 specifier|private
-specifier|static
-specifier|final
-name|String
-name|JUSTICE_VERSION
-init|=
-literal|"JustIce by Enver Haase"
-decl_stmt|;
-specifier|private
 name|String
 name|current_class
 decl_stmt|;
+specifier|private
 name|GridLayout
 name|gridLayout3
 init|=
@@ -430,6 +449,7 @@ operator|new
 name|GridLayout
 argument_list|()
 decl_stmt|;
+specifier|private
 name|JTextPane
 name|pass1TextPane
 init|=
@@ -437,6 +457,7 @@ operator|new
 name|JTextPane
 argument_list|()
 decl_stmt|;
+specifier|private
 name|JTextPane
 name|pass2TextPane
 init|=
@@ -444,6 +465,7 @@ operator|new
 name|JTextPane
 argument_list|()
 decl_stmt|;
+specifier|private
 name|JTextPane
 name|messagesTextPane
 init|=
@@ -451,6 +473,7 @@ operator|new
 name|JTextPane
 argument_list|()
 decl_stmt|;
+specifier|private
 name|JMenuItem
 name|newFileMenuItem
 init|=
@@ -458,6 +481,7 @@ operator|new
 name|JMenuItem
 argument_list|()
 decl_stmt|;
+specifier|private
 name|JSplitPane
 name|jSplitPane3
 init|=
@@ -465,6 +489,7 @@ operator|new
 name|JSplitPane
 argument_list|()
 decl_stmt|;
+specifier|private
 name|JSplitPane
 name|jSplitPane4
 init|=
@@ -472,6 +497,7 @@ operator|new
 name|JSplitPane
 argument_list|()
 decl_stmt|;
+specifier|private
 name|JScrollPane
 name|jScrollPane2
 init|=
@@ -479,6 +505,7 @@ operator|new
 name|JScrollPane
 argument_list|()
 decl_stmt|;
+specifier|private
 name|JScrollPane
 name|jScrollPane5
 init|=
@@ -486,6 +513,7 @@ operator|new
 name|JScrollPane
 argument_list|()
 decl_stmt|;
+specifier|private
 name|JScrollPane
 name|jScrollPane6
 init|=
@@ -493,6 +521,7 @@ operator|new
 name|JScrollPane
 argument_list|()
 decl_stmt|;
+specifier|private
 name|JScrollPane
 name|jScrollPane7
 init|=
@@ -500,6 +529,7 @@ operator|new
 name|JScrollPane
 argument_list|()
 decl_stmt|;
+specifier|private
 name|JList
 argument_list|<
 name|String
@@ -511,6 +541,7 @@ name|JList
 argument_list|<>
 argument_list|()
 decl_stmt|;
+specifier|private
 name|JList
 argument_list|<
 name|String
@@ -522,6 +553,7 @@ name|JList
 argument_list|<>
 argument_list|()
 decl_stmt|;
+specifier|private
 name|JTextPane
 name|pass3aTextPane
 init|=
@@ -529,6 +561,7 @@ operator|new
 name|JTextPane
 argument_list|()
 decl_stmt|;
+specifier|private
 name|JTextPane
 name|pass3bTextPane
 init|=
@@ -536,6 +569,7 @@ operator|new
 name|JTextPane
 argument_list|()
 decl_stmt|;
+specifier|private
 name|JMenu
 name|jMenu2
 init|=
@@ -543,6 +577,7 @@ operator|new
 name|JMenu
 argument_list|()
 decl_stmt|;
+specifier|private
 name|JMenuItem
 name|whatisMenuItem
 init|=
@@ -550,6 +585,7 @@ operator|new
 name|JMenuItem
 argument_list|()
 decl_stmt|;
+specifier|private
 name|JMenuItem
 name|aboutMenuItem
 init|=
@@ -2607,6 +2643,18 @@ operator|.
 name|INFORMATION_MESSAGE
 argument_list|)
 expr_stmt|;
+block|}
+comment|/**      * @return the classNamesJList      */
+name|JList
+argument_list|<
+name|String
+argument_list|>
+name|getClassNamesJList
+parameter_list|()
+block|{
+return|return
+name|classNamesJList
+return|;
 block|}
 block|}
 end_class

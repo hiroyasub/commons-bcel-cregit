@@ -72,6 +72,7 @@ specifier|public
 class|class
 name|GraphicalVerifier
 block|{
+specifier|private
 name|boolean
 name|packFrame
 init|=
@@ -208,7 +209,8 @@ argument_list|)
 expr_stmt|;
 name|frame
 operator|.
-name|classNamesJList
+name|getClassNamesJList
+argument_list|()
 operator|.
 name|setModel
 argument_list|(
@@ -232,7 +234,8 @@ expr_stmt|;
 comment|// Fill list with java.lang.Object
 name|frame
 operator|.
-name|classNamesJList
+name|getClassNamesJList
+argument_list|()
 operator|.
 name|setSelectedIndex
 argument_list|(
