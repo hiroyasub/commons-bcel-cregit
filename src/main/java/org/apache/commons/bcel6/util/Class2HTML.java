@@ -930,9 +930,6 @@ operator|new
 name|StringBuilder
 argument_list|()
 decl_stmt|;
-try|try
-block|{
-comment|// Filter any characters HTML doesn't like such as< and> in particular
 for|for
 control|(
 name|int
@@ -1020,15 +1017,6 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-block|}
-catch|catch
-parameter_list|(
-name|StringIndexOutOfBoundsException
-name|e
-parameter_list|)
-block|{
-block|}
-comment|// Never occurs
 return|return
 name|buf
 operator|.

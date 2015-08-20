@@ -207,6 +207,10 @@ name|JavaClass
 import|;
 end_import
 
+begin_comment
+comment|//CHECKSTYLE:OFF (there are lots of references!)
+end_comment
+
 begin_import
 import|import
 name|org
@@ -222,6 +226,10 @@ operator|.
 name|*
 import|;
 end_import
+
+begin_comment
+comment|//CHECKSTYLE:ON
+end_comment
 
 begin_import
 import|import

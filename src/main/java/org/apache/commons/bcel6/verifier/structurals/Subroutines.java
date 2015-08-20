@@ -656,7 +656,8 @@ if|if
 condition|(
 name|this
 operator|==
-name|TOPLEVEL
+name|getTopLevel
+argument_list|()
 condition|)
 block|{
 throw|throw
@@ -804,7 +805,8 @@ if|if
 condition|(
 name|this
 operator|==
-name|TOPLEVEL
+name|getTopLevel
+argument_list|()
 condition|)
 block|{
 throw|throw
@@ -1092,7 +1094,8 @@ literal|null
 operator|&&
 name|this
 operator|!=
-name|TOPLEVEL
+name|getTopLevel
+argument_list|()
 condition|)
 block|{
 throw|throw
@@ -1469,11 +1472,14 @@ argument_list|<>
 argument_list|()
 decl_stmt|;
 comment|/**      * This is referring to a special subroutine, namely the      * top level. This is not really a subroutine but we use      * it to distinguish between top level instructions and      * unreachable instructions.      */
+comment|// CHECKSTYLE:OFF
 specifier|public
 specifier|final
 name|Subroutine
 name|TOPLEVEL
 decl_stmt|;
+comment|// TODO can this be made private?
+comment|// CHECKSTYLE:ON
 comment|/**      * Constructor.      * @param mg A MethodGen object representing method to      * create the Subroutine objects of.      */
 specifier|public
 name|Subroutines

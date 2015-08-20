@@ -665,6 +665,7 @@ name|IOException
 name|e
 parameter_list|)
 block|{
+comment|// ignored
 block|}
 block|}
 block|}
