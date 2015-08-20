@@ -1577,6 +1577,7 @@ block|}
 block|}
 comment|/**      * A Visitor class that ensures the constant pool satisfies the static      * constraints.      * The visitXXX() methods throw ClassConstraintException instances otherwise.      *      * @see #constant_pool_entries_satisfy_static_constraints()      */
 specifier|private
+specifier|final
 class|class
 name|CPESSC_Visitor
 extends|extends
@@ -2034,9 +2035,8 @@ condition|)
 block|{
 if|if
 condition|(
+operator|!
 name|foundSourceFile
-operator|==
-literal|false
 condition|)
 block|{
 name|foundSourceFile
@@ -2072,9 +2072,8 @@ condition|)
 block|{
 if|if
 condition|(
+operator|!
 name|foundInnerClasses
-operator|==
-literal|false
 condition|)
 block|{
 name|foundInnerClasses
@@ -7201,6 +7200,7 @@ block|}
 block|}
 comment|/**      * A Visitor class that ensures the ConstantCP-subclassed entries      * of the constant pool are valid.      *<B>Precondition: index-style cross referencing in the constant      * pool must be valid.</B>      *      * @see #constant_pool_entries_satisfy_static_constraints()      * @see org.apache.commons.bcel6.classfile.ConstantCP      */
 specifier|private
+specifier|final
 class|class
 name|FAMRAV_Visitor
 extends|extends

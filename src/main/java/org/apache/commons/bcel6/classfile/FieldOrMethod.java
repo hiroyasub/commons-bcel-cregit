@@ -565,6 +565,7 @@ name|CloneNotSupportedException
 name|e
 parameter_list|)
 block|{
+comment|// ignored, but will cause NPE ...
 block|}
 name|c
 operator|.

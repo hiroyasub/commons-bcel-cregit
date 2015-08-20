@@ -2589,6 +2589,7 @@ name|CloneNotSupportedException
 name|e
 parameter_list|)
 block|{
+comment|// TODO should this throw?
 block|}
 return|return
 name|c
