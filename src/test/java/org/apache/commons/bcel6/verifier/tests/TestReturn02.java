@@ -121,7 +121,7 @@ name|test8
 parameter_list|()
 block|{
 return|return
-literal|1l
+literal|1L
 return|;
 block|}
 specifier|public

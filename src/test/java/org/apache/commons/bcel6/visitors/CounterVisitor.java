@@ -728,6 +728,7 @@ name|CounterVisitor
 implements|implements
 name|Visitor
 block|{
+comment|// CHECKSTYLE:OFF (public mutable fields in test code)
 specifier|public
 name|int
 name|unknownCount
@@ -991,6 +992,7 @@ name|constantInvokeDynamic
 init|=
 literal|0
 decl_stmt|;
+comment|// CHECKSTYLE:ON
 annotation|@
 name|Override
 specifier|public
