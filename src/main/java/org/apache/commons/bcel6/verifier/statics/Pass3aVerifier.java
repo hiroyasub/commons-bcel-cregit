@@ -2178,20 +2178,19 @@ comment|// array in vmspec2), together with pass 1 (reading code_length bytes an
 comment|// interpreting them as code[]). So this must not be checked again here.
 if|if
 condition|(
-operator|!
-operator|(
 name|code
 operator|.
 name|getCode
 argument_list|()
 operator|.
 name|length
-operator|<
-literal|65536
-operator|)
+operator|>=
+name|Constants
+operator|.
+name|MAX_CODE_SIZE
 condition|)
 block|{
-comment|// contradicts vmspec2 page 152 ("Limitations"), but is on page 134.
+comment|// length must be LESS than the max
 throw|throw
 operator|new
 name|StaticCodeInstructionConstraintException
@@ -2200,7 +2199,13 @@ literal|"Code array in code attribute '"
 operator|+
 name|code
 operator|+
-literal|"' too big: must be smaller than 65536 bytes."
+literal|"' too big: must be smaller than "
+operator|+
+name|Constants
+operator|.
+name|MAX_CODE_SIZE
+operator|+
+literal|"65536 bytes."
 argument_list|)
 throw|;
 block|}
