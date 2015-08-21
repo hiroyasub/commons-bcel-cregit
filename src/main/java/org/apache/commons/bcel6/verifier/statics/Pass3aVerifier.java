@@ -4438,15 +4438,27 @@ decl_stmt|;
 if|if
 condition|(
 name|dimensions
-operator|>=
-literal|255
+operator|>
+name|Constants
+operator|.
+name|MAX_ARRAY_DIMENSIONS
 condition|)
 block|{
 name|constraintViolated
 argument_list|(
 name|o
 argument_list|,
-literal|"Not allowed to create an array with more than 255 dimensions."
+literal|"Not allowed to create an array with more than "
+operator|+
+name|Constants
+operator|.
+name|MAX_ARRAY_DIMENSIONS
+operator|+
+literal|" dimensions;"
+operator|+
+literal|" actual: "
+operator|+
+name|dimensions
 argument_list|)
 expr_stmt|;
 block|}

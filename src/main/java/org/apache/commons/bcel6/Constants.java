@@ -665,6 +665,15 @@ init|=
 literal|65536
 decl_stmt|;
 comment|//bytes
+comment|/**    * The maximum number of dimensions in an array ({@value}).    * One of the limitations of the Java Virtual Machine.    *    * @see<a href="http://docs.oracle.com/javase/specs/jvms/se8/html/jvms-4.html#jvms-4.3.2-150">    * Field Descriptors in The Java Virtual Machine Specification</a>    */
+specifier|public
+specifier|static
+specifier|final
+name|int
+name|MAX_ARRAY_DIMENSIONS
+init|=
+literal|255
+decl_stmt|;
 comment|/** Java VM opcode.    * @see<a href="http://docs.oracle.com/javase/specs/jvms/se8/html/jvms-6.html#jvms-6.5.nop">    * Opcode definitions in The Java Virtual Machine Specification</a> */
 specifier|public
 specifier|static
