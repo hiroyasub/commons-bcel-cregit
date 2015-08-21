@@ -708,11 +708,7 @@ argument_list|(
 name|wipe
 argument_list|(
 literal|"temp1"
-operator|+
-name|File
-operator|.
-name|separator
-operator|+
+argument_list|,
 literal|"HelloWorld.class"
 argument_list|)
 argument_list|)
