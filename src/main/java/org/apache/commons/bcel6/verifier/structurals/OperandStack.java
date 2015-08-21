@@ -121,6 +121,8 @@ begin_class
 specifier|public
 class|class
 name|OperandStack
+implements|implements
+name|Cloneable
 block|{
 comment|/** We hold the stack information here. */
 specifier|private

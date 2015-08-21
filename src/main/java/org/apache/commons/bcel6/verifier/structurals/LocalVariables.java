@@ -95,6 +95,8 @@ begin_class
 specifier|public
 class|class
 name|LocalVariables
+implements|implements
+name|Cloneable
 block|{
 comment|/** The Type[] containing the local variable slots. */
 specifier|private
