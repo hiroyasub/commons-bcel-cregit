@@ -325,9 +325,6 @@ argument_list|,
 name|constant_html
 argument_list|)
 decl_stmt|;
-name|MethodHTML
-name|method_html
-init|=
 operator|new
 name|MethodHTML
 argument_list|(
@@ -346,7 +343,7 @@ name|constant_html
 argument_list|,
 name|attribute_html
 argument_list|)
-decl_stmt|;
+expr_stmt|;
 comment|// Write main file (with frames, yuk)
 name|writeMainHTML
 argument_list|(
@@ -479,7 +476,7 @@ literal|"-d"
 argument_list|)
 condition|)
 block|{
-comment|// Specify target directory, default `.ï¿½
+comment|// Specify target directory, default '.'
 name|dir
 operator|=
 name|argv
@@ -508,16 +505,65 @@ operator|+
 name|sep
 expr_stmt|;
 block|}
+specifier|final
+name|File
+name|store
+init|=
 operator|new
 name|File
 argument_list|(
 name|dir
 argument_list|)
+decl_stmt|;
+if|if
+condition|(
+operator|!
+name|store
+operator|.
+name|isDirectory
+argument_list|()
+condition|)
+block|{
+name|boolean
+name|created
+init|=
+name|store
 operator|.
 name|mkdirs
 argument_list|()
-expr_stmt|;
+decl_stmt|;
 comment|// Create target directory if necessary
+if|if
+condition|(
+operator|!
+name|created
+condition|)
+block|{
+if|if
+condition|(
+operator|!
+name|store
+operator|.
+name|isDirectory
+argument_list|()
+condition|)
+block|{
+name|System
+operator|.
+name|out
+operator|.
+name|println
+argument_list|(
+literal|"Tried to create the directory "
+operator|+
+name|dir
+operator|+
+literal|" but failed"
+argument_list|)
+expr_stmt|;
+block|}
+block|}
+block|}
 block|}
 if|else if
 condition|(
