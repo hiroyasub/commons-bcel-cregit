@@ -362,6 +362,8 @@ name|String
 index|[]
 name|argv
 parameter_list|)
+throws|throws
+name|IOException
 block|{
 name|String
 index|[]
@@ -410,9 +412,7 @@ operator|+
 name|sep
 decl_stmt|;
 comment|// Where to store HTML files
-try|try
-block|{
-comment|/* Parse command line arguments.              */
+comment|/* Parse command line arguments.          */
 for|for
 control|(
 name|int
@@ -667,32 +667,6 @@ literal|"Done."
 argument_list|)
 expr_stmt|;
 block|}
-block|}
-block|}
-catch|catch
-parameter_list|(
-name|Exception
-name|e
-parameter_list|)
-block|{
-name|System
-operator|.
-name|out
-operator|.
-name|println
-argument_list|(
-name|e
-argument_list|)
-expr_stmt|;
-name|e
-operator|.
-name|printStackTrace
-argument_list|(
-name|System
-operator|.
-name|out
-argument_list|)
-expr_stmt|;
 block|}
 block|}
 comment|/**      * Utility method that converts a class reference in the constant pool,      * i.e., an index to a string.      */
