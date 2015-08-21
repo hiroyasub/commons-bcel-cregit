@@ -1927,8 +1927,8 @@ condition|)
 block|{
 name|Frame
 operator|.
-name|_this
-operator|=
+name|set_this
+argument_list|(
 operator|new
 name|UninitializedObjectType
 argument_list|(
@@ -1940,6 +1940,7 @@ name|jc
 operator|.
 name|getClassName
 argument_list|()
+argument_list|)
 argument_list|)
 argument_list|)
 expr_stmt|;

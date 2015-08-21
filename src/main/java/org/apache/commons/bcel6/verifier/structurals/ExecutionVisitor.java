@@ -3798,7 +3798,8 @@ name|t
 operator|==
 name|Frame
 operator|.
-name|_this
+name|get_this
+argument_list|()
 condition|)
 block|{
 name|Frame
