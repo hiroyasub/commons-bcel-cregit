@@ -928,13 +928,6 @@ decl_stmt|;
 comment|/** @since 6.0 */
 specifier|public
 name|int
-name|stackMapTableCount
-init|=
-literal|0
-decl_stmt|;
-comment|/** @since 6.0 */
-specifier|public
-name|int
 name|bootstrapMethodsCount
 init|=
 literal|0
