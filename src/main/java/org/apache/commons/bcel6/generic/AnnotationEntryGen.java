@@ -746,6 +746,7 @@ argument_list|(
 literal|32
 argument_list|)
 decl_stmt|;
+comment|// CHECKSTYLE IGNORE MagicNumber
 name|s
 operator|.
 name|append

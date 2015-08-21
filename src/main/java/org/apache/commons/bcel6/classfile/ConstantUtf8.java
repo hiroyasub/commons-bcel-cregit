@@ -160,6 +160,7 @@ operator|.
 name|intValue
 argument_list|()
 decl_stmt|;
+comment|// CHECKSTYLE IGNORE MagicNumber
 specifier|private
 specifier|static
 specifier|final

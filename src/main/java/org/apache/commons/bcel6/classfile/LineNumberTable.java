@@ -74,6 +74,14 @@ extends|extends
 name|Attribute
 block|{
 specifier|private
+specifier|static
+specifier|final
+name|int
+name|MAX_LINE_LENGTH
+init|=
+literal|72
+decl_stmt|;
+specifier|private
 name|LineNumber
 index|[]
 name|line_number_table
@@ -414,7 +422,7 @@ operator|.
 name|length
 argument_list|()
 operator|>
-literal|72
+name|MAX_LINE_LENGTH
 operator|)
 operator|&&
 operator|(

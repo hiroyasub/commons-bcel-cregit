@@ -951,6 +951,7 @@ argument_list|(
 literal|100
 argument_list|)
 decl_stmt|;
+comment|// CHECKSTYLE IGNORE MagicNumber
 name|buf
 operator|.
 name|append

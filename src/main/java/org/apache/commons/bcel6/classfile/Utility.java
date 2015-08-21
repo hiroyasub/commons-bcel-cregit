@@ -516,7 +516,7 @@ operator|*
 literal|20
 argument_list|)
 decl_stmt|;
-comment|// Should be sufficient
+comment|// Should be sufficient // CHECKSTYLE IGNORE MagicNumber
 name|ByteSequence
 name|stream
 init|=
