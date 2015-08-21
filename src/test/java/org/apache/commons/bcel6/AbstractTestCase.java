@@ -279,6 +279,21 @@ operator|.
 name|getName
 argument_list|()
 decl_stmt|;
+comment|// Location of test data
+specifier|protected
+specifier|static
+specifier|final
+name|File
+name|TESTDATA
+init|=
+operator|new
+name|File
+argument_list|(
+literal|"target"
+argument_list|,
+literal|"testdata"
+argument_list|)
+decl_stmt|;
 comment|// package base name in signature format, i.e. with '/' separators instead of '.'
 specifier|protected
 specifier|static
@@ -295,6 +310,7 @@ argument_list|,
 literal|'/'
 argument_list|)
 decl_stmt|;
+comment|/**      * @param name      * @return Path to file under the TESTDATA directory      */
 specifier|protected
 name|File
 name|createTestdataFile
@@ -307,18 +323,8 @@ return|return
 operator|new
 name|File
 argument_list|(
-literal|"target"
-operator|+
-name|File
-operator|.
-name|separator
-operator|+
-literal|"testdata"
-operator|+
-name|File
-operator|.
-name|separator
-operator|+
+name|TESTDATA
+argument_list|,
 name|name
 argument_list|)
 return|;
@@ -395,6 +401,7 @@ return|return
 literal|null
 return|;
 block|}
+comment|/**      * Delete a file under the TESTDATA directory      * @param name      * @return      */
 specifier|protected
 name|boolean
 name|wipe
@@ -407,18 +414,8 @@ return|return
 operator|new
 name|File
 argument_list|(
-literal|"target"
-operator|+
-name|File
-operator|.
-name|separator
-operator|+
-literal|"testdata"
-operator|+
-name|File
-operator|.
-name|separator
-operator|+
+name|TESTDATA
+argument_list|,
 name|name
 argument_list|)
 operator|.
@@ -426,6 +423,7 @@ name|delete
 argument_list|()
 return|;
 block|}
+comment|/**      * Delete a directory and file under the TESTDATA directory      * @param dir      * @param name      * @return true if the file was deleted      */
 specifier|protected
 name|boolean
 name|wipe
@@ -437,6 +435,7 @@ name|String
 name|name
 parameter_list|)
 block|{
+comment|// The parameter is relative to the TESTDATA dir
 name|boolean
 name|b
 init|=
@@ -451,15 +450,23 @@ operator|+
 name|name
 argument_list|)
 decl_stmt|;
-name|String
-index|[]
-name|files
+specifier|final
+name|File
+name|testDir
 init|=
 operator|new
 name|File
 argument_list|(
+name|TESTDATA
+argument_list|,
 name|dir
 argument_list|)
+decl_stmt|;
+name|String
+index|[]
+name|files
+init|=
+name|testDir
 operator|.
 name|list
 argument_list|()
@@ -477,16 +484,41 @@ operator|==
 literal|0
 condition|)
 block|{
-operator|new
-name|File
-argument_list|(
-name|dir
-argument_list|)
+if|if
+condition|(
+operator|!
+name|testDir
 operator|.
 name|delete
 argument_list|()
+condition|)
+block|{
+name|System
+operator|.
+name|err
+operator|.
+name|println
+argument_list|(
+literal|"Failed to remove: "
+operator|+
+name|testDir
+argument_list|)
 expr_stmt|;
-comment|// Why does this not succeed? stupid thing
+block|}
+block|}
+else|else
+block|{
+name|System
+operator|.
+name|err
+operator|.
+name|println
+argument_list|(
+literal|"Non-empty directory: "
+operator|+
+name|testDir
+argument_list|)
+expr_stmt|;
 block|}
 return|return
 name|b
