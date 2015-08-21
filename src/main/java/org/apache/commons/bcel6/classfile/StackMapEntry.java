@@ -1388,7 +1388,6 @@ control|)
 block|{
 name|len
 operator|+=
-operator|(
 name|types_of_locals
 index|[
 name|i
@@ -1400,7 +1399,6 @@ condition|?
 literal|3
 else|:
 literal|1
-operator|)
 expr_stmt|;
 block|}
 return|return
@@ -1440,7 +1438,6 @@ control|)
 block|{
 name|len
 operator|+=
-operator|(
 name|types_of_locals
 index|[
 name|i
@@ -1452,7 +1449,6 @@ condition|?
 literal|3
 else|:
 literal|1
-operator|)
 expr_stmt|;
 block|}
 for|for
@@ -1474,7 +1470,6 @@ control|)
 block|{
 name|len
 operator|+=
-operator|(
 name|types_of_stack_items
 index|[
 name|i
@@ -1486,7 +1481,6 @@ condition|?
 literal|3
 else|:
 literal|1
-operator|)
 expr_stmt|;
 block|}
 return|return
@@ -1571,6 +1565,7 @@ operator|.
 name|SAME_LOCALS_1_STACK_ITEM_FRAME_EXTENDED
 condition|)
 block|{
+comment|// CHECKSTYLE IGNORE EmptyBlock
 block|}
 if|else if
 condition|(
@@ -1587,6 +1582,7 @@ operator|.
 name|CHOP_FRAME_MAX
 condition|)
 block|{
+comment|// CHECKSTYLE IGNORE EmptyBlock
 block|}
 if|else if
 condition|(
@@ -1597,6 +1593,7 @@ operator|.
 name|SAME_FRAME_EXTENDED
 condition|)
 block|{
+comment|// CHECKSTYLE IGNORE EmptyBlock
 block|}
 if|else if
 condition|(
@@ -1613,6 +1610,7 @@ operator|.
 name|APPEND_FRAME_MAX
 condition|)
 block|{
+comment|// CHECKSTYLE IGNORE EmptyBlock
 block|}
 if|else if
 condition|(
@@ -1623,6 +1621,7 @@ operator|.
 name|FULL_FRAME
 condition|)
 block|{
+comment|// CHECKSTYLE IGNORE EmptyBlock
 block|}
 else|else
 block|{
@@ -1671,7 +1670,9 @@ throw|throw
 operator|new
 name|RuntimeException
 argument_list|(
-literal|"Invalid StackMap offset"
+literal|"Invalid StackMap offset: "
+operator|+
+name|new_offset
 argument_list|)
 throw|;
 block|}
@@ -1766,6 +1767,7 @@ operator|.
 name|SAME_LOCALS_1_STACK_ITEM_FRAME_EXTENDED
 condition|)
 block|{
+comment|// CHECKSTYLE IGNORE EmptyBlock
 block|}
 if|else if
 condition|(
@@ -1782,6 +1784,7 @@ operator|.
 name|CHOP_FRAME_MAX
 condition|)
 block|{
+comment|// CHECKSTYLE IGNORE EmptyBlock
 block|}
 if|else if
 condition|(
@@ -1792,6 +1795,7 @@ operator|.
 name|SAME_FRAME_EXTENDED
 condition|)
 block|{
+comment|// CHECKSTYLE IGNORE EmptyBlock
 block|}
 if|else if
 condition|(
@@ -1808,6 +1812,7 @@ operator|.
 name|APPEND_FRAME_MAX
 condition|)
 block|{
+comment|// CHECKSTYLE IGNORE EmptyBlock
 block|}
 if|else if
 condition|(
@@ -1818,6 +1823,7 @@ operator|.
 name|FULL_FRAME
 condition|)
 block|{
+comment|// CHECKSTYLE IGNORE EmptyBlock
 block|}
 else|else
 block|{
@@ -1825,7 +1831,9 @@ throw|throw
 operator|new
 name|RuntimeException
 argument_list|(
-literal|"Invalid StackMap frame_type"
+literal|"Invalid StackMap frame_type: "
+operator|+
+name|frame_type
 argument_list|)
 throw|;
 block|}
