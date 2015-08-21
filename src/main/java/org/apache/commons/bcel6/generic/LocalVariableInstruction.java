@@ -523,12 +523,9 @@ name|n
 operator|=
 name|n
 expr_stmt|;
+comment|// Cannot be< 0 as this is checked above
 if|if
 condition|(
-name|n
-operator|>=
-literal|0
-operator|&&
 name|n
 operator|<=
 literal|3
