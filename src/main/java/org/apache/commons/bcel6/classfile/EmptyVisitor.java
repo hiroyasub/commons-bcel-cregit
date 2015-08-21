@@ -456,30 +456,8 @@ name|obj
 parameter_list|)
 block|{
 block|}
-comment|/**      * @since 6.0      */
-annotation|@
-name|Override
-specifier|public
-name|void
-name|visitStackMapTable
-parameter_list|(
-name|StackMapTable
-name|obj
-parameter_list|)
-block|{
-block|}
-comment|/**      * @since 6.0      */
-annotation|@
-name|Override
-specifier|public
-name|void
-name|visitStackMapTableEntry
-parameter_list|(
-name|StackMapTableEntry
-name|obj
-parameter_list|)
-block|{
-block|}
+comment|/**      * @since 6.0     @Override     public void visitStackMapTable(StackMapTable obj)     {     }      */
+comment|/**      * @since 6.0     @Override     public void visitStackMapTableEntry(StackMapTableEntry obj)     {     }      */
 comment|/**      * @since 6.0      */
 annotation|@
 name|Override

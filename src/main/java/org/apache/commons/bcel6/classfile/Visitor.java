@@ -259,22 +259,6 @@ parameter_list|)
 function_decl|;
 comment|/**      * @since 6.0      */
 name|void
-name|visitStackMapTable
-parameter_list|(
-name|StackMapTable
-name|obj
-parameter_list|)
-function_decl|;
-comment|/**      * @since 6.0      */
-name|void
-name|visitStackMapTableEntry
-parameter_list|(
-name|StackMapTableEntry
-name|obj
-parameter_list|)
-function_decl|;
-comment|/**      * @since 6.0      */
-name|void
 name|visitAnnotation
 parameter_list|(
 name|Annotations

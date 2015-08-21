@@ -809,7 +809,7 @@ name|ATTR_STACK_MAP_TABLE
 case|:
 return|return
 operator|new
-name|StackMapTable
+name|StackMap
 argument_list|(
 name|name_index
 argument_list|,
