@@ -600,8 +600,9 @@ condition|)
 block|{
 name|value
 operator|=
-operator|new
 name|Long
+operator|.
+name|valueOf
 argument_list|(
 name|l
 argument_list|)
