@@ -2362,23 +2362,23 @@ expr_stmt|;
 break|break;
 default|default:
 comment|// Never reached
-name|System
-operator|.
-name|err
-operator|.
-name|println
+throw|throw
+operator|new
+name|IllegalStateException
 argument_list|(
-literal|"Unreachable default case reached!"
-argument_list|)
-expr_stmt|;
-name|System
+literal|"Unreachable default case reached! "
+operator|+
+name|Constants
 operator|.
-name|exit
-argument_list|(
-operator|-
-literal|1
+name|TYPE_OF_OPERANDS
+index|[
+name|opcode
+index|]
+index|[
+name|i
+index|]
 argument_list|)
-expr_stmt|;
+throw|;
 block|}
 name|buf
 operator|.
