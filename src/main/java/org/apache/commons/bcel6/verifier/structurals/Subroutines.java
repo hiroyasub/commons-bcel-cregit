@@ -434,30 +434,72 @@ name|String
 name|toString
 parameter_list|()
 block|{
-name|String
+name|StringBuilder
 name|ret
 init|=
-literal|"Subroutine: Local variable is '"
-operator|+
-name|localVariable
-operator|+
-literal|"', JSRs are '"
-operator|+
-name|theJSRs
-operator|+
-literal|"', RET is '"
-operator|+
-name|theRET
-operator|+
-literal|"', Instructions: '"
-operator|+
-name|instructions
-operator|+
-literal|"'."
+operator|new
+name|StringBuilder
+argument_list|()
 decl_stmt|;
 name|ret
-operator|+=
+operator|.
+name|append
+argument_list|(
+literal|"Subroutine: Local variable is '"
+argument_list|)
+operator|.
+name|append
+argument_list|(
+name|localVariable
+argument_list|)
+expr_stmt|;
+name|ret
+operator|.
+name|append
+argument_list|(
+literal|"', JSRs are '"
+argument_list|)
+operator|.
+name|append
+argument_list|(
+name|theJSRs
+argument_list|)
+expr_stmt|;
+name|ret
+operator|.
+name|append
+argument_list|(
+literal|"', RET is '"
+argument_list|)
+operator|.
+name|append
+argument_list|(
+name|theRET
+argument_list|)
+expr_stmt|;
+name|ret
+operator|.
+name|append
+argument_list|(
+literal|"', Instructions: '"
+argument_list|)
+operator|.
+name|append
+argument_list|(
+name|instructions
+argument_list|)
+operator|.
+name|append
+argument_list|(
+literal|"'."
+argument_list|)
+expr_stmt|;
+name|ret
+operator|.
+name|append
+argument_list|(
 literal|" Accessed local variable slots: '"
+argument_list|)
 expr_stmt|;
 name|int
 index|[]
@@ -475,19 +517,33 @@ name|alv
 control|)
 block|{
 name|ret
-operator|+=
+operator|.
+name|append
+argument_list|(
 name|element
-operator|+
+argument_list|)
+expr_stmt|;
+name|ret
+operator|.
+name|append
+argument_list|(
 literal|" "
+argument_list|)
 expr_stmt|;
 block|}
 name|ret
-operator|+=
+operator|.
+name|append
+argument_list|(
 literal|"'."
+argument_list|)
 expr_stmt|;
 name|ret
-operator|+=
+operator|.
+name|append
+argument_list|(
 literal|" Recursively (via subsub...routines) accessed local variable slots: '"
+argument_list|)
 expr_stmt|;
 name|alv
 operator|=
@@ -503,18 +559,32 @@ name|alv
 control|)
 block|{
 name|ret
-operator|+=
+operator|.
+name|append
+argument_list|(
 name|element
-operator|+
+argument_list|)
+expr_stmt|;
+name|ret
+operator|.
+name|append
+argument_list|(
 literal|" "
+argument_list|)
 expr_stmt|;
 block|}
 name|ret
-operator|+=
+operator|.
+name|append
+argument_list|(
 literal|"'."
+argument_list|)
 expr_stmt|;
 return|return
 name|ret
+operator|.
+name|toString
+argument_list|()
 return|;
 block|}
 comment|/**          * Sets the leaving RET instruction. Must be invoked after all instructions are added.          * Must not be invoked for top-level 'subroutine'.          */
