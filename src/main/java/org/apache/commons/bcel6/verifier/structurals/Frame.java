@@ -268,22 +268,22 @@ return|return
 name|s
 return|;
 block|}
-comment|/**      * @return the _this      */
+comment|/**      * @return the _this      * @since 6.0      */
 specifier|public
 specifier|static
 name|UninitializedObjectType
-name|get_this
+name|getThis
 parameter_list|()
 block|{
 return|return
 name|_this
 return|;
 block|}
-comment|/**      * @param _this the _this to set      */
+comment|/**      * @param _this the _this to set      * @since 6.0      */
 specifier|public
 specifier|static
 name|void
-name|set_this
+name|setThis
 parameter_list|(
 name|UninitializedObjectType
 name|_this

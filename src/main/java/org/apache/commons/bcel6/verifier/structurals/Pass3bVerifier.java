@@ -1927,7 +1927,7 @@ condition|)
 block|{
 name|Frame
 operator|.
-name|set_this
+name|setThis
 argument_list|(
 operator|new
 name|UninitializedObjectType

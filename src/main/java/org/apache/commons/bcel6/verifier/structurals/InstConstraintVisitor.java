@@ -13783,7 +13783,7 @@ condition|(
 operator|(
 name|Frame
 operator|.
-name|get_this
+name|getThis
 argument_list|()
 operator|!=
 literal|null
