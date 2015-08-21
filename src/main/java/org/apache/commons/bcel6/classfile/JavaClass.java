@@ -1171,7 +1171,9 @@ name|file
 operator|.
 name|writeInt
 argument_list|(
-literal|0xcafebabe
+name|Constants
+operator|.
+name|JVM_CLASSFILE_MAGIC
 argument_list|)
 expr_stmt|;
 name|file

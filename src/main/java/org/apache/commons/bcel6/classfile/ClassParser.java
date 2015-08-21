@@ -817,11 +817,6 @@ name|IOException
 throws|,
 name|ClassFormatException
 block|{
-name|int
-name|magic
-init|=
-literal|0xCAFEBABE
-decl_stmt|;
 if|if
 condition|(
 name|dataInputStream
@@ -829,7 +824,9 @@ operator|.
 name|readInt
 argument_list|()
 operator|!=
-name|magic
+name|Constants
+operator|.
+name|JVM_CLASSFILE_MAGIC
 condition|)
 block|{
 throw|throw

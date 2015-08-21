@@ -25,6 +25,15 @@ specifier|final
 class|class
 name|Constants
 block|{
+comment|/**    * Java class file format Magic number (0xCAFEBABE)    *    * @see<a href="http://docs.oracle.com/javase/specs/jvms/se7/html/jvms-4.html#jvms-4.1-200-A">    * The ClassFile Structure in The Java Virtual Machine Specification</a>    */
+specifier|public
+specifier|static
+specifier|final
+name|int
+name|JVM_CLASSFILE_MAGIC
+init|=
+literal|0xCAFEBABE
+decl_stmt|;
 comment|/** Major version number of class files for Java 1.1.    *  @see #MINOR_1_1    *  */
 specifier|public
 specifier|static
