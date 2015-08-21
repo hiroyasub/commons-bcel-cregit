@@ -3787,9 +3787,12 @@ return|;
 block|}
 comment|// we have TypeArguments; build up partial result
 comment|// as we recurse for each TypeArgument
-name|String
+name|StringBuilder
 name|type
 init|=
+operator|new
+name|StringBuilder
+argument_list|(
 name|compactClassName
 argument_list|(
 name|signature
@@ -3803,8 +3806,12 @@ argument_list|)
 argument_list|,
 name|chopit
 argument_list|)
-operator|+
+argument_list|)
+operator|.
+name|append
+argument_list|(
 literal|"<"
+argument_list|)
 decl_stmt|;
 name|int
 name|consumed_chars
@@ -3828,10 +3835,11 @@ literal|'+'
 condition|)
 block|{
 name|type
-operator|=
-name|type
-operator|+
+operator|.
+name|append
+argument_list|(
 literal|"? extends "
+argument_list|)
 expr_stmt|;
 name|consumed_chars
 operator|++
@@ -3850,10 +3858,11 @@ literal|'-'
 condition|)
 block|{
 name|type
-operator|=
-name|type
-operator|+
+operator|.
+name|append
+argument_list|(
 literal|"? super "
+argument_list|)
 expr_stmt|;
 name|consumed_chars
 operator|++
@@ -3940,9 +3949,9 @@ return|;
 block|}
 comment|// get the first TypeArgument
 name|type
-operator|=
-name|type
-operator|+
+operator|.
+name|append
+argument_list|(
 name|signatureToString
 argument_list|(
 name|signature
@@ -3953,6 +3962,7 @@ name|consumed_chars
 argument_list|)
 argument_list|,
 name|chopit
+argument_list|)
 argument_list|)
 expr_stmt|;
 comment|// update our consumed count by the number of characters the for type argument
@@ -3990,9 +4000,9 @@ literal|'>'
 condition|)
 block|{
 name|type
-operator|=
-name|type
-operator|+
+operator|.
+name|append
+argument_list|(
 literal|", "
 operator|+
 name|signatureToString
@@ -4005,6 +4015,7 @@ name|consumed_chars
 argument_list|)
 argument_list|,
 name|chopit
+argument_list|)
 argument_list|)
 expr_stmt|;
 comment|// update our consumed count by the number of characters the for type argument
@@ -4067,8 +4078,14 @@ expr_stmt|;
 comment|// remove final ">;"
 return|return
 name|type
-operator|+
+operator|.
+name|append
+argument_list|(
 literal|">"
+argument_list|)
+operator|.
+name|toString
+argument_list|()
 return|;
 block|}
 case|case
