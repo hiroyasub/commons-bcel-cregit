@@ -277,7 +277,7 @@ name|len
 init|=
 literal|2
 decl_stmt|;
-comment|// TODO - what is this?
+comment|// Length of 'number_of_entries' field prior to the array of stack maps
 for|for
 control|(
 name|int
