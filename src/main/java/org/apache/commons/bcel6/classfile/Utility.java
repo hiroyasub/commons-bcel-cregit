@@ -4973,7 +4973,7 @@ operator|)
 name|b
 return|;
 block|}
-comment|/** Convert bytes into hexadecimal string      *      * @param bytes an array of bytes to convert to hexadecimal      *       * @return bytes as hexadecimal string, e.g. 00 FA 12 ...      */
+comment|/** Convert bytes into hexadecimal string      *      * @param bytes an array of bytes to convert to hexadecimal      *       * @return bytes as hexadecimal string, e.g. 00 fa 12 ...      */
 specifier|public
 specifier|static
 name|String
@@ -5024,11 +5024,9 @@ name|hex
 init|=
 name|Integer
 operator|.
-name|toString
+name|toHexString
 argument_list|(
 name|b
-argument_list|,
-literal|0x10
 argument_list|)
 decl_stmt|;
 if|if
