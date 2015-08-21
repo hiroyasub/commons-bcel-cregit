@@ -2228,10 +2228,12 @@ argument_list|(
 name|current_class
 argument_list|)
 decl_stmt|;
-name|String
+name|StringBuilder
 name|all3amsg
 init|=
-literal|""
+operator|new
+name|StringBuilder
+argument_list|()
 decl_stmt|;
 name|boolean
 name|all3aok
@@ -2325,9 +2327,14 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 name|all3amsg
-operator|+=
+operator|.
+name|append
+argument_list|(
 literal|"Method '"
-operator|+
+argument_list|)
+operator|.
+name|append
+argument_list|(
 name|jc
 operator|.
 name|getMethods
@@ -2335,9 +2342,15 @@ argument_list|()
 index|[
 name|i
 index|]
-operator|+
+argument_list|)
+operator|.
+name|append
+argument_list|(
 literal|"': "
-operator|+
+argument_list|)
+operator|.
+name|append
+argument_list|(
 name|vr
 operator|.
 name|getMessage
@@ -2349,8 +2362,12 @@ literal|'\n'
 argument_list|,
 literal|' '
 argument_list|)
-operator|+
+argument_list|)
+operator|.
+name|append
+argument_list|(
 literal|"\n\n"
+argument_list|)
 expr_stmt|;
 block|}
 catch|catch
@@ -2373,6 +2390,9 @@ operator|.
 name|setText
 argument_list|(
 name|all3amsg
+operator|.
+name|toString
+argument_list|()
 argument_list|)
 expr_stmt|;
 name|pass3aTextPane
