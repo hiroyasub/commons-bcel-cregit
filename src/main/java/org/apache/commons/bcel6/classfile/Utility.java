@@ -4645,6 +4645,7 @@ expr_stmt|;
 break|break;
 default|default:
 comment|// Don't care
+break|break;
 block|}
 block|}
 if|if
