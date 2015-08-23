@@ -998,7 +998,7 @@ comment|/**      * Use copy() if you want to have a deep copy(), i.e., with all 
 annotation|@
 name|Override
 specifier|public
-name|Object
+name|Attribute
 name|clone
 parameter_list|()
 block|{

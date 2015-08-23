@@ -430,13 +430,16 @@ function_decl|;
 annotation|@
 name|Override
 specifier|public
-name|Object
+name|FieldGenOrMethodGen
 name|clone
 parameter_list|()
 block|{
 try|try
 block|{
 return|return
+operator|(
+name|FieldGenOrMethodGen
+operator|)
 name|super
 operator|.
 name|clone

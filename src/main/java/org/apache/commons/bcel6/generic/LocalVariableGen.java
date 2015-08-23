@@ -661,13 +661,16 @@ block|}
 annotation|@
 name|Override
 specifier|public
-name|Object
+name|LocalVariableGen
 name|clone
 parameter_list|()
 block|{
 try|try
 block|{
 return|return
+operator|(
+name|LocalVariableGen
+operator|)
 name|super
 operator|.
 name|clone

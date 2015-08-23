@@ -459,13 +459,16 @@ block|}
 annotation|@
 name|Override
 specifier|public
-name|Object
+name|CodeExceptionGen
 name|clone
 parameter_list|()
 block|{
 try|try
 block|{
 return|return
+operator|(
+name|CodeExceptionGen
+operator|)
 name|super
 operator|.
 name|clone

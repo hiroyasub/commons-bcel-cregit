@@ -204,13 +204,16 @@ block|}
 annotation|@
 name|Override
 specifier|public
-name|Object
+name|LineNumberGen
 name|clone
 parameter_list|()
 block|{
 try|try
 block|{
 return|return
+operator|(
+name|LineNumberGen
+operator|)
 name|super
 operator|.
 name|clone
