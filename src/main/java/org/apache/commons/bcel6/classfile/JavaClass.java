@@ -993,11 +993,36 @@ argument_list|(
 name|parent
 argument_list|)
 decl_stmt|;
+if|if
+condition|(
+operator|!
 name|dir
 operator|.
 name|mkdirs
 argument_list|()
-expr_stmt|;
+condition|)
+block|{
+comment|// either was not created or already existed
+if|if
+condition|(
+operator|!
+name|dir
+operator|.
+name|isDirectory
+argument_list|()
+condition|)
+block|{
+throw|throw
+operator|new
+name|IOException
+argument_list|(
+literal|"Could not create the directory "
+operator|+
+name|dir
+argument_list|)
+throw|;
+block|}
+block|}
 block|}
 name|DataOutputStream
 name|dos
