@@ -495,9 +495,6 @@ condition|)
 block|{
 return|return
 name|parent
-operator|.
-name|toString
-argument_list|()
 operator|+
 name|File
 operator|.

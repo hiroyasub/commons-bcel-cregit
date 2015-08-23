@@ -658,9 +658,6 @@ parameter_list|()
 block|{
 return|return
 name|instruction
-operator|.
-name|toString
-argument_list|()
 operator|+
 literal|" (PUSH)"
 return|;

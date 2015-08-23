@@ -4402,9 +4402,6 @@ operator|.
 name|append
 argument_list|(
 name|a
-operator|.
-name|toString
-argument_list|()
 argument_list|)
 operator|.
 name|append

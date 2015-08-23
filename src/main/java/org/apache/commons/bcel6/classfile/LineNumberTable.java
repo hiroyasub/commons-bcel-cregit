@@ -448,9 +448,6 @@ operator|.
 name|append
 argument_list|(
 name|line
-operator|.
-name|toString
-argument_list|()
 argument_list|)
 expr_stmt|;
 name|line
