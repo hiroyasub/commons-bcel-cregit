@@ -1601,11 +1601,10 @@ name|first
 init|=
 name|op
 operator|.
-name|toCharArray
-argument_list|()
-index|[
+name|charAt
+argument_list|(
 literal|0
-index|]
+argument_list|)
 decl_stmt|;
 switch|switch
 condition|(
