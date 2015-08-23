@@ -236,9 +236,8 @@ specifier|final
 name|ObjectType
 name|OBJECT
 init|=
+operator|new
 name|ObjectType
-operator|.
-name|getInstance
 argument_list|(
 literal|"java.lang.Object"
 argument_list|)
@@ -249,9 +248,8 @@ specifier|final
 name|ObjectType
 name|CLASS
 init|=
+operator|new
 name|ObjectType
-operator|.
-name|getInstance
 argument_list|(
 literal|"java.lang.Class"
 argument_list|)
@@ -262,9 +260,8 @@ specifier|final
 name|ObjectType
 name|STRING
 init|=
+operator|new
 name|ObjectType
-operator|.
-name|getInstance
 argument_list|(
 literal|"java.lang.String"
 argument_list|)
@@ -275,9 +272,8 @@ specifier|final
 name|ObjectType
 name|STRINGBUFFER
 init|=
+operator|new
 name|ObjectType
-operator|.
-name|getInstance
 argument_list|(
 literal|"java.lang.StringBuffer"
 argument_list|)
@@ -288,9 +284,8 @@ specifier|final
 name|ObjectType
 name|THROWABLE
 init|=
+operator|new
 name|ObjectType
-operator|.
-name|getInstance
 argument_list|(
 literal|"java.lang.Throwable"
 argument_list|)
