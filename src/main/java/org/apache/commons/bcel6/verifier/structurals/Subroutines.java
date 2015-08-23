@@ -1487,44 +1487,15 @@ block|}
 comment|// end Inner Class SubrouteImpl
 comment|//Node coloring constants
 specifier|private
-specifier|static
-specifier|final
-name|Integer
+enum|enum
+name|ColourConstants
+block|{
 name|WHITE
-init|=
-name|Integer
-operator|.
-name|valueOf
-argument_list|(
-literal|0
-argument_list|)
-decl_stmt|;
-specifier|private
-specifier|static
-specifier|final
-name|Integer
+block|,
 name|GRAY
-init|=
-name|Integer
-operator|.
-name|valueOf
-argument_list|(
-literal|1
-argument_list|)
-decl_stmt|;
-specifier|private
-specifier|static
-specifier|final
-name|Integer
+block|,
 name|BLACK
-init|=
-name|Integer
-operator|.
-name|valueOf
-argument_list|(
-literal|2
-argument_list|)
-decl_stmt|;
+block|}
 comment|/**      * The map containing the subroutines found.      * Key: InstructionHandle of the leader of the subroutine.      * Elements: SubroutineImpl objects.      */
 specifier|private
 specifier|final
@@ -1780,11 +1751,12 @@ name|HashSet
 argument_list|<>
 argument_list|()
 decl_stmt|;
+comment|//Graph colouring. Key: InstructionHandle, Value: ColourConstants enum .
 name|Map
 argument_list|<
 name|InstructionHandle
 argument_list|,
-name|Integer
+name|ColourConstants
 argument_list|>
 name|colors
 init|=
@@ -1793,7 +1765,6 @@ name|HashMap
 argument_list|<>
 argument_list|()
 decl_stmt|;
-comment|//Graph colouring. Key: InstructionHandle, Value: Integer .
 name|List
 argument_list|<
 name|InstructionHandle
@@ -1829,6 +1800,8 @@ name|put
 argument_list|(
 name|element
 argument_list|,
+name|ColourConstants
+operator|.
 name|WHITE
 argument_list|)
 expr_stmt|;
@@ -1839,6 +1812,8 @@ name|put
 argument_list|(
 name|actual
 argument_list|,
+name|ColourConstants
+operator|.
 name|GRAY
 argument_list|)
 expr_stmt|;
@@ -1884,6 +1859,8 @@ operator|.
 name|getHandlerPC
 argument_list|()
 argument_list|,
+name|ColourConstants
+operator|.
 name|GRAY
 argument_list|)
 expr_stmt|;
@@ -1947,6 +1924,8 @@ argument_list|(
 name|successor
 argument_list|)
 operator|==
+name|ColourConstants
+operator|.
 name|WHITE
 condition|)
 block|{
@@ -1956,6 +1935,8 @@ name|put
 argument_list|(
 name|successor
 argument_list|,
+name|ColourConstants
+operator|.
 name|GRAY
 argument_list|)
 expr_stmt|;
@@ -1974,6 +1955,8 @@ name|put
 argument_list|(
 name|u
 argument_list|,
+name|ColourConstants
+operator|.
 name|BLACK
 argument_list|)
 expr_stmt|;
@@ -1996,6 +1979,8 @@ argument_list|(
 name|element
 argument_list|)
 operator|==
+name|ColourConstants
+operator|.
 name|BLACK
 condition|)
 block|{
