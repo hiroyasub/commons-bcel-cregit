@@ -1521,12 +1521,31 @@ name|TOPLEVEL
 decl_stmt|;
 comment|// TODO can this be made private?
 comment|// CHECKSTYLE:ON
-comment|/**      * Constructor.      * @param mg A MethodGen object representing method to      * create the Subroutine objects of.      */
+comment|/**      * Constructor.      * @param mg A MethodGen object representing method to      * create the Subroutine objects of.      * Assumes that JustIce strict checks are needed.      */
 specifier|public
 name|Subroutines
 parameter_list|(
 name|MethodGen
 name|mg
+parameter_list|)
+block|{
+name|this
+argument_list|(
+name|mg
+argument_list|,
+literal|true
+argument_list|)
+expr_stmt|;
+block|}
+comment|/**      * Constructor.      * @param mg A MethodGen object representing method to      * create the Subroutine objects of.      * @param enableJustIceCheck whether to enable additional JustIce checks      * @since 6.0      */
+specifier|public
+name|Subroutines
+parameter_list|(
+name|MethodGen
+name|mg
+parameter_list|,
+name|boolean
+name|enableJustIceCheck
 parameter_list|)
 block|{
 name|InstructionHandle
@@ -2068,6 +2087,11 @@ argument_list|()
 expr_stmt|;
 block|}
 block|}
+if|if
+condition|(
+name|enableJustIceCheck
+condition|)
+block|{
 comment|// Now make sure no instruction of a Subroutine is protected by exception handling code
 comment|// as is mandated by JustIces notion of subroutines.
 for|for
@@ -2162,6 +2186,7 @@ operator|.
 name|getNext
 argument_list|()
 expr_stmt|;
+block|}
 block|}
 block|}
 comment|// Now make sure no subroutine is calling a subroutine

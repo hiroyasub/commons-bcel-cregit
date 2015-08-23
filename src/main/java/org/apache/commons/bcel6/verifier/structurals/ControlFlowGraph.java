@@ -1560,12 +1560,31 @@ name|HashMap
 argument_list|<>
 argument_list|()
 decl_stmt|;
-comment|/**       * A Control Flow Graph.      */
+comment|/**       * A Control Flow Graph; with additional JustIce checks      * @param  method_gen the method generator instance      */
 specifier|public
 name|ControlFlowGraph
 parameter_list|(
 name|MethodGen
 name|method_gen
+parameter_list|)
+block|{
+name|this
+argument_list|(
+name|method_gen
+argument_list|,
+literal|true
+argument_list|)
+expr_stmt|;
+block|}
+comment|/**       * A Control Flow Graph.      * @param  method_gen the method generator instance      * @param enableJustIceCheck if true, additional JustIce checks are performed      * @since 6.0      */
+specifier|public
+name|ControlFlowGraph
+parameter_list|(
+name|MethodGen
+name|method_gen
+parameter_list|,
+name|boolean
+name|enableJustIceCheck
 parameter_list|)
 block|{
 name|subroutines
@@ -1574,6 +1593,8 @@ operator|new
 name|Subroutines
 argument_list|(
 name|method_gen
+argument_list|,
+name|enableJustIceCheck
 argument_list|)
 expr_stmt|;
 name|exceptionhandlers
