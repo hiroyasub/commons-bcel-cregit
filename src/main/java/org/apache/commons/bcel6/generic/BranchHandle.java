@@ -158,15 +158,18 @@ name|int
 name|pos
 parameter_list|)
 block|{
-name|i_position
-operator|=
+comment|// Original code: i_position = bi.position = pos;
 name|getBI
 argument_list|()
 operator|.
-name|setGetPosition
+name|setPosition
 argument_list|(
 name|pos
 argument_list|)
+expr_stmt|;
+name|i_position
+operator|=
+name|pos
 expr_stmt|;
 block|}
 annotation|@
@@ -265,6 +268,7 @@ block|}
 comment|/**       * Set new contents. Old instruction is disposed and may not be used anymore.      */
 annotation|@
 name|Override
+comment|// This is only done in order to apply the additional type check; could be merged with super impl.
 specifier|public
 name|void
 name|setInstruction
