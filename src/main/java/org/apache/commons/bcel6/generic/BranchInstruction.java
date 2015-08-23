@@ -603,7 +603,7 @@ literal|1
 expr_stmt|;
 block|}
 comment|/**      * @return the position      * @since 6.0      */
-specifier|public
+specifier|protected
 name|int
 name|getPosition
 parameter_list|()
@@ -614,8 +614,8 @@ return|;
 block|}
 comment|/**      * @param position the position to set      * @return the new position      * @since 6.0      */
 specifier|protected
-name|int
-name|setGetPosition
+name|void
+name|setPosition
 parameter_list|(
 name|int
 name|position
@@ -627,9 +627,6 @@ name|position
 operator|=
 name|position
 expr_stmt|;
-return|return
-name|position
-return|;
 block|}
 comment|/**      * @param index the index to set      * @since 6.0      */
 specifier|protected

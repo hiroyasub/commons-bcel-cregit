@@ -223,7 +223,7 @@ name|int
 name|max_offset
 parameter_list|)
 block|{
-name|setGetPosition
+name|setPosition
 argument_list|(
 name|getPosition
 argument_list|()

@@ -176,7 +176,7 @@ name|getTargetOffset
 argument_list|()
 decl_stmt|;
 comment|// Depending on old position value
-name|setGetPosition
+name|setPosition
 argument_list|(
 name|getPosition
 argument_list|()
