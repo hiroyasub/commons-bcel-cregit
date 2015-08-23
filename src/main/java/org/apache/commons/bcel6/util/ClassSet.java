@@ -226,9 +226,6 @@ name|String
 index|[
 name|_map
 operator|.
-name|keySet
-argument_list|()
-operator|.
 name|size
 argument_list|()
 index|]
