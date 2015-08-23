@@ -55,6 +55,16 @@ end_import
 
 begin_import
 import|import
+name|org
+operator|.
+name|junit
+operator|.
+name|Assert
+import|;
+end_import
+
+begin_import
+import|import
 name|junit
 operator|.
 name|framework
@@ -86,11 +96,28 @@ argument_list|(
 literal|"target/test-output/html"
 argument_list|)
 decl_stmt|;
+if|if
+condition|(
+operator|!
 name|outputDir
 operator|.
 name|mkdirs
 argument_list|()
+condition|)
+block|{
+comment|// either was not created or already existed
+name|Assert
+operator|.
+name|assertTrue
+argument_list|(
+name|outputDir
+operator|.
+name|isDirectory
+argument_list|()
+argument_list|)
 expr_stmt|;
+comment|// fail if missing
+block|}
 name|FileInputStream
 name|file
 init|=
