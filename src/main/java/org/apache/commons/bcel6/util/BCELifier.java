@@ -256,31 +256,18 @@ name|classfile
 operator|.
 name|EmptyVisitor
 block|{
-specifier|private
-specifier|static
-specifier|final
-name|int
-name|FLAG_FOR_UNKNOWN
-init|=
-operator|-
-literal|1
-decl_stmt|;
-specifier|private
-specifier|static
-specifier|final
-name|int
-name|FLAG_FOR_CLASS
-init|=
-literal|0
-decl_stmt|;
-specifier|private
-specifier|static
-specifier|final
-name|int
-name|FLAG_FOR_METHOD
-init|=
-literal|1
-decl_stmt|;
+comment|/**      * Enum corresponding to flag source.      */
+specifier|public
+enum|enum
+name|FLAGS
+block|{
+name|UNKNOWN
+block|,
+name|CLASS
+block|,
+name|METHOD
+block|,     }
+empty_stmt|;
 comment|// The base package name for imports; assumes Constants is at the top level
 specifier|private
 specifier|static
@@ -598,7 +585,9 @@ operator|.
 name|getAccessFlags
 argument_list|()
 argument_list|,
-name|FLAG_FOR_CLASS
+name|FLAGS
+operator|.
+name|CLASS
 argument_list|)
 operator|+
 literal|", "
@@ -1064,7 +1053,9 @@ operator|.
 name|getAccessFlags
 argument_list|()
 argument_list|,
-name|FLAG_FOR_METHOD
+name|FLAGS
+operator|.
+name|METHOD
 argument_list|)
 operator|+
 literal|", "
@@ -1185,10 +1176,14 @@ name|printFlags
 argument_list|(
 name|flags
 argument_list|,
-name|FLAG_FOR_UNKNOWN
+name|FLAGS
+operator|.
+name|UNKNOWN
 argument_list|)
 return|;
 block|}
+comment|/**      * Return a string with the flag settings      * @param flags the flags field to interpret      * @param location the item type      * @return the formatted string      * @since 6.0 made public      */
+specifier|public
 specifier|static
 name|String
 name|printFlags
@@ -1196,8 +1191,8 @@ parameter_list|(
 name|int
 name|flags
 parameter_list|,
-name|int
-name|reason
+name|FLAGS
+name|location
 parameter_list|)
 block|{
 if|if
@@ -1261,9 +1256,11 @@ name|ACC_SYNCHRONIZED
 operator|)
 operator|&&
 operator|(
-name|reason
+name|location
 operator|==
-name|FLAG_FOR_CLASS
+name|FLAGS
+operator|.
+name|CLASS
 operator|)
 condition|)
 block|{
@@ -1286,9 +1283,11 @@ name|ACC_VOLATILE
 operator|)
 operator|&&
 operator|(
-name|reason
+name|location
 operator|==
-name|FLAG_FOR_METHOD
+name|FLAGS
+operator|.
+name|METHOD
 operator|)
 condition|)
 block|{
@@ -1311,9 +1310,11 @@ name|ACC_TRANSIENT
 operator|)
 operator|&&
 operator|(
-name|reason
+name|location
 operator|==
-name|FLAG_FOR_METHOD
+name|FLAGS
+operator|.
+name|METHOD
 operator|)
 condition|)
 block|{

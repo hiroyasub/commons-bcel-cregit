@@ -315,7 +315,8 @@ throw|;
 comment|// never happens
 block|}
 block|}
-comment|/**      * Read one constant from the given input, the type depends on a tag byte.      *      * @param input Input stream      * @return Constant object      */
+comment|/**      * Read one constant from the given input, the type depends on a tag byte.      *      * @param input Input stream      * @return Constant object      * @since 6.0 made public      */
+specifier|public
 specifier|static
 name|Constant
 name|readConstant
