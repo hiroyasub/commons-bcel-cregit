@@ -562,13 +562,13 @@ name|str
 operator|=
 name|Constants
 operator|.
-name|METHODHANDLE_NAMES
-index|[
+name|getMethodHandleName
+argument_list|(
 name|cmh
 operator|.
 name|getReferenceKind
 argument_list|()
-index|]
+argument_list|)
 operator|+
 literal|" "
 operator|+

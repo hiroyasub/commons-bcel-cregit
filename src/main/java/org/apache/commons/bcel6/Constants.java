@@ -3835,7 +3835,9 @@ name|RESERVED
 comment|/*impdep2*/
 block|}
 decl_stmt|;
-comment|/**    * How the byte code operands are to be interpreted for each opcode.    * Indexed by opcode.  TYPE_OF_OPERANDS[ILOAD] = an array of shorts    * describing the data types for the instruction.    */
+comment|/**    * How the byte code operands are to be interpreted for each opcode.    * Indexed by opcode.  TYPE_OF_OPERANDS[ILOAD] = an array of shorts    * describing the data types for the instruction.    * @deprecated Do not use; will be made private.    * Use getOperandType(int, int) instead    */
+annotation|@
+name|Deprecated
 specifier|public
 specifier|static
 specifier|final
@@ -4681,6 +4683,48 @@ block|{}
 comment|/*impdep2*/
 block|}
 decl_stmt|;
+comment|/**    * @since 6.0    */
+specifier|public
+specifier|static
+name|short
+name|getOperandType
+parameter_list|(
+name|int
+name|opcode
+parameter_list|,
+name|int
+name|index
+parameter_list|)
+block|{
+return|return
+name|TYPE_OF_OPERANDS
+index|[
+name|opcode
+index|]
+index|[
+name|index
+index|]
+return|;
+block|}
+comment|/**    * @since 6.0    */
+specifier|public
+specifier|static
+name|long
+name|getOperandTypeCount
+parameter_list|(
+name|int
+name|opcode
+parameter_list|)
+block|{
+return|return
+name|TYPE_OF_OPERANDS
+index|[
+name|opcode
+index|]
+operator|.
+name|length
+return|;
+block|}
 comment|/**    * Names of opcodes.  Indexed by opcode.  OPCODE_NAMES[ALOAD] = "aload".    * @deprecated Do not use; will be made private . Use getOpcodeName(int) instead    */
 annotation|@
 name|Deprecated
@@ -7199,7 +7243,9 @@ name|REF_invokeInterface
 init|=
 literal|9
 decl_stmt|;
-comment|/** The names of the referencd_kinds of a CONSTANT_MethodHandle_info. */
+comment|/**    * The names of the reference_kinds of a CONSTANT_MethodHandle_info.    * @deprecated Do not use; will be made private . Use getMethodHandleName(int) instead    */
+annotation|@
+name|Deprecated
 specifier|public
 specifier|static
 specifier|final
@@ -7229,6 +7275,23 @@ block|,
 literal|"invokeInterface"
 block|}
 decl_stmt|;
+comment|/**    *     * @param index    * @return    * @since 6.0    */
+specifier|public
+specifier|static
+name|String
+name|getMethodHandleName
+parameter_list|(
+name|int
+name|index
+parameter_list|)
+block|{
+return|return
+name|METHODHANDLE_NAMES
+index|[
+name|index
+index|]
+return|;
+block|}
 specifier|private
 name|Constants
 parameter_list|()
