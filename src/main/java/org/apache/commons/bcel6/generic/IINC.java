@@ -321,7 +321,7 @@ argument_list|)
 expr_stmt|;
 name|super
 operator|.
-name|setIndex
+name|setIndexOnly
 argument_list|(
 name|bytes
 operator|.
@@ -348,7 +348,7 @@ argument_list|)
 expr_stmt|;
 name|super
 operator|.
-name|setIndex
+name|setIndexOnly
 argument_list|(
 name|bytes
 operator|.
@@ -420,7 +420,7 @@ throw|;
 block|}
 name|super
 operator|.
-name|setIndex
+name|setIndexOnly
 argument_list|(
 name|n
 argument_list|)
