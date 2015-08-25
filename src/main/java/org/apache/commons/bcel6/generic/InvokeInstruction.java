@@ -158,7 +158,10 @@ name|Constants
 operator|.
 name|OPCODE_NAMES
 index|[
-name|opcode
+name|super
+operator|.
+name|getOpcode
+argument_list|()
 index|]
 operator|+
 literal|" "
@@ -198,7 +201,10 @@ decl_stmt|;
 if|if
 condition|(
 operator|(
-name|opcode
+name|super
+operator|.
+name|getOpcode
+argument_list|()
 operator|==
 name|Constants
 operator|.
@@ -206,7 +212,10 @@ name|INVOKESTATIC
 operator|)
 operator|||
 operator|(
-name|opcode
+name|super
+operator|.
+name|getOpcode
+argument_list|()
 operator|==
 name|Constants
 operator|.

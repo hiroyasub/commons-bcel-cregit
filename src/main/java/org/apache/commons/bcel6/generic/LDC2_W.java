@@ -133,7 +133,10 @@ name|RuntimeException
 argument_list|(
 literal|"Unknown constant type "
 operator|+
-name|opcode
+name|super
+operator|.
+name|getOpcode
+argument_list|()
 argument_list|)
 throw|;
 block|}

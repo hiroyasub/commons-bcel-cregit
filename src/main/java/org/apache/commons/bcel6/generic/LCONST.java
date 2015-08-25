@@ -73,8 +73,10 @@ operator|==
 literal|0
 condition|)
 block|{
-name|opcode
-operator|=
+name|super
+operator|.
+name|setOpcode
+argument_list|(
 name|org
 operator|.
 name|apache
@@ -86,6 +88,7 @@ operator|.
 name|Constants
 operator|.
 name|LCONST_0
+argument_list|)
 expr_stmt|;
 block|}
 if|else if
@@ -95,8 +98,10 @@ operator|==
 literal|1
 condition|)
 block|{
-name|opcode
-operator|=
+name|super
+operator|.
+name|setOpcode
+argument_list|(
 name|org
 operator|.
 name|apache
@@ -108,6 +113,7 @@ operator|.
 name|Constants
 operator|.
 name|LCONST_1
+argument_list|)
 expr_stmt|;
 block|}
 else|else

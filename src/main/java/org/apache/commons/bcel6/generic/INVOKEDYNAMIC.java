@@ -147,7 +147,10 @@ name|out
 operator|.
 name|writeByte
 argument_list|(
-name|opcode
+name|super
+operator|.
+name|getOpcode
+argument_list|()
 argument_list|)
 expr_stmt|;
 name|out
@@ -200,9 +203,12 @@ argument_list|,
 name|wide
 argument_list|)
 expr_stmt|;
-name|length
-operator|=
+name|super
+operator|.
+name|setLength
+argument_list|(
 literal|5
+argument_list|)
 expr_stmt|;
 name|bytes
 operator|.

@@ -97,8 +97,10 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 comment|// Override just in case it has been changed
-name|opcode
-operator|=
+name|super
+operator|.
+name|setOpcode
+argument_list|(
 name|org
 operator|.
 name|apache
@@ -110,10 +112,14 @@ operator|.
 name|Constants
 operator|.
 name|LDC_W
+argument_list|)
 expr_stmt|;
-name|length
-operator|=
+name|super
+operator|.
+name|setLength
+argument_list|(
 literal|3
+argument_list|)
 expr_stmt|;
 block|}
 block|}
