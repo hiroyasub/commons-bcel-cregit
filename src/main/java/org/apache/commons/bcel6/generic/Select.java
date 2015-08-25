@@ -253,7 +253,13 @@ comment|// Additional offset caused by preceding SWITCHs, GOTOs, etc.
 name|short
 name|old_length
 init|=
-name|length
+operator|(
+name|short
+operator|)
+name|super
+operator|.
+name|getLength
+argument_list|()
 decl_stmt|;
 comment|/* Alignment on 4-byte-boundary, + 1, because of tag byte.          */
 name|padding
@@ -275,8 +281,10 @@ operator|)
 operator|%
 literal|4
 expr_stmt|;
-name|length
-operator|=
+name|super
+operator|.
+name|setLength
+argument_list|(
 operator|(
 name|short
 operator|)
@@ -285,10 +293,14 @@ name|fixed_length
 operator|+
 name|padding
 operator|)
+argument_list|)
 expr_stmt|;
 comment|// Update length
 return|return
-name|length
+name|super
+operator|.
+name|getLength
+argument_list|()
 operator|-
 name|old_length
 return|;
@@ -310,7 +322,10 @@ name|out
 operator|.
 name|writeByte
 argument_list|(
-name|opcode
+name|super
+operator|.
+name|getOpcode
+argument_list|()
 argument_list|)
 expr_stmt|;
 for|for

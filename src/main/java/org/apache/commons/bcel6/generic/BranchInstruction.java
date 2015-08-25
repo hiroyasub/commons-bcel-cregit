@@ -140,7 +140,10 @@ name|out
 operator|.
 name|writeByte
 argument_list|(
-name|opcode
+name|super
+operator|.
+name|getOpcode
+argument_list|()
 argument_list|)
 expr_stmt|;
 name|index
@@ -421,9 +424,12 @@ parameter_list|)
 throws|throws
 name|IOException
 block|{
-name|length
-operator|=
+name|super
+operator|.
+name|setLength
+argument_list|(
 literal|3
+argument_list|)
 expr_stmt|;
 name|index
 operator|=
