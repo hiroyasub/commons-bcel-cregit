@@ -309,6 +309,7 @@ index|[
 literal|0
 index|]
 decl_stmt|;
+comment|// EMPTY, so immutable
 specifier|public
 specifier|static
 specifier|final
