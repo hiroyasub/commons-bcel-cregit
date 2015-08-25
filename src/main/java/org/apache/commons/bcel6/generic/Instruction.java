@@ -95,6 +95,9 @@ name|Instruction
 implements|implements
 name|Cloneable
 block|{
+comment|/**      * @deprecated will be made private; do not access directly, use getter/setter      */
+annotation|@
+name|Deprecated
 specifier|protected
 name|short
 name|length
@@ -102,6 +105,9 @@ init|=
 literal|1
 decl_stmt|;
 comment|// Length of instruction in bytes
+comment|/**      * @deprecated will be made private; do not access directly, use getter/setter      */
+annotation|@
+name|Deprecated
 specifier|protected
 name|short
 name|opcode
@@ -1784,6 +1790,7 @@ name|length
 return|;
 block|}
 comment|/**      * Needed in readInstruction and subclasses in this package      */
+specifier|final
 name|void
 name|setOpcode
 parameter_list|(
@@ -1797,6 +1804,26 @@ name|opcode
 operator|=
 name|opcode
 expr_stmt|;
+block|}
+comment|/**      * Needed in readInstruction and subclasses in this package      * @since 6.0      */
+specifier|final
+name|void
+name|setLength
+parameter_list|(
+name|int
+name|length
+parameter_list|)
+block|{
+name|this
+operator|.
+name|length
+operator|=
+operator|(
+name|short
+operator|)
+name|length
+expr_stmt|;
+comment|// TODO check range?
 block|}
 comment|/** Some instructions may be reused, so don't do anything by default.      */
 name|void

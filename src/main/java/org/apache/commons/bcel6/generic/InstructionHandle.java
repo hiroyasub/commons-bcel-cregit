@@ -92,16 +92,19 @@ specifier|public
 class|class
 name|InstructionHandle
 block|{
+comment|// TODO make private
 name|InstructionHandle
 name|next
 decl_stmt|;
 name|InstructionHandle
 name|prev
 decl_stmt|;
-comment|// Will be set from the outside
 name|Instruction
 name|instruction
 decl_stmt|;
+comment|/**      * @deprecated will be made private; do not access directly, use getter/setter      */
+annotation|@
+name|Deprecated
 specifier|protected
 name|int
 name|i_position
@@ -751,6 +754,44 @@ argument_list|(
 name|v
 argument_list|)
 expr_stmt|;
+block|}
+comment|/**      * @param next the next to set      * @ since 6.0      */
+specifier|final
+name|InstructionHandle
+name|setNext
+parameter_list|(
+name|InstructionHandle
+name|next
+parameter_list|)
+block|{
+name|this
+operator|.
+name|next
+operator|=
+name|next
+expr_stmt|;
+return|return
+name|next
+return|;
+block|}
+comment|/**      * @param prev the prev to set      * @ since 6.0      */
+specifier|final
+name|InstructionHandle
+name|setPrev
+parameter_list|(
+name|InstructionHandle
+name|prev
+parameter_list|)
+block|{
+name|this
+operator|.
+name|prev
+operator|=
+name|prev
+expr_stmt|;
+return|return
+name|prev
+return|;
 block|}
 block|}
 end_class

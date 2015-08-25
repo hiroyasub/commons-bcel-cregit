@@ -64,10 +64,16 @@ block|,
 literal|"L"
 block|}
 decl_stmt|;
+comment|/**      * @deprecated will be made private; do not access directly, use getter/setter      */
+annotation|@
+name|Deprecated
 specifier|protected
 name|ClassGen
 name|cg
 decl_stmt|;
+comment|/**      * @deprecated will be made private; do not access directly, use getter/setter      */
+annotation|@
+name|Deprecated
 specifier|protected
 name|ConstantPoolGen
 name|cp

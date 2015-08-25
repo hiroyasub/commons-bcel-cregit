@@ -72,34 +72,52 @@ comment|/* @since 6.0 */
 implements|,
 name|StackProducer
 block|{
+comment|/**      * @deprecated will be made private; do not access directly, use getter/setter      */
+annotation|@
+name|Deprecated
 specifier|protected
 name|int
 index|[]
 name|match
 decl_stmt|;
 comment|// matches, i.e., case 1: ... TODO could be package-protected?
+comment|/**      * @deprecated will be made private; do not access directly, use getter/setter      */
+annotation|@
+name|Deprecated
 specifier|protected
 name|int
 index|[]
 name|indices
 decl_stmt|;
 comment|// target offsets TODO could be package-protected?
+comment|/**      * @deprecated will be made private; do not access directly, use getter/setter      */
+annotation|@
+name|Deprecated
 specifier|protected
 name|InstructionHandle
 index|[]
 name|targets
 decl_stmt|;
 comment|// target objects in instruction list TODO could be package-protected?
+comment|/**      * @deprecated will be made private; do not access directly, use getter/setter      */
+annotation|@
+name|Deprecated
 specifier|protected
 name|int
 name|fixed_length
 decl_stmt|;
 comment|// fixed length defined by subclasses TODO could be package-protected?
+comment|/**      * @deprecated will be made private; do not access directly, use getter/setter      */
+annotation|@
+name|Deprecated
 specifier|protected
 name|int
 name|match_length
 decl_stmt|;
 comment|// number of cases TODO could be package-protected?
+comment|/**      * @deprecated will be made private; do not access directly, use getter/setter      */
+annotation|@
+name|Deprecated
 specifier|protected
 name|int
 name|padding
@@ -831,6 +849,208 @@ block|{
 return|return
 name|targets
 return|;
+block|}
+comment|/**      * @return match entry      * @since 6.0      */
+specifier|final
+name|int
+name|getMatch
+parameter_list|(
+name|int
+name|index
+parameter_list|)
+block|{
+return|return
+name|match
+index|[
+name|index
+index|]
+return|;
+block|}
+comment|/**      * @return index entry from indices      * @since 6.0      */
+specifier|final
+name|int
+name|getIndices
+parameter_list|(
+name|int
+name|index
+parameter_list|)
+block|{
+return|return
+name|indices
+index|[
+name|index
+index|]
+return|;
+block|}
+comment|/**      * @return target entry      * @since 6.0      */
+specifier|final
+name|InstructionHandle
+name|getTarget
+parameter_list|(
+name|int
+name|index
+parameter_list|)
+block|{
+return|return
+name|targets
+index|[
+name|index
+index|]
+return|;
+block|}
+comment|/**      * @return the fixed_length      * @since 6.0      */
+specifier|final
+name|int
+name|getFixed_length
+parameter_list|()
+block|{
+return|return
+name|fixed_length
+return|;
+block|}
+comment|/**      * @param fixed_length the fixed_length to set      * @since 6.0      */
+specifier|final
+name|void
+name|setFixed_length
+parameter_list|(
+name|int
+name|fixed_length
+parameter_list|)
+block|{
+name|this
+operator|.
+name|fixed_length
+operator|=
+name|fixed_length
+expr_stmt|;
+block|}
+comment|/**      * @return the match_length      * @since 6.0      */
+specifier|final
+name|int
+name|getMatch_length
+parameter_list|()
+block|{
+return|return
+name|match_length
+return|;
+block|}
+comment|/**      * @param match_length the match_length to set      * @since 6.0      */
+specifier|final
+name|int
+name|setMatch_length
+parameter_list|(
+name|int
+name|match_length
+parameter_list|)
+block|{
+name|this
+operator|.
+name|match_length
+operator|=
+name|match_length
+expr_stmt|;
+return|return
+name|match_length
+return|;
+block|}
+comment|/**      *       * @param index      * @param value      * @since 6.0      */
+specifier|final
+name|void
+name|setMatch
+parameter_list|(
+name|int
+name|index
+parameter_list|,
+name|int
+name|value
+parameter_list|)
+block|{
+name|match
+index|[
+name|index
+index|]
+operator|=
+name|value
+expr_stmt|;
+block|}
+comment|/**      *       * @param array      * @since 6.0      */
+specifier|final
+name|void
+name|setIndices
+parameter_list|(
+name|int
+index|[]
+name|array
+parameter_list|)
+block|{
+name|indices
+operator|=
+name|array
+expr_stmt|;
+block|}
+comment|/**      *       * @param array      * @since 6.0      */
+specifier|final
+name|void
+name|setMatches
+parameter_list|(
+name|int
+index|[]
+name|array
+parameter_list|)
+block|{
+name|match
+operator|=
+name|array
+expr_stmt|;
+block|}
+comment|/**      *       * @param array      * @since 6.0      */
+specifier|final
+name|void
+name|setTargets
+parameter_list|(
+name|InstructionHandle
+index|[]
+name|array
+parameter_list|)
+block|{
+name|targets
+operator|=
+name|array
+expr_stmt|;
+block|}
+comment|/**      *       * @return      * @since 6.0      */
+specifier|final
+name|int
+name|getPadding
+parameter_list|()
+block|{
+return|return
+name|padding
+return|;
+block|}
+comment|/** @since 6.0 */
+specifier|final
+name|int
+name|setIndices
+parameter_list|(
+name|int
+name|i
+parameter_list|,
+name|int
+name|value
+parameter_list|)
+block|{
+name|indices
+index|[
+name|i
+index|]
+operator|=
+name|value
+expr_stmt|;
+return|return
+name|value
+return|;
+comment|// Allow use in nested calls
 block|}
 block|}
 end_class

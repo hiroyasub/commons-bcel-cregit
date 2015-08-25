@@ -83,6 +83,9 @@ name|TypedInstruction
 implements|,
 name|IndexedInstruction
 block|{
+comment|/**      * @deprecated will be made private; do not access directly, use getter/setter      */
+annotation|@
+name|Deprecated
 specifier|protected
 name|int
 name|n
@@ -465,7 +468,7 @@ literal|1
 expr_stmt|;
 block|}
 block|}
-comment|/**      * @return local variable index  referred by this instruction.      */
+comment|/**      * @return local variable index (n) referred by this instruction.      */
 annotation|@
 name|Override
 specifier|public

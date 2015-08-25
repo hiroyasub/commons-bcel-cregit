@@ -67,16 +67,25 @@ name|Instruction
 implements|implements
 name|InstructionTargeter
 block|{
+comment|/**      * @deprecated will be made private; do not access directly, use getter/setter      */
+annotation|@
+name|Deprecated
 specifier|protected
 name|int
 name|index
 decl_stmt|;
 comment|// Branch target relative to this instruction
+comment|/**      * @deprecated will be made private; do not access directly, use getter/setter      */
+annotation|@
+name|Deprecated
 specifier|protected
 name|InstructionHandle
 name|target
 decl_stmt|;
 comment|// Target object in instruction list
+comment|/**      * @deprecated will be made private; do not access directly, use getter/setter      */
+annotation|@
+name|Deprecated
 specifier|protected
 name|int
 name|position

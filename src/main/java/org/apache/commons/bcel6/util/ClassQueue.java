@@ -52,6 +52,9 @@ specifier|public
 class|class
 name|ClassQueue
 block|{
+comment|/**      * @deprecated will be made private; do not access      */
+annotation|@
+name|Deprecated
 specifier|protected
 name|LinkedList
 argument_list|<
@@ -64,6 +67,7 @@ name|LinkedList
 argument_list|<>
 argument_list|()
 decl_stmt|;
+comment|// TODO not used externally
 specifier|public
 name|void
 name|enqueue
