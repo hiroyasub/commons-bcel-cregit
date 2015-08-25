@@ -92,13 +92,15 @@ specifier|public
 class|class
 name|InstructionHandle
 block|{
-comment|// TODO make private
+specifier|private
 name|InstructionHandle
 name|next
 decl_stmt|;
+specifier|private
 name|InstructionHandle
 name|prev
 decl_stmt|;
+specifier|private
 name|Instruction
 name|instruction
 decl_stmt|;
