@@ -1348,10 +1348,12 @@ name|int
 name|method_no
 decl_stmt|;
 comment|/**      * The one and only InstructionList object used by an instance of this class.      * It's here for performance reasons by do_verify() and its callees.      */
+specifier|private
 name|InstructionList
 name|instructionList
 decl_stmt|;
 comment|/**      * The one and only Code object used by an instance of this class.      *  It's here for performance reasons by do_verify() and its callees.      */
+specifier|private
 name|Code
 name|code
 decl_stmt|;
