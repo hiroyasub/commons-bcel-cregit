@@ -5936,6 +5936,7 @@ name|FREE_CHARS
 init|=
 literal|48
 decl_stmt|;
+specifier|private
 specifier|static
 name|int
 index|[]
@@ -5947,6 +5948,7 @@ index|[
 name|FREE_CHARS
 index|]
 decl_stmt|;
+specifier|private
 specifier|static
 name|int
 index|[]
