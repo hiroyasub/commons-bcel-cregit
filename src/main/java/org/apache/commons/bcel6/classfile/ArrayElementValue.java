@@ -200,7 +200,10 @@ name|dos
 operator|.
 name|writeByte
 argument_list|(
-name|type
+name|super
+operator|.
+name|getType
+argument_list|()
 argument_list|)
 expr_stmt|;
 comment|// u1 type of value (ARRAY == '[')
