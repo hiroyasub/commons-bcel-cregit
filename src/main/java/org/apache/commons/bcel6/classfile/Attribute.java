@@ -412,10 +412,10 @@ name|equals
 argument_list|(
 name|Constants
 operator|.
-name|ATTRIBUTE_NAMES
-index|[
+name|getAttributeName
+argument_list|(
 name|i
-index|]
+argument_list|)
 argument_list|)
 condition|)
 block|{
@@ -1088,10 +1088,10 @@ block|{
 return|return
 name|Constants
 operator|.
-name|ATTRIBUTE_NAMES
-index|[
+name|getAttributeName
+argument_list|(
 name|tag
-index|]
+argument_list|)
 return|;
 block|}
 block|}

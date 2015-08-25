@@ -1745,10 +1745,10 @@ block|{
 return|return
 name|Constants
 operator|.
-name|CONSUME_STACK
-index|[
+name|getConsumeStack
+argument_list|(
 name|opcode
-index|]
+argument_list|)
 return|;
 block|}
 comment|/**      * This method also gives right results for instructions whose      * effect on the stack depends on the constant pool entry they      * reference.      * @return Number of words produced onto stack by this instruction,      * or Constants.UNPREDICTABLE, if this can not be computed statically      */
@@ -1763,10 +1763,10 @@ block|{
 return|return
 name|Constants
 operator|.
-name|PRODUCE_STACK
-index|[
+name|getProduceStack
+argument_list|(
 name|opcode
-index|]
+argument_list|)
 return|;
 block|}
 comment|/**      * @return this instructions opcode      */

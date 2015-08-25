@@ -322,12 +322,12 @@ block|{
 return|return
 name|Constants
 operator|.
-name|ATTRIBUTE_NAMES
-index|[
+name|getAttributeName
+argument_list|(
 name|Constants
 operator|.
 name|ATTR_DEPRECATED
-index|]
+argument_list|)
 return|;
 block|}
 comment|/**      * @return deep copy of this attribute      */

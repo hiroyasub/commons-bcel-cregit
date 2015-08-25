@@ -408,10 +408,10 @@ literal|"(type="
 operator|+
 name|Constants
 operator|.
-name|ITEM_NAMES
-index|[
+name|getItemName
+argument_list|(
 name|type
-index|]
+argument_list|)
 operator|+
 name|printIndex
 argument_list|()

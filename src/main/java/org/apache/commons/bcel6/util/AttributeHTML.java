@@ -550,10 +550,10 @@ literal|" "
 operator|+
 name|Constants
 operator|.
-name|ATTRIBUTE_NAMES
-index|[
+name|getAttributeName
+argument_list|(
 name|tag
-index|]
+argument_list|)
 operator|+
 literal|"</A></H4>"
 argument_list|)

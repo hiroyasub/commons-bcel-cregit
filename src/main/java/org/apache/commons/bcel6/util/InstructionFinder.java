@@ -1700,10 +1700,10 @@ if|if
 condition|(
 name|Constants
 operator|.
-name|NO_OF_OPERANDS
-index|[
+name|getNoOfOperands
+argument_list|(
 name|i
-index|]
+argument_list|)
 operator|!=
 name|Constants
 operator|.

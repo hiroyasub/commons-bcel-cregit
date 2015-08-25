@@ -224,10 +224,10 @@ name|bcel6
 operator|.
 name|Constants
 operator|.
-name|TYPE_NAMES
-index|[
+name|getTypeName
+argument_list|(
 name|type
-index|]
+argument_list|)
 return|;
 block|}
 comment|/**      * Read needed data (e.g. index) from file.      */

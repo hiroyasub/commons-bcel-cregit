@@ -400,7 +400,9 @@ name|MAX_ACC_FLAG
 init|=
 name|ACC_ENUM
 decl_stmt|;
-comment|/** The names of the access flags. */
+comment|/**    * The names of the access flags.    * @deprecated Do not use as will be made private.    * Use getAccessName instead    */
+annotation|@
+name|Deprecated
 specifier|public
 specifier|static
 specifier|final
@@ -440,6 +442,34 @@ block|,
 literal|"enum"
 block|}
 decl_stmt|;
+comment|/** @since 6.0 */
+specifier|public
+specifier|static
+specifier|final
+name|int
+name|ACCESS_NAMES_LENGTH
+init|=
+name|ACCESS_NAMES
+operator|.
+name|length
+decl_stmt|;
+comment|/**    *     * @param index    * @return    * @since 6.0    */
+specifier|public
+specifier|static
+name|String
+name|getAccessName
+parameter_list|(
+name|int
+name|index
+parameter_list|)
+block|{
+return|return
+name|ACCESS_NAMES
+index|[
+name|index
+index|]
+return|;
+block|}
 comment|/** Marks a constant pool entry as type UTF-8.    * @see<a href="http://docs.oracle.com/javase/specs/jvms/se8/html/jvms-4.html#jvms-4.4">    * The Constant Pool in The Java Virtual Machine Specification</a> */
 specifier|public
 specifier|static
@@ -566,7 +596,9 @@ name|CONSTANT_InvokeDynamic
 init|=
 literal|18
 decl_stmt|;
-comment|/** The names of the types of entries in a constant pool. */
+comment|/**    * The names of the types of entries in a constant pool.    * @deprecated Do not use as will be made private.    * Use getConstantName instead    */
+annotation|@
+name|Deprecated
 specifier|public
 specifier|static
 specifier|final
@@ -614,6 +646,23 @@ block|,
 literal|"CONSTANT_InvokeDynamic"
 block|}
 decl_stmt|;
+comment|/**    *     * @param index    * @return    * @since 6.0    */
+specifier|public
+specifier|static
+name|String
+name|getConstantName
+parameter_list|(
+name|int
+name|index
+parameter_list|)
+block|{
+return|return
+name|CONSTANT_NAMES
+index|[
+name|index
+index|]
+return|;
+block|}
 comment|/** The name of the static initializer, also called&quot;class    *  initialization method&quot; or&quot;interface initialization    *   method&quot;. This is&quot;&lt;clinit&gt;&quot;.    */
 specifier|public
 specifier|static
@@ -632,7 +681,9 @@ name|CONSTRUCTOR_NAME
 init|=
 literal|"<init>"
 decl_stmt|;
-comment|/** The names of the interfaces implemented by arrays */
+comment|/**    * The names of the interfaces implemented by arrays    * @deprecated Do not use as will be made private.    * Use TBA instead    */
+annotation|@
+name|Deprecated
 specifier|public
 specifier|static
 specifier|final
@@ -646,6 +697,23 @@ block|,
 literal|"java.io.Serializable"
 block|}
 decl_stmt|;
+comment|/**    *     * @param index    * @return    * @since 6.0    */
+specifier|public
+specifier|static
+name|String
+name|getConstasntName
+parameter_list|(
+name|int
+name|index
+parameter_list|)
+block|{
+return|return
+name|INTERFACES_IMPLEMENTED_BY_ARRAYS
+index|[
+name|index
+index|]
+return|;
+block|}
 comment|/**    * Maximum Constant Pool entries.    * One of the limitations of the Java Virtual Machine.    * @see<a href="http://docs.oracle.com/javase/specs/jvms/se8/html/jvms-4.html#jvms-4.11-100-A">    * The Java Virtual Machine Specification, Java SE 8 Edition, page 330, chapter 4.11.</a>    */
 specifier|public
 specifier|static
@@ -2978,7 +3046,9 @@ name|T_ADDRESS
 init|=
 literal|16
 decl_stmt|;
-comment|/** The primitive type names corresponding to the T_XX constants,    * e.g., TYPE_NAMES[T_INT] = "int"    */
+comment|/** The primitive type names corresponding to the T_XX constants,    * e.g., TYPE_NAMES[T_INT] = "int"    * @deprecated Do not use as will be made private.    * Use getTypeName instead    */
+annotation|@
+name|Deprecated
 specifier|public
 specifier|static
 specifier|final
@@ -3022,7 +3092,26 @@ block|,
 literal|"address"
 block|}
 decl_stmt|;
-comment|/** The primitive class names corresponding to the T_XX constants,    * e.g., CLASS_TYPE_NAMES[T_INT] = "java.lang.Integer"    */
+comment|/**    *     * @param index    * @return    * @since 6.0    */
+specifier|public
+specifier|static
+name|String
+name|getTypeName
+parameter_list|(
+name|int
+name|index
+parameter_list|)
+block|{
+return|return
+name|TYPE_NAMES
+index|[
+name|index
+index|]
+return|;
+block|}
+comment|/** The primitive class names corresponding to the T_XX constants,    * e.g., CLASS_TYPE_NAMES[T_INT] = "java.lang.Integer"    * @deprecated Do not use as will be made private.    * Use TBA instead    */
+annotation|@
+name|Deprecated
 specifier|public
 specifier|static
 specifier|final
@@ -3066,7 +3155,9 @@ block|,
 name|ILLEGAL_TYPE
 block|}
 decl_stmt|;
-comment|/** The signature characters corresponding to primitive types,    * e.g., SHORT_TYPE_NAMES[T_INT] = "I"    */
+comment|/** The signature characters corresponding to primitive types,    * e.g., SHORT_TYPE_NAMES[T_INT] = "I"    * @deprecated Do not use as will be made private.    * Use TBA instead    */
+annotation|@
+name|Deprecated
 specifier|public
 specifier|static
 specifier|final
@@ -3108,7 +3199,26 @@ block|,
 name|ILLEGAL_TYPE
 block|}
 decl_stmt|;
-comment|/**    * Number of byte code operands for each opcode, i.e., number of bytes after the tag byte    * itself.  Indexed by opcode, so NO_OF_OPERANDS[BIPUSH] = the number of operands for a bipush    * instruction.    */
+comment|/**    *     * @param index    * @return    * @since 6.0    */
+specifier|public
+specifier|static
+name|String
+name|getShortTypeName
+parameter_list|(
+name|int
+name|index
+parameter_list|)
+block|{
+return|return
+name|SHORT_TYPE_NAMES
+index|[
+name|index
+index|]
+return|;
+block|}
+comment|/**    * Number of byte code operands for each opcode, i.e., number of bytes after the tag byte    * itself.  Indexed by opcode, so NO_OF_OPERANDS[BIPUSH] = the number of operands for a bipush    * instruction.    * @deprecated Do not use as will be made private.    * Use TBA instead    */
+annotation|@
+name|Deprecated
 specifier|public
 specifier|static
 specifier|final
@@ -3835,6 +3945,23 @@ name|RESERVED
 comment|/*impdep2*/
 block|}
 decl_stmt|;
+comment|/**    *     * @param index    * @return    * @since 6.0    */
+specifier|public
+specifier|static
+name|short
+name|getNoOfOperands
+parameter_list|(
+name|int
+name|index
+parameter_list|)
+block|{
+return|return
+name|NO_OF_OPERANDS
+index|[
+name|index
+index|]
+return|;
+block|}
 comment|/**    * How the byte code operands are to be interpreted for each opcode.    * Indexed by opcode.  TYPE_OF_OPERANDS[ILOAD] = an array of shorts    * describing the data types for the instruction.    * @deprecated Do not use; will be made private.    * Use getOperandType(int, int) instead    */
 annotation|@
 name|Deprecated
@@ -5277,7 +5404,9 @@ name|index
 index|]
 return|;
 block|}
-comment|/**    * Number of words consumed on operand stack by instructions.    * Indexed by opcode.  CONSUME_STACK[FALOAD] = number of words    * consumed from the stack by a faload instruction.    */
+comment|/**    * Number of words consumed on operand stack by instructions.    * Indexed by opcode.  CONSUME_STACK[FALOAD] = number of words    * consumed from the stack by a faload instruction.    * @deprecated Do not use as will be made private.    * Use TBA instead    */
+annotation|@
+name|Deprecated
 specifier|public
 specifier|static
 specifier|final
@@ -6004,7 +6133,26 @@ name|UNPREDICTABLE
 comment|/*impdep2*/
 block|}
 decl_stmt|;
-comment|/**    * Number of words produced onto operand stack by instructions.    * Indexed by opcode.  CONSUME_STACK[DALOAD] = number of words    * consumed from the stack by a daload instruction.    */
+comment|/**    *     * @param index    * @return    * @since 6.0    */
+specifier|public
+specifier|static
+name|int
+name|getConsumeStack
+parameter_list|(
+name|int
+name|index
+parameter_list|)
+block|{
+return|return
+name|CONSUME_STACK
+index|[
+name|index
+index|]
+return|;
+block|}
+comment|/**    * Number of words produced onto operand stack by instructions.    * Indexed by opcode.  CONSUME_STACK[DALOAD] = number of words    * consumed from the stack by a daload instruction.    * @deprecated Do not use as will be made private.    * Use TBA instead    */
+annotation|@
+name|Deprecated
 specifier|public
 specifier|static
 specifier|final
@@ -6731,6 +6879,23 @@ name|UNPREDICTABLE
 comment|/*impdep2*/
 block|}
 decl_stmt|;
+comment|/**    *     * @param index    * @return    * @since 6.0    */
+specifier|public
+specifier|static
+name|int
+name|getProduceStack
+parameter_list|(
+name|int
+name|index
+parameter_list|)
+block|{
+return|return
+name|PRODUCE_STACK
+index|[
+name|index
+index|]
+return|;
+block|}
 comment|/** Attributes and their corresponding names.    */
 specifier|public
 specifier|static
@@ -6926,7 +7091,9 @@ init|=
 literal|22
 decl_stmt|;
 comment|// count of attributes
-comment|// TODO: mutable public array!!
+comment|/**    *     * @deprecated Do not use as will be made private.    * Use getAttributeName instead    */
+annotation|@
+name|Deprecated
 specifier|public
 specifier|static
 specifier|final
@@ -6980,6 +7147,23 @@ block|,
 literal|"MethodParameters"
 block|}
 decl_stmt|;
+comment|/**    *     * @param index    * @return    * @since 6.0    */
+specifier|public
+specifier|static
+name|String
+name|getAttributeName
+parameter_list|(
+name|int
+name|index
+parameter_list|)
+block|{
+return|return
+name|ATTRIBUTE_NAMES
+index|[
+name|index
+index|]
+return|;
+block|}
 comment|/** Constants used in the StackMap attribute.    */
 specifier|public
 specifier|static
@@ -7053,6 +7237,9 @@ name|ITEM_NewObject
 init|=
 literal|8
 decl_stmt|;
+comment|/**    * @deprecated Do not use as will be made private.    * Use TBA instead    */
+annotation|@
+name|Deprecated
 specifier|public
 specifier|static
 specifier|final
@@ -7080,6 +7267,23 @@ block|,
 literal|"NewObject"
 block|}
 decl_stmt|;
+comment|/**    *     * @param index    * @return    * @since 6.0    */
+specifier|public
+specifier|static
+name|String
+name|getItemName
+parameter_list|(
+name|int
+name|index
+parameter_list|)
+block|{
+return|return
+name|ITEM_NAMES
+index|[
+name|index
+index|]
+return|;
+block|}
 comment|/** Constants used to identify StackMapEntry types.    *    * For those types which can specify a range, the    * constant names the lowest value.    */
 specifier|public
 specifier|static

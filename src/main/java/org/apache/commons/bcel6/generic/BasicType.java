@@ -56,10 +56,10 @@ name|type
 argument_list|,
 name|Constants
 operator|.
-name|SHORT_TYPE_NAMES
-index|[
+name|getShortTypeName
+argument_list|(
 name|type
-index|]
+argument_list|)
 argument_list|)
 expr_stmt|;
 if|if

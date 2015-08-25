@@ -245,10 +245,10 @@ block|{
 return|return
 name|Constants
 operator|.
-name|CONSTANT_NAMES
-index|[
+name|getConstantName
+argument_list|(
 name|tag
-index|]
+argument_list|)
 operator|+
 literal|"["
 operator|+
