@@ -3804,9 +3804,10 @@ condition|)
 block|{
 name|Frame
 operator|.
-name|_this
-operator|=
+name|setThis
+argument_list|(
 literal|null
+argument_list|)
 expr_stmt|;
 block|}
 name|stack

@@ -1955,7 +1955,8 @@ literal|0
 argument_list|,
 name|Frame
 operator|.
-name|_this
+name|getThis
+argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
@@ -1963,9 +1964,10 @@ else|else
 block|{
 name|Frame
 operator|.
-name|_this
-operator|=
+name|setThis
+argument_list|(
 literal|null
+argument_list|)
 expr_stmt|;
 name|f
 operator|.
