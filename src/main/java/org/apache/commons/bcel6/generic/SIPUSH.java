@@ -177,9 +177,12 @@ parameter_list|)
 throws|throws
 name|IOException
 block|{
-name|length
-operator|=
+name|super
+operator|.
+name|setLength
+argument_list|(
 literal|3
+argument_list|)
 expr_stmt|;
 name|b
 operator|=

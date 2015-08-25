@@ -92,9 +92,18 @@ name|Type
 name|getType
 parameter_list|()
 block|{
+specifier|final
+name|short
+name|_opcode
+init|=
+name|super
+operator|.
+name|getOpcode
+argument_list|()
+decl_stmt|;
 switch|switch
 condition|(
-name|opcode
+name|_opcode
 condition|)
 block|{
 case|case
@@ -165,7 +174,7 @@ name|ClassGenException
 argument_list|(
 literal|"Unknown type "
 operator|+
-name|opcode
+name|_opcode
 argument_list|)
 throw|;
 block|}

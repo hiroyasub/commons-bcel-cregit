@@ -159,9 +159,12 @@ name|dimensions
 operator|=
 name|dimensions
 expr_stmt|;
-name|length
-operator|=
+name|super
+operator|.
+name|setLength
+argument_list|(
 literal|4
+argument_list|)
 expr_stmt|;
 block|}
 comment|/**      * Dump instruction as byte code to stream out.      * @param out Output stream      */
@@ -181,7 +184,10 @@ name|out
 operator|.
 name|writeByte
 argument_list|(
-name|opcode
+name|super
+operator|.
+name|getOpcode
+argument_list|()
 argument_list|)
 expr_stmt|;
 name|out
@@ -234,9 +240,12 @@ operator|.
 name|readByte
 argument_list|()
 expr_stmt|;
-name|length
-operator|=
+name|super
+operator|.
+name|setLength
+argument_list|(
 literal|4
+argument_list|)
 expr_stmt|;
 block|}
 comment|/**      * @return number of dimensions to be created      */
