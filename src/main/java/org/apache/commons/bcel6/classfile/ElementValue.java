@@ -57,11 +57,25 @@ specifier|abstract
 class|class
 name|ElementValue
 block|{
+comment|/**      * @deprecated will be made private and final; do not access directly, use getter      */
+annotation|@
+name|java
+operator|.
+name|lang
+operator|.
+name|Deprecated
 specifier|protected
 name|int
 name|type
 decl_stmt|;
 comment|// TODO should be final
+comment|/**      * @deprecated will be made private and final; do not access directly, use getter      */
+annotation|@
+name|java
+operator|.
+name|lang
+operator|.
+name|Deprecated
 specifier|protected
 name|ConstantPool
 name|cpool
@@ -436,6 +450,26 @@ name|type
 argument_list|)
 throw|;
 block|}
+block|}
+comment|/** @since 6.0 */
+specifier|final
+name|ConstantPool
+name|getConstantPool
+parameter_list|()
+block|{
+return|return
+name|cpool
+return|;
+block|}
+comment|/** @since 6.0 */
+specifier|final
+name|int
+name|getType
+parameter_list|()
+block|{
+return|return
+name|type
+return|;
 block|}
 specifier|public
 name|String

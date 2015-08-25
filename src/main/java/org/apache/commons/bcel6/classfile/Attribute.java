@@ -105,21 +105,49 @@ name|Cloneable
 implements|,
 name|Node
 block|{
+comment|/**      * @deprecated will be made private; do not access directly, use getter/setter      */
+annotation|@
+name|java
+operator|.
+name|lang
+operator|.
+name|Deprecated
 specifier|protected
 name|int
 name|name_index
 decl_stmt|;
 comment|// Points to attribute name in constant pool TODO make private (has getter& setter)
+comment|/**      * @deprecated will be made private; do not access directly, use getter/setter      */
+annotation|@
+name|java
+operator|.
+name|lang
+operator|.
+name|Deprecated
 specifier|protected
 name|int
 name|length
 decl_stmt|;
 comment|// Content length of attribute field TODO make private (has getter& setter)
+comment|/**      * @deprecated will be made private; do not access directly, use getter/setter      */
+annotation|@
+name|java
+operator|.
+name|lang
+operator|.
+name|Deprecated
 specifier|protected
 name|byte
 name|tag
 decl_stmt|;
 comment|// Tag to distinguish subclasses TODO make private& final; supposed to be immutable
+comment|/**      * @deprecated will be made private; do not access directly, use getter/setter      */
+annotation|@
+name|java
+operator|.
+name|lang
+operator|.
+name|Deprecated
 specifier|protected
 name|ConstantPool
 name|constant_pool

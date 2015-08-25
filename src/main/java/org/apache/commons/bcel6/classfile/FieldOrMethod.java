@@ -77,17 +77,37 @@ name|Cloneable
 implements|,
 name|Node
 block|{
-comment|// TODO should be made private
+comment|/**      * @deprecated will be made private; do not access directly, use getter/setter      */
+annotation|@
+name|java
+operator|.
+name|lang
+operator|.
+name|Deprecated
 specifier|protected
 name|int
 name|name_index
 decl_stmt|;
 comment|// Points to field name in constant pool
+comment|/**      * @deprecated will be made private; do not access directly, use getter/setter      */
+annotation|@
+name|java
+operator|.
+name|lang
+operator|.
+name|Deprecated
 specifier|protected
 name|int
 name|signature_index
 decl_stmt|;
 comment|// Points to encoded signature
+comment|/**      * @deprecated will be made private; do not access directly, use getter/setter      */
+annotation|@
+name|java
+operator|.
+name|lang
+operator|.
+name|Deprecated
 specifier|protected
 name|Attribute
 index|[]
@@ -101,6 +121,13 @@ index|[]
 name|annotationEntries
 decl_stmt|;
 comment|// annotations defined on the field or method
+comment|/**      * @deprecated will be made private; do not access directly, use getter/setter      */
+annotation|@
+name|java
+operator|.
+name|lang
+operator|.
+name|Deprecated
 specifier|protected
 name|ConstantPool
 name|constant_pool

@@ -41,10 +41,18 @@ specifier|abstract
 class|class
 name|AccessFlags
 block|{
+comment|/**      * @deprecated will be made private; do not access directly, use getter/setter      */
+annotation|@
+name|java
+operator|.
+name|lang
+operator|.
+name|Deprecated
 specifier|protected
 name|int
 name|access_flags
 decl_stmt|;
+comment|// TODO not used externally at present
 specifier|public
 name|AccessFlags
 parameter_list|()
