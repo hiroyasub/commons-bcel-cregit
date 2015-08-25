@@ -481,7 +481,7 @@ return|return
 name|n
 return|;
 block|}
-comment|/**      * Set the local variable index      */
+comment|/**      * Set the local variable index.      * also updates opcode and length      * TODO Why?      * @see #setIndexOnly(int)      */
 annotation|@
 name|Override
 specifier|public
@@ -689,6 +689,22 @@ name|canon_tag
 argument_list|)
 throw|;
 block|}
+block|}
+comment|/**      * Sets the index of the referenced variable (n) only      * @since 6.0      * @see #setIndex(int)      */
+specifier|final
+name|void
+name|setIndexOnly
+parameter_list|(
+name|int
+name|n
+parameter_list|)
+block|{
+name|this
+operator|.
+name|n
+operator|=
+name|n
+expr_stmt|;
 block|}
 block|}
 end_class
