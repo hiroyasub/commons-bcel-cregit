@@ -82,8 +82,10 @@ literal|5
 operator|)
 condition|)
 block|{
-name|opcode
-operator|=
+name|super
+operator|.
+name|setOpcode
+argument_list|(
 operator|(
 name|short
 operator|)
@@ -102,6 +104,7 @@ name|ICONST_0
 operator|+
 name|i
 operator|)
+argument_list|)
 expr_stmt|;
 comment|// Even works for i == -1
 block|}

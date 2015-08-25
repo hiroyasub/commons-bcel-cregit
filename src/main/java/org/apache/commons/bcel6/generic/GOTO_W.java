@@ -93,9 +93,12 @@ argument_list|,
 name|target
 argument_list|)
 expr_stmt|;
-name|length
-operator|=
+name|super
+operator|.
+name|setLength
+argument_list|(
 literal|5
+argument_list|)
 expr_stmt|;
 block|}
 comment|/**      * Dump instruction as byte code to stream out.      * @param out Output stream      */
@@ -123,7 +126,10 @@ name|out
 operator|.
 name|writeByte
 argument_list|(
-name|opcode
+name|super
+operator|.
+name|getOpcode
+argument_list|()
 argument_list|)
 expr_stmt|;
 name|out
@@ -163,9 +169,12 @@ name|readInt
 argument_list|()
 argument_list|)
 expr_stmt|;
-name|length
-operator|=
+name|super
+operator|.
+name|setLength
+argument_list|(
 literal|5
+argument_list|)
 expr_stmt|;
 block|}
 comment|/**      * Call corresponding visitor method(s). The order is:      * Call visitor methods of implemented interfaces first, then      * call methods according to the class hierarchy in descending order,      * i.e., the most specific visitXXX() call comes last.      *      * @param v Visitor object      */

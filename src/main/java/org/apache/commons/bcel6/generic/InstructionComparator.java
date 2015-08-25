@@ -53,11 +53,13 @@ if|if
 condition|(
 name|i1
 operator|.
-name|opcode
+name|getOpcode
+argument_list|()
 operator|==
 name|i2
 operator|.
-name|opcode
+name|getOpcode
+argument_list|()
 condition|)
 block|{
 if|if
@@ -161,7 +163,8 @@ operator|)
 name|i1
 operator|)
 operator|.
-name|target
+name|getTarget
+argument_list|()
 operator|==
 operator|(
 operator|(
@@ -170,7 +173,8 @@ operator|)
 name|i2
 operator|)
 operator|.
-name|target
+name|getTarget
+argument_list|()
 return|;
 block|}
 if|else if
