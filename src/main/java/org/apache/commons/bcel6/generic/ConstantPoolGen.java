@@ -370,10 +370,10 @@ specifier|static
 class|class
 name|Index
 block|{
+specifier|final
 name|int
 name|index
 decl_stmt|;
-comment|// TODO this could be final
 name|Index
 parameter_list|(
 name|int

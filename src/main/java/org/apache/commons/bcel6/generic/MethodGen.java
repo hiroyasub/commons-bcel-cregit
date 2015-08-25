@@ -3680,9 +3680,11 @@ specifier|final
 class|class
 name|BranchTarget
 block|{
+specifier|final
 name|InstructionHandle
 name|target
 decl_stmt|;
+specifier|final
 name|int
 name|stackDepth
 decl_stmt|;
@@ -3714,6 +3716,7 @@ specifier|final
 class|class
 name|BranchStack
 block|{
+specifier|private
 name|Stack
 argument_list|<
 name|BranchTarget
@@ -3725,6 +3728,7 @@ name|Stack
 argument_list|<>
 argument_list|()
 decl_stmt|;
+specifier|private
 name|Hashtable
 argument_list|<
 name|InstructionHandle
