@@ -513,10 +513,10 @@ name|append
 argument_list|(
 name|Constants
 operator|.
-name|OPCODE_NAMES
-index|[
+name|getOpcodeName
+argument_list|(
 name|opcode
-index|]
+argument_list|)
 argument_list|)
 operator|.
 name|append
@@ -2600,7 +2600,7 @@ operator|.
 name|readUnsignedByte
 argument_list|()
 expr_stmt|;
-comment|//System.out.println(OPCODE_NAMES[opcode]);
+comment|//System.out.println(getOpcodeName(opcode));
 switch|switch
 condition|(
 name|opcode

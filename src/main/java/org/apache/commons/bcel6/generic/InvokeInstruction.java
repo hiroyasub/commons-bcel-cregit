@@ -156,13 +156,13 @@ decl_stmt|;
 return|return
 name|Constants
 operator|.
-name|OPCODE_NAMES
-index|[
+name|getOpcodeName
+argument_list|(
 name|super
 operator|.
 name|getOpcode
 argument_list|()
-index|]
+argument_list|)
 operator|+
 literal|" "
 operator|+

@@ -4681,7 +4681,9 @@ block|{}
 comment|/*impdep2*/
 block|}
 decl_stmt|;
-comment|/**    * Names of opcodes.  Indexed by opcode.  OPCODE_NAMES[ALOAD] = "aload".    */
+comment|/**    * Names of opcodes.  Indexed by opcode.  OPCODE_NAMES[ALOAD] = "aload".    * @deprecated Do not use; will be made private . Use getOpcodeName(int) instead    */
+annotation|@
+name|Deprecated
 specifier|public
 specifier|static
 specifier|final
@@ -5203,6 +5205,34 @@ block|,
 literal|"impdep2"
 block|}
 decl_stmt|;
+comment|/**    * @since 6.0    */
+specifier|public
+specifier|static
+specifier|final
+name|int
+name|OPCODE_NAMES_LENGTH
+init|=
+name|OPCODE_NAMES
+operator|.
+name|length
+decl_stmt|;
+comment|/**    * @since 6.0    */
+specifier|public
+specifier|static
+name|String
+name|getOpcodeName
+parameter_list|(
+name|int
+name|index
+parameter_list|)
+block|{
+return|return
+name|OPCODE_NAMES
+index|[
+name|index
+index|]
+return|;
+block|}
 comment|/**    * Number of words consumed on operand stack by instructions.    * Indexed by opcode.  CONSUME_STACK[FALOAD] = number of words    * consumed from the stack by a faload instruction.    */
 specifier|public
 specifier|static

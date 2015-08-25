@@ -784,10 +784,10 @@ name|StringBuilder
 argument_list|(
 name|Constants
 operator|.
-name|OPCODE_NAMES
-index|[
+name|getOpcodeName
+argument_list|(
 name|opcode
-index|]
+argument_list|)
 argument_list|)
 decl_stmt|;
 comment|/* Special case: Skip (0-3) padding bytes, i.e., the          * following bytes are 4-byte-aligned          */
@@ -876,10 +876,10 @@ literal|"Warning: Padding byte != 0 in "
 operator|+
 name|Constants
 operator|.
-name|OPCODE_NAMES
-index|[
+name|getOpcodeName
+argument_list|(
 name|opcode
-index|]
+argument_list|)
 operator|+
 literal|":"
 operator|+
@@ -4929,9 +4929,7 @@ name|i
 operator|<
 name|Constants
 operator|.
-name|OPCODE_NAMES
-operator|.
-name|length
+name|OPCODE_NAMES_LENGTH
 condition|;
 name|i
 operator|++
@@ -4941,10 +4939,10 @@ if|if
 condition|(
 name|Constants
 operator|.
-name|OPCODE_NAMES
-index|[
+name|getOpcodeName
+argument_list|(
 name|i
-index|]
+argument_list|)
 operator|.
 name|equals
 argument_list|(

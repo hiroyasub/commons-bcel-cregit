@@ -373,10 +373,10 @@ name|equals
 argument_list|(
 name|Constants
 operator|.
-name|OPCODE_NAMES
-index|[
+name|getOpcodeName
+argument_list|(
 name|i
-index|]
+argument_list|)
 argument_list|)
 condition|)
 block|{
@@ -1851,7 +1851,7 @@ comment|//        for (int i = 0; i< pattern.length(); i++) {
 comment|//            char ch = pattern.charAt(i);
 comment|//            if (ch>= OFFSET) {
 comment|//                if (make_string) {
-comment|//                    buf.append(Constants.OPCODE_NAMES[ch - OFFSET]);
+comment|//                    buf.append(Constants.getOpcodeName(ch - OFFSET));
 comment|//                } else {
 comment|//                    buf.append((ch - OFFSET));
 comment|//                }

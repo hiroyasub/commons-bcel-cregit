@@ -1114,10 +1114,10 @@ literal|"Constants."
 operator|+
 name|Constants
 operator|.
-name|OPCODE_NAMES
-index|[
+name|getOpcodeName
+argument_list|(
 name|opcode
-index|]
+argument_list|)
 operator|.
 name|toUpperCase
 argument_list|(
@@ -1225,10 +1225,10 @@ literal|"Constants."
 operator|+
 name|Constants
 operator|.
-name|OPCODE_NAMES
-index|[
+name|getOpcodeName
+argument_list|(
 name|opcode
-index|]
+argument_list|)
 operator|.
 name|toUpperCase
 argument_list|(
