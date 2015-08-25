@@ -117,6 +117,9 @@ name|TypedInstruction
 implements|,
 name|IndexedInstruction
 block|{
+comment|/**      * @deprecated will be made private; do not access directly, use getter/setter      */
+annotation|@
+name|Deprecated
 specifier|protected
 name|int
 name|index
@@ -171,7 +174,10 @@ name|out
 operator|.
 name|writeByte
 argument_list|(
-name|opcode
+name|super
+operator|.
+name|getOpcode
+argument_list|()
 argument_list|)
 expr_stmt|;
 name|out
@@ -269,7 +275,10 @@ name|Constants
 operator|.
 name|OPCODE_NAMES
 index|[
-name|opcode
+name|super
+operator|.
+name|getOpcode
+argument_list|()
 index|]
 operator|+
 literal|" "
@@ -301,9 +310,12 @@ name|readUnsignedShort
 argument_list|()
 argument_list|)
 expr_stmt|;
-name|length
-operator|=
+name|super
+operator|.
+name|setLength
+argument_list|(
 literal|3
+argument_list|)
 expr_stmt|;
 block|}
 comment|/**      * @return index in constant pool referred by this instruction.      */
