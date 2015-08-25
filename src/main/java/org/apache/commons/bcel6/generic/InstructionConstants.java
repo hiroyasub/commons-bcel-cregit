@@ -41,6 +41,7 @@ class|class
 name|InstructionConstants
 block|{
 comment|/** Predefined instruction objects      */
+comment|/*      * NOTE these are not currently immutable, because Instruction      * has mutable protected fields opcode and length.      */
 specifier|public
 specifier|static
 specifier|final

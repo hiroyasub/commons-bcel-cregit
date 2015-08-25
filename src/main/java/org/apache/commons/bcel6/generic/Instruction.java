@@ -334,7 +334,7 @@ throws|throws
 name|IOException
 block|{
 block|}
-comment|/**      * Read an instruction from (byte code) input stream and return the      * appropiate object.      *      * @param bytes input stream bytes      * @return instruction object being read      */
+comment|/**      * Read an instruction from (byte code) input stream and return the      * appropiate object.      *<p>      * If the Instruction is defined in {@link InstructionConstants}, then the      * singleton instance is returned.      * @param bytes input stream bytes      * @return instruction object being read      * @see InstructionConstants#getInstruction(int)      */
 comment|// @since 6.0 no longer final
 specifier|public
 specifier|static
