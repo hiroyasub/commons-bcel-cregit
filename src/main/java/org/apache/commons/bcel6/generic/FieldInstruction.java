@@ -93,7 +93,10 @@ name|Constants
 operator|.
 name|OPCODE_NAMES
 index|[
-name|opcode
+name|super
+operator|.
+name|getOpcode
+argument_list|()
 index|]
 operator|+
 literal|" "
