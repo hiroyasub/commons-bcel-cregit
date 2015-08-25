@@ -638,7 +638,8 @@ name|element
 range|:
 name|Constants
 operator|.
-name|INTERFACES_IMPLEMENTED_BY_ARRAYS
+name|getInterfacesImplementedByArrays
+argument_list|()
 control|)
 block|{
 if|if

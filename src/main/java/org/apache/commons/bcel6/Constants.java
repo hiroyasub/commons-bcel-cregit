@@ -15,6 +15,26 @@ name|bcel6
 package|;
 end_package
 
+begin_import
+import|import
+name|java
+operator|.
+name|util
+operator|.
+name|Arrays
+import|;
+end_import
+
+begin_import
+import|import
+name|java
+operator|.
+name|util
+operator|.
+name|Collections
+import|;
+end_import
+
 begin_comment
 comment|/**  * Constants for the project, mostly defined in the JVM specification.  *  * @version $Id$  */
 end_comment
@@ -700,18 +720,25 @@ decl_stmt|;
 comment|/**    *     * @param index    * @return    * @since 6.0    */
 specifier|public
 specifier|static
+name|Iterable
+argument_list|<
 name|String
-name|getConstasntName
-parameter_list|(
-name|int
-name|index
-parameter_list|)
+argument_list|>
+name|getInterfacesImplementedByArrays
+parameter_list|()
 block|{
 return|return
+name|Collections
+operator|.
+name|unmodifiableList
+argument_list|(
+name|Arrays
+operator|.
+name|asList
+argument_list|(
 name|INTERFACES_IMPLEMENTED_BY_ARRAYS
-index|[
-name|index
-index|]
+argument_list|)
+argument_list|)
 return|;
 block|}
 comment|/**    * Maximum Constant Pool entries.    * One of the limitations of the Java Virtual Machine.    * @see<a href="http://docs.oracle.com/javase/specs/jvms/se8/html/jvms-4.html#jvms-4.11-100-A">    * The Java Virtual Machine Specification, Java SE 8 Edition, page 330, chapter 4.11.</a>    */
