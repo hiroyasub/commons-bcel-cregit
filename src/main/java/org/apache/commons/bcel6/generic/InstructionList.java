@@ -161,6 +161,11 @@ begin_class
 specifier|public
 class|class
 name|InstructionList
+implements|implements
+name|Iterable
+argument_list|<
+name|InstructionHandle
+argument_list|>
 block|{
 specifier|private
 name|InstructionHandle
