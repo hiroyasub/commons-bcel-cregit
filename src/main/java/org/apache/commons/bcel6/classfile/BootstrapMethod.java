@@ -110,11 +110,6 @@ argument_list|()
 argument_list|,
 name|c
 operator|.
-name|getNumBootstrapArguments
-argument_list|()
-argument_list|,
-name|c
-operator|.
 name|getBootstrapArguments
 argument_list|()
 argument_list|)
@@ -140,12 +135,6 @@ name|input
 operator|.
 name|readUnsignedShort
 argument_list|()
-argument_list|,
-operator|(
-name|int
-index|[]
-operator|)
-literal|null
 argument_list|)
 expr_stmt|;
 for|for
@@ -177,8 +166,8 @@ argument_list|()
 expr_stmt|;
 block|}
 block|}
-comment|/**      * @param bootstrap_method_ref int index into constant_pool of CONSTANT_MethodHandle      * @param num_bootstrap_arguments int count of number of boostrap arguments      * @param bootstrap_arguments int[] indices into constant_pool of CONSTANT_<type>_info      */
-specifier|public
+comment|// helper method
+specifier|private
 name|BootstrapMethod
 parameter_list|(
 name|int
@@ -186,6 +175,26 @@ name|bootstrap_method_ref
 parameter_list|,
 name|int
 name|num_bootstrap_arguments
+parameter_list|)
+block|{
+name|this
+argument_list|(
+name|bootstrap_method_ref
+argument_list|,
+operator|new
+name|int
+index|[
+name|num_bootstrap_arguments
+index|]
+argument_list|)
+expr_stmt|;
+block|}
+comment|/**      * @param bootstrap_method_ref int index into constant_pool of CONSTANT_MethodHandle      * @param bootstrap_arguments int[] indices into constant_pool of CONSTANT_<type>_info      */
+specifier|public
+name|BootstrapMethod
+parameter_list|(
+name|int
+name|bootstrap_method_ref
 parameter_list|,
 name|int
 index|[]
@@ -197,16 +206,6 @@ operator|.
 name|bootstrap_method_ref
 operator|=
 name|bootstrap_method_ref
-expr_stmt|;
-name|this
-operator|.
-name|bootstrap_arguments
-operator|=
-operator|new
-name|int
-index|[
-name|num_bootstrap_arguments
-index|]
 expr_stmt|;
 name|this
 operator|.
