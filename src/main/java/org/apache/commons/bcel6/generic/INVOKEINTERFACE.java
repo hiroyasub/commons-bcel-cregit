@@ -98,7 +98,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**   * INVOKEINTERFACE - Invoke interface method  *<PRE>Stack: ..., objectref, [arg1, [arg2 ...]] -&gt; ...</PRE>  *  * @version $Id$  */
+comment|/**   * INVOKEINTERFACE - Invoke interface method  *<PRE>Stack: ..., objectref, [arg1, [arg2 ...]] -&gt; ...</PRE>  *  * @version $Id$  * @see  *<a href="http://docs.oracle.com/javase/specs/jvms/se8/html/jvms-6.html#jvms-6.5.invokeinterface">  * The invokeinterface instruction in The Java Virtual Machine Specification</a>  */
 end_comment
 
 begin_class
