@@ -49,6 +49,16 @@ end_import
 
 begin_import
 import|import
+name|java
+operator|.
+name|util
+operator|.
+name|Arrays
+import|;
+end_import
+
+begin_import
+import|import
 name|org
 operator|.
 name|apache
@@ -76,11 +86,6 @@ comment|/** Index of the CONSTANT_MethodHandle_info structure in the constant_po
 specifier|private
 name|int
 name|bootstrap_method_ref
-decl_stmt|;
-specifier|private
-specifier|final
-name|int
-name|num_bootstrap_arguments
 decl_stmt|;
 comment|/** Array of references to the constant_pool table */
 specifier|private
@@ -143,14 +148,6 @@ operator|)
 literal|null
 argument_list|)
 expr_stmt|;
-name|bootstrap_arguments
-operator|=
-operator|new
-name|int
-index|[
-name|num_bootstrap_arguments
-index|]
-expr_stmt|;
 for|for
 control|(
 name|int
@@ -160,7 +157,9 @@ literal|0
 init|;
 name|i
 operator|<
-name|num_bootstrap_arguments
+name|bootstrap_arguments
+operator|.
+name|length
 condition|;
 name|i
 operator|++
@@ -201,9 +200,13 @@ name|bootstrap_method_ref
 expr_stmt|;
 name|this
 operator|.
-name|num_bootstrap_arguments
+name|bootstrap_arguments
 operator|=
+operator|new
+name|int
+index|[
 name|num_bootstrap_arguments
+index|]
 expr_stmt|;
 name|this
 operator|.
@@ -256,7 +259,9 @@ name|getNumBootstrapArguments
 parameter_list|()
 block|{
 return|return
-name|num_bootstrap_arguments
+name|bootstrap_arguments
+operator|.
+name|length
 return|;
 block|}
 comment|/**      * @param bootstrap_arguments int[] indices into constant_pool of CONSTANT_<type>_info      */
@@ -292,13 +297,20 @@ name|bootstrap_method_ref
 operator|+
 literal|", "
 operator|+
-name|num_bootstrap_arguments
+name|bootstrap_arguments
+operator|.
+name|length
 operator|+
 literal|", "
-comment|//UNDONE
-comment|//+ bootstrap_arguments + ")";
 operator|+
-literal|"UNDONE)"
+name|Arrays
+operator|.
+name|toString
+argument_list|(
+name|bootstrap_arguments
+argument_list|)
+operator|+
+literal|")"
 return|;
 block|}
 comment|/**      * @return Resolved string representation      */
@@ -346,6 +358,14 @@ name|bootstrap_method_name
 argument_list|)
 argument_list|)
 expr_stmt|;
+specifier|final
+name|int
+name|num_bootstrap_arguments
+init|=
+name|bootstrap_arguments
+operator|.
+name|length
+decl_stmt|;
 if|if
 condition|(
 name|num_bootstrap_arguments
