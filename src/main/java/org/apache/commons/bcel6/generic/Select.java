@@ -148,18 +148,31 @@ name|InstructionHandle
 name|defaultTarget
 parameter_list|)
 block|{
+comment|// don't set default target before instuction is built
 name|super
 argument_list|(
 name|opcode
 argument_list|,
-name|defaultTarget
+literal|null
 argument_list|)
+expr_stmt|;
+name|this
+operator|.
+name|match
+operator|=
+name|match
 expr_stmt|;
 name|this
 operator|.
 name|targets
 operator|=
 name|targets
+expr_stmt|;
+comment|// now it's safe to set default target
+name|setTarget
+argument_list|(
+name|defaultTarget
+argument_list|)
 expr_stmt|;
 for|for
 control|(
@@ -179,12 +192,6 @@ name|this
 argument_list|)
 expr_stmt|;
 block|}
-name|this
-operator|.
-name|match
-operator|=
-name|match
-expr_stmt|;
 if|if
 condition|(
 operator|(
