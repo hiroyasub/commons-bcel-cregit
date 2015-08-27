@@ -487,7 +487,7 @@ operator|=
 name|target
 expr_stmt|;
 block|}
-comment|/**      * Used by BranchInstruction, LocalVariableGen, CodeExceptionGen      */
+comment|/**      * Used by BranchInstruction, LocalVariableGen, CodeExceptionGen, LineNumberGen      */
 specifier|static
 name|void
 name|notifyTarget
