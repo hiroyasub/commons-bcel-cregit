@@ -73,6 +73,8 @@ comment|// BIs are never equal to make targeters work correctly (BCEL-195)
 return|return
 literal|false
 return|;
+comment|//                } else if (i1 == i2) { TODO consider adding this shortcut
+comment|//                    return true; // this must be AFTER the BI test
 block|}
 if|else if
 condition|(
