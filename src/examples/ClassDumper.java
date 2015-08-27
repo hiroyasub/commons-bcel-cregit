@@ -1021,9 +1021,7 @@ operator|++
 control|)
 block|{
 name|processFieldOrMethod
-argument_list|(
-literal|true
-argument_list|)
+argument_list|()
 expr_stmt|;
 if|if
 condition|(
@@ -1100,9 +1098,7 @@ operator|++
 control|)
 block|{
 name|processFieldOrMethod
-argument_list|(
-literal|false
-argument_list|)
+argument_list|()
 expr_stmt|;
 if|if
 condition|(
@@ -1213,10 +1209,7 @@ specifier|private
 specifier|final
 name|void
 name|processFieldOrMethod
-parameter_list|(
-name|boolean
-name|isField
-parameter_list|)
+parameter_list|()
 throws|throws
 name|IOException
 throws|,
@@ -1478,29 +1471,6 @@ argument_list|(
 literal|"  "
 argument_list|)
 expr_stmt|;
-if|if
-condition|(
-name|isField
-condition|)
-block|{
-name|System
-operator|.
-name|out
-operator|.
-name|printf
-argument_list|(
-literal|"%s: "
-argument_list|,
-name|attributes
-index|[
-name|i
-index|]
-operator|.
-name|getName
-argument_list|()
-argument_list|)
-expr_stmt|;
-block|}
 name|System
 operator|.
 name|out
