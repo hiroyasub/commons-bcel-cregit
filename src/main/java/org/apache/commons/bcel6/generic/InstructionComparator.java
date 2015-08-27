@@ -52,18 +52,6 @@ block|{
 if|if
 condition|(
 name|i1
-operator|==
-name|i2
-condition|)
-block|{
-return|return
-literal|true
-return|;
-comment|// shortcut for identical objects
-block|}
-if|if
-condition|(
-name|i1
 operator|.
 name|getOpcode
 argument_list|()
@@ -81,11 +69,10 @@ operator|instanceof
 name|BranchInstruction
 condition|)
 block|{
-comment|// Different BIs are never equal to make targeters work correctly (BCEL-195)
+comment|// BIs are never equal to make targeters work correctly (BCEL-195)
 return|return
 literal|false
 return|;
-comment|// identity checked above
 block|}
 if|else if
 condition|(
