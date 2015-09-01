@@ -531,6 +531,16 @@ argument_list|()
 return|;
 block|}
 specifier|public
+name|String
+name|toString
+parameter_list|()
+block|{
+return|return
+name|toShortString
+argument_list|()
+return|;
+block|}
+specifier|public
 specifier|static
 name|AnnotationEntry
 index|[]
