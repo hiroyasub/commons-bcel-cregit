@@ -1616,9 +1616,6 @@ name|classNamesJList
 operator|.
 name|getSelectedValue
 argument_list|()
-operator|.
-name|toString
-argument_list|()
 expr_stmt|;
 try|try
 block|{
