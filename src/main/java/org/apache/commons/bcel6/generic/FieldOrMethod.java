@@ -441,7 +441,7 @@ name|className
 argument_list|)
 return|;
 block|}
-comment|/** @return type of the referenced class/interface      */
+comment|/**       * Get the ObjectType of the method return or field.      *       * @return type of the referenced class/interface      * @throws ClassGenException when the field is (or method returns) an array,       */
 annotation|@
 name|Override
 specifier|public
@@ -452,15 +452,40 @@ name|ConstantPoolGen
 name|cpg
 parameter_list|)
 block|{
-return|return
-operator|(
-name|ObjectType
-operator|)
+name|ReferenceType
+name|rt
+init|=
 name|getReferenceType
 argument_list|(
 name|cpg
 argument_list|)
+decl_stmt|;
+if|if
+condition|(
+name|rt
+operator|instanceof
+name|ObjectType
+condition|)
+block|{
+return|return
+operator|(
+name|ObjectType
+operator|)
+name|rt
 return|;
+block|}
+throw|throw
+operator|new
+name|ClassGenException
+argument_list|(
+name|rt
+operator|.
+name|getSignature
+argument_list|()
+operator|+
+literal|" does not represent an ObjectType"
+argument_list|)
+throw|;
 block|}
 block|}
 end_class
