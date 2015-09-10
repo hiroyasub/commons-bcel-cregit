@@ -187,22 +187,20 @@ comment|/**      * Returns a deep copy of this object; that means, the clone ope
 annotation|@
 name|Override
 specifier|public
-name|OperandStack
+name|Object
 name|clone
 parameter_list|()
-block|{
-try|try
 block|{
 name|OperandStack
 name|newstack
 init|=
-operator|(
+operator|new
 name|OperandStack
-operator|)
-name|super
+argument_list|(
+name|this
 operator|.
-name|clone
-argument_list|()
+name|maxStack
+argument_list|)
 decl_stmt|;
 annotation|@
 name|SuppressWarnings
@@ -239,22 +237,6 @@ expr_stmt|;
 return|return
 name|newstack
 return|;
-block|}
-catch|catch
-parameter_list|(
-name|CloneNotSupportedException
-name|e
-parameter_list|)
-block|{
-throw|throw
-operator|new
-name|Error
-argument_list|(
-literal|"Clone Not Supported"
-argument_list|)
-throw|;
-comment|// never happens
-block|}
 block|}
 comment|/**      * Clears the stack.      */
 specifier|public
@@ -338,6 +320,9 @@ name|getClone
 parameter_list|()
 block|{
 return|return
+operator|(
+name|OperandStack
+operator|)
 name|this
 operator|.
 name|clone

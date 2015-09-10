@@ -151,7 +151,7 @@ comment|/**      * Returns a deep copy of this object; i.e. the clone      * ope
 annotation|@
 name|Override
 specifier|public
-name|LocalVariables
+name|Object
 name|clone
 parameter_list|()
 block|{
@@ -225,6 +225,9 @@ name|getClone
 parameter_list|()
 block|{
 return|return
+operator|(
+name|LocalVariables
+operator|)
 name|this
 operator|.
 name|clone

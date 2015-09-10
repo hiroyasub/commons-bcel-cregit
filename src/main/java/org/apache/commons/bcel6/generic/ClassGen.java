@@ -2217,16 +2217,13 @@ block|}
 annotation|@
 name|Override
 specifier|public
-name|ClassGen
+name|Object
 name|clone
 parameter_list|()
 block|{
 try|try
 block|{
 return|return
-operator|(
-name|ClassGen
-operator|)
 name|super
 operator|.
 name|clone
