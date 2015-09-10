@@ -298,6 +298,7 @@ name|JPanel
 name|contentPane
 decl_stmt|;
 specifier|private
+specifier|final
 name|JSplitPane
 name|jSplitPane1
 init|=
@@ -306,6 +307,7 @@ name|JSplitPane
 argument_list|()
 decl_stmt|;
 specifier|private
+specifier|final
 name|JPanel
 name|jPanel1
 init|=
@@ -314,6 +316,7 @@ name|JPanel
 argument_list|()
 decl_stmt|;
 specifier|private
+specifier|final
 name|JPanel
 name|jPanel2
 init|=
@@ -322,6 +325,7 @@ name|JPanel
 argument_list|()
 decl_stmt|;
 specifier|private
+specifier|final
 name|JSplitPane
 name|jSplitPane2
 init|=
@@ -330,6 +334,7 @@ name|JSplitPane
 argument_list|()
 decl_stmt|;
 specifier|private
+specifier|final
 name|JPanel
 name|jPanel3
 init|=
@@ -338,6 +343,7 @@ name|JPanel
 argument_list|()
 decl_stmt|;
 specifier|private
+specifier|final
 name|JList
 argument_list|<
 name|String
@@ -350,6 +356,7 @@ argument_list|<>
 argument_list|()
 decl_stmt|;
 specifier|private
+specifier|final
 name|GridLayout
 name|gridLayout1
 init|=
@@ -358,6 +365,7 @@ name|GridLayout
 argument_list|()
 decl_stmt|;
 specifier|private
+specifier|final
 name|JPanel
 name|messagesPanel
 init|=
@@ -366,6 +374,7 @@ name|JPanel
 argument_list|()
 decl_stmt|;
 specifier|private
+specifier|final
 name|GridLayout
 name|gridLayout2
 init|=
@@ -374,6 +383,7 @@ name|GridLayout
 argument_list|()
 decl_stmt|;
 specifier|private
+specifier|final
 name|JMenuBar
 name|jMenuBar1
 init|=
@@ -382,6 +392,7 @@ name|JMenuBar
 argument_list|()
 decl_stmt|;
 specifier|private
+specifier|final
 name|JMenu
 name|jMenu1
 init|=
@@ -390,6 +401,7 @@ name|JMenu
 argument_list|()
 decl_stmt|;
 specifier|private
+specifier|final
 name|JScrollPane
 name|jScrollPane1
 init|=
@@ -398,6 +410,7 @@ name|JScrollPane
 argument_list|()
 decl_stmt|;
 specifier|private
+specifier|final
 name|JScrollPane
 name|messagesScrollPane
 init|=
@@ -406,6 +419,7 @@ name|JScrollPane
 argument_list|()
 decl_stmt|;
 specifier|private
+specifier|final
 name|JScrollPane
 name|jScrollPane3
 init|=
@@ -414,6 +428,7 @@ name|JScrollPane
 argument_list|()
 decl_stmt|;
 specifier|private
+specifier|final
 name|GridLayout
 name|gridLayout4
 init|=
@@ -422,6 +437,7 @@ name|GridLayout
 argument_list|()
 decl_stmt|;
 specifier|private
+specifier|final
 name|JScrollPane
 name|jScrollPane4
 init|=
@@ -430,6 +446,7 @@ name|JScrollPane
 argument_list|()
 decl_stmt|;
 specifier|private
+specifier|final
 name|CardLayout
 name|cardLayout1
 init|=
@@ -442,6 +459,7 @@ name|String
 name|current_class
 decl_stmt|;
 specifier|private
+specifier|final
 name|GridLayout
 name|gridLayout3
 init|=
@@ -450,6 +468,7 @@ name|GridLayout
 argument_list|()
 decl_stmt|;
 specifier|private
+specifier|final
 name|JTextPane
 name|pass1TextPane
 init|=
@@ -458,6 +477,7 @@ name|JTextPane
 argument_list|()
 decl_stmt|;
 specifier|private
+specifier|final
 name|JTextPane
 name|pass2TextPane
 init|=
@@ -466,6 +486,7 @@ name|JTextPane
 argument_list|()
 decl_stmt|;
 specifier|private
+specifier|final
 name|JTextPane
 name|messagesTextPane
 init|=
@@ -474,6 +495,7 @@ name|JTextPane
 argument_list|()
 decl_stmt|;
 specifier|private
+specifier|final
 name|JMenuItem
 name|newFileMenuItem
 init|=
@@ -482,6 +504,7 @@ name|JMenuItem
 argument_list|()
 decl_stmt|;
 specifier|private
+specifier|final
 name|JSplitPane
 name|jSplitPane3
 init|=
@@ -490,6 +513,7 @@ name|JSplitPane
 argument_list|()
 decl_stmt|;
 specifier|private
+specifier|final
 name|JSplitPane
 name|jSplitPane4
 init|=
@@ -498,6 +522,7 @@ name|JSplitPane
 argument_list|()
 decl_stmt|;
 specifier|private
+specifier|final
 name|JScrollPane
 name|jScrollPane2
 init|=
@@ -506,6 +531,7 @@ name|JScrollPane
 argument_list|()
 decl_stmt|;
 specifier|private
+specifier|final
 name|JScrollPane
 name|jScrollPane5
 init|=
@@ -514,6 +540,7 @@ name|JScrollPane
 argument_list|()
 decl_stmt|;
 specifier|private
+specifier|final
 name|JScrollPane
 name|jScrollPane6
 init|=
@@ -522,6 +549,7 @@ name|JScrollPane
 argument_list|()
 decl_stmt|;
 specifier|private
+specifier|final
 name|JScrollPane
 name|jScrollPane7
 init|=
@@ -530,6 +558,7 @@ name|JScrollPane
 argument_list|()
 decl_stmt|;
 specifier|private
+specifier|final
 name|JList
 argument_list|<
 name|String
@@ -542,6 +571,7 @@ argument_list|<>
 argument_list|()
 decl_stmt|;
 specifier|private
+specifier|final
 name|JList
 argument_list|<
 name|String
@@ -554,6 +584,7 @@ argument_list|<>
 argument_list|()
 decl_stmt|;
 specifier|private
+specifier|final
 name|JTextPane
 name|pass3aTextPane
 init|=
@@ -562,6 +593,7 @@ name|JTextPane
 argument_list|()
 decl_stmt|;
 specifier|private
+specifier|final
 name|JTextPane
 name|pass3bTextPane
 init|=
@@ -570,6 +602,7 @@ name|JTextPane
 argument_list|()
 decl_stmt|;
 specifier|private
+specifier|final
 name|JMenu
 name|jMenu2
 init|=
@@ -578,6 +611,7 @@ name|JMenu
 argument_list|()
 decl_stmt|;
 specifier|private
+specifier|final
 name|JMenuItem
 name|whatisMenuItem
 init|=
@@ -586,6 +620,7 @@ name|JMenuItem
 argument_list|()
 decl_stmt|;
 specifier|private
+specifier|final
 name|JMenuItem
 name|aboutMenuItem
 init|=

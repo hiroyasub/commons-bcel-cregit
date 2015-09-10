@@ -73,6 +73,7 @@ class|class
 name|GraphicalVerifier
 block|{
 specifier|private
+specifier|final
 name|boolean
 name|packFrame
 init|=

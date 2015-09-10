@@ -3717,6 +3717,7 @@ class|class
 name|BranchStack
 block|{
 specifier|private
+specifier|final
 name|Stack
 argument_list|<
 name|BranchTarget
@@ -3729,6 +3730,7 @@ argument_list|<>
 argument_list|()
 decl_stmt|;
 specifier|private
+specifier|final
 name|Hashtable
 argument_list|<
 name|InstructionHandle

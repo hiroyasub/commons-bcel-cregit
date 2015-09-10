@@ -160,6 +160,7 @@ literal|null
 decl_stmt|;
 comment|/** Machine-generated. */
 specifier|private
+specifier|final
 name|IvjEventHandler
 name|ivjEventHandler
 init|=
