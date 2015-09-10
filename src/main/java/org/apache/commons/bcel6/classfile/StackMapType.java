@@ -124,9 +124,6 @@ name|this
 operator|.
 name|index
 operator|=
-operator|(
-name|int
-operator|)
 name|file
 operator|.
 name|readShort

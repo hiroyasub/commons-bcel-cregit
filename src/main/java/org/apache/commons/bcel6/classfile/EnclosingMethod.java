@@ -198,9 +198,6 @@ name|constant_pool
 parameter_list|)
 block|{
 return|return
-operator|(
-name|EnclosingMethod
-operator|)
 name|clone
 argument_list|()
 return|;

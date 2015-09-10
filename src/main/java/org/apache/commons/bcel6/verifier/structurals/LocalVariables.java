@@ -225,9 +225,6 @@ name|getClone
 parameter_list|()
 block|{
 return|return
-operator|(
-name|LocalVariables
-operator|)
 name|this
 operator|.
 name|clone

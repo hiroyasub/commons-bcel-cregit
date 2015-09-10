@@ -338,9 +338,6 @@ name|getClone
 parameter_list|()
 block|{
 return|return
-operator|(
-name|OperandStack
-operator|)
 name|this
 operator|.
 name|clone

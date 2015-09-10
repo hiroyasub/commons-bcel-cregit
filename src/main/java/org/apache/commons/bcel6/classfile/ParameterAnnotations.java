@@ -305,9 +305,6 @@ name|constant_pool
 parameter_list|)
 block|{
 return|return
-operator|(
-name|ParameterAnnotations
-operator|)
 name|clone
 argument_list|()
 return|;
