@@ -61,7 +61,7 @@ name|commons
 operator|.
 name|bcel6
 operator|.
-name|ExceptionConstants
+name|ExceptionConst
 import|;
 end_import
 
@@ -144,21 +144,21 @@ name|getExceptions
 parameter_list|()
 block|{
 return|return
-name|ExceptionConstants
+name|ExceptionConst
 operator|.
 name|createExceptions
 argument_list|(
-name|ExceptionConstants
+name|ExceptionConst
 operator|.
 name|EXCS
 operator|.
 name|EXCS_FIELD_AND_METHOD_RESOLUTION
 argument_list|,
-name|ExceptionConstants
+name|ExceptionConst
 operator|.
 name|UNSATISFIED_LINK_ERROR
 argument_list|,
-name|ExceptionConstants
+name|ExceptionConst
 operator|.
 name|INCOMPATIBLE_CLASS_CHANGE_ERROR
 argument_list|)

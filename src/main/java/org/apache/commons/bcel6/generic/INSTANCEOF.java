@@ -27,7 +27,7 @@ name|commons
 operator|.
 name|bcel6
 operator|.
-name|ExceptionConstants
+name|ExceptionConst
 import|;
 end_import
 
@@ -92,11 +92,11 @@ name|getExceptions
 parameter_list|()
 block|{
 return|return
-name|ExceptionConstants
+name|ExceptionConst
 operator|.
 name|createExceptions
 argument_list|(
-name|ExceptionConstants
+name|ExceptionConst
 operator|.
 name|EXCS
 operator|.
