@@ -420,10 +420,8 @@ name|MAX_ACC_FLAG
 init|=
 name|ACC_ENUM
 decl_stmt|;
-comment|/**    * The names of the access flags.    * @deprecated Do not use as will be made private.    * Use getAccessName instead    */
-annotation|@
-name|Deprecated
-specifier|public
+comment|/**    * The names of the access flags.    */
+specifier|private
 specifier|static
 specifier|final
 name|String
@@ -617,10 +615,8 @@ name|CONSTANT_InvokeDynamic
 init|=
 literal|18
 decl_stmt|;
-comment|/**    * The names of the types of entries in a constant pool.    * @deprecated Do not use as will be made private.    * Use getConstantName instead    */
-annotation|@
-name|Deprecated
-specifier|public
+comment|/**    * The names of the types of entries in a constant pool.    * Use getConstantName instead    */
+specifier|private
 specifier|static
 specifier|final
 name|String
@@ -702,10 +698,8 @@ name|CONSTRUCTOR_NAME
 init|=
 literal|"<init>"
 decl_stmt|;
-comment|/**    * The names of the interfaces implemented by arrays    * @deprecated Do not use as will be made private.    * Use TBA instead    */
-annotation|@
-name|Deprecated
-specifier|public
+comment|/**    * The names of the interfaces implemented by arrays    */
+specifier|private
 specifier|static
 specifier|final
 name|String
@@ -3074,10 +3068,8 @@ name|T_ADDRESS
 init|=
 literal|16
 decl_stmt|;
-comment|/** The primitive type names corresponding to the T_XX constants,    * e.g., TYPE_NAMES[T_INT] = "int"    * @deprecated Do not use as will be made private.    * Use getTypeName instead    */
-annotation|@
-name|Deprecated
-specifier|public
+comment|/** The primitive type names corresponding to the T_XX constants,    * e.g., TYPE_NAMES[T_INT] = "int"    */
+specifier|private
 specifier|static
 specifier|final
 name|String
@@ -3137,10 +3129,8 @@ name|index
 index|]
 return|;
 block|}
-comment|/** The primitive class names corresponding to the T_XX constants,    * e.g., CLASS_TYPE_NAMES[T_INT] = "java.lang.Integer"    * @deprecated Do not use as will be made private.    * Use TBA instead    */
-annotation|@
-name|Deprecated
-specifier|public
+comment|/** The primitive class names corresponding to the T_XX constants,    * e.g., CLASS_TYPE_NAMES[T_INT] = "java.lang.Integer"    */
+specifier|private
 specifier|static
 specifier|final
 name|String
@@ -3148,6 +3138,7 @@ index|[]
 name|CLASS_TYPE_NAMES
 init|=
 block|{
+comment|// TODO currently unused - are they needed?
 name|ILLEGAL_TYPE
 block|,
 name|ILLEGAL_TYPE
@@ -3183,10 +3174,8 @@ block|,
 name|ILLEGAL_TYPE
 block|}
 decl_stmt|;
-comment|/** The signature characters corresponding to primitive types,    * e.g., SHORT_TYPE_NAMES[T_INT] = "I"    * @deprecated Do not use as will be made private.    * Use TBA instead    */
-annotation|@
-name|Deprecated
-specifier|public
+comment|/** The signature characters corresponding to primitive types,    * e.g., SHORT_TYPE_NAMES[T_INT] = "I"    */
+specifier|private
 specifier|static
 specifier|final
 name|String
@@ -3244,10 +3233,8 @@ name|index
 index|]
 return|;
 block|}
-comment|/**    * Number of byte code operands for each opcode, i.e., number of bytes after the tag byte    * itself.  Indexed by opcode, so NO_OF_OPERANDS[BIPUSH] = the number of operands for a bipush    * instruction.    * @deprecated Do not use as will be made private.    * Use TBA instead    */
-annotation|@
-name|Deprecated
-specifier|public
+comment|/**    * Number of byte code operands for each opcode, i.e., number of bytes after the tag byte    * itself.  Indexed by opcode, so NO_OF_OPERANDS[BIPUSH] = the number of operands for a bipush    * instruction.    */
+specifier|private
 specifier|static
 specifier|final
 name|short
@@ -3990,10 +3977,8 @@ name|index
 index|]
 return|;
 block|}
-comment|/**    * How the byte code operands are to be interpreted for each opcode.    * Indexed by opcode.  TYPE_OF_OPERANDS[ILOAD] = an array of shorts    * describing the data types for the instruction.    * @deprecated Do not use; will be made private.    * Use getOperandType(int, int) instead    */
-annotation|@
-name|Deprecated
-specifier|public
+comment|/**    * How the byte code operands are to be interpreted for each opcode.    * Indexed by opcode.  TYPE_OF_OPERANDS[ILOAD] = an array of shorts    * describing the data types for the instruction.    */
+specifier|private
 specifier|static
 specifier|final
 name|short
@@ -4880,10 +4865,8 @@ operator|.
 name|length
 return|;
 block|}
-comment|/**    * Names of opcodes.  Indexed by opcode.  OPCODE_NAMES[ALOAD] = "aload".    * @deprecated Do not use; will be made private . Use getOpcodeName(int) instead    */
-annotation|@
-name|Deprecated
-specifier|public
+comment|/**    * Names of opcodes.  Indexed by opcode.  OPCODE_NAMES[ALOAD] = "aload".    */
+specifier|private
 specifier|static
 specifier|final
 name|String
@@ -5432,10 +5415,8 @@ name|index
 index|]
 return|;
 block|}
-comment|/**    * Number of words consumed on operand stack by instructions.    * Indexed by opcode.  CONSUME_STACK[FALOAD] = number of words    * consumed from the stack by a faload instruction.    * @deprecated Do not use as will be made private.    * Use TBA instead    */
-annotation|@
-name|Deprecated
-specifier|public
+comment|/**    * Number of words consumed on operand stack by instructions.    * Indexed by opcode.  CONSUME_STACK[FALOAD] = number of words    * consumed from the stack by a faload instruction.    */
+specifier|private
 specifier|static
 specifier|final
 name|int
@@ -6178,10 +6159,8 @@ name|index
 index|]
 return|;
 block|}
-comment|/**    * Number of words produced onto operand stack by instructions.    * Indexed by opcode.  CONSUME_STACK[DALOAD] = number of words    * consumed from the stack by a daload instruction.    * @deprecated Do not use as will be made private.    * Use TBA instead    */
-annotation|@
-name|Deprecated
-specifier|public
+comment|/**    * Number of words produced onto operand stack by instructions.    * Indexed by opcode.  CONSUME_STACK[DALOAD] = number of words    * consumed from the stack by a daload instruction.    */
+specifier|private
 specifier|static
 specifier|final
 name|int
@@ -7119,10 +7098,7 @@ init|=
 literal|22
 decl_stmt|;
 comment|// count of attributes
-comment|/**    *     * @deprecated Do not use as will be made private.    * Use getAttributeName instead    */
-annotation|@
-name|Deprecated
-specifier|public
+specifier|private
 specifier|static
 specifier|final
 name|String
@@ -7265,10 +7241,7 @@ name|ITEM_NewObject
 init|=
 literal|8
 decl_stmt|;
-comment|/**    * @deprecated Do not use as will be made private.    * Use TBA instead    */
-annotation|@
-name|Deprecated
-specifier|public
+specifier|private
 specifier|static
 specifier|final
 name|String
@@ -7475,10 +7448,8 @@ name|REF_invokeInterface
 init|=
 literal|9
 decl_stmt|;
-comment|/**    * The names of the reference_kinds of a CONSTANT_MethodHandle_info.    * @deprecated Do not use; will be made private . Use getMethodHandleName(int) instead    */
-annotation|@
-name|Deprecated
-specifier|public
+comment|/**    * The names of the reference_kinds of a CONSTANT_MethodHandle_info.    */
+specifier|private
 specifier|static
 specifier|final
 name|String
