@@ -149,6 +149,21 @@ name|this
 argument_list|)
 expr_stmt|;
 block|}
+comment|/**      * @return Reference (index) to bootstrap method this constant refers to.      *      * Note that this method is a functional duplicate of getClassIndex      * for use by ConstantInvokeDynamic.      * @since 6.0      */
+specifier|public
+specifier|final
+name|int
+name|getBootstrapMethodAttrIndex
+parameter_list|()
+block|{
+return|return
+name|super
+operator|.
+name|getClassIndex
+argument_list|()
+return|;
+comment|// AKA bootstrap_method_attr_index
+block|}
 comment|/**      * @return String representation      */
 annotation|@
 name|Override
@@ -158,12 +173,18 @@ name|String
 name|toString
 parameter_list|()
 block|{
-comment|// UNDONE: need to string replace "class_index" with "bootstrap_method_attr_index"
 return|return
 name|super
 operator|.
 name|toString
 argument_list|()
+operator|.
+name|replace
+argument_list|(
+literal|"class_index"
+argument_list|,
+literal|"bootstrap_method_attr_index"
+argument_list|)
 return|;
 block|}
 block|}

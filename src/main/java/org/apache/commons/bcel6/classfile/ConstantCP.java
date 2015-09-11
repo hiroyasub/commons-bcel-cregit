@@ -238,18 +238,6 @@ return|return
 name|class_index
 return|;
 block|}
-comment|/**      * @return Reference (index) to bootstrap method this constant refers to.      *      * Note that this method is a functional duplicate of getClassIndex      * for use by ConstantInvokeDynamic.      * @since 6.0      */
-specifier|public
-specifier|final
-name|int
-name|getBootstrapMethodAttrIndex
-parameter_list|()
-block|{
-return|return
-name|class_index
-return|;
-comment|// AKA bootstrap_method_attr_index
-block|}
 comment|/**      * @param class_index points to Constant_class       */
 specifier|public
 specifier|final
@@ -265,23 +253,6 @@ operator|.
 name|class_index
 operator|=
 name|class_index
-expr_stmt|;
-block|}
-comment|/**      * @param bootstrap_method_attr_index points to a BootstrapMethod.       *      * Note that this method is a functional duplicate of setClassIndex      * for use by ConstantInvokeDynamic.      * @since 6.0      */
-specifier|public
-specifier|final
-name|void
-name|setBootstrapMethodAttrIndex
-parameter_list|(
-name|int
-name|bootstrap_method_attr_index
-parameter_list|)
-block|{
-name|this
-operator|.
-name|class_index
-operator|=
-name|bootstrap_method_attr_index
 expr_stmt|;
 block|}
 comment|/**      * @return Reference (index) to signature of the field.      */
