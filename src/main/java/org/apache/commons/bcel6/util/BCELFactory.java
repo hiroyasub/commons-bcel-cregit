@@ -582,6 +582,21 @@ extends|extends
 name|EmptyVisitor
 block|{
 specifier|private
+specifier|static
+specifier|final
+name|String
+name|CONSTANT_PREFIX
+init|=
+name|Const
+operator|.
+name|class
+operator|.
+name|getSimpleName
+argument_list|()
+operator|+
+literal|"."
+decl_stmt|;
+specifier|private
 specifier|final
 name|MethodGen
 name|_mg
@@ -1110,7 +1125,7 @@ argument_list|)
 operator|+
 literal|", "
 operator|+
-literal|"Constants."
+name|CONSTANT_PREFIX
 operator|+
 name|Const
 operator|.
@@ -1221,7 +1236,7 @@ argument_list|)
 operator|+
 literal|", "
 operator|+
-literal|"Constants."
+name|CONSTANT_PREFIX
 operator|+
 name|Const
 operator|.
@@ -2005,7 +2020,7 @@ name|name
 operator|+
 literal|" = _factory.createBranchInstruction("
 operator|+
-literal|"Constants."
+name|CONSTANT_PREFIX
 operator|+
 name|bi
 operator|.

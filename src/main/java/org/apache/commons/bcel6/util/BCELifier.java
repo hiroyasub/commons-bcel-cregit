@@ -278,7 +278,8 @@ block|,
 name|METHOD
 block|,     }
 empty_stmt|;
-comment|// The base package name for imports; assumes Constants is at the top level
+comment|// The base package name for imports; assumes Const is at the top level
+comment|// N.B we use the class so renames will be detected by the compiler/IDE
 specifier|private
 specifier|static
 specifier|final
@@ -294,6 +295,21 @@ argument_list|()
 operator|.
 name|getName
 argument_list|()
+decl_stmt|;
+specifier|private
+specifier|static
+specifier|final
+name|String
+name|CONSTANT_PREFIX
+init|=
+name|Const
+operator|.
+name|class
+operator|.
+name|getSimpleName
+argument_list|()
+operator|+
+literal|"."
 decl_stmt|;
 specifier|private
 specifier|final
@@ -508,7 +524,7 @@ literal|"public class "
 operator|+
 name|class_name
 operator|+
-literal|"Creator implements Constants {"
+literal|"Creator {"
 argument_list|)
 expr_stmt|;
 name|_out
@@ -1278,6 +1294,8 @@ name|buf
 operator|.
 name|append
 argument_list|(
+name|CONSTANT_PREFIX
+operator|+
 literal|"ACC_SUPER | "
 argument_list|)
 expr_stmt|;
@@ -1305,6 +1323,8 @@ name|buf
 operator|.
 name|append
 argument_list|(
+name|CONSTANT_PREFIX
+operator|+
 literal|"ACC_BRIDGE | "
 argument_list|)
 expr_stmt|;
@@ -1332,6 +1352,8 @@ name|buf
 operator|.
 name|append
 argument_list|(
+name|CONSTANT_PREFIX
+operator|+
 literal|"ACC_VARARGS | "
 argument_list|)
 expr_stmt|;
@@ -1351,6 +1373,8 @@ name|buf
 operator|.
 name|append
 argument_list|(
+name|CONSTANT_PREFIX
+operator|+
 literal|"ACC_"
 argument_list|)
 operator|.
@@ -1387,6 +1411,8 @@ name|String
 operator|.
 name|format
 argument_list|(
+name|CONSTANT_PREFIX
+operator|+
 literal|"ACC_BIT %x | "
 argument_list|,
 name|pow
