@@ -57,7 +57,7 @@ name|commons
 operator|.
 name|bcel6
 operator|.
-name|Constants
+name|Const
 import|;
 end_import
 
@@ -139,7 +139,7 @@ parameter_list|)
 block|{
 name|super
 argument_list|(
-name|Constants
+name|Const
 operator|.
 name|ATTR_ANNOTATION_DEFAULT
 argument_list|,

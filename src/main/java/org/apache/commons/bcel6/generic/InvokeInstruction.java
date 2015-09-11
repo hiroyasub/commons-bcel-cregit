@@ -37,7 +37,7 @@ name|commons
 operator|.
 name|bcel6
 operator|.
-name|Constants
+name|Const
 import|;
 end_import
 
@@ -170,7 +170,7 @@ argument_list|)
 argument_list|)
 decl_stmt|;
 return|return
-name|Constants
+name|Const
 operator|.
 name|getOpcodeName
 argument_list|(
@@ -222,7 +222,7 @@ operator|.
 name|getOpcode
 argument_list|()
 operator|==
-name|Constants
+name|Const
 operator|.
 name|INVOKESTATIC
 operator|)
@@ -233,7 +233,7 @@ operator|.
 name|getOpcode
 argument_list|()
 operator|==
-name|Constants
+name|Const
 operator|.
 name|INVOKEDYNAMIC
 operator|)
@@ -425,7 +425,7 @@ operator|.
 name|getClassIndex
 argument_list|()
 argument_list|,
-name|Constants
+name|Const
 operator|.
 name|CONSTANT_Class
 argument_list|)

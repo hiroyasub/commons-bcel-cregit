@@ -57,7 +57,7 @@ name|commons
 operator|.
 name|bcel6
 operator|.
-name|Constants
+name|Const
 import|;
 end_import
 
@@ -149,7 +149,7 @@ parameter_list|)
 block|{
 name|super
 argument_list|(
-name|Constants
+name|Const
 operator|.
 name|ATTR_ENCLOSING_METHOD
 argument_list|,
@@ -275,7 +275,7 @@ name|getConstant
 argument_list|(
 name|classIndex
 argument_list|,
-name|Constants
+name|Const
 operator|.
 name|CONSTANT_Class
 argument_list|)
@@ -316,7 +316,7 @@ name|getConstant
 argument_list|(
 name|methodIndex
 argument_list|,
-name|Constants
+name|Const
 operator|.
 name|CONSTANT_NameAndType
 argument_list|)

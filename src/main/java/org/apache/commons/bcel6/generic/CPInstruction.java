@@ -271,7 +271,7 @@ name|commons
 operator|.
 name|bcel6
 operator|.
-name|Constants
+name|Const
 operator|.
 name|getOpcodeName
 argument_list|(
@@ -403,7 +403,7 @@ name|commons
 operator|.
 name|bcel6
 operator|.
-name|Constants
+name|Const
 operator|.
 name|CONSTANT_Class
 argument_list|)

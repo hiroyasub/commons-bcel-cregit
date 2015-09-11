@@ -104,7 +104,7 @@ name|commons
 operator|.
 name|bcel6
 operator|.
-name|Constants
+name|Const
 operator|.
 name|LDC_W
 argument_list|,
@@ -137,7 +137,7 @@ name|commons
 operator|.
 name|bcel6
 operator|.
-name|Constants
+name|Const
 operator|.
 name|MAX_BYTE
 condition|)
@@ -155,7 +155,7 @@ name|commons
 operator|.
 name|bcel6
 operator|.
-name|Constants
+name|Const
 operator|.
 name|LDC
 argument_list|)
@@ -182,7 +182,7 @@ name|commons
 operator|.
 name|bcel6
 operator|.
-name|Constants
+name|Const
 operator|.
 name|LDC_W
 argument_list|)
@@ -363,7 +363,7 @@ name|commons
 operator|.
 name|bcel6
 operator|.
-name|Constants
+name|Const
 operator|.
 name|CONSTANT_String
 case|:
@@ -432,7 +432,7 @@ name|commons
 operator|.
 name|bcel6
 operator|.
-name|Constants
+name|Const
 operator|.
 name|CONSTANT_Float
 case|:
@@ -470,7 +470,7 @@ name|commons
 operator|.
 name|bcel6
 operator|.
-name|Constants
+name|Const
 operator|.
 name|CONSTANT_Integer
 case|:
@@ -509,7 +509,7 @@ name|commons
 operator|.
 name|bcel6
 operator|.
-name|Constants
+name|Const
 operator|.
 name|CONSTANT_Class
 case|:
@@ -627,7 +627,7 @@ name|commons
 operator|.
 name|bcel6
 operator|.
-name|Constants
+name|Const
 operator|.
 name|CONSTANT_String
 case|:
@@ -645,7 +645,7 @@ name|commons
 operator|.
 name|bcel6
 operator|.
-name|Constants
+name|Const
 operator|.
 name|CONSTANT_Float
 case|:
@@ -663,7 +663,7 @@ name|commons
 operator|.
 name|bcel6
 operator|.
-name|Constants
+name|Const
 operator|.
 name|CONSTANT_Integer
 case|:
@@ -681,7 +681,7 @@ name|commons
 operator|.
 name|bcel6
 operator|.
-name|Constants
+name|Const
 operator|.
 name|CONSTANT_Class
 case|:

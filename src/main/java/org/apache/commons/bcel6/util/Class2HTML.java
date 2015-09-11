@@ -87,7 +87,7 @@ name|commons
 operator|.
 name|bcel6
 operator|.
-name|Constants
+name|Const
 import|;
 end_import
 
@@ -853,7 +853,7 @@ name|getConstantString
 argument_list|(
 name|index
 argument_list|,
-name|Constants
+name|Const
 operator|.
 name|CONSTANT_Class
 argument_list|)

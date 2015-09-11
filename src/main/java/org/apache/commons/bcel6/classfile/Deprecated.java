@@ -57,7 +57,7 @@ name|commons
 operator|.
 name|bcel6
 operator|.
-name|Constants
+name|Const
 import|;
 end_import
 
@@ -130,7 +130,7 @@ parameter_list|)
 block|{
 name|super
 argument_list|(
-name|Constants
+name|Const
 operator|.
 name|ATTR_DEPRECATED
 argument_list|,
@@ -320,11 +320,11 @@ name|toString
 parameter_list|()
 block|{
 return|return
-name|Constants
+name|Const
 operator|.
 name|getAttributeName
 argument_list|(
-name|Constants
+name|Const
 operator|.
 name|ATTR_DEPRECATED
 argument_list|)

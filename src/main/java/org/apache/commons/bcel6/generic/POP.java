@@ -44,7 +44,7 @@ name|commons
 operator|.
 name|bcel6
 operator|.
-name|Constants
+name|Const
 operator|.
 name|POP
 argument_list|)

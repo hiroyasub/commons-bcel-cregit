@@ -47,7 +47,7 @@ name|commons
 operator|.
 name|bcel6
 operator|.
-name|Constants
+name|Const
 import|;
 end_import
 
@@ -157,7 +157,7 @@ argument_list|(
 name|getIndex
 argument_list|()
 argument_list|,
-name|Constants
+name|Const
 operator|.
 name|CONSTANT_Utf8
 argument_list|)
@@ -208,7 +208,7 @@ argument_list|(
 name|getIndex
 argument_list|()
 argument_list|,
-name|Constants
+name|Const
 operator|.
 name|CONSTANT_Integer
 argument_list|)
@@ -259,7 +259,7 @@ argument_list|(
 name|getIndex
 argument_list|()
 argument_list|,
-name|Constants
+name|Const
 operator|.
 name|CONSTANT_Integer
 argument_list|)
@@ -313,7 +313,7 @@ argument_list|(
 name|getIndex
 argument_list|()
 argument_list|,
-name|Constants
+name|Const
 operator|.
 name|CONSTANT_Integer
 argument_list|)
@@ -626,7 +626,7 @@ argument_list|(
 name|getIndex
 argument_list|()
 argument_list|,
-name|Constants
+name|Const
 operator|.
 name|CONSTANT_Integer
 argument_list|)
@@ -658,7 +658,7 @@ argument_list|(
 name|getIndex
 argument_list|()
 argument_list|,
-name|Constants
+name|Const
 operator|.
 name|CONSTANT_Long
 argument_list|)
@@ -690,7 +690,7 @@ argument_list|(
 name|getIndex
 argument_list|()
 argument_list|,
-name|Constants
+name|Const
 operator|.
 name|CONSTANT_Double
 argument_list|)
@@ -722,7 +722,7 @@ argument_list|(
 name|getIndex
 argument_list|()
 argument_list|,
-name|Constants
+name|Const
 operator|.
 name|CONSTANT_Float
 argument_list|)
@@ -754,7 +754,7 @@ argument_list|(
 name|getIndex
 argument_list|()
 argument_list|,
-name|Constants
+name|Const
 operator|.
 name|CONSTANT_Integer
 argument_list|)
@@ -786,7 +786,7 @@ argument_list|(
 name|getIndex
 argument_list|()
 argument_list|,
-name|Constants
+name|Const
 operator|.
 name|CONSTANT_Integer
 argument_list|)
@@ -818,7 +818,7 @@ argument_list|(
 name|getIndex
 argument_list|()
 argument_list|,
-name|Constants
+name|Const
 operator|.
 name|CONSTANT_Integer
 argument_list|)
@@ -853,7 +853,7 @@ argument_list|(
 name|getIndex
 argument_list|()
 argument_list|,
-name|Constants
+name|Const
 operator|.
 name|CONSTANT_Integer
 argument_list|)
@@ -891,7 +891,7 @@ argument_list|(
 name|getIndex
 argument_list|()
 argument_list|,
-name|Constants
+name|Const
 operator|.
 name|CONSTANT_Utf8
 argument_list|)

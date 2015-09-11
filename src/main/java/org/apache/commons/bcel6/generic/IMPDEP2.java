@@ -42,7 +42,7 @@ name|commons
 operator|.
 name|bcel6
 operator|.
-name|Constants
+name|Const
 operator|.
 name|IMPDEP2
 argument_list|,

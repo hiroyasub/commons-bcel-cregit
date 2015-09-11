@@ -47,7 +47,7 @@ name|commons
 operator|.
 name|bcel6
 operator|.
-name|Constants
+name|Const
 import|;
 end_import
 
@@ -118,7 +118,7 @@ block|{
 return|return
 name|n
 operator|>
-name|Constants
+name|Const
 operator|.
 name|MAX_BYTE
 return|;
@@ -217,7 +217,7 @@ name|out
 operator|.
 name|writeByte
 argument_list|(
-name|Constants
+name|Const
 operator|.
 name|WIDE
 argument_list|)
@@ -296,7 +296,7 @@ operator|(
 operator|(
 name|_opcode
 operator|>=
-name|Constants
+name|Const
 operator|.
 name|ILOAD_0
 operator|)
@@ -304,7 +304,7 @@ operator|&&
 operator|(
 name|_opcode
 operator|<=
-name|Constants
+name|Const
 operator|.
 name|ALOAD_3
 operator|)
@@ -314,7 +314,7 @@ operator|(
 operator|(
 name|_opcode
 operator|>=
-name|Constants
+name|Const
 operator|.
 name|ISTORE_0
 operator|)
@@ -322,7 +322,7 @@ operator|&&
 operator|(
 name|_opcode
 operator|<=
-name|Constants
+name|Const
 operator|.
 name|ASTORE_3
 operator|)
@@ -404,7 +404,7 @@ operator|(
 operator|(
 name|_opcode
 operator|>=
-name|Constants
+name|Const
 operator|.
 name|ILOAD
 operator|)
@@ -412,7 +412,7 @@ operator|&&
 operator|(
 name|_opcode
 operator|<=
-name|Constants
+name|Const
 operator|.
 name|ALOAD
 operator|)
@@ -422,7 +422,7 @@ operator|(
 operator|(
 name|_opcode
 operator|>=
-name|Constants
+name|Const
 operator|.
 name|ISTORE
 operator|)
@@ -430,7 +430,7 @@ operator|&&
 operator|(
 name|_opcode
 operator|<=
-name|Constants
+name|Const
 operator|.
 name|ASTORE
 operator|)
@@ -456,7 +456,7 @@ if|else if
 condition|(
 name|_opcode
 operator|<=
-name|Constants
+name|Const
 operator|.
 name|ALOAD_3
 condition|)
@@ -467,7 +467,7 @@ operator|=
 operator|(
 name|_opcode
 operator|-
-name|Constants
+name|Const
 operator|.
 name|ILOAD_0
 operator|)
@@ -490,7 +490,7 @@ operator|=
 operator|(
 name|_opcode
 operator|-
-name|Constants
+name|Const
 operator|.
 name|ISTORE_0
 operator|)
@@ -543,7 +543,7 @@ operator|||
 operator|(
 name|n
 operator|>
-name|Constants
+name|Const
 operator|.
 name|MAX_SHORT
 operator|)
@@ -658,12 +658,12 @@ name|canon_tag
 condition|)
 block|{
 case|case
-name|Constants
+name|Const
 operator|.
 name|ILOAD
 case|:
 case|case
-name|Constants
+name|Const
 operator|.
 name|ISTORE
 case|:
@@ -673,12 +673,12 @@ operator|.
 name|INT
 return|;
 case|case
-name|Constants
+name|Const
 operator|.
 name|LLOAD
 case|:
 case|case
-name|Constants
+name|Const
 operator|.
 name|LSTORE
 case|:
@@ -688,12 +688,12 @@ operator|.
 name|LONG
 return|;
 case|case
-name|Constants
+name|Const
 operator|.
 name|DLOAD
 case|:
 case|case
-name|Constants
+name|Const
 operator|.
 name|DSTORE
 case|:
@@ -703,12 +703,12 @@ operator|.
 name|DOUBLE
 return|;
 case|case
-name|Constants
+name|Const
 operator|.
 name|FLOAD
 case|:
 case|case
-name|Constants
+name|Const
 operator|.
 name|FSTORE
 case|:
@@ -718,12 +718,12 @@ operator|.
 name|FLOAT
 return|;
 case|case
-name|Constants
+name|Const
 operator|.
 name|ALOAD
 case|:
 case|case
-name|Constants
+name|Const
 operator|.
 name|ASTORE
 case|:

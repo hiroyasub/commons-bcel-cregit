@@ -27,7 +27,7 @@ name|commons
 operator|.
 name|bcel6
 operator|.
-name|Constants
+name|Const
 import|;
 end_import
 
@@ -1329,7 +1329,7 @@ parameter_list|()
 block|{
 name|INSTRUCTIONS
 index|[
-name|Constants
+name|Const
 operator|.
 name|NOP
 index|]
@@ -1338,7 +1338,7 @@ name|NOP
 expr_stmt|;
 name|INSTRUCTIONS
 index|[
-name|Constants
+name|Const
 operator|.
 name|ACONST_NULL
 index|]
@@ -1347,7 +1347,7 @@ name|ACONST_NULL
 expr_stmt|;
 name|INSTRUCTIONS
 index|[
-name|Constants
+name|Const
 operator|.
 name|ICONST_M1
 index|]
@@ -1356,7 +1356,7 @@ name|ICONST_M1
 expr_stmt|;
 name|INSTRUCTIONS
 index|[
-name|Constants
+name|Const
 operator|.
 name|ICONST_0
 index|]
@@ -1365,7 +1365,7 @@ name|ICONST_0
 expr_stmt|;
 name|INSTRUCTIONS
 index|[
-name|Constants
+name|Const
 operator|.
 name|ICONST_1
 index|]
@@ -1374,7 +1374,7 @@ name|ICONST_1
 expr_stmt|;
 name|INSTRUCTIONS
 index|[
-name|Constants
+name|Const
 operator|.
 name|ICONST_2
 index|]
@@ -1383,7 +1383,7 @@ name|ICONST_2
 expr_stmt|;
 name|INSTRUCTIONS
 index|[
-name|Constants
+name|Const
 operator|.
 name|ICONST_3
 index|]
@@ -1392,7 +1392,7 @@ name|ICONST_3
 expr_stmt|;
 name|INSTRUCTIONS
 index|[
-name|Constants
+name|Const
 operator|.
 name|ICONST_4
 index|]
@@ -1401,7 +1401,7 @@ name|ICONST_4
 expr_stmt|;
 name|INSTRUCTIONS
 index|[
-name|Constants
+name|Const
 operator|.
 name|ICONST_5
 index|]
@@ -1410,7 +1410,7 @@ name|ICONST_5
 expr_stmt|;
 name|INSTRUCTIONS
 index|[
-name|Constants
+name|Const
 operator|.
 name|LCONST_0
 index|]
@@ -1419,7 +1419,7 @@ name|LCONST_0
 expr_stmt|;
 name|INSTRUCTIONS
 index|[
-name|Constants
+name|Const
 operator|.
 name|LCONST_1
 index|]
@@ -1428,7 +1428,7 @@ name|LCONST_1
 expr_stmt|;
 name|INSTRUCTIONS
 index|[
-name|Constants
+name|Const
 operator|.
 name|FCONST_0
 index|]
@@ -1437,7 +1437,7 @@ name|FCONST_0
 expr_stmt|;
 name|INSTRUCTIONS
 index|[
-name|Constants
+name|Const
 operator|.
 name|FCONST_1
 index|]
@@ -1446,7 +1446,7 @@ name|FCONST_1
 expr_stmt|;
 name|INSTRUCTIONS
 index|[
-name|Constants
+name|Const
 operator|.
 name|FCONST_2
 index|]
@@ -1455,7 +1455,7 @@ name|FCONST_2
 expr_stmt|;
 name|INSTRUCTIONS
 index|[
-name|Constants
+name|Const
 operator|.
 name|DCONST_0
 index|]
@@ -1464,7 +1464,7 @@ name|DCONST_0
 expr_stmt|;
 name|INSTRUCTIONS
 index|[
-name|Constants
+name|Const
 operator|.
 name|DCONST_1
 index|]
@@ -1473,7 +1473,7 @@ name|DCONST_1
 expr_stmt|;
 name|INSTRUCTIONS
 index|[
-name|Constants
+name|Const
 operator|.
 name|IALOAD
 index|]
@@ -1482,7 +1482,7 @@ name|IALOAD
 expr_stmt|;
 name|INSTRUCTIONS
 index|[
-name|Constants
+name|Const
 operator|.
 name|LALOAD
 index|]
@@ -1491,7 +1491,7 @@ name|LALOAD
 expr_stmt|;
 name|INSTRUCTIONS
 index|[
-name|Constants
+name|Const
 operator|.
 name|FALOAD
 index|]
@@ -1500,7 +1500,7 @@ name|FALOAD
 expr_stmt|;
 name|INSTRUCTIONS
 index|[
-name|Constants
+name|Const
 operator|.
 name|DALOAD
 index|]
@@ -1509,7 +1509,7 @@ name|DALOAD
 expr_stmt|;
 name|INSTRUCTIONS
 index|[
-name|Constants
+name|Const
 operator|.
 name|AALOAD
 index|]
@@ -1518,7 +1518,7 @@ name|AALOAD
 expr_stmt|;
 name|INSTRUCTIONS
 index|[
-name|Constants
+name|Const
 operator|.
 name|BALOAD
 index|]
@@ -1527,7 +1527,7 @@ name|BALOAD
 expr_stmt|;
 name|INSTRUCTIONS
 index|[
-name|Constants
+name|Const
 operator|.
 name|CALOAD
 index|]
@@ -1536,7 +1536,7 @@ name|CALOAD
 expr_stmt|;
 name|INSTRUCTIONS
 index|[
-name|Constants
+name|Const
 operator|.
 name|SALOAD
 index|]
@@ -1545,7 +1545,7 @@ name|SALOAD
 expr_stmt|;
 name|INSTRUCTIONS
 index|[
-name|Constants
+name|Const
 operator|.
 name|IASTORE
 index|]
@@ -1554,7 +1554,7 @@ name|IASTORE
 expr_stmt|;
 name|INSTRUCTIONS
 index|[
-name|Constants
+name|Const
 operator|.
 name|LASTORE
 index|]
@@ -1563,7 +1563,7 @@ name|LASTORE
 expr_stmt|;
 name|INSTRUCTIONS
 index|[
-name|Constants
+name|Const
 operator|.
 name|FASTORE
 index|]
@@ -1572,7 +1572,7 @@ name|FASTORE
 expr_stmt|;
 name|INSTRUCTIONS
 index|[
-name|Constants
+name|Const
 operator|.
 name|DASTORE
 index|]
@@ -1581,7 +1581,7 @@ name|DASTORE
 expr_stmt|;
 name|INSTRUCTIONS
 index|[
-name|Constants
+name|Const
 operator|.
 name|AASTORE
 index|]
@@ -1590,7 +1590,7 @@ name|AASTORE
 expr_stmt|;
 name|INSTRUCTIONS
 index|[
-name|Constants
+name|Const
 operator|.
 name|BASTORE
 index|]
@@ -1599,7 +1599,7 @@ name|BASTORE
 expr_stmt|;
 name|INSTRUCTIONS
 index|[
-name|Constants
+name|Const
 operator|.
 name|CASTORE
 index|]
@@ -1608,7 +1608,7 @@ name|CASTORE
 expr_stmt|;
 name|INSTRUCTIONS
 index|[
-name|Constants
+name|Const
 operator|.
 name|SASTORE
 index|]
@@ -1617,7 +1617,7 @@ name|SASTORE
 expr_stmt|;
 name|INSTRUCTIONS
 index|[
-name|Constants
+name|Const
 operator|.
 name|POP
 index|]
@@ -1626,7 +1626,7 @@ name|POP
 expr_stmt|;
 name|INSTRUCTIONS
 index|[
-name|Constants
+name|Const
 operator|.
 name|POP2
 index|]
@@ -1635,7 +1635,7 @@ name|POP2
 expr_stmt|;
 name|INSTRUCTIONS
 index|[
-name|Constants
+name|Const
 operator|.
 name|DUP
 index|]
@@ -1644,7 +1644,7 @@ name|DUP
 expr_stmt|;
 name|INSTRUCTIONS
 index|[
-name|Constants
+name|Const
 operator|.
 name|DUP_X1
 index|]
@@ -1653,7 +1653,7 @@ name|DUP_X1
 expr_stmt|;
 name|INSTRUCTIONS
 index|[
-name|Constants
+name|Const
 operator|.
 name|DUP_X2
 index|]
@@ -1662,7 +1662,7 @@ name|DUP_X2
 expr_stmt|;
 name|INSTRUCTIONS
 index|[
-name|Constants
+name|Const
 operator|.
 name|DUP2
 index|]
@@ -1671,7 +1671,7 @@ name|DUP2
 expr_stmt|;
 name|INSTRUCTIONS
 index|[
-name|Constants
+name|Const
 operator|.
 name|DUP2_X1
 index|]
@@ -1680,7 +1680,7 @@ name|DUP2_X1
 expr_stmt|;
 name|INSTRUCTIONS
 index|[
-name|Constants
+name|Const
 operator|.
 name|DUP2_X2
 index|]
@@ -1689,7 +1689,7 @@ name|DUP2_X2
 expr_stmt|;
 name|INSTRUCTIONS
 index|[
-name|Constants
+name|Const
 operator|.
 name|SWAP
 index|]
@@ -1698,7 +1698,7 @@ name|SWAP
 expr_stmt|;
 name|INSTRUCTIONS
 index|[
-name|Constants
+name|Const
 operator|.
 name|IADD
 index|]
@@ -1707,7 +1707,7 @@ name|IADD
 expr_stmt|;
 name|INSTRUCTIONS
 index|[
-name|Constants
+name|Const
 operator|.
 name|LADD
 index|]
@@ -1716,7 +1716,7 @@ name|LADD
 expr_stmt|;
 name|INSTRUCTIONS
 index|[
-name|Constants
+name|Const
 operator|.
 name|FADD
 index|]
@@ -1725,7 +1725,7 @@ name|FADD
 expr_stmt|;
 name|INSTRUCTIONS
 index|[
-name|Constants
+name|Const
 operator|.
 name|DADD
 index|]
@@ -1734,7 +1734,7 @@ name|DADD
 expr_stmt|;
 name|INSTRUCTIONS
 index|[
-name|Constants
+name|Const
 operator|.
 name|ISUB
 index|]
@@ -1743,7 +1743,7 @@ name|ISUB
 expr_stmt|;
 name|INSTRUCTIONS
 index|[
-name|Constants
+name|Const
 operator|.
 name|LSUB
 index|]
@@ -1752,7 +1752,7 @@ name|LSUB
 expr_stmt|;
 name|INSTRUCTIONS
 index|[
-name|Constants
+name|Const
 operator|.
 name|FSUB
 index|]
@@ -1761,7 +1761,7 @@ name|FSUB
 expr_stmt|;
 name|INSTRUCTIONS
 index|[
-name|Constants
+name|Const
 operator|.
 name|DSUB
 index|]
@@ -1770,7 +1770,7 @@ name|DSUB
 expr_stmt|;
 name|INSTRUCTIONS
 index|[
-name|Constants
+name|Const
 operator|.
 name|IMUL
 index|]
@@ -1779,7 +1779,7 @@ name|IMUL
 expr_stmt|;
 name|INSTRUCTIONS
 index|[
-name|Constants
+name|Const
 operator|.
 name|LMUL
 index|]
@@ -1788,7 +1788,7 @@ name|LMUL
 expr_stmt|;
 name|INSTRUCTIONS
 index|[
-name|Constants
+name|Const
 operator|.
 name|FMUL
 index|]
@@ -1797,7 +1797,7 @@ name|FMUL
 expr_stmt|;
 name|INSTRUCTIONS
 index|[
-name|Constants
+name|Const
 operator|.
 name|DMUL
 index|]
@@ -1806,7 +1806,7 @@ name|DMUL
 expr_stmt|;
 name|INSTRUCTIONS
 index|[
-name|Constants
+name|Const
 operator|.
 name|IDIV
 index|]
@@ -1815,7 +1815,7 @@ name|IDIV
 expr_stmt|;
 name|INSTRUCTIONS
 index|[
-name|Constants
+name|Const
 operator|.
 name|LDIV
 index|]
@@ -1824,7 +1824,7 @@ name|LDIV
 expr_stmt|;
 name|INSTRUCTIONS
 index|[
-name|Constants
+name|Const
 operator|.
 name|FDIV
 index|]
@@ -1833,7 +1833,7 @@ name|FDIV
 expr_stmt|;
 name|INSTRUCTIONS
 index|[
-name|Constants
+name|Const
 operator|.
 name|DDIV
 index|]
@@ -1842,7 +1842,7 @@ name|DDIV
 expr_stmt|;
 name|INSTRUCTIONS
 index|[
-name|Constants
+name|Const
 operator|.
 name|IREM
 index|]
@@ -1851,7 +1851,7 @@ name|IREM
 expr_stmt|;
 name|INSTRUCTIONS
 index|[
-name|Constants
+name|Const
 operator|.
 name|LREM
 index|]
@@ -1860,7 +1860,7 @@ name|LREM
 expr_stmt|;
 name|INSTRUCTIONS
 index|[
-name|Constants
+name|Const
 operator|.
 name|FREM
 index|]
@@ -1869,7 +1869,7 @@ name|FREM
 expr_stmt|;
 name|INSTRUCTIONS
 index|[
-name|Constants
+name|Const
 operator|.
 name|DREM
 index|]
@@ -1878,7 +1878,7 @@ name|DREM
 expr_stmt|;
 name|INSTRUCTIONS
 index|[
-name|Constants
+name|Const
 operator|.
 name|INEG
 index|]
@@ -1887,7 +1887,7 @@ name|INEG
 expr_stmt|;
 name|INSTRUCTIONS
 index|[
-name|Constants
+name|Const
 operator|.
 name|LNEG
 index|]
@@ -1896,7 +1896,7 @@ name|LNEG
 expr_stmt|;
 name|INSTRUCTIONS
 index|[
-name|Constants
+name|Const
 operator|.
 name|FNEG
 index|]
@@ -1905,7 +1905,7 @@ name|FNEG
 expr_stmt|;
 name|INSTRUCTIONS
 index|[
-name|Constants
+name|Const
 operator|.
 name|DNEG
 index|]
@@ -1914,7 +1914,7 @@ name|DNEG
 expr_stmt|;
 name|INSTRUCTIONS
 index|[
-name|Constants
+name|Const
 operator|.
 name|ISHL
 index|]
@@ -1923,7 +1923,7 @@ name|ISHL
 expr_stmt|;
 name|INSTRUCTIONS
 index|[
-name|Constants
+name|Const
 operator|.
 name|LSHL
 index|]
@@ -1932,7 +1932,7 @@ name|LSHL
 expr_stmt|;
 name|INSTRUCTIONS
 index|[
-name|Constants
+name|Const
 operator|.
 name|ISHR
 index|]
@@ -1941,7 +1941,7 @@ name|ISHR
 expr_stmt|;
 name|INSTRUCTIONS
 index|[
-name|Constants
+name|Const
 operator|.
 name|LSHR
 index|]
@@ -1950,7 +1950,7 @@ name|LSHR
 expr_stmt|;
 name|INSTRUCTIONS
 index|[
-name|Constants
+name|Const
 operator|.
 name|IUSHR
 index|]
@@ -1959,7 +1959,7 @@ name|IUSHR
 expr_stmt|;
 name|INSTRUCTIONS
 index|[
-name|Constants
+name|Const
 operator|.
 name|LUSHR
 index|]
@@ -1968,7 +1968,7 @@ name|LUSHR
 expr_stmt|;
 name|INSTRUCTIONS
 index|[
-name|Constants
+name|Const
 operator|.
 name|IAND
 index|]
@@ -1977,7 +1977,7 @@ name|IAND
 expr_stmt|;
 name|INSTRUCTIONS
 index|[
-name|Constants
+name|Const
 operator|.
 name|LAND
 index|]
@@ -1986,7 +1986,7 @@ name|LAND
 expr_stmt|;
 name|INSTRUCTIONS
 index|[
-name|Constants
+name|Const
 operator|.
 name|IOR
 index|]
@@ -1995,7 +1995,7 @@ name|IOR
 expr_stmt|;
 name|INSTRUCTIONS
 index|[
-name|Constants
+name|Const
 operator|.
 name|LOR
 index|]
@@ -2004,7 +2004,7 @@ name|LOR
 expr_stmt|;
 name|INSTRUCTIONS
 index|[
-name|Constants
+name|Const
 operator|.
 name|IXOR
 index|]
@@ -2013,7 +2013,7 @@ name|IXOR
 expr_stmt|;
 name|INSTRUCTIONS
 index|[
-name|Constants
+name|Const
 operator|.
 name|LXOR
 index|]
@@ -2022,7 +2022,7 @@ name|LXOR
 expr_stmt|;
 name|INSTRUCTIONS
 index|[
-name|Constants
+name|Const
 operator|.
 name|I2L
 index|]
@@ -2031,7 +2031,7 @@ name|I2L
 expr_stmt|;
 name|INSTRUCTIONS
 index|[
-name|Constants
+name|Const
 operator|.
 name|I2F
 index|]
@@ -2040,7 +2040,7 @@ name|I2F
 expr_stmt|;
 name|INSTRUCTIONS
 index|[
-name|Constants
+name|Const
 operator|.
 name|I2D
 index|]
@@ -2049,7 +2049,7 @@ name|I2D
 expr_stmt|;
 name|INSTRUCTIONS
 index|[
-name|Constants
+name|Const
 operator|.
 name|L2I
 index|]
@@ -2058,7 +2058,7 @@ name|L2I
 expr_stmt|;
 name|INSTRUCTIONS
 index|[
-name|Constants
+name|Const
 operator|.
 name|L2F
 index|]
@@ -2067,7 +2067,7 @@ name|L2F
 expr_stmt|;
 name|INSTRUCTIONS
 index|[
-name|Constants
+name|Const
 operator|.
 name|L2D
 index|]
@@ -2076,7 +2076,7 @@ name|L2D
 expr_stmt|;
 name|INSTRUCTIONS
 index|[
-name|Constants
+name|Const
 operator|.
 name|F2I
 index|]
@@ -2085,7 +2085,7 @@ name|F2I
 expr_stmt|;
 name|INSTRUCTIONS
 index|[
-name|Constants
+name|Const
 operator|.
 name|F2L
 index|]
@@ -2094,7 +2094,7 @@ name|F2L
 expr_stmt|;
 name|INSTRUCTIONS
 index|[
-name|Constants
+name|Const
 operator|.
 name|F2D
 index|]
@@ -2103,7 +2103,7 @@ name|F2D
 expr_stmt|;
 name|INSTRUCTIONS
 index|[
-name|Constants
+name|Const
 operator|.
 name|D2I
 index|]
@@ -2112,7 +2112,7 @@ name|D2I
 expr_stmt|;
 name|INSTRUCTIONS
 index|[
-name|Constants
+name|Const
 operator|.
 name|D2L
 index|]
@@ -2121,7 +2121,7 @@ name|D2L
 expr_stmt|;
 name|INSTRUCTIONS
 index|[
-name|Constants
+name|Const
 operator|.
 name|D2F
 index|]
@@ -2130,7 +2130,7 @@ name|D2F
 expr_stmt|;
 name|INSTRUCTIONS
 index|[
-name|Constants
+name|Const
 operator|.
 name|I2B
 index|]
@@ -2139,7 +2139,7 @@ name|I2B
 expr_stmt|;
 name|INSTRUCTIONS
 index|[
-name|Constants
+name|Const
 operator|.
 name|I2C
 index|]
@@ -2148,7 +2148,7 @@ name|I2C
 expr_stmt|;
 name|INSTRUCTIONS
 index|[
-name|Constants
+name|Const
 operator|.
 name|I2S
 index|]
@@ -2157,7 +2157,7 @@ name|I2S
 expr_stmt|;
 name|INSTRUCTIONS
 index|[
-name|Constants
+name|Const
 operator|.
 name|LCMP
 index|]
@@ -2166,7 +2166,7 @@ name|LCMP
 expr_stmt|;
 name|INSTRUCTIONS
 index|[
-name|Constants
+name|Const
 operator|.
 name|FCMPL
 index|]
@@ -2175,7 +2175,7 @@ name|FCMPL
 expr_stmt|;
 name|INSTRUCTIONS
 index|[
-name|Constants
+name|Const
 operator|.
 name|FCMPG
 index|]
@@ -2184,7 +2184,7 @@ name|FCMPG
 expr_stmt|;
 name|INSTRUCTIONS
 index|[
-name|Constants
+name|Const
 operator|.
 name|DCMPL
 index|]
@@ -2193,7 +2193,7 @@ name|DCMPL
 expr_stmt|;
 name|INSTRUCTIONS
 index|[
-name|Constants
+name|Const
 operator|.
 name|DCMPG
 index|]
@@ -2202,7 +2202,7 @@ name|DCMPG
 expr_stmt|;
 name|INSTRUCTIONS
 index|[
-name|Constants
+name|Const
 operator|.
 name|IRETURN
 index|]
@@ -2211,7 +2211,7 @@ name|IRETURN
 expr_stmt|;
 name|INSTRUCTIONS
 index|[
-name|Constants
+name|Const
 operator|.
 name|LRETURN
 index|]
@@ -2220,7 +2220,7 @@ name|LRETURN
 expr_stmt|;
 name|INSTRUCTIONS
 index|[
-name|Constants
+name|Const
 operator|.
 name|FRETURN
 index|]
@@ -2229,7 +2229,7 @@ name|FRETURN
 expr_stmt|;
 name|INSTRUCTIONS
 index|[
-name|Constants
+name|Const
 operator|.
 name|DRETURN
 index|]
@@ -2238,7 +2238,7 @@ name|DRETURN
 expr_stmt|;
 name|INSTRUCTIONS
 index|[
-name|Constants
+name|Const
 operator|.
 name|ARETURN
 index|]
@@ -2247,7 +2247,7 @@ name|ARETURN
 expr_stmt|;
 name|INSTRUCTIONS
 index|[
-name|Constants
+name|Const
 operator|.
 name|RETURN
 index|]
@@ -2256,7 +2256,7 @@ name|RETURN
 expr_stmt|;
 name|INSTRUCTIONS
 index|[
-name|Constants
+name|Const
 operator|.
 name|ARRAYLENGTH
 index|]
@@ -2265,7 +2265,7 @@ name|ARRAYLENGTH
 expr_stmt|;
 name|INSTRUCTIONS
 index|[
-name|Constants
+name|Const
 operator|.
 name|ATHROW
 index|]
@@ -2274,7 +2274,7 @@ name|ATHROW
 expr_stmt|;
 name|INSTRUCTIONS
 index|[
-name|Constants
+name|Const
 operator|.
 name|MONITORENTER
 index|]
@@ -2283,7 +2283,7 @@ name|MONITORENTER
 expr_stmt|;
 name|INSTRUCTIONS
 index|[
-name|Constants
+name|Const
 operator|.
 name|MONITOREXIT
 index|]

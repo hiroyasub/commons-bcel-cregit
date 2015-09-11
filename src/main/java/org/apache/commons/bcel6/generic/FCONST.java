@@ -56,7 +56,7 @@ name|commons
 operator|.
 name|bcel6
 operator|.
-name|Constants
+name|Const
 operator|.
 name|FCONST_0
 argument_list|,
@@ -85,7 +85,7 @@ name|commons
 operator|.
 name|bcel6
 operator|.
-name|Constants
+name|Const
 operator|.
 name|FCONST_0
 argument_list|)
@@ -110,7 +110,7 @@ name|commons
 operator|.
 name|bcel6
 operator|.
-name|Constants
+name|Const
 operator|.
 name|FCONST_1
 argument_list|)
@@ -135,7 +135,7 @@ name|commons
 operator|.
 name|bcel6
 operator|.
-name|Constants
+name|Const
 operator|.
 name|FCONST_2
 argument_list|)

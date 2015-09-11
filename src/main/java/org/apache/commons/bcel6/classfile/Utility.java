@@ -191,7 +191,7 @@ name|commons
 operator|.
 name|bcel6
 operator|.
-name|Constants
+name|Const
 import|;
 end_import
 
@@ -370,7 +370,7 @@ literal|0
 init|;
 name|p
 operator|<
-name|Constants
+name|Const
 operator|.
 name|MAX_ACC_FLAG
 condition|;
@@ -406,7 +406,7 @@ operator|(
 operator|(
 name|p
 operator|==
-name|Constants
+name|Const
 operator|.
 name|ACC_SUPER
 operator|)
@@ -414,7 +414,7 @@ operator|||
 operator|(
 name|p
 operator|==
-name|Constants
+name|Const
 operator|.
 name|ACC_INTERFACE
 operator|)
@@ -427,7 +427,7 @@ name|buf
 operator|.
 name|append
 argument_list|(
-name|Constants
+name|Const
 operator|.
 name|getAccessName
 argument_list|(
@@ -467,7 +467,7 @@ operator|(
 operator|(
 name|access_flags
 operator|&
-name|Constants
+name|Const
 operator|.
 name|ACC_INTERFACE
 operator|)
@@ -782,7 +782,7 @@ init|=
 operator|new
 name|StringBuilder
 argument_list|(
-name|Constants
+name|Const
 operator|.
 name|getOpcodeName
 argument_list|(
@@ -796,7 +796,7 @@ condition|(
 operator|(
 name|opcode
 operator|==
-name|Constants
+name|Const
 operator|.
 name|TABLESWITCH
 operator|)
@@ -804,7 +804,7 @@ operator|||
 operator|(
 name|opcode
 operator|==
-name|Constants
+name|Const
 operator|.
 name|LOOKUPSWITCH
 operator|)
@@ -874,7 +874,7 @@ name|println
 argument_list|(
 literal|"Warning: Padding byte != 0 in "
 operator|+
-name|Constants
+name|Const
 operator|.
 name|getOpcodeName
 argument_list|(
@@ -904,7 +904,7 @@ condition|)
 block|{
 comment|/* Table switch has variable length arguments.              */
 case|case
-name|Constants
+name|Const
 operator|.
 name|TABLESWITCH
 case|:
@@ -1057,7 +1057,7 @@ expr_stmt|;
 break|break;
 comment|/* Lookup switch has variable length arguments.              */
 case|case
-name|Constants
+name|Const
 operator|.
 name|LOOKUPSWITCH
 case|:
@@ -1228,92 +1228,92 @@ block|}
 break|break;
 comment|/* Two address bytes + offset from start of byte stream form the              * jump target              */
 case|case
-name|Constants
+name|Const
 operator|.
 name|GOTO
 case|:
 case|case
-name|Constants
+name|Const
 operator|.
 name|IFEQ
 case|:
 case|case
-name|Constants
+name|Const
 operator|.
 name|IFGE
 case|:
 case|case
-name|Constants
+name|Const
 operator|.
 name|IFGT
 case|:
 case|case
-name|Constants
+name|Const
 operator|.
 name|IFLE
 case|:
 case|case
-name|Constants
+name|Const
 operator|.
 name|IFLT
 case|:
 case|case
-name|Constants
+name|Const
 operator|.
 name|JSR
 case|:
 case|case
-name|Constants
+name|Const
 operator|.
 name|IFNE
 case|:
 case|case
-name|Constants
+name|Const
 operator|.
 name|IFNONNULL
 case|:
 case|case
-name|Constants
+name|Const
 operator|.
 name|IFNULL
 case|:
 case|case
-name|Constants
+name|Const
 operator|.
 name|IF_ACMPEQ
 case|:
 case|case
-name|Constants
+name|Const
 operator|.
 name|IF_ACMPNE
 case|:
 case|case
-name|Constants
+name|Const
 operator|.
 name|IF_ICMPEQ
 case|:
 case|case
-name|Constants
+name|Const
 operator|.
 name|IF_ICMPGE
 case|:
 case|case
-name|Constants
+name|Const
 operator|.
 name|IF_ICMPGT
 case|:
 case|case
-name|Constants
+name|Const
 operator|.
 name|IF_ICMPLE
 case|:
 case|case
-name|Constants
+name|Const
 operator|.
 name|IF_ICMPLT
 case|:
 case|case
-name|Constants
+name|Const
 operator|.
 name|IF_ICMPNE
 case|:
@@ -1344,12 +1344,12 @@ expr_stmt|;
 break|break;
 comment|/* 32-bit wide jumps              */
 case|case
-name|Constants
+name|Const
 operator|.
 name|GOTO_W
 case|:
 case|case
-name|Constants
+name|Const
 operator|.
 name|JSR_W
 case|:
@@ -1380,57 +1380,57 @@ expr_stmt|;
 break|break;
 comment|/* Index byte references local variable (register)              */
 case|case
-name|Constants
+name|Const
 operator|.
 name|ALOAD
 case|:
 case|case
-name|Constants
+name|Const
 operator|.
 name|ASTORE
 case|:
 case|case
-name|Constants
+name|Const
 operator|.
 name|DLOAD
 case|:
 case|case
-name|Constants
+name|Const
 operator|.
 name|DSTORE
 case|:
 case|case
-name|Constants
+name|Const
 operator|.
 name|FLOAD
 case|:
 case|case
-name|Constants
+name|Const
 operator|.
 name|FSTORE
 case|:
 case|case
-name|Constants
+name|Const
 operator|.
 name|ILOAD
 case|:
 case|case
-name|Constants
+name|Const
 operator|.
 name|ISTORE
 case|:
 case|case
-name|Constants
+name|Const
 operator|.
 name|LLOAD
 case|:
 case|case
-name|Constants
+name|Const
 operator|.
 name|LSTORE
 case|:
 case|case
-name|Constants
+name|Const
 operator|.
 name|RET
 case|:
@@ -1477,7 +1477,7 @@ expr_stmt|;
 break|break;
 comment|/*              * Remember wide byte which is used to form a 16-bit address in the              * following instruction. Relies on that the method is called again with              * the following opcode.              */
 case|case
-name|Constants
+name|Const
 operator|.
 name|WIDE
 case|:
@@ -1495,7 +1495,7 @@ expr_stmt|;
 break|break;
 comment|/* Array of basic type.              */
 case|case
-name|Constants
+name|Const
 operator|.
 name|NEWARRAY
 case|:
@@ -1508,7 +1508,7 @@ argument_list|)
 operator|.
 name|append
 argument_list|(
-name|Constants
+name|Const
 operator|.
 name|getTypeName
 argument_list|(
@@ -1527,22 +1527,22 @@ expr_stmt|;
 break|break;
 comment|/* Access object/class fields.              */
 case|case
-name|Constants
+name|Const
 operator|.
 name|GETFIELD
 case|:
 case|case
-name|Constants
+name|Const
 operator|.
 name|GETSTATIC
 case|:
 case|case
-name|Constants
+name|Const
 operator|.
 name|PUTFIELD
 case|:
 case|case
-name|Constants
+name|Const
 operator|.
 name|PUTSTATIC
 case|:
@@ -1568,7 +1568,7 @@ name|constantToString
 argument_list|(
 name|index
 argument_list|,
-name|Constants
+name|Const
 operator|.
 name|CONSTANT_Fieldref
 argument_list|)
@@ -1590,12 +1590,12 @@ expr_stmt|;
 break|break;
 comment|/* Operands are references to classes in constant pool              */
 case|case
-name|Constants
+name|Const
 operator|.
 name|NEW
 case|:
 case|case
-name|Constants
+name|Const
 operator|.
 name|CHECKCAST
 case|:
@@ -1608,7 +1608,7 @@ argument_list|)
 expr_stmt|;
 comment|//$FALL-THROUGH$
 case|case
-name|Constants
+name|Const
 operator|.
 name|INSTANCEOF
 case|:
@@ -1634,7 +1634,7 @@ name|constantToString
 argument_list|(
 name|index
 argument_list|,
-name|Constants
+name|Const
 operator|.
 name|CONSTANT_Class
 argument_list|)
@@ -1661,12 +1661,12 @@ expr_stmt|;
 break|break;
 comment|/* Operands are references to methods in constant pool              */
 case|case
-name|Constants
+name|Const
 operator|.
 name|INVOKESPECIAL
 case|:
 case|case
-name|Constants
+name|Const
 operator|.
 name|INVOKESTATIC
 case|:
@@ -1726,7 +1726,7 @@ argument_list|)
 expr_stmt|;
 break|break;
 case|case
-name|Constants
+name|Const
 operator|.
 name|INVOKEVIRTUAL
 case|:
@@ -1752,7 +1752,7 @@ name|constantToString
 argument_list|(
 name|index
 argument_list|,
-name|Constants
+name|Const
 operator|.
 name|CONSTANT_Methodref
 argument_list|)
@@ -1773,7 +1773,7 @@ argument_list|)
 expr_stmt|;
 break|break;
 case|case
-name|Constants
+name|Const
 operator|.
 name|INVOKEINTERFACE
 case|:
@@ -1808,7 +1808,7 @@ name|constantToString
 argument_list|(
 name|index
 argument_list|,
-name|Constants
+name|Const
 operator|.
 name|CONSTANT_InterfaceMethodref
 argument_list|)
@@ -1848,7 +1848,7 @@ expr_stmt|;
 comment|// Last byte is a reserved space
 break|break;
 case|case
-name|Constants
+name|Const
 operator|.
 name|INVOKEDYNAMIC
 case|:
@@ -1874,7 +1874,7 @@ name|constantToString
 argument_list|(
 name|index
 argument_list|,
-name|Constants
+name|Const
 operator|.
 name|CONSTANT_InvokeDynamic
 argument_list|)
@@ -1914,12 +1914,12 @@ comment|// Last byte is a reserved space
 break|break;
 comment|/* Operands are references to items in constant pool              */
 case|case
-name|Constants
+name|Const
 operator|.
 name|LDC_W
 case|:
 case|case
-name|Constants
+name|Const
 operator|.
 name|LDC2_W
 case|:
@@ -1972,7 +1972,7 @@ argument_list|)
 expr_stmt|;
 break|break;
 case|case
-name|Constants
+name|Const
 operator|.
 name|LDC
 case|:
@@ -2026,7 +2026,7 @@ expr_stmt|;
 break|break;
 comment|/* Array of references.              */
 case|case
-name|Constants
+name|Const
 operator|.
 name|ANEWARRAY
 case|:
@@ -2054,7 +2054,7 @@ name|getConstantString
 argument_list|(
 name|index
 argument_list|,
-name|Constants
+name|Const
 operator|.
 name|CONSTANT_Class
 argument_list|)
@@ -2084,7 +2084,7 @@ expr_stmt|;
 break|break;
 comment|/* Multidimensional array of references.              */
 case|case
-name|Constants
+name|Const
 operator|.
 name|MULTIANEWARRAY
 case|:
@@ -2121,7 +2121,7 @@ name|getConstantString
 argument_list|(
 name|index
 argument_list|,
-name|Constants
+name|Const
 operator|.
 name|CONSTANT_Class
 argument_list|)
@@ -2157,7 +2157,7 @@ block|}
 break|break;
 comment|/* Increment local variable.              */
 case|case
-name|Constants
+name|Const
 operator|.
 name|IINC
 case|:
@@ -2228,7 +2228,7 @@ break|break;
 default|default:
 if|if
 condition|(
-name|Constants
+name|Const
 operator|.
 name|getNoOfOperands
 argument_list|(
@@ -2247,7 +2247,7 @@ literal|0
 init|;
 name|i
 operator|<
-name|Constants
+name|Const
 operator|.
 name|getOperandTypeCount
 argument_list|(
@@ -2267,7 +2267,7 @@ argument_list|)
 expr_stmt|;
 switch|switch
 condition|(
-name|Constants
+name|Const
 operator|.
 name|getOperandType
 argument_list|(
@@ -2278,7 +2278,7 @@ argument_list|)
 condition|)
 block|{
 case|case
-name|Constants
+name|Const
 operator|.
 name|T_BYTE
 case|:
@@ -2294,7 +2294,7 @@ argument_list|)
 expr_stmt|;
 break|break;
 case|case
-name|Constants
+name|Const
 operator|.
 name|T_SHORT
 case|:
@@ -2310,7 +2310,7 @@ argument_list|)
 expr_stmt|;
 break|break;
 case|case
-name|Constants
+name|Const
 operator|.
 name|T_INT
 case|:
@@ -4462,14 +4462,14 @@ control|(
 name|int
 name|i
 init|=
-name|Constants
+name|Const
 operator|.
 name|T_BOOLEAN
 init|;
 operator|(
 name|i
 operator|<=
-name|Constants
+name|Const
 operator|.
 name|T_VOID
 operator|)
@@ -4483,7 +4483,7 @@ control|)
 block|{
 if|if
 condition|(
-name|Constants
+name|Const
 operator|.
 name|getTypeName
 argument_list|(
@@ -4504,7 +4504,7 @@ name|buf
 operator|.
 name|append
 argument_list|(
-name|Constants
+name|Const
 operator|.
 name|getShortTypeName
 argument_list|(
@@ -4667,7 +4667,7 @@ return|return
 name|count
 return|;
 block|}
-comment|/**      * Return type of method signature as a byte value as defined in<em>Constants</em>      *      * @param  signature in format described above      * @return type of method signature      * @see    Constants      *       * @throws ClassFormatException if signature is not a method signature      */
+comment|/**      * Return type of method signature as a byte value as defined in<em>Constants</em>      *      * @param  signature in format described above      * @return type of method signature      * @see    Const      *       * @throws ClassFormatException if signature is not a method signature      */
 specifier|public
 specifier|static
 name|byte
@@ -4748,7 +4748,7 @@ argument_list|)
 throw|;
 block|}
 block|}
-comment|/**      * Return type of signature as a byte value as defined in<em>Constants</em>      *      * @param  signature in format described above      * @return type of signature      * @see    Constants      *       * @throws ClassFormatException if signature isn't a known type      */
+comment|/**      * Return type of signature as a byte value as defined in<em>Constants</em>      *      * @param  signature in format described above      * @return type of signature      * @see    Const      *       * @throws ClassFormatException if signature isn't a known type      */
 specifier|public
 specifier|static
 name|byte
@@ -4776,7 +4776,7 @@ case|case
 literal|'B'
 case|:
 return|return
-name|Constants
+name|Const
 operator|.
 name|T_BYTE
 return|;
@@ -4784,7 +4784,7 @@ case|case
 literal|'C'
 case|:
 return|return
-name|Constants
+name|Const
 operator|.
 name|T_CHAR
 return|;
@@ -4792,7 +4792,7 @@ case|case
 literal|'D'
 case|:
 return|return
-name|Constants
+name|Const
 operator|.
 name|T_DOUBLE
 return|;
@@ -4800,7 +4800,7 @@ case|case
 literal|'F'
 case|:
 return|return
-name|Constants
+name|Const
 operator|.
 name|T_FLOAT
 return|;
@@ -4808,7 +4808,7 @@ case|case
 literal|'I'
 case|:
 return|return
-name|Constants
+name|Const
 operator|.
 name|T_INT
 return|;
@@ -4816,7 +4816,7 @@ case|case
 literal|'J'
 case|:
 return|return
-name|Constants
+name|Const
 operator|.
 name|T_LONG
 return|;
@@ -4827,7 +4827,7 @@ case|case
 literal|'T'
 case|:
 return|return
-name|Constants
+name|Const
 operator|.
 name|T_REFERENCE
 return|;
@@ -4835,7 +4835,7 @@ case|case
 literal|'['
 case|:
 return|return
-name|Constants
+name|Const
 operator|.
 name|T_ARRAY
 return|;
@@ -4843,7 +4843,7 @@ case|case
 literal|'V'
 case|:
 return|return
-name|Constants
+name|Const
 operator|.
 name|T_VOID
 return|;
@@ -4851,7 +4851,7 @@ case|case
 literal|'Z'
 case|:
 return|return
-name|Constants
+name|Const
 operator|.
 name|T_BOOLEAN
 return|;
@@ -4859,7 +4859,7 @@ case|case
 literal|'S'
 case|:
 return|return
-name|Constants
+name|Const
 operator|.
 name|T_SHORT
 return|;
@@ -4924,7 +4924,7 @@ literal|0
 init|;
 name|i
 operator|<
-name|Constants
+name|Const
 operator|.
 name|OPCODE_NAMES_LENGTH
 condition|;
@@ -4934,7 +4934,7 @@ control|)
 block|{
 if|if
 condition|(
-name|Constants
+name|Const
 operator|.
 name|getOpcodeName
 argument_list|(

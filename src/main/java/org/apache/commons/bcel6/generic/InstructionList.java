@@ -117,7 +117,7 @@ name|commons
 operator|.
 name|bcel6
 operator|.
-name|Constants
+name|Const
 import|;
 end_import
 
@@ -2962,7 +2962,7 @@ name|ClassGenException
 argument_list|(
 literal|"Branch target of "
 operator|+
-name|Constants
+name|Const
 operator|.
 name|getOpcodeName
 argument_list|(
@@ -3031,7 +3031,7 @@ name|ClassGenException
 argument_list|(
 literal|"Branch target of "
 operator|+
-name|Constants
+name|Const
 operator|.
 name|getOpcodeName
 argument_list|(
@@ -3067,7 +3067,7 @@ name|ClassGenException
 argument_list|(
 literal|"Branch instruction "
 operator|+
-name|Constants
+name|Const
 operator|.
 name|getOpcodeName
 argument_list|(
@@ -3141,12 +3141,12 @@ argument_list|()
 condition|)
 block|{
 case|case
-name|Constants
+name|Const
 operator|.
 name|JSR
 case|:
 case|case
-name|Constants
+name|Const
 operator|.
 name|GOTO
 case|:
@@ -3156,12 +3156,12 @@ literal|2
 expr_stmt|;
 break|break;
 case|case
-name|Constants
+name|Const
 operator|.
 name|TABLESWITCH
 case|:
 case|case
-name|Constants
+name|Const
 operator|.
 name|LOOKUPSWITCH
 case|:

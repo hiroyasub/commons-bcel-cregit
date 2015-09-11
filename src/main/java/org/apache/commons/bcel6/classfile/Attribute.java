@@ -87,7 +87,7 @@ name|commons
 operator|.
 name|bcel6
 operator|.
-name|Constants
+name|Const
 import|;
 end_import
 
@@ -338,7 +338,7 @@ block|{
 name|byte
 name|tag
 init|=
-name|Constants
+name|Const
 operator|.
 name|ATTR_UNKNOWN
 decl_stmt|;
@@ -364,7 +364,7 @@ name|getConstant
 argument_list|(
 name|name_index
 argument_list|,
-name|Constants
+name|Const
 operator|.
 name|CONSTANT_Utf8
 argument_list|)
@@ -396,7 +396,7 @@ literal|0
 init|;
 name|i
 operator|<
-name|Constants
+name|Const
 operator|.
 name|KNOWN_ATTRIBUTES
 condition|;
@@ -410,7 +410,7 @@ name|name
 operator|.
 name|equals
 argument_list|(
-name|Constants
+name|Const
 operator|.
 name|getAttributeName
 argument_list|(
@@ -434,7 +434,7 @@ name|tag
 condition|)
 block|{
 case|case
-name|Constants
+name|Const
 operator|.
 name|ATTR_UNKNOWN
 case|:
@@ -489,7 +489,7 @@ name|constant_pool
 argument_list|)
 return|;
 case|case
-name|Constants
+name|Const
 operator|.
 name|ATTR_CONSTANT_VALUE
 case|:
@@ -507,7 +507,7 @@ name|constant_pool
 argument_list|)
 return|;
 case|case
-name|Constants
+name|Const
 operator|.
 name|ATTR_SOURCE_FILE
 case|:
@@ -525,7 +525,7 @@ name|constant_pool
 argument_list|)
 return|;
 case|case
-name|Constants
+name|Const
 operator|.
 name|ATTR_CODE
 case|:
@@ -543,7 +543,7 @@ name|constant_pool
 argument_list|)
 return|;
 case|case
-name|Constants
+name|Const
 operator|.
 name|ATTR_EXCEPTIONS
 case|:
@@ -561,7 +561,7 @@ name|constant_pool
 argument_list|)
 return|;
 case|case
-name|Constants
+name|Const
 operator|.
 name|ATTR_LINE_NUMBER_TABLE
 case|:
@@ -579,7 +579,7 @@ name|constant_pool
 argument_list|)
 return|;
 case|case
-name|Constants
+name|Const
 operator|.
 name|ATTR_LOCAL_VARIABLE_TABLE
 case|:
@@ -597,7 +597,7 @@ name|constant_pool
 argument_list|)
 return|;
 case|case
-name|Constants
+name|Const
 operator|.
 name|ATTR_INNER_CLASSES
 case|:
@@ -615,7 +615,7 @@ name|constant_pool
 argument_list|)
 return|;
 case|case
-name|Constants
+name|Const
 operator|.
 name|ATTR_SYNTHETIC
 case|:
@@ -633,7 +633,7 @@ name|constant_pool
 argument_list|)
 return|;
 case|case
-name|Constants
+name|Const
 operator|.
 name|ATTR_DEPRECATED
 case|:
@@ -651,7 +651,7 @@ name|constant_pool
 argument_list|)
 return|;
 case|case
-name|Constants
+name|Const
 operator|.
 name|ATTR_PMG
 case|:
@@ -669,7 +669,7 @@ name|constant_pool
 argument_list|)
 return|;
 case|case
-name|Constants
+name|Const
 operator|.
 name|ATTR_SIGNATURE
 case|:
@@ -687,7 +687,7 @@ name|constant_pool
 argument_list|)
 return|;
 case|case
-name|Constants
+name|Const
 operator|.
 name|ATTR_STACK_MAP
 case|:
@@ -705,7 +705,7 @@ name|constant_pool
 argument_list|)
 return|;
 case|case
-name|Constants
+name|Const
 operator|.
 name|ATTR_RUNTIME_VISIBLE_ANNOTATIONS
 case|:
@@ -723,7 +723,7 @@ name|constant_pool
 argument_list|)
 return|;
 case|case
-name|Constants
+name|Const
 operator|.
 name|ATTR_RUNTIME_INVISIBLE_ANNOTATIONS
 case|:
@@ -741,7 +741,7 @@ name|constant_pool
 argument_list|)
 return|;
 case|case
-name|Constants
+name|Const
 operator|.
 name|ATTR_RUNTIME_VISIBLE_PARAMETER_ANNOTATIONS
 case|:
@@ -759,7 +759,7 @@ name|constant_pool
 argument_list|)
 return|;
 case|case
-name|Constants
+name|Const
 operator|.
 name|ATTR_RUNTIME_INVISIBLE_PARAMETER_ANNOTATIONS
 case|:
@@ -777,7 +777,7 @@ name|constant_pool
 argument_list|)
 return|;
 case|case
-name|Constants
+name|Const
 operator|.
 name|ATTR_ANNOTATION_DEFAULT
 case|:
@@ -795,7 +795,7 @@ name|constant_pool
 argument_list|)
 return|;
 case|case
-name|Constants
+name|Const
 operator|.
 name|ATTR_LOCAL_VARIABLE_TYPE_TABLE
 case|:
@@ -813,7 +813,7 @@ name|constant_pool
 argument_list|)
 return|;
 case|case
-name|Constants
+name|Const
 operator|.
 name|ATTR_ENCLOSING_METHOD
 case|:
@@ -831,7 +831,7 @@ name|constant_pool
 argument_list|)
 return|;
 case|case
-name|Constants
+name|Const
 operator|.
 name|ATTR_STACK_MAP_TABLE
 case|:
@@ -849,7 +849,7 @@ name|constant_pool
 argument_list|)
 return|;
 case|case
-name|Constants
+name|Const
 operator|.
 name|ATTR_BOOTSTRAP_METHODS
 case|:
@@ -867,7 +867,7 @@ name|constant_pool
 argument_list|)
 return|;
 case|case
-name|Constants
+name|Const
 operator|.
 name|ATTR_METHOD_PARAMETERS
 case|:
@@ -915,7 +915,7 @@ name|getConstant
 argument_list|(
 name|name_index
 argument_list|,
-name|Constants
+name|Const
 operator|.
 name|CONSTANT_Utf8
 argument_list|)
@@ -1086,7 +1086,7 @@ name|toString
 parameter_list|()
 block|{
 return|return
-name|Constants
+name|Const
 operator|.
 name|getAttributeName
 argument_list|(

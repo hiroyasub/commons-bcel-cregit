@@ -58,7 +58,7 @@ name|commons
 operator|.
 name|bcel6
 operator|.
-name|Constants
+name|Const
 operator|.
 name|LDIV
 argument_list|)

@@ -101,7 +101,7 @@ name|commons
 operator|.
 name|bcel6
 operator|.
-name|Constants
+name|Const
 import|;
 end_import
 
@@ -662,7 +662,7 @@ condition|(
 operator|(
 name|access_flags
 operator|&
-name|Constants
+name|Const
 operator|.
 name|ACC_INTERFACE
 operator|)
@@ -672,7 +672,7 @@ condition|)
 block|{
 name|access_flags
 operator||=
-name|Constants
+name|Const
 operator|.
 name|ACC_ABSTRACT
 expr_stmt|;
@@ -683,7 +683,7 @@ operator|(
 operator|(
 name|access_flags
 operator|&
-name|Constants
+name|Const
 operator|.
 name|ACC_ABSTRACT
 operator|)
@@ -695,7 +695,7 @@ operator|(
 operator|(
 name|access_flags
 operator|&
-name|Constants
+name|Const
 operator|.
 name|ACC_FINAL
 operator|)
@@ -824,7 +824,7 @@ operator|.
 name|readInt
 argument_list|()
 operator|!=
-name|Constants
+name|Const
 operator|.
 name|JVM_CLASSFILE_MAGIC
 condition|)

@@ -47,7 +47,7 @@ name|commons
 operator|.
 name|bcel6
 operator|.
-name|Constants
+name|Const
 import|;
 end_import
 
@@ -3130,7 +3130,7 @@ argument_list|()
 condition|)
 block|{
 case|case
-name|Constants
+name|Const
 operator|.
 name|CONSTANT_String
 case|:
@@ -3168,7 +3168,7 @@ argument_list|)
 return|;
 block|}
 case|case
-name|Constants
+name|Const
 operator|.
 name|CONSTANT_Class
 case|:
@@ -3206,7 +3206,7 @@ argument_list|)
 return|;
 block|}
 case|case
-name|Constants
+name|Const
 operator|.
 name|CONSTANT_NameAndType
 case|:
@@ -3263,7 +3263,7 @@ argument_list|)
 return|;
 block|}
 case|case
-name|Constants
+name|Const
 operator|.
 name|CONSTANT_Utf8
 case|:
@@ -3282,7 +3282,7 @@ argument_list|()
 argument_list|)
 return|;
 case|case
-name|Constants
+name|Const
 operator|.
 name|CONSTANT_Double
 case|:
@@ -3301,7 +3301,7 @@ argument_list|()
 argument_list|)
 return|;
 case|case
-name|Constants
+name|Const
 operator|.
 name|CONSTANT_Float
 case|:
@@ -3320,7 +3320,7 @@ argument_list|()
 argument_list|)
 return|;
 case|case
-name|Constants
+name|Const
 operator|.
 name|CONSTANT_Long
 case|:
@@ -3339,7 +3339,7 @@ argument_list|()
 argument_list|)
 return|;
 case|case
-name|Constants
+name|Const
 operator|.
 name|CONSTANT_Integer
 case|:
@@ -3358,17 +3358,17 @@ argument_list|()
 argument_list|)
 return|;
 case|case
-name|Constants
+name|Const
 operator|.
 name|CONSTANT_InterfaceMethodref
 case|:
 case|case
-name|Constants
+name|Const
 operator|.
 name|CONSTANT_Methodref
 case|:
 case|case
-name|Constants
+name|Const
 operator|.
 name|CONSTANT_Fieldref
 case|:
@@ -3489,7 +3489,7 @@ argument_list|()
 condition|)
 block|{
 case|case
-name|Constants
+name|Const
 operator|.
 name|CONSTANT_InterfaceMethodref
 case|:
@@ -3504,7 +3504,7 @@ name|signature
 argument_list|)
 return|;
 case|case
-name|Constants
+name|Const
 operator|.
 name|CONSTANT_Methodref
 case|:
@@ -3519,7 +3519,7 @@ name|signature
 argument_list|)
 return|;
 case|case
-name|Constants
+name|Const
 operator|.
 name|CONSTANT_Fieldref
 case|:

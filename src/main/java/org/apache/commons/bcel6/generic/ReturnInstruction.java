@@ -27,7 +27,7 @@ name|commons
 operator|.
 name|bcel6
 operator|.
-name|Constants
+name|Const
 import|;
 end_import
 
@@ -107,7 +107,7 @@ name|_opcode
 condition|)
 block|{
 case|case
-name|Constants
+name|Const
 operator|.
 name|IRETURN
 case|:
@@ -117,7 +117,7 @@ operator|.
 name|INT
 return|;
 case|case
-name|Constants
+name|Const
 operator|.
 name|LRETURN
 case|:
@@ -127,7 +127,7 @@ operator|.
 name|LONG
 return|;
 case|case
-name|Constants
+name|Const
 operator|.
 name|FRETURN
 case|:
@@ -137,7 +137,7 @@ operator|.
 name|FLOAT
 return|;
 case|case
-name|Constants
+name|Const
 operator|.
 name|DRETURN
 case|:
@@ -147,7 +147,7 @@ operator|.
 name|DOUBLE
 return|;
 case|case
-name|Constants
+name|Const
 operator|.
 name|ARETURN
 case|:
@@ -157,7 +157,7 @@ operator|.
 name|OBJECT
 return|;
 case|case
-name|Constants
+name|Const
 operator|.
 name|RETURN
 case|:

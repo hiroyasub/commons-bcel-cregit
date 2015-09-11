@@ -57,7 +57,7 @@ name|commons
 operator|.
 name|bcel6
 operator|.
-name|Constants
+name|Const
 import|;
 end_import
 
@@ -496,7 +496,7 @@ if|if
 condition|(
 name|tag
 operator|==
-name|Constants
+name|Const
 operator|.
 name|ATTR_UNKNOWN
 condition|)
@@ -548,7 +548,7 @@ name|attr_count
 operator|+
 literal|" "
 operator|+
-name|Constants
+name|Const
 operator|.
 name|getAttributeName
 argument_list|(
@@ -565,7 +565,7 @@ name|tag
 condition|)
 block|{
 case|case
-name|Constants
+name|Const
 operator|.
 name|ATTR_CODE
 case|:
@@ -747,7 +747,7 @@ expr_stmt|;
 block|}
 break|break;
 case|case
-name|Constants
+name|Const
 operator|.
 name|ATTR_CONSTANT_VALUE
 case|:
@@ -785,7 +785,7 @@ argument_list|)
 expr_stmt|;
 break|break;
 case|case
-name|Constants
+name|Const
 operator|.
 name|ATTR_SOURCE_FILE
 case|:
@@ -823,7 +823,7 @@ argument_list|)
 expr_stmt|;
 break|break;
 case|case
-name|Constants
+name|Const
 operator|.
 name|ATTR_EXCEPTIONS
 case|:
@@ -886,7 +886,7 @@ argument_list|)
 expr_stmt|;
 break|break;
 case|case
-name|Constants
+name|Const
 operator|.
 name|ATTR_LINE_NUMBER_TABLE
 case|:
@@ -979,7 +979,7 @@ block|}
 block|}
 break|break;
 case|case
-name|Constants
+name|Const
 operator|.
 name|ATTR_LOCAL_VARIABLE_TABLE
 case|:
@@ -1033,7 +1033,7 @@ name|getConstant
 argument_list|(
 name|index
 argument_list|,
-name|Constants
+name|Const
 operator|.
 name|CONSTANT_Utf8
 argument_list|)
@@ -1147,7 +1147,7 @@ argument_list|)
 expr_stmt|;
 break|break;
 case|case
-name|Constants
+name|Const
 operator|.
 name|ATTR_INNER_CLASSES
 case|:
@@ -1213,7 +1213,7 @@ name|getConstant
 argument_list|(
 name|index
 argument_list|,
-name|Constants
+name|Const
 operator|.
 name|CONSTANT_Utf8
 argument_list|)

@@ -57,12 +57,12 @@ name|commons
 operator|.
 name|bcel6
 operator|.
-name|Constants
+name|Const
 import|;
 end_import
 
 begin_comment
-comment|/**  * This class represents the type of a local variable or item on stack  * used in the StackMap entries.  *  * @version $Id$  * @see     StackMapEntry  * @see     StackMap  * @see     Constants  */
+comment|/**  * This class represents the type of a local variable or item on stack  * used in the StackMap entries.  *  * @version $Id$  * @see     StackMapEntry  * @see     StackMap  * @see     Const  */
 end_comment
 
 begin_class
@@ -156,7 +156,7 @@ condition|(
 operator|(
 name|type
 operator|<
-name|Constants
+name|Const
 operator|.
 name|ITEM_Bogus
 operator|)
@@ -164,7 +164,7 @@ operator|||
 operator|(
 name|type
 operator|>
-name|Constants
+name|Const
 operator|.
 name|ITEM_NewObject
 operator|)
@@ -212,7 +212,7 @@ condition|(
 operator|(
 name|t
 operator|<
-name|Constants
+name|Const
 operator|.
 name|ITEM_Bogus
 operator|)
@@ -220,7 +220,7 @@ operator|||
 operator|(
 name|t
 operator|>
-name|Constants
+name|Const
 operator|.
 name|ITEM_NewObject
 operator|)
@@ -318,13 +318,13 @@ block|{
 return|return
 name|type
 operator|==
-name|Constants
+name|Const
 operator|.
 name|ITEM_Object
 operator|||
 name|type
 operator|==
-name|Constants
+name|Const
 operator|.
 name|ITEM_NewObject
 return|;
@@ -338,7 +338,7 @@ if|if
 condition|(
 name|type
 operator|==
-name|Constants
+name|Const
 operator|.
 name|ITEM_Object
 condition|)
@@ -363,7 +363,7 @@ name|constantToString
 argument_list|(
 name|index
 argument_list|,
-name|Constants
+name|Const
 operator|.
 name|CONSTANT_Class
 argument_list|)
@@ -373,7 +373,7 @@ if|else if
 condition|(
 name|type
 operator|==
-name|Constants
+name|Const
 operator|.
 name|ITEM_NewObject
 condition|)
@@ -403,7 +403,7 @@ block|{
 return|return
 literal|"(type="
 operator|+
-name|Constants
+name|Const
 operator|.
 name|getItemName
 argument_list|(

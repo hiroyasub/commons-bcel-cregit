@@ -57,7 +57,7 @@ name|commons
 operator|.
 name|bcel6
 operator|.
-name|Constants
+name|Const
 import|;
 end_import
 
@@ -243,7 +243,7 @@ name|toString
 parameter_list|()
 block|{
 return|return
-name|Constants
+name|Const
 operator|.
 name|getConstantName
 argument_list|(
@@ -348,7 +348,7 @@ name|b
 condition|)
 block|{
 case|case
-name|Constants
+name|Const
 operator|.
 name|CONSTANT_Class
 case|:
@@ -360,7 +360,7 @@ name|input
 argument_list|)
 return|;
 case|case
-name|Constants
+name|Const
 operator|.
 name|CONSTANT_Fieldref
 case|:
@@ -372,7 +372,7 @@ name|input
 argument_list|)
 return|;
 case|case
-name|Constants
+name|Const
 operator|.
 name|CONSTANT_Methodref
 case|:
@@ -384,7 +384,7 @@ name|input
 argument_list|)
 return|;
 case|case
-name|Constants
+name|Const
 operator|.
 name|CONSTANT_InterfaceMethodref
 case|:
@@ -396,7 +396,7 @@ name|input
 argument_list|)
 return|;
 case|case
-name|Constants
+name|Const
 operator|.
 name|CONSTANT_String
 case|:
@@ -408,7 +408,7 @@ name|input
 argument_list|)
 return|;
 case|case
-name|Constants
+name|Const
 operator|.
 name|CONSTANT_Integer
 case|:
@@ -420,7 +420,7 @@ name|input
 argument_list|)
 return|;
 case|case
-name|Constants
+name|Const
 operator|.
 name|CONSTANT_Float
 case|:
@@ -432,7 +432,7 @@ name|input
 argument_list|)
 return|;
 case|case
-name|Constants
+name|Const
 operator|.
 name|CONSTANT_Long
 case|:
@@ -444,7 +444,7 @@ name|input
 argument_list|)
 return|;
 case|case
-name|Constants
+name|Const
 operator|.
 name|CONSTANT_Double
 case|:
@@ -456,7 +456,7 @@ name|input
 argument_list|)
 return|;
 case|case
-name|Constants
+name|Const
 operator|.
 name|CONSTANT_NameAndType
 case|:
@@ -468,7 +468,7 @@ name|input
 argument_list|)
 return|;
 case|case
-name|Constants
+name|Const
 operator|.
 name|CONSTANT_Utf8
 case|:
@@ -481,7 +481,7 @@ name|input
 argument_list|)
 return|;
 case|case
-name|Constants
+name|Const
 operator|.
 name|CONSTANT_MethodHandle
 case|:
@@ -493,7 +493,7 @@ name|input
 argument_list|)
 return|;
 case|case
-name|Constants
+name|Const
 operator|.
 name|CONSTANT_MethodType
 case|:
@@ -505,7 +505,7 @@ name|input
 argument_list|)
 return|;
 case|case
-name|Constants
+name|Const
 operator|.
 name|CONSTANT_InvokeDynamic
 case|:

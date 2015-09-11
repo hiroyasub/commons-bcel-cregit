@@ -72,7 +72,7 @@ name|commons
 operator|.
 name|bcel6
 operator|.
-name|Constants
+name|Const
 operator|.
 name|INSTANCEOF
 argument_list|,

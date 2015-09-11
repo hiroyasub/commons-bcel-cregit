@@ -87,7 +87,7 @@ name|commons
 operator|.
 name|bcel6
 operator|.
-name|Constants
+name|Const
 import|;
 end_import
 
@@ -897,7 +897,7 @@ if|if
 condition|(
 name|opcode
 operator|==
-name|Constants
+name|Const
 operator|.
 name|IINC
 condition|)
@@ -937,7 +937,7 @@ init|=
 operator|(
 name|opcode
 operator|<
-name|Constants
+name|Const
 operator|.
 name|ISTORE
 operator|)
@@ -1009,7 +1009,7 @@ init|=
 operator|(
 name|opcode
 operator|<
-name|Constants
+name|Const
 operator|.
 name|IASTORE
 operator|)
@@ -1112,7 +1112,7 @@ literal|", "
 operator|+
 literal|"Constants."
 operator|+
-name|Constants
+name|Const
 operator|.
 name|getOpcodeName
 argument_list|(
@@ -1223,7 +1223,7 @@ literal|", "
 operator|+
 literal|"Constants."
 operator|+
-name|Constants
+name|Const
 operator|.
 name|getOpcodeName
 argument_list|(
@@ -1315,7 +1315,7 @@ name|opcode
 condition|)
 block|{
 case|case
-name|Constants
+name|Const
 operator|.
 name|NEW
 case|:
@@ -1340,7 +1340,7 @@ argument_list|)
 expr_stmt|;
 break|break;
 case|case
-name|Constants
+name|Const
 operator|.
 name|MULTIANEWARRAY
 case|:
@@ -1358,12 +1358,12 @@ argument_list|()
 expr_stmt|;
 comment|//$FALL-THROUGH$
 case|case
-name|Constants
+name|Const
 operator|.
 name|ANEWARRAY
 case|:
 case|case
-name|Constants
+name|Const
 operator|.
 name|NEWARRAY
 case|:

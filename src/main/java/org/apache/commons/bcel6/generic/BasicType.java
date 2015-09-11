@@ -27,7 +27,7 @@ name|commons
 operator|.
 name|bcel6
 operator|.
-name|Constants
+name|Const
 import|;
 end_import
 
@@ -43,7 +43,7 @@ name|BasicType
 extends|extends
 name|Type
 block|{
-comment|/**      * Constructor for basic types such as int, long, `void'      *      * @param type one of T_INT, T_BOOLEAN, ..., T_VOID      * @see Constants      */
+comment|/**      * Constructor for basic types such as int, long, `void'      *      * @param type one of T_INT, T_BOOLEAN, ..., T_VOID      * @see Const      */
 name|BasicType
 parameter_list|(
 name|byte
@@ -54,7 +54,7 @@ name|super
 argument_list|(
 name|type
 argument_list|,
-name|Constants
+name|Const
 operator|.
 name|getShortTypeName
 argument_list|(
@@ -67,7 +67,7 @@ condition|(
 operator|(
 name|type
 operator|<
-name|Constants
+name|Const
 operator|.
 name|T_BOOLEAN
 operator|)
@@ -75,7 +75,7 @@ operator|||
 operator|(
 name|type
 operator|>
-name|Constants
+name|Const
 operator|.
 name|T_VOID
 operator|)
@@ -108,7 +108,7 @@ name|type
 condition|)
 block|{
 case|case
-name|Constants
+name|Const
 operator|.
 name|T_VOID
 case|:
@@ -116,7 +116,7 @@ return|return
 name|VOID
 return|;
 case|case
-name|Constants
+name|Const
 operator|.
 name|T_BOOLEAN
 case|:
@@ -124,7 +124,7 @@ return|return
 name|BOOLEAN
 return|;
 case|case
-name|Constants
+name|Const
 operator|.
 name|T_BYTE
 case|:
@@ -132,7 +132,7 @@ return|return
 name|BYTE
 return|;
 case|case
-name|Constants
+name|Const
 operator|.
 name|T_SHORT
 case|:
@@ -140,7 +140,7 @@ return|return
 name|SHORT
 return|;
 case|case
-name|Constants
+name|Const
 operator|.
 name|T_CHAR
 case|:
@@ -148,7 +148,7 @@ return|return
 name|CHAR
 return|;
 case|case
-name|Constants
+name|Const
 operator|.
 name|T_INT
 case|:
@@ -156,7 +156,7 @@ return|return
 name|INT
 return|;
 case|case
-name|Constants
+name|Const
 operator|.
 name|T_LONG
 case|:
@@ -164,7 +164,7 @@ return|return
 name|LONG
 return|;
 case|case
-name|Constants
+name|Const
 operator|.
 name|T_DOUBLE
 case|:
@@ -172,7 +172,7 @@ return|return
 name|DOUBLE
 return|;
 case|case
-name|Constants
+name|Const
 operator|.
 name|T_FLOAT
 case|:

@@ -48,7 +48,7 @@ name|commons
 operator|.
 name|bcel6
 operator|.
-name|Constants
+name|Const
 operator|.
 name|DCMPG
 argument_list|,

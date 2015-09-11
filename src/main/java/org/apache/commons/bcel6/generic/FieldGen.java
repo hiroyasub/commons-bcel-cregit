@@ -47,7 +47,7 @@ name|commons
 operator|.
 name|bcel6
 operator|.
-name|Constants
+name|Const
 import|;
 end_import
 
@@ -1106,27 +1106,27 @@ condition|)
 block|{
 comment|// sic
 case|case
-name|Constants
+name|Const
 operator|.
 name|T_INT
 case|:
 case|case
-name|Constants
+name|Const
 operator|.
 name|T_CHAR
 case|:
 case|case
-name|Constants
+name|Const
 operator|.
 name|T_BYTE
 case|:
 case|case
-name|Constants
+name|Const
 operator|.
 name|T_BOOLEAN
 case|:
 case|case
-name|Constants
+name|Const
 operator|.
 name|T_SHORT
 case|:
@@ -1150,7 +1150,7 @@ argument_list|()
 argument_list|)
 return|;
 case|case
-name|Constants
+name|Const
 operator|.
 name|T_FLOAT
 case|:
@@ -1174,7 +1174,7 @@ argument_list|()
 argument_list|)
 return|;
 case|case
-name|Constants
+name|Const
 operator|.
 name|T_DOUBLE
 case|:
@@ -1198,7 +1198,7 @@ argument_list|()
 argument_list|)
 return|;
 case|case
-name|Constants
+name|Const
 operator|.
 name|T_LONG
 case|:
@@ -1222,7 +1222,7 @@ argument_list|()
 argument_list|)
 return|;
 case|case
-name|Constants
+name|Const
 operator|.
 name|T_REFERENCE
 case|:

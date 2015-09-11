@@ -44,7 +44,7 @@ name|commons
 operator|.
 name|bcel6
 operator|.
-name|Constants
+name|Const
 operator|.
 name|DUP
 argument_list|)

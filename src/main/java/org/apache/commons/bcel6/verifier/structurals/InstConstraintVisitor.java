@@ -29,7 +29,7 @@ name|commons
 operator|.
 name|bcel6
 operator|.
-name|Constants
+name|Const
 import|;
 end_import
 
@@ -6066,11 +6066,11 @@ name|getAccessFlags
 argument_list|()
 operator|&
 operator|(
-name|Constants
+name|Const
 operator|.
 name|ACC_PUBLIC
 operator||
-name|Constants
+name|Const
 operator|.
 name|ACC_PROTECTED
 operator|)
@@ -8845,7 +8845,7 @@ argument_list|)
 operator|.
 name|equals
 argument_list|(
-name|Constants
+name|Const
 operator|.
 name|CONSTRUCTOR_NAME
 argument_list|)
@@ -9218,7 +9218,7 @@ argument_list|)
 operator|.
 name|equals
 argument_list|(
-name|Constants
+name|Const
 operator|.
 name|CONSTRUCTOR_NAME
 argument_list|)
@@ -13771,7 +13771,7 @@ argument_list|()
 operator|.
 name|equals
 argument_list|(
-name|Constants
+name|Const
 operator|.
 name|CONSTRUCTOR_NAME
 argument_list|)

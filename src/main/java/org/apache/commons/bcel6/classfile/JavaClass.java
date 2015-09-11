@@ -137,7 +137,7 @@ name|commons
 operator|.
 name|bcel6
 operator|.
-name|Constants
+name|Const
 import|;
 end_import
 
@@ -692,7 +692,7 @@ name|getConstantString
 argument_list|(
 name|class_name_index
 argument_list|,
-name|Constants
+name|Const
 operator|.
 name|CONSTANT_Class
 argument_list|)
@@ -760,7 +760,7 @@ name|getConstantString
 argument_list|(
 name|superclass_name_index
 argument_list|,
-name|Constants
+name|Const
 operator|.
 name|CONSTANT_Class
 argument_list|)
@@ -823,7 +823,7 @@ index|[
 name|i
 index|]
 argument_list|,
-name|Constants
+name|Const
 operator|.
 name|CONSTANT_Class
 argument_list|)
@@ -1196,7 +1196,7 @@ name|file
 operator|.
 name|writeInt
 argument_list|(
-name|Constants
+name|Const
 operator|.
 name|JVM_CLASSFILE_MAGIC
 argument_list|)
@@ -2637,7 +2637,7 @@ operator|.
 name|getAccessFlags
 argument_list|()
 operator|&
-name|Constants
+name|Const
 operator|.
 name|ACC_SUPER
 operator|)
@@ -2658,7 +2658,7 @@ operator|.
 name|getAccessFlags
 argument_list|()
 operator|&
-name|Constants
+name|Const
 operator|.
 name|ACC_INTERFACE
 operator|)
@@ -2766,7 +2766,7 @@ operator|.
 name|getInnerClassIndex
 argument_list|()
 argument_list|,
-name|Constants
+name|Const
 operator|.
 name|CONSTANT_Class
 argument_list|)

@@ -111,7 +111,7 @@ name|commons
 operator|.
 name|bcel6
 operator|.
-name|Constants
+name|Const
 import|;
 end_import
 
@@ -204,11 +204,11 @@ literal|"java.lang.Object"
 argument_list|,
 literal|"<generated>"
 argument_list|,
-name|Constants
+name|Const
 operator|.
 name|ACC_PUBLIC
 operator||
-name|Constants
+name|Const
 operator|.
 name|ACC_SUPER
 argument_list|,

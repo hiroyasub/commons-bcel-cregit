@@ -47,7 +47,7 @@ name|commons
 operator|.
 name|bcel6
 operator|.
-name|Constants
+name|Const
 import|;
 end_import
 
@@ -478,7 +478,7 @@ operator|.
 name|getSignatureIndex
 argument_list|()
 argument_list|,
-name|Constants
+name|Const
 operator|.
 name|CONSTANT_Utf8
 argument_list|)
@@ -508,7 +508,7 @@ operator|.
 name|getNameIndex
 argument_list|()
 argument_list|,
-name|Constants
+name|Const
 operator|.
 name|CONSTANT_Utf8
 argument_list|)

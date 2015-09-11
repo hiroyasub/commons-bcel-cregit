@@ -47,7 +47,7 @@ name|commons
 operator|.
 name|bcel6
 operator|.
-name|Constants
+name|Const
 import|;
 end_import
 
@@ -180,7 +180,7 @@ name|getName
 parameter_list|()
 block|{
 return|return
-name|Constants
+name|Const
 operator|.
 name|getOpcodeName
 argument_list|(
@@ -372,7 +372,7 @@ if|if
 condition|(
 name|opcode
 operator|==
-name|Constants
+name|Const
 operator|.
 name|WIDE
 condition|)
@@ -422,7 +422,7 @@ name|opcode
 condition|)
 block|{
 case|case
-name|Constants
+name|Const
 operator|.
 name|BIPUSH
 case|:
@@ -434,7 +434,7 @@ argument_list|()
 expr_stmt|;
 break|break;
 case|case
-name|Constants
+name|Const
 operator|.
 name|SIPUSH
 case|:
@@ -446,7 +446,7 @@ argument_list|()
 expr_stmt|;
 break|break;
 case|case
-name|Constants
+name|Const
 operator|.
 name|LDC
 case|:
@@ -458,7 +458,7 @@ argument_list|()
 expr_stmt|;
 break|break;
 case|case
-name|Constants
+name|Const
 operator|.
 name|LDC_W
 case|:
@@ -470,7 +470,7 @@ argument_list|()
 expr_stmt|;
 break|break;
 case|case
-name|Constants
+name|Const
 operator|.
 name|LDC2_W
 case|:
@@ -482,7 +482,7 @@ argument_list|()
 expr_stmt|;
 break|break;
 case|case
-name|Constants
+name|Const
 operator|.
 name|ILOAD
 case|:
@@ -494,7 +494,7 @@ argument_list|()
 expr_stmt|;
 break|break;
 case|case
-name|Constants
+name|Const
 operator|.
 name|LLOAD
 case|:
@@ -506,7 +506,7 @@ argument_list|()
 expr_stmt|;
 break|break;
 case|case
-name|Constants
+name|Const
 operator|.
 name|FLOAD
 case|:
@@ -518,7 +518,7 @@ argument_list|()
 expr_stmt|;
 break|break;
 case|case
-name|Constants
+name|Const
 operator|.
 name|DLOAD
 case|:
@@ -530,7 +530,7 @@ argument_list|()
 expr_stmt|;
 break|break;
 case|case
-name|Constants
+name|Const
 operator|.
 name|ALOAD
 case|:
@@ -542,7 +542,7 @@ argument_list|()
 expr_stmt|;
 break|break;
 case|case
-name|Constants
+name|Const
 operator|.
 name|ILOAD_0
 case|:
@@ -556,7 +556,7 @@ argument_list|)
 expr_stmt|;
 break|break;
 case|case
-name|Constants
+name|Const
 operator|.
 name|ILOAD_1
 case|:
@@ -570,7 +570,7 @@ argument_list|)
 expr_stmt|;
 break|break;
 case|case
-name|Constants
+name|Const
 operator|.
 name|ILOAD_2
 case|:
@@ -584,7 +584,7 @@ argument_list|)
 expr_stmt|;
 break|break;
 case|case
-name|Constants
+name|Const
 operator|.
 name|ILOAD_3
 case|:
@@ -598,7 +598,7 @@ argument_list|)
 expr_stmt|;
 break|break;
 case|case
-name|Constants
+name|Const
 operator|.
 name|LLOAD_0
 case|:
@@ -612,7 +612,7 @@ argument_list|)
 expr_stmt|;
 break|break;
 case|case
-name|Constants
+name|Const
 operator|.
 name|LLOAD_1
 case|:
@@ -626,7 +626,7 @@ argument_list|)
 expr_stmt|;
 break|break;
 case|case
-name|Constants
+name|Const
 operator|.
 name|LLOAD_2
 case|:
@@ -640,7 +640,7 @@ argument_list|)
 expr_stmt|;
 break|break;
 case|case
-name|Constants
+name|Const
 operator|.
 name|LLOAD_3
 case|:
@@ -654,7 +654,7 @@ argument_list|)
 expr_stmt|;
 break|break;
 case|case
-name|Constants
+name|Const
 operator|.
 name|FLOAD_0
 case|:
@@ -668,7 +668,7 @@ argument_list|)
 expr_stmt|;
 break|break;
 case|case
-name|Constants
+name|Const
 operator|.
 name|FLOAD_1
 case|:
@@ -682,7 +682,7 @@ argument_list|)
 expr_stmt|;
 break|break;
 case|case
-name|Constants
+name|Const
 operator|.
 name|FLOAD_2
 case|:
@@ -696,7 +696,7 @@ argument_list|)
 expr_stmt|;
 break|break;
 case|case
-name|Constants
+name|Const
 operator|.
 name|FLOAD_3
 case|:
@@ -710,7 +710,7 @@ argument_list|)
 expr_stmt|;
 break|break;
 case|case
-name|Constants
+name|Const
 operator|.
 name|DLOAD_0
 case|:
@@ -724,7 +724,7 @@ argument_list|)
 expr_stmt|;
 break|break;
 case|case
-name|Constants
+name|Const
 operator|.
 name|DLOAD_1
 case|:
@@ -738,7 +738,7 @@ argument_list|)
 expr_stmt|;
 break|break;
 case|case
-name|Constants
+name|Const
 operator|.
 name|DLOAD_2
 case|:
@@ -752,7 +752,7 @@ argument_list|)
 expr_stmt|;
 break|break;
 case|case
-name|Constants
+name|Const
 operator|.
 name|DLOAD_3
 case|:
@@ -766,7 +766,7 @@ argument_list|)
 expr_stmt|;
 break|break;
 case|case
-name|Constants
+name|Const
 operator|.
 name|ALOAD_0
 case|:
@@ -780,7 +780,7 @@ argument_list|)
 expr_stmt|;
 break|break;
 case|case
-name|Constants
+name|Const
 operator|.
 name|ALOAD_1
 case|:
@@ -794,7 +794,7 @@ argument_list|)
 expr_stmt|;
 break|break;
 case|case
-name|Constants
+name|Const
 operator|.
 name|ALOAD_2
 case|:
@@ -808,7 +808,7 @@ argument_list|)
 expr_stmt|;
 break|break;
 case|case
-name|Constants
+name|Const
 operator|.
 name|ALOAD_3
 case|:
@@ -822,7 +822,7 @@ argument_list|)
 expr_stmt|;
 break|break;
 case|case
-name|Constants
+name|Const
 operator|.
 name|ISTORE
 case|:
@@ -834,7 +834,7 @@ argument_list|()
 expr_stmt|;
 break|break;
 case|case
-name|Constants
+name|Const
 operator|.
 name|LSTORE
 case|:
@@ -846,7 +846,7 @@ argument_list|()
 expr_stmt|;
 break|break;
 case|case
-name|Constants
+name|Const
 operator|.
 name|FSTORE
 case|:
@@ -858,7 +858,7 @@ argument_list|()
 expr_stmt|;
 break|break;
 case|case
-name|Constants
+name|Const
 operator|.
 name|DSTORE
 case|:
@@ -870,7 +870,7 @@ argument_list|()
 expr_stmt|;
 break|break;
 case|case
-name|Constants
+name|Const
 operator|.
 name|ASTORE
 case|:
@@ -882,7 +882,7 @@ argument_list|()
 expr_stmt|;
 break|break;
 case|case
-name|Constants
+name|Const
 operator|.
 name|ISTORE_0
 case|:
@@ -896,7 +896,7 @@ argument_list|)
 expr_stmt|;
 break|break;
 case|case
-name|Constants
+name|Const
 operator|.
 name|ISTORE_1
 case|:
@@ -910,7 +910,7 @@ argument_list|)
 expr_stmt|;
 break|break;
 case|case
-name|Constants
+name|Const
 operator|.
 name|ISTORE_2
 case|:
@@ -924,7 +924,7 @@ argument_list|)
 expr_stmt|;
 break|break;
 case|case
-name|Constants
+name|Const
 operator|.
 name|ISTORE_3
 case|:
@@ -938,7 +938,7 @@ argument_list|)
 expr_stmt|;
 break|break;
 case|case
-name|Constants
+name|Const
 operator|.
 name|LSTORE_0
 case|:
@@ -952,7 +952,7 @@ argument_list|)
 expr_stmt|;
 break|break;
 case|case
-name|Constants
+name|Const
 operator|.
 name|LSTORE_1
 case|:
@@ -966,7 +966,7 @@ argument_list|)
 expr_stmt|;
 break|break;
 case|case
-name|Constants
+name|Const
 operator|.
 name|LSTORE_2
 case|:
@@ -980,7 +980,7 @@ argument_list|)
 expr_stmt|;
 break|break;
 case|case
-name|Constants
+name|Const
 operator|.
 name|LSTORE_3
 case|:
@@ -994,7 +994,7 @@ argument_list|)
 expr_stmt|;
 break|break;
 case|case
-name|Constants
+name|Const
 operator|.
 name|FSTORE_0
 case|:
@@ -1008,7 +1008,7 @@ argument_list|)
 expr_stmt|;
 break|break;
 case|case
-name|Constants
+name|Const
 operator|.
 name|FSTORE_1
 case|:
@@ -1022,7 +1022,7 @@ argument_list|)
 expr_stmt|;
 break|break;
 case|case
-name|Constants
+name|Const
 operator|.
 name|FSTORE_2
 case|:
@@ -1036,7 +1036,7 @@ argument_list|)
 expr_stmt|;
 break|break;
 case|case
-name|Constants
+name|Const
 operator|.
 name|FSTORE_3
 case|:
@@ -1050,7 +1050,7 @@ argument_list|)
 expr_stmt|;
 break|break;
 case|case
-name|Constants
+name|Const
 operator|.
 name|DSTORE_0
 case|:
@@ -1064,7 +1064,7 @@ argument_list|)
 expr_stmt|;
 break|break;
 case|case
-name|Constants
+name|Const
 operator|.
 name|DSTORE_1
 case|:
@@ -1078,7 +1078,7 @@ argument_list|)
 expr_stmt|;
 break|break;
 case|case
-name|Constants
+name|Const
 operator|.
 name|DSTORE_2
 case|:
@@ -1092,7 +1092,7 @@ argument_list|)
 expr_stmt|;
 break|break;
 case|case
-name|Constants
+name|Const
 operator|.
 name|DSTORE_3
 case|:
@@ -1106,7 +1106,7 @@ argument_list|)
 expr_stmt|;
 break|break;
 case|case
-name|Constants
+name|Const
 operator|.
 name|ASTORE_0
 case|:
@@ -1120,7 +1120,7 @@ argument_list|)
 expr_stmt|;
 break|break;
 case|case
-name|Constants
+name|Const
 operator|.
 name|ASTORE_1
 case|:
@@ -1134,7 +1134,7 @@ argument_list|)
 expr_stmt|;
 break|break;
 case|case
-name|Constants
+name|Const
 operator|.
 name|ASTORE_2
 case|:
@@ -1148,7 +1148,7 @@ argument_list|)
 expr_stmt|;
 break|break;
 case|case
-name|Constants
+name|Const
 operator|.
 name|ASTORE_3
 case|:
@@ -1162,7 +1162,7 @@ argument_list|)
 expr_stmt|;
 break|break;
 case|case
-name|Constants
+name|Const
 operator|.
 name|IINC
 case|:
@@ -1174,7 +1174,7 @@ argument_list|()
 expr_stmt|;
 break|break;
 case|case
-name|Constants
+name|Const
 operator|.
 name|IFEQ
 case|:
@@ -1186,7 +1186,7 @@ argument_list|()
 expr_stmt|;
 break|break;
 case|case
-name|Constants
+name|Const
 operator|.
 name|IFNE
 case|:
@@ -1198,7 +1198,7 @@ argument_list|()
 expr_stmt|;
 break|break;
 case|case
-name|Constants
+name|Const
 operator|.
 name|IFLT
 case|:
@@ -1210,7 +1210,7 @@ argument_list|()
 expr_stmt|;
 break|break;
 case|case
-name|Constants
+name|Const
 operator|.
 name|IFGE
 case|:
@@ -1222,7 +1222,7 @@ argument_list|()
 expr_stmt|;
 break|break;
 case|case
-name|Constants
+name|Const
 operator|.
 name|IFGT
 case|:
@@ -1234,7 +1234,7 @@ argument_list|()
 expr_stmt|;
 break|break;
 case|case
-name|Constants
+name|Const
 operator|.
 name|IFLE
 case|:
@@ -1246,7 +1246,7 @@ argument_list|()
 expr_stmt|;
 break|break;
 case|case
-name|Constants
+name|Const
 operator|.
 name|IF_ICMPEQ
 case|:
@@ -1258,7 +1258,7 @@ argument_list|()
 expr_stmt|;
 break|break;
 case|case
-name|Constants
+name|Const
 operator|.
 name|IF_ICMPNE
 case|:
@@ -1270,7 +1270,7 @@ argument_list|()
 expr_stmt|;
 break|break;
 case|case
-name|Constants
+name|Const
 operator|.
 name|IF_ICMPLT
 case|:
@@ -1282,7 +1282,7 @@ argument_list|()
 expr_stmt|;
 break|break;
 case|case
-name|Constants
+name|Const
 operator|.
 name|IF_ICMPGE
 case|:
@@ -1294,7 +1294,7 @@ argument_list|()
 expr_stmt|;
 break|break;
 case|case
-name|Constants
+name|Const
 operator|.
 name|IF_ICMPGT
 case|:
@@ -1306,7 +1306,7 @@ argument_list|()
 expr_stmt|;
 break|break;
 case|case
-name|Constants
+name|Const
 operator|.
 name|IF_ICMPLE
 case|:
@@ -1318,7 +1318,7 @@ argument_list|()
 expr_stmt|;
 break|break;
 case|case
-name|Constants
+name|Const
 operator|.
 name|IF_ACMPEQ
 case|:
@@ -1330,7 +1330,7 @@ argument_list|()
 expr_stmt|;
 break|break;
 case|case
-name|Constants
+name|Const
 operator|.
 name|IF_ACMPNE
 case|:
@@ -1342,7 +1342,7 @@ argument_list|()
 expr_stmt|;
 break|break;
 case|case
-name|Constants
+name|Const
 operator|.
 name|GOTO
 case|:
@@ -1354,7 +1354,7 @@ argument_list|()
 expr_stmt|;
 break|break;
 case|case
-name|Constants
+name|Const
 operator|.
 name|JSR
 case|:
@@ -1366,7 +1366,7 @@ argument_list|()
 expr_stmt|;
 break|break;
 case|case
-name|Constants
+name|Const
 operator|.
 name|RET
 case|:
@@ -1378,7 +1378,7 @@ argument_list|()
 expr_stmt|;
 break|break;
 case|case
-name|Constants
+name|Const
 operator|.
 name|TABLESWITCH
 case|:
@@ -1390,7 +1390,7 @@ argument_list|()
 expr_stmt|;
 break|break;
 case|case
-name|Constants
+name|Const
 operator|.
 name|LOOKUPSWITCH
 case|:
@@ -1402,7 +1402,7 @@ argument_list|()
 expr_stmt|;
 break|break;
 case|case
-name|Constants
+name|Const
 operator|.
 name|GETSTATIC
 case|:
@@ -1414,7 +1414,7 @@ argument_list|()
 expr_stmt|;
 break|break;
 case|case
-name|Constants
+name|Const
 operator|.
 name|PUTSTATIC
 case|:
@@ -1426,7 +1426,7 @@ argument_list|()
 expr_stmt|;
 break|break;
 case|case
-name|Constants
+name|Const
 operator|.
 name|GETFIELD
 case|:
@@ -1438,7 +1438,7 @@ argument_list|()
 expr_stmt|;
 break|break;
 case|case
-name|Constants
+name|Const
 operator|.
 name|PUTFIELD
 case|:
@@ -1450,7 +1450,7 @@ argument_list|()
 expr_stmt|;
 break|break;
 case|case
-name|Constants
+name|Const
 operator|.
 name|INVOKEVIRTUAL
 case|:
@@ -1462,7 +1462,7 @@ argument_list|()
 expr_stmt|;
 break|break;
 case|case
-name|Constants
+name|Const
 operator|.
 name|INVOKESPECIAL
 case|:
@@ -1474,7 +1474,7 @@ argument_list|()
 expr_stmt|;
 break|break;
 case|case
-name|Constants
+name|Const
 operator|.
 name|INVOKESTATIC
 case|:
@@ -1486,7 +1486,7 @@ argument_list|()
 expr_stmt|;
 break|break;
 case|case
-name|Constants
+name|Const
 operator|.
 name|INVOKEINTERFACE
 case|:
@@ -1498,7 +1498,7 @@ argument_list|()
 expr_stmt|;
 break|break;
 case|case
-name|Constants
+name|Const
 operator|.
 name|INVOKEDYNAMIC
 case|:
@@ -1510,7 +1510,7 @@ argument_list|()
 expr_stmt|;
 break|break;
 case|case
-name|Constants
+name|Const
 operator|.
 name|NEW
 case|:
@@ -1522,7 +1522,7 @@ argument_list|()
 expr_stmt|;
 break|break;
 case|case
-name|Constants
+name|Const
 operator|.
 name|NEWARRAY
 case|:
@@ -1534,7 +1534,7 @@ argument_list|()
 expr_stmt|;
 break|break;
 case|case
-name|Constants
+name|Const
 operator|.
 name|ANEWARRAY
 case|:
@@ -1546,7 +1546,7 @@ argument_list|()
 expr_stmt|;
 break|break;
 case|case
-name|Constants
+name|Const
 operator|.
 name|CHECKCAST
 case|:
@@ -1558,7 +1558,7 @@ argument_list|()
 expr_stmt|;
 break|break;
 case|case
-name|Constants
+name|Const
 operator|.
 name|INSTANCEOF
 case|:
@@ -1570,7 +1570,7 @@ argument_list|()
 expr_stmt|;
 break|break;
 case|case
-name|Constants
+name|Const
 operator|.
 name|MULTIANEWARRAY
 case|:
@@ -1582,7 +1582,7 @@ argument_list|()
 expr_stmt|;
 break|break;
 case|case
-name|Constants
+name|Const
 operator|.
 name|IFNULL
 case|:
@@ -1594,7 +1594,7 @@ argument_list|()
 expr_stmt|;
 break|break;
 case|case
-name|Constants
+name|Const
 operator|.
 name|IFNONNULL
 case|:
@@ -1606,7 +1606,7 @@ argument_list|()
 expr_stmt|;
 break|break;
 case|case
-name|Constants
+name|Const
 operator|.
 name|GOTO_W
 case|:
@@ -1618,7 +1618,7 @@ argument_list|()
 expr_stmt|;
 break|break;
 case|case
-name|Constants
+name|Const
 operator|.
 name|JSR_W
 case|:
@@ -1630,7 +1630,7 @@ argument_list|()
 expr_stmt|;
 break|break;
 case|case
-name|Constants
+name|Const
 operator|.
 name|BREAKPOINT
 case|:
@@ -1642,7 +1642,7 @@ argument_list|()
 expr_stmt|;
 break|break;
 case|case
-name|Constants
+name|Const
 operator|.
 name|IMPDEP1
 case|:
@@ -1654,7 +1654,7 @@ argument_list|()
 expr_stmt|;
 break|break;
 case|case
-name|Constants
+name|Const
 operator|.
 name|IMPDEP2
 case|:
@@ -1743,7 +1743,7 @@ name|cpg
 parameter_list|)
 block|{
 return|return
-name|Constants
+name|Const
 operator|.
 name|getConsumeStack
 argument_list|(
@@ -1761,7 +1761,7 @@ name|cpg
 parameter_list|)
 block|{
 return|return
-name|Constants
+name|Const
 operator|.
 name|getProduceStack
 argument_list|(

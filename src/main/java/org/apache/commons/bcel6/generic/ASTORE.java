@@ -42,7 +42,7 @@ name|commons
 operator|.
 name|bcel6
 operator|.
-name|Constants
+name|Const
 operator|.
 name|ASTORE
 argument_list|,
@@ -54,7 +54,7 @@ name|commons
 operator|.
 name|bcel6
 operator|.
-name|Constants
+name|Const
 operator|.
 name|ASTORE_0
 argument_list|)
@@ -78,7 +78,7 @@ name|commons
 operator|.
 name|bcel6
 operator|.
-name|Constants
+name|Const
 operator|.
 name|ASTORE
 argument_list|,
@@ -90,7 +90,7 @@ name|commons
 operator|.
 name|bcel6
 operator|.
-name|Constants
+name|Const
 operator|.
 name|ASTORE_0
 argument_list|,

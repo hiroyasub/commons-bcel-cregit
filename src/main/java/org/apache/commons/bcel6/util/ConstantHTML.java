@@ -57,7 +57,7 @@ name|commons
 operator|.
 name|bcel6
 operator|.
-name|Constants
+name|Const
 import|;
 end_import
 
@@ -505,7 +505,7 @@ name|index
 operator|+
 literal|"</A> "
 operator|+
-name|Constants
+name|Const
 operator|.
 name|getConstantName
 argument_list|(
@@ -522,12 +522,12 @@ name|tag
 condition|)
 block|{
 case|case
-name|Constants
+name|Const
 operator|.
 name|CONSTANT_InterfaceMethodref
 case|:
 case|case
-name|Constants
+name|Const
 operator|.
 name|CONSTANT_Methodref
 case|:
@@ -536,7 +536,7 @@ if|if
 condition|(
 name|tag
 operator|==
-name|Constants
+name|Const
 operator|.
 name|CONSTANT_Methodref
 condition|)
@@ -553,7 +553,7 @@ name|getConstant
 argument_list|(
 name|index
 argument_list|,
-name|Constants
+name|Const
 operator|.
 name|CONSTANT_Methodref
 argument_list|)
@@ -587,7 +587,7 @@ name|getConstant
 argument_list|(
 name|index
 argument_list|,
-name|Constants
+name|Const
 operator|.
 name|CONSTANT_InterfaceMethodref
 argument_list|)
@@ -617,7 +617,7 @@ name|constantToString
 argument_list|(
 name|name_index
 argument_list|,
-name|Constants
+name|Const
 operator|.
 name|CONSTANT_NameAndType
 argument_list|)
@@ -642,7 +642,7 @@ name|constantToString
 argument_list|(
 name|class_index
 argument_list|,
-name|Constants
+name|Const
 operator|.
 name|CONSTANT_Class
 argument_list|)
@@ -687,7 +687,7 @@ name|getConstant
 argument_list|(
 name|name_index
 argument_list|,
-name|Constants
+name|Const
 operator|.
 name|CONSTANT_NameAndType
 argument_list|)
@@ -704,7 +704,7 @@ operator|.
 name|getSignatureIndex
 argument_list|()
 argument_list|,
-name|Constants
+name|Const
 operator|.
 name|CONSTANT_Utf8
 argument_list|)
@@ -947,7 +947,7 @@ argument_list|)
 expr_stmt|;
 break|break;
 case|case
-name|Constants
+name|Const
 operator|.
 name|CONSTANT_Fieldref
 case|:
@@ -964,7 +964,7 @@ name|getConstant
 argument_list|(
 name|index
 argument_list|,
-name|Constants
+name|Const
 operator|.
 name|CONSTANT_Fieldref
 argument_list|)
@@ -993,7 +993,7 @@ name|constantToString
 argument_list|(
 name|class_index
 argument_list|,
-name|Constants
+name|Const
 operator|.
 name|CONSTANT_Class
 argument_list|)
@@ -1034,7 +1034,7 @@ name|constantToString
 argument_list|(
 name|name_index
 argument_list|,
-name|Constants
+name|Const
 operator|.
 name|CONSTANT_NameAndType
 argument_list|)
@@ -1151,7 +1151,7 @@ argument_list|)
 expr_stmt|;
 break|break;
 case|case
-name|Constants
+name|Const
 operator|.
 name|CONSTANT_Class
 case|:
@@ -1167,7 +1167,7 @@ name|getConstant
 argument_list|(
 name|index
 argument_list|,
-name|Constants
+name|Const
 operator|.
 name|CONSTANT_Class
 argument_list|)
@@ -1273,7 +1273,7 @@ argument_list|)
 expr_stmt|;
 break|break;
 case|case
-name|Constants
+name|Const
 operator|.
 name|CONSTANT_String
 case|:
@@ -1289,7 +1289,7 @@ name|getConstant
 argument_list|(
 name|index
 argument_list|,
-name|Constants
+name|Const
 operator|.
 name|CONSTANT_String
 argument_list|)
@@ -1341,7 +1341,7 @@ argument_list|)
 expr_stmt|;
 break|break;
 case|case
-name|Constants
+name|Const
 operator|.
 name|CONSTANT_NameAndType
 case|:
@@ -1357,7 +1357,7 @@ name|getConstant
 argument_list|(
 name|index
 argument_list|,
-name|Constants
+name|Const
 operator|.
 name|CONSTANT_NameAndType
 argument_list|)

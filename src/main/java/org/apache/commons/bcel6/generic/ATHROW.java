@@ -61,7 +61,7 @@ name|commons
 operator|.
 name|bcel6
 operator|.
-name|Constants
+name|Const
 operator|.
 name|ATHROW
 argument_list|,

@@ -99,7 +99,7 @@ name|commons
 operator|.
 name|bcel6
 operator|.
-name|Constants
+name|Const
 operator|.
 name|RET
 argument_list|,
@@ -146,7 +146,7 @@ name|commons
 operator|.
 name|bcel6
 operator|.
-name|Constants
+name|Const
 operator|.
 name|WIDE
 argument_list|)
@@ -203,7 +203,7 @@ name|commons
 operator|.
 name|bcel6
 operator|.
-name|Constants
+name|Const
 operator|.
 name|MAX_BYTE
 expr_stmt|;

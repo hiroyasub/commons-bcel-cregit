@@ -27,7 +27,7 @@ name|commons
 operator|.
 name|bcel6
 operator|.
-name|Constants
+name|Const
 import|;
 end_import
 
@@ -97,7 +97,7 @@ parameter_list|()
 block|{
 name|super
 argument_list|(
-name|Constants
+name|Const
 operator|.
 name|T_OBJECT
 argument_list|,
@@ -636,7 +636,7 @@ control|(
 name|String
 name|element
 range|:
-name|Constants
+name|Const
 operator|.
 name|getInterfacesImplementedByArrays
 argument_list|()

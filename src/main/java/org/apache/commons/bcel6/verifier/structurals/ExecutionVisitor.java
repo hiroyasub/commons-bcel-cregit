@@ -29,7 +29,7 @@ name|commons
 operator|.
 name|bcel6
 operator|.
-name|Constants
+name|Const
 import|;
 end_import
 
@@ -3765,7 +3765,7 @@ argument_list|)
 operator|.
 name|equals
 argument_list|(
-name|Constants
+name|Const
 operator|.
 name|CONSTRUCTOR_NAME
 argument_list|)

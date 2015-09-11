@@ -43,7 +43,7 @@ name|commons
 operator|.
 name|bcel6
 operator|.
-name|Constants
+name|Const
 operator|.
 name|FADD
 argument_list|)

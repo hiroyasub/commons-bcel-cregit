@@ -87,7 +87,7 @@ name|commons
 operator|.
 name|bcel6
 operator|.
-name|Constants
+name|Const
 import|;
 end_import
 
@@ -516,7 +516,7 @@ name|IOException
 block|{
 name|super
 argument_list|(
-name|Constants
+name|Const
 operator|.
 name|CONSTANT_Utf8
 argument_list|)
@@ -542,7 +542,7 @@ parameter_list|)
 block|{
 name|super
 argument_list|(
-name|Constants
+name|Const
 operator|.
 name|CONSTANT_Utf8
 argument_list|)

@@ -52,7 +52,7 @@ name|commons
 operator|.
 name|bcel6
 operator|.
-name|Constants
+name|Const
 operator|.
 name|LDC2_W
 argument_list|,
@@ -98,7 +98,7 @@ name|commons
 operator|.
 name|bcel6
 operator|.
-name|Constants
+name|Const
 operator|.
 name|CONSTANT_Long
 case|:
@@ -116,7 +116,7 @@ name|commons
 operator|.
 name|bcel6
 operator|.
-name|Constants
+name|Const
 operator|.
 name|CONSTANT_Double
 case|:
@@ -192,7 +192,7 @@ name|commons
 operator|.
 name|bcel6
 operator|.
-name|Constants
+name|Const
 operator|.
 name|CONSTANT_Long
 case|:
@@ -231,7 +231,7 @@ name|commons
 operator|.
 name|bcel6
 operator|.
-name|Constants
+name|Const
 operator|.
 name|CONSTANT_Double
 case|:

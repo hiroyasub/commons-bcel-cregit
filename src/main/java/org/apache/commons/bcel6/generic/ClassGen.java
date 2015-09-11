@@ -47,7 +47,7 @@ name|commons
 operator|.
 name|bcel6
 operator|.
-name|Constants
+name|Const
 import|;
 end_import
 
@@ -288,7 +288,7 @@ specifier|private
 name|int
 name|major
 init|=
-name|Constants
+name|Const
 operator|.
 name|MAJOR_1_1
 decl_stmt|;
@@ -296,7 +296,7 @@ specifier|private
 name|int
 name|minor
 init|=
-name|Constants
+name|Const
 operator|.
 name|MINOR_1_1
 decl_stmt|;
@@ -2050,7 +2050,7 @@ name|getConstantString
 argument_list|(
 name|class_name_index
 argument_list|,
-name|Constants
+name|Const
 operator|.
 name|CONSTANT_Class
 argument_list|)
@@ -2088,7 +2088,7 @@ name|getConstantString
 argument_list|(
 name|superclass_name_index
 argument_list|,
-name|Constants
+name|Const
 operator|.
 name|CONSTANT_Class
 argument_list|)

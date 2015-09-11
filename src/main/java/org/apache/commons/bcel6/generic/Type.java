@@ -47,7 +47,7 @@ name|commons
 operator|.
 name|bcel6
 operator|.
-name|Constants
+name|Const
 import|;
 end_import
 
@@ -119,7 +119,7 @@ init|=
 operator|new
 name|BasicType
 argument_list|(
-name|Constants
+name|Const
 operator|.
 name|T_VOID
 argument_list|)
@@ -133,7 +133,7 @@ init|=
 operator|new
 name|BasicType
 argument_list|(
-name|Constants
+name|Const
 operator|.
 name|T_BOOLEAN
 argument_list|)
@@ -147,7 +147,7 @@ init|=
 operator|new
 name|BasicType
 argument_list|(
-name|Constants
+name|Const
 operator|.
 name|T_INT
 argument_list|)
@@ -161,7 +161,7 @@ init|=
 operator|new
 name|BasicType
 argument_list|(
-name|Constants
+name|Const
 operator|.
 name|T_SHORT
 argument_list|)
@@ -175,7 +175,7 @@ init|=
 operator|new
 name|BasicType
 argument_list|(
-name|Constants
+name|Const
 operator|.
 name|T_BYTE
 argument_list|)
@@ -189,7 +189,7 @@ init|=
 operator|new
 name|BasicType
 argument_list|(
-name|Constants
+name|Const
 operator|.
 name|T_LONG
 argument_list|)
@@ -203,7 +203,7 @@ init|=
 operator|new
 name|BasicType
 argument_list|(
-name|Constants
+name|Const
 operator|.
 name|T_DOUBLE
 argument_list|)
@@ -217,7 +217,7 @@ init|=
 operator|new
 name|BasicType
 argument_list|(
-name|Constants
+name|Const
 operator|.
 name|T_FLOAT
 argument_list|)
@@ -231,7 +231,7 @@ init|=
 operator|new
 name|BasicType
 argument_list|(
-name|Constants
+name|Const
 operator|.
 name|T_CHAR
 argument_list|)
@@ -330,7 +330,7 @@ init|=
 operator|new
 name|Type
 argument_list|(
-name|Constants
+name|Const
 operator|.
 name|T_UNKNOWN
 argument_list|,
@@ -498,12 +498,12 @@ name|type
 condition|)
 block|{
 case|case
-name|Constants
+name|Const
 operator|.
 name|T_DOUBLE
 case|:
 case|case
-name|Constants
+name|Const
 operator|.
 name|T_LONG
 case|:
@@ -511,7 +511,7 @@ return|return
 literal|2
 return|;
 case|case
-name|Constants
+name|Const
 operator|.
 name|T_VOID
 case|:
@@ -547,7 +547,7 @@ operator|||
 operator|(
 name|type
 operator|>=
-name|Constants
+name|Const
 operator|.
 name|T_UNKNOWN
 operator|)
@@ -752,7 +752,7 @@ if|if
 condition|(
 name|type
 operator|<=
-name|Constants
+name|Const
 operator|.
 name|T_VOID
 condition|)
@@ -778,7 +778,7 @@ if|else if
 condition|(
 name|type
 operator|==
-name|Constants
+name|Const
 operator|.
 name|T_ARRAY
 condition|)
@@ -1668,7 +1668,7 @@ if|if
 condition|(
 name|type
 operator|<=
-name|Constants
+name|Const
 operator|.
 name|T_VOID
 condition|)
@@ -1694,7 +1694,7 @@ if|else if
 condition|(
 name|type
 operator|==
-name|Constants
+name|Const
 operator|.
 name|T_ARRAY
 condition|)

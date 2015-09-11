@@ -27,7 +27,7 @@ name|commons
 operator|.
 name|bcel6
 operator|.
-name|Constants
+name|Const
 import|;
 end_import
 
@@ -187,7 +187,7 @@ parameter_list|)
 block|{
 name|setFlag
 argument_list|(
-name|Constants
+name|Const
 operator|.
 name|ACC_PUBLIC
 argument_list|,
@@ -205,7 +205,7 @@ return|return
 operator|(
 name|access_flags
 operator|&
-name|Constants
+name|Const
 operator|.
 name|ACC_PUBLIC
 operator|)
@@ -224,7 +224,7 @@ parameter_list|)
 block|{
 name|setFlag
 argument_list|(
-name|Constants
+name|Const
 operator|.
 name|ACC_PRIVATE
 argument_list|,
@@ -242,7 +242,7 @@ return|return
 operator|(
 name|access_flags
 operator|&
-name|Constants
+name|Const
 operator|.
 name|ACC_PRIVATE
 operator|)
@@ -261,7 +261,7 @@ parameter_list|)
 block|{
 name|setFlag
 argument_list|(
-name|Constants
+name|Const
 operator|.
 name|ACC_PROTECTED
 argument_list|,
@@ -279,7 +279,7 @@ return|return
 operator|(
 name|access_flags
 operator|&
-name|Constants
+name|Const
 operator|.
 name|ACC_PROTECTED
 operator|)
@@ -298,7 +298,7 @@ parameter_list|)
 block|{
 name|setFlag
 argument_list|(
-name|Constants
+name|Const
 operator|.
 name|ACC_STATIC
 argument_list|,
@@ -316,7 +316,7 @@ return|return
 operator|(
 name|access_flags
 operator|&
-name|Constants
+name|Const
 operator|.
 name|ACC_STATIC
 operator|)
@@ -335,7 +335,7 @@ parameter_list|)
 block|{
 name|setFlag
 argument_list|(
-name|Constants
+name|Const
 operator|.
 name|ACC_FINAL
 argument_list|,
@@ -353,7 +353,7 @@ return|return
 operator|(
 name|access_flags
 operator|&
-name|Constants
+name|Const
 operator|.
 name|ACC_FINAL
 operator|)
@@ -372,7 +372,7 @@ parameter_list|)
 block|{
 name|setFlag
 argument_list|(
-name|Constants
+name|Const
 operator|.
 name|ACC_SYNCHRONIZED
 argument_list|,
@@ -390,7 +390,7 @@ return|return
 operator|(
 name|access_flags
 operator|&
-name|Constants
+name|Const
 operator|.
 name|ACC_SYNCHRONIZED
 operator|)
@@ -409,7 +409,7 @@ parameter_list|)
 block|{
 name|setFlag
 argument_list|(
-name|Constants
+name|Const
 operator|.
 name|ACC_VOLATILE
 argument_list|,
@@ -427,7 +427,7 @@ return|return
 operator|(
 name|access_flags
 operator|&
-name|Constants
+name|Const
 operator|.
 name|ACC_VOLATILE
 operator|)
@@ -446,7 +446,7 @@ parameter_list|)
 block|{
 name|setFlag
 argument_list|(
-name|Constants
+name|Const
 operator|.
 name|ACC_TRANSIENT
 argument_list|,
@@ -464,7 +464,7 @@ return|return
 operator|(
 name|access_flags
 operator|&
-name|Constants
+name|Const
 operator|.
 name|ACC_TRANSIENT
 operator|)
@@ -483,7 +483,7 @@ parameter_list|)
 block|{
 name|setFlag
 argument_list|(
-name|Constants
+name|Const
 operator|.
 name|ACC_NATIVE
 argument_list|,
@@ -501,7 +501,7 @@ return|return
 operator|(
 name|access_flags
 operator|&
-name|Constants
+name|Const
 operator|.
 name|ACC_NATIVE
 operator|)
@@ -520,7 +520,7 @@ parameter_list|)
 block|{
 name|setFlag
 argument_list|(
-name|Constants
+name|Const
 operator|.
 name|ACC_INTERFACE
 argument_list|,
@@ -538,7 +538,7 @@ return|return
 operator|(
 name|access_flags
 operator|&
-name|Constants
+name|Const
 operator|.
 name|ACC_INTERFACE
 operator|)
@@ -557,7 +557,7 @@ parameter_list|)
 block|{
 name|setFlag
 argument_list|(
-name|Constants
+name|Const
 operator|.
 name|ACC_ABSTRACT
 argument_list|,
@@ -575,7 +575,7 @@ return|return
 operator|(
 name|access_flags
 operator|&
-name|Constants
+name|Const
 operator|.
 name|ACC_ABSTRACT
 operator|)
@@ -594,7 +594,7 @@ parameter_list|)
 block|{
 name|setFlag
 argument_list|(
-name|Constants
+name|Const
 operator|.
 name|ACC_STRICT
 argument_list|,
@@ -612,7 +612,7 @@ return|return
 operator|(
 name|access_flags
 operator|&
-name|Constants
+name|Const
 operator|.
 name|ACC_STRICT
 operator|)
@@ -631,7 +631,7 @@ parameter_list|)
 block|{
 name|setFlag
 argument_list|(
-name|Constants
+name|Const
 operator|.
 name|ACC_SYNTHETIC
 argument_list|,
@@ -649,7 +649,7 @@ return|return
 operator|(
 name|access_flags
 operator|&
-name|Constants
+name|Const
 operator|.
 name|ACC_SYNTHETIC
 operator|)
@@ -668,7 +668,7 @@ parameter_list|)
 block|{
 name|setFlag
 argument_list|(
-name|Constants
+name|Const
 operator|.
 name|ACC_ANNOTATION
 argument_list|,
@@ -686,7 +686,7 @@ return|return
 operator|(
 name|access_flags
 operator|&
-name|Constants
+name|Const
 operator|.
 name|ACC_ANNOTATION
 operator|)
@@ -705,7 +705,7 @@ parameter_list|)
 block|{
 name|setFlag
 argument_list|(
-name|Constants
+name|Const
 operator|.
 name|ACC_ENUM
 argument_list|,
@@ -723,7 +723,7 @@ return|return
 operator|(
 name|access_flags
 operator|&
-name|Constants
+name|Const
 operator|.
 name|ACC_ENUM
 operator|)

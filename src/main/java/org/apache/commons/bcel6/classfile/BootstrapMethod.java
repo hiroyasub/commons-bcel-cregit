@@ -67,7 +67,7 @@ name|commons
 operator|.
 name|bcel6
 operator|.
-name|Constants
+name|Const
 import|;
 end_import
 
@@ -340,7 +340,7 @@ name|constantToString
 argument_list|(
 name|bootstrap_method_ref
 argument_list|,
-name|Constants
+name|Const
 operator|.
 name|CONSTANT_MethodHandle
 argument_list|)

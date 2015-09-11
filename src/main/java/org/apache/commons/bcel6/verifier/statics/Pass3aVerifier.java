@@ -29,7 +29,7 @@ name|commons
 operator|.
 name|bcel6
 operator|.
-name|Constants
+name|Const
 import|;
 end_import
 
@@ -2187,7 +2187,7 @@ argument_list|()
 operator|.
 name|length
 operator|>=
-name|Constants
+name|Const
 operator|.
 name|MAX_CODE_SIZE
 condition|)
@@ -2203,7 +2203,7 @@ name|code
 operator|+
 literal|"' too big: must be smaller than "
 operator|+
-name|Constants
+name|Const
 operator|.
 name|MAX_CODE_SIZE
 operator|+
@@ -3336,11 +3336,11 @@ name|getAccessFlags
 argument_list|()
 operator|&
 operator|(
-name|Constants
+name|Const
 operator|.
 name|ACC_PUBLIC
 operator||
-name|Constants
+name|Const
 operator|.
 name|ACC_PROTECTED
 operator|)
@@ -3569,7 +3569,7 @@ argument_list|()
 operator|.
 name|equals
 argument_list|(
-name|Constants
+name|Const
 operator|.
 name|CONSTRUCTOR_NAME
 argument_list|)
@@ -3604,7 +3604,7 @@ argument_list|()
 operator|.
 name|equals
 argument_list|(
-name|Constants
+name|Const
 operator|.
 name|CONSTRUCTOR_NAME
 argument_list|)
@@ -3731,7 +3731,7 @@ name|name
 operator|.
 name|equals
 argument_list|(
-name|Constants
+name|Const
 operator|.
 name|CONSTRUCTOR_NAME
 argument_list|)
@@ -3743,7 +3743,7 @@ name|o
 argument_list|,
 literal|"Method to invoke must not be '"
 operator|+
-name|Constants
+name|Const
 operator|.
 name|CONSTRUCTOR_NAME
 operator|+
@@ -3757,7 +3757,7 @@ name|name
 operator|.
 name|equals
 argument_list|(
-name|Constants
+name|Const
 operator|.
 name|STATIC_INITIALIZER_NAME
 argument_list|)
@@ -3769,7 +3769,7 @@ name|o
 argument_list|,
 literal|"Method to invoke must not be '"
 operator|+
-name|Constants
+name|Const
 operator|.
 name|STATIC_INITIALIZER_NAME
 operator|+
@@ -4441,7 +4441,7 @@ if|if
 condition|(
 name|dimensions
 operator|>
-name|Constants
+name|Const
 operator|.
 name|MAX_ARRAY_DIMENSIONS
 condition|)
@@ -4452,7 +4452,7 @@ name|o
 argument_list|,
 literal|"Not allowed to create an array with more than "
 operator|+
-name|Constants
+name|Const
 operator|.
 name|MAX_ARRAY_DIMENSIONS
 operator|+
@@ -4492,7 +4492,7 @@ operator|(
 operator|(
 name|t
 operator|==
-name|Constants
+name|Const
 operator|.
 name|T_BOOLEAN
 operator|)
@@ -4500,7 +4500,7 @@ operator|||
 operator|(
 name|t
 operator|==
-name|Constants
+name|Const
 operator|.
 name|T_CHAR
 operator|)
@@ -4508,7 +4508,7 @@ operator|||
 operator|(
 name|t
 operator|==
-name|Constants
+name|Const
 operator|.
 name|T_FLOAT
 operator|)
@@ -4516,7 +4516,7 @@ operator|||
 operator|(
 name|t
 operator|==
-name|Constants
+name|Const
 operator|.
 name|T_DOUBLE
 operator|)
@@ -4524,7 +4524,7 @@ operator|||
 operator|(
 name|t
 operator|==
-name|Constants
+name|Const
 operator|.
 name|T_BYTE
 operator|)
@@ -4532,7 +4532,7 @@ operator|||
 operator|(
 name|t
 operator|==
-name|Constants
+name|Const
 operator|.
 name|T_SHORT
 operator|)
@@ -4540,7 +4540,7 @@ operator|||
 operator|(
 name|t
 operator|==
-name|Constants
+name|Const
 operator|.
 name|T_INT
 operator|)
@@ -4548,7 +4548,7 @@ operator|||
 operator|(
 name|t
 operator|==
-name|Constants
+name|Const
 operator|.
 name|T_LONG
 operator|)
@@ -5794,7 +5794,7 @@ name|meth_name
 operator|.
 name|equals
 argument_list|(
-name|Constants
+name|Const
 operator|.
 name|STATIC_INITIALIZER_NAME
 argument_list|)
@@ -5812,7 +5812,7 @@ name|f
 operator|+
 literal|"' must be set in a '"
 operator|+
-name|Constants
+name|Const
 operator|.
 name|STATIC_INITIALIZER_NAME
 operator|+
@@ -6507,7 +6507,7 @@ argument_list|)
 operator|.
 name|equals
 argument_list|(
-name|Constants
+name|Const
 operator|.
 name|CONSTRUCTOR_NAME
 argument_list|)

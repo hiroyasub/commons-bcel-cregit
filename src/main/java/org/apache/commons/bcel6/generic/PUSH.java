@@ -27,7 +27,7 @@ name|commons
 operator|.
 name|bcel6
 operator|.
-name|Constants
+name|Const
 import|;
 end_import
 
@@ -82,7 +82,7 @@ name|InstructionConst
 operator|.
 name|getInstruction
 argument_list|(
-name|Constants
+name|Const
 operator|.
 name|ICONST_0
 operator|+
@@ -168,7 +168,7 @@ name|InstructionConst
 operator|.
 name|getInstruction
 argument_list|(
-name|Constants
+name|Const
 operator|.
 name|ICONST_0
 operator|+

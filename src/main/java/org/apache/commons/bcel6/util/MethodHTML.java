@@ -57,7 +57,7 @@ name|commons
 operator|.
 name|bcel6
 operator|.
-name|Constants
+name|Const
 import|;
 end_import
 
@@ -511,7 +511,7 @@ operator|.
 name|getTag
 argument_list|()
 operator|==
-name|Constants
+name|Const
 operator|.
 name|ATTR_CONSTANT_VALUE
 condition|)
@@ -831,7 +831,7 @@ if|if
 condition|(
 name|tag
 operator|==
-name|Constants
+name|Const
 operator|.
 name|ATTR_EXCEPTIONS
 condition|)
@@ -924,7 +924,7 @@ if|else if
 condition|(
 name|tag
 operator|==
-name|Constants
+name|Const
 operator|.
 name|ATTR_CODE
 condition|)

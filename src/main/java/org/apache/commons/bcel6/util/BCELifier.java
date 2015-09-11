@@ -67,7 +67,7 @@ name|commons
 operator|.
 name|bcel6
 operator|.
-name|Constants
+name|Const
 import|;
 end_import
 
@@ -285,7 +285,7 @@ specifier|final
 name|String
 name|BASE_PACKAGE
 init|=
-name|Constants
+name|Const
 operator|.
 name|class
 operator|.
@@ -1236,7 +1236,7 @@ literal|1
 init|;
 name|pow
 operator|<=
-name|Constants
+name|Const
 operator|.
 name|MAX_ACC_FLAG
 condition|;
@@ -1260,7 +1260,7 @@ condition|(
 operator|(
 name|pow
 operator|==
-name|Constants
+name|Const
 operator|.
 name|ACC_SYNCHRONIZED
 operator|)
@@ -1287,7 +1287,7 @@ condition|(
 operator|(
 name|pow
 operator|==
-name|Constants
+name|Const
 operator|.
 name|ACC_VOLATILE
 operator|)
@@ -1314,7 +1314,7 @@ condition|(
 operator|(
 name|pow
 operator|==
-name|Constants
+name|Const
 operator|.
 name|ACC_TRANSIENT
 operator|)
@@ -1342,7 +1342,7 @@ if|if
 condition|(
 name|i
 operator|<
-name|Constants
+name|Const
 operator|.
 name|ACCESS_NAMES_LENGTH
 condition|)
@@ -1356,7 +1356,7 @@ argument_list|)
 operator|.
 name|append
 argument_list|(
-name|Constants
+name|Const
 operator|.
 name|getAccessName
 argument_list|(
@@ -1563,7 +1563,7 @@ if|if
 condition|(
 name|t
 operator|<=
-name|Constants
+name|Const
 operator|.
 name|T_VOID
 condition|)
@@ -1571,7 +1571,7 @@ block|{
 return|return
 literal|"Type."
 operator|+
-name|Constants
+name|Const
 operator|.
 name|getTypeName
 argument_list|(

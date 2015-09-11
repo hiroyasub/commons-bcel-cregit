@@ -71,7 +71,7 @@ name|commons
 operator|.
 name|bcel6
 operator|.
-name|Constants
+name|Const
 import|;
 end_import
 
@@ -2213,7 +2213,7 @@ literal|"in"
 argument_list|,
 name|i_stream
 argument_list|,
-name|Constants
+name|Const
 operator|.
 name|GETSTATIC
 argument_list|)
@@ -2242,7 +2242,7 @@ block|{
 name|i_stream
 block|}
 argument_list|,
-name|Constants
+name|Const
 operator|.
 name|INVOKESPECIAL
 argument_list|)
@@ -2275,7 +2275,7 @@ literal|"java.io.Reader"
 argument_list|)
 block|}
 argument_list|,
-name|Constants
+name|Const
 operator|.
 name|INVOKESPECIAL
 argument_list|)
@@ -2538,7 +2538,7 @@ literal|"out"
 argument_list|,
 name|p_stream
 argument_list|,
-name|Constants
+name|Const
 operator|.
 name|GETSTATIC
 argument_list|)
@@ -2614,7 +2614,7 @@ operator|.
 name|STRING
 block|}
 argument_list|,
-name|Constants
+name|Const
 operator|.
 name|INVOKESPECIAL
 argument_list|)
@@ -2656,7 +2656,7 @@ operator|.
 name|STRING
 block|}
 argument_list|,
-name|Constants
+name|Const
 operator|.
 name|INVOKEVIRTUAL
 argument_list|)
@@ -2682,7 +2682,7 @@ name|Type
 operator|.
 name|NO_ARGS
 argument_list|,
-name|Constants
+name|Const
 operator|.
 name|INVOKEVIRTUAL
 argument_list|)
@@ -2713,7 +2713,7 @@ operator|.
 name|STRING
 block|}
 argument_list|,
-name|Constants
+name|Const
 operator|.
 name|INVOKEVIRTUAL
 argument_list|)
@@ -2761,7 +2761,7 @@ name|cg
 operator|.
 name|addEmptyConstructor
 argument_list|(
-name|Constants
+name|Const
 operator|.
 name|ACC_PUBLIC
 argument_list|)
@@ -2883,7 +2883,7 @@ literal|"in"
 argument_list|,
 name|i_stream
 argument_list|,
-name|Constants
+name|Const
 operator|.
 name|GETSTATIC
 argument_list|)
@@ -2912,7 +2912,7 @@ block|{
 name|i_stream
 block|}
 argument_list|,
-name|Constants
+name|Const
 operator|.
 name|INVOKESPECIAL
 argument_list|)
@@ -2945,7 +2945,7 @@ literal|"java.io.Reader"
 argument_list|)
 block|}
 argument_list|,
-name|Constants
+name|Const
 operator|.
 name|INVOKESPECIAL
 argument_list|)
@@ -3208,7 +3208,7 @@ literal|"out"
 argument_list|,
 name|p_stream
 argument_list|,
-name|Constants
+name|Const
 operator|.
 name|GETSTATIC
 argument_list|)
@@ -3284,7 +3284,7 @@ operator|.
 name|STRING
 block|}
 argument_list|,
-name|Constants
+name|Const
 operator|.
 name|INVOKESPECIAL
 argument_list|)
@@ -3326,7 +3326,7 @@ operator|.
 name|STRING
 block|}
 argument_list|,
-name|Constants
+name|Const
 operator|.
 name|INVOKEVIRTUAL
 argument_list|)
@@ -3352,7 +3352,7 @@ name|Type
 operator|.
 name|NO_ARGS
 argument_list|,
-name|Constants
+name|Const
 operator|.
 name|INVOKEVIRTUAL
 argument_list|)
@@ -3383,7 +3383,7 @@ operator|.
 name|STRING
 block|}
 argument_list|,
-name|Constants
+name|Const
 operator|.
 name|INVOKEVIRTUAL
 argument_list|)
@@ -3431,7 +3431,7 @@ name|cg
 operator|.
 name|addEmptyConstructor
 argument_list|(
-name|Constants
+name|Const
 operator|.
 name|ACC_PUBLIC
 argument_list|)
@@ -3487,11 +3487,11 @@ literal|"java.lang.Object"
 argument_list|,
 literal|"<generated>"
 argument_list|,
-name|Constants
+name|Const
 operator|.
 name|ACC_PUBLIC
 operator||
-name|Constants
+name|Const
 operator|.
 name|ACC_SUPER
 argument_list|,
@@ -3517,11 +3517,11 @@ return|return
 operator|new
 name|MethodGen
 argument_list|(
-name|Constants
+name|Const
 operator|.
 name|ACC_STATIC
 operator||
-name|Constants
+name|Const
 operator|.
 name|ACC_PUBLIC
 argument_list|,

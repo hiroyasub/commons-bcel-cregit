@@ -57,7 +57,7 @@ name|commons
 operator|.
 name|bcel6
 operator|.
-name|Constants
+name|Const
 import|;
 end_import
 
@@ -170,7 +170,7 @@ condition|(
 operator|(
 name|tag
 operator|==
-name|Constants
+name|Const
 operator|.
 name|CONSTANT_Double
 operator|)
@@ -178,7 +178,7 @@ operator|||
 operator|(
 name|tag
 operator|==
-name|Constants
+name|Const
 operator|.
 name|CONSTANT_Long
 operator|)
@@ -240,7 +240,7 @@ name|tag
 condition|)
 block|{
 case|case
-name|Constants
+name|Const
 operator|.
 name|CONSTANT_Class
 case|:
@@ -262,7 +262,7 @@ name|getConstant
 argument_list|(
 name|i
 argument_list|,
-name|Constants
+name|Const
 operator|.
 name|CONSTANT_Utf8
 argument_list|)
@@ -288,7 +288,7 @@ argument_list|)
 expr_stmt|;
 break|break;
 case|case
-name|Constants
+name|Const
 operator|.
 name|CONSTANT_String
 case|:
@@ -310,7 +310,7 @@ name|getConstant
 argument_list|(
 name|i
 argument_list|,
-name|Constants
+name|Const
 operator|.
 name|CONSTANT_Utf8
 argument_list|)
@@ -336,7 +336,7 @@ literal|"\""
 expr_stmt|;
 break|break;
 case|case
-name|Constants
+name|Const
 operator|.
 name|CONSTANT_Utf8
 case|:
@@ -354,7 +354,7 @@ argument_list|()
 expr_stmt|;
 break|break;
 case|case
-name|Constants
+name|Const
 operator|.
 name|CONSTANT_Double
 case|:
@@ -377,7 +377,7 @@ argument_list|)
 expr_stmt|;
 break|break;
 case|case
-name|Constants
+name|Const
 operator|.
 name|CONSTANT_Float
 case|:
@@ -400,7 +400,7 @@ argument_list|)
 expr_stmt|;
 break|break;
 case|case
-name|Constants
+name|Const
 operator|.
 name|CONSTANT_Long
 case|:
@@ -423,7 +423,7 @@ argument_list|)
 expr_stmt|;
 break|break;
 case|case
-name|Constants
+name|Const
 operator|.
 name|CONSTANT_Integer
 case|:
@@ -446,7 +446,7 @@ argument_list|)
 expr_stmt|;
 break|break;
 case|case
-name|Constants
+name|Const
 operator|.
 name|CONSTANT_NameAndType
 case|:
@@ -464,7 +464,7 @@ operator|.
 name|getNameIndex
 argument_list|()
 argument_list|,
-name|Constants
+name|Const
 operator|.
 name|CONSTANT_Utf8
 argument_list|)
@@ -483,24 +483,24 @@ operator|.
 name|getSignatureIndex
 argument_list|()
 argument_list|,
-name|Constants
+name|Const
 operator|.
 name|CONSTANT_Utf8
 argument_list|)
 expr_stmt|;
 break|break;
 case|case
-name|Constants
+name|Const
 operator|.
 name|CONSTANT_InterfaceMethodref
 case|:
 case|case
-name|Constants
+name|Const
 operator|.
 name|CONSTANT_Methodref
 case|:
 case|case
-name|Constants
+name|Const
 operator|.
 name|CONSTANT_Fieldref
 case|:
@@ -518,7 +518,7 @@ operator|.
 name|getClassIndex
 argument_list|()
 argument_list|,
-name|Constants
+name|Const
 operator|.
 name|CONSTANT_Class
 argument_list|)
@@ -537,14 +537,14 @@ operator|.
 name|getNameAndTypeIndex
 argument_list|()
 argument_list|,
-name|Constants
+name|Const
 operator|.
 name|CONSTANT_NameAndType
 argument_list|)
 expr_stmt|;
 break|break;
 case|case
-name|Constants
+name|Const
 operator|.
 name|CONSTANT_MethodHandle
 case|:
@@ -560,7 +560,7 @@ name|c
 decl_stmt|;
 name|str
 operator|=
-name|Constants
+name|Const
 operator|.
 name|getMethodHandleName
 argument_list|(
@@ -593,7 +593,7 @@ argument_list|)
 expr_stmt|;
 break|break;
 case|case
-name|Constants
+name|Const
 operator|.
 name|CONSTANT_MethodType
 case|:
@@ -614,14 +614,14 @@ operator|.
 name|getDescriptorIndex
 argument_list|()
 argument_list|,
-name|Constants
+name|Const
 operator|.
 name|CONSTANT_Utf8
 argument_list|)
 expr_stmt|;
 break|break;
 case|case
-name|Constants
+name|Const
 operator|.
 name|CONSTANT_InvokeDynamic
 case|:
@@ -649,7 +649,7 @@ operator|.
 name|getNameAndTypeIndex
 argument_list|()
 argument_list|,
-name|Constants
+name|Const
 operator|.
 name|CONSTANT_NameAndType
 argument_list|)
@@ -1001,7 +1001,7 @@ name|ClassFormatException
 argument_list|(
 literal|"Expected class `"
 operator|+
-name|Constants
+name|Const
 operator|.
 name|getConstantName
 argument_list|(
@@ -1069,7 +1069,7 @@ name|tag
 condition|)
 block|{
 case|case
-name|Constants
+name|Const
 operator|.
 name|CONSTANT_Class
 case|:
@@ -1087,7 +1087,7 @@ argument_list|()
 expr_stmt|;
 break|break;
 case|case
-name|Constants
+name|Const
 operator|.
 name|CONSTANT_String
 case|:
@@ -1122,7 +1122,7 @@ name|getConstant
 argument_list|(
 name|i
 argument_list|,
-name|Constants
+name|Const
 operator|.
 name|CONSTANT_Utf8
 argument_list|)

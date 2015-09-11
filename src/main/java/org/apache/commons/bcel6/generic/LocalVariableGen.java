@@ -27,7 +27,7 @@ name|commons
 operator|.
 name|bcel6
 operator|.
-name|Constants
+name|Const
 import|;
 end_import
 
@@ -113,7 +113,7 @@ operator|||
 operator|(
 name|index
 operator|>
-name|Constants
+name|Const
 operator|.
 name|MAX_SHORT
 operator|)
