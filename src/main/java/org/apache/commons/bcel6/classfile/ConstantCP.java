@@ -76,7 +76,7 @@ block|{
 comment|/** References to the constants containing the class and the field signature      */
 comment|// Note that this field is used to store the
 comment|// bootstrap_method_attr_index of a ConstantInvokeDynamic.
-comment|/**      * @deprecated will be made private; do not access directly, use getter/setter      */
+comment|/**      * @deprecated (since 6.0) will be made private; do not access directly, use getter/setter      */
 annotation|@
 name|java
 operator|.
@@ -89,7 +89,7 @@ name|class_index
 decl_stmt|;
 comment|// TODO make private (has getter& setter)
 comment|// This field has the same meaning for all subclasses.
-comment|/**      * @deprecated will be made private; do not access directly, use getter/setter      */
+comment|/**      * @deprecated (since 6.0) will be made private; do not access directly, use getter/setter      */
 annotation|@
 name|java
 operator|.

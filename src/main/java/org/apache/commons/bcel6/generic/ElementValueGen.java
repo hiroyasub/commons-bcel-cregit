@@ -169,14 +169,14 @@ specifier|abstract
 class|class
 name|ElementValueGen
 block|{
-comment|/**      * @deprecated will be made private and final; do not access directly, use getter      */
+comment|/**      * @deprecated (since 6.0) will be made private and final; do not access directly, use getter      */
 annotation|@
 name|Deprecated
 specifier|protected
 name|int
 name|type
 decl_stmt|;
-comment|/**      * @deprecated will be made private and final; do not access directly, use getter      */
+comment|/**      * @deprecated (since 6.0) will be made private and final; do not access directly, use getter      */
 annotation|@
 name|Deprecated
 specifier|protected

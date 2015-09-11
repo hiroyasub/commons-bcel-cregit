@@ -52,7 +52,7 @@ specifier|public
 class|class
 name|ClassQueue
 block|{
-comment|/**      * @deprecated will be made private; do not access      */
+comment|/**      * @deprecated (since 6.0) will be made private; do not access      */
 annotation|@
 name|Deprecated
 specifier|protected

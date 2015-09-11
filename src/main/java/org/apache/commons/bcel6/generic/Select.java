@@ -72,7 +72,7 @@ comment|/* @since 6.0 */
 implements|,
 name|StackProducer
 block|{
-comment|/**      * @deprecated will be made private; do not access directly, use getter/setter      */
+comment|/**      * @deprecated (since 6.0) will be made private; do not access directly, use getter/setter      */
 annotation|@
 name|Deprecated
 specifier|protected
@@ -81,7 +81,7 @@ index|[]
 name|match
 decl_stmt|;
 comment|// matches, i.e., case 1: ... TODO could be package-protected?
-comment|/**      * @deprecated will be made private; do not access directly, use getter/setter      */
+comment|/**      * @deprecated (since 6.0) will be made private; do not access directly, use getter/setter      */
 annotation|@
 name|Deprecated
 specifier|protected
@@ -90,7 +90,7 @@ index|[]
 name|indices
 decl_stmt|;
 comment|// target offsets TODO could be package-protected?
-comment|/**      * @deprecated will be made private; do not access directly, use getter/setter      */
+comment|/**      * @deprecated (since 6.0) will be made private; do not access directly, use getter/setter      */
 annotation|@
 name|Deprecated
 specifier|protected
@@ -99,7 +99,7 @@ index|[]
 name|targets
 decl_stmt|;
 comment|// target objects in instruction list TODO could be package-protected?
-comment|/**      * @deprecated will be made private; do not access directly, use getter/setter      */
+comment|/**      * @deprecated (since 6.0) will be made private; do not access directly, use getter/setter      */
 annotation|@
 name|Deprecated
 specifier|protected
@@ -107,7 +107,7 @@ name|int
 name|fixed_length
 decl_stmt|;
 comment|// fixed length defined by subclasses TODO could be package-protected?
-comment|/**      * @deprecated will be made private; do not access directly, use getter/setter      */
+comment|/**      * @deprecated (since 6.0) will be made private; do not access directly, use getter/setter      */
 annotation|@
 name|Deprecated
 specifier|protected
@@ -115,7 +115,7 @@ name|int
 name|match_length
 decl_stmt|;
 comment|// number of cases TODO could be package-protected?
-comment|/**      * @deprecated will be made private; do not access directly, use getter/setter      */
+comment|/**      * @deprecated (since 6.0) will be made private; do not access directly, use getter/setter      */
 annotation|@
 name|Deprecated
 specifier|protected

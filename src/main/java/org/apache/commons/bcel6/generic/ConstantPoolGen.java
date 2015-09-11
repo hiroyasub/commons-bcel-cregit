@@ -308,14 +308,14 @@ name|DEFAULT_BUFFER_SIZE
 init|=
 literal|256
 decl_stmt|;
-comment|/**      * @deprecated will be made private; do not access directly, use getter/setter      */
+comment|/**      * @deprecated (since 6.0) will be made private; do not access directly, use getter/setter      */
 annotation|@
 name|Deprecated
 specifier|protected
 name|int
 name|size
 decl_stmt|;
-comment|/**      * @deprecated will be made private; do not access directly, use getter/setter      */
+comment|/**      * @deprecated (since 6.0) will be made private; do not access directly, use getter/setter      */
 annotation|@
 name|Deprecated
 specifier|protected
@@ -323,7 +323,7 @@ name|Constant
 index|[]
 name|constants
 decl_stmt|;
-comment|/**      * @deprecated will be made private; do not access directly, use getSize()      */
+comment|/**      * @deprecated (since 6.0) will be made private; do not access directly, use getSize()      */
 annotation|@
 name|Deprecated
 specifier|protected

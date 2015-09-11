@@ -93,7 +93,7 @@ specifier|abstract
 class|class
 name|Type
 block|{
-comment|/**      * @deprecated will be made private; do not access directly, use getter/setter      */
+comment|/**      * @deprecated (since 6.0) will be made private; do not access directly, use getter/setter      */
 annotation|@
 name|Deprecated
 specifier|protected
@@ -101,7 +101,7 @@ name|byte
 name|type
 decl_stmt|;
 comment|// TODO should be final (and private)
-comment|/**      * @deprecated will be made private; do not access directly, use getter/setter      */
+comment|/**      * @deprecated (since 6.0) will be made private; do not access directly, use getter/setter      */
 annotation|@
 name|Deprecated
 specifier|protected

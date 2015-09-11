@@ -16,7 +16,7 @@ package|;
 end_package
 
 begin_comment
-comment|/**  * Constants for the project, mostly defined in the JVM specification.  *  * @version $Id$  * @deprecated DO NOT USE - use Const instead  */
+comment|/**  * Constants for the project, mostly defined in the JVM specification.  *  * @version $Id$  * @deprecated (since 6.0) DO NOT USE - use Const instead  */
 end_comment
 
 begin_interface

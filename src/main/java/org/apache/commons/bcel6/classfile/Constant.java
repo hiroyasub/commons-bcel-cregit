@@ -175,7 +175,7 @@ block|}
 block|}
 decl_stmt|;
 comment|/* In fact this tag is redundant since we can distinguish different      * `Constant' objects by their type, i.e., via `instanceof'. In some      * places we will use the tag for switch()es anyway.      *      * First, we want match the specification as closely as possible. Second we      * need the tag as an index to select the corresponding class name from the       * `CONSTANT_NAMES' array.      */
-comment|/**      * @deprecated will be made private; do not access directly, use getter/setter      */
+comment|/**      * @deprecated (since 6.0) will be made private; do not access directly, use getter/setter      */
 annotation|@
 name|java
 operator|.

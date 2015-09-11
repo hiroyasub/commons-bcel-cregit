@@ -104,7 +104,7 @@ specifier|private
 name|Instruction
 name|instruction
 decl_stmt|;
-comment|/**      * @deprecated will be made private; do not access directly, use getter/setter      */
+comment|/**      * @deprecated (since 6.0) will be made private; do not access directly, use getter/setter      */
 annotation|@
 name|Deprecated
 specifier|protected

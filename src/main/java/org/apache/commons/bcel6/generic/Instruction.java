@@ -95,7 +95,7 @@ name|Instruction
 implements|implements
 name|Cloneable
 block|{
-comment|/**      * @deprecated will be made private; do not access directly, use getter/setter      */
+comment|/**      * @deprecated (since 6.0) will be made private; do not access directly, use getter/setter      */
 annotation|@
 name|Deprecated
 specifier|protected
@@ -105,7 +105,7 @@ init|=
 literal|1
 decl_stmt|;
 comment|// Length of instruction in bytes
-comment|/**      * @deprecated will be made private; do not access directly, use getter/setter      */
+comment|/**      * @deprecated (since 6.0) will be made private; do not access directly, use getter/setter      */
 annotation|@
 name|Deprecated
 specifier|protected
