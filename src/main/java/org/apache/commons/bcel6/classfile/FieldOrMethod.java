@@ -470,8 +470,14 @@ operator|.
 name|attributes_count
 operator|=
 name|attributes
+operator|!=
+literal|null
+condition|?
+name|attributes
 operator|.
 name|length
+else|:
+literal|0
 expr_stmt|;
 comment|// init deprecated field
 block|}
