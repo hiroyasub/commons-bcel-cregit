@@ -808,7 +808,12 @@ name|Integer
 operator|.
 name|toString
 argument_list|(
+operator|(
+operator|(
+name|ConstantInvokeDynamic
+operator|)
 name|m
+operator|)
 operator|.
 name|getBootstrapMethodAttrIndex
 argument_list|()
