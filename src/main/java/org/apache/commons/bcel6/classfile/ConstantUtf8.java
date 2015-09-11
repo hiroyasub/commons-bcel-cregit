@@ -634,6 +634,28 @@ return|return
 name|bytes
 return|;
 block|}
+comment|/**      * @param bytes the raw bytes of this Utf-8      * @deprecated      */
+annotation|@
+name|java
+operator|.
+name|lang
+operator|.
+name|Deprecated
+specifier|public
+specifier|final
+name|void
+name|setBytes
+parameter_list|(
+name|String
+name|bytes
+parameter_list|)
+block|{
+throw|throw
+operator|new
+name|UnsupportedOperationException
+argument_list|()
+throw|;
+block|}
 comment|/**      * @return String representation      */
 annotation|@
 name|Override

@@ -80,7 +80,7 @@ init|=
 literal|false
 decl_stmt|;
 comment|/** Constructor. */
-specifier|private
+specifier|public
 name|GraphicalVerifier
 parameter_list|()
 block|{

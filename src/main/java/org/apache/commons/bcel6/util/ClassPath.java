@@ -478,6 +478,20 @@ name|paths
 argument_list|)
 expr_stmt|;
 block|}
+comment|/**      * Search for classes in CLASSPATH.      * @deprecated Use SYSTEM_CLASS_PATH constant      */
+annotation|@
+name|Deprecated
+specifier|public
+name|ClassPath
+parameter_list|()
+block|{
+name|this
+argument_list|(
+name|getClassPath
+argument_list|()
+argument_list|)
+expr_stmt|;
+block|}
 comment|/** @return used class path string      */
 annotation|@
 name|Override

@@ -33,6 +33,16 @@ name|java
 operator|.
 name|io
 operator|.
+name|DataInputStream
+import|;
+end_import
+
+begin_import
+import|import
+name|java
+operator|.
+name|io
+operator|.
 name|DataOutputStream
 import|;
 end_import
@@ -114,6 +124,18 @@ index|[]
 name|attributes
 decl_stmt|;
 comment|// Collection of attributes
+comment|/**      * @deprecated (since 6.0) will be removed (not needed)      */
+annotation|@
+name|java
+operator|.
+name|lang
+operator|.
+name|Deprecated
+specifier|protected
+name|int
+name|attributes_count
+decl_stmt|;
+comment|// No. of attributes
 comment|// @since 6.0
 specifier|private
 name|AnnotationEntry
@@ -182,6 +204,32 @@ name|c
 operator|.
 name|getConstantPool
 argument_list|()
+argument_list|)
+expr_stmt|;
+block|}
+comment|/**      * Construct object from file stream.      * @param file Input stream      * @throws IOException      * @throws ClassFormatException      * @deprecated Use {@link #FieldOrMethod(java.io.DataInput, ConstantPool)} instead.      */
+specifier|protected
+name|FieldOrMethod
+parameter_list|(
+name|DataInputStream
+name|file
+parameter_list|,
+name|ConstantPool
+name|constant_pool
+parameter_list|)
+throws|throws
+name|IOException
+throws|,
+name|ClassFormatException
+block|{
+name|this
+argument_list|(
+operator|(
+name|DataInput
+operator|)
+name|file
+argument_list|,
+name|constant_pool
 argument_list|)
 expr_stmt|;
 block|}
@@ -268,6 +316,13 @@ name|constant_pool
 argument_list|)
 expr_stmt|;
 block|}
+name|this
+operator|.
+name|attributes_count
+operator|=
+name|attributes_count
+expr_stmt|;
+comment|// init deprecated field
 block|}
 comment|/**      * @param access_flags Access rights of method      * @param name_index Points to field name in constant pool      * @param signature_index Points to encoded signature      * @param attributes Collection of attributes      * @param constant_pool Array of constants      */
 specifier|protected
@@ -410,6 +465,15 @@ name|attributes
 operator|=
 name|attributes
 expr_stmt|;
+name|this
+operator|.
+name|attributes_count
+operator|=
+name|attributes
+operator|.
+name|length
+expr_stmt|;
+comment|// init deprecated field
 block|}
 comment|/**      * @return Constant pool used by this object.      */
 specifier|public
@@ -612,6 +676,13 @@ operator|.
 name|length
 index|]
 expr_stmt|;
+name|c
+operator|.
+name|attributes_count
+operator|=
+name|attributes_count
+expr_stmt|;
+comment|// init deprecated field
 for|for
 control|(
 name|int
