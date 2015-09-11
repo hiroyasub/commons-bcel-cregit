@@ -36,7 +36,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Constants for the project, mostly defined in the JVM specification.  *  * @version $Id$  */
+comment|/**  * Constants for the project, mostly defined in the JVM specification.  *  * @version $Id$  * @since 6.0 (intended to replace the Constant interface)  */
 end_comment
 
 begin_class
@@ -3112,7 +3112,7 @@ block|,
 literal|"address"
 block|}
 decl_stmt|;
-comment|/**    *     * @param index    * @return    * @since 6.0    */
+comment|/**    * The primitive type names corresponding to the T_XX constants,    * e.g., TYPE_NAMES[T_INT] = "int"    * @param index    * @return    * @since 6.0    */
 specifier|public
 specifier|static
 name|String
@@ -3138,7 +3138,6 @@ index|[]
 name|CLASS_TYPE_NAMES
 init|=
 block|{
-comment|// TODO currently unused - are they needed?
 name|ILLEGAL_TYPE
 block|,
 name|ILLEGAL_TYPE
@@ -3174,6 +3173,23 @@ block|,
 name|ILLEGAL_TYPE
 block|}
 decl_stmt|;
+comment|/**    * The primitive class names corresponding to the T_XX constants,    * e.g., CLASS_TYPE_NAMES[T_INT] = "java.lang.Integer"    * @param index    * @return    * @since 6.0    */
+specifier|public
+specifier|static
+name|String
+name|getClassTypeName
+parameter_list|(
+name|int
+name|index
+parameter_list|)
+block|{
+return|return
+name|CLASS_TYPE_NAMES
+index|[
+name|index
+index|]
+return|;
+block|}
 comment|/** The signature characters corresponding to primitive types,    * e.g., SHORT_TYPE_NAMES[T_INT] = "I"    */
 specifier|private
 specifier|static
