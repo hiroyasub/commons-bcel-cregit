@@ -17,6 +17,20 @@ name|generic
 package|;
 end_package
 
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|commons
+operator|.
+name|bcel6
+operator|.
+name|ExceptionConst
+import|;
+end_import
+
 begin_comment
 comment|/**   * ARRAYLENGTH -  Get length of array  *<PRE>Stack: ..., arrayref -&gt; ..., length</PRE>  *  * @version $Id$  */
 end_comment
@@ -78,15 +92,7 @@ operator|new
 name|Class
 index|[]
 block|{
-name|org
-operator|.
-name|apache
-operator|.
-name|commons
-operator|.
-name|bcel6
-operator|.
-name|ExceptionConstants
+name|ExceptionConst
 operator|.
 name|NULL_POINTER_EXCEPTION
 block|}

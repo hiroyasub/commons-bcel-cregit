@@ -16,10 +16,12 @@ package|;
 end_package
 
 begin_comment
-comment|/**  * Exception constants.  *  * @version $Id$  */
+comment|/**  * Exception constants.  *  * @version $Id$  * @deprecated DO NOT USE - use ExceptionConst instead  */
 end_comment
 
 begin_interface
+annotation|@
+name|Deprecated
 specifier|public
 interface|interface
 name|ExceptionConstants

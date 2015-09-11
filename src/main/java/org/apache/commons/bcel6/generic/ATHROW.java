@@ -17,6 +17,20 @@ name|generic
 package|;
 end_package
 
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|commons
+operator|.
+name|bcel6
+operator|.
+name|ExceptionConst
+import|;
+end_import
+
 begin_comment
 comment|/**   * ATHROW -  Throw exception  *<PRE>Stack: ..., objectref -&gt; objectref</PRE>  *  * @version $Id$  */
 end_comment
@@ -75,15 +89,7 @@ operator|new
 name|Class
 index|[]
 block|{
-name|org
-operator|.
-name|apache
-operator|.
-name|commons
-operator|.
-name|bcel6
-operator|.
-name|ExceptionConstants
+name|ExceptionConst
 operator|.
 name|THROWABLE
 block|}

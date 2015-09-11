@@ -17,6 +17,20 @@ name|generic
 package|;
 end_package
 
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|commons
+operator|.
+name|bcel6
+operator|.
+name|ExceptionConst
+import|;
+end_import
+
 begin_comment
 comment|/**  * LDIV - Divide longs  *<PRE>Stack: ..., value1.word1, value1.word2, value2.word1, value2.word2 -&gt;</PRE>  *        ..., result.word1, result.word2  *  * @version $Id$  */
 end_comment
@@ -66,15 +80,7 @@ operator|new
 name|Class
 index|[]
 block|{
-name|org
-operator|.
-name|apache
-operator|.
-name|commons
-operator|.
-name|bcel6
-operator|.
-name|ExceptionConstants
+name|ExceptionConst
 operator|.
 name|ARITHMETIC_EXCEPTION
 block|}

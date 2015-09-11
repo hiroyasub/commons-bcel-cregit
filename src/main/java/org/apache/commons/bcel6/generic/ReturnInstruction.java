@@ -41,7 +41,7 @@ name|commons
 operator|.
 name|bcel6
 operator|.
-name|ExceptionConstants
+name|ExceptionConst
 import|;
 end_import
 
@@ -195,7 +195,7 @@ operator|new
 name|Class
 index|[]
 block|{
-name|ExceptionConstants
+name|ExceptionConst
 operator|.
 name|ILLEGAL_MONITOR_STATE
 block|}

@@ -17,6 +17,20 @@ name|generic
 package|;
 end_package
 
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|commons
+operator|.
+name|bcel6
+operator|.
+name|ExceptionConst
+import|;
+end_import
+
 begin_comment
 comment|/**  * IDIV - Divide ints  *<PRE>Stack: ..., value1, value2 -&gt; result</PRE>  *  * @version $Id$  */
 end_comment
@@ -68,15 +82,7 @@ operator|new
 name|Class
 index|[]
 block|{
-name|org
-operator|.
-name|apache
-operator|.
-name|commons
-operator|.
-name|bcel6
-operator|.
-name|ExceptionConstants
+name|ExceptionConst
 operator|.
 name|ARITHMETIC_EXCEPTION
 block|}
