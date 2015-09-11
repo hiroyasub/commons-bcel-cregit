@@ -11,6 +11,10 @@ name|bcel6
 package|;
 end_package
 
+begin_comment
+comment|/**  * Exception constants.  * @since 6.0 (intended to replace the InstructionConstant interface)  */
+end_comment
+
 begin_class
 specifier|public
 specifier|final
