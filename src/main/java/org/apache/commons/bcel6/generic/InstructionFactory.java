@@ -290,12 +290,24 @@ operator|+
 literal|1
 argument_list|)
 return|;
+case|case
+name|Const
+operator|.
+name|INVOKEDYNAMIC
+case|:
+return|return
+operator|new
+name|INVOKEDYNAMIC
+argument_list|(
+name|index
+argument_list|)
+return|;
 default|default:
 throw|throw
 operator|new
 name|RuntimeException
 argument_list|(
-literal|"Oops: Unknown invoke kind:"
+literal|"Oops: Unknown invoke kind: "
 operator|+
 name|kind
 argument_list|)
