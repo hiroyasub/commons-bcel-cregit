@@ -78,7 +78,7 @@ condition|)
 block|{
 name|instruction
 operator|=
-name|InstructionConstants
+name|InstructionConst
 operator|.
 name|getInstruction
 argument_list|(
@@ -164,7 +164,7 @@ parameter_list|)
 block|{
 name|instruction
 operator|=
-name|InstructionConstants
+name|InstructionConst
 operator|.
 name|getInstruction
 argument_list|(
@@ -202,7 +202,7 @@ condition|)
 block|{
 name|instruction
 operator|=
-name|InstructionConstants
+name|InstructionConst
 operator|.
 name|FCONST_0
 expr_stmt|;
@@ -216,7 +216,7 @@ condition|)
 block|{
 name|instruction
 operator|=
-name|InstructionConstants
+name|InstructionConst
 operator|.
 name|FCONST_1
 expr_stmt|;
@@ -230,7 +230,7 @@ condition|)
 block|{
 name|instruction
 operator|=
-name|InstructionConstants
+name|InstructionConst
 operator|.
 name|FCONST_2
 expr_stmt|;
@@ -272,7 +272,7 @@ condition|)
 block|{
 name|instruction
 operator|=
-name|InstructionConstants
+name|InstructionConst
 operator|.
 name|LCONST_0
 expr_stmt|;
@@ -286,7 +286,7 @@ condition|)
 block|{
 name|instruction
 operator|=
-name|InstructionConstants
+name|InstructionConst
 operator|.
 name|LCONST_1
 expr_stmt|;
@@ -328,7 +328,7 @@ condition|)
 block|{
 name|instruction
 operator|=
-name|InstructionConstants
+name|InstructionConst
 operator|.
 name|DCONST_0
 expr_stmt|;
@@ -342,7 +342,7 @@ condition|)
 block|{
 name|instruction
 operator|=
-name|InstructionConstants
+name|InstructionConst
 operator|.
 name|DCONST_1
 expr_stmt|;
@@ -384,7 +384,7 @@ condition|)
 block|{
 name|instruction
 operator|=
-name|InstructionConstants
+name|InstructionConst
 operator|.
 name|ACONST_NULL
 expr_stmt|;
@@ -426,7 +426,7 @@ condition|)
 block|{
 name|instruction
 operator|=
-name|InstructionConstants
+name|InstructionConst
 operator|.
 name|ACONST_NULL
 expr_stmt|;

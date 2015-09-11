@@ -2172,7 +2172,7 @@ name|il
 operator|.
 name|append
 argument_list|(
-name|InstructionConstants
+name|InstructionConst
 operator|.
 name|DUP
 argument_list|)
@@ -2194,7 +2194,7 @@ name|il
 operator|.
 name|append
 argument_list|(
-name|InstructionConstants
+name|InstructionConst
 operator|.
 name|DUP
 argument_list|)
@@ -2356,7 +2356,7 @@ name|il
 operator|.
 name|append
 argument_list|(
-name|InstructionConstants
+name|InstructionConst
 operator|.
 name|ACONST_NULL
 argument_list|)
@@ -2496,7 +2496,7 @@ name|il
 operator|.
 name|append
 argument_list|(
-name|InstructionConstants
+name|InstructionConst
 operator|.
 name|RETURN
 argument_list|)
@@ -2571,7 +2571,7 @@ name|il
 operator|.
 name|append
 argument_list|(
-name|InstructionConstants
+name|InstructionConst
 operator|.
 name|DUP
 argument_list|)
@@ -2723,7 +2723,7 @@ name|il
 operator|.
 name|append
 argument_list|(
-name|InstructionConstants
+name|InstructionConst
 operator|.
 name|RETURN
 argument_list|)
@@ -2842,7 +2842,7 @@ name|il
 operator|.
 name|append
 argument_list|(
-name|InstructionConstants
+name|InstructionConst
 operator|.
 name|DUP
 argument_list|)
@@ -2864,7 +2864,7 @@ name|il
 operator|.
 name|append
 argument_list|(
-name|InstructionConstants
+name|InstructionConst
 operator|.
 name|DUP
 argument_list|)
@@ -3026,7 +3026,7 @@ name|il
 operator|.
 name|append
 argument_list|(
-name|InstructionConstants
+name|InstructionConst
 operator|.
 name|ACONST_NULL
 argument_list|)
@@ -3166,7 +3166,7 @@ name|il
 operator|.
 name|append
 argument_list|(
-name|InstructionConstants
+name|InstructionConst
 operator|.
 name|RETURN
 argument_list|)
@@ -3241,7 +3241,7 @@ name|il
 operator|.
 name|append
 argument_list|(
-name|InstructionConstants
+name|InstructionConst
 operator|.
 name|DUP
 argument_list|)
@@ -3393,7 +3393,7 @@ name|il
 operator|.
 name|append
 argument_list|(
-name|InstructionConstants
+name|InstructionConst
 operator|.
 name|RETURN
 argument_list|)

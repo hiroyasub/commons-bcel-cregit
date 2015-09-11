@@ -359,7 +359,7 @@ name|bcel6
 operator|.
 name|generic
 operator|.
-name|InstructionConstants
+name|InstructionConst
 import|;
 end_import
 
@@ -810,7 +810,7 @@ decl_stmt|;
 if|if
 condition|(
 operator|(
-name|InstructionConstants
+name|InstructionConst
 operator|.
 name|getInstruction
 argument_list|(
@@ -840,7 +840,7 @@ name|_out
 operator|.
 name|println
 argument_list|(
-literal|"il.append(InstructionConstants."
+literal|"il.append(InstructionConst."
 operator|+
 name|i
 operator|.

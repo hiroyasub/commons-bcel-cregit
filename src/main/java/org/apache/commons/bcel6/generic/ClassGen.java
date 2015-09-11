@@ -1282,7 +1282,7 @@ name|il
 operator|.
 name|append
 argument_list|(
-name|InstructionConstants
+name|InstructionConst
 operator|.
 name|THIS
 argument_list|)
@@ -1312,7 +1312,7 @@ name|il
 operator|.
 name|append
 argument_list|(
-name|InstructionConstants
+name|InstructionConst
 operator|.
 name|RETURN
 argument_list|)

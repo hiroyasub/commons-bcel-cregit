@@ -267,7 +267,7 @@ decl_stmt|;
 comment|// "Constant" instruction, no need to duplicate
 if|if
 condition|(
-name|InstructionConstants
+name|InstructionConst
 operator|.
 name|getInstruction
 argument_list|(
@@ -334,7 +334,7 @@ throws|throws
 name|IOException
 block|{
 block|}
-comment|/**      * Read an instruction from (byte code) input stream and return the      * appropiate object.      *<p>      * If the Instruction is defined in {@link InstructionConstants}, then the      * singleton instance is returned.      * @param bytes input stream bytes      * @return instruction object being read      * @see InstructionConstants#getInstruction(int)      */
+comment|/**      * Read an instruction from (byte code) input stream and return the      * appropiate object.      *<p>      * If the Instruction is defined in {@link InstructionConst}, then the      * singleton instance is returned.      * @param bytes input stream bytes      * @return instruction object being read      * @see InstructionConst#getInstruction(int)      */
 comment|// @since 6.0 no longer final
 specifier|public
 specifier|static
@@ -397,7 +397,7 @@ specifier|final
 name|Instruction
 name|instruction
 init|=
-name|InstructionConstants
+name|InstructionConst
 operator|.
 name|getInstruction
 argument_list|(

@@ -32,7 +32,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**   * Instances of this class may be used, e.g., to generate typed  * versions of instructions. Its main purpose is to be used as the  * byte code generating backend of a compiler. You can subclass it to  * add your own create methods.  *<p>  * Note: The static createXXX methods return singleton instances  * from the {@link InstructionConstants} class.  *  * @version $Id$  * @see Constants  * @see InstructionConstants  */
+comment|/**   * Instances of this class may be used, e.g., to generate typed  * versions of instructions. Its main purpose is to be used as the  * byte code generating backend of a compiler. You can subclass it to  * add your own create methods.  *<p>  * Note: The static createXXX methods return singleton instances  * from the {@link InstructionConst} class.  *  * @version $Id$  * @see Constants  * @see InstructionConst  */
 end_comment
 
 begin_class
@@ -1135,7 +1135,7 @@ operator|.
 name|T_OBJECT
 case|:
 return|return
-name|InstructionConstants
+name|InstructionConst
 operator|.
 name|ARETURN
 return|;
@@ -1165,7 +1165,7 @@ operator|.
 name|T_BYTE
 case|:
 return|return
-name|InstructionConstants
+name|InstructionConst
 operator|.
 name|IRETURN
 return|;
@@ -1175,7 +1175,7 @@ operator|.
 name|T_FLOAT
 case|:
 return|return
-name|InstructionConstants
+name|InstructionConst
 operator|.
 name|FRETURN
 return|;
@@ -1185,7 +1185,7 @@ operator|.
 name|T_DOUBLE
 case|:
 return|return
-name|InstructionConstants
+name|InstructionConst
 operator|.
 name|DRETURN
 return|;
@@ -1195,7 +1195,7 @@ operator|.
 name|T_LONG
 case|:
 return|return
-name|InstructionConstants
+name|InstructionConst
 operator|.
 name|LRETURN
 return|;
@@ -1205,7 +1205,7 @@ operator|.
 name|T_VOID
 case|:
 return|return
-name|InstructionConstants
+name|InstructionConst
 operator|.
 name|RETURN
 return|;
@@ -1242,7 +1242,7 @@ case|case
 literal|'-'
 case|:
 return|return
-name|InstructionConstants
+name|InstructionConst
 operator|.
 name|ISUB
 return|;
@@ -1250,7 +1250,7 @@ case|case
 literal|'+'
 case|:
 return|return
-name|InstructionConstants
+name|InstructionConst
 operator|.
 name|IADD
 return|;
@@ -1258,7 +1258,7 @@ case|case
 literal|'%'
 case|:
 return|return
-name|InstructionConstants
+name|InstructionConst
 operator|.
 name|IREM
 return|;
@@ -1266,7 +1266,7 @@ case|case
 literal|'*'
 case|:
 return|return
-name|InstructionConstants
+name|InstructionConst
 operator|.
 name|IMUL
 return|;
@@ -1274,7 +1274,7 @@ case|case
 literal|'/'
 case|:
 return|return
-name|InstructionConstants
+name|InstructionConst
 operator|.
 name|IDIV
 return|;
@@ -1282,7 +1282,7 @@ case|case
 literal|'&'
 case|:
 return|return
-name|InstructionConstants
+name|InstructionConst
 operator|.
 name|IAND
 return|;
@@ -1290,7 +1290,7 @@ case|case
 literal|'|'
 case|:
 return|return
-name|InstructionConstants
+name|InstructionConst
 operator|.
 name|IOR
 return|;
@@ -1298,7 +1298,7 @@ case|case
 literal|'^'
 case|:
 return|return
-name|InstructionConstants
+name|InstructionConst
 operator|.
 name|IXOR
 return|;
@@ -1306,7 +1306,7 @@ case|case
 literal|'<'
 case|:
 return|return
-name|InstructionConstants
+name|InstructionConst
 operator|.
 name|ISHL
 return|;
@@ -1321,11 +1321,11 @@ argument_list|(
 literal|">>>"
 argument_list|)
 condition|?
-name|InstructionConstants
+name|InstructionConst
 operator|.
 name|IUSHR
 else|:
-name|InstructionConstants
+name|InstructionConst
 operator|.
 name|ISHR
 return|;
@@ -1362,7 +1362,7 @@ case|case
 literal|'-'
 case|:
 return|return
-name|InstructionConstants
+name|InstructionConst
 operator|.
 name|LSUB
 return|;
@@ -1370,7 +1370,7 @@ case|case
 literal|'+'
 case|:
 return|return
-name|InstructionConstants
+name|InstructionConst
 operator|.
 name|LADD
 return|;
@@ -1378,7 +1378,7 @@ case|case
 literal|'%'
 case|:
 return|return
-name|InstructionConstants
+name|InstructionConst
 operator|.
 name|LREM
 return|;
@@ -1386,7 +1386,7 @@ case|case
 literal|'*'
 case|:
 return|return
-name|InstructionConstants
+name|InstructionConst
 operator|.
 name|LMUL
 return|;
@@ -1394,7 +1394,7 @@ case|case
 literal|'/'
 case|:
 return|return
-name|InstructionConstants
+name|InstructionConst
 operator|.
 name|LDIV
 return|;
@@ -1402,7 +1402,7 @@ case|case
 literal|'&'
 case|:
 return|return
-name|InstructionConstants
+name|InstructionConst
 operator|.
 name|LAND
 return|;
@@ -1410,7 +1410,7 @@ case|case
 literal|'|'
 case|:
 return|return
-name|InstructionConstants
+name|InstructionConst
 operator|.
 name|LOR
 return|;
@@ -1418,7 +1418,7 @@ case|case
 literal|'^'
 case|:
 return|return
-name|InstructionConstants
+name|InstructionConst
 operator|.
 name|LXOR
 return|;
@@ -1426,7 +1426,7 @@ case|case
 literal|'<'
 case|:
 return|return
-name|InstructionConstants
+name|InstructionConst
 operator|.
 name|LSHL
 return|;
@@ -1441,11 +1441,11 @@ argument_list|(
 literal|">>>"
 argument_list|)
 condition|?
-name|InstructionConstants
+name|InstructionConst
 operator|.
 name|LUSHR
 else|:
-name|InstructionConstants
+name|InstructionConst
 operator|.
 name|LSHR
 return|;
@@ -1479,7 +1479,7 @@ case|case
 literal|'-'
 case|:
 return|return
-name|InstructionConstants
+name|InstructionConst
 operator|.
 name|FSUB
 return|;
@@ -1487,7 +1487,7 @@ case|case
 literal|'+'
 case|:
 return|return
-name|InstructionConstants
+name|InstructionConst
 operator|.
 name|FADD
 return|;
@@ -1495,7 +1495,7 @@ case|case
 literal|'*'
 case|:
 return|return
-name|InstructionConstants
+name|InstructionConst
 operator|.
 name|FMUL
 return|;
@@ -1503,7 +1503,7 @@ case|case
 literal|'/'
 case|:
 return|return
-name|InstructionConstants
+name|InstructionConst
 operator|.
 name|FDIV
 return|;
@@ -1511,7 +1511,7 @@ case|case
 literal|'%'
 case|:
 return|return
-name|InstructionConstants
+name|InstructionConst
 operator|.
 name|FREM
 return|;
@@ -1545,7 +1545,7 @@ case|case
 literal|'-'
 case|:
 return|return
-name|InstructionConstants
+name|InstructionConst
 operator|.
 name|DSUB
 return|;
@@ -1553,7 +1553,7 @@ case|case
 literal|'+'
 case|:
 return|return
-name|InstructionConstants
+name|InstructionConst
 operator|.
 name|DADD
 return|;
@@ -1561,7 +1561,7 @@ case|case
 literal|'*'
 case|:
 return|return
-name|InstructionConstants
+name|InstructionConst
 operator|.
 name|DMUL
 return|;
@@ -1569,7 +1569,7 @@ case|case
 literal|'/'
 case|:
 return|return
-name|InstructionConstants
+name|InstructionConst
 operator|.
 name|DDIV
 return|;
@@ -1577,7 +1577,7 @@ case|case
 literal|'%'
 case|:
 return|return
-name|InstructionConstants
+name|InstructionConst
 operator|.
 name|DREM
 return|;
@@ -1716,11 +1716,11 @@ operator|==
 literal|2
 operator|)
 condition|?
-name|InstructionConstants
+name|InstructionConst
 operator|.
 name|POP2
 else|:
-name|InstructionConstants
+name|InstructionConst
 operator|.
 name|POP
 return|;
@@ -1742,11 +1742,11 @@ operator|==
 literal|2
 operator|)
 condition|?
-name|InstructionConstants
+name|InstructionConst
 operator|.
 name|DUP2
 else|:
-name|InstructionConstants
+name|InstructionConst
 operator|.
 name|DUP
 return|;
@@ -1768,11 +1768,11 @@ operator|==
 literal|2
 operator|)
 condition|?
-name|InstructionConstants
+name|InstructionConst
 operator|.
 name|DUP2_X2
 else|:
-name|InstructionConstants
+name|InstructionConst
 operator|.
 name|DUP_X2
 return|;
@@ -1794,11 +1794,11 @@ operator|==
 literal|2
 operator|)
 condition|?
-name|InstructionConstants
+name|InstructionConst
 operator|.
 name|DUP2_X1
 else|:
-name|InstructionConstants
+name|InstructionConst
 operator|.
 name|DUP_X1
 return|;
@@ -2068,7 +2068,7 @@ operator|.
 name|T_BYTE
 case|:
 return|return
-name|InstructionConstants
+name|InstructionConst
 operator|.
 name|BALOAD
 return|;
@@ -2078,7 +2078,7 @@ operator|.
 name|T_CHAR
 case|:
 return|return
-name|InstructionConstants
+name|InstructionConst
 operator|.
 name|CALOAD
 return|;
@@ -2088,7 +2088,7 @@ operator|.
 name|T_SHORT
 case|:
 return|return
-name|InstructionConstants
+name|InstructionConst
 operator|.
 name|SALOAD
 return|;
@@ -2098,7 +2098,7 @@ operator|.
 name|T_INT
 case|:
 return|return
-name|InstructionConstants
+name|InstructionConst
 operator|.
 name|IALOAD
 return|;
@@ -2108,7 +2108,7 @@ operator|.
 name|T_FLOAT
 case|:
 return|return
-name|InstructionConstants
+name|InstructionConst
 operator|.
 name|FALOAD
 return|;
@@ -2118,7 +2118,7 @@ operator|.
 name|T_DOUBLE
 case|:
 return|return
-name|InstructionConstants
+name|InstructionConst
 operator|.
 name|DALOAD
 return|;
@@ -2128,7 +2128,7 @@ operator|.
 name|T_LONG
 case|:
 return|return
-name|InstructionConstants
+name|InstructionConst
 operator|.
 name|LALOAD
 return|;
@@ -2143,7 +2143,7 @@ operator|.
 name|T_OBJECT
 case|:
 return|return
-name|InstructionConstants
+name|InstructionConst
 operator|.
 name|AALOAD
 return|;
@@ -2188,7 +2188,7 @@ operator|.
 name|T_BYTE
 case|:
 return|return
-name|InstructionConstants
+name|InstructionConst
 operator|.
 name|BASTORE
 return|;
@@ -2198,7 +2198,7 @@ operator|.
 name|T_CHAR
 case|:
 return|return
-name|InstructionConstants
+name|InstructionConst
 operator|.
 name|CASTORE
 return|;
@@ -2208,7 +2208,7 @@ operator|.
 name|T_SHORT
 case|:
 return|return
-name|InstructionConstants
+name|InstructionConst
 operator|.
 name|SASTORE
 return|;
@@ -2218,7 +2218,7 @@ operator|.
 name|T_INT
 case|:
 return|return
-name|InstructionConstants
+name|InstructionConst
 operator|.
 name|IASTORE
 return|;
@@ -2228,7 +2228,7 @@ operator|.
 name|T_FLOAT
 case|:
 return|return
-name|InstructionConstants
+name|InstructionConst
 operator|.
 name|FASTORE
 return|;
@@ -2238,7 +2238,7 @@ operator|.
 name|T_DOUBLE
 case|:
 return|return
-name|InstructionConstants
+name|InstructionConst
 operator|.
 name|DASTORE
 return|;
@@ -2248,7 +2248,7 @@ operator|.
 name|T_LONG
 case|:
 return|return
-name|InstructionConstants
+name|InstructionConst
 operator|.
 name|LASTORE
 return|;
@@ -2263,7 +2263,7 @@ operator|.
 name|T_OBJECT
 case|:
 return|return
-name|InstructionConstants
+name|InstructionConst
 operator|.
 name|AASTORE
 return|;
@@ -2933,7 +2933,7 @@ operator|.
 name|T_OBJECT
 case|:
 return|return
-name|InstructionConstants
+name|InstructionConst
 operator|.
 name|ACONST_NULL
 return|;
@@ -2963,7 +2963,7 @@ operator|.
 name|T_BYTE
 case|:
 return|return
-name|InstructionConstants
+name|InstructionConst
 operator|.
 name|ICONST_0
 return|;
@@ -2973,7 +2973,7 @@ operator|.
 name|T_FLOAT
 case|:
 return|return
-name|InstructionConstants
+name|InstructionConst
 operator|.
 name|FCONST_0
 return|;
@@ -2983,7 +2983,7 @@ operator|.
 name|T_DOUBLE
 case|:
 return|return
-name|InstructionConstants
+name|InstructionConst
 operator|.
 name|DCONST_0
 return|;
@@ -2993,7 +2993,7 @@ operator|.
 name|T_LONG
 case|:
 return|return
-name|InstructionConstants
+name|InstructionConst
 operator|.
 name|LCONST_0
 return|;
@@ -3003,7 +3003,7 @@ operator|.
 name|T_VOID
 case|:
 return|return
-name|InstructionConstants
+name|InstructionConst
 operator|.
 name|NOP
 return|;
