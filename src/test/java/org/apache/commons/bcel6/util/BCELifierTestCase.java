@@ -167,6 +167,13 @@ block|}
 comment|/*      * Dump a class using "javap" and compare with the same class recreated      * using BCELifier, "javac", "java" and dumped with "javap"      * TODO: detect if JDK present and skip test if not       */
 annotation|@
 name|Test
+annotation|@
+name|org
+operator|.
+name|junit
+operator|.
+name|Ignore
+comment|// does not work properly on some systems. Also the output is rather different
 specifier|public
 name|void
 name|testJavapCompare
@@ -202,6 +209,8 @@ argument_list|,
 literal|"javap"
 argument_list|,
 literal|"-p"
+argument_list|,
+literal|"-c"
 argument_list|,
 name|javaClass
 argument_list|)
@@ -351,6 +360,8 @@ argument_list|,
 literal|"javap"
 argument_list|,
 literal|"-p"
+argument_list|,
+literal|"-c"
 argument_list|,
 name|infile
 operator|.
