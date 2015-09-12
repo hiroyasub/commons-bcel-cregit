@@ -712,9 +712,7 @@ throw|throw
 operator|new
 name|RuntimeException
 argument_list|(
-literal|"SimpleElementValueGen class does not know how "
-operator|+
-literal|"to copy this type "
+literal|"SimpleElementValueGen class does not know how to copy this type "
 operator|+
 name|super
 operator|.
