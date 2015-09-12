@@ -321,6 +321,30 @@ name|MethodParameters
 name|obj
 parameter_list|)
 function_decl|;
+comment|/**      * @since 6.0      */
+name|void
+name|visitConstantMethodType
+parameter_list|(
+name|ConstantMethodType
+name|obj
+parameter_list|)
+function_decl|;
+comment|/**      * @since 6.0      */
+name|void
+name|visitConstantMethodHandle
+parameter_list|(
+name|ConstantMethodHandle
+name|obj
+parameter_list|)
+function_decl|;
+comment|/**      * @since 6.0      */
+name|void
+name|visitParameterAnnotationEntry
+parameter_list|(
+name|ParameterAnnotationEntry
+name|obj
+parameter_list|)
+function_decl|;
 block|}
 end_interface
 

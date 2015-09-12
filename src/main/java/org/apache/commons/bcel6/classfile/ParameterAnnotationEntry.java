@@ -167,7 +167,13 @@ name|Visitor
 name|v
 parameter_list|)
 block|{
-comment|// v.visitParameterAnnotationEntry(this);
+name|v
+operator|.
+name|visitParameterAnnotationEntry
+argument_list|(
+name|this
+argument_list|)
+expr_stmt|;
 block|}
 comment|/**      * returns the array of annotation entries in this annotation      */
 specifier|public

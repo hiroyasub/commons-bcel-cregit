@@ -494,6 +494,42 @@ name|obj
 parameter_list|)
 block|{
 block|}
+comment|/**      * @since 6.0      */
+annotation|@
+name|Override
+specifier|public
+name|void
+name|visitConstantMethodType
+parameter_list|(
+name|ConstantMethodType
+name|obj
+parameter_list|)
+block|{
+block|}
+comment|/**      * @since 6.0      */
+annotation|@
+name|Override
+specifier|public
+name|void
+name|visitConstantMethodHandle
+parameter_list|(
+name|ConstantMethodHandle
+name|constantMethodHandle
+parameter_list|)
+block|{
+block|}
+comment|/**      * @since 6.0      */
+annotation|@
+name|Override
+specifier|public
+name|void
+name|visitParameterAnnotationEntry
+parameter_list|(
+name|ParameterAnnotationEntry
+name|parameterAnnotationEntry
+parameter_list|)
+block|{
+block|}
 block|}
 end_class
 

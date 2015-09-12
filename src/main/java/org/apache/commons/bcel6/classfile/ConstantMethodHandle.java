@@ -167,7 +167,13 @@ name|Visitor
 name|v
 parameter_list|)
 block|{
-comment|// TODO Add .visitMethodHandle to Visitor interface
+name|v
+operator|.
+name|visitConstantMethodHandle
+argument_list|(
+name|this
+argument_list|)
+expr_stmt|;
 block|}
 comment|/**      * Dump method kind and index to file stream in binary format.      *      * @param file Output file stream      * @throws IOException      */
 annotation|@

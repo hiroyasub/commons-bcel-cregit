@@ -253,6 +253,38 @@ name|bcel6
 operator|.
 name|classfile
 operator|.
+name|ConstantMethodHandle
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|commons
+operator|.
+name|bcel6
+operator|.
+name|classfile
+operator|.
+name|ConstantMethodType
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|commons
+operator|.
+name|bcel6
+operator|.
+name|classfile
+operator|.
 name|ConstantMethodref
 import|;
 end_import
@@ -558,6 +590,22 @@ operator|.
 name|classfile
 operator|.
 name|MethodParameters
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|commons
+operator|.
+name|bcel6
+operator|.
+name|classfile
+operator|.
+name|ParameterAnnotationEntry
 import|;
 end_import
 
@@ -1523,6 +1571,45 @@ block|{
 name|constantInvokeDynamic
 operator|++
 expr_stmt|;
+block|}
+comment|/** @since 6.0 */
+annotation|@
+name|Override
+specifier|public
+name|void
+name|visitConstantMethodType
+parameter_list|(
+name|ConstantMethodType
+name|obj
+parameter_list|)
+block|{
+comment|// TODO Auto-generated method stub
+block|}
+comment|/** @since 6.0 */
+annotation|@
+name|Override
+specifier|public
+name|void
+name|visitConstantMethodHandle
+parameter_list|(
+name|ConstantMethodHandle
+name|constantMethodHandle
+parameter_list|)
+block|{
+comment|// TODO Auto-generated method stub
+block|}
+comment|/** @since 6.0 */
+annotation|@
+name|Override
+specifier|public
+name|void
+name|visitParameterAnnotationEntry
+parameter_list|(
+name|ParameterAnnotationEntry
+name|parameterAnnotationEntry
+parameter_list|)
+block|{
+comment|// TODO Auto-generated method stub
 block|}
 block|}
 end_class
