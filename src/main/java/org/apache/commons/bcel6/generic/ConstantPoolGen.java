@@ -365,6 +365,7 @@ name|NAT_DELIM
 init|=
 literal|"%"
 decl_stmt|;
+comment|// Name and Type
 specifier|private
 specifier|static
 class|class
@@ -1031,6 +1032,106 @@ argument_list|)
 argument_list|)
 expr_stmt|;
 block|}
+block|}
+if|else if
+condition|(
+name|c
+operator|==
+literal|null
+condition|)
+block|{
+comment|// entries may be null
+comment|// nothing to do
+block|}
+if|else if
+condition|(
+name|c
+operator|instanceof
+name|ConstantInteger
+condition|)
+block|{
+comment|// nothing to do
+block|}
+if|else if
+condition|(
+name|c
+operator|instanceof
+name|ConstantLong
+condition|)
+block|{
+comment|// nothing to do
+block|}
+if|else if
+condition|(
+name|c
+operator|instanceof
+name|ConstantFloat
+condition|)
+block|{
+comment|// nothing to do
+block|}
+if|else if
+condition|(
+name|c
+operator|instanceof
+name|ConstantDouble
+condition|)
+block|{
+comment|// nothing to do
+block|}
+if|else if
+condition|(
+name|c
+operator|instanceof
+name|org
+operator|.
+name|apache
+operator|.
+name|commons
+operator|.
+name|bcel6
+operator|.
+name|classfile
+operator|.
+name|ConstantMethodType
+condition|)
+block|{
+comment|// TODO should this be handled somehow?
+block|}
+if|else if
+condition|(
+name|c
+operator|instanceof
+name|org
+operator|.
+name|apache
+operator|.
+name|commons
+operator|.
+name|bcel6
+operator|.
+name|classfile
+operator|.
+name|ConstantMethodHandle
+condition|)
+block|{
+comment|// TODO should this be handled somehow?
+block|}
+else|else
+block|{
+assert|assert
+literal|false
+operator|:
+literal|"Unexpected constant type: "
+operator|+
+name|c
+operator|.
+name|getClass
+argument_list|()
+operator|.
+name|getName
+argument_list|()
+assert|;
 block|}
 block|}
 block|}
