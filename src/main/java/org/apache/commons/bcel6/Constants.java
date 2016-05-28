@@ -2271,6 +2271,15 @@ specifier|public
 specifier|static
 specifier|final
 name|short
+name|INVOKEDYNAMIC
+init|=
+literal|186
+decl_stmt|;
+comment|/** Java VM opcode.    * @see<a href="http://docs.oracle.com/javase/specs/jvms/se8/html/jvms-6.html#jvms-6.5">    * Opcode definitions in The Java Virtual Machine Specification</a> */
+specifier|public
+specifier|static
+specifier|final
+name|short
 name|NEW
 init|=
 literal|187
@@ -3544,7 +3553,8 @@ block|,
 literal|4
 comment|/*invokeinterface*/
 block|,
-name|UNDEFINED
+literal|4
+comment|/*invokedynamic*/
 block|,
 literal|2
 comment|/*new*/
@@ -4359,7 +4369,14 @@ name|T_BYTE
 block|}
 comment|/*invokeinterface*/
 block|,
-block|{}
+block|{
+name|T_SHORT
+block|,
+name|T_BYTE
+block|,
+name|T_BYTE
+block|}
+comment|/*invokedynamic*/
 block|,
 block|{
 name|T_SHORT
@@ -4923,7 +4940,7 @@ literal|"invokestatic"
 block|,
 literal|"invokeinterface"
 block|,
-name|ILLEGAL_OPCODE
+literal|"invokedynamic"
 block|,
 literal|"new"
 block|,
@@ -5631,7 +5648,8 @@ block|,
 name|UNPREDICTABLE
 comment|/*invokeinterface*/
 block|,
-name|UNDEFINED
+name|UNPREDICTABLE
+comment|/*invokedynamic*/
 block|,
 literal|0
 comment|/*new*/
@@ -6357,7 +6375,8 @@ block|,
 name|UNPREDICTABLE
 comment|/*invokeinterface*/
 block|,
-name|UNDEFINED
+name|UNPREDICTABLE
+comment|/*invokedynamic*/
 block|,
 literal|1
 comment|/*new*/
