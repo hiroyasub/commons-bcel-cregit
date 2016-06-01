@@ -91,6 +91,7 @@ comment|/*      * Initialize from another object. Note that both objects use the
 specifier|public
 name|LineNumberTable
 parameter_list|(
+specifier|final
 name|LineNumberTable
 name|c
 parameter_list|)
@@ -123,16 +124,20 @@ comment|/*      * @param name_index Index of name      * @param length Content l
 specifier|public
 name|LineNumberTable
 parameter_list|(
+specifier|final
 name|int
 name|name_index
 parameter_list|,
+specifier|final
 name|int
 name|length
 parameter_list|,
+specifier|final
 name|LineNumber
 index|[]
 name|line_number_table
 parameter_list|,
+specifier|final
 name|ConstantPool
 name|constant_pool
 parameter_list|)
@@ -160,15 +165,19 @@ block|}
 comment|/**      * Construct object from input stream.      * @param name_index Index of name      * @param length Content length in bytes      * @param input Input stream      * @param constant_pool Array of constants      * @throws IOEXception if an I/O Exception occurs in readUnsignedShort      */
 name|LineNumberTable
 parameter_list|(
+specifier|final
 name|int
 name|name_index
 parameter_list|,
+specifier|final
 name|int
 name|length
 parameter_list|,
+specifier|final
 name|DataInput
 name|input
 parameter_list|,
+specifier|final
 name|ConstantPool
 name|constant_pool
 parameter_list|)
@@ -241,6 +250,7 @@ specifier|public
 name|void
 name|accept
 parameter_list|(
+specifier|final
 name|Visitor
 name|v
 parameter_list|)
@@ -261,6 +271,7 @@ specifier|final
 name|void
 name|dump
 parameter_list|(
+specifier|final
 name|DataOutputStream
 name|file
 parameter_list|)
@@ -318,6 +329,7 @@ specifier|final
 name|void
 name|setLineNumberTable
 parameter_list|(
+specifier|final
 name|LineNumber
 index|[]
 name|line_number_table
@@ -478,6 +490,7 @@ specifier|public
 name|int
 name|getSourceLine
 parameter_list|(
+specifier|final
 name|int
 name|pos
 parameter_list|)
@@ -644,6 +657,7 @@ specifier|public
 name|Attribute
 name|copy
 parameter_list|(
+specifier|final
 name|ConstantPool
 name|_constant_pool
 parameter_list|)

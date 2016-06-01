@@ -83,6 +83,7 @@ comment|/**      * @param constant_pool Array of constants      */
 specifier|public
 name|ConstantPool
 parameter_list|(
+specifier|final
 name|Constant
 index|[]
 name|constant_pool
@@ -99,6 +100,7 @@ comment|/**      * Read constants from given input stream.      *      * @param 
 specifier|public
 name|ConstantPool
 parameter_list|(
+specifier|final
 name|DataInput
 name|input
 parameter_list|)
@@ -197,6 +199,7 @@ specifier|public
 name|void
 name|accept
 parameter_list|(
+specifier|final
 name|Visitor
 name|v
 parameter_list|)
@@ -676,6 +679,7 @@ specifier|static
 name|String
 name|escape
 parameter_list|(
+specifier|final
 name|String
 name|str
 parameter_list|)
@@ -811,9 +815,11 @@ specifier|public
 name|String
 name|constantToString
 parameter_list|(
+specifier|final
 name|int
 name|index
 parameter_list|,
+specifier|final
 name|byte
 name|tag
 parameter_list|)
@@ -842,6 +848,7 @@ specifier|public
 name|void
 name|dump
 parameter_list|(
+specifier|final
 name|DataOutputStream
 name|file
 parameter_list|)
@@ -902,6 +909,7 @@ specifier|public
 name|Constant
 name|getConstant
 parameter_list|(
+specifier|final
 name|int
 name|index
 parameter_list|)
@@ -947,9 +955,11 @@ specifier|public
 name|Constant
 name|getConstant
 parameter_list|(
+specifier|final
 name|int
 name|index
 parameter_list|,
+specifier|final
 name|byte
 name|tag
 parameter_list|)
@@ -1038,9 +1048,11 @@ specifier|public
 name|String
 name|getConstantString
 parameter_list|(
+specifier|final
 name|int
 name|index
 parameter_list|,
+specifier|final
 name|byte
 name|tag
 parameter_list|)
@@ -1162,9 +1174,11 @@ specifier|public
 name|void
 name|setConstant
 parameter_list|(
+specifier|final
 name|int
 name|index
 parameter_list|,
+specifier|final
 name|Constant
 name|constant
 parameter_list|)
@@ -1182,6 +1196,7 @@ specifier|public
 name|void
 name|setConstantPool
 parameter_list|(
+specifier|final
 name|Constant
 index|[]
 name|constant_pool

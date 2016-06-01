@@ -147,6 +147,7 @@ block|}
 specifier|public
 name|JavaWrapper
 parameter_list|(
+specifier|final
 name|java
 operator|.
 name|lang
@@ -178,9 +179,11 @@ specifier|public
 name|void
 name|runMain
 parameter_list|(
+specifier|final
 name|String
 name|class_name
 parameter_list|,
+specifier|final
 name|String
 index|[]
 name|argv
@@ -346,6 +349,7 @@ specifier|static
 name|void
 name|main
 parameter_list|(
+specifier|final
 name|String
 index|[]
 name|argv

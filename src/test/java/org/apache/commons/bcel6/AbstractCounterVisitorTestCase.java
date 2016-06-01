@@ -141,6 +141,7 @@ specifier|public
 name|void
 name|setVisitor
 parameter_list|(
+specifier|final
 name|CounterVisitor
 name|visitor
 parameter_list|)

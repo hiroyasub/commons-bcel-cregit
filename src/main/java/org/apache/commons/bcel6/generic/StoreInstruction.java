@@ -34,9 +34,11 @@ block|{
 comment|/**      * Empty constructor needed for the Class.newInstance() statement in      * Instruction.readInstruction(). Not to be used otherwise.      * tag and length are defined in readInstruction and initFromFile, respectively.      */
 name|StoreInstruction
 parameter_list|(
+specifier|final
 name|short
 name|canon_tag
 parameter_list|,
+specifier|final
 name|short
 name|c_tag
 parameter_list|)
@@ -53,12 +55,15 @@ comment|/**      * @param opcode Instruction opcode      * @param c_tag Instruct
 specifier|protected
 name|StoreInstruction
 parameter_list|(
+specifier|final
 name|short
 name|opcode
 parameter_list|,
+specifier|final
 name|short
 name|c_tag
 parameter_list|,
+specifier|final
 name|int
 name|n
 parameter_list|)
@@ -80,6 +85,7 @@ specifier|public
 name|void
 name|accept
 parameter_list|(
+specifier|final
 name|Visitor
 name|v
 parameter_list|)

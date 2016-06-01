@@ -46,6 +46,7 @@ block|{
 comment|/**      * Constructor for basic types such as int, long, `void'      *      * @param type one of T_INT, T_BOOLEAN, ..., T_VOID      * @see Const      */
 name|BasicType
 parameter_list|(
+specifier|final
 name|byte
 name|type
 parameter_list|)
@@ -98,6 +99,7 @@ specifier|static
 name|BasicType
 name|getType
 parameter_list|(
+specifier|final
 name|byte
 name|type
 parameter_list|)
@@ -213,6 +215,7 @@ specifier|public
 name|boolean
 name|equals
 parameter_list|(
+specifier|final
 name|Object
 name|_type
 parameter_list|)

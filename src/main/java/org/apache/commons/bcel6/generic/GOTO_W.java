@@ -72,6 +72,7 @@ block|}
 specifier|public
 name|GOTO_W
 parameter_list|(
+specifier|final
 name|InstructionHandle
 name|target
 parameter_list|)
@@ -108,6 +109,7 @@ specifier|public
 name|void
 name|dump
 parameter_list|(
+specifier|final
 name|DataOutputStream
 name|out
 parameter_list|)
@@ -150,9 +152,11 @@ specifier|protected
 name|void
 name|initFromFile
 parameter_list|(
+specifier|final
 name|ByteSequence
 name|bytes
 parameter_list|,
+specifier|final
 name|boolean
 name|wide
 parameter_list|)
@@ -184,6 +188,7 @@ specifier|public
 name|void
 name|accept
 parameter_list|(
+specifier|final
 name|Visitor
 name|v
 parameter_list|)

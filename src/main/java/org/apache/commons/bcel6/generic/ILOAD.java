@@ -64,6 +64,7 @@ comment|/** Load int from local variable      * @param n index of local variable
 specifier|public
 name|ILOAD
 parameter_list|(
+specifier|final
 name|int
 name|n
 parameter_list|)
@@ -105,6 +106,7 @@ specifier|public
 name|void
 name|accept
 parameter_list|(
+specifier|final
 name|Visitor
 name|v
 parameter_list|)

@@ -52,6 +52,7 @@ comment|/**      * Constructs a new LocalVariableInfoInconsistentException with 
 specifier|public
 name|LocalVariableInfoInconsistentException
 parameter_list|(
+specifier|final
 name|String
 name|message
 parameter_list|)

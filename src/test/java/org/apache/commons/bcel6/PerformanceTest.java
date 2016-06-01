@@ -418,6 +418,7 @@ specifier|static
 name|void
 name|test
 parameter_list|(
+specifier|final
 name|File
 name|lib
 parameter_list|)
@@ -853,6 +854,7 @@ specifier|public
 name|boolean
 name|accept
 parameter_list|(
+specifier|final
 name|File
 name|file
 parameter_list|)

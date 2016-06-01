@@ -109,6 +109,7 @@ comment|/**      * Creates a new LocalVariables object.      */
 specifier|public
 name|LocalVariables
 parameter_list|(
+specifier|final
 name|int
 name|maxLocals
 parameter_list|)
@@ -207,6 +208,7 @@ specifier|public
 name|Type
 name|get
 parameter_list|(
+specifier|final
 name|int
 name|i
 parameter_list|)
@@ -251,9 +253,11 @@ specifier|public
 name|void
 name|set
 parameter_list|(
+specifier|final
 name|int
 name|i
 parameter_list|,
+specifier|final
 name|Type
 name|type
 parameter_list|)
@@ -327,6 +331,7 @@ specifier|public
 name|boolean
 name|equals
 parameter_list|(
+specifier|final
 name|Object
 name|o
 parameter_list|)
@@ -427,6 +432,7 @@ specifier|public
 name|void
 name|merge
 parameter_list|(
+specifier|final
 name|LocalVariables
 name|lv
 parameter_list|)
@@ -485,9 +491,11 @@ specifier|private
 name|void
 name|merge
 parameter_list|(
+specifier|final
 name|LocalVariables
 name|lv
 parameter_list|,
+specifier|final
 name|int
 name|i
 parameter_list|)
@@ -880,6 +888,7 @@ specifier|public
 name|void
 name|initializeObject
 parameter_list|(
+specifier|final
 name|UninitializedObjectType
 name|u
 parameter_list|)

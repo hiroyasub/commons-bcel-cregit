@@ -118,9 +118,11 @@ comment|/**      * @param index to constant pool      */
 specifier|protected
 name|FieldOrMethod
 parameter_list|(
+specifier|final
 name|short
 name|opcode
 parameter_list|,
+specifier|final
 name|int
 name|index
 parameter_list|)
@@ -138,6 +140,7 @@ specifier|public
 name|String
 name|getSignature
 parameter_list|(
+specifier|final
 name|ConstantPoolGen
 name|cpg
 parameter_list|)
@@ -207,6 +210,7 @@ specifier|public
 name|String
 name|getName
 parameter_list|(
+specifier|final
 name|ConstantPoolGen
 name|cpg
 parameter_list|)
@@ -278,6 +282,7 @@ specifier|public
 name|String
 name|getClassName
 parameter_list|(
+specifier|final
 name|ConstantPoolGen
 name|cpg
 parameter_list|)
@@ -356,6 +361,7 @@ specifier|public
 name|ObjectType
 name|getClassType
 parameter_list|(
+specifier|final
 name|ConstantPoolGen
 name|cpg
 parameter_list|)
@@ -377,6 +383,7 @@ specifier|public
 name|ReferenceType
 name|getReferenceType
 parameter_list|(
+specifier|final
 name|ConstantPoolGen
 name|cpg
 parameter_list|)
@@ -471,6 +478,7 @@ specifier|public
 name|ObjectType
 name|getLoadClassType
 parameter_list|(
+specifier|final
 name|ConstantPoolGen
 name|cpg
 parameter_list|)

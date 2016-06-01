@@ -199,6 +199,7 @@ specifier|public
 name|void
 name|actionPerformed
 parameter_list|(
+specifier|final
 name|java
 operator|.
 name|awt
@@ -322,6 +323,7 @@ comment|/** Machine-generated. */
 specifier|public
 name|VerifyDialog
 parameter_list|(
+specifier|final
 name|java
 operator|.
 name|awt
@@ -340,6 +342,7 @@ comment|/** Machine-generated. */
 specifier|public
 name|VerifyDialog
 parameter_list|(
+specifier|final
 name|java
 operator|.
 name|awt
@@ -347,6 +350,7 @@ operator|.
 name|Dialog
 name|owner
 parameter_list|,
+specifier|final
 name|String
 name|title
 parameter_list|)
@@ -363,6 +367,7 @@ comment|/** Machine-generated. */
 specifier|public
 name|VerifyDialog
 parameter_list|(
+specifier|final
 name|java
 operator|.
 name|awt
@@ -370,9 +375,11 @@ operator|.
 name|Dialog
 name|owner
 parameter_list|,
+specifier|final
 name|String
 name|title
 parameter_list|,
+specifier|final
 name|boolean
 name|modal
 parameter_list|)
@@ -391,6 +398,7 @@ comment|/** Machine-generated. */
 specifier|public
 name|VerifyDialog
 parameter_list|(
+specifier|final
 name|java
 operator|.
 name|awt
@@ -398,6 +406,7 @@ operator|.
 name|Dialog
 name|owner
 parameter_list|,
+specifier|final
 name|boolean
 name|modal
 parameter_list|)
@@ -414,6 +423,7 @@ comment|/** Machine-generated. */
 specifier|public
 name|VerifyDialog
 parameter_list|(
+specifier|final
 name|java
 operator|.
 name|awt
@@ -432,6 +442,7 @@ comment|/** Machine-generated. */
 specifier|public
 name|VerifyDialog
 parameter_list|(
+specifier|final
 name|java
 operator|.
 name|awt
@@ -439,6 +450,7 @@ operator|.
 name|Frame
 name|owner
 parameter_list|,
+specifier|final
 name|String
 name|title
 parameter_list|)
@@ -455,6 +467,7 @@ comment|/** Machine-generated. */
 specifier|public
 name|VerifyDialog
 parameter_list|(
+specifier|final
 name|java
 operator|.
 name|awt
@@ -462,9 +475,11 @@ operator|.
 name|Frame
 name|owner
 parameter_list|,
+specifier|final
 name|String
 name|title
 parameter_list|,
+specifier|final
 name|boolean
 name|modal
 parameter_list|)
@@ -483,6 +498,7 @@ comment|/** Machine-generated. */
 specifier|public
 name|VerifyDialog
 parameter_list|(
+specifier|final
 name|java
 operator|.
 name|awt
@@ -490,6 +506,7 @@ operator|.
 name|Frame
 name|owner
 parameter_list|,
+specifier|final
 name|boolean
 name|modal
 parameter_list|)
@@ -567,6 +584,7 @@ specifier|private
 name|void
 name|connEtoC1
 parameter_list|(
+specifier|final
 name|java
 operator|.
 name|awt
@@ -615,6 +633,7 @@ specifier|private
 name|void
 name|connEtoC2
 parameter_list|(
+specifier|final
 name|java
 operator|.
 name|awt
@@ -663,6 +682,7 @@ specifier|private
 name|void
 name|connEtoC3
 parameter_list|(
+specifier|final
 name|java
 operator|.
 name|awt
@@ -711,6 +731,7 @@ specifier|private
 name|void
 name|connEtoC4
 parameter_list|(
+specifier|final
 name|java
 operator|.
 name|awt
@@ -759,6 +780,7 @@ specifier|public
 name|void
 name|flushButton_ActionPerformed
 parameter_list|(
+specifier|final
 name|java
 operator|.
 name|awt
@@ -1721,6 +1743,7 @@ specifier|private
 name|void
 name|handleException
 parameter_list|(
+specifier|final
 name|java
 operator|.
 name|lang
@@ -1917,6 +1940,7 @@ specifier|static
 name|void
 name|main
 parameter_list|(
+specifier|final
 name|java
 operator|.
 name|lang
@@ -1980,6 +2004,7 @@ specifier|public
 name|void
 name|windowClosing
 parameter_list|(
+specifier|final
 name|java
 operator|.
 name|awt
@@ -2052,6 +2077,7 @@ specifier|public
 name|void
 name|pass1Button_ActionPerformed
 parameter_list|(
+specifier|final
 name|java
 operator|.
 name|awt
@@ -2144,6 +2170,7 @@ specifier|public
 name|void
 name|pass2Button_ActionPerformed
 parameter_list|(
+specifier|final
 name|java
 operator|.
 name|awt
@@ -2270,6 +2297,7 @@ specifier|public
 name|void
 name|pass4Button_ActionPerformed
 parameter_list|(
+specifier|final
 name|java
 operator|.
 name|awt

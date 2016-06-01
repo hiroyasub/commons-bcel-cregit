@@ -38,6 +38,7 @@ block|{
 specifier|public
 name|AnnotatedWithCombinedAnnotation
 parameter_list|(
+specifier|final
 name|int
 name|param1
 parameter_list|,
@@ -48,6 +49,7 @@ name|id
 operator|=
 literal|42
 argument_list|)
+specifier|final
 name|int
 name|param2
 parameter_list|)

@@ -220,6 +220,7 @@ comment|/**      * Should only be instantiated by a Verifier.      *      * @see
 specifier|public
 name|Pass1Verifier
 parameter_list|(
+specifier|final
 name|Verifier
 name|owner
 parameter_list|)

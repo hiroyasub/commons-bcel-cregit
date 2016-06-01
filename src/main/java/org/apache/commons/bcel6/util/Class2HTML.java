@@ -308,9 +308,11 @@ comment|/**      * Write contents of the given JavaClass into HTML files.      *
 specifier|public
 name|Class2HTML
 parameter_list|(
+specifier|final
 name|JavaClass
 name|java_class
 parameter_list|,
+specifier|final
 name|String
 name|dir
 parameter_list|)
@@ -475,6 +477,7 @@ specifier|static
 name|void
 name|main
 parameter_list|(
+specifier|final
 name|String
 index|[]
 name|argv
@@ -840,6 +843,7 @@ specifier|static
 name|String
 name|referenceClass
 parameter_list|(
+specifier|final
 name|int
 name|index
 parameter_list|)
@@ -902,6 +906,7 @@ specifier|static
 name|String
 name|referenceType
 parameter_list|(
+specifier|final
 name|String
 name|type
 parameter_list|)
@@ -1003,6 +1008,7 @@ specifier|static
 name|String
 name|toHTML
 parameter_list|(
+specifier|final
 name|String
 name|str
 parameter_list|)
@@ -1112,6 +1118,7 @@ specifier|private
 name|void
 name|writeMainHTML
 parameter_list|(
+specifier|final
 name|AttributeHTML
 name|attribute_html
 parameter_list|)

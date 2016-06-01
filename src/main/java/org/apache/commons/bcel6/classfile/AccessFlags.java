@@ -62,6 +62,7 @@ comment|/**      * @param a inital access flags      */
 specifier|public
 name|AccessFlags
 parameter_list|(
+specifier|final
 name|int
 name|a
 parameter_list|)
@@ -99,6 +100,7 @@ specifier|final
 name|void
 name|setAccessFlags
 parameter_list|(
+specifier|final
 name|int
 name|access_flags
 parameter_list|)
@@ -116,6 +118,7 @@ specifier|final
 name|void
 name|setModifiers
 parameter_list|(
+specifier|final
 name|int
 name|access_flags
 parameter_list|)
@@ -130,9 +133,11 @@ specifier|private
 name|void
 name|setFlag
 parameter_list|(
+specifier|final
 name|int
 name|flag
 parameter_list|,
+specifier|final
 name|boolean
 name|set
 parameter_list|)
@@ -181,6 +186,7 @@ specifier|final
 name|void
 name|isPublic
 parameter_list|(
+specifier|final
 name|boolean
 name|flag
 parameter_list|)
@@ -218,6 +224,7 @@ specifier|final
 name|void
 name|isPrivate
 parameter_list|(
+specifier|final
 name|boolean
 name|flag
 parameter_list|)
@@ -255,6 +262,7 @@ specifier|final
 name|void
 name|isProtected
 parameter_list|(
+specifier|final
 name|boolean
 name|flag
 parameter_list|)
@@ -292,6 +300,7 @@ specifier|final
 name|void
 name|isStatic
 parameter_list|(
+specifier|final
 name|boolean
 name|flag
 parameter_list|)
@@ -329,6 +338,7 @@ specifier|final
 name|void
 name|isFinal
 parameter_list|(
+specifier|final
 name|boolean
 name|flag
 parameter_list|)
@@ -366,6 +376,7 @@ specifier|final
 name|void
 name|isSynchronized
 parameter_list|(
+specifier|final
 name|boolean
 name|flag
 parameter_list|)
@@ -403,6 +414,7 @@ specifier|final
 name|void
 name|isVolatile
 parameter_list|(
+specifier|final
 name|boolean
 name|flag
 parameter_list|)
@@ -440,6 +452,7 @@ specifier|final
 name|void
 name|isTransient
 parameter_list|(
+specifier|final
 name|boolean
 name|flag
 parameter_list|)
@@ -477,6 +490,7 @@ specifier|final
 name|void
 name|isNative
 parameter_list|(
+specifier|final
 name|boolean
 name|flag
 parameter_list|)
@@ -514,6 +528,7 @@ specifier|final
 name|void
 name|isInterface
 parameter_list|(
+specifier|final
 name|boolean
 name|flag
 parameter_list|)
@@ -551,6 +566,7 @@ specifier|final
 name|void
 name|isAbstract
 parameter_list|(
+specifier|final
 name|boolean
 name|flag
 parameter_list|)
@@ -588,6 +604,7 @@ specifier|final
 name|void
 name|isStrictfp
 parameter_list|(
+specifier|final
 name|boolean
 name|flag
 parameter_list|)
@@ -625,6 +642,7 @@ specifier|final
 name|void
 name|isSynthetic
 parameter_list|(
+specifier|final
 name|boolean
 name|flag
 parameter_list|)
@@ -662,6 +680,7 @@ specifier|final
 name|void
 name|isAnnotation
 parameter_list|(
+specifier|final
 name|boolean
 name|flag
 parameter_list|)
@@ -699,6 +718,7 @@ specifier|final
 name|void
 name|isEnum
 parameter_list|(
+specifier|final
 name|boolean
 name|flag
 parameter_list|)

@@ -52,6 +52,7 @@ comment|/**      * Constructs a new ClassConstraintException with the specified 
 specifier|public
 name|ClassConstraintException
 parameter_list|(
+specifier|final
 name|String
 name|message
 parameter_list|)
@@ -66,9 +67,11 @@ comment|/**      * Constructs a new ClassConstraintException with the specified 
 specifier|public
 name|ClassConstraintException
 parameter_list|(
+specifier|final
 name|String
 name|message
 parameter_list|,
+specifier|final
 name|Throwable
 name|initCause
 parameter_list|)

@@ -613,9 +613,11 @@ name|_cp
 decl_stmt|;
 name|BCELFactory
 parameter_list|(
+specifier|final
 name|MethodGen
 name|mg
 parameter_list|,
+specifier|final
 name|PrintWriter
 name|out
 parameter_list|)
@@ -810,6 +812,7 @@ specifier|private
 name|boolean
 name|visitInstruction
 parameter_list|(
+specifier|final
 name|Instruction
 name|i
 parameter_list|)
@@ -886,6 +889,7 @@ specifier|public
 name|void
 name|visitLocalVariableInstruction
 parameter_list|(
+specifier|final
 name|LocalVariableInstruction
 name|i
 parameter_list|)
@@ -996,6 +1000,7 @@ specifier|public
 name|void
 name|visitArrayInstruction
 parameter_list|(
+specifier|final
 name|ArrayInstruction
 name|i
 parameter_list|)
@@ -1060,6 +1065,7 @@ specifier|public
 name|void
 name|visitFieldInstruction
 parameter_list|(
+specifier|final
 name|FieldInstruction
 name|i
 parameter_list|)
@@ -1151,6 +1157,7 @@ specifier|public
 name|void
 name|visitInvokeInstruction
 parameter_list|(
+specifier|final
 name|InvokeInstruction
 name|i
 parameter_list|)
@@ -1262,6 +1269,7 @@ specifier|public
 name|void
 name|visitAllocationInstruction
 parameter_list|(
+specifier|final
 name|AllocationInstruction
 name|i
 parameter_list|)
@@ -1439,6 +1447,7 @@ specifier|private
 name|void
 name|createConstant
 parameter_list|(
+specifier|final
 name|Object
 name|value
 parameter_list|)
@@ -1568,6 +1577,7 @@ specifier|public
 name|void
 name|visitLDC
 parameter_list|(
+specifier|final
 name|LDC
 name|i
 parameter_list|)
@@ -1589,6 +1599,7 @@ specifier|public
 name|void
 name|visitLDC2_W
 parameter_list|(
+specifier|final
 name|LDC2_W
 name|i
 parameter_list|)
@@ -1610,6 +1621,7 @@ specifier|public
 name|void
 name|visitConstantPushInstruction
 parameter_list|(
+specifier|final
 name|ConstantPushInstruction
 name|i
 parameter_list|)
@@ -1629,6 +1641,7 @@ specifier|public
 name|void
 name|visitINSTANCEOF
 parameter_list|(
+specifier|final
 name|INSTANCEOF
 name|i
 parameter_list|)
@@ -1666,6 +1679,7 @@ specifier|public
 name|void
 name|visitCHECKCAST
 parameter_list|(
+specifier|final
 name|CHECKCAST
 name|i
 parameter_list|)
@@ -1703,6 +1717,7 @@ specifier|public
 name|void
 name|visitReturnInstruction
 parameter_list|(
+specifier|final
 name|ReturnInstruction
 name|i
 parameter_list|)
@@ -1754,6 +1769,7 @@ specifier|public
 name|void
 name|visitBranchInstruction
 parameter_list|(
+specifier|final
 name|BranchInstruction
 name|bi
 parameter_list|)
@@ -2087,6 +2103,7 @@ specifier|public
 name|void
 name|visitRET
 parameter_list|(
+specifier|final
 name|RET
 name|i
 parameter_list|)

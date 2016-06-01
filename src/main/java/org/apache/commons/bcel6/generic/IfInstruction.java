@@ -40,9 +40,11 @@ comment|/**      * @param opcode opcode of instruction      * @param target Targ
 specifier|protected
 name|IfInstruction
 parameter_list|(
+specifier|final
 name|short
 name|opcode
 parameter_list|,
+specifier|final
 name|InstructionHandle
 name|target
 parameter_list|)

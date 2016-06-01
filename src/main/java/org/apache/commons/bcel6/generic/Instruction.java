@@ -133,9 +133,11 @@ block|}
 specifier|public
 name|Instruction
 parameter_list|(
+specifier|final
 name|short
 name|opcode
 parameter_list|,
+specifier|final
 name|short
 name|length
 parameter_list|)
@@ -158,6 +160,7 @@ specifier|public
 name|void
 name|dump
 parameter_list|(
+specifier|final
 name|DataOutputStream
 name|out
 parameter_list|)
@@ -193,6 +196,7 @@ specifier|public
 name|String
 name|toString
 parameter_list|(
+specifier|final
 name|boolean
 name|verbose
 parameter_list|)
@@ -242,6 +246,7 @@ specifier|public
 name|String
 name|toString
 parameter_list|(
+specifier|final
 name|ConstantPool
 name|cp
 parameter_list|)
@@ -324,9 +329,11 @@ specifier|protected
 name|void
 name|initFromFile
 parameter_list|(
+specifier|final
 name|ByteSequence
 name|bytes
 parameter_list|,
+specifier|final
 name|boolean
 name|wide
 parameter_list|)
@@ -341,6 +348,7 @@ specifier|static
 name|Instruction
 name|readInstruction
 parameter_list|(
+specifier|final
 name|ByteSequence
 name|bytes
 parameter_list|)
@@ -1738,6 +1746,7 @@ specifier|public
 name|int
 name|consumeStack
 parameter_list|(
+specifier|final
 name|ConstantPoolGen
 name|cpg
 parameter_list|)
@@ -1756,6 +1765,7 @@ specifier|public
 name|int
 name|produceStack
 parameter_list|(
+specifier|final
 name|ConstantPoolGen
 name|cpg
 parameter_list|)
@@ -1794,6 +1804,7 @@ specifier|final
 name|void
 name|setOpcode
 parameter_list|(
+specifier|final
 name|short
 name|opcode
 parameter_list|)
@@ -1810,6 +1821,7 @@ specifier|final
 name|void
 name|setLength
 parameter_list|(
+specifier|final
 name|int
 name|length
 parameter_list|)
@@ -1862,6 +1874,7 @@ specifier|static
 name|void
 name|setComparator
 parameter_list|(
+specifier|final
 name|InstructionComparator
 name|c
 parameter_list|)
@@ -1878,6 +1891,7 @@ specifier|public
 name|boolean
 name|equals
 parameter_list|(
+specifier|final
 name|Object
 name|that
 parameter_list|)
@@ -1922,6 +1936,7 @@ specifier|static
 name|boolean
 name|isValidByte
 parameter_list|(
+specifier|final
 name|int
 name|value
 parameter_list|)
@@ -1946,6 +1961,7 @@ specifier|static
 name|boolean
 name|isValidShort
 parameter_list|(
+specifier|final
 name|int
 name|value
 parameter_list|)

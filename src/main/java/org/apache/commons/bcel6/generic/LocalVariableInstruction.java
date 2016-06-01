@@ -126,9 +126,11 @@ block|}
 comment|/**      * Empty constructor needed for the Class.newInstance() statement in      * Instruction.readInstruction(). Not to be used otherwise.      * tag and length are defined in readInstruction and initFromFile, respectively.      */
 name|LocalVariableInstruction
 parameter_list|(
+specifier|final
 name|short
 name|canon_tag
 parameter_list|,
+specifier|final
 name|short
 name|c_tag
 parameter_list|)
@@ -158,12 +160,15 @@ comment|/**      * @param opcode Instruction opcode      * @param c_tag Instruct
 specifier|protected
 name|LocalVariableInstruction
 parameter_list|(
+specifier|final
 name|short
 name|opcode
 parameter_list|,
+specifier|final
 name|short
 name|c_tag
 parameter_list|,
+specifier|final
 name|int
 name|n
 parameter_list|)
@@ -201,6 +206,7 @@ specifier|public
 name|void
 name|dump
 parameter_list|(
+specifier|final
 name|DataOutputStream
 name|out
 parameter_list|)
@@ -277,6 +283,7 @@ specifier|public
 name|String
 name|toString
 parameter_list|(
+specifier|final
 name|boolean
 name|verbose
 parameter_list|)
@@ -358,9 +365,11 @@ specifier|protected
 name|void
 name|initFromFile
 parameter_list|(
+specifier|final
 name|ByteSequence
 name|bytes
 parameter_list|,
+specifier|final
 name|boolean
 name|wide
 parameter_list|)
@@ -527,6 +536,7 @@ specifier|public
 name|void
 name|setIndex
 parameter_list|(
+specifier|final
 name|int
 name|n
 parameter_list|)
@@ -648,6 +658,7 @@ specifier|public
 name|Type
 name|getType
 parameter_list|(
+specifier|final
 name|ConstantPoolGen
 name|cp
 parameter_list|)
@@ -749,6 +760,7 @@ specifier|final
 name|void
 name|setIndexOnly
 parameter_list|(
+specifier|final
 name|int
 name|n
 parameter_list|)

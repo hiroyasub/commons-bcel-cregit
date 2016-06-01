@@ -52,6 +52,7 @@ comment|/**      * Constructs a new LoadingException with the specified error me
 specifier|public
 name|LoadingException
 parameter_list|(
+specifier|final
 name|String
 name|message
 parameter_list|)

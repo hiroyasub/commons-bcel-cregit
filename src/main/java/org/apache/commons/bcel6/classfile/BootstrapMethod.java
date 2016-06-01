@@ -97,6 +97,7 @@ comment|/**      * Initialize from another object.      */
 specifier|public
 name|BootstrapMethod
 parameter_list|(
+specifier|final
 name|BootstrapMethod
 name|c
 parameter_list|)
@@ -118,6 +119,7 @@ block|}
 comment|/**      * Construct object from input stream.      *       * @param input Input stream      * @throws IOException      */
 name|BootstrapMethod
 parameter_list|(
+specifier|final
 name|DataInput
 name|input
 parameter_list|)
@@ -170,9 +172,11 @@ comment|// helper method
 specifier|private
 name|BootstrapMethod
 parameter_list|(
+specifier|final
 name|int
 name|bootstrap_method_ref
 parameter_list|,
+specifier|final
 name|int
 name|num_bootstrap_arguments
 parameter_list|)
@@ -193,9 +197,11 @@ comment|/**      * @param bootstrap_method_ref int index into constant_pool of C
 specifier|public
 name|BootstrapMethod
 parameter_list|(
+specifier|final
 name|int
 name|bootstrap_method_ref
 parameter_list|,
+specifier|final
 name|int
 index|[]
 name|bootstrap_arguments
@@ -229,6 +235,7 @@ specifier|public
 name|void
 name|setBootstrapMethodRef
 parameter_list|(
+specifier|final
 name|int
 name|bootstrap_method_ref
 parameter_list|)
@@ -268,6 +275,7 @@ specifier|public
 name|void
 name|setBootstrapArguments
 parameter_list|(
+specifier|final
 name|int
 index|[]
 name|bootstrap_arguments
@@ -318,6 +326,7 @@ specifier|final
 name|String
 name|toString
 parameter_list|(
+specifier|final
 name|ConstantPool
 name|constant_pool
 parameter_list|)
@@ -446,6 +455,7 @@ specifier|final
 name|void
 name|dump
 parameter_list|(
+specifier|final
 name|DataOutputStream
 name|file
 parameter_list|)

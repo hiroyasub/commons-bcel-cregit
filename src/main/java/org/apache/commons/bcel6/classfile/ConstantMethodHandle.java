@@ -85,6 +85,7 @@ comment|/**      * Initialize from another object.      */
 specifier|public
 name|ConstantMethodHandle
 parameter_list|(
+specifier|final
 name|ConstantMethodHandle
 name|c
 parameter_list|)
@@ -106,6 +107,7 @@ block|}
 comment|/**      * Initialize instance from file data.      *      * @param file Input stream      * @throws IOException      */
 name|ConstantMethodHandle
 parameter_list|(
+specifier|final
 name|DataInput
 name|file
 parameter_list|)
@@ -129,9 +131,11 @@ block|}
 specifier|public
 name|ConstantMethodHandle
 parameter_list|(
+specifier|final
 name|int
 name|reference_kind
 parameter_list|,
+specifier|final
 name|int
 name|reference_index
 parameter_list|)
@@ -163,6 +167,7 @@ specifier|public
 name|void
 name|accept
 parameter_list|(
+specifier|final
 name|Visitor
 name|v
 parameter_list|)
@@ -183,6 +188,7 @@ specifier|final
 name|void
 name|dump
 parameter_list|(
+specifier|final
 name|DataOutputStream
 name|file
 parameter_list|)
@@ -227,6 +233,7 @@ specifier|public
 name|void
 name|setReferenceKind
 parameter_list|(
+specifier|final
 name|int
 name|reference_kind
 parameter_list|)
@@ -251,6 +258,7 @@ specifier|public
 name|void
 name|setReferenceIndex
 parameter_list|(
+specifier|final
 name|int
 name|reference_index
 parameter_list|)

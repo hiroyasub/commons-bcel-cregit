@@ -57,6 +57,7 @@ block|}
 comment|/**      * Constructs a new VerifierConstraintViolatedException with the specified error message.      */
 name|VerifierConstraintViolatedException
 parameter_list|(
+specifier|final
 name|String
 name|message
 parameter_list|)
@@ -75,9 +76,11 @@ block|}
 comment|/**      * Constructs a new VerifierConstraintViolationException with the specified error message and cause      */
 name|VerifierConstraintViolatedException
 parameter_list|(
+specifier|final
 name|String
 name|message
 parameter_list|,
+specifier|final
 name|Throwable
 name|initCause
 parameter_list|)

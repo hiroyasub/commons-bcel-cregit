@@ -330,9 +330,11 @@ comment|/** @param clazz Java class to "decompile"      * @param out where to ou
 specifier|public
 name|BCELifier
 parameter_list|(
+specifier|final
 name|JavaClass
 name|clazz
 parameter_list|,
+specifier|final
 name|OutputStream
 name|out
 parameter_list|)
@@ -384,6 +386,7 @@ specifier|public
 name|void
 name|visitJavaClass
 parameter_list|(
+specifier|final
 name|JavaClass
 name|clazz
 parameter_list|)
@@ -947,6 +950,7 @@ specifier|public
 name|void
 name|visitField
 parameter_list|(
+specifier|final
 name|Field
 name|field
 parameter_list|)
@@ -1039,6 +1043,7 @@ specifier|public
 name|void
 name|visitMethod
 parameter_list|(
+specifier|final
 name|Method
 name|method
 parameter_list|)
@@ -1193,6 +1198,7 @@ specifier|static
 name|String
 name|printFlags
 parameter_list|(
+specifier|final
 name|int
 name|flags
 parameter_list|)
@@ -1214,9 +1220,11 @@ specifier|static
 name|String
 name|printFlags
 parameter_list|(
+specifier|final
 name|int
 name|flags
 parameter_list|,
+specifier|final
 name|FLAGS
 name|location
 parameter_list|)
@@ -1455,6 +1463,7 @@ specifier|static
 name|String
 name|printArgumentTypes
 parameter_list|(
+specifier|final
 name|Type
 index|[]
 name|arg_types
@@ -1545,6 +1554,7 @@ specifier|static
 name|String
 name|printType
 parameter_list|(
+specifier|final
 name|Type
 name|type
 parameter_list|)
@@ -1563,6 +1573,7 @@ specifier|static
 name|String
 name|printType
 parameter_list|(
+specifier|final
 name|String
 name|signature
 parameter_list|)
@@ -1723,6 +1734,7 @@ specifier|static
 name|void
 name|main
 parameter_list|(
+specifier|final
 name|String
 index|[]
 name|argv
@@ -1794,6 +1806,7 @@ specifier|static
 name|JavaClass
 name|getJavaClass
 parameter_list|(
+specifier|final
 name|String
 name|name
 parameter_list|)

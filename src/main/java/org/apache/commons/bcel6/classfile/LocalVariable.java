@@ -107,6 +107,7 @@ comment|/**      * Initialize from another object. Note that both objects use th
 specifier|public
 name|LocalVariable
 parameter_list|(
+specifier|final
 name|LocalVariable
 name|c
 parameter_list|)
@@ -148,9 +149,11 @@ block|}
 comment|/**      * Construct object from file stream.      * @param file Input stream      * @throws IOException      */
 name|LocalVariable
 parameter_list|(
+specifier|final
 name|DataInput
 name|file
 parameter_list|,
+specifier|final
 name|ConstantPool
 name|constant_pool
 parameter_list|)
@@ -192,21 +195,27 @@ comment|/**      * @param start_pc Range in which the variable      * @param len
 specifier|public
 name|LocalVariable
 parameter_list|(
+specifier|final
 name|int
 name|start_pc
 parameter_list|,
+specifier|final
 name|int
 name|length
 parameter_list|,
+specifier|final
 name|int
 name|name_index
 parameter_list|,
+specifier|final
 name|int
 name|signature_index
 parameter_list|,
+specifier|final
 name|int
 name|index
 parameter_list|,
+specifier|final
 name|ConstantPool
 name|constant_pool
 parameter_list|)
@@ -255,6 +264,7 @@ specifier|public
 name|void
 name|accept
 parameter_list|(
+specifier|final
 name|Visitor
 name|v
 parameter_list|)
@@ -273,6 +283,7 @@ specifier|final
 name|void
 name|dump
 parameter_list|(
+specifier|final
 name|DataOutputStream
 name|file
 parameter_list|)
@@ -452,6 +463,7 @@ specifier|final
 name|String
 name|toStringShared
 parameter_list|(
+specifier|final
 name|boolean
 name|typeTable
 parameter_list|)
@@ -520,6 +532,7 @@ specifier|final
 name|void
 name|setConstantPool
 parameter_list|(
+specifier|final
 name|ConstantPool
 name|constant_pool
 parameter_list|)
@@ -537,6 +550,7 @@ specifier|final
 name|void
 name|setLength
 parameter_list|(
+specifier|final
 name|int
 name|length
 parameter_list|)
@@ -554,6 +568,7 @@ specifier|final
 name|void
 name|setNameIndex
 parameter_list|(
+specifier|final
 name|int
 name|name_index
 parameter_list|)
@@ -572,6 +587,7 @@ specifier|final
 name|void
 name|setSignatureIndex
 parameter_list|(
+specifier|final
 name|int
 name|signature_index
 parameter_list|)
@@ -590,6 +606,7 @@ specifier|final
 name|void
 name|setIndex
 parameter_list|(
+specifier|final
 name|int
 name|index
 parameter_list|)
@@ -608,6 +625,7 @@ specifier|final
 name|void
 name|setStartPC
 parameter_list|(
+specifier|final
 name|int
 name|start_pc
 parameter_list|)

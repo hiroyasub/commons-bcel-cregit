@@ -69,6 +69,7 @@ specifier|public
 name|void
 name|push
 parameter_list|(
+specifier|final
 name|JavaClass
 name|clazz
 parameter_list|)

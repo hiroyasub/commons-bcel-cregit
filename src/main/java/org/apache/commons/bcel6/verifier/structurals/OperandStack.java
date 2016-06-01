@@ -147,6 +147,7 @@ comment|/**      * Creates an empty stack with a maximum of maxStack slots.     
 specifier|public
 name|OperandStack
 parameter_list|(
+specifier|final
 name|int
 name|maxStack
 parameter_list|)
@@ -162,9 +163,11 @@ comment|/**      * Creates an otherwise empty stack with a maximum of maxStack s
 specifier|public
 name|OperandStack
 parameter_list|(
+specifier|final
 name|int
 name|maxStack
 parameter_list|,
+specifier|final
 name|ObjectType
 name|obj
 parameter_list|)
@@ -274,6 +277,7 @@ specifier|public
 name|boolean
 name|equals
 parameter_list|(
+specifier|final
 name|Object
 name|o
 parameter_list|)
@@ -372,6 +376,7 @@ specifier|public
 name|Type
 name|peek
 parameter_list|(
+specifier|final
 name|int
 name|i
 parameter_list|)
@@ -418,6 +423,7 @@ specifier|public
 name|Type
 name|pop
 parameter_list|(
+specifier|final
 name|int
 name|i
 parameter_list|)
@@ -450,6 +456,7 @@ specifier|public
 name|void
 name|push
 parameter_list|(
+specifier|final
 name|Type
 name|type
 parameter_list|)
@@ -714,6 +721,7 @@ specifier|public
 name|void
 name|merge
 parameter_list|(
+specifier|final
 name|OperandStack
 name|s
 parameter_list|)
@@ -1067,6 +1075,7 @@ specifier|public
 name|void
 name|initializeObject
 parameter_list|(
+specifier|final
 name|UninitializedObjectType
 name|u
 parameter_list|)

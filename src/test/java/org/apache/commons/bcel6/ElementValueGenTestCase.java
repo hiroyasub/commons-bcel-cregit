@@ -188,6 +188,7 @@ specifier|private
 name|ClassGen
 name|createClassGen
 parameter_list|(
+specifier|final
 name|String
 name|classname
 parameter_list|)
@@ -1092,9 +1093,11 @@ specifier|private
 name|void
 name|checkSerialize
 parameter_list|(
+specifier|final
 name|ElementValueGen
 name|evgBefore
 parameter_list|,
+specifier|final
 name|ConstantPoolGen
 name|cpg
 parameter_list|)

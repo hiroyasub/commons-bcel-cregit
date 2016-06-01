@@ -386,9 +386,11 @@ specifier|public
 name|boolean
 name|equals
 parameter_list|(
+specifier|final
 name|Object
 name|o1
 parameter_list|,
+specifier|final
 name|Object
 name|o2
 parameter_list|)
@@ -430,6 +432,7 @@ specifier|public
 name|int
 name|hashCode
 parameter_list|(
+specifier|final
 name|Object
 name|o
 parameter_list|)
@@ -458,22 +461,28 @@ comment|/** Convenience constructor to set up some important values initially.  
 specifier|public
 name|ClassGen
 parameter_list|(
+specifier|final
 name|String
 name|class_name
 parameter_list|,
+specifier|final
 name|String
 name|super_class_name
 parameter_list|,
+specifier|final
 name|String
 name|file_name
 parameter_list|,
+specifier|final
 name|int
 name|access_flags
 parameter_list|,
+specifier|final
 name|String
 index|[]
 name|interfaces
 parameter_list|,
+specifier|final
 name|ConstantPoolGen
 name|cp
 parameter_list|)
@@ -589,18 +598,23 @@ comment|/** Convenience constructor to set up some important values initially.  
 specifier|public
 name|ClassGen
 parameter_list|(
+specifier|final
 name|String
 name|class_name
 parameter_list|,
+specifier|final
 name|String
 name|super_class_name
 parameter_list|,
+specifier|final
 name|String
 name|file_name
 parameter_list|,
+specifier|final
 name|int
 name|access_flags
 parameter_list|,
+specifier|final
 name|String
 index|[]
 name|interfaces
@@ -628,6 +642,7 @@ comment|/**      * Initialize with existing class.      * @param clazz JavaClass
 specifier|public
 name|ClassGen
 parameter_list|(
+specifier|final
 name|JavaClass
 name|clazz
 parameter_list|)
@@ -834,6 +849,7 @@ name|AnnotationEntryGen
 index|[]
 name|unpackAnnotations
 parameter_list|(
+specifier|final
 name|Attribute
 index|[]
 name|attrs
@@ -1129,6 +1145,7 @@ specifier|public
 name|void
 name|addInterface
 parameter_list|(
+specifier|final
 name|String
 name|name
 parameter_list|)
@@ -1146,6 +1163,7 @@ specifier|public
 name|void
 name|removeInterface
 parameter_list|(
+specifier|final
 name|String
 name|name
 parameter_list|)
@@ -1173,6 +1191,7 @@ specifier|public
 name|void
 name|setMajor
 parameter_list|(
+specifier|final
 name|int
 name|major
 parameter_list|)
@@ -1190,6 +1209,7 @@ specifier|public
 name|void
 name|setMinor
 parameter_list|(
+specifier|final
 name|int
 name|minor
 parameter_list|)
@@ -1217,6 +1237,7 @@ specifier|public
 name|void
 name|addAttribute
 parameter_list|(
+specifier|final
 name|Attribute
 name|a
 parameter_list|)
@@ -1233,6 +1254,7 @@ specifier|public
 name|void
 name|addAnnotationEntry
 parameter_list|(
+specifier|final
 name|AnnotationEntryGen
 name|a
 parameter_list|)
@@ -1250,6 +1272,7 @@ specifier|public
 name|void
 name|addMethod
 parameter_list|(
+specifier|final
 name|Method
 name|m
 parameter_list|)
@@ -1267,6 +1290,7 @@ specifier|public
 name|void
 name|addEmptyConstructor
 parameter_list|(
+specifier|final
 name|int
 name|access_flags
 parameter_list|)
@@ -1365,6 +1389,7 @@ specifier|public
 name|void
 name|addField
 parameter_list|(
+specifier|final
 name|Field
 name|f
 parameter_list|)
@@ -1381,6 +1406,7 @@ specifier|public
 name|boolean
 name|containsField
 parameter_list|(
+specifier|final
 name|Field
 name|f
 parameter_list|)
@@ -1399,6 +1425,7 @@ specifier|public
 name|Field
 name|containsField
 parameter_list|(
+specifier|final
 name|String
 name|name
 parameter_list|)
@@ -1438,9 +1465,11 @@ specifier|public
 name|Method
 name|containsMethod
 parameter_list|(
+specifier|final
 name|String
 name|name
 parameter_list|,
+specifier|final
 name|String
 name|signature
 parameter_list|)
@@ -1490,6 +1519,7 @@ specifier|public
 name|void
 name|removeAttribute
 parameter_list|(
+specifier|final
 name|Attribute
 name|a
 parameter_list|)
@@ -1507,6 +1537,7 @@ specifier|public
 name|void
 name|removeMethod
 parameter_list|(
+specifier|final
 name|Method
 name|m
 parameter_list|)
@@ -1524,9 +1555,11 @@ specifier|public
 name|void
 name|replaceMethod
 parameter_list|(
+specifier|final
 name|Method
 name|old
 parameter_list|,
+specifier|final
 name|Method
 name|new_
 parameter_list|)
@@ -1589,9 +1622,11 @@ specifier|public
 name|void
 name|replaceField
 parameter_list|(
+specifier|final
 name|Field
 name|old
 parameter_list|,
+specifier|final
 name|Field
 name|new_
 parameter_list|)
@@ -1654,6 +1689,7 @@ specifier|public
 name|void
 name|removeField
 parameter_list|(
+specifier|final
 name|Field
 name|f
 parameter_list|)
@@ -1697,6 +1733,7 @@ specifier|public
 name|void
 name|setClassName
 parameter_list|(
+specifier|final
 name|String
 name|name
 parameter_list|)
@@ -1726,6 +1763,7 @@ specifier|public
 name|void
 name|setSuperclassName
 parameter_list|(
+specifier|final
 name|String
 name|name
 parameter_list|)
@@ -1777,6 +1815,7 @@ specifier|public
 name|void
 name|setMethods
 parameter_list|(
+specifier|final
 name|Method
 index|[]
 name|methods
@@ -1806,9 +1845,11 @@ specifier|public
 name|void
 name|setMethodAt
 parameter_list|(
+specifier|final
 name|Method
 name|method
 parameter_list|,
+specifier|final
 name|int
 name|pos
 parameter_list|)
@@ -1827,6 +1868,7 @@ specifier|public
 name|Method
 name|getMethodAt
 parameter_list|(
+specifier|final
 name|int
 name|pos
 parameter_list|)
@@ -2016,6 +2058,7 @@ specifier|public
 name|void
 name|setConstantPool
 parameter_list|(
+specifier|final
 name|ConstantPoolGen
 name|constant_pool
 parameter_list|)
@@ -2029,6 +2072,7 @@ specifier|public
 name|void
 name|setClassNameIndex
 parameter_list|(
+specifier|final
 name|int
 name|class_name_index
 parameter_list|)
@@ -2067,6 +2111,7 @@ specifier|public
 name|void
 name|setSuperclassNameIndex
 parameter_list|(
+specifier|final
 name|int
 name|superclass_name_index
 parameter_list|)
@@ -2131,6 +2176,7 @@ specifier|public
 name|void
 name|addObserver
 parameter_list|(
+specifier|final
 name|ClassObserver
 name|o
 parameter_list|)
@@ -2163,6 +2209,7 @@ specifier|public
 name|void
 name|removeObserver
 parameter_list|(
+specifier|final
 name|ClassObserver
 name|o
 parameter_list|)
@@ -2263,6 +2310,7 @@ specifier|static
 name|void
 name|setComparator
 parameter_list|(
+specifier|final
 name|BCELComparator
 name|comparator
 parameter_list|)
@@ -2279,6 +2327,7 @@ specifier|public
 name|boolean
 name|equals
 parameter_list|(
+specifier|final
 name|Object
 name|obj
 parameter_list|)

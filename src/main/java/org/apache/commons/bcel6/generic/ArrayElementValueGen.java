@@ -113,6 +113,7 @@ decl_stmt|;
 specifier|public
 name|ArrayElementValueGen
 parameter_list|(
+specifier|final
 name|ConstantPoolGen
 name|cp
 parameter_list|)
@@ -135,13 +136,16 @@ block|}
 specifier|public
 name|ArrayElementValueGen
 parameter_list|(
+specifier|final
 name|int
 name|type
 parameter_list|,
+specifier|final
 name|ElementValue
 index|[]
 name|datums
 parameter_list|,
+specifier|final
 name|ConstantPoolGen
 name|cpool
 parameter_list|)
@@ -274,12 +278,15 @@ comment|/**      * @param value      * @param cpool      */
 specifier|public
 name|ArrayElementValueGen
 parameter_list|(
+specifier|final
 name|ArrayElementValue
 name|value
 parameter_list|,
+specifier|final
 name|ConstantPoolGen
 name|cpool
 parameter_list|,
+specifier|final
 name|boolean
 name|copyPoolEntries
 parameter_list|)
@@ -339,6 +346,7 @@ specifier|public
 name|void
 name|dump
 parameter_list|(
+specifier|final
 name|DataOutputStream
 name|dos
 parameter_list|)
@@ -481,6 +489,7 @@ specifier|public
 name|void
 name|addElement
 parameter_list|(
+specifier|final
 name|ElementValueGen
 name|gen
 parameter_list|)

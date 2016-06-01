@@ -84,6 +84,7 @@ specifier|static
 name|ObjectType
 name|getInstance
 parameter_list|(
+specifier|final
 name|String
 name|class_name
 parameter_list|)
@@ -100,6 +101,7 @@ comment|/**      * @param class_name fully qualified class name, e.g. java.lang.
 specifier|public
 name|ObjectType
 parameter_list|(
+specifier|final
 name|String
 name|class_name
 parameter_list|)
@@ -170,6 +172,7 @@ specifier|public
 name|boolean
 name|equals
 parameter_list|(
+specifier|final
 name|Object
 name|type
 parameter_list|)
@@ -331,6 +334,7 @@ specifier|public
 name|boolean
 name|subclassOf
 parameter_list|(
+specifier|final
 name|ObjectType
 name|superclass
 parameter_list|)
@@ -374,6 +378,7 @@ specifier|public
 name|boolean
 name|accessibleTo
 parameter_list|(
+specifier|final
 name|ObjectType
 name|accessor
 parameter_list|)

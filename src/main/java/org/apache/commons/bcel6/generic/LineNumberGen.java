@@ -58,9 +58,11 @@ comment|/**      * Create a line number.      *      * @param ih instruction han
 specifier|public
 name|LineNumberGen
 parameter_list|(
+specifier|final
 name|InstructionHandle
 name|ih
 parameter_list|,
+specifier|final
 name|int
 name|src_line
 parameter_list|)
@@ -83,6 +85,7 @@ specifier|public
 name|boolean
 name|containsTarget
 parameter_list|(
+specifier|final
 name|InstructionHandle
 name|ih
 parameter_list|)
@@ -102,9 +105,11 @@ specifier|public
 name|void
 name|updateTarget
 parameter_list|(
+specifier|final
 name|InstructionHandle
 name|old_ih
 parameter_list|,
+specifier|final
 name|InstructionHandle
 name|new_ih
 parameter_list|)
@@ -161,6 +166,7 @@ specifier|public
 name|void
 name|setInstruction
 parameter_list|(
+specifier|final
 name|InstructionHandle
 name|ih
 parameter_list|)
@@ -246,6 +252,7 @@ specifier|public
 name|void
 name|setSourceLine
 parameter_list|(
+specifier|final
 name|int
 name|src_line
 parameter_list|)

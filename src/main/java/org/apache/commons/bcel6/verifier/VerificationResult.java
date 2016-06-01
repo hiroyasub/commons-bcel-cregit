@@ -117,9 +117,11 @@ comment|/** The usual constructor. */
 specifier|public
 name|VerificationResult
 parameter_list|(
+specifier|final
 name|int
 name|status
 parameter_list|,
+specifier|final
 name|String
 name|message
 parameter_list|)
@@ -177,6 +179,7 @@ specifier|public
 name|boolean
 name|equals
 parameter_list|(
+specifier|final
 name|Object
 name|o
 parameter_list|)

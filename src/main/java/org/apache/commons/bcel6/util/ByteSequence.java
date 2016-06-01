@@ -57,6 +57,7 @@ decl_stmt|;
 specifier|public
 name|ByteSequence
 parameter_list|(
+specifier|final
 name|byte
 index|[]
 name|bytes
@@ -113,6 +114,7 @@ name|ByteArrayInputStream
 block|{
 name|ByteArrayStream
 parameter_list|(
+specifier|final
 name|byte
 index|[]
 name|bytes

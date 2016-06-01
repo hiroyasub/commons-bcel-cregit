@@ -231,6 +231,7 @@ specifier|public
 name|void
 name|setConstantPoolGen
 parameter_list|(
+specifier|final
 name|ConstantPoolGen
 name|cpg
 parameter_list|)
@@ -248,6 +249,7 @@ specifier|public
 name|void
 name|setFrame
 parameter_list|(
+specifier|final
 name|Frame
 name|f
 parameter_list|)
@@ -276,6 +278,7 @@ specifier|public
 name|void
 name|visitAALOAD
 parameter_list|(
+specifier|final
 name|AALOAD
 name|o
 parameter_list|)
@@ -349,6 +352,7 @@ specifier|public
 name|void
 name|visitAASTORE
 parameter_list|(
+specifier|final
 name|AASTORE
 name|o
 parameter_list|)
@@ -379,6 +383,7 @@ specifier|public
 name|void
 name|visitACONST_NULL
 parameter_list|(
+specifier|final
 name|ACONST_NULL
 name|o
 parameter_list|)
@@ -401,6 +406,7 @@ specifier|public
 name|void
 name|visitALOAD
 parameter_list|(
+specifier|final
 name|ALOAD
 name|o
 parameter_list|)
@@ -430,6 +436,7 @@ specifier|public
 name|void
 name|visitANEWARRAY
 parameter_list|(
+specifier|final
 name|ANEWARRAY
 name|o
 parameter_list|)
@@ -468,6 +475,7 @@ specifier|public
 name|void
 name|visitARETURN
 parameter_list|(
+specifier|final
 name|ARETURN
 name|o
 parameter_list|)
@@ -486,6 +494,7 @@ specifier|public
 name|void
 name|visitARRAYLENGTH
 parameter_list|(
+specifier|final
 name|ARRAYLENGTH
 name|o
 parameter_list|)
@@ -514,6 +523,7 @@ specifier|public
 name|void
 name|visitASTORE
 parameter_list|(
+specifier|final
 name|ASTORE
 name|o
 parameter_list|)
@@ -544,6 +554,7 @@ specifier|public
 name|void
 name|visitATHROW
 parameter_list|(
+specifier|final
 name|ATHROW
 name|o
 parameter_list|)
@@ -608,6 +619,7 @@ specifier|public
 name|void
 name|visitBALOAD
 parameter_list|(
+specifier|final
 name|BALOAD
 name|o
 parameter_list|)
@@ -642,6 +654,7 @@ specifier|public
 name|void
 name|visitBASTORE
 parameter_list|(
+specifier|final
 name|BASTORE
 name|o
 parameter_list|)
@@ -672,6 +685,7 @@ specifier|public
 name|void
 name|visitBIPUSH
 parameter_list|(
+specifier|final
 name|BIPUSH
 name|o
 parameter_list|)
@@ -694,6 +708,7 @@ specifier|public
 name|void
 name|visitCALOAD
 parameter_list|(
+specifier|final
 name|CALOAD
 name|o
 parameter_list|)
@@ -728,6 +743,7 @@ specifier|public
 name|void
 name|visitCASTORE
 parameter_list|(
+specifier|final
 name|CASTORE
 name|o
 parameter_list|)
@@ -758,6 +774,7 @@ specifier|public
 name|void
 name|visitCHECKCAST
 parameter_list|(
+specifier|final
 name|CHECKCAST
 name|o
 parameter_list|)
@@ -794,6 +811,7 @@ specifier|public
 name|void
 name|visitD2F
 parameter_list|(
+specifier|final
 name|D2F
 name|o
 parameter_list|)
@@ -822,6 +840,7 @@ specifier|public
 name|void
 name|visitD2I
 parameter_list|(
+specifier|final
 name|D2I
 name|o
 parameter_list|)
@@ -850,6 +869,7 @@ specifier|public
 name|void
 name|visitD2L
 parameter_list|(
+specifier|final
 name|D2L
 name|o
 parameter_list|)
@@ -878,6 +898,7 @@ specifier|public
 name|void
 name|visitDADD
 parameter_list|(
+specifier|final
 name|DADD
 name|o
 parameter_list|)
@@ -912,6 +933,7 @@ specifier|public
 name|void
 name|visitDALOAD
 parameter_list|(
+specifier|final
 name|DALOAD
 name|o
 parameter_list|)
@@ -946,6 +968,7 @@ specifier|public
 name|void
 name|visitDASTORE
 parameter_list|(
+specifier|final
 name|DASTORE
 name|o
 parameter_list|)
@@ -976,6 +999,7 @@ specifier|public
 name|void
 name|visitDCMPG
 parameter_list|(
+specifier|final
 name|DCMPG
 name|o
 parameter_list|)
@@ -1010,6 +1034,7 @@ specifier|public
 name|void
 name|visitDCMPL
 parameter_list|(
+specifier|final
 name|DCMPL
 name|o
 parameter_list|)
@@ -1044,6 +1069,7 @@ specifier|public
 name|void
 name|visitDCONST
 parameter_list|(
+specifier|final
 name|DCONST
 name|o
 parameter_list|)
@@ -1066,6 +1092,7 @@ specifier|public
 name|void
 name|visitDDIV
 parameter_list|(
+specifier|final
 name|DDIV
 name|o
 parameter_list|)
@@ -1100,6 +1127,7 @@ specifier|public
 name|void
 name|visitDLOAD
 parameter_list|(
+specifier|final
 name|DLOAD
 name|o
 parameter_list|)
@@ -1122,6 +1150,7 @@ specifier|public
 name|void
 name|visitDMUL
 parameter_list|(
+specifier|final
 name|DMUL
 name|o
 parameter_list|)
@@ -1156,6 +1185,7 @@ specifier|public
 name|void
 name|visitDNEG
 parameter_list|(
+specifier|final
 name|DNEG
 name|o
 parameter_list|)
@@ -1184,6 +1214,7 @@ specifier|public
 name|void
 name|visitDREM
 parameter_list|(
+specifier|final
 name|DREM
 name|o
 parameter_list|)
@@ -1218,6 +1249,7 @@ specifier|public
 name|void
 name|visitDRETURN
 parameter_list|(
+specifier|final
 name|DRETURN
 name|o
 parameter_list|)
@@ -1236,6 +1268,7 @@ specifier|public
 name|void
 name|visitDSTORE
 parameter_list|(
+specifier|final
 name|DSTORE
 name|o
 parameter_list|)
@@ -1282,6 +1315,7 @@ specifier|public
 name|void
 name|visitDSUB
 parameter_list|(
+specifier|final
 name|DSUB
 name|o
 parameter_list|)
@@ -1316,6 +1350,7 @@ specifier|public
 name|void
 name|visitDUP
 parameter_list|(
+specifier|final
 name|DUP
 name|o
 parameter_list|)
@@ -1353,6 +1388,7 @@ specifier|public
 name|void
 name|visitDUP_X1
 parameter_list|(
+specifier|final
 name|DUP_X1
 name|o
 parameter_list|)
@@ -1407,6 +1443,7 @@ specifier|public
 name|void
 name|visitDUP_X2
 parameter_list|(
+specifier|final
 name|DUP_X2
 name|o
 parameter_list|)
@@ -1516,6 +1553,7 @@ specifier|public
 name|void
 name|visitDUP2
 parameter_list|(
+specifier|final
 name|DUP2
 name|o
 parameter_list|)
@@ -1609,6 +1647,7 @@ specifier|public
 name|void
 name|visitDUP2_X1
 parameter_list|(
+specifier|final
 name|DUP2_X1
 name|o
 parameter_list|)
@@ -1736,6 +1775,7 @@ specifier|public
 name|void
 name|visitDUP2_X2
 parameter_list|(
+specifier|final
 name|DUP2_X2
 name|o
 parameter_list|)
@@ -1989,6 +2029,7 @@ specifier|public
 name|void
 name|visitF2D
 parameter_list|(
+specifier|final
 name|F2D
 name|o
 parameter_list|)
@@ -2017,6 +2058,7 @@ specifier|public
 name|void
 name|visitF2I
 parameter_list|(
+specifier|final
 name|F2I
 name|o
 parameter_list|)
@@ -2045,6 +2087,7 @@ specifier|public
 name|void
 name|visitF2L
 parameter_list|(
+specifier|final
 name|F2L
 name|o
 parameter_list|)
@@ -2073,6 +2116,7 @@ specifier|public
 name|void
 name|visitFADD
 parameter_list|(
+specifier|final
 name|FADD
 name|o
 parameter_list|)
@@ -2107,6 +2151,7 @@ specifier|public
 name|void
 name|visitFALOAD
 parameter_list|(
+specifier|final
 name|FALOAD
 name|o
 parameter_list|)
@@ -2141,6 +2186,7 @@ specifier|public
 name|void
 name|visitFASTORE
 parameter_list|(
+specifier|final
 name|FASTORE
 name|o
 parameter_list|)
@@ -2171,6 +2217,7 @@ specifier|public
 name|void
 name|visitFCMPG
 parameter_list|(
+specifier|final
 name|FCMPG
 name|o
 parameter_list|)
@@ -2205,6 +2252,7 @@ specifier|public
 name|void
 name|visitFCMPL
 parameter_list|(
+specifier|final
 name|FCMPL
 name|o
 parameter_list|)
@@ -2239,6 +2287,7 @@ specifier|public
 name|void
 name|visitFCONST
 parameter_list|(
+specifier|final
 name|FCONST
 name|o
 parameter_list|)
@@ -2261,6 +2310,7 @@ specifier|public
 name|void
 name|visitFDIV
 parameter_list|(
+specifier|final
 name|FDIV
 name|o
 parameter_list|)
@@ -2295,6 +2345,7 @@ specifier|public
 name|void
 name|visitFLOAD
 parameter_list|(
+specifier|final
 name|FLOAD
 name|o
 parameter_list|)
@@ -2317,6 +2368,7 @@ specifier|public
 name|void
 name|visitFMUL
 parameter_list|(
+specifier|final
 name|FMUL
 name|o
 parameter_list|)
@@ -2351,6 +2403,7 @@ specifier|public
 name|void
 name|visitFNEG
 parameter_list|(
+specifier|final
 name|FNEG
 name|o
 parameter_list|)
@@ -2379,6 +2432,7 @@ specifier|public
 name|void
 name|visitFREM
 parameter_list|(
+specifier|final
 name|FREM
 name|o
 parameter_list|)
@@ -2413,6 +2467,7 @@ specifier|public
 name|void
 name|visitFRETURN
 parameter_list|(
+specifier|final
 name|FRETURN
 name|o
 parameter_list|)
@@ -2431,6 +2486,7 @@ specifier|public
 name|void
 name|visitFSTORE
 parameter_list|(
+specifier|final
 name|FSTORE
 name|o
 parameter_list|)
@@ -2460,6 +2516,7 @@ specifier|public
 name|void
 name|visitFSUB
 parameter_list|(
+specifier|final
 name|FSUB
 name|o
 parameter_list|)
@@ -2494,6 +2551,7 @@ specifier|public
 name|void
 name|visitGETFIELD
 parameter_list|(
+specifier|final
 name|GETFIELD
 name|o
 parameter_list|)
@@ -2576,6 +2634,7 @@ specifier|public
 name|void
 name|visitGETSTATIC
 parameter_list|(
+specifier|final
 name|GETSTATIC
 name|o
 parameter_list|)
@@ -2652,6 +2711,7 @@ specifier|public
 name|void
 name|visitGOTO
 parameter_list|(
+specifier|final
 name|GOTO
 name|o
 parameter_list|)
@@ -2665,6 +2725,7 @@ specifier|public
 name|void
 name|visitGOTO_W
 parameter_list|(
+specifier|final
 name|GOTO_W
 name|o
 parameter_list|)
@@ -2678,6 +2739,7 @@ specifier|public
 name|void
 name|visitI2B
 parameter_list|(
+specifier|final
 name|I2B
 name|o
 parameter_list|)
@@ -2706,6 +2768,7 @@ specifier|public
 name|void
 name|visitI2C
 parameter_list|(
+specifier|final
 name|I2C
 name|o
 parameter_list|)
@@ -2734,6 +2797,7 @@ specifier|public
 name|void
 name|visitI2D
 parameter_list|(
+specifier|final
 name|I2D
 name|o
 parameter_list|)
@@ -2762,6 +2826,7 @@ specifier|public
 name|void
 name|visitI2F
 parameter_list|(
+specifier|final
 name|I2F
 name|o
 parameter_list|)
@@ -2790,6 +2855,7 @@ specifier|public
 name|void
 name|visitI2L
 parameter_list|(
+specifier|final
 name|I2L
 name|o
 parameter_list|)
@@ -2818,6 +2884,7 @@ specifier|public
 name|void
 name|visitI2S
 parameter_list|(
+specifier|final
 name|I2S
 name|o
 parameter_list|)
@@ -2846,6 +2913,7 @@ specifier|public
 name|void
 name|visitIADD
 parameter_list|(
+specifier|final
 name|IADD
 name|o
 parameter_list|)
@@ -2880,6 +2948,7 @@ specifier|public
 name|void
 name|visitIALOAD
 parameter_list|(
+specifier|final
 name|IALOAD
 name|o
 parameter_list|)
@@ -2914,6 +2983,7 @@ specifier|public
 name|void
 name|visitIAND
 parameter_list|(
+specifier|final
 name|IAND
 name|o
 parameter_list|)
@@ -2948,6 +3018,7 @@ specifier|public
 name|void
 name|visitIASTORE
 parameter_list|(
+specifier|final
 name|IASTORE
 name|o
 parameter_list|)
@@ -2978,6 +3049,7 @@ specifier|public
 name|void
 name|visitICONST
 parameter_list|(
+specifier|final
 name|ICONST
 name|o
 parameter_list|)
@@ -3000,6 +3072,7 @@ specifier|public
 name|void
 name|visitIDIV
 parameter_list|(
+specifier|final
 name|IDIV
 name|o
 parameter_list|)
@@ -3034,6 +3107,7 @@ specifier|public
 name|void
 name|visitIF_ACMPEQ
 parameter_list|(
+specifier|final
 name|IF_ACMPEQ
 name|o
 parameter_list|)
@@ -3058,6 +3132,7 @@ specifier|public
 name|void
 name|visitIF_ACMPNE
 parameter_list|(
+specifier|final
 name|IF_ACMPNE
 name|o
 parameter_list|)
@@ -3082,6 +3157,7 @@ specifier|public
 name|void
 name|visitIF_ICMPEQ
 parameter_list|(
+specifier|final
 name|IF_ICMPEQ
 name|o
 parameter_list|)
@@ -3106,6 +3182,7 @@ specifier|public
 name|void
 name|visitIF_ICMPGE
 parameter_list|(
+specifier|final
 name|IF_ICMPGE
 name|o
 parameter_list|)
@@ -3130,6 +3207,7 @@ specifier|public
 name|void
 name|visitIF_ICMPGT
 parameter_list|(
+specifier|final
 name|IF_ICMPGT
 name|o
 parameter_list|)
@@ -3154,6 +3232,7 @@ specifier|public
 name|void
 name|visitIF_ICMPLE
 parameter_list|(
+specifier|final
 name|IF_ICMPLE
 name|o
 parameter_list|)
@@ -3178,6 +3257,7 @@ specifier|public
 name|void
 name|visitIF_ICMPLT
 parameter_list|(
+specifier|final
 name|IF_ICMPLT
 name|o
 parameter_list|)
@@ -3202,6 +3282,7 @@ specifier|public
 name|void
 name|visitIF_ICMPNE
 parameter_list|(
+specifier|final
 name|IF_ICMPNE
 name|o
 parameter_list|)
@@ -3226,6 +3307,7 @@ specifier|public
 name|void
 name|visitIFEQ
 parameter_list|(
+specifier|final
 name|IFEQ
 name|o
 parameter_list|)
@@ -3244,6 +3326,7 @@ specifier|public
 name|void
 name|visitIFGE
 parameter_list|(
+specifier|final
 name|IFGE
 name|o
 parameter_list|)
@@ -3262,6 +3345,7 @@ specifier|public
 name|void
 name|visitIFGT
 parameter_list|(
+specifier|final
 name|IFGT
 name|o
 parameter_list|)
@@ -3280,6 +3364,7 @@ specifier|public
 name|void
 name|visitIFLE
 parameter_list|(
+specifier|final
 name|IFLE
 name|o
 parameter_list|)
@@ -3298,6 +3383,7 @@ specifier|public
 name|void
 name|visitIFLT
 parameter_list|(
+specifier|final
 name|IFLT
 name|o
 parameter_list|)
@@ -3316,6 +3402,7 @@ specifier|public
 name|void
 name|visitIFNE
 parameter_list|(
+specifier|final
 name|IFNE
 name|o
 parameter_list|)
@@ -3334,6 +3421,7 @@ specifier|public
 name|void
 name|visitIFNONNULL
 parameter_list|(
+specifier|final
 name|IFNONNULL
 name|o
 parameter_list|)
@@ -3352,6 +3440,7 @@ specifier|public
 name|void
 name|visitIFNULL
 parameter_list|(
+specifier|final
 name|IFNULL
 name|o
 parameter_list|)
@@ -3370,6 +3459,7 @@ specifier|public
 name|void
 name|visitIINC
 parameter_list|(
+specifier|final
 name|IINC
 name|o
 parameter_list|)
@@ -3383,6 +3473,7 @@ specifier|public
 name|void
 name|visitILOAD
 parameter_list|(
+specifier|final
 name|ILOAD
 name|o
 parameter_list|)
@@ -3405,6 +3496,7 @@ specifier|public
 name|void
 name|visitIMUL
 parameter_list|(
+specifier|final
 name|IMUL
 name|o
 parameter_list|)
@@ -3439,6 +3531,7 @@ specifier|public
 name|void
 name|visitINEG
 parameter_list|(
+specifier|final
 name|INEG
 name|o
 parameter_list|)
@@ -3467,6 +3560,7 @@ specifier|public
 name|void
 name|visitINSTANCEOF
 parameter_list|(
+specifier|final
 name|INSTANCEOF
 name|o
 parameter_list|)
@@ -3495,6 +3589,7 @@ specifier|public
 name|void
 name|visitINVOKEDYNAMIC
 parameter_list|(
+specifier|final
 name|INVOKEDYNAMIC
 name|o
 parameter_list|)
@@ -3619,6 +3714,7 @@ specifier|public
 name|void
 name|visitINVOKEINTERFACE
 parameter_list|(
+specifier|final
 name|INVOKEINTERFACE
 name|o
 parameter_list|)
@@ -3750,6 +3846,7 @@ specifier|public
 name|void
 name|visitINVOKESPECIAL
 parameter_list|(
+specifier|final
 name|INVOKESPECIAL
 name|o
 parameter_list|)
@@ -3954,6 +4051,7 @@ specifier|public
 name|void
 name|visitINVOKESTATIC
 parameter_list|(
+specifier|final
 name|INVOKESTATIC
 name|o
 parameter_list|)
@@ -4078,6 +4176,7 @@ specifier|public
 name|void
 name|visitINVOKEVIRTUAL
 parameter_list|(
+specifier|final
 name|INVOKEVIRTUAL
 name|o
 parameter_list|)
@@ -4209,6 +4308,7 @@ specifier|public
 name|void
 name|visitIOR
 parameter_list|(
+specifier|final
 name|IOR
 name|o
 parameter_list|)
@@ -4243,6 +4343,7 @@ specifier|public
 name|void
 name|visitIREM
 parameter_list|(
+specifier|final
 name|IREM
 name|o
 parameter_list|)
@@ -4277,6 +4378,7 @@ specifier|public
 name|void
 name|visitIRETURN
 parameter_list|(
+specifier|final
 name|IRETURN
 name|o
 parameter_list|)
@@ -4295,6 +4397,7 @@ specifier|public
 name|void
 name|visitISHL
 parameter_list|(
+specifier|final
 name|ISHL
 name|o
 parameter_list|)
@@ -4329,6 +4432,7 @@ specifier|public
 name|void
 name|visitISHR
 parameter_list|(
+specifier|final
 name|ISHR
 name|o
 parameter_list|)
@@ -4363,6 +4467,7 @@ specifier|public
 name|void
 name|visitISTORE
 parameter_list|(
+specifier|final
 name|ISTORE
 name|o
 parameter_list|)
@@ -4392,6 +4497,7 @@ specifier|public
 name|void
 name|visitISUB
 parameter_list|(
+specifier|final
 name|ISUB
 name|o
 parameter_list|)
@@ -4426,6 +4532,7 @@ specifier|public
 name|void
 name|visitIUSHR
 parameter_list|(
+specifier|final
 name|IUSHR
 name|o
 parameter_list|)
@@ -4460,6 +4567,7 @@ specifier|public
 name|void
 name|visitIXOR
 parameter_list|(
+specifier|final
 name|IXOR
 name|o
 parameter_list|)
@@ -4494,6 +4602,7 @@ specifier|public
 name|void
 name|visitJSR
 parameter_list|(
+specifier|final
 name|JSR
 name|o
 parameter_list|)
@@ -4522,6 +4631,7 @@ specifier|public
 name|void
 name|visitJSR_W
 parameter_list|(
+specifier|final
 name|JSR_W
 name|o
 parameter_list|)
@@ -4549,6 +4659,7 @@ specifier|public
 name|void
 name|visitL2D
 parameter_list|(
+specifier|final
 name|L2D
 name|o
 parameter_list|)
@@ -4577,6 +4688,7 @@ specifier|public
 name|void
 name|visitL2F
 parameter_list|(
+specifier|final
 name|L2F
 name|o
 parameter_list|)
@@ -4605,6 +4717,7 @@ specifier|public
 name|void
 name|visitL2I
 parameter_list|(
+specifier|final
 name|L2I
 name|o
 parameter_list|)
@@ -4633,6 +4746,7 @@ specifier|public
 name|void
 name|visitLADD
 parameter_list|(
+specifier|final
 name|LADD
 name|o
 parameter_list|)
@@ -4667,6 +4781,7 @@ specifier|public
 name|void
 name|visitLALOAD
 parameter_list|(
+specifier|final
 name|LALOAD
 name|o
 parameter_list|)
@@ -4701,6 +4816,7 @@ specifier|public
 name|void
 name|visitLAND
 parameter_list|(
+specifier|final
 name|LAND
 name|o
 parameter_list|)
@@ -4735,6 +4851,7 @@ specifier|public
 name|void
 name|visitLASTORE
 parameter_list|(
+specifier|final
 name|LASTORE
 name|o
 parameter_list|)
@@ -4765,6 +4882,7 @@ specifier|public
 name|void
 name|visitLCMP
 parameter_list|(
+specifier|final
 name|LCMP
 name|o
 parameter_list|)
@@ -4799,6 +4917,7 @@ specifier|public
 name|void
 name|visitLCONST
 parameter_list|(
+specifier|final
 name|LCONST
 name|o
 parameter_list|)
@@ -4821,6 +4940,7 @@ specifier|public
 name|void
 name|visitLDC
 parameter_list|(
+specifier|final
 name|LDC
 name|o
 parameter_list|)
@@ -4916,6 +5036,7 @@ specifier|public
 name|void
 name|visitLDC_W
 parameter_list|(
+specifier|final
 name|LDC_W
 name|o
 parameter_list|)
@@ -5013,6 +5134,7 @@ specifier|public
 name|void
 name|visitLDC2_W
 parameter_list|(
+specifier|final
 name|LDC2_W
 name|o
 parameter_list|)
@@ -5074,6 +5196,7 @@ specifier|public
 name|void
 name|visitLDIV
 parameter_list|(
+specifier|final
 name|LDIV
 name|o
 parameter_list|)
@@ -5108,6 +5231,7 @@ specifier|public
 name|void
 name|visitLLOAD
 parameter_list|(
+specifier|final
 name|LLOAD
 name|o
 parameter_list|)
@@ -5137,6 +5261,7 @@ specifier|public
 name|void
 name|visitLMUL
 parameter_list|(
+specifier|final
 name|LMUL
 name|o
 parameter_list|)
@@ -5171,6 +5296,7 @@ specifier|public
 name|void
 name|visitLNEG
 parameter_list|(
+specifier|final
 name|LNEG
 name|o
 parameter_list|)
@@ -5199,6 +5325,7 @@ specifier|public
 name|void
 name|visitLOOKUPSWITCH
 parameter_list|(
+specifier|final
 name|LOOKUPSWITCH
 name|o
 parameter_list|)
@@ -5218,6 +5345,7 @@ specifier|public
 name|void
 name|visitLOR
 parameter_list|(
+specifier|final
 name|LOR
 name|o
 parameter_list|)
@@ -5252,6 +5380,7 @@ specifier|public
 name|void
 name|visitLREM
 parameter_list|(
+specifier|final
 name|LREM
 name|o
 parameter_list|)
@@ -5286,6 +5415,7 @@ specifier|public
 name|void
 name|visitLRETURN
 parameter_list|(
+specifier|final
 name|LRETURN
 name|o
 parameter_list|)
@@ -5304,6 +5434,7 @@ specifier|public
 name|void
 name|visitLSHL
 parameter_list|(
+specifier|final
 name|LSHL
 name|o
 parameter_list|)
@@ -5338,6 +5469,7 @@ specifier|public
 name|void
 name|visitLSHR
 parameter_list|(
+specifier|final
 name|LSHR
 name|o
 parameter_list|)
@@ -5372,6 +5504,7 @@ specifier|public
 name|void
 name|visitLSTORE
 parameter_list|(
+specifier|final
 name|LSTORE
 name|o
 parameter_list|)
@@ -5418,6 +5551,7 @@ specifier|public
 name|void
 name|visitLSUB
 parameter_list|(
+specifier|final
 name|LSUB
 name|o
 parameter_list|)
@@ -5452,6 +5586,7 @@ specifier|public
 name|void
 name|visitLUSHR
 parameter_list|(
+specifier|final
 name|LUSHR
 name|o
 parameter_list|)
@@ -5486,6 +5621,7 @@ specifier|public
 name|void
 name|visitLXOR
 parameter_list|(
+specifier|final
 name|LXOR
 name|o
 parameter_list|)
@@ -5520,6 +5656,7 @@ specifier|public
 name|void
 name|visitMONITORENTER
 parameter_list|(
+specifier|final
 name|MONITORENTER
 name|o
 parameter_list|)
@@ -5538,6 +5675,7 @@ specifier|public
 name|void
 name|visitMONITOREXIT
 parameter_list|(
+specifier|final
 name|MONITOREXIT
 name|o
 parameter_list|)
@@ -5556,6 +5694,7 @@ specifier|public
 name|void
 name|visitMULTIANEWARRAY
 parameter_list|(
+specifier|final
 name|MULTIANEWARRAY
 name|o
 parameter_list|)
@@ -5606,6 +5745,7 @@ specifier|public
 name|void
 name|visitNEW
 parameter_list|(
+specifier|final
 name|NEW
 name|o
 parameter_list|)
@@ -5640,6 +5780,7 @@ specifier|public
 name|void
 name|visitNEWARRAY
 parameter_list|(
+specifier|final
 name|NEWARRAY
 name|o
 parameter_list|)
@@ -5669,6 +5810,7 @@ specifier|public
 name|void
 name|visitNOP
 parameter_list|(
+specifier|final
 name|NOP
 name|o
 parameter_list|)
@@ -5681,6 +5823,7 @@ specifier|public
 name|void
 name|visitPOP
 parameter_list|(
+specifier|final
 name|POP
 name|o
 parameter_list|)
@@ -5699,6 +5842,7 @@ specifier|public
 name|void
 name|visitPOP2
 parameter_list|(
+specifier|final
 name|POP2
 name|o
 parameter_list|)
@@ -5737,6 +5881,7 @@ specifier|public
 name|void
 name|visitPUTFIELD
 parameter_list|(
+specifier|final
 name|PUTFIELD
 name|o
 parameter_list|)
@@ -5761,6 +5906,7 @@ specifier|public
 name|void
 name|visitPUTSTATIC
 parameter_list|(
+specifier|final
 name|PUTSTATIC
 name|o
 parameter_list|)
@@ -5779,6 +5925,7 @@ specifier|public
 name|void
 name|visitRET
 parameter_list|(
+specifier|final
 name|RET
 name|o
 parameter_list|)
@@ -5793,6 +5940,7 @@ specifier|public
 name|void
 name|visitRETURN
 parameter_list|(
+specifier|final
 name|RETURN
 name|o
 parameter_list|)
@@ -5806,6 +5954,7 @@ specifier|public
 name|void
 name|visitSALOAD
 parameter_list|(
+specifier|final
 name|SALOAD
 name|o
 parameter_list|)
@@ -5840,6 +5989,7 @@ specifier|public
 name|void
 name|visitSASTORE
 parameter_list|(
+specifier|final
 name|SASTORE
 name|o
 parameter_list|)
@@ -5870,6 +6020,7 @@ specifier|public
 name|void
 name|visitSIPUSH
 parameter_list|(
+specifier|final
 name|SIPUSH
 name|o
 parameter_list|)
@@ -5892,6 +6043,7 @@ specifier|public
 name|void
 name|visitSWAP
 parameter_list|(
+specifier|final
 name|SWAP
 name|o
 parameter_list|)
@@ -5938,6 +6090,7 @@ specifier|public
 name|void
 name|visitTABLESWITCH
 parameter_list|(
+specifier|final
 name|TABLESWITCH
 name|o
 parameter_list|)

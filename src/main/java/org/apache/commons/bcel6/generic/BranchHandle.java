@@ -32,6 +32,7 @@ block|{
 specifier|private
 name|BranchHandle
 parameter_list|(
+specifier|final
 name|BranchInstruction
 name|i
 parameter_list|)
@@ -55,6 +56,7 @@ specifier|static
 name|BranchHandle
 name|getBranchHandle
 parameter_list|(
+specifier|final
 name|BranchInstruction
 name|i
 parameter_list|)
@@ -158,6 +160,7 @@ name|Override
 name|void
 name|setPosition
 parameter_list|(
+specifier|final
 name|int
 name|pos
 parameter_list|)
@@ -185,9 +188,11 @@ specifier|protected
 name|int
 name|updatePosition
 parameter_list|(
+specifier|final
 name|int
 name|offset
 parameter_list|,
+specifier|final
 name|int
 name|max_offset
 parameter_list|)
@@ -225,6 +230,7 @@ specifier|public
 name|void
 name|setTarget
 parameter_list|(
+specifier|final
 name|InstructionHandle
 name|ih
 parameter_list|)
@@ -243,9 +249,11 @@ specifier|public
 name|void
 name|updateTarget
 parameter_list|(
+specifier|final
 name|InstructionHandle
 name|old_ih
 parameter_list|,
+specifier|final
 name|InstructionHandle
 name|new_ih
 parameter_list|)
@@ -283,6 +291,7 @@ specifier|public
 name|void
 name|setInstruction
 parameter_list|(
+specifier|final
 name|Instruction
 name|i
 parameter_list|)

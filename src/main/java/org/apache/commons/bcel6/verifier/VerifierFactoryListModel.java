@@ -152,6 +152,7 @@ specifier|synchronized
 name|void
 name|update
 parameter_list|(
+specifier|final
 name|String
 name|s
 parameter_list|)
@@ -239,6 +240,7 @@ specifier|synchronized
 name|void
 name|addListDataListener
 parameter_list|(
+specifier|final
 name|ListDataListener
 name|l
 parameter_list|)
@@ -258,6 +260,7 @@ specifier|synchronized
 name|void
 name|removeListDataListener
 parameter_list|(
+specifier|final
 name|javax
 operator|.
 name|swing
@@ -298,6 +301,7 @@ specifier|synchronized
 name|String
 name|getElementAt
 parameter_list|(
+specifier|final
 name|int
 name|index
 parameter_list|)

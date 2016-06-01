@@ -315,6 +315,7 @@ specifier|protected
 name|File
 name|createTestdataFile
 parameter_list|(
+specifier|final
 name|String
 name|name
 parameter_list|)
@@ -333,6 +334,7 @@ specifier|protected
 name|JavaClass
 name|getTestClass
 parameter_list|(
+specifier|final
 name|String
 name|name
 parameter_list|)
@@ -355,9 +357,11 @@ specifier|protected
 name|Method
 name|getMethod
 parameter_list|(
+specifier|final
 name|JavaClass
 name|cl
 parameter_list|,
+specifier|final
 name|String
 name|methodname
 parameter_list|)
@@ -406,6 +410,7 @@ specifier|protected
 name|boolean
 name|wipe
 parameter_list|(
+specifier|final
 name|String
 name|name
 parameter_list|)
@@ -428,9 +433,11 @@ specifier|protected
 name|boolean
 name|wipe
 parameter_list|(
+specifier|final
 name|String
 name|dir
 parameter_list|,
+specifier|final
 name|String
 name|name
 parameter_list|)
@@ -528,6 +535,7 @@ specifier|public
 name|SyntheticRepository
 name|createRepos
 parameter_list|(
+specifier|final
 name|String
 name|cpentry
 parameter_list|)
@@ -571,9 +579,11 @@ name|Attribute
 index|[]
 name|findAttribute
 parameter_list|(
+specifier|final
 name|String
 name|name
 parameter_list|,
+specifier|final
 name|JavaClass
 name|clazz
 parameter_list|)
@@ -664,9 +674,11 @@ specifier|protected
 name|Attribute
 name|findAttribute
 parameter_list|(
+specifier|final
 name|String
 name|name
 parameter_list|,
+specifier|final
 name|Attribute
 index|[]
 name|all
@@ -763,6 +775,7 @@ specifier|protected
 name|String
 name|dumpAttributes
 parameter_list|(
+specifier|final
 name|Attribute
 index|[]
 name|as
@@ -855,6 +868,7 @@ specifier|protected
 name|String
 name|dumpAnnotationEntries
 parameter_list|(
+specifier|final
 name|AnnotationEntry
 index|[]
 name|as
@@ -947,6 +961,7 @@ specifier|protected
 name|String
 name|dumpAnnotationEntries
 parameter_list|(
+specifier|final
 name|AnnotationEntryGen
 index|[]
 name|as
@@ -1039,12 +1054,15 @@ specifier|public
 name|AnnotationEntryGen
 name|createFruitAnnotationEntry
 parameter_list|(
+specifier|final
 name|ConstantPoolGen
 name|cp
 parameter_list|,
+specifier|final
 name|String
 name|aFruit
 parameter_list|,
+specifier|final
 name|boolean
 name|visibility
 parameter_list|)

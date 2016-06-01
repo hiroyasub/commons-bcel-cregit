@@ -88,6 +88,7 @@ specifier|static
 name|void
 name|test2
 parameter_list|(
+specifier|final
 name|Object
 name|o
 parameter_list|)
@@ -98,6 +99,7 @@ specifier|static
 name|void
 name|test3
 parameter_list|(
+specifier|final
 name|Serializable
 name|o
 parameter_list|)
@@ -108,6 +110,7 @@ specifier|static
 name|void
 name|test4
 parameter_list|(
+specifier|final
 name|Cloneable
 name|o
 parameter_list|)
@@ -146,6 +149,7 @@ specifier|static
 name|Object
 name|foo
 parameter_list|(
+specifier|final
 name|String
 name|s
 parameter_list|)

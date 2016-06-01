@@ -300,6 +300,7 @@ specifier|public
 name|void
 name|create
 parameter_list|(
+specifier|final
 name|OutputStream
 name|out
 parameter_list|)

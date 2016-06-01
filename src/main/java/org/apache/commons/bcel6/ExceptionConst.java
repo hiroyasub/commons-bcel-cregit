@@ -422,6 +422,7 @@ argument_list|>
 index|[]
 name|mergeExceptions
 parameter_list|(
+specifier|final
 name|Class
 argument_list|<
 name|?
@@ -429,6 +430,7 @@ argument_list|>
 index|[]
 name|input
 parameter_list|,
+specifier|final
 name|Class
 argument_list|<
 name|?
@@ -526,9 +528,11 @@ argument_list|>
 index|[]
 name|createExceptions
 parameter_list|(
+specifier|final
 name|EXCS
 name|type
 parameter_list|,
+specifier|final
 name|Class
 argument_list|<
 name|?

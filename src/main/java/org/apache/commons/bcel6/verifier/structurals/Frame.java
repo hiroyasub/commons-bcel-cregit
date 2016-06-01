@@ -52,9 +52,11 @@ comment|/**      *      */
 specifier|public
 name|Frame
 parameter_list|(
+specifier|final
 name|int
 name|maxLocals
 parameter_list|,
+specifier|final
 name|int
 name|maxStack
 parameter_list|)
@@ -80,9 +82,11 @@ comment|/**      *      */
 specifier|public
 name|Frame
 parameter_list|(
+specifier|final
 name|LocalVariables
 name|locals
 parameter_list|,
+specifier|final
 name|OperandStack
 name|stack
 parameter_list|)
@@ -190,6 +194,7 @@ specifier|public
 name|boolean
 name|equals
 parameter_list|(
+specifier|final
 name|Object
 name|o
 parameter_list|)
@@ -287,6 +292,7 @@ specifier|static
 name|void
 name|setThis
 parameter_list|(
+specifier|final
 name|UninitializedObjectType
 name|_this
 parameter_list|)

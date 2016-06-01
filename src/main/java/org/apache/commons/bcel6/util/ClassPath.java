@@ -219,6 +219,7 @@ specifier|public
 name|boolean
 name|accept
 parameter_list|(
+specifier|final
 name|File
 name|dir
 parameter_list|,
@@ -273,9 +274,11 @@ decl_stmt|;
 specifier|public
 name|ClassPath
 parameter_list|(
+specifier|final
 name|ClassPath
 name|parent
 parameter_list|,
+specifier|final
 name|String
 name|class_path
 parameter_list|)
@@ -296,6 +299,7 @@ comment|/**      * Search for classes in given path.      *       * @param class
 specifier|public
 name|ClassPath
 parameter_list|(
+specifier|final
 name|String
 name|class_path
 parameter_list|)
@@ -560,6 +564,7 @@ specifier|public
 name|boolean
 name|equals
 parameter_list|(
+specifier|final
 name|Object
 name|o
 parameter_list|)
@@ -600,9 +605,11 @@ specifier|static
 name|void
 name|getPathComponents
 parameter_list|(
+specifier|final
 name|String
 name|path
 parameter_list|,
+specifier|final
 name|List
 argument_list|<
 name|String
@@ -873,6 +880,7 @@ specifier|public
 name|InputStream
 name|getInputStream
 parameter_list|(
+specifier|final
 name|String
 name|name
 parameter_list|)
@@ -900,9 +908,11 @@ specifier|public
 name|InputStream
 name|getInputStream
 parameter_list|(
+specifier|final
 name|String
 name|name
 parameter_list|,
+specifier|final
 name|String
 name|suffix
 parameter_list|)
@@ -969,6 +979,7 @@ specifier|public
 name|InputStream
 name|getResourceAsStream
 parameter_list|(
+specifier|final
 name|String
 name|name
 parameter_list|)
@@ -1014,6 +1025,7 @@ specifier|public
 name|URL
 name|getResource
 parameter_list|(
+specifier|final
 name|String
 name|name
 parameter_list|)
@@ -1062,6 +1074,7 @@ name|URL
 argument_list|>
 name|getResources
 parameter_list|(
+specifier|final
 name|String
 name|name
 parameter_list|)
@@ -1125,9 +1138,11 @@ specifier|public
 name|ClassFile
 name|getClassFile
 parameter_list|(
+specifier|final
 name|String
 name|name
 parameter_list|,
+specifier|final
 name|String
 name|suffix
 parameter_list|)
@@ -1202,9 +1217,11 @@ specifier|private
 name|ClassFile
 name|getClassFileInternal
 parameter_list|(
+specifier|final
 name|String
 name|name
 parameter_list|,
+specifier|final
 name|String
 name|suffix
 parameter_list|)
@@ -1252,6 +1269,7 @@ specifier|public
 name|ClassFile
 name|getClassFile
 parameter_list|(
+specifier|final
 name|String
 name|name
 parameter_list|)
@@ -1273,9 +1291,11 @@ name|byte
 index|[]
 name|getBytes
 parameter_list|(
+specifier|final
 name|String
 name|name
 parameter_list|,
+specifier|final
 name|String
 name|suffix
 parameter_list|)
@@ -1373,6 +1393,7 @@ name|byte
 index|[]
 name|getBytes
 parameter_list|(
+specifier|final
 name|String
 name|name
 parameter_list|)
@@ -1456,9 +1477,11 @@ specifier|public
 name|String
 name|getPath
 parameter_list|(
+specifier|final
 name|String
 name|name
 parameter_list|,
+specifier|final
 name|String
 name|suffix
 parameter_list|)
@@ -1570,6 +1593,7 @@ name|dir
 decl_stmt|;
 name|Dir
 parameter_list|(
+specifier|final
 name|String
 name|d
 parameter_list|)
@@ -1584,6 +1608,7 @@ name|Override
 name|URL
 name|getResource
 parameter_list|(
+specifier|final
 name|String
 name|name
 parameter_list|)
@@ -1649,6 +1674,7 @@ name|Override
 name|InputStream
 name|getResourceAsStream
 parameter_list|(
+specifier|final
 name|String
 name|name
 parameter_list|)
@@ -1712,9 +1738,11 @@ name|Override
 name|ClassFile
 name|getClassFile
 parameter_list|(
+specifier|final
 name|String
 name|name
 parameter_list|,
+specifier|final
 name|String
 name|suffix
 parameter_list|)
@@ -1872,6 +1900,7 @@ name|zip
 decl_stmt|;
 name|Zip
 parameter_list|(
+specifier|final
 name|ZipFile
 name|z
 parameter_list|)
@@ -1886,6 +1915,7 @@ name|Override
 name|URL
 name|getResource
 parameter_list|(
+specifier|final
 name|String
 name|name
 parameter_list|)
@@ -1944,6 +1974,7 @@ name|Override
 name|InputStream
 name|getResourceAsStream
 parameter_list|(
+specifier|final
 name|String
 name|name
 parameter_list|)
@@ -1994,9 +2025,11 @@ name|Override
 name|ClassFile
 name|getClassFile
 parameter_list|(
+specifier|final
 name|String
 name|name
 parameter_list|,
+specifier|final
 name|String
 name|suffix
 parameter_list|)

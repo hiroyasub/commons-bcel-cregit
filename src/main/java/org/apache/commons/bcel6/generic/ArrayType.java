@@ -55,9 +55,11 @@ comment|/**      * Convenience constructor for array type, e.g. int[]      *    
 specifier|public
 name|ArrayType
 parameter_list|(
+specifier|final
 name|byte
 name|type
 parameter_list|,
+specifier|final
 name|int
 name|dimensions
 parameter_list|)
@@ -79,9 +81,11 @@ comment|/**      * Convenience constructor for reference array type, e.g. Object
 specifier|public
 name|ArrayType
 parameter_list|(
+specifier|final
 name|String
 name|class_name
 parameter_list|,
+specifier|final
 name|int
 name|dimensions
 parameter_list|)
@@ -103,9 +107,11 @@ comment|/**      * Constructor for array of given type      *      * @param type
 specifier|public
 name|ArrayType
 parameter_list|(
+specifier|final
 name|Type
 name|type
 parameter_list|,
+specifier|final
 name|int
 name|dimensions
 parameter_list|)
@@ -336,6 +342,7 @@ specifier|public
 name|boolean
 name|equals
 parameter_list|(
+specifier|final
 name|Object
 name|_type
 parameter_list|)

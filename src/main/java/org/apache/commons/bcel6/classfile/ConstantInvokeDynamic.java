@@ -67,6 +67,7 @@ comment|/**      * Initialize from another object.      */
 specifier|public
 name|ConstantInvokeDynamic
 parameter_list|(
+specifier|final
 name|ConstantInvokeDynamic
 name|c
 parameter_list|)
@@ -88,6 +89,7 @@ block|}
 comment|/**      * Initialize instance from file data.      *      * @param file Input stream      * @throws IOException      */
 name|ConstantInvokeDynamic
 parameter_list|(
+specifier|final
 name|DataInput
 name|file
 parameter_list|)
@@ -111,9 +113,11 @@ block|}
 specifier|public
 name|ConstantInvokeDynamic
 parameter_list|(
+specifier|final
 name|int
 name|bootstrap_method_attr_index
 parameter_list|,
+specifier|final
 name|int
 name|name_and_type_index
 parameter_list|)
@@ -137,6 +141,7 @@ specifier|public
 name|void
 name|accept
 parameter_list|(
+specifier|final
 name|Visitor
 name|v
 parameter_list|)

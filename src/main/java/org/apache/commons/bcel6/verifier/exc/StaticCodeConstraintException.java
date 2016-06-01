@@ -42,6 +42,7 @@ decl_stmt|;
 specifier|public
 name|StaticCodeConstraintException
 parameter_list|(
+specifier|final
 name|String
 name|message
 parameter_list|)

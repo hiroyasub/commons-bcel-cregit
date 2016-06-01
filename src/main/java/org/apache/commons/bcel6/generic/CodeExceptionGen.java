@@ -67,15 +67,19 @@ comment|/**      * Add an exception handler, i.e., specify region where a handle
 specifier|public
 name|CodeExceptionGen
 parameter_list|(
+specifier|final
 name|InstructionHandle
 name|start_pc
 parameter_list|,
+specifier|final
 name|InstructionHandle
 name|end_pc
 parameter_list|,
+specifier|final
 name|InstructionHandle
 name|handler_pc
 parameter_list|,
+specifier|final
 name|ObjectType
 name|catch_type
 parameter_list|)
@@ -107,6 +111,7 @@ specifier|public
 name|CodeException
 name|getCodeException
 parameter_list|(
+specifier|final
 name|ConstantPoolGen
 name|cp
 parameter_list|)
@@ -160,6 +165,7 @@ specifier|public
 name|void
 name|setStartPC
 parameter_list|(
+specifier|final
 name|InstructionHandle
 name|start_pc
 parameter_list|)
@@ -190,6 +196,7 @@ specifier|public
 name|void
 name|setEndPC
 parameter_list|(
+specifier|final
 name|InstructionHandle
 name|end_pc
 parameter_list|)
@@ -220,6 +227,7 @@ specifier|public
 name|void
 name|setHandlerPC
 parameter_list|(
+specifier|final
 name|InstructionHandle
 name|handler_pc
 parameter_list|)
@@ -252,9 +260,11 @@ specifier|public
 name|void
 name|updateTarget
 parameter_list|(
+specifier|final
 name|InstructionHandle
 name|old_ih
 parameter_list|,
+specifier|final
 name|InstructionHandle
 name|new_ih
 parameter_list|)
@@ -353,6 +363,7 @@ specifier|public
 name|boolean
 name|containsTarget
 parameter_list|(
+specifier|final
 name|InstructionHandle
 name|ih
 parameter_list|)
@@ -382,6 +393,7 @@ specifier|public
 name|void
 name|setCatchType
 parameter_list|(
+specifier|final
 name|ObjectType
 name|catch_type
 parameter_list|)

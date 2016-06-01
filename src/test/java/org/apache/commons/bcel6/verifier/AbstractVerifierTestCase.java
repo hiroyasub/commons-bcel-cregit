@@ -88,9 +88,11 @@ specifier|public
 name|void
 name|assertVerifyOK
 parameter_list|(
+specifier|final
 name|String
 name|classname
 parameter_list|,
+specifier|final
 name|String
 name|message
 parameter_list|)
@@ -119,9 +121,11 @@ specifier|public
 name|void
 name|assertVerifyRejected
 parameter_list|(
+specifier|final
 name|String
 name|classname
 parameter_list|,
+specifier|final
 name|String
 name|message
 parameter_list|)
@@ -150,6 +154,7 @@ specifier|public
 name|boolean
 name|doAllPasses
 parameter_list|(
+specifier|final
 name|String
 name|classname
 parameter_list|)

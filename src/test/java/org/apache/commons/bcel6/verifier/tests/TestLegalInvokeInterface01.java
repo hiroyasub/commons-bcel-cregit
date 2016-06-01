@@ -29,6 +29,7 @@ specifier|static
 name|void
 name|test1
 parameter_list|(
+specifier|final
 name|Interface01
 name|t
 parameter_list|)

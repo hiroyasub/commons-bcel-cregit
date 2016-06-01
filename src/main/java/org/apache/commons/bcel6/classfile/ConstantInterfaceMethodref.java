@@ -67,6 +67,7 @@ comment|/**      * Initialize from another object.      */
 specifier|public
 name|ConstantInterfaceMethodref
 parameter_list|(
+specifier|final
 name|ConstantInterfaceMethodref
 name|c
 parameter_list|)
@@ -92,6 +93,7 @@ block|}
 comment|/**      * Initialize instance from input data.      *      * @param input input stream      * @throws IOException      */
 name|ConstantInterfaceMethodref
 parameter_list|(
+specifier|final
 name|DataInput
 name|input
 parameter_list|)
@@ -112,9 +114,11 @@ comment|/**      * @param class_index Reference to the class containing the meth
 specifier|public
 name|ConstantInterfaceMethodref
 parameter_list|(
+specifier|final
 name|int
 name|class_index
 parameter_list|,
+specifier|final
 name|int
 name|name_and_type_index
 parameter_list|)
@@ -138,6 +142,7 @@ specifier|public
 name|void
 name|accept
 parameter_list|(
+specifier|final
 name|Visitor
 name|v
 parameter_list|)

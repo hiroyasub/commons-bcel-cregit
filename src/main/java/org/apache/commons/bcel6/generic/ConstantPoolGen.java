@@ -377,6 +377,7 @@ name|index
 decl_stmt|;
 name|Index
 parameter_list|(
+specifier|final
 name|int
 name|i
 parameter_list|)
@@ -391,6 +392,7 @@ comment|/**      * Initialize with given array of constants.      *      * @para
 specifier|public
 name|ConstantPoolGen
 parameter_list|(
+specifier|final
 name|Constant
 index|[]
 name|cs
@@ -1139,6 +1141,7 @@ comment|/**      * Initialize with given constant pool.      */
 specifier|public
 name|ConstantPoolGen
 parameter_list|(
+specifier|final
 name|ConstantPool
 name|cp
 parameter_list|)
@@ -1240,6 +1243,7 @@ specifier|public
 name|int
 name|lookupString
 parameter_list|(
+specifier|final
 name|String
 name|str
 parameter_list|)
@@ -1274,6 +1278,7 @@ specifier|public
 name|int
 name|addString
 parameter_list|(
+specifier|final
 name|String
 name|str
 parameter_list|)
@@ -1382,6 +1387,7 @@ specifier|public
 name|int
 name|lookupClass
 parameter_list|(
+specifier|final
 name|String
 name|str
 parameter_list|)
@@ -1422,6 +1428,7 @@ specifier|private
 name|int
 name|addClass_
 parameter_list|(
+specifier|final
 name|String
 name|clazz
 parameter_list|)
@@ -1510,6 +1517,7 @@ specifier|public
 name|int
 name|addClass
 parameter_list|(
+specifier|final
 name|String
 name|str
 parameter_list|)
@@ -1533,6 +1541,7 @@ specifier|public
 name|int
 name|addClass
 parameter_list|(
+specifier|final
 name|ObjectType
 name|type
 parameter_list|)
@@ -1552,6 +1561,7 @@ specifier|public
 name|int
 name|addArrayClass
 parameter_list|(
+specifier|final
 name|ArrayType
 name|type
 parameter_list|)
@@ -1571,6 +1581,7 @@ specifier|public
 name|int
 name|lookupInteger
 parameter_list|(
+specifier|final
 name|int
 name|n
 parameter_list|)
@@ -1637,6 +1648,7 @@ specifier|public
 name|int
 name|addInteger
 parameter_list|(
+specifier|final
 name|int
 name|n
 parameter_list|)
@@ -1692,6 +1704,7 @@ specifier|public
 name|int
 name|lookupFloat
 parameter_list|(
+specifier|final
 name|float
 name|n
 parameter_list|)
@@ -1773,6 +1786,7 @@ specifier|public
 name|int
 name|addFloat
 parameter_list|(
+specifier|final
 name|float
 name|n
 parameter_list|)
@@ -1843,6 +1857,7 @@ specifier|public
 name|int
 name|lookupUtf8
 parameter_list|(
+specifier|final
 name|String
 name|n
 parameter_list|)
@@ -1877,6 +1892,7 @@ specifier|public
 name|int
 name|addUtf8
 parameter_list|(
+specifier|final
 name|String
 name|n
 parameter_list|)
@@ -1957,6 +1973,7 @@ specifier|public
 name|int
 name|lookupLong
 parameter_list|(
+specifier|final
 name|long
 name|n
 parameter_list|)
@@ -2023,6 +2040,7 @@ specifier|public
 name|int
 name|addLong
 parameter_list|(
+specifier|final
 name|long
 name|n
 parameter_list|)
@@ -2082,6 +2100,7 @@ specifier|public
 name|int
 name|lookupDouble
 parameter_list|(
+specifier|final
 name|double
 name|n
 parameter_list|)
@@ -2163,6 +2182,7 @@ specifier|public
 name|int
 name|addDouble
 parameter_list|(
+specifier|final
 name|double
 name|n
 parameter_list|)
@@ -2237,9 +2257,11 @@ specifier|public
 name|int
 name|lookupNameAndType
 parameter_list|(
+specifier|final
 name|String
 name|name
 parameter_list|,
+specifier|final
 name|String
 name|signature
 parameter_list|)
@@ -2278,9 +2300,11 @@ specifier|public
 name|int
 name|addNameAndType
 parameter_list|(
+specifier|final
 name|String
 name|name
 parameter_list|,
+specifier|final
 name|String
 name|signature
 parameter_list|)
@@ -2409,12 +2433,15 @@ specifier|public
 name|int
 name|lookupMethodref
 parameter_list|(
+specifier|final
 name|String
 name|class_name
 parameter_list|,
+specifier|final
 name|String
 name|method_name
 parameter_list|,
+specifier|final
 name|String
 name|signature
 parameter_list|)
@@ -2456,6 +2483,7 @@ specifier|public
 name|int
 name|lookupMethodref
 parameter_list|(
+specifier|final
 name|MethodGen
 name|method
 parameter_list|)
@@ -2485,12 +2513,15 @@ specifier|public
 name|int
 name|addMethodref
 parameter_list|(
+specifier|final
 name|String
 name|class_name
 parameter_list|,
+specifier|final
 name|String
 name|method_name
 parameter_list|,
+specifier|final
 name|String
 name|signature
 parameter_list|)
@@ -2611,6 +2642,7 @@ specifier|public
 name|int
 name|addMethodref
 parameter_list|(
+specifier|final
 name|MethodGen
 name|method
 parameter_list|)
@@ -2640,12 +2672,15 @@ specifier|public
 name|int
 name|lookupInterfaceMethodref
 parameter_list|(
+specifier|final
 name|String
 name|class_name
 parameter_list|,
+specifier|final
 name|String
 name|method_name
 parameter_list|,
+specifier|final
 name|String
 name|signature
 parameter_list|)
@@ -2687,6 +2722,7 @@ specifier|public
 name|int
 name|lookupInterfaceMethodref
 parameter_list|(
+specifier|final
 name|MethodGen
 name|method
 parameter_list|)
@@ -2716,12 +2752,15 @@ specifier|public
 name|int
 name|addInterfaceMethodref
 parameter_list|(
+specifier|final
 name|String
 name|class_name
 parameter_list|,
+specifier|final
 name|String
 name|method_name
 parameter_list|,
+specifier|final
 name|String
 name|signature
 parameter_list|)
@@ -2842,6 +2881,7 @@ specifier|public
 name|int
 name|addInterfaceMethodref
 parameter_list|(
+specifier|final
 name|MethodGen
 name|method
 parameter_list|)
@@ -2871,12 +2911,15 @@ specifier|public
 name|int
 name|lookupFieldref
 parameter_list|(
+specifier|final
 name|String
 name|class_name
 parameter_list|,
+specifier|final
 name|String
 name|field_name
 parameter_list|,
+specifier|final
 name|String
 name|signature
 parameter_list|)
@@ -2919,12 +2962,15 @@ specifier|public
 name|int
 name|addFieldref
 parameter_list|(
+specifier|final
 name|String
 name|class_name
 parameter_list|,
+specifier|final
 name|String
 name|field_name
 parameter_list|,
+specifier|final
 name|String
 name|signature
 parameter_list|)
@@ -3046,6 +3092,7 @@ specifier|public
 name|Constant
 name|getConstant
 parameter_list|(
+specifier|final
 name|int
 name|i
 parameter_list|)
@@ -3062,9 +3109,11 @@ specifier|public
 name|void
 name|setConstant
 parameter_list|(
+specifier|final
 name|int
 name|i
 parameter_list|,
+specifier|final
 name|Constant
 name|c
 parameter_list|)
@@ -3208,9 +3257,11 @@ specifier|public
 name|int
 name|addConstant
 parameter_list|(
+specifier|final
 name|Constant
 name|c
 parameter_list|,
+specifier|final
 name|ConstantPoolGen
 name|cp
 parameter_list|)

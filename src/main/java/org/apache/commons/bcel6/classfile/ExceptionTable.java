@@ -83,6 +83,7 @@ comment|/**      * Initialize from another object. Note that both objects use th
 specifier|public
 name|ExceptionTable
 parameter_list|(
+specifier|final
 name|ExceptionTable
 name|c
 parameter_list|)
@@ -115,16 +116,20 @@ comment|/**      * @param name_index Index in constant pool      * @param length
 specifier|public
 name|ExceptionTable
 parameter_list|(
+specifier|final
 name|int
 name|name_index
 parameter_list|,
+specifier|final
 name|int
 name|length
 parameter_list|,
+specifier|final
 name|int
 index|[]
 name|exception_index_table
 parameter_list|,
+specifier|final
 name|ConstantPool
 name|constant_pool
 parameter_list|)
@@ -162,15 +167,19 @@ block|}
 comment|/**      * Construct object from input stream.      * @param name_index Index in constant pool      * @param length Content length in bytes      * @param input Input stream      * @param constant_pool Array of constants      * @throws IOException      */
 name|ExceptionTable
 parameter_list|(
+specifier|final
 name|int
 name|name_index
 parameter_list|,
+specifier|final
 name|int
 name|length
 parameter_list|,
+specifier|final
 name|DataInput
 name|input
 parameter_list|,
+specifier|final
 name|ConstantPool
 name|constant_pool
 parameter_list|)
@@ -242,6 +251,7 @@ specifier|public
 name|void
 name|accept
 parameter_list|(
+specifier|final
 name|Visitor
 name|v
 parameter_list|)
@@ -262,6 +272,7 @@ specifier|final
 name|void
 name|dump
 parameter_list|(
+specifier|final
 name|DataOutputStream
 name|file
 parameter_list|)
@@ -409,6 +420,7 @@ specifier|final
 name|void
 name|setExceptionIndexTable
 parameter_list|(
+specifier|final
 name|int
 index|[]
 name|exception_index_table
@@ -541,6 +553,7 @@ specifier|public
 name|Attribute
 name|copy
 parameter_list|(
+specifier|final
 name|ConstantPool
 name|_constant_pool
 parameter_list|)

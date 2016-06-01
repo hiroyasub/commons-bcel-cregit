@@ -203,9 +203,11 @@ comment|/**      * Parse class from the given stream.      *      * @param input
 specifier|public
 name|ClassParser
 parameter_list|(
+specifier|final
 name|InputStream
 name|inputStream
 parameter_list|,
+specifier|final
 name|String
 name|file_name
 parameter_list|)
@@ -289,6 +291,7 @@ comment|/** Parse class from given .class file.      *      * @param file_name f
 specifier|public
 name|ClassParser
 parameter_list|(
+specifier|final
 name|String
 name|file_name
 parameter_list|)
@@ -312,9 +315,11 @@ comment|/** Parse class from given .class file in a ZIP-archive      *      * @p
 specifier|public
 name|ClassParser
 parameter_list|(
+specifier|final
 name|String
 name|zip_file
 parameter_list|,
+specifier|final
 name|String
 name|file_name
 parameter_list|)

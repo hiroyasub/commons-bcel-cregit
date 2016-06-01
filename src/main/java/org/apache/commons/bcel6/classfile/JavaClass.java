@@ -383,9 +383,11 @@ specifier|public
 name|boolean
 name|equals
 parameter_list|(
+specifier|final
 name|Object
 name|o1
 parameter_list|,
+specifier|final
 name|Object
 name|o2
 parameter_list|)
@@ -427,6 +429,7 @@ specifier|public
 name|int
 name|hashCode
 parameter_list|(
+specifier|final
 name|Object
 name|o
 parameter_list|)
@@ -476,24 +479,31 @@ comment|/**      * Constructor gets all contents as arguments.      *      * @pa
 specifier|public
 name|JavaClass
 parameter_list|(
+specifier|final
 name|int
 name|class_name_index
 parameter_list|,
+specifier|final
 name|int
 name|superclass_name_index
 parameter_list|,
+specifier|final
 name|String
 name|file_name
 parameter_list|,
+specifier|final
 name|int
 name|major
 parameter_list|,
+specifier|final
 name|int
 name|minor
 parameter_list|,
+specifier|final
 name|int
 name|access_flags
 parameter_list|,
+specifier|final
 name|ConstantPool
 name|constant_pool
 parameter_list|,
@@ -513,6 +523,7 @@ name|Attribute
 index|[]
 name|attributes
 parameter_list|,
+specifier|final
 name|byte
 name|source
 parameter_list|)
@@ -848,39 +859,50 @@ comment|/**      * Constructor gets all contents as arguments.      *      * @pa
 specifier|public
 name|JavaClass
 parameter_list|(
+specifier|final
 name|int
 name|class_name_index
 parameter_list|,
+specifier|final
 name|int
 name|superclass_name_index
 parameter_list|,
+specifier|final
 name|String
 name|file_name
 parameter_list|,
+specifier|final
 name|int
 name|major
 parameter_list|,
+specifier|final
 name|int
 name|minor
 parameter_list|,
+specifier|final
 name|int
 name|access_flags
 parameter_list|,
+specifier|final
 name|ConstantPool
 name|constant_pool
 parameter_list|,
+specifier|final
 name|int
 index|[]
 name|interfaces
 parameter_list|,
+specifier|final
 name|Field
 index|[]
 name|fields
 parameter_list|,
+specifier|final
 name|Method
 index|[]
 name|methods
 parameter_list|,
+specifier|final
 name|Attribute
 index|[]
 name|attributes
@@ -921,6 +943,7 @@ specifier|public
 name|void
 name|accept
 parameter_list|(
+specifier|final
 name|Visitor
 name|v
 parameter_list|)
@@ -938,6 +961,7 @@ specifier|static
 name|void
 name|Debug
 parameter_list|(
+specifier|final
 name|String
 name|str
 parameter_list|)
@@ -963,6 +987,7 @@ specifier|public
 name|void
 name|dump
 parameter_list|(
+specifier|final
 name|File
 name|file
 parameter_list|)
@@ -1071,6 +1096,7 @@ specifier|public
 name|void
 name|dump
 parameter_list|(
+specifier|final
 name|String
 name|_file_name
 parameter_list|)
@@ -1165,6 +1191,7 @@ specifier|public
 name|void
 name|dump
 parameter_list|(
+specifier|final
 name|OutputStream
 name|file
 parameter_list|)
@@ -1186,6 +1213,7 @@ specifier|public
 name|void
 name|dump
 parameter_list|(
+specifier|final
 name|DataOutputStream
 name|file
 parameter_list|)
@@ -1519,6 +1547,7 @@ specifier|public
 name|Method
 name|getMethod
 parameter_list|(
+specifier|final
 name|java
 operator|.
 name|lang
@@ -1634,6 +1663,7 @@ specifier|public
 name|void
 name|setAttributes
 parameter_list|(
+specifier|final
 name|Attribute
 index|[]
 name|attributes
@@ -1651,6 +1681,7 @@ specifier|public
 name|void
 name|setClassName
 parameter_list|(
+specifier|final
 name|String
 name|class_name
 parameter_list|)
@@ -1667,6 +1698,7 @@ specifier|public
 name|void
 name|setClassNameIndex
 parameter_list|(
+specifier|final
 name|int
 name|class_name_index
 parameter_list|)
@@ -1683,6 +1715,7 @@ specifier|public
 name|void
 name|setConstantPool
 parameter_list|(
+specifier|final
 name|ConstantPool
 name|constant_pool
 parameter_list|)
@@ -1699,6 +1732,7 @@ specifier|public
 name|void
 name|setFields
 parameter_list|(
+specifier|final
 name|Field
 index|[]
 name|fields
@@ -1716,6 +1750,7 @@ specifier|public
 name|void
 name|setFileName
 parameter_list|(
+specifier|final
 name|String
 name|file_name
 parameter_list|)
@@ -1732,6 +1767,7 @@ specifier|public
 name|void
 name|setInterfaceNames
 parameter_list|(
+specifier|final
 name|String
 index|[]
 name|interface_names
@@ -1749,6 +1785,7 @@ specifier|public
 name|void
 name|setInterfaces
 parameter_list|(
+specifier|final
 name|int
 index|[]
 name|interfaces
@@ -1766,6 +1803,7 @@ specifier|public
 name|void
 name|setMajor
 parameter_list|(
+specifier|final
 name|int
 name|major
 parameter_list|)
@@ -1782,6 +1820,7 @@ specifier|public
 name|void
 name|setMethods
 parameter_list|(
+specifier|final
 name|Method
 index|[]
 name|methods
@@ -1799,6 +1838,7 @@ specifier|public
 name|void
 name|setMinor
 parameter_list|(
+specifier|final
 name|int
 name|minor
 parameter_list|)
@@ -1815,6 +1855,7 @@ specifier|public
 name|void
 name|setSourceFileName
 parameter_list|(
+specifier|final
 name|String
 name|source_file_name
 parameter_list|)
@@ -1831,6 +1872,7 @@ specifier|public
 name|void
 name|setSuperclassName
 parameter_list|(
+specifier|final
 name|String
 name|superclass_name
 parameter_list|)
@@ -1847,6 +1889,7 @@ specifier|public
 name|void
 name|setSuperclassNameIndex
 parameter_list|(
+specifier|final
 name|int
 name|superclass_name_index
 parameter_list|)
@@ -2355,6 +2398,7 @@ specifier|static
 name|String
 name|indent
 parameter_list|(
+specifier|final
 name|Object
 name|obj
 parameter_list|)
@@ -2872,6 +2916,7 @@ specifier|public
 name|void
 name|setRepository
 parameter_list|(
+specifier|final
 name|org
 operator|.
 name|apache
@@ -2900,6 +2945,7 @@ specifier|final
 name|boolean
 name|instanceOf
 parameter_list|(
+specifier|final
 name|JavaClass
 name|super_class
 parameter_list|)
@@ -2974,6 +3020,7 @@ specifier|public
 name|boolean
 name|implementationOf
 parameter_list|(
+specifier|final
 name|JavaClass
 name|inter
 parameter_list|)
@@ -3370,6 +3417,7 @@ specifier|static
 name|void
 name|setComparator
 parameter_list|(
+specifier|final
 name|BCELComparator
 name|comparator
 parameter_list|)
@@ -3386,6 +3434,7 @@ specifier|public
 name|boolean
 name|equals
 parameter_list|(
+specifier|final
 name|Object
 name|obj
 parameter_list|)
@@ -3408,6 +3457,7 @@ specifier|public
 name|int
 name|compareTo
 parameter_list|(
+specifier|final
 name|JavaClass
 name|obj
 parameter_list|)

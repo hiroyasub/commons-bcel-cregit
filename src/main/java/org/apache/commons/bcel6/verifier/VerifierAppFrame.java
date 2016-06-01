@@ -891,6 +891,7 @@ specifier|public
 name|void
 name|valueChanged
 parameter_list|(
+specifier|final
 name|ListSelectionEvent
 name|e
 parameter_list|)
@@ -1095,6 +1096,7 @@ specifier|public
 name|void
 name|actionPerformed
 parameter_list|(
+specifier|final
 name|ActionEvent
 name|e
 parameter_list|)
@@ -1142,6 +1144,7 @@ specifier|public
 name|void
 name|valueChanged
 parameter_list|(
+specifier|final
 name|ListSelectionEvent
 name|e
 parameter_list|)
@@ -1175,6 +1178,7 @@ specifier|public
 name|void
 name|valueChanged
 parameter_list|(
+specifier|final
 name|ListSelectionEvent
 name|e
 parameter_list|)
@@ -1222,6 +1226,7 @@ specifier|public
 name|void
 name|actionPerformed
 parameter_list|(
+specifier|final
 name|ActionEvent
 name|e
 parameter_list|)
@@ -1262,6 +1267,7 @@ specifier|public
 name|void
 name|actionPerformed
 parameter_list|(
+specifier|final
 name|ActionEvent
 name|e
 parameter_list|)
@@ -1595,6 +1601,7 @@ specifier|protected
 name|void
 name|processWindowEvent
 parameter_list|(
+specifier|final
 name|WindowEvent
 name|e
 parameter_list|)
@@ -1631,6 +1638,7 @@ specifier|synchronized
 name|void
 name|classNamesJList_valueChanged
 parameter_list|(
+specifier|final
 name|ListSelectionEvent
 name|e
 parameter_list|)
@@ -2191,6 +2199,7 @@ block|}
 name|void
 name|newFileMenuItem_actionPerformed
 parameter_list|(
+specifier|final
 name|ActionEvent
 name|e
 parameter_list|)
@@ -2247,6 +2256,7 @@ specifier|synchronized
 name|void
 name|pass3aJList_valueChanged
 parameter_list|(
+specifier|final
 name|ListSelectionEvent
 name|e
 parameter_list|)
@@ -2466,6 +2476,7 @@ specifier|synchronized
 name|void
 name|pass3bJList_valueChanged
 parameter_list|(
+specifier|final
 name|ListSelectionEvent
 name|e
 parameter_list|)
@@ -2684,6 +2695,7 @@ block|}
 name|void
 name|aboutMenuItem_actionPerformed
 parameter_list|(
+specifier|final
 name|ActionEvent
 name|e
 parameter_list|)
@@ -2709,6 +2721,7 @@ block|}
 name|void
 name|whatisMenuItem_actionPerformed
 parameter_list|(
+specifier|final
 name|ActionEvent
 name|e
 parameter_list|)

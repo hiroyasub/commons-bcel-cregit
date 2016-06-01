@@ -103,6 +103,7 @@ specifier|public
 name|void
 name|addMessage
 parameter_list|(
+specifier|final
 name|String
 name|message
 parameter_list|)

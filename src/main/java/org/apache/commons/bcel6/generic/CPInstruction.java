@@ -134,9 +134,11 @@ comment|/**      * @param index to constant pool      */
 specifier|protected
 name|CPInstruction
 parameter_list|(
+specifier|final
 name|short
 name|opcode
 parameter_list|,
+specifier|final
 name|int
 name|index
 parameter_list|)
@@ -164,6 +166,7 @@ specifier|public
 name|void
 name|dump
 parameter_list|(
+specifier|final
 name|DataOutputStream
 name|out
 parameter_list|)
@@ -195,6 +198,7 @@ specifier|public
 name|String
 name|toString
 parameter_list|(
+specifier|final
 name|boolean
 name|verbose
 parameter_list|)
@@ -219,6 +223,7 @@ specifier|public
 name|String
 name|toString
 parameter_list|(
+specifier|final
 name|ConstantPool
 name|cp
 parameter_list|)
@@ -293,9 +298,11 @@ specifier|protected
 name|void
 name|initFromFile
 parameter_list|(
+specifier|final
 name|ByteSequence
 name|bytes
 parameter_list|,
+specifier|final
 name|boolean
 name|wide
 parameter_list|)
@@ -338,6 +345,7 @@ specifier|public
 name|void
 name|setIndex
 parameter_list|(
+specifier|final
 name|int
 name|index
 parameter_list|)
@@ -374,6 +382,7 @@ specifier|public
 name|Type
 name|getType
 parameter_list|(
+specifier|final
 name|ConstantPoolGen
 name|cpg
 parameter_list|)

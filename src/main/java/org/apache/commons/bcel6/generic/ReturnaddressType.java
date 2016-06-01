@@ -75,6 +75,7 @@ comment|/**      * Creates a ReturnaddressType object with a target.      */
 specifier|public
 name|ReturnaddressType
 parameter_list|(
+specifier|final
 name|InstructionHandle
 name|returnTarget
 parameter_list|)
@@ -132,6 +133,7 @@ specifier|public
 name|boolean
 name|equals
 parameter_list|(
+specifier|final
 name|Object
 name|rat
 parameter_list|)

@@ -79,15 +79,19 @@ decl_stmt|;
 comment|/**      * @param name_index    Index pointing to the name<em>Code</em>      * @param length        Content length in bytes      * @param input         Input stream      * @param constant_pool Array of constants      */
 name|AnnotationDefault
 parameter_list|(
+specifier|final
 name|int
 name|name_index
 parameter_list|,
+specifier|final
 name|int
 name|length
 parameter_list|,
+specifier|final
 name|DataInput
 name|input
 parameter_list|,
+specifier|final
 name|ConstantPool
 name|constant_pool
 parameter_list|)
@@ -124,15 +128,19 @@ comment|/**      * @param name_index    Index pointing to the name<em>Code</em> 
 specifier|public
 name|AnnotationDefault
 parameter_list|(
+specifier|final
 name|int
 name|name_index
 parameter_list|,
+specifier|final
 name|int
 name|length
 parameter_list|,
+specifier|final
 name|ElementValue
 name|defaultValue
 parameter_list|,
+specifier|final
 name|ConstantPool
 name|constant_pool
 parameter_list|)
@@ -164,6 +172,7 @@ specifier|public
 name|void
 name|accept
 parameter_list|(
+specifier|final
 name|Visitor
 name|v
 parameter_list|)
@@ -182,6 +191,7 @@ specifier|final
 name|void
 name|setDefaultValue
 parameter_list|(
+specifier|final
 name|ElementValue
 name|defaultValue
 parameter_list|)
@@ -208,6 +218,7 @@ specifier|public
 name|Attribute
 name|copy
 parameter_list|(
+specifier|final
 name|ConstantPool
 name|_constant_pool
 parameter_list|)
@@ -227,6 +238,7 @@ specifier|final
 name|void
 name|dump
 parameter_list|(
+specifier|final
 name|DataOutputStream
 name|dos
 parameter_list|)

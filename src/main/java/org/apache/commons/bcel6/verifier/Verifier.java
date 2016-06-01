@@ -265,6 +265,7 @@ specifier|public
 name|VerificationResult
 name|doPass3a
 parameter_list|(
+specifier|final
 name|int
 name|method_no
 parameter_list|)
@@ -335,6 +336,7 @@ specifier|public
 name|VerificationResult
 name|doPass3b
 parameter_list|(
+specifier|final
 name|int
 name|method_no
 parameter_list|)
@@ -403,6 +405,7 @@ block|}
 comment|/**      * Instantiation is done by the VerifierFactory.      *      * @see VerifierFactory      */
 name|Verifier
 parameter_list|(
+specifier|final
 name|String
 name|fully_qualified_classname
 parameter_list|)
@@ -711,6 +714,7 @@ specifier|static
 name|void
 name|main
 parameter_list|(
+specifier|final
 name|String
 index|[]
 name|args

@@ -130,6 +130,7 @@ specifier|static
 name|void
 name|setRepository
 parameter_list|(
+specifier|final
 name|org
 operator|.
 name|apache
@@ -155,6 +156,7 @@ specifier|static
 name|JavaClass
 name|lookupClass
 parameter_list|(
+specifier|final
 name|String
 name|class_name
 parameter_list|)
@@ -176,6 +178,7 @@ specifier|static
 name|JavaClass
 name|lookupClass
 parameter_list|(
+specifier|final
 name|Class
 argument_list|<
 name|?
@@ -202,6 +205,7 @@ operator|.
 name|ClassFile
 name|lookupClassFile
 parameter_list|(
+specifier|final
 name|String
 name|class_name
 parameter_list|)
@@ -266,6 +270,7 @@ specifier|static
 name|JavaClass
 name|addClass
 parameter_list|(
+specifier|final
 name|JavaClass
 name|clazz
 parameter_list|)
@@ -300,6 +305,7 @@ specifier|static
 name|void
 name|removeClass
 parameter_list|(
+specifier|final
 name|String
 name|clazz
 parameter_list|)
@@ -323,6 +329,7 @@ specifier|static
 name|void
 name|removeClass
 parameter_list|(
+specifier|final
 name|JavaClass
 name|clazz
 parameter_list|)
@@ -342,6 +349,7 @@ name|JavaClass
 index|[]
 name|getSuperClasses
 parameter_list|(
+specifier|final
 name|JavaClass
 name|clazz
 parameter_list|)
@@ -362,6 +370,7 @@ name|JavaClass
 index|[]
 name|getSuperClasses
 parameter_list|(
+specifier|final
 name|String
 name|class_name
 parameter_list|)
@@ -390,6 +399,7 @@ name|JavaClass
 index|[]
 name|getInterfaces
 parameter_list|(
+specifier|final
 name|JavaClass
 name|clazz
 parameter_list|)
@@ -410,6 +420,7 @@ name|JavaClass
 index|[]
 name|getInterfaces
 parameter_list|(
+specifier|final
 name|String
 name|class_name
 parameter_list|)
@@ -432,9 +443,11 @@ specifier|static
 name|boolean
 name|instanceOf
 parameter_list|(
+specifier|final
 name|JavaClass
 name|clazz
 parameter_list|,
+specifier|final
 name|JavaClass
 name|super_class
 parameter_list|)
@@ -456,9 +469,11 @@ specifier|static
 name|boolean
 name|instanceOf
 parameter_list|(
+specifier|final
 name|String
 name|clazz
 parameter_list|,
+specifier|final
 name|String
 name|super_class
 parameter_list|)
@@ -486,9 +501,11 @@ specifier|static
 name|boolean
 name|instanceOf
 parameter_list|(
+specifier|final
 name|JavaClass
 name|clazz
 parameter_list|,
+specifier|final
 name|String
 name|super_class
 parameter_list|)
@@ -513,9 +530,11 @@ specifier|static
 name|boolean
 name|instanceOf
 parameter_list|(
+specifier|final
 name|String
 name|clazz
 parameter_list|,
+specifier|final
 name|JavaClass
 name|super_class
 parameter_list|)
@@ -540,9 +559,11 @@ specifier|static
 name|boolean
 name|implementationOf
 parameter_list|(
+specifier|final
 name|JavaClass
 name|clazz
 parameter_list|,
+specifier|final
 name|JavaClass
 name|inter
 parameter_list|)
@@ -564,9 +585,11 @@ specifier|static
 name|boolean
 name|implementationOf
 parameter_list|(
+specifier|final
 name|String
 name|clazz
 parameter_list|,
+specifier|final
 name|String
 name|inter
 parameter_list|)
@@ -594,9 +617,11 @@ specifier|static
 name|boolean
 name|implementationOf
 parameter_list|(
+specifier|final
 name|JavaClass
 name|clazz
 parameter_list|,
+specifier|final
 name|String
 name|inter
 parameter_list|)
@@ -621,9 +646,11 @@ specifier|static
 name|boolean
 name|implementationOf
 parameter_list|(
+specifier|final
 name|String
 name|clazz
 parameter_list|,
+specifier|final
 name|JavaClass
 name|inter
 parameter_list|)

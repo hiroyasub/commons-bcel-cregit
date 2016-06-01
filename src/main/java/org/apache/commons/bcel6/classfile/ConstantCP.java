@@ -105,6 +105,7 @@ comment|/**      * Initialize from another object.      */
 specifier|public
 name|ConstantCP
 parameter_list|(
+specifier|final
 name|ConstantCP
 name|c
 parameter_list|)
@@ -131,9 +132,11 @@ block|}
 comment|/**      * Initialize instance from file data.      *      * @param tag  Constant type tag      * @param file Input stream      * @throws IOException      */
 name|ConstantCP
 parameter_list|(
+specifier|final
 name|byte
 name|tag
 parameter_list|,
+specifier|final
 name|DataInput
 name|file
 parameter_list|)
@@ -160,12 +163,15 @@ comment|/**      * @param class_index Reference to the class containing the fiel
 specifier|protected
 name|ConstantCP
 parameter_list|(
+specifier|final
 name|byte
 name|tag
 parameter_list|,
+specifier|final
 name|int
 name|class_index
 parameter_list|,
+specifier|final
 name|int
 name|name_and_type_index
 parameter_list|)
@@ -196,6 +202,7 @@ specifier|final
 name|void
 name|dump
 parameter_list|(
+specifier|final
 name|DataOutputStream
 name|file
 parameter_list|)
@@ -244,6 +251,7 @@ specifier|final
 name|void
 name|setClassIndex
 parameter_list|(
+specifier|final
 name|int
 name|class_index
 parameter_list|)
@@ -272,6 +280,7 @@ specifier|final
 name|void
 name|setNameAndTypeIndex
 parameter_list|(
+specifier|final
 name|int
 name|name_and_type_index
 parameter_list|)
@@ -288,6 +297,7 @@ specifier|public
 name|String
 name|getClass
 parameter_list|(
+specifier|final
 name|ConstantPool
 name|cp
 parameter_list|)

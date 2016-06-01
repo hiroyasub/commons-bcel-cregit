@@ -42,6 +42,7 @@ block|}
 specifier|public
 name|ICONST
 parameter_list|(
+specifier|final
 name|int
 name|i
 parameter_list|)
@@ -148,6 +149,7 @@ specifier|public
 name|Type
 name|getType
 parameter_list|(
+specifier|final
 name|ConstantPoolGen
 name|cp
 parameter_list|)
@@ -165,6 +167,7 @@ specifier|public
 name|void
 name|accept
 parameter_list|(
+specifier|final
 name|Visitor
 name|v
 parameter_list|)

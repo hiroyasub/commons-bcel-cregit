@@ -477,6 +477,7 @@ specifier|static
 name|String
 name|getAccessName
 parameter_list|(
+specifier|final
 name|int
 name|index
 parameter_list|)
@@ -669,6 +670,7 @@ specifier|static
 name|String
 name|getConstantName
 parameter_list|(
+specifier|final
 name|int
 name|index
 parameter_list|)
@@ -3118,6 +3120,7 @@ specifier|static
 name|String
 name|getTypeName
 parameter_list|(
+specifier|final
 name|int
 name|index
 parameter_list|)
@@ -3179,6 +3182,7 @@ specifier|static
 name|String
 name|getClassTypeName
 parameter_list|(
+specifier|final
 name|int
 name|index
 parameter_list|)
@@ -3238,6 +3242,7 @@ specifier|static
 name|String
 name|getShortTypeName
 parameter_list|(
+specifier|final
 name|int
 name|index
 parameter_list|)
@@ -3982,6 +3987,7 @@ specifier|static
 name|short
 name|getNoOfOperands
 parameter_list|(
+specifier|final
 name|int
 name|index
 parameter_list|)
@@ -4845,9 +4851,11 @@ specifier|static
 name|short
 name|getOperandType
 parameter_list|(
+specifier|final
 name|int
 name|opcode
 parameter_list|,
+specifier|final
 name|int
 name|index
 parameter_list|)
@@ -4868,6 +4876,7 @@ specifier|static
 name|long
 name|getOperandTypeCount
 parameter_list|(
+specifier|final
 name|int
 name|opcode
 parameter_list|)
@@ -5420,6 +5429,7 @@ specifier|static
 name|String
 name|getOpcodeName
 parameter_list|(
+specifier|final
 name|int
 name|index
 parameter_list|)
@@ -6164,6 +6174,7 @@ specifier|static
 name|int
 name|getConsumeStack
 parameter_list|(
+specifier|final
 name|int
 name|index
 parameter_list|)
@@ -6908,6 +6919,7 @@ specifier|static
 name|int
 name|getProduceStack
 parameter_list|(
+specifier|final
 name|int
 name|index
 parameter_list|)
@@ -7173,6 +7185,7 @@ specifier|static
 name|String
 name|getAttributeName
 parameter_list|(
+specifier|final
 name|int
 name|index
 parameter_list|)
@@ -7290,6 +7303,7 @@ specifier|static
 name|String
 name|getItemName
 parameter_list|(
+specifier|final
 name|int
 name|index
 parameter_list|)
@@ -7500,6 +7514,7 @@ specifier|static
 name|String
 name|getMethodHandleName
 parameter_list|(
+specifier|final
 name|int
 name|index
 parameter_list|)

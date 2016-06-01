@@ -40,6 +40,7 @@ specifier|public
 name|void
 name|visitAnnotation
 parameter_list|(
+specifier|final
 name|Annotations
 name|obj
 parameter_list|)
@@ -52,6 +53,7 @@ specifier|public
 name|void
 name|visitParameterAnnotation
 parameter_list|(
+specifier|final
 name|ParameterAnnotations
 name|obj
 parameter_list|)
@@ -64,6 +66,7 @@ specifier|public
 name|void
 name|visitAnnotationEntry
 parameter_list|(
+specifier|final
 name|AnnotationEntry
 name|obj
 parameter_list|)
@@ -76,6 +79,7 @@ specifier|public
 name|void
 name|visitAnnotationDefault
 parameter_list|(
+specifier|final
 name|AnnotationDefault
 name|obj
 parameter_list|)
@@ -87,6 +91,7 @@ specifier|public
 name|void
 name|visitCode
 parameter_list|(
+specifier|final
 name|Code
 name|obj
 parameter_list|)
@@ -98,6 +103,7 @@ specifier|public
 name|void
 name|visitCodeException
 parameter_list|(
+specifier|final
 name|CodeException
 name|obj
 parameter_list|)
@@ -109,6 +115,7 @@ specifier|public
 name|void
 name|visitConstantClass
 parameter_list|(
+specifier|final
 name|ConstantClass
 name|obj
 parameter_list|)
@@ -120,6 +127,7 @@ specifier|public
 name|void
 name|visitConstantDouble
 parameter_list|(
+specifier|final
 name|ConstantDouble
 name|obj
 parameter_list|)
@@ -131,6 +139,7 @@ specifier|public
 name|void
 name|visitConstantFieldref
 parameter_list|(
+specifier|final
 name|ConstantFieldref
 name|obj
 parameter_list|)
@@ -142,6 +151,7 @@ specifier|public
 name|void
 name|visitConstantFloat
 parameter_list|(
+specifier|final
 name|ConstantFloat
 name|obj
 parameter_list|)
@@ -153,6 +163,7 @@ specifier|public
 name|void
 name|visitConstantInteger
 parameter_list|(
+specifier|final
 name|ConstantInteger
 name|obj
 parameter_list|)
@@ -164,6 +175,7 @@ specifier|public
 name|void
 name|visitConstantInterfaceMethodref
 parameter_list|(
+specifier|final
 name|ConstantInterfaceMethodref
 name|obj
 parameter_list|)
@@ -175,6 +187,7 @@ specifier|public
 name|void
 name|visitConstantInvokeDynamic
 parameter_list|(
+specifier|final
 name|ConstantInvokeDynamic
 name|obj
 parameter_list|)
@@ -186,6 +199,7 @@ specifier|public
 name|void
 name|visitConstantLong
 parameter_list|(
+specifier|final
 name|ConstantLong
 name|obj
 parameter_list|)
@@ -197,6 +211,7 @@ specifier|public
 name|void
 name|visitConstantMethodref
 parameter_list|(
+specifier|final
 name|ConstantMethodref
 name|obj
 parameter_list|)
@@ -208,6 +223,7 @@ specifier|public
 name|void
 name|visitConstantNameAndType
 parameter_list|(
+specifier|final
 name|ConstantNameAndType
 name|obj
 parameter_list|)
@@ -219,6 +235,7 @@ specifier|public
 name|void
 name|visitConstantPool
 parameter_list|(
+specifier|final
 name|ConstantPool
 name|obj
 parameter_list|)
@@ -230,6 +247,7 @@ specifier|public
 name|void
 name|visitConstantString
 parameter_list|(
+specifier|final
 name|ConstantString
 name|obj
 parameter_list|)
@@ -241,6 +259,7 @@ specifier|public
 name|void
 name|visitConstantUtf8
 parameter_list|(
+specifier|final
 name|ConstantUtf8
 name|obj
 parameter_list|)
@@ -252,6 +271,7 @@ specifier|public
 name|void
 name|visitConstantValue
 parameter_list|(
+specifier|final
 name|ConstantValue
 name|obj
 parameter_list|)
@@ -263,6 +283,7 @@ specifier|public
 name|void
 name|visitDeprecated
 parameter_list|(
+specifier|final
 name|Deprecated
 name|obj
 parameter_list|)
@@ -274,6 +295,7 @@ specifier|public
 name|void
 name|visitExceptionTable
 parameter_list|(
+specifier|final
 name|ExceptionTable
 name|obj
 parameter_list|)
@@ -285,6 +307,7 @@ specifier|public
 name|void
 name|visitField
 parameter_list|(
+specifier|final
 name|Field
 name|obj
 parameter_list|)
@@ -296,6 +319,7 @@ specifier|public
 name|void
 name|visitInnerClass
 parameter_list|(
+specifier|final
 name|InnerClass
 name|obj
 parameter_list|)
@@ -307,6 +331,7 @@ specifier|public
 name|void
 name|visitInnerClasses
 parameter_list|(
+specifier|final
 name|InnerClasses
 name|obj
 parameter_list|)
@@ -319,6 +344,7 @@ specifier|public
 name|void
 name|visitBootstrapMethods
 parameter_list|(
+specifier|final
 name|BootstrapMethods
 name|obj
 parameter_list|)
@@ -330,6 +356,7 @@ specifier|public
 name|void
 name|visitJavaClass
 parameter_list|(
+specifier|final
 name|JavaClass
 name|obj
 parameter_list|)
@@ -341,6 +368,7 @@ specifier|public
 name|void
 name|visitLineNumber
 parameter_list|(
+specifier|final
 name|LineNumber
 name|obj
 parameter_list|)
@@ -352,6 +380,7 @@ specifier|public
 name|void
 name|visitLineNumberTable
 parameter_list|(
+specifier|final
 name|LineNumberTable
 name|obj
 parameter_list|)
@@ -363,6 +392,7 @@ specifier|public
 name|void
 name|visitLocalVariable
 parameter_list|(
+specifier|final
 name|LocalVariable
 name|obj
 parameter_list|)
@@ -374,6 +404,7 @@ specifier|public
 name|void
 name|visitLocalVariableTable
 parameter_list|(
+specifier|final
 name|LocalVariableTable
 name|obj
 parameter_list|)
@@ -385,6 +416,7 @@ specifier|public
 name|void
 name|visitMethod
 parameter_list|(
+specifier|final
 name|Method
 name|obj
 parameter_list|)
@@ -396,6 +428,7 @@ specifier|public
 name|void
 name|visitSignature
 parameter_list|(
+specifier|final
 name|Signature
 name|obj
 parameter_list|)
@@ -407,6 +440,7 @@ specifier|public
 name|void
 name|visitSourceFile
 parameter_list|(
+specifier|final
 name|SourceFile
 name|obj
 parameter_list|)
@@ -418,6 +452,7 @@ specifier|public
 name|void
 name|visitSynthetic
 parameter_list|(
+specifier|final
 name|Synthetic
 name|obj
 parameter_list|)
@@ -429,6 +464,7 @@ specifier|public
 name|void
 name|visitUnknown
 parameter_list|(
+specifier|final
 name|Unknown
 name|obj
 parameter_list|)
@@ -440,6 +476,7 @@ specifier|public
 name|void
 name|visitStackMap
 parameter_list|(
+specifier|final
 name|StackMap
 name|obj
 parameter_list|)
@@ -451,6 +488,7 @@ specifier|public
 name|void
 name|visitStackMapEntry
 parameter_list|(
+specifier|final
 name|StackMapEntry
 name|obj
 parameter_list|)
@@ -465,6 +503,7 @@ specifier|public
 name|void
 name|visitEnclosingMethod
 parameter_list|(
+specifier|final
 name|EnclosingMethod
 name|obj
 parameter_list|)
@@ -477,6 +516,7 @@ specifier|public
 name|void
 name|visitLocalVariableTypeTable
 parameter_list|(
+specifier|final
 name|LocalVariableTypeTable
 name|obj
 parameter_list|)
@@ -489,6 +529,7 @@ specifier|public
 name|void
 name|visitMethodParameters
 parameter_list|(
+specifier|final
 name|MethodParameters
 name|obj
 parameter_list|)
@@ -501,6 +542,7 @@ specifier|public
 name|void
 name|visitConstantMethodType
 parameter_list|(
+specifier|final
 name|ConstantMethodType
 name|obj
 parameter_list|)
@@ -513,6 +555,7 @@ specifier|public
 name|void
 name|visitConstantMethodHandle
 parameter_list|(
+specifier|final
 name|ConstantMethodHandle
 name|constantMethodHandle
 parameter_list|)
@@ -525,6 +568,7 @@ specifier|public
 name|void
 name|visitParameterAnnotationEntry
 parameter_list|(
+specifier|final
 name|ParameterAnnotationEntry
 name|parameterAnnotationEntry
 parameter_list|)

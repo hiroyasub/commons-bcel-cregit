@@ -54,9 +54,11 @@ comment|/**      * @param index to constant pool      */
 specifier|protected
 name|FieldInstruction
 parameter_list|(
+specifier|final
 name|short
 name|opcode
 parameter_list|,
+specifier|final
 name|int
 name|index
 parameter_list|)
@@ -76,6 +78,7 @@ specifier|public
 name|String
 name|toString
 parameter_list|(
+specifier|final
 name|ConstantPool
 name|cp
 parameter_list|)
@@ -129,6 +132,7 @@ specifier|protected
 name|int
 name|getFieldSize
 parameter_list|(
+specifier|final
 name|ConstantPoolGen
 name|cpg
 parameter_list|)
@@ -157,6 +161,7 @@ specifier|public
 name|Type
 name|getType
 parameter_list|(
+specifier|final
 name|ConstantPoolGen
 name|cpg
 parameter_list|)
@@ -173,6 +178,7 @@ specifier|public
 name|Type
 name|getFieldType
 parameter_list|(
+specifier|final
 name|ConstantPoolGen
 name|cpg
 parameter_list|)
@@ -194,6 +200,7 @@ specifier|public
 name|String
 name|getFieldName
 parameter_list|(
+specifier|final
 name|ConstantPoolGen
 name|cpg
 parameter_list|)

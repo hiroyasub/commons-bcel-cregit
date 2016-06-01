@@ -73,6 +73,7 @@ comment|/** Adds an element to the list. */
 name|void
 name|add
 parameter_list|(
+specifier|final
 name|int
 name|i
 parameter_list|)
@@ -94,6 +95,7 @@ comment|/** Checks if the specified int is already in the list. */
 name|boolean
 name|contains
 parameter_list|(
+specifier|final
 name|int
 name|i
 parameter_list|)

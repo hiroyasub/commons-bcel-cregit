@@ -90,6 +90,7 @@ block|}
 comment|/**      * Construct object from input stream.      *       * @param input Input stream      * @throws java.io.IOException      * @throws ClassFormatException      */
 name|MethodParameter
 parameter_list|(
+specifier|final
 name|DataInput
 name|input
 parameter_list|)
@@ -124,6 +125,7 @@ specifier|public
 name|void
 name|setNameIndex
 parameter_list|(
+specifier|final
 name|int
 name|name_index
 parameter_list|)
@@ -140,6 +142,7 @@ specifier|public
 name|String
 name|getParameterName
 parameter_list|(
+specifier|final
 name|ConstantPool
 name|constant_pool
 parameter_list|)
@@ -189,6 +192,7 @@ specifier|public
 name|void
 name|setAccessFlags
 parameter_list|(
+specifier|final
 name|int
 name|access_flags
 parameter_list|)
@@ -257,6 +261,7 @@ specifier|final
 name|void
 name|dump
 parameter_list|(
+specifier|final
 name|DataOutputStream
 name|file
 parameter_list|)

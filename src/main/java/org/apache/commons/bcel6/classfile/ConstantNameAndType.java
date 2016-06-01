@@ -87,6 +87,7 @@ comment|/**      * Initialize from another object.      */
 specifier|public
 name|ConstantNameAndType
 parameter_list|(
+specifier|final
 name|ConstantNameAndType
 name|c
 parameter_list|)
@@ -108,6 +109,7 @@ block|}
 comment|/**      * Initialize instance from file data.      *      * @param file Input stream      * @throws IOException      */
 name|ConstantNameAndType
 parameter_list|(
+specifier|final
 name|DataInput
 name|file
 parameter_list|)
@@ -132,9 +134,11 @@ comment|/**      * @param name_index Name of field/method      * @param signatur
 specifier|public
 name|ConstantNameAndType
 parameter_list|(
+specifier|final
 name|int
 name|name_index
 parameter_list|,
+specifier|final
 name|int
 name|signature_index
 parameter_list|)
@@ -166,6 +170,7 @@ specifier|public
 name|void
 name|accept
 parameter_list|(
+specifier|final
 name|Visitor
 name|v
 parameter_list|)
@@ -186,6 +191,7 @@ specifier|final
 name|void
 name|dump
 parameter_list|(
+specifier|final
 name|DataOutputStream
 name|file
 parameter_list|)
@@ -234,6 +240,7 @@ specifier|final
 name|String
 name|getName
 parameter_list|(
+specifier|final
 name|ConstantPool
 name|cp
 parameter_list|)
@@ -269,6 +276,7 @@ specifier|final
 name|String
 name|getSignature
 parameter_list|(
+specifier|final
 name|ConstantPool
 name|cp
 parameter_list|)
@@ -293,6 +301,7 @@ specifier|final
 name|void
 name|setNameIndex
 parameter_list|(
+specifier|final
 name|int
 name|name_index
 parameter_list|)
@@ -310,6 +319,7 @@ specifier|final
 name|void
 name|setSignatureIndex
 parameter_list|(
+specifier|final
 name|int
 name|signature_index
 parameter_list|)

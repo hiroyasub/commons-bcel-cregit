@@ -130,12 +130,15 @@ specifier|static
 name|AnnotationEntry
 name|read
 parameter_list|(
+specifier|final
 name|DataInput
 name|input
 parameter_list|,
+specifier|final
 name|ConstantPool
 name|constant_pool
 parameter_list|,
+specifier|final
 name|boolean
 name|isRuntimeVisible
 parameter_list|)
@@ -227,12 +230,15 @@ block|}
 specifier|public
 name|AnnotationEntry
 parameter_list|(
+specifier|final
 name|int
 name|type_index
 parameter_list|,
+specifier|final
 name|ConstantPool
 name|constant_pool
 parameter_list|,
+specifier|final
 name|boolean
 name|isRuntimeVisible
 parameter_list|)
@@ -290,6 +296,7 @@ specifier|public
 name|void
 name|accept
 parameter_list|(
+specifier|final
 name|Visitor
 name|v
 parameter_list|)
@@ -385,6 +392,7 @@ specifier|public
 name|void
 name|dump
 parameter_list|(
+specifier|final
 name|DataOutputStream
 name|dos
 parameter_list|)
@@ -433,6 +441,7 @@ specifier|public
 name|void
 name|addElementNameValuePair
 parameter_list|(
+specifier|final
 name|ElementValuePair
 name|elementNameValuePair
 parameter_list|)
@@ -546,6 +555,7 @@ name|AnnotationEntry
 index|[]
 name|createAnnotationEntries
 parameter_list|(
+specifier|final
 name|Attribute
 index|[]
 name|attrs

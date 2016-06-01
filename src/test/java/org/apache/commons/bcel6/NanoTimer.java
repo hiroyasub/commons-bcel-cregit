@@ -59,6 +59,7 @@ specifier|public
 name|void
 name|subtract
 parameter_list|(
+specifier|final
 name|NanoTimer
 name|o
 parameter_list|)

@@ -156,6 +156,7 @@ comment|/**      * @since 6.0      */
 specifier|protected
 name|FieldGenOrMethodGen
 parameter_list|(
+specifier|final
 name|int
 name|access_flags
 parameter_list|)
@@ -173,6 +174,7 @@ specifier|public
 name|void
 name|setType
 parameter_list|(
+specifier|final
 name|Type
 name|type
 parameter_list|)
@@ -236,6 +238,7 @@ specifier|public
 name|void
 name|setName
 parameter_list|(
+specifier|final
 name|String
 name|name
 parameter_list|)
@@ -261,6 +264,7 @@ specifier|public
 name|void
 name|setConstantPool
 parameter_list|(
+specifier|final
 name|ConstantPoolGen
 name|cp
 parameter_list|)
@@ -278,6 +282,7 @@ specifier|public
 name|void
 name|addAttribute
 parameter_list|(
+specifier|final
 name|Attribute
 name|a
 parameter_list|)
@@ -295,6 +300,7 @@ specifier|protected
 name|void
 name|addAnnotationEntry
 parameter_list|(
+specifier|final
 name|AnnotationEntryGen
 name|ag
 parameter_list|)
@@ -313,6 +319,7 @@ specifier|public
 name|void
 name|removeAttribute
 parameter_list|(
+specifier|final
 name|Attribute
 name|a
 parameter_list|)
@@ -330,6 +337,7 @@ specifier|protected
 name|void
 name|removeAnnotationEntry
 parameter_list|(
+specifier|final
 name|AnnotationEntryGen
 name|ag
 parameter_list|)

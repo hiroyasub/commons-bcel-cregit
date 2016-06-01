@@ -69,12 +69,15 @@ decl_stmt|;
 specifier|public
 name|SimpleElementValue
 parameter_list|(
+specifier|final
 name|int
 name|type
 parameter_list|,
+specifier|final
 name|int
 name|index
 parameter_list|,
+specifier|final
 name|ConstantPool
 name|cpool
 parameter_list|)
@@ -107,6 +110,7 @@ specifier|public
 name|void
 name|setIndex
 parameter_list|(
+specifier|final
 name|int
 name|index
 parameter_list|)
@@ -920,6 +924,7 @@ specifier|public
 name|void
 name|dump
 parameter_list|(
+specifier|final
 name|DataOutputStream
 name|dos
 parameter_list|)

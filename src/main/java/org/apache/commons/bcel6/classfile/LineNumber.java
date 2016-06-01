@@ -75,6 +75,7 @@ comment|/**      * Initialize from another object.      *       * @param c the o
 specifier|public
 name|LineNumber
 parameter_list|(
+specifier|final
 name|LineNumber
 name|c
 parameter_list|)
@@ -96,6 +97,7 @@ block|}
 comment|/**      * Construct object from file stream.      *       * @param file Input stream      * @throws IOEXception if an I/O Exception occurs in readUnsignedShort      */
 name|LineNumber
 parameter_list|(
+specifier|final
 name|DataInput
 name|file
 parameter_list|)
@@ -120,9 +122,11 @@ comment|/**      * @param start_pc Program Counter (PC) corresponds to      * @p
 specifier|public
 name|LineNumber
 parameter_list|(
+specifier|final
 name|int
 name|start_pc
 parameter_list|,
+specifier|final
 name|int
 name|line_number
 parameter_list|)
@@ -153,6 +157,7 @@ specifier|public
 name|void
 name|accept
 parameter_list|(
+specifier|final
 name|Visitor
 name|v
 parameter_list|)
@@ -171,6 +176,7 @@ specifier|final
 name|void
 name|dump
 parameter_list|(
+specifier|final
 name|DataOutputStream
 name|file
 parameter_list|)
@@ -224,6 +230,7 @@ specifier|final
 name|void
 name|setLineNumber
 parameter_list|(
+specifier|final
 name|int
 name|line_number
 parameter_list|)
@@ -244,6 +251,7 @@ specifier|final
 name|void
 name|setStartPC
 parameter_list|(
+specifier|final
 name|int
 name|start_pc
 parameter_list|)

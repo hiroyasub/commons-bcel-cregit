@@ -100,9 +100,11 @@ decl_stmt|;
 comment|/**      * Construct object from input stream.      *       * @param input Input stream      * @throws IOException      */
 name|StackMapEntry
 parameter_list|(
+specifier|final
 name|DataInput
 name|input
 parameter_list|,
+specifier|final
 name|ConstantPool
 name|constant_pool
 parameter_list|)
@@ -467,23 +469,29 @@ comment|/**      * DO NOT USE      *      * @param byte_code_offset      * @para
 specifier|public
 name|StackMapEntry
 parameter_list|(
+specifier|final
 name|int
 name|byte_code_offset
 parameter_list|,
+specifier|final
 name|int
 name|number_of_locals
 parameter_list|,
+specifier|final
 name|StackMapType
 index|[]
 name|types_of_locals
 parameter_list|,
+specifier|final
 name|int
 name|number_of_stack_items
 parameter_list|,
+specifier|final
 name|StackMapType
 index|[]
 name|types_of_stack_items
 parameter_list|,
+specifier|final
 name|ConstantPool
 name|constant_pool
 parameter_list|)
@@ -537,20 +545,25 @@ comment|/**      * Create an instance      *      * @param tag the frame_type to
 specifier|public
 name|StackMapEntry
 parameter_list|(
+specifier|final
 name|int
 name|tag
 parameter_list|,
+specifier|final
 name|int
 name|byte_code_offset
 parameter_list|,
+specifier|final
 name|StackMapType
 index|[]
 name|types_of_locals
 parameter_list|,
+specifier|final
 name|StackMapType
 index|[]
 name|types_of_stack_items
 parameter_list|,
+specifier|final
 name|ConstantPool
 name|constant_pool
 parameter_list|)
@@ -612,6 +625,7 @@ specifier|final
 name|void
 name|dump
 parameter_list|(
+specifier|final
 name|DataOutputStream
 name|file
 parameter_list|)
@@ -1506,6 +1520,7 @@ specifier|public
 name|void
 name|setFrameType
 parameter_list|(
+specifier|final
 name|int
 name|f
 parameter_list|)
@@ -1653,6 +1668,7 @@ specifier|public
 name|void
 name|setByteCodeOffset
 parameter_list|(
+specifier|final
 name|int
 name|new_offset
 parameter_list|)
@@ -1849,6 +1865,7 @@ specifier|public
 name|void
 name|updateByteCodeOffset
 parameter_list|(
+specifier|final
 name|int
 name|delta
 parameter_list|)
@@ -1880,6 +1897,7 @@ specifier|public
 name|void
 name|setNumberOfLocals
 parameter_list|(
+specifier|final
 name|int
 name|n
 parameter_list|)
@@ -1901,6 +1919,7 @@ specifier|public
 name|void
 name|setTypesOfLocals
 parameter_list|(
+specifier|final
 name|StackMapType
 index|[]
 name|types
@@ -1941,6 +1960,7 @@ specifier|public
 name|void
 name|setNumberOfStackItems
 parameter_list|(
+specifier|final
 name|int
 name|n
 parameter_list|)
@@ -1962,6 +1982,7 @@ specifier|public
 name|void
 name|setTypesOfStackItems
 parameter_list|(
+specifier|final
 name|StackMapType
 index|[]
 name|types
@@ -2127,6 +2148,7 @@ specifier|public
 name|void
 name|accept
 parameter_list|(
+specifier|final
 name|Visitor
 name|v
 parameter_list|)
@@ -2156,6 +2178,7 @@ specifier|final
 name|void
 name|setConstantPool
 parameter_list|(
+specifier|final
 name|ConstantPool
 name|constant_pool
 parameter_list|)

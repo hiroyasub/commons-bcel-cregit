@@ -43,6 +43,7 @@ comment|/** Constructs an InvalidMethodException with the specified detail messa
 specifier|public
 name|InvalidMethodException
 parameter_list|(
+specifier|final
 name|String
 name|message
 parameter_list|)

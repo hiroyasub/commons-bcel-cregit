@@ -125,6 +125,7 @@ comment|// CLASSNAME X JAVACLASS
 specifier|public
 name|ClassPathRepository
 parameter_list|(
+specifier|final
 name|ClassPath
 name|path
 parameter_list|)
@@ -141,6 +142,7 @@ specifier|public
 name|void
 name|storeClass
 parameter_list|(
+specifier|final
 name|JavaClass
 name|clazz
 parameter_list|)
@@ -172,6 +174,7 @@ specifier|public
 name|void
 name|removeClass
 parameter_list|(
+specifier|final
 name|JavaClass
 name|clazz
 parameter_list|)
@@ -194,6 +197,7 @@ specifier|public
 name|JavaClass
 name|findClass
 parameter_list|(
+specifier|final
 name|String
 name|className
 parameter_list|)
@@ -323,6 +327,7 @@ specifier|public
 name|JavaClass
 name|loadClass
 parameter_list|(
+specifier|final
 name|Class
 argument_list|<
 name|?
@@ -452,9 +457,11 @@ specifier|private
 name|JavaClass
 name|loadClass
 parameter_list|(
+specifier|final
 name|InputStream
 name|is
 parameter_list|,
+specifier|final
 name|String
 name|className
 parameter_list|)

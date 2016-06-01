@@ -227,6 +227,7 @@ comment|/**      * @param il      *          instruction list to search for give
 specifier|public
 name|InstructionFinder
 parameter_list|(
+specifier|final
 name|InstructionList
 name|il
 parameter_list|)
@@ -325,6 +326,7 @@ specifier|static
 name|String
 name|mapName
 parameter_list|(
+specifier|final
 name|String
 name|pattern
 parameter_list|)
@@ -406,6 +408,7 @@ specifier|static
 name|String
 name|compilePattern
 parameter_list|(
+specifier|final
 name|String
 name|pattern
 parameter_list|)
@@ -580,9 +583,11 @@ name|InstructionHandle
 index|[]
 name|getMatch
 parameter_list|(
+specifier|final
 name|int
 name|matched_from
 parameter_list|,
+specifier|final
 name|int
 name|match_length
 parameter_list|)
@@ -626,12 +631,15 @@ index|[]
 argument_list|>
 name|search
 parameter_list|(
+specifier|final
 name|String
 name|pattern
 parameter_list|,
+specifier|final
 name|InstructionHandle
 name|from
 parameter_list|,
+specifier|final
 name|CodeConstraint
 name|constraint
 parameter_list|)
@@ -834,6 +842,7 @@ index|[]
 argument_list|>
 name|search
 parameter_list|(
+specifier|final
 name|String
 name|pattern
 parameter_list|)
@@ -862,9 +871,11 @@ index|[]
 argument_list|>
 name|search
 parameter_list|(
+specifier|final
 name|String
 name|pattern
 parameter_list|,
+specifier|final
 name|InstructionHandle
 name|from
 parameter_list|)
@@ -890,9 +901,11 @@ index|[]
 argument_list|>
 name|search
 parameter_list|(
+specifier|final
 name|String
 name|pattern
 parameter_list|,
+specifier|final
 name|CodeConstraint
 name|constraint
 parameter_list|)
@@ -917,6 +930,7 @@ specifier|static
 name|char
 name|makeChar
 parameter_list|(
+specifier|final
 name|short
 name|opcode
 parameter_list|)
@@ -1765,12 +1779,15 @@ specifier|static
 name|String
 name|precompile
 parameter_list|(
+specifier|final
 name|short
 name|from
 parameter_list|,
+specifier|final
 name|short
 name|to
 parameter_list|,
+specifier|final
 name|short
 name|extra
 parameter_list|)

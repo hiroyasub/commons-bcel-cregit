@@ -174,6 +174,7 @@ comment|/**      * Initialize from another object. Note that both objects use th
 specifier|protected
 name|FieldOrMethod
 parameter_list|(
+specifier|final
 name|FieldOrMethod
 name|c
 parameter_list|)
@@ -211,9 +212,11 @@ comment|/**      * Construct object from file stream.      * @param file Input s
 specifier|protected
 name|FieldOrMethod
 parameter_list|(
+specifier|final
 name|DataInputStream
 name|file
 parameter_list|,
+specifier|final
 name|ConstantPool
 name|constant_pool
 parameter_list|)
@@ -237,9 +240,11 @@ comment|/**      * Construct object from file stream.      * @param file Input s
 specifier|protected
 name|FieldOrMethod
 parameter_list|(
+specifier|final
 name|DataInput
 name|file
 parameter_list|,
+specifier|final
 name|ConstantPool
 name|constant_pool
 parameter_list|)
@@ -328,19 +333,24 @@ comment|/**      * @param access_flags Access rights of method      * @param nam
 specifier|protected
 name|FieldOrMethod
 parameter_list|(
+specifier|final
 name|int
 name|access_flags
 parameter_list|,
+specifier|final
 name|int
 name|name_index
 parameter_list|,
+specifier|final
 name|int
 name|signature_index
 parameter_list|,
+specifier|final
 name|Attribute
 index|[]
 name|attributes
 parameter_list|,
+specifier|final
 name|ConstantPool
 name|constant_pool
 parameter_list|)
@@ -380,6 +390,7 @@ specifier|final
 name|void
 name|dump
 parameter_list|(
+specifier|final
 name|DataOutputStream
 name|file
 parameter_list|)
@@ -454,6 +465,7 @@ specifier|final
 name|void
 name|setAttributes
 parameter_list|(
+specifier|final
 name|Attribute
 index|[]
 name|attributes
@@ -498,6 +510,7 @@ specifier|final
 name|void
 name|setConstantPool
 parameter_list|(
+specifier|final
 name|ConstantPool
 name|constant_pool
 parameter_list|)
@@ -526,6 +539,7 @@ specifier|final
 name|void
 name|setNameIndex
 parameter_list|(
+specifier|final
 name|int
 name|name_index
 parameter_list|)
@@ -554,6 +568,7 @@ specifier|final
 name|void
 name|setSignatureIndex
 parameter_list|(
+specifier|final
 name|int
 name|signature_index
 parameter_list|)
@@ -636,6 +651,7 @@ specifier|protected
 name|FieldOrMethod
 name|copy_
 parameter_list|(
+specifier|final
 name|ConstantPool
 name|_constant_pool
 parameter_list|)

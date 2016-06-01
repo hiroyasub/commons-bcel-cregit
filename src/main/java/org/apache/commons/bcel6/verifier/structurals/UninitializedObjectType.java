@@ -86,6 +86,7 @@ comment|/** Creates a new instance. */
 specifier|public
 name|UninitializedObjectType
 parameter_list|(
+specifier|final
 name|ObjectType
 name|t
 parameter_list|)
@@ -143,6 +144,7 @@ specifier|public
 name|boolean
 name|equals
 parameter_list|(
+specifier|final
 name|Object
 name|o
 parameter_list|)

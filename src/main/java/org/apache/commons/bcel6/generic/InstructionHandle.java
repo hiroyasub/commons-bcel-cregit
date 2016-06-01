@@ -166,6 +166,7 @@ specifier|public
 name|void
 name|setInstruction
 parameter_list|(
+specifier|final
 name|Instruction
 name|i
 parameter_list|)
@@ -241,6 +242,7 @@ specifier|public
 name|Instruction
 name|swapInstruction
 parameter_list|(
+specifier|final
 name|Instruction
 name|i
 parameter_list|)
@@ -262,6 +264,7 @@ comment|/*private*/
 specifier|protected
 name|InstructionHandle
 parameter_list|(
+specifier|final
 name|Instruction
 name|i
 parameter_list|)
@@ -285,6 +288,7 @@ specifier|static
 name|InstructionHandle
 name|getInstructionHandle
 parameter_list|(
+specifier|final
 name|Instruction
 name|i
 parameter_list|)
@@ -331,9 +335,11 @@ specifier|protected
 name|int
 name|updatePosition
 parameter_list|(
+specifier|final
 name|int
 name|offset
 parameter_list|,
+specifier|final
 name|int
 name|max_offset
 parameter_list|)
@@ -360,6 +366,7 @@ comment|/** Set the position, i.e., the byte code offset of the contained      *
 name|void
 name|setPosition
 parameter_list|(
+specifier|final
 name|int
 name|pos
 parameter_list|)
@@ -445,6 +452,7 @@ specifier|public
 name|void
 name|removeTargeter
 parameter_list|(
+specifier|final
 name|InstructionTargeter
 name|t
 parameter_list|)
@@ -470,6 +478,7 @@ specifier|public
 name|void
 name|addTargeter
 parameter_list|(
+specifier|final
 name|InstructionTargeter
 name|t
 parameter_list|)
@@ -571,6 +580,7 @@ specifier|public
 name|String
 name|toString
 parameter_list|(
+specifier|final
 name|boolean
 name|verbose
 parameter_list|)
@@ -619,9 +629,11 @@ specifier|public
 name|void
 name|addAttribute
 parameter_list|(
+specifier|final
 name|Object
 name|key
 parameter_list|,
+specifier|final
 name|Object
 name|attr
 parameter_list|)
@@ -658,6 +670,7 @@ specifier|public
 name|void
 name|removeAttribute
 parameter_list|(
+specifier|final
 name|Object
 name|key
 parameter_list|)
@@ -683,6 +696,7 @@ specifier|public
 name|Object
 name|getAttribute
 parameter_list|(
+specifier|final
 name|Object
 name|key
 parameter_list|)
@@ -745,6 +759,7 @@ specifier|public
 name|void
 name|accept
 parameter_list|(
+specifier|final
 name|Visitor
 name|v
 parameter_list|)
@@ -762,6 +777,7 @@ specifier|final
 name|InstructionHandle
 name|setNext
 parameter_list|(
+specifier|final
 name|InstructionHandle
 name|next
 parameter_list|)
@@ -781,6 +797,7 @@ specifier|final
 name|InstructionHandle
 name|setPrev
 parameter_list|(
+specifier|final
 name|InstructionHandle
 name|prev
 parameter_list|)

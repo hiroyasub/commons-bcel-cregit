@@ -96,9 +96,11 @@ block|}
 specifier|protected
 name|ElementValue
 parameter_list|(
+specifier|final
 name|int
 name|type
 parameter_list|,
+specifier|final
 name|ConstantPool
 name|cpool
 parameter_list|)
@@ -251,9 +253,11 @@ specifier|static
 name|ElementValue
 name|readElementValue
 parameter_list|(
+specifier|final
 name|DataInput
 name|input
 parameter_list|,
+specifier|final
 name|ConstantPool
 name|cpool
 parameter_list|)

@@ -86,18 +86,23 @@ comment|/**      * Generate a local variable that with index `index'. Note that 
 specifier|public
 name|LocalVariableGen
 parameter_list|(
+specifier|final
 name|int
 name|index
 parameter_list|,
+specifier|final
 name|String
 name|name
 parameter_list|,
+specifier|final
 name|Type
 name|type
 parameter_list|,
+specifier|final
 name|InstructionHandle
 name|start
 parameter_list|,
+specifier|final
 name|InstructionHandle
 name|end
 parameter_list|)
@@ -163,6 +168,7 @@ specifier|public
 name|LocalVariable
 name|getLocalVariable
 parameter_list|(
+specifier|final
 name|ConstantPoolGen
 name|cp
 parameter_list|)
@@ -278,6 +284,7 @@ specifier|public
 name|void
 name|setIndex
 parameter_list|(
+specifier|final
 name|int
 name|index
 parameter_list|)
@@ -304,6 +311,7 @@ specifier|public
 name|void
 name|setName
 parameter_list|(
+specifier|final
 name|String
 name|name
 parameter_list|)
@@ -332,6 +340,7 @@ specifier|public
 name|void
 name|setType
 parameter_list|(
+specifier|final
 name|Type
 name|type
 parameter_list|)
@@ -376,6 +385,7 @@ specifier|public
 name|void
 name|setStart
 parameter_list|(
+specifier|final
 name|InstructionHandle
 name|start
 parameter_list|)
@@ -405,6 +415,7 @@ specifier|public
 name|void
 name|setEnd
 parameter_list|(
+specifier|final
 name|InstructionHandle
 name|end
 parameter_list|)
@@ -437,9 +448,11 @@ specifier|public
 name|void
 name|updateTarget
 parameter_list|(
+specifier|final
 name|InstructionHandle
 name|old_ih
 parameter_list|,
+specifier|final
 name|InstructionHandle
 name|new_ih
 parameter_list|)
@@ -533,6 +546,7 @@ specifier|public
 name|boolean
 name|containsTarget
 parameter_list|(
+specifier|final
 name|InstructionHandle
 name|ih
 parameter_list|)
@@ -579,6 +593,7 @@ specifier|public
 name|boolean
 name|equals
 parameter_list|(
+specifier|final
 name|Object
 name|o
 parameter_list|)

@@ -36,6 +36,7 @@ block|}
 specifier|public
 name|IFGT
 parameter_list|(
+specifier|final
 name|InstructionHandle
 name|target
 parameter_list|)
@@ -84,6 +85,7 @@ specifier|public
 name|void
 name|accept
 parameter_list|(
+specifier|final
 name|Visitor
 name|v
 parameter_list|)

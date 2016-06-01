@@ -1361,9 +1361,11 @@ comment|/** Should only be instantiated by a Verifier. */
 specifier|public
 name|Pass3aVerifier
 parameter_list|(
+specifier|final
 name|Verifier
 name|owner
 parameter_list|,
+specifier|final
 name|int
 name|method_no
 parameter_list|)
@@ -2546,10 +2548,12 @@ specifier|static
 name|boolean
 name|contains
 parameter_list|(
+specifier|final
 name|int
 index|[]
 name|ints
 parameter_list|,
+specifier|final
 name|int
 name|i
 parameter_list|)
@@ -2614,6 +2618,7 @@ decl_stmt|;
 comment|/** The only Constructor. */
 name|InstOperandConstraintVisitor
 parameter_list|(
+specifier|final
 name|ConstantPoolGen
 name|cpg
 parameter_list|)
@@ -2682,9 +2687,11 @@ specifier|private
 name|void
 name|constraintViolated
 parameter_list|(
+specifier|final
 name|Instruction
 name|i
 parameter_list|,
+specifier|final
 name|String
 name|message
 parameter_list|)
@@ -2708,9 +2715,11 @@ specifier|private
 name|void
 name|indexValid
 parameter_list|(
+specifier|final
 name|Instruction
 name|i
 parameter_list|,
+specifier|final
 name|int
 name|idx
 parameter_list|)
@@ -2752,6 +2761,7 @@ specifier|public
 name|void
 name|visitLoadClass
 parameter_list|(
+specifier|final
 name|LoadClass
 name|o
 parameter_list|)
@@ -2848,6 +2858,7 @@ specifier|public
 name|void
 name|visitLDC
 parameter_list|(
+specifier|final
 name|LDC
 name|o
 parameter_list|)
@@ -2940,6 +2951,7 @@ specifier|public
 name|void
 name|visitLDC2_W
 parameter_list|(
+specifier|final
 name|LDC2_W
 name|o
 parameter_list|)
@@ -3033,6 +3045,7 @@ specifier|private
 name|ObjectType
 name|getObjectType
 parameter_list|(
+specifier|final
 name|FieldInstruction
 name|o
 parameter_list|)
@@ -3082,6 +3095,7 @@ specifier|public
 name|void
 name|visitFieldInstruction
 parameter_list|(
+specifier|final
 name|FieldInstruction
 name|o
 parameter_list|)
@@ -3446,6 +3460,7 @@ specifier|public
 name|void
 name|visitInvokeInstruction
 parameter_list|(
+specifier|final
 name|InvokeInstruction
 name|o
 parameter_list|)
@@ -3983,6 +3998,7 @@ specifier|public
 name|void
 name|visitINSTANCEOF
 parameter_list|(
+specifier|final
 name|INSTANCEOF
 name|o
 parameter_list|)
@@ -4040,6 +4056,7 @@ specifier|public
 name|void
 name|visitCHECKCAST
 parameter_list|(
+specifier|final
 name|CHECKCAST
 name|o
 parameter_list|)
@@ -4097,6 +4114,7 @@ specifier|public
 name|void
 name|visitNEW
 parameter_list|(
+specifier|final
 name|NEW
 name|o
 parameter_list|)
@@ -4212,6 +4230,7 @@ specifier|public
 name|void
 name|visitMULTIANEWARRAY
 parameter_list|(
+specifier|final
 name|MULTIANEWARRAY
 name|o
 parameter_list|)
@@ -4358,6 +4377,7 @@ specifier|public
 name|void
 name|visitANEWARRAY
 parameter_list|(
+specifier|final
 name|ANEWARRAY
 name|o
 parameter_list|)
@@ -4473,6 +4493,7 @@ specifier|public
 name|void
 name|visitNEWARRAY
 parameter_list|(
+specifier|final
 name|NEWARRAY
 name|o
 parameter_list|)
@@ -4571,6 +4592,7 @@ specifier|public
 name|void
 name|visitILOAD
 parameter_list|(
+specifier|final
 name|ILOAD
 name|o
 parameter_list|)
@@ -4644,6 +4666,7 @@ specifier|public
 name|void
 name|visitFLOAD
 parameter_list|(
+specifier|final
 name|FLOAD
 name|o
 parameter_list|)
@@ -4717,6 +4740,7 @@ specifier|public
 name|void
 name|visitALOAD
 parameter_list|(
+specifier|final
 name|ALOAD
 name|o
 parameter_list|)
@@ -4790,6 +4814,7 @@ specifier|public
 name|void
 name|visitISTORE
 parameter_list|(
+specifier|final
 name|ISTORE
 name|o
 parameter_list|)
@@ -4863,6 +4888,7 @@ specifier|public
 name|void
 name|visitFSTORE
 parameter_list|(
+specifier|final
 name|FSTORE
 name|o
 parameter_list|)
@@ -4936,6 +4962,7 @@ specifier|public
 name|void
 name|visitASTORE
 parameter_list|(
+specifier|final
 name|ASTORE
 name|o
 parameter_list|)
@@ -5009,6 +5036,7 @@ specifier|public
 name|void
 name|visitIINC
 parameter_list|(
+specifier|final
 name|IINC
 name|o
 parameter_list|)
@@ -5082,6 +5110,7 @@ specifier|public
 name|void
 name|visitRET
 parameter_list|(
+specifier|final
 name|RET
 name|o
 parameter_list|)
@@ -5155,6 +5184,7 @@ specifier|public
 name|void
 name|visitLLOAD
 parameter_list|(
+specifier|final
 name|LLOAD
 name|o
 parameter_list|)
@@ -5230,6 +5260,7 @@ specifier|public
 name|void
 name|visitDLOAD
 parameter_list|(
+specifier|final
 name|DLOAD
 name|o
 parameter_list|)
@@ -5305,6 +5336,7 @@ specifier|public
 name|void
 name|visitLSTORE
 parameter_list|(
+specifier|final
 name|LSTORE
 name|o
 parameter_list|)
@@ -5380,6 +5412,7 @@ specifier|public
 name|void
 name|visitDSTORE
 parameter_list|(
+specifier|final
 name|DSTORE
 name|o
 parameter_list|)
@@ -5455,6 +5488,7 @@ specifier|public
 name|void
 name|visitLOOKUPSWITCH
 parameter_list|(
+specifier|final
 name|LOOKUPSWITCH
 name|o
 parameter_list|)
@@ -5558,6 +5592,7 @@ specifier|public
 name|void
 name|visitTABLESWITCH
 parameter_list|(
+specifier|final
 name|TABLESWITCH
 name|o
 parameter_list|)
@@ -5572,6 +5607,7 @@ specifier|public
 name|void
 name|visitPUTSTATIC
 parameter_list|(
+specifier|final
 name|PUTSTATIC
 name|o
 parameter_list|)
@@ -5848,6 +5884,7 @@ specifier|public
 name|void
 name|visitGETSTATIC
 parameter_list|(
+specifier|final
 name|GETSTATIC
 name|o
 parameter_list|)
@@ -6005,6 +6042,7 @@ specifier|public
 name|void
 name|visitINVOKEDYNAMIC
 parameter_list|(
+specifier|final
 name|INVOKEDYNAMIC
 name|o
 parameter_list|)
@@ -6024,6 +6062,7 @@ specifier|public
 name|void
 name|visitINVOKEINTERFACE
 parameter_list|(
+specifier|final
 name|INVOKEINTERFACE
 name|o
 parameter_list|)
@@ -6153,9 +6192,11 @@ specifier|private
 name|Method
 name|getMethodRecursive
 parameter_list|(
+specifier|final
 name|JavaClass
 name|jc
 parameter_list|,
+specifier|final
 name|InvokeInstruction
 name|invoke
 parameter_list|)
@@ -6265,9 +6306,11 @@ specifier|private
 name|Method
 name|getMethod
 parameter_list|(
+specifier|final
 name|JavaClass
 name|jc
 parameter_list|,
+specifier|final
 name|InvokeInstruction
 name|invoke
 parameter_list|)
@@ -6369,6 +6412,7 @@ specifier|public
 name|void
 name|visitINVOKESPECIAL
 parameter_list|(
+specifier|final
 name|INVOKESPECIAL
 name|o
 parameter_list|)
@@ -6705,6 +6749,7 @@ specifier|public
 name|void
 name|visitINVOKESTATIC
 parameter_list|(
+specifier|final
 name|INVOKESTATIC
 name|o
 parameter_list|)
@@ -6842,6 +6887,7 @@ specifier|public
 name|void
 name|visitINVOKEVIRTUAL
 parameter_list|(
+specifier|final
 name|INVOKEVIRTUAL
 name|o
 parameter_list|)
@@ -6975,10 +7021,12 @@ specifier|private
 name|boolean
 name|objarrayequals
 parameter_list|(
+specifier|final
 name|Object
 index|[]
 name|o
 parameter_list|,
+specifier|final
 name|Object
 index|[]
 name|p

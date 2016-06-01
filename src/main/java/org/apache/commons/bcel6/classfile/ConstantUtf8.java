@@ -243,6 +243,7 @@ specifier|protected
 name|boolean
 name|removeEldestEntry
 parameter_list|(
+specifier|final
 name|Map
 operator|.
 name|Entry
@@ -362,6 +363,7 @@ specifier|static
 name|ConstantUtf8
 name|getCachedInstance
 parameter_list|(
+specifier|final
 name|String
 name|s
 parameter_list|)
@@ -454,6 +456,7 @@ specifier|static
 name|ConstantUtf8
 name|getInstance
 parameter_list|(
+specifier|final
 name|String
 name|s
 parameter_list|)
@@ -472,6 +475,7 @@ specifier|static
 name|ConstantUtf8
 name|getInstance
 parameter_list|(
+specifier|final
 name|DataInput
 name|input
 parameter_list|)
@@ -492,6 +496,7 @@ comment|/**      * Initialize from another object.      */
 specifier|public
 name|ConstantUtf8
 parameter_list|(
+specifier|final
 name|ConstantUtf8
 name|c
 parameter_list|)
@@ -508,6 +513,7 @@ block|}
 comment|/**      * Initialize instance from file data.      *      * @param file Input stream      * @throws IOException      */
 name|ConstantUtf8
 parameter_list|(
+specifier|final
 name|DataInput
 name|file
 parameter_list|)
@@ -536,6 +542,7 @@ comment|/**      * @param bytes Data      */
 specifier|public
 name|ConstantUtf8
 parameter_list|(
+specifier|final
 name|String
 name|bytes
 parameter_list|)
@@ -579,6 +586,7 @@ specifier|public
 name|void
 name|accept
 parameter_list|(
+specifier|final
 name|Visitor
 name|v
 parameter_list|)
@@ -599,6 +607,7 @@ specifier|final
 name|void
 name|dump
 parameter_list|(
+specifier|final
 name|DataOutputStream
 name|file
 parameter_list|)
@@ -646,6 +655,7 @@ specifier|final
 name|void
 name|setBytes
 parameter_list|(
+specifier|final
 name|String
 name|bytes
 parameter_list|)

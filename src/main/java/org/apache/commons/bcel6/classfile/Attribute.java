@@ -156,15 +156,19 @@ comment|// TODO make private (has getter& setter)
 specifier|protected
 name|Attribute
 parameter_list|(
+specifier|final
 name|byte
 name|tag
 parameter_list|,
+specifier|final
 name|int
 name|name_index
 parameter_list|,
+specifier|final
 name|int
 name|length
 parameter_list|,
+specifier|final
 name|ConstantPool
 name|constant_pool
 parameter_list|)
@@ -211,6 +215,7 @@ specifier|public
 name|void
 name|dump
 parameter_list|(
+specifier|final
 name|DataOutputStream
 name|file
 parameter_list|)
@@ -260,9 +265,11 @@ specifier|static
 name|void
 name|addAttributeReader
 parameter_list|(
+specifier|final
 name|String
 name|name
 parameter_list|,
+specifier|final
 name|AttributeReader
 name|r
 parameter_list|)
@@ -283,9 +290,11 @@ specifier|static
 name|void
 name|addAttributeReader
 parameter_list|(
+specifier|final
 name|String
 name|name
 parameter_list|,
+specifier|final
 name|UnknownAttributeReader
 name|r
 parameter_list|)
@@ -306,6 +315,7 @@ specifier|static
 name|void
 name|removeAttributeReader
 parameter_list|(
+specifier|final
 name|String
 name|name
 parameter_list|)
@@ -324,9 +334,11 @@ specifier|static
 name|Attribute
 name|readAttribute
 parameter_list|(
+specifier|final
 name|DataInputStream
 name|file
 parameter_list|,
+specifier|final
 name|ConstantPool
 name|constant_pool
 parameter_list|)
@@ -353,9 +365,11 @@ specifier|static
 name|Attribute
 name|readAttribute
 parameter_list|(
+specifier|final
 name|DataInput
 name|file
 parameter_list|,
+specifier|final
 name|ConstantPool
 name|constant_pool
 parameter_list|)
@@ -973,6 +987,7 @@ specifier|final
 name|void
 name|setLength
 parameter_list|(
+specifier|final
 name|int
 name|length
 parameter_list|)
@@ -990,6 +1005,7 @@ specifier|final
 name|void
 name|setNameIndex
 parameter_list|(
+specifier|final
 name|int
 name|name_index
 parameter_list|)
@@ -1040,6 +1056,7 @@ specifier|final
 name|void
 name|setConstantPool
 parameter_list|(
+specifier|final
 name|ConstantPool
 name|constant_pool
 parameter_list|)

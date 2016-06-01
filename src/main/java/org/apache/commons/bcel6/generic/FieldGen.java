@@ -243,9 +243,11 @@ specifier|public
 name|boolean
 name|equals
 parameter_list|(
+specifier|final
 name|Object
 name|o1
 parameter_list|,
+specifier|final
 name|Object
 name|o2
 parameter_list|)
@@ -300,6 +302,7 @@ specifier|public
 name|int
 name|hashCode
 parameter_list|(
+specifier|final
 name|Object
 name|o
 parameter_list|)
@@ -336,15 +339,19 @@ comment|/**      * Declare a field. If it is static (isStatic() == true) and has
 specifier|public
 name|FieldGen
 parameter_list|(
+specifier|final
 name|int
 name|access_flags
 parameter_list|,
+specifier|final
 name|Type
 name|type
 parameter_list|,
+specifier|final
 name|String
 name|name
 parameter_list|,
+specifier|final
 name|ConstantPoolGen
 name|cp
 parameter_list|)
@@ -374,9 +381,11 @@ comment|/**      * Instantiate from existing field.      *      * @param field F
 specifier|public
 name|FieldGen
 parameter_list|(
+specifier|final
 name|Field
 name|field
 parameter_list|,
+specifier|final
 name|ConstantPoolGen
 name|cp
 parameter_list|)
@@ -505,6 +514,7 @@ specifier|private
 name|void
 name|setValue
 parameter_list|(
+specifier|final
 name|int
 name|index
 parameter_list|)
@@ -550,6 +560,7 @@ specifier|public
 name|void
 name|setInitValue
 parameter_list|(
+specifier|final
 name|String
 name|str
 parameter_list|)
@@ -581,6 +592,7 @@ specifier|public
 name|void
 name|setInitValue
 parameter_list|(
+specifier|final
 name|long
 name|l
 parameter_list|)
@@ -614,6 +626,7 @@ specifier|public
 name|void
 name|setInitValue
 parameter_list|(
+specifier|final
 name|int
 name|i
 parameter_list|)
@@ -647,6 +660,7 @@ specifier|public
 name|void
 name|setInitValue
 parameter_list|(
+specifier|final
 name|short
 name|s
 parameter_list|)
@@ -680,6 +694,7 @@ specifier|public
 name|void
 name|setInitValue
 parameter_list|(
+specifier|final
 name|char
 name|c
 parameter_list|)
@@ -713,6 +728,7 @@ specifier|public
 name|void
 name|setInitValue
 parameter_list|(
+specifier|final
 name|byte
 name|b
 parameter_list|)
@@ -746,6 +762,7 @@ specifier|public
 name|void
 name|setInitValue
 parameter_list|(
+specifier|final
 name|boolean
 name|b
 parameter_list|)
@@ -777,6 +794,7 @@ specifier|public
 name|void
 name|setInitValue
 parameter_list|(
+specifier|final
 name|float
 name|f
 parameter_list|)
@@ -809,6 +827,7 @@ specifier|public
 name|void
 name|setInitValue
 parameter_list|(
+specifier|final
 name|double
 name|d
 parameter_list|)
@@ -852,6 +871,7 @@ specifier|private
 name|void
 name|checkType
 parameter_list|(
+specifier|final
 name|Type
 name|atype
 parameter_list|)
@@ -1053,6 +1073,7 @@ specifier|private
 name|void
 name|addAnnotationsAsAttribute
 parameter_list|(
+specifier|final
 name|ConstantPoolGen
 name|cp
 parameter_list|)
@@ -1288,6 +1309,7 @@ specifier|public
 name|void
 name|addObserver
 parameter_list|(
+specifier|final
 name|FieldObserver
 name|o
 parameter_list|)
@@ -1320,6 +1342,7 @@ specifier|public
 name|void
 name|removeObserver
 parameter_list|(
+specifier|final
 name|FieldObserver
 name|o
 parameter_list|)
@@ -1527,6 +1550,7 @@ specifier|public
 name|FieldGen
 name|copy
 parameter_list|(
+specifier|final
 name|ConstantPoolGen
 name|cp
 parameter_list|)
@@ -1568,6 +1592,7 @@ specifier|static
 name|void
 name|setComparator
 parameter_list|(
+specifier|final
 name|BCELComparator
 name|comparator
 parameter_list|)
@@ -1584,6 +1609,7 @@ specifier|public
 name|boolean
 name|equals
 parameter_list|(
+specifier|final
 name|Object
 name|obj
 parameter_list|)

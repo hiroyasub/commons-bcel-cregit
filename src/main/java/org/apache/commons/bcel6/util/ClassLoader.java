@@ -253,6 +253,7 @@ comment|/** @param deferTo delegate class loader to use for ignored packages    
 specifier|public
 name|ClassLoader
 parameter_list|(
+specifier|final
 name|java
 operator|.
 name|lang
@@ -287,6 +288,7 @@ comment|/** @param ignored_packages classes contained in these packages will be 
 specifier|public
 name|ClassLoader
 parameter_list|(
+specifier|final
 name|String
 index|[]
 name|ignored_packages
@@ -303,6 +305,7 @@ comment|/** @param ignored_packages classes contained in these packages will be 
 specifier|public
 name|ClassLoader
 parameter_list|(
+specifier|final
 name|java
 operator|.
 name|lang
@@ -310,6 +313,7 @@ operator|.
 name|ClassLoader
 name|deferTo
 parameter_list|,
+specifier|final
 name|String
 index|[]
 name|ignored_packages
@@ -340,9 +344,11 @@ name|?
 argument_list|>
 name|loadClass
 parameter_list|(
+specifier|final
 name|String
 name|class_name
 parameter_list|,
+specifier|final
 name|boolean
 name|resolve
 parameter_list|)
@@ -550,6 +556,7 @@ specifier|protected
 name|JavaClass
 name|modifyClass
 parameter_list|(
+specifier|final
 name|JavaClass
 name|clazz
 parameter_list|)
@@ -563,6 +570,7 @@ specifier|protected
 name|JavaClass
 name|createClass
 parameter_list|(
+specifier|final
 name|String
 name|class_name
 parameter_list|)

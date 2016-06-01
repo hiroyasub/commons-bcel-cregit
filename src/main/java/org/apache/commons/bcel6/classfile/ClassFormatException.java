@@ -48,6 +48,7 @@ block|}
 specifier|public
 name|ClassFormatException
 parameter_list|(
+specifier|final
 name|String
 name|s
 parameter_list|)
@@ -62,9 +63,11 @@ comment|/**      * {@inheritDoc}      * @since 6.0      */
 specifier|public
 name|ClassFormatException
 parameter_list|(
+specifier|final
 name|String
 name|message
 parameter_list|,
+specifier|final
 name|Throwable
 name|cause
 parameter_list|)

@@ -42,6 +42,7 @@ block|}
 specifier|public
 name|DCONST
 parameter_list|(
+specifier|final
 name|double
 name|f
 parameter_list|)
@@ -155,6 +156,7 @@ specifier|public
 name|Type
 name|getType
 parameter_list|(
+specifier|final
 name|ConstantPoolGen
 name|cp
 parameter_list|)
@@ -172,6 +174,7 @@ specifier|public
 name|void
 name|accept
 parameter_list|(
+specifier|final
 name|Visitor
 name|v
 parameter_list|)

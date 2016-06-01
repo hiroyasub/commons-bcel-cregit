@@ -851,6 +851,7 @@ comment|/**      * Should only be instantiated by a Verifier.      *      * @see
 specifier|public
 name|Pass2Verifier
 parameter_list|(
+specifier|final
 name|Verifier
 name|owner
 parameter_list|)
@@ -865,6 +866,7 @@ specifier|public
 name|LocalVariablesInfo
 name|getLocalVariablesInfo
 parameter_list|(
+specifier|final
 name|int
 name|method_nr
 parameter_list|)
@@ -1722,6 +1724,7 @@ decl_stmt|;
 specifier|private
 name|CPESSC_Visitor
 parameter_list|(
+specifier|final
 name|JavaClass
 name|_jc
 parameter_list|)
@@ -1813,12 +1816,15 @@ specifier|private
 name|void
 name|checkIndex
 parameter_list|(
+specifier|final
 name|Node
 name|referrer
 parameter_list|,
+specifier|final
 name|int
 name|index
 parameter_list|,
+specifier|final
 name|Class
 argument_list|<
 name|?
@@ -1922,6 +1928,7 @@ specifier|public
 name|void
 name|visitJavaClass
 parameter_list|(
+specifier|final
 name|JavaClass
 name|obj
 parameter_list|)
@@ -2168,6 +2175,7 @@ specifier|public
 name|void
 name|visitConstantClass
 parameter_list|(
+specifier|final
 name|ConstantClass
 name|obj
 parameter_list|)
@@ -2218,6 +2226,7 @@ specifier|public
 name|void
 name|visitConstantFieldref
 parameter_list|(
+specifier|final
 name|ConstantFieldref
 name|obj
 parameter_list|)
@@ -2280,6 +2289,7 @@ specifier|public
 name|void
 name|visitConstantMethodref
 parameter_list|(
+specifier|final
 name|ConstantMethodref
 name|obj
 parameter_list|)
@@ -2342,6 +2352,7 @@ specifier|public
 name|void
 name|visitConstantInterfaceMethodref
 parameter_list|(
+specifier|final
 name|ConstantInterfaceMethodref
 name|obj
 parameter_list|)
@@ -2404,6 +2415,7 @@ specifier|public
 name|void
 name|visitConstantString
 parameter_list|(
+specifier|final
 name|ConstantString
 name|obj
 parameter_list|)
@@ -2454,6 +2466,7 @@ specifier|public
 name|void
 name|visitConstantInteger
 parameter_list|(
+specifier|final
 name|ConstantInteger
 name|obj
 parameter_list|)
@@ -2493,6 +2506,7 @@ specifier|public
 name|void
 name|visitConstantFloat
 parameter_list|(
+specifier|final
 name|ConstantFloat
 name|obj
 parameter_list|)
@@ -2532,6 +2546,7 @@ specifier|public
 name|void
 name|visitConstantLong
 parameter_list|(
+specifier|final
 name|ConstantLong
 name|obj
 parameter_list|)
@@ -2571,6 +2586,7 @@ specifier|public
 name|void
 name|visitConstantDouble
 parameter_list|(
+specifier|final
 name|ConstantDouble
 name|obj
 parameter_list|)
@@ -2610,6 +2626,7 @@ specifier|public
 name|void
 name|visitConstantNameAndType
 parameter_list|(
+specifier|final
 name|ConstantNameAndType
 name|obj
 parameter_list|)
@@ -2673,6 +2690,7 @@ specifier|public
 name|void
 name|visitConstantUtf8
 parameter_list|(
+specifier|final
 name|ConstantUtf8
 name|obj
 parameter_list|)
@@ -2715,6 +2733,7 @@ specifier|public
 name|void
 name|visitField
 parameter_list|(
+specifier|final
 name|Field
 name|obj
 parameter_list|)
@@ -3253,6 +3272,7 @@ specifier|public
 name|void
 name|visitMethod
 parameter_list|(
+specifier|final
 name|Method
 name|obj
 parameter_list|)
@@ -4453,6 +4473,7 @@ specifier|public
 name|void
 name|visitSourceFile
 parameter_list|(
+specifier|final
 name|SourceFile
 name|obj
 parameter_list|)
@@ -4643,6 +4664,7 @@ specifier|public
 name|void
 name|visitDeprecated
 parameter_list|(
+specifier|final
 name|Deprecated
 name|obj
 parameter_list|)
@@ -4718,6 +4740,7 @@ specifier|public
 name|void
 name|visitSynthetic
 parameter_list|(
+specifier|final
 name|Synthetic
 name|obj
 parameter_list|)
@@ -4793,6 +4816,7 @@ specifier|public
 name|void
 name|visitInnerClasses
 parameter_list|(
+specifier|final
 name|InnerClasses
 name|obj
 parameter_list|)
@@ -5026,6 +5050,7 @@ specifier|public
 name|void
 name|visitConstantValue
 parameter_list|(
+specifier|final
 name|ConstantValue
 name|obj
 parameter_list|)
@@ -5383,6 +5408,7 @@ specifier|public
 name|void
 name|visitCode
 parameter_list|(
+specifier|final
 name|Code
 name|obj
 parameter_list|)
@@ -6563,6 +6589,7 @@ specifier|public
 name|void
 name|visitExceptionTable
 parameter_list|(
+specifier|final
 name|ExceptionTable
 name|obj
 parameter_list|)
@@ -6959,6 +6986,7 @@ specifier|public
 name|void
 name|visitLineNumberTable
 parameter_list|(
+specifier|final
 name|LineNumberTable
 name|obj
 parameter_list|)
@@ -7037,6 +7065,7 @@ specifier|public
 name|void
 name|visitLocalVariableTable
 parameter_list|(
+specifier|final
 name|LocalVariableTable
 name|obj
 parameter_list|)
@@ -7054,6 +7083,7 @@ specifier|public
 name|void
 name|visitUnknown
 parameter_list|(
+specifier|final
 name|Unknown
 name|obj
 parameter_list|)
@@ -7095,6 +7125,7 @@ specifier|public
 name|void
 name|visitLocalVariable
 parameter_list|(
+specifier|final
 name|LocalVariable
 name|obj
 parameter_list|)
@@ -7109,6 +7140,7 @@ specifier|public
 name|void
 name|visitCodeException
 parameter_list|(
+specifier|final
 name|CodeException
 name|obj
 parameter_list|)
@@ -7124,6 +7156,7 @@ specifier|public
 name|void
 name|visitConstantPool
 parameter_list|(
+specifier|final
 name|ConstantPool
 name|obj
 parameter_list|)
@@ -7138,6 +7171,7 @@ specifier|public
 name|void
 name|visitInnerClass
 parameter_list|(
+specifier|final
 name|InnerClass
 name|obj
 parameter_list|)
@@ -7151,6 +7185,7 @@ specifier|public
 name|void
 name|visitLineNumber
 parameter_list|(
+specifier|final
 name|LineNumber
 name|obj
 parameter_list|)
@@ -7239,6 +7274,7 @@ comment|// ==jc.getConstantPool() -- only here to save typing work.
 specifier|private
 name|FAMRAV_Visitor
 parameter_list|(
+specifier|final
 name|JavaClass
 name|_jc
 parameter_list|)
@@ -7257,6 +7293,7 @@ specifier|public
 name|void
 name|visitConstantFieldref
 parameter_list|(
+specifier|final
 name|ConstantFieldref
 name|obj
 parameter_list|)
@@ -7507,6 +7544,7 @@ specifier|public
 name|void
 name|visitConstantMethodref
 parameter_list|(
+specifier|final
 name|ConstantMethodref
 name|obj
 parameter_list|)
@@ -7787,6 +7825,7 @@ specifier|public
 name|void
 name|visitConstantInterfaceMethodref
 parameter_list|(
+specifier|final
 name|ConstantInterfaceMethodref
 name|obj
 parameter_list|)
@@ -8076,6 +8115,7 @@ specifier|static
 name|boolean
 name|validClassName
 parameter_list|(
+specifier|final
 name|String
 name|name
 parameter_list|)
@@ -8091,9 +8131,11 @@ specifier|static
 name|boolean
 name|validMethodName
 parameter_list|(
+specifier|final
 name|String
 name|name
 parameter_list|,
+specifier|final
 name|boolean
 name|allowStaticInit
 parameter_list|)
@@ -8152,6 +8194,7 @@ specifier|static
 name|boolean
 name|validClassMethodName
 parameter_list|(
+specifier|final
 name|String
 name|name
 parameter_list|)
@@ -8171,6 +8214,7 @@ specifier|static
 name|boolean
 name|validJavaLangMethodName
 parameter_list|(
+specifier|final
 name|String
 name|name
 parameter_list|)
@@ -8244,6 +8288,7 @@ specifier|static
 name|boolean
 name|validInterfaceMethodName
 parameter_list|(
+specifier|final
 name|String
 name|name
 parameter_list|)
@@ -8276,6 +8321,7 @@ specifier|static
 name|boolean
 name|validJavaIdentifier
 parameter_list|(
+specifier|final
 name|String
 name|name
 parameter_list|)
@@ -8365,6 +8411,7 @@ specifier|static
 name|boolean
 name|validFieldName
 parameter_list|(
+specifier|final
 name|String
 name|name
 parameter_list|)
@@ -8405,6 +8452,7 @@ comment|/** Constructs an InnerClassDetector working on the JavaClass _jc. */
 specifier|public
 name|InnerClassDetector
 parameter_list|(
+specifier|final
 name|JavaClass
 name|_jc
 parameter_list|)
@@ -8451,6 +8499,7 @@ specifier|public
 name|void
 name|visitConstantClass
 parameter_list|(
+specifier|final
 name|ConstantClass
 name|obj
 parameter_list|)
@@ -8525,6 +8574,7 @@ specifier|static
 name|String
 name|tostring
 parameter_list|(
+specifier|final
 name|Node
 name|n
 parameter_list|)

@@ -92,9 +92,11 @@ decl_stmt|;
 comment|/**      * Construct object from file stream.      * @param file Input stream      * @throws IOException      */
 name|StackMapType
 parameter_list|(
+specifier|final
 name|DataInput
 name|file
 parameter_list|,
+specifier|final
 name|ConstantPool
 name|constant_pool
 parameter_list|)
@@ -141,12 +143,15 @@ comment|/**      * @param type type tag as defined in the Constants interface   
 specifier|public
 name|StackMapType
 parameter_list|(
+specifier|final
 name|byte
 name|type
 parameter_list|,
+specifier|final
 name|int
 name|index
 parameter_list|,
+specifier|final
 name|ConstantPool
 name|constant_pool
 parameter_list|)
@@ -203,6 +208,7 @@ specifier|public
 name|void
 name|setType
 parameter_list|(
+specifier|final
 name|byte
 name|t
 parameter_list|)
@@ -254,6 +260,7 @@ specifier|public
 name|void
 name|setIndex
 parameter_list|(
+specifier|final
 name|int
 name|t
 parameter_list|)
@@ -279,6 +286,7 @@ specifier|final
 name|void
 name|dump
 parameter_list|(
+specifier|final
 name|DataOutputStream
 name|file
 parameter_list|)
@@ -461,6 +469,7 @@ specifier|final
 name|void
 name|setConstantPool
 parameter_list|(
+specifier|final
 name|ConstantPool
 name|constant_pool
 parameter_list|)

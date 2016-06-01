@@ -41,6 +41,7 @@ decl_stmt|;
 specifier|public
 name|StaticCodeInstructionConstraintException
 parameter_list|(
+specifier|final
 name|String
 name|message
 parameter_list|)

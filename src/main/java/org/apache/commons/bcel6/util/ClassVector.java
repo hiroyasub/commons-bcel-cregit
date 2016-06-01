@@ -98,6 +98,7 @@ specifier|public
 name|void
 name|addElement
 parameter_list|(
+specifier|final
 name|JavaClass
 name|clazz
 parameter_list|)
@@ -114,6 +115,7 @@ specifier|public
 name|JavaClass
 name|elementAt
 parameter_list|(
+specifier|final
 name|int
 name|index
 parameter_list|)
@@ -131,6 +133,7 @@ specifier|public
 name|void
 name|removeElementAt
 parameter_list|(
+specifier|final
 name|int
 name|index
 parameter_list|)

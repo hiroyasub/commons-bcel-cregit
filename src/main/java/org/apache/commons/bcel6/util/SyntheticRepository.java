@@ -71,6 +71,7 @@ comment|// CLASSPATH X REPOSITORY
 specifier|private
 name|SyntheticRepository
 parameter_list|(
+specifier|final
 name|ClassPath
 name|path
 parameter_list|)
@@ -101,6 +102,7 @@ specifier|static
 name|SyntheticRepository
 name|getInstance
 parameter_list|(
+specifier|final
 name|ClassPath
 name|classPath
 parameter_list|)

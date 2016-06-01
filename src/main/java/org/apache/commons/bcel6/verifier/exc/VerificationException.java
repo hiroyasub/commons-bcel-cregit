@@ -50,6 +50,7 @@ block|}
 comment|/**      * Constructs a new VerificationException with the specified error message.      */
 name|VerificationException
 parameter_list|(
+specifier|final
 name|String
 name|message
 parameter_list|)
@@ -63,9 +64,11 @@ block|}
 comment|/**      * Constructs a new VerificationException with the specified error message and exception      */
 name|VerificationException
 parameter_list|(
+specifier|final
 name|String
 name|message
 parameter_list|,
+specifier|final
 name|Throwable
 name|initCause
 parameter_list|)

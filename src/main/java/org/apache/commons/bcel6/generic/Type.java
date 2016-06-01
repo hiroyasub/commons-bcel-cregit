@@ -341,9 +341,11 @@ decl_stmt|;
 specifier|protected
 name|Type
 parameter_list|(
+specifier|final
 name|byte
 name|t
 parameter_list|,
+specifier|final
 name|String
 name|s
 parameter_list|)
@@ -381,6 +383,7 @@ specifier|public
 name|boolean
 name|equals
 parameter_list|(
+specifier|final
 name|Object
 name|o
 parameter_list|)
@@ -572,9 +575,11 @@ specifier|static
 name|String
 name|getMethodSignature
 parameter_list|(
+specifier|final
 name|Type
 name|return_type
 parameter_list|,
+specifier|final
 name|Type
 index|[]
 name|arg_types
@@ -680,6 +685,7 @@ specifier|static
 name|int
 name|unwrap
 parameter_list|(
+specifier|final
 name|ThreadLocal
 argument_list|<
 name|Integer
@@ -702,12 +708,14 @@ specifier|static
 name|void
 name|wrap
 parameter_list|(
+specifier|final
 name|ThreadLocal
 argument_list|<
 name|Integer
 argument_list|>
 name|tl
 parameter_list|,
+specifier|final
 name|int
 name|value
 parameter_list|)
@@ -732,6 +740,7 @@ specifier|static
 name|Type
 name|getType
 parameter_list|(
+specifier|final
 name|String
 name|signature
 parameter_list|)
@@ -922,6 +931,7 @@ specifier|static
 name|Type
 name|getReturnType
 parameter_list|(
+specifier|final
 name|String
 name|signature
 parameter_list|)
@@ -980,6 +990,7 @@ name|Type
 index|[]
 name|getArgumentTypes
 parameter_list|(
+specifier|final
 name|String
 name|signature
 parameter_list|)
@@ -1117,6 +1128,7 @@ specifier|static
 name|Type
 name|getType
 parameter_list|(
+specifier|final
 name|java
 operator|.
 name|lang
@@ -1336,6 +1348,7 @@ name|Type
 index|[]
 name|getTypes
 parameter_list|(
+specifier|final
 name|java
 operator|.
 name|lang
@@ -1400,6 +1413,7 @@ specifier|static
 name|String
 name|getSignature
 parameter_list|(
+specifier|final
 name|java
 operator|.
 name|lang
@@ -1491,6 +1505,7 @@ specifier|static
 name|int
 name|size
 parameter_list|(
+specifier|final
 name|int
 name|coded
 parameter_list|)
@@ -1505,6 +1520,7 @@ specifier|static
 name|int
 name|consumed
 parameter_list|(
+specifier|final
 name|int
 name|coded
 parameter_list|)
@@ -1519,9 +1535,11 @@ specifier|static
 name|int
 name|encode
 parameter_list|(
+specifier|final
 name|int
 name|size
 parameter_list|,
+specifier|final
 name|int
 name|consumed
 parameter_list|)
@@ -1538,6 +1556,7 @@ specifier|static
 name|int
 name|getArgumentTypesSize
 parameter_list|(
+specifier|final
 name|String
 name|signature
 parameter_list|)
@@ -1648,6 +1667,7 @@ specifier|static
 name|int
 name|getTypeSize
 parameter_list|(
+specifier|final
 name|String
 name|signature
 parameter_list|)
@@ -1798,6 +1818,7 @@ specifier|static
 name|int
 name|getReturnTypeSize
 parameter_list|(
+specifier|final
 name|String
 name|signature
 parameter_list|)
@@ -1835,6 +1856,7 @@ comment|/*      * Currently only used by the ArrayType constructor.      * The s
 name|void
 name|setSignature
 parameter_list|(
+specifier|final
 name|String
 name|signature
 parameter_list|)

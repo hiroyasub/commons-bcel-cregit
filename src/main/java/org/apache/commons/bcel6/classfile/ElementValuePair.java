@@ -78,12 +78,15 @@ decl_stmt|;
 specifier|public
 name|ElementValuePair
 parameter_list|(
+specifier|final
 name|int
 name|elementNameIndex
 parameter_list|,
+specifier|final
 name|ElementValue
 name|elementValue
 parameter_list|,
+specifier|final
 name|ConstantPool
 name|constantPool
 parameter_list|)
@@ -200,6 +203,7 @@ specifier|protected
 name|void
 name|dump
 parameter_list|(
+specifier|final
 name|DataOutputStream
 name|dos
 parameter_list|)

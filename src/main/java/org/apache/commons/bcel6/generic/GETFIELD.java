@@ -70,6 +70,7 @@ block|}
 specifier|public
 name|GETFIELD
 parameter_list|(
+specifier|final
 name|int
 name|index
 parameter_list|)
@@ -90,6 +91,7 @@ specifier|public
 name|int
 name|produceStack
 parameter_list|(
+specifier|final
 name|ConstantPoolGen
 name|cpg
 parameter_list|)
@@ -140,6 +142,7 @@ specifier|public
 name|void
 name|accept
 parameter_list|(
+specifier|final
 name|Visitor
 name|v
 parameter_list|)

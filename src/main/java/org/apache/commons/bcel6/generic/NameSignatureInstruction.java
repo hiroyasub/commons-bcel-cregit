@@ -104,9 +104,11 @@ block|}
 specifier|public
 name|NameSignatureInstruction
 parameter_list|(
+specifier|final
 name|short
 name|opcode
 parameter_list|,
+specifier|final
 name|int
 name|index
 parameter_list|)
@@ -123,6 +125,7 @@ specifier|public
 name|ConstantNameAndType
 name|getNameAndType
 parameter_list|(
+specifier|final
 name|ConstantPoolGen
 name|cpg
 parameter_list|)
@@ -171,6 +174,7 @@ specifier|public
 name|String
 name|getSignature
 parameter_list|(
+specifier|final
 name|ConstantPoolGen
 name|cpg
 parameter_list|)
@@ -216,6 +220,7 @@ specifier|public
 name|String
 name|getName
 parameter_list|(
+specifier|final
 name|ConstantPoolGen
 name|cpg
 parameter_list|)

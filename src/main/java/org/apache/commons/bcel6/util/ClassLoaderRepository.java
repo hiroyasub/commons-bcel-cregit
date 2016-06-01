@@ -128,6 +128,7 @@ comment|// CLASSNAME X JAVACLASS
 specifier|public
 name|ClassLoaderRepository
 parameter_list|(
+specifier|final
 name|java
 operator|.
 name|lang
@@ -150,6 +151,7 @@ specifier|public
 name|void
 name|storeClass
 parameter_list|(
+specifier|final
 name|JavaClass
 name|clazz
 parameter_list|)
@@ -181,6 +183,7 @@ specifier|public
 name|void
 name|removeClass
 parameter_list|(
+specifier|final
 name|JavaClass
 name|clazz
 parameter_list|)
@@ -203,6 +206,7 @@ specifier|public
 name|JavaClass
 name|findClass
 parameter_list|(
+specifier|final
 name|String
 name|className
 parameter_list|)
@@ -232,6 +236,7 @@ specifier|public
 name|JavaClass
 name|loadClass
 parameter_list|(
+specifier|final
 name|String
 name|className
 parameter_list|)
@@ -365,6 +370,7 @@ specifier|public
 name|JavaClass
 name|loadClass
 parameter_list|(
+specifier|final
 name|Class
 argument_list|<
 name|?

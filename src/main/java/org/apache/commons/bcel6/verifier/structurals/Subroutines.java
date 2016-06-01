@@ -394,6 +394,7 @@ specifier|public
 name|boolean
 name|contains
 parameter_list|(
+specifier|final
 name|InstructionHandle
 name|inst
 parameter_list|)
@@ -765,6 +766,7 @@ specifier|public
 name|void
 name|addEnteringJsrInstruction
 parameter_list|(
+specifier|final
 name|InstructionHandle
 name|jsrInst
 parameter_list|)
@@ -926,6 +928,7 @@ comment|/*          * Adds an instruction to this subroutine.          * All ins
 name|void
 name|addInstruction
 parameter_list|(
+specifier|final
 name|InstructionHandle
 name|ih
 parameter_list|)
@@ -1061,12 +1064,14 @@ specifier|private
 name|void
 name|_getRecursivelyAccessedLocalsIndicesHelper
 parameter_list|(
+specifier|final
 name|Set
 argument_list|<
 name|Integer
 argument_list|>
 name|s
 parameter_list|,
+specifier|final
 name|Subroutine
 index|[]
 name|subs
@@ -1453,6 +1458,7 @@ comment|/*          * Sets the local variable slot the ASTORE that is targeted  
 name|void
 name|setLocalVariable
 parameter_list|(
+specifier|final
 name|int
 name|i
 parameter_list|)
@@ -1525,6 +1531,7 @@ comment|/**      * Constructor.      * @param mg A MethodGen object representing
 specifier|public
 name|Subroutines
 parameter_list|(
+specifier|final
 name|MethodGen
 name|mg
 parameter_list|)
@@ -1541,9 +1548,11 @@ comment|/**      * Constructor.      * @param mg A MethodGen object representing
 specifier|public
 name|Subroutines
 parameter_list|(
+specifier|final
 name|MethodGen
 name|mg
 parameter_list|,
+specifier|final
 name|boolean
 name|enableJustIceCheck
 parameter_list|)
@@ -2214,9 +2223,11 @@ specifier|private
 name|void
 name|noRecursiveCalls
 parameter_list|(
+specifier|final
 name|Subroutine
 name|sub
 parameter_list|,
+specifier|final
 name|Set
 argument_list|<
 name|Integer
@@ -2341,6 +2352,7 @@ specifier|public
 name|Subroutine
 name|getSubroutine
 parameter_list|(
+specifier|final
 name|InstructionHandle
 name|leader
 parameter_list|)
@@ -2394,6 +2406,7 @@ specifier|public
 name|Subroutine
 name|subroutineOf
 parameter_list|(
+specifier|final
 name|InstructionHandle
 name|any
 parameter_list|)
@@ -2464,6 +2477,7 @@ name|InstructionHandle
 index|[]
 name|getSuccessors
 parameter_list|(
+specifier|final
 name|InstructionHandle
 name|instruction
 parameter_list|)

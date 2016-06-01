@@ -90,6 +90,7 @@ decl_stmt|;
 comment|/** The constructor. */
 name|LocalVariablesInfo
 parameter_list|(
+specifier|final
 name|int
 name|max_locals
 parameter_list|)
@@ -133,6 +134,7 @@ specifier|public
 name|LocalVariableInfo
 name|getLocalVariableInfo
 parameter_list|(
+specifier|final
 name|int
 name|slot
 parameter_list|)
@@ -170,18 +172,23 @@ specifier|public
 name|void
 name|add
 parameter_list|(
+specifier|final
 name|int
 name|slot
 parameter_list|,
+specifier|final
 name|String
 name|name
 parameter_list|,
+specifier|final
 name|int
 name|startpc
 parameter_list|,
+specifier|final
 name|int
 name|length
 parameter_list|,
+specifier|final
 name|Type
 name|t
 parameter_list|)

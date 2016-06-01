@@ -116,12 +116,14 @@ specifier|private
 name|MethodGen
 name|getMethod
 parameter_list|(
+specifier|final
 name|Class
 argument_list|<
 name|?
 argument_list|>
 name|cls
 parameter_list|,
+specifier|final
 name|String
 name|name
 parameter_list|)

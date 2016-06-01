@@ -84,6 +84,7 @@ parameter_list|(
 name|String
 name|message
 parameter_list|,
+specifier|final
 name|Throwable
 name|initCause
 parameter_list|)
@@ -179,6 +180,7 @@ specifier|static
 name|void
 name|main
 parameter_list|(
+specifier|final
 name|String
 index|[]
 name|args

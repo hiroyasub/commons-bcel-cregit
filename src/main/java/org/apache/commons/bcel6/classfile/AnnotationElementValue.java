@@ -57,12 +57,15 @@ decl_stmt|;
 specifier|public
 name|AnnotationElementValue
 parameter_list|(
+specifier|final
 name|int
 name|type
 parameter_list|,
+specifier|final
 name|AnnotationEntry
 name|annotationEntry
 parameter_list|,
+specifier|final
 name|ConstantPool
 name|cpool
 parameter_list|)
@@ -104,6 +107,7 @@ specifier|public
 name|void
 name|dump
 parameter_list|(
+specifier|final
 name|DataOutputStream
 name|dos
 parameter_list|)

@@ -97,9 +97,11 @@ decl_stmt|;
 comment|/**      * Construct object from input stream.      *       * @param input Input stream      * @throws IOException      */
 name|ParameterAnnotationEntry
 parameter_list|(
+specifier|final
 name|DataInput
 name|input
 parameter_list|,
+specifier|final
 name|ConstantPool
 name|constant_pool
 parameter_list|)
@@ -163,6 +165,7 @@ specifier|public
 name|void
 name|accept
 parameter_list|(
+specifier|final
 name|Visitor
 name|v
 parameter_list|)
@@ -190,6 +193,7 @@ specifier|public
 name|void
 name|dump
 parameter_list|(
+specifier|final
 name|DataOutputStream
 name|dos
 parameter_list|)
@@ -228,6 +232,7 @@ name|ParameterAnnotationEntry
 index|[]
 name|createParameterAnnotationEntries
 parameter_list|(
+specifier|final
 name|Attribute
 index|[]
 name|attrs

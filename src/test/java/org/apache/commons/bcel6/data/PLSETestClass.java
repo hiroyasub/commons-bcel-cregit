@@ -36,6 +36,7 @@ specifier|public
 name|void
 name|meth1
 parameter_list|(
+specifier|final
 name|int
 name|arg1
 parameter_list|)
@@ -55,15 +56,18 @@ specifier|public
 name|void
 name|meth2
 parameter_list|(
+specifier|final
 name|int
 name|arg1
 parameter_list|,
+specifier|final
 name|ArrayList
 argument_list|<
 name|String
 argument_list|>
 name|arg2
 parameter_list|,
+specifier|final
 name|int
 name|arg3
 parameter_list|)

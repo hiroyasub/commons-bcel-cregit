@@ -58,6 +58,7 @@ block|}
 specifier|public
 name|JSR
 parameter_list|(
+specifier|final
 name|InstructionHandle
 name|target
 parameter_list|)
@@ -87,6 +88,7 @@ specifier|public
 name|void
 name|dump
 parameter_list|(
+specifier|final
 name|DataOutputStream
 name|out
 parameter_list|)
@@ -168,9 +170,11 @@ specifier|protected
 name|int
 name|updatePosition
 parameter_list|(
+specifier|final
 name|int
 name|offset
 parameter_list|,
+specifier|final
 name|int
 name|max_offset
 parameter_list|)
@@ -265,6 +269,7 @@ specifier|public
 name|void
 name|accept
 parameter_list|(
+specifier|final
 name|Visitor
 name|v
 parameter_list|)

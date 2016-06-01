@@ -191,6 +191,7 @@ specifier|public
 name|boolean
 name|accept
 parameter_list|(
+specifier|final
 name|File
 name|file
 parameter_list|)
@@ -246,6 +247,7 @@ specifier|private
 name|void
 name|testJar
 parameter_list|(
+specifier|final
 name|File
 name|file
 parameter_list|)
@@ -374,12 +376,15 @@ specifier|private
 name|void
 name|compare
 parameter_list|(
+specifier|final
 name|JavaClass
 name|jc
 parameter_list|,
+specifier|final
 name|InputStream
 name|inputStream
 parameter_list|,
+specifier|final
 name|String
 name|name
 parameter_list|)

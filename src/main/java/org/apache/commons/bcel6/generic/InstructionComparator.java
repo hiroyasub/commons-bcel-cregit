@@ -42,9 +42,11 @@ specifier|public
 name|boolean
 name|equals
 parameter_list|(
+specifier|final
 name|Instruction
 name|i1
 parameter_list|,
+specifier|final
 name|Instruction
 name|i2
 parameter_list|)

@@ -321,6 +321,7 @@ comment|/**          * Creates an InstructionHandleImpl object from an Instructi
 specifier|public
 name|InstructionContextImpl
 parameter_list|(
+specifier|final
 name|InstructionHandle
 name|inst
 parameter_list|)
@@ -378,6 +379,7 @@ specifier|public
 name|void
 name|setTag
 parameter_list|(
+specifier|final
 name|int
 name|tag
 parameter_list|)
@@ -414,6 +416,7 @@ specifier|public
 name|Frame
 name|getOutFrame
 parameter_list|(
+specifier|final
 name|ArrayList
 argument_list|<
 name|InstructionContext
@@ -540,18 +543,22 @@ specifier|public
 name|boolean
 name|execute
 parameter_list|(
+specifier|final
 name|Frame
 name|inFrame
 parameter_list|,
+specifier|final
 name|ArrayList
 argument_list|<
 name|InstructionContext
 argument_list|>
 name|execPreds
 parameter_list|,
+specifier|final
 name|InstConstraintVisitor
 name|icv
 parameter_list|,
+specifier|final
 name|ExecutionVisitor
 name|ev
 parameter_list|)
@@ -864,6 +871,7 @@ specifier|private
 name|boolean
 name|mergeInFrames
 parameter_list|(
+specifier|final
 name|Frame
 name|inFrame
 parameter_list|)
@@ -1028,6 +1036,7 @@ specifier|private
 name|void
 name|extendMessageWithFlow
 parameter_list|(
+specifier|final
 name|StructuralCodeConstraintException
 name|e
 parameter_list|)
@@ -1564,6 +1573,7 @@ comment|/**       * A Control Flow Graph; with additional JustIce checks      * 
 specifier|public
 name|ControlFlowGraph
 parameter_list|(
+specifier|final
 name|MethodGen
 name|method_gen
 parameter_list|)
@@ -1580,9 +1590,11 @@ comment|/**       * A Control Flow Graph.      * @param  method_gen the method g
 specifier|public
 name|ControlFlowGraph
 parameter_list|(
+specifier|final
 name|MethodGen
 name|method_gen
 parameter_list|,
+specifier|final
 name|boolean
 name|enableJustIceCheck
 parameter_list|)
@@ -1646,6 +1658,7 @@ specifier|public
 name|InstructionContext
 name|contextOf
 parameter_list|(
+specifier|final
 name|InstructionHandle
 name|inst
 parameter_list|)
@@ -1685,6 +1698,7 @@ name|InstructionContext
 index|[]
 name|contextsOf
 parameter_list|(
+specifier|final
 name|InstructionHandle
 index|[]
 name|insts
@@ -1777,6 +1791,7 @@ specifier|public
 name|boolean
 name|isDead
 parameter_list|(
+specifier|final
 name|InstructionHandle
 name|i
 parameter_list|)

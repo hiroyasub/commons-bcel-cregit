@@ -58,6 +58,7 @@ comment|/**      * @param opcode opcode of instruction      */
 specifier|protected
 name|ConversionInstruction
 parameter_list|(
+specifier|final
 name|short
 name|opcode
 parameter_list|)
@@ -80,6 +81,7 @@ specifier|public
 name|Type
 name|getType
 parameter_list|(
+specifier|final
 name|ConstantPoolGen
 name|cp
 parameter_list|)

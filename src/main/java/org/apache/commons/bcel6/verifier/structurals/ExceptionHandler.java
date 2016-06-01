@@ -75,9 +75,11 @@ decl_stmt|;
 comment|/** Leave instance creation to JustIce. */
 name|ExceptionHandler
 parameter_list|(
+specifier|final
 name|ObjectType
 name|catch_type
 parameter_list|,
+specifier|final
 name|InstructionHandle
 name|handler_pc
 parameter_list|)

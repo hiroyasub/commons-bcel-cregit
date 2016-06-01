@@ -106,9 +106,11 @@ specifier|public
 name|boolean
 name|equals
 parameter_list|(
+specifier|final
 name|Object
 name|o1
 parameter_list|,
+specifier|final
 name|Object
 name|o2
 parameter_list|)
@@ -150,6 +152,7 @@ specifier|public
 name|int
 name|hashCode
 parameter_list|(
+specifier|final
 name|Object
 name|o
 parameter_list|)
@@ -189,6 +192,7 @@ decl_stmt|;
 comment|// TODO should be private& final
 name|Constant
 parameter_list|(
+specifier|final
 name|byte
 name|tag
 parameter_list|)
@@ -325,6 +329,7 @@ specifier|static
 name|Constant
 name|readConstant
 parameter_list|(
+specifier|final
 name|DataInput
 name|input
 parameter_list|)
@@ -545,6 +550,7 @@ specifier|static
 name|void
 name|setComparator
 parameter_list|(
+specifier|final
 name|BCELComparator
 name|comparator
 parameter_list|)
@@ -561,6 +567,7 @@ specifier|public
 name|boolean
 name|equals
 parameter_list|(
+specifier|final
 name|Object
 name|obj
 parameter_list|)

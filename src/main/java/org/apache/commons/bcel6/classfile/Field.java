@@ -110,9 +110,11 @@ specifier|public
 name|boolean
 name|equals
 parameter_list|(
+specifier|final
 name|Object
 name|o1
 parameter_list|,
+specifier|final
 name|Object
 name|o2
 parameter_list|)
@@ -167,6 +169,7 @@ specifier|public
 name|int
 name|hashCode
 parameter_list|(
+specifier|final
 name|Object
 name|o
 parameter_list|)
@@ -203,6 +206,7 @@ comment|/**      * Initialize from another object. Note that both objects use th
 specifier|public
 name|Field
 parameter_list|(
+specifier|final
 name|Field
 name|c
 parameter_list|)
@@ -216,9 +220,11 @@ block|}
 comment|/**      * Construct object from file stream.      * @param file Input stream      */
 name|Field
 parameter_list|(
+specifier|final
 name|DataInput
 name|file
 parameter_list|,
+specifier|final
 name|ConstantPool
 name|constant_pool
 parameter_list|)
@@ -239,19 +245,24 @@ comment|/**      * @param access_flags Access rights of field      * @param name
 specifier|public
 name|Field
 parameter_list|(
+specifier|final
 name|int
 name|access_flags
 parameter_list|,
+specifier|final
 name|int
 name|name_index
 parameter_list|,
+specifier|final
 name|int
 name|signature_index
 parameter_list|,
+specifier|final
 name|Attribute
 index|[]
 name|attributes
 parameter_list|,
+specifier|final
 name|ConstantPool
 name|constant_pool
 parameter_list|)
@@ -277,6 +288,7 @@ specifier|public
 name|void
 name|accept
 parameter_list|(
+specifier|final
 name|Visitor
 name|v
 parameter_list|)
@@ -506,6 +518,7 @@ specifier|final
 name|Field
 name|copy
 parameter_list|(
+specifier|final
 name|ConstantPool
 name|_constant_pool
 parameter_list|)
@@ -553,6 +566,7 @@ specifier|static
 name|void
 name|setComparator
 parameter_list|(
+specifier|final
 name|BCELComparator
 name|comparator
 parameter_list|)
@@ -569,6 +583,7 @@ specifier|public
 name|boolean
 name|equals
 parameter_list|(
+specifier|final
 name|Object
 name|obj
 parameter_list|)

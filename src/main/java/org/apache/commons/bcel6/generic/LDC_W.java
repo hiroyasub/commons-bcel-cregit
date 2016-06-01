@@ -62,6 +62,7 @@ block|}
 specifier|public
 name|LDC_W
 parameter_list|(
+specifier|final
 name|int
 name|index
 parameter_list|)
@@ -79,9 +80,11 @@ specifier|protected
 name|void
 name|initFromFile
 parameter_list|(
+specifier|final
 name|ByteSequence
 name|bytes
 parameter_list|,
+specifier|final
 name|boolean
 name|wide
 parameter_list|)

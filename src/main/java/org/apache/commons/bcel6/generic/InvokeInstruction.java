@@ -116,9 +116,11 @@ comment|/**      * @param index to constant pool      */
 specifier|protected
 name|InvokeInstruction
 parameter_list|(
+specifier|final
 name|short
 name|opcode
 parameter_list|,
+specifier|final
 name|int
 name|index
 parameter_list|)
@@ -138,6 +140,7 @@ specifier|public
 name|String
 name|toString
 parameter_list|(
+specifier|final
 name|ConstantPool
 name|cp
 parameter_list|)
@@ -207,6 +210,7 @@ specifier|public
 name|int
 name|consumeStack
 parameter_list|(
+specifier|final
 name|ConstantPoolGen
 name|cpg
 parameter_list|)
@@ -280,6 +284,7 @@ specifier|public
 name|int
 name|produceStack
 parameter_list|(
+specifier|final
 name|ConstantPoolGen
 name|cpg
 parameter_list|)
@@ -308,6 +313,7 @@ specifier|public
 name|Type
 name|getType
 parameter_list|(
+specifier|final
 name|ConstantPoolGen
 name|cpg
 parameter_list|)
@@ -324,6 +330,7 @@ specifier|public
 name|String
 name|getMethodName
 parameter_list|(
+specifier|final
 name|ConstantPoolGen
 name|cpg
 parameter_list|)
@@ -340,6 +347,7 @@ specifier|public
 name|Type
 name|getReturnType
 parameter_list|(
+specifier|final
 name|ConstantPoolGen
 name|cpg
 parameter_list|)
@@ -362,6 +370,7 @@ name|Type
 index|[]
 name|getArgumentTypes
 parameter_list|(
+specifier|final
 name|ConstantPoolGen
 name|cpg
 parameter_list|)
@@ -385,6 +394,7 @@ specifier|public
 name|String
 name|getClassName
 parameter_list|(
+specifier|final
 name|ConstantPoolGen
 name|cpg
 parameter_list|)

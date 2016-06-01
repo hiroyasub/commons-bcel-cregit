@@ -47,6 +47,7 @@ block|}
 specifier|public
 name|ClassGenException
 parameter_list|(
+specifier|final
 name|String
 name|s
 parameter_list|)
@@ -60,9 +61,11 @@ block|}
 specifier|public
 name|ClassGenException
 parameter_list|(
+specifier|final
 name|String
 name|s
 parameter_list|,
+specifier|final
 name|Throwable
 name|initCause
 parameter_list|)

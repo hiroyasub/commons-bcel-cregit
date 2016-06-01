@@ -99,6 +99,7 @@ comment|/**      * Initialize from another object.      */
 specifier|public
 name|CodeException
 parameter_list|(
+specifier|final
 name|CodeException
 name|c
 parameter_list|)
@@ -130,6 +131,7 @@ block|}
 comment|/**      * Construct object from file stream.      * @param file Input stream      * @throws IOException      */
 name|CodeException
 parameter_list|(
+specifier|final
 name|DataInput
 name|file
 parameter_list|)
@@ -164,15 +166,19 @@ comment|/**      * @param start_pc Range in the code the exception handler is ac
 specifier|public
 name|CodeException
 parameter_list|(
+specifier|final
 name|int
 name|start_pc
 parameter_list|,
+specifier|final
 name|int
 name|end_pc
 parameter_list|,
+specifier|final
 name|int
 name|handler_pc
 parameter_list|,
+specifier|final
 name|int
 name|catch_type
 parameter_list|)
@@ -209,6 +215,7 @@ specifier|public
 name|void
 name|accept
 parameter_list|(
+specifier|final
 name|Visitor
 name|v
 parameter_list|)
@@ -227,6 +234,7 @@ specifier|final
 name|void
 name|dump
 parameter_list|(
+specifier|final
 name|DataOutputStream
 name|file
 parameter_list|)
@@ -312,6 +320,7 @@ specifier|final
 name|void
 name|setCatchType
 parameter_list|(
+specifier|final
 name|int
 name|catch_type
 parameter_list|)
@@ -329,6 +338,7 @@ specifier|final
 name|void
 name|setEndPC
 parameter_list|(
+specifier|final
 name|int
 name|end_pc
 parameter_list|)
@@ -346,6 +356,7 @@ specifier|final
 name|void
 name|setHandlerPC
 parameter_list|(
+specifier|final
 name|int
 name|handler_pc
 parameter_list|)
@@ -364,6 +375,7 @@ specifier|final
 name|void
 name|setStartPC
 parameter_list|(
+specifier|final
 name|int
 name|start_pc
 parameter_list|)
@@ -411,9 +423,11 @@ specifier|final
 name|String
 name|toString
 parameter_list|(
+specifier|final
 name|ConstantPool
 name|cp
 parameter_list|,
+specifier|final
 name|boolean
 name|verbose
 parameter_list|)
@@ -489,6 +503,7 @@ specifier|final
 name|String
 name|toString
 parameter_list|(
+specifier|final
 name|ConstantPool
 name|cp
 parameter_list|)

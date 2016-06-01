@@ -95,6 +95,7 @@ comment|/**      * Initialize from another object.      */
 specifier|public
 name|InnerClass
 parameter_list|(
+specifier|final
 name|InnerClass
 name|c
 parameter_list|)
@@ -126,6 +127,7 @@ block|}
 comment|/**      * Construct object from file stream.      * @param file Input stream      * @throws IOException      */
 name|InnerClass
 parameter_list|(
+specifier|final
 name|DataInput
 name|file
 parameter_list|)
@@ -160,15 +162,19 @@ comment|/**      * @param inner_class_index Class index in constant pool of inne
 specifier|public
 name|InnerClass
 parameter_list|(
+specifier|final
 name|int
 name|inner_class_index
 parameter_list|,
+specifier|final
 name|int
 name|outer_class_index
 parameter_list|,
+specifier|final
 name|int
 name|inner_name_index
 parameter_list|,
+specifier|final
 name|int
 name|inner_access_flags
 parameter_list|)
@@ -205,6 +211,7 @@ specifier|public
 name|void
 name|accept
 parameter_list|(
+specifier|final
 name|Visitor
 name|v
 parameter_list|)
@@ -223,6 +230,7 @@ specifier|final
 name|void
 name|dump
 parameter_list|(
+specifier|final
 name|DataOutputStream
 name|file
 parameter_list|)
@@ -308,6 +316,7 @@ specifier|final
 name|void
 name|setInnerAccessFlags
 parameter_list|(
+specifier|final
 name|int
 name|inner_access_flags
 parameter_list|)
@@ -325,6 +334,7 @@ specifier|final
 name|void
 name|setInnerClassIndex
 parameter_list|(
+specifier|final
 name|int
 name|inner_class_index
 parameter_list|)
@@ -342,6 +352,7 @@ specifier|final
 name|void
 name|setInnerNameIndex
 parameter_list|(
+specifier|final
 name|int
 name|inner_name_index
 parameter_list|)
@@ -360,6 +371,7 @@ specifier|final
 name|void
 name|setOuterClassIndex
 parameter_list|(
+specifier|final
 name|int
 name|outer_class_index
 parameter_list|)
@@ -407,6 +419,7 @@ specifier|final
 name|String
 name|toString
 parameter_list|(
+specifier|final
 name|ConstantPool
 name|constant_pool
 parameter_list|)

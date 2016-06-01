@@ -73,14 +73,17 @@ comment|/**      * @param match sorted array of match values, match[0] must be l
 specifier|public
 name|TABLESWITCH
 parameter_list|(
+specifier|final
 name|int
 index|[]
 name|match
 parameter_list|,
+specifier|final
 name|InstructionHandle
 index|[]
 name|targets
 parameter_list|,
+specifier|final
 name|InstructionHandle
 name|defaultTarget
 parameter_list|)
@@ -143,6 +146,7 @@ specifier|public
 name|void
 name|dump
 parameter_list|(
+specifier|final
 name|DataOutputStream
 name|out
 parameter_list|)
@@ -259,9 +263,11 @@ specifier|protected
 name|void
 name|initFromFile
 parameter_list|(
+specifier|final
 name|ByteSequence
 name|bytes
 parameter_list|,
+specifier|final
 name|boolean
 name|wide
 parameter_list|)
@@ -425,6 +431,7 @@ specifier|public
 name|void
 name|accept
 parameter_list|(
+specifier|final
 name|Visitor
 name|v
 parameter_list|)

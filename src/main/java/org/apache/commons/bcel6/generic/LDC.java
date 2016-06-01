@@ -90,6 +90,7 @@ block|}
 specifier|public
 name|LDC
 parameter_list|(
+specifier|final
 name|int
 name|index
 parameter_list|)
@@ -203,6 +204,7 @@ specifier|public
 name|void
 name|dump
 parameter_list|(
+specifier|final
 name|DataOutputStream
 name|out
 parameter_list|)
@@ -263,6 +265,7 @@ specifier|final
 name|void
 name|setIndex
 parameter_list|(
+specifier|final
 name|int
 name|index
 parameter_list|)
@@ -285,9 +288,11 @@ specifier|protected
 name|void
 name|initFromFile
 parameter_list|(
+specifier|final
 name|ByteSequence
 name|bytes
 parameter_list|,
+specifier|final
 name|boolean
 name|wide
 parameter_list|)
@@ -316,6 +321,7 @@ specifier|public
 name|Object
 name|getValue
 parameter_list|(
+specifier|final
 name|ConstantPoolGen
 name|cpg
 parameter_list|)
@@ -595,6 +601,7 @@ specifier|public
 name|Type
 name|getType
 parameter_list|(
+specifier|final
 name|ConstantPoolGen
 name|cpg
 parameter_list|)
@@ -737,6 +744,7 @@ specifier|public
 name|void
 name|accept
 parameter_list|(
+specifier|final
 name|Visitor
 name|v
 parameter_list|)

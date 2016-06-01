@@ -223,6 +223,7 @@ specifier|private
 name|void
 name|testJar
 parameter_list|(
+specifier|final
 name|File
 name|file
 parameter_list|)
@@ -354,9 +355,11 @@ specifier|private
 name|void
 name|compare
 parameter_list|(
+specifier|final
 name|String
 name|name
 parameter_list|,
+specifier|final
 name|Method
 name|m
 parameter_list|)
@@ -558,6 +561,7 @@ specifier|public
 name|boolean
 name|accept
 parameter_list|(
+specifier|final
 name|File
 name|file
 parameter_list|)
@@ -595,6 +599,7 @@ specifier|static
 name|String
 name|bytesToHex
 parameter_list|(
+specifier|final
 name|byte
 index|[]
 name|bytes

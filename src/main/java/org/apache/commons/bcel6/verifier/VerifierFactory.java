@@ -110,6 +110,7 @@ specifier|static
 name|Verifier
 name|getVerifier
 parameter_list|(
+specifier|final
 name|String
 name|fully_qualified_classname
 parameter_list|)
@@ -164,6 +165,7 @@ specifier|static
 name|void
 name|notify
 parameter_list|(
+specifier|final
 name|String
 name|fully_qualified_classname
 parameter_list|)
@@ -229,6 +231,7 @@ specifier|static
 name|void
 name|attach
 parameter_list|(
+specifier|final
 name|VerifierFactoryObserver
 name|o
 parameter_list|)
@@ -247,6 +250,7 @@ specifier|static
 name|void
 name|detach
 parameter_list|(
+specifier|final
 name|VerifierFactoryObserver
 name|o
 parameter_list|)

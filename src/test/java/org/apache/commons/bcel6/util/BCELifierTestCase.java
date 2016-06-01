@@ -191,6 +191,7 @@ specifier|private
 name|void
 name|testClassOnPath
 parameter_list|(
+specifier|final
 name|String
 name|javaClass
 parameter_list|)
@@ -381,9 +382,11 @@ specifier|private
 name|String
 name|exec
 parameter_list|(
+specifier|final
 name|File
 name|workDir
 parameter_list|,
+specifier|final
 name|String
 modifier|...
 name|args

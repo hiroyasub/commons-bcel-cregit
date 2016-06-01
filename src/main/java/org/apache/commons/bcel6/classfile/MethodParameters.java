@@ -85,15 +85,19 @@ index|]
 decl_stmt|;
 name|MethodParameters
 parameter_list|(
+specifier|final
 name|int
 name|name_index
 parameter_list|,
+specifier|final
 name|int
 name|length
 parameter_list|,
+specifier|final
 name|DataInput
 name|input
 parameter_list|,
+specifier|final
 name|ConstantPool
 name|constant_pool
 parameter_list|)
@@ -171,6 +175,7 @@ specifier|public
 name|void
 name|setParameters
 parameter_list|(
+specifier|final
 name|MethodParameter
 index|[]
 name|parameters
@@ -189,6 +194,7 @@ specifier|public
 name|void
 name|accept
 parameter_list|(
+specifier|final
 name|Visitor
 name|v
 parameter_list|)
@@ -207,6 +213,7 @@ specifier|public
 name|Attribute
 name|copy
 parameter_list|(
+specifier|final
 name|ConstantPool
 name|_constant_pool
 parameter_list|)
@@ -283,6 +290,7 @@ specifier|public
 name|void
 name|dump
 parameter_list|(
+specifier|final
 name|DataOutputStream
 name|file
 parameter_list|)

@@ -106,9 +106,11 @@ decl_stmt|;
 specifier|protected
 name|ClassElementValueGen
 parameter_list|(
+specifier|final
 name|int
 name|typeIdx
 parameter_list|,
+specifier|final
 name|ConstantPoolGen
 name|cpool
 parameter_list|)
@@ -132,9 +134,11 @@ block|}
 specifier|public
 name|ClassElementValueGen
 parameter_list|(
+specifier|final
 name|ObjectType
 name|t
 parameter_list|,
+specifier|final
 name|ConstantPoolGen
 name|cpool
 parameter_list|)
@@ -192,12 +196,15 @@ block|}
 specifier|public
 name|ClassElementValueGen
 parameter_list|(
+specifier|final
 name|ClassElementValue
 name|value
 parameter_list|,
+specifier|final
 name|ConstantPoolGen
 name|cpool
 parameter_list|,
+specifier|final
 name|boolean
 name|copyPoolEntries
 parameter_list|)
@@ -296,6 +303,7 @@ specifier|public
 name|void
 name|dump
 parameter_list|(
+specifier|final
 name|DataOutputStream
 name|dos
 parameter_list|)

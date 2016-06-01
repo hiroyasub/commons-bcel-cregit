@@ -91,6 +91,7 @@ specifier|public
 name|boolean
 name|add
 parameter_list|(
+specifier|final
 name|JavaClass
 name|clazz
 parameter_list|)
@@ -139,6 +140,7 @@ specifier|public
 name|void
 name|remove
 parameter_list|(
+specifier|final
 name|JavaClass
 name|clazz
 parameter_list|)

@@ -162,6 +162,7 @@ comment|/**      * Initialize from another object. Note that both objects use th
 specifier|public
 name|Unknown
 parameter_list|(
+specifier|final
 name|Unknown
 name|c
 parameter_list|)
@@ -194,16 +195,20 @@ comment|/**      * Create a non-standard attribute.      *      * @param name_in
 specifier|public
 name|Unknown
 parameter_list|(
+specifier|final
 name|int
 name|name_index
 parameter_list|,
+specifier|final
 name|int
 name|length
 parameter_list|,
+specifier|final
 name|byte
 index|[]
 name|bytes
 parameter_list|,
+specifier|final
 name|ConstantPool
 name|constant_pool
 parameter_list|)
@@ -261,15 +266,19 @@ block|}
 comment|/**      * Construct object from input stream.      *       * @param name_index Index in constant pool      * @param length Content length in bytes      * @param input Input stream      * @param constant_pool Array of constants      * @throws IOException      */
 name|Unknown
 parameter_list|(
+specifier|final
 name|int
 name|name_index
 parameter_list|,
+specifier|final
 name|int
 name|length
 parameter_list|,
+specifier|final
 name|DataInput
 name|input
 parameter_list|,
+specifier|final
 name|ConstantPool
 name|constant_pool
 parameter_list|)
@@ -322,6 +331,7 @@ specifier|public
 name|void
 name|accept
 parameter_list|(
+specifier|final
 name|Visitor
 name|v
 parameter_list|)
@@ -342,6 +352,7 @@ specifier|final
 name|void
 name|dump
 parameter_list|(
+specifier|final
 name|DataOutputStream
 name|file
 parameter_list|)
@@ -412,6 +423,7 @@ specifier|final
 name|void
 name|setBytes
 parameter_list|(
+specifier|final
 name|byte
 index|[]
 name|bytes
@@ -536,6 +548,7 @@ specifier|public
 name|Attribute
 name|copy
 parameter_list|(
+specifier|final
 name|ConstantPool
 name|_constant_pool
 parameter_list|)

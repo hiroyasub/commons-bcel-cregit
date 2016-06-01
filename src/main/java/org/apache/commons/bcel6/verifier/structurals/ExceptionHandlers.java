@@ -134,6 +134,7 @@ comment|/**      * Constructor. Creates a new ExceptionHandlers instance.      *
 specifier|public
 name|ExceptionHandlers
 parameter_list|(
+specifier|final
 name|MethodGen
 name|mg
 parameter_list|)
@@ -262,6 +263,7 @@ name|ExceptionHandler
 index|[]
 name|getExceptionHandlers
 parameter_list|(
+specifier|final
 name|InstructionHandle
 name|ih
 parameter_list|)

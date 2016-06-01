@@ -38,6 +38,7 @@ comment|/**      * @param opcode instruction opcode      */
 specifier|protected
 name|StackInstruction
 parameter_list|(
+specifier|final
 name|short
 name|opcode
 parameter_list|)
@@ -58,6 +59,7 @@ specifier|public
 name|Type
 name|getType
 parameter_list|(
+specifier|final
 name|ConstantPoolGen
 name|cp
 parameter_list|)

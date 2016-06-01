@@ -84,6 +84,7 @@ comment|/**      * Initialize from another object.      */
 specifier|public
 name|ConstantString
 parameter_list|(
+specifier|final
 name|ConstantString
 name|c
 parameter_list|)
@@ -100,6 +101,7 @@ block|}
 comment|/**       * Initialize instance from file data.      *      * @param file Input stream      * @throws IOException      */
 name|ConstantString
 parameter_list|(
+specifier|final
 name|DataInput
 name|file
 parameter_list|)
@@ -119,6 +121,7 @@ comment|/**      * @param string_index Index of Constant_Utf8 in constant pool  
 specifier|public
 name|ConstantString
 parameter_list|(
+specifier|final
 name|int
 name|string_index
 parameter_list|)
@@ -144,6 +147,7 @@ specifier|public
 name|void
 name|accept
 parameter_list|(
+specifier|final
 name|Visitor
 name|v
 parameter_list|)
@@ -164,6 +168,7 @@ specifier|final
 name|void
 name|dump
 parameter_list|(
+specifier|final
 name|DataOutputStream
 name|file
 parameter_list|)
@@ -205,6 +210,7 @@ specifier|final
 name|void
 name|setStringIndex
 parameter_list|(
+specifier|final
 name|int
 name|string_index
 parameter_list|)
@@ -245,6 +251,7 @@ specifier|public
 name|Object
 name|getConstantValue
 parameter_list|(
+specifier|final
 name|ConstantPool
 name|cp
 parameter_list|)
@@ -280,6 +287,7 @@ specifier|public
 name|String
 name|getBytes
 parameter_list|(
+specifier|final
 name|ConstantPool
 name|cp
 parameter_list|)

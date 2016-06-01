@@ -61,6 +61,7 @@ specifier|static
 name|String
 name|getStackTrace
 parameter_list|(
+specifier|final
 name|Throwable
 name|t
 parameter_list|)

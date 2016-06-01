@@ -84,6 +84,7 @@ block|}
 specifier|public
 name|INVOKEVIRTUAL
 parameter_list|(
+specifier|final
 name|int
 name|index
 parameter_list|)
@@ -105,6 +106,7 @@ specifier|public
 name|void
 name|dump
 parameter_list|(
+specifier|final
 name|DataOutputStream
 name|out
 parameter_list|)
@@ -179,6 +181,7 @@ specifier|public
 name|void
 name|accept
 parameter_list|(
+specifier|final
 name|Visitor
 name|v
 parameter_list|)

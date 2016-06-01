@@ -51,6 +51,7 @@ block|}
 comment|/**      * Constructs a new CodeConstraintException with the specified error message.      */
 name|CodeConstraintException
 parameter_list|(
+specifier|final
 name|String
 name|message
 parameter_list|)

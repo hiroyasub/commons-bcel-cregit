@@ -2287,6 +2287,7 @@ specifier|static
 name|Instruction
 name|getInstruction
 parameter_list|(
+specifier|final
 name|int
 name|index
 parameter_list|)

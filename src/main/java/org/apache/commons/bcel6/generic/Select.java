@@ -133,17 +133,21 @@ block|}
 comment|/**      * (Match, target) pairs for switch.      * `Match' and `targets' must have the same length of course.      *      * @param match array of matching values      * @param targets instruction targets      * @param defaultTarget default instruction target      */
 name|Select
 parameter_list|(
+specifier|final
 name|short
 name|opcode
 parameter_list|,
+specifier|final
 name|int
 index|[]
 name|match
 parameter_list|,
+specifier|final
 name|InstructionHandle
 index|[]
 name|targets
 parameter_list|,
+specifier|final
 name|InstructionHandle
 name|defaultTarget
 parameter_list|)
@@ -241,9 +245,11 @@ specifier|protected
 name|int
 name|updatePosition
 parameter_list|(
+specifier|final
 name|int
 name|offset
 parameter_list|,
+specifier|final
 name|int
 name|max_offset
 parameter_list|)
@@ -319,6 +325,7 @@ specifier|public
 name|void
 name|dump
 parameter_list|(
+specifier|final
 name|DataOutputStream
 name|out
 parameter_list|)
@@ -385,9 +392,11 @@ specifier|protected
 name|void
 name|initFromFile
 parameter_list|(
+specifier|final
 name|ByteSequence
 name|bytes
 parameter_list|,
+specifier|final
 name|boolean
 name|wide
 parameter_list|)
@@ -452,6 +461,7 @@ specifier|public
 name|String
 name|toString
 parameter_list|(
+specifier|final
 name|boolean
 name|verbose
 parameter_list|)
@@ -586,9 +596,11 @@ specifier|public
 name|void
 name|setTarget
 parameter_list|(
+specifier|final
 name|int
 name|i
 parameter_list|,
+specifier|final
 name|InstructionHandle
 name|target
 parameter_list|)
@@ -621,9 +633,11 @@ specifier|public
 name|void
 name|updateTarget
 parameter_list|(
+specifier|final
 name|InstructionHandle
 name|old_ih
 parameter_list|,
+specifier|final
 name|InstructionHandle
 name|new_ih
 parameter_list|)
@@ -717,6 +731,7 @@ specifier|public
 name|boolean
 name|containsTarget
 parameter_list|(
+specifier|final
 name|InstructionHandle
 name|ih
 parameter_list|)
@@ -877,6 +892,7 @@ specifier|final
 name|int
 name|getMatch
 parameter_list|(
+specifier|final
 name|int
 name|index
 parameter_list|)
@@ -893,6 +909,7 @@ specifier|final
 name|int
 name|getIndices
 parameter_list|(
+specifier|final
 name|int
 name|index
 parameter_list|)
@@ -909,6 +926,7 @@ specifier|final
 name|InstructionHandle
 name|getTarget
 parameter_list|(
+specifier|final
 name|int
 name|index
 parameter_list|)
@@ -935,6 +953,7 @@ specifier|final
 name|void
 name|setFixed_length
 parameter_list|(
+specifier|final
 name|int
 name|fixed_length
 parameter_list|)
@@ -961,6 +980,7 @@ specifier|final
 name|int
 name|setMatch_length
 parameter_list|(
+specifier|final
 name|int
 name|match_length
 parameter_list|)
@@ -980,9 +1000,11 @@ specifier|final
 name|void
 name|setMatch
 parameter_list|(
+specifier|final
 name|int
 name|index
 parameter_list|,
+specifier|final
 name|int
 name|value
 parameter_list|)
@@ -1000,6 +1022,7 @@ specifier|final
 name|void
 name|setIndices
 parameter_list|(
+specifier|final
 name|int
 index|[]
 name|array
@@ -1015,6 +1038,7 @@ specifier|final
 name|void
 name|setMatches
 parameter_list|(
+specifier|final
 name|int
 index|[]
 name|array
@@ -1030,6 +1054,7 @@ specifier|final
 name|void
 name|setTargets
 parameter_list|(
+specifier|final
 name|InstructionHandle
 index|[]
 name|array
@@ -1055,9 +1080,11 @@ specifier|final
 name|int
 name|setIndices
 parameter_list|(
+specifier|final
 name|int
 name|i
 parameter_list|,
+specifier|final
 name|int
 name|value
 parameter_list|)

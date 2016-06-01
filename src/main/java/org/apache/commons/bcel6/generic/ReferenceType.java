@@ -76,9 +76,11 @@ block|{
 specifier|protected
 name|ReferenceType
 parameter_list|(
+specifier|final
 name|byte
 name|t
 parameter_list|,
+specifier|final
 name|String
 name|s
 parameter_list|)
@@ -110,6 +112,7 @@ specifier|public
 name|boolean
 name|isCastableTo
 parameter_list|(
+specifier|final
 name|Type
 name|t
 parameter_list|)
@@ -148,6 +151,7 @@ specifier|public
 name|boolean
 name|isAssignmentCompatibleWith
 parameter_list|(
+specifier|final
 name|Type
 name|t
 parameter_list|)
@@ -674,6 +678,7 @@ specifier|public
 name|ReferenceType
 name|getFirstCommonSuperclass
 parameter_list|(
+specifier|final
 name|ReferenceType
 name|t
 parameter_list|)
@@ -1100,6 +1105,7 @@ specifier|public
 name|ReferenceType
 name|firstCommonSuperclass
 parameter_list|(
+specifier|final
 name|ReferenceType
 name|t
 parameter_list|)

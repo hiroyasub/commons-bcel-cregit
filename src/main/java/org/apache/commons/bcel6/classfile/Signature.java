@@ -91,6 +91,7 @@ comment|/**      * Initialize from another object. Note that both objects use th
 specifier|public
 name|Signature
 parameter_list|(
+specifier|final
 name|Signature
 name|c
 parameter_list|)
@@ -122,15 +123,19 @@ block|}
 comment|/**      * Construct object from file stream.      * @param name_index Index in constant pool to CONSTANT_Utf8      * @param length Content length in bytes      * @param input Input stream      * @param constant_pool Array of constants      * @throws IOException      */
 name|Signature
 parameter_list|(
+specifier|final
 name|int
 name|name_index
 parameter_list|,
+specifier|final
 name|int
 name|length
 parameter_list|,
+specifier|final
 name|DataInput
 name|input
 parameter_list|,
+specifier|final
 name|ConstantPool
 name|constant_pool
 parameter_list|)
@@ -156,15 +161,19 @@ comment|/**      * @param name_index Index in constant pool to CONSTANT_Utf8    
 specifier|public
 name|Signature
 parameter_list|(
+specifier|final
 name|int
 name|name_index
 parameter_list|,
+specifier|final
 name|int
 name|length
 parameter_list|,
+specifier|final
 name|int
 name|signature_index
 parameter_list|,
+specifier|final
 name|ConstantPool
 name|constant_pool
 parameter_list|)
@@ -196,6 +205,7 @@ specifier|public
 name|void
 name|accept
 parameter_list|(
+specifier|final
 name|Visitor
 name|v
 parameter_list|)
@@ -217,6 +227,7 @@ specifier|final
 name|void
 name|dump
 parameter_list|(
+specifier|final
 name|DataOutputStream
 name|file
 parameter_list|)
@@ -255,6 +266,7 @@ specifier|final
 name|void
 name|setSignatureIndex
 parameter_list|(
+specifier|final
 name|int
 name|signature_index
 parameter_list|)
@@ -311,6 +323,7 @@ name|ByteArrayInputStream
 block|{
 name|MyByteArrayInputStream
 parameter_list|(
+specifier|final
 name|String
 name|data
 parameter_list|)
@@ -360,6 +373,7 @@ specifier|static
 name|boolean
 name|identStart
 parameter_list|(
+specifier|final
 name|int
 name|ch
 parameter_list|)
@@ -379,9 +393,11 @@ specifier|static
 name|void
 name|matchIdent
 parameter_list|(
+specifier|final
 name|MyByteArrayInputStream
 name|in
 parameter_list|,
+specifier|final
 name|StringBuilder
 name|buf
 parameter_list|)
@@ -641,9 +657,11 @@ specifier|static
 name|void
 name|matchGJIdent
 parameter_list|(
+specifier|final
 name|MyByteArrayInputStream
 name|in
 parameter_list|,
+specifier|final
 name|StringBuilder
 name|buf
 parameter_list|)
@@ -860,6 +878,7 @@ specifier|static
 name|String
 name|translate
 parameter_list|(
+specifier|final
 name|String
 name|s
 parameter_list|)
@@ -896,6 +915,7 @@ specifier|static
 name|boolean
 name|isFormalParameterList
 parameter_list|(
+specifier|final
 name|String
 name|s
 parameter_list|)
@@ -926,6 +946,7 @@ specifier|static
 name|boolean
 name|isActualParameterList
 parameter_list|(
+specifier|final
 name|String
 name|s
 parameter_list|)
@@ -974,6 +995,7 @@ specifier|public
 name|Attribute
 name|copy
 parameter_list|(
+specifier|final
 name|ConstantPool
 name|_constant_pool
 parameter_list|)

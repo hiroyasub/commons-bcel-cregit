@@ -100,9 +100,11 @@ comment|/** Common super constructor      * @param opcode Instruction opcode    
 specifier|protected
 name|BranchInstruction
 parameter_list|(
+specifier|final
 name|short
 name|opcode
 parameter_list|,
+specifier|final
 name|InstructionHandle
 name|target
 parameter_list|)
@@ -130,6 +132,7 @@ specifier|public
 name|void
 name|dump
 parameter_list|(
+specifier|final
 name|DataOutputStream
 name|out
 parameter_list|)
@@ -184,6 +187,7 @@ specifier|protected
 name|int
 name|getTargetOffset
 parameter_list|(
+specifier|final
 name|InstructionHandle
 name|_target
 parameter_list|)
@@ -274,9 +278,11 @@ specifier|protected
 name|int
 name|updatePosition
 parameter_list|(
+specifier|final
 name|int
 name|offset
 parameter_list|,
+specifier|final
 name|int
 name|max_offset
 parameter_list|)
@@ -296,6 +302,7 @@ specifier|public
 name|String
 name|toString
 parameter_list|(
+specifier|final
 name|boolean
 name|verbose
 parameter_list|)
@@ -415,9 +422,11 @@ specifier|protected
 name|void
 name|initFromFile
 parameter_list|(
+specifier|final
 name|ByteSequence
 name|bytes
 parameter_list|,
+specifier|final
 name|boolean
 name|wide
 parameter_list|)
@@ -465,6 +474,7 @@ specifier|public
 name|void
 name|setTarget
 parameter_list|(
+specifier|final
 name|InstructionHandle
 name|target
 parameter_list|)
@@ -492,12 +502,15 @@ specifier|static
 name|void
 name|notifyTarget
 parameter_list|(
+specifier|final
 name|InstructionHandle
 name|old_ih
 parameter_list|,
+specifier|final
 name|InstructionHandle
 name|new_ih
 parameter_list|,
+specifier|final
 name|InstructionTargeter
 name|t
 parameter_list|)
@@ -540,9 +553,11 @@ specifier|public
 name|void
 name|updateTarget
 parameter_list|(
+specifier|final
 name|InstructionHandle
 name|old_ih
 parameter_list|,
+specifier|final
 name|InstructionHandle
 name|new_ih
 parameter_list|)
@@ -584,6 +599,7 @@ specifier|public
 name|boolean
 name|containsTarget
 parameter_list|(
+specifier|final
 name|InstructionHandle
 name|ih
 parameter_list|)
@@ -632,6 +648,7 @@ specifier|protected
 name|void
 name|setPosition
 parameter_list|(
+specifier|final
 name|int
 name|position
 parameter_list|)
@@ -648,6 +665,7 @@ specifier|protected
 name|void
 name|setIndex
 parameter_list|(
+specifier|final
 name|int
 name|index
 parameter_list|)

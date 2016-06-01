@@ -32,9 +32,11 @@ specifier|static
 name|void
 name|test1
 parameter_list|(
+specifier|final
 name|TestLegalInvokeSpecial02
 name|t
 parameter_list|,
+specifier|final
 name|int
 name|i
 parameter_list|)

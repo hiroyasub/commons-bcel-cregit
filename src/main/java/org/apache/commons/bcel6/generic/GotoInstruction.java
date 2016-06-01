@@ -33,9 +33,11 @@ name|UnconditionalBranch
 block|{
 name|GotoInstruction
 parameter_list|(
+specifier|final
 name|short
 name|opcode
 parameter_list|,
+specifier|final
 name|InstructionHandle
 name|target
 parameter_list|)

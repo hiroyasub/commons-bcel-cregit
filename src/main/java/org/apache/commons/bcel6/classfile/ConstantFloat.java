@@ -83,6 +83,7 @@ comment|/**       * @param bytes Data      */
 specifier|public
 name|ConstantFloat
 parameter_list|(
+specifier|final
 name|float
 name|bytes
 parameter_list|)
@@ -105,6 +106,7 @@ comment|/**      * Initialize from another object. Note that both objects use th
 specifier|public
 name|ConstantFloat
 parameter_list|(
+specifier|final
 name|ConstantFloat
 name|c
 parameter_list|)
@@ -121,6 +123,7 @@ block|}
 comment|/**       * Initialize instance from file data.      *      * @param file Input stream      * @throws IOException      */
 name|ConstantFloat
 parameter_list|(
+specifier|final
 name|DataInput
 name|file
 parameter_list|)
@@ -143,6 +146,7 @@ specifier|public
 name|void
 name|accept
 parameter_list|(
+specifier|final
 name|Visitor
 name|v
 parameter_list|)
@@ -163,6 +167,7 @@ specifier|final
 name|void
 name|dump
 parameter_list|(
+specifier|final
 name|DataOutputStream
 name|file
 parameter_list|)
@@ -204,6 +209,7 @@ specifier|final
 name|void
 name|setBytes
 parameter_list|(
+specifier|final
 name|float
 name|bytes
 parameter_list|)
@@ -244,6 +250,7 @@ specifier|public
 name|Object
 name|getConstantValue
 parameter_list|(
+specifier|final
 name|ConstantPool
 name|cp
 parameter_list|)

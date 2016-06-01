@@ -46,10 +46,12 @@ name|targets
 decl_stmt|;
 name|TargetLostException
 parameter_list|(
+specifier|final
 name|InstructionHandle
 index|[]
 name|t
 parameter_list|,
+specifier|final
 name|String
 name|mesg
 parameter_list|)
