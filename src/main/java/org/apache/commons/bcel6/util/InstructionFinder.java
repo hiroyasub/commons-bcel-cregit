@@ -1392,6 +1392,15 @@ operator|.
 name|FCONST_1
 argument_list|)
 block|,
+literal|'|'
+block|,
+name|makeChar
+argument_list|(
+name|Const
+operator|.
+name|FCONST_2
+argument_list|)
+block|,
 literal|')'
 block|}
 argument_list|)
