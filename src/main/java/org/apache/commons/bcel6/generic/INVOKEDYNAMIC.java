@@ -397,6 +397,8 @@ argument_list|)
 expr_stmt|;
 block|}
 comment|/**      * Override the parent method because our classname is held elsewhere.      */
+annotation|@
+name|Override
 specifier|public
 name|String
 name|getClassName
