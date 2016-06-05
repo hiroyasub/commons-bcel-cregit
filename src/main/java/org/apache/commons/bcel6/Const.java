@@ -36,7 +36,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Constants for the project, mostly defined in the JVM specification.  *  * @version $Id$  * @since 6.0 (intended to replace the Constant interface)  */
+comment|/**  * Constants for the project, mostly defined in the JVM specification.  *  * @version $Id$  * @since 6.0 (intended to replace the Constants interface)  */
 end_comment
 
 begin_class
