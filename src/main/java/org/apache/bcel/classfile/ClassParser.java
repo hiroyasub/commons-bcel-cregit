@@ -520,6 +520,18 @@ name|close
 argument_list|()
 expr_stmt|;
 block|}
+block|}
+catch|catch
+parameter_list|(
+name|IOException
+name|ioe
+parameter_list|)
+block|{
+comment|//ignore close exceptions
+block|}
+block|}
+try|try
+block|{
 if|if
 condition|(
 name|zip
@@ -541,7 +553,6 @@ name|ioe
 parameter_list|)
 block|{
 comment|//ignore close exceptions
-block|}
 block|}
 block|}
 comment|// Return the information we have gathered in a new object
