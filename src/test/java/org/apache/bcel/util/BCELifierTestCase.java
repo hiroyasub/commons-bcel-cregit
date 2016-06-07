@@ -163,13 +163,6 @@ block|}
 comment|/*      * Dump a class using "javap" and compare with the same class recreated      * using BCELifier, "javac", "java" and dumped with "javap"      * TODO: detect if JDK present and skip test if not       */
 annotation|@
 name|Test
-annotation|@
-name|org
-operator|.
-name|junit
-operator|.
-name|Ignore
-comment|// does not work properly on some systems. Also the output is rather different
 specifier|public
 name|void
 name|testJavapCompare
@@ -368,11 +361,66 @@ argument_list|)
 decl_stmt|;
 name|assertEquals
 argument_list|(
+name|canonHashRef
+argument_list|(
 name|initial
+argument_list|)
 argument_list|,
+name|canonHashRef
+argument_list|(
 name|output
 argument_list|)
+argument_list|)
 expr_stmt|;
+block|}
+comment|// Canonicalise the javap output so it compares better
+specifier|private
+name|String
+name|canonHashRef
+parameter_list|(
+name|String
+name|input
+parameter_list|)
+block|{
+name|input
+operator|=
+name|input
+operator|.
+name|replaceAll
+argument_list|(
+literal|"#\\d+"
+argument_list|,
+literal|"#n"
+argument_list|)
+expr_stmt|;
+comment|// numbers may vary in length
+name|input
+operator|=
+name|input
+operator|.
+name|replaceAll
+argument_list|(
+literal|" +"
+argument_list|,
+literal|" "
+argument_list|)
+expr_stmt|;
+comment|// collapse spaces
+name|input
+operator|=
+name|input
+operator|.
+name|replaceAll
+argument_list|(
+literal|"//.+"
+argument_list|,
+literal|""
+argument_list|)
+expr_stmt|;
+comment|// comments may vary
+return|return
+name|input
+return|;
 block|}
 specifier|private
 name|String
