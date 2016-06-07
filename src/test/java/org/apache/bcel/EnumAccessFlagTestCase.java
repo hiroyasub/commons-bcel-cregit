@@ -9,9 +9,7 @@ name|org
 operator|.
 name|apache
 operator|.
-name|commons
-operator|.
-name|bcel6
+name|bcel
 package|;
 end_package
 
@@ -21,9 +19,7 @@ name|org
 operator|.
 name|apache
 operator|.
-name|commons
-operator|.
-name|bcel6
+name|bcel
 operator|.
 name|classfile
 operator|.
@@ -34,14 +30,14 @@ end_import
 begin_class
 specifier|public
 class|class
-name|AnnotationAccessFlagTestCase
+name|EnumAccessFlagTestCase
 extends|extends
 name|AbstractTestCase
 block|{
-comment|/**      * If you write an annotation and compile it, the class file generated      * should be marked as an annotation type - which is detectable through      * BCEL.      */
+comment|/**      * An enumerated type, once compiled, should result in a class file that is      * marked such that we can determine from the access flags (through BCEL)      * that it was originally an enum type declaration.      */
 specifier|public
 name|void
-name|testAnnotationClassSaysItIs
+name|testEnumClassSaysItIs
 parameter_list|()
 throws|throws
 name|ClassNotFoundException
@@ -53,16 +49,16 @@ name|getTestClass
 argument_list|(
 name|PACKAGE_BASE_NAME
 operator|+
-literal|".data.SimpleAnnotation"
+literal|".data.SimpleEnum"
 argument_list|)
 decl_stmt|;
 name|assertTrue
 argument_list|(
-literal|"Expected SimpleAnnotation class to say it was an annotation - but it didn't !"
+literal|"Expected SimpleEnum class to say it was an enum - but it didn't !"
 argument_list|,
 name|clazz
 operator|.
-name|isAnnotation
+name|isEnum
 argument_list|()
 argument_list|)
 expr_stmt|;
@@ -77,12 +73,12 @@ argument_list|)
 expr_stmt|;
 name|assertTrue
 argument_list|(
-literal|"Expected SimpleClass class to say it was not an annotation - but it didn't !"
+literal|"Expected SimpleClass class to say it was not an enum - but it didn't !"
 argument_list|,
 operator|!
 name|clazz
 operator|.
-name|isAnnotation
+name|isEnum
 argument_list|()
 argument_list|)
 expr_stmt|;

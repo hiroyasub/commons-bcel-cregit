@@ -9,9 +9,7 @@ name|org
 operator|.
 name|apache
 operator|.
-name|commons
-operator|.
-name|bcel6
+name|bcel
 package|;
 end_package
 
@@ -31,9 +29,7 @@ name|org
 operator|.
 name|apache
 operator|.
-name|commons
-operator|.
-name|bcel6
+name|bcel
 operator|.
 name|classfile
 operator|.
@@ -47,9 +43,7 @@ name|org
 operator|.
 name|apache
 operator|.
-name|commons
-operator|.
-name|bcel6
+name|bcel
 operator|.
 name|util
 operator|.
@@ -63,9 +57,7 @@ name|org
 operator|.
 name|apache
 operator|.
-name|commons
-operator|.
-name|bcel6
+name|bcel
 operator|.
 name|util
 operator|.
@@ -74,7 +66,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * The repository maintains informations about class interdependencies, e.g.,  * whether a class is a sub-class of another. Delegates actual class loading  * to SyntheticRepository with current class path by default.  *  * @see org.apache.commons.bcel6.util.Repository  * @see SyntheticRepository  *  * @version $Id$  */
+comment|/**  * The repository maintains informations about class interdependencies, e.g.,  * whether a class is a sub-class of another. Delegates actual class loading  * to SyntheticRepository with current class path by default.  *  * @see org.apache.bcel.util.Repository  * @see SyntheticRepository  *  * @version $Id$  */
 end_comment
 
 begin_class
@@ -89,9 +81,7 @@ name|org
 operator|.
 name|apache
 operator|.
-name|commons
-operator|.
-name|bcel6
+name|bcel
 operator|.
 name|util
 operator|.
@@ -110,9 +100,7 @@ name|org
 operator|.
 name|apache
 operator|.
-name|commons
-operator|.
-name|bcel6
+name|bcel
 operator|.
 name|util
 operator|.
@@ -135,9 +123,7 @@ name|org
 operator|.
 name|apache
 operator|.
-name|commons
-operator|.
-name|bcel6
+name|bcel
 operator|.
 name|util
 operator|.

@@ -9,9 +9,7 @@ name|org
 operator|.
 name|apache
 operator|.
-name|commons
-operator|.
-name|bcel6
+name|bcel
 package|;
 end_package
 
@@ -41,9 +39,7 @@ name|org
 operator|.
 name|apache
 operator|.
-name|commons
-operator|.
-name|bcel6
+name|bcel
 operator|.
 name|classfile
 operator|.
@@ -57,9 +53,7 @@ name|org
 operator|.
 name|apache
 operator|.
-name|commons
-operator|.
-name|bcel6
+name|bcel
 operator|.
 name|classfile
 operator|.
@@ -73,9 +67,7 @@ name|org
 operator|.
 name|apache
 operator|.
-name|commons
-operator|.
-name|bcel6
+name|bcel
 operator|.
 name|classfile
 operator|.
@@ -89,9 +81,7 @@ name|org
 operator|.
 name|apache
 operator|.
-name|commons
-operator|.
-name|bcel6
+name|bcel
 operator|.
 name|classfile
 operator|.
@@ -105,9 +95,7 @@ name|org
 operator|.
 name|apache
 operator|.
-name|commons
-operator|.
-name|bcel6
+name|bcel
 operator|.
 name|util
 operator|.

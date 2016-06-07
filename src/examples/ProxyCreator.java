@@ -33,9 +33,7 @@ name|org
 operator|.
 name|apache
 operator|.
-name|commons
-operator|.
-name|bcel6
+name|bcel
 operator|.
 name|Constants
 import|;
@@ -47,9 +45,7 @@ name|org
 operator|.
 name|apache
 operator|.
-name|commons
-operator|.
-name|bcel6
+name|bcel
 operator|.
 name|classfile
 operator|.
@@ -63,9 +59,7 @@ name|org
 operator|.
 name|apache
 operator|.
-name|commons
-operator|.
-name|bcel6
+name|bcel
 operator|.
 name|generic
 operator|.
@@ -79,9 +73,7 @@ name|org
 operator|.
 name|apache
 operator|.
-name|commons
-operator|.
-name|bcel6
+name|bcel
 operator|.
 name|generic
 operator|.
@@ -95,9 +87,7 @@ name|org
 operator|.
 name|apache
 operator|.
-name|commons
-operator|.
-name|bcel6
+name|bcel
 operator|.
 name|generic
 operator|.
@@ -111,9 +101,7 @@ name|org
 operator|.
 name|apache
 operator|.
-name|commons
-operator|.
-name|bcel6
+name|bcel
 operator|.
 name|generic
 operator|.
@@ -127,9 +115,7 @@ name|org
 operator|.
 name|apache
 operator|.
-name|commons
-operator|.
-name|bcel6
+name|bcel
 operator|.
 name|generic
 operator|.
@@ -143,9 +129,7 @@ name|org
 operator|.
 name|apache
 operator|.
-name|commons
-operator|.
-name|bcel6
+name|bcel
 operator|.
 name|generic
 operator|.
@@ -159,9 +143,7 @@ name|org
 operator|.
 name|apache
 operator|.
-name|commons
-operator|.
-name|bcel6
+name|bcel
 operator|.
 name|generic
 operator|.
@@ -175,9 +157,7 @@ name|org
 operator|.
 name|apache
 operator|.
-name|commons
-operator|.
-name|bcel6
+name|bcel
 operator|.
 name|generic
 operator|.
@@ -191,9 +171,7 @@ name|org
 operator|.
 name|apache
 operator|.
-name|commons
-operator|.
-name|bcel6
+name|bcel
 operator|.
 name|generic
 operator|.
@@ -207,9 +185,7 @@ name|org
 operator|.
 name|apache
 operator|.
-name|commons
-operator|.
-name|bcel6
+name|bcel
 operator|.
 name|generic
 operator|.
@@ -223,9 +199,7 @@ name|org
 operator|.
 name|apache
 operator|.
-name|commons
-operator|.
-name|bcel6
+name|bcel
 operator|.
 name|generic
 operator|.
@@ -239,9 +213,7 @@ name|org
 operator|.
 name|apache
 operator|.
-name|commons
-operator|.
-name|bcel6
+name|bcel
 operator|.
 name|generic
 operator|.
@@ -250,7 +222,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Dynamically creates and uses a proxy for {@code java.awt.event.ActionListener}  * via the classloader mechanism if called with  *<pre>java org.apache.commons.bcel6.util.JavaWrapper ProxyCreator</pre>  *  * The trick is to encode the byte code we need into the class name  * using the Utility.encode() method. This will result however in big  * ugly class name, so for many cases it will be more sufficient to  * put some clever creation code into the class loader.<br> This is  * comparable to the mechanism provided via  * {@code java.lang.reflect.Proxy}, but much more flexible.  *  * @version $Id$  * @see org.apache.commons.bcel6.util.JavaWrapper  * @see Utility  */
+comment|/**  * Dynamically creates and uses a proxy for {@code java.awt.event.ActionListener}  * via the classloader mechanism if called with  *<pre>java org.apache.bcel.util.JavaWrapper ProxyCreator</pre>  *  * The trick is to encode the byte code we need into the class name  * using the Utility.encode() method. This will result however in big  * ugly class name, so for many cases it will be more sufficient to  * put some clever creation code into the class loader.<br> This is  * comparable to the mechanism provided via  * {@code java.lang.reflect.Proxy}, but much more flexible.  *  * @version $Id$  * @see org.apache.bcel.util.JavaWrapper  * @see Utility  */
 end_comment
 
 begin_class
@@ -350,7 +322,7 @@ argument_list|()
 operator|.
 name|equals
 argument_list|(
-literal|"class org.apache.commons.bcel6.util.ClassLoader"
+literal|"class org.apache.bcel.util.ClassLoader"
 argument_list|)
 condition|)
 block|{
@@ -734,7 +706,7 @@ name|err
 operator|.
 name|println
 argument_list|(
-literal|"Call me with java org.apache.commons.bcel6.util.JavaWrapper ProxyCreator"
+literal|"Call me with java org.apache.bcel.util.JavaWrapper ProxyCreator"
 argument_list|)
 expr_stmt|;
 block|}
