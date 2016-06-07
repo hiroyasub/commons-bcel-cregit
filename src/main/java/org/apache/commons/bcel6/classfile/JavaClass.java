@@ -1091,7 +1091,7 @@ expr_stmt|;
 block|}
 block|}
 block|}
-comment|/**       * Dump class to a file named file_name.      *      * @param _file_name Output file name      * @exception IOException      */
+comment|/**       * Dump class to a file named file_name.      *      * @param _file_name Output file name      * @throws IOException      */
 specifier|public
 name|void
 name|dump
@@ -1186,7 +1186,7 @@ name|toByteArray
 argument_list|()
 return|;
 block|}
-comment|/**      * Dump Java class to output stream in binary format.      *      * @param file Output stream      * @exception IOException      */
+comment|/**      * Dump Java class to output stream in binary format.      *      * @param file Output stream      * @throws IOException      */
 specifier|public
 name|void
 name|dump
@@ -1208,7 +1208,7 @@ argument_list|)
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Dump Java class to output stream in binary format.      *      * @param file Output stream      * @exception IOException      */
+comment|/**      * Dump Java class to output stream in binary format.      *      * @param file Output stream      * @throws IOException      */
 specifier|public
 name|void
 name|dump
