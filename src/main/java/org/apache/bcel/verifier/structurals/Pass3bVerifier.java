@@ -9,9 +9,7 @@ name|org
 operator|.
 name|apache
 operator|.
-name|commons
-operator|.
-name|bcel6
+name|bcel
 operator|.
 name|verifier
 operator|.
@@ -85,9 +83,7 @@ name|org
 operator|.
 name|apache
 operator|.
-name|commons
-operator|.
-name|bcel6
+name|bcel
 operator|.
 name|Const
 import|;
@@ -99,9 +95,7 @@ name|org
 operator|.
 name|apache
 operator|.
-name|commons
-operator|.
-name|bcel6
+name|bcel
 operator|.
 name|Repository
 import|;
@@ -113,9 +107,7 @@ name|org
 operator|.
 name|apache
 operator|.
-name|commons
-operator|.
-name|bcel6
+name|bcel
 operator|.
 name|classfile
 operator|.
@@ -129,9 +121,7 @@ name|org
 operator|.
 name|apache
 operator|.
-name|commons
-operator|.
-name|bcel6
+name|bcel
 operator|.
 name|classfile
 operator|.
@@ -145,9 +135,7 @@ name|org
 operator|.
 name|apache
 operator|.
-name|commons
-operator|.
-name|bcel6
+name|bcel
 operator|.
 name|generic
 operator|.
@@ -161,9 +149,7 @@ name|org
 operator|.
 name|apache
 operator|.
-name|commons
-operator|.
-name|bcel6
+name|bcel
 operator|.
 name|generic
 operator|.
@@ -177,9 +163,7 @@ name|org
 operator|.
 name|apache
 operator|.
-name|commons
-operator|.
-name|bcel6
+name|bcel
 operator|.
 name|generic
 operator|.
@@ -193,9 +177,7 @@ name|org
 operator|.
 name|apache
 operator|.
-name|commons
-operator|.
-name|bcel6
+name|bcel
 operator|.
 name|generic
 operator|.
@@ -209,9 +191,7 @@ name|org
 operator|.
 name|apache
 operator|.
-name|commons
-operator|.
-name|bcel6
+name|bcel
 operator|.
 name|generic
 operator|.
@@ -225,9 +205,7 @@ name|org
 operator|.
 name|apache
 operator|.
-name|commons
-operator|.
-name|bcel6
+name|bcel
 operator|.
 name|generic
 operator|.
@@ -241,9 +219,7 @@ name|org
 operator|.
 name|apache
 operator|.
-name|commons
-operator|.
-name|bcel6
+name|bcel
 operator|.
 name|generic
 operator|.
@@ -257,9 +233,7 @@ name|org
 operator|.
 name|apache
 operator|.
-name|commons
-operator|.
-name|bcel6
+name|bcel
 operator|.
 name|generic
 operator|.
@@ -273,9 +247,7 @@ name|org
 operator|.
 name|apache
 operator|.
-name|commons
-operator|.
-name|bcel6
+name|bcel
 operator|.
 name|generic
 operator|.
@@ -289,9 +261,7 @@ name|org
 operator|.
 name|apache
 operator|.
-name|commons
-operator|.
-name|bcel6
+name|bcel
 operator|.
 name|generic
 operator|.
@@ -305,9 +275,7 @@ name|org
 operator|.
 name|apache
 operator|.
-name|commons
-operator|.
-name|bcel6
+name|bcel
 operator|.
 name|verifier
 operator|.
@@ -321,9 +289,7 @@ name|org
 operator|.
 name|apache
 operator|.
-name|commons
-operator|.
-name|bcel6
+name|bcel
 operator|.
 name|verifier
 operator|.
@@ -337,9 +303,7 @@ name|org
 operator|.
 name|apache
 operator|.
-name|commons
-operator|.
-name|bcel6
+name|bcel
 operator|.
 name|verifier
 operator|.
@@ -353,9 +317,7 @@ name|org
 operator|.
 name|apache
 operator|.
-name|commons
-operator|.
-name|bcel6
+name|bcel
 operator|.
 name|verifier
 operator|.
@@ -371,9 +333,7 @@ name|org
 operator|.
 name|apache
 operator|.
-name|commons
-operator|.
-name|bcel6
+name|bcel
 operator|.
 name|verifier
 operator|.
@@ -389,9 +349,7 @@ name|org
 operator|.
 name|apache
 operator|.
-name|commons
-operator|.
-name|bcel6
+name|bcel
 operator|.
 name|verifier
 operator|.
@@ -591,7 +549,7 @@ specifier|final
 name|int
 name|method_no
 decl_stmt|;
-comment|/**      * This class should only be instantiated by a Verifier.      *      * @see org.apache.commons.bcel6.verifier.Verifier      */
+comment|/**      * This class should only be instantiated by a Verifier.      *      * @see org.apache.bcel.verifier.Verifier      */
 specifier|public
 name|Pass3bVerifier
 parameter_list|(
@@ -1721,7 +1679,7 @@ argument_list|()
 argument_list|)
 throw|;
 block|}
-comment|/**      * Pass 3b implements the data flow analysis as described in the Java Virtual      * Machine Specification, Second Edition.       * Later versions will use LocalVariablesInfo objects to verify if the       * verifier-inferred types and the class file's debug information (LocalVariables       * attributes) match [TODO].       *       * @see org.apache.commons.bcel6.verifier.statics.LocalVariablesInfo       * @see org.apache.commons.bcel6.verifier.statics.Pass2Verifier#getLocalVariablesInfo(int)       */
+comment|/**      * Pass 3b implements the data flow analysis as described in the Java Virtual      * Machine Specification, Second Edition.       * Later versions will use LocalVariablesInfo objects to verify if the       * verifier-inferred types and the class file's debug information (LocalVariables       * attributes) match [TODO].       *       * @see org.apache.bcel.verifier.statics.LocalVariablesInfo       * @see org.apache.bcel.verifier.statics.Pass2Verifier#getLocalVariablesInfo(int)       */
 annotation|@
 name|Override
 specifier|public

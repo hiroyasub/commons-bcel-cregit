@@ -9,9 +9,7 @@ name|org
 operator|.
 name|apache
 operator|.
-name|commons
-operator|.
-name|bcel6
+name|bcel
 operator|.
 name|util
 package|;
@@ -63,9 +61,7 @@ name|org
 operator|.
 name|apache
 operator|.
-name|commons
-operator|.
-name|bcel6
+name|bcel
 operator|.
 name|classfile
 operator|.
@@ -79,9 +75,7 @@ name|org
 operator|.
 name|apache
 operator|.
-name|commons
-operator|.
-name|bcel6
+name|bcel
 operator|.
 name|classfile
 operator|.
@@ -90,7 +84,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * The repository maintains information about which classes have  * been loaded.  *  * It loads its data from the ClassLoader implementation  * passed into its constructor.  *  * @see org.apache.commons.bcel6.Repository  *  * @version $Id$  */
+comment|/**  * The repository maintains information about which classes have  * been loaded.  *  * It loads its data from the ClassLoader implementation  * passed into its constructor.  *  * @see org.apache.bcel.Repository  *  * @version $Id$  */
 end_comment
 
 begin_class

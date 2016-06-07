@@ -9,9 +9,7 @@ name|org
 operator|.
 name|apache
 operator|.
-name|commons
-operator|.
-name|bcel6
+name|bcel
 operator|.
 name|generic
 package|;
@@ -23,9 +21,7 @@ name|org
 operator|.
 name|apache
 operator|.
-name|commons
-operator|.
-name|bcel6
+name|bcel
 operator|.
 name|Const
 import|;
@@ -2417,7 +2413,7 @@ block|}
 name|String
 name|name
 init|=
-literal|"org.apache.commons.bcel6.generic."
+literal|"org.apache.bcel.generic."
 operator|+
 name|short_names
 index|[

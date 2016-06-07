@@ -9,9 +9,7 @@ name|org
 operator|.
 name|apache
 operator|.
-name|commons
-operator|.
-name|bcel6
+name|bcel
 operator|.
 name|verifier
 operator|.
@@ -25,9 +23,7 @@ name|org
 operator|.
 name|apache
 operator|.
-name|commons
-operator|.
-name|bcel6
+name|bcel
 operator|.
 name|generic
 operator|.
@@ -41,9 +37,7 @@ name|org
 operator|.
 name|apache
 operator|.
-name|commons
-operator|.
-name|bcel6
+name|bcel
 operator|.
 name|generic
 operator|.
@@ -57,9 +51,7 @@ name|org
 operator|.
 name|apache
 operator|.
-name|commons
-operator|.
-name|bcel6
+name|bcel
 operator|.
 name|verifier
 operator|.
@@ -75,9 +67,7 @@ name|org
 operator|.
 name|apache
 operator|.
-name|commons
-operator|.
-name|bcel6
+name|bcel
 operator|.
 name|verifier
 operator|.
@@ -774,7 +764,7 @@ argument_list|)
 operator|)
 condition|)
 block|{
-comment|/*TODO                 if ((locals[i] instanceof org.apache.commons.bcel6.generic.ReturnaddressType)&&                     (lv.locals[i] instanceof org.apache.commons.bcel6.generic.ReturnaddressType)){                     //System.err.println("merging "+locals[i]+" and "+lv.locals[i]);                     throw new AssertionViolatedException("Merging different ReturnAddresses: '"+locals[i]+"' and '"+lv.locals[i]+"'.");                 } */
+comment|/*TODO                 if ((locals[i] instanceof org.apache.bcel.generic.ReturnaddressType)&&                     (lv.locals[i] instanceof org.apache.bcel.generic.ReturnaddressType)){                     //System.err.println("merging "+locals[i]+" and "+lv.locals[i]);                     throw new AssertionViolatedException("Merging different ReturnAddresses: '"+locals[i]+"' and '"+lv.locals[i]+"'.");                 } */
 name|locals
 index|[
 name|i

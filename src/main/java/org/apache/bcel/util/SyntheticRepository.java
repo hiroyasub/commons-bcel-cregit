@@ -9,9 +9,7 @@ name|org
 operator|.
 name|apache
 operator|.
-name|commons
-operator|.
-name|bcel6
+name|bcel
 operator|.
 name|util
 package|;
@@ -38,7 +36,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * This repository is used in situations where a Class is created outside the realm of a ClassLoader. Classes are loaded from the file systems using the paths  * specified in the given class path. By default, this is the value returned by ClassPath.getClassPath().<br>  * This repository uses a factory design, allowing it to maintain a collection of different classpaths, and as such It is designed to be used as a singleton per  * classpath.  *  * @see org.apache.commons.bcel6.Repository  *  * @version $Id$  */
+comment|/**  * This repository is used in situations where a Class is created outside the realm of a ClassLoader. Classes are loaded from the file systems using the paths  * specified in the given class path. By default, this is the value returned by ClassPath.getClassPath().<br>  * This repository uses a factory design, allowing it to maintain a collection of different classpaths, and as such It is designed to be used as a singleton per  * classpath.  *  * @see org.apache.bcel.Repository  *  * @version $Id$  */
 end_comment
 
 begin_class
