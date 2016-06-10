@@ -45,8 +45,6 @@ class|class
 name|SyntheticRepository
 extends|extends
 name|MemorySensitiveClassPathRepository
-implements|implements
-name|Repository
 block|{
 comment|// private static final String DEFAULT_PATH = ClassPath.getClassPath();
 specifier|private
