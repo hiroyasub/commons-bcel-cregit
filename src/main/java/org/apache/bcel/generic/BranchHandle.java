@@ -27,6 +27,13 @@ name|BranchHandle
 extends|extends
 name|InstructionHandle
 block|{
+comment|// This is also a cache in case the InstructionHandle#swapInstruction() method is used
+comment|// See BCEL-273
+specifier|private
+name|BranchInstruction
+name|bi
+decl_stmt|;
+comment|// An alias in fact, but saves lots of casts
 specifier|private
 name|BranchHandle
 parameter_list|(
@@ -39,6 +46,10 @@ name|super
 argument_list|(
 name|i
 argument_list|)
+expr_stmt|;
+name|bi
+operator|=
+name|i
 expr_stmt|;
 block|}
 comment|/** Factory methods.      */
@@ -120,23 +131,6 @@ operator|=
 name|this
 expr_stmt|;
 block|}
-comment|// get the instruction as a BranchInstruction
-comment|// (do the cast once)
-specifier|private
-name|BranchInstruction
-name|getBI
-parameter_list|()
-block|{
-return|return
-operator|(
-name|BranchInstruction
-operator|)
-name|super
-operator|.
-name|getInstruction
-argument_list|()
-return|;
-block|}
 comment|/* Override InstructionHandle methods: delegate to branch instruction.      * Through this overriding all access to the private i_position field should      * be prevented.      */
 annotation|@
 name|Override
@@ -146,8 +140,7 @@ name|getPosition
 parameter_list|()
 block|{
 return|return
-name|getBI
-argument_list|()
+name|bi
 operator|.
 name|getPosition
 argument_list|()
@@ -164,8 +157,7 @@ name|pos
 parameter_list|)
 block|{
 comment|// Original code: i_position = bi.position = pos;
-name|getBI
-argument_list|()
+name|bi
 operator|.
 name|setPosition
 argument_list|(
@@ -198,8 +190,7 @@ block|{
 name|int
 name|x
 init|=
-name|getBI
-argument_list|()
+name|bi
 operator|.
 name|updatePosition
 argument_list|(
@@ -212,8 +203,7 @@ name|super
 operator|.
 name|setPosition
 argument_list|(
-name|getBI
-argument_list|()
+name|bi
 operator|.
 name|getPosition
 argument_list|()
@@ -233,8 +223,7 @@ name|InstructionHandle
 name|ih
 parameter_list|)
 block|{
-name|getBI
-argument_list|()
+name|bi
 operator|.
 name|setTarget
 argument_list|(
@@ -256,8 +245,7 @@ name|InstructionHandle
 name|new_ih
 parameter_list|)
 block|{
-name|getBI
-argument_list|()
+name|bi
 operator|.
 name|updateTarget
 argument_list|(
@@ -274,8 +262,7 @@ name|getTarget
 parameter_list|()
 block|{
 return|return
-name|getBI
-argument_list|()
+name|bi
 operator|.
 name|getTarget
 argument_list|()
@@ -324,6 +311,13 @@ literal|" to branch handle which is not a branch instruction"
 argument_list|)
 throw|;
 block|}
+name|bi
+operator|=
+operator|(
+name|BranchInstruction
+operator|)
+name|i
+expr_stmt|;
 block|}
 block|}
 end_class

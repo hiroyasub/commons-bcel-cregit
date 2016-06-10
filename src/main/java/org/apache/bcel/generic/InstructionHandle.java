@@ -233,7 +233,9 @@ operator|=
 name|i
 expr_stmt|;
 block|}
-comment|/**      * Temporarily swap the current instruction, without disturbing      * anything. Meant to be used by a debugger, implementing      * breakpoints. Current instruction is returned.      */
+comment|/**      * Temporarily swap the current instruction, without disturbing      * anything. Meant to be used by a debugger, implementing      * breakpoints. Current instruction is returned.      *<p>      * Warning: if this is used on a BranchHandle then some methods such as      * getPosition() will still refer to the original cached instruction, whereas      * other BH methods may affect the cache and the replacement instruction.      */
+comment|// See BCEL-273
+comment|// TODO remove this method in any redesign of BCEL
 specifier|public
 name|Instruction
 name|swapInstruction
