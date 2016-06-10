@@ -324,7 +324,13 @@ literal|"java"
 argument_list|,
 literal|"-cp"
 argument_list|,
-literal|".:classes"
+literal|"."
+operator|+
+name|File
+operator|.
+name|pathSeparator
+operator|+
+literal|"classes"
 argument_list|,
 name|outfile
 operator|.
