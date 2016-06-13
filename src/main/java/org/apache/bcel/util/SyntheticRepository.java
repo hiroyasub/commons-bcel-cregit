@@ -56,7 +56,7 @@ name|ClassPath
 argument_list|,
 name|SyntheticRepository
 argument_list|>
-name|_instances
+name|instances
 init|=
 operator|new
 name|HashMap
@@ -106,7 +106,7 @@ block|{
 name|SyntheticRepository
 name|rep
 init|=
-name|_instances
+name|instances
 operator|.
 name|get
 argument_list|(
@@ -128,7 +128,7 @@ argument_list|(
 name|classPath
 argument_list|)
 expr_stmt|;
-name|_instances
+name|instances
 operator|.
 name|put
 argument_list|(
