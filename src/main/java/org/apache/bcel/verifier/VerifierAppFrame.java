@@ -2219,10 +2219,8 @@ operator|||
 operator|(
 name|classname
 operator|.
-name|equals
-argument_list|(
-literal|""
-argument_list|)
+name|isEmpty
+argument_list|()
 operator|)
 condition|)
 block|{
