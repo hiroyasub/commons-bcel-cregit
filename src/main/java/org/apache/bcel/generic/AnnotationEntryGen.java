@@ -1046,6 +1046,8 @@ operator|new
 name|ByteArrayOutputStream
 argument_list|()
 decl_stmt|;
+try|try
+init|(
 name|DataOutputStream
 name|rvaDos
 init|=
@@ -1054,7 +1056,7 @@ name|DataOutputStream
 argument_list|(
 name|rvaBytes
 argument_list|)
-decl_stmt|;
+init|;
 name|DataOutputStream
 name|riaDos
 init|=
@@ -1063,7 +1065,8 @@ name|DataOutputStream
 argument_list|(
 name|riaBytes
 argument_list|)
-decl_stmt|;
+init|)
+block|{
 name|rvaDos
 operator|.
 name|writeShort
@@ -1114,16 +1117,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-name|rvaDos
-operator|.
-name|close
-argument_list|()
-expr_stmt|;
-name|riaDos
-operator|.
-name|close
-argument_list|()
-expr_stmt|;
+block|}
 name|byte
 index|[]
 name|rvaData
@@ -1459,6 +1453,8 @@ operator|new
 name|ByteArrayOutputStream
 argument_list|()
 decl_stmt|;
+try|try
+init|(
 name|DataOutputStream
 name|rvaDos
 init|=
@@ -1467,7 +1463,8 @@ name|DataOutputStream
 argument_list|(
 name|rvaBytes
 argument_list|)
-decl_stmt|;
+init|)
+block|{
 name|rvaDos
 operator|.
 name|writeByte
@@ -1545,11 +1542,7 @@ block|}
 block|}
 block|}
 block|}
-name|rvaDos
-operator|.
-name|close
-argument_list|()
-expr_stmt|;
+block|}
 comment|// Lets do the invisible ones
 name|ByteArrayOutputStream
 name|riaBytes
@@ -1558,6 +1551,8 @@ operator|new
 name|ByteArrayOutputStream
 argument_list|()
 decl_stmt|;
+try|try
+init|(
 name|DataOutputStream
 name|riaDos
 init|=
@@ -1566,7 +1561,8 @@ name|DataOutputStream
 argument_list|(
 name|riaBytes
 argument_list|)
-decl_stmt|;
+init|)
+block|{
 name|riaDos
 operator|.
 name|writeByte
@@ -1645,11 +1641,7 @@ block|}
 block|}
 block|}
 block|}
-name|riaDos
-operator|.
-name|close
-argument_list|()
-expr_stmt|;
+block|}
 name|byte
 index|[]
 name|rvaData

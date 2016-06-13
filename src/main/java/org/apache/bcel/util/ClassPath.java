@@ -1306,7 +1306,7 @@ init|=
 literal|null
 decl_stmt|;
 try|try
-block|{
+init|(
 name|InputStream
 name|is
 init|=
@@ -1316,7 +1316,8 @@ name|name
 argument_list|,
 name|suffix
 argument_list|)
-decl_stmt|;
+init|)
+block|{
 if|if
 condition|(
 name|is
