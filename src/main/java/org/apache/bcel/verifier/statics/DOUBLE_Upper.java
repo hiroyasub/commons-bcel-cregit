@@ -60,7 +60,7 @@ specifier|private
 specifier|static
 specifier|final
 name|DOUBLE_Upper
-name|singleInstance
+name|singleton
 init|=
 operator|new
 name|DOUBLE_Upper
@@ -89,7 +89,7 @@ name|theInstance
 parameter_list|()
 block|{
 return|return
-name|singleInstance
+name|singleton
 return|;
 block|}
 block|}
