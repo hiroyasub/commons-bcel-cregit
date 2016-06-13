@@ -523,6 +523,8 @@ literal|20
 argument_list|)
 decl_stmt|;
 comment|// Should be sufficient // CHECKSTYLE IGNORE MagicNumber
+try|try
+init|(
 name|ByteSequence
 name|stream
 init|=
@@ -531,8 +533,7 @@ name|ByteSequence
 argument_list|(
 name|code
 argument_list|)
-decl_stmt|;
-try|try
+init|)
 block|{
 for|for
 control|(
@@ -5738,6 +5739,8 @@ operator|new
 name|CharArrayWriter
 argument_list|()
 decl_stmt|;
+try|try
+init|(
 name|JavaWriter
 name|jw
 init|=
@@ -5746,7 +5749,8 @@ name|JavaWriter
 argument_list|(
 name|caw
 argument_list|)
-decl_stmt|;
+init|)
+block|{
 for|for
 control|(
 name|byte
@@ -5771,11 +5775,7 @@ name|in
 argument_list|)
 expr_stmt|;
 block|}
-name|jw
-operator|.
-name|close
-argument_list|()
-expr_stmt|;
+block|}
 return|return
 name|caw
 operator|.

@@ -3424,6 +3424,8 @@ block|{
 comment|// No code, an abstract method, e.g.
 comment|//System.out.println(name + "\n" + Utility.codeToString(code, constant_pool, 0, -1));
 comment|// Print the byte code
+try|try
+init|(
 name|ByteSequence
 name|stream
 init|=
@@ -3432,7 +3434,8 @@ name|ByteSequence
 argument_list|(
 name|code
 argument_list|)
-decl_stmt|;
+init|)
+block|{
 name|stream
 operator|.
 name|mark
@@ -3499,7 +3502,7 @@ name|anchor
 init|=
 literal|""
 decl_stmt|;
-comment|/* Set an anchor mark if this line is targetted by a goto, jsr, etc.                  * Defining an anchor for every line is very inefficient!                  */
+comment|/*                      * Set an anchor mark if this line is targetted by a goto, jsr, etc. Defining an anchor for every                      * line is very inefficient!                      */
 if|if
 condition|(
 name|goto_set
@@ -3583,6 +3586,7 @@ operator|+
 literal|"</TR>"
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 comment|// Mark last line, may be targetted from Attributes window
 name|file
