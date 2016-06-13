@@ -312,7 +312,7 @@ name|List
 argument_list|<
 name|PathEntry
 argument_list|>
-name|vec
+name|list
 init|=
 operator|new
 name|ArrayList
@@ -387,7 +387,7 @@ name|isDirectory
 argument_list|()
 condition|)
 block|{
-name|vec
+name|list
 operator|.
 name|add
 argument_list|(
@@ -401,7 +401,7 @@ expr_stmt|;
 block|}
 else|else
 block|{
-name|vec
+name|list
 operator|.
 name|add
 argument_list|(
@@ -466,13 +466,13 @@ operator|=
 operator|new
 name|PathEntry
 index|[
-name|vec
+name|list
 operator|.
 name|size
 argument_list|()
 index|]
 expr_stmt|;
-name|vec
+name|list
 operator|.
 name|toArray
 argument_list|(
