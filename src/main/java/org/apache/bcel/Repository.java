@@ -86,7 +86,7 @@ operator|.
 name|util
 operator|.
 name|Repository
-name|_repository
+name|repository
 init|=
 name|SyntheticRepository
 operator|.
@@ -109,7 +109,7 @@ name|getRepository
 parameter_list|()
 block|{
 return|return
-name|_repository
+name|repository
 return|;
 block|}
 comment|/** Set repository instance to be used for class loading      */
@@ -131,7 +131,7 @@ name|Repository
 name|rep
 parameter_list|)
 block|{
-name|_repository
+name|repository
 operator|=
 name|rep
 expr_stmt|;
@@ -150,7 +150,7 @@ throws|throws
 name|ClassNotFoundException
 block|{
 return|return
-name|_repository
+name|repository
 operator|.
 name|loadClass
 argument_list|(
@@ -175,7 +175,7 @@ throws|throws
 name|ClassNotFoundException
 block|{
 return|return
-name|_repository
+name|repository
 operator|.
 name|loadClass
 argument_list|(
@@ -201,7 +201,7 @@ block|{
 name|ClassPath
 name|path
 init|=
-name|_repository
+name|repository
 operator|.
 name|getClassPath
 argument_list|()
@@ -244,7 +244,7 @@ name|void
 name|clearCache
 parameter_list|()
 block|{
-name|_repository
+name|repository
 operator|.
 name|clear
 argument_list|()
@@ -264,7 +264,7 @@ block|{
 name|JavaClass
 name|old
 init|=
-name|_repository
+name|repository
 operator|.
 name|findClass
 argument_list|(
@@ -274,7 +274,7 @@ name|getClassName
 argument_list|()
 argument_list|)
 decl_stmt|;
-name|_repository
+name|repository
 operator|.
 name|storeClass
 argument_list|(
@@ -296,11 +296,11 @@ name|String
 name|clazz
 parameter_list|)
 block|{
-name|_repository
+name|repository
 operator|.
 name|removeClass
 argument_list|(
-name|_repository
+name|repository
 operator|.
 name|findClass
 argument_list|(
@@ -320,7 +320,7 @@ name|JavaClass
 name|clazz
 parameter_list|)
 block|{
-name|_repository
+name|repository
 operator|.
 name|removeClass
 argument_list|(
