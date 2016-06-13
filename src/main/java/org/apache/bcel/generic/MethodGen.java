@@ -441,7 +441,7 @@ decl_stmt|;
 specifier|private
 specifier|static
 name|BCELComparator
-name|_cmp
+name|bcelComparator
 init|=
 operator|new
 name|BCELComparator
@@ -5023,7 +5023,7 @@ name|getComparator
 parameter_list|()
 block|{
 return|return
-name|_cmp
+name|bcelComparator
 return|;
 block|}
 comment|/**      * @param comparator Comparison strategy object      */
@@ -5037,7 +5037,7 @@ name|BCELComparator
 name|comparator
 parameter_list|)
 block|{
-name|_cmp
+name|bcelComparator
 operator|=
 name|comparator
 expr_stmt|;
@@ -5055,7 +5055,7 @@ name|obj
 parameter_list|)
 block|{
 return|return
-name|_cmp
+name|bcelComparator
 operator|.
 name|equals
 argument_list|(
@@ -5074,7 +5074,7 @@ name|hashCode
 parameter_list|()
 block|{
 return|return
-name|_cmp
+name|bcelComparator
 operator|.
 name|hashCode
 argument_list|(
