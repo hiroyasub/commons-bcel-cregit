@@ -76,7 +76,7 @@ name|String
 argument_list|,
 name|JavaClass
 argument_list|>
-name|_map
+name|map
 init|=
 operator|new
 name|HashMap
@@ -100,7 +100,7 @@ decl_stmt|;
 if|if
 condition|(
 operator|!
-name|_map
+name|map
 operator|.
 name|containsKey
 argument_list|(
@@ -115,7 +115,7 @@ name|result
 operator|=
 literal|true
 expr_stmt|;
-name|_map
+name|map
 operator|.
 name|put
 argument_list|(
@@ -141,7 +141,7 @@ name|JavaClass
 name|clazz
 parameter_list|)
 block|{
-name|_map
+name|map
 operator|.
 name|remove
 argument_list|(
@@ -158,7 +158,7 @@ name|empty
 parameter_list|()
 block|{
 return|return
-name|_map
+name|map
 operator|.
 name|isEmpty
 argument_list|()
@@ -176,7 +176,7 @@ name|JavaClass
 argument_list|>
 name|values
 init|=
-name|_map
+name|map
 operator|.
 name|values
 argument_list|()
@@ -212,7 +212,7 @@ name|getClassNames
 parameter_list|()
 block|{
 return|return
-name|_map
+name|map
 operator|.
 name|keySet
 argument_list|()
@@ -222,7 +222,7 @@ argument_list|(
 operator|new
 name|String
 index|[
-name|_map
+name|map
 operator|.
 name|size
 argument_list|()
