@@ -807,8 +807,6 @@ specifier|public
 name|void
 name|testPerformance
 parameter_list|()
-throws|throws
-name|IOException
 block|{
 name|File
 name|javaLib
