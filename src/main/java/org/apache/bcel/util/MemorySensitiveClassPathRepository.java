@@ -108,7 +108,7 @@ name|Repository
 block|{
 specifier|private
 name|ClassPath
-name|_path
+name|path
 init|=
 literal|null
 decl_stmt|;
@@ -123,7 +123,7 @@ argument_list|<
 name|JavaClass
 argument_list|>
 argument_list|>
-name|_loadedClasses
+name|loadedClasses
 init|=
 operator|new
 name|HashMap
@@ -139,7 +139,9 @@ name|ClassPath
 name|path
 parameter_list|)
 block|{
-name|_path
+name|this
+operator|.
+name|path
 operator|=
 name|path
 expr_stmt|;
@@ -156,7 +158,7 @@ name|JavaClass
 name|clazz
 parameter_list|)
 block|{
-name|_loadedClasses
+name|loadedClasses
 operator|.
 name|put
 argument_list|(
@@ -193,7 +195,7 @@ name|JavaClass
 name|clazz
 parameter_list|)
 block|{
-name|_loadedClasses
+name|loadedClasses
 operator|.
 name|remove
 argument_list|(
@@ -222,7 +224,7 @@ name|JavaClass
 argument_list|>
 name|ref
 init|=
-name|_loadedClasses
+name|loadedClasses
 operator|.
 name|get
 argument_list|(
@@ -322,7 +324,7 @@ block|{
 return|return
 name|loadClass
 argument_list|(
-name|_path
+name|path
 operator|.
 name|getInputStream
 argument_list|(
@@ -597,7 +599,7 @@ name|getClassPath
 parameter_list|()
 block|{
 return|return
-name|_path
+name|path
 return|;
 block|}
 comment|/**      * Clear all entries from cache.      */
@@ -608,7 +610,7 @@ name|void
 name|clear
 parameter_list|()
 block|{
-name|_loadedClasses
+name|loadedClasses
 operator|.
 name|clear
 argument_list|()
