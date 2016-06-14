@@ -397,6 +397,8 @@ operator|new
 name|ByteArrayOutputStream
 argument_list|()
 decl_stmt|;
+try|try
+init|(
 name|DataOutputStream
 name|dos
 init|=
@@ -405,7 +407,8 @@ name|DataOutputStream
 argument_list|(
 name|baos
 argument_list|)
-decl_stmt|;
+init|)
+block|{
 name|jc
 operator|.
 name|dump
@@ -413,11 +416,9 @@ argument_list|(
 name|dos
 argument_list|)
 expr_stmt|;
-name|dos
-operator|.
-name|close
-argument_list|()
-expr_stmt|;
+block|}
+try|try
+init|(
 name|DataInputStream
 name|src
 init|=
@@ -426,7 +427,8 @@ name|DataInputStream
 argument_list|(
 name|inputStream
 argument_list|)
-decl_stmt|;
+init|)
+block|{
 name|int
 name|i
 init|=
@@ -470,11 +472,7 @@ name|i
 operator|++
 expr_stmt|;
 block|}
-name|src
-operator|.
-name|close
-argument_list|()
-expr_stmt|;
+block|}
 block|}
 block|}
 end_class
