@@ -20,6 +20,12 @@ comment|/**  * Unknown (non-standard) attributes may be read via user-defined fa
 end_comment
 
 begin_interface
+annotation|@
+name|java
+operator|.
+name|lang
+operator|.
+name|Deprecated
 specifier|public
 interface|interface
 name|AttributeReader

@@ -205,6 +205,12 @@ argument_list|)
 expr_stmt|;
 block|}
 comment|/**      * Construct object from file stream.      * @param file Input stream      * @throws IOException      * @throws ClassFormatException      * @deprecated Use {@link #FieldOrMethod(java.io.DataInput, ConstantPool)} instead.      */
+annotation|@
+name|java
+operator|.
+name|lang
+operator|.
+name|Deprecated
 specifier|protected
 name|FieldOrMethod
 parameter_list|(

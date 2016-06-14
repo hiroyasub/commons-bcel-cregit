@@ -462,6 +462,12 @@ throw|;
 block|}
 block|}
 comment|/**      * DO NOT USE      *      * @param byte_code_offset      * @param number_of_locals NOT USED      * @param types_of_locals array of {@link StackMapType}s of locals      * @param number_of_stack_items NOT USED      * @param types_of_stack_items array ot {@link StackMapType}s of stack items      * @param constant_pool the constant pool      * @deprecated Since 6.0, use {@link #StackMapEntry(int, int, StackMapType[], StackMapType[], ConstantPool)}      * instead      */
+annotation|@
+name|java
+operator|.
+name|lang
+operator|.
+name|Deprecated
 specifier|public
 name|StackMapEntry
 parameter_list|(
