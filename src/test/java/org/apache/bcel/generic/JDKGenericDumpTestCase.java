@@ -229,6 +229,8 @@ argument_list|(
 name|file
 argument_list|)
 expr_stmt|;
+try|try
+init|(
 name|JarFile
 name|jar
 init|=
@@ -237,7 +239,8 @@ name|JarFile
 argument_list|(
 name|file
 argument_list|)
-decl_stmt|;
+init|)
+block|{
 name|Enumeration
 argument_list|<
 name|JarEntry
@@ -284,7 +287,9 @@ literal|".class"
 argument_list|)
 condition|)
 block|{
-comment|//                System.out.println("- " + name);
+comment|// System.out.println("- " + name);
+try|try
+init|(
 name|InputStream
 name|in
 init|=
@@ -294,7 +299,8 @@ name|getInputStream
 argument_list|(
 name|e
 argument_list|)
-decl_stmt|;
+init|)
+block|{
 name|ClassParser
 name|parser
 init|=
@@ -335,11 +341,8 @@ expr_stmt|;
 block|}
 block|}
 block|}
-name|jar
-operator|.
-name|close
-argument_list|()
-expr_stmt|;
+block|}
+block|}
 block|}
 specifier|private
 name|void

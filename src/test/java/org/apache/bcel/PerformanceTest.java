@@ -469,6 +469,8 @@ operator|.
 name|start
 argument_list|()
 expr_stmt|;
+try|try
+init|(
 name|JarFile
 name|jar
 init|=
@@ -477,7 +479,8 @@ name|JarFile
 argument_list|(
 name|lib
 argument_list|)
-decl_stmt|;
+init|)
+block|{
 name|Enumeration
 argument_list|<
 name|?
@@ -713,11 +716,7 @@ argument_list|()
 expr_stmt|;
 block|}
 block|}
-name|jar
-operator|.
-name|close
-argument_list|()
-expr_stmt|;
+block|}
 name|total
 operator|.
 name|stop
