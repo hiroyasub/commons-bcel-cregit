@@ -854,42 +854,30 @@ block|}
 else|else
 block|{
 comment|// type == T_REFERENCE
-name|int
-name|index
+comment|// Utility.signatureToString understands how to parse
+comment|// generic types.
+name|String
+name|parsedSignature
 init|=
-name|signature
+name|Utility
 operator|.
-name|indexOf
+name|signatureToString
 argument_list|(
-literal|';'
+name|signature
+argument_list|,
+literal|false
 argument_list|)
 decl_stmt|;
-comment|// Look for closing `;'
-if|if
-condition|(
-name|index
-operator|<
-literal|0
-condition|)
-block|{
-throw|throw
-operator|new
-name|ClassFormatException
-argument_list|(
-literal|"Invalid signature: "
-operator|+
-name|signature
-argument_list|)
-throw|;
-block|}
-comment|//corrected concurrent private static field acess
 name|wrap
 argument_list|(
 name|consumed_chars
 argument_list|,
-name|index
+name|parsedSignature
+operator|.
+name|length
+argument_list|()
 operator|+
-literal|1
+literal|2
 argument_list|)
 expr_stmt|;
 comment|// "Lblabla;" `L' and `;' are removed
@@ -898,14 +886,7 @@ name|ObjectType
 operator|.
 name|getInstance
 argument_list|(
-name|signature
-operator|.
-name|substring
-argument_list|(
-literal|1
-argument_list|,
-name|index
-argument_list|)
+name|parsedSignature
 operator|.
 name|replace
 argument_list|(
