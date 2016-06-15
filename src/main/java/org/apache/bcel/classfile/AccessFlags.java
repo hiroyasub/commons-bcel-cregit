@@ -28,7 +28,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Super class for all objects that have modifiers like private, final, ...  * I.e. classes, fields, and methods.  *  * @version $Id$  */
+comment|/**  * Super class for all objects that have modifiers like private, final, ... I.e. classes, fields, and methods.  *  * @version $Id$  */
 end_comment
 
 begin_class
@@ -54,7 +54,7 @@ name|AccessFlags
 parameter_list|()
 block|{
 block|}
-comment|/**      * @param a inital access flags      */
+comment|/**      * @param a      *            inital access flags      */
 specifier|public
 name|AccessFlags
 parameter_list|(
@@ -68,7 +68,7 @@ operator|=
 name|a
 expr_stmt|;
 block|}
-comment|/**       * @return Access flags of the object aka. "modifiers".      */
+comment|/**      * @return Access flags of the object aka. "modifiers".      */
 specifier|public
 specifier|final
 name|int
@@ -79,7 +79,7 @@ return|return
 name|access_flags
 return|;
 block|}
-comment|/**       * @return Access flags of the object aka. "modifiers".      */
+comment|/**      * @return Access flags of the object aka. "modifiers".      */
 specifier|public
 specifier|final
 name|int
@@ -90,7 +90,7 @@ return|return
 name|access_flags
 return|;
 block|}
-comment|/** Set access flags aka "modifiers".      * @param access_flags Access flags of the object.       */
+comment|/**      * Set access flags aka "modifiers".      *      * @param access_flags      *            Access flags of the object.      */
 specifier|public
 specifier|final
 name|void
@@ -108,7 +108,7 @@ operator|=
 name|access_flags
 expr_stmt|;
 block|}
-comment|/** Set access flags aka "modifiers".      * @param access_flags Access flags of the object.       */
+comment|/**      * Set access flags aka "modifiers".      *      * @param access_flags      *            Access flags of the object.      */
 specifier|public
 specifier|final
 name|void
@@ -742,6 +742,44 @@ operator|&
 name|Const
 operator|.
 name|ACC_ENUM
+operator|)
+operator|!=
+literal|0
+return|;
+block|}
+specifier|public
+specifier|final
+name|void
+name|isVarArgs
+parameter_list|(
+specifier|final
+name|boolean
+name|flag
+parameter_list|)
+block|{
+name|setFlag
+argument_list|(
+name|Const
+operator|.
+name|ACC_VARARGS
+argument_list|,
+name|flag
+argument_list|)
+expr_stmt|;
+block|}
+specifier|public
+specifier|final
+name|boolean
+name|isVarArgs
+parameter_list|()
+block|{
+return|return
+operator|(
+name|access_flags
+operator|&
+name|Const
+operator|.
+name|ACC_VARARGS
 operator|)
 operator|!=
 literal|0
