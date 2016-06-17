@@ -114,6 +114,8 @@ argument_list|)
 expr_stmt|;
 comment|// fail if missing
 block|}
+try|try
+init|(
 name|FileInputStream
 name|file
 init|=
@@ -122,7 +124,8 @@ name|FileInputStream
 argument_list|(
 literal|"target/test-classes/Java8Example.class"
 argument_list|)
-decl_stmt|;
+init|)
+block|{
 name|ClassParser
 name|parser
 init|=
@@ -150,6 +153,7 @@ operator|+
 literal|"/"
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 block|}
 end_class
