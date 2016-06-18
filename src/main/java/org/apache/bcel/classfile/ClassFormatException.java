@@ -57,7 +57,7 @@ name|s
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * {@inheritDoc}      * @since 6.0      */
+comment|/**      * @since 6.0      */
 specifier|public
 name|ClassFormatException
 parameter_list|(
