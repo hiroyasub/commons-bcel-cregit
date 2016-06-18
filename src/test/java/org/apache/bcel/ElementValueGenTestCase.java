@@ -204,6 +204,8 @@ specifier|public
 name|void
 name|testCreateIntegerElementValue
 parameter_list|()
+throws|throws
+name|Exception
 block|{
 name|ClassGen
 name|cg
@@ -281,6 +283,8 @@ specifier|public
 name|void
 name|testCreateFloatElementValue
 parameter_list|()
+throws|throws
+name|Exception
 block|{
 name|ClassGen
 name|cg
@@ -358,6 +362,8 @@ specifier|public
 name|void
 name|testCreateDoubleElementValue
 parameter_list|()
+throws|throws
+name|Exception
 block|{
 name|ClassGen
 name|cg
@@ -435,6 +441,8 @@ specifier|public
 name|void
 name|testCreateLongElementValue
 parameter_list|()
+throws|throws
+name|Exception
 block|{
 name|ClassGen
 name|cg
@@ -512,6 +520,8 @@ specifier|public
 name|void
 name|testCreateCharElementValue
 parameter_list|()
+throws|throws
+name|Exception
 block|{
 name|ClassGen
 name|cg
@@ -589,6 +599,8 @@ specifier|public
 name|void
 name|testCreateByteElementValue
 parameter_list|()
+throws|throws
+name|Exception
 block|{
 name|ClassGen
 name|cg
@@ -672,6 +684,8 @@ specifier|public
 name|void
 name|testCreateBooleanElementValue
 parameter_list|()
+throws|throws
+name|Exception
 block|{
 name|ClassGen
 name|cg
@@ -750,6 +764,8 @@ specifier|public
 name|void
 name|testCreateShortElementValue
 parameter_list|()
+throws|throws
+name|Exception
 block|{
 name|ClassGen
 name|cg
@@ -832,6 +848,8 @@ specifier|public
 name|void
 name|testCreateStringElementValue
 parameter_list|()
+throws|throws
+name|Exception
 block|{
 comment|// Create HelloWorld
 name|ClassGen
@@ -912,6 +930,8 @@ specifier|public
 name|void
 name|testCreateEnumElementValue
 parameter_list|()
+throws|throws
+name|Exception
 block|{
 name|ClassGen
 name|cg
@@ -1006,6 +1026,8 @@ specifier|public
 name|void
 name|testCreateClassElementValue
 parameter_list|()
+throws|throws
+name|Exception
 block|{
 name|ClassGen
 name|cg
@@ -1085,8 +1107,8 @@ specifier|final
 name|ConstantPoolGen
 name|cpg
 parameter_list|)
-block|{
-try|try
+throws|throws
+name|IOException
 block|{
 name|String
 name|beforeValue
@@ -1192,21 +1214,6 @@ operator|+
 name|afterValue
 operator|+
 literal|"'"
-argument_list|)
-expr_stmt|;
-block|}
-block|}
-catch|catch
-parameter_list|(
-name|IOException
-name|ioe
-parameter_list|)
-block|{
-name|fail
-argument_list|(
-literal|"Unexpected exception whilst checking serialization: "
-operator|+
-name|ioe
 argument_list|)
 expr_stmt|;
 block|}
