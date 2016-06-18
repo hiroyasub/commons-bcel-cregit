@@ -487,7 +487,7 @@ name|ACCESS_NAMES
 operator|.
 name|length
 decl_stmt|;
-comment|/**    *     * @param index    * @return    * @since 6.0    */
+comment|/**    * @param index    * @return the ACCESS_NAMES entry at the given index    * @since 6.0    */
 specifier|public
 specifier|static
 name|String
@@ -680,7 +680,7 @@ block|,
 literal|"CONSTANT_InvokeDynamic"
 block|}
 decl_stmt|;
-comment|/**    *     * @param index    * @return    * @since 6.0    */
+comment|/**    *     * @param index    * @return the CONSTANT_NAMES entry at the given index    * @since 6.0    */
 specifier|public
 specifier|static
 name|String
@@ -730,7 +730,7 @@ block|,
 literal|"java.io.Serializable"
 block|}
 decl_stmt|;
-comment|/**    *     * @param index    * @return    * @since 6.0    */
+comment|/**    * @since 6.0    */
 specifier|public
 specifier|static
 name|Iterable
@@ -3130,7 +3130,7 @@ block|,
 literal|"address"
 block|}
 decl_stmt|;
-comment|/**    * The primitive type names corresponding to the T_XX constants,    * e.g., TYPE_NAMES[T_INT] = "int"    * @param index    * @return    * @since 6.0    */
+comment|/**    * The primitive type names corresponding to the T_XX constants,    * e.g., TYPE_NAMES[T_INT] = "int"    * @param index    * @return the type name    * @since 6.0    */
 specifier|public
 specifier|static
 name|String
@@ -3192,7 +3192,7 @@ block|,
 name|ILLEGAL_TYPE
 block|}
 decl_stmt|;
-comment|/**    * The primitive class names corresponding to the T_XX constants,    * e.g., CLASS_TYPE_NAMES[T_INT] = "java.lang.Integer"    * @param index    * @return    * @since 6.0    */
+comment|/**    * The primitive class names corresponding to the T_XX constants,    * e.g., CLASS_TYPE_NAMES[T_INT] = "java.lang.Integer"    * @param index    * @return the class name    * @since 6.0    */
 specifier|public
 specifier|static
 name|String
@@ -3252,7 +3252,7 @@ block|,
 name|ILLEGAL_TYPE
 block|}
 decl_stmt|;
-comment|/**    *     * @param index    * @return    * @since 6.0    */
+comment|/**    *     * @param index    * @return the short type name    * @since 6.0    */
 specifier|public
 specifier|static
 name|String
@@ -3997,7 +3997,7 @@ name|RESERVED
 comment|/*impdep2*/
 block|}
 decl_stmt|;
-comment|/**    *     * @param index    * @return    * @since 6.0    */
+comment|/**    *     * @param index    * @return Number of byte code operands    * @since 6.0    */
 specifier|public
 specifier|static
 name|short
@@ -6184,7 +6184,7 @@ name|UNPREDICTABLE
 comment|/*impdep2*/
 block|}
 decl_stmt|;
-comment|/**    *     * @param index    * @return    * @since 6.0    */
+comment|/**    *     * @param index    * @return Number of words consumed on operand stack     * @since 6.0    */
 specifier|public
 specifier|static
 name|int
@@ -6929,7 +6929,7 @@ name|UNPREDICTABLE
 comment|/*impdep2*/
 block|}
 decl_stmt|;
-comment|/**    *     * @param index    * @return    * @since 6.0    */
+comment|/**    *     * @param index    * @return Number of words produced onto operand stack    * @since 6.0    */
 specifier|public
 specifier|static
 name|int
@@ -7195,7 +7195,7 @@ block|,
 literal|"MethodParameters"
 block|}
 decl_stmt|;
-comment|/**    *     * @param index    * @return    * @since 6.0    */
+comment|/**    *     * @param index    * @return the attribute name    * @since 6.0    */
 specifier|public
 specifier|static
 name|String
@@ -7313,7 +7313,7 @@ block|,
 literal|"NewObject"
 block|}
 decl_stmt|;
-comment|/**    *     * @param index    * @return    * @since 6.0    */
+comment|/**    *     * @param index    * @return the item name    * @since 6.0    */
 specifier|public
 specifier|static
 name|String
@@ -7524,7 +7524,7 @@ block|,
 literal|"invokeInterface"
 block|}
 decl_stmt|;
-comment|/**    *     * @param index    * @return    * @since 6.0    */
+comment|/**    *     * @param index    * @return the method handle name    * @since 6.0    */
 specifier|public
 specifier|static
 name|String

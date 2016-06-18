@@ -1826,7 +1826,7 @@ operator|=
 name|new_offset
 expr_stmt|;
 block|}
-comment|/**      * Update the distance (as an offset delta) from this StackMap      * entry to the next.  Note that this might cause the the      * frame type to change.  Note also that delta may be negative.      *      * @param int offset delta      */
+comment|/**      * Update the distance (as an offset delta) from this StackMap      * entry to the next.  Note that this might cause the the      * frame type to change.  Note also that delta may be negative.      *      * @param delta offset delta      */
 specifier|public
 name|void
 name|updateByteCodeOffset

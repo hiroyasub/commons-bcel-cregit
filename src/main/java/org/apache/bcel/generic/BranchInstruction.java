@@ -639,7 +639,7 @@ return|return
 name|position
 return|;
 block|}
-comment|/**      * @param position the position to set      * @return the new position      * @since 6.0      */
+comment|/**      * @param position the position to set      * @since 6.0      */
 specifier|protected
 name|void
 name|setPosition

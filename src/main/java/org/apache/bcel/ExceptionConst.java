@@ -394,7 +394,7 @@ block|,
 name|ARRAY_INDEX_OUT_OF_BOUNDS_EXCEPTION
 block|}
 decl_stmt|;
-comment|/**       * Enum corresponding to the various Exception Class arrays,       * used by {@link ExceptionConstants#createExceptions(EXCS, Class...)}      */
+comment|/**       * Enum corresponding to the various Exception Class arrays,       * used by {@link ExceptionConst#createExceptions(EXCS, Class...)}      */
 specifier|public
 enum|enum
 name|EXCS

@@ -899,8 +899,6 @@ name|pop
 argument_list|()
 expr_stmt|;
 block|}
-comment|/**      * @since 6.0     @Override     public void visitStackMapTable(StackMapTable table)     {         stack.push(table);         table.accept(visitor);         StackMapTableEntry[] vars = table.getStackMapTable();         for (StackMapTableEntry var : vars) {             var.accept(this);         }         stack.pop();     }      */
-comment|/**      * @since 6.0     @Override     public void visitStackMapTableEntry(StackMapTableEntry var)     {         stack.push(var);         var.accept(visitor);         stack.pop();     }      */
 annotation|@
 name|Override
 specifier|public

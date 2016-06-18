@@ -438,7 +438,7 @@ return|return
 name|type
 return|;
 block|}
-comment|/**      * boolean, short and char variable are considered as int in the stack or local variable area.      * Returns {@link Type#INT} for {@link Type#BOOLEAN}, {@link Type#SHORT} or {@link Type#CHAR}, otherwise      * returns the given type.      * @see OperandStack#push(Type)      * @see LocalVariables#set(int, Type)      * @since 6.0      */
+comment|/**      * boolean, short and char variable are considered as int in the stack or local variable area.      * Returns {@link Type#INT} for {@link Type#BOOLEAN}, {@link Type#SHORT} or {@link Type#CHAR}, otherwise      * returns the given type.      * @since 6.0      */
 specifier|public
 name|Type
 name|normalizeForStackOrLocal

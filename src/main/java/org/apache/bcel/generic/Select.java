@@ -1061,7 +1061,7 @@ operator|=
 name|array
 expr_stmt|;
 block|}
-comment|/**      *       * @return      * @since 6.0      */
+comment|/**      *       * @return the padding      * @since 6.0      */
 specifier|final
 name|int
 name|getPadding
