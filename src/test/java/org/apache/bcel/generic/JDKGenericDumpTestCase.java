@@ -411,12 +411,9 @@ name|javaHomes
 operator|.
 name|add
 argument_list|(
-name|System
+name|SystemUtils
 operator|.
-name|getProperty
-argument_list|(
-literal|"java.home"
-argument_list|)
+name|JAVA_HOME
 argument_list|)
 expr_stmt|;
 return|return
