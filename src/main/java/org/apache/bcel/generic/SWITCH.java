@@ -219,6 +219,7 @@ name|InstructionHandle
 name|target
 parameter_list|)
 block|{
+specifier|final
 name|int
 name|max_size
 init|=
@@ -228,6 +229,7 @@ name|match_length
 operator|*
 name|max_gap
 decl_stmt|;
+specifier|final
 name|int
 index|[]
 name|m_vec
@@ -238,6 +240,7 @@ index|[
 name|max_size
 index|]
 decl_stmt|;
+specifier|final
 name|InstructionHandle
 index|[]
 name|t_vec
@@ -288,6 +291,7 @@ name|i
 operator|++
 control|)
 block|{
+specifier|final
 name|int
 name|prev
 init|=
@@ -298,6 +302,7 @@ operator|-
 literal|1
 index|]
 decl_stmt|;
+specifier|final
 name|int
 name|gap
 init|=
@@ -441,6 +446,7 @@ decl_stmt|;
 name|int
 name|h
 decl_stmt|;
+specifier|final
 name|int
 name|m
 init|=

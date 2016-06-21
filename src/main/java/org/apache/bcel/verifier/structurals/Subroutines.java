@@ -401,6 +401,7 @@ name|String
 name|toString
 parameter_list|()
 block|{
+specifier|final
 name|StringBuilder
 name|ret
 init|=
@@ -477,6 +478,7 @@ argument_list|()
 decl_stmt|;
 for|for
 control|(
+specifier|final
 name|int
 name|element
 range|:
@@ -519,6 +521,7 @@ argument_list|()
 expr_stmt|;
 for|for
 control|(
+specifier|final
 name|int
 name|element
 range|:
@@ -581,6 +584,7 @@ literal|null
 decl_stmt|;
 for|for
 control|(
+specifier|final
 name|InstructionHandle
 name|actual
 range|:
@@ -705,6 +709,7 @@ literal|"getLeavingRET() called on top level pseudo-subroutine."
 argument_list|)
 throw|;
 block|}
+specifier|final
 name|InstructionHandle
 index|[]
 name|jsrs
@@ -868,6 +873,7 @@ index|[]
 name|getInstructions
 parameter_list|()
 block|{
+specifier|final
 name|InstructionHandle
 index|[]
 name|ret
@@ -931,6 +937,7 @@ index|[]
 name|getRecursivelyAccessedLocalsIndices
 parameter_list|()
 block|{
+specifier|final
 name|Set
 argument_list|<
 name|Integer
@@ -942,6 +949,7 @@ name|HashSet
 argument_list|<>
 argument_list|()
 decl_stmt|;
+specifier|final
 name|int
 index|[]
 name|lvs
@@ -951,6 +959,7 @@ argument_list|()
 decl_stmt|;
 for|for
 control|(
+specifier|final
 name|int
 name|lv
 range|:
@@ -980,6 +989,7 @@ name|subSubs
 argument_list|()
 argument_list|)
 expr_stmt|;
+specifier|final
 name|int
 index|[]
 name|ret
@@ -1001,6 +1011,7 @@ literal|1
 decl_stmt|;
 for|for
 control|(
+specifier|final
 name|Integer
 name|index
 range|:
@@ -1045,12 +1056,14 @@ parameter_list|)
 block|{
 for|for
 control|(
+specifier|final
 name|Subroutine
 name|sub
 range|:
 name|subs
 control|)
 block|{
+specifier|final
 name|int
 index|[]
 name|lvs
@@ -1062,6 +1075,7 @@ argument_list|()
 decl_stmt|;
 for|for
 control|(
+specifier|final
 name|int
 name|lv
 range|:
@@ -1116,6 +1130,7 @@ name|getAccessedLocalsIndices
 parameter_list|()
 block|{
 comment|//TODO: Implement caching.
+specifier|final
 name|Set
 argument_list|<
 name|Integer
@@ -1150,6 +1165,7 @@ block|}
 block|{
 for|for
 control|(
+specifier|final
 name|InstructionHandle
 name|ih
 range|:
@@ -1174,6 +1190,7 @@ operator|instanceof
 name|RET
 condition|)
 block|{
+specifier|final
 name|int
 name|idx
 init|=
@@ -1219,6 +1236,7 @@ operator|instanceof
 name|LocalVariableInstruction
 condition|)
 block|{
+specifier|final
 name|int
 name|s
 init|=
@@ -1266,6 +1284,7 @@ block|}
 block|}
 catch|catch
 parameter_list|(
+specifier|final
 name|RuntimeException
 name|re
 parameter_list|)
@@ -1284,6 +1303,7 @@ block|}
 block|}
 block|}
 block|{
+specifier|final
 name|int
 index|[]
 name|ret
@@ -1305,6 +1325,7 @@ literal|1
 decl_stmt|;
 for|for
 control|(
+specifier|final
 name|Integer
 name|accessedLocal
 range|:
@@ -1339,6 +1360,7 @@ index|[]
 name|subSubs
 parameter_list|()
 block|{
+specifier|final
 name|Set
 argument_list|<
 name|Subroutine
@@ -1352,12 +1374,14 @@ argument_list|()
 decl_stmt|;
 for|for
 control|(
+specifier|final
 name|InstructionHandle
 name|ih
 range|:
 name|instructions
 control|)
 block|{
+specifier|final
 name|Instruction
 name|inst
 init|=
@@ -1373,6 +1397,7 @@ operator|instanceof
 name|JsrInstruction
 condition|)
 block|{
+specifier|final
 name|InstructionHandle
 name|targ
 init|=
@@ -1398,6 +1423,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
+specifier|final
 name|Subroutine
 index|[]
 name|ret
@@ -1523,6 +1549,7 @@ name|boolean
 name|enableJustIceCheck
 parameter_list|)
 block|{
+specifier|final
 name|InstructionHandle
 index|[]
 name|all
@@ -1535,6 +1562,7 @@ operator|.
 name|getInstructionHandles
 argument_list|()
 decl_stmt|;
+specifier|final
 name|CodeExceptionGen
 index|[]
 name|handlers
@@ -1552,6 +1580,7 @@ name|SubroutineImpl
 argument_list|()
 expr_stmt|;
 comment|// Calculate "real" subroutines.
+specifier|final
 name|Set
 argument_list|<
 name|InstructionHandle
@@ -1566,12 +1595,14 @@ decl_stmt|;
 comment|// Elements: InstructionHandle
 for|for
 control|(
+specifier|final
 name|InstructionHandle
 name|element
 range|:
 name|all
 control|)
 block|{
+specifier|final
 name|Instruction
 name|inst
 init|=
@@ -1607,12 +1638,14 @@ block|}
 comment|// Build up the database.
 for|for
 control|(
+specifier|final
 name|InstructionHandle
 name|astore
 range|:
 name|sub_leaders
 control|)
 block|{
+specifier|final
 name|SubroutineImpl
 name|sr
 init|=
@@ -1680,12 +1713,14 @@ comment|// Instructions shared by a subroutine and the toplevel are
 comment|// disallowed and checked below, after the BFS.
 for|for
 control|(
+specifier|final
 name|InstructionHandle
 name|element
 range|:
 name|all
 control|)
 block|{
+specifier|final
 name|Instruction
 name|inst
 init|=
@@ -1701,6 +1736,7 @@ operator|instanceof
 name|JsrInstruction
 condition|)
 block|{
+specifier|final
 name|InstructionHandle
 name|leader
 init|=
@@ -1734,6 +1770,7 @@ block|}
 comment|// Now do a BFS from every subroutine leader to find all the
 comment|// instructions that belong to a subroutine.
 comment|// we don't want to assign an instruction to two or more Subroutine objects.
+specifier|final
 name|Set
 argument_list|<
 name|InstructionHandle
@@ -1746,6 +1783,7 @@ argument_list|<>
 argument_list|()
 decl_stmt|;
 comment|//Graph colouring. Key: InstructionHandle, Value: ColourConstants enum .
+specifier|final
 name|Map
 argument_list|<
 name|InstructionHandle
@@ -1759,6 +1797,7 @@ name|HashMap
 argument_list|<>
 argument_list|()
 decl_stmt|;
+specifier|final
 name|List
 argument_list|<
 name|InstructionHandle
@@ -1772,6 +1811,7 @@ argument_list|()
 decl_stmt|;
 for|for
 control|(
+specifier|final
 name|InstructionHandle
 name|actual
 range|:
@@ -1782,6 +1822,7 @@ comment|// Do some BFS with "actual" as the root of the graph.
 comment|// Init colors
 for|for
 control|(
+specifier|final
 name|InstructionHandle
 name|element
 range|:
@@ -1838,6 +1879,7 @@ condition|)
 block|{
 for|for
 control|(
+specifier|final
 name|CodeExceptionGen
 name|handler
 range|:
@@ -1882,6 +1924,7 @@ operator|!=
 literal|0
 condition|)
 block|{
+specifier|final
 name|InstructionHandle
 name|u
 init|=
@@ -1892,6 +1935,7 @@ argument_list|(
 literal|0
 argument_list|)
 decl_stmt|;
+specifier|final
 name|InstructionHandle
 index|[]
 name|successors
@@ -1903,6 +1947,7 @@ argument_list|)
 decl_stmt|;
 for|for
 control|(
+specifier|final
 name|InstructionHandle
 name|successor
 range|:
@@ -1958,6 +2003,7 @@ block|}
 comment|// BFS ended above.
 for|for
 control|(
+specifier|final
 name|InstructionHandle
 name|element
 range|:
@@ -2071,6 +2117,7 @@ comment|// Now make sure no instruction of a Subroutine is protected by exceptio
 comment|// as is mandated by JustIces notion of subroutines.
 for|for
 control|(
+specifier|final
 name|CodeExceptionGen
 name|handler
 range|:
@@ -2101,6 +2148,7 @@ block|{
 comment|// Note the inclusive/inclusive notation of "generic API" exception handlers!
 for|for
 control|(
+specifier|final
 name|Subroutine
 name|sub
 range|:
@@ -2201,6 +2249,7 @@ argument_list|>
 name|set
 parameter_list|)
 block|{
+specifier|final
 name|Subroutine
 index|[]
 name|subs
@@ -2212,12 +2261,14 @@ argument_list|()
 decl_stmt|;
 for|for
 control|(
+specifier|final
 name|Subroutine
 name|sub2
 range|:
 name|subs
 control|)
 block|{
+specifier|final
 name|int
 name|index
 init|=
@@ -2256,6 +2307,7 @@ argument_list|)
 condition|)
 block|{
 comment|// Don't use toString() here because of possibly infinite recursive subSubs() calls then.
+specifier|final
 name|SubroutineImpl
 name|si
 init|=
@@ -2323,6 +2375,7 @@ name|InstructionHandle
 name|leader
 parameter_list|)
 block|{
+specifier|final
 name|Subroutine
 name|ret
 init|=
@@ -2379,6 +2432,7 @@ parameter_list|)
 block|{
 for|for
 control|(
+specifier|final
 name|Subroutine
 name|s
 range|:
@@ -2470,6 +2524,7 @@ index|[
 literal|1
 index|]
 decl_stmt|;
+specifier|final
 name|Instruction
 name|inst
 init|=
@@ -2578,6 +2633,7 @@ condition|)
 block|{
 comment|// BCEL's getTargets() returns only the non-default targets,
 comment|// thanks to Eli Tilevich for reporting.
+specifier|final
 name|InstructionHandle
 index|[]
 name|matchTargets
@@ -2592,6 +2648,7 @@ operator|.
 name|getTargets
 argument_list|()
 decl_stmt|;
+specifier|final
 name|InstructionHandle
 index|[]
 name|ret

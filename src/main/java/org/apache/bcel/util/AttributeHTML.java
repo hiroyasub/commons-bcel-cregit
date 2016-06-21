@@ -458,6 +458,7 @@ name|int
 name|method_number
 parameter_list|)
 block|{
+specifier|final
 name|byte
 name|tag
 init|=
@@ -546,6 +547,7 @@ name|Const
 operator|.
 name|ATTR_CODE
 case|:
+specifier|final
 name|Code
 name|c
 init|=
@@ -585,6 +587,7 @@ literal|"\" TARGET=Code>Byte code</A></LI></UL>\n"
 argument_list|)
 expr_stmt|;
 comment|// Get handled exceptions and list them
+specifier|final
 name|CodeException
 index|[]
 name|ce
@@ -594,6 +597,7 @@ operator|.
 name|getExceptionTable
 argument_list|()
 decl_stmt|;
+specifier|final
 name|int
 name|len
 init|=
@@ -617,12 +621,14 @@ argument_list|)
 expr_stmt|;
 for|for
 control|(
+specifier|final
 name|CodeException
 name|cex
 range|:
 name|ce
 control|)
 block|{
+specifier|final
 name|int
 name|catch_type
 init|=
@@ -805,6 +811,7 @@ operator|.
 name|ATTR_EXCEPTIONS
 case|:
 comment|// List thrown exceptions
+specifier|final
 name|int
 index|[]
 name|indices
@@ -828,6 +835,7 @@ argument_list|)
 expr_stmt|;
 for|for
 control|(
+specifier|final
 name|int
 name|indice
 range|:
@@ -867,6 +875,7 @@ name|Const
 operator|.
 name|ATTR_LINE_NUMBER_TABLE
 case|:
+specifier|final
 name|LineNumber
 index|[]
 name|line_numbers
@@ -960,6 +969,7 @@ name|Const
 operator|.
 name|ATTR_LOCAL_VARIABLE_TABLE
 case|:
+specifier|final
 name|LocalVariable
 index|[]
 name|vars
@@ -984,6 +994,7 @@ argument_list|)
 expr_stmt|;
 for|for
 control|(
+specifier|final
 name|LocalVariable
 name|var
 range|:
@@ -1030,6 +1041,7 @@ argument_list|,
 literal|false
 argument_list|)
 expr_stmt|;
+specifier|final
 name|int
 name|start
 init|=
@@ -1038,6 +1050,7 @@ operator|.
 name|getStartPC
 argument_list|()
 decl_stmt|;
+specifier|final
 name|int
 name|end
 init|=
@@ -1128,6 +1141,7 @@ name|Const
 operator|.
 name|ATTR_INNER_CLASSES
 case|:
+specifier|final
 name|InnerClass
 index|[]
 name|classes
@@ -1152,6 +1166,7 @@ argument_list|)
 expr_stmt|;
 for|for
 control|(
+specifier|final
 name|InnerClass
 name|classe
 range|:

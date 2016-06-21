@@ -478,6 +478,7 @@ name|getAnnotationType
 argument_list|()
 argument_list|)
 expr_stmt|;
+specifier|final
 name|ElementValuePair
 index|[]
 name|evPairs
@@ -503,6 +504,7 @@ argument_list|)
 expr_stmt|;
 for|for
 control|(
+specifier|final
 name|ElementValuePair
 name|element
 range|:
@@ -560,6 +562,7 @@ name|attrs
 parameter_list|)
 block|{
 comment|// Find attributes that contain annotation data
+specifier|final
 name|List
 argument_list|<
 name|AnnotationEntry
@@ -577,6 +580,7 @@ argument_list|)
 decl_stmt|;
 for|for
 control|(
+specifier|final
 name|Attribute
 name|attribute
 range|:
@@ -590,6 +594,7 @@ operator|instanceof
 name|Annotations
 condition|)
 block|{
+specifier|final
 name|Annotations
 name|runtimeAnnotations
 init|=

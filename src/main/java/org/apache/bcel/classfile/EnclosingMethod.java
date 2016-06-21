@@ -269,6 +269,7 @@ name|ConstantClass
 name|getEnclosingClass
 parameter_list|()
 block|{
+specifier|final
 name|ConstantClass
 name|c
 init|=
@@ -310,6 +311,7 @@ return|return
 literal|null
 return|;
 block|}
+specifier|final
 name|ConstantNameAndType
 name|nat
 init|=

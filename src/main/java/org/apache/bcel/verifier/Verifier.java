@@ -258,6 +258,7 @@ name|int
 name|method_no
 parameter_list|)
 block|{
+specifier|final
 name|String
 name|key
 init|=
@@ -329,6 +330,7 @@ name|int
 name|method_no
 parameter_list|)
 block|{
+specifier|final
 name|String
 name|key
 init|=
@@ -451,6 +453,7 @@ parameter_list|()
 throws|throws
 name|ClassNotFoundException
 block|{
+specifier|final
 name|List
 argument_list|<
 name|String
@@ -469,6 +472,7 @@ operator|!=
 literal|null
 condition|)
 block|{
+specifier|final
 name|String
 index|[]
 name|p1m
@@ -480,6 +484,7 @@ argument_list|()
 decl_stmt|;
 for|for
 control|(
+specifier|final
 name|String
 name|element
 range|:
@@ -504,6 +509,7 @@ operator|!=
 literal|null
 condition|)
 block|{
+specifier|final
 name|String
 index|[]
 name|p2m
@@ -515,6 +521,7 @@ argument_list|()
 decl_stmt|;
 for|for
 control|(
+specifier|final
 name|String
 name|element
 range|:
@@ -534,6 +541,7 @@ block|}
 block|}
 for|for
 control|(
+specifier|final
 name|Pass3aVerifier
 name|pv
 range|:
@@ -543,6 +551,7 @@ name|values
 argument_list|()
 control|)
 block|{
+specifier|final
 name|String
 index|[]
 name|p3am
@@ -552,6 +561,7 @@ operator|.
 name|getMessages
 argument_list|()
 decl_stmt|;
+specifier|final
 name|int
 name|meth
 init|=
@@ -562,6 +572,7 @@ argument_list|()
 decl_stmt|;
 for|for
 control|(
+specifier|final
 name|String
 name|element
 range|:
@@ -606,6 +617,7 @@ block|}
 block|}
 for|for
 control|(
+specifier|final
 name|Pass3bVerifier
 name|pv
 range|:
@@ -615,6 +627,7 @@ name|values
 argument_list|()
 control|)
 block|{
+specifier|final
 name|String
 index|[]
 name|p3bm
@@ -624,6 +637,7 @@ operator|.
 name|getMessages
 argument_list|()
 decl_stmt|;
+specifier|final
 name|int
 name|meth
 init|=
@@ -634,6 +648,7 @@ argument_list|()
 decl_stmt|;
 for|for
 control|(
+specifier|final
 name|String
 name|element
 range|:
@@ -745,6 +760,7 @@ literal|".class"
 argument_list|)
 condition|)
 block|{
+specifier|final
 name|int
 name|dotclasspos
 init|=
@@ -818,6 +834,7 @@ operator|+
 literal|"\n"
 argument_list|)
 expr_stmt|;
+specifier|final
 name|Verifier
 name|v
 init|=
@@ -879,6 +896,7 @@ operator|.
 name|VR_OK
 condition|)
 block|{
+specifier|final
 name|JavaClass
 name|jc
 init|=
@@ -997,6 +1015,7 @@ argument_list|(
 literal|"Warnings:"
 argument_list|)
 expr_stmt|;
+specifier|final
 name|String
 index|[]
 name|warnings
@@ -1027,6 +1046,7 @@ expr_stmt|;
 block|}
 for|for
 control|(
+specifier|final
 name|String
 name|warning
 range|:
@@ -1077,6 +1097,7 @@ expr_stmt|;
 block|}
 catch|catch
 parameter_list|(
+specifier|final
 name|ClassNotFoundException
 name|e
 parameter_list|)

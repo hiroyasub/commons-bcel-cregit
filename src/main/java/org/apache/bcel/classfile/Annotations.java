@@ -334,6 +334,7 @@ argument_list|)
 expr_stmt|;
 for|for
 control|(
+specifier|final
 name|AnnotationEntry
 name|element
 range|:

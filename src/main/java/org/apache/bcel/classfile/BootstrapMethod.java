@@ -327,6 +327,7 @@ name|ConstantPool
 name|constant_pool
 parameter_list|)
 block|{
+specifier|final
 name|StringBuilder
 name|buf
 init|=
@@ -476,6 +477,7 @@ argument_list|)
 expr_stmt|;
 for|for
 control|(
+specifier|final
 name|int
 name|bootstrap_argument
 range|:
@@ -509,6 +511,7 @@ return|;
 block|}
 catch|catch
 parameter_list|(
+specifier|final
 name|CloneNotSupportedException
 name|e
 parameter_list|)

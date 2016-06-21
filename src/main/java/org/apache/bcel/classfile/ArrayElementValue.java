@@ -60,6 +60,7 @@ name|String
 name|toString
 parameter_list|()
 block|{
+specifier|final
 name|StringBuilder
 name|sb
 init|=
@@ -220,6 +221,7 @@ argument_list|)
 expr_stmt|;
 for|for
 control|(
+specifier|final
 name|ElementValue
 name|evalue
 range|:
@@ -242,6 +244,7 @@ name|String
 name|stringifyValue
 parameter_list|()
 block|{
+specifier|final
 name|StringBuilder
 name|sb
 init|=

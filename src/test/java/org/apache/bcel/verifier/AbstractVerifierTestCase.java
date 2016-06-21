@@ -160,6 +160,7 @@ literal|0
 decl_stmt|;
 try|try
 block|{
+specifier|final
 name|JavaClass
 name|jc
 init|=
@@ -182,6 +183,7 @@ expr_stmt|;
 block|}
 catch|catch
 parameter_list|(
+specifier|final
 name|ClassNotFoundException
 name|e
 parameter_list|)
@@ -198,6 +200,7 @@ return|return
 literal|false
 return|;
 block|}
+specifier|final
 name|Verifier
 name|verifier
 init|=

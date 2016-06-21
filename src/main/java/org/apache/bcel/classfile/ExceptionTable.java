@@ -197,6 +197,7 @@ argument_list|,
 name|constant_pool
 argument_list|)
 expr_stmt|;
+specifier|final
 name|int
 name|number_of_exceptions
 init|=
@@ -293,6 +294,7 @@ argument_list|)
 expr_stmt|;
 for|for
 control|(
+specifier|final
 name|int
 name|index
 range|:
@@ -347,6 +349,7 @@ index|[]
 name|getExceptionNames
 parameter_list|()
 block|{
+specifier|final
 name|String
 index|[]
 name|names
@@ -448,6 +451,7 @@ name|String
 name|toString
 parameter_list|()
 block|{
+specifier|final
 name|StringBuilder
 name|buf
 init|=
@@ -554,6 +558,7 @@ name|ConstantPool
 name|_constant_pool
 parameter_list|)
 block|{
+specifier|final
 name|ExceptionTable
 name|c
 init|=

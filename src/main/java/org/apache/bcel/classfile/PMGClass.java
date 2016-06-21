@@ -332,6 +332,7 @@ name|String
 name|getPMGName
 parameter_list|()
 block|{
+specifier|final
 name|ConstantUtf8
 name|c
 init|=
@@ -366,6 +367,7 @@ name|String
 name|getPMGClassName
 parameter_list|()
 block|{
+specifier|final
 name|ConstantUtf8
 name|c
 init|=

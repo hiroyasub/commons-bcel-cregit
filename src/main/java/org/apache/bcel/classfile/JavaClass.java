@@ -380,6 +380,7 @@ name|Object
 name|o2
 parameter_list|)
 block|{
+specifier|final
 name|JavaClass
 name|THIS
 init|=
@@ -388,6 +389,7 @@ name|JavaClass
 operator|)
 name|o1
 decl_stmt|;
+specifier|final
 name|JavaClass
 name|THAT
 init|=
@@ -422,6 +424,7 @@ name|Object
 name|o
 parameter_list|)
 block|{
+specifier|final
 name|JavaClass
 name|THIS
 init|=
@@ -652,6 +655,7 @@ expr_stmt|;
 comment|// Get source file name if available
 for|for
 control|(
+specifier|final
 name|Attribute
 name|attribute
 range|:
@@ -705,6 +709,7 @@ argument_list|,
 literal|false
 argument_list|)
 expr_stmt|;
+specifier|final
 name|int
 name|index
 init|=
@@ -808,6 +813,7 @@ name|i
 operator|++
 control|)
 block|{
+specifier|final
 name|String
 name|str
 init|=
@@ -980,6 +986,7 @@ parameter_list|)
 throws|throws
 name|IOException
 block|{
+specifier|final
 name|String
 name|parent
 init|=
@@ -995,6 +1002,7 @@ operator|!=
 literal|null
 condition|)
 block|{
+specifier|final
 name|File
 name|dir
 init|=
@@ -1087,6 +1095,7 @@ index|[]
 name|getBytes
 parameter_list|()
 block|{
+specifier|final
 name|ByteArrayOutputStream
 name|s
 init|=
@@ -1094,6 +1103,7 @@ operator|new
 name|ByteArrayOutputStream
 argument_list|()
 decl_stmt|;
+specifier|final
 name|DataOutputStream
 name|ds
 init|=
@@ -1113,6 +1123,7 @@ expr_stmt|;
 block|}
 catch|catch
 parameter_list|(
+specifier|final
 name|IOException
 name|e
 parameter_list|)
@@ -1135,6 +1146,7 @@ expr_stmt|;
 block|}
 catch|catch
 parameter_list|(
+specifier|final
 name|IOException
 name|e2
 parameter_list|)
@@ -1252,6 +1264,7 @@ argument_list|)
 expr_stmt|;
 for|for
 control|(
+specifier|final
 name|int
 name|interface1
 range|:
@@ -1277,6 +1290,7 @@ argument_list|)
 expr_stmt|;
 for|for
 control|(
+specifier|final
 name|Field
 name|field
 range|:
@@ -1302,6 +1316,7 @@ argument_list|)
 expr_stmt|;
 for|for
 control|(
+specifier|final
 name|Method
 name|method
 range|:
@@ -1334,6 +1349,7 @@ argument_list|)
 expr_stmt|;
 for|for
 control|(
+specifier|final
 name|Attribute
 name|attribute
 range|:
@@ -1527,6 +1543,7 @@ parameter_list|)
 block|{
 for|for
 control|(
+specifier|final
 name|Method
 name|method
 range|:
@@ -1906,6 +1923,7 @@ operator|+
 literal|" "
 operator|)
 expr_stmt|;
+specifier|final
 name|StringBuilder
 name|buf
 init|=
@@ -1967,6 +1985,7 @@ argument_list|(
 literal|'\n'
 argument_list|)
 expr_stmt|;
+specifier|final
 name|int
 name|size
 init|=
@@ -2176,6 +2195,7 @@ argument_list|)
 expr_stmt|;
 for|for
 control|(
+specifier|final
 name|Attribute
 name|attribute
 range|:
@@ -2194,6 +2214,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
+specifier|final
 name|AnnotationEntry
 index|[]
 name|annotations
@@ -2223,6 +2244,7 @@ argument_list|)
 expr_stmt|;
 for|for
 control|(
+specifier|final
 name|AnnotationEntry
 name|annotation
 range|:
@@ -2271,6 +2293,7 @@ argument_list|)
 expr_stmt|;
 for|for
 control|(
+specifier|final
 name|Field
 name|field
 range|:
@@ -2326,6 +2349,7 @@ argument_list|)
 expr_stmt|;
 for|for
 control|(
+specifier|final
 name|Method
 name|method
 range|:
@@ -2368,6 +2392,7 @@ name|Object
 name|obj
 parameter_list|)
 block|{
+specifier|final
 name|StringTokenizer
 name|tok
 init|=
@@ -2382,6 +2407,7 @@ argument_list|,
 literal|"\n"
 argument_list|)
 decl_stmt|;
+specifier|final
 name|StringBuilder
 name|buf
 init|=
@@ -2623,6 +2649,7 @@ block|}
 block|}
 catch|catch
 parameter_list|(
+specifier|final
 name|CloneNotSupportedException
 name|e
 parameter_list|)
@@ -2721,6 +2748,7 @@ return|return;
 block|}
 for|for
 control|(
+specifier|final
 name|Attribute
 name|attribute
 range|:
@@ -2736,6 +2764,7 @@ operator|instanceof
 name|InnerClasses
 condition|)
 block|{
+specifier|final
 name|InnerClass
 index|[]
 name|innerClasses
@@ -2752,6 +2781,7 @@ argument_list|()
 decl_stmt|;
 for|for
 control|(
+specifier|final
 name|InnerClass
 name|innerClasse
 range|:
@@ -2927,6 +2957,7 @@ return|return
 literal|true
 return|;
 block|}
+specifier|final
 name|JavaClass
 index|[]
 name|super_classes
@@ -2936,6 +2967,7 @@ argument_list|()
 decl_stmt|;
 for|for
 control|(
+specifier|final
 name|JavaClass
 name|super_classe
 range|:
@@ -3024,6 +3056,7 @@ return|return
 literal|true
 return|;
 block|}
+specifier|final
 name|JavaClass
 index|[]
 name|super_interfaces
@@ -3033,6 +3066,7 @@ argument_list|()
 decl_stmt|;
 for|for
 control|(
+specifier|final
 name|JavaClass
 name|super_interface
 range|:
@@ -3105,6 +3139,7 @@ name|clazz
 init|=
 name|this
 decl_stmt|;
+specifier|final
 name|List
 argument_list|<
 name|JavaClass
@@ -3170,6 +3205,7 @@ parameter_list|()
 throws|throws
 name|ClassNotFoundException
 block|{
+specifier|final
 name|String
 index|[]
 name|_interfaces
@@ -3177,6 +3213,7 @@ init|=
 name|getInterfaceNames
 argument_list|()
 decl_stmt|;
+specifier|final
 name|JavaClass
 index|[]
 name|classes
@@ -3235,6 +3272,7 @@ parameter_list|()
 throws|throws
 name|ClassNotFoundException
 block|{
+specifier|final
 name|ClassQueue
 name|queue
 init|=
@@ -3242,6 +3280,7 @@ operator|new
 name|ClassQueue
 argument_list|()
 decl_stmt|;
+specifier|final
 name|Set
 argument_list|<
 name|JavaClass
@@ -3269,6 +3308,7 @@ name|empty
 argument_list|()
 condition|)
 block|{
+specifier|final
 name|JavaClass
 name|clazz
 init|=
@@ -3277,6 +3317,7 @@ operator|.
 name|dequeue
 argument_list|()
 decl_stmt|;
+specifier|final
 name|JavaClass
 name|souper
 init|=
@@ -3285,6 +3326,7 @@ operator|.
 name|getSuperClass
 argument_list|()
 decl_stmt|;
+specifier|final
 name|JavaClass
 index|[]
 name|_interfaces
@@ -3330,6 +3372,7 @@ block|}
 block|}
 for|for
 control|(
+specifier|final
 name|JavaClass
 name|_interface
 range|:

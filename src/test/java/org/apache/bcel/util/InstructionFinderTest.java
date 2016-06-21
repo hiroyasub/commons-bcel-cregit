@@ -119,6 +119,7 @@ name|void
 name|testSearch
 parameter_list|()
 block|{
+specifier|final
 name|InstructionList
 name|il
 init|=
@@ -168,6 +169,7 @@ literal|3
 argument_list|)
 argument_list|)
 expr_stmt|;
+specifier|final
 name|InstructionFinder
 name|finder
 init|=
@@ -177,6 +179,7 @@ argument_list|(
 name|il
 argument_list|)
 decl_stmt|;
+specifier|final
 name|Iterator
 argument_list|<
 name|?
@@ -200,6 +203,7 @@ argument_list|,
 literal|null
 argument_list|)
 decl_stmt|;
+specifier|final
 name|InstructionHandle
 index|[]
 name|ihs

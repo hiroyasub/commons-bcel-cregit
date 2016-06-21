@@ -375,6 +375,7 @@ index|[]
 name|getAttributes
 parameter_list|()
 block|{
+specifier|final
 name|Attribute
 index|[]
 name|attributes
@@ -405,6 +406,7 @@ index|[]
 name|getAnnotationEntries
 parameter_list|()
 block|{
+specifier|final
 name|AnnotationEntryGen
 index|[]
 name|annotations
@@ -454,6 +456,7 @@ return|;
 block|}
 catch|catch
 parameter_list|(
+specifier|final
 name|CloneNotSupportedException
 name|e
 parameter_list|)

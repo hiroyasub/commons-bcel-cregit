@@ -1244,6 +1244,7 @@ condition|)
 block|{
 comment|// Okay, class file was loaded correctly by Pass 1
 comment|// and satisfies static constraints of Pass 2.
+specifier|final
 name|JavaClass
 name|jc
 init|=
@@ -1257,6 +1258,7 @@ name|getClassName
 argument_list|()
 argument_list|)
 decl_stmt|;
+specifier|final
 name|Method
 index|[]
 name|methods
@@ -1283,6 +1285,7 @@ literal|"METHOD DOES NOT EXIST!"
 argument_list|)
 throw|;
 block|}
+specifier|final
 name|Method
 name|method
 init|=
@@ -1347,6 +1350,7 @@ expr_stmt|;
 block|}
 catch|catch
 parameter_list|(
+specifier|final
 name|RuntimeException
 name|re
 parameter_list|)
@@ -1391,6 +1395,7 @@ expr_stmt|;
 block|}
 catch|catch
 parameter_list|(
+specifier|final
 name|ClassConstraintException
 name|cce
 parameter_list|)
@@ -1425,6 +1430,7 @@ expr_stmt|;
 block|}
 catch|catch
 parameter_list|(
+specifier|final
 name|StaticCodeConstraintException
 name|scce
 parameter_list|)
@@ -1447,6 +1453,7 @@ expr_stmt|;
 block|}
 catch|catch
 parameter_list|(
+specifier|final
 name|ClassCastException
 name|cce
 parameter_list|)
@@ -1482,6 +1489,7 @@ return|;
 block|}
 catch|catch
 parameter_list|(
+specifier|final
 name|ClassNotFoundException
 name|e
 parameter_list|)
@@ -1506,6 +1514,7 @@ name|void
 name|delayedPass2Checks
 parameter_list|()
 block|{
+specifier|final
 name|int
 index|[]
 name|instructionPositions
@@ -1515,6 +1524,7 @@ operator|.
 name|getInstructionPositions
 argument_list|()
 decl_stmt|;
+specifier|final
 name|int
 name|codeLength
 init|=
@@ -1528,6 +1538,7 @@ decl_stmt|;
 comment|/////////////////////
 comment|// LineNumberTable //
 comment|/////////////////////
+specifier|final
 name|LineNumberTable
 name|lnt
 init|=
@@ -1543,6 +1554,7 @@ operator|!=
 literal|null
 condition|)
 block|{
+specifier|final
 name|LineNumber
 index|[]
 name|lineNumbers
@@ -1552,6 +1564,7 @@ operator|.
 name|getLineNumberTable
 argument_list|()
 decl_stmt|;
+specifier|final
 name|IntList
 name|offsets
 init|=
@@ -1563,6 +1576,7 @@ name|lineNumber_loop
 label|:
 for|for
 control|(
+specifier|final
 name|LineNumber
 name|lineNumber
 range|:
@@ -1572,6 +1586,7 @@ block|{
 comment|// may appear in any order.
 for|for
 control|(
+specifier|final
 name|int
 name|instructionPosition
 range|:
@@ -1579,6 +1594,7 @@ name|instructionPositions
 control|)
 block|{
 comment|// TODO: Make this a binary search! The instructionPositions array is naturally ordered!
+specifier|final
 name|int
 name|offset
 init|=
@@ -1669,6 +1685,7 @@ comment|///////////////////////////
 comment|// LocalVariableTable(s) //
 comment|///////////////////////////
 comment|/* We cannot use code.getLocalVariableTable() because there could be more            than only one. This is a bug in BCEL. */
+specifier|final
 name|Attribute
 index|[]
 name|atts
@@ -1680,6 +1697,7 @@ argument_list|()
 decl_stmt|;
 for|for
 control|(
+specifier|final
 name|Attribute
 name|att
 range|:
@@ -1693,6 +1711,7 @@ operator|instanceof
 name|LocalVariableTable
 condition|)
 block|{
+specifier|final
 name|LocalVariableTable
 name|lvt
 init|=
@@ -1701,6 +1720,7 @@ name|LocalVariableTable
 operator|)
 name|att
 decl_stmt|;
+specifier|final
 name|LocalVariable
 index|[]
 name|localVariables
@@ -1712,12 +1732,14 @@ argument_list|()
 decl_stmt|;
 for|for
 control|(
+specifier|final
 name|LocalVariable
 name|localVariable
 range|:
 name|localVariables
 control|)
 block|{
+specifier|final
 name|int
 name|startpc
 init|=
@@ -1726,6 +1748,7 @@ operator|.
 name|getStartPC
 argument_list|()
 decl_stmt|;
+specifier|final
 name|int
 name|length
 init|=
@@ -1827,6 +1850,7 @@ comment|////////////////////
 comment|// In BCEL's "classfile" API, the startPC/endPC-notation is
 comment|// inclusive/exclusive as in the Java Virtual Machine Specification.
 comment|// WARNING: This is not true for BCEL's "generic" API.
+specifier|final
 name|CodeException
 index|[]
 name|exceptionTable
@@ -1838,12 +1862,14 @@ argument_list|()
 decl_stmt|;
 for|for
 control|(
+specifier|final
 name|CodeException
 name|element
 range|:
 name|exceptionTable
 control|)
 block|{
+specifier|final
 name|int
 name|startpc
 init|=
@@ -1852,6 +1878,7 @@ operator|.
 name|getStartPC
 argument_list|()
 decl_stmt|;
+specifier|final
 name|int
 name|endpc
 init|=
@@ -1860,6 +1887,7 @@ operator|.
 name|getEndPC
 argument_list|()
 decl_stmt|;
+specifier|final
 name|int
 name|handlerpc
 init|=
@@ -2075,6 +2103,7 @@ operator|!=
 literal|null
 condition|)
 block|{
+specifier|final
 name|Instruction
 name|i
 init|=
@@ -2140,6 +2169,7 @@ comment|// The original verifier seems to do this check here, too.
 comment|// An unreachable last instruction may also not fall through the
 comment|// end of the code, which is stupid -- but with the original
 comment|// verifier's subroutine semantics one cannot predict reachability.
+specifier|final
 name|Instruction
 name|last
 init|=
@@ -2211,6 +2241,7 @@ comment|// TODO: Review Exception API, possibly build in some "offending instruc
 comment|//       when we're ready to insulate the offending instruction by doing the
 comment|//       above thing.
 comment|// TODO: Implement as much as possible here. BCEL does _not_ check everything.
+specifier|final
 name|ConstantPoolGen
 name|cpg
 init|=
@@ -2231,6 +2262,7 @@ name|getConstantPool
 argument_list|()
 argument_list|)
 decl_stmt|;
+specifier|final
 name|InstOperandConstraintVisitor
 name|v
 init|=
@@ -2256,6 +2288,7 @@ operator|!=
 literal|null
 condition|)
 block|{
+specifier|final
 name|Instruction
 name|i
 init|=
@@ -2272,6 +2305,7 @@ operator|instanceof
 name|JsrInstruction
 condition|)
 block|{
+specifier|final
 name|InstructionHandle
 name|target
 init|=
@@ -2360,6 +2394,7 @@ block|}
 block|}
 catch|catch
 parameter_list|(
+specifier|final
 name|ClassNotFoundException
 name|e
 parameter_list|)
@@ -2396,6 +2431,7 @@ parameter_list|)
 block|{
 for|for
 control|(
+specifier|final
 name|int
 name|k
 range|:
@@ -2498,6 +2534,7 @@ return|;
 block|}
 catch|catch
 parameter_list|(
+specifier|final
 name|ClassNotFoundException
 name|e
 parameter_list|)
@@ -2600,6 +2637,7 @@ name|LoadClass
 name|o
 parameter_list|)
 block|{
+specifier|final
 name|ObjectType
 name|t
 init|=
@@ -2618,6 +2656,7 @@ literal|null
 condition|)
 block|{
 comment|// null means "no class is loaded"
+specifier|final
 name|Verifier
 name|v
 init|=
@@ -2631,6 +2670,7 @@ name|getClassName
 argument_list|()
 argument_list|)
 decl_stmt|;
+specifier|final
 name|VerificationResult
 name|vr
 init|=
@@ -2707,6 +2747,7 @@ name|getIndex
 argument_list|()
 argument_list|)
 expr_stmt|;
+specifier|final
 name|Constant
 name|c
 init|=
@@ -2800,6 +2841,7 @@ name|getIndex
 argument_list|()
 argument_list|)
 expr_stmt|;
+specifier|final
 name|Constant
 name|c
 init|=
@@ -2860,6 +2902,7 @@ expr_stmt|;
 block|}
 catch|catch
 parameter_list|(
+specifier|final
 name|StaticCodeInstructionOperandConstraintException
 name|e
 parameter_list|)
@@ -2884,6 +2927,7 @@ name|FieldInstruction
 name|o
 parameter_list|)
 block|{
+specifier|final
 name|ReferenceType
 name|rt
 init|=
@@ -2946,6 +2990,7 @@ name|getIndex
 argument_list|()
 argument_list|)
 expr_stmt|;
+specifier|final
 name|Constant
 name|c
 init|=
@@ -2981,6 +3026,7 @@ literal|"'."
 argument_list|)
 expr_stmt|;
 block|}
+specifier|final
 name|String
 name|field_name
 init|=
@@ -2991,6 +3037,7 @@ argument_list|(
 name|cpg
 argument_list|)
 decl_stmt|;
+specifier|final
 name|JavaClass
 name|jc
 init|=
@@ -3023,6 +3070,7 @@ literal|null
 decl_stmt|;
 for|for
 control|(
+specifier|final
 name|Field
 name|field
 range|:
@@ -3042,6 +3090,7 @@ name|field_name
 argument_list|)
 condition|)
 block|{
+specifier|final
 name|Type
 name|f_type
 init|=
@@ -3055,6 +3104,7 @@ name|getSignature
 argument_list|()
 argument_list|)
 decl_stmt|;
+specifier|final
 name|Type
 name|o_type
 init|=
@@ -3091,6 +3141,7 @@ operator|==
 literal|null
 condition|)
 block|{
+specifier|final
 name|JavaClass
 index|[]
 name|superclasses
@@ -3104,6 +3155,7 @@ name|outer
 label|:
 for|for
 control|(
+specifier|final
 name|JavaClass
 name|superclass
 range|:
@@ -3119,6 +3171,7 @@ argument_list|()
 expr_stmt|;
 for|for
 control|(
+specifier|final
 name|Field
 name|field
 range|:
@@ -3138,6 +3191,7 @@ name|field_name
 argument_list|)
 condition|)
 block|{
+specifier|final
 name|Type
 name|f_type
 init|=
@@ -3151,6 +3205,7 @@ name|getSignature
 argument_list|()
 argument_list|)
 decl_stmt|;
+specifier|final
 name|Type
 name|o_type
 init|=
@@ -3269,6 +3324,7 @@ block|}
 block|}
 catch|catch
 parameter_list|(
+specifier|final
 name|ClassNotFoundException
 name|e
 parameter_list|)
@@ -3330,6 +3386,7 @@ name|INVOKESTATIC
 operator|)
 condition|)
 block|{
+specifier|final
 name|Constant
 name|c
 init|=
@@ -3368,6 +3425,7 @@ block|}
 else|else
 block|{
 comment|// Constants are okay due to pass2.
+specifier|final
 name|ConstantNameAndType
 name|cnat
 init|=
@@ -3391,6 +3449,7 @@ argument_list|()
 argument_list|)
 operator|)
 decl_stmt|;
+specifier|final
 name|ConstantUtf8
 name|cutf8
 init|=
@@ -3488,6 +3547,7 @@ block|}
 else|else
 block|{
 comment|//if (o instanceof INVOKEINTERFACE) {
+specifier|final
 name|Constant
 name|c
 init|=
@@ -3528,6 +3588,7 @@ comment|// 'count' operand is consistent with the information in the
 comment|// CONSTANT_InterfaceMethodref and if the last operand is zero.
 comment|// By now, BCEL hides those two operands because they're superfluous.
 comment|// Invoked method must not be<init> or<clinit>
+specifier|final
 name|ConstantNameAndType
 name|cnat
 init|=
@@ -3551,6 +3612,7 @@ argument_list|()
 argument_list|)
 operator|)
 decl_stmt|;
+specifier|final
 name|String
 name|name
 init|=
@@ -3665,6 +3727,7 @@ operator|instanceof
 name|ObjectType
 condition|)
 block|{
+specifier|final
 name|Verifier
 name|v
 init|=
@@ -3683,6 +3746,7 @@ name|getClassName
 argument_list|()
 argument_list|)
 decl_stmt|;
+specifier|final
 name|VerificationResult
 name|vr
 init|=
@@ -3719,6 +3783,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
+specifier|final
 name|Type
 index|[]
 name|ts
@@ -3732,6 +3797,7 @@ argument_list|)
 decl_stmt|;
 for|for
 control|(
+specifier|final
 name|Type
 name|element
 range|:
@@ -3769,6 +3835,7 @@ operator|instanceof
 name|ObjectType
 condition|)
 block|{
+specifier|final
 name|Verifier
 name|v
 init|=
@@ -3787,6 +3854,7 @@ name|getClassName
 argument_list|()
 argument_list|)
 decl_stmt|;
+specifier|final
 name|VerificationResult
 name|vr
 init|=
@@ -3847,6 +3915,7 @@ name|getIndex
 argument_list|()
 argument_list|)
 expr_stmt|;
+specifier|final
 name|Constant
 name|c
 init|=
@@ -3905,6 +3974,7 @@ name|getIndex
 argument_list|()
 argument_list|)
 expr_stmt|;
+specifier|final
 name|Constant
 name|c
 init|=
@@ -3963,6 +4033,7 @@ name|getIndex
 argument_list|()
 argument_list|)
 expr_stmt|;
+specifier|final
 name|Constant
 name|c
 init|=
@@ -4000,6 +4071,7 @@ expr_stmt|;
 block|}
 else|else
 block|{
+specifier|final
 name|ConstantUtf8
 name|cutf8
 init|=
@@ -4023,6 +4095,7 @@ argument_list|()
 argument_list|)
 operator|)
 decl_stmt|;
+specifier|final
 name|Type
 name|t
 init|=
@@ -4079,6 +4152,7 @@ name|getIndex
 argument_list|()
 argument_list|)
 expr_stmt|;
+specifier|final
 name|Constant
 name|c
 init|=
@@ -4114,6 +4188,7 @@ literal|"'."
 argument_list|)
 expr_stmt|;
 block|}
+specifier|final
 name|int
 name|dimensions2create
 init|=
@@ -4137,6 +4212,7 @@ literal|"Number of dimensions to create must be greater than zero."
 argument_list|)
 expr_stmt|;
 block|}
+specifier|final
 name|Type
 name|t
 init|=
@@ -4154,6 +4230,7 @@ operator|instanceof
 name|ArrayType
 condition|)
 block|{
+specifier|final
 name|int
 name|dimensions
 init|=
@@ -4226,6 +4303,7 @@ name|getIndex
 argument_list|()
 argument_list|)
 expr_stmt|;
+specifier|final
 name|Constant
 name|c
 init|=
@@ -4261,6 +4339,7 @@ literal|"'."
 argument_list|)
 expr_stmt|;
 block|}
+specifier|final
 name|Type
 name|t
 init|=
@@ -4278,6 +4357,7 @@ operator|instanceof
 name|ArrayType
 condition|)
 block|{
+specifier|final
 name|int
 name|dimensions
 init|=
@@ -4332,6 +4412,7 @@ name|NEWARRAY
 name|o
 parameter_list|)
 block|{
+specifier|final
 name|byte
 name|t
 init|=
@@ -4431,6 +4512,7 @@ name|ILOAD
 name|o
 parameter_list|)
 block|{
+specifier|final
 name|int
 name|idx
 init|=
@@ -4460,6 +4542,7 @@ expr_stmt|;
 block|}
 else|else
 block|{
+specifier|final
 name|int
 name|maxminus1
 init|=
@@ -4505,6 +4588,7 @@ name|FLOAD
 name|o
 parameter_list|)
 block|{
+specifier|final
 name|int
 name|idx
 init|=
@@ -4534,6 +4618,7 @@ expr_stmt|;
 block|}
 else|else
 block|{
+specifier|final
 name|int
 name|maxminus1
 init|=
@@ -4579,6 +4664,7 @@ name|ALOAD
 name|o
 parameter_list|)
 block|{
+specifier|final
 name|int
 name|idx
 init|=
@@ -4608,6 +4694,7 @@ expr_stmt|;
 block|}
 else|else
 block|{
+specifier|final
 name|int
 name|maxminus1
 init|=
@@ -4653,6 +4740,7 @@ name|ISTORE
 name|o
 parameter_list|)
 block|{
+specifier|final
 name|int
 name|idx
 init|=
@@ -4682,6 +4770,7 @@ expr_stmt|;
 block|}
 else|else
 block|{
+specifier|final
 name|int
 name|maxminus1
 init|=
@@ -4727,6 +4816,7 @@ name|FSTORE
 name|o
 parameter_list|)
 block|{
+specifier|final
 name|int
 name|idx
 init|=
@@ -4756,6 +4846,7 @@ expr_stmt|;
 block|}
 else|else
 block|{
+specifier|final
 name|int
 name|maxminus1
 init|=
@@ -4801,6 +4892,7 @@ name|ASTORE
 name|o
 parameter_list|)
 block|{
+specifier|final
 name|int
 name|idx
 init|=
@@ -4830,6 +4922,7 @@ expr_stmt|;
 block|}
 else|else
 block|{
+specifier|final
 name|int
 name|maxminus1
 init|=
@@ -4875,6 +4968,7 @@ name|IINC
 name|o
 parameter_list|)
 block|{
+specifier|final
 name|int
 name|idx
 init|=
@@ -4904,6 +4998,7 @@ expr_stmt|;
 block|}
 else|else
 block|{
+specifier|final
 name|int
 name|maxminus1
 init|=
@@ -4949,6 +5044,7 @@ name|RET
 name|o
 parameter_list|)
 block|{
+specifier|final
 name|int
 name|idx
 init|=
@@ -4978,6 +5074,7 @@ expr_stmt|;
 block|}
 else|else
 block|{
+specifier|final
 name|int
 name|maxminus1
 init|=
@@ -5023,6 +5120,7 @@ name|LLOAD
 name|o
 parameter_list|)
 block|{
+specifier|final
 name|int
 name|idx
 init|=
@@ -5054,6 +5152,7 @@ expr_stmt|;
 block|}
 else|else
 block|{
+specifier|final
 name|int
 name|maxminus2
 init|=
@@ -5099,6 +5198,7 @@ name|DLOAD
 name|o
 parameter_list|)
 block|{
+specifier|final
 name|int
 name|idx
 init|=
@@ -5130,6 +5230,7 @@ expr_stmt|;
 block|}
 else|else
 block|{
+specifier|final
 name|int
 name|maxminus2
 init|=
@@ -5175,6 +5276,7 @@ name|LSTORE
 name|o
 parameter_list|)
 block|{
+specifier|final
 name|int
 name|idx
 init|=
@@ -5206,6 +5308,7 @@ expr_stmt|;
 block|}
 else|else
 block|{
+specifier|final
 name|int
 name|maxminus2
 init|=
@@ -5251,6 +5354,7 @@ name|DSTORE
 name|o
 parameter_list|)
 block|{
+specifier|final
 name|int
 name|idx
 init|=
@@ -5282,6 +5386,7 @@ expr_stmt|;
 block|}
 else|else
 block|{
+specifier|final
 name|int
 name|maxminus2
 init|=
@@ -5327,6 +5432,7 @@ name|LOOKUPSWITCH
 name|o
 parameter_list|)
 block|{
+specifier|final
 name|int
 index|[]
 name|matchs
@@ -5448,6 +5554,7 @@ parameter_list|)
 block|{
 try|try
 block|{
+specifier|final
 name|String
 name|field_name
 init|=
@@ -5458,6 +5565,7 @@ argument_list|(
 name|cpg
 argument_list|)
 decl_stmt|;
+specifier|final
 name|JavaClass
 name|jc
 init|=
@@ -5474,6 +5582,7 @@ name|getClassName
 argument_list|()
 argument_list|)
 decl_stmt|;
+specifier|final
 name|Field
 index|[]
 name|fields
@@ -5490,6 +5599,7 @@ literal|null
 decl_stmt|;
 for|for
 control|(
+specifier|final
 name|Field
 name|field
 range|:
@@ -5622,6 +5732,7 @@ literal|"' is not static which it should be."
 argument_list|)
 expr_stmt|;
 block|}
+specifier|final
 name|String
 name|meth_name
 init|=
@@ -5693,6 +5804,7 @@ block|}
 block|}
 catch|catch
 parameter_list|(
+specifier|final
 name|ClassNotFoundException
 name|e
 parameter_list|)
@@ -5725,6 +5837,7 @@ parameter_list|)
 block|{
 try|try
 block|{
+specifier|final
 name|String
 name|field_name
 init|=
@@ -5735,6 +5848,7 @@ argument_list|(
 name|cpg
 argument_list|)
 decl_stmt|;
+specifier|final
 name|JavaClass
 name|jc
 init|=
@@ -5751,6 +5865,7 @@ name|getClassName
 argument_list|()
 argument_list|)
 decl_stmt|;
+specifier|final
 name|Field
 index|[]
 name|fields
@@ -5767,6 +5882,7 @@ literal|null
 decl_stmt|;
 for|for
 control|(
+specifier|final
 name|Field
 name|field
 range|:
@@ -5843,6 +5959,7 @@ block|}
 block|}
 catch|catch
 parameter_list|(
+specifier|final
 name|ClassNotFoundException
 name|e
 parameter_list|)
@@ -5907,6 +6024,7 @@ comment|// INVOKEINTERFACE is a LoadClass; the Class where the referenced method
 comment|// is therefore resolved/verified.
 comment|// INVOKEINTERFACE is an InvokeInstruction, the argument and return types are resolved/verified,
 comment|// too. So are the allowed method names.
+specifier|final
 name|String
 name|classname
 init|=
@@ -5917,6 +6035,7 @@ argument_list|(
 name|cpg
 argument_list|)
 decl_stmt|;
+specifier|final
 name|JavaClass
 name|jc
 init|=
@@ -5927,6 +6046,7 @@ argument_list|(
 name|classname
 argument_list|)
 decl_stmt|;
+specifier|final
 name|Method
 name|m
 init|=
@@ -6003,6 +6123,7 @@ block|}
 block|}
 catch|catch
 parameter_list|(
+specifier|final
 name|ClassNotFoundException
 name|e
 parameter_list|)
@@ -6065,6 +6186,7 @@ block|}
 comment|//method not found, look in super classes
 for|for
 control|(
+specifier|final
 name|JavaClass
 name|superclass
 range|:
@@ -6099,6 +6221,7 @@ block|}
 comment|//method not found, look in super interfaces
 for|for
 control|(
+specifier|final
 name|JavaClass
 name|superclass
 range|:
@@ -6149,6 +6272,7 @@ name|InvokeInstruction
 name|invoke
 parameter_list|)
 block|{
+specifier|final
 name|Method
 index|[]
 name|ms
@@ -6160,6 +6284,7 @@ argument_list|()
 decl_stmt|;
 for|for
 control|(
+specifier|final
 name|Method
 name|element
 range|:
@@ -6257,6 +6382,7 @@ comment|// INVOKESPECIAL is a LoadClass; the Class where the referenced method i
 comment|// is therefore resolved/verified.
 comment|// INVOKESPECIAL is an InvokeInstruction, the argument and return types are resolved/verified,
 comment|// too. So are the allowed method names.
+specifier|final
 name|String
 name|classname
 init|=
@@ -6267,6 +6393,7 @@ argument_list|(
 name|cpg
 argument_list|)
 decl_stmt|;
+specifier|final
 name|JavaClass
 name|jc
 init|=
@@ -6277,6 +6404,7 @@ argument_list|(
 name|classname
 argument_list|)
 decl_stmt|;
+specifier|final
 name|Method
 name|m
 init|=
@@ -6430,6 +6558,7 @@ name|getSuperclassName
 argument_list|()
 argument_list|)
 expr_stmt|;
+specifier|final
 name|Method
 index|[]
 name|meths
@@ -6441,6 +6570,7 @@ argument_list|()
 decl_stmt|;
 for|for
 control|(
+specifier|final
 name|Method
 name|meth2
 range|:
@@ -6558,6 +6688,7 @@ block|}
 block|}
 catch|catch
 parameter_list|(
+specifier|final
 name|ClassNotFoundException
 name|e
 parameter_list|)
@@ -6594,6 +6725,7 @@ comment|// INVOKESTATIC is a LoadClass; the Class where the referenced method is
 comment|// is therefore resolved/verified.
 comment|// INVOKESTATIC is an InvokeInstruction, the argument and return types are resolved/verified,
 comment|// too. So are the allowed method names.
+specifier|final
 name|String
 name|classname
 init|=
@@ -6604,6 +6736,7 @@ argument_list|(
 name|cpg
 argument_list|)
 decl_stmt|;
+specifier|final
 name|JavaClass
 name|jc
 init|=
@@ -6614,6 +6747,7 @@ argument_list|(
 name|classname
 argument_list|)
 decl_stmt|;
+specifier|final
 name|Method
 name|m
 init|=
@@ -6696,6 +6830,7 @@ block|}
 block|}
 catch|catch
 parameter_list|(
+specifier|final
 name|ClassNotFoundException
 name|e
 parameter_list|)
@@ -6732,6 +6867,7 @@ comment|// INVOKEVIRTUAL is a LoadClass; the Class where the referenced method i
 comment|// is therefore resolved/verified.
 comment|// INVOKEVIRTUAL is an InvokeInstruction, the argument and return types are resolved/verified,
 comment|// too. So are the allowed method names.
+specifier|final
 name|String
 name|classname
 init|=
@@ -6742,6 +6878,7 @@ argument_list|(
 name|cpg
 argument_list|)
 decl_stmt|;
+specifier|final
 name|JavaClass
 name|jc
 init|=
@@ -6752,6 +6889,7 @@ argument_list|(
 name|classname
 argument_list|)
 decl_stmt|;
+specifier|final
 name|Method
 name|m
 init|=
@@ -6831,6 +6969,7 @@ block|}
 block|}
 catch|catch
 parameter_list|(
+specifier|final
 name|ClassNotFoundException
 name|e
 parameter_list|)

@@ -308,6 +308,7 @@ name|class_path
 operator|=
 name|class_path
 expr_stmt|;
+specifier|final
 name|List
 argument_list|<
 name|PathEntry
@@ -321,6 +322,7 @@ argument_list|()
 decl_stmt|;
 for|for
 control|(
+specifier|final
 name|StringTokenizer
 name|tok
 init|=
@@ -341,6 +343,7 @@ argument_list|()
 condition|;
 control|)
 block|{
+specifier|final
 name|String
 name|path
 init|=
@@ -358,6 +361,7 @@ name|isEmpty
 argument_list|()
 condition|)
 block|{
+specifier|final
 name|File
 name|file
 init|=
@@ -419,6 +423,7 @@ block|}
 block|}
 catch|catch
 parameter_list|(
+specifier|final
 name|IOException
 name|e
 parameter_list|)
@@ -572,6 +577,7 @@ operator|instanceof
 name|ClassPath
 condition|)
 block|{
+specifier|final
 name|ClassPath
 name|cp
 init|=
@@ -620,6 +626,7 @@ operator|!=
 literal|null
 condition|)
 block|{
+specifier|final
 name|StringTokenizer
 name|tok
 init|=
@@ -641,6 +648,7 @@ name|hasMoreTokens
 argument_list|()
 condition|)
 block|{
+specifier|final
 name|String
 name|name
 init|=
@@ -649,6 +657,7 @@ operator|.
 name|nextToken
 argument_list|()
 decl_stmt|;
+specifier|final
 name|File
 name|file
 init|=
@@ -685,6 +694,7 @@ name|String
 name|getClassPath
 parameter_list|()
 block|{
+specifier|final
 name|String
 name|class_path
 init|=
@@ -695,6 +705,7 @@ argument_list|(
 literal|"java.class.path"
 argument_list|)
 decl_stmt|;
+specifier|final
 name|String
 name|boot_path
 init|=
@@ -705,6 +716,7 @@ argument_list|(
 literal|"sun.boot.class.path"
 argument_list|)
 decl_stmt|;
+specifier|final
 name|String
 name|ext_path
 init|=
@@ -715,6 +727,7 @@ argument_list|(
 literal|"java.ext.dirs"
 argument_list|)
 decl_stmt|;
+specifier|final
 name|List
 argument_list|<
 name|String
@@ -740,6 +753,7 @@ argument_list|,
 name|list
 argument_list|)
 expr_stmt|;
+specifier|final
 name|List
 argument_list|<
 name|String
@@ -760,12 +774,14 @@ argument_list|)
 expr_stmt|;
 for|for
 control|(
+specifier|final
 name|String
 name|d
 range|:
 name|dirs
 control|)
 block|{
+specifier|final
 name|File
 name|ext_dir
 init|=
@@ -775,6 +791,7 @@ argument_list|(
 name|d
 argument_list|)
 decl_stmt|;
+specifier|final
 name|String
 index|[]
 name|extensions
@@ -795,6 +812,7 @@ condition|)
 block|{
 for|for
 control|(
+specifier|final
 name|String
 name|extension
 range|:
@@ -820,6 +838,7 @@ expr_stmt|;
 block|}
 block|}
 block|}
+specifier|final
 name|StringBuilder
 name|buf
 init|=
@@ -834,6 +853,7 @@ literal|""
 decl_stmt|;
 for|for
 control|(
+specifier|final
 name|String
 name|path
 range|:
@@ -941,6 +961,7 @@ comment|// may return null
 block|}
 catch|catch
 parameter_list|(
+specifier|final
 name|Exception
 name|e
 parameter_list|)
@@ -982,6 +1003,7 @@ parameter_list|)
 block|{
 for|for
 control|(
+specifier|final
 name|PathEntry
 name|path
 range|:
@@ -1028,6 +1050,7 @@ parameter_list|)
 block|{
 for|for
 control|(
+specifier|final
 name|PathEntry
 name|path
 range|:
@@ -1075,6 +1098,7 @@ name|String
 name|name
 parameter_list|)
 block|{
+specifier|final
 name|Vector
 argument_list|<
 name|URL
@@ -1088,6 +1112,7 @@ argument_list|()
 decl_stmt|;
 for|for
 control|(
+specifier|final
 name|PathEntry
 name|path
 range|:
@@ -1226,12 +1251,14 @@ name|IOException
 block|{
 for|for
 control|(
+specifier|final
 name|PathEntry
 name|path
 range|:
 name|paths
 control|)
 block|{
+specifier|final
 name|ClassFile
 name|cf
 init|=
@@ -1343,6 +1370,7 @@ argument_list|(
 name|is
 argument_list|)
 expr_stmt|;
+specifier|final
 name|byte
 index|[]
 name|bytes
@@ -1417,6 +1445,7 @@ parameter_list|)
 throws|throws
 name|IOException
 block|{
+specifier|final
 name|int
 name|index
 init|=
@@ -1647,6 +1676,7 @@ return|;
 block|}
 catch|catch
 parameter_list|(
+specifier|final
 name|MalformedURLException
 name|e
 parameter_list|)
@@ -1711,6 +1741,7 @@ return|;
 block|}
 catch|catch
 parameter_list|(
+specifier|final
 name|IOException
 name|e
 parameter_list|)
@@ -1808,6 +1839,7 @@ return|;
 block|}
 catch|catch
 parameter_list|(
+specifier|final
 name|IOException
 name|e
 parameter_list|)
@@ -1947,6 +1979,7 @@ return|;
 block|}
 catch|catch
 parameter_list|(
+specifier|final
 name|MalformedURLException
 name|e
 parameter_list|)
@@ -1998,6 +2031,7 @@ return|;
 block|}
 catch|catch
 parameter_list|(
+specifier|final
 name|IOException
 name|e
 parameter_list|)

@@ -132,6 +132,7 @@ parameter_list|()
 throws|throws
 name|ClassNotFoundException
 block|{
+specifier|final
 name|JavaClass
 name|clazz
 init|=
@@ -188,6 +189,7 @@ name|ClassNotFoundException
 throws|,
 name|IOException
 block|{
+specifier|final
 name|JavaClass
 name|clazz
 init|=
@@ -233,6 +235,7 @@ literal|"2"
 argument_list|)
 expr_stmt|;
 comment|// Write it out
+specifier|final
 name|File
 name|tfile
 init|=
@@ -248,6 +251,7 @@ argument_list|(
 name|tfile
 argument_list|)
 expr_stmt|;
+specifier|final
 name|SyntheticRepository
 name|repos2
 init|=
@@ -314,11 +318,13 @@ parameter_list|()
 throws|throws
 name|ClassNotFoundException
 block|{
+specifier|final
 name|boolean
 name|dbg
 init|=
 literal|false
 decl_stmt|;
+specifier|final
 name|JavaClass
 name|clazz
 init|=
@@ -329,6 +335,7 @@ operator|+
 literal|".data.AnnotatedFields"
 argument_list|)
 decl_stmt|;
+specifier|final
 name|ClassGen
 name|clg
 init|=
@@ -389,6 +396,7 @@ argument_list|)
 argument_list|)
 expr_stmt|;
 block|}
+specifier|final
 name|AnnotationEntryGen
 name|fruitBasedAnnotationEntry
 init|=
@@ -404,6 +412,7 @@ argument_list|,
 literal|false
 argument_list|)
 decl_stmt|;
+specifier|final
 name|FieldGen
 name|fg
 init|=
@@ -613,6 +622,7 @@ name|String
 name|AnnotationEntryElementValue
 parameter_list|)
 block|{
+specifier|final
 name|Field
 index|[]
 name|fields
@@ -624,12 +634,14 @@ argument_list|()
 decl_stmt|;
 for|for
 control|(
+specifier|final
 name|Field
 name|f
 range|:
 name|fields
 control|)
 block|{
+specifier|final
 name|AnnotationEntry
 index|[]
 name|fieldAnnotationEntrys
@@ -735,6 +747,7 @@ operator|==
 literal|1
 argument_list|)
 expr_stmt|;
+specifier|final
 name|ElementValuePair
 name|envp
 init|=
@@ -839,6 +852,7 @@ name|i
 operator|++
 control|)
 block|{
+specifier|final
 name|ElementValuePair
 name|element
 init|=

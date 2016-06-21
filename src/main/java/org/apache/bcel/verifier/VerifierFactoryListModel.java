@@ -155,6 +155,7 @@ name|String
 name|s
 parameter_list|)
 block|{
+specifier|final
 name|Verifier
 index|[]
 name|verifiers
@@ -164,6 +165,7 @@ operator|.
 name|getVerifiers
 argument_list|()
 decl_stmt|;
+specifier|final
 name|int
 name|num_of_verifiers
 init|=
@@ -178,6 +180,7 @@ argument_list|()
 expr_stmt|;
 for|for
 control|(
+specifier|final
 name|Verifier
 name|verifier
 range|:
@@ -197,12 +200,14 @@ expr_stmt|;
 block|}
 for|for
 control|(
+specifier|final
 name|ListDataListener
 name|listener
 range|:
 name|listeners
 control|)
 block|{
+specifier|final
 name|ListDataEvent
 name|e
 init|=

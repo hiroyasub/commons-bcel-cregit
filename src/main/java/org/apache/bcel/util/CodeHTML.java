@@ -417,6 +417,7 @@ parameter_list|)
 throws|throws
 name|IOException
 block|{
+specifier|final
 name|short
 name|opcode
 init|=
@@ -469,6 +470,7 @@ decl_stmt|;
 name|int
 name|offset
 decl_stmt|;
+specifier|final
 name|StringBuilder
 name|buf
 init|=
@@ -521,6 +523,7 @@ name|LOOKUPSWITCH
 operator|)
 condition|)
 block|{
+specifier|final
 name|int
 name|remainder
 init|=
@@ -695,6 +698,7 @@ expr_stmt|;
 comment|// Print target and default indices in second row
 for|for
 control|(
+specifier|final
 name|int
 name|element
 range|:
@@ -783,6 +787,7 @@ name|Const
 operator|.
 name|LOOKUPSWITCH
 case|:
+specifier|final
 name|int
 name|npairs
 init|=
@@ -839,6 +844,7 @@ name|i
 operator|++
 control|)
 block|{
+specifier|final
 name|int
 name|match
 init|=
@@ -1136,6 +1142,7 @@ name|Const
 operator|.
 name|JSR_W
 case|:
+specifier|final
 name|int
 name|windex
 init|=
@@ -1364,6 +1371,7 @@ operator|.
 name|readShort
 argument_list|()
 expr_stmt|;
+specifier|final
 name|ConstantFieldref
 name|c1
 init|=
@@ -1419,6 +1427,7 @@ operator|.
 name|getNameAndTypeIndex
 argument_list|()
 expr_stmt|;
+specifier|final
 name|String
 name|field_name
 init|=
@@ -1570,6 +1579,7 @@ name|Const
 operator|.
 name|INVOKEDYNAMIC
 case|:
+specifier|final
 name|int
 name|m_index
 init|=
@@ -1605,6 +1615,7 @@ expr_stmt|;
 comment|// Reserved
 comment|//                    int nargs = bytes.readUnsignedByte(); // Redundant
 comment|//                    int reserved = bytes.readUnsignedByte(); // Reserved
+specifier|final
 name|ConstantInterfaceMethodref
 name|c
 init|=
@@ -1668,6 +1679,7 @@ name|readUnsignedByte
 argument_list|()
 expr_stmt|;
 comment|// Reserved
+specifier|final
 name|ConstantInvokeDynamic
 name|c
 init|=
@@ -1707,6 +1719,7 @@ block|{
 comment|// UNDONE: Java8 now allows INVOKESPECIAL and INVOKESTATIC to
 comment|// reference EITHER a Methodref OR an InterfaceMethodref.
 comment|// Not sure if that affects this code or not.  (markro)
+specifier|final
 name|ConstantMethodref
 name|c
 init|=
@@ -1772,6 +1785,7 @@ argument_list|)
 argument_list|)
 expr_stmt|;
 comment|// Get signature, i.e., types
+specifier|final
 name|ConstantNameAndType
 name|c2
 init|=
@@ -1805,6 +1819,7 @@ operator|.
 name|CONSTANT_Utf8
 argument_list|)
 expr_stmt|;
+specifier|final
 name|String
 index|[]
 name|args
@@ -1818,6 +1833,7 @@ argument_list|,
 literal|false
 argument_list|)
 decl_stmt|;
+specifier|final
 name|String
 name|type
 init|=
@@ -2134,6 +2150,7 @@ operator|.
 name|readShort
 argument_list|()
 expr_stmt|;
+specifier|final
 name|int
 name|dimensions
 init|=
@@ -2418,6 +2435,7 @@ operator|!=
 literal|null
 condition|)
 block|{
+specifier|final
 name|CodeException
 index|[]
 name|ce
@@ -2429,6 +2447,7 @@ argument_list|()
 decl_stmt|;
 for|for
 control|(
+specifier|final
 name|CodeException
 name|cex
 range|:
@@ -2467,6 +2486,7 @@ argument_list|)
 expr_stmt|;
 block|}
 comment|// Look for local variables and their range
+specifier|final
 name|Attribute
 index|[]
 name|attributes
@@ -2478,6 +2498,7 @@ argument_list|()
 decl_stmt|;
 for|for
 control|(
+specifier|final
 name|Attribute
 name|attribute
 range|:
@@ -2496,6 +2517,7 @@ operator|.
 name|ATTR_LOCAL_VARIABLE_TABLE
 condition|)
 block|{
+specifier|final
 name|LocalVariable
 index|[]
 name|vars
@@ -2512,12 +2534,14 @@ argument_list|()
 decl_stmt|;
 for|for
 control|(
+specifier|final
 name|LocalVariable
 name|var
 range|:
 name|vars
 control|)
 block|{
+specifier|final
 name|int
 name|start
 init|=
@@ -2526,6 +2550,7 @@ operator|.
 name|getStartPC
 argument_list|()
 decl_stmt|;
+specifier|final
 name|int
 name|end
 init|=
@@ -2592,6 +2617,7 @@ operator|.
 name|LOOKUPSWITCH
 case|:
 comment|//bytes.readByte(); // Skip already read byte
+specifier|final
 name|int
 name|remainder
 init|=
@@ -2602,6 +2628,7 @@ argument_list|()
 operator|%
 literal|4
 decl_stmt|;
+specifier|final
 name|int
 name|no_pad_bytes
 init|=
@@ -2661,6 +2688,7 @@ operator|.
 name|TABLESWITCH
 condition|)
 block|{
+specifier|final
 name|int
 name|low
 init|=
@@ -2669,6 +2697,7 @@ operator|.
 name|readInt
 argument_list|()
 decl_stmt|;
+specifier|final
 name|int
 name|high
 init|=
@@ -2743,6 +2772,7 @@ block|}
 else|else
 block|{
 comment|// LOOKUPSWITCH
+specifier|final
 name|int
 name|npairs
 init|=
@@ -2995,6 +3025,7 @@ throws|throws
 name|IOException
 block|{
 comment|// Get raw signature
+specifier|final
 name|String
 name|signature
 init|=
@@ -3004,6 +3035,7 @@ name|getSignature
 argument_list|()
 decl_stmt|;
 comment|// Get array of strings containing the argument types
+specifier|final
 name|String
 index|[]
 name|args
@@ -3018,6 +3050,7 @@ literal|false
 argument_list|)
 decl_stmt|;
 comment|// Get return type string
+specifier|final
 name|String
 name|type
 init|=
@@ -3031,6 +3064,7 @@ literal|false
 argument_list|)
 decl_stmt|;
 comment|// Get method name
+specifier|final
 name|String
 name|name
 init|=
@@ -3039,6 +3073,7 @@ operator|.
 name|getName
 argument_list|()
 decl_stmt|;
+specifier|final
 name|String
 name|html_name
 init|=
@@ -3077,6 +3112,7 @@ literal|"&nbsp;"
 argument_list|)
 expr_stmt|;
 comment|// Get the method's attributes, the Code Attribute in particular
+specifier|final
 name|Attribute
 index|[]
 name|attributes
@@ -3312,6 +3348,7 @@ index|[
 name|i
 index|]
 expr_stmt|;
+specifier|final
 name|Attribute
 index|[]
 name|attributes2
@@ -3479,6 +3516,7 @@ literal|0
 condition|;
 control|)
 block|{
+specifier|final
 name|int
 name|offset
 init|=
@@ -3487,6 +3525,7 @@ operator|.
 name|getIndex
 argument_list|()
 decl_stmt|;
+specifier|final
 name|String
 name|str
 init|=

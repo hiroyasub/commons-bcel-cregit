@@ -283,6 +283,7 @@ argument_list|,
 name|cpool
 argument_list|)
 expr_stmt|;
+specifier|final
 name|int
 name|local_variable_type_table_length
 init|=
@@ -380,6 +381,7 @@ argument_list|)
 expr_stmt|;
 for|for
 control|(
+specifier|final
 name|LocalVariable
 name|variable
 range|:
@@ -418,6 +420,7 @@ parameter_list|)
 block|{
 for|for
 control|(
+specifier|final
 name|LocalVariable
 name|variable
 range|:
@@ -470,6 +473,7 @@ name|String
 name|toString
 parameter_list|()
 block|{
+specifier|final
 name|StringBuilder
 name|buf
 init|=
@@ -548,6 +552,7 @@ name|ConstantPool
 name|constant_pool
 parameter_list|)
 block|{
+specifier|final
 name|LocalVariableTypeTable
 name|c
 init|=

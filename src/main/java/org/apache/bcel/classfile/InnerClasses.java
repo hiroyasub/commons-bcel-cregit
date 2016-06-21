@@ -196,6 +196,7 @@ argument_list|,
 name|constant_pool
 argument_list|)
 expr_stmt|;
+specifier|final
 name|int
 name|number_of_classes
 init|=
@@ -293,6 +294,7 @@ argument_list|)
 expr_stmt|;
 for|for
 control|(
+specifier|final
 name|InnerClass
 name|inner_class
 range|:
@@ -358,6 +360,7 @@ name|String
 name|toString
 parameter_list|()
 block|{
+specifier|final
 name|StringBuilder
 name|buf
 init|=
@@ -390,6 +393,7 @@ argument_list|)
 expr_stmt|;
 for|for
 control|(
+specifier|final
 name|InnerClass
 name|inner_class
 range|:
@@ -437,6 +441,7 @@ name|_constant_pool
 parameter_list|)
 block|{
 comment|// TODO this could be recoded to use a lower level constructor after creating a copy of the inner classes
+specifier|final
 name|InnerClasses
 name|c
 init|=

@@ -106,6 +106,7 @@ parameter_list|)
 throws|throws
 name|IOException
 block|{
+specifier|final
 name|int
 name|annotation_table_length
 init|=
@@ -209,6 +210,7 @@ argument_list|)
 expr_stmt|;
 for|for
 control|(
+specifier|final
 name|AnnotationEntry
 name|entry
 range|:
@@ -237,6 +239,7 @@ name|attrs
 parameter_list|)
 block|{
 comment|// Find attributes that contain parameter annotation data
+specifier|final
 name|List
 argument_list|<
 name|ParameterAnnotationEntry
@@ -254,6 +257,7 @@ argument_list|)
 decl_stmt|;
 for|for
 control|(
+specifier|final
 name|Attribute
 name|attribute
 range|:
@@ -267,6 +271,7 @@ operator|instanceof
 name|ParameterAnnotations
 condition|)
 block|{
+specifier|final
 name|ParameterAnnotations
 name|runtimeAnnotations
 init|=

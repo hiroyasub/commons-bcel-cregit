@@ -482,6 +482,7 @@ return|;
 block|}
 catch|catch
 parameter_list|(
+specifier|final
 name|CloneNotSupportedException
 name|e
 parameter_list|)

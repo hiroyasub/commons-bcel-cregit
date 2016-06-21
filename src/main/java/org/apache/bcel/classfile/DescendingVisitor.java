@@ -82,6 +82,7 @@ name|int
 name|level
 parameter_list|)
 block|{
+specifier|final
 name|int
 name|size
 init|=
@@ -203,6 +204,7 @@ argument_list|(
 name|visitor
 argument_list|)
 expr_stmt|;
+specifier|final
 name|Field
 index|[]
 name|fields
@@ -214,6 +216,7 @@ argument_list|()
 decl_stmt|;
 for|for
 control|(
+specifier|final
 name|Field
 name|field
 range|:
@@ -228,6 +231,7 @@ name|this
 argument_list|)
 expr_stmt|;
 block|}
+specifier|final
 name|Method
 index|[]
 name|methods
@@ -239,6 +243,7 @@ argument_list|()
 decl_stmt|;
 for|for
 control|(
+specifier|final
 name|Method
 name|method
 range|:
@@ -253,6 +258,7 @@ name|this
 argument_list|)
 expr_stmt|;
 block|}
+specifier|final
 name|Attribute
 index|[]
 name|attributes
@@ -264,6 +270,7 @@ argument_list|()
 decl_stmt|;
 for|for
 control|(
+specifier|final
 name|Attribute
 name|attribute
 range|:
@@ -320,6 +327,7 @@ argument_list|(
 name|visitor
 argument_list|)
 expr_stmt|;
+specifier|final
 name|AnnotationEntry
 index|[]
 name|entries
@@ -331,6 +339,7 @@ argument_list|()
 decl_stmt|;
 for|for
 control|(
+specifier|final
 name|AnnotationEntry
 name|entrie
 range|:
@@ -408,6 +417,7 @@ argument_list|(
 name|visitor
 argument_list|)
 expr_stmt|;
+specifier|final
 name|Attribute
 index|[]
 name|attributes
@@ -419,6 +429,7 @@ argument_list|()
 decl_stmt|;
 for|for
 control|(
+specifier|final
 name|Attribute
 name|attribute
 range|:
@@ -495,6 +506,7 @@ argument_list|(
 name|visitor
 argument_list|)
 expr_stmt|;
+specifier|final
 name|Attribute
 index|[]
 name|attributes
@@ -506,6 +518,7 @@ argument_list|()
 decl_stmt|;
 for|for
 control|(
+specifier|final
 name|Attribute
 name|attribute
 range|:
@@ -582,6 +595,7 @@ argument_list|(
 name|visitor
 argument_list|)
 expr_stmt|;
+specifier|final
 name|CodeException
 index|[]
 name|table
@@ -593,6 +607,7 @@ argument_list|()
 decl_stmt|;
 for|for
 control|(
+specifier|final
 name|CodeException
 name|element
 range|:
@@ -607,6 +622,7 @@ name|this
 argument_list|)
 expr_stmt|;
 block|}
+specifier|final
 name|Attribute
 index|[]
 name|attributes
@@ -618,6 +634,7 @@ argument_list|()
 decl_stmt|;
 for|for
 control|(
+specifier|final
 name|Attribute
 name|attribute
 range|:
@@ -694,6 +711,7 @@ argument_list|(
 name|visitor
 argument_list|)
 expr_stmt|;
+specifier|final
 name|LineNumber
 index|[]
 name|numbers
@@ -705,6 +723,7 @@ argument_list|()
 decl_stmt|;
 for|for
 control|(
+specifier|final
 name|LineNumber
 name|number
 range|:
@@ -781,6 +800,7 @@ argument_list|(
 name|visitor
 argument_list|)
 expr_stmt|;
+specifier|final
 name|LocalVariable
 index|[]
 name|vars
@@ -792,6 +812,7 @@ argument_list|()
 decl_stmt|;
 for|for
 control|(
+specifier|final
 name|LocalVariable
 name|var
 range|:
@@ -837,6 +858,7 @@ argument_list|(
 name|visitor
 argument_list|)
 expr_stmt|;
+specifier|final
 name|StackMapEntry
 index|[]
 name|vars
@@ -848,6 +870,7 @@ argument_list|()
 decl_stmt|;
 for|for
 control|(
+specifier|final
 name|StackMapEntry
 name|var
 range|:
@@ -955,6 +978,7 @@ argument_list|(
 name|visitor
 argument_list|)
 expr_stmt|;
+specifier|final
 name|Constant
 index|[]
 name|constants
@@ -1407,6 +1431,7 @@ argument_list|(
 name|visitor
 argument_list|)
 expr_stmt|;
+specifier|final
 name|InnerClass
 index|[]
 name|ics
@@ -1418,6 +1443,7 @@ argument_list|()
 decl_stmt|;
 for|for
 control|(
+specifier|final
 name|InnerClass
 name|ic2
 range|:

@@ -146,6 +146,7 @@ index|[]
 name|toArray
 parameter_list|()
 block|{
+specifier|final
 name|JavaClass
 index|[]
 name|classes

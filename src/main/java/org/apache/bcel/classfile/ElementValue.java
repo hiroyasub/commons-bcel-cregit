@@ -262,6 +262,7 @@ parameter_list|)
 throws|throws
 name|IOException
 block|{
+specifier|final
 name|byte
 name|type
 init|=
@@ -382,6 +383,7 @@ return|;
 case|case
 name|ARRAY
 case|:
+specifier|final
 name|int
 name|numArrayVals
 init|=
@@ -390,6 +392,7 @@ operator|.
 name|readUnsignedShort
 argument_list|()
 decl_stmt|;
+specifier|final
 name|ElementValue
 index|[]
 name|evalues

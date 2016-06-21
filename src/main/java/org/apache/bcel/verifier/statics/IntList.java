@@ -98,6 +98,7 @@ name|int
 name|i
 parameter_list|)
 block|{
+specifier|final
 name|Integer
 index|[]
 name|ints
@@ -120,6 +121,7 @@ argument_list|)
 expr_stmt|;
 for|for
 control|(
+specifier|final
 name|Integer
 name|k
 range|:

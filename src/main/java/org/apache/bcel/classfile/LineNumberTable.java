@@ -195,6 +195,7 @@ argument_list|,
 name|constant_pool
 argument_list|)
 expr_stmt|;
+specifier|final
 name|int
 name|line_number_table_length
 init|=
@@ -292,6 +293,7 @@ argument_list|)
 expr_stmt|;
 for|for
 control|(
+specifier|final
 name|LineNumber
 name|lineNumber
 range|:
@@ -347,6 +349,7 @@ name|String
 name|toString
 parameter_list|()
 block|{
+specifier|final
 name|StringBuilder
 name|buf
 init|=
@@ -354,6 +357,7 @@ operator|new
 name|StringBuilder
 argument_list|()
 decl_stmt|;
+specifier|final
 name|StringBuilder
 name|line
 init|=
@@ -361,6 +365,7 @@ operator|new
 name|StringBuilder
 argument_list|()
 decl_stmt|;
+specifier|final
 name|String
 name|newLine
 init|=
@@ -532,6 +537,7 @@ decl_stmt|;
 comment|/* Do a binary search since the array is ordered.          */
 do|do
 block|{
+specifier|final
 name|int
 name|i
 init|=
@@ -543,6 +549,7 @@ operator|)
 operator|/
 literal|2
 decl_stmt|;
+specifier|final
 name|int
 name|j
 init|=
@@ -660,6 +667,7 @@ parameter_list|)
 block|{
 comment|// TODO could use the lower level constructor and thereby allow
 comment|// line_number_table to be made final
+specifier|final
 name|LineNumberTable
 name|c
 init|=

@@ -355,6 +355,7 @@ name|Const
 operator|.
 name|CONSTANT_String
 case|:
+specifier|final
 name|int
 name|i
 init|=
@@ -487,6 +488,7 @@ name|Const
 operator|.
 name|CONSTANT_Class
 case|:
+specifier|final
 name|int
 name|nameIndex
 init|=

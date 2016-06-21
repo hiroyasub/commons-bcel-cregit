@@ -161,6 +161,7 @@ name|Const
 operator|.
 name|T_ARRAY
 case|:
+specifier|final
 name|ArrayType
 name|array
 init|=
@@ -212,6 +213,7 @@ name|type
 expr_stmt|;
 break|break;
 block|}
+specifier|final
 name|StringBuilder
 name|buf
 init|=
@@ -350,6 +352,7 @@ operator|instanceof
 name|ArrayType
 condition|)
 block|{
+specifier|final
 name|ArrayType
 name|array
 init|=

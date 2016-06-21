@@ -98,6 +98,7 @@ parameter_list|()
 throws|throws
 name|ClassNotFoundException
 block|{
+specifier|final
 name|JavaClass
 name|clazz
 init|=
@@ -108,6 +109,7 @@ operator|+
 literal|".data.SimpleAnnotation"
 argument_list|)
 decl_stmt|;
+specifier|final
 name|Method
 name|m
 init|=
@@ -118,6 +120,7 @@ argument_list|,
 literal|"fruit"
 argument_list|)
 decl_stmt|;
+specifier|final
 name|AnnotationDefault
 name|a
 init|=
@@ -134,6 +137,7 @@ name|getAttributes
 argument_list|()
 argument_list|)
 decl_stmt|;
+specifier|final
 name|SimpleElementValue
 name|val
 init|=

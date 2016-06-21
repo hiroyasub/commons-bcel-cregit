@@ -844,6 +844,7 @@ parameter_list|()
 block|{
 try|try
 block|{
+specifier|final
 name|VerificationResult
 name|vr1
 init|=
@@ -912,6 +913,7 @@ expr_stmt|;
 block|}
 catch|catch
 parameter_list|(
+specifier|final
 name|ClassConstraintException
 name|cce
 parameter_list|)
@@ -944,6 +946,7 @@ return|;
 block|}
 catch|catch
 parameter_list|(
+specifier|final
 name|ClassNotFoundException
 name|e
 parameter_list|)
@@ -970,6 +973,7 @@ parameter_list|()
 block|{
 try|try
 block|{
+specifier|final
 name|Set
 argument_list|<
 name|String
@@ -1066,6 +1070,7 @@ block|}
 block|}
 else|else
 block|{
+specifier|final
 name|String
 name|supername
 init|=
@@ -1094,6 +1099,7 @@ literal|"Circular superclass hierarchy detected."
 argument_list|)
 throw|;
 block|}
+specifier|final
 name|Verifier
 name|v
 init|=
@@ -1104,6 +1110,7 @@ argument_list|(
 name|supername
 argument_list|)
 decl_stmt|;
+specifier|final
 name|VerificationResult
 name|vr
 init|=
@@ -1167,6 +1174,7 @@ block|}
 block|}
 catch|catch
 parameter_list|(
+specifier|final
 name|ClassNotFoundException
 name|e
 parameter_list|)
@@ -1193,6 +1201,7 @@ parameter_list|()
 block|{
 try|try
 block|{
+specifier|final
 name|Map
 argument_list|<
 name|String
@@ -1239,6 +1248,7 @@ operator|.
 name|getSuperclassNameIndex
 argument_list|()
 expr_stmt|;
+specifier|final
 name|Method
 index|[]
 name|methods
@@ -1250,12 +1260,14 @@ argument_list|()
 decl_stmt|;
 for|for
 control|(
+specifier|final
 name|Method
 name|method
 range|:
 name|methods
 control|)
 block|{
+specifier|final
 name|String
 name|nameAndSig
 init|=
@@ -1425,6 +1437,7 @@ block|}
 block|}
 catch|catch
 parameter_list|(
+specifier|final
 name|ClassNotFoundException
 name|e
 parameter_list|)
@@ -1454,6 +1467,7 @@ block|{
 comment|// Most of the consistency is handled internally by BCEL; here
 comment|// we only have to verify if the indices of the constants point
 comment|// to constants of the appropriate type and such.
+specifier|final
 name|JavaClass
 name|jc
 init|=
@@ -1477,6 +1491,7 @@ comment|// constructor implicitly traverses jc
 block|}
 catch|catch
 parameter_list|(
+specifier|final
 name|ClassNotFoundException
 name|e
 parameter_list|)
@@ -1782,6 +1797,7 @@ literal|"'."
 argument_list|)
 throw|;
 block|}
+specifier|final
 name|Constant
 name|c
 init|=
@@ -1849,6 +1865,7 @@ name|JavaClass
 name|obj
 parameter_list|)
 block|{
+specifier|final
 name|Attribute
 index|[]
 name|atts
@@ -1870,6 +1887,7 @@ literal|false
 decl_stmt|;
 comment|// Is there an InnerClass referenced?
 comment|// This is a costly check; existing verifiers don't do it!
+specifier|final
 name|boolean
 name|hasInnerClass
 init|=
@@ -1884,6 +1902,7 @@ argument_list|()
 decl_stmt|;
 for|for
 control|(
+specifier|final
 name|Attribute
 name|att
 range|:
@@ -2900,6 +2919,7 @@ argument_list|,
 name|CONST_Utf8
 argument_list|)
 expr_stmt|;
+specifier|final
 name|String
 name|name
 init|=
@@ -2952,6 +2972,7 @@ argument_list|,
 name|CONST_Utf8
 argument_list|)
 expr_stmt|;
+specifier|final
 name|String
 name|sig
 init|=
@@ -2989,6 +3010,7 @@ comment|/* Don't need the return value */
 block|}
 catch|catch
 parameter_list|(
+specifier|final
 name|ClassFormatException
 name|cfe
 parameter_list|)
@@ -3014,6 +3036,7 @@ name|cfe
 argument_list|)
 throw|;
 block|}
+specifier|final
 name|String
 name|nameanddesc
 init|=
@@ -3080,6 +3103,7 @@ argument_list|(
 name|name
 argument_list|)
 expr_stmt|;
+specifier|final
 name|Attribute
 index|[]
 name|atts
@@ -3091,6 +3115,7 @@ argument_list|()
 decl_stmt|;
 for|for
 control|(
+specifier|final
 name|Attribute
 name|att
 range|:
@@ -3205,6 +3230,7 @@ argument_list|,
 name|CONST_Utf8
 argument_list|)
 expr_stmt|;
+specifier|final
 name|String
 name|name
 init|=
@@ -3256,6 +3282,7 @@ argument_list|,
 name|CONST_Utf8
 argument_list|)
 expr_stmt|;
+specifier|final
 name|String
 name|sig
 init|=
@@ -3311,6 +3338,7 @@ expr_stmt|;
 block|}
 catch|catch
 parameter_list|(
+specifier|final
 name|ClassFormatException
 name|cfe
 parameter_list|)
@@ -3369,6 +3397,7 @@ operator|instanceof
 name|ObjectType
 condition|)
 block|{
+specifier|final
 name|Verifier
 name|v
 init|=
@@ -3387,6 +3416,7 @@ name|getClassName
 argument_list|()
 argument_list|)
 decl_stmt|;
+specifier|final
 name|VerificationResult
 name|vr
 init|=
@@ -3426,6 +3456,7 @@ block|}
 block|}
 for|for
 control|(
+specifier|final
 name|Type
 name|element
 range|:
@@ -3463,6 +3494,7 @@ operator|instanceof
 name|ObjectType
 condition|)
 block|{
+specifier|final
 name|Verifier
 name|v
 init|=
@@ -3481,6 +3513,7 @@ name|getClassName
 argument_list|()
 argument_list|)
 decl_stmt|;
+specifier|final
 name|VerificationResult
 name|vr
 init|=
@@ -4124,6 +4157,7 @@ literal|" ACC_SYNCHRONIZED, ACC_NATIVE, ACC_ABSTRACT, ACC_STRICT set (ignored)."
 argument_list|)
 expr_stmt|;
 block|}
+specifier|final
 name|String
 name|nameanddesc
 init|=
@@ -4163,6 +4197,7 @@ argument_list|(
 name|nameanddesc
 argument_list|)
 expr_stmt|;
+specifier|final
 name|Attribute
 index|[]
 name|atts
@@ -4179,6 +4214,7 @@ literal|0
 decl_stmt|;
 for|for
 control|(
+specifier|final
 name|Attribute
 name|att
 range|:
@@ -4408,6 +4444,7 @@ argument_list|,
 name|CONST_Utf8
 argument_list|)
 expr_stmt|;
+specifier|final
 name|String
 name|name
 init|=
@@ -4471,6 +4508,7 @@ argument_list|,
 name|CONST_Utf8
 argument_list|)
 expr_stmt|;
+specifier|final
 name|String
 name|sourcefilename
 init|=
@@ -4493,6 +4531,7 @@ name|getBytes
 argument_list|()
 decl_stmt|;
 comment|//==obj.getSourceFileName() ?
+specifier|final
 name|String
 name|sourcefilenamelc
 init|=
@@ -4598,6 +4637,7 @@ argument_list|,
 name|CONST_Utf8
 argument_list|)
 expr_stmt|;
+specifier|final
 name|String
 name|name
 init|=
@@ -4674,6 +4714,7 @@ argument_list|,
 name|CONST_Utf8
 argument_list|)
 expr_stmt|;
+specifier|final
 name|String
 name|name
 init|=
@@ -4751,6 +4792,7 @@ argument_list|,
 name|CONST_Utf8
 argument_list|)
 expr_stmt|;
+specifier|final
 name|String
 name|name
 init|=
@@ -4802,6 +4844,7 @@ literal|"'."
 argument_list|)
 throw|;
 block|}
+specifier|final
 name|InnerClass
 index|[]
 name|ics
@@ -4813,6 +4856,7 @@ argument_list|()
 decl_stmt|;
 for|for
 control|(
+specifier|final
 name|InnerClass
 name|ic
 range|:
@@ -4831,6 +4875,7 @@ argument_list|,
 name|CONST_Class
 argument_list|)
 expr_stmt|;
+specifier|final
 name|int
 name|outer_idx
 init|=
@@ -4856,6 +4901,7 @@ name|CONST_Class
 argument_list|)
 expr_stmt|;
 block|}
+specifier|final
 name|int
 name|innername_idx
 init|=
@@ -4986,6 +5032,7 @@ argument_list|,
 name|CONST_Utf8
 argument_list|)
 expr_stmt|;
+specifier|final
 name|String
 name|name
 init|=
@@ -5037,6 +5084,7 @@ literal|"'."
 argument_list|)
 throw|;
 block|}
+specifier|final
 name|Object
 name|pred
 init|=
@@ -5053,6 +5101,7 @@ name|Field
 condition|)
 block|{
 comment|//ConstantValue attributes are quite senseless if the predecessor is not a field.
+specifier|final
 name|Field
 name|f
 init|=
@@ -5062,6 +5111,7 @@ operator|)
 name|pred
 decl_stmt|;
 comment|// Field constraints have been checked before -- so we are safe using their type information.
+specifier|final
 name|Type
 name|field_type
 init|=
@@ -5090,6 +5140,7 @@ name|getBytes
 argument_list|()
 argument_list|)
 decl_stmt|;
+specifier|final
 name|int
 name|index
 init|=
@@ -5132,6 +5183,7 @@ literal|"'."
 argument_list|)
 throw|;
 block|}
+specifier|final
 name|Constant
 name|c
 init|=
@@ -5346,6 +5398,7 @@ argument_list|,
 name|CONST_Utf8
 argument_list|)
 expr_stmt|;
+specifier|final
 name|String
 name|name
 init|=
@@ -5481,6 +5534,7 @@ argument_list|)
 throw|;
 block|}
 comment|//In JustIce, the check for correct offsets into the code array is delayed to Pass 3a.
+specifier|final
 name|CodeException
 index|[]
 name|exc_table
@@ -5492,12 +5546,14 @@ argument_list|()
 decl_stmt|;
 for|for
 control|(
+specifier|final
 name|CodeException
 name|element
 range|:
 name|exc_table
 control|)
 block|{
+specifier|final
 name|int
 name|exc_index
 init|=
@@ -5523,6 +5579,7 @@ argument_list|,
 name|CONST_Class
 argument_list|)
 expr_stmt|;
+specifier|final
 name|ConstantClass
 name|cc
 init|=
@@ -5551,6 +5608,7 @@ argument_list|,
 name|CONST_Utf8
 argument_list|)
 expr_stmt|;
+specifier|final
 name|String
 name|cname
 init|=
@@ -5650,6 +5708,7 @@ argument_list|(
 name|cname
 argument_list|)
 decl_stmt|;
+specifier|final
 name|JavaClass
 name|t
 init|=
@@ -5665,6 +5724,7 @@ name|getClassName
 argument_list|()
 argument_list|)
 decl_stmt|;
+specifier|final
 name|JavaClass
 name|o
 init|=
@@ -5832,6 +5892,7 @@ init|=
 operator|-
 literal|1
 decl_stmt|;
+specifier|final
 name|Method
 index|[]
 name|ms
@@ -5919,6 +5980,7 @@ init|=
 literal|0
 decl_stmt|;
 comment|// Now iterate through the attributes the Code attribute has.
+specifier|final
 name|Attribute
 index|[]
 name|atts
@@ -6044,6 +6106,7 @@ name|LocalVariableTable
 condition|)
 block|{
 comment|// checks conforming to vmspec2 4.7.9
+specifier|final
 name|LocalVariableTable
 name|lvt
 init|=
@@ -6067,6 +6130,7 @@ argument_list|,
 name|CONST_Utf8
 argument_list|)
 expr_stmt|;
+specifier|final
 name|String
 name|lvtname
 init|=
@@ -6118,12 +6182,14 @@ literal|"'."
 argument_list|)
 throw|;
 block|}
+specifier|final
 name|Code
 name|code
 init|=
 name|obj
 decl_stmt|;
 comment|//In JustIce, the check for correct offsets into the code array is delayed to Pass 3a.
+specifier|final
 name|LocalVariable
 index|[]
 name|localvariables
@@ -6135,6 +6201,7 @@ argument_list|()
 decl_stmt|;
 for|for
 control|(
+specifier|final
 name|LocalVariable
 name|localvariable
 range|:
@@ -6153,6 +6220,7 @@ argument_list|,
 name|CONST_Utf8
 argument_list|)
 expr_stmt|;
+specifier|final
 name|String
 name|localname
 init|=
@@ -6214,6 +6282,7 @@ argument_list|,
 name|CONST_Utf8
 argument_list|)
 expr_stmt|;
+specifier|final
 name|String
 name|localsig
 init|=
@@ -6255,6 +6324,7 @@ expr_stmt|;
 block|}
 catch|catch
 parameter_list|(
+specifier|final
 name|ClassFormatException
 name|cfe
 parameter_list|)
@@ -6287,6 +6357,7 @@ name|cfe
 argument_list|)
 throw|;
 block|}
+specifier|final
 name|int
 name|localindex
 init|=
@@ -6383,6 +6454,7 @@ expr_stmt|;
 block|}
 catch|catch
 parameter_list|(
+specifier|final
 name|LocalVariableInfoInconsistentException
 name|lviie
 parameter_list|)
@@ -6480,6 +6552,7 @@ comment|// for all attributes atts[a] END
 block|}
 catch|catch
 parameter_list|(
+specifier|final
 name|ClassNotFoundException
 name|e
 parameter_list|)
@@ -6526,6 +6599,7 @@ argument_list|,
 name|CONST_Utf8
 argument_list|)
 expr_stmt|;
+specifier|final
 name|String
 name|name
 init|=
@@ -6577,6 +6651,7 @@ literal|"'."
 argument_list|)
 throw|;
 block|}
+specifier|final
 name|int
 index|[]
 name|exc_indices
@@ -6588,6 +6663,7 @@ argument_list|()
 decl_stmt|;
 for|for
 control|(
+specifier|final
 name|int
 name|exc_indice
 range|:
@@ -6603,6 +6679,7 @@ argument_list|,
 name|CONST_Class
 argument_list|)
 expr_stmt|;
+specifier|final
 name|ConstantClass
 name|cc
 init|=
@@ -6632,6 +6709,7 @@ argument_list|)
 expr_stmt|;
 comment|// can't be sure this ConstantClass has already been visited (checked)!
 comment|//convert internal notation on-the-fly to external notation:
+specifier|final
 name|String
 name|cname
 init|=
@@ -6720,6 +6798,7 @@ argument_list|(
 name|cname
 argument_list|)
 decl_stmt|;
+specifier|final
 name|JavaClass
 name|t
 init|=
@@ -6735,6 +6814,7 @@ name|getClassName
 argument_list|()
 argument_list|)
 decl_stmt|;
+specifier|final
 name|JavaClass
 name|o
 init|=
@@ -6873,6 +6953,7 @@ block|}
 block|}
 catch|catch
 parameter_list|(
+specifier|final
 name|ClassNotFoundException
 name|e
 parameter_list|)
@@ -6920,6 +7001,7 @@ argument_list|,
 name|CONST_Utf8
 argument_list|)
 expr_stmt|;
+specifier|final
 name|String
 name|name
 init|=
@@ -7119,6 +7201,7 @@ parameter_list|()
 block|{
 try|try
 block|{
+specifier|final
 name|JavaClass
 name|jc
 init|=
@@ -7132,6 +7215,7 @@ name|getClassName
 argument_list|()
 argument_list|)
 decl_stmt|;
+specifier|final
 name|DescendingVisitor
 name|v
 init|=
@@ -7155,6 +7239,7 @@ expr_stmt|;
 block|}
 catch|catch
 parameter_list|(
+specifier|final
 name|ClassNotFoundException
 name|e
 parameter_list|)
@@ -7241,6 +7326,7 @@ literal|"' has wrong tag!"
 argument_list|)
 throw|;
 block|}
+specifier|final
 name|int
 name|name_and_type_index
 init|=
@@ -7249,6 +7335,7 @@ operator|.
 name|getNameAndTypeIndex
 argument_list|()
 decl_stmt|;
+specifier|final
 name|ConstantNameAndType
 name|cnat
 init|=
@@ -7264,6 +7351,7 @@ name|name_and_type_index
 argument_list|)
 operator|)
 decl_stmt|;
+specifier|final
 name|String
 name|name
 init|=
@@ -7316,6 +7404,7 @@ literal|"'."
 argument_list|)
 throw|;
 block|}
+specifier|final
 name|int
 name|class_index
 init|=
@@ -7324,6 +7413,7 @@ operator|.
 name|getClassIndex
 argument_list|()
 decl_stmt|;
+specifier|final
 name|ConstantClass
 name|cc
 init|=
@@ -7339,6 +7429,7 @@ name|class_index
 argument_list|)
 operator|)
 decl_stmt|;
+specifier|final
 name|String
 name|className
 init|=
@@ -7391,6 +7482,7 @@ literal|"'."
 argument_list|)
 throw|;
 block|}
+specifier|final
 name|String
 name|sig
 init|=
@@ -7428,6 +7520,7 @@ comment|/* Don't need the return value */
 block|}
 catch|catch
 parameter_list|(
+specifier|final
 name|ClassFormatException
 name|cfe
 parameter_list|)
@@ -7492,6 +7585,7 @@ literal|"' has wrong tag!"
 argument_list|)
 throw|;
 block|}
+specifier|final
 name|int
 name|name_and_type_index
 init|=
@@ -7500,6 +7594,7 @@ operator|.
 name|getNameAndTypeIndex
 argument_list|()
 decl_stmt|;
+specifier|final
 name|ConstantNameAndType
 name|cnat
 init|=
@@ -7515,6 +7610,7 @@ name|name_and_type_index
 argument_list|)
 operator|)
 decl_stmt|;
+specifier|final
 name|String
 name|name
 init|=
@@ -7567,6 +7663,7 @@ literal|"'."
 argument_list|)
 throw|;
 block|}
+specifier|final
 name|int
 name|class_index
 init|=
@@ -7575,6 +7672,7 @@ operator|.
 name|getClassIndex
 argument_list|()
 decl_stmt|;
+specifier|final
 name|ConstantClass
 name|cc
 init|=
@@ -7590,6 +7688,7 @@ name|class_index
 argument_list|)
 operator|)
 decl_stmt|;
+specifier|final
 name|String
 name|className
 init|=
@@ -7642,6 +7741,7 @@ literal|"'."
 argument_list|)
 throw|;
 block|}
+specifier|final
 name|String
 name|sig
 init|=
@@ -7668,6 +7768,7 @@ decl_stmt|;
 comment|// Field or Method sig.(=descriptor)
 try|try
 block|{
+specifier|final
 name|Type
 name|t
 init|=
@@ -7709,6 +7810,7 @@ block|}
 block|}
 catch|catch
 parameter_list|(
+specifier|final
 name|ClassFormatException
 name|cfe
 parameter_list|)
@@ -7773,6 +7875,7 @@ literal|"' has wrong tag!"
 argument_list|)
 throw|;
 block|}
+specifier|final
 name|int
 name|name_and_type_index
 init|=
@@ -7781,6 +7884,7 @@ operator|.
 name|getNameAndTypeIndex
 argument_list|()
 decl_stmt|;
+specifier|final
 name|ConstantNameAndType
 name|cnat
 init|=
@@ -7796,6 +7900,7 @@ name|name_and_type_index
 argument_list|)
 operator|)
 decl_stmt|;
+specifier|final
 name|String
 name|name
 init|=
@@ -7848,6 +7953,7 @@ literal|"'."
 argument_list|)
 throw|;
 block|}
+specifier|final
 name|int
 name|class_index
 init|=
@@ -7856,6 +7962,7 @@ operator|.
 name|getClassIndex
 argument_list|()
 decl_stmt|;
+specifier|final
 name|ConstantClass
 name|cc
 init|=
@@ -7871,6 +7978,7 @@ name|class_index
 argument_list|)
 operator|)
 decl_stmt|;
+specifier|final
 name|String
 name|className
 init|=
@@ -7923,6 +8031,7 @@ literal|"'."
 argument_list|)
 throw|;
 block|}
+specifier|final
 name|String
 name|sig
 init|=
@@ -7949,6 +8058,7 @@ decl_stmt|;
 comment|// Field or Method sig.(=descriptor)
 try|try
 block|{
+specifier|final
 name|Type
 name|t
 init|=
@@ -7998,6 +8108,7 @@ block|}
 block|}
 catch|catch
 parameter_list|(
+specifier|final
 name|ClassFormatException
 name|cfe
 parameter_list|)
@@ -8420,6 +8531,7 @@ name|ConstantClass
 name|obj
 parameter_list|)
 block|{
+specifier|final
 name|Constant
 name|c
 init|=
@@ -8441,6 +8553,7 @@ name|ConstantUtf8
 condition|)
 block|{
 comment|//Ignore the case where it's not a ConstantUtf8 here, we'll find out later.
+specifier|final
 name|String
 name|classname
 init|=

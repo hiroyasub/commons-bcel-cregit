@@ -138,6 +138,7 @@ name|HashMap
 argument_list|<>
 argument_list|()
 expr_stmt|;
+specifier|final
 name|CodeExceptionGen
 index|[]
 name|cegs
@@ -149,12 +150,14 @@ argument_list|()
 decl_stmt|;
 for|for
 control|(
+specifier|final
 name|CodeExceptionGen
 name|ceg
 range|:
 name|cegs
 control|)
 block|{
+specifier|final
 name|ExceptionHandler
 name|eh
 init|=
@@ -260,6 +263,7 @@ name|InstructionHandle
 name|ih
 parameter_list|)
 block|{
+specifier|final
 name|Set
 argument_list|<
 name|ExceptionHandler

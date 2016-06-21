@@ -126,6 +126,7 @@ parameter_list|()
 throws|throws
 name|ClassNotFoundException
 block|{
+specifier|final
 name|JavaClass
 name|clazz
 init|=
@@ -136,6 +137,7 @@ operator|+
 literal|".data.PLSETestClass"
 argument_list|)
 decl_stmt|;
+specifier|final
 name|ClassGen
 name|gen
 init|=
@@ -145,6 +147,7 @@ argument_list|(
 name|clazz
 argument_list|)
 decl_stmt|;
+specifier|final
 name|ConstantPoolGen
 name|pool
 init|=
@@ -153,6 +156,7 @@ operator|.
 name|getConstantPool
 argument_list|()
 decl_stmt|;
+specifier|final
 name|Method
 name|m
 init|=
@@ -163,6 +167,7 @@ argument_list|(
 literal|1
 argument_list|)
 decl_stmt|;
+specifier|final
 name|MethodGen
 name|mg
 init|=
@@ -218,6 +223,7 @@ parameter_list|()
 throws|throws
 name|ClassNotFoundException
 block|{
+specifier|final
 name|JavaClass
 name|clazz
 init|=
@@ -228,6 +234,7 @@ operator|+
 literal|".data.PLSETestClass"
 argument_list|)
 decl_stmt|;
+specifier|final
 name|ClassGen
 name|gen
 init|=
@@ -237,6 +244,7 @@ argument_list|(
 name|clazz
 argument_list|)
 decl_stmt|;
+specifier|final
 name|ConstantPoolGen
 name|pool
 init|=
@@ -245,6 +253,7 @@ operator|.
 name|getConstantPool
 argument_list|()
 decl_stmt|;
+specifier|final
 name|Method
 name|m
 init|=
@@ -255,6 +264,7 @@ argument_list|(
 literal|2
 argument_list|)
 decl_stmt|;
+specifier|final
 name|LocalVariableTable
 name|lvt
 init|=
@@ -265,6 +275,7 @@ argument_list|()
 decl_stmt|;
 comment|//System.out.println(lvt);
 comment|//System.out.println(lvt.getTableLength());
+specifier|final
 name|MethodGen
 name|mg
 init|=
@@ -281,6 +292,7 @@ argument_list|,
 name|pool
 argument_list|)
 decl_stmt|;
+specifier|final
 name|LocalVariableTable
 name|new_lvt
 init|=

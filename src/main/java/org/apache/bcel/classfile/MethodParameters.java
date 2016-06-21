@@ -113,6 +113,7 @@ argument_list|,
 name|constant_pool
 argument_list|)
 expr_stmt|;
+specifier|final
 name|int
 name|parameters_count
 init|=
@@ -214,6 +215,7 @@ name|ConstantPool
 name|_constant_pool
 parameter_list|)
 block|{
+specifier|final
 name|MethodParameters
 name|c
 init|=
@@ -311,6 +313,7 @@ argument_list|)
 expr_stmt|;
 for|for
 control|(
+specifier|final
 name|MethodParameter
 name|parameter
 range|:

@@ -212,6 +212,7 @@ literal|" is invalid null handle"
 argument_list|)
 throw|;
 block|}
+specifier|final
 name|int
 name|t
 init|=
@@ -303,6 +304,7 @@ name|boolean
 name|verbose
 parameter_list|)
 block|{
+specifier|final
 name|String
 name|s
 init|=

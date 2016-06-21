@@ -198,6 +198,7 @@ parameter_list|)
 block|{
 try|try
 block|{
+specifier|final
 name|ClassPath
 name|path
 init|=
@@ -228,6 +229,7 @@ return|;
 block|}
 catch|catch
 parameter_list|(
+specifier|final
 name|IOException
 name|e
 parameter_list|)
@@ -261,6 +263,7 @@ name|JavaClass
 name|clazz
 parameter_list|)
 block|{
+specifier|final
 name|JavaClass
 name|old
 init|=
@@ -363,6 +366,7 @@ parameter_list|)
 throws|throws
 name|ClassNotFoundException
 block|{
+specifier|final
 name|JavaClass
 name|jc
 init|=

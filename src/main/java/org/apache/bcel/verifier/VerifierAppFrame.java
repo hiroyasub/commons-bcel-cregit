@@ -642,6 +642,7 @@ expr_stmt|;
 block|}
 catch|catch
 parameter_list|(
+specifier|final
 name|Exception
 name|e
 parameter_list|)
@@ -1662,6 +1663,7 @@ expr_stmt|;
 block|}
 catch|catch
 parameter_list|(
+specifier|final
 name|ClassNotFoundException
 name|ex
 parameter_list|)
@@ -1695,6 +1697,7 @@ argument_list|(
 literal|"PLEASE WAIT"
 argument_list|)
 expr_stmt|;
+specifier|final
 name|Verifier
 name|v
 init|=
@@ -1960,6 +1963,7 @@ operator|.
 name|green
 argument_list|)
 expr_stmt|;
+specifier|final
 name|JavaClass
 name|jc
 init|=
@@ -1971,6 +1975,7 @@ name|current_class
 argument_list|)
 decl_stmt|;
 comment|/*                  boolean all3aok = true;                  boolean all3bok = true;                  String all3amsg = "";                  String all3bmsg = "";                  */
+specifier|final
 name|String
 index|[]
 name|methodnames
@@ -2085,6 +2090,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
+specifier|final
 name|String
 index|[]
 name|msgs
@@ -2113,6 +2119,7 @@ operator|.
 name|yellow
 argument_list|)
 expr_stmt|;
+specifier|final
 name|StringBuilder
 name|allmsgs
 init|=
@@ -2198,6 +2205,7 @@ name|ActionEvent
 name|e
 parameter_list|)
 block|{
+specifier|final
 name|String
 name|classname
 init|=
@@ -2263,6 +2271,7 @@ condition|)
 block|{
 return|return;
 block|}
+specifier|final
 name|Verifier
 name|v
 init|=
@@ -2273,6 +2282,7 @@ argument_list|(
 name|current_class
 argument_list|)
 decl_stmt|;
+specifier|final
 name|StringBuilder
 name|all3amsg
 init|=
@@ -2321,6 +2331,7 @@ name|i
 argument_list|)
 condition|)
 block|{
+specifier|final
 name|VerificationResult
 name|vr
 init|=
@@ -2417,6 +2428,7 @@ expr_stmt|;
 block|}
 catch|catch
 parameter_list|(
+specifier|final
 name|ClassNotFoundException
 name|ex
 parameter_list|)
@@ -2483,6 +2495,7 @@ condition|)
 block|{
 return|return;
 block|}
+specifier|final
 name|Verifier
 name|v
 init|=
@@ -2493,6 +2506,7 @@ argument_list|(
 name|current_class
 argument_list|)
 decl_stmt|;
+specifier|final
 name|StringBuilder
 name|all3bmsg
 init|=
@@ -2541,6 +2555,7 @@ name|i
 argument_list|)
 condition|)
 block|{
+specifier|final
 name|VerificationResult
 name|vr
 init|=
@@ -2637,6 +2652,7 @@ expr_stmt|;
 block|}
 catch|catch
 parameter_list|(
+specifier|final
 name|ClassNotFoundException
 name|ex
 parameter_list|)

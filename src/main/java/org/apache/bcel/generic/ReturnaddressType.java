@@ -148,6 +148,7 @@ return|return
 literal|false
 return|;
 block|}
+specifier|final
 name|ReturnaddressType
 name|that
 init|=

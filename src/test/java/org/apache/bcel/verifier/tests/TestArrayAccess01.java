@@ -30,6 +30,7 @@ name|void
 name|test
 parameter_list|()
 block|{
+specifier|final
 name|XTestArray01
 index|[]
 name|array

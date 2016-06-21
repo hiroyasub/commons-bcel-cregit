@@ -210,6 +210,7 @@ argument_list|,
 name|constant_pool
 argument_list|)
 expr_stmt|;
+specifier|final
 name|int
 name|code_length
 init|=
@@ -235,6 +236,7 @@ name|code
 argument_list|)
 expr_stmt|;
 comment|/* Read exception table that contains all regions where an exception          * handler is active, i.e., a try { ... } catch() block.          */
+specifier|final
 name|int
 name|exception_table_length
 init|=
@@ -279,6 +281,7 @@ argument_list|)
 expr_stmt|;
 block|}
 comment|/* Read all attributes, currently `LineNumberTable' and          * `LocalVariableTable'          */
+specifier|final
 name|int
 name|attributes_count
 init|=
@@ -546,6 +549,7 @@ argument_list|)
 expr_stmt|;
 for|for
 control|(
+specifier|final
 name|CodeException
 name|exception
 range|:
@@ -571,6 +575,7 @@ argument_list|)
 expr_stmt|;
 for|for
 control|(
+specifier|final
 name|Attribute
 name|attribute
 range|:
@@ -606,6 +611,7 @@ parameter_list|()
 block|{
 for|for
 control|(
+specifier|final
 name|Attribute
 name|attribute
 range|:
@@ -639,6 +645,7 @@ parameter_list|()
 block|{
 for|for
 control|(
+specifier|final
 name|Attribute
 name|attribute
 range|:
@@ -773,6 +780,7 @@ condition|)
 block|{
 for|for
 control|(
+specifier|final
 name|Attribute
 name|attribute
 range|:
@@ -959,6 +967,7 @@ name|boolean
 name|verbose
 parameter_list|)
 block|{
+specifier|final
 name|StringBuilder
 name|buf
 init|=
@@ -1053,6 +1062,7 @@ argument_list|)
 expr_stmt|;
 for|for
 control|(
+specifier|final
 name|CodeException
 name|exception
 range|:
@@ -1101,6 +1111,7 @@ argument_list|)
 expr_stmt|;
 for|for
 control|(
+specifier|final
 name|Attribute
 name|attribute
 range|:
@@ -1156,6 +1167,7 @@ name|ConstantPool
 name|_constant_pool
 parameter_list|)
 block|{
+specifier|final
 name|Code
 name|c
 init|=

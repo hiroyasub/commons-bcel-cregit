@@ -97,6 +97,7 @@ name|SuppressWarnings
 argument_list|(
 literal|"unused"
 argument_list|)
+specifier|final
 name|int
 name|a
 init|=
@@ -122,6 +123,7 @@ parameter_list|)
 throws|throws
 name|ClassNotFoundException
 block|{
+specifier|final
 name|JavaClass
 name|jc
 init|=
@@ -132,6 +134,7 @@ argument_list|(
 name|cls
 argument_list|)
 decl_stmt|;
+specifier|final
 name|ConstantPoolGen
 name|cp
 init|=
@@ -146,6 +149,7 @@ argument_list|)
 decl_stmt|;
 for|for
 control|(
+specifier|final
 name|Method
 name|method
 range|:
@@ -206,6 +210,7 @@ parameter_list|()
 throws|throws
 name|Exception
 block|{
+specifier|final
 name|MethodGen
 name|mg
 init|=
@@ -218,6 +223,7 @@ argument_list|,
 literal|"bar"
 argument_list|)
 decl_stmt|;
+specifier|final
 name|LocalVariableGen
 name|lv
 init|=
@@ -241,6 +247,7 @@ name|getName
 argument_list|()
 argument_list|)
 expr_stmt|;
+specifier|final
 name|InstructionHandle
 name|start
 init|=
@@ -249,6 +256,7 @@ operator|.
 name|getStart
 argument_list|()
 decl_stmt|;
+specifier|final
 name|InstructionHandle
 name|end
 init|=
@@ -387,6 +395,7 @@ parameter_list|()
 throws|throws
 name|Exception
 block|{
+specifier|final
 name|MethodGen
 name|mg
 init|=
@@ -399,6 +408,7 @@ argument_list|,
 literal|"bar"
 argument_list|)
 decl_stmt|;
+specifier|final
 name|LocalVariableGen
 name|lv
 init|=
@@ -422,6 +432,7 @@ name|getName
 argument_list|()
 argument_list|)
 expr_stmt|;
+specifier|final
 name|InstructionHandle
 name|start
 init|=
@@ -430,6 +441,7 @@ operator|.
 name|getStart
 argument_list|()
 decl_stmt|;
+specifier|final
 name|InstructionHandle
 name|end
 init|=

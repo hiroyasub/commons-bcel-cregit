@@ -345,6 +345,7 @@ parameter_list|)
 throws|throws
 name|IOException
 block|{
+specifier|final
 name|int
 name|type
 init|=
@@ -598,6 +599,7 @@ case|case
 literal|'['
 case|:
 comment|// Array
+specifier|final
 name|int
 name|numArrayVals
 init|=
@@ -606,6 +608,7 @@ operator|.
 name|readUnsignedShort
 argument_list|()
 decl_stmt|;
+specifier|final
 name|ElementValue
 index|[]
 name|evalues

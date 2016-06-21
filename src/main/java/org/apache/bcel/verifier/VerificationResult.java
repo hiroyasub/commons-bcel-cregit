@@ -196,6 +196,7 @@ return|return
 literal|false
 return|;
 block|}
+specifier|final
 name|VerificationResult
 name|other
 init|=

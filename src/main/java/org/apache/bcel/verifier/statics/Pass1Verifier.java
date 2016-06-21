@@ -184,6 +184,7 @@ expr_stmt|;
 block|}
 catch|catch
 parameter_list|(
+specifier|final
 name|ClassNotFoundException
 name|e
 parameter_list|)
@@ -284,6 +285,7 @@ block|}
 block|}
 catch|catch
 parameter_list|(
+specifier|final
 name|LoadingException
 name|e
 parameter_list|)
@@ -305,6 +307,7 @@ return|;
 block|}
 catch|catch
 parameter_list|(
+specifier|final
 name|ClassFormatException
 name|e
 parameter_list|)
@@ -326,6 +329,7 @@ return|;
 block|}
 catch|catch
 parameter_list|(
+specifier|final
 name|RuntimeException
 name|e
 parameter_list|)

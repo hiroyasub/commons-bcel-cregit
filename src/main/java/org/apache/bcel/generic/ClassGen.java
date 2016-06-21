@@ -367,6 +367,7 @@ name|Object
 name|o2
 parameter_list|)
 block|{
+specifier|final
 name|ClassGen
 name|THIS
 init|=
@@ -375,6 +376,7 @@ name|ClassGen
 operator|)
 name|o1
 decl_stmt|;
+specifier|final
 name|ClassGen
 name|THAT
 init|=
@@ -409,6 +411,7 @@ name|Object
 name|o
 parameter_list|)
 block|{
+specifier|final
 name|ClassGen
 name|THIS
 init|=
@@ -552,6 +555,7 @@ condition|)
 block|{
 for|for
 control|(
+specifier|final
 name|String
 name|interface1
 range|:
@@ -687,6 +691,7 @@ operator|.
 name|getMinor
 argument_list|()
 expr_stmt|;
+specifier|final
 name|Attribute
 index|[]
 name|attributes
@@ -697,6 +702,7 @@ name|getAttributes
 argument_list|()
 decl_stmt|;
 comment|// J5TODO: Could make unpacking lazy, done on first reference
+specifier|final
 name|AnnotationEntryGen
 index|[]
 name|annotations
@@ -706,6 +712,7 @@ argument_list|(
 name|attributes
 argument_list|)
 decl_stmt|;
+specifier|final
 name|Method
 index|[]
 name|methods
@@ -715,6 +722,7 @@ operator|.
 name|getMethods
 argument_list|()
 decl_stmt|;
+specifier|final
 name|Field
 index|[]
 name|fields
@@ -724,6 +732,7 @@ operator|.
 name|getFields
 argument_list|()
 decl_stmt|;
+specifier|final
 name|String
 index|[]
 name|interfaces
@@ -735,6 +744,7 @@ argument_list|()
 decl_stmt|;
 for|for
 control|(
+specifier|final
 name|String
 name|interface1
 range|:
@@ -749,6 +759,7 @@ expr_stmt|;
 block|}
 for|for
 control|(
+specifier|final
 name|Attribute
 name|attribute
 range|:
@@ -774,6 +785,7 @@ block|}
 block|}
 for|for
 control|(
+specifier|final
 name|AnnotationEntryGen
 name|annotation
 range|:
@@ -788,6 +800,7 @@ expr_stmt|;
 block|}
 for|for
 control|(
+specifier|final
 name|Method
 name|method
 range|:
@@ -802,6 +815,7 @@ expr_stmt|;
 block|}
 for|for
 control|(
+specifier|final
 name|Field
 name|field
 range|:
@@ -827,6 +841,7 @@ index|[]
 name|attrs
 parameter_list|)
 block|{
+specifier|final
 name|List
 argument_list|<
 name|AnnotationEntryGen
@@ -840,6 +855,7 @@ argument_list|()
 decl_stmt|;
 for|for
 control|(
+specifier|final
 name|Attribute
 name|attr
 range|:
@@ -853,6 +869,7 @@ operator|instanceof
 name|RuntimeVisibleAnnotations
 condition|)
 block|{
+specifier|final
 name|RuntimeVisibleAnnotations
 name|rva
 init|=
@@ -861,6 +878,7 @@ name|RuntimeVisibleAnnotations
 operator|)
 name|attr
 decl_stmt|;
+specifier|final
 name|AnnotationEntry
 index|[]
 name|annos
@@ -872,6 +890,7 @@ argument_list|()
 decl_stmt|;
 for|for
 control|(
+specifier|final
 name|AnnotationEntry
 name|a
 range|:
@@ -903,6 +922,7 @@ operator|instanceof
 name|RuntimeInvisibleAnnotations
 condition|)
 block|{
+specifier|final
 name|RuntimeInvisibleAnnotations
 name|ria
 init|=
@@ -911,6 +931,7 @@ name|RuntimeInvisibleAnnotations
 operator|)
 name|attr
 decl_stmt|;
+specifier|final
 name|AnnotationEntry
 index|[]
 name|annos
@@ -922,6 +943,7 @@ argument_list|()
 decl_stmt|;
 for|for
 control|(
+specifier|final
 name|AnnotationEntry
 name|a
 range|:
@@ -969,6 +991,7 @@ name|JavaClass
 name|getJavaClass
 parameter_list|()
 block|{
+specifier|final
 name|int
 index|[]
 name|interfaces
@@ -976,6 +999,7 @@ init|=
 name|getInterfaces
 argument_list|()
 decl_stmt|;
+specifier|final
 name|Field
 index|[]
 name|fields
@@ -983,6 +1007,7 @@ init|=
 name|getFields
 argument_list|()
 decl_stmt|;
+specifier|final
 name|Method
 index|[]
 name|methods
@@ -1013,6 +1038,7 @@ block|}
 else|else
 block|{
 comment|// TODO: Sometime later, trash any attributes called 'RuntimeVisibleAnnotations' or 'RuntimeInvisibleAnnotations'
+specifier|final
 name|Attribute
 index|[]
 name|annAttributes
@@ -1071,6 +1097,7 @@ argument_list|)
 expr_stmt|;
 block|}
 comment|// Must be last since the above calls may still add something to it
+specifier|final
 name|ConstantPool
 name|_cp
 init|=
@@ -1267,6 +1294,7 @@ name|int
 name|access_flags
 parameter_list|)
 block|{
+specifier|final
 name|InstructionList
 name|il
 init|=
@@ -1313,6 +1341,7 @@ operator|.
 name|RETURN
 argument_list|)
 expr_stmt|;
+specifier|final
 name|MethodGen
 name|mg
 init|=
@@ -1404,6 +1433,7 @@ parameter_list|)
 block|{
 for|for
 control|(
+specifier|final
 name|Field
 name|f
 range|:
@@ -1448,6 +1478,7 @@ parameter_list|)
 block|{
 for|for
 control|(
+specifier|final
 name|Method
 name|m
 range|:
@@ -1551,6 +1582,7 @@ literal|"Replacement method must not be null"
 argument_list|)
 throw|;
 block|}
+specifier|final
 name|int
 name|i
 init|=
@@ -1618,6 +1650,7 @@ literal|"Replacement method must not be null"
 argument_list|)
 throw|;
 block|}
+specifier|final
 name|int
 name|i
 init|=
@@ -1800,6 +1833,7 @@ argument_list|()
 expr_stmt|;
 for|for
 control|(
+specifier|final
 name|Method
 name|method
 range|:
@@ -1860,6 +1894,7 @@ index|[]
 name|getInterfaceNames
 parameter_list|()
 block|{
+specifier|final
 name|int
 name|size
 init|=
@@ -1868,6 +1903,7 @@ operator|.
 name|size
 argument_list|()
 decl_stmt|;
+specifier|final
 name|String
 index|[]
 name|interfaces
@@ -1895,6 +1931,7 @@ index|[]
 name|getInterfaces
 parameter_list|()
 block|{
+specifier|final
 name|int
 name|size
 init|=
@@ -1903,6 +1940,7 @@ operator|.
 name|size
 argument_list|()
 decl_stmt|;
+specifier|final
 name|int
 index|[]
 name|interfaces
@@ -2217,6 +2255,7 @@ condition|)
 block|{
 for|for
 control|(
+specifier|final
 name|ClassObserver
 name|observer
 range|:
@@ -2251,6 +2290,7 @@ return|;
 block|}
 catch|catch
 parameter_list|(
+specifier|final
 name|CloneNotSupportedException
 name|e
 parameter_list|)

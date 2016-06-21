@@ -281,6 +281,7 @@ condition|(
 literal|true
 condition|)
 block|{
+specifier|final
 name|int
 name|n
 init|=
@@ -316,6 +317,7 @@ operator|.
 name|length
 condition|)
 block|{
+specifier|final
 name|byte
 index|[]
 name|c
@@ -363,6 +365,7 @@ operator|.
 name|length
 condition|)
 block|{
+specifier|final
 name|byte
 index|[]
 name|c
@@ -411,6 +414,7 @@ parameter_list|)
 throws|throws
 name|IOException
 block|{
+specifier|final
 name|NanoTimer
 name|total
 init|=
@@ -418,6 +422,7 @@ operator|new
 name|NanoTimer
 argument_list|()
 decl_stmt|;
+specifier|final
 name|NanoTimer
 name|parseTime
 init|=
@@ -425,6 +430,7 @@ operator|new
 name|NanoTimer
 argument_list|()
 decl_stmt|;
+specifier|final
 name|NanoTimer
 name|cgenTime
 init|=
@@ -432,6 +438,7 @@ operator|new
 name|NanoTimer
 argument_list|()
 decl_stmt|;
+specifier|final
 name|NanoTimer
 name|mgenTime
 init|=
@@ -439,6 +446,7 @@ operator|new
 name|NanoTimer
 argument_list|()
 decl_stmt|;
+specifier|final
 name|NanoTimer
 name|mserTime
 init|=
@@ -446,6 +454,7 @@ operator|new
 name|NanoTimer
 argument_list|()
 decl_stmt|;
+specifier|final
 name|NanoTimer
 name|serTime
 init|=
@@ -481,6 +490,7 @@ name|lib
 argument_list|)
 init|)
 block|{
+specifier|final
 name|Enumeration
 argument_list|<
 name|?
@@ -500,6 +510,7 @@ name|hasMoreElements
 argument_list|()
 condition|)
 block|{
+specifier|final
 name|JarEntry
 name|e
 init|=
@@ -554,6 +565,7 @@ operator|.
 name|start
 argument_list|()
 expr_stmt|;
+specifier|final
 name|JavaClass
 name|clazz
 init|=
@@ -585,6 +597,7 @@ operator|.
 name|start
 argument_list|()
 expr_stmt|;
+specifier|final
 name|ClassGen
 name|cg
 init|=
@@ -599,6 +612,7 @@ operator|.
 name|stop
 argument_list|()
 expr_stmt|;
+specifier|final
 name|Method
 index|[]
 name|methods
@@ -610,6 +624,7 @@ argument_list|()
 decl_stmt|;
 for|for
 control|(
+specifier|final
 name|Method
 name|m
 range|:
@@ -621,6 +636,7 @@ operator|.
 name|start
 argument_list|()
 expr_stmt|;
+specifier|final
 name|MethodGen
 name|mg
 init|=
@@ -640,6 +656,7 @@ name|getConstantPool
 argument_list|()
 argument_list|)
 decl_stmt|;
+specifier|final
 name|InstructionList
 name|il
 init|=
@@ -813,6 +830,7 @@ name|void
 name|testPerformance
 parameter_list|()
 block|{
+specifier|final
 name|File
 name|javaLib
 init|=
@@ -871,6 +889,7 @@ expr_stmt|;
 block|}
 catch|catch
 parameter_list|(
+specifier|final
 name|IOException
 name|e
 parameter_list|)

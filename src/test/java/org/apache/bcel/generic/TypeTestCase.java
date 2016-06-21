@@ -41,11 +41,13 @@ comment|// expectedValue = "Ljava/util/Map<TX;Ljava/util/List<TY;>;>;";
 comment|// The line commented out above is the correct expected value; however,
 comment|// the constructor for ObjectType is yet another place where BCEL does
 comment|// not understand generics so we need to substitute the modified value below.
+specifier|final
 name|String
 name|expectedValue
 init|=
 literal|"Ljava/util/Map<X, java/util/List<Y>>;"
 decl_stmt|;
+specifier|final
 name|String
 name|actualValue
 init|=

@@ -230,6 +230,7 @@ argument_list|()
 expr_stmt|;
 block|}
 block|}
+specifier|final
 name|int
 name|name_index
 init|=
@@ -240,6 +241,7 @@ argument_list|(
 name|name
 argument_list|)
 decl_stmt|;
+specifier|final
 name|int
 name|signature_index
 init|=
@@ -606,6 +608,7 @@ return|return
 literal|false
 return|;
 block|}
+specifier|final
 name|LocalVariableGen
 name|l
 init|=
@@ -685,6 +688,7 @@ return|;
 block|}
 catch|catch
 parameter_list|(
+specifier|final
 name|CloneNotSupportedException
 name|e
 parameter_list|)

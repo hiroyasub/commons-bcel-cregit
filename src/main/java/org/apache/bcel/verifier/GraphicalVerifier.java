@@ -80,6 +80,7 @@ specifier|public
 name|GraphicalVerifier
 parameter_list|()
 block|{
+specifier|final
 name|VerifierAppFrame
 name|frame
 init|=
@@ -109,6 +110,7 @@ argument_list|()
 expr_stmt|;
 block|}
 comment|//Das Fenster zentrieren
+specifier|final
 name|Dimension
 name|screenSize
 init|=
@@ -120,6 +122,7 @@ operator|.
 name|getScreenSize
 argument_list|()
 decl_stmt|;
+specifier|final
 name|Dimension
 name|frameSize
 init|=
@@ -268,6 +271,7 @@ expr_stmt|;
 block|}
 catch|catch
 parameter_list|(
+specifier|final
 name|Exception
 name|e
 parameter_list|)

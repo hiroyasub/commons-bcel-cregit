@@ -186,6 +186,7 @@ argument_list|,
 name|constant_pool
 argument_list|)
 expr_stmt|;
+specifier|final
 name|int
 name|num_bootstrap_methods
 init|=
@@ -293,6 +294,7 @@ name|ConstantPool
 name|_constant_pool
 parameter_list|)
 block|{
+specifier|final
 name|BootstrapMethods
 name|c
 init|=
@@ -391,6 +393,7 @@ argument_list|)
 expr_stmt|;
 for|for
 control|(
+specifier|final
 name|BootstrapMethod
 name|bootstrap_method
 range|:
@@ -415,6 +418,7 @@ name|String
 name|toString
 parameter_list|()
 block|{
+specifier|final
 name|StringBuilder
 name|buf
 init|=

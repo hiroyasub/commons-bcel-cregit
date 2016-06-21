@@ -441,6 +441,7 @@ modifier|...
 name|extraClasses
 parameter_list|)
 block|{
+specifier|final
 name|int
 name|extraLen
 init|=
@@ -454,6 +455,7 @@ name|extraClasses
 operator|.
 name|length
 decl_stmt|;
+specifier|final
 name|Class
 argument_list|<
 name|?

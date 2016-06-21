@@ -210,6 +210,7 @@ name|testConstructMutableAnnotation
 parameter_list|()
 block|{
 comment|// Create the containing class
+specifier|final
 name|ClassGen
 name|cg
 init|=
@@ -218,6 +219,7 @@ argument_list|(
 literal|"HelloWorld"
 argument_list|)
 decl_stmt|;
+specifier|final
 name|ConstantPoolGen
 name|cp
 init|=
@@ -227,6 +229,7 @@ name|getConstantPool
 argument_list|()
 decl_stmt|;
 comment|// Create the simple primitive value '4' of type 'int'
+specifier|final
 name|SimpleElementValueGen
 name|evg
 init|=
@@ -243,6 +246,7 @@ literal|4
 argument_list|)
 decl_stmt|;
 comment|// Give it a name, call it 'id'
+specifier|final
 name|ElementValuePairGen
 name|nvGen
 init|=
@@ -277,6 +281,7 @@ literal|"id=4"
 argument_list|)
 argument_list|)
 expr_stmt|;
+specifier|final
 name|ObjectType
 name|t
 init|=
@@ -286,6 +291,7 @@ argument_list|(
 literal|"SimpleAnnotation"
 argument_list|)
 decl_stmt|;
+specifier|final
 name|List
 argument_list|<
 name|ElementValuePairGen
@@ -306,6 +312,7 @@ argument_list|)
 expr_stmt|;
 comment|// Build an annotation of type 'SimpleAnnotation' with 'id=4' as the
 comment|// only value :)
+specifier|final
 name|AnnotationEntryGen
 name|a
 init|=
@@ -336,6 +343,7 @@ name|testVisibleInvisibleAnnotationGen
 parameter_list|()
 block|{
 comment|// Create the containing class
+specifier|final
 name|ClassGen
 name|cg
 init|=
@@ -344,6 +352,7 @@ argument_list|(
 literal|"HelloWorld"
 argument_list|)
 decl_stmt|;
+specifier|final
 name|ConstantPoolGen
 name|cp
 init|=
@@ -353,6 +362,7 @@ name|getConstantPool
 argument_list|()
 decl_stmt|;
 comment|// Create the simple primitive value '4' of type 'int'
+specifier|final
 name|SimpleElementValueGen
 name|evg
 init|=
@@ -369,6 +379,7 @@ literal|4
 argument_list|)
 decl_stmt|;
 comment|// Give it a name, call it 'id'
+specifier|final
 name|ElementValuePairGen
 name|nvGen
 init|=
@@ -403,6 +414,7 @@ literal|"id=4"
 argument_list|)
 argument_list|)
 expr_stmt|;
+specifier|final
 name|ObjectType
 name|t
 init|=
@@ -412,6 +424,7 @@ argument_list|(
 literal|"SimpleAnnotation"
 argument_list|)
 decl_stmt|;
+specifier|final
 name|List
 argument_list|<
 name|ElementValuePairGen
@@ -432,6 +445,7 @@ argument_list|)
 expr_stmt|;
 comment|// Build a RV annotation of type 'SimpleAnnotation' with 'id=4' as the
 comment|// only value :)
+specifier|final
 name|AnnotationEntryGen
 name|a
 init|=
@@ -447,6 +461,7 @@ argument_list|,
 name|cp
 argument_list|)
 decl_stmt|;
+specifier|final
 name|List
 argument_list|<
 name|AnnotationEntryGen
@@ -465,6 +480,7 @@ argument_list|(
 name|a
 argument_list|)
 expr_stmt|;
+specifier|final
 name|Attribute
 index|[]
 name|attributes
@@ -494,6 +510,7 @@ literal|false
 decl_stmt|;
 for|for
 control|(
+specifier|final
 name|Attribute
 name|attribute
 range|:
@@ -535,6 +552,7 @@ argument_list|)
 expr_stmt|;
 comment|// Build a RIV annotation of type 'SimpleAnnotation' with 'id=4' as the
 comment|// only value :)
+specifier|final
 name|AnnotationEntryGen
 name|a2
 init|=
@@ -550,6 +568,7 @@ argument_list|,
 name|cp
 argument_list|)
 decl_stmt|;
+specifier|final
 name|List
 argument_list|<
 name|AnnotationEntryGen
@@ -568,6 +587,7 @@ argument_list|(
 name|a2
 argument_list|)
 expr_stmt|;
+specifier|final
 name|Attribute
 index|[]
 name|attributes2
@@ -597,6 +617,7 @@ literal|false
 decl_stmt|;
 for|for
 control|(
+specifier|final
 name|Attribute
 name|attribute
 range|:
@@ -652,6 +673,7 @@ parameter_list|)
 block|{
 try|try
 block|{
+specifier|final
 name|String
 name|beforeName
 init|=
@@ -660,6 +682,7 @@ operator|.
 name|getTypeName
 argument_list|()
 decl_stmt|;
+specifier|final
 name|ByteArrayOutputStream
 name|baos
 init|=
@@ -692,6 +715,7 @@ name|flush
 argument_list|()
 expr_stmt|;
 block|}
+specifier|final
 name|byte
 index|[]
 name|bs
@@ -701,6 +725,7 @@ operator|.
 name|toByteArray
 argument_list|()
 decl_stmt|;
+specifier|final
 name|ByteArrayInputStream
 name|bais
 init|=
@@ -742,6 +767,7 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
+specifier|final
 name|String
 name|afterName
 init|=
@@ -839,6 +865,7 @@ name|i
 operator|++
 control|)
 block|{
+specifier|final
 name|ElementValuePairGen
 name|beforeElement
 init|=
@@ -852,6 +879,7 @@ argument_list|(
 name|i
 argument_list|)
 decl_stmt|;
+specifier|final
 name|ElementValuePairGen
 name|afterElement
 init|=
@@ -904,6 +932,7 @@ block|}
 block|}
 catch|catch
 parameter_list|(
+specifier|final
 name|IOException
 name|ioe
 parameter_list|)

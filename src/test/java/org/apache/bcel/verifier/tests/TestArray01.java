@@ -38,6 +38,7 @@ name|Object
 name|test1
 parameter_list|()
 block|{
+specifier|final
 name|String
 index|[]
 name|a

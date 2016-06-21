@@ -182,6 +182,7 @@ name|Object
 name|clone
 parameter_list|()
 block|{
+specifier|final
 name|OperandStack
 name|newstack
 init|=
@@ -284,6 +285,7 @@ return|return
 literal|false
 return|;
 block|}
+specifier|final
 name|OperandStack
 name|s
 init|=
@@ -389,6 +391,7 @@ name|Type
 name|pop
 parameter_list|()
 block|{
+specifier|final
 name|Type
 name|e
 init|=
@@ -595,6 +598,7 @@ name|String
 name|toString
 parameter_list|()
 block|{
+specifier|final
 name|StringBuilder
 name|sb
 init|=
@@ -1040,6 +1044,7 @@ block|}
 block|}
 catch|catch
 parameter_list|(
+specifier|final
 name|ClassNotFoundException
 name|e
 parameter_list|)

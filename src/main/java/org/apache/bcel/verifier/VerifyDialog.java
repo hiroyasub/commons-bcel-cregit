@@ -524,6 +524,7 @@ block|{
 name|super
 argument_list|()
 expr_stmt|;
+specifier|final
 name|int
 name|dotclasspos
 init|=
@@ -605,6 +606,7 @@ comment|// user code end
 block|}
 catch|catch
 parameter_list|(
+specifier|final
 name|java
 operator|.
 name|lang
@@ -654,6 +656,7 @@ comment|// user code end
 block|}
 catch|catch
 parameter_list|(
+specifier|final
 name|java
 operator|.
 name|lang
@@ -703,6 +706,7 @@ comment|// user code end
 block|}
 catch|catch
 parameter_list|(
+specifier|final
 name|java
 operator|.
 name|lang
@@ -752,6 +756,7 @@ comment|// user code end
 block|}
 catch|catch
 parameter_list|(
+specifier|final
 name|java
 operator|.
 name|lang
@@ -946,6 +951,7 @@ comment|// user code end
 block|}
 catch|catch
 parameter_list|(
+specifier|final
 name|java
 operator|.
 name|lang
@@ -1120,6 +1126,7 @@ comment|// user code end
 block|}
 catch|catch
 parameter_list|(
+specifier|final
 name|java
 operator|.
 name|lang
@@ -1222,6 +1229,7 @@ comment|// user code end
 block|}
 catch|catch
 parameter_list|(
+specifier|final
 name|java
 operator|.
 name|lang
@@ -1317,6 +1325,7 @@ comment|// user code end
 block|}
 catch|catch
 parameter_list|(
+specifier|final
 name|java
 operator|.
 name|lang
@@ -1419,6 +1428,7 @@ comment|// user code end
 block|}
 catch|catch
 parameter_list|(
+specifier|final
 name|java
 operator|.
 name|lang
@@ -1514,6 +1524,7 @@ comment|// user code end
 block|}
 catch|catch
 parameter_list|(
+specifier|final
 name|java
 operator|.
 name|lang
@@ -1616,6 +1627,7 @@ comment|// user code end
 block|}
 catch|catch
 parameter_list|(
+specifier|final
 name|java
 operator|.
 name|lang
@@ -1711,6 +1723,7 @@ comment|// user code end
 block|}
 catch|catch
 parameter_list|(
+specifier|final
 name|java
 operator|.
 name|lang
@@ -1902,6 +1915,7 @@ expr_stmt|;
 block|}
 catch|catch
 parameter_list|(
+specifier|final
 name|java
 operator|.
 name|lang
@@ -1952,6 +1966,7 @@ name|length
 expr_stmt|;
 for|for
 control|(
+specifier|final
 name|String
 name|arg
 range|:
@@ -2041,6 +2056,7 @@ expr_stmt|;
 block|}
 catch|catch
 parameter_list|(
+specifier|final
 name|Throwable
 name|exception
 parameter_list|)
@@ -2082,6 +2098,7 @@ name|ActionEvent
 name|actionEvent
 parameter_list|)
 block|{
+specifier|final
 name|Verifier
 name|v
 init|=
@@ -2092,6 +2109,7 @@ argument_list|(
 name|class_name
 argument_list|)
 decl_stmt|;
+specifier|final
 name|VerificationResult
 name|vr
 init|=
@@ -2180,6 +2198,7 @@ argument_list|(
 name|actionEvent
 argument_list|)
 expr_stmt|;
+specifier|final
 name|Verifier
 name|v
 init|=
@@ -2190,6 +2209,7 @@ argument_list|(
 name|class_name
 argument_list|)
 decl_stmt|;
+specifier|final
 name|VerificationResult
 name|vr
 init|=
@@ -2314,6 +2334,7 @@ name|Color
 operator|.
 name|green
 decl_stmt|;
+specifier|final
 name|Verifier
 name|v
 init|=
@@ -2360,6 +2381,7 @@ argument_list|(
 name|class_name
 argument_list|)
 expr_stmt|;
+specifier|final
 name|int
 name|nr
 init|=
@@ -2418,6 +2440,7 @@ block|}
 block|}
 catch|catch
 parameter_list|(
+specifier|final
 name|ClassNotFoundException
 name|ex
 parameter_list|)

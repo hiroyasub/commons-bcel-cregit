@@ -125,6 +125,7 @@ parameter_list|()
 throws|throws
 name|Exception
 block|{
+specifier|final
 name|OutputStream
 name|os
 init|=
@@ -132,6 +133,7 @@ operator|new
 name|ByteArrayOutputStream
 argument_list|()
 decl_stmt|;
+specifier|final
 name|JavaClass
 name|java_class
 init|=
@@ -147,6 +149,7 @@ argument_list|(
 name|java_class
 argument_list|)
 expr_stmt|;
+specifier|final
 name|BCELifier
 name|bcelifier
 init|=
@@ -219,6 +222,7 @@ argument_list|(
 literal|"target"
 argument_list|)
 decl_stmt|;
+specifier|final
 name|File
 name|infile
 init|=
@@ -228,6 +232,7 @@ argument_list|(
 name|javaClass
 argument_list|)
 decl_stmt|;
+specifier|final
 name|JavaClass
 name|java_class
 init|=
@@ -253,6 +258,7 @@ argument_list|(
 name|java_class
 argument_list|)
 expr_stmt|;
+specifier|final
 name|File
 name|outfile
 init|=
@@ -286,6 +292,7 @@ name|outfile
 argument_list|)
 init|)
 block|{
+specifier|final
 name|BCELifier
 name|bcelifier
 init|=
@@ -448,6 +455,7 @@ throws|throws
 name|Exception
 block|{
 comment|// System.err.println(java.util.Arrays.toString(args));
+specifier|final
 name|ProcessBuilder
 name|pb
 init|=
@@ -464,6 +472,7 @@ argument_list|(
 name|workDir
 argument_list|)
 expr_stmt|;
+specifier|final
 name|Process
 name|proc
 init|=
@@ -500,6 +509,7 @@ operator|.
 name|waitFor
 argument_list|()
 expr_stmt|;
+specifier|final
 name|byte
 index|[]
 name|buff
@@ -548,6 +558,7 @@ argument_list|)
 argument_list|)
 expr_stmt|;
 block|}
+specifier|final
 name|StringBuilder
 name|sb
 init|=

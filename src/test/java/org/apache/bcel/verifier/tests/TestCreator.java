@@ -97,6 +97,7 @@ parameter_list|()
 throws|throws
 name|IOException
 block|{
+specifier|final
 name|File
 name|classFile
 init|=
@@ -134,6 +135,7 @@ name|String
 name|getClassName
 parameter_list|()
 block|{
+specifier|final
 name|String
 name|name
 init|=
@@ -240,6 +242,7 @@ return|;
 block|}
 catch|catch
 parameter_list|(
+specifier|final
 name|URISyntaxException
 name|e
 parameter_list|)

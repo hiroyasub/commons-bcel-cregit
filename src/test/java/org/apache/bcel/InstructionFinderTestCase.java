@@ -107,6 +107,7 @@ parameter_list|()
 throws|throws
 name|Exception
 block|{
+specifier|final
 name|JavaClass
 name|clazz
 init|=
@@ -117,6 +118,7 @@ operator|+
 literal|".util.InstructionFinder"
 argument_list|)
 decl_stmt|;
+specifier|final
 name|Method
 index|[]
 name|methods
@@ -133,6 +135,7 @@ literal|null
 decl_stmt|;
 for|for
 control|(
+specifier|final
 name|Method
 name|m
 range|:
@@ -185,6 +188,7 @@ literal|"search method not found"
 argument_list|)
 throw|;
 block|}
+specifier|final
 name|byte
 index|[]
 name|bytes
@@ -197,6 +201,7 @@ operator|.
 name|getCode
 argument_list|()
 decl_stmt|;
+specifier|final
 name|InstructionList
 name|il
 init|=
@@ -206,6 +211,7 @@ argument_list|(
 name|bytes
 argument_list|)
 decl_stmt|;
+specifier|final
 name|InstructionFinder
 name|finder
 init|=
@@ -215,6 +221,7 @@ argument_list|(
 name|il
 argument_list|)
 decl_stmt|;
+specifier|final
 name|Iterator
 argument_list|<
 name|?
@@ -235,6 +242,7 @@ argument_list|,
 literal|null
 argument_list|)
 decl_stmt|;
+specifier|final
 name|InstructionHandle
 index|[]
 name|ihs
@@ -255,6 +263,7 @@ literal|0
 decl_stmt|;
 for|for
 control|(
+specifier|final
 name|InstructionHandle
 name|ih
 range|:

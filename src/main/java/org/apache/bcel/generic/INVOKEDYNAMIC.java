@@ -394,6 +394,7 @@ name|ConstantPoolGen
 name|cpg
 parameter_list|)
 block|{
+specifier|final
 name|ConstantPool
 name|cp
 init|=
@@ -402,6 +403,7 @@ operator|.
 name|getConstantPool
 argument_list|()
 decl_stmt|;
+specifier|final
 name|ConstantInvokeDynamic
 name|cid
 init|=

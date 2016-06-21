@@ -110,6 +110,7 @@ name|Object
 name|clone
 parameter_list|()
 block|{
+specifier|final
 name|Frame
 name|f
 init|=
@@ -212,6 +213,7 @@ literal|false
 return|;
 comment|// implies "null" is non-equal.
 block|}
+specifier|final
 name|Frame
 name|f
 init|=

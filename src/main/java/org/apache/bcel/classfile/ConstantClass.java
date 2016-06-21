@@ -230,6 +230,7 @@ name|ConstantPool
 name|cp
 parameter_list|)
 block|{
+specifier|final
 name|Constant
 name|c
 init|=

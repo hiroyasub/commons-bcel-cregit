@@ -181,6 +181,7 @@ name|ElementValuePair
 name|getElementNameValuePair
 parameter_list|()
 block|{
+specifier|final
 name|ElementValue
 name|immutableValue
 init|=

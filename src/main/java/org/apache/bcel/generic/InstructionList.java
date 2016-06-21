@@ -291,6 +291,7 @@ decl_stmt|;
 comment|/*          * Do a binary search since the pos array is orderd.          */
 do|do
 block|{
+specifier|final
 name|int
 name|i
 init|=
@@ -302,6 +303,7 @@ operator|)
 operator|/
 literal|2
 decl_stmt|;
+specifier|final
 name|int
 name|j
 init|=
@@ -369,6 +371,7 @@ name|int
 name|pos
 parameter_list|)
 block|{
+specifier|final
 name|int
 index|[]
 name|positions
@@ -490,6 +493,7 @@ literal|0
 condition|)
 block|{
 comment|// Remember byte offset and associate it with the instruction
+specifier|final
 name|int
 name|off
 init|=
@@ -506,6 +510,7 @@ operator|=
 name|off
 expr_stmt|;
 comment|/*                  * Read one instruction from the byte stream, the byte position is set accordingly.                  */
+specifier|final
 name|Instruction
 name|i
 init|=
@@ -568,6 +573,7 @@ block|}
 block|}
 catch|catch
 parameter_list|(
+specifier|final
 name|IOException
 name|e
 parameter_list|)
@@ -635,6 +641,7 @@ operator|instanceof
 name|BranchHandle
 condition|)
 block|{
+specifier|final
 name|BranchInstruction
 name|bi
 init|=
@@ -712,6 +719,7 @@ name|Select
 condition|)
 block|{
 comment|// Either LOOKUPSWITCH or TABLESWITCH
+specifier|final
 name|Select
 name|s
 init|=
@@ -720,6 +728,7 @@ name|Select
 operator|)
 name|bi
 decl_stmt|;
+specifier|final
 name|int
 index|[]
 name|indices
@@ -844,6 +853,7 @@ return|return
 name|ih
 return|;
 block|}
+specifier|final
 name|InstructionHandle
 name|next
 init|=
@@ -852,6 +862,7 @@ operator|.
 name|getNext
 argument_list|()
 decl_stmt|;
+specifier|final
 name|InstructionHandle
 name|ret
 init|=
@@ -1139,6 +1150,7 @@ name|Instruction
 name|i
 parameter_list|)
 block|{
+specifier|final
 name|InstructionHandle
 name|ih
 init|=
@@ -1168,6 +1180,7 @@ name|BranchInstruction
 name|i
 parameter_list|)
 block|{
+specifier|final
 name|BranchHandle
 name|ih
 init|=
@@ -1327,6 +1340,7 @@ name|BranchInstruction
 name|i
 parameter_list|)
 block|{
+specifier|final
 name|BranchHandle
 name|bh
 init|=
@@ -1337,6 +1351,7 @@ argument_list|(
 name|i
 argument_list|)
 decl_stmt|;
+specifier|final
 name|InstructionList
 name|il
 init|=
@@ -1403,6 +1418,7 @@ return|return
 name|ih
 return|;
 block|}
+specifier|final
 name|InstructionHandle
 name|prev
 init|=
@@ -1411,6 +1427,7 @@ operator|.
 name|getPrev
 argument_list|()
 decl_stmt|;
+specifier|final
 name|InstructionHandle
 name|ret
 init|=
@@ -1652,6 +1669,7 @@ name|Instruction
 name|i
 parameter_list|)
 block|{
+specifier|final
 name|InstructionHandle
 name|ih
 init|=
@@ -1681,6 +1699,7 @@ name|BranchInstruction
 name|i
 parameter_list|)
 block|{
+specifier|final
 name|BranchHandle
 name|ih
 init|=
@@ -1840,6 +1859,7 @@ name|BranchInstruction
 name|i
 parameter_list|)
 block|{
+specifier|final
 name|BranchHandle
 name|bh
 init|=
@@ -1850,6 +1870,7 @@ argument_list|(
 name|i
 argument_list|)
 decl_stmt|;
+specifier|final
 name|InstructionList
 name|il
 init|=
@@ -2026,6 +2047,7 @@ throw|;
 block|}
 block|}
 comment|// Step 2: Temporarily remove the given instructions from the list
+specifier|final
 name|InstructionHandle
 name|prev
 init|=
@@ -2364,6 +2386,7 @@ argument_list|(
 literal|null
 argument_list|)
 expr_stmt|;
+specifier|final
 name|List
 argument_list|<
 name|InstructionHandle
@@ -2404,6 +2427,7 @@ argument_list|()
 expr_stmt|;
 comment|// e.g. BranchInstructions release their targets
 block|}
+specifier|final
 name|StringBuilder
 name|buf
 init|=
@@ -2510,6 +2534,7 @@ name|isEmpty
 argument_list|()
 condition|)
 block|{
+specifier|final
 name|InstructionHandle
 index|[]
 name|targeted
@@ -2941,6 +2966,7 @@ name|count
 init|=
 literal|0
 decl_stmt|;
+specifier|final
 name|int
 index|[]
 name|pos
@@ -2976,6 +3002,7 @@ name|getNext
 argument_list|()
 control|)
 block|{
+specifier|final
 name|Instruction
 name|i
 init|=
@@ -3048,6 +3075,7 @@ operator|instanceof
 name|Select
 condition|)
 block|{
+specifier|final
 name|InstructionHandle
 index|[]
 name|targets
@@ -3064,6 +3092,7 @@ argument_list|()
 decl_stmt|;
 for|for
 control|(
+specifier|final
 name|InstructionHandle
 name|target
 range|:
@@ -3169,6 +3198,7 @@ name|getNext
 argument_list|()
 control|)
 block|{
+specifier|final
 name|Instruction
 name|i
 init|=
@@ -3298,6 +3328,7 @@ name|getNext
 argument_list|()
 control|)
 block|{
+specifier|final
 name|Instruction
 name|i
 init|=
@@ -3365,6 +3396,7 @@ comment|// Update position indices of instructions
 name|setPositions
 argument_list|()
 expr_stmt|;
+specifier|final
 name|ByteArrayOutputStream
 name|b
 init|=
@@ -3372,6 +3404,7 @@ operator|new
 name|ByteArrayOutputStream
 argument_list|()
 decl_stmt|;
+specifier|final
 name|DataOutputStream
 name|out
 init|=
@@ -3402,6 +3435,7 @@ name|getNext
 argument_list|()
 control|)
 block|{
+specifier|final
 name|Instruction
 name|i
 init|=
@@ -3427,6 +3461,7 @@ expr_stmt|;
 block|}
 catch|catch
 parameter_list|(
+specifier|final
 name|IOException
 name|e
 parameter_list|)
@@ -3462,6 +3497,7 @@ index|[]
 name|getInstructions
 parameter_list|()
 block|{
+specifier|final
 name|List
 argument_list|<
 name|Instruction
@@ -3512,6 +3548,7 @@ block|}
 block|}
 catch|catch
 parameter_list|(
+specifier|final
 name|IOException
 name|e
 parameter_list|)
@@ -3569,6 +3606,7 @@ name|boolean
 name|verbose
 parameter_list|)
 block|{
+specifier|final
 name|StringBuilder
 name|buf
 init|=
@@ -3667,6 +3705,7 @@ name|NoSuchElementException
 argument_list|()
 throw|;
 block|}
+specifier|final
 name|InstructionHandle
 name|i
 init|=
@@ -3719,6 +3758,7 @@ index|[]
 name|getInstructionHandles
 parameter_list|()
 block|{
+specifier|final
 name|InstructionHandle
 index|[]
 name|ihs
@@ -3785,6 +3825,7 @@ name|InstructionList
 name|copy
 parameter_list|()
 block|{
+specifier|final
 name|Map
 argument_list|<
 name|InstructionHandle
@@ -3798,6 +3839,7 @@ name|HashMap
 argument_list|<>
 argument_list|()
 decl_stmt|;
+specifier|final
 name|InstructionList
 name|il
 init|=
@@ -3825,6 +3867,7 @@ name|getNext
 argument_list|()
 control|)
 block|{
+specifier|final
 name|Instruction
 name|i
 init|=
@@ -3833,6 +3876,7 @@ operator|.
 name|getInstruction
 argument_list|()
 decl_stmt|;
+specifier|final
 name|Instruction
 name|c
 init|=
@@ -3905,6 +3949,7 @@ operator|!=
 literal|null
 condition|)
 block|{
+specifier|final
 name|Instruction
 name|i
 init|=
@@ -3913,6 +3958,7 @@ operator|.
 name|getInstruction
 argument_list|()
 decl_stmt|;
+specifier|final
 name|Instruction
 name|c
 init|=
@@ -3928,6 +3974,7 @@ operator|instanceof
 name|BranchInstruction
 condition|)
 block|{
+specifier|final
 name|BranchInstruction
 name|bi
 init|=
@@ -3936,6 +3983,7 @@ name|BranchInstruction
 operator|)
 name|i
 decl_stmt|;
+specifier|final
 name|BranchInstruction
 name|bc
 init|=
@@ -3944,6 +3992,7 @@ name|BranchInstruction
 operator|)
 name|c
 decl_stmt|;
+specifier|final
 name|InstructionHandle
 name|itarget
 init|=
@@ -3974,6 +4023,7 @@ name|Select
 condition|)
 block|{
 comment|// Either LOOKUPSWITCH or TABLESWITCH
+specifier|final
 name|InstructionHandle
 index|[]
 name|itargets
@@ -3988,6 +4038,7 @@ operator|.
 name|getTargets
 argument_list|()
 decl_stmt|;
+specifier|final
 name|InstructionHandle
 index|[]
 name|ctargets
@@ -4090,6 +4141,7 @@ name|getNext
 argument_list|()
 control|)
 block|{
+specifier|final
 name|Instruction
 name|i
 init|=
@@ -4105,6 +4157,7 @@ operator|instanceof
 name|CPInstruction
 condition|)
 block|{
+specifier|final
 name|CPInstruction
 name|ci
 init|=
@@ -4113,6 +4166,7 @@ name|CPInstruction
 operator|)
 name|i
 decl_stmt|;
+specifier|final
 name|Constant
 name|c
 init|=
@@ -4269,6 +4323,7 @@ name|getNext
 argument_list|()
 control|)
 block|{
+specifier|final
 name|Instruction
 name|i
 init|=
@@ -4284,6 +4339,7 @@ operator|instanceof
 name|BranchInstruction
 condition|)
 block|{
+specifier|final
 name|BranchInstruction
 name|b
 init|=
@@ -4292,6 +4348,7 @@ name|BranchInstruction
 operator|)
 name|i
 decl_stmt|;
+specifier|final
 name|InstructionHandle
 name|target
 init|=
@@ -4323,6 +4380,7 @@ name|Select
 condition|)
 block|{
 comment|// Either LOOKUPSWITCH or TABLESWITCH
+specifier|final
 name|InstructionHandle
 index|[]
 name|targets
@@ -4405,12 +4463,14 @@ parameter_list|)
 block|{
 for|for
 control|(
+specifier|final
 name|LocalVariableGen
 name|element
 range|:
 name|lg
 control|)
 block|{
+specifier|final
 name|InstructionHandle
 name|start
 init|=
@@ -4419,6 +4479,7 @@ operator|.
 name|getStart
 argument_list|()
 decl_stmt|;
+specifier|final
 name|InstructionHandle
 name|end
 init|=
@@ -4480,6 +4541,7 @@ parameter_list|)
 block|{
 for|for
 control|(
+specifier|final
 name|CodeExceptionGen
 name|exception
 range|:
@@ -4623,6 +4685,7 @@ condition|)
 block|{
 for|for
 control|(
+specifier|final
 name|InstructionListObserver
 name|observer
 range|:

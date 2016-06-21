@@ -327,6 +327,7 @@ name|String
 name|toString
 parameter_list|()
 block|{
+specifier|final
 name|StringBuilder
 name|buf
 init|=
@@ -383,6 +384,7 @@ name|ConstantPool
 name|_constant_pool
 parameter_list|)
 block|{
+specifier|final
 name|Synthetic
 name|c
 init|=

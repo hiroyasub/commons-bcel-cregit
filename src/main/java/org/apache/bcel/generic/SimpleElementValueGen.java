@@ -799,6 +799,7 @@ literal|"Dont call getValueString() on a non STRING ElementValue"
 argument_list|)
 throw|;
 block|}
+specifier|final
 name|ConstantUtf8
 name|c
 init|=
@@ -843,6 +844,7 @@ literal|"Dont call getValueString() on a non STRING ElementValue"
 argument_list|)
 throw|;
 block|}
+specifier|final
 name|ConstantInteger
 name|c
 init|=
@@ -883,6 +885,7 @@ block|{
 case|case
 name|PRIMITIVE_INT
 case|:
+specifier|final
 name|ConstantInteger
 name|c
 init|=
@@ -911,6 +914,7 @@ return|;
 case|case
 name|PRIMITIVE_LONG
 case|:
+specifier|final
 name|ConstantLong
 name|j
 init|=
@@ -939,6 +943,7 @@ return|;
 case|case
 name|PRIMITIVE_DOUBLE
 case|:
+specifier|final
 name|ConstantDouble
 name|d
 init|=
@@ -967,6 +972,7 @@ return|;
 case|case
 name|PRIMITIVE_FLOAT
 case|:
+specifier|final
 name|ConstantFloat
 name|f
 init|=
@@ -995,6 +1001,7 @@ return|;
 case|case
 name|PRIMITIVE_SHORT
 case|:
+specifier|final
 name|ConstantInteger
 name|s
 init|=
@@ -1023,6 +1030,7 @@ return|;
 case|case
 name|PRIMITIVE_BYTE
 case|:
+specifier|final
 name|ConstantInteger
 name|b
 init|=
@@ -1051,6 +1059,7 @@ return|;
 case|case
 name|PRIMITIVE_CHAR
 case|:
+specifier|final
 name|ConstantInteger
 name|ch
 init|=
@@ -1079,6 +1088,7 @@ return|;
 case|case
 name|PRIMITIVE_BOOLEAN
 case|:
+specifier|final
 name|ConstantInteger
 name|bo
 init|=
@@ -1113,6 +1123,7 @@ return|;
 case|case
 name|STRING
 case|:
+specifier|final
 name|ConstantUtf8
 name|cu8
 init|=

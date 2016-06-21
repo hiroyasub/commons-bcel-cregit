@@ -121,6 +121,7 @@ name|ConstantPool
 name|cp
 parameter_list|)
 block|{
+specifier|final
 name|Constant
 name|c
 init|=
@@ -134,6 +135,7 @@ name|getIndex
 argument_list|()
 argument_list|)
 decl_stmt|;
+specifier|final
 name|StringTokenizer
 name|tok
 init|=
@@ -232,6 +234,7 @@ literal|1
 expr_stmt|;
 comment|// this reference
 block|}
+specifier|final
 name|String
 name|signature
 init|=
@@ -265,6 +268,7 @@ name|ConstantPoolGen
 name|cpg
 parameter_list|)
 block|{
+specifier|final
 name|String
 name|signature
 init|=

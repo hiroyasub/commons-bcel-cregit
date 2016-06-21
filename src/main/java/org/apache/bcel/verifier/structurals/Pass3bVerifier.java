@@ -611,6 +611,7 @@ operator|new
 name|Random
 argument_list|()
 decl_stmt|;
+specifier|final
 name|InstructionContextQueue
 name|icq
 init|=
@@ -677,6 +678,7 @@ operator|!
 name|DEBUG
 condition|)
 block|{
+specifier|final
 name|int
 name|r
 init|=
@@ -750,6 +752,7 @@ argument_list|(
 literal|"unchecked"
 argument_list|)
 comment|// ec is of type ArrayList<InstructionContext>
+specifier|final
 name|ArrayList
 argument_list|<
 name|InstructionContext
@@ -775,6 +778,7 @@ argument_list|(
 literal|"unchecked"
 argument_list|)
 comment|// ec is of type ArrayList<InstructionContext>
+specifier|final
 name|ArrayList
 argument_list|<
 name|InstructionContext
@@ -819,6 +823,7 @@ block|{
 comment|//System.err.println(u);
 comment|// We can only follow _one_ successor, the one after the
 comment|// JSR that was recently executed.
+specifier|final
 name|RET
 name|ret
 init|=
@@ -835,6 +840,7 @@ name|getInstruction
 argument_list|()
 operator|)
 decl_stmt|;
+specifier|final
 name|ReturnaddressType
 name|t
 init|=
@@ -859,6 +865,7 @@ name|getIndex
 argument_list|()
 argument_list|)
 decl_stmt|;
+specifier|final
 name|InstructionContext
 name|theSuccessor
 init|=
@@ -1005,6 +1012,7 @@ literal|"'."
 argument_list|)
 throw|;
 block|}
+specifier|final
 name|JsrInstruction
 name|jsr
 init|=
@@ -1096,6 +1104,7 @@ argument_list|(
 literal|"unchecked"
 argument_list|)
 comment|// newchain is already of type ArrayList<InstructionContext>
+specifier|final
 name|ArrayList
 argument_list|<
 name|InstructionContext
@@ -1128,6 +1137,7 @@ else|else
 block|{
 comment|// "not a ret"
 comment|// Normal successors. Add them to the queue of successors.
+specifier|final
 name|InstructionContext
 index|[]
 name|succs
@@ -1139,6 +1149,7 @@ argument_list|()
 decl_stmt|;
 for|for
 control|(
+specifier|final
 name|InstructionContext
 name|v
 range|:
@@ -1172,6 +1183,7 @@ argument_list|(
 literal|"unchecked"
 argument_list|)
 comment|// newchain is already of type ArrayList<InstructionContext>
+specifier|final
 name|ArrayList
 argument_list|<
 name|InstructionContext
@@ -1204,6 +1216,7 @@ block|}
 comment|// end "not a ret"
 comment|// Exception Handlers. Add them to the queue of successors.
 comment|// [subroutines are never protected; mandated by JustIce]
+specifier|final
 name|ExceptionHandler
 index|[]
 name|exc_hds
@@ -1215,12 +1228,14 @@ argument_list|()
 decl_stmt|;
 for|for
 control|(
+specifier|final
 name|ExceptionHandler
 name|exc_hd
 range|:
 name|exc_hds
 control|)
 block|{
+specifier|final
 name|InstructionContext
 name|v
 init|=
@@ -1364,6 +1379,7 @@ operator|)
 operator|)
 condition|)
 block|{
+specifier|final
 name|InstructionContext
 name|ic
 init|=
@@ -1376,6 +1392,7 @@ argument_list|)
 decl_stmt|;
 comment|// TODO: This is buggy, we check only the top-level return instructions this way.
 comment|// Maybe some maniac returns from a method when in a subroutine?
+specifier|final
 name|Frame
 name|f
 init|=
@@ -1391,6 +1408,7 @@ argument_list|>
 argument_list|()
 argument_list|)
 decl_stmt|;
+specifier|final
 name|LocalVariables
 name|lvs
 init|=
@@ -1446,6 +1464,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
+specifier|final
 name|OperandStack
 name|os
 init|=
@@ -1507,6 +1526,7 @@ name|returnedType
 init|=
 literal|null
 decl_stmt|;
+specifier|final
 name|OperandStack
 name|inStack
 init|=
@@ -1591,6 +1611,7 @@ block|}
 block|}
 catch|catch
 parameter_list|(
+specifier|final
 name|ClassNotFoundException
 name|e
 parameter_list|)
@@ -1733,6 +1754,7 @@ expr_stmt|;
 block|}
 catch|catch
 parameter_list|(
+specifier|final
 name|ClassNotFoundException
 name|e
 parameter_list|)
@@ -1750,6 +1772,7 @@ name|e
 argument_list|)
 throw|;
 block|}
+specifier|final
 name|ConstantPoolGen
 name|constantPoolGen
 init|=
@@ -1763,6 +1786,7 @@ argument_list|()
 argument_list|)
 decl_stmt|;
 comment|// Init Visitors
+specifier|final
 name|InstConstraintVisitor
 name|icv
 init|=
@@ -1777,6 +1801,7 @@ argument_list|(
 name|constantPoolGen
 argument_list|)
 expr_stmt|;
+specifier|final
 name|ExecutionVisitor
 name|ev
 init|=
@@ -1791,6 +1816,7 @@ argument_list|(
 name|constantPoolGen
 argument_list|)
 expr_stmt|;
+specifier|final
 name|Method
 index|[]
 name|methods
@@ -1803,6 +1829,7 @@ decl_stmt|;
 comment|// Method no "method_no" exists, we ran Pass3a before on it!
 try|try
 block|{
+specifier|final
 name|MethodGen
 name|mg
 init|=
@@ -1847,6 +1874,7 @@ operator|)
 condition|)
 block|{
 comment|// IF mg HAS CODE (See pass 2)
+specifier|final
 name|ControlFlowGraph
 name|cfg
 init|=
@@ -1857,6 +1885,7 @@ name|mg
 argument_list|)
 decl_stmt|;
 comment|// Build the initial frame situation for this method.
+specifier|final
 name|Frame
 name|f
 init|=
@@ -1964,6 +1993,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
+specifier|final
 name|Type
 index|[]
 name|argtypes
@@ -2147,6 +2177,7 @@ block|}
 block|}
 catch|catch
 parameter_list|(
+specifier|final
 name|VerifierConstraintViolatedException
 name|ce
 parameter_list|)
@@ -2184,11 +2215,13 @@ return|;
 block|}
 catch|catch
 parameter_list|(
+specifier|final
 name|RuntimeException
 name|re
 parameter_list|)
 block|{
 comment|// These are internal errors
+specifier|final
 name|StringWriter
 name|sw
 init|=
@@ -2196,6 +2229,7 @@ operator|new
 name|StringWriter
 argument_list|()
 decl_stmt|;
+specifier|final
 name|PrintWriter
 name|pw
 init|=

@@ -218,6 +218,7 @@ name|String
 name|className
 parameter_list|)
 block|{
+specifier|final
 name|SoftReference
 argument_list|<
 name|JavaClass
@@ -298,6 +299,7 @@ literal|'.'
 argument_list|)
 expr_stmt|;
 comment|// Just in case, canonical form
+specifier|final
 name|JavaClass
 name|clazz
 init|=
@@ -335,6 +337,7 @@ return|;
 block|}
 catch|catch
 parameter_list|(
+specifier|final
 name|IOException
 name|e
 parameter_list|)
@@ -373,6 +376,7 @@ parameter_list|)
 throws|throws
 name|ClassNotFoundException
 block|{
+specifier|final
 name|String
 name|className
 init|=
@@ -381,6 +385,7 @@ operator|.
 name|getName
 argument_list|()
 decl_stmt|;
+specifier|final
 name|JavaClass
 name|repositoryClass
 init|=
@@ -405,6 +410,7 @@ name|name
 init|=
 name|className
 decl_stmt|;
+specifier|final
 name|int
 name|i
 init|=
@@ -467,6 +473,7 @@ return|;
 block|}
 catch|catch
 parameter_list|(
+specifier|final
 name|IOException
 name|e
 parameter_list|)
@@ -500,6 +507,7 @@ operator|!=
 literal|null
 condition|)
 block|{
+specifier|final
 name|ClassParser
 name|parser
 init|=
@@ -511,6 +519,7 @@ argument_list|,
 name|className
 argument_list|)
 decl_stmt|;
+specifier|final
 name|JavaClass
 name|clazz
 init|=
@@ -531,6 +540,7 @@ block|}
 block|}
 catch|catch
 parameter_list|(
+specifier|final
 name|IOException
 name|e
 parameter_list|)
@@ -570,6 +580,7 @@ expr_stmt|;
 block|}
 catch|catch
 parameter_list|(
+specifier|final
 name|IOException
 name|e
 parameter_list|)

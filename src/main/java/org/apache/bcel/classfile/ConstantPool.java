@@ -108,6 +108,7 @@ block|{
 name|byte
 name|tag
 decl_stmt|;
+specifier|final
 name|int
 name|constant_pool_count
 init|=
@@ -225,6 +226,7 @@ decl_stmt|;
 name|int
 name|i
 decl_stmt|;
+specifier|final
 name|byte
 name|tag
 init|=
@@ -549,6 +551,7 @@ name|CONSTANT_MethodHandle
 case|:
 comment|// Note that the ReferenceIndex may point to a Fieldref, Methodref or
 comment|// InterfaceMethodref - so we need to peek ahead to get the actual type.
+specifier|final
 name|ConstantMethodHandle
 name|cmh
 init|=
@@ -596,6 +599,7 @@ name|Const
 operator|.
 name|CONSTANT_MethodType
 case|:
+specifier|final
 name|ConstantMethodType
 name|cmt
 init|=
@@ -624,6 +628,7 @@ name|Const
 operator|.
 name|CONSTANT_InvokeDynamic
 case|:
+specifier|final
 name|ConstantInvokeDynamic
 name|cid
 init|=
@@ -680,6 +685,7 @@ name|String
 name|str
 parameter_list|)
 block|{
+specifier|final
 name|int
 name|len
 init|=
@@ -688,6 +694,7 @@ operator|.
 name|length
 argument_list|()
 decl_stmt|;
+specifier|final
 name|StringBuilder
 name|buf
 init|=
@@ -699,6 +706,7 @@ operator|+
 literal|5
 argument_list|)
 decl_stmt|;
+specifier|final
 name|char
 index|[]
 name|ch
@@ -822,6 +830,7 @@ parameter_list|)
 throws|throws
 name|ClassFormatException
 block|{
+specifier|final
 name|Constant
 name|c
 init|=
@@ -1213,6 +1222,7 @@ name|String
 name|toString
 parameter_list|()
 block|{
+specifier|final
 name|StringBuilder
 name|buf
 init|=
@@ -1350,6 +1360,7 @@ block|}
 block|}
 catch|catch
 parameter_list|(
+specifier|final
 name|CloneNotSupportedException
 name|e
 parameter_list|)

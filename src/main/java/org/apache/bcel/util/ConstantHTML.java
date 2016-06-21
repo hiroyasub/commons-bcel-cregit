@@ -453,6 +453,7 @@ name|int
 name|index
 parameter_list|)
 block|{
+specifier|final
 name|byte
 name|tag
 init|=
@@ -524,6 +525,7 @@ operator|.
 name|CONSTANT_Methodref
 condition|)
 block|{
+specifier|final
 name|ConstantMethodref
 name|c
 init|=
@@ -558,6 +560,7 @@ expr_stmt|;
 block|}
 else|else
 block|{
+specifier|final
 name|ConstantInterfaceMethodref
 name|c1
 init|=
@@ -591,6 +594,7 @@ argument_list|()
 expr_stmt|;
 block|}
 comment|// Get method name and its class
+specifier|final
 name|String
 name|method_name
 init|=
@@ -605,6 +609,7 @@ operator|.
 name|CONSTANT_NameAndType
 argument_list|)
 decl_stmt|;
+specifier|final
 name|String
 name|html_method_name
 init|=
@@ -616,6 +621,7 @@ name|method_name
 argument_list|)
 decl_stmt|;
 comment|// Partially compacted class name, i.e., / -> .
+specifier|final
 name|String
 name|method_class
 init|=
@@ -658,6 +664,7 @@ argument_list|)
 expr_stmt|;
 comment|// Remove class package prefix
 comment|// Get method signature
+specifier|final
 name|ConstantNameAndType
 name|c2
 init|=
@@ -675,6 +682,7 @@ operator|.
 name|CONSTANT_NameAndType
 argument_list|)
 decl_stmt|;
+specifier|final
 name|String
 name|signature
 init|=
@@ -693,6 +701,7 @@ name|CONSTANT_Utf8
 argument_list|)
 decl_stmt|;
 comment|// Get array of strings containing the argument types
+specifier|final
 name|String
 index|[]
 name|args
@@ -707,6 +716,7 @@ literal|false
 argument_list|)
 decl_stmt|;
 comment|// Get return type string
+specifier|final
 name|String
 name|type
 init|=
@@ -719,6 +729,7 @@ argument_list|,
 literal|false
 argument_list|)
 decl_stmt|;
+specifier|final
 name|String
 name|ret_type
 init|=
@@ -729,6 +740,7 @@ argument_list|(
 name|type
 argument_list|)
 decl_stmt|;
+specifier|final
 name|StringBuilder
 name|buf
 init|=
@@ -797,6 +809,7 @@ argument_list|(
 literal|")"
 argument_list|)
 expr_stmt|;
+specifier|final
 name|String
 name|arg_types
 init|=
@@ -935,6 +948,7 @@ operator|.
 name|CONSTANT_Fieldref
 case|:
 comment|// Get class_index and name_and_type_index
+specifier|final
 name|ConstantFieldref
 name|c3
 init|=
@@ -967,6 +981,7 @@ name|getNameAndTypeIndex
 argument_list|()
 expr_stmt|;
 comment|// Get method name and its class (compacted)
+specifier|final
 name|String
 name|field_class
 init|=
@@ -1008,6 +1023,7 @@ literal|true
 argument_list|)
 expr_stmt|;
 comment|// Remove class package prefix
+specifier|final
 name|String
 name|field_name
 init|=
@@ -1138,6 +1154,7 @@ name|Const
 operator|.
 name|CONSTANT_Class
 case|:
+specifier|final
 name|ConstantClass
 name|c4
 init|=
@@ -1162,6 +1179,7 @@ operator|.
 name|getNameIndex
 argument_list|()
 expr_stmt|;
+specifier|final
 name|String
 name|class_name2
 init|=
@@ -1260,6 +1278,7 @@ name|Const
 operator|.
 name|CONSTANT_String
 case|:
+specifier|final
 name|ConstantString
 name|c5
 init|=
@@ -1284,6 +1303,7 @@ operator|.
 name|getStringIndex
 argument_list|()
 expr_stmt|;
+specifier|final
 name|String
 name|str
 init|=
@@ -1328,6 +1348,7 @@ name|Const
 operator|.
 name|CONSTANT_NameAndType
 case|:
+specifier|final
 name|ConstantNameAndType
 name|c6
 init|=
@@ -1352,6 +1373,7 @@ operator|.
 name|getNameIndex
 argument_list|()
 expr_stmt|;
+specifier|final
 name|int
 name|signature_index
 init|=
@@ -1457,6 +1479,7 @@ name|i
 operator|++
 control|)
 block|{
+specifier|final
 name|String
 name|cmp
 init|=

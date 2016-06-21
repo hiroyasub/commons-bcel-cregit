@@ -83,6 +83,7 @@ parameter_list|()
 throws|throws
 name|Exception
 block|{
+specifier|final
 name|File
 name|outputDir
 init|=
@@ -126,6 +127,7 @@ literal|"target/test-classes/Java8Example.class"
 argument_list|)
 init|)
 block|{
+specifier|final
 name|ClassParser
 name|parser
 init|=

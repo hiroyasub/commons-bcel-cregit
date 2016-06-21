@@ -405,6 +405,7 @@ expr_stmt|;
 name|Frame
 name|org
 decl_stmt|;
+specifier|final
 name|InstructionContext
 name|jsr
 init|=
@@ -465,6 +466,7 @@ block|{
 name|Frame
 name|org
 decl_stmt|;
+specifier|final
 name|InstructionContext
 name|jsr
 init|=
@@ -708,6 +710,7 @@ block|}
 block|}
 comment|// Now we're sure the inFrame has changed!
 comment|// new inFrame is already merged in, see above.
+specifier|final
 name|Frame
 name|workingFrame
 init|=
@@ -739,6 +742,7 @@ expr_stmt|;
 block|}
 catch|catch
 parameter_list|(
+specifier|final
 name|StructuralCodeConstraintException
 name|ce
 parameter_list|)
@@ -823,6 +827,7 @@ block|{
 comment|//TODO: Put information in the brackets, e.g.
 comment|//      Is this an ExceptionHandler? Is this a RET? Is this the start of
 comment|//      a subroutine?
+specifier|final
 name|String
 name|ret
 init|=
@@ -851,6 +856,7 @@ name|inFrame
 parameter_list|)
 block|{
 comment|// TODO: Can be performance-improved.
+specifier|final
 name|Frame
 name|inF
 init|=
@@ -862,6 +868,7 @@ name|lastExecutionJSR
 argument_list|()
 argument_list|)
 decl_stmt|;
+specifier|final
 name|OperandStack
 name|oldstack
 init|=
@@ -873,6 +880,7 @@ operator|.
 name|getClone
 argument_list|()
 decl_stmt|;
+specifier|final
 name|LocalVariables
 name|oldlocals
 init|=
@@ -915,6 +923,7 @@ expr_stmt|;
 block|}
 catch|catch
 parameter_list|(
+specifier|final
 name|StructuralCodeConstraintException
 name|sce
 parameter_list|)
@@ -1015,6 +1024,7 @@ name|StructuralCodeConstraintException
 name|e
 parameter_list|)
 block|{
+specifier|final
 name|String
 name|s
 init|=
@@ -1051,6 +1061,7 @@ name|InstructionContextImpl
 name|lastExecutionJSR
 parameter_list|()
 block|{
+specifier|final
 name|int
 name|size
 init|=
@@ -1081,6 +1092,7 @@ name|i
 operator|--
 control|)
 block|{
+specifier|final
 name|InstructionContextImpl
 name|current
 init|=
@@ -1096,6 +1108,7 @@ name|i
 argument_list|)
 operator|)
 decl_stmt|;
+specifier|final
 name|Instruction
 name|currentlast
 init|=
@@ -1193,6 +1206,7 @@ index|[
 literal|1
 index|]
 decl_stmt|;
+specifier|final
 name|Instruction
 name|inst
 init|=
@@ -1209,6 +1223,7 @@ operator|instanceof
 name|RET
 condition|)
 block|{
+specifier|final
 name|Subroutine
 name|s
 init|=
@@ -1240,6 +1255,7 @@ block|}
 comment|//TODO: remove. Only JustIce must not use it, but foreign users of the ControlFlowGraph
 comment|//      will want it. Thanks Johannes Wust.
 comment|//throw new AssertionViolatedException("DID YOU REALLY WANT TO ASK FOR RET'S SUCCS?");
+specifier|final
 name|InstructionHandle
 index|[]
 name|jsrs
@@ -1249,6 +1265,7 @@ operator|.
 name|getEnteringJsrInstructions
 argument_list|()
 decl_stmt|;
+specifier|final
 name|InstructionHandle
 index|[]
 name|ret
@@ -1390,6 +1407,7 @@ condition|)
 block|{
 comment|// BCEL's getTargets() returns only the non-default targets,
 comment|// thanks to Eli Tilevich for reporting.
+specifier|final
 name|InstructionHandle
 index|[]
 name|matchTargets
@@ -1404,6 +1422,7 @@ operator|.
 name|getTargets
 argument_list|()
 decl_stmt|;
+specifier|final
 name|InstructionHandle
 index|[]
 name|ret
@@ -1591,6 +1610,7 @@ argument_list|(
 name|method_gen
 argument_list|)
 expr_stmt|;
+specifier|final
 name|InstructionHandle
 index|[]
 name|instructionhandles
@@ -1605,6 +1625,7 @@ argument_list|()
 decl_stmt|;
 for|for
 control|(
+specifier|final
 name|InstructionHandle
 name|instructionhandle
 range|:
@@ -1637,6 +1658,7 @@ name|InstructionHandle
 name|inst
 parameter_list|)
 block|{
+specifier|final
 name|InstructionContext
 name|ic
 init|=
@@ -1678,6 +1700,7 @@ index|[]
 name|insts
 parameter_list|)
 block|{
+specifier|final
 name|InstructionContext
 index|[]
 name|ret
@@ -1732,6 +1755,7 @@ index|[]
 name|getInstructionContexts
 parameter_list|()
 block|{
+specifier|final
 name|InstructionContext
 index|[]
 name|ret

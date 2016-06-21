@@ -55,6 +55,7 @@ name|void
 name|testsetInstructionNull
 parameter_list|()
 block|{
+specifier|final
 name|BranchHandle
 name|bh
 init|=
@@ -99,6 +100,7 @@ name|void
 name|testsetInstructionBI
 parameter_list|()
 block|{
+specifier|final
 name|BranchHandle
 name|bh
 init|=
@@ -154,6 +156,7 @@ name|void
 name|testsetInstructionnotBI
 parameter_list|()
 block|{
+specifier|final
 name|BranchHandle
 name|bh
 init|=

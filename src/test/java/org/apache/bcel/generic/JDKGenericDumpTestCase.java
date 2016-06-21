@@ -187,6 +187,7 @@ parameter_list|()
 throws|throws
 name|Exception
 block|{
+specifier|final
 name|File
 index|[]
 name|jars
@@ -196,6 +197,7 @@ argument_list|()
 decl_stmt|;
 for|for
 control|(
+specifier|final
 name|File
 name|file
 range|:
@@ -241,6 +243,7 @@ name|file
 argument_list|)
 init|)
 block|{
+specifier|final
 name|Enumeration
 argument_list|<
 name|JarEntry
@@ -260,6 +263,7 @@ name|hasMoreElements
 argument_list|()
 condition|)
 block|{
+specifier|final
 name|JarEntry
 name|e
 init|=
@@ -301,6 +305,7 @@ name|e
 argument_list|)
 init|)
 block|{
+specifier|final
 name|ClassParser
 name|parser
 init|=
@@ -312,6 +317,7 @@ argument_list|,
 name|name
 argument_list|)
 decl_stmt|;
+specifier|final
 name|JavaClass
 name|jc
 init|=
@@ -322,6 +328,7 @@ argument_list|()
 decl_stmt|;
 for|for
 control|(
+specifier|final
 name|Method
 name|m
 range|:
@@ -358,6 +365,7 @@ name|m
 parameter_list|)
 block|{
 comment|//        System.out.println("Method: " + m);
+specifier|final
 name|Code
 name|c
 init|=
@@ -376,6 +384,7 @@ block|{
 return|return;
 comment|// e.g. abstract method
 block|}
+specifier|final
 name|byte
 index|[]
 name|src
@@ -385,6 +394,7 @@ operator|.
 name|getCode
 argument_list|()
 decl_stmt|;
+specifier|final
 name|InstructionList
 name|il
 init|=
@@ -394,6 +404,7 @@ argument_list|(
 name|src
 argument_list|)
 decl_stmt|;
+specifier|final
 name|byte
 index|[]
 name|out
@@ -487,6 +498,7 @@ argument_list|)
 expr_stmt|;
 for|for
 control|(
+specifier|final
 name|InstructionHandle
 name|ih
 range|:
@@ -523,6 +535,7 @@ parameter_list|()
 throws|throws
 name|Exception
 block|{
+specifier|final
 name|File
 name|javaLib
 init|=
@@ -598,6 +611,7 @@ index|[]
 name|bytes
 parameter_list|)
 block|{
+specifier|final
 name|char
 index|[]
 name|hexChars
@@ -619,12 +633,14 @@ literal|0
 decl_stmt|;
 for|for
 control|(
+specifier|final
 name|byte
 name|b
 range|:
 name|bytes
 control|)
 block|{
+specifier|final
 name|int
 name|v
 init|=

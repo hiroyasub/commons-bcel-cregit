@@ -146,6 +146,7 @@ name|Object
 name|clone
 parameter_list|()
 block|{
+specifier|final
 name|LocalVariables
 name|lvs
 init|=
@@ -340,6 +341,7 @@ return|return
 literal|false
 return|;
 block|}
+specifier|final
 name|LocalVariables
 name|lv
 init|=
@@ -669,6 +671,7 @@ argument_list|)
 condition|)
 block|{
 comment|// needed in case of two UninitializedObjectType instances
+specifier|final
 name|Type
 name|sup
 init|=
@@ -779,6 +782,7 @@ block|}
 block|}
 catch|catch
 parameter_list|(
+specifier|final
 name|ClassNotFoundException
 name|e
 parameter_list|)
@@ -805,6 +809,7 @@ name|String
 name|toString
 parameter_list|()
 block|{
+specifier|final
 name|StringBuilder
 name|sb
 init|=

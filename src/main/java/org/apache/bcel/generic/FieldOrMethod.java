@@ -133,6 +133,7 @@ name|ConstantPoolGen
 name|cpg
 parameter_list|)
 block|{
+specifier|final
 name|ConstantPool
 name|cp
 init|=
@@ -141,6 +142,7 @@ operator|.
 name|getConstantPool
 argument_list|()
 decl_stmt|;
+specifier|final
 name|ConstantCP
 name|cmr
 init|=
@@ -157,6 +159,7 @@ name|getIndex
 argument_list|()
 argument_list|)
 decl_stmt|;
+specifier|final
 name|ConstantNameAndType
 name|cnat
 init|=
@@ -203,6 +206,7 @@ name|ConstantPoolGen
 name|cpg
 parameter_list|)
 block|{
+specifier|final
 name|ConstantPool
 name|cp
 init|=
@@ -211,6 +215,7 @@ operator|.
 name|getConstantPool
 argument_list|()
 decl_stmt|;
+specifier|final
 name|ConstantCP
 name|cmr
 init|=
@@ -227,6 +232,7 @@ name|getIndex
 argument_list|()
 argument_list|)
 decl_stmt|;
+specifier|final
 name|ConstantNameAndType
 name|cnat
 init|=
@@ -275,6 +281,7 @@ name|ConstantPoolGen
 name|cpg
 parameter_list|)
 block|{
+specifier|final
 name|ConstantPool
 name|cp
 init|=
@@ -283,6 +290,7 @@ operator|.
 name|getConstantPool
 argument_list|()
 decl_stmt|;
+specifier|final
 name|ConstantCP
 name|cmr
 init|=
@@ -299,6 +307,7 @@ name|getIndex
 argument_list|()
 argument_list|)
 decl_stmt|;
+specifier|final
 name|String
 name|className
 init|=
@@ -376,6 +385,7 @@ name|ConstantPoolGen
 name|cpg
 parameter_list|)
 block|{
+specifier|final
 name|ConstantPool
 name|cp
 init|=
@@ -384,6 +394,7 @@ operator|.
 name|getConstantPool
 argument_list|()
 decl_stmt|;
+specifier|final
 name|ConstantCP
 name|cmr
 init|=
@@ -471,6 +482,7 @@ name|ConstantPoolGen
 name|cpg
 parameter_list|)
 block|{
+specifier|final
 name|ReferenceType
 name|rt
 init|=

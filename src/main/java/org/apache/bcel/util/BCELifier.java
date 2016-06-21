@@ -371,6 +371,7 @@ operator|.
 name|getClassName
 argument_list|()
 decl_stmt|;
+specifier|final
 name|String
 name|super_name
 init|=
@@ -379,6 +380,7 @@ operator|.
 name|getSuperclassName
 argument_list|()
 decl_stmt|;
+specifier|final
 name|String
 name|package_name
 init|=
@@ -387,6 +389,7 @@ operator|.
 name|getPackageName
 argument_list|()
 decl_stmt|;
+specifier|final
 name|String
 name|inter
 init|=
@@ -634,6 +637,7 @@ expr_stmt|;
 name|printCreate
 argument_list|()
 expr_stmt|;
+specifier|final
 name|Field
 index|[]
 name|fields
@@ -668,6 +672,7 @@ argument_list|)
 expr_stmt|;
 for|for
 control|(
+specifier|final
 name|Field
 name|field
 range|:
@@ -695,6 +700,7 @@ name|println
 argument_list|()
 expr_stmt|;
 block|}
+specifier|final
 name|Method
 index|[]
 name|methods
@@ -778,6 +784,7 @@ argument_list|(
 literal|"  public void create(OutputStream out) throws IOException {"
 argument_list|)
 expr_stmt|;
+specifier|final
 name|Field
 index|[]
 name|fields
@@ -804,6 +811,7 @@ literal|"    createFields();"
 argument_list|)
 expr_stmt|;
 block|}
+specifier|final
 name|Method
 index|[]
 name|methods
@@ -867,6 +875,7 @@ name|void
 name|printMain
 parameter_list|()
 block|{
+specifier|final
 name|String
 name|class_name
 init|=
@@ -966,6 +975,7 @@ operator|+
 literal|"\", _cp);"
 argument_list|)
 expr_stmt|;
+specifier|final
 name|ConstantValue
 name|cv
 init|=
@@ -981,6 +991,7 @@ operator|!=
 literal|null
 condition|)
 block|{
+specifier|final
 name|String
 name|value
 init|=
@@ -1020,6 +1031,7 @@ name|Method
 name|method
 parameter_list|)
 block|{
+specifier|final
 name|MethodGen
 name|mg
 init|=
@@ -1121,6 +1133,7 @@ operator|.
 name|println
 argument_list|()
 expr_stmt|;
+specifier|final
 name|BCELFactory
 name|factory
 init|=
@@ -1212,6 +1225,7 @@ return|return
 literal|"0"
 return|;
 block|}
+specifier|final
 name|StringBuilder
 name|buf
 init|=
@@ -1407,6 +1421,7 @@ operator|<<=
 literal|1
 expr_stmt|;
 block|}
+specifier|final
 name|String
 name|str
 init|=
@@ -1454,6 +1469,7 @@ return|return
 literal|"Type.NO_ARGS"
 return|;
 block|}
+specifier|final
 name|StringBuilder
 name|args
 init|=
@@ -1550,6 +1566,7 @@ name|String
 name|signature
 parameter_list|)
 block|{
+specifier|final
 name|Type
 name|type
 init|=
@@ -1560,6 +1577,7 @@ argument_list|(
 name|signature
 argument_list|)
 decl_stmt|;
+specifier|final
 name|byte
 name|t
 init|=
@@ -1653,6 +1671,7 @@ operator|instanceof
 name|ArrayType
 condition|)
 block|{
+specifier|final
 name|ArrayType
 name|at
 init|=
@@ -1743,6 +1762,7 @@ argument_list|)
 expr_stmt|;
 return|return;
 block|}
+specifier|final
 name|JavaClass
 name|java_class
 init|=
@@ -1754,6 +1774,7 @@ literal|0
 index|]
 argument_list|)
 decl_stmt|;
+specifier|final
 name|BCELifier
 name|bcelifier
 init|=

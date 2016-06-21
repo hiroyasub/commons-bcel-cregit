@@ -218,6 +218,7 @@ name|ConstantPool
 name|cp
 parameter_list|)
 block|{
+specifier|final
 name|Constant
 name|c
 init|=
@@ -375,6 +376,7 @@ name|ConstantPoolGen
 name|cpg
 parameter_list|)
 block|{
+specifier|final
 name|ConstantPool
 name|cp
 init|=

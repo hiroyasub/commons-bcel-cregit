@@ -462,6 +462,7 @@ name|Object
 name|o2
 parameter_list|)
 block|{
+specifier|final
 name|MethodGen
 name|THIS
 init|=
@@ -470,6 +471,7 @@ name|MethodGen
 operator|)
 name|o1
 decl_stmt|;
+specifier|final
 name|MethodGen
 name|THAT
 init|=
@@ -517,6 +519,7 @@ name|Object
 name|o
 parameter_list|)
 block|{
+specifier|final
 name|MethodGen
 name|THIS
 init|=
@@ -623,6 +626,7 @@ argument_list|(
 name|cp
 argument_list|)
 expr_stmt|;
+specifier|final
 name|boolean
 name|abstract_
 init|=
@@ -702,6 +706,7 @@ operator|!=
 literal|null
 condition|)
 block|{
+specifier|final
 name|int
 name|size
 init|=
@@ -711,6 +716,7 @@ name|length
 decl_stmt|;
 for|for
 control|(
+specifier|final
 name|Type
 name|arg_type
 range|:
@@ -945,6 +951,7 @@ argument_list|,
 name|cp
 argument_list|)
 expr_stmt|;
+specifier|final
 name|Attribute
 index|[]
 name|attributes
@@ -956,6 +963,7 @@ argument_list|()
 decl_stmt|;
 for|for
 control|(
+specifier|final
 name|Attribute
 name|attribute
 range|:
@@ -974,6 +982,7 @@ operator|instanceof
 name|Code
 condition|)
 block|{
+specifier|final
 name|Code
 name|c
 init|=
@@ -998,6 +1007,7 @@ name|getMaxLocals
 argument_list|()
 argument_list|)
 expr_stmt|;
+specifier|final
 name|CodeException
 index|[]
 name|ces
@@ -1016,12 +1026,14 @@ condition|)
 block|{
 for|for
 control|(
+specifier|final
 name|CodeException
 name|ce
 range|:
 name|ces
 control|)
 block|{
+specifier|final
 name|int
 name|type
 init|=
@@ -1042,6 +1054,7 @@ operator|>
 literal|0
 condition|)
 block|{
+specifier|final
 name|String
 name|cen
 init|=
@@ -1069,6 +1082,7 @@ name|cen
 argument_list|)
 expr_stmt|;
 block|}
+specifier|final
 name|int
 name|end_pc
 init|=
@@ -1077,6 +1091,7 @@ operator|.
 name|getEndPC
 argument_list|()
 decl_stmt|;
+specifier|final
 name|int
 name|length
 init|=
@@ -1158,6 +1173,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
+specifier|final
 name|Attribute
 index|[]
 name|c_attributes
@@ -1169,6 +1185,7 @@ argument_list|()
 decl_stmt|;
 for|for
 control|(
+specifier|final
 name|Attribute
 name|c_attribute
 range|:
@@ -1186,6 +1203,7 @@ operator|instanceof
 name|LineNumberTable
 condition|)
 block|{
+specifier|final
 name|LineNumber
 index|[]
 name|ln
@@ -1202,12 +1220,14 @@ argument_list|()
 decl_stmt|;
 for|for
 control|(
+specifier|final
 name|LineNumber
 name|l
 range|:
 name|ln
 control|)
 block|{
+specifier|final
 name|InstructionHandle
 name|ih
 init|=
@@ -1248,6 +1268,7 @@ operator|instanceof
 name|LocalVariableTable
 condition|)
 block|{
+specifier|final
 name|LocalVariable
 index|[]
 name|lv
@@ -1267,6 +1288,7 @@ argument_list|()
 expr_stmt|;
 for|for
 control|(
+specifier|final
 name|LocalVariable
 name|l
 range|:
@@ -1381,6 +1403,7 @@ operator|instanceof
 name|ExceptionTable
 condition|)
 block|{
+specifier|final
 name|String
 index|[]
 name|names
@@ -1397,6 +1420,7 @@ argument_list|()
 decl_stmt|;
 for|for
 control|(
+specifier|final
 name|String
 name|name2
 range|:
@@ -1417,6 +1441,7 @@ operator|instanceof
 name|Annotations
 condition|)
 block|{
+specifier|final
 name|Annotations
 name|runtimeAnnotations
 init|=
@@ -1425,6 +1450,7 @@ name|Annotations
 operator|)
 name|a
 decl_stmt|;
+specifier|final
 name|AnnotationEntry
 index|[]
 name|aes
@@ -1436,6 +1462,7 @@ argument_list|()
 decl_stmt|;
 for|for
 control|(
+specifier|final
 name|AnnotationEntry
 name|element
 range|:
@@ -1493,6 +1520,7 @@ name|InstructionHandle
 name|end
 parameter_list|)
 block|{
+specifier|final
 name|byte
 name|t
 init|=
@@ -1510,6 +1538,7 @@ operator|.
 name|T_ADDRESS
 condition|)
 block|{
+specifier|final
 name|int
 name|add
 init|=
@@ -1534,6 +1563,7 @@ operator|+
 name|add
 expr_stmt|;
 block|}
+specifier|final
 name|LocalVariableGen
 name|l
 init|=
@@ -1674,6 +1704,7 @@ parameter_list|()
 block|{
 for|for
 control|(
+specifier|final
 name|LocalVariableGen
 name|lv
 range|:
@@ -1699,6 +1730,7 @@ index|[]
 name|getLocalVariables
 parameter_list|()
 block|{
+specifier|final
 name|int
 name|size
 init|=
@@ -1707,6 +1739,7 @@ operator|.
 name|size
 argument_list|()
 decl_stmt|;
+specifier|final
 name|LocalVariableGen
 index|[]
 name|lg
@@ -1875,6 +1908,7 @@ name|ConstantPoolGen
 name|cp
 parameter_list|)
 block|{
+specifier|final
 name|LocalVariableGen
 index|[]
 name|lg
@@ -1882,6 +1916,7 @@ init|=
 name|getLocalVariables
 argument_list|()
 decl_stmt|;
+specifier|final
 name|int
 name|size
 init|=
@@ -1889,6 +1924,7 @@ name|lg
 operator|.
 name|length
 decl_stmt|;
+specifier|final
 name|LocalVariable
 index|[]
 name|lv
@@ -1972,6 +2008,7 @@ name|int
 name|src_line
 parameter_list|)
 block|{
+specifier|final
 name|LineNumberGen
 name|l
 init|=
@@ -2031,6 +2068,7 @@ index|[]
 name|getLineNumbers
 parameter_list|()
 block|{
+specifier|final
 name|LineNumberGen
 index|[]
 name|lg
@@ -2065,6 +2103,7 @@ name|ConstantPoolGen
 name|cp
 parameter_list|)
 block|{
+specifier|final
 name|int
 name|size
 init|=
@@ -2073,6 +2112,7 @@ operator|.
 name|size
 argument_list|()
 decl_stmt|;
+specifier|final
 name|LineNumber
 index|[]
 name|ln
@@ -2193,6 +2233,7 @@ literal|"Exception handler target is null instruction"
 argument_list|)
 throw|;
 block|}
+specifier|final
 name|CodeExceptionGen
 name|c
 init|=
@@ -2256,6 +2297,7 @@ index|[]
 name|getExceptionHandlers
 parameter_list|()
 block|{
+specifier|final
 name|CodeExceptionGen
 index|[]
 name|cg
@@ -2287,6 +2329,7 @@ index|[]
 name|getCodeExceptions
 parameter_list|()
 block|{
+specifier|final
 name|int
 name|size
 init|=
@@ -2295,6 +2338,7 @@ operator|.
 name|size
 argument_list|()
 decl_stmt|;
+specifier|final
 name|CodeException
 index|[]
 name|c_exc
@@ -2320,6 +2364,7 @@ name|i
 operator|++
 control|)
 block|{
+specifier|final
 name|CodeExceptionGen
 name|c
 init|=
@@ -2405,6 +2450,7 @@ index|[]
 name|getExceptions
 parameter_list|()
 block|{
+specifier|final
 name|String
 index|[]
 name|e
@@ -2439,6 +2485,7 @@ name|ConstantPoolGen
 name|cp
 parameter_list|)
 block|{
+specifier|final
 name|int
 name|size
 init|=
@@ -2447,6 +2494,7 @@ operator|.
 name|size
 argument_list|()
 decl_stmt|;
+specifier|final
 name|int
 index|[]
 name|ex
@@ -2571,6 +2619,7 @@ index|[]
 name|getCodeAttributes
 parameter_list|()
 block|{
+specifier|final
 name|Attribute
 index|[]
 name|attributes
@@ -2605,6 +2654,7 @@ name|ConstantPoolGen
 name|cp
 parameter_list|)
 block|{
+specifier|final
 name|Attribute
 index|[]
 name|attrs
@@ -2623,6 +2673,7 @@ argument_list|)
 decl_stmt|;
 for|for
 control|(
+specifier|final
 name|Attribute
 name|attr
 range|:
@@ -2654,6 +2705,7 @@ condition|)
 block|{
 return|return;
 block|}
+specifier|final
 name|Attribute
 index|[]
 name|attrs
@@ -2676,6 +2728,7 @@ condition|)
 block|{
 for|for
 control|(
+specifier|final
 name|Attribute
 name|attr
 range|:
@@ -2696,6 +2749,7 @@ name|Method
 name|getMethod
 parameter_list|()
 block|{
+specifier|final
 name|String
 name|signature
 init|=
@@ -2711,6 +2765,7 @@ operator|.
 name|getConstantPool
 argument_list|()
 decl_stmt|;
+specifier|final
 name|int
 name|name_index
 init|=
@@ -2724,6 +2779,7 @@ name|getName
 argument_list|()
 argument_list|)
 decl_stmt|;
+specifier|final
 name|int
 name|signature_index
 init|=
@@ -2819,6 +2875,7 @@ argument_list|)
 argument_list|)
 expr_stmt|;
 block|}
+specifier|final
 name|Attribute
 index|[]
 name|code_attrs
@@ -2834,6 +2891,7 @@ literal|0
 decl_stmt|;
 for|for
 control|(
+specifier|final
 name|Attribute
 name|code_attr
 range|:
@@ -2850,6 +2908,7 @@ operator|+
 literal|6
 expr_stmt|;
 block|}
+specifier|final
 name|CodeException
 index|[]
 name|c_exc
@@ -2857,6 +2916,7 @@ init|=
 name|getCodeExceptions
 argument_list|()
 decl_stmt|;
+specifier|final
 name|int
 name|exc_len
 init|=
@@ -2890,6 +2950,7 @@ argument_list|()
 condition|)
 block|{
 comment|// Remove any stale code attribute
+specifier|final
 name|Attribute
 index|[]
 name|attributes
@@ -2899,6 +2960,7 @@ argument_list|()
 decl_stmt|;
 for|for
 control|(
+specifier|final
 name|Attribute
 name|a
 range|:
@@ -3007,6 +3069,7 @@ argument_list|)
 expr_stmt|;
 comment|// Add `Exceptions' if there are "throws" clauses
 block|}
+specifier|final
 name|Method
 name|m
 init|=
@@ -3161,12 +3224,14 @@ expr_stmt|;
 block|}
 catch|catch
 parameter_list|(
+specifier|final
 name|TargetLostException
 name|e
 parameter_list|)
 block|{
 for|for
 control|(
+specifier|final
 name|InstructionHandle
 name|target
 range|:
@@ -3178,6 +3243,7 @@ control|)
 block|{
 for|for
 control|(
+specifier|final
 name|InstructionTargeter
 name|targeter
 range|:
@@ -3556,6 +3622,7 @@ condition|)
 block|{
 for|for
 control|(
+specifier|final
 name|Type
 name|arg_type
 range|:
@@ -3593,6 +3660,7 @@ name|getNext
 argument_list|()
 control|)
 block|{
+specifier|final
 name|Instruction
 name|ins
 init|=
@@ -3622,6 +3690,7 @@ name|IINC
 operator|)
 condition|)
 block|{
+specifier|final
 name|int
 name|index
 init|=
@@ -3816,6 +3885,7 @@ name|empty
 argument_list|()
 condition|)
 block|{
+specifier|final
 name|BranchTarget
 name|bt
 init|=
@@ -3845,6 +3915,7 @@ name|int
 name|stackDepth
 parameter_list|)
 block|{
+specifier|final
 name|BranchTarget
 name|bt
 init|=
@@ -3910,6 +3981,7 @@ index|[]
 name|et
 parameter_list|)
 block|{
+specifier|final
 name|BranchStack
 name|branchTargets
 init|=
@@ -3920,12 +3992,14 @@ decl_stmt|;
 comment|/* Initially, populate the branch stack with the exception          * handlers, because these aren't (necessarily) branched to          * explicitly. in each case, the stack will have depth 1,          * containing the exception object.          */
 for|for
 control|(
+specifier|final
 name|CodeExceptionGen
 name|element
 range|:
 name|et
 control|)
 block|{
+specifier|final
 name|InstructionHandle
 name|handler_pc
 init|=
@@ -3977,6 +4051,7 @@ operator|!=
 literal|null
 condition|)
 block|{
+specifier|final
 name|Instruction
 name|instruction
 init|=
@@ -3985,6 +4060,7 @@ operator|.
 name|getInstruction
 argument_list|()
 decl_stmt|;
+specifier|final
 name|short
 name|opcode
 init|=
@@ -3993,6 +4069,7 @@ operator|.
 name|getOpcode
 argument_list|()
 decl_stmt|;
+specifier|final
 name|int
 name|delta
 init|=
@@ -4034,6 +4111,7 @@ operator|instanceof
 name|BranchInstruction
 condition|)
 block|{
+specifier|final
 name|BranchInstruction
 name|branch
 init|=
@@ -4050,6 +4128,7 @@ name|Select
 condition|)
 block|{
 comment|// explore all of the select's targets. the default target is handled below.
+specifier|final
 name|Select
 name|select
 init|=
@@ -4058,6 +4137,7 @@ name|Select
 operator|)
 name|branch
 decl_stmt|;
+specifier|final
 name|InstructionHandle
 index|[]
 name|targets
@@ -4069,6 +4149,7 @@ argument_list|()
 decl_stmt|;
 for|for
 control|(
+specifier|final
 name|InstructionHandle
 name|target
 range|:
@@ -4216,6 +4297,7 @@ operator|==
 literal|null
 condition|)
 block|{
+specifier|final
 name|BranchTarget
 name|bt
 init|=
@@ -4331,6 +4413,7 @@ condition|)
 block|{
 for|for
 control|(
+specifier|final
 name|MethodObserver
 name|observer
 range|:
@@ -4356,6 +4439,7 @@ name|String
 name|toString
 parameter_list|()
 block|{
+specifier|final
 name|String
 name|access
 init|=
@@ -4410,6 +4494,7 @@ argument_list|()
 argument_list|)
 argument_list|)
 expr_stmt|;
+specifier|final
 name|StringBuilder
 name|buf
 init|=
@@ -4421,6 +4506,7 @@ argument_list|)
 decl_stmt|;
 for|for
 control|(
+specifier|final
 name|Attribute
 name|a
 range|:
@@ -4477,6 +4563,7 @@ condition|)
 block|{
 for|for
 control|(
+specifier|final
 name|String
 name|throwsDescriptor
 range|:
@@ -4518,6 +4605,7 @@ name|ConstantPoolGen
 name|cp
 parameter_list|)
 block|{
+specifier|final
 name|Method
 name|m
 init|=
@@ -4532,6 +4620,7 @@ operator|.
 name|getMethod
 argument_list|()
 decl_stmt|;
+specifier|final
 name|MethodGen
 name|mg
 init|=
@@ -4640,6 +4729,7 @@ block|{
 return|return;
 block|}
 comment|// Find attributes that contain parameter annotation data
+specifier|final
 name|Attribute
 index|[]
 name|attrs
@@ -4659,6 +4749,7 @@ literal|null
 decl_stmt|;
 for|for
 control|(
+specifier|final
 name|Attribute
 name|attribute
 range|:
@@ -4738,6 +4829,7 @@ name|hasParameterAnnotations
 operator|=
 literal|true
 expr_stmt|;
+specifier|final
 name|ParameterAnnotations
 name|rpa
 init|=
@@ -4783,6 +4875,7 @@ operator|++
 control|)
 block|{
 comment|// This returns Annotation[] ...
+specifier|final
 name|ParameterAnnotationEntry
 name|immutableArray
 init|=
@@ -4795,6 +4888,7 @@ name|j
 index|]
 decl_stmt|;
 comment|// ... which needs transforming into an AnnotationGen[] ...
+specifier|final
 name|List
 argument_list|<
 name|AnnotationEntryGen
@@ -4867,6 +4961,7 @@ index|[]
 name|mutableArray
 parameter_list|)
 block|{
+specifier|final
 name|List
 argument_list|<
 name|AnnotationEntryGen
@@ -4880,6 +4975,7 @@ argument_list|()
 decl_stmt|;
 for|for
 control|(
+specifier|final
 name|AnnotationEntry
 name|element
 range|:
@@ -4960,6 +5056,7 @@ operator|=
 literal|true
 expr_stmt|;
 block|}
+specifier|final
 name|List
 argument_list|<
 name|AnnotationEntryGen
@@ -4988,6 +5085,7 @@ expr_stmt|;
 block|}
 else|else
 block|{
+specifier|final
 name|List
 argument_list|<
 name|AnnotationEntryGen

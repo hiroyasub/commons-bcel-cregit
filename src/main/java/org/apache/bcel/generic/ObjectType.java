@@ -203,6 +203,7 @@ parameter_list|()
 block|{
 try|try
 block|{
+specifier|final
 name|JavaClass
 name|jc
 init|=
@@ -222,6 +223,7 @@ return|;
 block|}
 catch|catch
 parameter_list|(
+specifier|final
 name|ClassNotFoundException
 name|e
 parameter_list|)
@@ -241,6 +243,7 @@ parameter_list|()
 block|{
 try|try
 block|{
+specifier|final
 name|JavaClass
 name|jc
 init|=
@@ -261,6 +264,7 @@ return|;
 block|}
 catch|catch
 parameter_list|(
+specifier|final
 name|ClassNotFoundException
 name|e
 parameter_list|)
@@ -278,6 +282,7 @@ parameter_list|()
 throws|throws
 name|ClassNotFoundException
 block|{
+specifier|final
 name|JavaClass
 name|jc
 init|=
@@ -303,6 +308,7 @@ parameter_list|()
 throws|throws
 name|ClassNotFoundException
 block|{
+specifier|final
 name|JavaClass
 name|jc
 init|=
@@ -377,6 +383,7 @@ parameter_list|)
 throws|throws
 name|ClassNotFoundException
 block|{
+specifier|final
 name|JavaClass
 name|jc
 init|=
@@ -399,6 +406,7 @@ return|return
 literal|true
 return|;
 block|}
+specifier|final
 name|JavaClass
 name|acc
 init|=

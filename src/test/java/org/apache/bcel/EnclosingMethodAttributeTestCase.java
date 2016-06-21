@@ -128,6 +128,7 @@ parameter_list|()
 throws|throws
 name|ClassNotFoundException
 block|{
+specifier|final
 name|JavaClass
 name|clazz
 init|=
@@ -138,6 +139,7 @@ operator|+
 literal|".data.AttributeTestClassEM01$1S"
 argument_list|)
 decl_stmt|;
+specifier|final
 name|ConstantPool
 name|pool
 init|=
@@ -146,6 +148,7 @@ operator|.
 name|getConstantPool
 argument_list|()
 decl_stmt|;
+specifier|final
 name|Attribute
 index|[]
 name|encMethodAttrs
@@ -172,6 +175,7 @@ operator|==
 literal|1
 argument_list|)
 expr_stmt|;
+specifier|final
 name|EnclosingMethod
 name|em
 init|=
@@ -183,6 +187,7 @@ index|[
 literal|0
 index|]
 decl_stmt|;
+specifier|final
 name|String
 name|enclosingClassName
 init|=
@@ -196,6 +201,7 @@ argument_list|(
 name|pool
 argument_list|)
 decl_stmt|;
+specifier|final
 name|String
 name|enclosingMethodName
 init|=
@@ -252,6 +258,7 @@ parameter_list|()
 throws|throws
 name|ClassNotFoundException
 block|{
+specifier|final
 name|JavaClass
 name|clazz
 init|=
@@ -262,6 +269,7 @@ operator|+
 literal|".data.AttributeTestClassEM02$1"
 argument_list|)
 decl_stmt|;
+specifier|final
 name|ConstantPool
 name|pool
 init|=
@@ -270,6 +278,7 @@ operator|.
 name|getConstantPool
 argument_list|()
 decl_stmt|;
+specifier|final
 name|Attribute
 index|[]
 name|encMethodAttrs
@@ -296,6 +305,7 @@ operator|==
 literal|1
 argument_list|)
 expr_stmt|;
+specifier|final
 name|EnclosingMethod
 name|em
 init|=
@@ -307,6 +317,7 @@ index|[
 literal|0
 index|]
 decl_stmt|;
+specifier|final
 name|String
 name|enclosingClassName
 init|=
@@ -368,6 +379,7 @@ name|ClassNotFoundException
 throws|,
 name|IOException
 block|{
+specifier|final
 name|JavaClass
 name|clazz
 init|=
@@ -378,6 +390,7 @@ operator|+
 literal|".data.AttributeTestClassEM02$1"
 argument_list|)
 decl_stmt|;
+specifier|final
 name|ConstantPool
 name|pool
 init|=
@@ -386,6 +399,7 @@ operator|.
 name|getConstantPool
 argument_list|()
 decl_stmt|;
+specifier|final
 name|Attribute
 index|[]
 name|encMethodAttrs
@@ -413,6 +427,7 @@ literal|1
 argument_list|)
 expr_stmt|;
 comment|// Write it out
+specifier|final
 name|File
 name|tfile
 init|=
@@ -429,6 +444,7 @@ name|tfile
 argument_list|)
 expr_stmt|;
 comment|// Read in the new version and check it is OK
+specifier|final
 name|SyntheticRepository
 name|repos2
 init|=
@@ -437,6 +453,7 @@ argument_list|(
 literal|"."
 argument_list|)
 decl_stmt|;
+specifier|final
 name|JavaClass
 name|clazz2
 init|=
@@ -455,6 +472,7 @@ name|clazz2
 argument_list|)
 expr_stmt|;
 comment|// Use the variable to avoid a warning
+specifier|final
 name|EnclosingMethod
 name|em
 init|=
@@ -466,6 +484,7 @@ index|[
 literal|0
 index|]
 decl_stmt|;
+specifier|final
 name|String
 name|enclosingClassName
 init|=

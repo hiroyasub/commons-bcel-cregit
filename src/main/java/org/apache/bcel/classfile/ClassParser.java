@@ -218,6 +218,7 @@ name|fileOwned
 operator|=
 literal|false
 expr_stmt|;
+specifier|final
 name|String
 name|clazz
 init|=
@@ -376,6 +377,7 @@ argument_list|(
 name|zip_file
 argument_list|)
 expr_stmt|;
+specifier|final
 name|ZipEntry
 name|entry
 init|=
@@ -523,6 +525,7 @@ block|}
 block|}
 catch|catch
 parameter_list|(
+specifier|final
 name|IOException
 name|ioe
 parameter_list|)
@@ -548,6 +551,7 @@ block|}
 block|}
 catch|catch
 parameter_list|(
+specifier|final
 name|IOException
 name|ioe
 parameter_list|)
@@ -604,6 +608,7 @@ name|IOException
 throws|,
 name|ClassFormatException
 block|{
+specifier|final
 name|int
 name|attributes_count
 init|=
@@ -772,6 +777,7 @@ name|IOException
 throws|,
 name|ClassFormatException
 block|{
+specifier|final
 name|int
 name|fields_count
 init|=
@@ -862,6 +868,7 @@ name|IOException
 throws|,
 name|ClassFormatException
 block|{
+specifier|final
 name|int
 name|interfaces_count
 init|=
@@ -915,6 +922,7 @@ name|IOException
 throws|,
 name|ClassFormatException
 block|{
+specifier|final
 name|int
 name|methods_count
 init|=

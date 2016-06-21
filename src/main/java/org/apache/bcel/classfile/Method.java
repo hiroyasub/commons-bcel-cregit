@@ -111,6 +111,7 @@ name|Object
 name|o2
 parameter_list|)
 block|{
+specifier|final
 name|Method
 name|THIS
 init|=
@@ -119,6 +120,7 @@ name|Method
 operator|)
 name|o1
 decl_stmt|;
+specifier|final
 name|Method
 name|THAT
 init|=
@@ -166,6 +168,7 @@ name|Object
 name|o
 parameter_list|)
 block|{
+specifier|final
 name|Method
 name|THIS
 init|=
@@ -314,6 +317,7 @@ parameter_list|()
 block|{
 for|for
 control|(
+specifier|final
 name|Attribute
 name|attribute
 range|:
@@ -351,6 +355,7 @@ parameter_list|()
 block|{
 for|for
 control|(
+specifier|final
 name|Attribute
 name|attribute
 range|:
@@ -386,6 +391,7 @@ name|LocalVariableTable
 name|getLocalVariableTable
 parameter_list|()
 block|{
+specifier|final
 name|Code
 name|code
 init|=
@@ -417,6 +423,7 @@ name|LineNumberTable
 name|getLineNumberTable
 parameter_list|()
 block|{
+specifier|final
 name|Code
 name|code
 init|=
@@ -450,6 +457,7 @@ name|String
 name|toString
 parameter_list|()
 block|{
+specifier|final
 name|String
 name|access
 init|=
@@ -517,6 +525,7 @@ operator|.
 name|CONSTANT_Utf8
 argument_list|)
 expr_stmt|;
+specifier|final
 name|String
 name|name
 init|=
@@ -543,6 +552,7 @@ name|getLocalVariableTable
 argument_list|()
 argument_list|)
 expr_stmt|;
+specifier|final
 name|StringBuilder
 name|buf
 init|=
@@ -554,6 +564,7 @@ argument_list|)
 decl_stmt|;
 for|for
 control|(
+specifier|final
 name|Attribute
 name|attribute
 range|:
@@ -600,6 +611,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
+specifier|final
 name|ExceptionTable
 name|e
 init|=
@@ -613,6 +625,7 @@ operator|!=
 literal|null
 condition|)
 block|{
+specifier|final
 name|String
 name|str
 init|=

@@ -377,6 +377,7 @@ name|String
 name|stringifyValue
 parameter_list|()
 block|{
+specifier|final
 name|ConstantUtf8
 name|cu8
 init|=

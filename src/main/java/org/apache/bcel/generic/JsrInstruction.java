@@ -130,6 +130,7 @@ name|getNext
 argument_list|()
 expr_stmt|;
 block|}
+specifier|final
 name|InstructionHandle
 name|toThis
 init|=

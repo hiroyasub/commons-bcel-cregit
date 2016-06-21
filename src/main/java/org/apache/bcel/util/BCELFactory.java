@@ -634,6 +634,7 @@ name|getNext
 argument_list|()
 control|)
 block|{
+specifier|final
 name|Instruction
 name|i
 init|=
@@ -753,6 +754,7 @@ name|Instruction
 name|i
 parameter_list|)
 block|{
+specifier|final
 name|short
 name|opcode
 init|=
@@ -830,6 +832,7 @@ name|LocalVariableInstruction
 name|i
 parameter_list|)
 block|{
+specifier|final
 name|short
 name|opcode
 init|=
@@ -838,6 +841,7 @@ operator|.
 name|getOpcode
 argument_list|()
 decl_stmt|;
+specifier|final
 name|Type
 name|type
 init|=
@@ -886,6 +890,7 @@ expr_stmt|;
 block|}
 else|else
 block|{
+specifier|final
 name|String
 name|kind
 init|=
@@ -941,6 +946,7 @@ name|ArrayInstruction
 name|i
 parameter_list|)
 block|{
+specifier|final
 name|short
 name|opcode
 init|=
@@ -949,6 +955,7 @@ operator|.
 name|getOpcode
 argument_list|()
 decl_stmt|;
+specifier|final
 name|Type
 name|type
 init|=
@@ -959,6 +966,7 @@ argument_list|(
 name|_cp
 argument_list|)
 decl_stmt|;
+specifier|final
 name|String
 name|kind
 init|=
@@ -1006,6 +1014,7 @@ name|FieldInstruction
 name|i
 parameter_list|)
 block|{
+specifier|final
 name|short
 name|opcode
 init|=
@@ -1014,6 +1023,7 @@ operator|.
 name|getOpcode
 argument_list|()
 decl_stmt|;
+specifier|final
 name|String
 name|class_name
 init|=
@@ -1024,6 +1034,7 @@ argument_list|(
 name|_cp
 argument_list|)
 decl_stmt|;
+specifier|final
 name|String
 name|field_name
 init|=
@@ -1034,6 +1045,7 @@ argument_list|(
 name|_cp
 argument_list|)
 decl_stmt|;
+specifier|final
 name|Type
 name|type
 init|=
@@ -1098,6 +1110,7 @@ name|InvokeInstruction
 name|i
 parameter_list|)
 block|{
+specifier|final
 name|short
 name|opcode
 init|=
@@ -1106,6 +1119,7 @@ operator|.
 name|getOpcode
 argument_list|()
 decl_stmt|;
+specifier|final
 name|String
 name|class_name
 init|=
@@ -1116,6 +1130,7 @@ argument_list|(
 name|_cp
 argument_list|)
 decl_stmt|;
+specifier|final
 name|String
 name|method_name
 init|=
@@ -1126,6 +1141,7 @@ argument_list|(
 name|_cp
 argument_list|)
 decl_stmt|;
+specifier|final
 name|Type
 name|type
 init|=
@@ -1136,6 +1152,7 @@ argument_list|(
 name|_cp
 argument_list|)
 decl_stmt|;
+specifier|final
 name|Type
 index|[]
 name|arg_types
@@ -1250,6 +1267,7 @@ name|getType
 argument_list|()
 expr_stmt|;
 block|}
+specifier|final
 name|short
 name|opcode
 init|=
@@ -1475,6 +1493,7 @@ operator|instanceof
 name|ObjectType
 condition|)
 block|{
+specifier|final
 name|ObjectType
 name|ot
 init|=
@@ -1582,6 +1601,7 @@ name|INSTANCEOF
 name|i
 parameter_list|)
 block|{
+specifier|final
 name|Type
 name|type
 init|=
@@ -1620,6 +1640,7 @@ name|CHECKCAST
 name|i
 parameter_list|)
 block|{
+specifier|final
 name|Type
 name|type
 init|=
@@ -1658,6 +1679,7 @@ name|ReturnInstruction
 name|i
 parameter_list|)
 block|{
+specifier|final
 name|Type
 name|type
 init|=
@@ -1710,6 +1732,7 @@ name|BranchInstruction
 name|bi
 parameter_list|)
 block|{
+specifier|final
 name|BranchHandle
 name|bh
 init|=
@@ -1723,6 +1746,7 @@ argument_list|(
 name|bi
 argument_list|)
 decl_stmt|;
+specifier|final
 name|int
 name|pos
 init|=
@@ -1731,6 +1755,7 @@ operator|.
 name|getPosition
 argument_list|()
 decl_stmt|;
+specifier|final
 name|String
 name|name
 init|=
@@ -1750,6 +1775,7 @@ operator|instanceof
 name|Select
 condition|)
 block|{
+specifier|final
 name|Select
 name|s
 init|=
@@ -1765,6 +1791,7 @@ argument_list|(
 name|bi
 argument_list|)
 expr_stmt|;
+specifier|final
 name|StringBuilder
 name|args
 init|=
@@ -1774,6 +1801,7 @@ argument_list|(
 literal|"new int[] { "
 argument_list|)
 decl_stmt|;
+specifier|final
 name|int
 index|[]
 name|matchs
@@ -1920,6 +1948,7 @@ expr_stmt|;
 block|}
 else|else
 block|{
+specifier|final
 name|int
 name|t_pos
 init|=
@@ -2066,12 +2095,14 @@ parameter_list|()
 block|{
 for|for
 control|(
+specifier|final
 name|BranchInstruction
 name|bi
 range|:
 name|branches
 control|)
 block|{
+specifier|final
 name|BranchHandle
 name|bh
 init|=
@@ -2085,6 +2116,7 @@ argument_list|(
 name|bi
 argument_list|)
 decl_stmt|;
+specifier|final
 name|int
 name|pos
 init|=
@@ -2093,6 +2125,7 @@ operator|.
 name|getPosition
 argument_list|()
 decl_stmt|;
+specifier|final
 name|String
 name|name
 init|=
@@ -2138,6 +2171,7 @@ operator|instanceof
 name|Select
 condition|)
 block|{
+specifier|final
 name|InstructionHandle
 index|[]
 name|ihs
@@ -2207,6 +2241,7 @@ name|void
 name|updateExceptionHandlers
 parameter_list|()
 block|{
+specifier|final
 name|CodeExceptionGen
 index|[]
 name|handlers
@@ -2218,12 +2253,14 @@ argument_list|()
 decl_stmt|;
 for|for
 control|(
+specifier|final
 name|CodeExceptionGen
 name|h
 range|:
 name|handlers
 control|)
 block|{
+specifier|final
 name|String
 name|type
 init|=

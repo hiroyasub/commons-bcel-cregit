@@ -161,6 +161,7 @@ init|=
 name|getMatch_length
 argument_list|()
 decl_stmt|;
+specifier|final
 name|int
 name|low
 init|=
@@ -186,6 +187,7 @@ argument_list|(
 name|low
 argument_list|)
 expr_stmt|;
+specifier|final
 name|int
 name|high
 init|=
@@ -277,6 +279,7 @@ argument_list|,
 name|wide
 argument_list|)
 expr_stmt|;
+specifier|final
 name|int
 name|low
 init|=
@@ -285,6 +288,7 @@ operator|.
 name|readInt
 argument_list|()
 decl_stmt|;
+specifier|final
 name|int
 name|high
 init|=

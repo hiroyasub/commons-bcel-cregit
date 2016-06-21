@@ -154,6 +154,7 @@ argument_list|,
 name|constant_pool
 argument_list|)
 expr_stmt|;
+specifier|final
 name|int
 name|map_length
 init|=
@@ -233,6 +234,7 @@ argument_list|)
 expr_stmt|;
 for|for
 control|(
+specifier|final
 name|StackMapEntry
 name|entry
 range|:
@@ -286,6 +288,7 @@ decl_stmt|;
 comment|// Length of 'number_of_entries' field prior to the array of stack maps
 for|for
 control|(
+specifier|final
 name|StackMapEntry
 name|element
 range|:
@@ -315,6 +318,7 @@ name|String
 name|toString
 parameter_list|()
 block|{
+specifier|final
 name|StringBuilder
 name|buf
 init|=
@@ -397,6 +401,7 @@ name|ConstantPool
 name|_constant_pool
 parameter_list|)
 block|{
+specifier|final
 name|StackMap
 name|c
 init|=

@@ -478,12 +478,14 @@ name|boolean
 name|typeTable
 parameter_list|)
 block|{
+specifier|final
 name|String
 name|name
 init|=
 name|getName
 argument_list|()
 decl_stmt|;
+specifier|final
 name|String
 name|signature
 init|=
@@ -497,6 +499,7 @@ argument_list|,
 literal|false
 argument_list|)
 decl_stmt|;
+specifier|final
 name|String
 name|label
 init|=
@@ -682,6 +685,7 @@ return|;
 block|}
 catch|catch
 parameter_list|(
+specifier|final
 name|CloneNotSupportedException
 name|e
 parameter_list|)

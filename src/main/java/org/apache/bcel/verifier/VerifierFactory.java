@@ -171,6 +171,7 @@ block|{
 comment|// notify the observers
 for|for
 control|(
+specifier|final
 name|VerifierFactoryObserver
 name|vfo
 range|:
@@ -194,6 +195,7 @@ index|[]
 name|getVerifiers
 parameter_list|()
 block|{
+specifier|final
 name|Verifier
 index|[]
 name|vs

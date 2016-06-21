@@ -340,6 +340,7 @@ name|String
 name|methodname
 parameter_list|)
 block|{
+specifier|final
 name|Method
 index|[]
 name|methods
@@ -351,6 +352,7 @@ argument_list|()
 decl_stmt|;
 for|for
 control|(
+specifier|final
 name|Method
 name|m
 range|:
@@ -417,6 +419,7 @@ name|name
 parameter_list|)
 block|{
 comment|// The parameter is relative to the TESTDATA dir
+specifier|final
 name|boolean
 name|b
 init|=
@@ -443,6 +446,7 @@ argument_list|,
 name|dir
 argument_list|)
 decl_stmt|;
+specifier|final
 name|String
 index|[]
 name|files
@@ -514,6 +518,7 @@ name|String
 name|cpentry
 parameter_list|)
 block|{
+specifier|final
 name|ClassPath
 name|cp
 init|=
@@ -562,6 +567,7 @@ name|JavaClass
 name|clazz
 parameter_list|)
 block|{
+specifier|final
 name|Attribute
 index|[]
 name|all
@@ -571,6 +577,7 @@ operator|.
 name|getAttributes
 argument_list|()
 decl_stmt|;
+specifier|final
 name|List
 argument_list|<
 name|Attribute
@@ -584,6 +591,7 @@ argument_list|()
 decl_stmt|;
 for|for
 control|(
+specifier|final
 name|Attribute
 name|element
 range|:
@@ -658,6 +666,7 @@ index|[]
 name|all
 parameter_list|)
 block|{
+specifier|final
 name|List
 argument_list|<
 name|Attribute
@@ -671,6 +680,7 @@ argument_list|()
 decl_stmt|;
 for|for
 control|(
+specifier|final
 name|Attribute
 name|element
 range|:
@@ -755,6 +765,7 @@ index|[]
 name|as
 parameter_list|)
 block|{
+specifier|final
 name|StringBuilder
 name|result
 init|=
@@ -786,6 +797,7 @@ name|i
 operator|++
 control|)
 block|{
+specifier|final
 name|Attribute
 name|attr
 init|=
@@ -848,6 +860,7 @@ index|[]
 name|as
 parameter_list|)
 block|{
+specifier|final
 name|StringBuilder
 name|result
 init|=
@@ -879,6 +892,7 @@ name|i
 operator|++
 control|)
 block|{
+specifier|final
 name|AnnotationEntry
 name|annotation
 init|=
@@ -941,6 +955,7 @@ index|[]
 name|as
 parameter_list|)
 block|{
+specifier|final
 name|StringBuilder
 name|result
 init|=
@@ -972,6 +987,7 @@ name|i
 operator|++
 control|)
 block|{
+specifier|final
 name|AnnotationEntryGen
 name|annotation
 init|=
@@ -1041,6 +1057,7 @@ name|boolean
 name|visibility
 parameter_list|)
 block|{
+specifier|final
 name|SimpleElementValueGen
 name|evg
 init|=
@@ -1056,6 +1073,7 @@ argument_list|,
 name|aFruit
 argument_list|)
 decl_stmt|;
+specifier|final
 name|ElementValuePairGen
 name|nvGen
 init|=
@@ -1069,6 +1087,7 @@ argument_list|,
 name|cp
 argument_list|)
 decl_stmt|;
+specifier|final
 name|ObjectType
 name|t
 init|=
@@ -1078,6 +1097,7 @@ argument_list|(
 literal|"SimpleStringAnnotation"
 argument_list|)
 decl_stmt|;
+specifier|final
 name|List
 argument_list|<
 name|ElementValuePairGen

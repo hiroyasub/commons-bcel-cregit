@@ -122,6 +122,7 @@ index|[]
 name|getUnknownAttributes
 parameter_list|()
 block|{
+specifier|final
 name|Unknown
 index|[]
 name|unknowns
@@ -476,6 +477,7 @@ operator|>
 literal|10
 condition|)
 block|{
+specifier|final
 name|byte
 index|[]
 name|tmp
@@ -549,6 +551,7 @@ name|ConstantPool
 name|_constant_pool
 parameter_list|)
 block|{
+specifier|final
 name|Unknown
 name|c
 init|=

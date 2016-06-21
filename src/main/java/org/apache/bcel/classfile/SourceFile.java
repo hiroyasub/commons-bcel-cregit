@@ -270,6 +270,7 @@ name|String
 name|getSourceFileName
 parameter_list|()
 block|{
+specifier|final
 name|ConstantUtf8
 name|c
 init|=

@@ -164,6 +164,7 @@ return|return
 literal|false
 return|;
 block|}
+specifier|final
 name|ReferenceType
 name|T
 init|=
@@ -523,6 +524,7 @@ name|ArrayType
 condition|)
 block|{
 comment|/* TC and SC are the same primitive type (ï¿½2.4.1).                  */
+specifier|final
 name|Type
 name|sc
 init|=
@@ -536,6 +538,7 @@ operator|.
 name|getElementType
 argument_list|()
 decl_stmt|;
+specifier|final
 name|Type
 name|tc
 init|=
@@ -629,6 +632,7 @@ condition|)
 block|{
 for|for
 control|(
+specifier|final
 name|String
 name|element
 range|:
@@ -740,6 +744,7 @@ name|ArrayType
 operator|)
 condition|)
 block|{
+specifier|final
 name|ArrayType
 name|arrType1
 init|=
@@ -748,6 +753,7 @@ name|ArrayType
 operator|)
 name|this
 decl_stmt|;
+specifier|final
 name|ArrayType
 name|arrType2
 init|=
@@ -889,6 +895,7 @@ comment|// make class file verification a bit stronger here by using the notion 
 comment|// superinterfaces or even castability or assignment compatibility.
 block|}
 comment|// this and t are ObjectTypes, see above.
+specifier|final
 name|ObjectType
 name|thiz
 init|=
@@ -897,6 +904,7 @@ name|ObjectType
 operator|)
 name|this
 decl_stmt|;
+specifier|final
 name|ObjectType
 name|other
 init|=
@@ -905,6 +913,7 @@ name|ObjectType
 operator|)
 name|t
 decl_stmt|;
+specifier|final
 name|JavaClass
 index|[]
 name|thiz_sups
@@ -919,6 +928,7 @@ name|getClassName
 argument_list|()
 argument_list|)
 decl_stmt|;
+specifier|final
 name|JavaClass
 index|[]
 name|other_sups
@@ -953,6 +963,7 @@ literal|null
 return|;
 block|}
 comment|// Waaahh...
+specifier|final
 name|JavaClass
 index|[]
 name|this_sups
@@ -967,6 +978,7 @@ operator|+
 literal|1
 index|]
 decl_stmt|;
+specifier|final
 name|JavaClass
 index|[]
 name|t_sups
@@ -1047,6 +1059,7 @@ argument_list|)
 expr_stmt|;
 for|for
 control|(
+specifier|final
 name|JavaClass
 name|t_sup
 range|:
@@ -1055,6 +1068,7 @@ control|)
 block|{
 for|for
 control|(
+specifier|final
 name|JavaClass
 name|this_sup
 range|:
@@ -1222,6 +1236,7 @@ comment|// make class file verification a bit stronger here by using the notion 
 comment|// superinterfaces or even castability or assignment compatibility.
 block|}
 comment|// this and t are ObjectTypes, see above.
+specifier|final
 name|ObjectType
 name|thiz
 init|=
@@ -1230,6 +1245,7 @@ name|ObjectType
 operator|)
 name|this
 decl_stmt|;
+specifier|final
 name|ObjectType
 name|other
 init|=
@@ -1238,6 +1254,7 @@ name|ObjectType
 operator|)
 name|t
 decl_stmt|;
+specifier|final
 name|JavaClass
 index|[]
 name|thiz_sups
@@ -1252,6 +1269,7 @@ name|getClassName
 argument_list|()
 argument_list|)
 decl_stmt|;
+specifier|final
 name|JavaClass
 index|[]
 name|other_sups
@@ -1286,6 +1304,7 @@ literal|null
 return|;
 block|}
 comment|// Waaahh...
+specifier|final
 name|JavaClass
 index|[]
 name|this_sups
@@ -1300,6 +1319,7 @@ operator|+
 literal|1
 index|]
 decl_stmt|;
+specifier|final
 name|JavaClass
 index|[]
 name|t_sups
@@ -1380,6 +1400,7 @@ argument_list|)
 expr_stmt|;
 for|for
 control|(
+specifier|final
 name|JavaClass
 name|t_sup
 range|:
@@ -1388,6 +1409,7 @@ control|)
 block|{
 for|for
 control|(
+specifier|final
 name|JavaClass
 name|this_sup
 range|:

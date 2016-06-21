@@ -173,6 +173,7 @@ name|int
 name|max_offset
 parameter_list|)
 block|{
+specifier|final
 name|int
 name|i
 init|=
@@ -223,6 +224,7 @@ operator|.
 name|JSR_W
 argument_list|)
 expr_stmt|;
+specifier|final
 name|short
 name|old_length
 init|=

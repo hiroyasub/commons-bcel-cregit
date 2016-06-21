@@ -207,6 +207,7 @@ parameter_list|()
 throws|throws
 name|Exception
 block|{
+specifier|final
 name|ClassGen
 name|cg
 init|=
@@ -215,6 +216,7 @@ argument_list|(
 literal|"HelloWorld"
 argument_list|)
 decl_stmt|;
+specifier|final
 name|ConstantPoolGen
 name|cp
 init|=
@@ -223,6 +225,7 @@ operator|.
 name|getConstantPool
 argument_list|()
 decl_stmt|;
+specifier|final
 name|SimpleElementValueGen
 name|evg
 init|=
@@ -286,6 +289,7 @@ parameter_list|()
 throws|throws
 name|Exception
 block|{
+specifier|final
 name|ClassGen
 name|cg
 init|=
@@ -294,6 +298,7 @@ argument_list|(
 literal|"HelloWorld"
 argument_list|)
 decl_stmt|;
+specifier|final
 name|ConstantPoolGen
 name|cp
 init|=
@@ -302,6 +307,7 @@ operator|.
 name|getConstantPool
 argument_list|()
 decl_stmt|;
+specifier|final
 name|SimpleElementValueGen
 name|evg
 init|=
@@ -365,6 +371,7 @@ parameter_list|()
 throws|throws
 name|Exception
 block|{
+specifier|final
 name|ClassGen
 name|cg
 init|=
@@ -373,6 +380,7 @@ argument_list|(
 literal|"HelloWorld"
 argument_list|)
 decl_stmt|;
+specifier|final
 name|ConstantPoolGen
 name|cp
 init|=
@@ -381,6 +389,7 @@ operator|.
 name|getConstantPool
 argument_list|()
 decl_stmt|;
+specifier|final
 name|SimpleElementValueGen
 name|evg
 init|=
@@ -398,6 +407,7 @@ argument_list|)
 decl_stmt|;
 comment|// Creation of an element like that should leave a new entry in the
 comment|// cpool
+specifier|final
 name|int
 name|idx
 init|=
@@ -444,6 +454,7 @@ parameter_list|()
 throws|throws
 name|Exception
 block|{
+specifier|final
 name|ClassGen
 name|cg
 init|=
@@ -452,6 +463,7 @@ argument_list|(
 literal|"HelloWorld"
 argument_list|)
 decl_stmt|;
+specifier|final
 name|ConstantPoolGen
 name|cp
 init|=
@@ -460,6 +472,7 @@ operator|.
 name|getConstantPool
 argument_list|()
 decl_stmt|;
+specifier|final
 name|SimpleElementValueGen
 name|evg
 init|=
@@ -477,6 +490,7 @@ argument_list|)
 decl_stmt|;
 comment|// Creation of an element like that should leave a new entry in the
 comment|// cpool
+specifier|final
 name|int
 name|idx
 init|=
@@ -523,6 +537,7 @@ parameter_list|()
 throws|throws
 name|Exception
 block|{
+specifier|final
 name|ClassGen
 name|cg
 init|=
@@ -531,6 +546,7 @@ argument_list|(
 literal|"HelloWorld"
 argument_list|)
 decl_stmt|;
+specifier|final
 name|ConstantPoolGen
 name|cp
 init|=
@@ -539,6 +555,7 @@ operator|.
 name|getConstantPool
 argument_list|()
 decl_stmt|;
+specifier|final
 name|SimpleElementValueGen
 name|evg
 init|=
@@ -556,6 +573,7 @@ argument_list|)
 decl_stmt|;
 comment|// Creation of an element like that should leave a new entry in the
 comment|// cpool
+specifier|final
 name|int
 name|idx
 init|=
@@ -602,6 +620,7 @@ parameter_list|()
 throws|throws
 name|Exception
 block|{
+specifier|final
 name|ClassGen
 name|cg
 init|=
@@ -610,6 +629,7 @@ argument_list|(
 literal|"HelloWorld"
 argument_list|)
 decl_stmt|;
+specifier|final
 name|ConstantPoolGen
 name|cp
 init|=
@@ -618,6 +638,7 @@ operator|.
 name|getConstantPool
 argument_list|()
 decl_stmt|;
+specifier|final
 name|SimpleElementValueGen
 name|evg
 init|=
@@ -638,6 +659,7 @@ argument_list|)
 decl_stmt|;
 comment|// Creation of an element like that should leave a new entry in the
 comment|// cpool
+specifier|final
 name|int
 name|idx
 init|=
@@ -687,6 +709,7 @@ parameter_list|()
 throws|throws
 name|Exception
 block|{
+specifier|final
 name|ClassGen
 name|cg
 init|=
@@ -695,6 +718,7 @@ argument_list|(
 literal|"HelloWorld"
 argument_list|)
 decl_stmt|;
+specifier|final
 name|ConstantPoolGen
 name|cp
 init|=
@@ -703,6 +727,7 @@ operator|.
 name|getConstantPool
 argument_list|()
 decl_stmt|;
+specifier|final
 name|SimpleElementValueGen
 name|evg
 init|=
@@ -720,6 +745,7 @@ argument_list|)
 decl_stmt|;
 comment|// Creation of an element like that should leave a new entry in the
 comment|// cpool
+specifier|final
 name|int
 name|idx
 init|=
@@ -767,6 +793,7 @@ parameter_list|()
 throws|throws
 name|Exception
 block|{
+specifier|final
 name|ClassGen
 name|cg
 init|=
@@ -775,6 +802,7 @@ argument_list|(
 literal|"HelloWorld"
 argument_list|)
 decl_stmt|;
+specifier|final
 name|ConstantPoolGen
 name|cp
 init|=
@@ -783,6 +811,7 @@ operator|.
 name|getConstantPool
 argument_list|()
 decl_stmt|;
+specifier|final
 name|SimpleElementValueGen
 name|evg
 init|=
@@ -803,6 +832,7 @@ argument_list|)
 decl_stmt|;
 comment|// Creation of an element like that should leave a new entry in the
 comment|// cpool
+specifier|final
 name|int
 name|idx
 init|=
@@ -852,6 +882,7 @@ throws|throws
 name|Exception
 block|{
 comment|// Create HelloWorld
+specifier|final
 name|ClassGen
 name|cg
 init|=
@@ -860,6 +891,7 @@ argument_list|(
 literal|"HelloWorld"
 argument_list|)
 decl_stmt|;
+specifier|final
 name|ConstantPoolGen
 name|cp
 init|=
@@ -868,6 +900,7 @@ operator|.
 name|getConstantPool
 argument_list|()
 decl_stmt|;
+specifier|final
 name|SimpleElementValueGen
 name|evg
 init|=
@@ -933,6 +966,7 @@ parameter_list|()
 throws|throws
 name|Exception
 block|{
+specifier|final
 name|ClassGen
 name|cg
 init|=
@@ -941,6 +975,7 @@ argument_list|(
 literal|"HelloWorld"
 argument_list|)
 decl_stmt|;
+specifier|final
 name|ConstantPoolGen
 name|cp
 init|=
@@ -949,6 +984,7 @@ operator|.
 name|getConstantPool
 argument_list|()
 decl_stmt|;
+specifier|final
 name|ObjectType
 name|enumType
 init|=
@@ -960,6 +996,7 @@ argument_list|)
 decl_stmt|;
 comment|// Supports rainbow
 comment|// :)
+specifier|final
 name|EnumElementValueGen
 name|evg
 init|=
@@ -1029,6 +1066,7 @@ parameter_list|()
 throws|throws
 name|Exception
 block|{
+specifier|final
 name|ClassGen
 name|cg
 init|=
@@ -1037,6 +1075,7 @@ argument_list|(
 literal|"HelloWorld"
 argument_list|)
 decl_stmt|;
+specifier|final
 name|ConstantPoolGen
 name|cp
 init|=
@@ -1045,6 +1084,7 @@ operator|.
 name|getConstantPool
 argument_list|()
 decl_stmt|;
+specifier|final
 name|ObjectType
 name|classType
 init|=
@@ -1054,6 +1094,7 @@ argument_list|(
 literal|"java.lang.Integer"
 argument_list|)
 decl_stmt|;
+specifier|final
 name|ClassElementValueGen
 name|evg
 init|=
@@ -1110,6 +1151,7 @@ parameter_list|)
 throws|throws
 name|IOException
 block|{
+specifier|final
 name|String
 name|beforeValue
 init|=
@@ -1118,6 +1160,7 @@ operator|.
 name|stringifyValue
 argument_list|()
 decl_stmt|;
+specifier|final
 name|ByteArrayOutputStream
 name|baos
 init|=
@@ -1184,6 +1227,7 @@ name|cpg
 argument_list|)
 expr_stmt|;
 block|}
+specifier|final
 name|String
 name|afterValue
 init|=

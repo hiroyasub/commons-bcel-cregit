@@ -245,6 +245,7 @@ name|Instruction
 name|i
 parameter_list|)
 block|{
+specifier|final
 name|Instruction
 name|oldInstruction
 init|=
@@ -306,6 +307,7 @@ name|i
 argument_list|)
 return|;
 block|}
+specifier|final
 name|InstructionHandle
 name|ih
 init|=
@@ -549,6 +551,7 @@ literal|0
 index|]
 return|;
 block|}
+specifier|final
 name|InstructionTargeter
 index|[]
 name|t

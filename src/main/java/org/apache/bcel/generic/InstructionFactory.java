@@ -173,6 +173,7 @@ name|nargs
 init|=
 literal|0
 decl_stmt|;
+specifier|final
 name|String
 name|signature
 init|=
@@ -187,6 +188,7 @@ argument_list|)
 decl_stmt|;
 for|for
 control|(
+specifier|final
 name|Type
 name|arg_type
 range|:
@@ -333,6 +335,7 @@ name|String
 name|s
 parameter_list|)
 block|{
+specifier|final
 name|InstructionList
 name|il
 init|=
@@ -340,6 +343,7 @@ operator|new
 name|InstructionList
 argument_list|()
 decl_stmt|;
+specifier|final
 name|int
 name|out
 init|=
@@ -354,6 +358,7 @@ argument_list|,
 literal|"Ljava/io/PrintStream;"
 argument_list|)
 decl_stmt|;
+specifier|final
 name|int
 name|println
 init|=
@@ -890,6 +895,7 @@ name|Type
 name|type
 parameter_list|)
 block|{
+specifier|final
 name|byte
 name|t
 init|=
@@ -1038,6 +1044,7 @@ block|{
 name|int
 name|index
 decl_stmt|;
+specifier|final
 name|String
 name|signature
 init|=
@@ -1648,6 +1655,7 @@ name|Type
 name|type
 parameter_list|)
 block|{
+specifier|final
 name|char
 name|first
 init|=
@@ -2360,6 +2368,7 @@ name|BasicType
 operator|)
 condition|)
 block|{
+specifier|final
 name|byte
 name|dest
 init|=
@@ -2412,6 +2421,7 @@ operator|.
 name|T_INT
 expr_stmt|;
 block|}
+specifier|final
 name|String
 name|name
 init|=
@@ -2466,6 +2476,7 @@ expr_stmt|;
 block|}
 catch|catch
 parameter_list|(
+specifier|final
 name|Exception
 name|e
 parameter_list|)

@@ -383,6 +383,7 @@ name|ATTR_UNKNOWN
 decl_stmt|;
 comment|// Unknown attribute
 comment|// Get class name from constant pool via `name_index' indirection
+specifier|final
 name|int
 name|name_index
 init|=
@@ -391,6 +392,7 @@ operator|.
 name|readUnsignedShort
 argument_list|()
 decl_stmt|;
+specifier|final
 name|ConstantUtf8
 name|c
 init|=
@@ -408,6 +410,7 @@ operator|.
 name|CONSTANT_Utf8
 argument_list|)
 decl_stmt|;
+specifier|final
 name|String
 name|name
 init|=
@@ -417,6 +420,7 @@ name|getBytes
 argument_list|()
 decl_stmt|;
 comment|// Length of data in bytes
+specifier|final
 name|int
 name|length
 init|=
@@ -477,6 +481,7 @@ name|Const
 operator|.
 name|ATTR_UNKNOWN
 case|:
+specifier|final
 name|Object
 name|r
 init|=
@@ -942,6 +947,7 @@ name|String
 name|getName
 parameter_list|()
 block|{
+specifier|final
 name|ConstantUtf8
 name|c
 init|=
@@ -1092,6 +1098,7 @@ expr_stmt|;
 block|}
 catch|catch
 parameter_list|(
+specifier|final
 name|CloneNotSupportedException
 name|e
 parameter_list|)

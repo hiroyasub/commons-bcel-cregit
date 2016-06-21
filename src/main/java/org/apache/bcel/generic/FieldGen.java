@@ -228,6 +228,7 @@ name|Object
 name|o2
 parameter_list|)
 block|{
+specifier|final
 name|FieldGen
 name|THIS
 init|=
@@ -236,6 +237,7 @@ name|FieldGen
 operator|)
 name|o1
 decl_stmt|;
+specifier|final
 name|FieldGen
 name|THAT
 init|=
@@ -283,6 +285,7 @@ name|Object
 name|o
 parameter_list|)
 block|{
+specifier|final
 name|FieldGen
 name|THIS
 init|=
@@ -391,6 +394,7 @@ argument_list|,
 name|cp
 argument_list|)
 expr_stmt|;
+specifier|final
 name|Attribute
 index|[]
 name|attrs
@@ -402,6 +406,7 @@ argument_list|()
 decl_stmt|;
 for|for
 control|(
+specifier|final
 name|Attribute
 name|attr
 range|:
@@ -436,6 +441,7 @@ operator|instanceof
 name|Annotations
 condition|)
 block|{
+specifier|final
 name|Annotations
 name|runtimeAnnotations
 init|=
@@ -444,6 +450,7 @@ name|Annotations
 operator|)
 name|attr
 decl_stmt|;
+specifier|final
 name|AnnotationEntry
 index|[]
 name|annotationEntries
@@ -455,6 +462,7 @@ argument_list|()
 decl_stmt|;
 for|for
 control|(
+specifier|final
 name|AnnotationEntry
 name|element
 range|:
@@ -495,6 +503,7 @@ name|int
 name|index
 parameter_list|)
 block|{
+specifier|final
 name|ConstantPool
 name|cp
 init|=
@@ -506,6 +515,7 @@ operator|.
 name|getConstantPool
 argument_list|()
 decl_stmt|;
+specifier|final
 name|Constant
 name|c
 init|=
@@ -923,12 +933,14 @@ name|Field
 name|getField
 parameter_list|()
 block|{
+specifier|final
 name|String
 name|signature
 init|=
 name|getSignature
 argument_list|()
 decl_stmt|;
+specifier|final
 name|int
 name|name_index
 init|=
@@ -945,6 +957,7 @@ name|getName
 argument_list|()
 argument_list|)
 decl_stmt|;
+specifier|final
 name|int
 name|signature_index
 init|=
@@ -973,6 +986,7 @@ name|getType
 argument_list|()
 argument_list|)
 expr_stmt|;
+specifier|final
 name|int
 name|index
 init|=
@@ -1054,6 +1068,7 @@ name|ConstantPoolGen
 name|cp
 parameter_list|)
 block|{
+specifier|final
 name|Attribute
 index|[]
 name|attrs
@@ -1072,6 +1087,7 @@ argument_list|)
 decl_stmt|;
 for|for
 control|(
+specifier|final
 name|Attribute
 name|attr
 range|:
@@ -1354,6 +1370,7 @@ condition|)
 block|{
 for|for
 control|(
+specifier|final
 name|FieldObserver
 name|observer
 range|:
@@ -1454,6 +1471,7 @@ operator|=
 name|getName
 argument_list|()
 expr_stmt|;
+specifier|final
 name|StringBuilder
 name|buf
 init|=
@@ -1486,6 +1504,7 @@ argument_list|(
 name|name
 argument_list|)
 expr_stmt|;
+specifier|final
 name|String
 name|value
 init|=
@@ -1529,6 +1548,7 @@ name|ConstantPoolGen
 name|cp
 parameter_list|)
 block|{
+specifier|final
 name|FieldGen
 name|fg
 init|=

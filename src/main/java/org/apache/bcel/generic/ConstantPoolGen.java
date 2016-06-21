@@ -364,6 +364,7 @@ index|[]
 name|cs
 parameter_list|)
 block|{
+specifier|final
 name|StringBuilder
 name|sb
 init|=
@@ -444,6 +445,7 @@ name|i
 operator|++
 control|)
 block|{
+specifier|final
 name|Constant
 name|c
 init|=
@@ -459,6 +461,7 @@ operator|instanceof
 name|ConstantString
 condition|)
 block|{
+specifier|final
 name|ConstantString
 name|s
 init|=
@@ -467,6 +470,7 @@ name|ConstantString
 operator|)
 name|c
 decl_stmt|;
+specifier|final
 name|ConstantUtf8
 name|u8
 init|=
@@ -481,6 +485,7 @@ name|getStringIndex
 argument_list|()
 index|]
 decl_stmt|;
+specifier|final
 name|String
 name|key
 init|=
@@ -522,6 +527,7 @@ operator|instanceof
 name|ConstantClass
 condition|)
 block|{
+specifier|final
 name|ConstantClass
 name|s
 init|=
@@ -530,6 +536,7 @@ name|ConstantClass
 operator|)
 name|c
 decl_stmt|;
+specifier|final
 name|ConstantUtf8
 name|u8
 init|=
@@ -544,6 +551,7 @@ name|getNameIndex
 argument_list|()
 index|]
 decl_stmt|;
+specifier|final
 name|String
 name|key
 init|=
@@ -585,6 +593,7 @@ operator|instanceof
 name|ConstantNameAndType
 condition|)
 block|{
+specifier|final
 name|ConstantNameAndType
 name|n
 init|=
@@ -593,6 +602,7 @@ name|ConstantNameAndType
 operator|)
 name|c
 decl_stmt|;
+specifier|final
 name|ConstantUtf8
 name|u8
 init|=
@@ -607,6 +617,7 @@ name|getNameIndex
 argument_list|()
 index|]
 decl_stmt|;
+specifier|final
 name|ConstantUtf8
 name|u8_2
 init|=
@@ -648,6 +659,7 @@ name|getBytes
 argument_list|()
 argument_list|)
 expr_stmt|;
+specifier|final
 name|String
 name|key
 init|=
@@ -701,6 +713,7 @@ operator|instanceof
 name|ConstantUtf8
 condition|)
 block|{
+specifier|final
 name|ConstantUtf8
 name|u
 init|=
@@ -709,6 +722,7 @@ name|ConstantUtf8
 operator|)
 name|c
 decl_stmt|;
+specifier|final
 name|String
 name|key
 init|=
@@ -750,6 +764,7 @@ operator|instanceof
 name|ConstantCP
 condition|)
 block|{
+specifier|final
 name|ConstantCP
 name|m
 init|=
@@ -793,6 +808,7 @@ comment|// METHODREF_DELIM with out fear of duplicates.
 block|}
 else|else
 block|{
+specifier|final
 name|ConstantClass
 name|clazz
 init|=
@@ -835,6 +851,7 @@ literal|'.'
 argument_list|)
 expr_stmt|;
 block|}
+specifier|final
 name|ConstantNameAndType
 name|n
 init|=
@@ -862,6 +879,7 @@ name|getNameIndex
 argument_list|()
 index|]
 expr_stmt|;
+specifier|final
 name|String
 name|method_name
 init|=
@@ -883,6 +901,7 @@ name|getSignatureIndex
 argument_list|()
 index|]
 expr_stmt|;
+specifier|final
 name|String
 name|signature
 init|=
@@ -955,6 +974,7 @@ argument_list|(
 name|signature
 argument_list|)
 expr_stmt|;
+specifier|final
 name|String
 name|key
 init|=
@@ -1150,6 +1170,7 @@ operator|>=
 name|size
 condition|)
 block|{
+specifier|final
 name|Constant
 index|[]
 name|cs
@@ -1210,6 +1231,7 @@ name|String
 name|str
 parameter_list|)
 block|{
+specifier|final
 name|Index
 name|index
 init|=
@@ -1268,6 +1290,7 @@ name|ret
 return|;
 comment|// Already in CP
 block|}
+specifier|final
 name|int
 name|utf8
 init|=
@@ -1279,6 +1302,7 @@ decl_stmt|;
 name|adjustSize
 argument_list|()
 expr_stmt|;
+specifier|final
 name|ConstantString
 name|s
 init|=
@@ -1354,6 +1378,7 @@ name|String
 name|str
 parameter_list|)
 block|{
+specifier|final
 name|Index
 name|index
 init|=
@@ -1421,6 +1446,7 @@ block|}
 name|adjustSize
 argument_list|()
 expr_stmt|;
+specifier|final
 name|ConstantClass
 name|c
 init|=
@@ -1573,6 +1599,7 @@ operator|instanceof
 name|ConstantInteger
 condition|)
 block|{
+specifier|final
 name|ConstantInteger
 name|c
 init|=
@@ -1671,6 +1698,7 @@ name|float
 name|n
 parameter_list|)
 block|{
+specifier|final
 name|int
 name|bits
 init|=
@@ -1706,6 +1734,7 @@ operator|instanceof
 name|ConstantFloat
 condition|)
 block|{
+specifier|final
 name|ConstantFloat
 name|c
 init|=
@@ -1824,6 +1853,7 @@ name|String
 name|n
 parameter_list|)
 block|{
+specifier|final
 name|Index
 name|index
 init|=
@@ -1965,6 +1995,7 @@ operator|instanceof
 name|ConstantLong
 condition|)
 block|{
+specifier|final
 name|ConstantLong
 name|c
 init|=
@@ -2067,6 +2098,7 @@ name|double
 name|n
 parameter_list|)
 block|{
+specifier|final
 name|long
 name|bits
 init|=
@@ -2102,6 +2134,7 @@ operator|instanceof
 name|ConstantDouble
 condition|)
 block|{
+specifier|final
 name|ConstantDouble
 name|c
 init|=
@@ -2228,6 +2261,7 @@ name|String
 name|signature
 parameter_list|)
 block|{
+specifier|final
 name|Index
 name|_index
 init|=
@@ -2337,6 +2371,7 @@ argument_list|,
 name|signature_index
 argument_list|)
 expr_stmt|;
+specifier|final
 name|String
 name|key
 init|=
@@ -2408,6 +2443,7 @@ name|String
 name|signature
 parameter_list|)
 block|{
+specifier|final
 name|Index
 name|index
 init|=
@@ -2558,6 +2594,7 @@ argument_list|,
 name|name_and_type_index
 argument_list|)
 expr_stmt|;
+specifier|final
 name|String
 name|key
 init|=
@@ -2647,6 +2684,7 @@ name|String
 name|signature
 parameter_list|)
 block|{
+specifier|final
 name|Index
 name|index
 init|=
@@ -2797,6 +2835,7 @@ argument_list|,
 name|name_and_type_index
 argument_list|)
 expr_stmt|;
+specifier|final
 name|String
 name|key
 init|=
@@ -2886,6 +2925,7 @@ name|String
 name|signature
 parameter_list|)
 block|{
+specifier|final
 name|Index
 name|index
 init|=
@@ -3007,6 +3047,7 @@ argument_list|,
 name|name_and_type_index
 argument_list|)
 expr_stmt|;
+specifier|final
 name|String
 name|key
 init|=
@@ -3118,6 +3159,7 @@ name|ConstantPool
 name|getFinalConstantPool
 parameter_list|()
 block|{
+specifier|final
 name|Constant
 index|[]
 name|cs
@@ -3159,6 +3201,7 @@ name|String
 name|toString
 parameter_list|()
 block|{
+specifier|final
 name|StringBuilder
 name|buf
 init|=
@@ -3228,6 +3271,7 @@ name|ConstantPoolGen
 name|cp
 parameter_list|)
 block|{
+specifier|final
 name|Constant
 index|[]
 name|constants
@@ -3254,6 +3298,7 @@ operator|.
 name|CONSTANT_String
 case|:
 block|{
+specifier|final
 name|ConstantString
 name|s
 init|=
@@ -3262,6 +3307,7 @@ name|ConstantString
 operator|)
 name|c
 decl_stmt|;
+specifier|final
 name|ConstantUtf8
 name|u8
 init|=
@@ -3292,6 +3338,7 @@ operator|.
 name|CONSTANT_Class
 case|:
 block|{
+specifier|final
 name|ConstantClass
 name|s
 init|=
@@ -3300,6 +3347,7 @@ name|ConstantClass
 operator|)
 name|c
 decl_stmt|;
+specifier|final
 name|ConstantUtf8
 name|u8
 init|=
@@ -3330,6 +3378,7 @@ operator|.
 name|CONSTANT_NameAndType
 case|:
 block|{
+specifier|final
 name|ConstantNameAndType
 name|n
 init|=
@@ -3338,6 +3387,7 @@ name|ConstantNameAndType
 operator|)
 name|c
 decl_stmt|;
+specifier|final
 name|ConstantUtf8
 name|u8
 init|=
@@ -3352,6 +3402,7 @@ name|getNameIndex
 argument_list|()
 index|]
 decl_stmt|;
+specifier|final
 name|ConstantUtf8
 name|u8_2
 init|=
@@ -3492,6 +3543,7 @@ operator|.
 name|CONSTANT_Fieldref
 case|:
 block|{
+specifier|final
 name|ConstantCP
 name|m
 init|=
@@ -3500,6 +3552,7 @@ name|ConstantCP
 operator|)
 name|c
 decl_stmt|;
+specifier|final
 name|ConstantClass
 name|clazz
 init|=
@@ -3514,6 +3567,7 @@ name|getClassIndex
 argument_list|()
 index|]
 decl_stmt|;
+specifier|final
 name|ConstantNameAndType
 name|n
 init|=
@@ -3542,6 +3596,7 @@ name|getNameIndex
 argument_list|()
 index|]
 decl_stmt|;
+specifier|final
 name|String
 name|class_name
 init|=
@@ -3570,6 +3625,7 @@ name|getNameIndex
 argument_list|()
 index|]
 expr_stmt|;
+specifier|final
 name|String
 name|name
 init|=
@@ -3591,6 +3647,7 @@ name|getSignatureIndex
 argument_list|()
 index|]
 expr_stmt|;
+specifier|final
 name|String
 name|signature
 init|=

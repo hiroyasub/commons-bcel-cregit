@@ -109,6 +109,7 @@ name|Object
 name|o2
 parameter_list|)
 block|{
+specifier|final
 name|Constant
 name|THIS
 init|=
@@ -117,6 +118,7 @@ name|Constant
 operator|)
 name|o1
 decl_stmt|;
+specifier|final
 name|Constant
 name|THAT
 init|=
@@ -151,6 +153,7 @@ name|Object
 name|o
 parameter_list|)
 block|{
+specifier|final
 name|Constant
 name|THIS
 init|=
@@ -275,6 +278,7 @@ return|;
 block|}
 catch|catch
 parameter_list|(
+specifier|final
 name|CloneNotSupportedException
 name|e
 parameter_list|)
@@ -303,6 +307,7 @@ return|;
 block|}
 catch|catch
 parameter_list|(
+specifier|final
 name|CloneNotSupportedException
 name|e
 parameter_list|)
@@ -332,6 +337,7 @@ name|IOException
 throws|,
 name|ClassFormatException
 block|{
+specifier|final
 name|byte
 name|b
 init|=

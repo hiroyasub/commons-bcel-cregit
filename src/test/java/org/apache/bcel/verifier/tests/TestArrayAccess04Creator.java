@@ -291,6 +291,7 @@ name|void
 name|createMethod_0
 parameter_list|()
 block|{
+specifier|final
 name|InstructionList
 name|il
 init|=
@@ -298,6 +299,7 @@ operator|new
 name|InstructionList
 argument_list|()
 decl_stmt|;
+specifier|final
 name|MethodGen
 name|method
 init|=
@@ -332,6 +334,7 @@ argument_list|,
 name|_cp
 argument_list|)
 decl_stmt|;
+specifier|final
 name|InstructionHandle
 name|ih_0
 init|=
@@ -385,6 +388,7 @@ name|INVOKESPECIAL
 argument_list|)
 argument_list|)
 expr_stmt|;
+specifier|final
 name|InstructionHandle
 name|ih_4
 init|=
@@ -441,6 +445,7 @@ name|void
 name|createMethod_1
 parameter_list|()
 block|{
+specifier|final
 name|InstructionList
 name|il
 init|=
@@ -448,6 +453,7 @@ operator|new
 name|InstructionList
 argument_list|()
 decl_stmt|;
+specifier|final
 name|MethodGen
 name|method
 init|=
@@ -493,6 +499,7 @@ argument_list|,
 name|_cp
 argument_list|)
 decl_stmt|;
+specifier|final
 name|InstructionHandle
 name|ih_0
 init|=
@@ -552,6 +559,7 @@ literal|1
 argument_list|)
 argument_list|)
 expr_stmt|;
+specifier|final
 name|InstructionHandle
 name|ih_5
 init|=
@@ -592,6 +600,7 @@ literal|2
 argument_list|)
 argument_list|)
 expr_stmt|;
+specifier|final
 name|InstructionHandle
 name|ih_7
 init|=
@@ -657,6 +666,7 @@ operator|.
 name|AASTORE
 argument_list|)
 expr_stmt|;
+specifier|final
 name|InstructionHandle
 name|ih_11
 init|=

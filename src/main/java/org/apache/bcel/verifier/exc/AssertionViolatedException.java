@@ -184,6 +184,7 @@ index|[]
 name|args
 parameter_list|)
 block|{
+specifier|final
 name|AssertionViolatedException
 name|ave
 init|=

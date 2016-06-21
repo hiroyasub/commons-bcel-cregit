@@ -350,6 +350,7 @@ name|ConstantPool
 name|_constant_pool
 parameter_list|)
 block|{
+specifier|final
 name|Deprecated
 name|c
 init|=

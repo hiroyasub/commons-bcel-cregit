@@ -295,6 +295,7 @@ operator|.
 name|readShort
 argument_list|()
 expr_stmt|;
+specifier|final
 name|int
 name|number_of_locals
 init|=
@@ -356,6 +357,7 @@ operator|.
 name|readShort
 argument_list|()
 expr_stmt|;
+specifier|final
 name|int
 name|number_of_locals
 init|=
@@ -401,6 +403,7 @@ name|constant_pool
 argument_list|)
 expr_stmt|;
 block|}
+specifier|final
 name|int
 name|number_of_stack_items
 init|=
@@ -775,6 +778,7 @@ argument_list|)
 expr_stmt|;
 for|for
 control|(
+specifier|final
 name|StackMapType
 name|type
 range|:
@@ -817,6 +821,7 @@ argument_list|)
 expr_stmt|;
 for|for
 control|(
+specifier|final
 name|StackMapType
 name|type
 range|:
@@ -842,6 +847,7 @@ argument_list|)
 expr_stmt|;
 for|for
 control|(
+specifier|final
 name|StackMapType
 name|type
 range|:
@@ -880,6 +886,7 @@ name|String
 name|toString
 parameter_list|()
 block|{
+specifier|final
 name|StringBuilder
 name|buf
 init|=
@@ -1389,6 +1396,7 @@ literal|3
 decl_stmt|;
 for|for
 control|(
+specifier|final
 name|StackMapType
 name|types_of_local
 range|:
@@ -1427,6 +1435,7 @@ literal|7
 decl_stmt|;
 for|for
 control|(
+specifier|final
 name|StackMapType
 name|types_of_local
 range|:
@@ -1447,6 +1456,7 @@ expr_stmt|;
 block|}
 for|for
 control|(
+specifier|final
 name|StackMapType
 name|types_of_stack_item
 range|:
@@ -2001,6 +2011,7 @@ expr_stmt|;
 block|}
 catch|catch
 parameter_list|(
+specifier|final
 name|CloneNotSupportedException
 name|ex
 parameter_list|)

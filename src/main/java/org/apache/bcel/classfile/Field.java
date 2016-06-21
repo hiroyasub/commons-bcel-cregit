@@ -111,6 +111,7 @@ name|Object
 name|o2
 parameter_list|)
 block|{
+specifier|final
 name|Field
 name|THIS
 init|=
@@ -119,6 +120,7 @@ name|Field
 operator|)
 name|o1
 decl_stmt|;
+specifier|final
 name|Field
 name|THAT
 init|=
@@ -166,6 +168,7 @@ name|Object
 name|o
 parameter_list|)
 block|{
+specifier|final
 name|Field
 name|THIS
 init|=
@@ -302,6 +305,7 @@ parameter_list|()
 block|{
 for|for
 control|(
+specifier|final
 name|Attribute
 name|attribute
 range|:
@@ -397,6 +401,7 @@ operator|=
 name|getName
 argument_list|()
 expr_stmt|;
+specifier|final
 name|StringBuilder
 name|buf
 init|=
@@ -429,6 +434,7 @@ argument_list|(
 name|name
 argument_list|)
 expr_stmt|;
+specifier|final
 name|ConstantValue
 name|cv
 init|=
@@ -457,6 +463,7 @@ expr_stmt|;
 block|}
 for|for
 control|(
+specifier|final
 name|Attribute
 name|attribute
 range|:

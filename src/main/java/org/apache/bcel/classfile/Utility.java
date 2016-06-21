@@ -349,6 +349,7 @@ name|boolean
 name|for_class
 parameter_list|)
 block|{
+specifier|final
 name|StringBuilder
 name|buf
 init|=
@@ -509,6 +510,7 @@ name|boolean
 name|verbose
 parameter_list|)
 block|{
+specifier|final
 name|StringBuilder
 name|buf
 init|=
@@ -593,6 +595,7 @@ name|length
 operator|)
 condition|)
 block|{
+specifier|final
 name|String
 name|indices
 init|=
@@ -641,6 +644,7 @@ block|}
 block|}
 catch|catch
 parameter_list|(
+specifier|final
 name|IOException
 name|e
 parameter_list|)
@@ -726,6 +730,7 @@ parameter_list|)
 throws|throws
 name|IOException
 block|{
+specifier|final
 name|short
 name|opcode
 init|=
@@ -776,6 +781,7 @@ decl_stmt|;
 name|int
 name|offset
 decl_stmt|;
+specifier|final
 name|StringBuilder
 name|buf
 init|=
@@ -810,6 +816,7 @@ name|LOOKUPSWITCH
 operator|)
 condition|)
 block|{
+specifier|final
 name|int
 name|remainder
 init|=
@@ -1677,6 +1684,7 @@ operator|.
 name|readUnsignedShort
 argument_list|()
 expr_stmt|;
+specifier|final
 name|Constant
 name|c
 init|=
@@ -1784,6 +1792,7 @@ operator|.
 name|readUnsignedShort
 argument_list|()
 expr_stmt|;
+specifier|final
 name|int
 name|nargs
 init|=
@@ -2096,6 +2105,7 @@ operator|.
 name|readUnsignedShort
 argument_list|()
 expr_stmt|;
+specifier|final
 name|int
 name|dimensions
 init|=
@@ -2410,6 +2420,7 @@ name|boolean
 name|chopit
 parameter_list|)
 block|{
+specifier|final
 name|int
 name|len
 init|=
@@ -2543,6 +2554,7 @@ name|int
 name|i
 parameter_list|)
 block|{
+specifier|final
 name|int
 name|bit
 init|=
@@ -2613,6 +2625,7 @@ parameter_list|)
 throws|throws
 name|ClassFormatException
 block|{
+specifier|final
 name|StringBuilder
 name|buf
 init|=
@@ -2634,6 +2647,7 @@ condition|)
 block|{
 for|for
 control|(
+specifier|final
 name|String
 name|element
 range|:
@@ -2743,6 +2757,7 @@ parameter_list|)
 throws|throws
 name|ClassFormatException
 block|{
+specifier|final
 name|List
 argument_list|<
 name|String
@@ -2829,6 +2844,7 @@ block|}
 block|}
 catch|catch
 parameter_list|(
+specifier|final
 name|StringIndexOutOfBoundsException
 name|e
 parameter_list|)
@@ -2938,6 +2954,7 @@ expr_stmt|;
 block|}
 catch|catch
 parameter_list|(
+specifier|final
 name|StringIndexOutOfBoundsException
 name|e
 parameter_list|)
@@ -3057,6 +3074,7 @@ parameter_list|)
 throws|throws
 name|ClassFormatException
 block|{
+specifier|final
 name|StringBuilder
 name|buf
 init|=
@@ -3128,6 +3146,7 @@ operator|!=
 literal|')'
 condition|)
 block|{
+specifier|final
 name|String
 name|param_type
 init|=
@@ -3157,6 +3176,7 @@ operator|!=
 literal|null
 condition|)
 block|{
+specifier|final
 name|LocalVariable
 name|l
 init|=
@@ -3275,6 +3295,7 @@ expr_stmt|;
 block|}
 catch|catch
 parameter_list|(
+specifier|final
 name|StringIndexOutOfBoundsException
 name|e
 parameter_list|)
@@ -3407,6 +3428,7 @@ argument_list|)
 condition|)
 block|{
 comment|// `old' found in str
+specifier|final
 name|StringBuilder
 name|buf
 init|=
@@ -3497,6 +3519,7 @@ block|}
 block|}
 catch|catch
 parameter_list|(
+specifier|final
 name|StringIndexOutOfBoundsException
 name|e
 parameter_list|)
@@ -3613,6 +3636,7 @@ literal|'T'
 case|:
 block|{
 comment|// TypeVariableSignature
+specifier|final
 name|int
 name|index
 init|=
@@ -3729,6 +3753,7 @@ argument_list|)
 throw|;
 block|}
 block|}
+specifier|final
 name|int
 name|index
 init|=
@@ -3760,6 +3785,7 @@ argument_list|)
 throw|;
 block|}
 comment|// check to see if there are any TypeArguments
+specifier|final
 name|int
 name|bracketIndex
 init|=
@@ -3813,6 +3839,7 @@ return|;
 block|}
 comment|// we have TypeArguments; build up partial result
 comment|// as we recurse for each TypeArgument
+specifier|final
 name|StringBuilder
 name|type
 init|=
@@ -4204,6 +4231,7 @@ argument_list|)
 expr_stmt|;
 comment|//corrected concurrent private static field acess
 comment|//Utility.consumed_chars += consumed_chars; is replaced by:
+specifier|final
 name|int
 name|_temp
 init|=
@@ -4256,6 +4284,7 @@ block|}
 block|}
 catch|catch
 parameter_list|(
+specifier|final
 name|StringIndexOutOfBoundsException
 name|e
 parameter_list|)
@@ -4284,6 +4313,7 @@ name|String
 name|type
 parameter_list|)
 block|{
+specifier|final
 name|StringBuilder
 name|buf
 init|=
@@ -4291,6 +4321,7 @@ operator|new
 name|StringBuilder
 argument_list|()
 decl_stmt|;
+specifier|final
 name|char
 index|[]
 name|chars
@@ -4591,6 +4622,7 @@ name|String
 name|brackets
 parameter_list|)
 block|{
+specifier|final
 name|char
 index|[]
 name|chars
@@ -4612,6 +4644,7 @@ literal|false
 decl_stmt|;
 for|for
 control|(
+specifier|final
 name|char
 name|c
 range|:
@@ -4762,6 +4795,7 @@ return|;
 block|}
 catch|catch
 parameter_list|(
+specifier|final
 name|StringIndexOutOfBoundsException
 name|e
 parameter_list|)
@@ -4909,6 +4943,7 @@ block|}
 block|}
 catch|catch
 parameter_list|(
+specifier|final
 name|StringIndexOutOfBoundsException
 name|e
 parameter_list|)
@@ -5034,6 +5069,7 @@ index|[]
 name|bytes
 parameter_list|)
 block|{
+specifier|final
 name|StringBuilder
 name|buf
 init|=
@@ -5058,6 +5094,7 @@ name|i
 operator|++
 control|)
 block|{
+specifier|final
 name|short
 name|b
 init|=
@@ -5069,6 +5106,7 @@ name|i
 index|]
 argument_list|)
 decl_stmt|;
+specifier|final
 name|String
 name|hex
 init|=
@@ -5192,6 +5230,7 @@ name|char
 name|fill
 parameter_list|)
 block|{
+specifier|final
 name|int
 name|len
 init|=
@@ -5202,6 +5241,7 @@ operator|.
 name|length
 argument_list|()
 decl_stmt|;
+specifier|final
 name|char
 index|[]
 name|buf
@@ -5476,6 +5516,7 @@ return|return
 literal|null
 return|;
 block|}
+specifier|final
 name|StringBuilder
 name|buf
 init|=
@@ -5726,6 +5767,7 @@ argument_list|()
 expr_stmt|;
 block|}
 block|}
+specifier|final
 name|CharArrayWriter
 name|caw
 init|=
@@ -5747,12 +5789,14 @@ init|)
 block|{
 for|for
 control|(
+specifier|final
 name|byte
 name|b
 range|:
 name|bytes
 control|)
 block|{
+specifier|final
 name|int
 name|in
 init|=
@@ -5863,6 +5907,7 @@ condition|(
 name|uncompress
 condition|)
 block|{
+specifier|final
 name|GZIPInputStream
 name|gis
 init|=
@@ -5876,6 +5921,7 @@ name|bytes
 argument_list|)
 argument_list|)
 decl_stmt|;
+specifier|final
 name|byte
 index|[]
 name|tmp
@@ -6131,6 +6177,7 @@ parameter_list|()
 throws|throws
 name|IOException
 block|{
+specifier|final
 name|int
 name|b
 init|=
@@ -6150,6 +6197,7 @@ return|return
 name|b
 return|;
 block|}
+specifier|final
 name|int
 name|i
 init|=
@@ -6202,6 +6250,7 @@ operator|)
 condition|)
 block|{
 comment|// Normal escape
+specifier|final
 name|int
 name|j
 init|=
@@ -6222,6 +6271,7 @@ operator|-
 literal|1
 return|;
 block|}
+specifier|final
 name|char
 index|[]
 name|tmp
@@ -6238,6 +6288,7 @@ operator|)
 name|j
 block|}
 decl_stmt|;
+specifier|final
 name|int
 name|s
 init|=
@@ -6417,6 +6468,7 @@ block|}
 else|else
 block|{
 comment|// Normal escape
+specifier|final
 name|char
 index|[]
 name|tmp
@@ -6579,6 +6631,7 @@ name|String
 name|label
 parameter_list|)
 block|{
+specifier|final
 name|char
 index|[]
 name|ch
@@ -6588,6 +6641,7 @@ operator|.
 name|toCharArray
 argument_list|()
 decl_stmt|;
+specifier|final
 name|StringBuilder
 name|buf
 init|=
@@ -6597,6 +6651,7 @@ argument_list|()
 decl_stmt|;
 for|for
 control|(
+specifier|final
 name|char
 name|element
 range|:

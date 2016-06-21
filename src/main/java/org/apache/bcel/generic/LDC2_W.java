@@ -144,6 +144,7 @@ name|ConstantPoolGen
 name|cpg
 parameter_list|)
 block|{
+specifier|final
 name|org
 operator|.
 name|apache

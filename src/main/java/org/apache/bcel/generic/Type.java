@@ -387,6 +387,7 @@ operator|instanceof
 name|Type
 condition|)
 block|{
+specifier|final
 name|Type
 name|t
 init|=
@@ -577,6 +578,7 @@ index|[]
 name|arg_types
 parameter_list|)
 block|{
+specifier|final
 name|StringBuilder
 name|buf
 init|=
@@ -595,6 +597,7 @@ condition|)
 block|{
 for|for
 control|(
+specifier|final
 name|Type
 name|arg_type
 range|:
@@ -739,6 +742,7 @@ parameter_list|)
 throws|throws
 name|StringIndexOutOfBoundsException
 block|{
+specifier|final
 name|byte
 name|type
 init|=
@@ -809,6 +813,7 @@ literal|'['
 condition|)
 do|;
 comment|// Recurse, but just once, if the signature is ok
+specifier|final
 name|Type
 name|t
 init|=
@@ -824,6 +829,7 @@ argument_list|)
 decl_stmt|;
 comment|//corrected concurrent private static field acess
 comment|//  consumed_chars += dim; // update counter - is replaced by
+specifier|final
 name|int
 name|_temp
 init|=
@@ -856,6 +862,7 @@ block|{
 comment|// type == T_REFERENCE
 comment|// Utility.signatureToString understands how to parse
 comment|// generic types.
+specifier|final
 name|String
 name|parsedSignature
 init|=
@@ -912,6 +919,7 @@ block|{
 try|try
 block|{
 comment|// Read return type after `)'
+specifier|final
 name|int
 name|index
 init|=
@@ -938,6 +946,7 @@ return|;
 block|}
 catch|catch
 parameter_list|(
+specifier|final
 name|StringIndexOutOfBoundsException
 name|e
 parameter_list|)
@@ -968,6 +977,7 @@ name|String
 name|signature
 parameter_list|)
 block|{
+specifier|final
 name|List
 argument_list|<
 name|Type
@@ -1056,6 +1066,7 @@ block|}
 block|}
 catch|catch
 parameter_list|(
+specifier|final
 name|StringIndexOutOfBoundsException
 name|e
 parameter_list|)
@@ -1334,6 +1345,7 @@ index|[]
 name|classes
 parameter_list|)
 block|{
+specifier|final
 name|Type
 index|[]
 name|ret
@@ -1397,6 +1409,7 @@ name|Method
 name|meth
 parameter_list|)
 block|{
+specifier|final
 name|StringBuilder
 name|sb
 init|=
@@ -1406,6 +1419,7 @@ argument_list|(
 literal|"("
 argument_list|)
 decl_stmt|;
+specifier|final
 name|Class
 argument_list|<
 name|?
@@ -1421,6 +1435,7 @@ decl_stmt|;
 comment|// avoid clone
 for|for
 control|(
+specifier|final
 name|Class
 argument_list|<
 name|?
@@ -1584,6 +1599,7 @@ operator|!=
 literal|')'
 condition|)
 block|{
+specifier|final
 name|int
 name|coded
 init|=
@@ -1615,6 +1631,7 @@ block|}
 block|}
 catch|catch
 parameter_list|(
+specifier|final
 name|StringIndexOutOfBoundsException
 name|e
 parameter_list|)
@@ -1647,6 +1664,7 @@ parameter_list|)
 throws|throws
 name|StringIndexOutOfBoundsException
 block|{
+specifier|final
 name|byte
 name|type
 init|=
@@ -1717,6 +1735,7 @@ literal|'['
 condition|)
 do|;
 comment|// Recurse, but just once, if the signature is ok
+specifier|final
 name|int
 name|consumed
 init|=
@@ -1747,6 +1766,7 @@ block|}
 else|else
 block|{
 comment|// type == T_REFERENCE
+specifier|final
 name|int
 name|index
 init|=
@@ -1796,6 +1816,7 @@ name|String
 name|signature
 parameter_list|)
 block|{
+specifier|final
 name|int
 name|index
 init|=

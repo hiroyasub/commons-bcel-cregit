@@ -69,6 +69,7 @@ literal|1
 argument_list|)
 expr_stmt|;
 block|}
+specifier|final
 name|int
 name|dotclasspos
 init|=
@@ -141,6 +142,7 @@ expr_stmt|;
 block|}
 catch|catch
 parameter_list|(
+specifier|final
 name|ExceptionInInitializerError
 name|eiie
 parameter_list|)
@@ -181,6 +183,7 @@ expr_stmt|;
 block|}
 catch|catch
 parameter_list|(
+specifier|final
 name|LinkageError
 name|le
 parameter_list|)
@@ -220,6 +223,7 @@ expr_stmt|;
 block|}
 catch|catch
 parameter_list|(
+specifier|final
 name|ClassNotFoundException
 name|cnfe
 parameter_list|)
@@ -250,6 +254,7 @@ expr_stmt|;
 block|}
 catch|catch
 parameter_list|(
+specifier|final
 name|Throwable
 name|t
 parameter_list|)

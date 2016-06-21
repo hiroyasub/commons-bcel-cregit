@@ -239,6 +239,7 @@ name|void
 name|reread
 parameter_list|()
 block|{
+specifier|final
 name|int
 name|size
 init|=
@@ -247,6 +248,7 @@ operator|.
 name|getLength
 argument_list|()
 decl_stmt|;
+specifier|final
 name|char
 index|[]
 name|buf
@@ -321,6 +323,7 @@ name|String
 name|pattern
 parameter_list|)
 block|{
+specifier|final
 name|String
 name|result
 init|=
@@ -404,6 +407,7 @@ name|pattern
 parameter_list|)
 block|{
 comment|//Bug: BCEL-77 - Instructions are assumed to be english, to avoid odd Locale issues
+specifier|final
 name|String
 name|lower
 init|=
@@ -416,6 +420,7 @@ operator|.
 name|ENGLISH
 argument_list|)
 decl_stmt|;
+specifier|final
 name|StringBuilder
 name|buf
 init|=
@@ -423,6 +428,7 @@ operator|new
 name|StringBuilder
 argument_list|()
 decl_stmt|;
+specifier|final
 name|int
 name|size
 init|=
@@ -466,6 +472,7 @@ name|ch
 argument_list|)
 condition|)
 block|{
+specifier|final
 name|StringBuilder
 name|name
 init|=
@@ -582,6 +589,7 @@ name|int
 name|match_length
 parameter_list|)
 block|{
+specifier|final
 name|InstructionHandle
 index|[]
 name|match
@@ -634,6 +642,7 @@ name|CodeConstraint
 name|constraint
 parameter_list|)
 block|{
+specifier|final
 name|String
 name|search
 init|=
@@ -703,6 +712,7 @@ literal|" not found in instruction list."
 argument_list|)
 throw|;
 block|}
+specifier|final
 name|Pattern
 name|regex
 init|=
@@ -713,6 +723,7 @@ argument_list|(
 name|search
 argument_list|)
 decl_stmt|;
+specifier|final
 name|List
 argument_list|<
 name|InstructionHandle
@@ -725,6 +736,7 @@ name|ArrayList
 argument_list|<>
 argument_list|()
 decl_stmt|;
+specifier|final
 name|Matcher
 name|matcher
 init|=
@@ -752,6 +764,7 @@ name|start
 argument_list|)
 condition|)
 block|{
+specifier|final
 name|int
 name|startExpr
 init|=
@@ -760,6 +773,7 @@ operator|.
 name|start
 argument_list|()
 decl_stmt|;
+specifier|final
 name|int
 name|endExpr
 init|=
@@ -768,6 +782,7 @@ operator|.
 name|end
 argument_list|()
 decl_stmt|;
+specifier|final
 name|int
 name|lenExpr
 init|=
@@ -775,6 +790,7 @@ name|endExpr
 operator|-
 name|startExpr
 decl_stmt|;
+specifier|final
 name|InstructionHandle
 index|[]
 name|match
@@ -1617,6 +1633,7 @@ expr_stmt|;
 comment|// Compile strings
 for|for
 control|(
+specifier|final
 name|Map
 operator|.
 name|Entry
@@ -1633,6 +1650,7 @@ name|entrySet
 argument_list|()
 control|)
 block|{
+specifier|final
 name|String
 name|key
 init|=
@@ -1641,6 +1659,7 @@ operator|.
 name|getKey
 argument_list|()
 decl_stmt|;
+specifier|final
 name|String
 name|value
 init|=
@@ -1649,6 +1668,7 @@ operator|.
 name|getValue
 argument_list|()
 decl_stmt|;
+specifier|final
 name|char
 name|ch
 init|=
@@ -1683,6 +1703,7 @@ comment|// precompile all patterns
 block|}
 block|}
 comment|// Add instruction alias to match anything
+specifier|final
 name|StringBuilder
 name|buf
 init|=
@@ -1789,6 +1810,7 @@ name|short
 name|extra
 parameter_list|)
 block|{
+specifier|final
 name|StringBuilder
 name|buf
 init|=

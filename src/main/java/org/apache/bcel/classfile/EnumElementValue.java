@@ -174,6 +174,7 @@ name|String
 name|stringifyValue
 parameter_list|()
 block|{
+specifier|final
 name|ConstantUtf8
 name|cu8
 init|=
@@ -206,6 +207,7 @@ name|String
 name|getEnumTypeString
 parameter_list|()
 block|{
+specifier|final
 name|ConstantUtf8
 name|cu8
 init|=
@@ -239,6 +241,7 @@ name|String
 name|getEnumValueString
 parameter_list|()
 block|{
+specifier|final
 name|ConstantUtf8
 name|cu8
 init|=

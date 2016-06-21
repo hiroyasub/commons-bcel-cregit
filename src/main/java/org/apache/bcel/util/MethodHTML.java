@@ -269,6 +269,7 @@ argument_list|)
 expr_stmt|;
 for|for
 control|(
+specifier|final
 name|Field
 name|field
 range|:
@@ -352,6 +353,7 @@ parameter_list|)
 throws|throws
 name|IOException
 block|{
+specifier|final
 name|String
 name|type
 init|=
@@ -365,6 +367,7 @@ name|getSignature
 argument_list|()
 argument_list|)
 decl_stmt|;
+specifier|final
 name|String
 name|name
 init|=
@@ -506,6 +509,7 @@ name|ATTR_CONSTANT_VALUE
 condition|)
 block|{
 comment|// Default value
+specifier|final
 name|String
 name|str
 init|=
@@ -571,6 +575,7 @@ name|method_number
 parameter_list|)
 block|{
 comment|// Get raw signature
+specifier|final
 name|String
 name|signature
 init|=
@@ -580,6 +585,7 @@ name|getSignature
 argument_list|()
 decl_stmt|;
 comment|// Get array of strings containing the argument types
+specifier|final
 name|String
 index|[]
 name|args
@@ -594,6 +600,7 @@ literal|false
 argument_list|)
 decl_stmt|;
 comment|// Get return type string
+specifier|final
 name|String
 name|type
 init|=
@@ -607,6 +614,7 @@ literal|false
 argument_list|)
 decl_stmt|;
 comment|// Get method name
+specifier|final
 name|String
 name|name
 init|=
@@ -633,6 +641,7 @@ argument_list|()
 argument_list|)
 decl_stmt|;
 comment|// Get the method's attributes, the Code Attribute in particular
+specifier|final
 name|Attribute
 index|[]
 name|attributes
@@ -807,6 +816,7 @@ argument_list|,
 name|method_number
 argument_list|)
 expr_stmt|;
+specifier|final
 name|byte
 name|tag
 init|=
@@ -834,6 +844,7 @@ argument_list|(
 literal|"<TR VALIGN=TOP><TD COLSPAN=2></TD><TH ALIGN=LEFT>throws</TH><TD>"
 argument_list|)
 expr_stmt|;
+specifier|final
 name|int
 index|[]
 name|exceptions
@@ -920,6 +931,7 @@ operator|.
 name|ATTR_CODE
 condition|)
 block|{
+specifier|final
 name|Attribute
 index|[]
 name|c_a

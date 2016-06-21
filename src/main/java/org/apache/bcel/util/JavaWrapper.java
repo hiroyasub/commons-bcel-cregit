@@ -67,6 +67,7 @@ name|ClassLoader
 name|getClassLoader
 parameter_list|()
 block|{
+specifier|final
 name|String
 name|s
 init|=
@@ -124,6 +125,7 @@ return|;
 block|}
 catch|catch
 parameter_list|(
+specifier|final
 name|Exception
 name|e
 parameter_list|)
@@ -189,6 +191,7 @@ parameter_list|)
 throws|throws
 name|ClassNotFoundException
 block|{
+specifier|final
 name|Class
 argument_list|<
 name|?
@@ -229,6 +232,7 @@ block|}
 argument_list|)
 expr_stmt|;
 comment|/* Method main is sane ?              */
+specifier|final
 name|int
 name|m
 init|=
@@ -237,6 +241,7 @@ operator|.
 name|getModifiers
 argument_list|()
 decl_stmt|;
+specifier|final
 name|Class
 argument_list|<
 name|?
@@ -292,6 +297,7 @@ block|}
 block|}
 catch|catch
 parameter_list|(
+specifier|final
 name|NoSuchMethodException
 name|no
 parameter_list|)
@@ -330,6 +336,7 @@ expr_stmt|;
 block|}
 catch|catch
 parameter_list|(
+specifier|final
 name|Exception
 name|ex
 parameter_list|)
@@ -376,6 +383,7 @@ argument_list|)
 expr_stmt|;
 return|return;
 block|}
+specifier|final
 name|String
 name|class_name
 init|=
@@ -384,6 +392,7 @@ index|[
 literal|0
 index|]
 decl_stmt|;
+specifier|final
 name|String
 index|[]
 name|new_argv
@@ -415,6 +424,7 @@ operator|.
 name|length
 argument_list|)
 expr_stmt|;
+specifier|final
 name|JavaWrapper
 name|wrapper
 init|=

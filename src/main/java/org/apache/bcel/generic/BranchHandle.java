@@ -85,6 +85,7 @@ name|i
 argument_list|)
 return|;
 block|}
+specifier|final
 name|BranchHandle
 name|bh
 init|=
@@ -187,6 +188,7 @@ name|int
 name|max_offset
 parameter_list|)
 block|{
+specifier|final
 name|int
 name|x
 init|=

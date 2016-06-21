@@ -360,6 +360,7 @@ block|{
 comment|/* Second try: Load system class using system class loader. You better              * don't mess around with them.              */
 for|for
 control|(
+specifier|final
 name|String
 name|ignored_package
 range|:
@@ -465,6 +466,7 @@ operator|!=
 literal|null
 condition|)
 block|{
+specifier|final
 name|byte
 index|[]
 name|bytes
@@ -552,6 +554,7 @@ name|String
 name|class_name
 parameter_list|)
 block|{
+specifier|final
 name|int
 name|index
 init|=
@@ -562,6 +565,7 @@ argument_list|(
 name|BCEL_TOKEN
 argument_list|)
 decl_stmt|;
+specifier|final
 name|String
 name|real_name
 init|=
@@ -584,6 +588,7 @@ literal|null
 decl_stmt|;
 try|try
 block|{
+specifier|final
 name|byte
 index|[]
 name|bytes
@@ -597,6 +602,7 @@ argument_list|,
 literal|true
 argument_list|)
 decl_stmt|;
+specifier|final
 name|ClassParser
 name|parser
 init|=
@@ -622,6 +628,7 @@ expr_stmt|;
 block|}
 catch|catch
 parameter_list|(
+specifier|final
 name|IOException
 name|e
 parameter_list|)
@@ -636,6 +643,7 @@ literal|null
 return|;
 block|}
 comment|// Adapt the class name to the passed value
+specifier|final
 name|ConstantPool
 name|cp
 init|=
@@ -644,6 +652,7 @@ operator|.
 name|getConstantPool
 argument_list|()
 decl_stmt|;
+specifier|final
 name|ConstantClass
 name|cl
 init|=
@@ -664,6 +673,7 @@ operator|.
 name|CONSTANT_Class
 argument_list|)
 decl_stmt|;
+specifier|final
 name|ConstantUtf8
 name|name
 init|=

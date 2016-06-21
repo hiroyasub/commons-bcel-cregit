@@ -179,6 +179,7 @@ argument_list|()
 expr_stmt|;
 for|for
 control|(
+specifier|final
 name|ElementValue
 name|datum
 range|:
@@ -211,6 +212,7 @@ name|ElementValue
 name|getElementValue
 parameter_list|()
 block|{
+specifier|final
 name|ElementValue
 index|[]
 name|immutableData
@@ -231,6 +233,7 @@ literal|0
 decl_stmt|;
 for|for
 control|(
+specifier|final
 name|ElementValueGen
 name|element
 range|:
@@ -299,6 +302,7 @@ name|ArrayList
 argument_list|<>
 argument_list|()
 expr_stmt|;
+specifier|final
 name|ElementValue
 index|[]
 name|in
@@ -310,6 +314,7 @@ argument_list|()
 decl_stmt|;
 for|for
 control|(
+specifier|final
 name|ElementValue
 name|element
 range|:
@@ -370,6 +375,7 @@ argument_list|)
 expr_stmt|;
 for|for
 control|(
+specifier|final
 name|ElementValueGen
 name|element
 range|:
@@ -392,6 +398,7 @@ name|String
 name|stringifyValue
 parameter_list|()
 block|{
+specifier|final
 name|StringBuilder
 name|sb
 init|=
@@ -413,6 +420,7 @@ literal|""
 decl_stmt|;
 for|for
 control|(
+specifier|final
 name|ElementValueGen
 name|element
 range|:

@@ -111,6 +111,7 @@ name|String
 name|getNameString
 parameter_list|()
 block|{
+specifier|final
 name|ConstantUtf8
 name|c
 init|=
@@ -159,6 +160,7 @@ name|String
 name|toShortString
 parameter_list|()
 block|{
+specifier|final
 name|StringBuilder
 name|result
 init|=

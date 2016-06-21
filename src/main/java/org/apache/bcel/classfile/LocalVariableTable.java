@@ -186,6 +186,7 @@ argument_list|,
 name|constant_pool
 argument_list|)
 expr_stmt|;
+specifier|final
 name|int
 name|local_variable_table_length
 init|=
@@ -285,6 +286,7 @@ argument_list|)
 expr_stmt|;
 for|for
 control|(
+specifier|final
 name|LocalVariable
 name|variable
 range|:
@@ -331,6 +333,7 @@ parameter_list|)
 block|{
 for|for
 control|(
+specifier|final
 name|LocalVariable
 name|variable
 range|:
@@ -373,6 +376,7 @@ parameter_list|)
 block|{
 for|for
 control|(
+specifier|final
 name|LocalVariable
 name|variable
 range|:
@@ -389,6 +393,7 @@ operator|==
 name|index
 condition|)
 block|{
+specifier|final
 name|int
 name|start_pc
 init|=
@@ -397,6 +402,7 @@ operator|.
 name|getStartPC
 argument_list|()
 decl_stmt|;
+specifier|final
 name|int
 name|end_pc
 init|=
@@ -459,6 +465,7 @@ name|String
 name|toString
 parameter_list|()
 block|{
+specifier|final
 name|StringBuilder
 name|buf
 init|=
@@ -532,6 +539,7 @@ name|ConstantPool
 name|_constant_pool
 parameter_list|)
 block|{
+specifier|final
 name|LocalVariableTable
 name|c
 init|=

@@ -332,6 +332,7 @@ name|boolean
 name|copyPoolEntries
 parameter_list|)
 block|{
+specifier|final
 name|List
 argument_list|<
 name|ElementValuePairGen
@@ -345,6 +346,7 @@ argument_list|()
 decl_stmt|;
 for|for
 control|(
+specifier|final
 name|ElementValuePair
 name|nvp
 range|:
@@ -392,6 +394,7 @@ name|AnnotationEntry
 name|getAnnotation
 parameter_list|()
 block|{
+specifier|final
 name|AnnotationEntry
 name|a
 init|=
@@ -410,6 +413,7 @@ argument_list|)
 decl_stmt|;
 for|for
 control|(
+specifier|final
 name|ElementValuePairGen
 name|element
 range|:
@@ -503,6 +507,7 @@ parameter_list|)
 throws|throws
 name|IOException
 block|{
+specifier|final
 name|AnnotationEntryGen
 name|a
 init|=
@@ -521,6 +526,7 @@ operator|.
 name|readUnsignedShort
 argument_list|()
 expr_stmt|;
+specifier|final
 name|int
 name|elemValuePairCount
 init|=
@@ -544,6 +550,7 @@ name|i
 operator|++
 control|)
 block|{
+specifier|final
 name|int
 name|nidx
 init|=
@@ -618,6 +625,7 @@ expr_stmt|;
 comment|// u2 element_value pair count
 for|for
 control|(
+specifier|final
 name|ElementValuePairGen
 name|envp
 range|:
@@ -681,6 +689,7 @@ name|getTypeSignature
 parameter_list|()
 block|{
 comment|// ConstantClass c = (ConstantClass)cpool.getConstant(typeIndex);
+specifier|final
 name|ConstantUtf8
 name|utf8
 init|=
@@ -735,6 +744,7 @@ name|String
 name|toString
 parameter_list|()
 block|{
+specifier|final
 name|StringBuilder
 name|s
 init|=
@@ -846,6 +856,7 @@ name|String
 name|toShortString
 parameter_list|()
 block|{
+specifier|final
 name|StringBuilder
 name|s
 init|=
@@ -1007,6 +1018,7 @@ decl_stmt|;
 comment|//  put the annotations in the right output stream
 for|for
 control|(
+specifier|final
 name|AnnotationEntryGen
 name|a
 range|:
@@ -1032,6 +1044,7 @@ operator|++
 expr_stmt|;
 block|}
 block|}
+specifier|final
 name|ByteArrayOutputStream
 name|rvaBytes
 init|=
@@ -1039,6 +1052,7 @@ operator|new
 name|ByteArrayOutputStream
 argument_list|()
 decl_stmt|;
+specifier|final
 name|ByteArrayOutputStream
 name|riaBytes
 init|=
@@ -1084,6 +1098,7 @@ expr_stmt|;
 comment|// put the annotations in the right output stream
 for|for
 control|(
+specifier|final
 name|AnnotationEntryGen
 name|a
 range|:
@@ -1118,6 +1133,7 @@ expr_stmt|;
 block|}
 block|}
 block|}
+specifier|final
 name|byte
 index|[]
 name|rvaData
@@ -1127,6 +1143,7 @@ operator|.
 name|toByteArray
 argument_list|()
 decl_stmt|;
+specifier|final
 name|byte
 index|[]
 name|riaData
@@ -1186,6 +1203,7 @@ literal|"RuntimeInvisibleAnnotations"
 argument_list|)
 expr_stmt|;
 block|}
+specifier|final
 name|List
 argument_list|<
 name|Attribute
@@ -1295,6 +1313,7 @@ return|;
 block|}
 catch|catch
 parameter_list|(
+specifier|final
 name|IOException
 name|e
 parameter_list|)
@@ -1338,6 +1357,7 @@ comment|/*Array of lists, array size depends on #params */
 name|vec
 parameter_list|)
 block|{
+specifier|final
 name|int
 index|[]
 name|visCount
@@ -1355,6 +1375,7 @@ name|totalVisCount
 init|=
 literal|0
 decl_stmt|;
+specifier|final
 name|int
 index|[]
 name|invisCount
@@ -1403,6 +1424,7 @@ condition|)
 block|{
 for|for
 control|(
+specifier|final
 name|AnnotationEntryGen
 name|element
 range|:
@@ -1446,6 +1468,7 @@ block|}
 block|}
 block|}
 comment|// Lets do the visible ones
+specifier|final
 name|ByteArrayOutputStream
 name|rvaBytes
 init|=
@@ -1514,6 +1537,7 @@ condition|)
 block|{
 for|for
 control|(
+specifier|final
 name|AnnotationEntryGen
 name|element
 range|:
@@ -1544,6 +1568,7 @@ block|}
 block|}
 block|}
 comment|// Lets do the invisible ones
+specifier|final
 name|ByteArrayOutputStream
 name|riaBytes
 init|=
@@ -1612,6 +1637,7 @@ condition|)
 block|{
 for|for
 control|(
+specifier|final
 name|AnnotationEntryGen
 name|element
 range|:
@@ -1642,6 +1668,7 @@ block|}
 block|}
 block|}
 block|}
+specifier|final
 name|byte
 index|[]
 name|rvaData
@@ -1651,6 +1678,7 @@ operator|.
 name|toByteArray
 argument_list|()
 decl_stmt|;
+specifier|final
 name|byte
 index|[]
 name|riaData
@@ -1706,6 +1734,7 @@ literal|"RuntimeInvisibleParameterAnnotations"
 argument_list|)
 expr_stmt|;
 block|}
+specifier|final
 name|List
 argument_list|<
 name|Attribute
@@ -1811,6 +1840,7 @@ return|;
 block|}
 catch|catch
 parameter_list|(
+specifier|final
 name|IOException
 name|e
 parameter_list|)

@@ -474,6 +474,7 @@ name|ConstantPool
 name|_constant_pool
 parameter_list|)
 block|{
+specifier|final
 name|ConstantValue
 name|c
 init|=

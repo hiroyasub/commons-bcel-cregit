@@ -215,6 +215,7 @@ throws|throws
 name|ClassNotFoundException
 block|{
 comment|// Create HelloWorld
+specifier|final
 name|ClassGen
 name|cg
 init|=
@@ -237,6 +238,7 @@ argument_list|(
 literal|0
 argument_list|)
 expr_stmt|;
+specifier|final
 name|ConstantPoolGen
 name|cp
 init|=
@@ -245,6 +247,7 @@ operator|.
 name|getConstantPool
 argument_list|()
 decl_stmt|;
+specifier|final
 name|InstructionList
 name|il
 init|=
@@ -289,6 +292,7 @@ argument_list|,
 literal|"HelloWorld.class"
 argument_list|)
 expr_stmt|;
+specifier|final
 name|JavaClass
 name|jc
 init|=
@@ -299,6 +303,7 @@ argument_list|,
 literal|"HelloWorld"
 argument_list|)
 decl_stmt|;
+specifier|final
 name|AnnotationEntry
 index|[]
 name|as
@@ -376,6 +381,7 @@ literal|"LSimpleAnnotation;"
 argument_list|)
 argument_list|)
 expr_stmt|;
+specifier|final
 name|ElementValuePair
 index|[]
 name|vals
@@ -388,6 +394,7 @@ operator|.
 name|getElementValuePairs
 argument_list|()
 decl_stmt|;
+specifier|final
 name|ElementValuePair
 name|nvp
 init|=
@@ -416,6 +423,7 @@ literal|"id"
 argument_list|)
 argument_list|)
 expr_stmt|;
+specifier|final
 name|ElementValue
 name|ev
 init|=
@@ -484,6 +492,7 @@ throws|throws
 name|ClassNotFoundException
 block|{
 comment|// Create HelloWorld
+specifier|final
 name|ClassGen
 name|cg
 init|=
@@ -492,6 +501,7 @@ argument_list|(
 literal|"HelloWorld"
 argument_list|)
 decl_stmt|;
+specifier|final
 name|ConstantPoolGen
 name|cp
 init|=
@@ -500,6 +510,7 @@ operator|.
 name|getConstantPool
 argument_list|()
 decl_stmt|;
+specifier|final
 name|InstructionList
 name|il
 init|=
@@ -557,6 +568,7 @@ operator|+
 literal|"HelloWorld.class"
 argument_list|)
 expr_stmt|;
+specifier|final
 name|JavaClass
 name|jc2
 init|=
@@ -594,6 +606,7 @@ operator|==
 literal|1
 argument_list|)
 expr_stmt|;
+specifier|final
 name|ClassGen
 name|cg2
 init|=
@@ -604,6 +617,7 @@ name|jc2
 argument_list|)
 decl_stmt|;
 comment|// Check it now it is a ClassGen
+specifier|final
 name|Method
 index|[]
 name|m
@@ -636,6 +650,7 @@ operator|==
 literal|1
 argument_list|)
 expr_stmt|;
+specifier|final
 name|MethodGen
 name|mg
 init|=
@@ -699,6 +714,7 @@ throws|throws
 name|ClassNotFoundException
 block|{
 comment|// Create HelloWorld
+specifier|final
 name|ClassGen
 name|cg
 init|=
@@ -707,6 +723,7 @@ argument_list|(
 literal|"HelloWorld"
 argument_list|)
 decl_stmt|;
+specifier|final
 name|ConstantPoolGen
 name|cp
 init|=
@@ -715,6 +732,7 @@ operator|.
 name|getConstantPool
 argument_list|()
 decl_stmt|;
+specifier|final
 name|InstructionList
 name|il
 init|=
@@ -740,6 +758,7 @@ argument_list|,
 literal|"HelloWorld.class"
 argument_list|)
 expr_stmt|;
+specifier|final
 name|JavaClass
 name|jc2
 init|=
@@ -750,6 +769,7 @@ argument_list|,
 literal|"HelloWorld"
 argument_list|)
 decl_stmt|;
+specifier|final
 name|ClassGen
 name|cg2
 init|=
@@ -760,6 +780,7 @@ name|jc2
 argument_list|)
 decl_stmt|;
 comment|// Main method after reading the class back in
+specifier|final
 name|Method
 name|mainMethod1
 init|=
@@ -792,6 +813,7 @@ operator|==
 literal|1
 argument_list|)
 expr_stmt|;
+specifier|final
 name|MethodGen
 name|mainMethod2
 init|=
@@ -873,6 +895,7 @@ argument_list|,
 literal|"HelloWorld.class"
 argument_list|)
 expr_stmt|;
+specifier|final
 name|JavaClass
 name|jc3
 init|=
@@ -883,6 +906,7 @@ argument_list|,
 literal|"HelloWorld"
 argument_list|)
 decl_stmt|;
+specifier|final
 name|ClassGen
 name|cg3
 init|=
@@ -892,6 +916,7 @@ argument_list|(
 name|jc3
 argument_list|)
 decl_stmt|;
+specifier|final
 name|Method
 name|mainMethod3
 init|=
@@ -903,6 +928,7 @@ index|[
 literal|1
 index|]
 decl_stmt|;
+specifier|final
 name|int
 name|i
 init|=
@@ -954,6 +980,7 @@ parameter_list|()
 throws|throws
 name|ClassNotFoundException
 block|{
+specifier|final
 name|JavaClass
 name|jc
 init|=
@@ -964,6 +991,7 @@ operator|+
 literal|".data.SimpleAnnotatedClass"
 argument_list|)
 decl_stmt|;
+specifier|final
 name|ClassGen
 name|cgen
 init|=
@@ -974,6 +1002,7 @@ name|jc
 argument_list|)
 decl_stmt|;
 comment|// Check annotations are correctly preserved
+specifier|final
 name|AnnotationEntryGen
 index|[]
 name|annotations
@@ -1007,6 +1036,7 @@ parameter_list|()
 throws|throws
 name|ClassNotFoundException
 block|{
+specifier|final
 name|JavaClass
 name|jc
 init|=
@@ -1017,6 +1047,7 @@ operator|+
 literal|".data.AnnotatedWithEnumClass"
 argument_list|)
 decl_stmt|;
+specifier|final
 name|ClassGen
 name|cgen
 init|=
@@ -1027,6 +1058,7 @@ name|jc
 argument_list|)
 decl_stmt|;
 comment|// Check annotations are correctly preserved
+specifier|final
 name|AnnotationEntryGen
 index|[]
 name|annotations
@@ -1060,6 +1092,7 @@ parameter_list|()
 throws|throws
 name|ClassNotFoundException
 block|{
+specifier|final
 name|JavaClass
 name|jc
 init|=
@@ -1070,6 +1103,7 @@ operator|+
 literal|".data.AnnotatedWithCombinedAnnotation"
 argument_list|)
 decl_stmt|;
+specifier|final
 name|ClassGen
 name|cgen
 init|=
@@ -1080,6 +1114,7 @@ name|jc
 argument_list|)
 decl_stmt|;
 comment|// Check annotations are correctly preserved
+specifier|final
 name|AnnotationEntryGen
 index|[]
 name|annotations
@@ -1104,6 +1139,7 @@ operator|==
 literal|1
 argument_list|)
 expr_stmt|;
+specifier|final
 name|AnnotationEntryGen
 name|a
 init|=
@@ -1135,6 +1171,7 @@ operator|==
 literal|1
 argument_list|)
 expr_stmt|;
+specifier|final
 name|ElementValuePairGen
 name|nvp
 init|=
@@ -1148,6 +1185,7 @@ argument_list|(
 literal|0
 argument_list|)
 decl_stmt|;
+specifier|final
 name|ElementValueGen
 name|value
 init|=
@@ -1167,6 +1205,7 @@ operator|instanceof
 name|ArrayElementValueGen
 argument_list|)
 expr_stmt|;
+specifier|final
 name|ArrayElementValueGen
 name|arrayValue
 init|=
@@ -1192,6 +1231,7 @@ operator|==
 literal|1
 argument_list|)
 expr_stmt|;
+specifier|final
 name|ElementValueGen
 name|innerValue
 init|=
@@ -1216,6 +1256,7 @@ operator|instanceof
 name|AnnotationElementValueGen
 argument_list|)
 expr_stmt|;
+specifier|final
 name|AnnotationElementValueGen
 name|innerAnnotationValue
 init|=
@@ -1259,6 +1300,7 @@ argument_list|)
 argument_list|)
 expr_stmt|;
 comment|// check the three methods
+specifier|final
 name|Method
 index|[]
 name|methods
@@ -1279,12 +1321,14 @@ argument_list|)
 expr_stmt|;
 for|for
 control|(
+specifier|final
 name|Method
 name|method
 range|:
 name|methods
 control|)
 block|{
+specifier|final
 name|String
 name|methodName
 init|=
@@ -1394,6 +1438,7 @@ name|int
 name|nExpectedArrayValues
 parameter_list|)
 block|{
+specifier|final
 name|String
 name|methodName
 init|=
@@ -1402,6 +1447,7 @@ operator|.
 name|getName
 argument_list|()
 decl_stmt|;
+specifier|final
 name|AnnotationEntry
 index|[]
 name|annos
@@ -1456,6 +1502,7 @@ name|AnnotationEntry
 name|anno
 parameter_list|)
 block|{
+specifier|final
 name|ElementValuePair
 name|elementValuePair
 init|=
@@ -1477,6 +1524,7 @@ name|getNameString
 argument_list|()
 argument_list|)
 expr_stmt|;
+specifier|final
 name|ArrayElementValue
 name|ev
 init|=
@@ -1488,6 +1536,7 @@ operator|.
 name|getValue
 argument_list|()
 decl_stmt|;
+specifier|final
 name|ElementValue
 index|[]
 name|eva
@@ -1521,6 +1570,7 @@ modifier|...
 name|expectedNumberOfParmeterAnnotations
 parameter_list|)
 block|{
+specifier|final
 name|String
 name|methodName
 init|=
@@ -1531,6 +1581,7 @@ operator|.
 name|getName
 argument_list|()
 decl_stmt|;
+specifier|final
 name|ParameterAnnotationEntry
 index|[]
 name|parameterAnnotations
@@ -1560,12 +1611,14 @@ literal|0
 decl_stmt|;
 for|for
 control|(
+specifier|final
 name|ParameterAnnotationEntry
 name|parameterAnnotation
 range|:
 name|parameterAnnotations
 control|)
 block|{
+specifier|final
 name|AnnotationEntry
 index|[]
 name|annos
@@ -1575,6 +1628,7 @@ operator|.
 name|getAnnotationEntries
 argument_list|()
 decl_stmt|;
+specifier|final
 name|int
 name|expectedLength
 init|=
@@ -1626,6 +1680,7 @@ name|AnnotationEntry
 name|anno
 parameter_list|)
 block|{
+specifier|final
 name|ElementValuePair
 name|elementValuePair
 init|=
@@ -1647,6 +1702,7 @@ name|getNameString
 argument_list|()
 argument_list|)
 expr_stmt|;
+specifier|final
 name|SimpleElementValue
 name|ev
 init|=
@@ -1677,6 +1733,7 @@ parameter_list|()
 throws|throws
 name|ClassNotFoundException
 block|{
+specifier|final
 name|JavaClass
 name|jc
 init|=
@@ -1687,6 +1744,7 @@ operator|+
 literal|".data.ComplexAnnotatedClass"
 argument_list|)
 decl_stmt|;
+specifier|final
 name|ClassGen
 name|cgen
 init|=
@@ -1697,6 +1755,7 @@ name|jc
 argument_list|)
 decl_stmt|;
 comment|// Check annotations are correctly preserved
+specifier|final
 name|AnnotationEntryGen
 index|[]
 name|annotations
@@ -1721,6 +1780,7 @@ operator|==
 literal|1
 argument_list|)
 expr_stmt|;
+specifier|final
 name|List
 argument_list|<
 name|?
@@ -1742,12 +1802,14 @@ literal|false
 decl_stmt|;
 for|for
 control|(
+specifier|final
 name|Object
 name|name
 range|:
 name|l
 control|)
 block|{
+specifier|final
 name|ElementValuePairGen
 name|element
 init|=
@@ -1813,6 +1875,7 @@ parameter_list|()
 throws|throws
 name|ClassNotFoundException
 block|{
+specifier|final
 name|JavaClass
 name|jc
 init|=
@@ -1823,6 +1886,7 @@ operator|+
 literal|".data.SimpleAnnotatedClass"
 argument_list|)
 decl_stmt|;
+specifier|final
 name|ClassGen
 name|cgen
 init|=
@@ -1832,6 +1896,7 @@ argument_list|(
 name|jc
 argument_list|)
 decl_stmt|;
+specifier|final
 name|ConstantPoolGen
 name|cp
 init|=
@@ -1897,6 +1962,7 @@ parameter_list|()
 throws|throws
 name|ClassNotFoundException
 block|{
+specifier|final
 name|JavaClass
 name|jc
 init|=
@@ -1907,6 +1973,7 @@ operator|+
 literal|".data.SimpleAnnotatedClass"
 argument_list|)
 decl_stmt|;
+specifier|final
 name|ClassGen
 name|cgen
 init|=
@@ -1916,6 +1983,7 @@ argument_list|(
 name|jc
 argument_list|)
 decl_stmt|;
+specifier|final
 name|ConstantPoolGen
 name|cp
 init|=
@@ -1962,6 +2030,7 @@ argument_list|,
 literal|"SimpleAnnotatedClass.class"
 argument_list|)
 expr_stmt|;
+specifier|final
 name|JavaClass
 name|jc2
 init|=
@@ -2002,6 +2071,7 @@ parameter_list|)
 block|{
 try|try
 block|{
+specifier|final
 name|File
 name|f
 init|=
@@ -2023,6 +2093,7 @@ expr_stmt|;
 block|}
 catch|catch
 parameter_list|(
+specifier|final
 name|java
 operator|.
 name|io
@@ -2091,6 +2162,7 @@ name|il
 parameter_list|)
 block|{
 comment|// Create method 'public static void main(String[]argv)'
+specifier|final
 name|MethodGen
 name|mg
 init|=
@@ -2103,6 +2175,7 @@ argument_list|,
 name|cp
 argument_list|)
 decl_stmt|;
+specifier|final
 name|InstructionFactory
 name|factory
 init|=
@@ -2126,6 +2199,7 @@ argument_list|)
 argument_list|)
 expr_stmt|;
 comment|// We now define some often used types:
+specifier|final
 name|ObjectType
 name|i_stream
 init|=
@@ -2135,6 +2209,7 @@ argument_list|(
 literal|"java.io.InputStream"
 argument_list|)
 decl_stmt|;
+specifier|final
 name|ObjectType
 name|p_stream
 init|=
@@ -2293,6 +2368,7 @@ argument_list|,
 literal|null
 argument_list|)
 decl_stmt|;
+specifier|final
 name|int
 name|in
 init|=
@@ -2336,6 +2412,7 @@ argument_list|,
 literal|null
 argument_list|)
 expr_stmt|;
+specifier|final
 name|int
 name|name
 init|=
@@ -2381,6 +2458,7 @@ comment|// Constants.INVOKEVIRTUAL));
 comment|// il.append(new ALOAD(in));
 comment|// il.append(factory.createInvoke("java.io.BufferedReader", "readLine",
 comment|// Type.STRING, Type.NO_ARGS, Constants.INVOKEVIRTUAL));
+specifier|final
 name|InstructionHandle
 name|try_start
 init|=
@@ -2410,6 +2488,7 @@ argument_list|)
 expr_stmt|;
 comment|// Upon normal execution we jump behind exception handler, the target
 comment|// address is not known yet.
+specifier|final
 name|GOTO
 name|g
 init|=
@@ -2419,6 +2498,7 @@ argument_list|(
 literal|null
 argument_list|)
 decl_stmt|;
+specifier|final
 name|InstructionHandle
 name|try_end
 init|=
@@ -2430,6 +2510,7 @@ name|g
 argument_list|)
 decl_stmt|;
 comment|// We add the exception handler which simply returns from the method.
+specifier|final
 name|LocalVariableGen
 name|var_ex
 init|=
@@ -2451,6 +2532,7 @@ argument_list|,
 literal|null
 argument_list|)
 decl_stmt|;
+specifier|final
 name|int
 name|var_ex_slot
 init|=
@@ -2459,6 +2541,7 @@ operator|.
 name|getIndex
 argument_list|()
 decl_stmt|;
+specifier|final
 name|InstructionHandle
 name|handler
 init|=
@@ -2513,6 +2596,7 @@ argument_list|)
 expr_stmt|;
 comment|// "Normal" code continues, now we can set the branch target of the GOTO
 comment|// .
+specifier|final
 name|InstructionHandle
 name|ih
 init|=
@@ -2777,6 +2861,7 @@ name|il
 parameter_list|)
 block|{
 comment|// Create method 'public static void main(String[]argv)'
+specifier|final
 name|MethodGen
 name|mg
 init|=
@@ -2789,6 +2874,7 @@ argument_list|,
 name|cp
 argument_list|)
 decl_stmt|;
+specifier|final
 name|InstructionFactory
 name|factory
 init|=
@@ -2799,6 +2885,7 @@ name|cg
 argument_list|)
 decl_stmt|;
 comment|// We now define some often used types:
+specifier|final
 name|ObjectType
 name|i_stream
 init|=
@@ -2808,6 +2895,7 @@ argument_list|(
 literal|"java.io.InputStream"
 argument_list|)
 decl_stmt|;
+specifier|final
 name|ObjectType
 name|p_stream
 init|=
@@ -2966,6 +3054,7 @@ argument_list|,
 literal|null
 argument_list|)
 decl_stmt|;
+specifier|final
 name|int
 name|in
 init|=
@@ -3009,6 +3098,7 @@ argument_list|,
 literal|null
 argument_list|)
 expr_stmt|;
+specifier|final
 name|int
 name|name
 init|=
@@ -3054,6 +3144,7 @@ comment|// Constants.INVOKEVIRTUAL));
 comment|// il.append(new ALOAD(in));
 comment|// il.append(factory.createInvoke("java.io.BufferedReader", "readLine",
 comment|// Type.STRING, Type.NO_ARGS, Constants.INVOKEVIRTUAL));
+specifier|final
 name|InstructionHandle
 name|try_start
 init|=
@@ -3083,6 +3174,7 @@ argument_list|)
 expr_stmt|;
 comment|// Upon normal execution we jump behind exception handler, the target
 comment|// address is not known yet.
+specifier|final
 name|GOTO
 name|g
 init|=
@@ -3092,6 +3184,7 @@ argument_list|(
 literal|null
 argument_list|)
 decl_stmt|;
+specifier|final
 name|InstructionHandle
 name|try_end
 init|=
@@ -3103,6 +3196,7 @@ name|g
 argument_list|)
 decl_stmt|;
 comment|// We add the exception handler which simply returns from the method.
+specifier|final
 name|LocalVariableGen
 name|var_ex
 init|=
@@ -3124,6 +3218,7 @@ argument_list|,
 literal|null
 argument_list|)
 decl_stmt|;
+specifier|final
 name|int
 name|var_ex_slot
 init|=
@@ -3132,6 +3227,7 @@ operator|.
 name|getIndex
 argument_list|()
 decl_stmt|;
+specifier|final
 name|InstructionHandle
 name|handler
 init|=
@@ -3186,6 +3282,7 @@ argument_list|)
 expr_stmt|;
 comment|// "Normal" code continues, now we can set the branch target of the GOTO
 comment|// .
+specifier|final
 name|InstructionHandle
 name|ih
 init|=
@@ -3448,6 +3545,7 @@ throws|throws
 name|ClassNotFoundException
 block|{
 comment|// System.out.println(where);
+specifier|final
 name|SyntheticRepository
 name|repos
 init|=
@@ -3578,6 +3676,7 @@ name|ConstantPoolGen
 name|cp
 parameter_list|)
 block|{
+specifier|final
 name|SimpleElementValueGen
 name|evg
 init|=
@@ -3593,6 +3692,7 @@ argument_list|,
 literal|4
 argument_list|)
 decl_stmt|;
+specifier|final
 name|ElementValuePairGen
 name|nvGen
 init|=
@@ -3606,6 +3706,7 @@ argument_list|,
 name|cp
 argument_list|)
 decl_stmt|;
+specifier|final
 name|ObjectType
 name|t
 init|=
@@ -3615,6 +3716,7 @@ argument_list|(
 literal|"SimpleAnnotation"
 argument_list|)
 decl_stmt|;
+specifier|final
 name|List
 argument_list|<
 name|ElementValuePairGen
@@ -3633,6 +3735,7 @@ argument_list|(
 name|nvGen
 argument_list|)
 expr_stmt|;
+specifier|final
 name|AnnotationEntryGen
 name|a
 init|=
@@ -3665,6 +3768,7 @@ name|String
 name|aFruit
 parameter_list|)
 block|{
+specifier|final
 name|SimpleElementValueGen
 name|evg
 init|=
@@ -3680,6 +3784,7 @@ argument_list|,
 name|aFruit
 argument_list|)
 decl_stmt|;
+specifier|final
 name|ElementValuePairGen
 name|nvGen
 init|=
@@ -3693,6 +3798,7 @@ argument_list|,
 name|cp
 argument_list|)
 decl_stmt|;
+specifier|final
 name|ObjectType
 name|t
 init|=
@@ -3702,6 +3808,7 @@ argument_list|(
 literal|"SimpleStringAnnotation"
 argument_list|)
 decl_stmt|;
+specifier|final
 name|List
 argument_list|<
 name|ElementValuePairGen
@@ -3744,6 +3851,7 @@ name|cp
 parameter_list|)
 block|{
 comment|// Create an annotation instance
+specifier|final
 name|AnnotationEntryGen
 name|a
 init|=
@@ -3752,6 +3860,7 @@ argument_list|(
 name|cp
 argument_list|)
 decl_stmt|;
+specifier|final
 name|ArrayElementValueGen
 name|array
 init|=
@@ -3774,6 +3883,7 @@ name|cp
 argument_list|)
 argument_list|)
 expr_stmt|;
+specifier|final
 name|ElementValuePairGen
 name|nvp
 init|=
@@ -3787,6 +3897,7 @@ argument_list|,
 name|cp
 argument_list|)
 decl_stmt|;
+specifier|final
 name|List
 argument_list|<
 name|ElementValuePairGen
@@ -3832,6 +3943,7 @@ name|ConstantPoolGen
 name|cp
 parameter_list|)
 block|{
+specifier|final
 name|SimpleElementValueGen
 name|evg
 init|=
@@ -3847,6 +3959,7 @@ argument_list|,
 literal|4
 argument_list|)
 decl_stmt|;
+specifier|final
 name|ElementValuePairGen
 name|nvGen
 init|=
@@ -3860,6 +3973,7 @@ argument_list|,
 name|cp
 argument_list|)
 decl_stmt|;
+specifier|final
 name|ObjectType
 name|t
 init|=
@@ -3869,6 +3983,7 @@ argument_list|(
 literal|"SimpleAnnotation"
 argument_list|)
 decl_stmt|;
+specifier|final
 name|List
 argument_list|<
 name|ElementValuePairGen
@@ -3887,6 +4002,7 @@ argument_list|(
 name|nvGen
 argument_list|)
 expr_stmt|;
+specifier|final
 name|AnnotationEntryGen
 name|a
 init|=

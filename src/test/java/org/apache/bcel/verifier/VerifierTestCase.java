@@ -47,6 +47,7 @@ name|void
 name|testDefaultMethodValidation
 parameter_list|()
 block|{
+specifier|final
 name|String
 name|classname
 init|=
@@ -57,6 +58,7 @@ operator|.
 name|getName
 argument_list|()
 decl_stmt|;
+specifier|final
 name|Verifier
 name|verifier
 init|=

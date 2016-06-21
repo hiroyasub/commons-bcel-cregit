@@ -121,6 +121,7 @@ name|indent
 operator|+=
 literal|1
 expr_stmt|;
+specifier|final
 name|Verifier
 name|v
 init|=
@@ -201,6 +202,7 @@ condition|)
 block|{
 try|try
 block|{
+specifier|final
 name|JavaClass
 name|jc
 init|=
@@ -336,6 +338,7 @@ block|}
 block|}
 catch|catch
 parameter_list|(
+specifier|final
 name|ClassNotFoundException
 name|e
 parameter_list|)
@@ -401,6 +404,7 @@ literal|1
 argument_list|)
 expr_stmt|;
 block|}
+specifier|final
 name|int
 name|dotclasspos
 init|=
@@ -457,6 +461,7 @@ argument_list|,
 literal|'.'
 argument_list|)
 expr_stmt|;
+specifier|final
 name|TransitiveHull
 name|th
 init|=

@@ -237,6 +237,7 @@ parameter_list|)
 throws|throws
 name|ClassNotFoundException
 block|{
+specifier|final
 name|String
 name|classFile
 init|=
@@ -300,6 +301,7 @@ literal|" not found."
 argument_list|)
 throw|;
 block|}
+specifier|final
 name|ClassParser
 name|parser
 init|=
@@ -329,6 +331,7 @@ return|;
 block|}
 catch|catch
 parameter_list|(
+specifier|final
 name|IOException
 name|e
 parameter_list|)

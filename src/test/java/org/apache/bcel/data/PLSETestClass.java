@@ -44,6 +44,7 @@ name|SuppressWarnings
 argument_list|(
 literal|"unused"
 argument_list|)
+specifier|final
 name|int
 name|local1
 init|=
@@ -75,6 +76,7 @@ name|SuppressWarnings
 argument_list|(
 literal|"unused"
 argument_list|)
+specifier|final
 name|int
 name|local1
 init|=

@@ -281,6 +281,7 @@ name|String
 name|getSignature
 parameter_list|()
 block|{
+specifier|final
 name|ConstantUtf8
 name|c
 init|=
@@ -441,6 +442,7 @@ name|ch
 argument_list|)
 condition|)
 block|{
+specifier|final
 name|StringBuilder
 name|buf2
 init|=
@@ -552,6 +554,7 @@ block|}
 block|}
 return|return;
 block|}
+specifier|final
 name|StringBuilder
 name|buf2
 init|=
@@ -880,6 +883,7 @@ name|s
 parameter_list|)
 block|{
 comment|//System.out.println("Sig:" + s);
+specifier|final
 name|StringBuilder
 name|buf
 init|=
@@ -972,6 +976,7 @@ name|String
 name|toString
 parameter_list|()
 block|{
+specifier|final
 name|String
 name|s
 init|=

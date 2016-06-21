@@ -176,6 +176,7 @@ argument_list|)
 expr_stmt|;
 for|for
 control|(
+specifier|final
 name|InstructionHandle
 name|target2
 range|:
@@ -259,6 +260,7 @@ name|offset
 argument_list|)
 expr_stmt|;
 comment|// Additional offset caused by preceding SWITCHs, GOTOs, etc.
+specifier|final
 name|short
 name|old_length
 init|=
@@ -462,6 +464,7 @@ name|boolean
 name|verbose
 parameter_list|)
 block|{
+specifier|final
 name|StringBuilder
 name|buf
 init|=
@@ -748,6 +751,7 @@ return|;
 block|}
 for|for
 control|(
+specifier|final
 name|InstructionHandle
 name|target2
 range|:
@@ -779,6 +783,7 @@ parameter_list|()
 throws|throws
 name|CloneNotSupportedException
 block|{
+specifier|final
 name|Select
 name|copy
 init|=
@@ -835,6 +840,7 @@ argument_list|()
 expr_stmt|;
 for|for
 control|(
+specifier|final
 name|InstructionHandle
 name|target2
 range|:

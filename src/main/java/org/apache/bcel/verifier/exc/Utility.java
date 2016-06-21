@@ -64,6 +64,7 @@ name|Throwable
 name|t
 parameter_list|)
 block|{
+specifier|final
 name|StringWriter
 name|sw
 init|=
@@ -71,6 +72,7 @@ operator|new
 name|StringWriter
 argument_list|()
 decl_stmt|;
+specifier|final
 name|PrintWriter
 name|pw
 init|=

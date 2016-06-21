@@ -271,6 +271,7 @@ argument_list|()
 expr_stmt|;
 comment|// pop the index int
 comment|//System.out.print(stack().peek());
+specifier|final
 name|Type
 name|t
 init|=
@@ -304,6 +305,7 @@ block|}
 comment|// Do nothing stackwise --- a NullPointerException is thrown at Run-Time
 else|else
 block|{
+specifier|final
 name|ArrayType
 name|at
 init|=
@@ -539,6 +541,7 @@ name|ATHROW
 name|o
 parameter_list|)
 block|{
+specifier|final
 name|Type
 name|t
 init|=
@@ -1335,6 +1338,7 @@ name|DUP
 name|o
 parameter_list|)
 block|{
+specifier|final
 name|Type
 name|t
 init|=
@@ -1373,6 +1377,7 @@ name|DUP_X1
 name|o
 parameter_list|)
 block|{
+specifier|final
 name|Type
 name|w1
 init|=
@@ -1382,6 +1387,7 @@ operator|.
 name|pop
 argument_list|()
 decl_stmt|;
+specifier|final
 name|Type
 name|w2
 init|=
@@ -1428,6 +1434,7 @@ name|DUP_X2
 name|o
 parameter_list|)
 block|{
+specifier|final
 name|Type
 name|w1
 init|=
@@ -1437,6 +1444,7 @@ operator|.
 name|pop
 argument_list|()
 decl_stmt|;
+specifier|final
 name|Type
 name|w2
 init|=
@@ -1483,6 +1491,7 @@ expr_stmt|;
 block|}
 else|else
 block|{
+specifier|final
 name|Type
 name|w3
 init|=
@@ -1538,6 +1547,7 @@ name|DUP2
 name|o
 parameter_list|)
 block|{
+specifier|final
 name|Type
 name|t
 init|=
@@ -1577,6 +1587,7 @@ block|}
 else|else
 block|{
 comment|// t.getSize() is 1
+specifier|final
 name|Type
 name|u
 init|=
@@ -1632,6 +1643,7 @@ name|DUP2_X1
 name|o
 parameter_list|)
 block|{
+specifier|final
 name|Type
 name|t
 init|=
@@ -1651,6 +1663,7 @@ operator|==
 literal|2
 condition|)
 block|{
+specifier|final
 name|Type
 name|u
 init|=
@@ -1688,6 +1701,7 @@ block|}
 else|else
 block|{
 comment|//t.getSize() is1
+specifier|final
 name|Type
 name|u
 init|=
@@ -1697,6 +1711,7 @@ operator|.
 name|pop
 argument_list|()
 decl_stmt|;
+specifier|final
 name|Type
 name|v
 init|=
@@ -1760,6 +1775,7 @@ name|DUP2_X2
 name|o
 parameter_list|)
 block|{
+specifier|final
 name|Type
 name|t
 init|=
@@ -1779,6 +1795,7 @@ operator|==
 literal|2
 condition|)
 block|{
+specifier|final
 name|Type
 name|u
 init|=
@@ -1825,6 +1842,7 @@ expr_stmt|;
 block|}
 else|else
 block|{
+specifier|final
 name|Type
 name|v
 init|=
@@ -1871,6 +1889,7 @@ block|}
 else|else
 block|{
 comment|//t.getSize() is 1
+specifier|final
 name|Type
 name|u
 init|=
@@ -1880,6 +1899,7 @@ operator|.
 name|pop
 argument_list|()
 decl_stmt|;
+specifier|final
 name|Type
 name|v
 init|=
@@ -1942,6 +1962,7 @@ expr_stmt|;
 block|}
 else|else
 block|{
+specifier|final
 name|Type
 name|w
 init|=
@@ -3848,6 +3869,7 @@ name|CONSTRUCTOR_NAME
 argument_list|)
 condition|)
 block|{
+specifier|final
 name|UninitializedObjectType
 name|t
 init|=
@@ -4925,6 +4947,7 @@ name|LDC
 name|o
 parameter_list|)
 block|{
+specifier|final
 name|Constant
 name|c
 init|=
@@ -5021,6 +5044,7 @@ name|LDC_W
 name|o
 parameter_list|)
 block|{
+specifier|final
 name|Constant
 name|c
 init|=
@@ -5119,6 +5143,7 @@ name|LDC2_W
 name|o
 parameter_list|)
 block|{
+specifier|final
 name|Constant
 name|c
 init|=
@@ -5827,6 +5852,7 @@ name|POP2
 name|o
 parameter_list|)
 block|{
+specifier|final
 name|Type
 name|t
 init|=
@@ -6028,6 +6054,7 @@ name|SWAP
 name|o
 parameter_list|)
 block|{
+specifier|final
 name|Type
 name|t
 init|=
@@ -6037,6 +6064,7 @@ operator|.
 name|pop
 argument_list|()
 decl_stmt|;
+specifier|final
 name|Type
 name|u
 init|=

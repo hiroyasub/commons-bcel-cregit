@@ -55,6 +55,7 @@ name|void
 name|testsetInstructionNull
 parameter_list|()
 block|{
+specifier|final
 name|InstructionHandle
 name|ih
 init|=
@@ -97,6 +98,7 @@ name|void
 name|testsetInstructionI
 parameter_list|()
 block|{
+specifier|final
 name|InstructionHandle
 name|ih
 init|=
@@ -148,6 +150,7 @@ name|void
 name|testsetInstructionnotI
 parameter_list|()
 block|{
+specifier|final
 name|InstructionHandle
 name|ih
 init|=
@@ -216,6 +219,7 @@ name|void
 name|testBCEL195
 parameter_list|()
 block|{
+specifier|final
 name|InstructionList
 name|il
 init|=
@@ -223,6 +227,7 @@ operator|new
 name|InstructionList
 argument_list|()
 decl_stmt|;
+specifier|final
 name|InstructionHandle
 name|ih
 init|=

@@ -159,6 +159,7 @@ parameter_list|()
 throws|throws
 name|Exception
 block|{
+specifier|final
 name|File
 name|javaLib
 init|=
@@ -217,6 +218,7 @@ expr_stmt|;
 block|}
 catch|catch
 parameter_list|(
+specifier|final
 name|Exception
 name|e
 parameter_list|)
@@ -275,6 +277,7 @@ name|file
 argument_list|)
 init|)
 block|{
+specifier|final
 name|Enumeration
 argument_list|<
 name|JarEntry
@@ -294,6 +297,7 @@ name|hasMoreElements
 argument_list|()
 condition|)
 block|{
+specifier|final
 name|JarEntry
 name|e
 init|=
@@ -335,6 +339,7 @@ name|e
 argument_list|)
 init|)
 block|{
+specifier|final
 name|ClassParser
 name|parser
 init|=
@@ -346,6 +351,7 @@ argument_list|,
 name|name
 argument_list|)
 decl_stmt|;
+specifier|final
 name|JavaClass
 name|jc
 init|=
@@ -439,6 +445,7 @@ literal|0
 decl_stmt|;
 for|for
 control|(
+specifier|final
 name|int
 name|out
 range|:
@@ -448,6 +455,7 @@ name|toByteArray
 argument_list|()
 control|)
 block|{
+specifier|final
 name|int
 name|in
 init|=

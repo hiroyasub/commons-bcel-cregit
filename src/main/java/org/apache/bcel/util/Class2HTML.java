@@ -317,6 +317,7 @@ parameter_list|)
 throws|throws
 name|IOException
 block|{
+specifier|final
 name|Method
 index|[]
 name|methods
@@ -354,6 +355,7 @@ name|getConstantPool
 argument_list|()
 expr_stmt|;
 comment|// Get package name by tacking off everything after the last `.'
+specifier|final
 name|int
 name|index
 init|=
@@ -392,6 +394,7 @@ literal|""
 expr_stmt|;
 comment|// default package
 block|}
+specifier|final
 name|ConstantHTML
 name|constant_html
 init|=
@@ -410,6 +413,7 @@ name|constant_pool
 argument_list|)
 decl_stmt|;
 comment|/* Attributes can't be written in one step, so we just open a file          * which will be written consequently.          */
+specifier|final
 name|AttributeHTML
 name|attribute_html
 init|=
@@ -483,6 +487,7 @@ parameter_list|)
 throws|throws
 name|IOException
 block|{
+specifier|final
 name|String
 index|[]
 name|file_name
@@ -515,6 +520,7 @@ name|zip_file
 init|=
 literal|null
 decl_stmt|;
+specifier|final
 name|char
 name|sep
 init|=
@@ -625,6 +631,7 @@ name|isDirectory
 argument_list|()
 condition|)
 block|{
+specifier|final
 name|boolean
 name|created
 init|=
@@ -934,6 +941,7 @@ argument_list|,
 literal|true
 argument_list|)
 expr_stmt|;
+specifier|final
 name|int
 name|index
 init|=
@@ -1011,6 +1019,7 @@ name|String
 name|str
 parameter_list|)
 block|{
+specifier|final
 name|StringBuilder
 name|buf
 init|=
@@ -1205,6 +1214,7 @@ literal|"</FRAMESET></FRAMESET></HTML>"
 argument_list|)
 expr_stmt|;
 block|}
+specifier|final
 name|Attribute
 index|[]
 name|attributes

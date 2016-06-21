@@ -373,6 +373,7 @@ name|String
 name|description
 parameter_list|)
 block|{
+specifier|final
 name|String
 name|fq_classname
 init|=
@@ -645,6 +646,7 @@ name|Instruction
 name|o
 parameter_list|)
 block|{
+specifier|final
 name|int
 name|consume
 init|=
@@ -690,6 +692,7 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
+specifier|final
 name|int
 name|produce
 init|=
@@ -774,6 +777,7 @@ name|LoadClass
 name|o
 parameter_list|)
 block|{
+specifier|final
 name|ObjectType
 name|t
 init|=
@@ -792,6 +796,7 @@ literal|null
 condition|)
 block|{
 comment|// null means "no class is loaded"
+specifier|final
 name|Verifier
 name|v
 init|=
@@ -805,6 +810,7 @@ name|getClassName
 argument_list|()
 argument_list|)
 decl_stmt|;
+specifier|final
 name|VerificationResult
 name|vr
 init|=
@@ -913,6 +919,7 @@ name|CPInstruction
 name|o
 parameter_list|)
 block|{
+specifier|final
 name|int
 name|idx
 init|=
@@ -968,6 +975,7 @@ comment|// visitLoadClass(o) has been called before: Every FieldOrMethod
 comment|// implements LoadClass.
 comment|// visitCPInstruction(o) has been called before.
 comment|// A FieldInstruction may be: GETFIELD, GETSTATIC, PUTFIELD, PUTSTATIC
+specifier|final
 name|Constant
 name|c
 init|=
@@ -1011,6 +1019,7 @@ argument_list|)
 expr_stmt|;
 block|}
 comment|// the o.getClassType(cpg) type has passed pass 2; see visitLoadClass(o).
+specifier|final
 name|Type
 name|t
 init|=
@@ -1028,6 +1037,7 @@ operator|instanceof
 name|ObjectType
 condition|)
 block|{
+specifier|final
 name|String
 name|name
 init|=
@@ -1041,6 +1051,7 @@ operator|.
 name|getClassName
 argument_list|()
 decl_stmt|;
+specifier|final
 name|Verifier
 name|v
 init|=
@@ -1051,6 +1062,7 @@ argument_list|(
 name|name
 argument_list|)
 decl_stmt|;
+specifier|final
 name|VerificationResult
 name|vr
 init|=
@@ -1537,6 +1549,7 @@ block|}
 else|else
 block|{
 comment|// we deal with ASTORE
+specifier|final
 name|Type
 name|stacktop
 init|=
@@ -1827,6 +1840,7 @@ name|AALOAD
 name|o
 parameter_list|)
 block|{
+specifier|final
 name|Type
 name|arrayref
 init|=
@@ -1838,6 +1852,7 @@ argument_list|(
 literal|1
 argument_list|)
 decl_stmt|;
+specifier|final
 name|Type
 name|index
 init|=
@@ -1919,6 +1934,7 @@ name|AASTORE
 name|o
 parameter_list|)
 block|{
+specifier|final
 name|Type
 name|arrayref
 init|=
@@ -1930,6 +1946,7 @@ argument_list|(
 literal|2
 argument_list|)
 decl_stmt|;
+specifier|final
 name|Type
 name|index
 init|=
@@ -1941,6 +1958,7 @@ argument_list|(
 literal|1
 argument_list|)
 decl_stmt|;
+specifier|final
 name|Type
 name|value
 init|=
@@ -2163,6 +2181,7 @@ literal|"'."
 argument_list|)
 expr_stmt|;
 block|}
+specifier|final
 name|ReferenceType
 name|objectref
 init|=
@@ -2204,6 +2223,7 @@ name|ARRAYLENGTH
 name|o
 parameter_list|)
 block|{
+specifier|final
 name|Type
 name|arrayref
 init|=
@@ -2363,6 +2383,7 @@ condition|)
 block|{
 return|return;
 block|}
+specifier|final
 name|ObjectType
 name|exc
 init|=
@@ -2377,6 +2398,7 @@ name|peek
 argument_list|()
 operator|)
 decl_stmt|;
+specifier|final
 name|ObjectType
 name|throwable
 init|=
@@ -2438,6 +2460,7 @@ block|}
 block|}
 catch|catch
 parameter_list|(
+specifier|final
 name|ClassNotFoundException
 name|e
 parameter_list|)
@@ -2468,6 +2491,7 @@ name|BALOAD
 name|o
 parameter_list|)
 block|{
+specifier|final
 name|Type
 name|arrayref
 init|=
@@ -2479,6 +2503,7 @@ argument_list|(
 literal|1
 argument_list|)
 decl_stmt|;
+specifier|final
 name|Type
 name|index
 init|=
@@ -2585,6 +2610,7 @@ name|BASTORE
 name|o
 parameter_list|)
 block|{
+specifier|final
 name|Type
 name|arrayref
 init|=
@@ -2596,6 +2622,7 @@ argument_list|(
 literal|2
 argument_list|)
 decl_stmt|;
+specifier|final
 name|Type
 name|index
 init|=
@@ -2607,6 +2634,7 @@ argument_list|(
 literal|1
 argument_list|)
 decl_stmt|;
+specifier|final
 name|Type
 name|value
 init|=
@@ -2754,6 +2782,7 @@ name|CALOAD
 name|o
 parameter_list|)
 block|{
+specifier|final
 name|Type
 name|arrayref
 init|=
@@ -2765,6 +2794,7 @@ argument_list|(
 literal|1
 argument_list|)
 decl_stmt|;
+specifier|final
 name|Type
 name|index
 init|=
@@ -2803,6 +2833,7 @@ name|CASTORE
 name|o
 parameter_list|)
 block|{
+specifier|final
 name|Type
 name|arrayref
 init|=
@@ -2814,6 +2845,7 @@ argument_list|(
 literal|2
 argument_list|)
 decl_stmt|;
+specifier|final
 name|Type
 name|index
 init|=
@@ -2825,6 +2857,7 @@ argument_list|(
 literal|1
 argument_list|)
 decl_stmt|;
+specifier|final
 name|Type
 name|value
 init|=
@@ -2916,6 +2949,7 @@ name|o
 parameter_list|)
 block|{
 comment|// The objectref must be of type reference.
+specifier|final
 name|Type
 name|objectref
 init|=
@@ -2955,6 +2989,7 @@ comment|//}
 comment|// The unsigned indexbyte1 and indexbyte2 are used to construct an index into the runtime constant pool of the
 comment|// current class (ï¿½3.6), where the value of the index is (indexbyte1<< 8) | indexbyte2. The runtime constant
 comment|// pool item at the index must be a symbolic reference to a class, array, or interface type.
+specifier|final
 name|Constant
 name|c
 init|=
@@ -3266,6 +3301,7 @@ literal|"'."
 argument_list|)
 expr_stmt|;
 block|}
+specifier|final
 name|Type
 name|t
 init|=
@@ -3420,6 +3456,7 @@ literal|"'."
 argument_list|)
 expr_stmt|;
 block|}
+specifier|final
 name|Type
 name|t
 init|=
@@ -5026,6 +5063,7 @@ literal|"'."
 argument_list|)
 expr_stmt|;
 block|}
+specifier|final
 name|Type
 name|t
 init|=
@@ -5180,6 +5218,7 @@ literal|"'."
 argument_list|)
 expr_stmt|;
 block|}
+specifier|final
 name|Type
 name|t
 init|=
@@ -5816,6 +5855,7 @@ name|FieldInstruction
 name|o
 parameter_list|)
 block|{
+specifier|final
 name|ReferenceType
 name|rt
 init|=
@@ -5867,6 +5907,7 @@ parameter_list|)
 block|{
 try|try
 block|{
+specifier|final
 name|Type
 name|objectref
 init|=
@@ -5908,6 +5949,7 @@ literal|"'."
 argument_list|)
 expr_stmt|;
 block|}
+specifier|final
 name|String
 name|field_name
 init|=
@@ -5918,6 +5960,7 @@ argument_list|(
 name|cpg
 argument_list|)
 decl_stmt|;
+specifier|final
 name|JavaClass
 name|jc
 init|=
@@ -5950,6 +5993,7 @@ literal|null
 decl_stmt|;
 for|for
 control|(
+specifier|final
 name|Field
 name|field
 range|:
@@ -5969,6 +6013,7 @@ name|field_name
 argument_list|)
 condition|)
 block|{
+specifier|final
 name|Type
 name|f_type
 init|=
@@ -5982,6 +6027,7 @@ name|getSignature
 argument_list|()
 argument_list|)
 decl_stmt|;
+specifier|final
 name|Type
 name|o_type
 init|=
@@ -6018,6 +6064,7 @@ operator|==
 literal|null
 condition|)
 block|{
+specifier|final
 name|JavaClass
 index|[]
 name|superclasses
@@ -6031,6 +6078,7 @@ name|outer
 label|:
 for|for
 control|(
+specifier|final
 name|JavaClass
 name|superclass
 range|:
@@ -6046,6 +6094,7 @@ argument_list|()
 expr_stmt|;
 for|for
 control|(
+specifier|final
 name|Field
 name|field
 range|:
@@ -6065,6 +6114,7 @@ name|field_name
 argument_list|)
 condition|)
 block|{
+specifier|final
 name|Type
 name|f_type
 init|=
@@ -6078,6 +6128,7 @@ name|getSignature
 argument_list|()
 argument_list|)
 decl_stmt|;
+specifier|final
 name|Type
 name|o_type
 init|=
@@ -6169,6 +6220,7 @@ name|isProtected
 argument_list|()
 condition|)
 block|{
+specifier|final
 name|ObjectType
 name|classtype
 init|=
@@ -6177,6 +6229,7 @@ argument_list|(
 name|o
 argument_list|)
 decl_stmt|;
+specifier|final
 name|ObjectType
 name|curr
 init|=
@@ -6207,6 +6260,7 @@ name|classtype
 argument_list|)
 condition|)
 block|{
+specifier|final
 name|Type
 name|t
 init|=
@@ -6249,6 +6303,7 @@ literal|"'."
 argument_list|)
 expr_stmt|;
 block|}
+specifier|final
 name|ObjectType
 name|objreftype
 init|=
@@ -6311,6 +6366,7 @@ block|}
 block|}
 catch|catch
 parameter_list|(
+specifier|final
 name|ClassNotFoundException
 name|e
 parameter_list|)
@@ -6772,6 +6828,7 @@ literal|"'."
 argument_list|)
 expr_stmt|;
 block|}
+specifier|final
 name|Type
 name|t
 init|=
@@ -7001,6 +7058,7 @@ literal|"'."
 argument_list|)
 expr_stmt|;
 block|}
+specifier|final
 name|Type
 name|t
 init|=
@@ -8374,6 +8432,7 @@ name|o
 parameter_list|)
 block|{
 comment|// The objectref must be of type reference.
+specifier|final
 name|Type
 name|objectref
 init|=
@@ -8413,6 +8472,7 @@ comment|//}
 comment|// The unsigned indexbyte1 and indexbyte2 are used to construct an index into the runtime constant pool of the
 comment|// current class (ï¿½3.6), where the value of the index is (indexbyte1<< 8) | indexbyte2. The runtime constant
 comment|// pool item at the index must be a symbolic reference to a class, array, or interface type.
+specifier|final
 name|Constant
 name|c
 init|=
@@ -8482,6 +8542,7 @@ name|o
 parameter_list|)
 block|{
 comment|// Method is not native, otherwise pass 3 would not happen.
+specifier|final
 name|int
 name|count
 init|=
@@ -8509,6 +8570,7 @@ comment|// It is a ConstantInterfaceMethodref, Pass 3a made it sure.
 comment|// TODO: Do we want to do anything with it?
 comment|//ConstantInterfaceMethodref cimr = (ConstantInterfaceMethodref) (cpg.getConstant(o.getIndex()));
 comment|// the o.getClassType(cpg) type has passed pass 2; see visitLoadClass(o).
+specifier|final
 name|Type
 name|t
 init|=
@@ -8526,6 +8588,7 @@ operator|instanceof
 name|ObjectType
 condition|)
 block|{
+specifier|final
 name|String
 name|name
 init|=
@@ -8539,6 +8602,7 @@ operator|.
 name|getClassName
 argument_list|()
 decl_stmt|;
+specifier|final
 name|Verifier
 name|v
 init|=
@@ -8549,6 +8613,7 @@ argument_list|(
 name|name
 argument_list|)
 decl_stmt|;
+specifier|final
 name|VerificationResult
 name|vr
 init|=
@@ -8586,6 +8651,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
+specifier|final
 name|Type
 index|[]
 name|argtypes
@@ -8597,6 +8663,7 @@ argument_list|(
 name|cpg
 argument_list|)
 decl_stmt|;
+specifier|final
 name|int
 name|nargs
 init|=
@@ -8621,6 +8688,7 @@ name|i
 operator|--
 control|)
 block|{
+specifier|final
 name|Type
 name|fromStack
 init|=
@@ -8703,6 +8771,7 @@ operator|instanceof
 name|ReferenceType
 condition|)
 block|{
+specifier|final
 name|ReferenceType
 name|rFromStack
 init|=
@@ -8975,6 +9044,7 @@ argument_list|)
 expr_stmt|;
 block|}
 comment|// the o.getClassType(cpg) type has passed pass 2; see visitLoadClass(o).
+specifier|final
 name|Type
 name|t
 init|=
@@ -8992,6 +9062,7 @@ operator|instanceof
 name|ObjectType
 condition|)
 block|{
+specifier|final
 name|String
 name|name
 init|=
@@ -9005,6 +9076,7 @@ operator|.
 name|getClassName
 argument_list|()
 decl_stmt|;
+specifier|final
 name|Verifier
 name|v
 init|=
@@ -9015,6 +9087,7 @@ argument_list|(
 name|name
 argument_list|)
 decl_stmt|;
+specifier|final
 name|VerificationResult
 name|vr
 init|=
@@ -9052,6 +9125,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
+specifier|final
 name|Type
 index|[]
 name|argtypes
@@ -9063,6 +9137,7 @@ argument_list|(
 name|cpg
 argument_list|)
 decl_stmt|;
+specifier|final
 name|int
 name|nargs
 init|=
@@ -9087,6 +9162,7 @@ name|i
 operator|--
 control|)
 block|{
+specifier|final
 name|Type
 name|fromStack
 init|=
@@ -9169,6 +9245,7 @@ operator|instanceof
 name|ReferenceType
 condition|)
 block|{
+specifier|final
 name|ReferenceType
 name|rFromStack
 init|=
@@ -9177,6 +9254,7 @@ name|ReferenceType
 operator|)
 name|fromStack
 decl_stmt|;
+specifier|final
 name|ReferenceType
 name|rFromDesc
 init|=
@@ -9415,6 +9493,7 @@ name|getClassName
 argument_list|()
 expr_stmt|;
 block|}
+specifier|final
 name|String
 name|theClass
 init|=
@@ -9457,6 +9536,7 @@ block|}
 block|}
 catch|catch
 parameter_list|(
+specifier|final
 name|ClassNotFoundException
 name|e
 parameter_list|)
@@ -9490,6 +9570,7 @@ block|{
 try|try
 block|{
 comment|// Method is not native, otherwise pass 3 would not happen.
+specifier|final
 name|Type
 name|t
 init|=
@@ -9507,6 +9588,7 @@ operator|instanceof
 name|ObjectType
 condition|)
 block|{
+specifier|final
 name|String
 name|name
 init|=
@@ -9520,6 +9602,7 @@ operator|.
 name|getClassName
 argument_list|()
 decl_stmt|;
+specifier|final
 name|Verifier
 name|v
 init|=
@@ -9530,6 +9613,7 @@ argument_list|(
 name|name
 argument_list|)
 decl_stmt|;
+specifier|final
 name|VerificationResult
 name|vr
 init|=
@@ -9567,6 +9651,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
+specifier|final
 name|Type
 index|[]
 name|argtypes
@@ -9578,6 +9663,7 @@ argument_list|(
 name|cpg
 argument_list|)
 decl_stmt|;
+specifier|final
 name|int
 name|nargs
 init|=
@@ -9602,6 +9688,7 @@ name|i
 operator|--
 control|)
 block|{
+specifier|final
 name|Type
 name|fromStack
 init|=
@@ -9684,6 +9771,7 @@ operator|instanceof
 name|ReferenceType
 condition|)
 block|{
+specifier|final
 name|ReferenceType
 name|rFromStack
 init|=
@@ -9692,6 +9780,7 @@ name|ReferenceType
 operator|)
 name|fromStack
 decl_stmt|;
+specifier|final
 name|ReferenceType
 name|rFromDesc
 init|=
@@ -9760,6 +9849,7 @@ block|}
 block|}
 catch|catch
 parameter_list|(
+specifier|final
 name|ClassNotFoundException
 name|e
 parameter_list|)
@@ -9793,6 +9883,7 @@ block|{
 try|try
 block|{
 comment|// the o.getClassType(cpg) type has passed pass 2; see visitLoadClass(o).
+specifier|final
 name|Type
 name|t
 init|=
@@ -9810,6 +9901,7 @@ operator|instanceof
 name|ObjectType
 condition|)
 block|{
+specifier|final
 name|String
 name|name
 init|=
@@ -9823,6 +9915,7 @@ operator|.
 name|getClassName
 argument_list|()
 decl_stmt|;
+specifier|final
 name|Verifier
 name|v
 init|=
@@ -9833,6 +9926,7 @@ argument_list|(
 name|name
 argument_list|)
 decl_stmt|;
+specifier|final
 name|VerificationResult
 name|vr
 init|=
@@ -9870,6 +9964,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
+specifier|final
 name|Type
 index|[]
 name|argtypes
@@ -9881,6 +9976,7 @@ argument_list|(
 name|cpg
 argument_list|)
 decl_stmt|;
+specifier|final
 name|int
 name|nargs
 init|=
@@ -9905,6 +10001,7 @@ name|i
 operator|--
 control|)
 block|{
+specifier|final
 name|Type
 name|fromStack
 init|=
@@ -9987,6 +10084,7 @@ operator|instanceof
 name|ReferenceType
 condition|)
 block|{
+specifier|final
 name|ReferenceType
 name|rFromStack
 init|=
@@ -9995,6 +10093,7 @@ name|ReferenceType
 operator|)
 name|fromStack
 decl_stmt|;
+specifier|final
 name|ReferenceType
 name|rFromDesc
 init|=
@@ -10155,6 +10254,7 @@ name|GENERIC_ARRAY
 expr_stmt|;
 block|}
 block|}
+specifier|final
 name|String
 name|objref_classname
 init|=
@@ -10168,6 +10268,7 @@ operator|.
 name|getClassName
 argument_list|()
 decl_stmt|;
+specifier|final
 name|String
 name|theClass
 init|=
@@ -10210,6 +10311,7 @@ block|}
 block|}
 catch|catch
 parameter_list|(
+specifier|final
 name|ClassNotFoundException
 name|e
 parameter_list|)
@@ -11113,6 +11215,7 @@ literal|"'."
 argument_list|)
 expr_stmt|;
 block|}
+specifier|final
 name|Type
 name|t
 init|=
@@ -11342,6 +11445,7 @@ literal|"'."
 argument_list|)
 expr_stmt|;
 block|}
+specifier|final
 name|Type
 name|t
 init|=
@@ -11493,6 +11597,7 @@ name|o
 parameter_list|)
 block|{
 comment|// visitCPInstruction is called first.
+specifier|final
 name|Constant
 name|c
 init|=
@@ -11560,6 +11665,7 @@ name|o
 parameter_list|)
 block|{
 comment|// visitCPInstruction is called first.
+specifier|final
 name|Constant
 name|c
 init|=
@@ -11629,6 +11735,7 @@ name|o
 parameter_list|)
 block|{
 comment|// visitCPInstruction is called first.
+specifier|final
 name|Constant
 name|c
 init|=
@@ -12609,6 +12716,7 @@ name|MULTIANEWARRAY
 name|o
 parameter_list|)
 block|{
+specifier|final
 name|int
 name|dimensions
 init|=
@@ -12678,6 +12786,7 @@ parameter_list|)
 block|{
 comment|//visitCPInstruction(CPInstruction) has been called before.
 comment|//visitLoadClass(LoadClass) has been called before.
+specifier|final
 name|Type
 name|t
 init|=
@@ -12728,6 +12837,7 @@ literal|"'."
 argument_list|)
 expr_stmt|;
 block|}
+specifier|final
 name|ObjectType
 name|obj
 init|=
@@ -12763,6 +12873,7 @@ block|}
 block|}
 catch|catch
 parameter_list|(
+specifier|final
 name|ClassNotFoundException
 name|e
 parameter_list|)
@@ -12962,6 +13073,7 @@ parameter_list|)
 block|{
 try|try
 block|{
+specifier|final
 name|Type
 name|objectref
 init|=
@@ -13005,6 +13117,7 @@ literal|"'."
 argument_list|)
 expr_stmt|;
 block|}
+specifier|final
 name|String
 name|field_name
 init|=
@@ -13015,6 +13128,7 @@ argument_list|(
 name|cpg
 argument_list|)
 decl_stmt|;
+specifier|final
 name|JavaClass
 name|jc
 init|=
@@ -13031,6 +13145,7 @@ name|getClassName
 argument_list|()
 argument_list|)
 decl_stmt|;
+specifier|final
 name|Field
 index|[]
 name|fields
@@ -13047,6 +13162,7 @@ literal|null
 decl_stmt|;
 for|for
 control|(
+specifier|final
 name|Field
 name|field
 range|:
@@ -13066,6 +13182,7 @@ name|field_name
 argument_list|)
 condition|)
 block|{
+specifier|final
 name|Type
 name|f_type
 init|=
@@ -13079,6 +13196,7 @@ name|getSignature
 argument_list|()
 argument_list|)
 decl_stmt|;
+specifier|final
 name|Type
 name|o_type
 init|=
@@ -13132,6 +13250,7 @@ argument_list|()
 argument_list|)
 throw|;
 block|}
+specifier|final
 name|Type
 name|value
 init|=
@@ -13141,6 +13260,7 @@ operator|.
 name|peek
 argument_list|()
 decl_stmt|;
+specifier|final
 name|Type
 name|t
 init|=
@@ -13308,6 +13428,7 @@ name|isProtected
 argument_list|()
 condition|)
 block|{
+specifier|final
 name|ObjectType
 name|classtype
 init|=
@@ -13316,6 +13437,7 @@ argument_list|(
 name|o
 argument_list|)
 decl_stmt|;
+specifier|final
 name|ObjectType
 name|curr
 init|=
@@ -13346,6 +13468,7 @@ name|classtype
 argument_list|)
 condition|)
 block|{
+specifier|final
 name|Type
 name|tp
 init|=
@@ -13390,6 +13513,7 @@ literal|"'."
 argument_list|)
 expr_stmt|;
 block|}
+specifier|final
 name|ObjectType
 name|objreftype
 init|=
@@ -13462,6 +13586,7 @@ block|}
 block|}
 catch|catch
 parameter_list|(
+specifier|final
 name|ClassNotFoundException
 name|e
 parameter_list|)
@@ -13494,6 +13619,7 @@ parameter_list|)
 block|{
 try|try
 block|{
+specifier|final
 name|String
 name|field_name
 init|=
@@ -13504,6 +13630,7 @@ argument_list|(
 name|cpg
 argument_list|)
 decl_stmt|;
+specifier|final
 name|JavaClass
 name|jc
 init|=
@@ -13520,6 +13647,7 @@ name|getClassName
 argument_list|()
 argument_list|)
 decl_stmt|;
+specifier|final
 name|Field
 index|[]
 name|fields
@@ -13536,6 +13664,7 @@ literal|null
 decl_stmt|;
 for|for
 control|(
+specifier|final
 name|Field
 name|field
 range|:
@@ -13555,6 +13684,7 @@ name|field_name
 argument_list|)
 condition|)
 block|{
+specifier|final
 name|Type
 name|f_type
 init|=
@@ -13568,6 +13698,7 @@ name|getSignature
 argument_list|()
 argument_list|)
 decl_stmt|;
+specifier|final
 name|Type
 name|o_type
 init|=
@@ -13621,6 +13752,7 @@ argument_list|()
 argument_list|)
 throw|;
 block|}
+specifier|final
 name|Type
 name|value
 init|=
@@ -13630,6 +13762,7 @@ operator|.
 name|peek
 argument_list|()
 decl_stmt|;
+specifier|final
 name|Type
 name|t
 init|=
@@ -13794,6 +13927,7 @@ comment|//       JustIce's execution model). This may only happen in<clinit>, se
 block|}
 catch|catch
 parameter_list|(
+specifier|final
 name|ClassNotFoundException
 name|e
 parameter_list|)
@@ -14031,6 +14165,7 @@ literal|"'."
 argument_list|)
 expr_stmt|;
 block|}
+specifier|final
 name|Type
 name|t
 init|=
@@ -14185,6 +14320,7 @@ literal|"'."
 argument_list|)
 expr_stmt|;
 block|}
+specifier|final
 name|Type
 name|t
 init|=

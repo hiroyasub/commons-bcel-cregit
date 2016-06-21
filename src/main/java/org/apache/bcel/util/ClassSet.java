@@ -170,6 +170,7 @@ index|[]
 name|toArray
 parameter_list|()
 block|{
+specifier|final
 name|Collection
 argument_list|<
 name|JavaClass
@@ -181,6 +182,7 @@ operator|.
 name|values
 argument_list|()
 decl_stmt|;
+specifier|final
 name|JavaClass
 index|[]
 name|classes

@@ -106,6 +106,7 @@ argument_list|,
 name|constant_pool
 argument_list|)
 expr_stmt|;
+specifier|final
 name|int
 name|num_parameters
 init|=
@@ -289,6 +290,7 @@ argument_list|)
 expr_stmt|;
 for|for
 control|(
+specifier|final
 name|ParameterAnnotationEntry
 name|element
 range|:
