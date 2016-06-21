@@ -25,9 +25,6 @@ interface|interface
 name|ExceptionConstants
 block|{
 comment|/** The mother of all exceptions      */
-specifier|public
-specifier|static
-specifier|final
 name|Class
 argument_list|<
 name|Throwable
@@ -39,9 +36,6 @@ operator|.
 name|class
 decl_stmt|;
 comment|/** Super class of any run-time exception      */
-specifier|public
-specifier|static
-specifier|final
 name|Class
 argument_list|<
 name|RuntimeException
@@ -53,9 +47,6 @@ operator|.
 name|class
 decl_stmt|;
 comment|/** Super class of any linking exception (aka Linkage Error)      */
-specifier|public
-specifier|static
-specifier|final
 name|Class
 argument_list|<
 name|LinkageError
@@ -67,9 +58,6 @@ operator|.
 name|class
 decl_stmt|;
 comment|/** Linking Exceptions      */
-specifier|public
-specifier|static
-specifier|final
 name|Class
 argument_list|<
 name|ClassCircularityError
@@ -80,9 +68,6 @@ name|ClassCircularityError
 operator|.
 name|class
 decl_stmt|;
-specifier|public
-specifier|static
-specifier|final
 name|Class
 argument_list|<
 name|ClassFormatError
@@ -93,9 +78,6 @@ name|ClassFormatError
 operator|.
 name|class
 decl_stmt|;
-specifier|public
-specifier|static
-specifier|final
 name|Class
 argument_list|<
 name|ExceptionInInitializerError
@@ -106,9 +88,6 @@ name|ExceptionInInitializerError
 operator|.
 name|class
 decl_stmt|;
-specifier|public
-specifier|static
-specifier|final
 name|Class
 argument_list|<
 name|IncompatibleClassChangeError
@@ -119,9 +98,6 @@ name|IncompatibleClassChangeError
 operator|.
 name|class
 decl_stmt|;
-specifier|public
-specifier|static
-specifier|final
 name|Class
 argument_list|<
 name|AbstractMethodError
@@ -132,9 +108,6 @@ name|AbstractMethodError
 operator|.
 name|class
 decl_stmt|;
-specifier|public
-specifier|static
-specifier|final
 name|Class
 argument_list|<
 name|IllegalAccessError
@@ -145,9 +118,6 @@ name|IllegalAccessError
 operator|.
 name|class
 decl_stmt|;
-specifier|public
-specifier|static
-specifier|final
 name|Class
 argument_list|<
 name|InstantiationError
@@ -158,9 +128,6 @@ name|InstantiationError
 operator|.
 name|class
 decl_stmt|;
-specifier|public
-specifier|static
-specifier|final
 name|Class
 argument_list|<
 name|NoSuchFieldError
@@ -171,9 +138,6 @@ name|NoSuchFieldError
 operator|.
 name|class
 decl_stmt|;
-specifier|public
-specifier|static
-specifier|final
 name|Class
 argument_list|<
 name|NoSuchMethodError
@@ -184,9 +148,6 @@ name|NoSuchMethodError
 operator|.
 name|class
 decl_stmt|;
-specifier|public
-specifier|static
-specifier|final
 name|Class
 argument_list|<
 name|NoClassDefFoundError
@@ -197,9 +158,6 @@ name|NoClassDefFoundError
 operator|.
 name|class
 decl_stmt|;
-specifier|public
-specifier|static
-specifier|final
 name|Class
 argument_list|<
 name|UnsatisfiedLinkError
@@ -210,9 +168,6 @@ name|UnsatisfiedLinkError
 operator|.
 name|class
 decl_stmt|;
-specifier|public
-specifier|static
-specifier|final
 name|Class
 argument_list|<
 name|VerifyError
@@ -224,11 +179,8 @@ operator|.
 name|class
 decl_stmt|;
 comment|/* UnsupportedClassVersionError is new in JDK 1.2 */
-comment|//    public static final Class UnsupportedClassVersionError = UnsupportedClassVersionError.class;
+comment|//    Class UnsupportedClassVersionError = UnsupportedClassVersionError.class;
 comment|/** Run-Time Exceptions       */
-specifier|public
-specifier|static
-specifier|final
 name|Class
 argument_list|<
 name|NullPointerException
@@ -239,9 +191,6 @@ name|NullPointerException
 operator|.
 name|class
 decl_stmt|;
-specifier|public
-specifier|static
-specifier|final
 name|Class
 argument_list|<
 name|ArrayIndexOutOfBoundsException
@@ -252,9 +201,6 @@ name|ArrayIndexOutOfBoundsException
 operator|.
 name|class
 decl_stmt|;
-specifier|public
-specifier|static
-specifier|final
 name|Class
 argument_list|<
 name|ArithmeticException
@@ -265,9 +211,6 @@ name|ArithmeticException
 operator|.
 name|class
 decl_stmt|;
-specifier|public
-specifier|static
-specifier|final
 name|Class
 argument_list|<
 name|NegativeArraySizeException
@@ -278,9 +221,6 @@ name|NegativeArraySizeException
 operator|.
 name|class
 decl_stmt|;
-specifier|public
-specifier|static
-specifier|final
 name|Class
 argument_list|<
 name|ClassCastException
@@ -291,9 +231,6 @@ name|ClassCastException
 operator|.
 name|class
 decl_stmt|;
-specifier|public
-specifier|static
-specifier|final
 name|Class
 argument_list|<
 name|IllegalMonitorStateException
@@ -307,9 +244,6 @@ decl_stmt|;
 comment|/**      * Pre-defined exception arrays according to chapters 5.1-5.4 of the Java Virtual      * Machine Specification      * @deprecated Do not use these arrays, use the static methods in the ExceptionConst implementation class instead      */
 annotation|@
 name|Deprecated
-specifier|public
-specifier|static
-specifier|final
 name|Class
 argument_list|<
 name|?
@@ -334,9 +268,6 @@ decl_stmt|;
 comment|// Chapter 5.1
 annotation|@
 name|Deprecated
-specifier|public
-specifier|static
-specifier|final
 name|Class
 argument_list|<
 name|?
@@ -355,9 +286,6 @@ decl_stmt|;
 comment|// Chapter 5.2
 annotation|@
 name|Deprecated
-specifier|public
-specifier|static
-specifier|final
 name|Class
 argument_list|<
 name|?
@@ -374,9 +302,6 @@ decl_stmt|;
 comment|// Chapter 5.3 (as below)
 annotation|@
 name|Deprecated
-specifier|public
-specifier|static
-specifier|final
 name|Class
 argument_list|<
 name|?
@@ -393,9 +318,6 @@ decl_stmt|;
 comment|// Chapter 5.4 (no errors but the ones that _always_ could happen! How stupid.)
 annotation|@
 name|Deprecated
-specifier|public
-specifier|static
-specifier|final
 name|Class
 argument_list|<
 name|?

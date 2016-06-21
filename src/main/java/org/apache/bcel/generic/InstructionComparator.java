@@ -24,9 +24,6 @@ specifier|public
 interface|interface
 name|InstructionComparator
 block|{
-specifier|public
-specifier|static
-specifier|final
 name|InstructionComparator
 name|DEFAULT
 init|=

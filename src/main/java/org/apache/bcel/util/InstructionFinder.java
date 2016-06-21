@@ -949,12 +949,10 @@ return|;
 block|}
 comment|/**      * Code patterns found may be checked using an additional user-defined      * constraint object whether they really match the needed criterion. I.e.,      * check constraints that can not expressed with regular expressions.      *       */
 specifier|public
-specifier|static
 interface|interface
 name|CodeConstraint
 block|{
 comment|/**          * @param match          *          array of instructions matching the requested pattern          * @return true if the matched area is really useful          */
-specifier|public
 name|boolean
 name|checkCode
 parameter_list|(

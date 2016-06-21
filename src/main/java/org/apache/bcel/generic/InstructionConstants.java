@@ -40,9 +40,6 @@ name|InstructionConstants
 block|{
 comment|/** Predefined instruction objects      */
 comment|/*      * NOTE these are not currently immutable, because Instruction      * has mutable protected fields opcode and length.      */
-specifier|public
-specifier|static
-specifier|final
 name|Instruction
 name|NOP
 init|=
@@ -50,9 +47,6 @@ operator|new
 name|NOP
 argument_list|()
 decl_stmt|;
-specifier|public
-specifier|static
-specifier|final
 name|Instruction
 name|ACONST_NULL
 init|=
@@ -60,9 +54,6 @@ operator|new
 name|ACONST_NULL
 argument_list|()
 decl_stmt|;
-specifier|public
-specifier|static
-specifier|final
 name|Instruction
 name|ICONST_M1
 init|=
@@ -73,9 +64,6 @@ operator|-
 literal|1
 argument_list|)
 decl_stmt|;
-specifier|public
-specifier|static
-specifier|final
 name|Instruction
 name|ICONST_0
 init|=
@@ -85,9 +73,6 @@ argument_list|(
 literal|0
 argument_list|)
 decl_stmt|;
-specifier|public
-specifier|static
-specifier|final
 name|Instruction
 name|ICONST_1
 init|=
@@ -97,9 +82,6 @@ argument_list|(
 literal|1
 argument_list|)
 decl_stmt|;
-specifier|public
-specifier|static
-specifier|final
 name|Instruction
 name|ICONST_2
 init|=
@@ -109,9 +91,6 @@ argument_list|(
 literal|2
 argument_list|)
 decl_stmt|;
-specifier|public
-specifier|static
-specifier|final
 name|Instruction
 name|ICONST_3
 init|=
@@ -121,9 +100,6 @@ argument_list|(
 literal|3
 argument_list|)
 decl_stmt|;
-specifier|public
-specifier|static
-specifier|final
 name|Instruction
 name|ICONST_4
 init|=
@@ -133,9 +109,6 @@ argument_list|(
 literal|4
 argument_list|)
 decl_stmt|;
-specifier|public
-specifier|static
-specifier|final
 name|Instruction
 name|ICONST_5
 init|=
@@ -145,9 +118,6 @@ argument_list|(
 literal|5
 argument_list|)
 decl_stmt|;
-specifier|public
-specifier|static
-specifier|final
 name|Instruction
 name|LCONST_0
 init|=
@@ -157,9 +127,6 @@ argument_list|(
 literal|0
 argument_list|)
 decl_stmt|;
-specifier|public
-specifier|static
-specifier|final
 name|Instruction
 name|LCONST_1
 init|=
@@ -169,9 +136,6 @@ argument_list|(
 literal|1
 argument_list|)
 decl_stmt|;
-specifier|public
-specifier|static
-specifier|final
 name|Instruction
 name|FCONST_0
 init|=
@@ -181,9 +145,6 @@ argument_list|(
 literal|0
 argument_list|)
 decl_stmt|;
-specifier|public
-specifier|static
-specifier|final
 name|Instruction
 name|FCONST_1
 init|=
@@ -193,9 +154,6 @@ argument_list|(
 literal|1
 argument_list|)
 decl_stmt|;
-specifier|public
-specifier|static
-specifier|final
 name|Instruction
 name|FCONST_2
 init|=
@@ -205,9 +163,6 @@ argument_list|(
 literal|2
 argument_list|)
 decl_stmt|;
-specifier|public
-specifier|static
-specifier|final
 name|Instruction
 name|DCONST_0
 init|=
@@ -217,9 +172,6 @@ argument_list|(
 literal|0
 argument_list|)
 decl_stmt|;
-specifier|public
-specifier|static
-specifier|final
 name|Instruction
 name|DCONST_1
 init|=
@@ -229,9 +181,6 @@ argument_list|(
 literal|1
 argument_list|)
 decl_stmt|;
-specifier|public
-specifier|static
-specifier|final
 name|ArrayInstruction
 name|IALOAD
 init|=
@@ -239,9 +188,6 @@ operator|new
 name|IALOAD
 argument_list|()
 decl_stmt|;
-specifier|public
-specifier|static
-specifier|final
 name|ArrayInstruction
 name|LALOAD
 init|=
@@ -249,9 +195,6 @@ operator|new
 name|LALOAD
 argument_list|()
 decl_stmt|;
-specifier|public
-specifier|static
-specifier|final
 name|ArrayInstruction
 name|FALOAD
 init|=
@@ -259,9 +202,6 @@ operator|new
 name|FALOAD
 argument_list|()
 decl_stmt|;
-specifier|public
-specifier|static
-specifier|final
 name|ArrayInstruction
 name|DALOAD
 init|=
@@ -269,9 +209,6 @@ operator|new
 name|DALOAD
 argument_list|()
 decl_stmt|;
-specifier|public
-specifier|static
-specifier|final
 name|ArrayInstruction
 name|AALOAD
 init|=
@@ -279,9 +216,6 @@ operator|new
 name|AALOAD
 argument_list|()
 decl_stmt|;
-specifier|public
-specifier|static
-specifier|final
 name|ArrayInstruction
 name|BALOAD
 init|=
@@ -289,9 +223,6 @@ operator|new
 name|BALOAD
 argument_list|()
 decl_stmt|;
-specifier|public
-specifier|static
-specifier|final
 name|ArrayInstruction
 name|CALOAD
 init|=
@@ -299,9 +230,6 @@ operator|new
 name|CALOAD
 argument_list|()
 decl_stmt|;
-specifier|public
-specifier|static
-specifier|final
 name|ArrayInstruction
 name|SALOAD
 init|=
@@ -309,9 +237,6 @@ operator|new
 name|SALOAD
 argument_list|()
 decl_stmt|;
-specifier|public
-specifier|static
-specifier|final
 name|ArrayInstruction
 name|IASTORE
 init|=
@@ -319,9 +244,6 @@ operator|new
 name|IASTORE
 argument_list|()
 decl_stmt|;
-specifier|public
-specifier|static
-specifier|final
 name|ArrayInstruction
 name|LASTORE
 init|=
@@ -329,9 +251,6 @@ operator|new
 name|LASTORE
 argument_list|()
 decl_stmt|;
-specifier|public
-specifier|static
-specifier|final
 name|ArrayInstruction
 name|FASTORE
 init|=
@@ -339,9 +258,6 @@ operator|new
 name|FASTORE
 argument_list|()
 decl_stmt|;
-specifier|public
-specifier|static
-specifier|final
 name|ArrayInstruction
 name|DASTORE
 init|=
@@ -349,9 +265,6 @@ operator|new
 name|DASTORE
 argument_list|()
 decl_stmt|;
-specifier|public
-specifier|static
-specifier|final
 name|ArrayInstruction
 name|AASTORE
 init|=
@@ -359,9 +272,6 @@ operator|new
 name|AASTORE
 argument_list|()
 decl_stmt|;
-specifier|public
-specifier|static
-specifier|final
 name|ArrayInstruction
 name|BASTORE
 init|=
@@ -369,9 +279,6 @@ operator|new
 name|BASTORE
 argument_list|()
 decl_stmt|;
-specifier|public
-specifier|static
-specifier|final
 name|ArrayInstruction
 name|CASTORE
 init|=
@@ -379,9 +286,6 @@ operator|new
 name|CASTORE
 argument_list|()
 decl_stmt|;
-specifier|public
-specifier|static
-specifier|final
 name|ArrayInstruction
 name|SASTORE
 init|=
@@ -389,9 +293,6 @@ operator|new
 name|SASTORE
 argument_list|()
 decl_stmt|;
-specifier|public
-specifier|static
-specifier|final
 name|StackInstruction
 name|POP
 init|=
@@ -399,9 +300,6 @@ operator|new
 name|POP
 argument_list|()
 decl_stmt|;
-specifier|public
-specifier|static
-specifier|final
 name|StackInstruction
 name|POP2
 init|=
@@ -409,9 +307,6 @@ operator|new
 name|POP2
 argument_list|()
 decl_stmt|;
-specifier|public
-specifier|static
-specifier|final
 name|StackInstruction
 name|DUP
 init|=
@@ -419,9 +314,6 @@ operator|new
 name|DUP
 argument_list|()
 decl_stmt|;
-specifier|public
-specifier|static
-specifier|final
 name|StackInstruction
 name|DUP_X1
 init|=
@@ -429,9 +321,6 @@ operator|new
 name|DUP_X1
 argument_list|()
 decl_stmt|;
-specifier|public
-specifier|static
-specifier|final
 name|StackInstruction
 name|DUP_X2
 init|=
@@ -439,9 +328,6 @@ operator|new
 name|DUP_X2
 argument_list|()
 decl_stmt|;
-specifier|public
-specifier|static
-specifier|final
 name|StackInstruction
 name|DUP2
 init|=
@@ -449,9 +335,6 @@ operator|new
 name|DUP2
 argument_list|()
 decl_stmt|;
-specifier|public
-specifier|static
-specifier|final
 name|StackInstruction
 name|DUP2_X1
 init|=
@@ -459,9 +342,6 @@ operator|new
 name|DUP2_X1
 argument_list|()
 decl_stmt|;
-specifier|public
-specifier|static
-specifier|final
 name|StackInstruction
 name|DUP2_X2
 init|=
@@ -469,9 +349,6 @@ operator|new
 name|DUP2_X2
 argument_list|()
 decl_stmt|;
-specifier|public
-specifier|static
-specifier|final
 name|StackInstruction
 name|SWAP
 init|=
@@ -479,9 +356,6 @@ operator|new
 name|SWAP
 argument_list|()
 decl_stmt|;
-specifier|public
-specifier|static
-specifier|final
 name|ArithmeticInstruction
 name|IADD
 init|=
@@ -489,9 +363,6 @@ operator|new
 name|IADD
 argument_list|()
 decl_stmt|;
-specifier|public
-specifier|static
-specifier|final
 name|ArithmeticInstruction
 name|LADD
 init|=
@@ -499,9 +370,6 @@ operator|new
 name|LADD
 argument_list|()
 decl_stmt|;
-specifier|public
-specifier|static
-specifier|final
 name|ArithmeticInstruction
 name|FADD
 init|=
@@ -509,9 +377,6 @@ operator|new
 name|FADD
 argument_list|()
 decl_stmt|;
-specifier|public
-specifier|static
-specifier|final
 name|ArithmeticInstruction
 name|DADD
 init|=
@@ -519,9 +384,6 @@ operator|new
 name|DADD
 argument_list|()
 decl_stmt|;
-specifier|public
-specifier|static
-specifier|final
 name|ArithmeticInstruction
 name|ISUB
 init|=
@@ -529,9 +391,6 @@ operator|new
 name|ISUB
 argument_list|()
 decl_stmt|;
-specifier|public
-specifier|static
-specifier|final
 name|ArithmeticInstruction
 name|LSUB
 init|=
@@ -539,9 +398,6 @@ operator|new
 name|LSUB
 argument_list|()
 decl_stmt|;
-specifier|public
-specifier|static
-specifier|final
 name|ArithmeticInstruction
 name|FSUB
 init|=
@@ -549,9 +405,6 @@ operator|new
 name|FSUB
 argument_list|()
 decl_stmt|;
-specifier|public
-specifier|static
-specifier|final
 name|ArithmeticInstruction
 name|DSUB
 init|=
@@ -559,9 +412,6 @@ operator|new
 name|DSUB
 argument_list|()
 decl_stmt|;
-specifier|public
-specifier|static
-specifier|final
 name|ArithmeticInstruction
 name|IMUL
 init|=
@@ -569,9 +419,6 @@ operator|new
 name|IMUL
 argument_list|()
 decl_stmt|;
-specifier|public
-specifier|static
-specifier|final
 name|ArithmeticInstruction
 name|LMUL
 init|=
@@ -579,9 +426,6 @@ operator|new
 name|LMUL
 argument_list|()
 decl_stmt|;
-specifier|public
-specifier|static
-specifier|final
 name|ArithmeticInstruction
 name|FMUL
 init|=
@@ -589,9 +433,6 @@ operator|new
 name|FMUL
 argument_list|()
 decl_stmt|;
-specifier|public
-specifier|static
-specifier|final
 name|ArithmeticInstruction
 name|DMUL
 init|=
@@ -599,9 +440,6 @@ operator|new
 name|DMUL
 argument_list|()
 decl_stmt|;
-specifier|public
-specifier|static
-specifier|final
 name|ArithmeticInstruction
 name|IDIV
 init|=
@@ -609,9 +447,6 @@ operator|new
 name|IDIV
 argument_list|()
 decl_stmt|;
-specifier|public
-specifier|static
-specifier|final
 name|ArithmeticInstruction
 name|LDIV
 init|=
@@ -619,9 +454,6 @@ operator|new
 name|LDIV
 argument_list|()
 decl_stmt|;
-specifier|public
-specifier|static
-specifier|final
 name|ArithmeticInstruction
 name|FDIV
 init|=
@@ -629,9 +461,6 @@ operator|new
 name|FDIV
 argument_list|()
 decl_stmt|;
-specifier|public
-specifier|static
-specifier|final
 name|ArithmeticInstruction
 name|DDIV
 init|=
@@ -639,9 +468,6 @@ operator|new
 name|DDIV
 argument_list|()
 decl_stmt|;
-specifier|public
-specifier|static
-specifier|final
 name|ArithmeticInstruction
 name|IREM
 init|=
@@ -649,9 +475,6 @@ operator|new
 name|IREM
 argument_list|()
 decl_stmt|;
-specifier|public
-specifier|static
-specifier|final
 name|ArithmeticInstruction
 name|LREM
 init|=
@@ -659,9 +482,6 @@ operator|new
 name|LREM
 argument_list|()
 decl_stmt|;
-specifier|public
-specifier|static
-specifier|final
 name|ArithmeticInstruction
 name|FREM
 init|=
@@ -669,9 +489,6 @@ operator|new
 name|FREM
 argument_list|()
 decl_stmt|;
-specifier|public
-specifier|static
-specifier|final
 name|ArithmeticInstruction
 name|DREM
 init|=
@@ -679,9 +496,6 @@ operator|new
 name|DREM
 argument_list|()
 decl_stmt|;
-specifier|public
-specifier|static
-specifier|final
 name|ArithmeticInstruction
 name|INEG
 init|=
@@ -689,9 +503,6 @@ operator|new
 name|INEG
 argument_list|()
 decl_stmt|;
-specifier|public
-specifier|static
-specifier|final
 name|ArithmeticInstruction
 name|LNEG
 init|=
@@ -699,9 +510,6 @@ operator|new
 name|LNEG
 argument_list|()
 decl_stmt|;
-specifier|public
-specifier|static
-specifier|final
 name|ArithmeticInstruction
 name|FNEG
 init|=
@@ -709,9 +517,6 @@ operator|new
 name|FNEG
 argument_list|()
 decl_stmt|;
-specifier|public
-specifier|static
-specifier|final
 name|ArithmeticInstruction
 name|DNEG
 init|=
@@ -719,9 +524,6 @@ operator|new
 name|DNEG
 argument_list|()
 decl_stmt|;
-specifier|public
-specifier|static
-specifier|final
 name|ArithmeticInstruction
 name|ISHL
 init|=
@@ -729,9 +531,6 @@ operator|new
 name|ISHL
 argument_list|()
 decl_stmt|;
-specifier|public
-specifier|static
-specifier|final
 name|ArithmeticInstruction
 name|LSHL
 init|=
@@ -739,9 +538,6 @@ operator|new
 name|LSHL
 argument_list|()
 decl_stmt|;
-specifier|public
-specifier|static
-specifier|final
 name|ArithmeticInstruction
 name|ISHR
 init|=
@@ -749,9 +545,6 @@ operator|new
 name|ISHR
 argument_list|()
 decl_stmt|;
-specifier|public
-specifier|static
-specifier|final
 name|ArithmeticInstruction
 name|LSHR
 init|=
@@ -759,9 +552,6 @@ operator|new
 name|LSHR
 argument_list|()
 decl_stmt|;
-specifier|public
-specifier|static
-specifier|final
 name|ArithmeticInstruction
 name|IUSHR
 init|=
@@ -769,9 +559,6 @@ operator|new
 name|IUSHR
 argument_list|()
 decl_stmt|;
-specifier|public
-specifier|static
-specifier|final
 name|ArithmeticInstruction
 name|LUSHR
 init|=
@@ -779,9 +566,6 @@ operator|new
 name|LUSHR
 argument_list|()
 decl_stmt|;
-specifier|public
-specifier|static
-specifier|final
 name|ArithmeticInstruction
 name|IAND
 init|=
@@ -789,9 +573,6 @@ operator|new
 name|IAND
 argument_list|()
 decl_stmt|;
-specifier|public
-specifier|static
-specifier|final
 name|ArithmeticInstruction
 name|LAND
 init|=
@@ -799,9 +580,6 @@ operator|new
 name|LAND
 argument_list|()
 decl_stmt|;
-specifier|public
-specifier|static
-specifier|final
 name|ArithmeticInstruction
 name|IOR
 init|=
@@ -809,9 +587,6 @@ operator|new
 name|IOR
 argument_list|()
 decl_stmt|;
-specifier|public
-specifier|static
-specifier|final
 name|ArithmeticInstruction
 name|LOR
 init|=
@@ -819,9 +594,6 @@ operator|new
 name|LOR
 argument_list|()
 decl_stmt|;
-specifier|public
-specifier|static
-specifier|final
 name|ArithmeticInstruction
 name|IXOR
 init|=
@@ -829,9 +601,6 @@ operator|new
 name|IXOR
 argument_list|()
 decl_stmt|;
-specifier|public
-specifier|static
-specifier|final
 name|ArithmeticInstruction
 name|LXOR
 init|=
@@ -839,9 +608,6 @@ operator|new
 name|LXOR
 argument_list|()
 decl_stmt|;
-specifier|public
-specifier|static
-specifier|final
 name|ConversionInstruction
 name|I2L
 init|=
@@ -849,9 +615,6 @@ operator|new
 name|I2L
 argument_list|()
 decl_stmt|;
-specifier|public
-specifier|static
-specifier|final
 name|ConversionInstruction
 name|I2F
 init|=
@@ -859,9 +622,6 @@ operator|new
 name|I2F
 argument_list|()
 decl_stmt|;
-specifier|public
-specifier|static
-specifier|final
 name|ConversionInstruction
 name|I2D
 init|=
@@ -869,9 +629,6 @@ operator|new
 name|I2D
 argument_list|()
 decl_stmt|;
-specifier|public
-specifier|static
-specifier|final
 name|ConversionInstruction
 name|L2I
 init|=
@@ -879,9 +636,6 @@ operator|new
 name|L2I
 argument_list|()
 decl_stmt|;
-specifier|public
-specifier|static
-specifier|final
 name|ConversionInstruction
 name|L2F
 init|=
@@ -889,9 +643,6 @@ operator|new
 name|L2F
 argument_list|()
 decl_stmt|;
-specifier|public
-specifier|static
-specifier|final
 name|ConversionInstruction
 name|L2D
 init|=
@@ -899,9 +650,6 @@ operator|new
 name|L2D
 argument_list|()
 decl_stmt|;
-specifier|public
-specifier|static
-specifier|final
 name|ConversionInstruction
 name|F2I
 init|=
@@ -909,9 +657,6 @@ operator|new
 name|F2I
 argument_list|()
 decl_stmt|;
-specifier|public
-specifier|static
-specifier|final
 name|ConversionInstruction
 name|F2L
 init|=
@@ -919,9 +664,6 @@ operator|new
 name|F2L
 argument_list|()
 decl_stmt|;
-specifier|public
-specifier|static
-specifier|final
 name|ConversionInstruction
 name|F2D
 init|=
@@ -929,9 +671,6 @@ operator|new
 name|F2D
 argument_list|()
 decl_stmt|;
-specifier|public
-specifier|static
-specifier|final
 name|ConversionInstruction
 name|D2I
 init|=
@@ -939,9 +678,6 @@ operator|new
 name|D2I
 argument_list|()
 decl_stmt|;
-specifier|public
-specifier|static
-specifier|final
 name|ConversionInstruction
 name|D2L
 init|=
@@ -949,9 +685,6 @@ operator|new
 name|D2L
 argument_list|()
 decl_stmt|;
-specifier|public
-specifier|static
-specifier|final
 name|ConversionInstruction
 name|D2F
 init|=
@@ -959,9 +692,6 @@ operator|new
 name|D2F
 argument_list|()
 decl_stmt|;
-specifier|public
-specifier|static
-specifier|final
 name|ConversionInstruction
 name|I2B
 init|=
@@ -969,9 +699,6 @@ operator|new
 name|I2B
 argument_list|()
 decl_stmt|;
-specifier|public
-specifier|static
-specifier|final
 name|ConversionInstruction
 name|I2C
 init|=
@@ -979,9 +706,6 @@ operator|new
 name|I2C
 argument_list|()
 decl_stmt|;
-specifier|public
-specifier|static
-specifier|final
 name|ConversionInstruction
 name|I2S
 init|=
@@ -989,9 +713,6 @@ operator|new
 name|I2S
 argument_list|()
 decl_stmt|;
-specifier|public
-specifier|static
-specifier|final
 name|Instruction
 name|LCMP
 init|=
@@ -999,9 +720,6 @@ operator|new
 name|LCMP
 argument_list|()
 decl_stmt|;
-specifier|public
-specifier|static
-specifier|final
 name|Instruction
 name|FCMPL
 init|=
@@ -1009,9 +727,6 @@ operator|new
 name|FCMPL
 argument_list|()
 decl_stmt|;
-specifier|public
-specifier|static
-specifier|final
 name|Instruction
 name|FCMPG
 init|=
@@ -1019,9 +734,6 @@ operator|new
 name|FCMPG
 argument_list|()
 decl_stmt|;
-specifier|public
-specifier|static
-specifier|final
 name|Instruction
 name|DCMPL
 init|=
@@ -1029,9 +741,6 @@ operator|new
 name|DCMPL
 argument_list|()
 decl_stmt|;
-specifier|public
-specifier|static
-specifier|final
 name|Instruction
 name|DCMPG
 init|=
@@ -1039,9 +748,6 @@ operator|new
 name|DCMPG
 argument_list|()
 decl_stmt|;
-specifier|public
-specifier|static
-specifier|final
 name|ReturnInstruction
 name|IRETURN
 init|=
@@ -1049,9 +755,6 @@ operator|new
 name|IRETURN
 argument_list|()
 decl_stmt|;
-specifier|public
-specifier|static
-specifier|final
 name|ReturnInstruction
 name|LRETURN
 init|=
@@ -1059,9 +762,6 @@ operator|new
 name|LRETURN
 argument_list|()
 decl_stmt|;
-specifier|public
-specifier|static
-specifier|final
 name|ReturnInstruction
 name|FRETURN
 init|=
@@ -1069,9 +769,6 @@ operator|new
 name|FRETURN
 argument_list|()
 decl_stmt|;
-specifier|public
-specifier|static
-specifier|final
 name|ReturnInstruction
 name|DRETURN
 init|=
@@ -1079,9 +776,6 @@ operator|new
 name|DRETURN
 argument_list|()
 decl_stmt|;
-specifier|public
-specifier|static
-specifier|final
 name|ReturnInstruction
 name|ARETURN
 init|=
@@ -1089,9 +783,6 @@ operator|new
 name|ARETURN
 argument_list|()
 decl_stmt|;
-specifier|public
-specifier|static
-specifier|final
 name|ReturnInstruction
 name|RETURN
 init|=
@@ -1099,9 +790,6 @@ operator|new
 name|RETURN
 argument_list|()
 decl_stmt|;
-specifier|public
-specifier|static
-specifier|final
 name|Instruction
 name|ARRAYLENGTH
 init|=
@@ -1109,9 +797,6 @@ operator|new
 name|ARRAYLENGTH
 argument_list|()
 decl_stmt|;
-specifier|public
-specifier|static
-specifier|final
 name|Instruction
 name|ATHROW
 init|=
@@ -1119,9 +804,6 @@ operator|new
 name|ATHROW
 argument_list|()
 decl_stmt|;
-specifier|public
-specifier|static
-specifier|final
 name|Instruction
 name|MONITORENTER
 init|=
@@ -1129,9 +811,6 @@ operator|new
 name|MONITORENTER
 argument_list|()
 decl_stmt|;
-specifier|public
-specifier|static
-specifier|final
 name|Instruction
 name|MONITOREXIT
 init|=
@@ -1140,9 +819,6 @@ name|MONITOREXIT
 argument_list|()
 decl_stmt|;
 comment|/** You can use these constants in multiple places safely, if you can guarantee      * that you will never alter their internal values, e.g. call setIndex().      */
-specifier|public
-specifier|static
-specifier|final
 name|LocalVariableInstruction
 name|THIS
 init|=
@@ -1152,17 +828,11 @@ argument_list|(
 literal|0
 argument_list|)
 decl_stmt|;
-specifier|public
-specifier|static
-specifier|final
 name|LocalVariableInstruction
 name|ALOAD_0
 init|=
 name|THIS
 decl_stmt|;
-specifier|public
-specifier|static
-specifier|final
 name|LocalVariableInstruction
 name|ALOAD_1
 init|=
@@ -1172,9 +842,6 @@ argument_list|(
 literal|1
 argument_list|)
 decl_stmt|;
-specifier|public
-specifier|static
-specifier|final
 name|LocalVariableInstruction
 name|ALOAD_2
 init|=
@@ -1184,9 +851,6 @@ argument_list|(
 literal|2
 argument_list|)
 decl_stmt|;
-specifier|public
-specifier|static
-specifier|final
 name|LocalVariableInstruction
 name|ILOAD_0
 init|=
@@ -1196,9 +860,6 @@ argument_list|(
 literal|0
 argument_list|)
 decl_stmt|;
-specifier|public
-specifier|static
-specifier|final
 name|LocalVariableInstruction
 name|ILOAD_1
 init|=
@@ -1208,9 +869,6 @@ argument_list|(
 literal|1
 argument_list|)
 decl_stmt|;
-specifier|public
-specifier|static
-specifier|final
 name|LocalVariableInstruction
 name|ILOAD_2
 init|=
@@ -1220,9 +878,6 @@ argument_list|(
 literal|2
 argument_list|)
 decl_stmt|;
-specifier|public
-specifier|static
-specifier|final
 name|LocalVariableInstruction
 name|ASTORE_0
 init|=
@@ -1232,9 +887,6 @@ argument_list|(
 literal|0
 argument_list|)
 decl_stmt|;
-specifier|public
-specifier|static
-specifier|final
 name|LocalVariableInstruction
 name|ASTORE_1
 init|=
@@ -1244,9 +896,6 @@ argument_list|(
 literal|1
 argument_list|)
 decl_stmt|;
-specifier|public
-specifier|static
-specifier|final
 name|LocalVariableInstruction
 name|ASTORE_2
 init|=
@@ -1256,9 +905,6 @@ argument_list|(
 literal|2
 argument_list|)
 decl_stmt|;
-specifier|public
-specifier|static
-specifier|final
 name|LocalVariableInstruction
 name|ISTORE_0
 init|=
@@ -1268,9 +914,6 @@ argument_list|(
 literal|0
 argument_list|)
 decl_stmt|;
-specifier|public
-specifier|static
-specifier|final
 name|LocalVariableInstruction
 name|ISTORE_1
 init|=
@@ -1280,9 +923,6 @@ argument_list|(
 literal|1
 argument_list|)
 decl_stmt|;
-specifier|public
-specifier|static
-specifier|final
 name|LocalVariableInstruction
 name|ISTORE_2
 init|=
@@ -1293,9 +933,6 @@ literal|2
 argument_list|)
 decl_stmt|;
 comment|/** Get object via its opcode, for immutable instructions like      * branch instructions entries are set to null.      */
-specifier|public
-specifier|static
-specifier|final
 name|Instruction
 index|[]
 name|INSTRUCTIONS
@@ -1307,8 +944,6 @@ literal|256
 index|]
 decl_stmt|;
 comment|/** Interfaces may have no static initializers, so we simulate this      * with an inner class.      */
-specifier|static
-specifier|final
 name|Clinit
 name|bla
 init|=
@@ -1316,7 +951,6 @@ operator|new
 name|Clinit
 argument_list|()
 decl_stmt|;
-specifier|static
 class|class
 name|Clinit
 block|{

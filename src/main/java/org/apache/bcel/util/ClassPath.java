@@ -1539,8 +1539,6 @@ interface|interface
 name|ClassFile
 block|{
 comment|/** @return input stream for class file.          */
-specifier|public
-specifier|abstract
 name|InputStream
 name|getInputStream
 parameter_list|()
@@ -1548,29 +1546,21 @@ throws|throws
 name|IOException
 function_decl|;
 comment|/** @return canonical path to class file.          */
-specifier|public
-specifier|abstract
 name|String
 name|getPath
 parameter_list|()
 function_decl|;
 comment|/** @return base path of found class, i.e. class is contained relative          * to that path, which may either denote a directory, or zip file          */
-specifier|public
-specifier|abstract
 name|String
 name|getBase
 parameter_list|()
 function_decl|;
 comment|/** @return modification time of class file.          */
-specifier|public
-specifier|abstract
 name|long
 name|getTime
 parameter_list|()
 function_decl|;
 comment|/** @return size of class file.          */
-specifier|public
-specifier|abstract
 name|long
 name|getSize
 parameter_list|()
