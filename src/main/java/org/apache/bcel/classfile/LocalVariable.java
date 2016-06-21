@@ -57,6 +57,18 @@ name|Const
 import|;
 end_import
 
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|bcel
+operator|.
+name|Constants
+import|;
+end_import
+
 begin_comment
 comment|/**  * This class represents a local variable within a method. It contains its  * scope, name, signature and index on the method's frame.  *  * @version $Id$  * @see     LocalVariableTable  */
 end_comment
@@ -70,6 +82,8 @@ implements|implements
 name|Cloneable
 implements|,
 name|Node
+implements|,
+name|Constants
 block|{
 specifier|private
 name|int

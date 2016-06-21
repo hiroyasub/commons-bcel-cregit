@@ -35,6 +35,8 @@ begin_class
 specifier|public
 class|class
 name|InstructionFactory
+implements|implements
+name|InstructionConstants
 block|{
 comment|// N.N. These must agree with the order of Constants.T_CHAR through T_LONG
 specifier|private

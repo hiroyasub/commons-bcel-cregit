@@ -40,6 +40,8 @@ implements|implements
 name|CompoundInstruction
 implements|,
 name|VariableLengthInstruction
+implements|,
+name|InstructionConstants
 block|{
 specifier|private
 name|Instruction
