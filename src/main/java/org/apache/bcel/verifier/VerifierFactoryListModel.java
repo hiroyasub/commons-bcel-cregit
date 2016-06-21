@@ -80,7 +80,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * This class implements an adapter; it implements both a Swing ListModel and  * a VerifierFactoryObserver.  *  * @version $Id$  */
+comment|/**  * This class implements an adapter; it implements both a Swing ListModel and a VerifierFactoryObserver.  *  * @version $Id$  */
 end_comment
 
 begin_class
