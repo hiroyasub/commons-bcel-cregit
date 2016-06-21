@@ -3260,7 +3260,7 @@ comment|//                Type f_type = Type.getType(f.getSignature());
 comment|//                Type o_type = o.getType(cpg);
 comment|// Argh. Sun's implementation allows us to have multiple fields of
 comment|// the same name but with a different signature.
-comment|//if (! f_type.equals(o_type)){
+comment|//if (! f_type.equals(o_type)) {
 comment|//    constraintViolated(o,
 comment|//        "Referenced field '"+field_name+"' has type '"+f_type+"' instead of '"+o_type+"' as expected.");
 comment|//}
@@ -3487,7 +3487,7 @@ block|}
 block|}
 else|else
 block|{
-comment|//if (o instanceof INVOKEINTERFACE){
+comment|//if (o instanceof INVOKEINTERFACE) {
 name|Constant
 name|c
 init|=
@@ -5862,11 +5862,11 @@ throw|;
 block|}
 block|}
 comment|/* Checks if the constraints of operands of the said instruction(s) are satisfied. */
-comment|//public void visitPUTFIELD(PUTFIELD o){
+comment|//public void visitPUTFIELD(PUTFIELD o) {
 comment|// for performance reasons done in Pass 3b
 comment|//}
 comment|/* Checks if the constraints of operands of the said instruction(s) are satisfied. */
-comment|//public void visitGETFIELD(GETFIELD o){
+comment|//public void visitGETFIELD(GETFIELD o) {
 comment|// for performance reasons done in Pass 3b
 comment|//}
 comment|/** Checks if the constraints of operands of the said instruction(s) are satisfied. */

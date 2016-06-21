@@ -1244,7 +1244,7 @@ comment|// We should address this problem later; by now we simply "cut" the chai
 comment|// by using an empty chain for the exception handlers.
 comment|//if (v.execute(new Frame(u.getOutFrame(oldchain).getLocals(),
 comment|// new OperandStack (u.getOutFrame().getStack().maxStack(),
-comment|// (exc_hds[s].getExceptionType()==null? Type.THROWABLE : exc_hds[s].getExceptionType())) ), newchain), icv, ev){
+comment|// (exc_hds[s].getExceptionType()==null? Type.THROWABLE : exc_hds[s].getExceptionType())) ), newchain), icv, ev) {
 comment|//icq.add(v, (ArrayList) newchain.clone());
 if|if
 condition|(

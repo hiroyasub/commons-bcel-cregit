@@ -243,7 +243,7 @@ name|f
 expr_stmt|;
 block|}
 comment|///** Symbolically executes the corresponding Java Virtual Machine instruction. */
-comment|//public void visitWIDE(WIDE o){
+comment|//public void visitWIDE(WIDE o) {
 comment|// The WIDE instruction is modelled as a flag
 comment|// of the embedded instructions in BCEL.
 comment|// Therefore BCEL checks for possible errors

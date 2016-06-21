@@ -1583,7 +1583,7 @@ literal|"'; Instruction expects a ReferenceType or a ReturnadressType."
 argument_list|)
 expr_stmt|;
 block|}
-comment|//if (stacktop instanceof ReferenceType){
+comment|//if (stacktop instanceof ReferenceType) {
 comment|//    referenceTypeIsInitialized(o, (ReferenceType) stacktop);
 comment|//}
 block|}
@@ -1759,7 +1759,7 @@ expr_stmt|;
 comment|//ReferenceType objectref = (ReferenceType) (stack().peek());
 comment|// TODO: This can only be checked if using Staerk-et-al's "set of object types" instead of a
 comment|// "wider cast object type" created during verification.
-comment|//if (! (objectref.isAssignmentCompatibleWith(mg.getType())) ){
+comment|//if (! (objectref.isAssignmentCompatibleWith(mg.getType())) ) {
 comment|//    constraintViolated(o, "Type on stack top which should be returned is a '"+stack().peek()+
 comment|//    "' which is not assignment compatible with the return type of this method, '"+mg.getType()+"'.");
 comment|//}
@@ -2187,7 +2187,7 @@ expr_stmt|;
 comment|// The check below should already done via visitReturnInstruction(ReturnInstruction), see there.
 comment|// It cannot be done using Staerk-et-al's "set of object types" instead of a
 comment|// "wider cast object type", anyway.
-comment|//if (! objectref.isAssignmentCompatibleWith(mg.getReturnType() )){
+comment|//if (! objectref.isAssignmentCompatibleWith(mg.getReturnType() )) {
 comment|//    constraintViolated(o, "The 'objectref' type "+objectref+
 comment|// " at the stack top is not assignment compatible with the return type '"+mg.getReturnType()+"' of the method.");
 comment|//}
@@ -2277,7 +2277,7 @@ literal|"."
 argument_list|)
 expr_stmt|;
 block|}
-comment|//if (stack().peek() instanceof ReferenceType){
+comment|//if (stack().peek() instanceof ReferenceType) {
 comment|//    referenceTypeIsInitialized(o, (ReferenceType) (stack().peek()) );
 comment|//}
 block|}
@@ -8714,7 +8714,7 @@ decl_stmt|;
 comment|//ReferenceType rFromDesc = (ReferenceType) fromDesc;
 comment|// TODO: This can only be checked when using Staerk-et-al's "set of object types"
 comment|// instead of a "wider cast object type" created during verification.
-comment|//if ( ! rFromStack.isAssignmentCompatibleWith(rFromDesc) ){
+comment|//if ( ! rFromStack.isAssignmentCompatibleWith(rFromDesc) ) {
 comment|//    constraintViolated(o, "Expecting a '"+fromDesc+"' but found a '"+fromStack+
 comment|//    "' on the stack (which is not assignment compatible).");
 comment|//}
@@ -8845,7 +8845,7 @@ comment|// String objref_classname = ((ObjectType) objref).getClassName();
 comment|// String theInterface = o.getClassName(cpg);
 comment|// TODO: This can only be checked if we're using Staerk-et-al's "set of object types"
 comment|//       instead of "wider cast object types" generated during verification.
-comment|//if ( ! Repository.implementationOf(objref_classname, theInterface) ){
+comment|//if ( ! Repository.implementationOf(objref_classname, theInterface) ) {
 comment|//    constraintViolated(o, "The 'objref' item '"+objref+"' does not implement '"+theInterface+"' as expected.");
 comment|//}
 name|int
