@@ -484,7 +484,7 @@ argument_list|()
 expr_stmt|;
 comment|// Check for unknown variables
 comment|//Unknown[] u = Unknown.getUnknownAttributes();
-comment|//for(int i=0; i< u.length; i++)
+comment|//for (int i=0; i< u.length; i++)
 comment|//  System.err.println("WARNING: " + u[i]);
 comment|// Everything should have been read now
 comment|//      if(file.available()> 0) {
