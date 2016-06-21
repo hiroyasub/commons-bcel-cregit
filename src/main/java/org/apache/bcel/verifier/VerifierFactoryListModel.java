@@ -310,7 +310,6 @@ name|index
 parameter_list|)
 block|{
 return|return
-operator|(
 name|cache
 operator|.
 name|toArray
@@ -324,7 +323,6 @@ name|size
 argument_list|()
 index|]
 argument_list|)
-operator|)
 index|[
 name|index
 index|]
