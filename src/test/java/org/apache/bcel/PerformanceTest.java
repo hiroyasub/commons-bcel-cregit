@@ -843,8 +843,8 @@ name|getProperty
 argument_list|(
 literal|"java.home"
 argument_list|)
-operator|+
-literal|"/lib"
+argument_list|,
+literal|"lib"
 argument_list|)
 decl_stmt|;
 name|javaLib

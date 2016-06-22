@@ -956,8 +956,8 @@ operator|new
 name|File
 argument_list|(
 name|javaHome
-operator|+
-literal|"/lib"
+argument_list|,
+literal|"lib"
 argument_list|)
 decl_stmt|;
 return|return
