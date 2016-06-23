@@ -1846,7 +1846,7 @@ name|Visitor
 name|v
 parameter_list|)
 function_decl|;
-comment|/** Get Comparator object used in the equals() method to determine      * equality of instructions.      *      * @return currently used comparator for equals()      * @deprecated use the built in comparator, or wrap this class in another object that implements these methods      */
+comment|/** Get Comparator object used in the equals() method to determine      * equality of instructions.      *      * @return currently used comparator for equals()      * @deprecated (6.0) use the built in comparator, or wrap this class in another object that implements these methods      */
 annotation|@
 name|Deprecated
 specifier|public
@@ -1859,7 +1859,7 @@ return|return
 name|cmp
 return|;
 block|}
-comment|/** Set comparator to be used for equals().       * @deprecated use the built in comparator, or wrap this class in another object that implements these methods      */
+comment|/** Set comparator to be used for equals().       * @deprecated (6.0) use the built in comparator, or wrap this class in another object that implements these methods      */
 annotation|@
 name|Deprecated
 specifier|public

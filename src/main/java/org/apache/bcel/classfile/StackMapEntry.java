@@ -1863,6 +1863,7 @@ return|return
 name|byte_code_offset
 return|;
 block|}
+comment|/**      *       * @deprecated since 6.0      */
 annotation|@
 name|java
 operator|.
@@ -1926,6 +1927,7 @@ return|return
 name|types_of_locals
 return|;
 block|}
+comment|/**      *       * @deprecated since 6.0      */
 annotation|@
 name|java
 operator|.

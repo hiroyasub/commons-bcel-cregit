@@ -249,7 +249,7 @@ name|HashMap
 argument_list|<>
 argument_list|()
 decl_stmt|;
-comment|/**      * Add an Attribute reader capable of parsing (user-defined) attributes      * named "name". You should not add readers for the standard attributes such      * as "LineNumberTable", because those are handled internally.      *       * @param name the name of the attribute as stored in the class file      * @param r    the reader object      * @deprecated Use {@link #addAttributeReader(String, UnknownAttributeReader)} instead      */
+comment|/**      * Add an Attribute reader capable of parsing (user-defined) attributes      * named "name". You should not add readers for the standard attributes such      * as "LineNumberTable", because those are handled internally.      *       * @param name the name of the attribute as stored in the class file      * @param r    the reader object      * @deprecated (6.0) Use {@link #addAttributeReader(String, UnknownAttributeReader)} instead      */
 annotation|@
 name|java
 operator|.

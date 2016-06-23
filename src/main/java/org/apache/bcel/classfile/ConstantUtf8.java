@@ -639,7 +639,7 @@ return|return
 name|bytes
 return|;
 block|}
-comment|/**      * @param bytes the raw bytes of this Utf-8      * @deprecated      */
+comment|/**      * @param bytes the raw bytes of this Utf-8      * @deprecated (since 6.0)      */
 annotation|@
 name|java
 operator|.
