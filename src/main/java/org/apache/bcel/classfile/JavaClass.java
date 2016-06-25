@@ -354,7 +354,6 @@ argument_list|(
 literal|"JavaClass.debug"
 argument_list|)
 decl_stmt|;
-empty_stmt|;
 comment|// Debugging on/off
 specifier|private
 specifier|static
