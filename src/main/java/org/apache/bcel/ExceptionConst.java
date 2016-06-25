@@ -413,7 +413,6 @@ name|EXCS_STRING_RESOLUTION
 block|,
 name|EXCS_ARRAY_EXCEPTION
 block|,     }
-empty_stmt|;
 comment|// helper method to merge exception class arrays
 specifier|private
 specifier|static

@@ -249,7 +249,6 @@ name|CLASS
 block|,
 name|METHOD
 block|,     }
-empty_stmt|;
 comment|// The base package name for imports; assumes Const is at the top level
 comment|// N.B we use the class so renames will be detected by the compiler/IDE
 specifier|private
