@@ -300,7 +300,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Test that the generic dump() methods work on the JDK classes Reads each class into an instruction list and then dumps  * the instructions. The output bytes should be the same as the input.  */
+comment|/**  * Test that the generic dump() methods work on the JDK classes Reads each class  * into an instruction list and then dumps the instructions. The output bytes  * should be the same as the input.  */
 end_comment
 
 begin_class
@@ -508,6 +508,22 @@ range|:
 name|keys
 control|)
 block|{
+if|if
+condition|(
+name|Advapi32Util
+operator|.
+name|registryKeyExists
+argument_list|(
+name|HKEY_LOCAL_MACHINE
+argument_list|,
+name|KEY_JRE
+operator|+
+literal|"\\"
+operator|+
+name|key
+argument_list|)
+condition|)
+block|{
 specifier|final
 name|String
 name|javaHome
@@ -556,6 +572,7 @@ argument_list|(
 name|javaHome
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 block|}
 block|}
