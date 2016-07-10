@@ -300,7 +300,7 @@ name|signature
 argument_list|)
 return|;
 block|}
-comment|/**      * This overrides the deprecated version as we know here that the referenced class      * cannot be an array unless something has gone badly wrong.      * may legally be an array.      * *      * @return name of the referenced class/interface      * @throws IllegalArgumentException if the referenced class is an array (this should not happen)      */
+comment|/**      * This overrides the deprecated version as we know here that the referenced class      * may legally be an array.      *      * @return name of the referenced class/interface      * @throws IllegalArgumentException if the referenced class is an array (this should not happen)      */
 annotation|@
 name|Override
 specifier|public
@@ -356,24 +356,6 @@ operator|.
 name|CONSTANT_Class
 argument_list|)
 decl_stmt|;
-if|if
-condition|(
-name|className
-operator|.
-name|startsWith
-argument_list|(
-literal|"["
-argument_list|)
-condition|)
-block|{
-throw|throw
-operator|new
-name|IllegalArgumentException
-argument_list|(
-literal|"Cannot be used on an array type"
-argument_list|)
-throw|;
-block|}
 return|return
 name|className
 operator|.
