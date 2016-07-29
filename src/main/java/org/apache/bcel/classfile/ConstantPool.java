@@ -470,7 +470,7 @@ operator|.
 name|CONSTANT_Utf8
 argument_list|)
 operator|+
-literal|":"
+literal|" "
 operator|+
 name|constantToString
 argument_list|(
@@ -848,7 +848,7 @@ name|c
 argument_list|)
 return|;
 block|}
-comment|/**       * Dump constant pool to file stream in binary format.      *      * @param file Output file stream      * @throws IOException      */
+comment|/**      * Dump constant pool to file stream in binary format.      *      * @param file Output file stream      * @throws IOException      */
 specifier|public
 name|void
 name|dump
