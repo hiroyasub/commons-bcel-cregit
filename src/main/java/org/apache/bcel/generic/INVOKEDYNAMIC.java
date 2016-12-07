@@ -446,6 +446,31 @@ name|cp
 argument_list|)
 return|;
 block|}
+comment|/**      * Since InvokeDynamic doesn't refer to a reference type, just return java.lang.Object,       * as that is the only type we can say for sure the reference will be.      *       * @param cpg      *            the ConstantPoolGen used to create the instruction      * @return an ObjectType for java.lang.Object      */
+annotation|@
+name|Override
+specifier|public
+name|ReferenceType
+name|getReferenceType
+parameter_list|(
+specifier|final
+name|ConstantPoolGen
+name|cpg
+parameter_list|)
+block|{
+return|return
+operator|new
+name|ObjectType
+argument_list|(
+name|Object
+operator|.
+name|class
+operator|.
+name|getName
+argument_list|()
+argument_list|)
+return|;
+block|}
 block|}
 end_class
 
