@@ -16,7 +16,7 @@ package|;
 end_package
 
 begin_comment
-comment|/**  * Visitor with empty method bodies, can be extended and used in conjunction  * with the DescendingVisitor class, e.g. By courtesy of David Spencer.  *   * @see DescendingVisitor  * @version $Id$  */
+comment|/**  * Visitor with empty method bodies, can be extended and used in conjunction  * with the DescendingVisitor class, e.g. By courtesy of David Spencer.  *  * @see DescendingVisitor  * @version $Id$  */
 end_comment
 
 begin_class
@@ -569,6 +569,32 @@ parameter_list|(
 specifier|final
 name|ParameterAnnotationEntry
 name|parameterAnnotationEntry
+parameter_list|)
+block|{
+block|}
+comment|/**      * @since 6.1      */
+annotation|@
+name|Override
+specifier|public
+name|void
+name|visitConstantPackage
+parameter_list|(
+specifier|final
+name|ConstantPackage
+name|constantPackage
+parameter_list|)
+block|{
+block|}
+comment|/**      * @since 6.1      */
+annotation|@
+name|Override
+specifier|public
+name|void
+name|visitConstantModule
+parameter_list|(
+specifier|final
+name|ConstantModule
+name|constantModule
 parameter_list|)
 block|{
 block|}

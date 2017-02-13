@@ -632,6 +632,24 @@ name|CONSTANT_InvokeDynamic
 init|=
 literal|18
 decl_stmt|;
+comment|/** Marks a constant pool entry as a Module Reference.    * @see<a href="http://cr.openjdk.java.net/~mr/jigsaw/spec/lang-vm.html#jigsaw-2.6">    * JPMS: Modules in the Java Language and JVM</a>    * Note: Early access Java 9 support- currently subject to change */
+specifier|public
+specifier|static
+specifier|final
+name|byte
+name|CONSTANT_Module
+init|=
+literal|19
+decl_stmt|;
+comment|/** Marks a constant pool entry as a Package Reference.    * @see<a href="http://cr.openjdk.java.net/~mr/jigsaw/spec/lang-vm.html#jigsaw-2.6">    * JPMS: Modules in the Java Language and JVM</a>    * Note: Early access Java 9 support- currently subject to change */
+specifier|public
+specifier|static
+specifier|final
+name|byte
+name|CONSTANT_Package
+init|=
+literal|20
+decl_stmt|;
 comment|/**    * The names of the types of entries in a constant pool.    * Use getConstantName instead    */
 specifier|private
 specifier|static
@@ -678,9 +696,13 @@ block|,
 literal|""
 block|,
 literal|"CONSTANT_InvokeDynamic"
+block|,
+literal|"CONSTANT_Module"
+block|,
+literal|"CONSTANT_Package"
 block|}
 decl_stmt|;
-comment|/**    *     * @param index    * @return the CONSTANT_NAMES entry at the given index    * @since 6.0    */
+comment|/**    *    * @param index    * @return the CONSTANT_NAMES entry at the given index    * @since 6.0    */
 specifier|public
 specifier|static
 name|String
@@ -763,7 +785,7 @@ name|MAX_CP_ENTRIES
 init|=
 literal|65535
 decl_stmt|;
-comment|/**    * Maximum code size (plus one; the code size must be LESS than this)    * One of the limitations of the Java Virtual Machine.    * Note vmspec2 page 152 ("Limitations") says:    * "The amount of code per non-native, non-abstract method is limited to 65536 bytes by    * the sizes of the indices in the exception_table of the Code attribute (Â§4.7.3),     * in the LineNumberTable attribute (Â§4.7.8), and in the LocalVariableTable attribute (Â§4.7.9)."    * However this should be taken as an upper limit rather than the defined maximum.    * On page 134 (4.8.1 Static Constants) of the same spec, it says:    * "The value of the code_length item must be less than 65536."    * The entry in the Limitations section has been removed from later versions of the spec;    * it is not present in the Java SE 8 edition.    *    * @see<a href="http://docs.oracle.com/javase/specs/jvms/se8/html/jvms-4.html#jvms-4.7.3-300-E">    * The Java Virtual Machine Specification, Java SE 8 Edition, page 104, chapter 4.7.</a>    */
+comment|/**    * Maximum code size (plus one; the code size must be LESS than this)    * One of the limitations of the Java Virtual Machine.    * Note vmspec2 page 152 ("Limitations") says:    * "The amount of code per non-native, non-abstract method is limited to 65536 bytes by    * the sizes of the indices in the exception_table of the Code attribute (Â§4.7.3),    * in the LineNumberTable attribute (Â§4.7.8), and in the LocalVariableTable attribute (Â§4.7.9)."    * However this should be taken as an upper limit rather than the defined maximum.    * On page 134 (4.8.1 Static Constants) of the same spec, it says:    * "The value of the code_length item must be less than 65536."    * The entry in the Limitations section has been removed from later versions of the spec;    * it is not present in the Java SE 8 edition.    *    * @see<a href="http://docs.oracle.com/javase/specs/jvms/se8/html/jvms-4.html#jvms-4.7.3-300-E">    * The Java Virtual Machine Specification, Java SE 8 Edition, page 104, chapter 4.7.</a>    */
 specifier|public
 specifier|static
 specifier|final
@@ -3252,7 +3274,7 @@ block|,
 name|ILLEGAL_TYPE
 block|}
 decl_stmt|;
-comment|/**    *     * @param index    * @return the short type name    * @since 6.0    */
+comment|/**    *    * @param index    * @return the short type name    * @since 6.0    */
 specifier|public
 specifier|static
 name|String
@@ -3997,7 +4019,7 @@ name|RESERVED
 comment|/*impdep2*/
 block|}
 decl_stmt|;
-comment|/**    *     * @param index    * @return Number of byte code operands    * @since 6.0    */
+comment|/**    *    * @param index    * @return Number of byte code operands    * @since 6.0    */
 specifier|public
 specifier|static
 name|short
@@ -6184,7 +6206,7 @@ name|UNPREDICTABLE
 comment|/*impdep2*/
 block|}
 decl_stmt|;
-comment|/**    *     * @param index    * @return Number of words consumed on operand stack     * @since 6.0    */
+comment|/**    *    * @param index    * @return Number of words consumed on operand stack    * @since 6.0    */
 specifier|public
 specifier|static
 name|int
@@ -6929,7 +6951,7 @@ name|UNPREDICTABLE
 comment|/*impdep2*/
 block|}
 decl_stmt|;
-comment|/**    *     * @param index    * @return Number of words produced onto operand stack    * @since 6.0    */
+comment|/**    *    * @param index    * @return Number of words produced onto operand stack    * @since 6.0    */
 specifier|public
 specifier|static
 name|int
@@ -7195,7 +7217,7 @@ block|,
 literal|"MethodParameters"
 block|}
 decl_stmt|;
-comment|/**    *     * @param index    * @return the attribute name    * @since 6.0    */
+comment|/**    *    * @param index    * @return the attribute name    * @since 6.0    */
 specifier|public
 specifier|static
 name|String
@@ -7313,7 +7335,7 @@ block|,
 literal|"NewObject"
 block|}
 decl_stmt|;
-comment|/**    *     * @param index    * @return the item name    * @since 6.0    */
+comment|/**    *    * @param index    * @return the item name    * @since 6.0    */
 specifier|public
 specifier|static
 name|String
@@ -7524,7 +7546,7 @@ block|,
 literal|"invokeInterface"
 block|}
 decl_stmt|;
-comment|/**    *     * @param index    * @return the method handle name    * @since 6.0    */
+comment|/**    *    * @param index    * @return the method handle name    * @since 6.0    */
 specifier|public
 specifier|static
 name|String

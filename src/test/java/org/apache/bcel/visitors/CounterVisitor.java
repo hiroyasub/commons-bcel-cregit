@@ -1,6 +1,6 @@
 begin_unit|revision:1.0.0;language:Java;cregit-version:0.0.1
 begin_comment
-comment|/*  * Licensed to the Apache Software Foundation (ASF) under one or more  * contributor license agreements.  See the NOTICE file distributed with  * this work for additional information regarding copyright ownership.  * The ASF licenses this file to You under the Apache License, Version 2.0  * (the "License"); you may not use this file except in compliance with  * the License.  You may obtain a copy of the License at  *  *   http://www.apache.org/licenses/LICENSE-2.0  *  * Unless required by applicable law or agreed to in writing, software  * distributed under the License is distributed on an "AS IS" BASIS,  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.  * See the License for the specific language governing permissions and  * limitations under the License.  *   */
+comment|/*  * Licensed to the Apache Software Foundation (ASF) under one or more  * contributor license agreements.  See the NOTICE file distributed with  * this work for additional information regarding copyright ownership.  * The ASF licenses this file to You under the Apache License, Version 2.0  * (the "License"); you may not use this file except in compliance with  * the License.  You may obtain a copy of the License at  *  *   http://www.apache.org/licenses/LICENSE-2.0  *  * Unless required by applicable law or agreed to in writing, software  * distributed under the License is distributed on an "AS IS" BASIS,  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.  * See the License for the specific language governing permissions and  * limitations under the License.  *  */
 end_comment
 
 begin_package
@@ -263,7 +263,35 @@ name|bcel
 operator|.
 name|classfile
 operator|.
+name|ConstantModule
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|bcel
+operator|.
+name|classfile
+operator|.
 name|ConstantNameAndType
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|bcel
+operator|.
+name|classfile
+operator|.
+name|ConstantPackage
 import|;
 end_import
 
@@ -899,6 +927,20 @@ comment|/** @since 6.0 */
 specifier|public
 name|int
 name|constantInvokeDynamic
+init|=
+literal|0
+decl_stmt|;
+comment|/** @since 6.1 */
+specifier|public
+name|int
+name|constantModuleCount
+init|=
+literal|0
+decl_stmt|;
+comment|/** @since 6.1 */
+specifier|public
+name|int
+name|constantPackageCount
 init|=
 literal|0
 decl_stmt|;
@@ -1562,6 +1604,36 @@ name|parameterAnnotationEntry
 parameter_list|)
 block|{
 comment|// TODO Auto-generated method stub
+block|}
+comment|/** @since 6.1 */
+annotation|@
+name|Override
+specifier|public
+name|void
+name|visitConstantPackage
+parameter_list|(
+name|ConstantPackage
+name|constantPackage
+parameter_list|)
+block|{
+name|constantPackageCount
+operator|++
+expr_stmt|;
+block|}
+comment|/** @since 6.1 */
+annotation|@
+name|Override
+specifier|public
+name|void
+name|visitConstantModule
+parameter_list|(
+name|ConstantModule
+name|constantModule
+parameter_list|)
+block|{
+name|constantModuleCount
+operator|++
+expr_stmt|;
 block|}
 block|}
 end_class

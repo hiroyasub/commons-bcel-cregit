@@ -16,7 +16,7 @@ package|;
 end_package
 
 begin_comment
-comment|/**  * Interface to make use of the Visitor pattern programming style. I.e. a class  * that implements this interface can traverse the contents of a Java class just  * by calling the `accept' method which all classes have.  *   * @version $Id$  */
+comment|/**  * Interface to make use of the Visitor pattern programming style. I.e. a class  * that implements this interface can traverse the contents of a Java class just  * by calling the `accept' method which all classes have.  *  * @version $Id$  */
 end_comment
 
 begin_interface
@@ -341,6 +341,22 @@ name|visitParameterAnnotationEntry
 parameter_list|(
 name|ParameterAnnotationEntry
 name|obj
+parameter_list|)
+function_decl|;
+comment|/**      * @since 6.1      */
+name|void
+name|visitConstantPackage
+parameter_list|(
+name|ConstantPackage
+name|constantPackage
+parameter_list|)
+function_decl|;
+comment|/**      * @since 6.1      */
+name|void
+name|visitConstantModule
+parameter_list|(
+name|ConstantModule
+name|constantModule
 parameter_list|)
 function_decl|;
 block|}
