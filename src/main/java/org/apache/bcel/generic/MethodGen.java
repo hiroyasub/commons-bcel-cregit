@@ -5065,6 +5065,16 @@ operator|=
 name|rpa
 expr_stmt|;
 block|}
+specifier|final
+name|ParameterAnnotationEntry
+index|[]
+name|parameterAnnotationEntries
+init|=
+name|rpa
+operator|.
+name|getParameterAnnotationEntries
+argument_list|()
+decl_stmt|;
 for|for
 control|(
 name|int
@@ -5074,7 +5084,7 @@ literal|0
 init|;
 name|j
 operator|<
-name|arg_types
+name|parameterAnnotationEntries
 operator|.
 name|length
 condition|;
