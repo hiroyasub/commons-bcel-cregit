@@ -135,11 +135,13 @@ name|Inner
 parameter_list|(
 annotation|@
 name|A
+specifier|final
 name|Object
 name|a
 parameter_list|,
 annotation|@
 name|B
+specifier|final
 name|Object
 name|b
 parameter_list|)

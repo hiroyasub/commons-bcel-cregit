@@ -1612,6 +1612,7 @@ specifier|public
 name|void
 name|visitConstantPackage
 parameter_list|(
+specifier|final
 name|ConstantPackage
 name|constantPackage
 parameter_list|)
@@ -1627,6 +1628,7 @@ specifier|public
 name|void
 name|visitConstantModule
 parameter_list|(
+specifier|final
 name|ConstantModule
 name|constantModule
 parameter_list|)

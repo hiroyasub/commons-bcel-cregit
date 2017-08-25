@@ -3137,6 +3137,7 @@ specifier|private
 name|void
 name|updateLocalVariableTable
 parameter_list|(
+specifier|final
 name|LocalVariableTable
 name|a
 parameter_list|)
@@ -3258,6 +3259,7 @@ specifier|private
 name|void
 name|adjustLocalVariableLength
 parameter_list|(
+specifier|final
 name|LocalVariableTable
 name|lvt
 parameter_list|)

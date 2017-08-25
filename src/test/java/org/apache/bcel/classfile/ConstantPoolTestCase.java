@@ -205,12 +205,15 @@ name|InstructionHandle
 index|[]
 name|getInstructionHandles
 parameter_list|(
+specifier|final
 name|JavaClass
 name|clazz
 parameter_list|,
+specifier|final
 name|ConstantPoolGen
 name|cp
 parameter_list|,
+specifier|final
 name|Method
 name|method
 parameter_list|)
