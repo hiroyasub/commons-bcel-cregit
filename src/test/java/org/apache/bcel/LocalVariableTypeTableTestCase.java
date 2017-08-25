@@ -310,6 +310,7 @@ name|IllegalAccessException
 throws|,
 name|IOException
 block|{
+specifier|final
 name|String
 name|targetClass
 init|=
@@ -317,6 +318,7 @@ name|PACKAGE_BASE_NAME
 operator|+
 literal|".data.SimpleClassHasMethodIncludeGenericArgument"
 decl_stmt|;
+specifier|final
 name|TestClassLoader
 name|loader
 init|=
@@ -330,6 +332,7 @@ name|getClassLoader
 argument_list|()
 argument_list|)
 decl_stmt|;
+specifier|final
 name|Class
 name|cls
 init|=
@@ -494,6 +497,7 @@ name|ClassNotFoundException
 throws|,
 name|IOException
 block|{
+specifier|final
 name|JavaClass
 name|clazz
 init|=
@@ -502,6 +506,7 @@ argument_list|(
 name|className
 argument_list|)
 decl_stmt|;
+specifier|final
 name|ConstantPoolGen
 name|cp
 init|=
@@ -514,6 +519,7 @@ name|getConstantPool
 argument_list|()
 argument_list|)
 decl_stmt|;
+specifier|final
 name|Method
 index|[]
 name|methods
@@ -540,6 +546,7 @@ name|i
 operator|++
 control|)
 block|{
+specifier|final
 name|Method
 name|method
 init|=
@@ -621,6 +628,7 @@ name|int
 name|firstStringOffset
 parameter_list|)
 block|{
+specifier|final
 name|MethodGen
 name|methodGen
 init|=
@@ -637,6 +645,7 @@ argument_list|,
 name|cp
 argument_list|)
 decl_stmt|;
+specifier|final
 name|InstructionList
 name|instructionList
 init|=
@@ -715,6 +724,7 @@ name|InstructionList
 argument_list|()
 return|;
 block|}
+specifier|final
 name|LocalVariableGen
 name|localVariableGen
 init|=
@@ -862,6 +872,7 @@ name|Method
 name|method
 parameter_list|)
 block|{
+specifier|final
 name|Type
 index|[]
 name|argumentTypes

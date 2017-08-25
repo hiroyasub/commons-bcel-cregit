@@ -3264,6 +3264,7 @@ name|LocalVariableTable
 name|lvt
 parameter_list|)
 block|{
+specifier|final
 name|LocalVariable
 index|[]
 name|lv
@@ -3273,6 +3274,7 @@ operator|.
 name|getLocalVariableTable
 argument_list|()
 decl_stmt|;
+specifier|final
 name|LocalVariable
 index|[]
 name|lvg
@@ -3284,6 +3286,7 @@ argument_list|()
 decl_stmt|;
 for|for
 control|(
+specifier|final
 name|LocalVariable
 name|element
 range|:
@@ -3292,6 +3295,7 @@ control|)
 block|{
 for|for
 control|(
+specifier|final
 name|LocalVariable
 name|l
 range|:

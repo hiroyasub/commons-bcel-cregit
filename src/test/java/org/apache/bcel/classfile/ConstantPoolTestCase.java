@@ -109,6 +109,7 @@ parameter_list|()
 throws|throws
 name|ClassNotFoundException
 block|{
+specifier|final
 name|JavaClass
 name|clazz
 init|=
@@ -119,6 +120,7 @@ operator|+
 literal|".data.SimpleClassWithDefaultConstructor"
 argument_list|)
 decl_stmt|;
+specifier|final
 name|ConstantPoolGen
 name|cp
 init|=
@@ -131,6 +133,7 @@ name|getConstantPool
 argument_list|()
 argument_list|)
 decl_stmt|;
+specifier|final
 name|Method
 index|[]
 name|methods
@@ -142,6 +145,7 @@ argument_list|()
 decl_stmt|;
 for|for
 control|(
+specifier|final
 name|Method
 name|method
 range|:
@@ -163,6 +167,7 @@ condition|)
 block|{
 for|for
 control|(
+specifier|final
 name|InstructionHandle
 name|instructionHandle
 range|:
@@ -218,6 +223,7 @@ name|Method
 name|method
 parameter_list|)
 block|{
+specifier|final
 name|MethodGen
 name|methodGen
 init|=
@@ -234,6 +240,7 @@ argument_list|,
 name|cp
 argument_list|)
 decl_stmt|;
+specifier|final
 name|InstructionList
 name|instructionList
 init|=
