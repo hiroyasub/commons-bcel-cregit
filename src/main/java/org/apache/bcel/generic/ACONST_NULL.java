@@ -16,7 +16,7 @@ package|;
 end_package
 
 begin_comment
-comment|/**   * ACONST_NULL - Push null reference  *<PRE>Stack: ... -&gt; ..., null</PRE>  *  * @version $Id$  */
+comment|/**  * ACONST_NULL - Push null reference  *<PRE>Stack: ... -&gt; ..., null</PRE>  *  * @version $Id$  */
 end_comment
 
 begin_class
@@ -30,7 +30,7 @@ name|PushInstruction
 implements|,
 name|TypedInstruction
 block|{
-comment|/**       * Push null reference      */
+comment|/**      * Push null reference      */
 specifier|public
 name|ACONST_NULL
 parameter_list|()

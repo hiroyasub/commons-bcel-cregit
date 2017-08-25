@@ -16,7 +16,7 @@ package|;
 end_package
 
 begin_comment
-comment|/**   * ASTORE - Store reference into local variable  *<PRE>Stack ..., objectref -&gt; ...</PRE>  *  * @version $Id$  */
+comment|/**  * ASTORE - Store reference into local variable  *<PRE>Stack ..., objectref -&gt; ...</PRE>  *  * @version $Id$  */
 end_comment
 
 begin_class

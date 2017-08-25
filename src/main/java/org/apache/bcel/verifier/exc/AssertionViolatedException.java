@@ -172,7 +172,7 @@ return|return
 name|detailMessage
 return|;
 block|}
-comment|/**       * DO NOT USE. It's for experimental testing during development only.      */
+comment|/**      * DO NOT USE. It's for experimental testing during development only.      */
 specifier|public
 specifier|static
 name|void

@@ -16,7 +16,7 @@ package|;
 end_package
 
 begin_comment
-comment|/**  * Used for BCEL comparison strategy  *   * @version $Id$  * @since 5.2  */
+comment|/**  * Used for BCEL comparison strategy  *  * @version $Id$  * @since 5.2  */
 end_comment
 
 begin_interface
@@ -24,7 +24,7 @@ specifier|public
 interface|interface
 name|BCELComparator
 block|{
-comment|/**      * Compare two objects and return what THIS.equals(THAT) should return      *       * @param THIS      * @param THAT      * @return true if and only if THIS equals THAT      */
+comment|/**      * Compare two objects and return what THIS.equals(THAT) should return      *      * @param THIS      * @param THAT      * @return true if and only if THIS equals THAT      */
 name|boolean
 name|equals
 parameter_list|(
@@ -35,7 +35,7 @@ name|Object
 name|THAT
 parameter_list|)
 function_decl|;
-comment|/**      * Return hashcode for THIS.hashCode()      *       * @param THIS      * @return hashcode for THIS.hashCode()      */
+comment|/**      * Return hashcode for THIS.hashCode()      *      * @param THIS      * @return hashcode for THIS.hashCode()      */
 name|int
 name|hashCode
 parameter_list|(

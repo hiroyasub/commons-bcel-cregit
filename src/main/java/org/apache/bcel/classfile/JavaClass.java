@@ -683,7 +683,7 @@ expr_stmt|;
 break|break;
 block|}
 block|}
-comment|/* According to the specification the following entries must be of type          * `ConstantClass' but we check that anyway via the           * `ConstPool.getConstant' method.          */
+comment|/* According to the specification the following entries must be of type          * `ConstantClass' but we check that anyway via the          * `ConstPool.getConstant' method.          */
 name|class_name
 operator|=
 name|constant_pool
@@ -973,7 +973,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/**       * Dump class to a file.      *      * @param file Output file      * @throws IOException      */
+comment|/**      * Dump class to a file.      *      * @param file Output file      * @throws IOException      */
 specifier|public
 name|void
 name|dump
@@ -1065,7 +1065,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/**       * Dump class to a file named file_name.      *      * @param _file_name Output file name      * @throws IOException      */
+comment|/**      * Dump class to a file named file_name.      *      * @param _file_name Output file name      * @throws IOException      */
 specifier|public
 name|void
 name|dump
@@ -3430,7 +3430,7 @@ operator|=
 name|comparator
 expr_stmt|;
 block|}
-comment|/**      * Return value as defined by given BCELComparator strategy.      * By default two JavaClass objects are said to be equal when      * their class names are equal.      *       * @see java.lang.Object#equals(java.lang.Object)      */
+comment|/**      * Return value as defined by given BCELComparator strategy.      * By default two JavaClass objects are said to be equal when      * their class names are equal.      *      * @see java.lang.Object#equals(java.lang.Object)      */
 annotation|@
 name|Override
 specifier|public
@@ -3478,7 +3478,7 @@ argument_list|()
 argument_list|)
 return|;
 block|}
-comment|/**      * Return value as defined by given BCELComparator strategy.      * By default return the hashcode of the class name.      *       * @see java.lang.Object#hashCode()      */
+comment|/**      * Return value as defined by given BCELComparator strategy.      * By default return the hashcode of the class name.      *      * @see java.lang.Object#hashCode()      */
 annotation|@
 name|Override
 specifier|public

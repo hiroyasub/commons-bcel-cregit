@@ -16,7 +16,7 @@ package|;
 end_package
 
 begin_comment
-comment|/**   * IAND - Bitwise AND int  *<PRE>Stack: ..., value1, value2 -&gt; ..., result</PRE>  *  * @version $Id$  */
+comment|/**  * IAND - Bitwise AND int  *<PRE>Stack: ..., value1, value2 -&gt; ..., result</PRE>  *  * @version $Id$  */
 end_comment
 
 begin_class

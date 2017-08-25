@@ -58,7 +58,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**   * Abstract super class for Fieldref, Methodref, InterfaceMethodref and  *                          InvokeDynamic constants.  *  * @version $Id$  * @see     ConstantFieldref  * @see     ConstantMethodref  * @see     ConstantInterfaceMethodref  * @see     ConstantInvokeDynamic  */
+comment|/**  * Abstract super class for Fieldref, Methodref, InterfaceMethodref and  *                          InvokeDynamic constants.  *  * @version $Id$  * @see     ConstantFieldref  * @see     ConstantMethodref  * @see     ConstantInterfaceMethodref  * @see     ConstantInvokeDynamic  */
 end_comment
 
 begin_class
@@ -190,7 +190,7 @@ operator|=
 name|name_and_type_index
 expr_stmt|;
 block|}
-comment|/**       * Dump constant field reference to file stream in binary format.      *      * @param file Output file stream      * @throws IOException      */
+comment|/**      * Dump constant field reference to file stream in binary format.      *      * @param file Output file stream      * @throws IOException      */
 annotation|@
 name|Override
 specifier|public
@@ -241,7 +241,7 @@ return|return
 name|class_index
 return|;
 block|}
-comment|/**      * @param class_index points to Constant_class       */
+comment|/**      * @param class_index points to Constant_class      */
 specifier|public
 specifier|final
 name|void

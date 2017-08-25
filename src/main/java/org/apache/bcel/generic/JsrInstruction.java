@@ -16,7 +16,7 @@ package|;
 end_package
 
 begin_comment
-comment|/**   * Super class for JSR - Jump to subroutine  *  * @version $Id$  */
+comment|/**  * Super class for JSR - Jump to subroutine  *  * @version $Id$  */
 end_comment
 
 begin_class

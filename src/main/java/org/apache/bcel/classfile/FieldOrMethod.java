@@ -68,7 +68,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**   * Abstract super class for fields and methods.  *  * @version $Id$  */
+comment|/**  * Abstract super class for fields and methods.  *  * @version $Id$  */
 end_comment
 
 begin_class

@@ -153,7 +153,7 @@ argument_list|(
 name|input
 argument_list|)
 expr_stmt|;
-comment|/* Quote from the JVM specification:              * "All eight byte constants take up two spots in the constant pool.              * If this is the n'th byte in the constant pool, then the next item              * will be numbered n+2"              *               * Thus we have to increment the index counter.              */
+comment|/* Quote from the JVM specification:              * "All eight byte constants take up two spots in the constant pool.              * If this is the n'th byte in the constant pool, then the next item              * will be numbered n+2"              *              * Thus we have to increment the index counter.              */
 name|tag
 operator|=
 name|constant_pool
@@ -1048,7 +1048,7 @@ return|return
 name|constant_pool
 return|;
 block|}
-comment|/**      * Get string from constant pool and bypass the indirection of       * `ConstantClass' and `ConstantString' objects. I.e. these classes have      * an index field that points to another entry of the constant pool of      * type `ConstantUtf8' which contains the real data.      *      * @param  index Index in constant pool      * @param  tag Tag of expected constant, either ConstantClass or ConstantString      * @return Contents of string reference      * @see    ConstantClass      * @see    ConstantString      * @throws  ClassFormatException      */
+comment|/**      * Get string from constant pool and bypass the indirection of      * `ConstantClass' and `ConstantString' objects. I.e. these classes have      * an index field that points to another entry of the constant pool of      * type `ConstantUtf8' which contains the real data.      *      * @param  index Index in constant pool      * @param  tag Tag of expected constant, either ConstantClass or ConstantString      * @return Contents of string reference      * @see    ConstantClass      * @see    ConstantString      * @throws  ClassFormatException      */
 specifier|public
 name|String
 name|getConstantString

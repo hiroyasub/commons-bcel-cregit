@@ -58,7 +58,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Entry of the parameters table.  *   * @see<a href="http://docs.oracle.com/javase/specs/jvms/se8/html/jvms-4.html#jvms-4.7.24">  * The class File Format : The MethodParameters Attribute</a>  * @since 6.0  */
+comment|/**  * Entry of the parameters table.  *  * @see<a href="http://docs.oracle.com/javase/specs/jvms/se8/html/jvms-4.html#jvms-4.7.24">  * The class File Format : The MethodParameters Attribute</a>  * @since 6.0  */
 end_comment
 
 begin_class
@@ -83,7 +83,7 @@ name|MethodParameter
 parameter_list|()
 block|{
 block|}
-comment|/**      * Construct object from input stream.      *       * @param input Input stream      * @throws java.io.IOException      * @throws ClassFormatException      */
+comment|/**      * Construct object from input stream.      *      * @param input Input stream      * @throws java.io.IOException      * @throws ClassFormatException      */
 name|MethodParameter
 parameter_list|(
 specifier|final

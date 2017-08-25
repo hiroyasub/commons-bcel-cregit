@@ -38,7 +38,7 @@ specifier|public
 interface|interface
 name|Repository
 block|{
-comment|/**      * Store the provided class under "clazz.getClassName()"       */
+comment|/**      * Store the provided class under "clazz.getClassName()"      */
 name|void
 name|storeClass
 parameter_list|(

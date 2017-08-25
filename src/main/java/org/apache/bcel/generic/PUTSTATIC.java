@@ -40,7 +40,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**   * PUTSTATIC - Put static field in class  *<PRE>Stack: ..., value -&gt; ...</PRE>  * OR  *<PRE>Stack: ..., value.word1, value.word2 -&gt; ...</PRE>  *  * @version $Id$  */
+comment|/**  * PUTSTATIC - Put static field in class  *<PRE>Stack: ..., value -&gt; ...</PRE>  * OR  *<PRE>Stack: ..., value.word1, value.word2 -&gt; ...</PRE>  *  * @version $Id$  */
 end_comment
 
 begin_class

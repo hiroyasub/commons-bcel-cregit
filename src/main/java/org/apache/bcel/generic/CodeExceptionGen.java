@@ -30,7 +30,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**   * This class represents an exception handler, i.e., specifies the  region where  * a handler is active and an instruction where the actual handling is done.  * pool as parameters. Opposed to the JVM specification the end of the handled  * region is set to be inclusive, i.e. all instructions between start and end  * are protected including the start and end instructions (handles) themselves.  * The end of the region is automatically mapped to be exclusive when calling  * getCodeException(), i.e., there is no difference semantically.  *  * @version $Id$  * @see     MethodGen  * @see     CodeException  * @see     InstructionHandle  */
+comment|/**  * This class represents an exception handler, i.e., specifies the  region where  * a handler is active and an instruction where the actual handling is done.  * pool as parameters. Opposed to the JVM specification the end of the handled  * region is set to be inclusive, i.e. all instructions between start and end  * are protected including the start and end instructions (handles) themselves.  * The end of the region is automatically mapped to be exclusive when calling  * getCodeException(), i.e., there is no difference semantically.  *  * @version $Id$  * @see     MethodGen  * @see     CodeException  * @see     InstructionHandle  */
 end_comment
 
 begin_class
@@ -156,7 +156,7 @@ argument_list|)
 argument_list|)
 return|;
 block|}
-comment|/* Set start of handler       * @param start_pc Start of handled region (inclusive)      */
+comment|/* Set start of handler      * @param start_pc Start of handled region (inclusive)      */
 specifier|public
 name|void
 name|setStartPC
@@ -187,7 +187,7 @@ operator|=
 name|start_pc
 expr_stmt|;
 block|}
-comment|/* Set end of handler       * @param end_pc End of handled region (inclusive)      */
+comment|/* Set end of handler      * @param end_pc End of handled region (inclusive)      */
 specifier|public
 name|void
 name|setEndPC

@@ -16,7 +16,7 @@ package|;
 end_package
 
 begin_comment
-comment|/**  * Denotes that an instruction may start the process of loading and resolving   * the referenced class in the Virtual Machine.  *  * @version $Id$  */
+comment|/**  * Denotes that an instruction may start the process of loading and resolving  * the referenced class in the Virtual Machine.  *  * @version $Id$  */
 end_comment
 
 begin_interface

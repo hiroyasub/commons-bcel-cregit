@@ -88,7 +88,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Abstract super class for<em>Attribute</em> objects. Currently the  *<em>ConstantValue</em>,<em>SourceFile</em>,<em>Code</em>,  *<em>Exceptiontable</em>,<em>LineNumberTable</em>,  *<em>LocalVariableTable</em>,<em>InnerClasses</em> and  *<em>Synthetic</em> attributes are supported. The<em>Unknown</em>  * attribute stands for non-standard-attributes.  *   * @version $Id$  * @see ConstantValue  * @see SourceFile  * @see Code  * @see Unknown  * @see ExceptionTable  * @see LineNumberTable  * @see LocalVariableTable  * @see InnerClasses  * @see Synthetic  * @see Deprecated  * @see Signature  */
+comment|/**  * Abstract super class for<em>Attribute</em> objects. Currently the  *<em>ConstantValue</em>,<em>SourceFile</em>,<em>Code</em>,  *<em>Exceptiontable</em>,<em>LineNumberTable</em>,  *<em>LocalVariableTable</em>,<em>InnerClasses</em> and  *<em>Synthetic</em> attributes are supported. The<em>Unknown</em>  * attribute stands for non-standard-attributes.  *  * @version $Id$  * @see ConstantValue  * @see SourceFile  * @see Code  * @see Unknown  * @see ExceptionTable  * @see LineNumberTable  * @see LocalVariableTable  * @see InnerClasses  * @see Synthetic  * @see Deprecated  * @see Signature  */
 end_comment
 
 begin_class
@@ -194,7 +194,7 @@ operator|=
 name|constant_pool
 expr_stmt|;
 block|}
-comment|/**      * Called by objects that are traversing the nodes of the tree implicitely      * defined by the contents of a Java class. I.e., the hierarchy of methods,      * fields, attributes, etc. spawns a tree of objects.      *       * @param v      *            Visitor object      */
+comment|/**      * Called by objects that are traversing the nodes of the tree implicitely      * defined by the contents of a Java class. I.e., the hierarchy of methods,      * fields, attributes, etc. spawns a tree of objects.      *      * @param v      *            Visitor object      */
 annotation|@
 name|Override
 specifier|public
@@ -206,7 +206,7 @@ name|Visitor
 name|v
 parameter_list|)
 function_decl|;
-comment|/**      * Dump attribute to file stream in binary format.      *       * @param file      *            Output file stream      * @throws IOException      */
+comment|/**      * Dump attribute to file stream in binary format.      *      * @param file      *            Output file stream      * @throws IOException      */
 specifier|public
 name|void
 name|dump
@@ -249,7 +249,7 @@ name|HashMap
 argument_list|<>
 argument_list|()
 decl_stmt|;
-comment|/**      * Add an Attribute reader capable of parsing (user-defined) attributes      * named "name". You should not add readers for the standard attributes such      * as "LineNumberTable", because those are handled internally.      *       * @param name the name of the attribute as stored in the class file      * @param r    the reader object      * @deprecated (6.0) Use {@link #addAttributeReader(String, UnknownAttributeReader)} instead      */
+comment|/**      * Add an Attribute reader capable of parsing (user-defined) attributes      * named "name". You should not add readers for the standard attributes such      * as "LineNumberTable", because those are handled internally.      *      * @param name the name of the attribute as stored in the class file      * @param r    the reader object      * @deprecated (6.0) Use {@link #addAttributeReader(String, UnknownAttributeReader)} instead      */
 annotation|@
 name|java
 operator|.
@@ -280,7 +280,7 @@ name|r
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Add an Attribute reader capable of parsing (user-defined) attributes      * named "name". You should not add readers for the standard attributes such      * as "LineNumberTable", because those are handled internally.      *       * @param name the name of the attribute as stored in the class file      * @param r    the reader object      */
+comment|/**      * Add an Attribute reader capable of parsing (user-defined) attributes      * named "name". You should not add readers for the standard attributes such      * as "LineNumberTable", because those are handled internally.      *      * @param name the name of the attribute as stored in the class file      * @param r    the reader object      */
 specifier|public
 specifier|static
 name|void
@@ -305,7 +305,7 @@ name|r
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Remove attribute reader      *       * @param name the name of the attribute as stored in the class file      */
+comment|/**      * Remove attribute reader      *      * @param name the name of the attribute as stored in the class file      */
 specifier|public
 specifier|static
 name|void
@@ -324,7 +324,7 @@ name|name
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Class method reads one attribute from the input data stream. This method      * must not be accessible from the outside. It is called by the Field and      * Method constructor methods.      *       * @see Field      * @see Method      *       * @param file Input stream      * @param constant_pool Array of constants      * @return Attribute      * @throws IOException      * @throws ClassFormatException      */
+comment|/**      * Class method reads one attribute from the input data stream. This method      * must not be accessible from the outside. It is called by the Field and      * Method constructor methods.      *      * @see Field      * @see Method      *      * @param file Input stream      * @param constant_pool Array of constants      * @return Attribute      * @throws IOException      * @throws ClassFormatException      */
 specifier|public
 specifier|static
 name|Attribute
@@ -355,7 +355,7 @@ name|constant_pool
 argument_list|)
 return|;
 block|}
-comment|/**      * Class method reads one attribute from the input data stream. This method      * must not be accessible from the outside. It is called by the Field and      * Method constructor methods.      *       * @see Field      * @see Method      *       * @param file Input stream      * @param constant_pool Array of constants      * @return Attribute      * @throws IOException      * @throws ClassFormatException      * @since 6.0      */
+comment|/**      * Class method reads one attribute from the input data stream. This method      * must not be accessible from the outside. It is called by the Field and      * Method constructor methods.      *      * @see Field      * @see Method      *      * @param file Input stream      * @param constant_pool Array of constants      * @return Attribute      * @throws IOException      * @throws ClassFormatException      * @since 6.0      */
 specifier|public
 specifier|static
 name|Attribute
@@ -1070,7 +1070,7 @@ operator|=
 name|constant_pool
 expr_stmt|;
 block|}
-comment|/**      * Use copy() if you want to have a deep copy(), i.e., with all references      * copied correctly.      *       * @return shallow copy of this attribute      */
+comment|/**      * Use copy() if you want to have a deep copy(), i.e., with all references      * copied correctly.      *      * @return shallow copy of this attribute      */
 annotation|@
 name|Override
 specifier|public

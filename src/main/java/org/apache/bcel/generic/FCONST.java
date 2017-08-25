@@ -16,7 +16,7 @@ package|;
 end_package
 
 begin_comment
-comment|/**   * FCONST - Push 0.0, 1.0 or 2.0, other values cause an exception  *  *<PRE>Stack: ... -&gt; ...,</PRE>  *  * @version $Id$  */
+comment|/**  * FCONST - Push 0.0, 1.0 or 2.0, other values cause an exception  *  *<PRE>Stack: ... -&gt; ...,</PRE>  *  * @version $Id$  */
 end_comment
 
 begin_class

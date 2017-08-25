@@ -270,7 +270,7 @@ expr_stmt|;
 block|}
 block|}
 block|}
-comment|/**      * Long output format:      *      *&lt;name of opcode&gt; "["&lt;opcode number&gt;"]"       * "("&lt;length of instruction&gt;")" "&lt;"&lt; local variable index&gt;"&gt;"      *      * @param verbose long/short format switch      * @return mnemonic for instruction      */
+comment|/**      * Long output format:      *      *&lt;name of opcode&gt; "["&lt;opcode number&gt;"]"      * "("&lt;length of instruction&gt;")" "&lt;"&lt; local variable index&gt;"&gt;"      *      * @param verbose long/short format switch      * @return mnemonic for instruction      */
 annotation|@
 name|Override
 specifier|public
@@ -645,7 +645,7 @@ return|return
 name|canon_tag
 return|;
 block|}
-comment|/**      * Returns the type associated with the instruction -       * in case of ALOAD or ASTORE Type.OBJECT is returned.      * This is just a bit incorrect, because ALOAD and ASTORE      * may work on every ReferenceType (including Type.NULL) and      * ASTORE may even work on a ReturnaddressType .      * @return type associated with the instruction      */
+comment|/**      * Returns the type associated with the instruction -      * in case of ALOAD or ASTORE Type.OBJECT is returned.      * This is just a bit incorrect, because ALOAD and ASTORE      * may work on every ReferenceType (including Type.NULL) and      * ASTORE may even work on a ReturnaddressType .      * @return type associated with the instruction      */
 annotation|@
 name|Override
 specifier|public

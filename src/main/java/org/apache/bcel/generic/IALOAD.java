@@ -16,7 +16,7 @@ package|;
 end_package
 
 begin_comment
-comment|/**   * IALOAD - Load int from array  *<PRE>Stack: ..., arrayref, index -&gt; ..., value</PRE>  *  * @version $Id$  */
+comment|/**  * IALOAD - Load int from array  *<PRE>Stack: ..., arrayref, index -&gt; ..., value</PRE>  *  * @version $Id$  */
 end_comment
 
 begin_class
@@ -28,7 +28,7 @@ name|ArrayInstruction
 implements|implements
 name|StackProducer
 block|{
-comment|/**       * Load int from array      */
+comment|/**      * Load int from array      */
 specifier|public
 name|IALOAD
 parameter_list|()

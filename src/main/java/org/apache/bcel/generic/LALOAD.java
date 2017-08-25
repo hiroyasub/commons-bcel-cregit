@@ -16,7 +16,7 @@ package|;
 end_package
 
 begin_comment
-comment|/**   * LALOAD - Load long from array  *<PRE>Stack: ..., arrayref, index -&gt; ..., value1, value2</PRE>  *  * @version $Id$  */
+comment|/**  * LALOAD - Load long from array  *<PRE>Stack: ..., arrayref, index -&gt; ..., value1, value2</PRE>  *  * @version $Id$  */
 end_comment
 
 begin_class

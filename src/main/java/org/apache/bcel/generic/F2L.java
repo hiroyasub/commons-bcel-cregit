@@ -16,7 +16,7 @@ package|;
 end_package
 
 begin_comment
-comment|/**   * F2L - Convert float to long  *<PRE>Stack: ..., value -&gt; ..., result.word1, result.word2</PRE>  *  * @version $Id$  */
+comment|/**  * F2L - Convert float to long  *<PRE>Stack: ..., value -&gt; ..., result.word1, result.word2</PRE>  *  * @version $Id$  */
 end_comment
 
 begin_class

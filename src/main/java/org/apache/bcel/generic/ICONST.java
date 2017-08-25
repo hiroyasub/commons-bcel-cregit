@@ -16,7 +16,7 @@ package|;
 end_package
 
 begin_comment
-comment|/**   * ICONST - Push value between -1, ..., 5, other values cause an exception  *  *<PRE>Stack: ... -&gt; ...,</PRE>  *  * @version $Id$  */
+comment|/**  * ICONST - Push value between -1, ..., 5, other values cause an exception  *  *<PRE>Stack: ... -&gt; ...,</PRE>  *  * @version $Id$  */
 end_comment
 
 begin_class

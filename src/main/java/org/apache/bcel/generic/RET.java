@@ -50,7 +50,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**   * RET - Return from subroutine  *  *<PRE>Stack: ... -&gt; ...</PRE>  *  * @version $Id$  */
+comment|/**  * RET - Return from subroutine  *  *<PRE>Stack: ... -&gt; ...</PRE>  *  * @version $Id$  */
 end_comment
 
 begin_class

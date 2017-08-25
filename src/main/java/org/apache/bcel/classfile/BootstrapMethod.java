@@ -68,7 +68,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * This class represents a bootstrap method attribute, i.e., the bootstrap  * method ref, the number of bootstrap arguments and an array of the  * bootstrap arguments.  *   * @see<a href="http://docs.oracle.com/javase/specs/jvms/se8/html/jvms-4.html#jvms-4.7.23">  * The class File Format : The BootstrapMethods Attribute</a>  * @since 6.0  */
+comment|/**  * This class represents a bootstrap method attribute, i.e., the bootstrap  * method ref, the number of bootstrap arguments and an array of the  * bootstrap arguments.  *  * @see<a href="http://docs.oracle.com/javase/specs/jvms/se8/html/jvms-4.html#jvms-4.7.23">  * The class File Format : The BootstrapMethods Attribute</a>  * @since 6.0  */
 end_comment
 
 begin_class
@@ -112,7 +112,7 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Construct object from input stream.      *       * @param input Input stream      * @throws IOException      */
+comment|/**      * Construct object from input stream.      *      * @param input Input stream      * @throws IOException      */
 name|BootstrapMethod
 parameter_list|(
 specifier|final

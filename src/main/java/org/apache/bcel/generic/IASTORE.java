@@ -16,7 +16,7 @@ package|;
 end_package
 
 begin_comment
-comment|/**   * IASTORE -  Store into int array  *<PRE>Stack: ..., arrayref, index, value -&gt; ...</PRE>  *  * @version $Id$  */
+comment|/**  * IASTORE -  Store into int array  *<PRE>Stack: ..., arrayref, index, value -&gt; ...</PRE>  *  * @version $Id$  */
 end_comment
 
 begin_class
@@ -28,7 +28,7 @@ name|ArrayInstruction
 implements|implements
 name|StackConsumer
 block|{
-comment|/**       * Store into int array      */
+comment|/**      * Store into int array      */
 specifier|public
 name|IASTORE
 parameter_list|()

@@ -293,7 +293,7 @@ operator|=
 name|parent
 expr_stmt|;
 block|}
-comment|/**      * Search for classes in given path.      *       * @param class_path      */
+comment|/**      * Search for classes in given path.      *      * @param class_path      */
 specifier|public
 name|ClassPath
 parameter_list|(

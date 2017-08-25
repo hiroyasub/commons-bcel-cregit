@@ -16,7 +16,7 @@ package|;
 end_package
 
 begin_comment
-comment|/**   * DADD - Add doubles  *<PRE>Stack: ..., value1.word1, value1.word2, value2.word1, value2.word2 -&gt;</PRE>  *        ..., result.word1, result1.word2  *  * @version $Id$  */
+comment|/**  * DADD - Add doubles  *<PRE>Stack: ..., value1.word1, value1.word2, value2.word1, value2.word2 -&gt;</PRE>  *        ..., result.word1, result1.word2  *  * @version $Id$  */
 end_comment
 
 begin_class

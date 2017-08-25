@@ -88,7 +88,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * represents one annotation in the annotation table  *   * @version $Id: AnnotationEntry  * @since 6.0  */
+comment|/**  * represents one annotation in the annotation table  *  * @version $Id: AnnotationEntry  * @since 6.0  */
 end_comment
 
 begin_class
@@ -120,7 +120,7 @@ name|ElementValuePair
 argument_list|>
 name|element_value_pairs
 decl_stmt|;
-comment|/*      * Factory method to create an AnnotionEntry from a DataInput      *       * @param input      * @param constant_pool      * @param isRuntimeVisible      * @return the entry      * @throws IOException      */
+comment|/*      * Factory method to create an AnnotionEntry from a DataInput      *      * @param input      * @param constant_pool      * @param isRuntimeVisible      * @return the entry      * @throws IOException      */
 specifier|public
 specifier|static
 name|AnnotationEntry
@@ -285,7 +285,7 @@ return|return
 name|isRuntimeVisible
 return|;
 block|}
-comment|/**      * Called by objects that are traversing the nodes of the tree implicitely defined by the contents of a Java class.      * I.e., the hierarchy of methods, fields, attributes, etc. spawns a tree of objects.      *       * @param v Visitor object      */
+comment|/**      * Called by objects that are traversing the nodes of the tree implicitely defined by the contents of a Java class.      * I.e., the hierarchy of methods, fields, attributes, etc. spawns a tree of objects.      *      * @param v Visitor object      */
 annotation|@
 name|Override
 specifier|public

@@ -198,7 +198,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Convert constant pool into HTML file.  *  * @version $Id$  *   */
+comment|/**  * Convert constant pool into HTML file.  *  * @version $Id$  *  */
 end_comment
 
 begin_class
@@ -499,7 +499,7 @@ operator|+
 literal|"</H4>"
 argument_list|)
 expr_stmt|;
-comment|/* For every constant type get the needed parameters and print them appropiately           */
+comment|/* For every constant type get the needed parameters and print them appropiately          */
 switch|switch
 condition|(
 name|tag

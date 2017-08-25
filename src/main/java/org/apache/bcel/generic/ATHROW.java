@@ -28,7 +28,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**   * ATHROW -  Throw exception  *<PRE>Stack: ..., objectref -&gt; objectref</PRE>  *  * @version $Id$  */
+comment|/**  * ATHROW -  Throw exception  *<PRE>Stack: ..., objectref -&gt; objectref</PRE>  *  * @version $Id$  */
 end_comment
 
 begin_class
@@ -42,7 +42,7 @@ name|UnconditionalBranch
 implements|,
 name|ExceptionThrower
 block|{
-comment|/**       *  Throw exception      */
+comment|/**      *  Throw exception      */
 specifier|public
 name|ATHROW
 parameter_list|()

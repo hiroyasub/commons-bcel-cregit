@@ -50,7 +50,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**   * Abstract super class for branching instructions like GOTO, IFEQ, etc..  * Branch instructions may have a variable length, namely GOTO, JSR,   * LOOKUPSWITCH and TABLESWITCH.  *  * @see InstructionList  * @version $Id$  */
+comment|/**  * Abstract super class for branching instructions like GOTO, IFEQ, etc..  * Branch instructions may have a variable length, namely GOTO, JSR,  * LOOKUPSWITCH and TABLESWITCH.  *  * @see InstructionList  * @version $Id$  */
 end_comment
 
 begin_class
@@ -292,7 +292,7 @@ return|return
 literal|0
 return|;
 block|}
-comment|/**      * Long output format:      *      *&lt;position in byte code&gt;      *&lt;name of opcode&gt; "["&lt;opcode number&gt;"]"       * "("&lt;length of instruction&gt;")"      * "&lt;"&lt;target instruction&gt;"&gt;" "@"&lt;branch target offset&gt;      *      * @param verbose long/short format switch      * @return mnemonic for instruction      */
+comment|/**      * Long output format:      *      *&lt;position in byte code&gt;      *&lt;name of opcode&gt; "["&lt;opcode number&gt;"]"      * "("&lt;length of instruction&gt;")"      * "&lt;"&lt;target instruction&gt;"&gt;" "@"&lt;branch target offset&gt;      *      * @param verbose long/short format switch      * @return mnemonic for instruction      */
 annotation|@
 name|Override
 specifier|public

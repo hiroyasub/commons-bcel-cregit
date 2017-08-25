@@ -16,7 +16,7 @@ package|;
 end_package
 
 begin_comment
-comment|/**   * ARETURN -  Return reference from method  *<PRE>Stack: ..., objectref -&gt;&lt;empty&gt;</PRE>  *  * @version $Id$  */
+comment|/**  * ARETURN -  Return reference from method  *<PRE>Stack: ..., objectref -&gt;&lt;empty&gt;</PRE>  *  * @version $Id$  */
 end_comment
 
 begin_class
@@ -26,7 +26,7 @@ name|ARETURN
 extends|extends
 name|ReturnInstruction
 block|{
-comment|/**       * Return reference from method      */
+comment|/**      * Return reference from method      */
 specifier|public
 name|ARETURN
 parameter_list|()

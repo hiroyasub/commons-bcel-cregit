@@ -1665,7 +1665,7 @@ name|clear
 argument_list|()
 expr_stmt|;
 block|}
-comment|/*      * If the range of the variable has not been set yet, it will be set to be valid from      * the start to the end of the instruction list.      *       * @return array of declared local variables sorted by index      */
+comment|/*      * If the range of the variable has not been set yet, it will be set to be valid from      * the start to the end of the instruction list.      *      * @return array of declared local variables sorted by index      */
 specifier|public
 name|LocalVariableGen
 index|[]

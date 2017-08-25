@@ -50,7 +50,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**   * Select - Abstract super class for LOOKUPSWITCH and TABLESWITCH instructions.  *   *<p>We use our super's<code>target</code> property as the default target.  *  * @version $Id$  * @see LOOKUPSWITCH  * @see TABLESWITCH  * @see InstructionList  */
+comment|/**  * Select - Abstract super class for LOOKUPSWITCH and TABLESWITCH instructions.  *  *<p>We use our super's<code>target</code> property as the default target.  *  * @version $Id$  * @see LOOKUPSWITCH  * @see TABLESWITCH  * @see InstructionList  */
 end_comment
 
 begin_class
@@ -997,7 +997,7 @@ return|return
 name|match_length
 return|;
 block|}
-comment|/**      *       * @param index      * @param value      * @since 6.0      */
+comment|/**      *      * @param index      * @param value      * @since 6.0      */
 specifier|final
 name|void
 name|setMatch
@@ -1019,7 +1019,7 @@ operator|=
 name|value
 expr_stmt|;
 block|}
-comment|/**      *       * @param array      * @since 6.0      */
+comment|/**      *      * @param array      * @since 6.0      */
 specifier|final
 name|void
 name|setIndices
@@ -1035,7 +1035,7 @@ operator|=
 name|array
 expr_stmt|;
 block|}
-comment|/**      *       * @param array      * @since 6.0      */
+comment|/**      *      * @param array      * @since 6.0      */
 specifier|final
 name|void
 name|setMatches
@@ -1051,7 +1051,7 @@ operator|=
 name|array
 expr_stmt|;
 block|}
-comment|/**      *       * @param array      * @since 6.0      */
+comment|/**      *      * @param array      * @since 6.0      */
 specifier|final
 name|void
 name|setTargets
@@ -1067,7 +1067,7 @@ operator|=
 name|array
 expr_stmt|;
 block|}
-comment|/**      *       * @return the padding      * @since 6.0      */
+comment|/**      *      * @return the padding      * @since 6.0      */
 specifier|final
 name|int
 name|getPadding

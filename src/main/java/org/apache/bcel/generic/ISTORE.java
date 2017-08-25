@@ -16,7 +16,7 @@ package|;
 end_package
 
 begin_comment
-comment|/**   * ISTORE - Store int from stack into local variable  *<PRE>Stack: ..., value -&gt; ...</PRE>  *  * @version $Id$  */
+comment|/**  * ISTORE - Store int from stack into local variable  *<PRE>Stack: ..., value -&gt; ...</PRE>  *  * @version $Id$  */
 end_comment
 
 begin_class

@@ -50,7 +50,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**   * GOTO_W - Branch always (to relative offset, not absolute address)  *  * @version $Id$  */
+comment|/**  * GOTO_W - Branch always (to relative offset, not absolute address)  *  * @version $Id$  */
 end_comment
 
 begin_class

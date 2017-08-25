@@ -76,7 +76,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**   * Abstract super class for all Java byte codes.  *  * @version $Id$  */
+comment|/**  * Abstract super class for all Java byte codes.  *  * @version $Id$  */
 end_comment
 
 begin_class
@@ -183,7 +183,7 @@ name|opcode
 argument_list|)
 return|;
 block|}
-comment|/**      * Long output format:      *      *&lt;name of opcode&gt; "["&lt;opcode number&gt;"]"       * "("&lt;length of instruction&gt;")"      *      * @param verbose long/short format switch      * @return mnemonic for instruction      */
+comment|/**      * Long output format:      *      *&lt;name of opcode&gt; "["&lt;opcode number&gt;"]"      * "("&lt;length of instruction&gt;")"      *      * @param verbose long/short format switch      * @return mnemonic for instruction      */
 specifier|public
 name|String
 name|toString
@@ -250,7 +250,7 @@ literal|false
 argument_list|)
 return|;
 block|}
-comment|/**      * Use with caution, since `BranchInstruction's have a `target' reference which      * is not copied correctly (only basic types are). This also applies for       * `Select' instructions with their multiple branch targets.      *      * @see BranchInstruction      * @return (shallow) copy of an instruction      */
+comment|/**      * Use with caution, since `BranchInstruction's have a `target' reference which      * is not copied correctly (only basic types are). This also applies for      * `Select' instructions with their multiple branch targets.      *      * @see BranchInstruction      * @return (shallow) copy of an instruction      */
 specifier|public
 name|Instruction
 name|copy

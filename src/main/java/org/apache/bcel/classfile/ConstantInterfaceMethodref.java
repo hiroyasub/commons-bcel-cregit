@@ -48,7 +48,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**   * This class represents a constant pool reference to an interface method.  *  * @version $Id$  */
+comment|/**  * This class represents a constant pool reference to an interface method.  *  * @version $Id$  */
 end_comment
 
 begin_class

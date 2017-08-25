@@ -58,7 +58,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**   * This class is derived from the abstract {@link Constant}  * and represents a reference to a (external) class.  *  * @version $Id$  * @see     Constant  */
+comment|/**  * This class is derived from the abstract {@link Constant}  * and represents a reference to a (external) class.  *  * @version $Id$  * @see     Constant  */
 end_comment
 
 begin_class
@@ -156,7 +156,7 @@ name|this
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**       * Dump constant class to file stream in binary format.      *      * @param file Output file stream      * @throws IOException      */
+comment|/**      * Dump constant class to file stream in binary format.      *      * @param file Output file stream      * @throws IOException      */
 annotation|@
 name|Override
 specifier|public

@@ -16,7 +16,7 @@ package|;
 end_package
 
 begin_comment
-comment|/**   * DASTORE -  Store into double array  *<PRE>Stack: ..., arrayref, index, value.word1, value.word2 -&gt; ...</PRE>  *  * @version $Id$  */
+comment|/**  * DASTORE -  Store into double array  *<PRE>Stack: ..., arrayref, index, value.word1, value.word2 -&gt; ...</PRE>  *  * @version $Id$  */
 end_comment
 
 begin_class

@@ -190,7 +190,7 @@ name|InstructionList
 parameter_list|()
 block|{
 block|}
-comment|/**      * Create instruction list containing one instruction.      *       * @param i      *            initial instruction      */
+comment|/**      * Create instruction list containing one instruction.      *      * @param i      *            initial instruction      */
 specifier|public
 name|InstructionList
 parameter_list|(
@@ -205,7 +205,7 @@ name|i
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Create instruction list containing one instruction.      *       * @param i      *            initial instruction      */
+comment|/**      * Create instruction list containing one instruction.      *      * @param i      *            initial instruction      */
 specifier|public
 name|InstructionList
 parameter_list|(

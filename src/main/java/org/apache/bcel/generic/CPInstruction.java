@@ -92,7 +92,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**   * Abstract super class for instructions that use an index into the   * constant pool such as LDC, INVOKEVIRTUAL, etc.  *  * @see ConstantPoolGen  * @see LDC  * @see INVOKEVIRTUAL  *  * @version $Id$  */
+comment|/**  * Abstract super class for instructions that use an index into the  * constant pool such as LDC, INVOKEVIRTUAL, etc.  *  * @see ConstantPoolGen  * @see LDC  * @see INVOKEVIRTUAL  *  * @version $Id$  */
 end_comment
 
 begin_class
@@ -181,7 +181,7 @@ name|index
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Long output format:      *      *&lt;name of opcode&gt; "["&lt;opcode number&gt;"]"       * "("&lt;length of instruction&gt;")" "&lt;"&lt; constant pool index&gt;"&gt;"      *      * @param verbose long/short format switch      * @return mnemonic for instruction      */
+comment|/**      * Long output format:      *      *&lt;name of opcode&gt; "["&lt;opcode number&gt;"]"      * "("&lt;length of instruction&gt;")" "&lt;"&lt; constant pool index&gt;"&gt;"      *      * @param verbose long/short format switch      * @return mnemonic for instruction      */
 annotation|@
 name|Override
 specifier|public

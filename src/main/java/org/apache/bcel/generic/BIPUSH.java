@@ -50,7 +50,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**   * BIPUSH - Push byte on stack  *  *<PRE>Stack: ... -&gt; ..., value</PRE>  *  * @version $Id$  */
+comment|/**  * BIPUSH - Push byte on stack  *  *<PRE>Stack: ... -&gt; ..., value</PRE>  *  * @version $Id$  */
 end_comment
 
 begin_class

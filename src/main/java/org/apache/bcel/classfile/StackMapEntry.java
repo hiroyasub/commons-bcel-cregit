@@ -93,7 +93,7 @@ specifier|private
 name|ConstantPool
 name|constant_pool
 decl_stmt|;
-comment|/**      * Construct object from input stream.      *       * @param input Input stream      * @throws IOException      */
+comment|/**      * Construct object from input stream.      *      * @param input Input stream      * @throws IOException      */
 name|StackMapEntry
 parameter_list|(
 specifier|final
@@ -1863,7 +1863,7 @@ return|return
 name|byte_code_offset
 return|;
 block|}
-comment|/**      *       * @deprecated since 6.0      */
+comment|/**      *      * @deprecated since 6.0      */
 annotation|@
 name|java
 operator|.
@@ -1927,7 +1927,7 @@ return|return
 name|types_of_locals
 return|;
 block|}
-comment|/**      *       * @deprecated since 6.0      */
+comment|/**      *      * @deprecated since 6.0      */
 annotation|@
 name|java
 operator|.

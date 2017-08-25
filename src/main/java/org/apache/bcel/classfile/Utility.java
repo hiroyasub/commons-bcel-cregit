@@ -334,7 +334,7 @@ literal|false
 argument_list|)
 return|;
 block|}
-comment|/**      * Convert bit field of flags into string such as `static final'.      *      * Special case: Classes compiled with new compilers and with the      * `ACC_SUPER' flag would be said to be "synchronized". This is      * because SUN used the same value for the flags `ACC_SUPER' and      * `ACC_SYNCHRONIZED'.       *      * @param  access_flags Access flags      * @param  for_class access flags are for class qualifiers ?      * @return String representation of flags      */
+comment|/**      * Convert bit field of flags into string such as `static final'.      *      * Special case: Classes compiled with new compilers and with the      * `ACC_SUPER' flag would be said to be "synchronized". This is      * because SUN used the same value for the flags `ACC_SUPER' and      * `ACC_SYNCHRONIZED'.      *      * @param  access_flags Access flags      * @param  for_class access flags are for class qualifiers ?      * @return String representation of flags      */
 specifier|public
 specifier|static
 name|String
@@ -453,7 +453,7 @@ name|trim
 argument_list|()
 return|;
 block|}
-comment|/**      * @param access_flags the class flags      *       * @return "class" or "interface", depending on the ACC_INTERFACE flag      */
+comment|/**      * @param access_flags the class flags      *      * @return "class" or "interface", depending on the ACC_INTERFACE flag      */
 specifier|public
 specifier|static
 name|String
@@ -482,7 +482,7 @@ else|:
 literal|"class"
 return|;
 block|}
-comment|/**      * Disassemble a byte array of JVM byte codes starting from code line       * `index' and return the disassembled string representation. Decode only      * `num' opcodes (including their operands), use -1 if you want to      * decompile everything.      *      * @param  code byte code array      * @param  constant_pool Array of constants      * @param  index offset in `code' array      *<EM>(number of opcodes, not bytes!)</EM>      * @param  length number of opcodes to decompile, -1 for all      * @param  verbose be verbose, e.g. print constant pool index      * @return String representation of byte codes      */
+comment|/**      * Disassemble a byte array of JVM byte codes starting from code line      * `index' and return the disassembled string representation. Decode only      * `num' opcodes (including their operands), use -1 if you want to      * decompile everything.      *      * @param  code byte code array      * @param  constant_pool Array of constants      * @param  index offset in `code' array      *<EM>(number of opcodes, not bytes!)</EM>      * @param  length number of opcodes to decompile, -1 for all      * @param  verbose be verbose, e.g. print constant pool index      * @return String representation of byte codes      */
 specifier|public
 specifier|static
 name|String
@@ -709,7 +709,7 @@ literal|true
 argument_list|)
 return|;
 block|}
-comment|/**      * Disassemble a stream of byte codes and return the      * string representation.      *      * @param  bytes stream of bytes      * @param  constant_pool Array of constants      * @param  verbose be verbose, e.g. print constant pool index      * @return String representation of byte code      *       * @throws IOException if a failure from reading from the bytes argument occurs      */
+comment|/**      * Disassemble a stream of byte codes and return the      * string representation.      *      * @param  bytes stream of bytes      * @param  constant_pool Array of constants      * @param  verbose be verbose, e.g. print constant pool index      * @return String representation of byte code      *      * @throws IOException if a failure from reading from the bytes argument occurs      */
 specifier|public
 specifier|static
 name|String
@@ -2382,7 +2382,7 @@ literal|true
 argument_list|)
 return|;
 block|}
-comment|/**      * Shorten long class names,<em>java/lang/String</em> becomes       *<em>String</em>.      *      * @param str The long class name      * @return Compacted class name      */
+comment|/**      * Shorten long class names,<em>java/lang/String</em> becomes      *<em>String</em>.      *      * @param str The long class name      * @return Compacted class name      */
 specifier|public
 specifier|static
 name|String
@@ -2489,7 +2489,7 @@ return|return
 name|str
 return|;
 block|}
-comment|/**      * Shorten long class names,<em>java/lang/String</em> becomes       *<em>java.lang.String</em>,      * e.g.. If<em>chopit</em> is<em>true</em> the prefix<em>java.lang</em>      * is also removed.      *      * @param str The long class name      * @param chopit Flag that determines whether chopping is executed or not      * @return Compacted class name      */
+comment|/**      * Shorten long class names,<em>java/lang/String</em> becomes      *<em>java.lang.String</em>,      * e.g.. If<em>chopit</em> is<em>true</em> the prefix<em>java.lang</em>      * is also removed.      *      * @param str The long class name      * @param chopit Flag that determines whether chopping is executed or not      * @return Compacted class name      */
 specifier|public
 specifier|static
 name|String
@@ -2607,7 +2607,7 @@ operator|!=
 literal|0
 return|;
 block|}
-comment|/**      * Converts string containing the method return and argument types       * to a byte code method signature.      *      * @param  ret Return type of method      * @param  argv Types of method arguments      * @return Byte code representation of method signature      *       * @throws ClassFormatException if the signature is for Void      */
+comment|/**      * Converts string containing the method return and argument types      * to a byte code method signature.      *      * @param  ret Return type of method      * @param  argv Types of method arguments      * @return Byte code representation of method signature      *      * @throws ClassFormatException if the signature is for Void      */
 specifier|public
 specifier|static
 name|String
@@ -2716,7 +2716,7 @@ name|toString
 argument_list|()
 return|;
 block|}
-comment|/**      * @param  signature    Method signature      * @return Array of argument types      * @throws  ClassFormatException        */
+comment|/**      * @param  signature    Method signature      * @return Array of argument types      * @throws  ClassFormatException      */
 specifier|public
 specifier|static
 name|String
@@ -2739,7 +2739,7 @@ literal|true
 argument_list|)
 return|;
 block|}
-comment|/**      * @param  signature    Method signature      * @param chopit Shorten class names ?      * @return Array of argument types      * @throws  ClassFormatException        */
+comment|/**      * @param  signature    Method signature      * @param chopit Shorten class names ?      * @return Array of argument types      * @throws  ClassFormatException      */
 specifier|public
 specifier|static
 name|String
@@ -2878,7 +2878,7 @@ index|]
 argument_list|)
 return|;
 block|}
-comment|/**      * @param  signature    Method signature      * @return return type of method      * @throws  ClassFormatException        */
+comment|/**      * @param  signature    Method signature      * @return return type of method      * @throws  ClassFormatException      */
 specifier|public
 specifier|static
 name|String
@@ -2900,7 +2900,7 @@ literal|true
 argument_list|)
 return|;
 block|}
-comment|/**      * @param  signature    Method signature      * @param chopit Shorten class names ?      * @return return type of method      * @throws  ClassFormatException        */
+comment|/**      * @param  signature    Method signature      * @param chopit Shorten class names ?      * @return return type of method      * @throws  ClassFormatException      */
 specifier|public
 specifier|static
 name|String
@@ -3045,7 +3045,7 @@ literal|null
 argument_list|)
 return|;
 block|}
-comment|/**      * A returntype signature represents the return value from a method.      * It is a series of bytes in the following grammar:      *      *<pre>      *&lt;return_signature&gt; ::=&lt;field_type&gt; | V      *</pre>      *      * The character V indicates that the method returns no value. Otherwise, the      * signature indicates the type of the return value.      * An argument signature represents an argument passed to a method:      *      *<pre>      *&lt;argument_signature&gt; ::=&lt;field_type&gt;      *</pre>      *      * A method signature represents the arguments that the method expects, and      * the value that it returns.      *<pre>      *&lt;method_signature&gt; ::= (&lt;arguments_signature&gt;)&lt;return_signature&gt;      *&lt;arguments_signature&gt;::=&lt;argument_signature&gt;*      *</pre>      *      * This method converts such a string into a Java type declaration like      * `void main(String[])' and throws a `ClassFormatException' when the parsed       * type is invalid.      *      * @param  signature    Method signature      * @param  name         Method name      * @param  access       Method access rights      * @param chopit      * @param vars      * @return Java type declaration      * @throws  ClassFormatException        */
+comment|/**      * A returntype signature represents the return value from a method.      * It is a series of bytes in the following grammar:      *      *<pre>      *&lt;return_signature&gt; ::=&lt;field_type&gt; | V      *</pre>      *      * The character V indicates that the method returns no value. Otherwise, the      * signature indicates the type of the return value.      * An argument signature represents an argument passed to a method:      *      *<pre>      *&lt;argument_signature&gt; ::=&lt;field_type&gt;      *</pre>      *      * A method signature represents the arguments that the method expects, and      * the value that it returns.      *<pre>      *&lt;method_signature&gt; ::= (&lt;arguments_signature&gt;)&lt;return_signature&gt;      *&lt;arguments_signature&gt;::=&lt;argument_signature&gt;*      *</pre>      *      * This method converts such a string into a Java type declaration like      * `void main(String[])' and throws a `ClassFormatException' when the parsed      * type is invalid.      *      * @param  signature    Method signature      * @param  name         Method name      * @param  access       Method access rights      * @param chopit      * @param vars      * @return Java type declaration      * @throws  ClassFormatException      */
 specifier|public
 specifier|static
 name|String
@@ -3559,7 +3559,7 @@ literal|true
 argument_list|)
 return|;
 block|}
-comment|/**      * The field signature represents the value of an argument to a function or       * the value of a variable. It is a series of bytes generated by the       * following grammar:      *      *<PRE>      *&lt;field_signature&gt; ::=&lt;field_type&gt;      *&lt;field_type&gt;      ::=&lt;base_type&gt;|&lt;object_type&gt;|&lt;array_type&gt;      *&lt;base_type&gt;       ::= B|C|D|F|I|J|S|Z      *&lt;object_type&gt;     ::= L&lt;fullclassname&gt;;      *&lt;array_type&gt;      ::= [&lt;field_type&gt;      *      * The meaning of the base types is as follows:      * B byte signed byte      * C char character      * D double double precision IEEE float      * F float single precision IEEE float      * I int integer      * J long long integer      * L&lt;fullclassname&gt;; ... an object of the given class      * S short signed short      * Z boolean true or false      * [&lt;field sig&gt; ... array      *</PRE>      *      * This method converts this string into a Java type declaration such as      * `String[]' and throws a `ClassFormatException' when the parsed type is       * invalid.      *      * @param  signature  Class signature      * @param chopit Flag that determines whether chopping is executed or not      * @return Java type declaration      * @throws ClassFormatException      */
+comment|/**      * The field signature represents the value of an argument to a function or      * the value of a variable. It is a series of bytes generated by the      * following grammar:      *      *<PRE>      *&lt;field_signature&gt; ::=&lt;field_type&gt;      *&lt;field_type&gt;      ::=&lt;base_type&gt;|&lt;object_type&gt;|&lt;array_type&gt;      *&lt;base_type&gt;       ::= B|C|D|F|I|J|S|Z      *&lt;object_type&gt;     ::= L&lt;fullclassname&gt;;      *&lt;array_type&gt;      ::= [&lt;field_type&gt;      *      * The meaning of the base types is as follows:      * B byte signed byte      * C char character      * D double double precision IEEE float      * F float single precision IEEE float      * I int integer      * J long long integer      * L&lt;fullclassname&gt;; ... an object of the given class      * S short signed short      * Z boolean true or false      * [&lt;field sig&gt; ... array      *</PRE>      *      * This method converts this string into a Java type declaration such as      * `String[]' and throws a `ClassFormatException' when the parsed type is      * invalid.      *      * @param  signature  Class signature      * @param chopit Flag that determines whether chopping is executed or not      * @return Java type declaration      * @throws ClassFormatException      */
 specifier|public
 specifier|static
 name|String
@@ -4730,7 +4730,7 @@ return|return
 name|count
 return|;
 block|}
-comment|/**      * Return type of method signature as a byte value as defined in<em>Constants</em>      *      * @param  signature in format described above      * @return type of method signature      * @see    Const      *       * @throws ClassFormatException if signature is not a method signature      */
+comment|/**      * Return type of method signature as a byte value as defined in<em>Constants</em>      *      * @param  signature in format described above      * @return type of method signature      * @see    Const      *      * @throws ClassFormatException if signature is not a method signature      */
 specifier|public
 specifier|static
 name|byte
@@ -4813,7 +4813,7 @@ argument_list|)
 throw|;
 block|}
 block|}
-comment|/**      * Return type of signature as a byte value as defined in<em>Constants</em>      *      * @param  signature in format described above      * @return type of signature      * @see    Const      *       * @throws ClassFormatException if signature isn't a known type      */
+comment|/**      * Return type of signature as a byte value as defined in<em>Constants</em>      *      * @param  signature in format described above      * @return type of signature      * @see    Const      *      * @throws ClassFormatException if signature isn't a known type      */
 specifier|public
 specifier|static
 name|byte
@@ -5077,7 +5077,7 @@ operator|)
 name|b
 return|;
 block|}
-comment|/** Convert bytes into hexadecimal string      *      * @param bytes an array of bytes to convert to hexadecimal      *       * @return bytes as hexadecimal string, e.g. 00 fa 12 ...      */
+comment|/** Convert bytes into hexadecimal string      *      * @param bytes an array of bytes to convert to hexadecimal      *      * @return bytes as hexadecimal string, e.g. 00 fa 12 ...      */
 specifier|public
 specifier|static
 name|String
@@ -5663,7 +5663,7 @@ name|toString
 argument_list|()
 return|;
 block|}
-comment|/**       * @param ch the character to test if it's part of an identifier      *       * @return true, if character is one of (a, ... z, A, ... Z, 0, ... 9, _)      */
+comment|/**      * @param ch the character to test if it's part of an identifier      *      * @return true, if character is one of (a, ... z, A, ... Z, 0, ... 9, _)      */
 specifier|public
 specifier|static
 name|boolean
@@ -5724,7 +5724,7 @@ literal|'_'
 operator|)
 return|;
 block|}
-comment|/**      * Encode byte array it into Java identifier string, i.e., a string      * that only contains the following characters: (a, ... z, A, ... Z,      * 0, ... 9, _, $).  The encoding algorithm itself is not too      * clever: if the current byte's ASCII value already is a valid Java      * identifier part, leave it as it is. Otherwise it writes the      * escape character($) followed by:      *       *<ul>      *<li> the ASCII value as a hexadecimal string, if the value is not in the range 200..247</li>      *<li>a Java identifier char not used in a lowercase hexadecimal string, if the value is in the range 200..247</li>      *</ul>      *      *<p>This operation inflates the original byte array by roughly 40-50%</p>      *      * @param bytes the byte array to convert      * @param compress use gzip to minimize string      *       * @throws IOException if there's a gzip exception      */
+comment|/**      * Encode byte array it into Java identifier string, i.e., a string      * that only contains the following characters: (a, ... z, A, ... Z,      * 0, ... 9, _, $).  The encoding algorithm itself is not too      * clever: if the current byte's ASCII value already is a valid Java      * identifier part, leave it as it is. Otherwise it writes the      * escape character($) followed by:      *      *<ul>      *<li> the ASCII value as a hexadecimal string, if the value is not in the range 200..247</li>      *<li>a Java identifier char not used in a lowercase hexadecimal string, if the value is in the range 200..247</li>      *</ul>      *      *<p>This operation inflates the original byte array by roughly 40-50%</p>      *      * @param bytes the byte array to convert      * @param compress use gzip to minimize string      *      * @throws IOException if there's a gzip exception      */
 specifier|public
 specifier|static
 name|String
@@ -5841,7 +5841,7 @@ name|toString
 argument_list|()
 return|;
 block|}
-comment|/**      * Decode a string back to a byte array.      *      * @param s the string to convert      * @param uncompress use gzip to uncompress the stream of bytes      *       * @throws IOException if there's a gzip exception      */
+comment|/**      * Decode a string back to a byte array.      *      * @param s the string to convert      * @param uncompress use gzip to uncompress the stream of bytes      *      * @throws IOException if there's a gzip exception      */
 specifier|public
 specifier|static
 name|byte

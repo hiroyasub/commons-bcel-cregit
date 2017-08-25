@@ -258,7 +258,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**   * This class is used to build up a constant pool. The user adds  * constants via `addXXX' methods, `addString', `addClass',  * etc.. These methods return an index into the constant  * pool. Finally, `getFinalConstantPool()' returns the constant pool  * built up. Intermediate versions of the constant pool can be  * obtained with `getConstantPool()'. A constant pool has capacity for  * Constants.MAX_SHORT entries. Note that the first (0) is used by the  * JVM and that Double and Long constants need two slots.  *  * @version $Id$  * @see Constant  */
+comment|/**  * This class is used to build up a constant pool. The user adds  * constants via `addXXX' methods, `addString', `addClass',  * etc.. These methods return an index into the constant  * pool. Finally, `getFinalConstantPool()' returns the constant pool  * built up. Intermediate versions of the constant pool can be  * obtained with `getConstantPool()'. A constant pool has capacity for  * Constants.MAX_SHORT entries. Note that the first (0) is used by the  * JVM and that Double and Long constants need two slots.  *  * @version $Id$  * @see Constant  */
 end_comment
 
 begin_class
@@ -1221,7 +1221,7 @@ name|HashMap
 argument_list|<>
 argument_list|()
 decl_stmt|;
-comment|/**       * Look for ConstantString in ConstantPool containing String `str'.      *      * @param str String to search for      * @return index on success, -1 otherwise      */
+comment|/**      * Look for ConstantString in ConstantPool containing String `str'.      *      * @param str String to search for      * @return index on success, -1 otherwise      */
 specifier|public
 name|int
 name|lookupString
@@ -1564,7 +1564,7 @@ argument_list|()
 argument_list|)
 return|;
 block|}
-comment|/**       * Look for ConstantInteger in ConstantPool.      *      * @param n integer number to look for      * @return index on success, -1 otherwise      */
+comment|/**      * Look for ConstantInteger in ConstantPool.      *      * @param n integer number to look for      * @return index on success, -1 otherwise      */
 specifier|public
 name|int
 name|lookupInteger
@@ -1688,7 +1688,7 @@ return|return
 name|ret
 return|;
 block|}
-comment|/**       * Look for ConstantFloat in ConstantPool.      *      * @param n Float number to look for      * @return index on success, -1 otherwise      */
+comment|/**      * Look for ConstantFloat in ConstantPool.      *      * @param n Float number to look for      * @return index on success, -1 otherwise      */
 specifier|public
 name|int
 name|lookupFloat
@@ -1843,7 +1843,7 @@ name|HashMap
 argument_list|<>
 argument_list|()
 decl_stmt|;
-comment|/**       * Look for ConstantUtf8 in ConstantPool.      *      * @param n Utf8 string to look for      * @return index on success, -1 otherwise      */
+comment|/**      * Look for ConstantUtf8 in ConstantPool.      *      * @param n Utf8 string to look for      * @return index on success, -1 otherwise      */
 specifier|public
 name|int
 name|lookupUtf8
@@ -1960,7 +1960,7 @@ return|return
 name|ret
 return|;
 block|}
-comment|/**       * Look for ConstantLong in ConstantPool.      *      * @param n Long number to look for      * @return index on success, -1 otherwise      */
+comment|/**      * Look for ConstantLong in ConstantPool.      *      * @param n Long number to look for      * @return index on success, -1 otherwise      */
 specifier|public
 name|int
 name|lookupLong
@@ -2088,7 +2088,7 @@ return|return
 name|ret
 return|;
 block|}
-comment|/**       * Look for ConstantDouble in ConstantPool.      *      * @param n Double number to look for      * @return index on success, -1 otherwise      */
+comment|/**      * Look for ConstantDouble in ConstantPool.      *      * @param n Double number to look for      * @return index on success, -1 otherwise      */
 specifier|public
 name|int
 name|lookupDouble
@@ -2247,7 +2247,7 @@ name|HashMap
 argument_list|<>
 argument_list|()
 decl_stmt|;
-comment|/**       * Look for ConstantNameAndType in ConstantPool.      *      * @param name of variable/method      * @param signature of variable/method      * @return index on success, -1 otherwise      */
+comment|/**      * Look for ConstantNameAndType in ConstantPool.      *      * @param name of variable/method      * @param signature of variable/method      * @return index on success, -1 otherwise      */
 specifier|public
 name|int
 name|lookupNameAndType
@@ -2291,7 +2291,7 @@ operator|-
 literal|1
 return|;
 block|}
-comment|/**      * Add a new NameAndType constant to the ConstantPool if it is not already       * in there.      *      * @param name Name string to add      * @param signature signature string to add      * @return index of entry      */
+comment|/**      * Add a new NameAndType constant to the ConstantPool if it is not already      * in there.      *      * @param name Name string to add      * @param signature signature string to add      * @return index of entry      */
 specifier|public
 name|int
 name|addNameAndType
@@ -2425,7 +2425,7 @@ name|HashMap
 argument_list|<>
 argument_list|()
 decl_stmt|;
-comment|/**       * Look for ConstantMethodref in ConstantPool.      *      * @param class_name Where to find method      * @param method_name Guess what      * @param signature return and argument types      * @return index on success, -1 otherwise      */
+comment|/**      * Look for ConstantMethodref in ConstantPool.      *      * @param class_name Where to find method      * @param method_name Guess what      * @param signature return and argument types      * @return index on success, -1 otherwise      */
 specifier|public
 name|int
 name|lookupMethodref
@@ -2506,7 +2506,7 @@ argument_list|()
 argument_list|)
 return|;
 block|}
-comment|/**      * Add a new Methodref constant to the ConstantPool, if it is not already       * in there.      *      * @param class_name class name string to add      * @param method_name method name string to add      * @param signature method signature string to add      * @return index of entry      */
+comment|/**      * Add a new Methodref constant to the ConstantPool, if it is not already      * in there.      *      * @param class_name class name string to add      * @param method_name method name string to add      * @param signature method signature string to add      * @return index of entry      */
 specifier|public
 name|int
 name|addMethodref
@@ -2666,7 +2666,7 @@ argument_list|()
 argument_list|)
 return|;
 block|}
-comment|/**       * Look for ConstantInterfaceMethodref in ConstantPool.      *      * @param class_name Where to find method      * @param method_name Guess what      * @param signature return and argument types      * @return index on success, -1 otherwise      */
+comment|/**      * Look for ConstantInterfaceMethodref in ConstantPool.      *      * @param class_name Where to find method      * @param method_name Guess what      * @param signature return and argument types      * @return index on success, -1 otherwise      */
 specifier|public
 name|int
 name|lookupInterfaceMethodref
@@ -2747,7 +2747,7 @@ argument_list|()
 argument_list|)
 return|;
 block|}
-comment|/**      * Add a new InterfaceMethodref constant to the ConstantPool, if it is not already       * in there.      *      * @param class_name class name string to add      * @param method_name method name string to add      * @param signature signature string to add      * @return index of entry      */
+comment|/**      * Add a new InterfaceMethodref constant to the ConstantPool, if it is not already      * in there.      *      * @param class_name class name string to add      * @param method_name method name string to add      * @param signature signature string to add      * @return index of entry      */
 specifier|public
 name|int
 name|addInterfaceMethodref
@@ -2907,7 +2907,7 @@ argument_list|()
 argument_list|)
 return|;
 block|}
-comment|/**       * Look for ConstantFieldref in ConstantPool.      *      * @param class_name Where to find method      * @param field_name Guess what      * @param signature return and argument types      * @return index on success, -1 otherwise      */
+comment|/**      * Look for ConstantFieldref in ConstantPool.      *      * @param class_name Where to find method      * @param field_name Guess what      * @param signature return and argument types      * @return index on success, -1 otherwise      */
 specifier|public
 name|int
 name|lookupFieldref
@@ -2959,7 +2959,7 @@ operator|-
 literal|1
 return|;
 block|}
-comment|/**      * Add a new Fieldref constant to the ConstantPool, if it is not already       * in there.      *      * @param class_name class name string to add      * @param field_name field name string to add      * @param signature signature string to add      * @return index of entry      */
+comment|/**      * Add a new Fieldref constant to the ConstantPool, if it is not already      * in there.      *      * @param class_name class name string to add      * @param field_name field name string to add      * @param signature signature string to add      * @return index of entry      */
 specifier|public
 name|int
 name|addFieldref

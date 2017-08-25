@@ -16,7 +16,7 @@ package|;
 end_package
 
 begin_comment
-comment|/**   * FSTORE - Store float into local variable  *<PRE>Stack: ..., value -&gt; ...</PRE>  *  * @version $Id$  */
+comment|/**  * FSTORE - Store float into local variable  *<PRE>Stack: ..., value -&gt; ...</PRE>  *  * @version $Id$  */
 end_comment
 
 begin_class

@@ -69,7 +69,7 @@ specifier|private
 name|short
 name|line_number
 decl_stmt|;
-comment|/**      * Initialize from another object.      *       * @param c the object to copy      */
+comment|/**      * Initialize from another object.      *      * @param c the object to copy      */
 specifier|public
 name|LineNumber
 parameter_list|(
@@ -92,7 +92,7 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Construct object from file stream.      *       * @param file Input stream      * @throws IOEXception if an I/O Exception occurs in readUnsignedShort      */
+comment|/**      * Construct object from file stream.      *      * @param file Input stream      * @throws IOEXception if an I/O Exception occurs in readUnsignedShort      */
 name|LineNumber
 parameter_list|(
 specifier|final

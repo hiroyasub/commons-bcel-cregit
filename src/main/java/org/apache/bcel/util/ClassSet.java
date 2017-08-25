@@ -60,7 +60,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**   * Utility class implementing a (typesafe) set of JavaClass objects.  * Since JavaClass has no equals() method, the name of the class is  * used for comparison.  *  * @version $Id$  * @see ClassStack  */
+comment|/**  * Utility class implementing a (typesafe) set of JavaClass objects.  * Since JavaClass has no equals() method, the name of the class is  * used for comparison.  *  * @version $Id$  * @see ClassStack  */
 end_comment
 
 begin_class

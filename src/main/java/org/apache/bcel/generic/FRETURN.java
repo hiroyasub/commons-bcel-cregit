@@ -16,7 +16,7 @@ package|;
 end_package
 
 begin_comment
-comment|/**   * FRETURN -  Return float from method  *<PRE>Stack: ..., value -&gt;&lt;empty&gt;</PRE>  *  * @version $Id$  */
+comment|/**  * FRETURN -  Return float from method  *<PRE>Stack: ..., value -&gt;&lt;empty&gt;</PRE>  *  * @version $Id$  */
 end_comment
 
 begin_class

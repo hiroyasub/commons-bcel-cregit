@@ -16,7 +16,7 @@ package|;
 end_package
 
 begin_comment
-comment|/**   * DUP - Duplicate top operand stack word  *<PRE>Stack: ..., word -&gt; ..., word, word</PRE>  *  * @version $Id$  */
+comment|/**  * DUP - Duplicate top operand stack word  *<PRE>Stack: ..., word -&gt; ..., word, word</PRE>  *  * @version $Id$  */
 end_comment
 
 begin_class

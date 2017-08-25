@@ -117,7 +117,7 @@ block|}
 block|}
 annotation_defn|@interface
 name|A
-block|{             }
+block|{     }
 annotation_defn|@interface
 name|B
 block|{     }

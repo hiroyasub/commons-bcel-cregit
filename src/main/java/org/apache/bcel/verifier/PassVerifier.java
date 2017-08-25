@@ -96,7 +96,7 @@ name|VerificationResult
 name|do_verify
 parameter_list|()
 function_decl|;
-comment|/**      * This method adds a (warning) message to the message pool of this      * PassVerifier. This method is normally only internally used by      * BCEL's class file verifier "JustIce" and should not be used from      * the outside.       *      * @see #getMessages()      */
+comment|/**      * This method adds a (warning) message to the message pool of this      * PassVerifier. This method is normally only internally used by      * BCEL's class file verifier "JustIce" and should not be used from      * the outside.      *      * @see #getMessages()      */
 specifier|public
 name|void
 name|addMessage

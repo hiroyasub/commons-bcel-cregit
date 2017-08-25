@@ -224,7 +224,7 @@ name|class
 decl_stmt|;
 comment|/* UnsupportedClassVersionError is new in JDK 1.2 */
 comment|//    public static final Class UnsupportedClassVersionError = UnsupportedClassVersionError.class;
-comment|/** Run-Time Exceptions       */
+comment|/** Run-Time Exceptions      */
 specifier|public
 specifier|static
 specifier|final
@@ -303,7 +303,7 @@ name|IllegalMonitorStateException
 operator|.
 name|class
 decl_stmt|;
-comment|/**      * Pre-defined exception arrays according to chapters 5.1-5.4 of the Java Virtual      * Machine Specification       */
+comment|/**      * Pre-defined exception arrays according to chapters 5.1-5.4 of the Java Virtual      * Machine Specification      */
 specifier|private
 specifier|static
 specifier|final
@@ -398,7 +398,7 @@ block|,
 name|ARRAY_INDEX_OUT_OF_BOUNDS_EXCEPTION
 block|}
 decl_stmt|;
-comment|/**       * Enum corresponding to the various Exception Class arrays,       * used by {@link ExceptionConst#createExceptions(EXCS, Class...)}      */
+comment|/**      * Enum corresponding to the various Exception Class arrays,      * used by {@link ExceptionConst#createExceptions(EXCS, Class...)}      */
 specifier|public
 enum|enum
 name|EXCS

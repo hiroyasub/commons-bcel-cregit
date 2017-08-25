@@ -172,7 +172,7 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * @param start_pc Range in the code the exception handler is active,      * start_pc is inclusive while      * @param end_pc is exclusive      * @param handler_pc Starting address of exception handler, i.e.,      * an offset from start of code.      * @param catch_type If zero the handler catches any       * exception, otherwise it points to the exception class which is       * to be caught.      */
+comment|/**      * @param start_pc Range in the code the exception handler is active,      * start_pc is inclusive while      * @param end_pc is exclusive      * @param handler_pc Starting address of exception handler, i.e.,      * an offset from start of code.      * @param catch_type If zero the handler catches any      * exception, otherwise it points to the exception class which is      * to be caught.      */
 specifier|public
 name|CodeException
 parameter_list|(

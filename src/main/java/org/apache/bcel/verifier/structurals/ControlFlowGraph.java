@@ -280,7 +280,7 @@ argument_list|>
 name|outFrames
 decl_stmt|;
 comment|// key: the last-executed JSR
-comment|/**          * The 'execution predecessors' - a list of type InstructionContext           * of those instances that have been execute()d before in that order.          */
+comment|/**          * The 'execution predecessors' - a list of type InstructionContext          * of those instances that have been execute()d before in that order.          */
 specifier|private
 name|List
 argument_list|<
@@ -1562,7 +1562,7 @@ name|HashMap
 argument_list|<>
 argument_list|()
 decl_stmt|;
-comment|/**       * A Control Flow Graph; with additional JustIce checks      * @param  method_gen the method generator instance      */
+comment|/**      * A Control Flow Graph; with additional JustIce checks      * @param  method_gen the method generator instance      */
 specifier|public
 name|ControlFlowGraph
 parameter_list|(
@@ -1579,7 +1579,7 @@ literal|true
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**       * A Control Flow Graph.      * @param  method_gen the method generator instance      * @param enableJustIceCheck if true, additional JustIce checks are performed      * @since 6.0      */
+comment|/**      * A Control Flow Graph.      * @param  method_gen the method generator instance      * @param enableJustIceCheck if true, additional JustIce checks are performed      * @since 6.0      */
 specifier|public
 name|ControlFlowGraph
 parameter_list|(

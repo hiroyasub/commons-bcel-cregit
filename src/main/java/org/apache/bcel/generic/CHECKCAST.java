@@ -28,7 +28,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**   * CHECKCAST - Check whether object is of given type  *<PRE>Stack: ..., objectref -&gt; ..., objectref</PRE>  *  * @version $Id$  */
+comment|/**  * CHECKCAST - Check whether object is of given type  *<PRE>Stack: ..., objectref -&gt; ..., objectref</PRE>  *  * @version $Id$  */
 end_comment
 
 begin_class

@@ -58,7 +58,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**   * This class represents a chunk of Java byte code contained in a  * method. It is instantiated by the  *<em>Attribute.readAttribute()</em> method. A<em>Code</em>  * attribute contains informations about operand stack, local  * variables, byte code and the exceptions handled within this  * method.  *  * This attribute has attributes itself, namely<em>LineNumberTable</em> which  * is used for debugging purposes and<em>LocalVariableTable</em> which   * contains information about the local variables.  *  * @version $Id$  * @see     Attribute  * @see     CodeException  * @see     LineNumberTable  * @see LocalVariableTable  */
+comment|/**  * This class represents a chunk of Java byte code contained in a  * method. It is instantiated by the  *<em>Attribute.readAttribute()</em> method. A<em>Code</em>  * attribute contains informations about operand stack, local  * variables, byte code and the exceptions handled within this  * method.  *  * This attribute has attributes itself, namely<em>LineNumberTable</em> which  * is used for debugging purposes and<em>LocalVariableTable</em> which  * contains information about the local variables.  *  * @version $Id$  * @see     Attribute  * @see     CodeException  * @see     LineNumberTable  * @see LocalVariableTable  */
 end_comment
 
 begin_class
@@ -717,7 +717,7 @@ return|return
 name|max_stack
 return|;
 block|}
-comment|/**      * @return the internal length of this code attribute (minus the first 6 bytes)       * and excluding all its attributes      */
+comment|/**      * @return the internal length of this code attribute (minus the first 6 bytes)      * and excluding all its attributes      */
 specifier|private
 name|int
 name|getInternalLength
@@ -1155,7 +1155,7 @@ literal|true
 argument_list|)
 return|;
 block|}
-comment|/**      * @return deep copy of this attribute      *       * @param _constant_pool the constant pool to duplicate      */
+comment|/**      * @return deep copy of this attribute      *      * @param _constant_pool the constant pool to duplicate      */
 annotation|@
 name|Override
 specifier|public

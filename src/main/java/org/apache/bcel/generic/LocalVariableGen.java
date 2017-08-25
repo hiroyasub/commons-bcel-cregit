@@ -42,7 +42,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**   * This class represents a local variable within a method. It contains its  * scope, name and type. The generated LocalVariable object can be obtained  * with getLocalVariable which needs the instruction list and the constant  * pool as parameters.  *  * @version $Id$  * @see     LocalVariable  * @see     MethodGen  */
+comment|/**  * This class represents a local variable within a method. It contains its  * scope, name and type. The generated LocalVariable object can be obtained  * with getLocalVariable which needs the instruction list and the constant  * pool as parameters.  *  * @version $Id$  * @see     LocalVariable  * @see     MethodGen  */
 end_comment
 
 begin_class

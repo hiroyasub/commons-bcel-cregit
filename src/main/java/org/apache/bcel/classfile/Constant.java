@@ -174,7 +174,7 @@ return|;
 block|}
 block|}
 decl_stmt|;
-comment|/* In fact this tag is redundant since we can distinguish different      * `Constant' objects by their type, i.e., via `instanceof'. In some      * places we will use the tag for switch()es anyway.      *      * First, we want match the specification as closely as possible. Second we      * need the tag as an index to select the corresponding class name from the       * `CONSTANT_NAMES' array.      */
+comment|/* In fact this tag is redundant since we can distinguish different      * `Constant' objects by their type, i.e., via `instanceof'. In some      * places we will use the tag for switch()es anyway.      *      * First, we want match the specification as closely as possible. Second we      * need the tag as an index to select the corresponding class name from the      * `CONSTANT_NAMES' array.      */
 comment|/**      * @deprecated (since 6.0) will be made private; do not access directly, use getter/setter      */
 annotation|@
 name|java
@@ -560,7 +560,7 @@ operator|=
 name|comparator
 expr_stmt|;
 block|}
-comment|/**      * Return value as defined by given BCELComparator strategy.      * By default two Constant objects are said to be equal when      * the result of toString() is equal.      *       * @see java.lang.Object#equals(java.lang.Object)      */
+comment|/**      * Return value as defined by given BCELComparator strategy.      * By default two Constant objects are said to be equal when      * the result of toString() is equal.      *      * @see java.lang.Object#equals(java.lang.Object)      */
 annotation|@
 name|Override
 specifier|public
@@ -583,7 +583,7 @@ name|obj
 argument_list|)
 return|;
 block|}
-comment|/**      * Return value as defined by given BCELComparator strategy.      * By default return the hashcode of the result of toString().      *       * @see java.lang.Object#hashCode()      */
+comment|/**      * Return value as defined by given BCELComparator strategy.      * By default return the hashcode of the result of toString().      *      * @see java.lang.Object#hashCode()      */
 annotation|@
 name|Override
 specifier|public

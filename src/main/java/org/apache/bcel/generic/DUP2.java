@@ -16,7 +16,7 @@ package|;
 end_package
 
 begin_comment
-comment|/**   * DUP2 - Duplicate two top operand stack words  *<PRE>Stack: ..., word2, word1 -&gt; ..., word2, word1, word2, word1</PRE>  *  * @version $Id$  */
+comment|/**  * DUP2 - Duplicate two top operand stack words  *<PRE>Stack: ..., word2, word1 -&gt; ..., word2, word1, word2, word1</PRE>  *  * @version $Id$  */
 end_comment
 
 begin_class

@@ -30,7 +30,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**   * This class represents a line number within a method, i.e., give an instruction  * a line number corresponding to the source code line.  *  * @version $Id$  * @see     LineNumber  * @see     MethodGen  */
+comment|/**  * This class represents a line number within a method, i.e., give an instruction  * a line number corresponding to the source code line.  *  * @version $Id$  * @see     LineNumber  * @see     MethodGen  */
 end_comment
 
 begin_class

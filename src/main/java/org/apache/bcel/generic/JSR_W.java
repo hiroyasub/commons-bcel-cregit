@@ -50,7 +50,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**   * JSR_W - Jump to subroutine  *  * @version $Id$  */
+comment|/**  * JSR_W - Jump to subroutine  *  * @version $Id$  */
 end_comment
 
 begin_class

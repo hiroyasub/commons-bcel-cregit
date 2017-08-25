@@ -92,7 +92,7 @@ name|AnnotationEntry
 index|[]
 name|annotation_table
 decl_stmt|;
-comment|/**      * Construct object from input stream.      *       * @param input Input stream      * @throws IOException      */
+comment|/**      * Construct object from input stream.      *      * @param input Input stream      * @throws IOException      */
 name|ParameterAnnotationEntry
 parameter_list|(
 specifier|final

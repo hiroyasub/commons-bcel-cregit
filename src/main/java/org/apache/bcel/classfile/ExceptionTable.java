@@ -58,7 +58,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**   * This class represents the table of exceptions that are thrown by a  * method. This attribute may be used once per method.  The name of  * this class is<em>ExceptionTable</em> for historical reasons; The  * Java Virtual Machine Specification, Second Edition defines this  * attribute using the name<em>Exceptions</em> (which is inconsistent  * with the other classes).  *  * @version $Id$  * @see     Code  */
+comment|/**  * This class represents the table of exceptions that are thrown by a  * method. This attribute may be used once per method.  The name of  * this class is<em>ExceptionTable</em> for historical reasons; The  * Java Virtual Machine Specification, Second Edition defines this  * attribute using the name<em>Exceptions</em> (which is inconsistent  * with the other classes).  *  * @version $Id$  * @see     Code  */
 end_comment
 
 begin_class

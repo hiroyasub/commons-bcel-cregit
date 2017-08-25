@@ -270,7 +270,7 @@ name|getTarget
 argument_list|()
 return|;
 block|}
-comment|/**       * Set new contents. Old instruction is disposed and may not be used anymore.      */
+comment|/**      * Set new contents. Old instruction is disposed and may not be used anymore.      */
 annotation|@
 name|Override
 comment|// This is only done in order to apply the additional type check; could be merged with super impl.

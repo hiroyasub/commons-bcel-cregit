@@ -16,7 +16,7 @@ package|;
 end_package
 
 begin_comment
-comment|/**   * ALOAD - Load reference from local variable  *<PRE>Stack: ... -&gt; ..., objectref</PRE>  *  * @version $Id$  */
+comment|/**  * ALOAD - Load reference from local variable  *<PRE>Stack: ... -&gt; ..., objectref</PRE>  *  * @version $Id$  */
 end_comment
 
 begin_class

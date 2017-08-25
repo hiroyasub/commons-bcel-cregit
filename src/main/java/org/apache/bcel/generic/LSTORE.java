@@ -16,7 +16,7 @@ package|;
 end_package
 
 begin_comment
-comment|/**   * LSTORE - Store long into local variable  *<PRE>Stack: ..., value.word1, value.word2 -&gt; ...</PRE>  *  * @version $Id$  */
+comment|/**  * LSTORE - Store long into local variable  *<PRE>Stack: ..., value.word1, value.word2 -&gt; ...</PRE>  *  * @version $Id$  */
 end_comment
 
 begin_class

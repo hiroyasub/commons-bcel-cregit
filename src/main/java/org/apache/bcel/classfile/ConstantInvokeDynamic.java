@@ -48,7 +48,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**   * This class is derived from the abstract {@link Constant}  * and represents a reference to a invoke dynamic.  *  * @see     Constant  * @see<a href="http://docs.oracle.com/javase/specs/jvms/se8/html/jvms-4.html#jvms-4.4.10">  * The CONSTANT_InvokeDynamic_info Structure in The Java Virtual Machine Specification</a>  * @since 6.0  */
+comment|/**  * This class is derived from the abstract {@link Constant}  * and represents a reference to a invoke dynamic.  *  * @see     Constant  * @see<a href="http://docs.oracle.com/javase/specs/jvms/se8/html/jvms-4.html#jvms-4.4.10">  * The CONSTANT_InvokeDynamic_info Structure in The Java Virtual Machine Specification</a>  * @since 6.0  */
 end_comment
 
 begin_class

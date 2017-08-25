@@ -149,7 +149,7 @@ operator|=
 name|bytes
 expr_stmt|;
 block|}
-comment|/**      * Construct object from input stream.      *       * @param name_index Index in constant pool to CONSTANT_Utf8      * @param length Content length in bytes      * @param input Input stream      * @param constant_pool Array of constants      * @throws IOException      */
+comment|/**      * Construct object from input stream.      *      * @param name_index Index in constant pool to CONSTANT_Utf8      * @param length Content length in bytes      * @param input Input stream      * @param constant_pool Array of constants      * @throws IOException      */
 name|Synthetic
 parameter_list|(
 specifier|final

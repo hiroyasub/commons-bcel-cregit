@@ -302,7 +302,7 @@ literal|"float"
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Write contents of the given JavaClass into HTML files.      *       * @param java_class The class to write      * @param dir The directory to put the files in      */
+comment|/**      * Write contents of the given JavaClass into HTML files.      *      * @param java_class The class to write      * @param dir The directory to put the files in      */
 specifier|public
 name|Class2HTML
 parameter_list|(

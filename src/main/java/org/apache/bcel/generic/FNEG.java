@@ -16,7 +16,7 @@ package|;
 end_package
 
 begin_comment
-comment|/**   * FNEG - Negate float  *<PRE>Stack: ..., value -&gt; ..., result</PRE>  *  * @version $Id$  */
+comment|/**  * FNEG - Negate float  *<PRE>Stack: ..., value -&gt; ..., result</PRE>  *  * @version $Id$  */
 end_comment
 
 begin_class

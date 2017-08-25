@@ -188,7 +188,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**   * Template class for building up a field.  The only extraordinary thing  * one can do is to add a constant value attribute to a field (which must of  * course be compatible with to the declared type).  *  * @version $Id$  * @see Field  */
+comment|/**  * Template class for building up a field.  The only extraordinary thing  * one can do is to add a constant value attribute to a field (which must of  * course be compatible with to the declared type).  *  * @version $Id$  * @see Field  */
 end_comment
 
 begin_class
@@ -1596,7 +1596,7 @@ operator|=
 name|comparator
 expr_stmt|;
 block|}
-comment|/**      * Return value as defined by given BCELComparator strategy.      * By default two FieldGen objects are said to be equal when      * their names and signatures are equal.      *       * @see java.lang.Object#equals(java.lang.Object)      */
+comment|/**      * Return value as defined by given BCELComparator strategy.      * By default two FieldGen objects are said to be equal when      * their names and signatures are equal.      *      * @see java.lang.Object#equals(java.lang.Object)      */
 annotation|@
 name|Override
 specifier|public
@@ -1619,7 +1619,7 @@ name|obj
 argument_list|)
 return|;
 block|}
-comment|/**      * Return value as defined by given BCELComparator strategy.      * By default return the hashcode of the field's name XOR signature.      *       * @see java.lang.Object#hashCode()      */
+comment|/**      * Return value as defined by given BCELComparator strategy.      * By default return the hashcode of the field's name XOR signature.      *      * @see java.lang.Object#hashCode()      */
 annotation|@
 name|Override
 specifier|public

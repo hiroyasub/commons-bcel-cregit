@@ -180,7 +180,7 @@ name|class
 decl_stmt|;
 comment|/* UnsupportedClassVersionError is new in JDK 1.2 */
 comment|//    Class UnsupportedClassVersionError = UnsupportedClassVersionError.class;
-comment|/** Run-Time Exceptions       */
+comment|/** Run-Time Exceptions      */
 name|Class
 argument_list|<
 name|NullPointerException

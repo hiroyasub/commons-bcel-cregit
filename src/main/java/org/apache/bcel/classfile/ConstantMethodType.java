@@ -58,7 +58,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**   * This class is derived from the abstract {@link Constant}  * and represents a reference to a method type.  *   * @see     Constant  * @since 6.0  */
+comment|/**  * This class is derived from the abstract {@link Constant}  * and represents a reference to a method type.  *  * @see     Constant  * @since 6.0  */
 end_comment
 
 begin_class

@@ -40,7 +40,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**   * LDC_W - Push item from constant pool (wide index)  *  *<PRE>Stack: ... -&gt; ..., item.word1, item.word2</PRE>  *  * @version $Id$  */
+comment|/**  * LDC_W - Push item from constant pool (wide index)  *  *<PRE>Stack: ... -&gt; ..., item.word1, item.word2</PRE>  *  * @version $Id$  */
 end_comment
 
 begin_class

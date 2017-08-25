@@ -76,7 +76,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * This class represents the field info structure, i.e., the representation   * for a variable in the class. See JVM specification for details.  *  * @version $Id$  */
+comment|/**  * This class represents the field info structure, i.e., the representation  * for a variable in the class. See JVM specification for details.  *  * @version $Id$  */
 end_comment
 
 begin_class
@@ -573,7 +573,7 @@ operator|=
 name|comparator
 expr_stmt|;
 block|}
-comment|/**      * Return value as defined by given BCELComparator strategy.      * By default two Field objects are said to be equal when      * their names and signatures are equal.      *       * @see java.lang.Object#equals(java.lang.Object)      */
+comment|/**      * Return value as defined by given BCELComparator strategy.      * By default two Field objects are said to be equal when      * their names and signatures are equal.      *      * @see java.lang.Object#equals(java.lang.Object)      */
 annotation|@
 name|Override
 specifier|public
@@ -596,7 +596,7 @@ name|obj
 argument_list|)
 return|;
 block|}
-comment|/**      * Return value as defined by given BCELComparator strategy.      * By default return the hashcode of the field's name XOR signature.      *       * @see java.lang.Object#hashCode()      */
+comment|/**      * Return value as defined by given BCELComparator strategy.      * By default return the hashcode of the field's name XOR signature.      *      * @see java.lang.Object#hashCode()      */
 annotation|@
 name|Override
 specifier|public

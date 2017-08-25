@@ -16,7 +16,7 @@ package|;
 end_package
 
 begin_comment
-comment|/**   * IFNONNULL - Branch if reference is not null  *  *<PRE>Stack: ..., reference -&gt; ...</PRE>  *  * @version $Id$  */
+comment|/**  * IFNONNULL - Branch if reference is not null  *  *<PRE>Stack: ..., reference -&gt; ...</PRE>  *  * @version $Id$  */
 end_comment
 
 begin_class

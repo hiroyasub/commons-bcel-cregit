@@ -117,7 +117,7 @@ operator|=
 name|map
 expr_stmt|;
 block|}
-comment|/**      * Construct object from input stream.      *       * @param name_index Index of name      * @param length Content length in bytes      * @param input Input stream      * @param constant_pool Array of constants      * @throws IOException      */
+comment|/**      * Construct object from input stream.      *      * @param name_index Index of name      * @param length Content length in bytes      * @param input Input stream      * @param constant_pool Array of constants      * @throws IOException      */
 name|StackMap
 parameter_list|(
 specifier|final

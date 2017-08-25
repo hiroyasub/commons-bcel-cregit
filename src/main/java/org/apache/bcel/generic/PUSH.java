@@ -28,7 +28,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**   * Wrapper class for push operations, which are implemented either as BIPUSH,  * LDC or xCONST_n instructions.  *  * @version $Id$  */
+comment|/**  * Wrapper class for push operations, which are implemented either as BIPUSH,  * LDC or xCONST_n instructions.  *  * @version $Id$  */
 end_comment
 
 begin_class
@@ -47,7 +47,7 @@ specifier|private
 name|Instruction
 name|instruction
 decl_stmt|;
-comment|/**      * This constructor also applies for values of type short, char, byte       *      * @param cp Constant pool      * @param value to be pushed       */
+comment|/**      * This constructor also applies for values of type short, char, byte      *      * @param cp Constant pool      * @param value to be pushed      */
 specifier|public
 name|PUSH
 parameter_list|(
@@ -151,7 +151,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/**      * @param cp Constant pool      * @param value to be pushed       */
+comment|/**      * @param cp Constant pool      * @param value to be pushed      */
 specifier|public
 name|PUSH
 parameter_list|(
@@ -184,7 +184,7 @@ operator|)
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * @param cp Constant pool      * @param value to be pushed       */
+comment|/**      * @param cp Constant pool      * @param value to be pushed      */
 specifier|public
 name|PUSH
 parameter_list|(
@@ -256,7 +256,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/**      * @param cp Constant pool      * @param value to be pushed       */
+comment|/**      * @param cp Constant pool      * @param value to be pushed      */
 specifier|public
 name|PUSH
 parameter_list|(
@@ -314,7 +314,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/**      * @param cp Constant pool      * @param value to be pushed       */
+comment|/**      * @param cp Constant pool      * @param value to be pushed      */
 specifier|public
 name|PUSH
 parameter_list|(
@@ -372,7 +372,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/**      * @param cp Constant pool      * @param value to be pushed       */
+comment|/**      * @param cp Constant pool      * @param value to be pushed      */
 specifier|public
 name|PUSH
 parameter_list|(
@@ -416,7 +416,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/**      *       * @param cp      * @param value      * @since 6.0      */
+comment|/**      *      * @param cp      * @param value      * @since 6.0      */
 specifier|public
 name|PUSH
 parameter_list|(
@@ -460,7 +460,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/**      * @param cp Constant pool      * @param value to be pushed       */
+comment|/**      * @param cp Constant pool      * @param value to be pushed      */
 specifier|public
 name|PUSH
 parameter_list|(
@@ -592,7 +592,7 @@ argument_list|)
 throw|;
 block|}
 block|}
-comment|/**      * creates a push object from a Character value. Warning: Make sure not to attempt to allow      * autoboxing to create this value parameter, as an alternative constructor will be called      *       * @param cp Constant pool      * @param value to be pushed       */
+comment|/**      * creates a push object from a Character value. Warning: Make sure not to attempt to allow      * autoboxing to create this value parameter, as an alternative constructor will be called      *      * @param cp Constant pool      * @param value to be pushed      */
 specifier|public
 name|PUSH
 parameter_list|(
@@ -616,7 +616,7 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * @param cp Constant pool      * @param value to be pushed       */
+comment|/**      * @param cp Constant pool      * @param value to be pushed      */
 specifier|public
 name|PUSH
 parameter_list|(

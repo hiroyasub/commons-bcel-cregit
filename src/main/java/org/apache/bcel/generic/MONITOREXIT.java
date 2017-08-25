@@ -28,7 +28,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**   * MONITOREXIT - Exit monitor for object  *<PRE>Stack: ..., objectref -&gt; ...</PRE>  *  * @version $Id$  */
+comment|/**  * MONITOREXIT - Exit monitor for object  *<PRE>Stack: ..., objectref -&gt; ...</PRE>  *  * @version $Id$  */
 end_comment
 
 begin_class
