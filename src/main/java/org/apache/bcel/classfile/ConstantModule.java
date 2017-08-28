@@ -58,7 +58,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * This class is derived from the abstract {@link Constant}  * and represents a reference to a module.  *  * Note: Early access Java 9 support- currently subject to change  *  * @see     Constant  */
+comment|/**  * This class is derived from the abstract {@link Constant}  * and represents a reference to a module.  *  *<p>Note: Early access Java 9 support- currently subject to change</p>  *  * @see     Constant  * @since 6.1  */
 end_comment
 
 begin_class

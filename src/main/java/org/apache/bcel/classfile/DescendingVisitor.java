@@ -1943,6 +1943,7 @@ name|pop
 argument_list|()
 expr_stmt|;
 block|}
+comment|/** @since 6.1 */
 annotation|@
 name|Override
 specifier|public
@@ -1974,6 +1975,7 @@ name|pop
 argument_list|()
 expr_stmt|;
 block|}
+comment|/** @since 6.1 */
 annotation|@
 name|Override
 specifier|public
