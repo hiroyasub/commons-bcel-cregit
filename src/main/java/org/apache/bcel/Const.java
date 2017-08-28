@@ -506,7 +506,7 @@ index|]
 return|;
 block|}
 comment|/*    * The description of the constant pool is at:    * http://docs.oracle.com/javase/specs/jvms/se8/html/jvms-4.html#jvms-4.4    * References below are to the individual sections    */
-comment|/** Marks a constant pool entry as type UTF-8.    * @see<a href="http://docs.oracle.com/javase/specs/jvms/se8/html/jvms-4.html#jvms-4.4.7">    * The Constant Pool in The Java Virtual Machine Specification</a> */
+comment|/**    * Marks a constant pool entry as type UTF-8.    * @see<a href="http://docs.oracle.com/javase/specs/jvms/se8/html/jvms-4.html#jvms-4.4.7">    * The Constant Pool in The Java Virtual Machine Specification</a>    */
 specifier|public
 specifier|static
 specifier|final
@@ -515,7 +515,7 @@ name|CONSTANT_Utf8
 init|=
 literal|1
 decl_stmt|;
-comment|/** Marks a constant pool entry as type Integer.    * @see<a href="http://docs.oracle.com/javase/specs/jvms/se8/html/jvms-4.html#jvms-4.4.4">    * The Constant Pool in The Java Virtual Machine Specification</a> */
+comment|/**    * Marks a constant pool entry as type Integer.    * @see<a href="http://docs.oracle.com/javase/specs/jvms/se8/html/jvms-4.html#jvms-4.4.4">    * The Constant Pool in The Java Virtual Machine Specification</a>    */
 specifier|public
 specifier|static
 specifier|final
@@ -524,7 +524,7 @@ name|CONSTANT_Integer
 init|=
 literal|3
 decl_stmt|;
-comment|/** Marks a constant pool entry as type Float.    * @see<a href="http://docs.oracle.com/javase/specs/jvms/se8/html/jvms-4.html#jvms-4.4.4">    * The Constant Pool in The Java Virtual Machine Specification</a> */
+comment|/**    * Marks a constant pool entry as type Float.    * @see<a href="http://docs.oracle.com/javase/specs/jvms/se8/html/jvms-4.html#jvms-4.4.4">    * The Constant Pool in The Java Virtual Machine Specification</a>    */
 specifier|public
 specifier|static
 specifier|final
@@ -533,7 +533,7 @@ name|CONSTANT_Float
 init|=
 literal|4
 decl_stmt|;
-comment|/** Marks a constant pool entry as type Long.    * @see<a href="http://docs.oracle.com/javase/specs/jvms/se8/html/jvms-4.html#jvms-4.4.5">    * The Constant Pool in The Java Virtual Machine Specification</a> */
+comment|/**    * Marks a constant pool entry as type Long.    * @see<a href="http://docs.oracle.com/javase/specs/jvms/se8/html/jvms-4.html#jvms-4.4.5">    * The Constant Pool in The Java Virtual Machine Specification</a>    */
 specifier|public
 specifier|static
 specifier|final
@@ -542,7 +542,7 @@ name|CONSTANT_Long
 init|=
 literal|5
 decl_stmt|;
-comment|/** Marks a constant pool entry as type Double.    * @see<a href="http://docs.oracle.com/javase/specs/jvms/se8/html/jvms-4.html#jvms-4.4.5">    * The Constant Pool in The Java Virtual Machine Specification</a> */
+comment|/**    * Marks a constant pool entry as type Double.    * @see<a href="http://docs.oracle.com/javase/specs/jvms/se8/html/jvms-4.html#jvms-4.4.5">    * The Constant Pool in The Java Virtual Machine Specification</a>    */
 specifier|public
 specifier|static
 specifier|final
@@ -551,7 +551,7 @@ name|CONSTANT_Double
 init|=
 literal|6
 decl_stmt|;
-comment|/** Marks a constant pool entry as a Class    * @see<a href="http://docs.oracle.com/javase/specs/jvms/se8/html/jvms-4.html#jvms-4.4.1">    * The Constant Pool in The Java Virtual Machine Specification</a> */
+comment|/**    * Marks a constant pool entry as a Class    * @see<a href="http://docs.oracle.com/javase/specs/jvms/se8/html/jvms-4.html#jvms-4.4.1">    * The Constant Pool in The Java Virtual Machine Specification</a>    */
 specifier|public
 specifier|static
 specifier|final
@@ -560,7 +560,7 @@ name|CONSTANT_Class
 init|=
 literal|7
 decl_stmt|;
-comment|/** Marks a constant pool entry as a Field Reference.    * @see<a href="http://docs.oracle.com/javase/specs/jvms/se8/html/jvms-4.html#jvms-4.4.2">    * The Constant Pool in The Java Virtual Machine Specification</a> */
+comment|/**    * Marks a constant pool entry as a Field Reference.    * @see<a href="http://docs.oracle.com/javase/specs/jvms/se8/html/jvms-4.html#jvms-4.4.2">    * The Constant Pool in The Java Virtual Machine Specification</a>    */
 specifier|public
 specifier|static
 specifier|final
@@ -569,7 +569,7 @@ name|CONSTANT_Fieldref
 init|=
 literal|9
 decl_stmt|;
-comment|/** Marks a constant pool entry as type String    * @see<a href="http://docs.oracle.com/javase/specs/jvms/se8/html/jvms-4.html#jvms-4.4.3">    * The Constant Pool in The Java Virtual Machine Specification</a> */
+comment|/**    * Marks a constant pool entry as type String    * @see<a href="http://docs.oracle.com/javase/specs/jvms/se8/html/jvms-4.html#jvms-4.4.3">    * The Constant Pool in The Java Virtual Machine Specification</a>    */
 specifier|public
 specifier|static
 specifier|final
@@ -587,7 +587,7 @@ name|CONSTANT_Methodref
 init|=
 literal|10
 decl_stmt|;
-comment|/** Marks a constant pool entry as an Interface Method Reference.    * @see<a href="http://docs.oracle.com/javase/specs/jvms/se8/html/jvms-4.html#jvms-4.4.2">    * The Constant Pool in The Java Virtual Machine Specification</a> */
+comment|/**    * Marks a constant pool entry as an Interface Method Reference.    * @see<a href="http://docs.oracle.com/javase/specs/jvms/se8/html/jvms-4.html#jvms-4.4.2">    * The Constant Pool in The Java Virtual Machine Specification</a>    */
 specifier|public
 specifier|static
 specifier|final
@@ -605,7 +605,7 @@ name|CONSTANT_NameAndType
 init|=
 literal|12
 decl_stmt|;
-comment|/** Marks a constant pool entry as a Method Handle.    * @see<a href="http://docs.oracle.com/javase/specs/jvms/se8/html/jvms-4.html#jvms-4.4.8">    * The Constant Pool in The Java Virtual Machine Specification</a> */
+comment|/**    * Marks a constant pool entry as a Method Handle.    * @see<a href="http://docs.oracle.com/javase/specs/jvms/se8/html/jvms-4.html#jvms-4.4.8">    * The Constant Pool in The Java Virtual Machine Specification</a>    */
 specifier|public
 specifier|static
 specifier|final
@@ -614,7 +614,7 @@ name|CONSTANT_MethodHandle
 init|=
 literal|15
 decl_stmt|;
-comment|/** Marks a constant pool entry as a Method Type.    * @see<a href="http://docs.oracle.com/javase/specs/jvms/se8/html/jvms-4.html#jvms-4.4.9">    * The Constant Pool in The Java Virtual Machine Specification</a> */
+comment|/**    * Marks a constant pool entry as a Method Type.    * @see<a href="http://docs.oracle.com/javase/specs/jvms/se8/html/jvms-4.html#jvms-4.4.9">    * The Constant Pool in The Java Virtual Machine Specification</a>    */
 specifier|public
 specifier|static
 specifier|final
@@ -623,7 +623,7 @@ name|CONSTANT_MethodType
 init|=
 literal|16
 decl_stmt|;
-comment|/** Marks a constant pool entry as an Invoke Dynamic    * @see<a href="http://docs.oracle.com/javase/specs/jvms/se8/html/jvms-4.html#jvms-4.4.10">    * The Constant Pool in The Java Virtual Machine Specification</a> */
+comment|/**    * Marks a constant pool entry as an Invoke Dynamic    * @see<a href="http://docs.oracle.com/javase/specs/jvms/se8/html/jvms-4.html#jvms-4.4.10">    * The Constant Pool in The Java Virtual Machine Specification</a>    */
 specifier|public
 specifier|static
 specifier|final
@@ -632,7 +632,7 @@ name|CONSTANT_InvokeDynamic
 init|=
 literal|18
 decl_stmt|;
-comment|/** Marks a constant pool entry as a Module Reference.    * @see<a href="http://cr.openjdk.java.net/~mr/jigsaw/spec/lang-vm.html#jigsaw-2.6">    * JPMS: Modules in the Java Language and JVM</a>    * Note: Early access Java 9 support- currently subject to change */
+comment|/**    * Marks a constant pool entry as a Module Reference.    *    *<p>Note: Early access Java 9 support- currently subject to change</p>    *    * @see<a href="http://cr.openjdk.java.net/~mr/jigsaw/spec/lang-vm.html#jigsaw-2.6">    * JPMS: Modules in the Java Language and JVM</a>    * @since 6.1    */
 specifier|public
 specifier|static
 specifier|final
@@ -641,7 +641,7 @@ name|CONSTANT_Module
 init|=
 literal|19
 decl_stmt|;
-comment|/** Marks a constant pool entry as a Package Reference.    * @see<a href="http://cr.openjdk.java.net/~mr/jigsaw/spec/lang-vm.html#jigsaw-2.6">    * JPMS: Modules in the Java Language and JVM</a>    * Note: Early access Java 9 support- currently subject to change */
+comment|/**    * Marks a constant pool entry as a Package Reference.    *    *<p>Note: Early access Java 9 support- currently subject to change</p>    *    * @see<a href="http://cr.openjdk.java.net/~mr/jigsaw/spec/lang-vm.html#jigsaw-2.6">    * JPMS: Modules in the Java Language and JVM</a>    * @since 6.1    */
 specifier|public
 specifier|static
 specifier|final
