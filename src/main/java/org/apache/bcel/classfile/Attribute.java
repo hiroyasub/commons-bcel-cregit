@@ -735,9 +735,20 @@ name|Const
 operator|.
 name|ATTR_STACK_MAP
 case|:
+comment|// old style stack map: unneeded for JDK5 and below;
+comment|// illegal(?) for JDK6 and above.  So just delete with a warning.
+name|System
+operator|.
+name|err
+operator|.
+name|println
+argument_list|(
+literal|"Warning: Obsolete StackMap attribute ignored."
+argument_list|)
+expr_stmt|;
 return|return
 operator|new
-name|StackMap
+name|Unknown
 argument_list|(
 name|name_index
 argument_list|,
@@ -879,6 +890,8 @@ name|Const
 operator|.
 name|ATTR_STACK_MAP_TABLE
 case|:
+comment|// read new style stack map: StackMapTable.  The rest of the code
+comment|// calls this a StackMap for historical reasons.
 return|return
 operator|new
 name|StackMap
