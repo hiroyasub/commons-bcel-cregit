@@ -367,12 +367,6 @@ name|boolean
 name|strip_attributes
 decl_stmt|;
 specifier|private
-name|LocalVariableTable
-name|local_variable_table
-init|=
-literal|null
-decl_stmt|;
-specifier|private
 name|LocalVariableTypeTable
 name|local_variable_type_table
 init|=
@@ -1294,20 +1288,12 @@ operator|instanceof
 name|LocalVariableTable
 condition|)
 block|{
-name|this
-operator|.
-name|local_variable_table
-operator|=
+name|updateLocalVariableTable
+argument_list|(
 operator|(
 name|LocalVariableTable
 operator|)
 name|a
-expr_stmt|;
-name|updateLocalVariableTable
-argument_list|(
-name|this
-operator|.
-name|local_variable_table
 argument_list|)
 expr_stmt|;
 block|}
@@ -1326,6 +1312,14 @@ operator|(
 name|LocalVariableTypeTable
 operator|)
 name|a
+operator|.
+name|copy
+argument_list|(
+name|cp
+operator|.
+name|getConstantPool
+argument_list|()
+argument_list|)
 expr_stmt|;
 block|}
 else|else
@@ -1436,7 +1430,7 @@ expr_stmt|;
 block|}
 block|}
 block|}
-comment|/**      * Adds a local variable to this method.      *      * @param name variable name      * @param type variable type      * @param slot the index of the local variable, if type is long or double, the next available      * index is slot+2      * @param start from where the variable is valid      * @param end until where the variable is valid      * @return new local variable object      * @see LocalVariable      */
+comment|/**      * Adds a local variable to this method.      *      * @param name variable name      * @param type variable type      * @param slot the index of the local variable, if type is long or double, the next available      * index is slot+2      * @param start from where the variable is valid      * @param end until where the variable is valid      * @param orig_index the index of the local variable prior to any modifications      * @return new local variable object      * @see LocalVariable      */
 specifier|public
 name|LocalVariableGen
 name|addLocalVariable
@@ -1460,6 +1454,10 @@ parameter_list|,
 specifier|final
 name|InstructionHandle
 name|end
+parameter_list|,
+specifier|final
+name|int
+name|orig_index
 parameter_list|)
 block|{
 specifier|final
@@ -1521,6 +1519,8 @@ argument_list|,
 name|start
 argument_list|,
 name|end
+argument_list|,
+name|orig_index
 argument_list|)
 decl_stmt|;
 name|int
@@ -1577,6 +1577,49 @@ operator|+
 literal|" as type for local variable"
 argument_list|)
 throw|;
+block|}
+comment|/**      * Adds a local variable to this method.      *      * @param name variable name      * @param type variable type      * @param slot the index of the local variable, if type is long or double, the next available      * index is slot+2      * @param start from where the variable is valid      * @param end until where the variable is valid      * @return new local variable object      * @see LocalVariable      */
+specifier|public
+name|LocalVariableGen
+name|addLocalVariable
+parameter_list|(
+specifier|final
+name|String
+name|name
+parameter_list|,
+specifier|final
+name|Type
+name|type
+parameter_list|,
+specifier|final
+name|int
+name|slot
+parameter_list|,
+specifier|final
+name|InstructionHandle
+name|start
+parameter_list|,
+specifier|final
+name|InstructionHandle
+name|end
+parameter_list|)
+block|{
+return|return
+name|addLocalVariable
+argument_list|(
+name|name
+argument_list|,
+name|type
+argument_list|,
+name|slot
+argument_list|,
+name|start
+argument_list|,
+name|end
+argument_list|,
+name|slot
+argument_list|)
+return|;
 block|}
 comment|/**      * Adds a local variable to this method and assigns an index automatically.      *      * @param name variable name      * @param type variable type      * @param start from where the variable is valid, if this is null,      * it is valid from the start      * @param end until where the variable is valid, if this is null,      * it is valid to the end      * @return new local variable object      * @see LocalVariable      */
 specifier|public
@@ -1934,6 +1977,16 @@ operator|.
 name|getConstantPool
 argument_list|()
 argument_list|)
+return|;
+block|}
+comment|/**      * @return `LocalVariableTypeTable' attribute of this method.      */
+specifier|public
+name|LocalVariableTypeTable
+name|getLocalVariableTypeTable
+parameter_list|()
+block|{
+return|return
+name|local_variable_type_table
 return|;
 block|}
 comment|/**      * Give an instruction a line number corresponding to the source code line.      *      * @param ih instruction to tag      * @return new line number object      * @see LineNumber      */
@@ -2524,6 +2577,17 @@ name|a
 argument_list|)
 expr_stmt|;
 block|}
+comment|/**      * Remove the LocalVariableTypeTable      */
+specifier|public
+name|void
+name|removeLocalVariableTypeTable
+parameter_list|( )
+block|{
+name|local_variable_type_table
+operator|=
+literal|null
+expr_stmt|;
+block|}
 comment|/**      * Remove a code attribute.      */
 specifier|public
 name|void
@@ -2548,6 +2612,10 @@ name|void
 name|removeCodeAttributes
 parameter_list|()
 block|{
+name|local_variable_type_table
+operator|=
+literal|null
+expr_stmt|;
 name|code_attrs_vec
 operator|.
 name|clear
@@ -2780,19 +2848,14 @@ operator|!
 name|strip_attributes
 condition|)
 block|{
-if|if
-condition|(
-name|local_variable_table
-operator|!=
-literal|null
-condition|)
-block|{
 name|updateLocalVariableTable
 argument_list|(
-name|local_variable_table
+name|getLocalVariableTable
+argument_list|(
+name|_cp
+argument_list|)
 argument_list|)
 expr_stmt|;
-block|}
 name|addCodeAttribute
 argument_list|(
 name|lvt
@@ -2819,7 +2882,7 @@ operator|!=
 literal|null
 condition|)
 block|{
-name|adjustLocalVariableLength
+name|adjustLocalVariableTypeTable
 argument_list|(
 name|lvt
 argument_list|)
@@ -3092,6 +3155,19 @@ expr_stmt|;
 block|}
 if|if
 condition|(
+name|local_variable_type_table
+operator|!=
+literal|null
+condition|)
+block|{
+name|removeCodeAttribute
+argument_list|(
+name|local_variable_type_table
+argument_list|)
+expr_stmt|;
+block|}
+if|if
+condition|(
 name|lnt
 operator|!=
 literal|null
@@ -3226,6 +3302,8 @@ name|getEnd
 argument_list|()
 expr_stmt|;
 block|}
+comment|// Since we are recreating the LocalVaraible, we must
+comment|// propagate the orig_index to new copy.
 name|addLocalVariable
 argument_list|(
 name|l
@@ -3251,13 +3329,18 @@ argument_list|,
 name|start
 argument_list|,
 name|end
+argument_list|,
+name|l
+operator|.
+name|getOrigIndex
+argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
 block|}
 specifier|private
 name|void
-name|adjustLocalVariableLength
+name|adjustLocalVariableTypeTable
 parameter_list|(
 specifier|final
 name|LocalVariableTable
@@ -3324,7 +3407,7 @@ argument_list|()
 operator|==
 name|l
 operator|.
-name|getIndex
+name|getOrigIndex
 argument_list|()
 condition|)
 block|{
@@ -3335,6 +3418,26 @@ argument_list|(
 name|l
 operator|.
 name|getLength
+argument_list|()
+argument_list|)
+expr_stmt|;
+name|element
+operator|.
+name|setStartPC
+argument_list|(
+name|l
+operator|.
+name|getStartPC
+argument_list|()
+argument_list|)
+expr_stmt|;
+name|element
+operator|.
+name|setIndex
+argument_list|(
+name|l
+operator|.
+name|getIndex
 argument_list|()
 argument_list|)
 expr_stmt|;
