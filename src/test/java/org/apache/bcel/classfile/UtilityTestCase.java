@@ -39,6 +39,7 @@ parameter_list|()
 throws|throws
 name|Exception
 block|{
+comment|// tests for BCEL-197
 name|assertEquals
 argument_list|(
 literal|"generic signature"
@@ -71,13 +72,56 @@ name|assertEquals
 argument_list|(
 literal|"generic signature"
 argument_list|,
-literal|"java.nio.file.attribute.FileAttribute<?>...[]"
+literal|"java.nio.file.attribute.FileAttribute<?>[]"
 argument_list|,
 name|Utility
 operator|.
 name|signatureToString
 argument_list|(
 literal|"[Ljava/nio/file/attribute/FileAttribute<*>;"
+argument_list|)
+argument_list|)
+expr_stmt|;
+comment|// tests for BCEL-286
+name|assertEquals
+argument_list|(
+literal|"generic signature"
+argument_list|,
+literal|"boofcv.alg.tracker.tld.TldTracker<boofcv.struct.image.ImageGray<boofcv.struct.image.GrayU8>, boofcv.struct.image.GrayI<boofcv.struct.image.GrayU8>>"
+argument_list|,
+name|Utility
+operator|.
+name|signatureToString
+argument_list|(
+literal|"Lboofcv/alg/tracker/tld/TldTracker<Lboofcv/struct/image/ImageGray<Lboofcv/struct/image/GrayU8;>;Lboofcv/struct/image/GrayI<Lboofcv/struct/image/GrayU8;>;>;"
+argument_list|)
+argument_list|)
+expr_stmt|;
+name|assertEquals
+argument_list|(
+literal|"generic signature"
+argument_list|,
+literal|"java.util.Map<?, ?>"
+argument_list|,
+name|Utility
+operator|.
+name|signatureToString
+argument_list|(
+literal|"Ljava/util/Map<**>;"
+argument_list|)
+argument_list|)
+expr_stmt|;
+name|assertEquals
+argument_list|(
+literal|"generic signature"
+argument_list|,
+literal|"com.jme3.util.IntMap<T>.IntMapIterator"
+argument_list|,
+name|Utility
+operator|.
+name|signatureToString
+argument_list|(
+literal|"Lcom/jme3/util/IntMap<TT;>.IntMapIterator;"
 argument_list|)
 argument_list|)
 expr_stmt|;
