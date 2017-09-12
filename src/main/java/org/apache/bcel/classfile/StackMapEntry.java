@@ -58,7 +58,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * This class represents a stack map entry recording the types of  * local variables and the the of stack items at a given byte code offset.  * See CLDC specification ï¿½5.3.1.2  *  * @version $Id$  * @see     StackMap  * @see     StackMapType  */
+comment|/**  * This class represents a stack map entry recording the types of  * local variables and the the of stack items at a given byte code offset.  * See CLDC specification 5.3.1.2  *  * @version $Id$  * @see     StackMap  * @see     StackMapType  */
 end_comment
 
 begin_class
