@@ -223,7 +223,6 @@ parameter_list|()
 block|{
 name|wide
 operator|=
-operator|(
 name|super
 operator|.
 name|getIndex
@@ -238,7 +237,6 @@ operator|.
 name|Const
 operator|.
 name|MAX_BYTE
-operator|)
 expr_stmt|;
 if|if
 condition|(
