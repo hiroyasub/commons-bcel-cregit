@@ -201,7 +201,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/**      * Dump line number table attribute to file stream in binary format.      *      * @param file Output file stream      * @throws IOException      */
+comment|/**      * Dump stack map table attribute to file stream in binary format.      *      * @param file Output file stream      * @throws IOException      */
 annotation|@
 name|Override
 specifier|public
