@@ -133,7 +133,7 @@ operator|=
 name|message
 expr_stmt|;
 block|}
-comment|/**      * Returns one one the {@link #VERIFIED_OK}, {@link #VERIFIED_NOTYET},      * {@link #VERIFIED_REJECTED} constants.      */
+comment|/**      * Returns one of the {@link #VERIFIED_OK}, {@link #VERIFIED_NOTYET},      * {@link #VERIFIED_REJECTED} constants.      */
 specifier|public
 name|int
 name|getStatus
