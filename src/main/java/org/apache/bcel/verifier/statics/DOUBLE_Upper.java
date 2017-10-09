@@ -77,7 +77,7 @@ name|Const
 operator|.
 name|T_UNKNOWN
 argument_list|,
-literal|"Long_Upper"
+literal|"Double_Upper"
 argument_list|)
 expr_stmt|;
 block|}
