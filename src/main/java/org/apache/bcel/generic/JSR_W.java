@@ -60,7 +60,7 @@ name|JSR_W
 extends|extends
 name|JsrInstruction
 block|{
-comment|/**      * Empty constructor needed for the Class.newInstance() statement in      * Instruction.readInstruction(). Not to be used otherwise.      */
+comment|/**      * Empty constructor needed for Instruction.readInstruction.      * Not to be used otherwise.      */
 name|JSR_W
 parameter_list|()
 block|{

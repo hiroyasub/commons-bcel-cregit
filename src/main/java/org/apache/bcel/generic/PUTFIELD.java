@@ -54,7 +54,7 @@ name|PopInstruction
 implements|,
 name|ExceptionThrower
 block|{
-comment|/**      * Empty constructor needed for the Class.newInstance() statement in      * Instruction.readInstruction(). Not to be used otherwise.      */
+comment|/**      * Empty constructor needed for Instruction.readInstruction.      * Not to be used otherwise.      */
 name|PUTFIELD
 parameter_list|()
 block|{

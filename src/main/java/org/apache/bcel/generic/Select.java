@@ -121,7 +121,7 @@ init|=
 literal|0
 decl_stmt|;
 comment|// number of pad bytes for alignment TODO could be package-protected?
-comment|/**      * Empty constructor needed for the Class.newInstance() statement in      * Instruction.readInstruction(). Not to be used otherwise.      */
+comment|/**      * Empty constructor needed for Instruction.readInstruction.      * Not to be used otherwise.      */
 name|Select
 parameter_list|()
 block|{

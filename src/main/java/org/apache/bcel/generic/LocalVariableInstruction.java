@@ -117,7 +117,7 @@ operator|.
 name|MAX_BYTE
 return|;
 block|}
-comment|/**      * Empty constructor needed for the Class.newInstance() statement in      * Instruction.readInstruction(). Not to be used otherwise.      * tag and length are defined in readInstruction and initFromFile, respectively.      */
+comment|/**      * Empty constructor needed for Instruction.readInstruction.      * Not to be used otherwise.      * tag and length are defined in readInstruction and initFromFile, respectively.      */
 name|LocalVariableInstruction
 parameter_list|(
 specifier|final
@@ -145,7 +145,7 @@ operator|=
 name|c_tag
 expr_stmt|;
 block|}
-comment|/**      * Empty constructor needed for the Class.newInstance() statement in      * Instruction.readInstruction(). Also used by IINC()!      */
+comment|/**      * Empty constructor needed for Instruction.readInstruction.      * Also used by IINC()!      */
 name|LocalVariableInstruction
 parameter_list|()
 block|{

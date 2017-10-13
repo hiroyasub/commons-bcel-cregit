@@ -43,7 +43,7 @@ name|ExceptionThrower
 implements|,
 name|TypedInstruction
 block|{
-comment|/**      * Empty constructor needed for the Class.newInstance() statement in      * Instruction.readInstruction(). Not to be used otherwise.      */
+comment|/**      * Empty constructor needed for Instruction.readInstruction.      * Not to be used otherwise.      */
 name|ArrayInstruction
 parameter_list|()
 block|{

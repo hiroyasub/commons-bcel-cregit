@@ -104,7 +104,7 @@ name|int
 name|nargs
 decl_stmt|;
 comment|// Number of arguments on stack (number of stack slots), called "count" in vmspec2
-comment|/**      * Empty constructor needed for the Class.newInstance() statement in      * Instruction.readInstruction(). Not to be used otherwise.      */
+comment|/**      * Empty constructor needed for Instruction.readInstruction.      * Not to be used otherwise.      */
 name|INVOKEINTERFACE
 parameter_list|()
 block|{

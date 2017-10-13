@@ -48,7 +48,7 @@ name|target
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Empty constructor needed for the Class.newInstance() statement in      * Instruction.readInstruction(). Not to be used otherwise.      */
+comment|/**      * Empty constructor needed for Instruction.readInstruction.      * Not to be used otherwise.      */
 name|GotoInstruction
 parameter_list|()
 block|{

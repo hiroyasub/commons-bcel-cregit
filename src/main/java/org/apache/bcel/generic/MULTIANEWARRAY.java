@@ -96,7 +96,7 @@ specifier|private
 name|short
 name|dimensions
 decl_stmt|;
-comment|/**      * Empty constructor needed for the Class.newInstance() statement in      * Instruction.readInstruction(). Not to be used otherwise.      */
+comment|/**      * Empty constructor needed for Instruction.readInstruction.      * Not to be used otherwise.      */
 name|MULTIANEWARRAY
 parameter_list|()
 block|{

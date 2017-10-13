@@ -32,7 +32,7 @@ specifier|private
 name|long
 name|value
 decl_stmt|;
-comment|/**      * Empty constructor needed for the Class.newInstance() statement in      * Instruction.readInstruction(). Not to be used otherwise.      */
+comment|/**      * Empty constructor needed for Instruction.readInstruction.      * Not to be used otherwise.      */
 name|LCONST
 parameter_list|()
 block|{
