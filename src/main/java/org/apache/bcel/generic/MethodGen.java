@@ -661,6 +661,7 @@ name|start
 init|=
 literal|null
 decl_stmt|;
+specifier|final
 name|InstructionHandle
 name|end
 init|=
@@ -3247,6 +3248,7 @@ name|getStartPC
 argument_list|()
 argument_list|)
 decl_stmt|;
+specifier|final
 name|InstructionHandle
 name|end
 init|=
