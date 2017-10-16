@@ -23,20 +23,6 @@ name|bcel
 operator|.
 name|classfile
 operator|.
-name|ClassParser
-import|;
-end_import
-
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|bcel
-operator|.
-name|classfile
-operator|.
 name|JavaClass
 import|;
 end_import
@@ -178,16 +164,6 @@ operator|.
 name|generic
 operator|.
 name|Type
-import|;
-end_import
-
-begin_import
-import|import
-name|java
-operator|.
-name|io
-operator|.
-name|FileInputStream
 import|;
 end_import
 
