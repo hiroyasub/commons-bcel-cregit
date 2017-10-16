@@ -81,6 +81,10 @@ name|int
 name|orig_index
 decl_stmt|;
 comment|// never changes; used to match up with LocalVariableTypeTable entries
+specifier|private
+name|boolean
+name|live_to_end
+decl_stmt|;
 comment|/**      * Generate a local variable that with index `index'. Note that double and long      * variables need two indexs. Index indices have to be provided by the user.      *      * @param index index of local variable      * @param name its name      * @param type its type      * @param start from where the instruction is valid (null means from the start)      * @param end until where the instruction is valid (null means to the end)      */
 specifier|public
 name|LocalVariableGen
@@ -167,6 +171,29 @@ name|orig_index
 operator|=
 name|index
 expr_stmt|;
+if|if
+condition|(
+name|end
+operator|==
+literal|null
+condition|)
+block|{
+name|this
+operator|.
+name|live_to_end
+operator|=
+literal|true
+expr_stmt|;
+block|}
+else|else
+block|{
+name|this
+operator|.
+name|live_to_end
+operator|=
+literal|false
+expr_stmt|;
+block|}
 block|}
 comment|/**      * Generate a local variable that with index `index'. Note that double and long      * variables need two indexs. Index indices have to be provided by the user.      *      * @param index index of local variable      * @param name its name      * @param type its type      * @param start from where the instruction is valid (null means from the start)      * @param end until where the instruction is valid (null means to the end)      * @param orig_index index of local variable prior to any changes to index      */
 specifier|public
@@ -217,7 +244,7 @@ operator|=
 name|orig_index
 expr_stmt|;
 block|}
-comment|/**      * Get LocalVariable object.      *      * This relies on that the instruction list has already been dumped to byte code or      * or that the `setPositions' methods has been called for the instruction list.      *      * Note that for local variables whose scope end at the last      * instruction of the method's code, the JVM specification is ambiguous:      * both a start_pc+length ending at the last instruction and      * start_pc+length ending at first index beyond the end of the code are      * valid.      *      * @param cp constant pool      */
+comment|/**      * Get LocalVariable object.      *      * This relies on that the instruction list has already been dumped to byte code or      * or that the `setPositions' methods has been called for the instruction list.      *      * Note that due to the conversion from byte code offset to InstructionHandle,      * it is impossible to tell the difference between a live range that ends BEFORE      * the last insturction of the method or a live range that ends AFTER the last      * instruction of the method.  Hence the live_to_end flag to differentiate      * between these two cases.      *      * @param cp constant pool      */
 specifier|public
 name|LocalVariable
 name|getLocalVariable
@@ -270,12 +297,16 @@ name|start_pc
 expr_stmt|;
 if|if
 condition|(
+operator|(
 name|end
 operator|.
 name|getNext
 argument_list|()
 operator|==
 literal|null
+operator|)
+operator|&&
+name|live_to_end
 condition|)
 block|{
 name|length
@@ -370,6 +401,31 @@ parameter_list|()
 block|{
 return|return
 name|orig_index
+return|;
+block|}
+specifier|public
+name|void
+name|setLiveToEnd
+parameter_list|(
+specifier|final
+name|boolean
+name|live_to_end
+parameter_list|)
+block|{
+name|this
+operator|.
+name|live_to_end
+operator|=
+name|live_to_end
+expr_stmt|;
+block|}
+specifier|public
+name|boolean
+name|getLiveToEnd
+parameter_list|()
+block|{
+return|return
+name|live_to_end
 return|;
 block|}
 annotation|@

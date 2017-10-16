@@ -679,13 +679,7 @@ operator|.
 name|getStart
 argument_list|()
 expr_stmt|;
-name|end
-operator|=
-name|il
-operator|.
-name|getEnd
-argument_list|()
-expr_stmt|;
+comment|// end == null => live to end of method
 comment|/* Add local variables, namely the implicit `this' and the arguments              */
 if|if
 condition|(
@@ -3287,21 +3281,7 @@ name|getStart
 argument_list|()
 expr_stmt|;
 block|}
-if|if
-condition|(
-literal|null
-operator|==
-name|end
-condition|)
-block|{
-name|end
-operator|=
-name|il
-operator|.
-name|getEnd
-argument_list|()
-expr_stmt|;
-block|}
+comment|// end == null => live to end of method
 comment|// Since we are recreating the LocalVaraible, we must
 comment|// propagate the orig_index to new copy.
 name|addLocalVariable
