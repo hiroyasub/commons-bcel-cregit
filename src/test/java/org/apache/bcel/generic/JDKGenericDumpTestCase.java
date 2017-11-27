@@ -425,6 +425,7 @@ argument_list|>
 name|findJavaHomesOnWindows
 parameter_list|()
 block|{
+specifier|final
 name|Set
 argument_list|<
 name|String
@@ -477,6 +478,7 @@ specifier|final
 name|String
 name|keyJre
 parameter_list|,
+specifier|final
 name|Set
 argument_list|<
 name|String
@@ -512,6 +514,7 @@ name|String
 argument_list|>
 name|findJavaHomesOnWindows
 parameter_list|(
+specifier|final
 name|String
 name|keyJavaHome
 parameter_list|,
