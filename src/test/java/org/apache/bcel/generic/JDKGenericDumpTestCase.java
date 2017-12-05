@@ -376,6 +376,18 @@ argument_list|>
 name|javaHomes
 parameter_list|)
 block|{
+if|if
+condition|(
+name|Advapi32Util
+operator|.
+name|registryKeyExists
+argument_list|(
+name|HKEY_LOCAL_MACHINE
+argument_list|,
+name|keyJre
+argument_list|)
+condition|)
+block|{
 name|javaHomes
 operator|.
 name|addAll
@@ -395,6 +407,7 @@ argument_list|)
 argument_list|)
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 specifier|private
 specifier|static
