@@ -322,7 +322,7 @@ throw|;
 comment|// never happens
 block|}
 block|}
-comment|/**      * Read one constant from the given input, the type depends on a tag byte.      *      * @param input Input stream      * @return Constant object      * @since 6.0 made public      */
+comment|/**      * Read one constant from the given input, the type depends on a tag byte.      *      * @param dataInput Input stream      * @return Constant object      * @throws IOException if an I/O error occurs reading from the given {@code dataInput}.      * @throws ClassFormatException if the next byte is not recognized      * @since 6.0 made public      */
 specifier|public
 specifier|static
 name|Constant
@@ -330,7 +330,7 @@ name|readConstant
 parameter_list|(
 specifier|final
 name|DataInput
-name|input
+name|dataInput
 parameter_list|)
 throws|throws
 name|IOException
@@ -341,7 +341,7 @@ specifier|final
 name|byte
 name|b
 init|=
-name|input
+name|dataInput
 operator|.
 name|readByte
 argument_list|()
@@ -361,7 +361,7 @@ return|return
 operator|new
 name|ConstantClass
 argument_list|(
-name|input
+name|dataInput
 argument_list|)
 return|;
 case|case
@@ -373,7 +373,7 @@ return|return
 operator|new
 name|ConstantFieldref
 argument_list|(
-name|input
+name|dataInput
 argument_list|)
 return|;
 case|case
@@ -385,7 +385,7 @@ return|return
 operator|new
 name|ConstantMethodref
 argument_list|(
-name|input
+name|dataInput
 argument_list|)
 return|;
 case|case
@@ -397,7 +397,7 @@ return|return
 operator|new
 name|ConstantInterfaceMethodref
 argument_list|(
-name|input
+name|dataInput
 argument_list|)
 return|;
 case|case
@@ -409,7 +409,7 @@ return|return
 operator|new
 name|ConstantString
 argument_list|(
-name|input
+name|dataInput
 argument_list|)
 return|;
 case|case
@@ -421,7 +421,7 @@ return|return
 operator|new
 name|ConstantInteger
 argument_list|(
-name|input
+name|dataInput
 argument_list|)
 return|;
 case|case
@@ -433,7 +433,7 @@ return|return
 operator|new
 name|ConstantFloat
 argument_list|(
-name|input
+name|dataInput
 argument_list|)
 return|;
 case|case
@@ -445,7 +445,7 @@ return|return
 operator|new
 name|ConstantLong
 argument_list|(
-name|input
+name|dataInput
 argument_list|)
 return|;
 case|case
@@ -457,7 +457,7 @@ return|return
 operator|new
 name|ConstantDouble
 argument_list|(
-name|input
+name|dataInput
 argument_list|)
 return|;
 case|case
@@ -469,7 +469,7 @@ return|return
 operator|new
 name|ConstantNameAndType
 argument_list|(
-name|input
+name|dataInput
 argument_list|)
 return|;
 case|case
@@ -482,7 +482,7 @@ name|ConstantUtf8
 operator|.
 name|getInstance
 argument_list|(
-name|input
+name|dataInput
 argument_list|)
 return|;
 case|case
@@ -494,7 +494,7 @@ return|return
 operator|new
 name|ConstantMethodHandle
 argument_list|(
-name|input
+name|dataInput
 argument_list|)
 return|;
 case|case
@@ -506,7 +506,7 @@ return|return
 operator|new
 name|ConstantMethodType
 argument_list|(
-name|input
+name|dataInput
 argument_list|)
 return|;
 case|case
@@ -518,7 +518,7 @@ return|return
 operator|new
 name|ConstantInvokeDynamic
 argument_list|(
-name|input
+name|dataInput
 argument_list|)
 return|;
 case|case
@@ -530,7 +530,7 @@ return|return
 operator|new
 name|ConstantModule
 argument_list|(
-name|input
+name|dataInput
 argument_list|)
 return|;
 case|case
@@ -542,7 +542,7 @@ return|return
 operator|new
 name|ConstantPackage
 argument_list|(
-name|input
+name|dataInput
 argument_list|)
 return|;
 default|default:

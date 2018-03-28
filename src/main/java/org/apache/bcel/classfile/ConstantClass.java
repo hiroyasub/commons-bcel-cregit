@@ -94,19 +94,19 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Initialize instance from file data.      *      * @param file Input stream      * @throws IOException      */
+comment|/**      * Constructs an instance from file data.      *      * @param dataInput Input stream      * @throws IOException if an I/O error occurs reading from the given {@code dataInput}.      */
 name|ConstantClass
 parameter_list|(
 specifier|final
 name|DataInput
-name|file
+name|dataInput
 parameter_list|)
 throws|throws
 name|IOException
 block|{
 name|this
 argument_list|(
-name|file
+name|dataInput
 operator|.
 name|readUnsignedShort
 argument_list|()
