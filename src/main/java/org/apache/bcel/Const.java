@@ -187,15 +187,6 @@ name|MAJOR_1_8
 init|=
 literal|52
 decl_stmt|;
-comment|/** Major version number of class files for Java 1.9.    *  @see #MINOR_1_9    *  */
-specifier|public
-specifier|static
-specifier|final
-name|short
-name|MAJOR_1_9
-init|=
-literal|53
-decl_stmt|;
 comment|/** Minor version number of class files for Java 1.8.    *  @see #MAJOR_1_8    *  */
 specifier|public
 specifier|static
@@ -204,6 +195,15 @@ name|short
 name|MINOR_1_8
 init|=
 literal|0
+decl_stmt|;
+comment|/** Major version number of class files for Java 1.9.    *  @see #MINOR_1_9    *  */
+specifier|public
+specifier|static
+specifier|final
+name|short
+name|MAJOR_1_9
+init|=
+literal|53
 decl_stmt|;
 comment|/** Minor version number of class files for Java 1.9.    *  @see #MAJOR_1_9    *  */
 specifier|public
