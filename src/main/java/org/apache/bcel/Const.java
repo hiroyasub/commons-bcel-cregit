@@ -632,7 +632,7 @@ name|CONSTANT_InvokeDynamic
 init|=
 literal|18
 decl_stmt|;
-comment|/**    * Marks a constant pool entry as a Module Reference.    *    *<p>Note: Early access Java 9 support- currently subject to change</p>    *    * @see<a href="http://cr.openjdk.java.net/~mr/jigsaw/spec/lang-vm.html#jigsaw-2.6">    * JPMS: Modules in the Java Language and JVM</a>    * @since 6.1    */
+comment|/**    * Marks a constant pool entry as a Module Reference.    * @see<a href="https://docs.oracle.com/javase/specs/jvms/se9/html/jvms-4.html#jvms-4.4.11">    * The Constant Pool in The Java Virtual Machine Specification</a>    * @since 6.1    */
 specifier|public
 specifier|static
 specifier|final
@@ -641,7 +641,7 @@ name|CONSTANT_Module
 init|=
 literal|19
 decl_stmt|;
-comment|/**    * Marks a constant pool entry as a Package Reference.    *    *<p>Note: Early access Java 9 support- currently subject to change</p>    *    * @see<a href="http://cr.openjdk.java.net/~mr/jigsaw/spec/lang-vm.html#jigsaw-2.6">    * JPMS: Modules in the Java Language and JVM</a>    * @since 6.1    */
+comment|/**    * Marks a constant pool entry as a Package Reference.    * @see<a href="https://docs.oracle.com/javase/specs/jvms/se9/html/jvms-4.html#jvms-4.4.12">    * The Constant Pool in The Java Virtual Machine Specification</a>    * @since 6.1    */
 specifier|public
 specifier|static
 specifier|final
