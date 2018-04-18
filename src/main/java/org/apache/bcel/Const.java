@@ -232,6 +232,24 @@ name|MINOR_1_10
 init|=
 literal|0
 decl_stmt|;
+comment|/** Major version number of class files for Java 11.    *  @see #MINOR_1_11    *  */
+specifier|public
+specifier|static
+specifier|final
+name|short
+name|MAJOR_1_11
+init|=
+literal|55
+decl_stmt|;
+comment|/** Minor version number of class files for Java 11.    *  @see #MAJOR_1_11    *  */
+specifier|public
+specifier|static
+specifier|final
+name|short
+name|MINOR_1_11
+init|=
+literal|0
+decl_stmt|;
 comment|/** Default major version number.  Class file is for Java 1.1.    *  @see #MAJOR_1_1    *  */
 specifier|public
 specifier|static
