@@ -214,6 +214,24 @@ name|MINOR_1_9
 init|=
 literal|0
 decl_stmt|;
+comment|/** Major version number of class files for Java 10.    *  @see #MINOR_1_10    *  */
+specifier|public
+specifier|static
+specifier|final
+name|short
+name|MAJOR_1_10
+init|=
+literal|54
+decl_stmt|;
+comment|/** Minor version number of class files for Java 10.    *  @see #MAJOR_1_10    *  */
+specifier|public
+specifier|static
+specifier|final
+name|short
+name|MINOR_1_10
+init|=
+literal|0
+decl_stmt|;
 comment|/** Default major version number.  Class file is for Java 1.1.    *  @see #MAJOR_1_1    *  */
 specifier|public
 specifier|static
