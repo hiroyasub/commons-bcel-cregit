@@ -659,6 +659,15 @@ name|CONSTANT_MethodType
 init|=
 literal|16
 decl_stmt|;
+comment|/**    * Marks a constant pool entry as dynamically computed.    * @see<a href="https://bugs.openjdk.java.net/secure/attachment/74618/constant-dynamic.html">    * Change request for JEP 309</a>    * @since 6.3    */
+specifier|public
+specifier|static
+specifier|final
+name|byte
+name|CONSTANT_Dynamic
+init|=
+literal|17
+decl_stmt|;
 comment|/**    * Marks a constant pool entry as an Invoke Dynamic    * @see<a href="http://docs.oracle.com/javase/specs/jvms/se8/html/jvms-4.html#jvms-4.4.10">    * The Constant Pool in The Java Virtual Machine Specification</a>    */
 specifier|public
 specifier|static
@@ -729,7 +738,7 @@ literal|"CONSTANT_MethodHandle"
 block|,
 literal|"CONSTANT_MethodType"
 block|,
-literal|""
+literal|"CONSTANT_Dynamic"
 block|,
 literal|"CONSTANT_InvokeDynamic"
 block|,

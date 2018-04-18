@@ -598,6 +598,19 @@ name|constantModule
 parameter_list|)
 block|{
 block|}
+comment|/**      * @since 6.3      */
+annotation|@
+name|Override
+specifier|public
+name|void
+name|visitConstantDynamic
+parameter_list|(
+specifier|final
+name|ConstantDynamic
+name|obj
+parameter_list|)
+block|{
+block|}
 block|}
 end_class
 

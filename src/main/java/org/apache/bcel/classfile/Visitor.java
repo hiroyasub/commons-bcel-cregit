@@ -359,6 +359,14 @@ name|ConstantModule
 name|constantModule
 parameter_list|)
 function_decl|;
+comment|/**      * @since 6.3      */
+name|void
+name|visitConstantDynamic
+parameter_list|(
+name|ConstantDynamic
+name|constantDynamic
+parameter_list|)
+function_decl|;
 block|}
 end_interface
 

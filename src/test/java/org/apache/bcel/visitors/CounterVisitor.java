@@ -137,6 +137,20 @@ name|bcel
 operator|.
 name|classfile
 operator|.
+name|ConstantDynamic
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|bcel
+operator|.
+name|classfile
+operator|.
 name|ConstantFieldref
 import|;
 end_import
@@ -944,6 +958,13 @@ name|constantPackageCount
 init|=
 literal|0
 decl_stmt|;
+comment|/** @since 6.3 */
+specifier|public
+name|int
+name|constantDynamicCount
+init|=
+literal|0
+decl_stmt|;
 comment|// CHECKSTYLE:ON
 annotation|@
 name|Override
@@ -1634,6 +1655,22 @@ name|constantModule
 parameter_list|)
 block|{
 name|constantModuleCount
+operator|++
+expr_stmt|;
+block|}
+comment|/** @since 6.3 */
+annotation|@
+name|Override
+specifier|public
+name|void
+name|visitConstantDynamic
+parameter_list|(
+specifier|final
+name|ConstantDynamic
+name|constantDynamic
+parameter_list|)
+block|{
+name|constantDynamicCount
 operator|++
 expr_stmt|;
 block|}
