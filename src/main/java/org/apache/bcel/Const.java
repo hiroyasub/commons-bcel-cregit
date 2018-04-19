@@ -196,57 +196,79 @@ name|MINOR_1_8
 init|=
 literal|0
 decl_stmt|;
-comment|/** Major version number of class files for Java 1.9.    *  @see #MINOR_1_9    *  */
+comment|/** Major version number of class files for Java 9.    *  @see #MINOR_9    *  */
+specifier|public
+specifier|static
+specifier|final
+name|short
+name|MAJOR_9
+init|=
+literal|53
+decl_stmt|;
+comment|/** Minor version number of class files for Java 9.    *  @see #MAJOR_9    *  */
+specifier|public
+specifier|static
+specifier|final
+name|short
+name|MINOR_9
+init|=
+literal|0
+decl_stmt|;
+comment|/**    * @deprecated Use {@link #MAJOR_9} instead    */
+annotation|@
+name|Deprecated
 specifier|public
 specifier|static
 specifier|final
 name|short
 name|MAJOR_1_9
 init|=
-literal|53
+name|MAJOR_9
 decl_stmt|;
-comment|/** Minor version number of class files for Java 1.9.    *  @see #MAJOR_1_9    *  */
+comment|/**    * @deprecated Use {@link #MINOR_9} instead    */
+annotation|@
+name|Deprecated
 specifier|public
 specifier|static
 specifier|final
 name|short
 name|MINOR_1_9
 init|=
-literal|0
+name|MINOR_9
 decl_stmt|;
-comment|/** Major version number of class files for Java 10.    *  @see #MINOR_1_10    *  */
+comment|/** Major version number of class files for Java 10.    *  @see #MINOR_10    *  */
 specifier|public
 specifier|static
 specifier|final
 name|short
-name|MAJOR_1_10
+name|MAJOR_10
 init|=
 literal|54
 decl_stmt|;
-comment|/** Minor version number of class files for Java 10.    *  @see #MAJOR_1_10    *  */
+comment|/** Minor version number of class files for Java 10.    *  @see #MAJOR_10    *  */
 specifier|public
 specifier|static
 specifier|final
 name|short
-name|MINOR_1_10
+name|MINOR_10
 init|=
 literal|0
 decl_stmt|;
-comment|/** Major version number of class files for Java 11.    *  @see #MINOR_1_11    *  */
+comment|/** Major version number of class files for Java 11.    *  @see #MINOR_11    *  */
 specifier|public
 specifier|static
 specifier|final
 name|short
-name|MAJOR_1_11
+name|MAJOR_11
 init|=
 literal|55
 decl_stmt|;
-comment|/** Minor version number of class files for Java 11.    *  @see #MAJOR_1_11    *  */
+comment|/** Minor version number of class files for Java 11.    *  @see #MAJOR_11    *  */
 specifier|public
 specifier|static
 specifier|final
 name|short
-name|MINOR_1_11
+name|MINOR_11
 init|=
 literal|0
 decl_stmt|;
