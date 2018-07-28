@@ -38,7 +38,7 @@ specifier|public
 interface|interface
 name|Repository
 block|{
-comment|/**      * Store the provided class under "clazz.getClassName()"      */
+comment|/**      * Stores the provided class under "clazz.getClassName()"      */
 name|void
 name|storeClass
 parameter_list|(
@@ -46,7 +46,7 @@ name|JavaClass
 name|clazz
 parameter_list|)
 function_decl|;
-comment|/**      * Remove class from repository      */
+comment|/**      * Removes class from repository      */
 name|void
 name|removeClass
 parameter_list|(
@@ -54,7 +54,7 @@ name|JavaClass
 name|clazz
 parameter_list|)
 function_decl|;
-comment|/**      * Find the class with the name provided, if the class      * isn't there, return NULL.      */
+comment|/**      * Finds the class with the name provided, if the class      * isn't there, return NULL.      */
 name|JavaClass
 name|findClass
 parameter_list|(
@@ -62,7 +62,7 @@ name|String
 name|className
 parameter_list|)
 function_decl|;
-comment|/**      * Find the class with the name provided, if the class      * isn't there, make an attempt to load it.      */
+comment|/**      * Finds the class with the name provided, if the class      * isn't there, make an attempt to load it.      */
 name|JavaClass
 name|loadClass
 parameter_list|(
@@ -76,7 +76,7 @@ name|lang
 operator|.
 name|ClassNotFoundException
 function_decl|;
-comment|/**      * Find the JavaClass instance for the given run-time class object      */
+comment|/**      * Finds the JavaClass instance for the given run-time class object      */
 name|JavaClass
 name|loadClass
 parameter_list|(
@@ -93,12 +93,12 @@ name|lang
 operator|.
 name|ClassNotFoundException
 function_decl|;
-comment|/** Clear all entries from cache.      */
+comment|/**       * Clears all entries from cache.      */
 name|void
 name|clear
 parameter_list|()
 function_decl|;
-comment|/** Get the ClassPath associated with this Repository      */
+comment|/**       * Gets the ClassPath associated with this Repository      */
 name|ClassPath
 name|getClassPath
 parameter_list|()
