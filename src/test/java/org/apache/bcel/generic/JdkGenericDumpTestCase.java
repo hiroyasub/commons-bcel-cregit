@@ -313,7 +313,7 @@ name|class
 argument_list|)
 specifier|public
 class|class
-name|JDKGenericDumpTestCase
+name|JdkGenericDumpTestCase
 block|{
 specifier|private
 specifier|static
@@ -743,7 +743,7 @@ name|String
 name|javaHome
 decl_stmt|;
 specifier|public
-name|JDKGenericDumpTestCase
+name|JdkGenericDumpTestCase
 parameter_list|(
 specifier|final
 name|String
@@ -936,7 +936,7 @@ block|}
 specifier|private
 name|File
 index|[]
-name|listJDKjars
+name|listJdkJars
 parameter_list|()
 throws|throws
 name|Exception
@@ -1133,7 +1133,7 @@ annotation|@
 name|Test
 specifier|public
 name|void
-name|testJDKjars
+name|testJdkJars
 parameter_list|()
 throws|throws
 name|Exception
@@ -1143,7 +1143,7 @@ name|File
 index|[]
 name|jars
 init|=
-name|listJDKjars
+name|listJdkJars
 argument_list|()
 decl_stmt|;
 if|if
