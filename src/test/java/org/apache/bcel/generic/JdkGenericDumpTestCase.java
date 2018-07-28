@@ -1238,14 +1238,14 @@ block|{
 specifier|final
 name|File
 index|[]
-name|jars
+name|jmods
 init|=
 name|listJdkModules
 argument_list|()
 decl_stmt|;
 if|if
 condition|(
-name|jars
+name|jmods
 operator|!=
 literal|null
 condition|)
@@ -1256,7 +1256,7 @@ specifier|final
 name|File
 name|file
 range|:
-name|jars
+name|jmods
 control|)
 block|{
 name|testJar
