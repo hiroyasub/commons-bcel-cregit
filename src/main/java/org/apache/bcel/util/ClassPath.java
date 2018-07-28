@@ -180,7 +180,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Responsible for loading (class) files from the CLASSPATH. Inspired by  * sun.tools.ClassPath.  *  * @version $Id$  */
+comment|/**  * Responsible for loading (class) files from the CLASSPATH. Inspired by sun.tools.ClassPath.  *  * @version $Id$  */
 end_comment
 
 begin_class
@@ -255,15 +255,61 @@ block|}
 block|}
 decl_stmt|;
 specifier|private
+specifier|static
 specifier|final
-name|PathEntry
+name|FilenameFilter
+name|MODULES_FILTER
+init|=
+operator|new
+name|FilenameFilter
+argument_list|()
+block|{
+annotation|@
+name|Override
+specifier|public
+name|boolean
+name|accept
+parameter_list|(
+specifier|final
+name|File
+name|dir
+parameter_list|,
+name|String
+name|name
+parameter_list|)
+block|{
+name|name
+operator|=
+name|name
+operator|.
+name|toLowerCase
+argument_list|(
+name|Locale
+operator|.
+name|ENGLISH
+argument_list|)
+expr_stmt|;
+return|return
+name|name
+operator|.
+name|endsWith
+argument_list|(
+literal|".jmod"
+argument_list|)
+return|;
+block|}
+block|}
+decl_stmt|;
+specifier|private
+specifier|final
+name|AbstractPathEntry
 index|[]
 name|paths
 decl_stmt|;
 specifier|private
 specifier|final
 name|String
-name|class_path
+name|classPath
 decl_stmt|;
 specifier|private
 name|ClassPath
@@ -304,14 +350,14 @@ parameter_list|)
 block|{
 name|this
 operator|.
-name|class_path
+name|classPath
 operator|=
 name|class_path
 expr_stmt|;
 specifier|final
 name|List
 argument_list|<
-name|PathEntry
+name|AbstractPathEntry
 argument_list|>
 name|list
 init|=
@@ -401,6 +447,32 @@ argument_list|)
 argument_list|)
 expr_stmt|;
 block|}
+if|else if
+condition|(
+name|path
+operator|.
+name|endsWith
+argument_list|(
+literal|".jmod"
+argument_list|)
+condition|)
+block|{
+name|list
+operator|.
+name|add
+argument_list|(
+operator|new
+name|Module
+argument_list|(
+operator|new
+name|ZipFile
+argument_list|(
+name|file
+argument_list|)
+argument_list|)
+argument_list|)
+expr_stmt|;
+block|}
 else|else
 block|{
 name|list
@@ -408,7 +480,7 @@ operator|.
 name|add
 argument_list|(
 operator|new
-name|Zip
+name|Jar
 argument_list|(
 operator|new
 name|ZipFile
@@ -467,7 +539,7 @@ block|}
 name|paths
 operator|=
 operator|new
-name|PathEntry
+name|AbstractPathEntry
 index|[
 name|list
 operator|.
@@ -483,7 +555,7 @@ name|paths
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Search for classes in CLASSPATH.      * @deprecated Use SYSTEM_CLASS_PATH constant      */
+comment|/**      * Search for classes in CLASSPATH.      *      * @deprecated Use SYSTEM_CLASS_PATH constant      */
 annotation|@
 name|Deprecated
 specifier|public
@@ -497,7 +569,7 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
-comment|/** @return used class path string      */
+comment|/**      * @return used class path string      */
 annotation|@
 name|Override
 specifier|public
@@ -519,11 +591,11 @@ name|File
 operator|.
 name|pathSeparator
 operator|+
-name|class_path
+name|classPath
 return|;
 block|}
 return|return
-name|class_path
+name|classPath
 return|;
 block|}
 annotation|@
@@ -541,7 +613,7 @@ literal|null
 condition|)
 block|{
 return|return
-name|class_path
+name|classPath
 operator|.
 name|hashCode
 argument_list|()
@@ -553,7 +625,7 @@ argument_list|()
 return|;
 block|}
 return|return
-name|class_path
+name|classPath
 operator|.
 name|hashCode
 argument_list|()
@@ -587,7 +659,7 @@ operator|)
 name|o
 decl_stmt|;
 return|return
-name|class_path
+name|classPath
 operator|.
 name|equals
 argument_list|(
@@ -686,7 +758,7 @@ block|}
 block|}
 block|}
 block|}
-comment|/** Checks for class path components in the following properties:      * "java.class.path", "sun.boot.class.path", "java.ext.dirs"      *      * @return class path as used by default by BCEL      */
+comment|/**      * Checks for class path components in the following properties: "java.class.path", "sun.boot.class.path",      * "java.ext.dirs"      *      * @return class path as used by default by BCEL      */
 comment|// @since 6.0 no longer final
 specifier|public
 specifier|static
@@ -838,6 +910,106 @@ expr_stmt|;
 block|}
 block|}
 block|}
+comment|// Starting in JDK 9, .class files are in the jmods directory. Add them to the path.
+name|String
+name|modules_path
+init|=
+name|System
+operator|.
+name|getProperty
+argument_list|(
+literal|"java.modules.path"
+argument_list|)
+decl_stmt|;
+if|if
+condition|(
+name|modules_path
+operator|==
+literal|null
+operator|||
+name|modules_path
+operator|.
+name|trim
+argument_list|()
+operator|.
+name|isEmpty
+argument_list|()
+condition|)
+block|{
+comment|// Default to looking in JAVA_HOME/jmods
+name|modules_path
+operator|=
+name|System
+operator|.
+name|getProperty
+argument_list|(
+literal|"java.home"
+argument_list|)
+operator|+
+name|File
+operator|.
+name|separator
+operator|+
+literal|"jmods"
+expr_stmt|;
+block|}
+specifier|final
+name|File
+name|modules_dir
+init|=
+operator|new
+name|File
+argument_list|(
+name|modules_path
+argument_list|)
+decl_stmt|;
+if|if
+condition|(
+name|modules_dir
+operator|.
+name|exists
+argument_list|()
+condition|)
+block|{
+specifier|final
+name|String
+index|[]
+name|modules
+init|=
+name|modules_dir
+operator|.
+name|list
+argument_list|(
+name|MODULES_FILTER
+argument_list|)
+decl_stmt|;
+for|for
+control|(
+specifier|final
+name|String
+name|module
+range|:
+name|modules
+control|)
+block|{
+name|list
+operator|.
+name|add
+argument_list|(
+name|modules_dir
+operator|.
+name|getPath
+argument_list|()
+operator|+
+name|File
+operator|.
+name|separatorChar
+operator|+
+name|module
+argument_list|)
+expr_stmt|;
+block|}
+block|}
 specifier|final
 name|StringBuilder
 name|buf
@@ -891,7 +1063,7 @@ name|intern
 argument_list|()
 return|;
 block|}
-comment|/**      * @param name fully qualified class name, e.g. java.lang.String      * @return input stream for class      */
+comment|/**      * @param name      *            fully qualified class name, e.g. java.lang.String      * @return input stream for class      */
 specifier|public
 name|InputStream
 name|getInputStream
@@ -906,20 +1078,16 @@ block|{
 return|return
 name|getInputStream
 argument_list|(
-name|name
-operator|.
-name|replace
+name|packageToFolder
 argument_list|(
-literal|'.'
-argument_list|,
-literal|'/'
+name|name
 argument_list|)
 argument_list|,
 literal|".class"
 argument_list|)
 return|;
 block|}
-comment|/**      * Return stream for class or resource on CLASSPATH.      *      * @param name fully qualified file name, e.g. java/lang/String      * @param suffix file name ends with suff, e.g. .java      * @return input stream for file on class path      */
+comment|/**      * Return stream for class or resource on CLASSPATH.      *      * @param name      *            fully qualified file name, e.g. java/lang/String      * @param suffix      *            file name ends with suff, e.g. .java      * @return input stream for file on class path      */
 specifier|public
 name|InputStream
 name|getInputStream
@@ -991,7 +1159,7 @@ name|getInputStream
 argument_list|()
 return|;
 block|}
-comment|/**      * @param name fully qualified resource name, e.g. java/lang/String.class      * @return InputStream supplying the resource, or null if no resource with that name.      * @since 6.0      */
+comment|/**      * @param name      *            fully qualified resource name, e.g. java/lang/String.class      * @return InputStream supplying the resource, or null if no resource with that name.      * @since 6.0      */
 specifier|public
 name|InputStream
 name|getResourceAsStream
@@ -1004,7 +1172,7 @@ block|{
 for|for
 control|(
 specifier|final
-name|PathEntry
+name|AbstractPathEntry
 name|path
 range|:
 name|paths
@@ -1038,7 +1206,7 @@ return|return
 literal|null
 return|;
 block|}
-comment|/**      * @param name fully qualified resource name, e.g. java/lang/String.class      * @return URL supplying the resource, or null if no resource with that name.      * @since 6.0      */
+comment|/**      * @param name      *            fully qualified resource name, e.g. java/lang/String.class      * @return URL supplying the resource, or null if no resource with that name.      * @since 6.0      */
 specifier|public
 name|URL
 name|getResource
@@ -1051,7 +1219,7 @@ block|{
 for|for
 control|(
 specifier|final
-name|PathEntry
+name|AbstractPathEntry
 name|path
 range|:
 name|paths
@@ -1085,7 +1253,7 @@ return|return
 literal|null
 return|;
 block|}
-comment|/**      * @param name fully qualified resource name, e.g. java/lang/String.class      * @return An Enumeration of URLs supplying the resource, or an      * empty Enumeration if no resource with that name.      * @since 6.0      */
+comment|/**      * @param name      *            fully qualified resource name, e.g. java/lang/String.class      * @return An Enumeration of URLs supplying the resource, or an empty Enumeration if no resource with that name.      * @since 6.0      */
 specifier|public
 name|Enumeration
 argument_list|<
@@ -1113,7 +1281,7 @@ decl_stmt|;
 for|for
 control|(
 specifier|final
-name|PathEntry
+name|AbstractPathEntry
 name|path
 range|:
 name|paths
@@ -1154,7 +1322,7 @@ name|elements
 argument_list|()
 return|;
 block|}
-comment|/**      * @param name fully qualified file name, e.g. java/lang/String      * @param suffix file name ends with suff, e.g. .java      * @return class file for the java class      */
+comment|/**      * @param name      *            fully qualified file name, e.g. java/lang/String      * @param suffix      *            file name ends with suff, e.g. .java      * @return class file for the java class      */
 specifier|public
 name|ClassFile
 name|getClassFile
@@ -1252,7 +1420,7 @@ block|{
 for|for
 control|(
 specifier|final
-name|PathEntry
+name|AbstractPathEntry
 name|path
 range|:
 name|paths
@@ -1287,7 +1455,7 @@ return|return
 literal|null
 return|;
 block|}
-comment|/**      * @param name fully qualified class name, e.g. java.lang.String      * @return input stream for class      */
+comment|/**      * @param name      *            fully qualified class name, e.g. java.lang.String      * @return input stream for class      */
 specifier|public
 name|ClassFile
 name|getClassFile
@@ -1308,7 +1476,7 @@ literal|".class"
 argument_list|)
 return|;
 block|}
-comment|/**      * @param name fully qualified file name, e.g. java/lang/String      * @param suffix file name ends with suffix, e.g. .java      * @return byte array for file on class path      */
+comment|/**      * @param name      *            fully qualified file name, e.g. java/lang/String      * @param suffix      *            file name ends with suffix, e.g. .java      * @return byte array for file on class path      */
 specifier|public
 name|byte
 index|[]
@@ -1434,7 +1602,7 @@ literal|".class"
 argument_list|)
 return|;
 block|}
-comment|/**      * @param name name of file to search for, e.g. java/lang/String.java      * @return full (canonical) path for file      */
+comment|/**      * @param name      *            name of file to search for, e.g. java/lang/String.java      * @return full (canonical) path for file      */
 specifier|public
 name|String
 name|getPath
@@ -1498,7 +1666,7 @@ name|suffix
 argument_list|)
 return|;
 block|}
-comment|/**      * @param name name of file to search for, e.g. java/lang/String      * @param suffix file name suffix, e.g. .java      * @return full (canonical) path for file, if it exists      */
+comment|/**      * @param name      *            name of file to search for, e.g. java/lang/String      * @param suffix      *            file name suffix, e.g. .java      * @return full (canonical) path for file, if it exists      */
 specifier|public
 name|String
 name|getPath
@@ -1530,7 +1698,7 @@ specifier|private
 specifier|abstract
 specifier|static
 class|class
-name|PathEntry
+name|AbstractPathEntry
 block|{
 specifier|abstract
 name|ClassFile
@@ -1562,34 +1730,34 @@ name|name
 parameter_list|)
 function_decl|;
 block|}
-comment|/** Contains information about file/ZIP entry of the Java class.      */
+comment|/**      * Contains information about file/ZIP entry of the Java class.      */
 specifier|public
 interface|interface
 name|ClassFile
 block|{
-comment|/** @return input stream for class file.          */
+comment|/**          * @return input stream for class file.          */
 name|InputStream
 name|getInputStream
 parameter_list|()
 throws|throws
 name|IOException
 function_decl|;
-comment|/** @return canonical path to class file.          */
+comment|/**          * @return canonical path to class file.          */
 name|String
 name|getPath
 parameter_list|()
 function_decl|;
-comment|/** @return base path of found class, i.e. class is contained relative          * to that path, which may either denote a directory, or zip file          */
+comment|/**          * @return base path of found class, i.e. class is contained relative to that path, which may either denote a          *         directory, or zip file          */
 name|String
 name|getBase
 parameter_list|()
 function_decl|;
-comment|/** @return modification time of class file.          */
+comment|/**          * @return modification time of class file.          */
 name|long
 name|getTime
 parameter_list|()
 function_decl|;
-comment|/** @return size of class file.          */
+comment|/**          * @return size of class file.          */
 name|long
 name|getSize
 parameter_list|()
@@ -1600,7 +1768,7 @@ specifier|static
 class|class
 name|Dir
 extends|extends
-name|PathEntry
+name|AbstractPathEntry
 block|{
 specifier|private
 specifier|final
@@ -1634,25 +1802,9 @@ specifier|final
 name|File
 name|file
 init|=
-operator|new
-name|File
+name|toFile
 argument_list|(
-name|dir
-operator|+
-name|File
-operator|.
-name|separatorChar
-operator|+
 name|name
-operator|.
-name|replace
-argument_list|(
-literal|'/'
-argument_list|,
-name|File
-operator|.
-name|separatorChar
-argument_list|)
 argument_list|)
 decl_stmt|;
 try|try
@@ -1701,25 +1853,9 @@ specifier|final
 name|File
 name|file
 init|=
-operator|new
-name|File
+name|toFile
 argument_list|(
-name|dir
-operator|+
-name|File
-operator|.
-name|separatorChar
-operator|+
 name|name
-operator|.
-name|replace
-argument_list|(
-literal|'/'
-argument_list|,
-name|File
-operator|.
-name|separatorChar
-argument_list|)
 argument_list|)
 decl_stmt|;
 try|try
@@ -1893,6 +2029,38 @@ else|:
 literal|null
 return|;
 block|}
+specifier|private
+name|File
+name|toFile
+parameter_list|(
+specifier|final
+name|String
+name|name
+parameter_list|)
+block|{
+return|return
+operator|new
+name|File
+argument_list|(
+name|dir
+operator|+
+name|File
+operator|.
+name|separatorChar
+operator|+
+name|name
+operator|.
+name|replace
+argument_list|(
+literal|'/'
+argument_list|,
+name|File
+operator|.
+name|separatorChar
+argument_list|)
+argument_list|)
+return|;
+block|}
 annotation|@
 name|Override
 specifier|public
@@ -1908,25 +2076,120 @@ block|}
 specifier|private
 specifier|static
 class|class
-name|Zip
+name|Module
 extends|extends
-name|PathEntry
+name|AbstractZip
+block|{
+name|Module
+parameter_list|(
+specifier|final
+name|ZipFile
+name|zip
+parameter_list|)
+block|{
+name|super
+argument_list|(
+name|zip
+argument_list|)
+expr_stmt|;
+block|}
+annotation|@
+name|Override
+specifier|protected
+name|String
+name|toEntryName
+parameter_list|(
+specifier|final
+name|String
+name|name
+parameter_list|,
+specifier|final
+name|String
+name|suffix
+parameter_list|)
+block|{
+return|return
+literal|"classes/"
+operator|+
+name|packageToFolder
+argument_list|(
+name|name
+argument_list|)
+operator|+
+name|suffix
+return|;
+block|}
+block|}
+specifier|private
+specifier|static
+class|class
+name|Jar
+extends|extends
+name|AbstractZip
+block|{
+name|Jar
+parameter_list|(
+specifier|final
+name|ZipFile
+name|zip
+parameter_list|)
+block|{
+name|super
+argument_list|(
+name|zip
+argument_list|)
+expr_stmt|;
+block|}
+annotation|@
+name|Override
+specifier|protected
+name|String
+name|toEntryName
+parameter_list|(
+specifier|final
+name|String
+name|name
+parameter_list|,
+specifier|final
+name|String
+name|suffix
+parameter_list|)
+block|{
+return|return
+name|packageToFolder
+argument_list|(
+name|name
+argument_list|)
+operator|+
+name|suffix
+return|;
+block|}
+block|}
+specifier|private
+specifier|static
+specifier|abstract
+class|class
+name|AbstractZip
+extends|extends
+name|AbstractPathEntry
 block|{
 specifier|private
 specifier|final
 name|ZipFile
 name|zip
 decl_stmt|;
-name|Zip
+name|AbstractZip
 parameter_list|(
 specifier|final
 name|ZipFile
-name|z
+name|zip
 parameter_list|)
 block|{
+name|this
+operator|.
 name|zip
 operator|=
-name|z
+name|zip
 expr_stmt|;
 block|}
 annotation|@
@@ -1953,11 +2216,9 @@ decl_stmt|;
 try|try
 block|{
 return|return
-operator|(
 name|entry
 operator|!=
 literal|null
-operator|)
 condition|?
 operator|new
 name|URL
@@ -2013,11 +2274,9 @@ decl_stmt|;
 try|try
 block|{
 return|return
-operator|(
 name|entry
 operator|!=
 literal|null
-operator|)
 condition|?
 name|zip
 operator|.
@@ -2065,16 +2324,12 @@ name|zip
 operator|.
 name|getEntry
 argument_list|(
-name|name
-operator|.
-name|replace
+name|toEntryName
 argument_list|(
-literal|'.'
+name|name
 argument_list|,
-literal|'/'
-argument_list|)
-operator|+
 name|suffix
+argument_list|)
 argument_list|)
 decl_stmt|;
 if|if
@@ -2170,6 +2425,54 @@ block|}
 block|}
 return|;
 block|}
+specifier|protected
+specifier|abstract
+name|String
+name|toEntryName
+parameter_list|(
+specifier|final
+name|String
+name|name
+parameter_list|,
+specifier|final
+name|String
+name|suffix
+parameter_list|)
+function_decl|;
+annotation|@
+name|Override
+specifier|public
+name|String
+name|toString
+parameter_list|()
+block|{
+return|return
+name|zip
+operator|.
+name|getName
+argument_list|()
+return|;
+block|}
+block|}
+specifier|static
+name|String
+name|packageToFolder
+parameter_list|(
+specifier|final
+name|String
+name|name
+parameter_list|)
+block|{
+return|return
+name|name
+operator|.
+name|replace
+argument_list|(
+literal|'.'
+argument_list|,
+literal|'/'
+argument_list|)
+return|;
 block|}
 block|}
 end_class
