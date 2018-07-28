@@ -1693,6 +1693,7 @@ name|close
 argument_list|()
 expr_stmt|;
 block|}
+block|}
 if|if
 condition|(
 name|classLoader
@@ -1718,7 +1719,6 @@ operator|.
 name|close
 argument_list|()
 expr_stmt|;
-block|}
 block|}
 block|}
 annotation|@
