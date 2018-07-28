@@ -1435,7 +1435,7 @@ decl_stmt|;
 specifier|private
 specifier|final
 name|FileSystem
-name|fs
+name|jrtFileSystem
 decl_stmt|;
 specifier|private
 specifier|final
@@ -1639,7 +1639,7 @@ name|tempClassLoader
 expr_stmt|;
 name|this
 operator|.
-name|fs
+name|jrtFileSystem
 operator|=
 name|tempFs
 expr_stmt|;
@@ -1708,12 +1708,12 @@ expr_stmt|;
 block|}
 if|if
 condition|(
-name|fs
+name|jrtFileSystem
 operator|!=
 literal|null
 condition|)
 block|{
-name|fs
+name|jrtFileSystem
 operator|.
 name|close
 argument_list|()
