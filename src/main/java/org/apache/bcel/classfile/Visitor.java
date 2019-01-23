@@ -360,13 +360,16 @@ name|constantModule
 parameter_list|)
 function_decl|;
 comment|/**      * @since 6.3      */
+specifier|default
 name|void
 name|visitConstantDynamic
 parameter_list|(
 name|ConstantDynamic
 name|constantDynamic
 parameter_list|)
-function_decl|;
+block|{
+comment|// empty
+block|}
 block|}
 end_interface
 
