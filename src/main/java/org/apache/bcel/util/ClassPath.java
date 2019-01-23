@@ -295,8 +295,8 @@ parameter_list|)
 function_decl|;
 block|}
 specifier|private
-specifier|static
 specifier|abstract
+specifier|static
 class|class
 name|AbstractZip
 extends|extends
