@@ -272,6 +272,42 @@ name|MINOR_11
 init|=
 literal|0
 decl_stmt|;
+comment|/** Major version number of class files for Java 12.    *  @see #MINOR_12    *  */
+specifier|public
+specifier|static
+specifier|final
+name|short
+name|MAJOR_12
+init|=
+literal|56
+decl_stmt|;
+comment|/** Minor version number of class files for Java 12.    *  @see #MAJOR_12    *  */
+specifier|public
+specifier|static
+specifier|final
+name|short
+name|MINOR_12
+init|=
+literal|0
+decl_stmt|;
+comment|/** Major version number of class files for Java 13.    *  @see #MINOR_13    *  */
+specifier|public
+specifier|static
+specifier|final
+name|short
+name|MAJOR_13
+init|=
+literal|57
+decl_stmt|;
+comment|/** Minor version number of class files for Java 13.    *  @see #MAJOR_13    *  */
+specifier|public
+specifier|static
+specifier|final
+name|short
+name|MINOR_13
+init|=
+literal|0
+decl_stmt|;
 comment|/** Default major version number.  Class file is for Java 1.1.    *  @see #MAJOR_1_1    *  */
 specifier|public
 specifier|static
