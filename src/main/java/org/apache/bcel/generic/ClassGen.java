@@ -37,6 +37,16 @@ end_import
 
 begin_import
 import|import
+name|java
+operator|.
+name|util
+operator|.
+name|Objects
+import|;
+end_import
+
+begin_import
+import|import
 name|org
 operator|.
 name|apache
@@ -386,13 +396,15 @@ operator|)
 name|o2
 decl_stmt|;
 return|return
+name|Objects
+operator|.
+name|equals
+argument_list|(
 name|THIS
 operator|.
 name|getClassName
 argument_list|()
-operator|.
-name|equals
-argument_list|(
+argument_list|,
 name|THAT
 operator|.
 name|getClassName
