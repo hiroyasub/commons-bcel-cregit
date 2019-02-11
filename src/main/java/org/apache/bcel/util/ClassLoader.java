@@ -53,7 +53,7 @@ name|apache
 operator|.
 name|bcel
 operator|.
-name|Constants
+name|Const
 import|;
 end_import
 
@@ -668,7 +668,7 @@ operator|.
 name|getClassNameIndex
 argument_list|()
 argument_list|,
-name|Constants
+name|Const
 operator|.
 name|CONSTANT_Class
 argument_list|)
@@ -689,7 +689,7 @@ operator|.
 name|getNameIndex
 argument_list|()
 argument_list|,
-name|Constants
+name|Const
 operator|.
 name|CONSTANT_Utf8
 argument_list|)
