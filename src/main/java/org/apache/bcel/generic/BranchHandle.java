@@ -52,15 +52,7 @@ operator|=
 name|i
 expr_stmt|;
 block|}
-comment|/** Factory methods.      */
-specifier|private
-specifier|static
-name|BranchHandle
-name|bh_list
-init|=
-literal|null
-decl_stmt|;
-comment|// List of reusable handles
+comment|/** Factory method.      */
 specifier|static
 name|BranchHandle
 name|getBranchHandle
@@ -70,13 +62,6 @@ name|BranchInstruction
 name|i
 parameter_list|)
 block|{
-if|if
-condition|(
-name|bh_list
-operator|==
-literal|null
-condition|)
-block|{
 return|return
 operator|new
 name|BranchHandle
@@ -84,53 +69,6 @@ argument_list|(
 name|i
 argument_list|)
 return|;
-block|}
-specifier|final
-name|BranchHandle
-name|bh
-init|=
-name|bh_list
-decl_stmt|;
-name|bh_list
-operator|=
-operator|(
-name|BranchHandle
-operator|)
-name|bh
-operator|.
-name|getNext
-argument_list|()
-expr_stmt|;
-name|bh
-operator|.
-name|setInstruction
-argument_list|(
-name|i
-argument_list|)
-expr_stmt|;
-return|return
-name|bh
-return|;
-block|}
-comment|/** Handle adds itself to the list of resuable handles.      */
-annotation|@
-name|Override
-specifier|protected
-name|void
-name|addHandle
-parameter_list|()
-block|{
-name|super
-operator|.
-name|setNext
-argument_list|(
-name|bh_list
-argument_list|)
-expr_stmt|;
-name|bh_list
-operator|=
-name|this
-expr_stmt|;
 block|}
 comment|/* Override InstructionHandle methods: delegate to branch instruction.      * Through this overriding all access to the private i_position field should      * be prevented.      */
 annotation|@

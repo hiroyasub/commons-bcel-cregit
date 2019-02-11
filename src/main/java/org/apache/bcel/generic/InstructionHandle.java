@@ -274,14 +274,6 @@ name|i
 argument_list|)
 expr_stmt|;
 block|}
-specifier|private
-specifier|static
-name|InstructionHandle
-name|ih_list
-init|=
-literal|null
-decl_stmt|;
-comment|// List of reusable handles
 comment|/** Factory method.      */
 specifier|static
 name|InstructionHandle
@@ -292,42 +284,12 @@ name|Instruction
 name|i
 parameter_list|)
 block|{
-if|if
-condition|(
-name|ih_list
-operator|==
-literal|null
-condition|)
-block|{
 return|return
 operator|new
 name|InstructionHandle
 argument_list|(
 name|i
 argument_list|)
-return|;
-block|}
-specifier|final
-name|InstructionHandle
-name|ih
-init|=
-name|ih_list
-decl_stmt|;
-name|ih_list
-operator|=
-name|ih
-operator|.
-name|next
-expr_stmt|;
-name|ih
-operator|.
-name|setInstruction
-argument_list|(
-name|i
-argument_list|)
-expr_stmt|;
-return|return
-name|ih
 return|;
 block|}
 comment|/**      * Called by InstructionList.setPositions when setting the position for every      * instruction. In the presence of variable length instructions `setPositions()'      * performs multiple passes over the instruction list to calculate the      * correct (byte) positions and offsets by calling this function.      *      * @param offset additional offset caused by preceding (variable length) instructions      * @param max_offset the maximum offset that may be caused by these instructions      * @return additional offset caused by possible change of this instruction's length      */
@@ -376,22 +338,7 @@ operator|=
 name|pos
 expr_stmt|;
 block|}
-comment|/** Overridden in BranchHandle      */
-specifier|protected
-name|void
-name|addHandle
-parameter_list|()
-block|{
-name|next
-operator|=
-name|ih_list
-expr_stmt|;
-name|ih_list
-operator|=
-name|this
-expr_stmt|;
-block|}
-comment|/**      * Delete contents, i.e., remove user access and make handle reusable.      */
+comment|/**      * Delete contents, i.e., remove user access.      */
 name|void
 name|dispose
 parameter_list|()
@@ -421,9 +368,6 @@ operator|=
 literal|null
 expr_stmt|;
 name|removeAllTargeters
-argument_list|()
-expr_stmt|;
-name|addHandle
 argument_list|()
 expr_stmt|;
 block|}
