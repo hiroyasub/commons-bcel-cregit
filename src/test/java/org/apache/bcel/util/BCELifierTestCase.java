@@ -324,6 +324,14 @@ name|outfile
 operator|.
 name|getName
 argument_list|()
+argument_list|,
+literal|"-source"
+argument_list|,
+literal|"1.8"
+argument_list|,
+literal|"-target"
+argument_list|,
+literal|"1.8"
 argument_list|)
 expr_stmt|;
 name|exec
