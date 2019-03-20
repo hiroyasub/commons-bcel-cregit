@@ -428,11 +428,16 @@ name|file
 operator|.
 name|writeShort
 argument_list|(
-name|attributes
-operator|.
-name|length
+name|attributes_count
 argument_list|)
 expr_stmt|;
+if|if
+condition|(
+name|attributes
+operator|!=
+literal|null
+condition|)
+block|{
 for|for
 control|(
 specifier|final
@@ -449,6 +454,7 @@ argument_list|(
 name|file
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 block|}
 comment|/**      * @return Collection of object attributes.      */
