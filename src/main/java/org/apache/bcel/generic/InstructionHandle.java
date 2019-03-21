@@ -127,6 +127,16 @@ name|Object
 argument_list|>
 name|attributes
 decl_stmt|;
+comment|/**      * Does nothing.      *       * @deprecated Does nothing as of 6.3.1.      */
+annotation|@
+name|Deprecated
+specifier|protected
+name|void
+name|addHandle
+parameter_list|()
+block|{
+comment|// noop
+block|}
 specifier|public
 specifier|final
 name|InstructionHandle
