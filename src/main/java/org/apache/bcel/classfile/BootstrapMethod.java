@@ -189,7 +189,7 @@ index|]
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * @param bootstrap_method_ref int index into constant_pool of CONSTANT_MethodHandle      * @param bootstrap_arguments int[] indices into constant_pool of CONSTANT_<type>_info      */
+comment|/**      * @param bootstrap_method_ref int index into constant_pool of CONSTANT_MethodHandle      * @param bootstrap_arguments int[] indices into constant_pool of CONSTANT_[type]_info      */
 specifier|public
 name|BootstrapMethod
 parameter_list|(
@@ -243,7 +243,7 @@ operator|=
 name|bootstrap_method_ref
 expr_stmt|;
 block|}
-comment|/**      * @return int[] of bootstrap_method indices into constant_pool of CONSTANT_<type>_info      */
+comment|/**      * @return int[] of bootstrap_method indices into constant_pool of CONSTANT_[type]_info      */
 specifier|public
 name|int
 index|[]
@@ -266,7 +266,7 @@ operator|.
 name|length
 return|;
 block|}
-comment|/**      * @param bootstrap_arguments int[] indices into constant_pool of CONSTANT_<type>_info      */
+comment|/**      * @param bootstrap_arguments int[] indices into constant_pool of CONSTANT_[type]_info      */
 specifier|public
 name|void
 name|setBootstrapArguments

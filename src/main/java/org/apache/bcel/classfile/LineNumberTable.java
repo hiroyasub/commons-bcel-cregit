@@ -158,7 +158,7 @@ operator|=
 name|line_number_table
 expr_stmt|;
 block|}
-comment|/**      * Construct object from input stream.      * @param name_index Index of name      * @param length Content length in bytes      * @param input Input stream      * @param constant_pool Array of constants      * @throws IOEXception if an I/O Exception occurs in readUnsignedShort      */
+comment|/**      * Construct object from input stream.      * @param name_index Index of name      * @param length Content length in bytes      * @param input Input stream      * @param constant_pool Array of constants      * @throws IOException if an I/O Exception occurs in readUnsignedShort      */
 name|LineNumberTable
 parameter_list|(
 specifier|final
@@ -260,7 +260,7 @@ name|this
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Dump line number table attribute to file stream in binary format.      *      * @param file Output file stream      * @throws IOEXception if an I/O Exception occurs in writeShort      */
+comment|/**      * Dump line number table attribute to file stream in binary format.      *      * @param file Output file stream      * @throws IOException if an I/O Exception occurs in writeShort      */
 annotation|@
 name|Override
 specifier|public
