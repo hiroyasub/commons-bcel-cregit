@@ -220,10 +220,6 @@ name|Visitor
 name|v
 parameter_list|)
 block|{
-name|System
-operator|.
-name|err
-operator|.
 name|println
 argument_list|(
 literal|"Visiting non-standard PMGClass object"

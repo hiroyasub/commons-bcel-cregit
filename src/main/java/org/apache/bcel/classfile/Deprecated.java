@@ -208,10 +208,6 @@ argument_list|(
 name|bytes
 argument_list|)
 expr_stmt|;
-name|System
-operator|.
-name|err
-operator|.
 name|println
 argument_list|(
 literal|"Deprecated attribute with length> 0"
