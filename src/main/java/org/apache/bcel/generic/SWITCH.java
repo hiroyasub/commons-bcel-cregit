@@ -457,8 +457,8 @@ name|l
 operator|+
 name|r
 operator|)
-operator|/
-literal|2
+operator|>>>
+literal|1
 index|]
 decl_stmt|;
 name|InstructionHandle

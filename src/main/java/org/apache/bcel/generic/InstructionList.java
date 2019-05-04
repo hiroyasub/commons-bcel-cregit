@@ -300,8 +300,8 @@ name|l
 operator|+
 name|r
 operator|)
-operator|/
-literal|2
+operator|>>>
+literal|1
 decl_stmt|;
 specifier|final
 name|int

@@ -400,13 +400,6 @@ operator|!=
 literal|null
 condition|)
 block|{
-if|if
-condition|(
-name|classLoader
-operator|!=
-literal|null
-condition|)
-block|{
 name|classLoader
 operator|.
 name|close
@@ -425,7 +418,6 @@ operator|.
 name|close
 argument_list|()
 expr_stmt|;
-block|}
 block|}
 block|}
 comment|/**      * Lists all entries in the given directory.      *      * @param dirPath      *            directory path.      * @return a list of dir entries if an I/O error occurs      * @throws IOException      *             an I/O error occurs accessing the file system      */
