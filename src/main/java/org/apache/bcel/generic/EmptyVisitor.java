@@ -16,7 +16,7 @@ package|;
 end_package
 
 begin_comment
-comment|/**  * Supplies empty method bodies to be overridden by subclasses.  *  * @version $Id$  */
+comment|/**  * Supplies empty method bodies to be overridden by subclasses.  *  */
 end_comment
 
 begin_class

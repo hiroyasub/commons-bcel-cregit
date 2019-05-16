@@ -18,7 +18,7 @@ package|;
 end_package
 
 begin_comment
-comment|/**  * Instances of this class are thrown by BCEL's class file verifier "JustIce"  * when the verification of a method is requested that does not exist.  *  * @version $Id$  */
+comment|/**  * Instances of this class are thrown by BCEL's class file verifier "JustIce"  * when the verification of a method is requested that does not exist.  *  */
 end_comment
 
 begin_class

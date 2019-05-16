@@ -64,7 +64,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * A utility class holding the information about  * the names and the types of the local variables in  * a given method.  *  * @version $Id$  */
+comment|/**  * A utility class holding the information about  * the names and the types of the local variables in  * a given method.  *  */
 end_comment
 
 begin_class

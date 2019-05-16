@@ -28,7 +28,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * ARRAYLENGTH -  Get length of array  *<PRE>Stack: ..., arrayref -&gt; ..., length</PRE>  *  * @version $Id$  */
+comment|/**  * ARRAYLENGTH -  Get length of array  *<PRE>Stack: ..., arrayref -&gt; ..., length</PRE>  *  */
 end_comment
 
 begin_class

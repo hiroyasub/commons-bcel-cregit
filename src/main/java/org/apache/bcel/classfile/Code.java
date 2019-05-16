@@ -58,7 +58,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * This class represents a chunk of Java byte code contained in a  * method. It is instantiated by the  *<em>Attribute.readAttribute()</em> method. A<em>Code</em>  * attribute contains informations about operand stack, local  * variables, byte code and the exceptions handled within this  * method.  *  * This attribute has attributes itself, namely<em>LineNumberTable</em> which  * is used for debugging purposes and<em>LocalVariableTable</em> which  * contains information about the local variables.  *  * @version $Id$  * @see     Attribute  * @see     CodeException  * @see     LineNumberTable  * @see LocalVariableTable  */
+comment|/**  * This class represents a chunk of Java byte code contained in a  * method. It is instantiated by the  *<em>Attribute.readAttribute()</em> method. A<em>Code</em>  * attribute contains informations about operand stack, local  * variables, byte code and the exceptions handled within this  * method.  *  * This attribute has attributes itself, namely<em>LineNumberTable</em> which  * is used for debugging purposes and<em>LocalVariableTable</em> which  * contains information about the local variables.  *  * @see     Attribute  * @see     CodeException  * @see     LineNumberTable  * @see LocalVariableTable  */
 end_comment
 
 begin_class

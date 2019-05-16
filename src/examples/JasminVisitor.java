@@ -434,7 +434,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Disassemble Java class object into the<a href="http://jasmin.sourceforge.net">  * Jasmin</a> format.  *  * @version $Id$  */
+comment|/**  * Disassemble Java class object into the<a href="http://jasmin.sourceforge.net">  * Jasmin</a> format.  *  */
 end_comment
 
 begin_class

@@ -152,7 +152,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Remove NOPs from given class  *  * @version $Id$  */
+comment|/**  * Remove NOPs from given class  *  */
 end_comment
 
 begin_class

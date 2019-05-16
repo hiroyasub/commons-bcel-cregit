@@ -54,7 +54,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Denotes reference such as java.lang.String.  *  * @version $Id$  */
+comment|/**  * Denotes reference such as java.lang.String.  *  */
 end_comment
 
 begin_class

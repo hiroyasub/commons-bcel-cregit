@@ -16,7 +16,7 @@ package|;
 end_package
 
 begin_comment
-comment|/**  * DCMPL - Compare doubles: value1&lt; value2  *<PRE>Stack: ..., value1.word1, value1.word2, value2.word1, value2.word2 -&gt; ..., result</PRE>  *  * @version $Id$  */
+comment|/**  * DCMPL - Compare doubles: value1&lt; value2  *<PRE>Stack: ..., value1.word1, value1.word2, value2.word1, value2.word2 -&gt; ..., result</PRE>  *  */
 end_comment
 
 begin_class

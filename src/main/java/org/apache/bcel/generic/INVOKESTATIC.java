@@ -60,7 +60,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * INVOKESTATIC - Invoke a class (static) method  *  *<PRE>Stack: ..., [arg1, [arg2 ...]] -&gt; ...</PRE>  *  * @version $Id$  * @see  *<a href="http://docs.oracle.com/javase/specs/jvms/se8/html/jvms-6.html#jvms-6.5.invokestatic">  * The invokestatic instruction in The Java Virtual Machine Specification</a>  */
+comment|/**  * INVOKESTATIC - Invoke a class (static) method  *  *<PRE>Stack: ..., [arg1, [arg2 ...]] -&gt; ...</PRE>  *  * @see  *<a href="http://docs.oracle.com/javase/specs/jvms/se8/html/jvms-6.html#jvms-6.5.invokestatic">  * The invokestatic instruction in The Java Virtual Machine Specification</a>  */
 end_comment
 
 begin_class

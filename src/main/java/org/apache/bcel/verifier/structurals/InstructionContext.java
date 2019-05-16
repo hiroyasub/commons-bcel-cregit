@@ -42,7 +42,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * An InstructionContext offers convenient access  * to information like control flow successors and  * such.  *  * @version $Id$  */
+comment|/**  * An InstructionContext offers convenient access  * to information like control flow successors and  * such.  *  */
 end_comment
 
 begin_interface

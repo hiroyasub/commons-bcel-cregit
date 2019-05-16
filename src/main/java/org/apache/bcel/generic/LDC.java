@@ -62,7 +62,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * LDC - Push item from constant pool.  *  *<PRE>Stack: ... -&gt; ..., item</PRE>  *  * @version $Id$  */
+comment|/**  * LDC - Push item from constant pool.  *  *<PRE>Stack: ... -&gt; ..., item</PRE>  *  */
 end_comment
 
 begin_class

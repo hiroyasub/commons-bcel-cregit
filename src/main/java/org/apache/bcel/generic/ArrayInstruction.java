@@ -28,7 +28,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Super class for instructions dealing with array access such as IALOAD.  *  * @version $Id$  */
+comment|/**  * Super class for instructions dealing with array access such as IALOAD.  *  */
 end_comment
 
 begin_class

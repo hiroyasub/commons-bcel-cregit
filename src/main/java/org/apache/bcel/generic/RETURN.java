@@ -16,7 +16,7 @@ package|;
 end_package
 
 begin_comment
-comment|/**  * RETURN -  Return from void method  *<PRE>Stack: ... -&gt;&lt;empty&gt;</PRE>  *  * @version $Id$  */
+comment|/**  * RETURN -  Return from void method  *<PRE>Stack: ... -&gt;&lt;empty&gt;</PRE>  *  */
 end_comment
 
 begin_class

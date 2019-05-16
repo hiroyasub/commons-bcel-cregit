@@ -76,7 +76,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Abstract super class for all Java byte codes.  *  * @version $Id$  */
+comment|/**  * Abstract super class for all Java byte codes.  *  */
 end_comment
 
 begin_class

@@ -14,7 +14,7 @@ package|;
 end_package
 
 begin_comment
-comment|/**  * Exception constants.  *  * @version $Id$  * @deprecated (since 6.0) DO NOT USE - use ExceptionConst instead  */
+comment|/**  * Exception constants.  *  * @deprecated (since 6.0) DO NOT USE - use ExceptionConst instead  */
 end_comment
 
 begin_interface

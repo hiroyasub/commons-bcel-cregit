@@ -16,7 +16,7 @@ package|;
 end_package
 
 begin_comment
-comment|/**  * Denotes an unparameterized instruction to load a value from a local  * variable, e.g. ILOAD.  *  * @version $Id$  */
+comment|/**  * Denotes an unparameterized instruction to load a value from a local  * variable, e.g. ILOAD.  *  */
 end_comment
 
 begin_class

@@ -268,7 +268,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Convert found attributes into HTML file.  *  * @version $Id$  *  */
+comment|/**  * Convert found attributes into HTML file.  *  *  */
 end_comment
 
 begin_class

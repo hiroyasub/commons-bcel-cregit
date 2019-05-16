@@ -16,7 +16,7 @@ package|;
 end_package
 
 begin_comment
-comment|/**  * LDC2_W - Push long or double from constant pool  *  *<PRE>Stack: ... -&gt; ..., item.word1, item.word2</PRE>  *  * @version $Id$  */
+comment|/**  * LDC2_W - Push long or double from constant pool  *  *<PRE>Stack: ... -&gt; ..., item.word1, item.word2</PRE>  *  */
 end_comment
 
 begin_class

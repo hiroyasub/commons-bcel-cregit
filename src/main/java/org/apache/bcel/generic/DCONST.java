@@ -16,7 +16,7 @@ package|;
 end_package
 
 begin_comment
-comment|/**  * DCONST - Push 0.0 or 1.0, other values cause an exception  *  *<PRE>Stack: ... -&gt; ...,</PRE>  *  * @version $Id$  */
+comment|/**  * DCONST - Push 0.0 or 1.0, other values cause an exception  *  *<PRE>Stack: ... -&gt; ...,</PRE>  *  */
 end_comment
 
 begin_class

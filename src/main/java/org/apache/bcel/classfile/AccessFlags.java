@@ -28,7 +28,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Super class for all objects that have modifiers like private, final, ... I.e. classes, fields, and methods.  *  * @version $Id$  */
+comment|/**  * Super class for all objects that have modifiers like private, final, ... I.e. classes, fields, and methods.  *  */
 end_comment
 
 begin_class

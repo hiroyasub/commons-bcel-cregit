@@ -16,7 +16,7 @@ package|;
 end_package
 
 begin_comment
-comment|/**  * L2D - Convert long to double  *<PRE>Stack: ..., value.word1, value.word2 -&gt; ..., result.word1, result.word2</PRE>  *  * @version $Id$  */
+comment|/**  * L2D - Convert long to double  *<PRE>Stack: ..., value.word1, value.word2 -&gt; ..., result.word1, result.word2</PRE>  *  */
 end_comment
 
 begin_class

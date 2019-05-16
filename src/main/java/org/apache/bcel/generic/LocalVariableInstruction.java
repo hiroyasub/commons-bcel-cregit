@@ -62,7 +62,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Abstract super class for instructions dealing with local variables.  *  * @version $Id$  */
+comment|/**  * Abstract super class for instructions dealing with local variables.  *  */
 end_comment
 
 begin_class

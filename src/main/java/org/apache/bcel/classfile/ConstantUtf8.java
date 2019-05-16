@@ -88,7 +88,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * This class is derived from the abstract {@link Constant}  * and represents a reference to a Utf8 encoded string.  *  * @version $Id$  * @see     Constant  */
+comment|/**  * This class is derived from the abstract {@link Constant}  * and represents a reference to a Utf8 encoded string.  *  * @see     Constant  */
 end_comment
 
 begin_class

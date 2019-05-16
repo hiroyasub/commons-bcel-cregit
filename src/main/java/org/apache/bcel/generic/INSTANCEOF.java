@@ -28,7 +28,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * INSTANCEOF - Determine if object is of given type  *<PRE>Stack: ..., objectref -&gt; ..., result</PRE>  *  * @version $Id$  */
+comment|/**  * INSTANCEOF - Determine if object is of given type  *<PRE>Stack: ..., objectref -&gt; ..., result</PRE>  *  */
 end_comment
 
 begin_class

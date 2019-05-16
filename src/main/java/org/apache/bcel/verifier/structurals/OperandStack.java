@@ -102,7 +102,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * This class implements a stack used for symbolic JVM stack simulation.  * [It's used an an operand stack substitute.]  * Elements of this stack are {@link Type} objects.  *  * @version $Id$  */
+comment|/**  * This class implements a stack used for symbolic JVM stack simulation.  * [It's used an an operand stack substitute.]  * Elements of this stack are {@link Type} objects.  *  */
 end_comment
 
 begin_class

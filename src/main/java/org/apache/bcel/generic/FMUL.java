@@ -16,7 +16,7 @@ package|;
 end_package
 
 begin_comment
-comment|/**  * FMUL - Multiply floats  *<PRE>Stack: ..., value1, value2 -&gt; result</PRE>  *  * @version $Id$  */
+comment|/**  * FMUL - Multiply floats  *<PRE>Stack: ..., value1, value2 -&gt; result</PRE>  *  */
 end_comment
 
 begin_class

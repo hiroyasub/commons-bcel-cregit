@@ -60,7 +60,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * A graphical user interface application demonstrating JustIce.  *  * @version $Id$  */
+comment|/**  * A graphical user interface application demonstrating JustIce.  *  */
 end_comment
 
 begin_class

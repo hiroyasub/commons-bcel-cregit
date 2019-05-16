@@ -40,7 +40,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * GETFIELD - Fetch field from object  *<PRE>Stack: ..., objectref -&gt; ..., value</PRE>  * OR  *<PRE>Stack: ..., objectref -&gt; ..., value.word1, value.word2</PRE>  *  * @version $Id$  */
+comment|/**  * GETFIELD - Fetch field from object  *<PRE>Stack: ..., objectref -&gt; ..., value</PRE>  * OR  *<PRE>Stack: ..., objectref -&gt; ..., value.word1, value.word2</PRE>  *  */
 end_comment
 
 begin_class

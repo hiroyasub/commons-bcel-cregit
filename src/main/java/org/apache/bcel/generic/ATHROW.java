@@ -28,7 +28,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * ATHROW -  Throw exception  *<PRE>Stack: ..., objectref -&gt; objectref</PRE>  *  * @version $Id$  */
+comment|/**  * ATHROW -  Throw exception  *<PRE>Stack: ..., objectref -&gt; objectref</PRE>  *  */
 end_comment
 
 begin_class

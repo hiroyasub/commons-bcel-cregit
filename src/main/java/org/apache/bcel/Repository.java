@@ -66,7 +66,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * The repository maintains informations about class interdependencies, e.g.,  * whether a class is a sub-class of another. Delegates actual class loading  * to SyntheticRepository with current class path by default.  *  * @see org.apache.bcel.util.Repository  * @see SyntheticRepository  *  * @version $Id$  */
+comment|/**  * The repository maintains informations about class interdependencies, e.g.,  * whether a class is a sub-class of another. Delegates actual class loading  * to SyntheticRepository with current class path by default.  *  * @see org.apache.bcel.util.Repository  * @see SyntheticRepository  *  */
 end_comment
 
 begin_class

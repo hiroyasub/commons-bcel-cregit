@@ -230,7 +230,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * This class represents a control flow graph of a method.  *  * @version $Id$  */
+comment|/**  * This class represents a control flow graph of a method.  *  */
 end_comment
 
 begin_class

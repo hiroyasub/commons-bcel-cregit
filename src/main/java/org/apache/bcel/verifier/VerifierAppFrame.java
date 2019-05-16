@@ -260,7 +260,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * This class implements a machine-generated frame for use with  * the GraphicalVerfifier.  *  * @version $Id$  * @see GraphicalVerifier  */
+comment|/**  * This class implements a machine-generated frame for use with  * the GraphicalVerfifier.  *  * @see GraphicalVerifier  */
 end_comment
 
 begin_class

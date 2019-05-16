@@ -86,7 +86,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * This class represents the method info structure, i.e., the representation  * for a method in the class. See JVM specification for details.  * A method has access flags, a name, a signature and a number of attributes.  *  * @version $Id$  */
+comment|/**  * This class represents the method info structure, i.e., the representation  * for a method in the class. See JVM specification for details.  * A method has access flags, a name, a signature and a number of attributes.  *  */
 end_comment
 
 begin_class

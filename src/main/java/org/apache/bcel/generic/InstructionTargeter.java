@@ -16,7 +16,7 @@ package|;
 end_package
 
 begin_comment
-comment|/**  * Denote that a class targets InstructionHandles within an InstructionList. Namely  * the following implementers:  *  * @see BranchHandle  * @see LocalVariableGen  * @see CodeExceptionGen  * @version $Id$  */
+comment|/**  * Denote that a class targets InstructionHandles within an InstructionList. Namely  * the following implementers:  *  * @see BranchHandle  * @see LocalVariableGen  * @see CodeExceptionGen  */
 end_comment
 
 begin_interface

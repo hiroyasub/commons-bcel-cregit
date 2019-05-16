@@ -28,7 +28,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Denotes basic type such as int.  *  * @version $Id$  */
+comment|/**  * Denotes basic type such as int.  *  */
 end_comment
 
 begin_class

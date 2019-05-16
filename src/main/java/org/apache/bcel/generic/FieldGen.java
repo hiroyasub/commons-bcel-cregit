@@ -198,7 +198,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Template class for building up a field.  The only extraordinary thing  * one can do is to add a constant value attribute to a field (which must of  * course be compatible with to the declared type).  *  * @version $Id$  * @see Field  */
+comment|/**  * Template class for building up a field.  The only extraordinary thing  * one can do is to add a constant value attribute to a field (which must of  * course be compatible with to the declared type).  *  * @see Field  */
 end_comment
 
 begin_class

@@ -28,7 +28,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Super class for the family of arithmetic instructions.  *  * @version $Id$  */
+comment|/**  * Super class for the family of arithmetic instructions.  *  */
 end_comment
 
 begin_class

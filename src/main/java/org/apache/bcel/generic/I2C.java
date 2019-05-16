@@ -16,7 +16,7 @@ package|;
 end_package
 
 begin_comment
-comment|/**  * I2C - Convert int to char  *<PRE>Stack: ..., value -&gt; ..., result</PRE>  *  * @version $Id$  */
+comment|/**  * I2C - Convert int to char  *<PRE>Stack: ..., value -&gt; ..., result</PRE>  *  */
 end_comment
 
 begin_class

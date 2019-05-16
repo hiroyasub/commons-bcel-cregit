@@ -16,7 +16,7 @@ package|;
 end_package
 
 begin_comment
-comment|/**  * IF_ICMPGE - Branch if int comparison succeeds  *  *<PRE>Stack: ..., value1, value2 -&gt; ...</PRE>  *  * @version $Id$  */
+comment|/**  * IF_ICMPGE - Branch if int comparison succeeds  *  *<PRE>Stack: ..., value1, value2 -&gt; ...</PRE>  *  */
 end_comment
 
 begin_class

@@ -16,7 +16,7 @@ package|;
 end_package
 
 begin_comment
-comment|/**  * Denote class to have an accept method();  *  * @version $Id$  */
+comment|/**  * Denote class to have an accept method();  *  */
 end_comment
 
 begin_interface

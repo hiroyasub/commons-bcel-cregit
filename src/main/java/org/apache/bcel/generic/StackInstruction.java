@@ -16,7 +16,7 @@ package|;
 end_package
 
 begin_comment
-comment|/**  * Super class for stack operations like DUP and POP.  *  * @version $Id$  */
+comment|/**  * Super class for stack operations like DUP and POP.  *  */
 end_comment
 
 begin_class

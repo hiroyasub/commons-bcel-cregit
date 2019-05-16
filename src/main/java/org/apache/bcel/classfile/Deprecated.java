@@ -58,7 +58,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * This class is derived from<em>Attribute</em> and denotes that this is a  * deprecated method.  * It is instantiated from the<em>Attribute.readAttribute()</em> method.  *  * @version $Id$  * @see     Attribute  */
+comment|/**  * This class is derived from<em>Attribute</em> and denotes that this is a  * deprecated method.  * It is instantiated from the<em>Attribute.readAttribute()</em> method.  *  * @see     Attribute  */
 end_comment
 
 begin_class

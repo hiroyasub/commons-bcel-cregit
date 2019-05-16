@@ -16,7 +16,7 @@ package|;
 end_package
 
 begin_comment
-comment|/**  * IF_ACMPEQ - Branch if reference comparison succeeds  *  *<PRE>Stack: ..., value1, value2 -&gt; ...</PRE>  *  * @version $Id$  */
+comment|/**  * IF_ACMPEQ - Branch if reference comparison succeeds  *  *<PRE>Stack: ..., value1, value2 -&gt; ...</PRE>  *  */
 end_comment
 
 begin_class

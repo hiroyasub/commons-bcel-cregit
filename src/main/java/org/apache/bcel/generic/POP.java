@@ -16,7 +16,7 @@ package|;
 end_package
 
 begin_comment
-comment|/**  * POP - Pop top operand stack word  *  *<PRE>Stack: ..., word -&gt; ...</PRE>  *  * @version $Id$  */
+comment|/**  * POP - Pop top operand stack word  *  *<PRE>Stack: ..., word -&gt; ...</PRE>  *  */
 end_comment
 
 begin_class

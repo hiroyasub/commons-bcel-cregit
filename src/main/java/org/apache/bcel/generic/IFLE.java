@@ -16,7 +16,7 @@ package|;
 end_package
 
 begin_comment
-comment|/**  * IFLE - Branch if int comparison with zero succeeds  *  *<PRE>Stack: ..., value -&gt; ...</PRE>  *  * @version $Id$  */
+comment|/**  * IFLE - Branch if int comparison with zero succeeds  *  *<PRE>Stack: ..., value -&gt; ...</PRE>  *  */
 end_comment
 
 begin_class

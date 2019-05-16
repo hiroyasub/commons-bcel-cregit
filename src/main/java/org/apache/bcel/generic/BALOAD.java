@@ -16,7 +16,7 @@ package|;
 end_package
 
 begin_comment
-comment|/**  * BALOAD - Load byte or boolean from array  *<PRE>Stack: ..., arrayref, index -&gt; ..., value</PRE>  *  * @version $Id$  */
+comment|/**  * BALOAD - Load byte or boolean from array  *<PRE>Stack: ..., arrayref, index -&gt; ..., value</PRE>  *  */
 end_comment
 
 begin_class

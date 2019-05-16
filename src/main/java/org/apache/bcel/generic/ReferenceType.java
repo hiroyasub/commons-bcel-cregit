@@ -54,7 +54,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Super class for object and array types.  *  * @version $Id$  */
+comment|/**  * Super class for object and array types.  *  */
 end_comment
 
 begin_class

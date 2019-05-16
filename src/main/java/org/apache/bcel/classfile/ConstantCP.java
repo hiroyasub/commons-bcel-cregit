@@ -58,7 +58,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Abstract super class for Fieldref, Methodref, InterfaceMethodref and  *                          InvokeDynamic constants.  *  * @version $Id$  * @see     ConstantFieldref  * @see     ConstantMethodref  * @see     ConstantInterfaceMethodref  * @see     ConstantInvokeDynamic  */
+comment|/**  * Abstract super class for Fieldref, Methodref, InterfaceMethodref and  *                          InvokeDynamic constants.  *  * @see     ConstantFieldref  * @see     ConstantMethodref  * @see     ConstantInterfaceMethodref  * @see     ConstantInvokeDynamic  */
 end_comment
 
 begin_class

@@ -16,7 +16,7 @@ package|;
 end_package
 
 begin_comment
-comment|/**  * LLOAD - Load long from local variable  *<PRE>Stack ... -&gt; ..., result.word1, result.word2</PRE>  *  * @version $Id$  */
+comment|/**  * LLOAD - Load long from local variable  *<PRE>Stack ... -&gt; ..., result.word1, result.word2</PRE>  *  */
 end_comment
 
 begin_class

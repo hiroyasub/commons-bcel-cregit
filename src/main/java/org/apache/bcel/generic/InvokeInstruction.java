@@ -80,7 +80,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Super class for the INVOKExxx family of instructions.  *  * @version $Id$  */
+comment|/**  * Super class for the INVOKExxx family of instructions.  *  */
 end_comment
 
 begin_class

@@ -16,7 +16,7 @@ package|;
 end_package
 
 begin_comment
-comment|/**  * ACONST_NULL - Push null reference  *<PRE>Stack: ... -&gt; ..., null</PRE>  *  * @version $Id$  */
+comment|/**  * ACONST_NULL - Push null reference  *<PRE>Stack: ... -&gt; ..., null</PRE>  *  */
 end_comment
 
 begin_class

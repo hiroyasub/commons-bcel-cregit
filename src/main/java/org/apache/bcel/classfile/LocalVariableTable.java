@@ -58,7 +58,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * This class represents colection of local variables in a  * method. This attribute is contained in the<em>Code</em> attribute.  *  * @version $Id$  * @see     Code  * @see LocalVariable  */
+comment|/**  * This class represents colection of local variables in a  * method. This attribute is contained in the<em>Code</em> attribute.  *  * @see     Code  * @see LocalVariable  */
 end_comment
 
 begin_class

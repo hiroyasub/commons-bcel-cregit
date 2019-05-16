@@ -664,7 +664,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * BCEL's Node classes (those from the classfile API that<B>accept()</B> Visitor  * instances) have<B>toString()</B> methods that were not designed to be robust,  * this gap is closed by this class.  * When performing class file verification, it may be useful to output which  * entity (e.g. a<B>Code</B> instance) is not satisfying the verifier's  * constraints, but in this case it could be possible for the<B>toString()</B>  * method to throw a RuntimeException.  * A (new StringRepresentation(Node n)).toString() never throws any exception.  * Note that this class also serves as a placeholder for more sophisticated message  * handling in future versions of JustIce.  *  * @version $Id$  */
+comment|/**  * BCEL's Node classes (those from the classfile API that<B>accept()</B> Visitor  * instances) have<B>toString()</B> methods that were not designed to be robust,  * this gap is closed by this class.  * When performing class file verification, it may be useful to output which  * entity (e.g. a<B>Code</B> instance) is not satisfying the verifier's  * constraints, but in this case it could be possible for the<B>toString()</B>  * method to throw a RuntimeException.  * A (new StringRepresentation(Node n)).toString() never throws any exception.  * Note that this class also serves as a placeholder for more sophisticated message  * handling in future versions of JustIce.  *  */
 end_comment
 
 begin_class

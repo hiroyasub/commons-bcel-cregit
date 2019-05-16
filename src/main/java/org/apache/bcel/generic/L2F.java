@@ -16,7 +16,7 @@ package|;
 end_package
 
 begin_comment
-comment|/**  * L2F - Convert long to float  *<PRE>Stack: ..., value.word1, value.word2 -&gt; ..., result</PRE>  *  * @version $Id$  */
+comment|/**  * L2F - Convert long to float  *<PRE>Stack: ..., value.word1, value.word2 -&gt; ..., result</PRE>  *  */
 end_comment
 
 begin_class

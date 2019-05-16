@@ -16,7 +16,7 @@ package|;
 end_package
 
 begin_comment
-comment|/**  * DLOAD - Load double from local variable  *<PRE>Stack ... -&gt; ..., result.word1, result.word2</PRE>  *  * @version $Id$  */
+comment|/**  * DLOAD - Load double from local variable  *<PRE>Stack ... -&gt; ..., result.word1, result.word2</PRE>  *  */
 end_comment
 
 begin_class

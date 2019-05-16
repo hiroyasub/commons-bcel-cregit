@@ -76,7 +76,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Abstract super class for all possible java types, namely basic types  * such as int, object types like String and array types, e.g. int[]  *  * @version $Id$  */
+comment|/**  * Abstract super class for all possible java types, namely basic types  * such as int, object types like String and array types, e.g. int[]  *  */
 end_comment
 
 begin_class

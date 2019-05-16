@@ -16,7 +16,7 @@ package|;
 end_package
 
 begin_comment
-comment|/**  * SWITCH - Branch depending on int value, generates either LOOKUPSWITCH or  * TABLESWITCH instruction, depending on whether the match values (int[]) can be  * sorted with no gaps between the numbers.  *  * @version $Id$  */
+comment|/**  * SWITCH - Branch depending on int value, generates either LOOKUPSWITCH or  * TABLESWITCH instruction, depending on whether the match values (int[]) can be  * sorted with no gaps between the numbers.  *  */
 end_comment
 
 begin_class

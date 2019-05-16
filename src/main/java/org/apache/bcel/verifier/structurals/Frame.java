@@ -18,7 +18,7 @@ package|;
 end_package
 
 begin_comment
-comment|/**  * This class represents a JVM execution frame; that means,  * a local variable array and an operand stack.  *  * @version $Id$  */
+comment|/**  * This class represents a JVM execution frame; that means,  * a local variable array and an operand stack.  *  */
 end_comment
 
 begin_class

@@ -50,7 +50,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Select - Abstract super class for LOOKUPSWITCH and TABLESWITCH instructions.  *  *<p>We use our super's<code>target</code> property as the default target.  *  * @version $Id$  * @see LOOKUPSWITCH  * @see TABLESWITCH  * @see InstructionList  */
+comment|/**  * Select - Abstract super class for LOOKUPSWITCH and TABLESWITCH instructions.  *  *<p>We use our super's<code>target</code> property as the default target.  *  * @see LOOKUPSWITCH  * @see TABLESWITCH  * @see InstructionList  */
 end_comment
 
 begin_class

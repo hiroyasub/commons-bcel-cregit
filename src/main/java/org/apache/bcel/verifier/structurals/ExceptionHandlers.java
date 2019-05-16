@@ -100,7 +100,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * This class allows easy access to ExceptionHandler objects.  *  * @version $Id$  */
+comment|/**  * This class allows easy access to ExceptionHandler objects.  *  */
 end_comment
 
 begin_class

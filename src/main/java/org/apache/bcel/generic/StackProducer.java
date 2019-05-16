@@ -16,7 +16,7 @@ package|;
 end_package
 
 begin_comment
-comment|/**  * Denote an instruction that may produce a value on top of the stack  * (this excludes DUP_X1, e.g.)  *  * @version $Id$  */
+comment|/**  * Denote an instruction that may produce a value on top of the stack  * (this excludes DUP_X1, e.g.)  *  */
 end_comment
 
 begin_interface

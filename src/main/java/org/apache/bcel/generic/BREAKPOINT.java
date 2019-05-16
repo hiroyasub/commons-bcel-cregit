@@ -16,7 +16,7 @@ package|;
 end_package
 
 begin_comment
-comment|/**  * BREAKPOINT, JVM dependent, ignored by default  *  * @version $Id$  */
+comment|/**  * BREAKPOINT, JVM dependent, ignored by default  *  */
 end_comment
 
 begin_class

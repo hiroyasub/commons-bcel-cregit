@@ -50,7 +50,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Abstract super class for branching instructions like GOTO, IFEQ, etc..  * Branch instructions may have a variable length, namely GOTO, JSR,  * LOOKUPSWITCH and TABLESWITCH.  *  * @see InstructionList  * @version $Id$  */
+comment|/**  * Abstract super class for branching instructions like GOTO, IFEQ, etc..  * Branch instructions may have a variable length, namely GOTO, JSR,  * LOOKUPSWITCH and TABLESWITCH.  *  * @see InstructionList  */
 end_comment
 
 begin_class

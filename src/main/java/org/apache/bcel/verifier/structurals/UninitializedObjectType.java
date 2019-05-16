@@ -70,7 +70,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * This class represents an uninitialized object type; see The Java  * Virtual Machine Specification, Second Edition, page 147: 4.9.4 for  * more details.  *  * @version $Id$  */
+comment|/**  * This class represents an uninitialized object type; see The Java  * Virtual Machine Specification, Second Edition, page 147: 4.9.4 for  * more details.  *  */
 end_comment
 
 begin_class

@@ -18,7 +18,7 @@ package|;
 end_package
 
 begin_comment
-comment|/**  * Instances of this class are thrown by BCEL's class file verifier "JustIce"  * when a class file to verify does not pass the verification pass 2 as described  * in the Java Virtual Machine specification, 2nd edition.  *  * @version $Id$  */
+comment|/**  * Instances of this class are thrown by BCEL's class file verifier "JustIce"  * when a class file to verify does not pass the verification pass 2 as described  * in the Java Virtual Machine specification, 2nd edition.  *  */
 end_comment
 
 begin_class

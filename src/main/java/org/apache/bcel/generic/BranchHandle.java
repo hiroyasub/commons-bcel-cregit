@@ -16,7 +16,7 @@ package|;
 end_package
 
 begin_comment
-comment|/**  * BranchHandle is returned by specialized InstructionList.append() whenever a  * BranchInstruction is appended. This is useful when the target of this  * instruction is not known at time of creation and must be set later  * via setTarget().  *  * @see InstructionHandle  * @see Instruction  * @see InstructionList  * @version $Id$  */
+comment|/**  * BranchHandle is returned by specialized InstructionList.append() whenever a  * BranchInstruction is appended. This is useful when the target of this  * instruction is not known at time of creation and must be set later  * via setTarget().  *  * @see InstructionHandle  * @see Instruction  * @see InstructionList  */
 end_comment
 
 begin_class

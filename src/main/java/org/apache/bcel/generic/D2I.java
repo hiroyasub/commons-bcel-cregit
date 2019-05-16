@@ -16,7 +16,7 @@ package|;
 end_package
 
 begin_comment
-comment|/**  * D2I - Convert double to int  *<PRE>Stack: ..., value.word1, value.word2 -&gt; ..., result</PRE>  *  * @version $Id$  */
+comment|/**  * D2I - Convert double to int  *<PRE>Stack: ..., value.word1, value.word2 -&gt; ..., result</PRE>  *  */
 end_comment
 
 begin_class

@@ -58,7 +58,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * This class represents the type of a local variable or item on stack  * used in the StackMap entries.  *  * @version $Id$  * @see     StackMapEntry  * @see     StackMap  * @see     Const  */
+comment|/**  * This class represents the type of a local variable or item on stack  * used in the StackMap entries.  *  * @see     StackMapEntry  * @see     StackMap  * @see     Const  */
 end_comment
 
 begin_class

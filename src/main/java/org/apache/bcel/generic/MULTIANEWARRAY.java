@@ -76,7 +76,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * MULTIANEWARRAY - Create new mutidimensional array of references  *<PRE>Stack: ..., count1, [count2, ...] -&gt; ..., arrayref</PRE>  *  * @version $Id$  */
+comment|/**  * MULTIANEWARRAY - Create new mutidimensional array of references  *<PRE>Stack: ..., count1, [count2, ...] -&gt; ..., arrayref</PRE>  *  */
 end_comment
 
 begin_class

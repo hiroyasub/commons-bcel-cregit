@@ -16,7 +16,7 @@ package|;
 end_package
 
 begin_comment
-comment|/**  * IMPDEP1 - Implementation dependent  *  * @version $Id$  */
+comment|/**  * IMPDEP1 - Implementation dependent  *  */
 end_comment
 
 begin_class

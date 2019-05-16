@@ -50,7 +50,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Utility class implementing a (typesafe) collection of JavaClass  * objects. Contains the most important methods of a Vector.  *  * @version $Id$  *  * @deprecated as of 5.1.1 - 7/17/2005  */
+comment|/**  * Utility class implementing a (typesafe) collection of JavaClass  * objects. Contains the most important methods of a Vector.  *  *  * @deprecated as of 5.1.1 - 7/17/2005  */
 end_comment
 
 begin_class

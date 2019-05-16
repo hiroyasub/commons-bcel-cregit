@@ -16,7 +16,7 @@ package|;
 end_package
 
 begin_comment
-comment|/**  * I2D - Convert int to double  *<PRE>Stack: ..., value -&gt; ..., result.word1, result.word2</PRE>  *  * @version $Id$  */
+comment|/**  * I2D - Convert int to double  *<PRE>Stack: ..., value -&gt; ..., result.word1, result.word2</PRE>  *  */
 end_comment
 
 begin_class

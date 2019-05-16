@@ -132,7 +132,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * This PassVerifier verifies a class file according to pass 1 as  * described in The Java Virtual Machine Specification, 2nd edition.  * More detailed information is to be found at the do_verify() method's  * documentation.  *  * @version $Id$  * @see #do_verify()  */
+comment|/**  * This PassVerifier verifies a class file according to pass 1 as  * described in The Java Virtual Machine Specification, 2nd edition.  * More detailed information is to be found at the do_verify() method's  * documentation.  *  * @see #do_verify()  */
 end_comment
 
 begin_class

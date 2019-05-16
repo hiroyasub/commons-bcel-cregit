@@ -18,7 +18,7 @@ package|;
 end_package
 
 begin_comment
-comment|/**  * Instances of this class are thrown by BCEL's class file verifier "JustIce"  * whenever  * verification proves that some constraint of a class file (as stated in the  * Java Virtual Machine Specification, Edition 2) is violated.  * This is roughly equivalent to the VerifyError the JVM-internal verifiers  * throw.  *  * @version $Id$  */
+comment|/**  * Instances of this class are thrown by BCEL's class file verifier "JustIce"  * whenever  * verification proves that some constraint of a class file (as stated in the  * Java Virtual Machine Specification, Edition 2) is violated.  * This is roughly equivalent to the VerifyError the JVM-internal verifiers  * throw.  *  */
 end_comment
 
 begin_class

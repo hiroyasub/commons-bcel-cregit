@@ -58,7 +58,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * This class is derived from<em>Attribute</em> and represents a reference  * to a PMG attribute.  *  * @version $Id$  * @see     Attribute  */
+comment|/**  * This class is derived from<em>Attribute</em> and represents a reference  * to a PMG attribute.  *  * @see     Attribute  */
 end_comment
 
 begin_class

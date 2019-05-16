@@ -10,7 +10,7 @@ package|;
 end_package
 
 begin_comment
-comment|/**  * Entry in environment.  *  * @version $Id$  */
+comment|/**  * Entry in environment.  *  */
 end_comment
 
 begin_interface

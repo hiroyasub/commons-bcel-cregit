@@ -16,7 +16,7 @@ package|;
 end_package
 
 begin_comment
-comment|/**  * Denote family of instructions that allocates space in the heap.  *  * @version $Id$  */
+comment|/**  * Denote family of instructions that allocates space in the heap.  *  */
 end_comment
 
 begin_interface

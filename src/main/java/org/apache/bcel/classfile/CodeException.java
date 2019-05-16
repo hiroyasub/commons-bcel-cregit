@@ -70,7 +70,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * This class represents an entry in the exception table of the<em>Code</em>  * attribute and is used only there. It contains a range in which a  * particular exception handler is active.  *  * @version $Id$  * @see     Code  */
+comment|/**  * This class represents an entry in the exception table of the<em>Code</em>  * attribute and is used only there. It contains a range in which a  * particular exception handler is active.  *  * @see     Code  */
 end_comment
 
 begin_class

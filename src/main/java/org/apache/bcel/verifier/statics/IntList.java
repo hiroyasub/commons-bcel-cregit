@@ -38,7 +38,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * A small utility class representing a set of basic int values.  *  * @version $Id$  */
+comment|/**  * A small utility class representing a set of basic int values.  *  */
 end_comment
 
 begin_class

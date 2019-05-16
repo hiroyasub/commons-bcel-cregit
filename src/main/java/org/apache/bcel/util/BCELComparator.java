@@ -16,7 +16,7 @@ package|;
 end_package
 
 begin_comment
-comment|/**  * Used for BCEL comparison strategy  *  * @version $Id$  * @since 5.2  */
+comment|/**  * Used for BCEL comparison strategy  *  * @since 5.2  */
 end_comment
 
 begin_interface

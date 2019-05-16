@@ -16,7 +16,7 @@ package|;
 end_package
 
 begin_comment
-comment|/**  * DSTORE - Store double into local variable  *<pre>Stack: ..., value.word1, value.word2 -&gt; ...</PRE>  *  * @version $Id$  */
+comment|/**  * DSTORE - Store double into local variable  *<pre>Stack: ..., value.word1, value.word2 -&gt; ...</PRE>  *  */
 end_comment
 
 begin_class

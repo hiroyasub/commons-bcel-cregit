@@ -70,7 +70,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * This class represents a local variable within a method. It contains its  * scope, name, signature and index on the method's frame.  *  * @version $Id$  * @see     LocalVariableTable  */
+comment|/**  * This class represents a local variable within a method. It contains its  * scope, name, signature and index on the method's frame.  *  * @see     LocalVariableTable  */
 end_comment
 
 begin_class

@@ -16,7 +16,7 @@ package|;
 end_package
 
 begin_comment
-comment|/**  * ARETURN -  Return reference from method  *<PRE>Stack: ..., objectref -&gt;&lt;empty&gt;</PRE>  *  * @version $Id$  */
+comment|/**  * ARETURN -  Return reference from method  *<PRE>Stack: ..., objectref -&gt;&lt;empty&gt;</PRE>  *  */
 end_comment
 
 begin_class

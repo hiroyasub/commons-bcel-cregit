@@ -16,7 +16,7 @@ package|;
 end_package
 
 begin_comment
-comment|/**  * Visitor with empty method bodies, can be extended and used in conjunction  * with the DescendingVisitor class, e.g. By courtesy of David Spencer.  *  * @see DescendingVisitor  * @version $Id$  */
+comment|/**  * Visitor with empty method bodies, can be extended and used in conjunction  * with the DescendingVisitor class, e.g. By courtesy of David Spencer.  *  * @see DescendingVisitor  */
 end_comment
 
 begin_class

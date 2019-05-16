@@ -16,7 +16,7 @@ package|;
 end_package
 
 begin_comment
-comment|/**  * Denote entity that refers to an index, e.g. local variable instructions,  * RET, CPInstruction, etc.  *  * @version $Id$  */
+comment|/**  * Denote entity that refers to an index, e.g. local variable instructions,  * RET, CPInstruction, etc.  *  */
 end_comment
 
 begin_interface

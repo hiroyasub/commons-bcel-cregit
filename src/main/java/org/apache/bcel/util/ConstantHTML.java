@@ -198,7 +198,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Convert constant pool into HTML file.  *  * @version $Id$  *  */
+comment|/**  * Convert constant pool into HTML file.  *  *  */
 end_comment
 
 begin_class

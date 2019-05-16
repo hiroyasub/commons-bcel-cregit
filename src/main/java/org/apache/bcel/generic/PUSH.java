@@ -28,7 +28,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Wrapper class for push operations, which are implemented either as BIPUSH,  * LDC or xCONST_n instructions.  *  * @version $Id$  */
+comment|/**  * Wrapper class for push operations, which are implemented either as BIPUSH,  * LDC or xCONST_n instructions.  *  */
 end_comment
 
 begin_class

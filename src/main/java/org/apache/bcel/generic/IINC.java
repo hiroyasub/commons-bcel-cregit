@@ -50,7 +50,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * IINC - Increment local variable by constant  *  * @version $Id$  */
+comment|/**  * IINC - Increment local variable by constant  *  */
 end_comment
 
 begin_class

@@ -246,7 +246,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Find all classes referenced by given start class and all classes referenced  * by those and so on. In other words: Compute the transitive hull of classes  * used by a given class. This is done by checking all ConstantClass entries and  * all method and field signatures.<br>  * This may be useful in order to put all class files of an application into a  * single JAR file, e.g..  *<p>  * It fails however in the presence of reflexive code aka introspection.  *<p>  * You'll need Apache's regular expression library supplied together with BCEL  * to use this class.  *  * @version $Id$  */
+comment|/**  * Find all classes referenced by given start class and all classes referenced  * by those and so on. In other words: Compute the transitive hull of classes  * used by a given class. This is done by checking all ConstantClass entries and  * all method and field signatures.<br>  * This may be useful in order to put all class files of an application into a  * single JAR file, e.g..  *<p>  * It fails however in the presence of reflexive code aka introspection.  *<p>  * You'll need Apache's regular expression library supplied together with BCEL  * to use this class.  *  */
 end_comment
 
 begin_class

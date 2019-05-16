@@ -58,7 +58,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * This class represents a table of line numbers for debugging  * purposes. This attribute is used by the<em>Code</em> attribute. It  * contains pairs of PCs and line numbers.  *  * @version $Id$  * @see     Code  * @see LineNumber  */
+comment|/**  * This class represents a table of line numbers for debugging  * purposes. This attribute is used by the<em>Code</em> attribute. It  * contains pairs of PCs and line numbers.  *  * @see     Code  * @see LineNumber  */
 end_comment
 
 begin_class

@@ -28,7 +28,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Instances of this class may be used, e.g., to generate typed  * versions of instructions. Its main purpose is to be used as the  * byte code generating backend of a compiler. You can subclass it to  * add your own create methods.  *<p>  * Note: The static createXXX methods return singleton instances  * from the {@link InstructionConst} class.  *  * @version $Id$  * @see Const  * @see InstructionConst  */
+comment|/**  * Instances of this class may be used, e.g., to generate typed  * versions of instructions. Its main purpose is to be used as the  * byte code generating backend of a compiler. You can subclass it to  * add your own create methods.  *<p>  * Note: The static createXXX methods return singleton instances  * from the {@link InstructionConst} class.  *  * @see Const  * @see InstructionConst  */
 end_comment
 
 begin_class

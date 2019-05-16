@@ -36,7 +36,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * JSR - Jump to subroutine  *  * @version $Id$  */
+comment|/**  * JSR - Jump to subroutine  *  */
 end_comment
 
 begin_class

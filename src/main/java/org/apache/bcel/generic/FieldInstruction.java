@@ -30,7 +30,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Super class for the GET/PUTxxx family of instructions.  *  * @version $Id$  */
+comment|/**  * Super class for the GET/PUTxxx family of instructions.  *  */
 end_comment
 
 begin_class

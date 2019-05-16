@@ -48,7 +48,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * This class represents a constant pool reference to a field.  *  * @version $Id$  */
+comment|/**  * This class represents a constant pool reference to a field.  *  */
 end_comment
 
 begin_class

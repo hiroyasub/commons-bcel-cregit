@@ -16,7 +16,7 @@ package|;
 end_package
 
 begin_comment
-comment|/**  * NOP - Do nothing  *  * @version $Id$  */
+comment|/**  * NOP - Do nothing  *  */
 end_comment
 
 begin_class

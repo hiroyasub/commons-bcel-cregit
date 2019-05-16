@@ -28,7 +28,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * LREM - Remainder of long  *<PRE>Stack: ..., value1, value2 -&gt; result</PRE>  *  * @version $Id$  */
+comment|/**  * LREM - Remainder of long  *<PRE>Stack: ..., value1, value2 -&gt; result</PRE>  *  */
 end_comment
 
 begin_class

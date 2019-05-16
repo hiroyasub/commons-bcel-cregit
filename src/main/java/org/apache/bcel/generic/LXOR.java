@@ -16,7 +16,7 @@ package|;
 end_package
 
 begin_comment
-comment|/**  * LXOR - Bitwise XOR long  *<PRE>Stack: ..., value1, value2 -&gt; ..., result</PRE>  *  * @version $Id$  */
+comment|/**  * LXOR - Bitwise XOR long  *<PRE>Stack: ..., value1, value2 -&gt; ..., result</PRE>  *  */
 end_comment
 
 begin_class

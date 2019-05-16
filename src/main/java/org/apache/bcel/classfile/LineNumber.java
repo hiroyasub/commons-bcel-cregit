@@ -46,7 +46,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * This class represents a (PC offset, line number) pair, i.e., a line number in  * the source that corresponds to a relative address in the byte code. This  * is used for debugging purposes.  *  * @version $Id$  * @see     LineNumberTable  */
+comment|/**  * This class represents a (PC offset, line number) pair, i.e., a line number in  * the source that corresponds to a relative address in the byte code. This  * is used for debugging purposes.  *  * @see     LineNumberTable  */
 end_comment
 
 begin_class

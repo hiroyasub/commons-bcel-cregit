@@ -76,7 +76,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Super class for FieldGen and MethodGen objects, since they have  * some methods in common!  *  * @version $Id$  */
+comment|/**  * Super class for FieldGen and MethodGen objects, since they have  * some methods in common!  *  */
 end_comment
 
 begin_class

@@ -92,7 +92,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Abstract super class for instructions that use an index into the  * constant pool such as LDC, INVOKEVIRTUAL, etc.  *  * @see ConstantPoolGen  * @see LDC  * @see INVOKEVIRTUAL  *  * @version $Id$  */
+comment|/**  * Abstract super class for instructions that use an index into the  * constant pool such as LDC, INVOKEVIRTUAL, etc.  *  * @see ConstantPoolGen  * @see LDC  * @see INVOKEVIRTUAL  *  */
 end_comment
 
 begin_class
