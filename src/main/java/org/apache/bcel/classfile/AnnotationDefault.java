@@ -58,7 +58,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Represents the default value of a annotation for a method info  *  * @version $Id: AnnotationDefault 1 2005-02-13 03:15:08Z dbrosius $  * @since 6.0  */
+comment|/**  * Represents the default value of a annotation for a method info  *  * @since 6.0  */
 end_comment
 
 begin_class
