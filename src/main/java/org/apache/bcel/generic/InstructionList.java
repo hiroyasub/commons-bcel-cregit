@@ -1896,7 +1896,7 @@ return|return
 name|bh
 return|;
 block|}
-comment|/**      * Take all instructions (handles) from "start" to "end" and append them after the new location "target". Of course, "end" must be after "start" and target      * must not be located withing this range. If you want to move something to the start of the list use null as value for target.<br>      * Any instruction targeters pointing to handles within the block, keep their targets.      *      * @param start      *            of moved block      * @param end      *            of moved block      * @param target      *            of moved block      */
+comment|/**      * Take all instructions (handles) from "start" to "end" and append them after the new location "target". Of course, "end" must be after "start" and target      * must not be located withing this range. If you want to move something to the start of the list use null as value for target.      *<p>      * Any instruction targeters pointing to handles within the block, keep their targets.      *</p>      *      * @param start      *            of moved block      * @param end      *            of moved block      * @param target      *            of moved block      */
 specifier|public
 name|void
 name|move
