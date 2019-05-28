@@ -334,7 +334,7 @@ throw|;
 comment|// never happens
 block|}
 block|}
-comment|/**      * Read one constant from the given input, the type depends on a tag byte.      *      * @param dataInput Input stream      * @return Constant object      * @throws IOException if an I/O error occurs reading from the given {@code dataInput}.      * @throws ClassFormatException if the next byte is not recognized      * @since 6.0 made public      */
+comment|/**      * Reads one constant from the given input, the type depends on a tag byte.      *      * @param dataInput Input stream      * @return Constant object      * @throws IOException if an I/O error occurs reading from the given {@code dataInput}.      * @throws ClassFormatException if the next byte is not recognized      * @since 6.0 made public      */
 specifier|public
 specifier|static
 name|Constant
@@ -608,7 +608,7 @@ operator|=
 name|comparator
 expr_stmt|;
 block|}
-comment|/**      * Return value as defined by given BCELComparator strategy.      * By default two Constant objects are said to be equal when      * the result of toString() is equal.      *      * @see java.lang.Object#equals(java.lang.Object)      */
+comment|/**      * Returns value as defined by given BCELComparator strategy.      * By default two Constant objects are said to be equal when      * the result of toString() is equal.      *      * @see java.lang.Object#equals(java.lang.Object)      */
 annotation|@
 name|Override
 specifier|public
@@ -631,7 +631,7 @@ name|obj
 argument_list|)
 return|;
 block|}
-comment|/**      * Return value as defined by given BCELComparator strategy.      * By default return the hashcode of the result of toString().      *      * @see java.lang.Object#hashCode()      */
+comment|/**      * Returns value as defined by given BCELComparator strategy.      * By default return the hashcode of the result of toString().      *      * @see java.lang.Object#hashCode()      */
 annotation|@
 name|Override
 specifier|public
