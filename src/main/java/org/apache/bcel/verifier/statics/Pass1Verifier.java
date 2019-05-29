@@ -378,7 +378,7 @@ operator|.
 name|VR_OK
 return|;
 block|}
-comment|//TODO: Maybe change Repository's behaviour to throw a LoadingException instead of just returning "null"
+comment|//TODO: Maybe change Repository's behavior to throw a LoadingException instead of just returning "null"
 comment|//      if a class file cannot be found or in another way be looked up.
 return|return
 operator|new

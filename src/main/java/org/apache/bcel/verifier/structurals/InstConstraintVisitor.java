@@ -278,7 +278,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * A Visitor class testing for valid preconditions of JVM instructions.  * The instance of this class will throw a StructuralCodeConstraintException  * instance if an instruction is visitXXX()ed which has preconditions that are  * not satisfied.  * TODO: Currently, the JVM's behaviour concerning monitors (MONITORENTER,  * MONITOREXIT) is not modeled in JustIce.  *  * @see StructuralCodeConstraintException  */
+comment|/**  * A Visitor class testing for valid preconditions of JVM instructions.  * The instance of this class will throw a StructuralCodeConstraintException  * instance if an instruction is visitXXX()ed which has preconditions that are  * not satisfied.  * TODO: Currently, the JVM's behavior concerning monitors (MONITORENTER,  * MONITOREXIT) is not modeled in JustIce.  *  * @see StructuralCodeConstraintException  */
 end_comment
 
 begin_class

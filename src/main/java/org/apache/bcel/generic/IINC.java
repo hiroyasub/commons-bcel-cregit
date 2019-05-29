@@ -89,7 +89,7 @@ block|{
 name|super
 argument_list|()
 expr_stmt|;
-comment|// Default behaviour of LocalVariableInstruction causes error
+comment|// Default behavior of LocalVariableInstruction causes error
 name|super
 operator|.
 name|setOpcode

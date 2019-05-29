@@ -1362,7 +1362,7 @@ argument_list|()
 operator|+
 literal|"'. This is okay, as the original definition was private; however this constraint leverage"
 operator|+
-literal|" was introduced by JLS 8.4.6 (not vmspec2) and the behaviour of the Sun verifiers."
+literal|" was introduced by JLS 8.4.6 (not vmspec2) and the behavior of the Sun verifiers."
 argument_list|)
 expr_stmt|;
 block|}
