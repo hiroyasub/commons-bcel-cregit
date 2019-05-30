@@ -46,7 +46,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * @version $Id: ElementValue  * @since 6.0  */
+comment|/**  * @since 6.0  */
 end_comment
 
 begin_class

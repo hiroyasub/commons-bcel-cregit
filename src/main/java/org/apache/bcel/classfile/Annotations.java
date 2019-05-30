@@ -46,7 +46,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * base class for annotations  *  * @version $Id: Annotations  * @since 6.0  */
+comment|/**  * base class for annotations  *  * @since 6.0  */
 end_comment
 
 begin_class

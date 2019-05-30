@@ -58,7 +58,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * represents an annotation that is represented in the class file and is  * provided to the JVM.  *  * @version $Id: RuntimeVisibleAnnotations  * @since 6.0  */
+comment|/**  * represents an annotation that is represented in the class file and is  * provided to the JVM.  *  * @since 6.0  */
 end_comment
 
 begin_class

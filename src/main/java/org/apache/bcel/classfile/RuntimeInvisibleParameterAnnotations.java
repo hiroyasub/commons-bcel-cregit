@@ -48,7 +48,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Represents a parameter annotation that is represented in the class file  * but is not provided to the JVM.  *  * @version $Id: RuntimeInvisibleParameterAnnotations  * @since 6.0  */
+comment|/**  * Represents a parameter annotation that is represented in the class file  * but is not provided to the JVM.  *  * @since 6.0  */
 end_comment
 
 begin_class

@@ -88,7 +88,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * represents one annotation in the annotation table  *  * @version $Id: AnnotationEntry  * @since 6.0  */
+comment|/**  * represents one annotation in the annotation table  *  * @since 6.0  */
 end_comment
 
 begin_class

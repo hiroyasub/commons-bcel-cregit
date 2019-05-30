@@ -76,7 +76,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * represents one parameter annotation in the parameter annotation table  *  * @version $Id: ParameterAnnotationEntry  * @since 6.0  */
+comment|/**  * represents one parameter annotation in the parameter annotation table  *  * @since 6.0  */
 end_comment
 
 begin_class
