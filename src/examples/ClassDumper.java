@@ -1527,7 +1527,7 @@ throw|throw
 operator|new
 name|RuntimeException
 argument_list|(
-literal|"Require filename as only argument"
+literal|"Require file name as only argument"
 argument_list|)
 throw|;
 block|}

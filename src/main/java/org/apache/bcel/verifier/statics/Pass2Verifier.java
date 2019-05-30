@@ -4510,7 +4510,7 @@ argument_list|)
 expr_stmt|;
 specifier|final
 name|String
-name|sourcefilename
+name|sourceFileName
 init|=
 operator|(
 operator|(
@@ -4533,9 +4533,9 @@ decl_stmt|;
 comment|//==obj.getSourceFileName() ?
 specifier|final
 name|String
-name|sourcefilenamelc
+name|sourceFileNameLc
 init|=
-name|sourcefilename
+name|sourceFileName
 operator|.
 name|toLowerCase
 argument_list|(
@@ -4547,7 +4547,7 @@ decl_stmt|;
 if|if
 condition|(
 operator|(
-name|sourcefilename
+name|sourceFileName
 operator|.
 name|indexOf
 argument_list|(
@@ -4559,7 +4559,7 @@ literal|1
 operator|)
 operator|||
 operator|(
-name|sourcefilename
+name|sourceFileName
 operator|.
 name|indexOf
 argument_list|(
@@ -4571,7 +4571,7 @@ literal|1
 operator|)
 operator|||
 operator|(
-name|sourcefilename
+name|sourceFileName
 operator|.
 name|indexOf
 argument_list|(
@@ -4583,7 +4583,7 @@ literal|1
 operator|)
 operator|||
 operator|(
-name|sourcefilenamelc
+name|sourceFileNameLc
 operator|.
 name|lastIndexOf
 argument_list|(
@@ -4606,7 +4606,7 @@ argument_list|)
 operator|+
 literal|"' has a funny name: remember not to confuse certain parsers working on javap's output. Also, this name ('"
 operator|+
-name|sourcefilename
+name|sourceFileName
 operator|+
 literal|"') is considered an unqualified (simple) file name only."
 argument_list|)
