@@ -195,7 +195,7 @@ name|BUFSIZE
 init|=
 literal|8192
 decl_stmt|;
-comment|/**      * Parse class from the given stream.      *      * @param inputStream Input stream      * @param file_name File name      */
+comment|/**      * Parses class from the given stream.      *      * @param inputStream Input stream      * @param file_name File name      */
 specifier|public
 name|ClassParser
 parameter_list|(
@@ -284,7 +284,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/** Parse class from given .class file.      *      * @param file_name file name      */
+comment|/** Parses class from given .class file.      *      * @param file_name file name      */
 specifier|public
 name|ClassParser
 parameter_list|(
@@ -308,7 +308,7 @@ operator|=
 literal|true
 expr_stmt|;
 block|}
-comment|/** Parse class from given .class file in a ZIP-archive      *      * @param zip_file zip file name      * @param file_name file name      */
+comment|/** Parses class from given .class file in a ZIP-archive      *      * @param zip_file zip file name      * @param file_name file name      */
 specifier|public
 name|ClassParser
 parameter_list|(
@@ -342,7 +342,7 @@ operator|=
 name|file_name
 expr_stmt|;
 block|}
-comment|/**      * Parse the given Java class file and return an object that represents      * the contained data, i.e., constants, methods, fields and commands.      * A<em>ClassFormatException</em> is raised, if the file is not a valid      * .class file. (This does not include verification of the byte code as it      * is performed by the java interpreter).      *      * @return Class object representing the parsed class file      * @throws  IOException      * @throws  ClassFormatException      */
+comment|/**      * Parses the given Java class file and return an object that represents      * the contained data, i.e., constants, methods, fields and commands.      * A<em>ClassFormatException</em> is raised, if the file is not a valid      * .class file. (This does not include verification of the byte code as it      * is performed by the java interpreter).      *      * @return Class object representing the parsed class file      * @throws  IOException      * @throws  ClassFormatException      */
 specifier|public
 name|JavaClass
 name|parse
@@ -598,7 +598,7 @@ name|FILE
 argument_list|)
 return|;
 block|}
-comment|/**      * Read information about the attributes of the class.      * @throws  IOException      * @throws  ClassFormatException      */
+comment|/**      * Reads information about the attributes of the class.      * @throws  IOException      * @throws  ClassFormatException      */
 specifier|private
 name|void
 name|readAttributes
@@ -656,7 +656,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/**      * Read information about the class and its super class.      * @throws  IOException      * @throws  ClassFormatException      */
+comment|/**      * Reads information about the class and its super class.      * @throws  IOException      * @throws  ClassFormatException      */
 specifier|private
 name|void
 name|readClassInfo
@@ -748,7 +748,7 @@ name|readUnsignedShort
 argument_list|()
 expr_stmt|;
 block|}
-comment|/**      * Read constant pool entries.      * @throws  IOException      * @throws  ClassFormatException      */
+comment|/**      * Reads constant pool entries.      * @throws  IOException      * @throws  ClassFormatException      */
 specifier|private
 name|void
 name|readConstantPool
@@ -767,7 +767,7 @@ name|dataInputStream
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Read information about the fields of the class, i.e., its variables.      * @throws  IOException      * @throws  ClassFormatException      */
+comment|/**      * Reads information about the fields of the class, i.e., its variables.      * @throws  IOException      * @throws  ClassFormatException      */
 specifier|private
 name|void
 name|readFields
@@ -825,7 +825,7 @@ expr_stmt|;
 block|}
 block|}
 comment|/******************** Private utility methods **********************/
-comment|/**      * Check whether the header of the file is ok.      * Of course, this has to be the first action on successive file reads.      * @throws  IOException      * @throws  ClassFormatException      */
+comment|/**      * Checks whether the header of the file is ok.      * Of course, this has to be the first action on successive file reads.      * @throws  IOException      * @throws  ClassFormatException      */
 specifier|private
 name|void
 name|readID
@@ -858,7 +858,7 @@ argument_list|)
 throw|;
 block|}
 block|}
-comment|/**      * Read information about the interfaces implemented by this class.      * @throws  IOException      * @throws  ClassFormatException      */
+comment|/**      * Reads information about the interfaces implemented by this class.      * @throws  IOException      * @throws  ClassFormatException      */
 specifier|private
 name|void
 name|readInterfaces
@@ -912,7 +912,7 @@ argument_list|()
 expr_stmt|;
 block|}
 block|}
-comment|/**      * Read information about the methods of the class.      * @throws  IOException      * @throws  ClassFormatException      */
+comment|/**      * Reads information about the methods of the class.      * @throws  IOException      * @throws  ClassFormatException      */
 specifier|private
 name|void
 name|readMethods
@@ -969,7 +969,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/**      * Read major and minor version of compiler which created the file.      * @throws  IOException      * @throws  ClassFormatException      */
+comment|/**      * Reads major and minor version of compiler which created the file.      * @throws  IOException      * @throws  ClassFormatException      */
 specifier|private
 name|void
 name|readVersion
