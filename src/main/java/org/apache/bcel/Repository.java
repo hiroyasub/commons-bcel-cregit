@@ -93,7 +93,7 @@ operator|.
 name|getInstance
 argument_list|()
 decl_stmt|;
-comment|/** @return currently used repository instance      */
+comment|/**       * @return currently used repository instance      */
 specifier|public
 specifier|static
 name|org
@@ -112,7 +112,7 @@ return|return
 name|repository
 return|;
 block|}
-comment|/** Set repository instance to be used for class loading      */
+comment|/**       * Sets repository instance to be used for class loading      */
 specifier|public
 specifier|static
 name|void
@@ -136,7 +136,7 @@ operator|=
 name|rep
 expr_stmt|;
 block|}
-comment|/** Lookup class somewhere found on your CLASSPATH, or whereever the      * repository instance looks for it.      *      * @return class object for given fully qualified class name      * @throws ClassNotFoundException if the class could not be found or      * parsed correctly      */
+comment|/**       * Lookups class somewhere found on your CLASSPATH, or whereever the      * repository instance looks for it.      *      * @return class object for given fully qualified class name      * @throws ClassNotFoundException if the class could not be found or      * parsed correctly      */
 specifier|public
 specifier|static
 name|JavaClass
@@ -158,7 +158,7 @@ name|class_name
 argument_list|)
 return|;
 block|}
-comment|/**      * Try to find class source using the internal repository instance.      * @see Class      * @return JavaClass object for given runtime class      * @throws ClassNotFoundException if the class could not be found or      * parsed correctly      */
+comment|/**      * Tries to find class source using the internal repository instance.      *       * @see Class      * @return JavaClass object for given runtime class      * @throws ClassNotFoundException if the class could not be found or      * parsed correctly      */
 specifier|public
 specifier|static
 name|JavaClass
@@ -239,7 +239,7 @@ literal|null
 return|;
 block|}
 block|}
-comment|/** Clear the repository.      */
+comment|/**       * Clears the repository.      */
 specifier|public
 specifier|static
 name|void
@@ -252,7 +252,7 @@ name|clear
 argument_list|()
 expr_stmt|;
 block|}
-comment|/**      * Add clazz to repository if there isn't an equally named class already in there.      *      * @return old entry in repository      */
+comment|/**      * Adds clazz to repository if there isn't an equally named class already in there.      *      * @return old entry in repository      */
 specifier|public
 specifier|static
 name|JavaClass
@@ -288,7 +288,7 @@ return|return
 name|old
 return|;
 block|}
-comment|/**      * Remove class with given (fully qualified) name from repository.      */
+comment|/**      * Removes class with given (fully qualified) name from repository.      */
 specifier|public
 specifier|static
 name|void
@@ -312,7 +312,7 @@ argument_list|)
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Remove given class from repository.      */
+comment|/**      * Removes given class from repository.      */
 specifier|public
 specifier|static
 name|void
