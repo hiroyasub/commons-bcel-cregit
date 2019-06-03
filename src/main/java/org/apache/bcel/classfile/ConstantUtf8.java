@@ -290,6 +290,21 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
+comment|/**      * Clears the cache.      *       * @since 6.4.0      */
+specifier|public
+specifier|static
+name|void
+name|clearCache
+parameter_list|()
+block|{
+name|CACHE_HOLDER
+operator|.
+name|CACHE
+operator|.
+name|clear
+argument_list|()
+expr_stmt|;
+block|}
 comment|// for accesss by test code
 specifier|static
 name|void
