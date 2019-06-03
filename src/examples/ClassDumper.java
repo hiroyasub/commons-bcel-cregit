@@ -1531,6 +1531,8 @@ literal|"Require file name as only argument"
 argument_list|)
 throw|;
 block|}
+try|try
+init|(
 name|FileImageInputStream
 name|file
 init|=
@@ -1546,7 +1548,8 @@ literal|0
 index|]
 argument_list|)
 argument_list|)
-decl_stmt|;
+init|)
+block|{
 name|ClassDumper
 name|cd
 init|=
@@ -1566,6 +1569,7 @@ operator|.
 name|dump
 argument_list|()
 expr_stmt|;
+block|}
 name|System
 operator|.
 name|out
