@@ -92,7 +92,7 @@ operator|=
 name|constant_pool
 expr_stmt|;
 block|}
-comment|/**      * Read constants from given input stream.      *      * @param input Input stream      * @throws IOException      * @throws ClassFormatException      */
+comment|/**      * Reads constants from given input stream.      *      * @param input Input stream      * @throws IOException      * @throws ClassFormatException      */
 specifier|public
 name|ConstantPool
 parameter_list|(
@@ -209,7 +209,7 @@ name|this
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Resolve constant to a string representation.      *      * @param  c Constant to be printed      * @return String representation      */
+comment|/**      * Resolves constant to a string representation.      *      * @param  c Constant to be printed      * @return String representation      */
 specifier|public
 name|String
 name|constantToString
@@ -814,7 +814,7 @@ name|toString
 argument_list|()
 return|;
 block|}
-comment|/**      * Retrieve constant at `index' from constant pool and resolve it to      * a string representation.      *      * @param  index of constant in constant pool      * @param  tag expected type      * @return String representation      */
+comment|/**      * Retrieves constant at `index' from constant pool and resolve it to      * a string representation.      *      * @param  index of constant in constant pool      * @param  tag expected type      * @return String representation      */
 specifier|public
 name|String
 name|constantToString
@@ -909,7 +909,7 @@ expr_stmt|;
 block|}
 block|}
 block|}
-comment|/**      * Get constant from constant pool.      *      * @param  index Index in constant pool      * @return Constant value      * @see    Constant      */
+comment|/**      * Gets constant from constant pool.      *      * @param  index Index in constant pool      * @return Constant value      * @see    Constant      */
 specifier|public
 name|Constant
 name|getConstant
@@ -955,7 +955,7 @@ name|index
 index|]
 return|;
 block|}
-comment|/**      * Get constant from constant pool and check whether it has the      * expected type.      *      * @param  index Index in constant pool      * @param  tag Tag of expected constant, i.e., its type      * @return Constant value      * @see    Constant      * @throws  ClassFormatException      */
+comment|/**      * Gets constant from constant pool and check whether it has the      * expected type.      *      * @param  index Index in constant pool      * @param  tag Tag of expected constant, i.e., its type      * @return Constant value      * @see    Constant      * @throws  ClassFormatException      */
 specifier|public
 name|Constant
 name|getConstant
@@ -1048,7 +1048,7 @@ return|return
 name|constant_pool
 return|;
 block|}
-comment|/**      * Get string from constant pool and bypass the indirection of      * `ConstantClass' and `ConstantString' objects. I.e. these classes have      * an index field that points to another entry of the constant pool of      * type `ConstantUtf8' which contains the real data.      *      * @param  index Index in constant pool      * @param  tag Tag of expected constant, either ConstantClass or ConstantString      * @return Contents of string reference      * @see    ConstantClass      * @see    ConstantString      * @throws  ClassFormatException      */
+comment|/**      * Gets string from constant pool and bypass the indirection of      * `ConstantClass' and `ConstantString' objects. I.e. these classes have      * an index field that points to another entry of the constant pool of      * type `ConstantUtf8' which contains the real data.      *      * @param  index Index in constant pool      * @param  tag Tag of expected constant, either ConstantClass or ConstantString      * @return Contents of string reference      * @see    ConstantClass      * @see    ConstantString      * @throws  ClassFormatException      */
 specifier|public
 name|String
 name|getConstantString
