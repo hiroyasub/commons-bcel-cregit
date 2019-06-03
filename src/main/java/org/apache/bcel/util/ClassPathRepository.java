@@ -121,15 +121,15 @@ name|ClassPathRepository
 parameter_list|(
 specifier|final
 name|ClassPath
-name|path
+name|classPath
 parameter_list|)
 block|{
 name|_path
 operator|=
-name|path
+name|classPath
 expr_stmt|;
 block|}
-comment|/**      * Store a new JavaClass instance into this Repository.      */
+comment|/**      * Stores a new JavaClass instance into this Repository.      */
 annotation|@
 name|Override
 specifier|public
@@ -138,22 +138,22 @@ name|storeClass
 parameter_list|(
 specifier|final
 name|JavaClass
-name|clazz
+name|javaClass
 parameter_list|)
 block|{
 name|_loadedClasses
 operator|.
 name|put
 argument_list|(
-name|clazz
+name|javaClass
 operator|.
 name|getClassName
 argument_list|()
 argument_list|,
-name|clazz
+name|javaClass
 argument_list|)
 expr_stmt|;
-name|clazz
+name|javaClass
 operator|.
 name|setRepository
 argument_list|(
@@ -161,7 +161,7 @@ name|this
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Remove class from repository      */
+comment|/**      * Removes class from repository      */
 annotation|@
 name|Override
 specifier|public
@@ -170,21 +170,21 @@ name|removeClass
 parameter_list|(
 specifier|final
 name|JavaClass
-name|clazz
+name|javaClass
 parameter_list|)
 block|{
 name|_loadedClasses
 operator|.
 name|remove
 argument_list|(
-name|clazz
+name|javaClass
 operator|.
 name|getClassName
 argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Find an already defined (cached) JavaClass object by name.      */
+comment|/**      * Finds an already defined (cached) JavaClass object by name.      */
 annotation|@
 name|Override
 specifier|public
@@ -205,7 +205,7 @@ name|className
 argument_list|)
 return|;
 block|}
-comment|/**      * Find a JavaClass object by name. If it is already in this Repository, the Repository version is returned. Otherwise, the Repository's classpath is      * searched for the class (and it is added to the Repository if found).      *      * @param className      *            the name of the class      * @return the JavaClass object      * @throws ClassNotFoundException      *             if the class is not in the Repository, and could not be found on the classpath      */
+comment|/**      * Finds a JavaClass object by name. If it is already in this Repository, the Repository version is returned. Otherwise, the Repository's classpath is      * searched for the class (and it is added to the Repository if found).      *      * @param className      *            the name of the class      * @return the JavaClass object      * @throws ClassNotFoundException      *             if the class is not in the Repository, and could not be found on the classpath      */
 annotation|@
 name|Override
 specifier|public
@@ -314,7 +314,7 @@ argument_list|)
 throw|;
 block|}
 block|}
-comment|/**      * Find the JavaClass object for a runtime Class object. If a class with the same name is already in this Repository, the Repository version is returned.      * Otherwise, getResourceAsStream() is called on the Class object to find the class's representation. If the representation is found, it is added to the      * Repository.      *      * @see Class      * @param clazz      *            the runtime Class object      * @return JavaClass object for given runtime class      * @throws ClassNotFoundException      *             if the class is not in the Repository, and its representation could not be found      */
+comment|/**      * Finds the JavaClass object for a runtime Class object. If a class with the same name is already in this Repository, the Repository version is returned.      * Otherwise, getResourceAsStream() is called on the Class object to find the class's representation. If the representation is found, it is added to the      * Repository.      *      * @see Class      * @param clazz      *            the runtime Class object      * @return JavaClass object for given runtime class      * @throws ClassNotFoundException      *             if the class is not in the Repository, and its representation could not be found      */
 annotation|@
 name|Override
 specifier|public
@@ -444,7 +444,7 @@ name|loadClass
 parameter_list|(
 specifier|final
 name|InputStream
-name|is
+name|inputStream
 parameter_list|,
 specifier|final
 name|String
@@ -457,7 +457,7 @@ try|try
 block|{
 if|if
 condition|(
-name|is
+name|inputStream
 operator|!=
 literal|null
 condition|)
@@ -469,7 +469,7 @@ init|=
 operator|new
 name|ClassParser
 argument_list|(
-name|is
+name|inputStream
 argument_list|,
 name|className
 argument_list|)
@@ -520,14 +520,14 @@ finally|finally
 block|{
 if|if
 condition|(
-name|is
+name|inputStream
 operator|!=
 literal|null
 condition|)
 block|{
 try|try
 block|{
-name|is
+name|inputStream
 operator|.
 name|close
 argument_list|()
@@ -566,7 +566,7 @@ return|return
 name|_path
 return|;
 block|}
-comment|/**      * Clear all entries from cache.      */
+comment|/**      * Clears all entries from cache.      */
 annotation|@
 name|Override
 specifier|public
