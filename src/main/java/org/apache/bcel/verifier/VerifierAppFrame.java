@@ -2716,7 +2716,7 @@ name|this
 argument_list|,
 literal|"JustIce is a Java class file verifier.\n"
 operator|+
-literal|"It was implemented by Enver Haase in 2001, 2002.\n<http://commons.apache.org/bcel/>"
+literal|"It was implemented by Enver Haase in 2001, 2002.\n<https://commons.apache.org/bcel/>"
 argument_list|,
 name|JUSTICE_VERSION
 argument_list|,

@@ -569,7 +569,7 @@ name|out
 operator|.
 name|println
 argument_list|(
-literal|";; http://commons.apache.org/bcel/"
+literal|";; https://commons.apache.org/bcel/"
 argument_list|)
 expr_stmt|;
 name|out
