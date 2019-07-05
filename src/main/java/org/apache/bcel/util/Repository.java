@@ -30,7 +30,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Abstract definition of a class repository. Instances may be used  * to load classes from different sources and may be used in the  * Repository.setRepository method.  *  * @see org.apache.bcel.Repository  */
+comment|/**  * Abstract definition of a class repository. Instances may be used to load classes from different sources and may be  * used in the Repository.setRepository method.  *  * @see org.apache.bcel.Repository  */
 end_comment
 
 begin_interface
@@ -54,7 +54,7 @@ name|JavaClass
 name|clazz
 parameter_list|)
 function_decl|;
-comment|/**      * Finds the class with the name provided, if the class      * isn't there, return NULL.      */
+comment|/**      * Finds the class with the name provided, if the class isn't there, return NULL.      */
 name|JavaClass
 name|findClass
 parameter_list|(
@@ -62,7 +62,7 @@ name|String
 name|className
 parameter_list|)
 function_decl|;
-comment|/**      * Finds the class with the name provided, if the class      * isn't there, make an attempt to load it.      */
+comment|/**      * Finds the class with the name provided, if the class isn't there, make an attempt to load it.      */
 name|JavaClass
 name|loadClass
 parameter_list|(
@@ -93,12 +93,12 @@ name|lang
 operator|.
 name|ClassNotFoundException
 function_decl|;
-comment|/**       * Clears all entries from cache.      */
+comment|/**      * Clears all entries from cache.      */
 name|void
 name|clear
 parameter_list|()
 function_decl|;
-comment|/**       * Gets the ClassPath associated with this Repository      */
+comment|/**      * Gets the ClassPath associated with this Repository      */
 name|ClassPath
 name|getClassPath
 parameter_list|()
