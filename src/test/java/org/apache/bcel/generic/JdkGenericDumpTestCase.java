@@ -464,7 +464,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Test that the generic dump() methods work on the JDK classes Reads each class into an instruction list and then dumps  * the instructions. The output bytes should be the same as the input.  */
+comment|/**  * Test that the generic dump() methods work on the JDK classes Reads each class into an instruction list and then dumps  * the instructions. The output bytes should be the same as the input.  *<p>  * Set the property {@value #EXTRA_JAVA_HOMES} to a comma-sepaarted list of JRE/JDK paths for additional testing.  *</p>  */
 end_comment
 
 begin_class
@@ -479,6 +479,14 @@ specifier|public
 class|class
 name|JdkGenericDumpTestCase
 block|{
+specifier|private
+specifier|static
+specifier|final
+name|String
+name|EXTRA_JAVA_HOMES
+init|=
+literal|"ExtraJavaHomes"
+decl_stmt|;
 specifier|private
 specifier|static
 class|class
@@ -993,7 +1001,7 @@ argument_list|)
 expr_stmt|;
 name|addAllJavaHomes
 argument_list|(
-literal|"ExtraJavaHomes"
+name|EXTRA_JAVA_HOMES
 argument_list|,
 name|javaHomes
 argument_list|)
