@@ -344,8 +344,8 @@ block|}
 block|}
 comment|/**      * Clears the cache.      *       * @since 6.4.0      */
 specifier|public
-specifier|synchronized
 specifier|static
+specifier|synchronized
 name|void
 name|clearCache
 parameter_list|()
