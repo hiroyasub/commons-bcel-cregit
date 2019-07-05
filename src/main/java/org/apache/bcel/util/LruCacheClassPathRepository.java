@@ -50,7 +50,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * This repository maintains least-recently-used (LRU) cache of {@link JavaClass} with maximum size {@code cacheSize}.  *  *<p>This repository supports a class path consisting of too many JAR files to handle in {@link  * ClassPathRepository} or {@link MemorySensitiveClassPathRepository} without causing {@code OutOfMemoryError}.  *  * @since 6.4.0  */
+comment|/**  * Maintains a least-recently-used (LRU) cache of {@link JavaClass} with maximum size {@code cacheSize}.  *  *<p>  * This repository supports a class path consisting of too many JAR files to handle in {@link ClassPathRepository} or  * {@link MemorySensitiveClassPathRepository} without causing {@code OutOfMemoryError}.  *</p>  *   * @since 6.4.0  */
 end_comment
 
 begin_class
@@ -68,7 +68,7 @@ name|String
 argument_list|,
 name|JavaClass
 argument_list|>
-name|loadedClass
+name|loadedClasses
 decl_stmt|;
 specifier|public
 name|LruCacheClassPathRepository
@@ -98,7 +98,7 @@ throw|throw
 operator|new
 name|IllegalArgumentException
 argument_list|(
-literal|"cacheSize must be a positive number"
+literal|"cacheSize must be a positive number."
 argument_list|)
 throw|;
 block|}
@@ -120,7 +120,7 @@ init|=
 literal|true
 decl_stmt|;
 comment|// Evicts least-recently-accessed
-name|loadedClass
+name|loadedClasses
 operator|=
 operator|new
 name|LinkedHashMap
@@ -137,6 +137,16 @@ argument_list|,
 name|accessOrder
 argument_list|)
 block|{
+specifier|private
+specifier|static
+specifier|final
+name|long
+name|serialVersionUID
+init|=
+literal|1L
+decl_stmt|;
+annotation|@
+name|Override
 specifier|protected
 name|boolean
 name|removeEldestEntry
@@ -165,6 +175,26 @@ block|}
 annotation|@
 name|Override
 specifier|public
+name|JavaClass
+name|findClass
+parameter_list|(
+specifier|final
+name|String
+name|className
+parameter_list|)
+block|{
+return|return
+name|loadedClasses
+operator|.
+name|get
+argument_list|(
+name|className
+argument_list|)
+return|;
+block|}
+annotation|@
+name|Override
+specifier|public
 name|void
 name|storeClass
 parameter_list|(
@@ -174,7 +204,7 @@ name|javaClass
 parameter_list|)
 block|{
 comment|// Not storing parent's _loadedClass
-name|loadedClass
+name|loadedClasses
 operator|.
 name|put
 argument_list|(
@@ -193,26 +223,6 @@ argument_list|(
 name|this
 argument_list|)
 expr_stmt|;
-block|}
-annotation|@
-name|Override
-specifier|public
-name|JavaClass
-name|findClass
-parameter_list|(
-specifier|final
-name|String
-name|className
-parameter_list|)
-block|{
-return|return
-name|loadedClass
-operator|.
-name|get
-argument_list|(
-name|className
-argument_list|)
-return|;
 block|}
 block|}
 end_class
