@@ -88,7 +88,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * This class is derived from the abstract {@link Constant}  * and represents a reference to a Utf8 encoded string.  *  * @see     Constant  */
+comment|/**  * Extends the abstract {@link Constant} to represent a reference to a UTF-8 encoded string.  *<p>  * The following system properties govern caching this class performs.  *<ul>  *<li>{@value #SYS_PROP_CACHE_MAX_ENTRIES} (since 6.4): The size of the cache, by default 0, meaning caching is disabled.</li>  *<li>{@value #SYS_PROP_CACHE_MAX_ENTRY_SIZE} (since 6.0): The maximum size of the values to cache, by default 200, 0 disables  * caching. Values larger than this are<em>not</em> cached.</li>  *<li>{@value #SYS_PROP_STATISTICS} (since 6.0): Prints statistics on the console when the JVM exits.</li>  *</ul>  *</p>  *<p>  * Here is a sample Maven invocation with caching disabled:  *</p>  *   *<pre>  * mvn test -Dbcel.statistics=true -Dbcel.maxcached.size=0 -Dbcel.maxcached=0  *</pre>  *<p>  * Here is a sample Maven invocation with caching enabled:  *</p>  *   *<pre>  * mvn test -Dbcel.statistics=true -Dbcel.maxcached.size=100000 -Dbcel.maxcached=5000000  *</pre>  *   * @see Constant  */
 end_comment
 
 begin_class
@@ -102,27 +102,50 @@ block|{
 specifier|private
 specifier|static
 class|class
-name|CacheHolder
+name|Cache
 block|{
 specifier|private
 specifier|static
 specifier|final
-name|int
-name|MAX_CACHE_ENTRIES
+name|boolean
+name|BCEL_STATISTICS
 init|=
-literal|20000
+name|Boolean
+operator|.
+name|getBoolean
+argument_list|(
+name|SYS_PROP_STATISTICS
+argument_list|)
 decl_stmt|;
 specifier|private
 specifier|static
 specifier|final
 name|int
-name|INITIAL_CACHE_CAPACITY
+name|MAX_ENTRIES
+init|=
+name|Integer
+operator|.
+name|getInteger
+argument_list|(
+name|SYS_PROP_CACHE_MAX_ENTRIES
+argument_list|,
+literal|0
+argument_list|)
+operator|.
+name|intValue
+argument_list|()
+decl_stmt|;
+specifier|private
+specifier|static
+specifier|final
+name|int
+name|INITIAL_CAPACITY
 init|=
 operator|(
 name|int
 operator|)
 operator|(
-name|MAX_CACHE_ENTRIES
+name|MAX_ENTRIES
 operator|/
 literal|0.75
 operator|)
@@ -146,7 +169,7 @@ argument_list|,
 name|ConstantUtf8
 argument_list|>
 argument_list|(
-name|INITIAL_CACHE_CAPACITY
+name|INITIAL_CAPACITY
 argument_list|,
 literal|0.75f
 argument_list|,
@@ -184,11 +207,47 @@ return|return
 name|size
 argument_list|()
 operator|>
-name|MAX_CACHE_ENTRIES
+name|MAX_ENTRIES
 return|;
 block|}
 block|}
 decl_stmt|;
+comment|// Set the size to 0 or below to skip caching entirely
+specifier|private
+specifier|static
+specifier|final
+name|int
+name|MAX_ENTRY_SIZE
+init|=
+name|Integer
+operator|.
+name|getInteger
+argument_list|(
+name|SYS_PROP_CACHE_MAX_ENTRY_SIZE
+argument_list|,
+literal|200
+argument_list|)
+operator|.
+name|intValue
+argument_list|()
+decl_stmt|;
+specifier|static
+name|boolean
+name|isEnabled
+parameter_list|()
+block|{
+return|return
+name|Cache
+operator|.
+name|MAX_ENTRIES
+operator|>
+literal|0
+operator|&&
+name|MAX_ENTRY_SIZE
+operator|>
+literal|0
+return|;
+block|}
 block|}
 comment|// TODO these should perhaps be AtomicInt?
 specifier|private
@@ -196,6 +255,14 @@ specifier|static
 specifier|volatile
 name|int
 name|considered
+init|=
+literal|0
+decl_stmt|;
+specifier|private
+specifier|static
+specifier|volatile
+name|int
+name|created
 init|=
 literal|0
 decl_stmt|;
@@ -217,48 +284,34 @@ literal|0
 decl_stmt|;
 specifier|private
 specifier|static
-specifier|volatile
-name|int
-name|created
+specifier|final
+name|String
+name|SYS_PROP_CACHE_MAX_ENTRIES
 init|=
-literal|0
+literal|"bcel.maxcached"
 decl_stmt|;
-comment|// Set the size to 0 or below to skip caching entirely
 specifier|private
 specifier|static
 specifier|final
-name|int
-name|MAX_CACHED_SIZE
+name|String
+name|SYS_PROP_CACHE_MAX_ENTRY_SIZE
 init|=
-name|Integer
-operator|.
-name|getInteger
-argument_list|(
 literal|"bcel.maxcached.size"
-argument_list|,
-literal|200
-argument_list|)
-operator|.
-name|intValue
-argument_list|()
 decl_stmt|;
 specifier|private
 specifier|static
 specifier|final
-name|boolean
-name|BCEL_STATISTICS
+name|String
+name|SYS_PROP_STATISTICS
 init|=
-name|Boolean
-operator|.
-name|getBoolean
-argument_list|(
 literal|"bcel.statistics"
-argument_list|)
 decl_stmt|;
 static|static
 block|{
 if|if
 condition|(
+name|Cache
+operator|.
 name|BCEL_STATISTICS
 condition|)
 block|{
@@ -291,12 +344,13 @@ block|}
 block|}
 comment|/**      * Clears the cache.      *       * @since 6.4.0      */
 specifier|public
+specifier|synchronized
 specifier|static
 name|void
 name|clearCache
 parameter_list|()
 block|{
-name|CacheHolder
+name|Cache
 operator|.
 name|CACHE
 operator|.
@@ -306,6 +360,7 @@ expr_stmt|;
 block|}
 comment|// for accesss by test code
 specifier|static
+specifier|synchronized
 name|void
 name|clearStats
 parameter_list|()
@@ -321,7 +376,7 @@ operator|=
 literal|0
 expr_stmt|;
 block|}
-comment|/**      * @since 6.0      */
+comment|/**      * Gets a new or cached instance of the given value.      *<p>      * See {@link ConstantUtf8} class Javadoc for details.      *</p>      *       * @param value the value.      * @return a new or cached instance of the given value.      * @since 6.0      */
 specifier|public
 specifier|static
 name|ConstantUtf8
@@ -329,17 +384,19 @@ name|getCachedInstance
 parameter_list|(
 specifier|final
 name|String
-name|s
+name|value
 parameter_list|)
 block|{
 if|if
 condition|(
-name|s
+name|value
 operator|.
 name|length
 argument_list|()
 operator|>
-name|MAX_CACHED_SIZE
+name|Cache
+operator|.
+name|MAX_ENTRY_SIZE
 condition|)
 block|{
 name|skipped
@@ -349,7 +406,7 @@ return|return
 operator|new
 name|ConstantUtf8
 argument_list|(
-name|s
+name|value
 argument_list|)
 return|;
 block|}
@@ -367,13 +424,13 @@ comment|// might be better with a specific lock object
 name|ConstantUtf8
 name|result
 init|=
-name|CacheHolder
+name|Cache
 operator|.
 name|CACHE
 operator|.
 name|get
 argument_list|(
-name|s
+name|value
 argument_list|)
 decl_stmt|;
 if|if
@@ -395,16 +452,16 @@ operator|=
 operator|new
 name|ConstantUtf8
 argument_list|(
-name|s
+name|value
 argument_list|)
 expr_stmt|;
-name|CacheHolder
+name|Cache
 operator|.
 name|CACHE
 operator|.
 name|put
 argument_list|(
-name|s
+name|value
 argument_list|,
 name|result
 argument_list|)
@@ -414,7 +471,7 @@ name|result
 return|;
 block|}
 block|}
-comment|/**      * @since 6.0      */
+comment|/**      * Gets a new or cached instance of the given value.      *<p>      * See {@link ConstantUtf8} class Javadoc for details.      *</p>      *       * @param dataInput the value.      * @return a new or cached instance of the given value.      * @throws IOException if an I/O error occurs.      * @since 6.0      */
 specifier|public
 specifier|static
 name|ConstantUtf8
@@ -422,7 +479,7 @@ name|getInstance
 parameter_list|(
 specifier|final
 name|DataInput
-name|input
+name|dataInput
 parameter_list|)
 throws|throws
 name|IOException
@@ -430,14 +487,14 @@ block|{
 return|return
 name|getInstance
 argument_list|(
-name|input
+name|dataInput
 operator|.
 name|readUTF
 argument_list|()
 argument_list|)
 return|;
 block|}
-comment|/**      * @since 6.0      */
+comment|/**      * Gets a new or cached instance of the given value.      *<p>      * See {@link ConstantUtf8} class Javadoc for details.      *</p>      *       * @param value the value.      * @return a new or cached instance of the given value.      * @since 6.0      */
 specifier|public
 specifier|static
 name|ConstantUtf8
@@ -445,14 +502,24 @@ name|getInstance
 parameter_list|(
 specifier|final
 name|String
-name|s
+name|value
 parameter_list|)
 block|{
 return|return
+name|Cache
+operator|.
+name|isEnabled
+argument_list|()
+condition|?
+name|getCachedInstance
+argument_list|(
+name|value
+argument_list|)
+else|:
 operator|new
 name|ConstantUtf8
 argument_list|(
-name|s
+name|value
 argument_list|)
 return|;
 block|}
@@ -462,13 +529,21 @@ name|void
 name|printStats
 parameter_list|()
 block|{
+specifier|final
+name|String
+name|prefix
+init|=
+literal|"[Apache Commons BCEL]"
+decl_stmt|;
 name|System
 operator|.
 name|err
 operator|.
 name|printf
 argument_list|(
-literal|"Cache hit %,d/%,d, %d skipped.%n"
+literal|"%s Cache hit %,d/%,d, %d skipped.%n"
+argument_list|,
+name|prefix
 argument_list|,
 name|hits
 argument_list|,
@@ -483,41 +558,66 @@ name|err
 operator|.
 name|printf
 argument_list|(
-literal|"Total of %,d ConstantUtf8 objects created.%n"
+literal|"%s Total of %,d ConstantUtf8 objects created.%n"
+argument_list|,
+name|prefix
 argument_list|,
 name|created
+argument_list|)
+expr_stmt|;
+name|System
+operator|.
+name|err
+operator|.
+name|printf
+argument_list|(
+literal|"%s Configuration: %s=%,d, %s=%,d.%n"
+argument_list|,
+name|prefix
+argument_list|,
+name|SYS_PROP_CACHE_MAX_ENTRIES
+argument_list|,
+name|Cache
+operator|.
+name|MAX_ENTRIES
+argument_list|,
+name|SYS_PROP_CACHE_MAX_ENTRY_SIZE
+argument_list|,
+name|Cache
+operator|.
+name|MAX_ENTRY_SIZE
 argument_list|)
 expr_stmt|;
 block|}
 specifier|private
 specifier|final
 name|String
-name|bytes
+name|value
 decl_stmt|;
-comment|/**      * Initialize from another object.      */
+comment|/**      * Initializes from another object.      *       * @param constantUtf8 the value.      */
 specifier|public
 name|ConstantUtf8
 parameter_list|(
 specifier|final
 name|ConstantUtf8
-name|c
+name|constantUtf8
 parameter_list|)
 block|{
 name|this
 argument_list|(
-name|c
+name|constantUtf8
 operator|.
 name|getBytes
 argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Initialize instance from file data.      *      * @param file Input stream      * @throws IOException      */
+comment|/**      * Initializes instance from file data.      *      * @param dataInput Input stream      * @throws IOException      */
 name|ConstantUtf8
 parameter_list|(
 specifier|final
 name|DataInput
-name|file
+name|dataInput
 parameter_list|)
 throws|throws
 name|IOException
@@ -529,9 +629,9 @@ operator|.
 name|CONSTANT_Utf8
 argument_list|)
 expr_stmt|;
-name|bytes
+name|value
 operator|=
-name|file
+name|dataInput
 operator|.
 name|readUTF
 argument_list|()
@@ -540,13 +640,13 @@ name|created
 operator|++
 expr_stmt|;
 block|}
-comment|/**      * @param bytes Data      */
+comment|/**      * @param value Data      */
 specifier|public
 name|ConstantUtf8
 parameter_list|(
 specifier|final
 name|String
-name|bytes
+name|value
 parameter_list|)
 block|{
 name|super
@@ -558,7 +658,7 @@ argument_list|)
 expr_stmt|;
 if|if
 condition|(
-name|bytes
+name|value
 operator|==
 literal|null
 condition|)
@@ -567,21 +667,21 @@ throw|throw
 operator|new
 name|IllegalArgumentException
 argument_list|(
-literal|"bytes must not be null!"
+literal|"Value must not be null."
 argument_list|)
 throw|;
 block|}
 name|this
 operator|.
-name|bytes
+name|value
 operator|=
-name|bytes
+name|value
 expr_stmt|;
 name|created
 operator|++
 expr_stmt|;
 block|}
-comment|/**      * Called by objects that are traversing the nodes of the tree implicitely      * defined by the contents of a Java class. I.e., the hierarchy of methods,      * fields, attributes, etc. spawns a tree of objects.      *      * @param v Visitor object      */
+comment|/**      * Called by objects that are traversing the nodes of the tree implicitely defined by the contents of a Java class.      * I.e., the hierarchy of methods, fields, attributes, etc. spawns a tree of objects.      *      * @param v Visitor object      */
 annotation|@
 name|Override
 specifier|public
@@ -601,7 +701,7 @@ name|this
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Dump String in Utf8 format to file stream.      *      * @param file Output file stream      * @throws IOException      */
+comment|/**      * Dumps String in Utf8 format to file stream.      *      * @param file Output file stream      * @throws IOException      */
 annotation|@
 name|Override
 specifier|public
@@ -630,7 +730,7 @@ name|file
 operator|.
 name|writeUTF
 argument_list|(
-name|bytes
+name|value
 argument_list|)
 expr_stmt|;
 block|}
@@ -642,10 +742,10 @@ name|getBytes
 parameter_list|()
 block|{
 return|return
-name|bytes
+name|value
 return|;
 block|}
-comment|/**      * @param bytes the raw bytes of this Utf-8      * @deprecated (since 6.0)      */
+comment|/**      * @param bytes the raw bytes of this UTF-8      * @deprecated (since 6.0)      */
 annotation|@
 name|java
 operator|.
@@ -689,7 +789,7 @@ name|Utility
 operator|.
 name|replace
 argument_list|(
-name|bytes
+name|value
 argument_list|,
 literal|"\n"
 argument_list|,
