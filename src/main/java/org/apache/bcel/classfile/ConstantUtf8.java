@@ -102,7 +102,7 @@ block|{
 specifier|private
 specifier|static
 class|class
-name|CACHE_HOLDER
+name|CacheHolder
 block|{
 specifier|private
 specifier|static
@@ -296,7 +296,7 @@ name|void
 name|clearCache
 parameter_list|()
 block|{
-name|CACHE_HOLDER
+name|CacheHolder
 operator|.
 name|CACHE
 operator|.
@@ -367,7 +367,7 @@ comment|// might be better with a specific lock object
 name|ConstantUtf8
 name|result
 init|=
-name|CACHE_HOLDER
+name|CacheHolder
 operator|.
 name|CACHE
 operator|.
@@ -398,7 +398,7 @@ argument_list|(
 name|s
 argument_list|)
 expr_stmt|;
-name|CACHE_HOLDER
+name|CacheHolder
 operator|.
 name|CACHE
 operator|.
