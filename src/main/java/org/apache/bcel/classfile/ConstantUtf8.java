@@ -466,34 +466,26 @@ name|System
 operator|.
 name|err
 operator|.
-name|println
+name|printf
 argument_list|(
-literal|"Cache hit "
-operator|+
+literal|"Cache hit %,d/%,d, %d skipped.%n"
+argument_list|,
 name|hits
-operator|+
-literal|"/"
-operator|+
+argument_list|,
 name|considered
-operator|+
-literal|", "
-operator|+
+argument_list|,
 name|skipped
-operator|+
-literal|" skipped"
 argument_list|)
 expr_stmt|;
 name|System
 operator|.
 name|err
 operator|.
-name|println
+name|printf
 argument_list|(
-literal|"Total of "
-operator|+
+literal|"Total of %,d ConstantUtf8 objects created.%n"
+argument_list|,
 name|created
-operator|+
-literal|" ConstantUtf8 objects created"
 argument_list|)
 expr_stmt|;
 block|}
