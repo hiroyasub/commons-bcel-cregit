@@ -43,6 +43,18 @@ name|apache
 operator|.
 name|bcel
 operator|.
+name|Const
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|bcel
+operator|.
 name|Constants
 import|;
 end_import
@@ -340,7 +352,7 @@ if|if
 condition|(
 name|magic
 operator|!=
-name|Constants
+name|Const
 operator|.
 name|JVM_CLASSFILE_MAGIC
 condition|)
