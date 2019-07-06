@@ -2483,21 +2483,21 @@ comment|/** The ConstantPoolGen instance this Visitor operates on. */
 specifier|private
 specifier|final
 name|ConstantPoolGen
-name|cpg
+name|constantPoolGen
 decl_stmt|;
 comment|/** The only Constructor. */
 name|InstOperandConstraintVisitor
 parameter_list|(
 specifier|final
 name|ConstantPoolGen
-name|cpg
+name|constantPoolGen
 parameter_list|)
 block|{
 name|this
 operator|.
-name|cpg
+name|constantPoolGen
 operator|=
-name|cpg
+name|constantPoolGen
 expr_stmt|;
 block|}
 comment|/**          * Utility method to return the max_locals value of the method verified          * by the surrounding Pass3aVerifier instance.          */
@@ -2603,7 +2603,7 @@ literal|0
 operator|||
 name|idx
 operator|>=
-name|cpg
+name|constantPoolGen
 operator|.
 name|getSize
 argument_list|()
@@ -2634,18 +2634,18 @@ name|visitLoadClass
 parameter_list|(
 specifier|final
 name|LoadClass
-name|o
+name|loadClass
 parameter_list|)
 block|{
 specifier|final
 name|ObjectType
 name|t
 init|=
-name|o
+name|loadClass
 operator|.
 name|getLoadClassType
 argument_list|(
-name|cpg
+name|constantPoolGen
 argument_list|)
 decl_stmt|;
 if|if
@@ -2696,15 +2696,15 @@ argument_list|(
 operator|(
 name|Instruction
 operator|)
-name|o
+name|loadClass
 argument_list|,
 literal|"Class '"
 operator|+
-name|o
+name|loadClass
 operator|.
 name|getLoadClassType
 argument_list|(
-name|cpg
+name|constantPoolGen
 argument_list|)
 operator|.
 name|getClassName
@@ -2734,14 +2734,14 @@ name|visitLDC
 parameter_list|(
 specifier|final
 name|LDC
-name|o
+name|ldc
 parameter_list|)
 block|{
 name|indexValid
 argument_list|(
-name|o
+name|ldc
 argument_list|,
-name|o
+name|ldc
 operator|.
 name|getIndex
 argument_list|()
@@ -2751,11 +2751,11 @@ specifier|final
 name|Constant
 name|c
 init|=
-name|cpg
+name|constantPoolGen
 operator|.
 name|getConstant
 argument_list|(
-name|o
+name|ldc
 operator|.
 name|getIndex
 argument_list|()
@@ -2806,7 +2806,7 @@ condition|)
 block|{
 name|constraintViolated
 argument_list|(
-name|o
+name|ldc
 argument_list|,
 literal|"Operand of LDC or LDC_W must be one of CONSTANT_Integer, CONSTANT_Float or CONSTANT_String, but is '"
 operator|+
@@ -2845,7 +2845,7 @@ specifier|final
 name|Constant
 name|c
 init|=
-name|cpg
+name|constantPoolGen
 operator|.
 name|getConstant
 argument_list|(
@@ -2935,7 +2935,7 @@ name|o
 operator|.
 name|getReferenceType
 argument_list|(
-name|cpg
+name|constantPoolGen
 argument_list|)
 decl_stmt|;
 if|if
@@ -2994,7 +2994,7 @@ specifier|final
 name|Constant
 name|c
 init|=
-name|cpg
+name|constantPoolGen
 operator|.
 name|getConstant
 argument_list|(
@@ -3034,7 +3034,7 @@ name|o
 operator|.
 name|getFieldName
 argument_list|(
-name|cpg
+name|constantPoolGen
 argument_list|)
 decl_stmt|;
 specifier|final
@@ -3112,7 +3112,7 @@ name|o
 operator|.
 name|getType
 argument_list|(
-name|cpg
+name|constantPoolGen
 argument_list|)
 decl_stmt|;
 comment|/* TODO: Check if assignment compatibility is sufficient.                    * What does Sun do?                    */
@@ -3213,7 +3213,7 @@ name|o
 operator|.
 name|getType
 argument_list|(
-name|cpg
+name|constantPoolGen
 argument_list|)
 decl_stmt|;
 if|if
@@ -3308,7 +3308,7 @@ name|o
 operator|.
 name|getType
 argument_list|(
-name|cpg
+name|constantPoolGen
 argument_list|)
 expr_stmt|;
 comment|//                Type f_type = Type.getType(f.getSignature());
@@ -3390,7 +3390,7 @@ specifier|final
 name|Constant
 name|c
 init|=
-name|cpg
+name|constantPoolGen
 operator|.
 name|getConstant
 argument_list|(
@@ -3433,7 +3433,7 @@ operator|(
 name|ConstantNameAndType
 operator|)
 operator|(
-name|cpg
+name|constantPoolGen
 operator|.
 name|getConstant
 argument_list|(
@@ -3457,7 +3457,7 @@ operator|(
 name|ConstantUtf8
 operator|)
 operator|(
-name|cpg
+name|constantPoolGen
 operator|.
 name|getConstant
 argument_list|(
@@ -3551,7 +3551,7 @@ specifier|final
 name|Constant
 name|c
 init|=
-name|cpg
+name|constantPoolGen
 operator|.
 name|getConstant
 argument_list|(
@@ -3596,7 +3596,7 @@ operator|(
 name|ConstantNameAndType
 operator|)
 operator|(
-name|cpg
+name|constantPoolGen
 operator|.
 name|getConstant
 argument_list|(
@@ -3621,7 +3621,7 @@ operator|(
 name|ConstantUtf8
 operator|)
 operator|(
-name|cpg
+name|constantPoolGen
 operator|.
 name|getConstant
 argument_list|(
@@ -3697,7 +3697,7 @@ name|o
 operator|.
 name|getReturnType
 argument_list|(
-name|cpg
+name|constantPoolGen
 argument_list|)
 decl_stmt|;
 if|if
@@ -3792,7 +3792,7 @@ name|o
 operator|.
 name|getArgumentTypes
 argument_list|(
-name|cpg
+name|constantPoolGen
 argument_list|)
 decl_stmt|;
 for|for
@@ -3919,7 +3919,7 @@ specifier|final
 name|Constant
 name|c
 init|=
-name|cpg
+name|constantPoolGen
 operator|.
 name|getConstant
 argument_list|(
@@ -3978,7 +3978,7 @@ specifier|final
 name|Constant
 name|c
 init|=
-name|cpg
+name|constantPoolGen
 operator|.
 name|getConstant
 argument_list|(
@@ -4037,7 +4037,7 @@ specifier|final
 name|Constant
 name|c
 init|=
-name|cpg
+name|constantPoolGen
 operator|.
 name|getConstant
 argument_list|(
@@ -4079,7 +4079,7 @@ operator|(
 name|ConstantUtf8
 operator|)
 operator|(
-name|cpg
+name|constantPoolGen
 operator|.
 name|getConstant
 argument_list|(
@@ -4156,7 +4156,7 @@ specifier|final
 name|Constant
 name|c
 init|=
-name|cpg
+name|constantPoolGen
 operator|.
 name|getConstant
 argument_list|(
@@ -4220,7 +4220,7 @@ name|o
 operator|.
 name|getType
 argument_list|(
-name|cpg
+name|constantPoolGen
 argument_list|)
 decl_stmt|;
 if|if
@@ -4307,7 +4307,7 @@ specifier|final
 name|Constant
 name|c
 init|=
-name|cpg
+name|constantPoolGen
 operator|.
 name|getConstant
 argument_list|(
@@ -4347,7 +4347,7 @@ name|o
 operator|.
 name|getType
 argument_list|(
-name|cpg
+name|constantPoolGen
 argument_list|)
 decl_stmt|;
 if|if
@@ -5562,7 +5562,7 @@ name|o
 operator|.
 name|getFieldName
 argument_list|(
-name|cpg
+name|constantPoolGen
 argument_list|)
 decl_stmt|;
 specifier|final
@@ -5701,7 +5701,7 @@ name|o
 operator|.
 name|getReferenceType
 argument_list|(
-name|cpg
+name|constantPoolGen
 argument_list|)
 operator|+
 literal|"'."
@@ -5845,7 +5845,7 @@ name|o
 operator|.
 name|getFieldName
 argument_list|(
-name|cpg
+name|constantPoolGen
 argument_list|)
 decl_stmt|;
 specifier|final
@@ -6032,7 +6032,7 @@ name|o
 operator|.
 name|getClassName
 argument_list|(
-name|cpg
+name|constantPoolGen
 argument_list|)
 decl_stmt|;
 specifier|final
@@ -6074,7 +6074,7 @@ name|o
 operator|.
 name|getMethodName
 argument_list|(
-name|cpg
+name|constantPoolGen
 argument_list|)
 operator|+
 literal|"' with expected signature '"
@@ -6083,7 +6083,7 @@ name|o
 operator|.
 name|getSignature
 argument_list|(
-name|cpg
+name|constantPoolGen
 argument_list|)
 operator|+
 literal|"' not found in class '"
@@ -6305,7 +6305,7 @@ name|invoke
 operator|.
 name|getMethodName
 argument_list|(
-name|cpg
+name|constantPoolGen
 argument_list|)
 argument_list|)
 operator|)
@@ -6327,7 +6327,7 @@ name|invoke
 operator|.
 name|getReturnType
 argument_list|(
-name|cpg
+name|constantPoolGen
 argument_list|)
 argument_list|)
 operator|)
@@ -6349,7 +6349,7 @@ name|invoke
 operator|.
 name|getArgumentTypes
 argument_list|(
-name|cpg
+name|constantPoolGen
 argument_list|)
 argument_list|)
 operator|)
@@ -6390,7 +6390,7 @@ name|o
 operator|.
 name|getClassName
 argument_list|(
-name|cpg
+name|constantPoolGen
 argument_list|)
 decl_stmt|;
 specifier|final
@@ -6432,7 +6432,7 @@ name|o
 operator|.
 name|getMethodName
 argument_list|(
-name|cpg
+name|constantPoolGen
 argument_list|)
 operator|+
 literal|"' with expected signature '"
@@ -6441,7 +6441,7 @@ name|o
 operator|.
 name|getSignature
 argument_list|(
-name|cpg
+name|constantPoolGen
 argument_list|)
 operator|+
 literal|"' not found in class '"
@@ -6508,7 +6508,7 @@ name|o
 operator|.
 name|getMethodName
 argument_list|(
-name|cpg
+name|constantPoolGen
 argument_list|)
 operator|.
 name|equals
@@ -6591,7 +6591,7 @@ name|o
 operator|.
 name|getMethodName
 argument_list|(
-name|cpg
+name|constantPoolGen
 argument_list|)
 argument_list|)
 operator|)
@@ -6613,7 +6613,7 @@ name|o
 operator|.
 name|getReturnType
 argument_list|(
-name|cpg
+name|constantPoolGen
 argument_list|)
 argument_list|)
 operator|)
@@ -6635,7 +6635,7 @@ name|o
 operator|.
 name|getArgumentTypes
 argument_list|(
-name|cpg
+name|constantPoolGen
 argument_list|)
 argument_list|)
 operator|)
@@ -6675,7 +6675,7 @@ name|o
 operator|.
 name|getMethodName
 argument_list|(
-name|cpg
+name|constantPoolGen
 argument_list|)
 operator|+
 literal|"' with proper signature not declared in superclass hierarchy."
@@ -6733,7 +6733,7 @@ name|o
 operator|.
 name|getClassName
 argument_list|(
-name|cpg
+name|constantPoolGen
 argument_list|)
 decl_stmt|;
 specifier|final
@@ -6775,7 +6775,7 @@ name|o
 operator|.
 name|getMethodName
 argument_list|(
-name|cpg
+name|constantPoolGen
 argument_list|)
 operator|+
 literal|"' with expected signature '"
@@ -6784,7 +6784,7 @@ name|o
 operator|.
 name|getSignature
 argument_list|(
-name|cpg
+name|constantPoolGen
 argument_list|)
 operator|+
 literal|"' not found in class '"
@@ -6820,7 +6820,7 @@ name|o
 operator|.
 name|getMethodName
 argument_list|(
-name|cpg
+name|constantPoolGen
 argument_list|)
 operator|+
 literal|"' has ACC_STATIC unset."
@@ -6875,7 +6875,7 @@ name|o
 operator|.
 name|getClassName
 argument_list|(
-name|cpg
+name|constantPoolGen
 argument_list|)
 decl_stmt|;
 specifier|final
@@ -6917,7 +6917,7 @@ name|o
 operator|.
 name|getMethodName
 argument_list|(
-name|cpg
+name|constantPoolGen
 argument_list|)
 operator|+
 literal|"' with expected signature '"
@@ -6926,7 +6926,7 @@ name|o
 operator|.
 name|getSignature
 argument_list|(
-name|cpg
+name|constantPoolGen
 argument_list|)
 operator|+
 literal|"' not found in class '"
