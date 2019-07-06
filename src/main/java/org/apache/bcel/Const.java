@@ -308,6 +308,24 @@ name|MINOR_13
 init|=
 literal|0
 decl_stmt|;
+comment|/** Major version number of class files for Java 14.    *  @see #MINOR_14    *  @since 6.4.0    *  */
+specifier|public
+specifier|static
+specifier|final
+name|short
+name|MAJOR_14
+init|=
+literal|58
+decl_stmt|;
+comment|/** Minor version number of class files for Java 14.    *  @see #MAJOR_14    *  @since 6.4.0    *  */
+specifier|public
+specifier|static
+specifier|final
+name|short
+name|MINOR_14
+init|=
+literal|0
+decl_stmt|;
 comment|/** Default major version number.  Class file is for Java 1.1.    *  @see #MAJOR_1_1    *  */
 specifier|public
 specifier|static
