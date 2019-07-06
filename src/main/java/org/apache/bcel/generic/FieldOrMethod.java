@@ -101,6 +101,7 @@ comment|/**      * Empty constructor needed for Instruction.readInstruction.    
 name|FieldOrMethod
 parameter_list|()
 block|{
+comment|// no init
 block|}
 comment|/**      * @param index to constant pool      */
 specifier|protected
@@ -509,6 +510,16 @@ throw|throw
 operator|new
 name|ClassGenException
 argument_list|(
+name|rt
+operator|.
+name|getClass
+argument_list|()
+operator|.
+name|getCanonicalName
+argument_list|()
+operator|+
+literal|" "
+operator|+
 name|rt
 operator|.
 name|getSignature

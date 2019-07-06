@@ -110,7 +110,7 @@ name|getVerifier
 parameter_list|(
 specifier|final
 name|String
-name|fully_qualified_classname
+name|fullyQualifiedClassName
 parameter_list|)
 block|{
 name|Verifier
@@ -120,7 +120,7 @@ name|hashMap
 operator|.
 name|get
 argument_list|(
-name|fully_qualified_classname
+name|fullyQualifiedClassName
 argument_list|)
 decl_stmt|;
 if|if
@@ -135,21 +135,21 @@ operator|=
 operator|new
 name|Verifier
 argument_list|(
-name|fully_qualified_classname
+name|fullyQualifiedClassName
 argument_list|)
 expr_stmt|;
 name|hashMap
 operator|.
 name|put
 argument_list|(
-name|fully_qualified_classname
+name|fullyQualifiedClassName
 argument_list|,
 name|v
 argument_list|)
 expr_stmt|;
 name|notify
 argument_list|(
-name|fully_qualified_classname
+name|fullyQualifiedClassName
 argument_list|)
 expr_stmt|;
 block|}
@@ -165,7 +165,7 @@ name|notify
 parameter_list|(
 specifier|final
 name|String
-name|fully_qualified_classname
+name|fullyQualifiedClassName
 parameter_list|)
 block|{
 comment|// notify the observers
@@ -182,7 +182,7 @@ name|vfo
 operator|.
 name|update
 argument_list|(
-name|fully_qualified_classname
+name|fullyQualifiedClassName
 argument_list|)
 expr_stmt|;
 block|}
