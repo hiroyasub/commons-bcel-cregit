@@ -89,6 +89,16 @@ name|org
 operator|.
 name|junit
 operator|.
+name|Assert
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|junit
+operator|.
 name|Test
 import|;
 end_import
@@ -181,12 +191,10 @@ name|method
 argument_list|)
 control|)
 block|{
-name|System
-operator|.
-name|out
-operator|.
-name|println
-argument_list|(
+specifier|final
+name|String
+name|string
+init|=
 name|instructionHandle
 operator|.
 name|getInstruction
@@ -199,8 +207,16 @@ operator|.
 name|getConstantPool
 argument_list|()
 argument_list|)
+decl_stmt|;
+name|Assert
+operator|.
+name|assertNotNull
+argument_list|(
+name|string
 argument_list|)
 expr_stmt|;
+comment|// TODO Need real assertions.
+comment|// System.out.println(string);
 block|}
 block|}
 block|}
