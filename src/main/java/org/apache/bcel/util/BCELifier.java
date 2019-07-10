@@ -605,6 +605,34 @@ expr_stmt|;
 name|_out
 operator|.
 name|println
+argument_list|(
+literal|"    _cg.setMajor("
+operator|+
+name|clazz
+operator|.
+name|getMajor
+argument_list|()
+operator|+
+literal|");"
+argument_list|)
+expr_stmt|;
+name|_out
+operator|.
+name|println
+argument_list|(
+literal|"    _cg.setMinor("
+operator|+
+name|clazz
+operator|.
+name|getMinor
+argument_list|()
+operator|+
+literal|");"
+argument_list|)
+expr_stmt|;
+name|_out
+operator|.
+name|println
 argument_list|()
 expr_stmt|;
 name|_out
