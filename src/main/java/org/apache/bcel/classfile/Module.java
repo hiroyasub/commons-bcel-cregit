@@ -58,7 +58,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * This class is derived from<em>Attribute</em> and represents the list of modules required, exported, opened or provided by a module.  * There may be at most one Module attribute in a ClassFile structure.  *  * @see   Attribute  * @since 6.4  */
+comment|/**  * This class is derived from<em>Attribute</em> and represents the list of modules required, exported, opened or provided by a module.  * There may be at most one Module attribute in a ClassFile structure.  *  * @see   Attribute  * @since 6.4.0  */
 end_comment
 
 begin_class

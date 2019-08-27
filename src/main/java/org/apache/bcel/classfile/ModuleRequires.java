@@ -58,7 +58,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * This class represents an entry in the requires table of the Module attribute.  * Each entry describes a module on which the parent module depends.  *  * @see   Module  * @since 6.4  */
+comment|/**  * This class represents an entry in the requires table of the Module attribute.  * Each entry describes a module on which the parent module depends.  *  * @see   Module  * @since 6.4.0  */
 end_comment
 
 begin_class

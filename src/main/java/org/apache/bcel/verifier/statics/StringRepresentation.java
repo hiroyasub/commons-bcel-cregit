@@ -1713,7 +1713,7 @@ name|obj
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * @since 6.4      */
+comment|/**      * @since 6.4.0      */
 annotation|@
 name|Override
 specifier|public

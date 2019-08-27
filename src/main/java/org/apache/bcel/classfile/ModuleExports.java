@@ -58,7 +58,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * This class represents an entry in the exports table of the Module attribute.  * Each entry describes a package which may open the parent module.  *  * @see   Module  * @since 6.4  */
+comment|/**  * This class represents an entry in the exports table of the Module attribute.  * Each entry describes a package which may open the parent module.  *  * @see   Module  * @since 6.4.0  */
 end_comment
 
 begin_class

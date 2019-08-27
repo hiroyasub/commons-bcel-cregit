@@ -319,7 +319,7 @@ name|MethodParameters
 name|obj
 parameter_list|)
 function_decl|;
-comment|/**      * @since 6.4      */
+comment|/**      * @since 6.4.0      */
 specifier|default
 name|void
 name|visitMethodParameter
@@ -381,7 +381,7 @@ parameter_list|)
 block|{
 comment|// empty
 block|}
-comment|/**      * @since 6.4      */
+comment|/**      * @since 6.4.0      */
 name|void
 name|visitModule
 parameter_list|(
@@ -389,7 +389,7 @@ name|Module
 name|constantModule
 parameter_list|)
 function_decl|;
-comment|/**      * @since 6.4      */
+comment|/**      * @since 6.4.0      */
 name|void
 name|visitModuleRequires
 parameter_list|(
@@ -397,7 +397,7 @@ name|ModuleRequires
 name|constantModule
 parameter_list|)
 function_decl|;
-comment|/**      * @since 6.4      */
+comment|/**      * @since 6.4.0      */
 name|void
 name|visitModuleExports
 parameter_list|(
@@ -405,7 +405,7 @@ name|ModuleExports
 name|constantModule
 parameter_list|)
 function_decl|;
-comment|/**      * @since 6.4      */
+comment|/**      * @since 6.4.0      */
 name|void
 name|visitModuleOpens
 parameter_list|(
@@ -413,7 +413,7 @@ name|ModuleOpens
 name|constantModule
 parameter_list|)
 function_decl|;
-comment|/**      * @since 6.4      */
+comment|/**      * @since 6.4.0      */
 name|void
 name|visitModuleProvides
 parameter_list|(
@@ -421,7 +421,7 @@ name|ModuleProvides
 name|constantModule
 parameter_list|)
 function_decl|;
-comment|/**      * @since 6.4      */
+comment|/**      * @since 6.4.0      */
 name|void
 name|visitModulePackages
 parameter_list|(
@@ -429,7 +429,7 @@ name|ModulePackages
 name|constantModule
 parameter_list|)
 function_decl|;
-comment|/**      * @since 6.4      */
+comment|/**      * @since 6.4.0      */
 name|void
 name|visitModuleMainClass
 parameter_list|(
@@ -437,7 +437,7 @@ name|ModuleMainClass
 name|obj
 parameter_list|)
 function_decl|;
-comment|/**      * @since 6.4      */
+comment|/**      * @since 6.4.0      */
 name|void
 name|visitNestHost
 parameter_list|(
@@ -445,7 +445,7 @@ name|NestHost
 name|obj
 parameter_list|)
 function_decl|;
-comment|/**      * @since 6.4      */
+comment|/**      * @since 6.4.0      */
 name|void
 name|visitNestMembers
 parameter_list|(

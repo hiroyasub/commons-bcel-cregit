@@ -1112,63 +1112,63 @@ name|constantDynamicCount
 init|=
 literal|0
 decl_stmt|;
-comment|/** @since 6.4 */
+comment|/** @since 6.4.0 */
 specifier|public
 name|int
 name|moduleCount
 init|=
 literal|0
 decl_stmt|;
-comment|/** @since 6.4 */
+comment|/** @since 6.4.0 */
 specifier|public
 name|int
 name|moduleExportsCount
 init|=
 literal|0
 decl_stmt|;
-comment|/** @since 6.4 */
+comment|/** @since 6.4.0 */
 specifier|public
 name|int
 name|moduleOpensCount
 init|=
 literal|0
 decl_stmt|;
-comment|/** @since 6.4 */
+comment|/** @since 6.4.0 */
 specifier|public
 name|int
 name|moduleProvidesCount
 init|=
 literal|0
 decl_stmt|;
-comment|/** @since 6.4 */
+comment|/** @since 6.4.0 */
 specifier|public
 name|int
 name|moduleRequiresCount
 init|=
 literal|0
 decl_stmt|;
-comment|/** @since 6.4 */
+comment|/** @since 6.4.0 */
 specifier|public
 name|int
 name|moduleMainClassCount
 init|=
 literal|0
 decl_stmt|;
-comment|/** @since 6.4 */
+comment|/** @since 6.4.0 */
 specifier|public
 name|int
 name|modulePackagesCount
 init|=
 literal|0
 decl_stmt|;
-comment|/** @since 6.4 */
+comment|/** @since 6.4.0 */
 specifier|public
 name|int
 name|nestHostCount
 init|=
 literal|0
 decl_stmt|;
-comment|/** @since 6.4 */
+comment|/** @since 6.4.0 */
 specifier|public
 name|int
 name|nestMembersCount
@@ -1900,7 +1900,7 @@ name|constantDynamicCount
 operator|++
 expr_stmt|;
 block|}
-comment|/** @since 6.4 */
+comment|/** @since 6.4.0 */
 annotation|@
 name|Override
 specifier|public
@@ -1916,7 +1916,7 @@ name|moduleCount
 operator|++
 expr_stmt|;
 block|}
-comment|/** @since 6.4 */
+comment|/** @since 6.4.0 */
 annotation|@
 name|Override
 specifier|public
@@ -1932,7 +1932,7 @@ name|moduleExportsCount
 operator|++
 expr_stmt|;
 block|}
-comment|/** @since 6.4 */
+comment|/** @since 6.4.0 */
 annotation|@
 name|Override
 specifier|public
@@ -1948,7 +1948,7 @@ name|moduleOpensCount
 operator|++
 expr_stmt|;
 block|}
-comment|/** @since 6.4 */
+comment|/** @since 6.4.0 */
 annotation|@
 name|Override
 specifier|public
@@ -1964,7 +1964,7 @@ name|moduleProvidesCount
 operator|++
 expr_stmt|;
 block|}
-comment|/** @since 6.4 */
+comment|/** @since 6.4.0 */
 annotation|@
 name|Override
 specifier|public
@@ -1980,7 +1980,7 @@ name|moduleRequiresCount
 operator|++
 expr_stmt|;
 block|}
-comment|/** @since 6.4 */
+comment|/** @since 6.4.0 */
 annotation|@
 name|Override
 specifier|public
@@ -1996,7 +1996,7 @@ name|moduleMainClassCount
 operator|++
 expr_stmt|;
 block|}
-comment|/** @since 6.4 */
+comment|/** @since 6.4.0 */
 annotation|@
 name|Override
 specifier|public
@@ -2012,7 +2012,7 @@ name|modulePackagesCount
 operator|++
 expr_stmt|;
 block|}
-comment|/** @since 6.4 */
+comment|/** @since 6.4.0 */
 annotation|@
 name|Override
 specifier|public
@@ -2028,7 +2028,7 @@ name|nestHostCount
 operator|++
 expr_stmt|;
 block|}
-comment|/** @since 6.4 */
+comment|/** @since 6.4.0 */
 annotation|@
 name|Override
 specifier|public
