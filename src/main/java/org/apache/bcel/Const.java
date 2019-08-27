@@ -364,7 +364,7 @@ init|=
 literal|255
 decl_stmt|;
 comment|// 2^8 - 1
-comment|/** One of the access flags for fields, methods, or classes.    *  @see<a href='http://docs.oracle.com/javase/specs/jvms/se8/html/jvms-4.html#jvms-4.5'>    *  Flag definitions for Fields in the Java Virtual Machine Specification (Java SE 8 Edition).</a>    *  @see<a href='http://docs.oracle.com/javase/specs/jvms/se8/html/jvms-4.html#jvms-4.6'>    *  Flag definitions for Methods in the Java Virtual Machine Specification (Java SE 8 Edition).</a>    *  @see<a href='http://docs.oracle.com/javase/specs/jvms/se8/html/jvms-4.html#jvms-4.7.6-300-D.1-D.1'>    *  Flag definitions for Classes in the Java Virtual Machine Specification (Java SE 8 Edition).</a>    */
+comment|/** One of the access flags for fields, methods, or classes.    *  @see<a href='http://docs.oracle.com/javase/specs/jvms/se9/html/jvms-4.html#jvms-4.1-200-E.1'>    *  Flag definitions for Classes in the Java Virtual Machine Specification (Java SE 9 Edition).</a>    *  @see<a href='http://docs.oracle.com/javase/specs/jvms/se9/html/jvms-4.html#jvms-4.5'>    *  Flag definitions for Fields in the Java Virtual Machine Specification (Java SE 9 Edition).</a>    *  @see<a href='http://docs.oracle.com/javase/specs/jvms/se9/html/jvms-4.html#jvms-4.6'>    *  Flag definitions for Methods in the Java Virtual Machine Specification (Java SE 9 Edition).</a>    *  @see<a href='http://docs.oracle.com/javase/specs/jvms/se9/html/jvms-4.html#jvms-4.7.6-300-D.1-D.1'>    *  Flag definitions for Inner Classes in the Java Virtual Machine Specification (Java SE 9 Edition).</a>    */
 specifier|public
 specifier|static
 specifier|final
@@ -409,7 +409,25 @@ name|ACC_FINAL
 init|=
 literal|0x0010
 decl_stmt|;
-comment|/** One of the access flags for fields, methods, or classes.    *  @see #ACC_PUBLIC    */
+comment|/** One of the access flags for the Module attribute.    *  @see #ACC_PUBLIC    */
+specifier|public
+specifier|static
+specifier|final
+name|short
+name|ACC_OPEN
+init|=
+literal|0x0020
+decl_stmt|;
+comment|/** One of the access flags for classes.    *  @see #ACC_PUBLIC    */
+specifier|public
+specifier|static
+specifier|final
+name|short
+name|ACC_SUPER
+init|=
+literal|0x0020
+decl_stmt|;
+comment|/** One of the access flags for methods.    *  @see #ACC_PUBLIC    */
 specifier|public
 specifier|static
 specifier|final
@@ -418,16 +436,16 @@ name|ACC_SYNCHRONIZED
 init|=
 literal|0x0020
 decl_stmt|;
-comment|/** One of the access flags for fields, methods, or classes.    *  @see #ACC_PUBLIC    */
+comment|/** One of the access flags for the Module attribute.    *  @see #ACC_PUBLIC    */
 specifier|public
 specifier|static
 specifier|final
 name|short
-name|ACC_VOLATILE
+name|ACC_TRANSITIVE
 init|=
-literal|0x0040
+literal|0x0020
 decl_stmt|;
-comment|/** One of the access flags for fields, methods, or classes.    *  @see #ACC_PUBLIC    */
+comment|/** One of the access flags for methods.    *  @see #ACC_PUBLIC    */
 specifier|public
 specifier|static
 specifier|final
@@ -436,7 +454,25 @@ name|ACC_BRIDGE
 init|=
 literal|0x0040
 decl_stmt|;
-comment|/** One of the access flags for fields, methods, or classes.    *  @see #ACC_PUBLIC    */
+comment|/** One of the access flags for the Module attribute.    *  @see #ACC_PUBLIC    */
+specifier|public
+specifier|static
+specifier|final
+name|short
+name|ACC_STATIC_PHASE
+init|=
+literal|0x0040
+decl_stmt|;
+comment|/** One of the access flags for fields.    *  @see #ACC_PUBLIC    */
+specifier|public
+specifier|static
+specifier|final
+name|short
+name|ACC_VOLATILE
+init|=
+literal|0x0040
+decl_stmt|;
+comment|/** One of the access flags for fields.    *  @see #ACC_PUBLIC    */
 specifier|public
 specifier|static
 specifier|final
@@ -445,7 +481,7 @@ name|ACC_TRANSIENT
 init|=
 literal|0x0080
 decl_stmt|;
-comment|/** One of the access flags for fields, methods, or classes.    *  @see #ACC_PUBLIC    */
+comment|/** One of the access flags for methods.    *  @see #ACC_PUBLIC    */
 specifier|public
 specifier|static
 specifier|final
@@ -454,7 +490,7 @@ name|ACC_VARARGS
 init|=
 literal|0x0080
 decl_stmt|;
-comment|/** One of the access flags for fields, methods, or classes.    *  @see #ACC_PUBLIC    */
+comment|/** One of the access flags for methods.    *  @see #ACC_PUBLIC    */
 specifier|public
 specifier|static
 specifier|final
@@ -463,7 +499,7 @@ name|ACC_NATIVE
 init|=
 literal|0x0100
 decl_stmt|;
-comment|/** One of the access flags for fields, methods, or classes.    *  @see #ACC_PUBLIC    */
+comment|/** One of the access flags for classes.    *  @see #ACC_PUBLIC    */
 specifier|public
 specifier|static
 specifier|final
@@ -472,7 +508,7 @@ name|ACC_INTERFACE
 init|=
 literal|0x0200
 decl_stmt|;
-comment|/** One of the access flags for fields, methods, or classes.    *  @see #ACC_PUBLIC    */
+comment|/** One of the access flags for methods or classes.    *  @see #ACC_PUBLIC    */
 specifier|public
 specifier|static
 specifier|final
@@ -481,7 +517,7 @@ name|ACC_ABSTRACT
 init|=
 literal|0x0400
 decl_stmt|;
-comment|/** One of the access flags for fields, methods, or classes.    *  @see #ACC_PUBLIC    */
+comment|/** One of the access flags for methods.    *  @see #ACC_PUBLIC    */
 specifier|public
 specifier|static
 specifier|final
@@ -490,7 +526,7 @@ name|ACC_STRICT
 init|=
 literal|0x0800
 decl_stmt|;
-comment|/** One of the access flags for fields, methods, or classes.    *  @see #ACC_PUBLIC    */
+comment|/** One of the access flags for fields, methods, classes, MethodParameter attribute, or Module attribute.    *  @see #ACC_PUBLIC    */
 specifier|public
 specifier|static
 specifier|final
@@ -499,7 +535,7 @@ name|ACC_SYNTHETIC
 init|=
 literal|0x1000
 decl_stmt|;
-comment|/** One of the access flags for fields, methods, or classes.    *  @see #ACC_PUBLIC    */
+comment|/** One of the access flags for classes.    *  @see #ACC_PUBLIC    */
 specifier|public
 specifier|static
 specifier|final
@@ -508,7 +544,7 @@ name|ACC_ANNOTATION
 init|=
 literal|0x2000
 decl_stmt|;
-comment|/** One of the access flags for fields, methods, or classes.    *  @see #ACC_PUBLIC    */
+comment|/** One of the access flags for fields or classes.    *  @see #ACC_PUBLIC    */
 specifier|public
 specifier|static
 specifier|final
@@ -517,7 +553,8 @@ name|ACC_ENUM
 init|=
 literal|0x4000
 decl_stmt|;
-comment|/** One of the access flags for fields, methods, or classes.    *  @see #ACC_PUBLIC    */
+comment|// Applies to classes compiled by new compilers only
+comment|/** One of the access flags for MethodParameter or Module attributes.    *  @see #ACC_PUBLIC    */
 specifier|public
 specifier|static
 specifier|final
@@ -529,25 +566,32 @@ name|short
 operator|)
 literal|0x8000
 decl_stmt|;
-comment|// Applies to classes compiled by new compilers only
-comment|/** One of the access flags for fields, methods, or classes.    *  @see #ACC_PUBLIC    */
+comment|/** One of the access flags for classes.    *  @see #ACC_PUBLIC    */
 specifier|public
 specifier|static
 specifier|final
 name|short
-name|ACC_SUPER
+name|ACC_MODULE
 init|=
-literal|0x0020
+operator|(
+name|short
+operator|)
+literal|0x8000
 decl_stmt|;
-comment|/** One of the access flags for fields, methods, or classes.    *  @see #ACC_PUBLIC    */
 specifier|public
 specifier|static
 specifier|final
-name|short
+name|int
 name|MAX_ACC_FLAG
 init|=
-name|ACC_ENUM
+literal|0x8000
 decl_stmt|;
+comment|// ACC_MODULE is negative as a short
+comment|// Note that do to overloading:
+comment|// 'synchronized' is for methods, might be 'open' (if Module), 'super' (if class), or 'transitive' (if Module).
+comment|// 'volatile'     is for fields,  might be 'bridge' (if method) or 'static_phase' (if Module)
+comment|// 'transient'    is for fields,  might be 'varargs' (if method)
+comment|// 'module'       is for classes, might be 'mandated' (if Module or MethodParameters)
 comment|/**    * The names of the access flags.    */
 specifier|private
 specifier|static
@@ -586,6 +630,8 @@ block|,
 literal|"annotation"
 block|,
 literal|"enum"
+block|,
+literal|"module"
 block|}
 decl_stmt|;
 comment|/** @since 6.0 */
@@ -7279,10 +7325,50 @@ decl_stmt|;
 specifier|public
 specifier|static
 specifier|final
+name|byte
+name|ATTR_MODULE
+init|=
+literal|22
+decl_stmt|;
+specifier|public
+specifier|static
+specifier|final
+name|byte
+name|ATTR_MODULE_PACKAGES
+init|=
+literal|23
+decl_stmt|;
+specifier|public
+specifier|static
+specifier|final
+name|byte
+name|ATTR_MODULE_MAIN_CLASS
+init|=
+literal|24
+decl_stmt|;
+specifier|public
+specifier|static
+specifier|final
+name|byte
+name|ATTR_NEST_HOST
+init|=
+literal|25
+decl_stmt|;
+specifier|public
+specifier|static
+specifier|final
+name|byte
+name|ATTR_NEST_MEMBERS
+init|=
+literal|26
+decl_stmt|;
+specifier|public
+specifier|static
+specifier|final
 name|short
 name|KNOWN_ATTRIBUTES
 init|=
-literal|22
+literal|27
 decl_stmt|;
 comment|// count of attributes
 specifier|private
@@ -7336,6 +7422,16 @@ block|,
 literal|"BootstrapMethods"
 block|,
 literal|"MethodParameters"
+block|,
+literal|"Module"
+block|,
+literal|"ModulePackages"
+block|,
+literal|"ModuleMainClass"
+block|,
+literal|"NestHost"
+block|,
+literal|"NestMembers"
 block|}
 decl_stmt|;
 comment|/**    *    * @param index    * @return the attribute name    * @since 6.0    */

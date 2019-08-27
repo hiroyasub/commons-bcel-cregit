@@ -360,6 +360,8 @@ operator|.
 name|compactClassName
 argument_list|(
 name|bootstrap_method_name
+argument_list|,
+literal|false
 argument_list|)
 argument_list|)
 expr_stmt|;
@@ -382,7 +384,7 @@ name|buf
 operator|.
 name|append
 argument_list|(
-literal|"\n     Method Arguments:"
+literal|"\nMethod Arguments:"
 argument_list|)
 expr_stmt|;
 for|for
@@ -404,7 +406,7 @@ name|buf
 operator|.
 name|append
 argument_list|(
-literal|"\n     "
+literal|"\n  "
 argument_list|)
 operator|.
 name|append

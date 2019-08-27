@@ -251,6 +251,23 @@ operator|!=
 literal|0
 return|;
 block|}
+specifier|public
+name|void
+name|accept
+parameter_list|(
+specifier|final
+name|Visitor
+name|v
+parameter_list|)
+block|{
+name|v
+operator|.
+name|visitMethodParameter
+argument_list|(
+name|this
+argument_list|)
+expr_stmt|;
+block|}
 comment|/**      * Dump object to file stream on binary format.      *      * @param file Output file stream      * @throws IOException      */
 specifier|public
 specifier|final

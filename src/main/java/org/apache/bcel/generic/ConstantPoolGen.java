@@ -1101,6 +1101,40 @@ condition|)
 block|{
 comment|// TODO should this be handled somehow?
 block|}
+if|else if
+condition|(
+name|c
+operator|instanceof
+name|org
+operator|.
+name|apache
+operator|.
+name|bcel
+operator|.
+name|classfile
+operator|.
+name|ConstantModule
+condition|)
+block|{
+comment|// TODO should this be handled somehow?
+block|}
+if|else if
+condition|(
+name|c
+operator|instanceof
+name|org
+operator|.
+name|apache
+operator|.
+name|bcel
+operator|.
+name|classfile
+operator|.
+name|ConstantPackage
+condition|)
+block|{
+comment|// TODO should this be handled somehow?
+block|}
 else|else
 block|{
 assert|assert

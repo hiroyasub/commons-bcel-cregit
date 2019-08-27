@@ -447,6 +447,8 @@ operator|.
 name|compactClassName
 argument_list|(
 name|inner_class_name
+argument_list|,
+literal|false
 argument_list|)
 expr_stmt|;
 if|if
@@ -478,6 +480,8 @@ operator|.
 name|compactClassName
 argument_list|(
 name|outer_class_name
+argument_list|,
+literal|false
 argument_list|)
 expr_stmt|;
 block|}
