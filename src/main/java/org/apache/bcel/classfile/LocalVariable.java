@@ -70,7 +70,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * This class represents a local variable within a method. It contains its  * scope, name, signature and index on the method's frame.  *  * @see     LocalVariableTable  */
+comment|/**  * This class represents a local variable within a method. It contains its  * scope, name, signature and index on the method's frame.  It is used both  * to represent an element of the LocalVariableTable as well as an element  * of the LocalVariableTypeTable.  The nomenclature used here may be a bit confusing;  * while the two items have the same layout in a class file, a LocalVariableTable  * attribute contains a descriptor_index, not a signature_index.  The  * LocalVariableTypeTable attribute does have a signature_index.  * @see org.apache.bcel.classfile.Utility for more details on the difference.  *  * @see     LocalVariableTable  * @see     LocalVariableTypeTable  */
 end_comment
 
 begin_class
@@ -99,6 +99,8 @@ name|int
 name|name_index
 decl_stmt|;
 comment|// Index in constant pool of variable name
+comment|// Technically, a decscriptor_index for a local variable table entry
+comment|// and a signature_index for a local variable type table entry.
 specifier|private
 name|int
 name|signature_index

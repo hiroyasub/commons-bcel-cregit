@@ -125,6 +125,111 @@ literal|"Lcom/jme3/util/IntMap<TT;>.IntMapIterator;"
 argument_list|)
 argument_list|)
 expr_stmt|;
+comment|// tests for BCEL-279
+name|assertEquals
+argument_list|(
+literal|"type parameters signature"
+argument_list|,
+literal|"<T extends java.lang.Object>(com.google.common.io.ByteProcessor<T>, int)T"
+argument_list|,
+name|Utility
+operator|.
+name|signatureToString
+argument_list|(
+literal|"<T:Ljava/lang/Object;>(Lcom/google/common/io/ByteProcessor<TT;>;I)TT;"
+argument_list|,
+literal|false
+argument_list|)
+argument_list|)
+expr_stmt|;
+name|assertEquals
+argument_list|(
+literal|"type parameters signature"
+argument_list|,
+literal|"<T extends Object>(com.google.common.io.ByteProcessor<T>, int)T"
+argument_list|,
+name|Utility
+operator|.
+name|signatureToString
+argument_list|(
+literal|"<T:Ljava/lang/Object;>(Lcom/google/common/io/ByteProcessor<TT;>;I)TT;"
+argument_list|,
+literal|true
+argument_list|)
+argument_list|)
+expr_stmt|;
+name|assertEquals
+argument_list|(
+literal|"type parameters signature"
+argument_list|,
+literal|"<M extends java.lang.reflect.AccessibleObject& java.lang.reflect.Member>(M)void"
+argument_list|,
+name|Utility
+operator|.
+name|signatureToString
+argument_list|(
+literal|"<M:Ljava/lang/reflect/AccessibleObject;:Ljava/lang/reflect/Member;>(TM;)V"
+argument_list|)
+argument_list|)
+expr_stmt|;
+name|assertEquals
+argument_list|(
+literal|"type parameters signature"
+argument_list|,
+literal|"<K1 extends K, V1 extends V>()com.google.common.cache.Weigher<K1, V1>"
+argument_list|,
+name|Utility
+operator|.
+name|signatureToString
+argument_list|(
+literal|"<K1:TK;V1:TV;>()Lcom/google/common/cache/Weigher<TK1;TV1;>;"
+argument_list|)
+argument_list|)
+expr_stmt|;
+name|assertEquals
+argument_list|(
+literal|"type parameters signature"
+argument_list|,
+literal|"<K1 extends K, V1 extends V>(com.google.common.cache.Weigher<? super K1, ? super V1>)com.google.common.cache.CacheBuilder<K1, V1>"
+argument_list|,
+name|Utility
+operator|.
+name|signatureToString
+argument_list|(
+literal|"<K1:TK;V1:TV;>(Lcom/google/common/cache/Weigher<-TK1;-TV1;>;)Lcom/google/common/cache/CacheBuilder<TK1;TV1;>;"
+argument_list|)
+argument_list|)
+expr_stmt|;
+name|assertEquals
+argument_list|(
+literal|"class signature"
+argument_list|,
+literal|"<N extends java.lang.Object, E extends java.lang.Object> extends java.lang.Object implements com.google.common.graph.Network<N, E>"
+argument_list|,
+name|Utility
+operator|.
+name|signatureToString
+argument_list|(
+literal|"<N:Ljava/lang/Object;E:Ljava/lang/Object;>Ljava/lang/Object;Lcom/google/common/graph/Network<TN;TE;>;"
+argument_list|,
+literal|false
+argument_list|)
+argument_list|)
+expr_stmt|;
+name|assertEquals
+argument_list|(
+literal|"class signature"
+argument_list|,
+literal|"<K extends Object, V extends Object> extends Object"
+argument_list|,
+name|Utility
+operator|.
+name|signatureToString
+argument_list|(
+literal|"<K:Ljava/lang/Object;V:Ljava/lang/Object;>Ljava/lang/Object;"
+argument_list|)
+argument_list|)
+expr_stmt|;
 block|}
 block|}
 end_class

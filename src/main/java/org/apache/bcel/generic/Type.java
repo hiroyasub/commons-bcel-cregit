@@ -860,15 +860,14 @@ block|}
 else|else
 block|{
 comment|// type == T_REFERENCE
-comment|// Utility.signatureToString understands how to parse
-comment|// generic types.
+comment|// Utility.typeSignatureToString understands how to parse generic types.
 specifier|final
 name|String
 name|parsedSignature
 init|=
 name|Utility
 operator|.
-name|signatureToString
+name|typeSignatureToString
 argument_list|(
 name|signature
 argument_list|,
@@ -998,17 +997,23 @@ name|types
 decl_stmt|;
 try|try
 block|{
-comment|// Read all declarations between for `(' and `)'
-if|if
-condition|(
+comment|// Skip any type arguments to read argument declarations between `(' and `)'
+name|index
+operator|=
 name|signature
 operator|.
-name|charAt
+name|indexOf
 argument_list|(
-literal|0
-argument_list|)
-operator|!=
 literal|'('
+argument_list|)
+operator|+
+literal|1
+expr_stmt|;
+if|if
+condition|(
+name|index
+operator|<=
+literal|0
 condition|)
 block|{
 throw|throw
@@ -1021,11 +1026,6 @@ name|signature
 argument_list|)
 throw|;
 block|}
-name|index
-operator|=
-literal|1
-expr_stmt|;
-comment|// current string position
 while|while
 condition|(
 name|signature
@@ -1559,17 +1559,23 @@ name|index
 decl_stmt|;
 try|try
 block|{
-comment|// Read all declarations between for `(' and `)'
-if|if
-condition|(
+comment|// Skip any type arguments to read argument declarations between `(' and `)'
+name|index
+operator|=
 name|signature
 operator|.
-name|charAt
+name|indexOf
 argument_list|(
-literal|0
-argument_list|)
-operator|!=
 literal|'('
+argument_list|)
+operator|+
+literal|1
+expr_stmt|;
+if|if
+condition|(
+name|index
+operator|<=
+literal|0
 condition|)
 block|{
 throw|throw
@@ -1582,11 +1588,6 @@ name|signature
 argument_list|)
 throw|;
 block|}
-name|index
-operator|=
-literal|1
-expr_stmt|;
-comment|// current string position
 while|while
 condition|(
 name|signature

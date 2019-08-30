@@ -272,6 +272,7 @@ argument_list|)
 argument_list|)
 expr_stmt|;
 block|}
+comment|/* How many chars have been consumed      * during parsing in typeSignatureToString().      * Read by methodSignatureToString().      * Set by side effect, but only internally.      */
 specifier|private
 specifier|static
 name|ThreadLocal
@@ -305,7 +306,7 @@ return|;
 block|}
 block|}
 decl_stmt|;
-comment|/* How many chars have been consumed      * during parsing in signatureToString().      * Read by methodSignatureToString().      * Set by side effect,but only internally.      */
+comment|/* The `WIDE' instruction is used in the      * byte code to allow 16-bit wide indices      * for local variables. This opcode      * precedes an `ILOAD', e.g.. The opcode      * immediately following takes an extra      * byte which is combined with the      * following byte to form a      * 16-bit value.      */
 specifier|private
 specifier|static
 name|boolean
@@ -313,7 +314,6 @@ name|wide
 init|=
 literal|false
 decl_stmt|;
-comment|/* The `WIDE' instruction is used in the      * byte code to allow 16-bit wide indices      * for local variables. This opcode      * precedes an `ILOAD', e.g.. The opcode      * immediately following takes an extra      * byte which is combined with the      * following byte to form a      * 16-bit value.      */
 comment|/**      * Convert bit field of flags into string such as `static final'.      *      * @param  access_flags Access flags      * @return String representation of flags      */
 specifier|public
 specifier|static
@@ -2402,7 +2402,33 @@ literal|true
 argument_list|)
 return|;
 block|}
-comment|/**      * Shorten long class name<em>str</em>, i.e., chop off the<em>prefix</em>,      * if the      * class name starts with this string and the flag<em>chopit</em> is true.      * Slashes<em>/</em> are converted to dots<em>.</em>.      *      * @param str The long class name      * @param prefix The prefix the get rid off      * @param chopit Flag that determines whether chopping is executed or not      * @return Compacted class name      */
+comment|/**      * Shorten long class names,<em>java/lang/String</em> becomes      *<em>java.lang.String</em>,      * e.g.. If<em>chopit</em> is<em>true</em> the prefix<em>java.lang</em>      * is also removed.      *      * @param str The long class name      * @param chopit flag that determines whether chopping is executed or not      * @return Compacted class name      */
+specifier|public
+specifier|static
+name|String
+name|compactClassName
+parameter_list|(
+specifier|final
+name|String
+name|str
+parameter_list|,
+specifier|final
+name|boolean
+name|chopit
+parameter_list|)
+block|{
+return|return
+name|compactClassName
+argument_list|(
+name|str
+argument_list|,
+literal|"java.lang."
+argument_list|,
+name|chopit
+argument_list|)
+return|;
+block|}
+comment|/**      * Shorten long class name<em>str</em>, i.e., chop off the<em>prefix</em>,      * if the      * class name starts with this string and the flag<em>chopit</em> is true.      * Slashes<em>/</em> are converted to dots<em>.</em>.      *      * @param str The long class name      * @param prefix The prefix the get rid off      * @param chopit flag that determines whether chopping is executed or not      * @return Compacted class name      */
 specifier|public
 specifier|static
 name|String
@@ -2487,32 +2513,6 @@ block|}
 block|}
 return|return
 name|str
-return|;
-block|}
-comment|/**      * Shorten long class names,<em>java/lang/String</em> becomes      *<em>java.lang.String</em>,      * e.g.. If<em>chopit</em> is<em>true</em> the prefix<em>java.lang</em>      * is also removed.      *      * @param str The long class name      * @param chopit Flag that determines whether chopping is executed or not      * @return Compacted class name      */
-specifier|public
-specifier|static
-name|String
-name|compactClassName
-parameter_list|(
-specifier|final
-name|String
-name|str
-parameter_list|,
-specifier|final
-name|boolean
-name|chopit
-parameter_list|)
-block|{
-return|return
-name|compactClassName
-argument_list|(
-name|str
-argument_list|,
-literal|"java.lang."
-argument_list|,
-name|chopit
-argument_list|)
 return|;
 block|}
 comment|/**      * @return `flag' with bit `i' set to 1      */
@@ -2716,7 +2716,7 @@ name|toString
 argument_list|()
 return|;
 block|}
-comment|/**      * @param  signature    Method signature      * @return Array of argument types      * @throws  ClassFormatException      */
+comment|/**      * Converts argument list portion of method signature to string with all class names compacted.      *      * @param  signature    Method signature      * @return String Array of argument types      * @throws ClassFormatException      */
 specifier|public
 specifier|static
 name|String
@@ -2739,7 +2739,7 @@ literal|true
 argument_list|)
 return|;
 block|}
-comment|/**      * @param  signature    Method signature      * @param chopit Shorten class names ?      * @return Array of argument types      * @throws  ClassFormatException      */
+comment|/**      * Converts argument list portion of method signature to string.      *      * @param  signature    Method signature      * @param  chopit flag that determines whether chopping is executed or not      * @return String Array of argument types      * @throws ClassFormatException      */
 specifier|public
 specifier|static
 name|String
@@ -2774,17 +2774,23 @@ name|index
 decl_stmt|;
 try|try
 block|{
-comment|// Read all declarations between for `(' and `)'
-if|if
-condition|(
+comment|// Skip any type arguments to read argument declarations between `(' and `)'
+name|index
+operator|=
 name|signature
 operator|.
-name|charAt
+name|indexOf
 argument_list|(
-literal|0
-argument_list|)
-operator|!=
 literal|'('
+argument_list|)
+operator|+
+literal|1
+expr_stmt|;
+if|if
+condition|(
+name|index
+operator|<=
+literal|0
 condition|)
 block|{
 throw|throw
@@ -2797,11 +2803,6 @@ name|signature
 argument_list|)
 throw|;
 block|}
-name|index
-operator|=
-literal|1
-expr_stmt|;
-comment|// current string position
 while|while
 condition|(
 name|signature
@@ -2818,7 +2819,7 @@ name|vec
 operator|.
 name|add
 argument_list|(
-name|signatureToString
+name|typeSignatureToString
 argument_list|(
 name|signature
 operator|.
@@ -2878,7 +2879,7 @@ index|]
 argument_list|)
 return|;
 block|}
-comment|/**      * @param  signature    Method signature      * @return return type of method      * @throws  ClassFormatException      */
+comment|/**      * Converts return type portion of method signature to string with all class names compacted.      *      * @param  signature    Method signature      * @return String representation of method return type      * @throws ClassFormatException      */
 specifier|public
 specifier|static
 name|String
@@ -2900,7 +2901,7 @@ literal|true
 argument_list|)
 return|;
 block|}
-comment|/**      * @param  signature    Method signature      * @param chopit Shorten class names ?      * @return return type of method      * @throws  ClassFormatException      */
+comment|/**      * Converts return type portion of method signature to string.      *      * @param  signature    Method signature      * @param  chopit flag that determines whether chopping is executed or not      * @return String representation of method return type      * @throws ClassFormatException      */
 specifier|public
 specifier|static
 name|String
@@ -2937,9 +2938,26 @@ argument_list|)
 operator|+
 literal|1
 expr_stmt|;
+if|if
+condition|(
+name|index
+operator|<=
+literal|0
+condition|)
+block|{
+throw|throw
+operator|new
+name|ClassFormatException
+argument_list|(
+literal|"Invalid method signature: "
+operator|+
+name|signature
+argument_list|)
+throw|;
+block|}
 name|type
 operator|=
-name|signatureToString
+name|typeSignatureToString
 argument_list|(
 name|signature
 operator|.
@@ -2976,7 +2994,7 @@ return|return
 name|type
 return|;
 block|}
-comment|/**      * Converts method signature to string with all class names compacted.      *      * @param signature to convert      * @param name of method      * @param access flags of method      * @return Human readable signature      */
+comment|/**      * Converts method signature to string with all class names compacted.      *      * @param  signature to convert      * @param  name of method      * @param  access flags of method      * @return Human readable signature      */
 specifier|public
 specifier|static
 name|String
@@ -3008,6 +3026,7 @@ literal|true
 argument_list|)
 return|;
 block|}
+comment|/**      * Converts method signature to string.      *      * @param  signature to convert      * @param  name of method      * @param  access flags of method      * @param  chopit flag that determines whether chopping is executed or not      * @return Human readable signature      */
 specifier|public
 specifier|static
 name|String
@@ -3045,7 +3064,7 @@ literal|null
 argument_list|)
 return|;
 block|}
-comment|/**      * A returntype signature represents the return value from a method.      * It is a series of bytes in the following grammar:      *      *<pre>      *&lt;return_signature&gt; ::=&lt;field_type&gt; | V      *</pre>      *      * The character V indicates that the method returns no value. Otherwise, the      * signature indicates the type of the return value.      * An argument signature represents an argument passed to a method:      *      *<pre>      *&lt;argument_signature&gt; ::=&lt;field_type&gt;      *</pre>      *      * A method signature represents the arguments that the method expects, and      * the value that it returns.      *<pre>      *&lt;method_signature&gt; ::= (&lt;arguments_signature&gt;)&lt;return_signature&gt;      *&lt;arguments_signature&gt;::=&lt;argument_signature&gt;*      *</pre>      *      * This method converts such a string into a Java type declaration like      * `void main(String[])' and throws a `ClassFormatException' when the parsed      * type is invalid.      *      * @param  signature    Method signature      * @param  name         Method name      * @param  access       Method access rights      * @param chopit      * @param vars      * @return Java type declaration      * @throws  ClassFormatException      */
+comment|/**      * This method converts a method signature string into a Java type declaration like      * `void main(String[])' and throws a `ClassFormatException' when the parsed      * type is invalid.      *      * @param  signature    Method signature      * @param  name         Method name      * @param  access       Method access rights      * @param  chopit flag that determines whether chopping is executed or not      * @param  vars the LocalVariableTable for the method      * @return Java type declaration      * @throws ClassFormatException      */
 specifier|public
 specifier|static
 name|String
@@ -3106,17 +3125,23 @@ literal|1
 decl_stmt|;
 try|try
 block|{
-comment|// Read all declarations between for `(' and `)'
-if|if
-condition|(
+comment|// Skip any type arguments to read argument declarations between `(' and `)'
+name|index
+operator|=
 name|signature
 operator|.
-name|charAt
+name|indexOf
 argument_list|(
-literal|0
-argument_list|)
-operator|!=
 literal|'('
+argument_list|)
+operator|+
+literal|1
+expr_stmt|;
+if|if
+condition|(
+name|index
+operator|<=
+literal|0
 condition|)
 block|{
 throw|throw
@@ -3129,11 +3154,6 @@ name|signature
 argument_list|)
 throw|;
 block|}
-name|index
-operator|=
-literal|1
-expr_stmt|;
-comment|// current string position
 while|while
 condition|(
 name|signature
@@ -3150,7 +3170,7 @@ specifier|final
 name|String
 name|param_type
 init|=
-name|signatureToString
+name|typeSignatureToString
 argument_list|(
 name|signature
 operator|.
@@ -3280,7 +3300,7 @@ comment|// update position
 comment|// Read return type after `)'
 name|type
 operator|=
-name|signatureToString
+name|typeSignatureToString
 argument_list|(
 name|signature
 operator|.
@@ -3313,6 +3333,7 @@ name|e
 argument_list|)
 throw|;
 block|}
+comment|// ignore any throws information in the signature
 if|if
 condition|(
 name|buf
@@ -3374,7 +3395,6 @@ name|toString
 argument_list|()
 return|;
 block|}
-comment|// Guess what this does
 specifier|private
 specifier|static
 name|int
@@ -3539,7 +3559,8 @@ return|return
 name|str
 return|;
 block|}
-comment|/**      * Converts signature to string with all class names compacted.      *      * @param signature to convert      * @return Human readable signature      */
+comment|/**      * WARNING:      *      * There is some nomenclature confusion through much of the BCEL code base with      * respect to the terms Descriptor and Signature.  For the offical definitions see:      *      * @see<a href="http://docs.oracle.com/javase/specs/jvms/se8/html/jvms-4.html#jvms-4.3">      * Descriptors in The Java Virtual Machine Specification</a>      *      * @see<a href="http://docs.oracle.com/javase/specs/jvms/se8/html/jvms-4.html#jvms-4.7.9.1">      * Signatures in The Java Virtual Machine Specification</a>      *      * In brief, a descriptor is a string representing the type of a field or method.      * Signatures are similar, but more complex.  Signatures are used to encode declarations      * written in the Java programming language that use types outside the type system of the      * Java Virtual Machine.  They are used to describe the type of any class, interface,      * constructor, method or field whose declaration uses type variables or parameterized types.      *      * To parse a descriptor, call typeSignatureToString.      * To parse a signature, call signatureToString.      *      * Note that if the signature string is a single, non-generic item, the call to      * signatureToString reduces to a call to typeSignatureToString.      * Also note, that if you only wish to parse the first item in a longer signature      * string, you should call typeSignatureToString directly.      */
+comment|/**      * Converts a signature to a string with all class names compacted.      * Class, Method and Type signatures are supported.      * Enum and Interface signatures are not supported.      *      * @param  signature signature to convert      * @return String containg human readable signature      */
 specifier|public
 specifier|static
 name|String
@@ -3559,7 +3580,7 @@ literal|true
 argument_list|)
 return|;
 block|}
-comment|/**      * The field signature represents the value of an argument to a function or      * the value of a variable. It is a series of bytes generated by the      * following grammar:      *      *<PRE>      *&lt;field_signature&gt; ::=&lt;field_type&gt;      *&lt;field_type&gt;      ::=&lt;base_type&gt;|&lt;object_type&gt;|&lt;array_type&gt;      *&lt;base_type&gt;       ::= B|C|D|F|I|J|S|Z      *&lt;object_type&gt;     ::= L&lt;fullclassname&gt;;      *&lt;array_type&gt;      ::= [&lt;field_type&gt;      *      * The meaning of the base types is as follows:      * B byte signed byte      * C char character      * D double double precision IEEE float      * F float single precision IEEE float      * I int integer      * J long long integer      * L&lt;fullclassname&gt;; ... an object of the given class      * S short signed short      * Z boolean true or false      * [&lt;field sig&gt; ... array      *</PRE>      *      * This method converts this string into a Java type declaration such as      * `String[]' and throws a `ClassFormatException' when the parsed type is      * invalid.      *      * @param  signature  Class signature      * @param chopit Flag that determines whether chopping is executed or not      * @return Java type declaration      * @throws ClassFormatException      */
+comment|/**      * Converts a signature to a string.      * Class, Method and Type signatures are supported.      * Enum and Interface signatures are not supported.      *      * @param  signature signature to convert      * @param  chopit flag that determines whether chopping is executed or not      * @return String containg human readable signature      */
 specifier|public
 specifier|static
 name|String
@@ -3573,6 +3594,755 @@ specifier|final
 name|boolean
 name|chopit
 parameter_list|)
+block|{
+name|String
+name|type
+init|=
+literal|""
+decl_stmt|;
+name|String
+name|typeParams
+init|=
+literal|""
+decl_stmt|;
+name|int
+name|index
+init|=
+literal|0
+decl_stmt|;
+if|if
+condition|(
+name|signature
+operator|.
+name|charAt
+argument_list|(
+literal|0
+argument_list|)
+operator|==
+literal|'<'
+condition|)
+block|{
+comment|// we have type paramters
+name|typeParams
+operator|=
+name|typeParamTypesToString
+argument_list|(
+name|signature
+argument_list|,
+name|chopit
+argument_list|)
+expr_stmt|;
+name|index
+operator|+=
+name|unwrap
+argument_list|(
+name|consumed_chars
+argument_list|)
+expr_stmt|;
+comment|// update position
+block|}
+if|if
+condition|(
+name|signature
+operator|.
+name|charAt
+argument_list|(
+name|index
+argument_list|)
+operator|==
+literal|'('
+condition|)
+block|{
+comment|// We have a Method signature.
+comment|// add types of arguments
+name|type
+operator|=
+name|typeParams
+operator|+
+name|typeSignaturesToString
+argument_list|(
+name|signature
+operator|.
+name|substring
+argument_list|(
+name|index
+argument_list|)
+argument_list|,
+name|chopit
+argument_list|,
+literal|')'
+argument_list|)
+expr_stmt|;
+name|index
+operator|+=
+name|unwrap
+argument_list|(
+name|consumed_chars
+argument_list|)
+expr_stmt|;
+comment|// update position
+comment|// add return type
+name|type
+operator|=
+name|type
+operator|+
+name|typeSignatureToString
+argument_list|(
+name|signature
+operator|.
+name|substring
+argument_list|(
+name|index
+argument_list|)
+argument_list|,
+name|chopit
+argument_list|)
+expr_stmt|;
+name|index
+operator|+=
+name|unwrap
+argument_list|(
+name|consumed_chars
+argument_list|)
+expr_stmt|;
+comment|// update position
+comment|// ignore any throws information in the signature
+return|return
+name|type
+return|;
+block|}
+else|else
+block|{
+comment|// Could be Class or Type...
+name|type
+operator|=
+name|typeSignatureToString
+argument_list|(
+name|signature
+operator|.
+name|substring
+argument_list|(
+name|index
+argument_list|)
+argument_list|,
+name|chopit
+argument_list|)
+expr_stmt|;
+name|index
+operator|+=
+name|unwrap
+argument_list|(
+name|consumed_chars
+argument_list|)
+expr_stmt|;
+comment|// update position
+if|if
+condition|(
+operator|(
+name|typeParams
+operator|.
+name|length
+argument_list|()
+operator|==
+literal|0
+operator|)
+operator|&&
+operator|(
+name|index
+operator|==
+name|signature
+operator|.
+name|length
+argument_list|()
+operator|)
+condition|)
+block|{
+comment|// We have a Type signature.
+return|return
+name|type
+return|;
+block|}
+comment|// We have a Class signature.
+name|StringBuilder
+name|typeClass
+init|=
+operator|new
+name|StringBuilder
+argument_list|(
+name|typeParams
+argument_list|)
+decl_stmt|;
+name|typeClass
+operator|.
+name|append
+argument_list|(
+literal|" extends "
+argument_list|)
+expr_stmt|;
+name|typeClass
+operator|.
+name|append
+argument_list|(
+name|type
+argument_list|)
+expr_stmt|;
+if|if
+condition|(
+name|index
+operator|<
+name|signature
+operator|.
+name|length
+argument_list|()
+condition|)
+block|{
+name|typeClass
+operator|.
+name|append
+argument_list|(
+literal|" implements "
+argument_list|)
+expr_stmt|;
+name|typeClass
+operator|.
+name|append
+argument_list|(
+name|typeSignatureToString
+argument_list|(
+name|signature
+operator|.
+name|substring
+argument_list|(
+name|index
+argument_list|)
+argument_list|,
+name|chopit
+argument_list|)
+argument_list|)
+expr_stmt|;
+name|index
+operator|+=
+name|unwrap
+argument_list|(
+name|consumed_chars
+argument_list|)
+expr_stmt|;
+comment|// update position
+block|}
+while|while
+condition|(
+name|index
+operator|<
+name|signature
+operator|.
+name|length
+argument_list|()
+condition|)
+block|{
+name|typeClass
+operator|.
+name|append
+argument_list|(
+literal|", "
+argument_list|)
+expr_stmt|;
+name|typeClass
+operator|.
+name|append
+argument_list|(
+name|typeSignatureToString
+argument_list|(
+name|signature
+operator|.
+name|substring
+argument_list|(
+name|index
+argument_list|)
+argument_list|,
+name|chopit
+argument_list|)
+argument_list|)
+expr_stmt|;
+name|index
+operator|+=
+name|unwrap
+argument_list|(
+name|consumed_chars
+argument_list|)
+expr_stmt|;
+comment|// update position
+block|}
+return|return
+name|typeClass
+operator|.
+name|toString
+argument_list|()
+return|;
+block|}
+block|}
+comment|/**      * Converts a type parameter list signature to a string.      *      * @param  signature signature to convert      * @param  chopit flag that determines whether chopping is executed or not      * @return String containg human readable signature      */
+specifier|private
+specifier|static
+name|String
+name|typeParamTypesToString
+parameter_list|(
+specifier|final
+name|String
+name|signature
+parameter_list|,
+specifier|final
+name|boolean
+name|chopit
+parameter_list|)
+block|{
+comment|// The first character is guranteed to be '<'
+name|StringBuilder
+name|typeParams
+init|=
+operator|new
+name|StringBuilder
+argument_list|(
+literal|"<"
+argument_list|)
+decl_stmt|;
+name|int
+name|index
+init|=
+literal|1
+decl_stmt|;
+comment|// skip the '<'
+comment|// get the first TypeParameter
+name|typeParams
+operator|.
+name|append
+argument_list|(
+name|typeParamTypeToString
+argument_list|(
+name|signature
+operator|.
+name|substring
+argument_list|(
+name|index
+argument_list|)
+argument_list|,
+name|chopit
+argument_list|)
+argument_list|)
+expr_stmt|;
+name|index
+operator|+=
+name|unwrap
+argument_list|(
+name|consumed_chars
+argument_list|)
+expr_stmt|;
+comment|// update position
+comment|// are there more TypeParameters?
+while|while
+condition|(
+name|signature
+operator|.
+name|charAt
+argument_list|(
+name|index
+argument_list|)
+operator|!=
+literal|'>'
+condition|)
+block|{
+name|typeParams
+operator|.
+name|append
+argument_list|(
+literal|", "
+argument_list|)
+expr_stmt|;
+name|typeParams
+operator|.
+name|append
+argument_list|(
+name|typeParamTypeToString
+argument_list|(
+name|signature
+operator|.
+name|substring
+argument_list|(
+name|index
+argument_list|)
+argument_list|,
+name|chopit
+argument_list|)
+argument_list|)
+expr_stmt|;
+name|index
+operator|+=
+name|unwrap
+argument_list|(
+name|consumed_chars
+argument_list|)
+expr_stmt|;
+comment|// update position
+block|}
+name|wrap
+argument_list|(
+name|consumed_chars
+argument_list|,
+name|index
+operator|+
+literal|1
+argument_list|)
+expr_stmt|;
+comment|// account for the '>' char
+return|return
+name|typeParams
+operator|.
+name|append
+argument_list|(
+literal|">"
+argument_list|)
+operator|.
+name|toString
+argument_list|()
+return|;
+block|}
+comment|/**      * Converts a type parameter signature to a string.      *      * @param  signature signature to convert      * @param  chopit flag that determines whether chopping is executed or not      * @return String containg human readable signature      */
+specifier|private
+specifier|static
+name|String
+name|typeParamTypeToString
+parameter_list|(
+specifier|final
+name|String
+name|signature
+parameter_list|,
+specifier|final
+name|boolean
+name|chopit
+parameter_list|)
+block|{
+name|int
+name|index
+init|=
+name|signature
+operator|.
+name|indexOf
+argument_list|(
+literal|':'
+argument_list|)
+decl_stmt|;
+if|if
+condition|(
+name|index
+operator|<=
+literal|0
+condition|)
+block|{
+throw|throw
+operator|new
+name|ClassFormatException
+argument_list|(
+literal|"Invalid type parameter signature: "
+operator|+
+name|signature
+argument_list|)
+throw|;
+block|}
+comment|// get the TypeParameter identifier
+name|StringBuilder
+name|typeParam
+init|=
+operator|new
+name|StringBuilder
+argument_list|(
+name|signature
+operator|.
+name|substring
+argument_list|(
+literal|0
+argument_list|,
+name|index
+argument_list|)
+argument_list|)
+decl_stmt|;
+name|index
+operator|++
+expr_stmt|;
+comment|// account for the ':'
+if|if
+condition|(
+name|signature
+operator|.
+name|charAt
+argument_list|(
+name|index
+argument_list|)
+operator|!=
+literal|':'
+condition|)
+block|{
+comment|// we have a class bound
+name|typeParam
+operator|.
+name|append
+argument_list|(
+literal|" extends "
+argument_list|)
+expr_stmt|;
+name|typeParam
+operator|.
+name|append
+argument_list|(
+name|typeSignatureToString
+argument_list|(
+name|signature
+operator|.
+name|substring
+argument_list|(
+name|index
+argument_list|)
+argument_list|,
+name|chopit
+argument_list|)
+argument_list|)
+expr_stmt|;
+name|index
+operator|+=
+name|unwrap
+argument_list|(
+name|consumed_chars
+argument_list|)
+expr_stmt|;
+comment|// update position
+block|}
+comment|// look for interface bounds
+while|while
+condition|(
+name|signature
+operator|.
+name|charAt
+argument_list|(
+name|index
+argument_list|)
+operator|==
+literal|':'
+condition|)
+block|{
+name|index
+operator|++
+expr_stmt|;
+comment|// skip over the ':'
+name|typeParam
+operator|.
+name|append
+argument_list|(
+literal|"& "
+argument_list|)
+expr_stmt|;
+name|typeParam
+operator|.
+name|append
+argument_list|(
+name|typeSignatureToString
+argument_list|(
+name|signature
+operator|.
+name|substring
+argument_list|(
+name|index
+argument_list|)
+argument_list|,
+name|chopit
+argument_list|)
+argument_list|)
+expr_stmt|;
+name|index
+operator|+=
+name|unwrap
+argument_list|(
+name|consumed_chars
+argument_list|)
+expr_stmt|;
+comment|// update position
+block|}
+name|wrap
+argument_list|(
+name|consumed_chars
+argument_list|,
+name|index
+argument_list|)
+expr_stmt|;
+return|return
+name|typeParam
+operator|.
+name|toString
+argument_list|()
+return|;
+block|}
+comment|/**      * Converts a list of type signatures to a string.      *      * @param  signature signature to convert      * @param  chopit flag that determines whether chopping is executed or not      * @param  term character indicating the end of the list      * @return String containg human readable signature      */
+specifier|private
+specifier|static
+name|String
+name|typeSignaturesToString
+parameter_list|(
+specifier|final
+name|String
+name|signature
+parameter_list|,
+specifier|final
+name|boolean
+name|chopit
+parameter_list|,
+specifier|final
+name|char
+name|term
+parameter_list|)
+block|{
+comment|// The first character will be an 'open' that matches the 'close' contained in term.
+name|StringBuilder
+name|typeList
+init|=
+operator|new
+name|StringBuilder
+argument_list|(
+name|signature
+operator|.
+name|substring
+argument_list|(
+literal|0
+argument_list|,
+literal|1
+argument_list|)
+argument_list|)
+decl_stmt|;
+name|int
+name|index
+init|=
+literal|1
+decl_stmt|;
+comment|// skip the 'open' character
+comment|// get the first Type in the list
+if|if
+condition|(
+name|signature
+operator|.
+name|charAt
+argument_list|(
+name|index
+argument_list|)
+operator|!=
+name|term
+condition|)
+block|{
+name|typeList
+operator|.
+name|append
+argument_list|(
+name|typeSignatureToString
+argument_list|(
+name|signature
+operator|.
+name|substring
+argument_list|(
+name|index
+argument_list|)
+argument_list|,
+name|chopit
+argument_list|)
+argument_list|)
+expr_stmt|;
+name|index
+operator|+=
+name|unwrap
+argument_list|(
+name|consumed_chars
+argument_list|)
+expr_stmt|;
+comment|// update position
+block|}
+comment|// are there more types in the list?
+while|while
+condition|(
+name|signature
+operator|.
+name|charAt
+argument_list|(
+name|index
+argument_list|)
+operator|!=
+name|term
+condition|)
+block|{
+name|typeList
+operator|.
+name|append
+argument_list|(
+literal|", "
+argument_list|)
+expr_stmt|;
+name|typeList
+operator|.
+name|append
+argument_list|(
+name|typeSignatureToString
+argument_list|(
+name|signature
+operator|.
+name|substring
+argument_list|(
+name|index
+argument_list|)
+argument_list|,
+name|chopit
+argument_list|)
+argument_list|)
+expr_stmt|;
+name|index
+operator|+=
+name|unwrap
+argument_list|(
+name|consumed_chars
+argument_list|)
+expr_stmt|;
+comment|// update position
+block|}
+name|wrap
+argument_list|(
+name|consumed_chars
+argument_list|,
+name|index
+operator|+
+literal|1
+argument_list|)
+expr_stmt|;
+comment|// account for the term char
+return|return
+name|typeList
+operator|.
+name|append
+argument_list|(
+name|term
+argument_list|)
+operator|.
+name|toString
+argument_list|()
+return|;
+block|}
+comment|/**      *      * This method converts a type signature string into a Java type declaration such as      * `String[]' and throws a `ClassFormatException' when the parsed type is invalid.      *      * @param  signature type signature      * @param  chopit flag that determines whether chopping is executed or not      * @return string containing human readable type signature      * @throws ClassFormatException      * @since 6.4.0      */
+specifier|public
+specifier|static
+name|String
+name|typeSignatureToString
+parameter_list|(
+specifier|final
+name|String
+name|signature
+parameter_list|,
+specifier|final
+name|boolean
+name|chopit
+parameter_list|)
+throws|throws
+name|ClassFormatException
 block|{
 comment|//corrected concurrent private static field acess
 name|wrap
@@ -3659,7 +4429,7 @@ throw|throw
 operator|new
 name|ClassFormatException
 argument_list|(
-literal|"Invalid signature: "
+literal|"Invalid type variable signature: "
 operator|+
 name|signature
 argument_list|)
@@ -4012,7 +4782,7 @@ name|type
 operator|.
 name|append
 argument_list|(
-name|signatureToString
+name|typeSignatureToString
 argument_list|(
 name|signature
 operator|.
@@ -4143,7 +4913,7 @@ name|type
 operator|.
 name|append
 argument_list|(
-name|signatureToString
+name|typeSignatureToString
 argument_list|(
 name|signature
 operator|.
@@ -4216,7 +4986,7 @@ name|type
 operator|.
 name|append
 argument_list|(
-name|signatureToString
+name|typeSignatureToString
 argument_list|(
 literal|"L"
 operator|+
@@ -4377,7 +5147,7 @@ comment|// Remember value
 comment|// The rest of the string denotes a `<field_type>'
 name|type
 operator|=
-name|signatureToString
+name|typeSignatureToString
 argument_list|(
 name|signature
 operator|.
