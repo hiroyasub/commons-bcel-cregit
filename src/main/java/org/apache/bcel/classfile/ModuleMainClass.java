@@ -106,7 +106,7 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * @param name_index Index in constant pool      * @param length Content length in bytes      * @param int Host class index      * @param constant_pool Array of constants      */
+comment|/**      * @param name_index Index in constant pool      * @param length Content length in bytes      * @param main_class_index Host class index      * @param constant_pool Array of constants      */
 specifier|public
 name|ModuleMainClass
 parameter_list|(
@@ -188,7 +188,7 @@ name|readUnsignedShort
 argument_list|()
 expr_stmt|;
 block|}
-comment|/**      * Called by objects that are traversing the nodes of the tree implicitely      * defined by the contents of a Java class. I.e., the hierarchy of methods,      * fields, attributes, etc. spawns a tree of objects.      *      * @param v Visitor object      */
+comment|/**      * Called by objects that are traversing the nodes of the tree implicitly      * defined by the contents of a Java class. I.e., the hierarchy of methods,      * fields, attributes, etc. spawns a tree of objects.      *      * @param v Visitor object      */
 annotation|@
 name|Override
 specifier|public
@@ -208,7 +208,7 @@ name|this
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Dump ModuleMainClass attribute to file stream in binary format.      *      * @param file Output file stream      * @throws IOException      */
+comment|/**      * Dump ModuleMainClass attribute to file stream in binary format.      *      * @param file Output file stream      * @throws IOException if an I/O error occurs.      */
 annotation|@
 name|Override
 specifier|public
@@ -247,7 +247,7 @@ return|return
 name|main_class_index
 return|;
 block|}
-comment|/**      * @param int the host class index      */
+comment|/**      * @param main_class_index the host class index      */
 specifier|public
 name|void
 name|setHostClassIndex
