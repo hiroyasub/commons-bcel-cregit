@@ -1275,7 +1275,7 @@ name|pow
 operator|<=
 name|Const
 operator|.
-name|MAX_ACC_FLAG
+name|MAX_ACC_FLAG_I
 condition|;
 name|i
 operator|++

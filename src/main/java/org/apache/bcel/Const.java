@@ -578,11 +578,23 @@ name|short
 operator|)
 literal|0x8000
 decl_stmt|;
+comment|/** One of the access flags for fields, methods, or classes.    *  @see #ACC_PUBLIC    *  @deprecated Use {@link #MAX_ACC_FLAG_I}    */
+annotation|@
+name|Deprecated
+specifier|public
+specifier|static
+specifier|final
+name|short
+name|MAX_ACC_FLAG
+init|=
+name|ACC_ENUM
+decl_stmt|;
+comment|/** One of the access flags for fields, methods, or classes.    * ACC_MODULE is negative as a short.    * @see #ACC_PUBLIC    * @since 6.4.0    */
 specifier|public
 specifier|static
 specifier|final
 name|int
-name|MAX_ACC_FLAG
+name|MAX_ACC_FLAG_I
 init|=
 literal|0x8000
 decl_stmt|;
