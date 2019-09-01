@@ -72,6 +72,7 @@ specifier|private
 name|void
 name|verifyCaching
 parameter_list|(
+specifier|final
 name|AbstractClassPathRepository
 name|repository
 parameter_list|)
@@ -79,6 +80,7 @@ throws|throws
 name|ClassNotFoundException
 block|{
 comment|// Tests loadClass()
+specifier|final
 name|JavaClass
 name|class1
 init|=
@@ -96,6 +98,7 @@ argument_list|(
 name|class1
 argument_list|)
 expr_stmt|;
+specifier|final
 name|JavaClass
 name|class2
 init|=
@@ -311,6 +314,7 @@ literal|""
 argument_list|)
 init|)
 block|{
+specifier|final
 name|ClassPathRepository
 name|repository
 init|=
@@ -365,6 +369,7 @@ literal|""
 argument_list|)
 init|)
 block|{
+specifier|final
 name|ClassPathRepository
 name|repository
 init|=
@@ -414,6 +419,7 @@ literal|""
 argument_list|)
 init|)
 block|{
+specifier|final
 name|ClassPathRepository
 name|repository
 init|=
@@ -463,6 +469,7 @@ literal|""
 argument_list|)
 init|)
 block|{
+specifier|final
 name|ClassPathRepository
 name|repository
 init|=
@@ -512,6 +519,7 @@ literal|""
 argument_list|)
 init|)
 block|{
+specifier|final
 name|ClassPathRepository
 name|repository
 init|=

@@ -278,6 +278,7 @@ specifier|static
 name|void
 name|main
 parameter_list|(
+specifier|final
 name|String
 index|[]
 name|argv
@@ -287,6 +288,7 @@ name|Exception
 block|{
 for|for
 control|(
+specifier|final
 name|String
 name|arg
 range|:
@@ -303,6 +305,7 @@ literal|".class"
 argument_list|)
 condition|)
 block|{
+specifier|final
 name|JavaClass
 name|java_class
 init|=
@@ -315,6 +318,7 @@ operator|.
 name|parse
 argument_list|()
 decl_stmt|;
+specifier|final
 name|ConstantPool
 name|constants
 init|=
@@ -323,6 +327,7 @@ operator|.
 name|getConstantPool
 argument_list|()
 decl_stmt|;
+specifier|final
 name|String
 name|file_name
 init|=
@@ -382,6 +387,7 @@ literal|"(Ljava/lang/String;)V"
 argument_list|)
 expr_stmt|;
 comment|// Patch all methods.
+specifier|final
 name|Method
 index|[]
 name|methods
@@ -449,6 +455,7 @@ specifier|static
 name|void
 name|helloifyClassName
 parameter_list|(
+specifier|final
 name|JavaClass
 name|java_class
 parameter_list|)
@@ -518,6 +525,7 @@ name|Method
 name|m
 parameter_list|)
 block|{
+specifier|final
 name|Code
 name|code
 init|=
@@ -526,6 +534,7 @@ operator|.
 name|getCode
 argument_list|()
 decl_stmt|;
+specifier|final
 name|int
 name|flags
 init|=
@@ -534,6 +543,7 @@ operator|.
 name|getAccessFlags
 argument_list|()
 decl_stmt|;
+specifier|final
 name|String
 name|name
 init|=
@@ -567,6 +577,7 @@ name|m
 return|;
 block|}
 comment|// Create instruction list to be inserted at method start.
+specifier|final
 name|String
 name|mesg
 init|=
@@ -591,6 +602,7 @@ name|flags
 argument_list|)
 argument_list|)
 decl_stmt|;
+specifier|final
 name|InstructionList
 name|patch
 init|=
@@ -633,6 +645,7 @@ name|println
 argument_list|)
 argument_list|)
 expr_stmt|;
+specifier|final
 name|MethodGen
 name|mg
 init|=
@@ -646,6 +659,7 @@ argument_list|,
 name|cp
 argument_list|)
 decl_stmt|;
+specifier|final
 name|InstructionList
 name|il
 init|=
@@ -654,6 +668,7 @@ operator|.
 name|getInstructionList
 argument_list|()
 decl_stmt|;
+specifier|final
 name|InstructionHandle
 index|[]
 name|ihs

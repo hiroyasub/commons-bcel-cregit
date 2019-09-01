@@ -381,6 +381,7 @@ decl_stmt|;
 comment|// Generated methods
 name|ASTFunDecl
 parameter_list|(
+specifier|final
 name|int
 name|id
 parameter_list|)
@@ -393,9 +394,11 @@ expr_stmt|;
 block|}
 name|ASTFunDecl
 parameter_list|(
+specifier|final
 name|MiniParser
 name|p
 parameter_list|,
+specifier|final
 name|int
 name|id
 parameter_list|)
@@ -413,9 +416,11 @@ specifier|static
 name|Node
 name|jjtCreate
 parameter_list|(
+specifier|final
 name|MiniParser
 name|p
 parameter_list|,
+specifier|final
 name|int
 name|id
 parameter_list|)
@@ -432,16 +437,20 @@ return|;
 block|}
 name|ASTFunDecl
 parameter_list|(
+specifier|final
 name|ASTIdent
 name|name
 parameter_list|,
+specifier|final
 name|ASTIdent
 index|[]
 name|argv
 parameter_list|,
+specifier|final
 name|ASTExpr
 name|body
 parameter_list|,
+specifier|final
 name|int
 name|type
 parameter_list|)
@@ -567,6 +576,7 @@ specifier|public
 name|ASTFunDecl
 name|traverse
 parameter_list|(
+specifier|final
 name|Environment
 name|env
 parameter_list|)
@@ -595,6 +605,7 @@ name|i
 operator|++
 control|)
 block|{
+specifier|final
 name|EnvEntry
 name|entry
 init|=
@@ -667,6 +678,7 @@ block|}
 comment|/* Update entry of this function, i.e. set argument references.      * The entry is already in there by garantuee, but may be of wrong type,      * i.e. the user defined a function `TRUE', e.g. and `TRUE' is of type `Variable'.      */
 try|try
 block|{
+specifier|final
 name|Function
 name|fun
 init|=
@@ -693,6 +705,7 @@ expr_stmt|;
 block|}
 catch|catch
 parameter_list|(
+specifier|final
 name|ClassCastException
 name|e
 parameter_list|)
@@ -718,10 +731,12 @@ specifier|public
 name|int
 name|eval
 parameter_list|(
+specifier|final
 name|int
 name|pass
 parameter_list|)
 block|{
+specifier|final
 name|int
 name|expected
 init|=
@@ -819,6 +834,7 @@ specifier|public
 name|void
 name|code
 parameter_list|(
+specifier|final
 name|PrintWriter
 name|out
 parameter_list|)
@@ -835,6 +851,7 @@ name|ignore
 init|=
 literal|false
 decl_stmt|;
+specifier|final
 name|String
 name|fname
 init|=
@@ -972,6 +989,7 @@ operator|!
 name|ignore
 condition|)
 block|{
+specifier|final
 name|StringBuffer
 name|buf
 init|=
@@ -1059,9 +1077,11 @@ specifier|public
 name|void
 name|byte_code
 parameter_list|(
+specifier|final
 name|ClassGen
 name|class_gen
 parameter_list|,
+specifier|final
 name|ConstantPoolGen
 name|cp
 parameter_list|)
@@ -1080,6 +1100,7 @@ name|ignore
 init|=
 literal|false
 decl_stmt|;
+specifier|final
 name|String
 name|class_name
 init|=
@@ -1088,6 +1109,7 @@ operator|.
 name|getClassName
 argument_list|()
 decl_stmt|;
+specifier|final
 name|String
 name|fname
 init|=
@@ -1096,6 +1118,7 @@ operator|.
 name|getName
 argument_list|()
 decl_stmt|;
+specifier|final
 name|InstructionList
 name|il
 init|=
@@ -1194,6 +1217,7 @@ expr_stmt|;
 block|}
 else|else
 block|{
+specifier|final
 name|int
 name|size
 init|=
@@ -1283,6 +1307,7 @@ argument_list|,
 name|cp
 argument_list|)
 expr_stmt|;
+specifier|final
 name|LocalVariableGen
 index|[]
 name|lv
@@ -1307,6 +1332,7 @@ name|i
 operator|++
 control|)
 block|{
+specifier|final
 name|Variable
 name|entry
 init|=
@@ -1364,6 +1390,7 @@ condition|(
 name|main
 condition|)
 block|{
+specifier|final
 name|ObjectType
 name|e_type
 init|=
@@ -1373,6 +1400,7 @@ argument_list|(
 literal|"java.lang.Exception"
 argument_list|)
 decl_stmt|;
+specifier|final
 name|InstructionHandle
 name|start
 init|=
@@ -1380,13 +1408,15 @@ name|il
 operator|.
 name|getStart
 argument_list|()
-decl_stmt|,
+decl_stmt|;
+name|InstructionHandle
 name|end
 decl_stmt|,
 name|handler
 decl_stmt|,
 name|end_handler
 decl_stmt|;
+specifier|final
 name|LocalVariableGen
 name|exc
 init|=
@@ -1403,6 +1433,7 @@ argument_list|,
 literal|null
 argument_list|)
 decl_stmt|;
+specifier|final
 name|int
 name|slot
 init|=
@@ -1622,11 +1653,13 @@ specifier|public
 name|boolean
 name|checkCode
 parameter_list|(
+specifier|final
 name|InstructionHandle
 index|[]
 name|match
 parameter_list|)
 block|{
+specifier|final
 name|BranchInstruction
 name|if_icmp
 init|=
@@ -1641,6 +1674,7 @@ operator|.
 name|getInstruction
 argument_list|()
 decl_stmt|;
+specifier|final
 name|GOTO
 name|goto_
 init|=
@@ -1689,10 +1723,12 @@ specifier|static
 name|void
 name|optimizeIFs
 parameter_list|(
+specifier|final
 name|InstructionList
 name|il
 parameter_list|)
 block|{
+specifier|final
 name|InstructionFinder
 name|f
 init|=
@@ -1702,6 +1738,7 @@ argument_list|(
 name|il
 argument_list|)
 decl_stmt|;
+specifier|final
 name|String
 name|pat
 init|=
@@ -1709,6 +1746,7 @@ literal|"IF_ICMP ICONST_1 GOTO ICONST_0 IFEQ Instruction"
 decl_stmt|;
 for|for
 control|(
+specifier|final
 name|Iterator
 argument_list|<
 name|InstructionHandle
@@ -1732,6 +1770,7 @@ argument_list|()
 condition|;
 control|)
 block|{
+specifier|final
 name|InstructionHandle
 index|[]
 name|match
@@ -1742,6 +1781,7 @@ name|next
 argument_list|()
 decl_stmt|;
 comment|// Everything ok, update code
+specifier|final
 name|BranchInstruction
 name|ifeq
 init|=
@@ -1758,6 +1798,7 @@ name|getInstruction
 argument_list|()
 operator|)
 decl_stmt|;
+specifier|final
 name|BranchHandle
 name|if_icmp
 init|=
@@ -1799,10 +1840,12 @@ expr_stmt|;
 block|}
 catch|catch
 parameter_list|(
+specifier|final
 name|TargetLostException
 name|e
 parameter_list|)
 block|{
+specifier|final
 name|InstructionHandle
 index|[]
 name|targets
@@ -1841,6 +1884,7 @@ name|i
 operator|++
 control|)
 block|{
+specifier|final
 name|InstructionTargeter
 index|[]
 name|targeters
@@ -1922,6 +1966,7 @@ name|String
 name|toString
 parameter_list|()
 block|{
+specifier|final
 name|StringBuffer
 name|buf
 init|=
@@ -2070,6 +2115,7 @@ specifier|public
 name|void
 name|setType
 parameter_list|(
+specifier|final
 name|int
 name|type
 parameter_list|)
@@ -2085,6 +2131,7 @@ specifier|public
 name|void
 name|setLine
 parameter_list|(
+specifier|final
 name|int
 name|line
 parameter_list|)
@@ -2109,6 +2156,7 @@ specifier|public
 name|void
 name|setColumn
 parameter_list|(
+specifier|final
 name|int
 name|column
 parameter_list|)
@@ -2133,9 +2181,11 @@ specifier|public
 name|void
 name|setPosition
 parameter_list|(
+specifier|final
 name|int
 name|line
 parameter_list|,
+specifier|final
 name|int
 name|column
 parameter_list|)
@@ -2160,6 +2210,7 @@ specifier|public
 name|void
 name|dump
 parameter_list|(
+specifier|final
 name|String
 name|prefix
 parameter_list|)
@@ -2241,6 +2292,7 @@ name|String
 name|getVarDecls
 parameter_list|()
 block|{
+specifier|final
 name|StringBuffer
 name|buf
 init|=
@@ -2311,6 +2363,7 @@ specifier|static
 name|void
 name|pop
 parameter_list|(
+specifier|final
 name|int
 name|s
 parameter_list|)
@@ -2324,6 +2377,7 @@ specifier|static
 name|void
 name|push
 parameter_list|(
+specifier|final
 name|int
 name|s
 parameter_list|)
@@ -2361,9 +2415,11 @@ specifier|static
 name|void
 name|push
 parameter_list|(
+specifier|final
 name|StringBuffer
 name|buf
 parameter_list|,
+specifier|final
 name|String
 name|str
 parameter_list|)

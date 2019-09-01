@@ -100,6 +100,7 @@ specifier|static
 name|void
 name|main
 parameter_list|(
+specifier|final
 name|String
 index|[]
 name|argv
@@ -109,6 +110,7 @@ name|Exception
 block|{
 for|for
 control|(
+specifier|final
 name|String
 name|class_name
 range|:
@@ -144,6 +146,7 @@ name|parse
 argument_list|()
 expr_stmt|;
 block|}
+specifier|final
 name|ConstantPoolGen
 name|cp
 init|=
@@ -158,6 +161,7 @@ argument_list|)
 decl_stmt|;
 for|for
 control|(
+specifier|final
 name|Method
 name|m
 range|:
@@ -183,6 +187,7 @@ argument_list|()
 operator|)
 condition|)
 block|{
+specifier|final
 name|MethodGen
 name|mg
 init|=
@@ -196,6 +201,7 @@ argument_list|,
 name|cp
 argument_list|)
 decl_stmt|;
+specifier|final
 name|int
 name|compiled_stack
 init|=
@@ -204,6 +210,7 @@ operator|.
 name|getMaxStack
 argument_list|()
 decl_stmt|;
+specifier|final
 name|int
 name|compiled_locals
 init|=
@@ -223,6 +230,7 @@ operator|.
 name|setMaxLocals
 argument_list|()
 expr_stmt|;
+specifier|final
 name|int
 name|computed_stack
 init|=
@@ -231,6 +239,7 @@ operator|.
 name|getMaxStack
 argument_list|()
 decl_stmt|;
+specifier|final
 name|int
 name|computed_locals
 init|=

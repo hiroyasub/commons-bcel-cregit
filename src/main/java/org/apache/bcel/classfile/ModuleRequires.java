@@ -72,15 +72,18 @@ implements|,
 name|Node
 block|{
 specifier|private
+specifier|final
 name|int
 name|requires_index
 decl_stmt|;
 comment|// points to CONSTANT_Module_info
 specifier|private
+specifier|final
 name|int
 name|requires_flags
 decl_stmt|;
 specifier|private
+specifier|final
 name|int
 name|requires_version_index
 decl_stmt|;

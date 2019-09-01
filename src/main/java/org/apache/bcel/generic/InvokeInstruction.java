@@ -164,6 +164,7 @@ name|c
 argument_list|)
 argument_list|)
 decl_stmt|;
+specifier|final
 name|String
 name|opcodeName
 init|=
@@ -177,6 +178,7 @@ name|getOpcode
 argument_list|()
 argument_list|)
 decl_stmt|;
+specifier|final
 name|StringBuilder
 name|sb
 init|=

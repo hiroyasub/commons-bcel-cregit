@@ -165,6 +165,7 @@ decl_stmt|;
 comment|// Generated methods
 name|ASTLetExpr
 parameter_list|(
+specifier|final
 name|int
 name|id
 parameter_list|)
@@ -177,9 +178,11 @@ expr_stmt|;
 block|}
 name|ASTLetExpr
 parameter_list|(
+specifier|final
 name|MiniParser
 name|p
 parameter_list|,
+specifier|final
 name|int
 name|id
 parameter_list|)
@@ -197,9 +200,11 @@ specifier|static
 name|Node
 name|jjtCreate
 parameter_list|(
+specifier|final
 name|MiniParser
 name|p
 parameter_list|,
+specifier|final
 name|int
 name|id
 parameter_list|)
@@ -224,7 +229,10 @@ parameter_list|()
 block|{
 name|int
 name|i
-decl_stmt|,
+decl_stmt|;
+comment|/* length must be a multiple of                                           * two (ident = expr) + 1 (body expr) */
+specifier|final
+name|int
 name|len_2
 init|=
 name|children
@@ -233,7 +241,6 @@ name|length
 operator|/
 literal|2
 decl_stmt|;
-comment|/* length must be a multiple of                                           * two (ident = expr) + 1 (body expr) */
 name|idents
 operator|=
 operator|new
@@ -326,6 +333,7 @@ specifier|public
 name|ASTExpr
 name|traverse
 parameter_list|(
+specifier|final
 name|Environment
 name|env
 parameter_list|)
@@ -394,6 +402,7 @@ name|i
 operator|++
 control|)
 block|{
+specifier|final
 name|ASTIdent
 name|id
 init|=
@@ -402,6 +411,7 @@ index|[
 name|i
 index|]
 decl_stmt|;
+specifier|final
 name|String
 name|name
 init|=
@@ -410,6 +420,7 @@ operator|.
 name|getName
 argument_list|()
 decl_stmt|;
+specifier|final
 name|EnvEntry
 name|entry
 init|=
@@ -484,6 +495,7 @@ specifier|public
 name|int
 name|eval
 parameter_list|(
+specifier|final
 name|int
 name|expected
 parameter_list|)
@@ -506,6 +518,7 @@ name|i
 operator|++
 control|)
 block|{
+specifier|final
 name|int
 name|t
 init|=
@@ -549,6 +562,7 @@ specifier|public
 name|void
 name|code
 parameter_list|(
+specifier|final
 name|StringBuffer
 name|buf
 parameter_list|)
@@ -570,6 +584,7 @@ name|i
 operator|++
 control|)
 block|{
+specifier|final
 name|String
 name|ident
 init|=
@@ -581,6 +596,7 @@ operator|.
 name|getName
 argument_list|()
 decl_stmt|;
+specifier|final
 name|int
 name|t
 init|=
@@ -645,16 +661,20 @@ specifier|public
 name|void
 name|byte_code
 parameter_list|(
+specifier|final
 name|InstructionList
 name|il
 parameter_list|,
+specifier|final
 name|MethodGen
 name|method
 parameter_list|,
+specifier|final
 name|ConstantPoolGen
 name|cp
 parameter_list|)
 block|{
+specifier|final
 name|int
 name|size
 init|=
@@ -662,6 +682,7 @@ name|idents
 operator|.
 name|length
 decl_stmt|;
+specifier|final
 name|LocalVariableGen
 index|[]
 name|l
@@ -687,6 +708,7 @@ name|i
 operator|++
 control|)
 block|{
+specifier|final
 name|String
 name|ident
 init|=
@@ -698,6 +720,7 @@ operator|.
 name|getName
 argument_list|()
 decl_stmt|;
+specifier|final
 name|Variable
 name|entry
 init|=
@@ -711,6 +734,7 @@ argument_list|(
 name|ident
 argument_list|)
 decl_stmt|;
+specifier|final
 name|Type
 name|t
 init|=
@@ -730,6 +754,7 @@ name|getType
 argument_list|()
 argument_list|)
 decl_stmt|;
+specifier|final
 name|LocalVariableGen
 name|lg
 init|=
@@ -746,6 +771,7 @@ argument_list|,
 literal|null
 argument_list|)
 decl_stmt|;
+specifier|final
 name|int
 name|slot
 init|=
@@ -843,6 +869,7 @@ argument_list|,
 name|cp
 argument_list|)
 expr_stmt|;
+specifier|final
 name|InstructionHandle
 name|end
 init|=
@@ -884,6 +911,7 @@ specifier|public
 name|void
 name|dump
 parameter_list|(
+specifier|final
 name|String
 name|prefix
 parameter_list|)

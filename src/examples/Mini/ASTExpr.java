@@ -270,6 +270,7 @@ decl_stmt|;
 comment|// Generated methods
 name|ASTExpr
 parameter_list|(
+specifier|final
 name|int
 name|id
 parameter_list|)
@@ -282,9 +283,11 @@ expr_stmt|;
 block|}
 name|ASTExpr
 parameter_list|(
+specifier|final
 name|MiniParser
 name|p
 parameter_list|,
+specifier|final
 name|int
 name|id
 parameter_list|)
@@ -302,9 +305,11 @@ specifier|static
 name|Node
 name|jjtCreate
 parameter_list|(
+specifier|final
 name|MiniParser
 name|p
 parameter_list|,
+specifier|final
 name|int
 name|id
 parameter_list|)
@@ -321,12 +326,15 @@ return|;
 block|}
 name|ASTExpr
 parameter_list|(
+specifier|final
 name|int
 name|line
 parameter_list|,
+specifier|final
 name|int
 name|column
 parameter_list|,
+specifier|final
 name|int
 name|id
 parameter_list|)
@@ -351,15 +359,19 @@ expr_stmt|;
 block|}
 name|ASTExpr
 parameter_list|(
+specifier|final
 name|int
 name|line
 parameter_list|,
+specifier|final
 name|int
 name|column
 parameter_list|,
+specifier|final
 name|int
 name|kind
 parameter_list|,
+specifier|final
 name|int
 name|id
 parameter_list|)
@@ -383,16 +395,20 @@ block|}
 comment|/* Special constructor, called from ASTTerm.traverse() and    * ASTFactor.traverse(), when traverse()ing the parse tree replace    * themselves with Expr nodes.     */
 name|ASTExpr
 parameter_list|(
+specifier|final
 name|ASTExpr
 index|[]
 name|children
 parameter_list|,
+specifier|final
 name|int
 name|kind
 parameter_list|,
+specifier|final
 name|int
 name|line
 parameter_list|,
+specifier|final
 name|int
 name|column
 parameter_list|)
@@ -426,6 +442,7 @@ name|op
 init|=
 literal|""
 decl_stmt|;
+specifier|final
 name|int
 name|len
 init|=
@@ -557,6 +574,7 @@ specifier|public
 name|ASTExpr
 name|traverse
 parameter_list|(
+specifier|final
 name|Environment
 name|env
 parameter_list|)
@@ -643,6 +661,7 @@ specifier|public
 name|int
 name|eval
 parameter_list|(
+specifier|final
 name|int
 name|expected
 parameter_list|)
@@ -868,6 +887,7 @@ specifier|static
 name|String
 name|toBool
 parameter_list|(
+specifier|final
 name|String
 name|i
 parameter_list|)
@@ -885,6 +905,7 @@ specifier|static
 name|String
 name|toInt
 parameter_list|(
+specifier|final
 name|String
 name|i
 parameter_list|)
@@ -902,6 +923,7 @@ specifier|public
 name|void
 name|code
 parameter_list|(
+specifier|final
 name|StringBuffer
 name|buf
 parameter_list|)
@@ -924,6 +946,7 @@ argument_list|(
 name|buf
 argument_list|)
 expr_stmt|;
+specifier|final
 name|String
 name|top
 init|=
@@ -990,6 +1013,7 @@ argument_list|(
 name|buf
 argument_list|)
 expr_stmt|;
+specifier|final
 name|String
 name|_body_int2
 init|=
@@ -998,6 +1022,7 @@ operator|.
 name|pop
 argument_list|()
 decl_stmt|;
+specifier|final
 name|String
 name|_body_int
 init|=
@@ -1269,12 +1294,15 @@ specifier|public
 name|void
 name|byte_code
 parameter_list|(
+specifier|final
 name|InstructionList
 name|il
 parameter_list|,
+specifier|final
 name|MethodGen
 name|method
 parameter_list|,
+specifier|final
 name|ConstantPoolGen
 name|cp
 parameter_list|)
@@ -1757,6 +1785,7 @@ specifier|public
 name|void
 name|setType
 parameter_list|(
+specifier|final
 name|int
 name|type
 parameter_list|)
@@ -1781,6 +1810,7 @@ specifier|public
 name|void
 name|setKind
 parameter_list|(
+specifier|final
 name|int
 name|kind
 parameter_list|)
@@ -1805,6 +1835,7 @@ specifier|public
 name|void
 name|setUnOp
 parameter_list|(
+specifier|final
 name|int
 name|unop
 parameter_list|)
@@ -1829,6 +1860,7 @@ specifier|public
 name|void
 name|setLine
 parameter_list|(
+specifier|final
 name|int
 name|line
 parameter_list|)
@@ -1853,6 +1885,7 @@ specifier|public
 name|void
 name|setColumn
 parameter_list|(
+specifier|final
 name|int
 name|column
 parameter_list|)
@@ -1877,9 +1910,11 @@ specifier|public
 name|void
 name|setPosition
 parameter_list|(
+specifier|final
 name|int
 name|line
 parameter_list|,
+specifier|final
 name|int
 name|column
 parameter_list|)
@@ -1903,6 +1938,7 @@ specifier|public
 name|void
 name|dump
 parameter_list|(
+specifier|final
 name|String
 name|prefix
 parameter_list|)

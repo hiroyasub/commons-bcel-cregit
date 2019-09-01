@@ -235,11 +235,13 @@ specifier|static
 name|void
 name|main
 parameter_list|(
+specifier|final
 name|String
 index|[]
 name|argv
 parameter_list|)
 block|{
+specifier|final
 name|List
 argument_list|<
 name|String
@@ -253,6 +255,7 @@ name|String
 argument_list|>
 argument_list|()
 decl_stmt|;
+specifier|final
 name|List
 argument_list|<
 name|String
@@ -307,6 +310,7 @@ decl_stmt|;
 comment|// Parse command line arguments.
 for|for
 control|(
+specifier|final
 name|String
 name|arg
 range|:
@@ -545,6 +549,7 @@ expr_stmt|;
 block|}
 else|else
 block|{
+specifier|final
 name|listclass
 name|listClass
 init|=
@@ -606,24 +611,31 @@ block|}
 specifier|public
 name|listclass
 parameter_list|(
+specifier|final
 name|boolean
 name|code
 parameter_list|,
+specifier|final
 name|boolean
 name|constants
 parameter_list|,
+specifier|final
 name|boolean
 name|verbose
 parameter_list|,
+specifier|final
 name|boolean
 name|classdep
 parameter_list|,
+specifier|final
 name|boolean
 name|nocontents
 parameter_list|,
+specifier|final
 name|boolean
 name|recurse
 parameter_list|,
+specifier|final
 name|List
 argument_list|<
 name|String
@@ -692,6 +704,7 @@ specifier|public
 name|void
 name|list
 parameter_list|(
+specifier|final
 name|String
 name|name
 parameter_list|)
@@ -888,6 +901,7 @@ condition|(
 name|recurse
 condition|)
 block|{
+specifier|final
 name|String
 index|[]
 name|dependencies
@@ -902,6 +916,7 @@ argument_list|)
 decl_stmt|;
 for|for
 control|(
+specifier|final
 name|String
 name|dependency
 range|:
@@ -918,6 +933,7 @@ block|}
 block|}
 catch|catch
 parameter_list|(
+specifier|final
 name|IOException
 name|e
 parameter_list|)
@@ -945,6 +961,7 @@ expr_stmt|;
 block|}
 catch|catch
 parameter_list|(
+specifier|final
 name|Exception
 name|e
 parameter_list|)
@@ -977,6 +994,7 @@ specifier|static
 name|void
 name|printClassDependencies
 parameter_list|(
+specifier|final
 name|ConstantPool
 name|pool
 parameter_list|)
@@ -992,6 +1010,7 @@ argument_list|)
 expr_stmt|;
 for|for
 control|(
+specifier|final
 name|String
 name|name
 range|:
@@ -1020,10 +1039,12 @@ name|String
 index|[]
 name|getClassDependencies
 parameter_list|(
+specifier|final
 name|ConstantPool
 name|pool
 parameter_list|)
 block|{
+specifier|final
 name|String
 index|[]
 name|tempArray
@@ -1042,6 +1063,7 @@ name|size
 init|=
 literal|0
 decl_stmt|;
+specifier|final
 name|StringBuilder
 name|buf
 init|=
@@ -1067,6 +1089,7 @@ name|idx
 operator|++
 control|)
 block|{
+specifier|final
 name|Constant
 name|c
 init|=
@@ -1093,6 +1116,7 @@ operator|.
 name|CONSTANT_Class
 condition|)
 block|{
+specifier|final
 name|ConstantUtf8
 name|c1
 init|=
@@ -1185,6 +1209,7 @@ argument_list|()
 expr_stmt|;
 block|}
 block|}
+specifier|final
 name|String
 index|[]
 name|dependencies
@@ -1220,16 +1245,19 @@ specifier|static
 name|void
 name|printCode
 parameter_list|(
+specifier|final
 name|Method
 index|[]
 name|methods
 parameter_list|,
+specifier|final
 name|boolean
 name|verbose
 parameter_list|)
 block|{
 for|for
 control|(
+specifier|final
 name|Method
 name|method
 range|:
@@ -1245,6 +1273,7 @@ argument_list|(
 name|method
 argument_list|)
 expr_stmt|;
+specifier|final
 name|Code
 name|code
 init|=

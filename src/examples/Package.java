@@ -238,11 +238,13 @@ specifier|static
 name|void
 name|main
 parameter_list|(
+specifier|final
 name|String
 name|args
 index|[]
 parameter_list|)
 block|{
+specifier|final
 name|Package
 name|instance
 init|=
@@ -262,6 +264,7 @@ expr_stmt|;
 block|}
 catch|catch
 parameter_list|(
+specifier|final
 name|Exception
 name|e
 parameter_list|)
@@ -521,6 +524,7 @@ comment|/**      * the main of this class      */
 name|void
 name|go
 parameter_list|(
+specifier|final
 name|String
 index|[]
 name|args
@@ -534,6 +538,7 @@ decl_stmt|;
 comment|// sort the options
 for|for
 control|(
+specifier|final
 name|String
 name|arg
 range|:
@@ -702,6 +707,7 @@ name|isEmpty
 argument_list|()
 condition|)
 block|{
+specifier|final
 name|String
 name|name
 init|=
@@ -710,6 +716,7 @@ operator|.
 name|firstKey
 argument_list|()
 decl_stmt|;
+specifier|final
 name|String
 name|from
 init|=
@@ -734,6 +741,7 @@ condition|)
 block|{
 try|try
 block|{
+specifier|final
 name|InputStream
 name|is
 init|=
@@ -765,6 +773,7 @@ expr_stmt|;
 block|}
 catch|catch
 parameter_list|(
+specifier|final
 name|IOException
 name|e
 parameter_list|)
@@ -793,6 +802,7 @@ argument_list|()
 expr_stmt|;
 block|}
 comment|// create the jar
+specifier|final
 name|JarOutputStream
 name|jarFile
 init|=
@@ -821,6 +831,7 @@ literal|0
 decl_stmt|;
 for|for
 control|(
+specifier|final
 name|String
 name|name
 range|:
@@ -831,6 +842,7 @@ argument_list|()
 control|)
 block|{
 comment|// add entries for every class
+specifier|final
 name|JavaClass
 name|claz
 init|=
@@ -841,6 +853,7 @@ argument_list|(
 name|name
 argument_list|)
 decl_stmt|;
+specifier|final
 name|ZipEntry
 name|zipEntry
 init|=
@@ -852,6 +865,7 @@ operator|+
 literal|".class"
 argument_list|)
 decl_stmt|;
+specifier|final
 name|byte
 index|[]
 name|bytes
@@ -861,6 +875,7 @@ operator|.
 name|getBytes
 argument_list|()
 decl_stmt|;
+specifier|final
 name|int
 name|length
 init|=
@@ -955,6 +970,7 @@ name|isEmpty
 argument_list|()
 condition|)
 block|{
+specifier|final
 name|String
 name|name
 init|=
@@ -1004,6 +1020,7 @@ name|void
 name|printAllClasses
 parameter_list|()
 block|{
+specifier|final
 name|List
 argument_list|<
 name|String
@@ -1047,6 +1064,7 @@ name|i
 operator|++
 control|)
 block|{
+specifier|final
 name|String
 name|cl
 init|=
@@ -1072,12 +1090,14 @@ comment|/**      * Add this class to allClasses. Then go through all its depende
 name|void
 name|addDependents
 parameter_list|(
+specifier|final
 name|JavaClass
 name|clazz
 parameter_list|)
 throws|throws
 name|IOException
 block|{
+specifier|final
 name|String
 name|name
 init|=
@@ -1102,6 +1122,7 @@ argument_list|,
 name|clazz
 argument_list|)
 expr_stmt|;
+specifier|final
 name|ConstantPool
 name|pool
 init|=
@@ -1128,6 +1149,7 @@ name|i
 operator|++
 control|)
 block|{
+specifier|final
 name|Constant
 name|cons
 init|=
@@ -1155,6 +1177,7 @@ operator|.
 name|CONSTANT_Class
 condition|)
 block|{
+specifier|final
 name|int
 name|idx
 init|=
@@ -1173,6 +1196,7 @@ operator|.
 name|getNameIndex
 argument_list|()
 decl_stmt|;
+specifier|final
 name|String
 name|clas
 init|=
@@ -1205,9 +1229,11 @@ comment|/**      * add given class to dependents (from is where its dependent fr
 name|void
 name|addClassString
 parameter_list|(
+specifier|final
 name|String
 name|clas
 parameter_list|,
+specifier|final
 name|String
 name|from
 parameter_list|)

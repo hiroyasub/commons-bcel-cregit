@@ -120,6 +120,7 @@ comment|// Points to Function in environment
 comment|// Generated methods
 name|ASTFunAppl
 parameter_list|(
+specifier|final
 name|int
 name|id
 parameter_list|)
@@ -132,9 +133,11 @@ expr_stmt|;
 block|}
 name|ASTFunAppl
 parameter_list|(
+specifier|final
 name|MiniParser
 name|p
 parameter_list|,
+specifier|final
 name|int
 name|id
 parameter_list|)
@@ -152,9 +155,11 @@ specifier|static
 name|Node
 name|jjtCreate
 parameter_list|(
+specifier|final
 name|MiniParser
 name|p
 parameter_list|,
+specifier|final
 name|int
 name|id
 parameter_list|)
@@ -171,12 +176,15 @@ return|;
 block|}
 name|ASTFunAppl
 parameter_list|(
+specifier|final
 name|ASTIdent
 name|name
 parameter_list|,
+specifier|final
 name|Function
 name|function
 parameter_list|,
+specifier|final
 name|ASTExpr
 index|[]
 name|exprs
@@ -299,10 +307,12 @@ specifier|public
 name|ASTExpr
 name|traverse
 parameter_list|(
+specifier|final
 name|Environment
 name|env
 parameter_list|)
 block|{
+specifier|final
 name|String
 name|fname
 init|=
@@ -311,6 +321,7 @@ operator|.
 name|getName
 argument_list|()
 decl_stmt|;
+specifier|final
 name|EnvEntry
 name|entry
 init|=
@@ -392,6 +403,7 @@ expr_stmt|;
 block|}
 else|else
 block|{
+specifier|final
 name|int
 name|len
 init|=
@@ -407,6 +419,7 @@ name|length
 else|:
 literal|0
 decl_stmt|;
+specifier|final
 name|Function
 name|fun
 init|=
@@ -527,10 +540,12 @@ specifier|public
 name|int
 name|eval
 parameter_list|(
+specifier|final
 name|int
 name|expected
 parameter_list|)
 block|{
+specifier|final
 name|String
 name|fname
 init|=
@@ -539,11 +554,13 @@ operator|.
 name|getName
 argument_list|()
 decl_stmt|;
+specifier|final
 name|Function
 name|f
 init|=
 name|function
 decl_stmt|;
+specifier|final
 name|ASTIdent
 name|fun
 init|=
@@ -552,6 +569,7 @@ operator|.
 name|getName
 argument_list|()
 decl_stmt|;
+specifier|final
 name|ASTIdent
 index|[]
 name|args
@@ -600,6 +618,7 @@ operator|++
 control|)
 block|{
 comment|// length match checked in previous pass
+specifier|final
 name|int
 name|expect
 init|=
@@ -612,6 +631,7 @@ name|getType
 argument_list|()
 decl_stmt|;
 comment|// May be T_UNKNOWN
+specifier|final
 name|int
 name|t_e
 init|=
@@ -749,10 +769,12 @@ specifier|public
 name|void
 name|code
 parameter_list|(
+specifier|final
 name|StringBuffer
 name|buf
 parameter_list|)
 block|{
+specifier|final
 name|String
 name|fname
 init|=
@@ -862,6 +884,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
+specifier|final
 name|StringBuffer
 name|call
 init|=
@@ -957,16 +980,20 @@ specifier|public
 name|void
 name|byte_code
 parameter_list|(
+specifier|final
 name|InstructionList
 name|il
 parameter_list|,
+specifier|final
 name|MethodGen
 name|method
 parameter_list|,
+specifier|final
 name|ConstantPoolGen
 name|cp
 parameter_list|)
 block|{
+specifier|final
 name|String
 name|fname
 init|=
@@ -978,6 +1005,7 @@ decl_stmt|;
 comment|//    Function   f     = function;
 comment|//ASTIdent   fun   = f.getName();
 comment|//    ASTIdent[] args  = f.getArgs();
+specifier|final
 name|String
 name|class_name
 init|=
@@ -1070,6 +1098,7 @@ block|}
 else|else
 block|{
 comment|// Normal function
+specifier|final
 name|int
 name|size
 init|=

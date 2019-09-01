@@ -91,6 +91,7 @@ decl_stmt|;
 comment|// Generated methods
 name|ASTInteger
 parameter_list|(
+specifier|final
 name|int
 name|id
 parameter_list|)
@@ -103,9 +104,11 @@ expr_stmt|;
 block|}
 name|ASTInteger
 parameter_list|(
+specifier|final
 name|MiniParser
 name|p
 parameter_list|,
+specifier|final
 name|int
 name|id
 parameter_list|)
@@ -123,9 +126,11 @@ specifier|static
 name|Node
 name|jjtCreate
 parameter_list|(
+specifier|final
 name|MiniParser
 name|p
 parameter_list|,
+specifier|final
 name|int
 name|id
 parameter_list|)
@@ -167,6 +172,7 @@ specifier|public
 name|ASTExpr
 name|traverse
 parameter_list|(
+specifier|final
 name|Environment
 name|env
 parameter_list|)
@@ -189,6 +195,7 @@ specifier|public
 name|int
 name|eval
 parameter_list|(
+specifier|final
 name|int
 name|expected
 parameter_list|)
@@ -211,6 +218,7 @@ specifier|public
 name|void
 name|code
 parameter_list|(
+specifier|final
 name|StringBuffer
 name|buf
 parameter_list|)
@@ -234,12 +242,15 @@ specifier|public
 name|void
 name|byte_code
 parameter_list|(
+specifier|final
 name|InstructionList
 name|il
 parameter_list|,
+specifier|final
 name|MethodGen
 name|method
 parameter_list|,
+specifier|final
 name|ConstantPoolGen
 name|cp
 parameter_list|)
@@ -266,6 +277,7 @@ block|}
 name|void
 name|setValue
 parameter_list|(
+specifier|final
 name|int
 name|value
 parameter_list|)

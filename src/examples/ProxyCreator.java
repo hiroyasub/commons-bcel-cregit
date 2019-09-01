@@ -236,15 +236,18 @@ specifier|static
 name|Object
 name|createProxy
 parameter_list|(
+specifier|final
 name|String
 name|pack
 parameter_list|,
+specifier|final
 name|String
 name|class_name
 parameter_list|)
 block|{
 try|try
 block|{
+specifier|final
 name|Class
 argument_list|<
 name|?
@@ -271,6 +274,7 @@ return|;
 block|}
 catch|catch
 parameter_list|(
+specifier|final
 name|Exception
 name|e
 parameter_list|)
@@ -291,6 +295,7 @@ specifier|static
 name|void
 name|main
 parameter_list|(
+specifier|final
 name|String
 index|[]
 name|argv
@@ -298,6 +303,7 @@ parameter_list|)
 throws|throws
 name|Exception
 block|{
+specifier|final
 name|ClassLoader
 name|loader
 init|=
@@ -327,6 +333,7 @@ argument_list|)
 condition|)
 block|{
 comment|// Real class name will be set by the class loader
+specifier|final
 name|ClassGen
 name|cg
 init|=
@@ -361,6 +368,7 @@ operator|.
 name|ACC_PUBLIC
 argument_list|)
 expr_stmt|;
+specifier|final
 name|InstructionList
 name|il
 init|=
@@ -368,6 +376,7 @@ operator|new
 name|InstructionList
 argument_list|()
 decl_stmt|;
+specifier|final
 name|ConstantPoolGen
 name|cp
 init|=
@@ -376,6 +385,7 @@ operator|.
 name|getConstantPool
 argument_list|()
 decl_stmt|;
+specifier|final
 name|InstructionFactory
 name|factory
 init|=
@@ -385,6 +395,7 @@ argument_list|(
 name|cg
 argument_list|)
 decl_stmt|;
+specifier|final
 name|int
 name|out
 init|=
@@ -399,6 +410,7 @@ argument_list|,
 literal|"Ljava/io/PrintStream;"
 argument_list|)
 decl_stmt|;
+specifier|final
 name|int
 name|println
 init|=
@@ -413,6 +425,7 @@ argument_list|,
 literal|"(Ljava/lang/Object;)V"
 argument_list|)
 decl_stmt|;
+specifier|final
 name|MethodGen
 name|mg
 init|=
@@ -598,6 +611,7 @@ name|getMethod
 argument_list|()
 argument_list|)
 expr_stmt|;
+specifier|final
 name|byte
 index|[]
 name|bytes
@@ -623,6 +637,7 @@ operator|.
 name|length
 argument_list|)
 expr_stmt|;
+specifier|final
 name|String
 name|s
 init|=
@@ -658,6 +673,7 @@ argument_list|(
 literal|"Creating proxy ... "
 argument_list|)
 expr_stmt|;
+specifier|final
 name|ActionListener
 name|a
 init|=

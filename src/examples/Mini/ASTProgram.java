@@ -301,6 +301,7 @@ decl_stmt|;
 comment|// Environment contains variables and functions
 name|ASTProgram
 parameter_list|(
+specifier|final
 name|int
 name|id
 parameter_list|)
@@ -488,9 +489,11 @@ expr_stmt|;
 block|}
 name|ASTProgram
 parameter_list|(
+specifier|final
 name|MiniParser
 name|p
 parameter_list|,
+specifier|final
 name|int
 name|id
 parameter_list|)
@@ -508,9 +511,11 @@ specifier|static
 name|Node
 name|jjtCreate
 parameter_list|(
+specifier|final
 name|MiniParser
 name|p
 parameter_list|,
+specifier|final
 name|int
 name|id
 parameter_list|)
@@ -835,6 +840,7 @@ specifier|public
 name|void
 name|eval
 parameter_list|(
+specifier|final
 name|int
 name|pass
 parameter_list|)
@@ -874,6 +880,7 @@ literal|3
 condition|)
 block|{
 comment|// Final check for unresolved types
+specifier|final
 name|ASTIdent
 name|name
 init|=
@@ -928,9 +935,11 @@ specifier|public
 name|void
 name|code
 parameter_list|(
+specifier|final
 name|PrintWriter
 name|out
 parameter_list|,
+specifier|final
 name|String
 name|name
 parameter_list|)
@@ -1037,9 +1046,11 @@ specifier|public
 name|void
 name|byte_code
 parameter_list|(
+specifier|final
 name|ClassGen
 name|class_gen
 parameter_list|,
+specifier|final
 name|ConstantPoolGen
 name|cp
 parameter_list|)
@@ -1089,6 +1100,7 @@ operator|new
 name|InstructionList
 argument_list|()
 decl_stmt|;
+specifier|final
 name|String
 name|class_name
 init|=
@@ -1098,6 +1110,7 @@ name|getClassName
 argument_list|()
 decl_stmt|;
 comment|/* Often used constant pool entries      */
+specifier|final
 name|int
 name|_in
 init|=
@@ -1112,6 +1125,7 @@ argument_list|,
 literal|"Ljava/io/BufferedReader;"
 argument_list|)
 decl_stmt|;
+specifier|final
 name|int
 name|out
 init|=
@@ -1286,6 +1300,7 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 comment|/* private static int _writeInt(int i) throws IOException      */
+specifier|final
 name|Type
 index|[]
 name|args
@@ -1296,6 +1311,7 @@ operator|.
 name|INT
 block|}
 decl_stmt|;
+specifier|final
 name|String
 index|[]
 name|argv
@@ -1839,6 +1855,7 @@ specifier|public
 name|void
 name|dump
 parameter_list|(
+specifier|final
 name|String
 name|prefix
 parameter_list|)

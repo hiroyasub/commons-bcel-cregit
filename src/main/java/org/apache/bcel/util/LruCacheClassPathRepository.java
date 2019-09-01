@@ -102,6 +102,7 @@ literal|"cacheSize must be a positive number."
 argument_list|)
 throw|;
 block|}
+specifier|final
 name|int
 name|initialCapacity
 init|=
@@ -114,6 +115,7 @@ operator|*
 name|cacheSize
 operator|)
 decl_stmt|;
+specifier|final
 name|boolean
 name|accessOrder
 init|=
@@ -151,6 +153,7 @@ specifier|protected
 name|boolean
 name|removeEldestEntry
 parameter_list|(
+specifier|final
 name|Map
 operator|.
 name|Entry

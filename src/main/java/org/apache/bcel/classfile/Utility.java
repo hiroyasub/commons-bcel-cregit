@@ -3763,6 +3763,7 @@ name|type
 return|;
 block|}
 comment|// We have a Class signature.
+specifier|final
 name|StringBuilder
 name|typeClass
 init|=
@@ -3896,6 +3897,7 @@ name|chopit
 parameter_list|)
 block|{
 comment|// The first character is guranteed to be '<'
+specifier|final
 name|StringBuilder
 name|typeParams
 init|=
@@ -4048,6 +4050,7 @@ argument_list|)
 throw|;
 block|}
 comment|// get the TypeParameter identifier
+specifier|final
 name|StringBuilder
 name|typeParam
 init|=
@@ -4198,6 +4201,7 @@ name|term
 parameter_list|)
 block|{
 comment|// The first character will be an 'open' that matches the 'close' contained in term.
+specifier|final
 name|StringBuilder
 name|typeList
 init|=

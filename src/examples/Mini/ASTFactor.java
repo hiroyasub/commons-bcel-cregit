@@ -31,6 +31,7 @@ block|{
 comment|// Generated methods
 name|ASTFactor
 parameter_list|(
+specifier|final
 name|int
 name|id
 parameter_list|)
@@ -43,9 +44,11 @@ expr_stmt|;
 block|}
 name|ASTFactor
 parameter_list|(
+specifier|final
 name|MiniParser
 name|p
 parameter_list|,
+specifier|final
 name|int
 name|id
 parameter_list|)
@@ -63,9 +66,11 @@ specifier|static
 name|Node
 name|jjtCreate
 parameter_list|(
+specifier|final
 name|MiniParser
 name|p
 parameter_list|,
+specifier|final
 name|int
 name|id
 parameter_list|)
@@ -88,6 +93,7 @@ specifier|public
 name|ASTExpr
 name|traverse
 parameter_list|(
+specifier|final
 name|Environment
 name|env
 parameter_list|)

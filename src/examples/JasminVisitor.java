@@ -453,27 +453,33 @@ operator|.
 name|EmptyVisitor
 block|{
 specifier|private
+specifier|final
 name|JavaClass
 name|clazz
 decl_stmt|;
 specifier|private
+specifier|final
 name|PrintWriter
 name|out
 decl_stmt|;
 specifier|private
+specifier|final
 name|String
 name|class_name
 decl_stmt|;
 specifier|private
+specifier|final
 name|ConstantPoolGen
 name|cp
 decl_stmt|;
 specifier|public
 name|JasminVisitor
 parameter_list|(
+specifier|final
 name|JavaClass
 name|clazz
 parameter_list|,
+specifier|final
 name|OutputStream
 name|out
 parameter_list|)
@@ -554,6 +560,7 @@ specifier|public
 name|void
 name|visitJavaClass
 parameter_list|(
+specifier|final
 name|JavaClass
 name|clazz
 parameter_list|)
@@ -663,6 +670,7 @@ argument_list|)
 expr_stmt|;
 for|for
 control|(
+specifier|final
 name|String
 name|iface
 range|:
@@ -703,6 +711,7 @@ specifier|public
 name|void
 name|visitField
 parameter_list|(
+specifier|final
 name|Field
 name|field
 parameter_list|)
@@ -765,6 +774,7 @@ specifier|public
 name|void
 name|visitConstantValue
 parameter_list|(
+specifier|final
 name|ConstantValue
 name|cv
 parameter_list|)
@@ -788,10 +798,12 @@ specifier|private
 name|void
 name|printEndMethod
 parameter_list|(
+specifier|final
 name|Attribute
 name|attr
 parameter_list|)
 block|{
+specifier|final
 name|Attribute
 index|[]
 name|attributes
@@ -830,6 +842,7 @@ specifier|public
 name|void
 name|visitDeprecated
 parameter_list|(
+specifier|final
 name|Deprecated
 name|attribute
 parameter_list|)
@@ -846,6 +859,7 @@ specifier|public
 name|void
 name|visitSynthetic
 parameter_list|(
+specifier|final
 name|Synthetic
 name|attribute
 parameter_list|)
@@ -870,6 +884,7 @@ specifier|public
 name|void
 name|visitMethod
 parameter_list|(
+specifier|final
 name|Method
 name|method
 parameter_list|)
@@ -910,6 +925,7 @@ name|getSignature
 argument_list|()
 argument_list|)
 expr_stmt|;
+specifier|final
 name|Attribute
 index|[]
 name|attributes
@@ -951,12 +967,14 @@ specifier|public
 name|void
 name|visitExceptionTable
 parameter_list|(
+specifier|final
 name|ExceptionTable
 name|e
 parameter_list|)
 block|{
 for|for
 control|(
+specifier|final
 name|String
 name|name
 range|:
@@ -1004,6 +1022,7 @@ specifier|public
 name|void
 name|visitCode
 parameter_list|(
+specifier|final
 name|Code
 name|code
 parameter_list|)
@@ -1037,6 +1056,7 @@ name|getMaxLocals
 argument_list|()
 argument_list|)
 expr_stmt|;
+specifier|final
 name|MethodGen
 name|mg
 init|=
@@ -1050,6 +1070,7 @@ argument_list|,
 name|cp
 argument_list|)
 decl_stmt|;
+specifier|final
 name|InstructionList
 name|il
 init|=
@@ -1058,6 +1079,7 @@ operator|.
 name|getInstructionList
 argument_list|()
 decl_stmt|;
+specifier|final
 name|InstructionHandle
 index|[]
 name|ihs
@@ -1081,6 +1103,7 @@ argument_list|()
 expr_stmt|;
 for|for
 control|(
+specifier|final
 name|InstructionHandle
 name|ih1
 range|:
@@ -1094,6 +1117,7 @@ operator|instanceof
 name|BranchHandle
 condition|)
 block|{
+specifier|final
 name|BranchInstruction
 name|bi
 init|=
@@ -1115,6 +1139,7 @@ block|{
 comment|// Special cases LOOKUPSWITCH and TABLESWITCH
 for|for
 control|(
+specifier|final
 name|InstructionHandle
 name|target
 range|:
@@ -1143,6 +1168,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
+specifier|final
 name|InstructionHandle
 name|ih
 init|=
@@ -1165,6 +1191,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
+specifier|final
 name|LocalVariableGen
 index|[]
 name|lvs
@@ -1176,6 +1203,7 @@ argument_list|()
 decl_stmt|;
 for|for
 control|(
+specifier|final
 name|LocalVariableGen
 name|lv
 range|:
@@ -1222,6 +1250,7 @@ literal|":"
 argument_list|)
 expr_stmt|;
 block|}
+specifier|final
 name|CodeExceptionGen
 index|[]
 name|ehs
@@ -1233,6 +1262,7 @@ argument_list|()
 decl_stmt|;
 for|for
 control|(
+specifier|final
 name|CodeExceptionGen
 name|c
 range|:
@@ -1298,6 +1328,7 @@ literal|":"
 argument_list|)
 expr_stmt|;
 block|}
+specifier|final
 name|LineNumberGen
 index|[]
 name|lns
@@ -1309,12 +1340,14 @@ argument_list|()
 decl_stmt|;
 for|for
 control|(
+specifier|final
 name|LineNumberGen
 name|ln
 range|:
 name|lns
 control|)
 block|{
+specifier|final
 name|InstructionHandle
 name|ih
 init|=
@@ -1339,6 +1372,7 @@ block|}
 comment|// Pass 2: Output code.
 for|for
 control|(
+specifier|final
 name|LocalVariableGen
 name|l
 range|:
@@ -1410,6 +1444,7 @@ range|:
 name|ihs
 control|)
 block|{
+specifier|final
 name|Instruction
 name|inst
 init|=
@@ -1458,6 +1493,7 @@ name|Select
 condition|)
 block|{
 comment|// Special cases LOOKUPSWITCH and TABLESWITCH
+specifier|final
 name|Select
 name|s
 init|=
@@ -1466,6 +1502,7 @@ name|Select
 operator|)
 name|inst
 decl_stmt|;
+specifier|final
 name|int
 index|[]
 name|matchs
@@ -1475,6 +1512,7 @@ operator|.
 name|getMatchs
 argument_list|()
 decl_stmt|;
+specifier|final
 name|InstructionHandle
 index|[]
 name|targets
@@ -1516,6 +1554,7 @@ argument_list|)
 expr_stmt|;
 for|for
 control|(
+specifier|final
 name|InstructionHandle
 name|target
 range|:
@@ -1606,6 +1645,7 @@ comment|// Applies for both
 block|}
 else|else
 block|{
+specifier|final
 name|BranchInstruction
 name|bi
 init|=
@@ -1681,12 +1721,14 @@ argument_list|)
 expr_stmt|;
 for|for
 control|(
+specifier|final
 name|CodeExceptionGen
 name|c
 range|:
 name|ehs
 control|)
 block|{
+specifier|final
 name|ObjectType
 name|caught
 init|=
@@ -1695,6 +1737,7 @@ operator|.
 name|getCatchType
 argument_list|()
 decl_stmt|;
+specifier|final
 name|String
 name|class_name
 init|=
@@ -1769,10 +1812,12 @@ specifier|private
 name|String
 name|get
 parameter_list|(
+specifier|final
 name|InstructionHandle
 name|ih
 parameter_list|)
 block|{
+specifier|final
 name|String
 name|str
 init|=
@@ -1812,13 +1857,16 @@ specifier|private
 name|void
 name|put
 parameter_list|(
+specifier|final
 name|InstructionHandle
 name|ih
 parameter_list|,
+specifier|final
 name|String
 name|line
 parameter_list|)
 block|{
+specifier|final
 name|String
 name|str
 init|=
@@ -1888,6 +1936,7 @@ specifier|static
 name|void
 name|main
 parameter_list|(
+specifier|final
 name|String
 index|[]
 name|argv
@@ -1920,6 +1969,7 @@ return|return;
 block|}
 for|for
 control|(
+specifier|final
 name|String
 name|arg
 range|:
@@ -1962,6 +2012,7 @@ operator|.
 name|getClassName
 argument_list|()
 decl_stmt|;
+specifier|final
 name|int
 name|index
 init|=
@@ -1972,6 +2023,7 @@ argument_list|(
 literal|'.'
 argument_list|)
 decl_stmt|;
+specifier|final
 name|String
 name|path
 init|=
@@ -2017,6 +2069,7 @@ literal|""
 argument_list|)
 condition|)
 block|{
+specifier|final
 name|File
 name|f
 init|=
@@ -2032,6 +2085,7 @@ name|mkdirs
 argument_list|()
 expr_stmt|;
 block|}
+specifier|final
 name|String
 name|name
 init|=
@@ -2041,6 +2095,7 @@ name|class_name
 operator|+
 literal|".j"
 decl_stmt|;
+specifier|final
 name|FileOutputStream
 name|out
 init|=

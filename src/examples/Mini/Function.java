@@ -29,6 +29,7 @@ implements|,
 name|EnvEntry
 block|{
 specifier|private
+specifier|final
 name|ASTIdent
 name|name
 decl_stmt|;
@@ -41,11 +42,13 @@ decl_stmt|;
 comment|// Reference to argument identifiers
 comment|//  private ASTExpr    body;         // Reference to function expression body
 specifier|private
+specifier|final
 name|boolean
 name|reserved
 decl_stmt|;
 comment|// Is a key word?
 specifier|private
+specifier|final
 name|int
 name|line
 decl_stmt|,
@@ -53,6 +56,7 @@ name|column
 decl_stmt|;
 comment|// Short for name.getToken()
 specifier|private
+specifier|final
 name|String
 name|fun_name
 decl_stmt|;
@@ -64,9 +68,11 @@ decl_stmt|;
 specifier|public
 name|Function
 parameter_list|(
+specifier|final
 name|ASTIdent
 name|name
 parameter_list|,
+specifier|final
 name|ASTIdent
 index|[]
 name|args
@@ -85,13 +91,16 @@ block|}
 specifier|public
 name|Function
 parameter_list|(
+specifier|final
 name|ASTIdent
 name|name
 parameter_list|,
+specifier|final
 name|ASTIdent
 index|[]
 name|args
 parameter_list|,
+specifier|final
 name|boolean
 name|reserved
 parameter_list|)
@@ -148,6 +157,7 @@ name|String
 name|toString
 parameter_list|()
 block|{
+specifier|final
 name|StringBuffer
 name|buf
 init|=
@@ -201,6 +211,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
+specifier|final
 name|String
 name|prefix
 init|=
@@ -293,6 +304,7 @@ specifier|public
 name|ASTIdent
 name|getArg
 parameter_list|(
+specifier|final
 name|int
 name|i
 parameter_list|)
@@ -318,6 +330,7 @@ specifier|public
 name|void
 name|setArgs
 parameter_list|(
+specifier|final
 name|ASTIdent
 index|[]
 name|args

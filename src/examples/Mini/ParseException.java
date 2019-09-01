@@ -28,14 +28,17 @@ comment|/**    * This constructor is used by the method "generateParseException"
 specifier|public
 name|ParseException
 parameter_list|(
+specifier|final
 name|Token
 name|currentTokenVal
 parameter_list|,
+specifier|final
 name|int
 index|[]
 index|[]
 name|expectedTokenSequencesVal
 parameter_list|,
+specifier|final
 name|String
 index|[]
 name|tokenImageVal
@@ -79,6 +82,7 @@ block|}
 specifier|public
 name|ParseException
 parameter_list|(
+specifier|final
 name|String
 name|message
 parameter_list|)
@@ -405,10 +409,12 @@ specifier|protected
 name|String
 name|add_escapes
 parameter_list|(
+specifier|final
 name|String
 name|str
 parameter_list|)
 block|{
+specifier|final
 name|StringBuffer
 name|retval
 init|=
@@ -560,6 +566,7 @@ operator|>
 literal|0x7e
 condition|)
 block|{
+specifier|final
 name|String
 name|s
 init|=

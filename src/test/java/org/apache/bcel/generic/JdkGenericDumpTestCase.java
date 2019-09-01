@@ -1015,9 +1015,11 @@ specifier|static
 name|void
 name|addAllJavaHomes
 parameter_list|(
+specifier|final
 name|String
 name|extraJavaHomesProp
 parameter_list|,
+specifier|final
 name|Set
 argument_list|<
 name|String
@@ -1025,6 +1027,7 @@ argument_list|>
 name|javaHomes
 parameter_list|)
 block|{
+specifier|final
 name|String
 name|path
 init|=
@@ -1047,6 +1050,7 @@ condition|)
 block|{
 return|return;
 block|}
+specifier|final
 name|String
 index|[]
 name|paths

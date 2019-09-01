@@ -72,19 +72,23 @@ implements|,
 name|Node
 block|{
 specifier|private
+specifier|final
 name|int
 name|exports_index
 decl_stmt|;
 comment|// points to CONSTANT_Package_info
 specifier|private
+specifier|final
 name|int
 name|exports_flags
 decl_stmt|;
 specifier|private
+specifier|final
 name|int
 name|exports_to_count
 decl_stmt|;
 specifier|private
+specifier|final
 name|int
 name|exports_to_index
 index|[]

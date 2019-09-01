@@ -166,10 +166,12 @@ class|class
 name|ClassDumper
 block|{
 specifier|private
+specifier|final
 name|FileImageInputStream
 name|file
 decl_stmt|;
 specifier|private
+specifier|final
 name|String
 name|file_name
 decl_stmt|;
@@ -234,9 +236,11 @@ comment|/**      * Parses class from the given stream.      *      * @param file
 specifier|public
 name|ClassDumper
 parameter_list|(
+specifier|final
 name|FileImageInputStream
 name|file
 parameter_list|,
+specifier|final
 name|String
 name|file_name
 parameter_list|)
@@ -320,6 +324,7 @@ block|}
 block|}
 catch|catch
 parameter_list|(
+specifier|final
 name|IOException
 name|ioe
 parameter_list|)
@@ -470,6 +475,7 @@ block|{
 name|byte
 name|tag
 decl_stmt|;
+specifier|final
 name|int
 name|constant_pool_count
 init|=
@@ -1202,6 +1208,7 @@ name|constant_pool
 argument_list|)
 expr_stmt|;
 comment|// indent all lines by two spaces
+specifier|final
 name|String
 index|[]
 name|lines
@@ -1221,6 +1228,7 @@ argument_list|)
 decl_stmt|;
 for|for
 control|(
+specifier|final
 name|String
 name|line
 range|:
@@ -1252,6 +1260,7 @@ name|IOException
 throws|,
 name|ClassFormatException
 block|{
+specifier|final
 name|int
 name|access_flags
 init|=
@@ -1260,6 +1269,7 @@ operator|.
 name|readUnsignedShort
 argument_list|()
 decl_stmt|;
+specifier|final
 name|int
 name|name_index
 init|=
@@ -1315,6 +1325,7 @@ name|METHOD
 argument_list|)
 argument_list|)
 expr_stmt|;
+specifier|final
 name|int
 name|descriptor_index
 init|=
@@ -1348,6 +1359,7 @@ operator|+
 literal|")"
 argument_list|)
 expr_stmt|;
+specifier|final
 name|int
 name|attributes_count
 init|=
@@ -1356,6 +1368,7 @@ operator|.
 name|readUnsignedShort
 argument_list|()
 decl_stmt|;
+specifier|final
 name|Attribute
 index|[]
 name|attributes
@@ -1398,6 +1411,7 @@ operator|.
 name|mark
 argument_list|()
 expr_stmt|;
+specifier|final
 name|int
 name|attribute_name_index
 init|=
@@ -1406,6 +1420,7 @@ operator|.
 name|readUnsignedShort
 argument_list|()
 decl_stmt|;
+specifier|final
 name|int
 name|attribute_length
 init|=
@@ -1428,6 +1443,7 @@ comment|// System.out.println("  atribute_length: " + attribute_length);
 comment|// A stronger verification test would be to read attribute_length bytes
 comment|// into a buffer.  Then pass that buffer to readAttribute and also
 comment|// verify we're at EOF of the buffer on return.
+specifier|final
 name|long
 name|pos1
 init|=
@@ -1450,6 +1466,7 @@ argument_list|,
 name|constant_pool
 argument_list|)
 expr_stmt|;
+specifier|final
 name|long
 name|pos2
 init|=
@@ -1527,10 +1544,12 @@ specifier|final
 name|String
 name|constantToString
 parameter_list|(
+specifier|final
 name|int
 name|index
 parameter_list|)
 block|{
+specifier|final
 name|Constant
 name|c
 init|=
@@ -1560,6 +1579,7 @@ specifier|static
 name|void
 name|main
 parameter_list|(
+specifier|final
 name|String
 index|[]
 name|args
@@ -1603,6 +1623,7 @@ argument_list|)
 argument_list|)
 init|)
 block|{
+specifier|final
 name|ClassDumper
 name|cd
 init|=

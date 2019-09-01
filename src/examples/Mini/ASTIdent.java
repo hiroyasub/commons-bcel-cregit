@@ -132,6 +132,7 @@ comment|// Reference in environment to decl of this ident
 comment|// Generated methods
 name|ASTIdent
 parameter_list|(
+specifier|final
 name|int
 name|id
 parameter_list|)
@@ -144,9 +145,11 @@ expr_stmt|;
 block|}
 name|ASTIdent
 parameter_list|(
+specifier|final
 name|MiniParser
 name|p
 parameter_list|,
+specifier|final
 name|int
 name|id
 parameter_list|)
@@ -164,9 +167,11 @@ specifier|static
 name|Node
 name|jjtCreate
 parameter_list|(
+specifier|final
 name|MiniParser
 name|p
 parameter_list|,
+specifier|final
 name|int
 name|id
 parameter_list|)
@@ -184,15 +189,19 @@ block|}
 specifier|public
 name|ASTIdent
 parameter_list|(
+specifier|final
 name|String
 name|name
 parameter_list|,
+specifier|final
 name|int
 name|type
 parameter_list|,
+specifier|final
 name|int
 name|line
 parameter_list|,
+specifier|final
 name|int
 name|column
 parameter_list|)
@@ -246,10 +255,12 @@ specifier|public
 name|ASTExpr
 name|traverse
 parameter_list|(
+specifier|final
 name|Environment
 name|env
 parameter_list|)
 block|{
+specifier|final
 name|EnvEntry
 name|entry
 init|=
@@ -326,10 +337,12 @@ specifier|public
 name|int
 name|eval
 parameter_list|(
+specifier|final
 name|int
 name|expected
 parameter_list|)
 block|{
+specifier|final
 name|ASTIdent
 name|ident
 init|=
@@ -338,6 +351,7 @@ operator|.
 name|getName
 argument_list|()
 decl_stmt|;
+specifier|final
 name|int
 name|t
 init|=
@@ -444,6 +458,7 @@ specifier|public
 name|void
 name|code
 parameter_list|(
+specifier|final
 name|StringBuffer
 name|buf
 parameter_list|)
@@ -508,12 +523,15 @@ specifier|public
 name|void
 name|byte_code
 parameter_list|(
+specifier|final
 name|InstructionList
 name|il
 parameter_list|,
+specifier|final
 name|MethodGen
 name|method
 parameter_list|,
+specifier|final
 name|ConstantPoolGen
 name|cp
 parameter_list|)
@@ -568,6 +586,7 @@ expr_stmt|;
 block|}
 else|else
 block|{
+specifier|final
 name|LocalVariableGen
 name|local_var
 init|=
@@ -601,6 +620,7 @@ specifier|public
 name|void
 name|setName
 parameter_list|(
+specifier|final
 name|String
 name|name
 parameter_list|)

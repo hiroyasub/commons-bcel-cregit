@@ -73,6 +73,7 @@ specifier|static
 name|void
 name|main
 parameter_list|(
+specifier|final
 name|String
 index|[]
 name|argv
@@ -80,6 +81,7 @@ parameter_list|)
 throws|throws
 name|Exception
 block|{
+specifier|final
 name|String
 index|[]
 name|file_name
@@ -168,6 +170,7 @@ name|i
 operator|++
 control|)
 block|{
+specifier|final
 name|ClassParser
 name|parser
 init|=
@@ -180,6 +183,7 @@ name|i
 index|]
 argument_list|)
 decl_stmt|;
+specifier|final
 name|JavaClass
 name|java_class
 init|=
@@ -244,12 +248,15 @@ specifier|static
 name|void
 name|patchIt
 parameter_list|(
+specifier|final
 name|String
 name|old
 parameter_list|,
+specifier|final
 name|String
 name|replacement
 parameter_list|,
+specifier|final
 name|Constant
 index|[]
 name|constant_pool
@@ -442,6 +449,7 @@ block|}
 block|}
 catch|catch
 parameter_list|(
+specifier|final
 name|StringIndexOutOfBoundsException
 name|e
 parameter_list|)

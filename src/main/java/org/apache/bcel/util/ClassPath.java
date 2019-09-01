@@ -1355,6 +1355,7 @@ decl_stmt|;
 specifier|public
 name|JrtModules
 parameter_list|(
+specifier|final
 name|String
 name|path
 parameter_list|)

@@ -72,6 +72,7 @@ specifier|static
 name|Token
 name|newToken
 parameter_list|(
+specifier|final
 name|int
 name|ofKind
 parameter_list|)

@@ -324,6 +324,7 @@ specifier|default
 name|void
 name|visitMethodParameter
 parameter_list|(
+specifier|final
 name|MethodParameter
 name|obj
 parameter_list|)
@@ -375,6 +376,7 @@ specifier|default
 name|void
 name|visitConstantDynamic
 parameter_list|(
+specifier|final
 name|ConstantDynamic
 name|constantDynamic
 parameter_list|)

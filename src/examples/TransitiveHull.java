@@ -265,10 +265,12 @@ operator|.
 name|EmptyVisitor
 block|{
 specifier|private
+specifier|final
 name|ClassQueue
 name|queue
 decl_stmt|;
 specifier|private
+specifier|final
 name|ClassSet
 name|set
 decl_stmt|;
@@ -313,6 +315,7 @@ decl_stmt|;
 specifier|public
 name|TransitiveHull
 parameter_list|(
+specifier|final
 name|JavaClass
 name|clazz
 parameter_list|)
@@ -385,6 +388,7 @@ name|empty
 argument_list|()
 condition|)
 block|{
+specifier|final
 name|JavaClass
 name|clazz
 init|=
@@ -442,6 +446,7 @@ argument_list|)
 expr_stmt|;
 for|for
 control|(
+specifier|final
 name|String
 name|anIgnored
 range|:
@@ -465,6 +470,7 @@ block|}
 block|}
 try|try
 block|{
+specifier|final
 name|JavaClass
 name|clazz
 init|=
@@ -496,6 +502,7 @@ block|}
 block|}
 catch|catch
 parameter_list|(
+specifier|final
 name|ClassNotFoundException
 name|e
 parameter_list|)
@@ -520,10 +527,12 @@ specifier|public
 name|void
 name|visitConstantClass
 parameter_list|(
+specifier|final
 name|ConstantClass
 name|cc
 parameter_list|)
 block|{
+specifier|final
 name|String
 name|class_name
 init|=
@@ -597,13 +606,16 @@ specifier|private
 name|void
 name|visitRef
 parameter_list|(
+specifier|final
 name|ConstantCP
 name|ccp
 parameter_list|,
+specifier|final
 name|boolean
 name|method
 parameter_list|)
 block|{
+specifier|final
 name|String
 name|class_name
 init|=
@@ -619,6 +631,7 @@ argument_list|(
 name|class_name
 argument_list|)
 expr_stmt|;
+specifier|final
 name|ConstantNameAndType
 name|cnat
 init|=
@@ -639,6 +652,7 @@ operator|.
 name|CONSTANT_NameAndType
 argument_list|)
 decl_stmt|;
+specifier|final
 name|String
 name|signature
 init|=
@@ -654,6 +668,7 @@ condition|(
 name|method
 condition|)
 block|{
+specifier|final
 name|Type
 name|type
 init|=
@@ -671,6 +686,7 @@ argument_list|)
 expr_stmt|;
 for|for
 control|(
+specifier|final
 name|Type
 name|type1
 range|:
@@ -709,6 +725,7 @@ specifier|public
 name|void
 name|visitConstantMethodref
 parameter_list|(
+specifier|final
 name|ConstantMethodref
 name|cmr
 parameter_list|)
@@ -727,6 +744,7 @@ specifier|public
 name|void
 name|visitConstantInterfaceMethodref
 parameter_list|(
+specifier|final
 name|ConstantInterfaceMethodref
 name|cimr
 parameter_list|)
@@ -745,6 +763,7 @@ specifier|public
 name|void
 name|visitConstantFieldref
 parameter_list|(
+specifier|final
 name|ConstantFieldref
 name|cfr
 parameter_list|)
@@ -772,6 +791,7 @@ specifier|public
 name|void
 name|setIgnored
 parameter_list|(
+specifier|final
 name|String
 index|[]
 name|v
@@ -787,6 +807,7 @@ specifier|static
 name|void
 name|main
 parameter_list|(
+specifier|final
 name|String
 index|[]
 name|argv
@@ -852,6 +873,7 @@ name|parse
 argument_list|()
 expr_stmt|;
 block|}
+specifier|final
 name|TransitiveHull
 name|hull
 init|=
@@ -887,6 +909,7 @@ block|}
 block|}
 catch|catch
 parameter_list|(
+specifier|final
 name|Exception
 name|e
 parameter_list|)

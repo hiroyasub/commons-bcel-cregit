@@ -165,6 +165,7 @@ specifier|static
 name|void
 name|main
 parameter_list|(
+specifier|final
 name|String
 index|[]
 name|argv
@@ -173,6 +174,7 @@ block|{
 try|try
 block|{
 comment|// Load the class from CLASSPATH.
+specifier|final
 name|JavaClass
 name|clazz
 init|=
@@ -186,6 +188,7 @@ literal|0
 index|]
 argument_list|)
 decl_stmt|;
+specifier|final
 name|Method
 index|[]
 name|methods
@@ -195,6 +198,7 @@ operator|.
 name|getMethods
 argument_list|()
 decl_stmt|;
+specifier|final
 name|ConstantPoolGen
 name|cp
 init|=
@@ -246,6 +250,7 @@ argument_list|()
 operator|)
 condition|)
 block|{
+specifier|final
 name|MethodGen
 name|mg
 init|=
@@ -265,6 +270,7 @@ argument_list|,
 name|cp
 argument_list|)
 decl_stmt|;
+specifier|final
 name|Method
 name|stripped
 init|=
@@ -317,6 +323,7 @@ expr_stmt|;
 block|}
 catch|catch
 parameter_list|(
+specifier|final
 name|Exception
 name|e
 parameter_list|)
@@ -333,10 +340,12 @@ specifier|static
 name|Method
 name|removeNOPs
 parameter_list|(
+specifier|final
 name|MethodGen
 name|mg
 parameter_list|)
 block|{
+specifier|final
 name|InstructionList
 name|il
 init|=
@@ -345,6 +354,7 @@ operator|.
 name|getInstructionList
 argument_list|()
 decl_stmt|;
+specifier|final
 name|InstructionFinder
 name|f
 init|=
@@ -354,6 +364,7 @@ argument_list|(
 name|il
 argument_list|)
 decl_stmt|;
+specifier|final
 name|String
 name|pat
 init|=
@@ -372,6 +383,7 @@ literal|0
 decl_stmt|;
 for|for
 control|(
+specifier|final
 name|Iterator
 argument_list|<
 name|InstructionHandle
@@ -393,6 +405,7 @@ argument_list|()
 condition|;
 control|)
 block|{
+specifier|final
 name|InstructionHandle
 index|[]
 name|match
@@ -402,6 +415,7 @@ operator|.
 name|next
 argument_list|()
 decl_stmt|;
+specifier|final
 name|InstructionHandle
 name|first
 init|=
@@ -410,6 +424,7 @@ index|[
 literal|0
 index|]
 decl_stmt|;
+specifier|final
 name|InstructionHandle
 name|last
 init|=
@@ -460,12 +475,14 @@ expr_stmt|;
 block|}
 catch|catch
 parameter_list|(
+specifier|final
 name|TargetLostException
 name|e2
 parameter_list|)
 block|{
 for|for
 control|(
+specifier|final
 name|InstructionHandle
 name|target
 range|:
@@ -477,6 +494,7 @@ control|)
 block|{
 for|for
 control|(
+specifier|final
 name|InstructionTargeter
 name|targeter
 range|:

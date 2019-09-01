@@ -127,6 +127,7 @@ specifier|static
 name|void
 name|main
 parameter_list|(
+specifier|final
 name|String
 index|[]
 name|argv
@@ -172,6 +173,7 @@ argument_list|()
 expr_stmt|;
 comment|// May throw IOException
 block|}
+specifier|final
 name|ClassGen
 name|cg
 init|=
@@ -183,6 +185,7 @@ argument_list|)
 decl_stmt|;
 for|for
 control|(
+specifier|final
 name|Method
 name|method
 range|:
@@ -192,6 +195,7 @@ name|getMethods
 argument_list|()
 control|)
 block|{
+specifier|final
 name|MethodGen
 name|mg
 init|=
@@ -226,6 +230,7 @@ expr_stmt|;
 block|}
 for|for
 control|(
+specifier|final
 name|Field
 name|field
 range|:
@@ -235,6 +240,7 @@ name|getFields
 argument_list|()
 control|)
 block|{
+specifier|final
 name|FieldGen
 name|fg
 init|=

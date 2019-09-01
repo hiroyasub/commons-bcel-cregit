@@ -18,6 +18,7 @@ class|class
 name|JJTMiniParserState
 block|{
 specifier|private
+specifier|final
 name|java
 operator|.
 name|util
@@ -29,6 +30,7 @@ argument_list|>
 name|nodes
 decl_stmt|;
 specifier|private
+specifier|final
 name|java
 operator|.
 name|util
@@ -142,6 +144,7 @@ comment|/* Pushes a node on to the stack. */
 name|void
 name|pushNode
 parameter_list|(
+specifier|final
 name|Node
 name|n
 parameter_list|)
@@ -214,6 +217,7 @@ block|}
 name|void
 name|clearNodeScope
 parameter_list|(
+specifier|final
 name|Node
 name|n
 parameter_list|)
@@ -243,6 +247,7 @@ block|}
 name|void
 name|openNodeScope
 parameter_list|(
+specifier|final
 name|Node
 name|n
 parameter_list|)
@@ -272,6 +277,7 @@ comment|/* A definite node is constructed from a specified number of      childr
 name|void
 name|closeNodeScope
 parameter_list|(
+specifier|final
 name|Node
 name|n
 parameter_list|,
@@ -297,6 +303,7 @@ operator|>
 literal|0
 condition|)
 block|{
+specifier|final
 name|Node
 name|c
 init|=
@@ -339,9 +346,11 @@ comment|/* A conditional node is constructed if its condition is true.  All     
 name|void
 name|closeNodeScope
 parameter_list|(
+specifier|final
 name|Node
 name|n
 parameter_list|,
+specifier|final
 name|boolean
 name|condition
 parameter_list|)
@@ -375,6 +384,7 @@ operator|>
 literal|0
 condition|)
 block|{
+specifier|final
 name|Node
 name|c
 init|=

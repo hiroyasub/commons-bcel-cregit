@@ -40,6 +40,7 @@ specifier|private
 name|void
 name|jjCheckNAdd
 parameter_list|(
+specifier|final
 name|int
 name|state
 parameter_list|)
@@ -79,6 +80,7 @@ parameter_list|(
 name|int
 name|start
 parameter_list|,
+specifier|final
 name|int
 name|end
 parameter_list|)
@@ -111,9 +113,11 @@ specifier|private
 name|void
 name|jjCheckNAddTwoStates
 parameter_list|(
+specifier|final
 name|int
 name|state1
 parameter_list|,
+specifier|final
 name|int
 name|state2
 parameter_list|)
@@ -145,6 +149,7 @@ specifier|private
 name|int
 name|jjMoveNfa_1
 parameter_list|(
+specifier|final
 name|int
 name|startState
 parameter_list|,
@@ -203,6 +208,7 @@ operator|<
 literal|64
 condition|)
 block|{
+specifier|final
 name|long
 name|l
 init|=
@@ -432,6 +438,7 @@ expr_stmt|;
 block|}
 catch|catch
 parameter_list|(
+specifier|final
 name|java
 operator|.
 name|io
@@ -451,9 +458,11 @@ specifier|static
 name|int
 name|jjStopStringLiteralDfa_0
 parameter_list|(
+specifier|final
 name|int
 name|pos
 parameter_list|,
+specifier|final
 name|long
 name|active0
 parameter_list|)
@@ -636,9 +645,11 @@ specifier|static
 name|int
 name|jjStartNfa_0
 parameter_list|(
+specifier|final
 name|int
 name|pos
 parameter_list|,
+specifier|final
 name|long
 name|active0
 parameter_list|)
@@ -664,9 +675,11 @@ specifier|private
 name|int
 name|jjStopAtPos
 parameter_list|(
+specifier|final
 name|int
 name|pos
 parameter_list|,
+specifier|final
 name|int
 name|kind
 parameter_list|)
@@ -690,12 +703,15 @@ specifier|private
 name|int
 name|jjStartNfaWithStates_0
 parameter_list|(
+specifier|final
 name|int
 name|pos
 parameter_list|,
+specifier|final
 name|int
 name|kind
 parameter_list|,
+specifier|final
 name|int
 name|state
 parameter_list|)
@@ -720,6 +736,7 @@ expr_stmt|;
 block|}
 catch|catch
 parameter_list|(
+specifier|final
 name|java
 operator|.
 name|io
@@ -995,6 +1012,7 @@ specifier|private
 name|int
 name|jjMoveStringLiteralDfa1_0
 parameter_list|(
+specifier|final
 name|long
 name|active0
 parameter_list|)
@@ -1011,6 +1029,7 @@ expr_stmt|;
 block|}
 catch|catch
 parameter_list|(
+specifier|final
 name|java
 operator|.
 name|io
@@ -1333,6 +1352,7 @@ specifier|private
 name|int
 name|jjMoveStringLiteralDfa2_0
 parameter_list|(
+specifier|final
 name|long
 name|old0
 parameter_list|,
@@ -1374,6 +1394,7 @@ expr_stmt|;
 block|}
 catch|catch
 parameter_list|(
+specifier|final
 name|java
 operator|.
 name|io
@@ -1559,6 +1580,7 @@ specifier|private
 name|int
 name|jjMoveStringLiteralDfa3_0
 parameter_list|(
+specifier|final
 name|long
 name|old0
 parameter_list|,
@@ -1600,6 +1622,7 @@ expr_stmt|;
 block|}
 catch|catch
 parameter_list|(
+specifier|final
 name|java
 operator|.
 name|io
@@ -1763,6 +1786,7 @@ specifier|private
 name|int
 name|jjMoveStringLiteralDfa4_0
 parameter_list|(
+specifier|final
 name|long
 name|old0
 parameter_list|,
@@ -1804,6 +1828,7 @@ expr_stmt|;
 block|}
 catch|catch
 parameter_list|(
+specifier|final
 name|java
 operator|.
 name|io
@@ -1909,6 +1934,7 @@ specifier|private
 name|int
 name|jjMoveNfa_0
 parameter_list|(
+specifier|final
 name|int
 name|startState
 parameter_list|,
@@ -1967,6 +1993,7 @@ operator|<
 literal|64
 condition|)
 block|{
+specifier|final
 name|long
 name|l
 init|=
@@ -2185,6 +2212,7 @@ operator|<
 literal|128
 condition|)
 block|{
+specifier|final
 name|long
 name|l
 init|=
@@ -2300,6 +2328,7 @@ do|;
 block|}
 else|else
 block|{
+specifier|final
 name|int
 name|i2
 init|=
@@ -2311,6 +2340,7 @@ operator|)
 operator|>>
 literal|6
 decl_stmt|;
+specifier|final
 name|long
 name|l2
 init|=
@@ -2431,6 +2461,7 @@ expr_stmt|;
 block|}
 catch|catch
 parameter_list|(
+specifier|final
 name|java
 operator|.
 name|io
@@ -2792,6 +2823,7 @@ decl_stmt|;
 specifier|public
 name|MiniParserTokenManager
 parameter_list|(
+specifier|final
 name|ASCII_CharStream
 name|stream
 parameter_list|)
@@ -2823,9 +2855,11 @@ block|}
 specifier|public
 name|MiniParserTokenManager
 parameter_list|(
+specifier|final
 name|ASCII_CharStream
 name|stream
 parameter_list|,
+specifier|final
 name|int
 name|lexState
 parameter_list|)
@@ -2846,6 +2880,7 @@ specifier|public
 name|void
 name|ReInit
 parameter_list|(
+specifier|final
 name|ASCII_CharStream
 name|stream
 parameter_list|)
@@ -2908,9 +2943,11 @@ specifier|public
 name|void
 name|ReInit
 parameter_list|(
+specifier|final
 name|ASCII_CharStream
 name|stream
 parameter_list|,
+specifier|final
 name|int
 name|lexState
 parameter_list|)
@@ -2931,6 +2968,7 @@ specifier|public
 name|void
 name|SwitchTo
 parameter_list|(
+specifier|final
 name|int
 name|lexState
 parameter_list|)
@@ -2976,6 +3014,7 @@ name|Token
 name|jjFillToken
 parameter_list|()
 block|{
+specifier|final
 name|Token
 name|t
 init|=
@@ -2992,6 +3031,7 @@ name|kind
 operator|=
 name|jjmatchedKind
 expr_stmt|;
+specifier|final
 name|String
 name|im
 init|=
@@ -3124,6 +3164,7 @@ expr_stmt|;
 block|}
 catch|catch
 parameter_list|(
+specifier|final
 name|java
 operator|.
 name|io
@@ -3212,6 +3253,7 @@ block|}
 block|}
 catch|catch
 parameter_list|(
+specifier|final
 name|java
 operator|.
 name|io
@@ -3525,6 +3567,7 @@ continue|continue;
 block|}
 catch|catch
 parameter_list|(
+specifier|final
 name|java
 operator|.
 name|io
@@ -3578,6 +3621,7 @@ expr_stmt|;
 block|}
 catch|catch
 parameter_list|(
+specifier|final
 name|java
 operator|.
 name|io
@@ -3684,6 +3728,7 @@ specifier|static
 name|void
 name|SkipLexicalActions
 parameter_list|(
+specifier|final
 name|Token
 name|matchedToken
 parameter_list|)

@@ -49,11 +49,13 @@ literal|3
 decl_stmt|;
 comment|// Number of slots of each field
 specifier|private
+specifier|final
 name|int
 name|size
 decl_stmt|;
 comment|// The table is an array of
 specifier|private
+specifier|final
 name|Vector
 argument_list|<
 name|EnvEntry
@@ -71,6 +73,7 @@ decl_stmt|;
 specifier|public
 name|Environment
 parameter_list|(
+specifier|final
 name|int
 name|size
 parameter_list|)
@@ -93,6 +96,7 @@ block|}
 specifier|private
 name|Environment
 parameter_list|(
+specifier|final
 name|Vector
 argument_list|<
 name|EnvEntry
@@ -128,6 +132,7 @@ specifier|private
 name|int
 name|hashCode
 parameter_list|(
+specifier|final
 name|String
 name|key
 parameter_list|)
@@ -151,6 +156,7 @@ specifier|public
 name|void
 name|put
 parameter_list|(
+specifier|final
 name|EnvEntry
 name|obj
 parameter_list|)
@@ -164,6 +170,7 @@ name|EnvEntry
 argument_list|>
 name|v
 decl_stmt|;
+specifier|final
 name|String
 name|key
 init|=
@@ -218,6 +225,7 @@ else|else
 block|{
 try|try
 block|{
+specifier|final
 name|int
 name|index
 init|=
@@ -250,6 +258,7 @@ block|}
 block|}
 catch|catch
 parameter_list|(
+specifier|final
 name|ArrayIndexOutOfBoundsException
 name|e
 parameter_list|)
@@ -270,6 +279,7 @@ specifier|public
 name|EnvEntry
 name|get
 parameter_list|(
+specifier|final
 name|String
 name|key
 parameter_list|)
@@ -315,6 +325,7 @@ return|;
 block|}
 try|try
 block|{
+specifier|final
 name|int
 name|index
 init|=
@@ -345,6 +356,7 @@ block|}
 block|}
 catch|catch
 parameter_list|(
+specifier|final
 name|ArrayIndexOutOfBoundsException
 name|e
 parameter_list|)
@@ -359,6 +371,7 @@ specifier|public
 name|void
 name|delete
 parameter_list|(
+specifier|final
 name|String
 name|key
 parameter_list|)
@@ -397,6 +410,7 @@ return|return;
 block|}
 try|try
 block|{
+specifier|final
 name|int
 name|index
 init|=
@@ -429,6 +443,7 @@ block|}
 block|}
 catch|catch
 parameter_list|(
+specifier|final
 name|ArrayIndexOutOfBoundsException
 name|e
 parameter_list|)
@@ -440,18 +455,21 @@ specifier|static
 name|int
 name|lookup
 parameter_list|(
+specifier|final
 name|Vector
 argument_list|<
 name|EnvEntry
 argument_list|>
 name|v
 parameter_list|,
+specifier|final
 name|String
 name|key
 parameter_list|)
 throws|throws
 name|ArrayIndexOutOfBoundsException
 block|{
+specifier|final
 name|int
 name|len
 init|=
@@ -475,6 +493,7 @@ name|i
 operator|++
 control|)
 block|{
+specifier|final
 name|EnvEntry
 name|entry
 init|=
@@ -515,6 +534,7 @@ name|Object
 name|clone
 parameter_list|()
 block|{
+specifier|final
 name|Vector
 argument_list|<
 name|EnvEntry
@@ -588,6 +608,7 @@ name|String
 name|toString
 parameter_list|()
 block|{
+specifier|final
 name|StringBuffer
 name|buf
 init|=
@@ -647,6 +668,7 @@ index|[]
 name|getEntries
 parameter_list|()
 block|{
+specifier|final
 name|EnvEntry
 index|[]
 name|entries
@@ -697,6 +719,7 @@ operator|!=
 literal|null
 condition|)
 block|{
+specifier|final
 name|int
 name|len
 init|=
@@ -739,6 +762,7 @@ block|}
 block|}
 catch|catch
 parameter_list|(
+specifier|final
 name|ArrayIndexOutOfBoundsException
 name|e
 parameter_list|)

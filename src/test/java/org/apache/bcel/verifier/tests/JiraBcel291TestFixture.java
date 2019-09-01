@@ -28,6 +28,7 @@ name|Object
 index|[]
 name|bug
 parameter_list|(
+specifier|final
 name|Object
 index|[]
 name|arg

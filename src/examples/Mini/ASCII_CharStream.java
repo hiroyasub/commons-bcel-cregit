@@ -125,10 +125,12 @@ specifier|private
 name|void
 name|ExpandBuff
 parameter_list|(
+specifier|final
 name|boolean
 name|wrapAround
 parameter_list|)
 block|{
+specifier|final
 name|char
 index|[]
 name|newbuffer
@@ -141,6 +143,7 @@ operator|+
 literal|2048
 index|]
 decl_stmt|;
+specifier|final
 name|int
 name|newbufline
 index|[]
@@ -153,6 +156,7 @@ operator|+
 literal|2048
 index|]
 decl_stmt|;
+specifier|final
 name|int
 name|newbufcolumn
 index|[]
@@ -376,6 +380,7 @@ block|}
 block|}
 catch|catch
 parameter_list|(
+specifier|final
 name|Throwable
 name|t
 parameter_list|)
@@ -562,6 +567,7 @@ return|return;
 block|}
 catch|catch
 parameter_list|(
+specifier|final
 name|java
 operator|.
 name|io
@@ -614,6 +620,7 @@ operator|=
 operator|-
 literal|1
 expr_stmt|;
+specifier|final
 name|char
 name|c
 init|=
@@ -633,6 +640,7 @@ specifier|private
 name|void
 name|UpdateLineColumn
 parameter_list|(
+specifier|final
 name|char
 name|c
 parameter_list|)
@@ -816,6 +824,7 @@ name|FillBuff
 argument_list|()
 expr_stmt|;
 block|}
+specifier|final
 name|char
 name|c
 init|=
@@ -907,6 +916,7 @@ specifier|final
 name|void
 name|backup
 parameter_list|(
+specifier|final
 name|int
 name|amount
 parameter_list|)
@@ -935,6 +945,7 @@ block|}
 specifier|public
 name|ASCII_CharStream
 parameter_list|(
+specifier|final
 name|java
 operator|.
 name|io
@@ -942,12 +953,15 @@ operator|.
 name|Reader
 name|dstream
 parameter_list|,
+specifier|final
 name|int
 name|startline
 parameter_list|,
+specifier|final
 name|int
 name|startcolumn
 parameter_list|,
+specifier|final
 name|int
 name|buffersize
 parameter_list|)
@@ -1019,6 +1033,7 @@ block|}
 specifier|public
 name|ASCII_CharStream
 parameter_list|(
+specifier|final
 name|java
 operator|.
 name|io
@@ -1026,9 +1041,11 @@ operator|.
 name|Reader
 name|dstream
 parameter_list|,
+specifier|final
 name|int
 name|startline
 parameter_list|,
+specifier|final
 name|int
 name|startcolumn
 parameter_list|)
@@ -1050,6 +1067,7 @@ specifier|public
 name|void
 name|ReInit
 parameter_list|(
+specifier|final
 name|java
 operator|.
 name|io
@@ -1057,12 +1075,15 @@ operator|.
 name|Reader
 name|dstream
 parameter_list|,
+specifier|final
 name|int
 name|startline
 parameter_list|,
+specifier|final
 name|int
 name|startcolumn
 parameter_list|,
+specifier|final
 name|int
 name|buffersize
 parameter_list|)
@@ -1150,6 +1171,7 @@ specifier|public
 name|void
 name|ReInit
 parameter_list|(
+specifier|final
 name|java
 operator|.
 name|io
@@ -1157,9 +1179,11 @@ operator|.
 name|Reader
 name|dstream
 parameter_list|,
+specifier|final
 name|int
 name|startline
 parameter_list|,
+specifier|final
 name|int
 name|startcolumn
 parameter_list|)
@@ -1179,6 +1203,7 @@ block|}
 specifier|public
 name|ASCII_CharStream
 parameter_list|(
+specifier|final
 name|java
 operator|.
 name|io
@@ -1186,12 +1211,15 @@ operator|.
 name|InputStream
 name|dstream
 parameter_list|,
+specifier|final
 name|int
 name|startline
 parameter_list|,
+specifier|final
 name|int
 name|startcolumn
 parameter_list|,
+specifier|final
 name|int
 name|buffersize
 parameter_list|)
@@ -1219,6 +1247,7 @@ block|}
 specifier|public
 name|ASCII_CharStream
 parameter_list|(
+specifier|final
 name|java
 operator|.
 name|io
@@ -1226,9 +1255,11 @@ operator|.
 name|InputStream
 name|dstream
 parameter_list|,
+specifier|final
 name|int
 name|startline
 parameter_list|,
+specifier|final
 name|int
 name|startcolumn
 parameter_list|)
@@ -1250,6 +1281,7 @@ specifier|public
 name|void
 name|ReInit
 parameter_list|(
+specifier|final
 name|java
 operator|.
 name|io
@@ -1257,12 +1289,15 @@ operator|.
 name|InputStream
 name|dstream
 parameter_list|,
+specifier|final
 name|int
 name|startline
 parameter_list|,
+specifier|final
 name|int
 name|startcolumn
 parameter_list|,
+specifier|final
 name|int
 name|buffersize
 parameter_list|)
@@ -1292,6 +1327,7 @@ specifier|public
 name|void
 name|ReInit
 parameter_list|(
+specifier|final
 name|java
 operator|.
 name|io
@@ -1299,9 +1335,11 @@ operator|.
 name|InputStream
 name|dstream
 parameter_list|,
+specifier|final
 name|int
 name|startline
 parameter_list|,
+specifier|final
 name|int
 name|startcolumn
 parameter_list|)
@@ -1384,10 +1422,12 @@ name|char
 index|[]
 name|GetSuffix
 parameter_list|(
+specifier|final
 name|int
 name|len
 parameter_list|)
 block|{
+specifier|final
 name|char
 index|[]
 name|ret
@@ -1512,6 +1552,7 @@ parameter_list|(
 name|int
 name|newLine
 parameter_list|,
+specifier|final
 name|int
 name|newCol
 parameter_list|)

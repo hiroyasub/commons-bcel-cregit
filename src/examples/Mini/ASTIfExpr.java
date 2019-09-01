@@ -145,6 +145,7 @@ decl_stmt|;
 comment|// Generated methods
 name|ASTIfExpr
 parameter_list|(
+specifier|final
 name|int
 name|id
 parameter_list|)
@@ -157,9 +158,11 @@ expr_stmt|;
 block|}
 name|ASTIfExpr
 parameter_list|(
+specifier|final
 name|MiniParser
 name|p
 parameter_list|,
+specifier|final
 name|int
 name|id
 parameter_list|)
@@ -177,9 +180,11 @@ specifier|static
 name|Node
 name|jjtCreate
 parameter_list|(
+specifier|final
 name|MiniParser
 name|p
 parameter_list|,
+specifier|final
 name|int
 name|id
 parameter_list|)
@@ -275,6 +280,7 @@ specifier|public
 name|ASTExpr
 name|traverse
 parameter_list|(
+specifier|final
 name|Environment
 name|env
 parameter_list|)
@@ -331,6 +337,7 @@ specifier|public
 name|int
 name|eval
 parameter_list|(
+specifier|final
 name|int
 name|expected
 parameter_list|)
@@ -598,6 +605,7 @@ specifier|public
 name|void
 name|code
 parameter_list|(
+specifier|final
 name|StringBuffer
 name|buf
 parameter_list|)
@@ -623,6 +631,7 @@ operator|+
 literal|" == 1) {\n"
 argument_list|)
 expr_stmt|;
+specifier|final
 name|int
 name|size
 init|=
@@ -673,12 +682,15 @@ specifier|public
 name|void
 name|byte_code
 parameter_list|(
+specifier|final
 name|InstructionList
 name|il
 parameter_list|,
+specifier|final
 name|MethodGen
 name|method
 parameter_list|,
+specifier|final
 name|ConstantPoolGen
 name|cp
 parameter_list|)
@@ -694,6 +706,7 @@ argument_list|,
 name|cp
 argument_list|)
 expr_stmt|;
+specifier|final
 name|InstructionList
 name|then_code
 init|=
@@ -701,6 +714,7 @@ operator|new
 name|InstructionList
 argument_list|()
 decl_stmt|;
+specifier|final
 name|InstructionList
 name|else_code
 init|=
@@ -808,6 +822,7 @@ specifier|public
 name|void
 name|dump
 parameter_list|(
+specifier|final
 name|String
 name|prefix
 parameter_list|)

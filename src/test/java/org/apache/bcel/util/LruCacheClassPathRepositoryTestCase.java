@@ -116,6 +116,7 @@ literal|""
 argument_list|)
 init|)
 block|{
+specifier|final
 name|LruCacheClassPathRepository
 name|repository
 init|=
@@ -127,6 +128,7 @@ argument_list|,
 literal|2
 argument_list|)
 decl_stmt|;
+specifier|final
 name|JavaClass
 name|class1
 init|=
@@ -144,6 +146,7 @@ argument_list|(
 name|class1
 argument_list|)
 expr_stmt|;
+specifier|final
 name|JavaClass
 name|class2
 init|=
@@ -161,6 +164,7 @@ argument_list|(
 name|class2
 argument_list|)
 expr_stmt|;
+specifier|final
 name|JavaClass
 name|class3
 init|=
@@ -189,6 +193,7 @@ literal|"java.lang.String"
 argument_list|)
 argument_list|)
 expr_stmt|;
+specifier|final
 name|JavaClass
 name|cachedClass2
 init|=
@@ -232,6 +237,7 @@ literal|""
 argument_list|)
 init|)
 block|{
+specifier|final
 name|LruCacheClassPathRepository
 name|repository
 init|=
@@ -243,6 +249,7 @@ argument_list|,
 literal|2
 argument_list|)
 decl_stmt|;
+specifier|final
 name|JavaClass
 name|class1
 init|=
@@ -260,6 +267,7 @@ argument_list|(
 name|class1
 argument_list|)
 expr_stmt|;
+specifier|final
 name|JavaClass
 name|class2
 init|=
@@ -285,6 +293,7 @@ literal|"java.lang.String"
 argument_list|)
 expr_stmt|;
 comment|// Uses class1
+specifier|final
 name|JavaClass
 name|class3
 init|=
@@ -313,6 +322,7 @@ literal|"java.lang.Long"
 argument_list|)
 argument_list|)
 expr_stmt|;
+specifier|final
 name|JavaClass
 name|cachedClass1
 init|=

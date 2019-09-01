@@ -249,11 +249,13 @@ specifier|static
 name|void
 name|main
 parameter_list|(
+specifier|final
 name|String
 index|[]
 name|argv
 parameter_list|)
 block|{
+specifier|final
 name|ClassGen
 name|cg
 init|=
@@ -277,6 +279,7 @@ argument_list|,
 literal|null
 argument_list|)
 decl_stmt|;
+specifier|final
 name|ConstantPoolGen
 name|cp
 init|=
@@ -286,6 +289,7 @@ name|getConstantPool
 argument_list|()
 decl_stmt|;
 comment|// cg creates constant pool
+specifier|final
 name|InstructionList
 name|il
 init|=
@@ -293,6 +297,7 @@ operator|new
 name|InstructionList
 argument_list|()
 decl_stmt|;
+specifier|final
 name|MethodGen
 name|mg
 init|=
@@ -347,6 +352,7 @@ argument_list|,
 name|cp
 argument_list|)
 decl_stmt|;
+specifier|final
 name|InstructionFactory
 name|factory
 init|=
@@ -356,6 +362,7 @@ argument_list|(
 name|cg
 argument_list|)
 decl_stmt|;
+specifier|final
 name|ObjectType
 name|i_stream
 init|=
@@ -365,6 +372,7 @@ argument_list|(
 literal|"java.io.InputStream"
 argument_list|)
 decl_stmt|;
+specifier|final
 name|ObjectType
 name|p_stream
 init|=
@@ -522,6 +530,7 @@ argument_list|,
 literal|null
 argument_list|)
 decl_stmt|;
+specifier|final
 name|int
 name|in
 init|=
@@ -565,6 +574,7 @@ argument_list|,
 literal|null
 argument_list|)
 expr_stmt|;
+specifier|final
 name|int
 name|name
 init|=
@@ -600,6 +610,7 @@ argument_list|)
 expr_stmt|;
 comment|// `name' valid from here
 comment|// try { ...
+specifier|final
 name|InstructionHandle
 name|try_start
 init|=
@@ -716,6 +727,7 @@ argument_list|)
 argument_list|)
 expr_stmt|;
 comment|// Upon normal execution we jump behind exception handler, the target address is not known yet.
+specifier|final
 name|GOTO
 name|g
 init|=
@@ -725,6 +737,7 @@ argument_list|(
 literal|null
 argument_list|)
 decl_stmt|;
+specifier|final
 name|InstructionHandle
 name|try_end
 init|=
@@ -736,6 +749,7 @@ name|g
 argument_list|)
 decl_stmt|;
 comment|/* } catch() { ... }          * Add exception handler: print exception and return from method          */
+specifier|final
 name|InstructionHandle
 name|handler
 init|=
@@ -827,6 +841,7 @@ argument_list|)
 argument_list|)
 expr_stmt|;
 comment|// Normal code continues, now we can set the branch target of the GOTO that jumps over the handler code.
+specifier|final
 name|InstructionHandle
 name|ih
 init|=
@@ -1084,6 +1099,7 @@ expr_stmt|;
 block|}
 catch|catch
 parameter_list|(
+specifier|final
 name|IOException
 name|e
 parameter_list|)

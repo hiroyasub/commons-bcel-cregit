@@ -143,11 +143,13 @@ specifier|static
 name|void
 name|main
 parameter_list|(
+specifier|final
 name|String
 index|[]
 name|argv
 parameter_list|)
 block|{
+specifier|final
 name|String
 index|[]
 name|file_name
@@ -664,6 +666,7 @@ argument_list|(
 literal|"Pass 5: Generating byte code ..."
 argument_list|)
 expr_stmt|;
+specifier|final
 name|ClassGen
 name|class_gen
 init|=
@@ -688,6 +691,7 @@ argument_list|,
 literal|null
 argument_list|)
 decl_stmt|;
+specifier|final
 name|ConstantPoolGen
 name|cp
 init|=
@@ -705,6 +709,7 @@ argument_list|,
 name|cp
 argument_list|)
 expr_stmt|;
+specifier|final
 name|JavaClass
 name|clazz
 init|=
@@ -734,6 +739,7 @@ argument_list|(
 literal|"Pass 5: Generating Java code ..."
 argument_list|)
 expr_stmt|;
+specifier|final
 name|PrintWriter
 name|out
 init|=
@@ -772,6 +778,7 @@ argument_list|(
 literal|"Pass 6: Compiling Java code ..."
 argument_list|)
 expr_stmt|;
+specifier|final
 name|String
 index|[]
 name|args
@@ -787,6 +794,7 @@ decl_stmt|;
 comment|//sun.tools.javac.Main compiler = new sun.tools.javac.Main(System.err, "javac");
 try|try
 block|{
+specifier|final
 name|Process
 name|p
 init|=
@@ -808,6 +816,7 @@ expr_stmt|;
 block|}
 catch|catch
 parameter_list|(
+specifier|final
 name|Exception
 name|e
 parameter_list|)
@@ -872,6 +881,7 @@ block|}
 block|}
 catch|catch
 parameter_list|(
+specifier|final
 name|Exception
 name|e
 parameter_list|)
@@ -888,12 +898,15 @@ specifier|static
 name|void
 name|addError
 parameter_list|(
+specifier|final
 name|int
 name|line
 parameter_list|,
+specifier|final
 name|int
 name|column
 parameter_list|,
+specifier|final
 name|String
 name|err
 parameter_list|)
@@ -941,12 +954,15 @@ specifier|static
 name|void
 name|addWarning
 parameter_list|(
+specifier|final
 name|int
 name|line
 parameter_list|,
+specifier|final
 name|int
 name|column
 parameter_list|,
+specifier|final
 name|String
 name|err
 parameter_list|)
@@ -988,13 +1004,16 @@ specifier|static
 name|String
 name|fillup
 parameter_list|(
+specifier|final
 name|int
 name|n
 parameter_list|,
+specifier|final
 name|int
 name|len
 parameter_list|)
 block|{
+specifier|final
 name|String
 name|str
 init|=
@@ -1005,6 +1024,7 @@ argument_list|(
 name|n
 argument_list|)
 decl_stmt|;
+specifier|final
 name|int
 name|diff
 init|=
@@ -1022,6 +1042,7 @@ operator|>
 literal|0
 condition|)
 block|{
+specifier|final
 name|char
 index|[]
 name|chs
@@ -1077,6 +1098,7 @@ specifier|static
 name|void
 name|addWarning
 parameter_list|(
+specifier|final
 name|String
 name|err
 parameter_list|)

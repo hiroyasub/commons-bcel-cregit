@@ -49,6 +49,7 @@ decl_stmt|;
 specifier|public
 name|SimpleNode
 parameter_list|(
+specifier|final
 name|int
 name|i
 parameter_list|)
@@ -61,9 +62,11 @@ block|}
 specifier|public
 name|SimpleNode
 parameter_list|(
+specifier|final
 name|MiniParser
 name|p
 parameter_list|,
+specifier|final
 name|int
 name|i
 parameter_list|)
@@ -100,6 +103,7 @@ specifier|public
 name|void
 name|jjtSetParent
 parameter_list|(
+specifier|final
 name|Node
 name|n
 parameter_list|)
@@ -122,9 +126,11 @@ specifier|public
 name|void
 name|jjtAddChild
 parameter_list|(
+specifier|final
 name|Node
 name|n
 parameter_list|,
+specifier|final
 name|int
 name|i
 parameter_list|)
@@ -156,6 +162,7 @@ operator|.
 name|length
 condition|)
 block|{
+specifier|final
 name|Node
 name|c
 index|[]
@@ -202,6 +209,7 @@ specifier|public
 name|Node
 name|jjtGetChild
 parameter_list|(
+specifier|final
 name|int
 name|i
 parameter_list|)
@@ -253,6 +261,7 @@ specifier|public
 name|String
 name|toString
 parameter_list|(
+specifier|final
 name|String
 name|prefix
 parameter_list|)
@@ -269,6 +278,7 @@ specifier|public
 name|void
 name|dump
 parameter_list|(
+specifier|final
 name|String
 name|prefix
 parameter_list|)
@@ -309,6 +319,7 @@ operator|++
 name|i
 control|)
 block|{
+specifier|final
 name|SimpleNode
 name|n
 init|=

@@ -72,15 +72,18 @@ implements|,
 name|Node
 block|{
 specifier|private
+specifier|final
 name|int
 name|provides_index
 decl_stmt|;
 comment|// points to CONSTANT_Class_info
 specifier|private
+specifier|final
 name|int
 name|provides_with_count
 decl_stmt|;
 specifier|private
+specifier|final
 name|int
 name|provides_with_index
 index|[]

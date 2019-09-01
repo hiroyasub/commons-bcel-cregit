@@ -35,16 +35,19 @@ implements|implements
 name|EnvEntry
 block|{
 specifier|private
+specifier|final
 name|ASTIdent
 name|name
 decl_stmt|;
 comment|// Reference to the original declaration
 specifier|private
+specifier|final
 name|boolean
 name|reserved
 decl_stmt|;
 comment|// Is a key word?
 specifier|private
+specifier|final
 name|int
 name|line
 decl_stmt|,
@@ -52,6 +55,7 @@ name|column
 decl_stmt|;
 comment|// Extracted from name.getToken()
 specifier|private
+specifier|final
 name|String
 name|var_name
 decl_stmt|;
@@ -64,6 +68,7 @@ comment|// local var associated with this variable
 specifier|public
 name|Variable
 parameter_list|(
+specifier|final
 name|ASTIdent
 name|name
 parameter_list|)
@@ -79,9 +84,11 @@ block|}
 specifier|public
 name|Variable
 parameter_list|(
+specifier|final
 name|ASTIdent
 name|name
 parameter_list|,
+specifier|final
 name|boolean
 name|reserved
 parameter_list|)
@@ -205,6 +212,7 @@ block|}
 name|void
 name|setLocalVariable
 parameter_list|(
+specifier|final
 name|LocalVariableGen
 name|local_var
 parameter_list|)

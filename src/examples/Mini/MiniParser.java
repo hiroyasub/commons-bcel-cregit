@@ -43,6 +43,7 @@ specifier|static
 name|void
 name|jjtreeOpenNodeScope
 parameter_list|(
+specifier|final
 name|Node
 name|n
 parameter_list|)
@@ -53,6 +54,7 @@ specifier|static
 name|void
 name|jjtreeCloseNodeScope
 parameter_list|(
+specifier|final
 name|Node
 name|n
 parameter_list|)
@@ -78,6 +80,7 @@ throws|throws
 name|ParseException
 block|{
 comment|/*@bgen(jjtree) Program */
+specifier|final
 name|ASTProgram
 name|jjtn000
 init|=
@@ -156,6 +159,7 @@ expr_stmt|;
 block|}
 catch|catch
 parameter_list|(
+specifier|final
 name|Throwable
 name|jjte000
 parameter_list|)
@@ -278,6 +282,7 @@ throws|throws
 name|ParseException
 block|{
 comment|/*@bgen(jjtree) FunDecl */
+specifier|final
 name|ASTFunDecl
 name|jjtn000
 init|=
@@ -443,6 +448,7 @@ expr_stmt|;
 block|}
 catch|catch
 parameter_list|(
+specifier|final
 name|Throwable
 name|jjte000
 parameter_list|)
@@ -564,6 +570,7 @@ throws|throws
 name|ParseException
 block|{
 comment|/*@bgen(jjtree) Expr */
+specifier|final
 name|ASTExpr
 name|jjtn000
 init|=
@@ -752,6 +759,7 @@ block|}
 block|}
 catch|catch
 parameter_list|(
+specifier|final
 name|Throwable
 name|jjte000
 parameter_list|)
@@ -874,6 +882,7 @@ throws|throws
 name|ParseException
 block|{
 comment|/*@bgen(jjtree) IfExpr */
+specifier|final
 name|ASTIfExpr
 name|jjtn000
 init|=
@@ -982,6 +991,7 @@ expr_stmt|;
 block|}
 catch|catch
 parameter_list|(
+specifier|final
 name|Throwable
 name|jjte000
 parameter_list|)
@@ -1103,6 +1113,7 @@ throws|throws
 name|ParseException
 block|{
 comment|/*@bgen(jjtree) LetExpr */
+specifier|final
 name|ASTLetExpr
 name|jjtn000
 init|=
@@ -1229,6 +1240,7 @@ expr_stmt|;
 block|}
 catch|catch
 parameter_list|(
+specifier|final
 name|Throwable
 name|jjte000
 parameter_list|)
@@ -1350,6 +1362,7 @@ throws|throws
 name|ParseException
 block|{
 comment|/*@bgen(jjtree) FunAppl */
+specifier|final
 name|ASTFunAppl
 name|jjtn000
 init|=
@@ -1551,6 +1564,7 @@ block|}
 block|}
 catch|catch
 parameter_list|(
+specifier|final
 name|Throwable
 name|jjte000
 parameter_list|)
@@ -1679,6 +1693,7 @@ throws|throws
 name|ParseException
 block|{
 comment|/*@bgen(jjtree) Term */
+specifier|final
 name|ASTTerm
 name|jjtn000
 init|=
@@ -1802,6 +1817,7 @@ expr_stmt|;
 block|}
 catch|catch
 parameter_list|(
+specifier|final
 name|Throwable
 name|jjte000
 parameter_list|)
@@ -1923,6 +1939,7 @@ throws|throws
 name|ParseException
 block|{
 comment|/*@bgen(jjtree) Factor */
+specifier|final
 name|ASTFactor
 name|jjtn000
 init|=
@@ -2052,6 +2069,7 @@ expr_stmt|;
 block|}
 catch|catch
 parameter_list|(
+specifier|final
 name|Throwable
 name|jjte000
 parameter_list|)
@@ -2283,6 +2301,7 @@ throws|throws
 name|ParseException
 block|{
 comment|/*@bgen(jjtree) Integer */
+specifier|final
 name|ASTInteger
 name|jjtn000
 init|=
@@ -2418,6 +2437,7 @@ throws|throws
 name|ParseException
 block|{
 comment|/*@bgen(jjtree) Ident */
+specifier|final
 name|ASTIdent
 name|jjtn000
 init|=
@@ -3069,6 +3089,7 @@ specifier|private
 name|boolean
 name|jj_2_1
 parameter_list|(
+specifier|final
 name|int
 name|xla
 parameter_list|)
@@ -3083,6 +3104,7 @@ name|jj_scanpos
 operator|=
 name|token
 expr_stmt|;
+specifier|final
 name|boolean
 name|retval
 init|=
@@ -3711,6 +3733,7 @@ decl_stmt|;
 specifier|public
 name|MiniParser
 parameter_list|(
+specifier|final
 name|java
 operator|.
 name|io
@@ -3853,6 +3876,7 @@ specifier|public
 name|void
 name|ReInit
 parameter_list|(
+specifier|final
 name|java
 operator|.
 name|io
@@ -3954,6 +3978,7 @@ block|}
 specifier|public
 name|MiniParser
 parameter_list|(
+specifier|final
 name|java
 operator|.
 name|io
@@ -4096,6 +4121,7 @@ specifier|public
 name|void
 name|ReInit
 parameter_list|(
+specifier|final
 name|java
 operator|.
 name|io
@@ -4197,6 +4223,7 @@ block|}
 specifier|public
 name|MiniParser
 parameter_list|(
+specifier|final
 name|MiniParserTokenManager
 name|tm
 parameter_list|)
@@ -4318,6 +4345,7 @@ specifier|public
 name|void
 name|ReInit
 parameter_list|(
+specifier|final
 name|MiniParserTokenManager
 name|tm
 parameter_list|)
@@ -4403,6 +4431,7 @@ specifier|private
 name|Token
 name|jj_consume_token
 parameter_list|(
+specifier|final
 name|int
 name|kind
 parameter_list|)
@@ -4554,6 +4583,7 @@ specifier|private
 name|boolean
 name|jj_scan_token
 parameter_list|(
+specifier|final
 name|int
 name|kind
 parameter_list|)
@@ -4727,6 +4757,7 @@ specifier|public
 name|Token
 name|getToken
 parameter_list|(
+specifier|final
 name|int
 name|index
 parameter_list|)
@@ -4902,9 +4933,11 @@ specifier|private
 name|void
 name|jj_add_error_token
 parameter_list|(
+specifier|final
 name|int
 name|kind
 parameter_list|,
+specifier|final
 name|int
 name|pos
 parameter_list|)
@@ -4984,6 +5017,7 @@ literal|false
 decl_stmt|;
 for|for
 control|(
+specifier|final
 name|java
 operator|.
 name|util
@@ -5007,6 +5041,7 @@ argument_list|()
 condition|;
 control|)
 block|{
+specifier|final
 name|int
 index|[]
 name|oldentry
@@ -5127,6 +5162,7 @@ operator|.
 name|removeAllElements
 argument_list|()
 expr_stmt|;
+specifier|final
 name|boolean
 index|[]
 name|la1tokens
@@ -5338,6 +5374,7 @@ argument_list|,
 literal|0
 argument_list|)
 expr_stmt|;
+specifier|final
 name|int
 index|[]
 index|[]
@@ -5507,9 +5544,11 @@ specifier|private
 name|void
 name|jj_save
 parameter_list|(
+specifier|final
 name|int
 name|index
 parameter_list|,
+specifier|final
 name|int
 name|xla
 parameter_list|)
