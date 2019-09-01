@@ -4891,10 +4891,7 @@ operator|.
 name|util
 operator|.
 name|Vector
-argument_list|<
-name|int
-index|[]
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 specifier|static

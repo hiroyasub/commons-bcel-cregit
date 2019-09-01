@@ -66,9 +66,7 @@ operator|.
 name|util
 operator|.
 name|Stack
-argument_list|<
-name|Node
-argument_list|>
+argument_list|<>
 argument_list|()
 expr_stmt|;
 name|marks
@@ -79,9 +77,7 @@ operator|.
 name|util
 operator|.
 name|Stack
-argument_list|<
-name|Integer
-argument_list|>
+argument_list|<>
 argument_list|()
 expr_stmt|;
 name|sp

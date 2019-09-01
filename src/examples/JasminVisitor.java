@@ -1094,11 +1094,7 @@ name|map
 operator|=
 operator|new
 name|Hashtable
-argument_list|<
-name|InstructionHandle
-argument_list|,
-name|String
-argument_list|>
+argument_list|<>
 argument_list|()
 expr_stmt|;
 for|for

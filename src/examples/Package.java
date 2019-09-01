@@ -300,11 +300,7 @@ name|allClasses
 init|=
 operator|new
 name|TreeMap
-argument_list|<
-name|String
-argument_list|,
-name|JavaClass
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 comment|/**      * We start at the root classes, put them in here, then go through      * this list, putting dependent classes in here and from there      * into allClasses. Store class names against class names of their dependents      */
@@ -318,11 +314,7 @@ name|dependents
 init|=
 operator|new
 name|TreeMap
-argument_list|<
-name|String
-argument_list|,
-name|String
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 comment|/**      * Collect all classes that could not be found in the classpath.      * Store class names against class names of their dependents      */
@@ -336,11 +328,7 @@ name|notFound
 init|=
 operator|new
 name|TreeMap
-argument_list|<
-name|String
-argument_list|,
-name|String
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 comment|/**      * See wheather we print the classes that were not found (default = false)      */
@@ -1029,9 +1017,7 @@ name|names
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|String
-argument_list|>
+argument_list|<>
 argument_list|(
 name|allClasses
 operator|.

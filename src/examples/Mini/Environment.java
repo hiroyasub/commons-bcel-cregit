@@ -213,9 +213,7 @@ name|v
 operator|=
 operator|new
 name|Vector
-argument_list|<
-name|EnvEntry
-argument_list|>
+argument_list|<>
 argument_list|(
 name|SLOTS
 argument_list|)
