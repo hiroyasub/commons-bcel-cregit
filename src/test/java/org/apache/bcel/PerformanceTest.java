@@ -229,7 +229,6 @@ literal|"true"
 argument_list|)
 argument_list|)
 decl_stmt|;
-empty_stmt|;
 specifier|private
 specifier|static
 name|byte
