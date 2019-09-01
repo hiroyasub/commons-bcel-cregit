@@ -73,7 +73,7 @@ specifier|private
 name|int
 name|host_class_index
 decl_stmt|;
-comment|/**      * Initialize from another object. Note that both objects use the same      * references (shallow copy). Use copy() for a physical copy.      */
+comment|/**      * Initializes from another object. Note that both objects use the same      * references (shallow copy). Use copy() for a physical copy.      */
 specifier|public
 name|NestHost
 parameter_list|(
@@ -147,7 +147,7 @@ operator|=
 name|host_class_index
 expr_stmt|;
 block|}
-comment|/**      * Construct object from input stream.      * @param name_index Index in constant pool      * @param length Content length in bytes      * @param input Input stream      * @param constant_pool Array of constants      * @throws IOException      */
+comment|/**      * Constructs object from input stream.      * @param name_index Index in constant pool      * @param length Content length in bytes      * @param input Input stream      * @param constant_pool Array of constants      * @throws IOException      */
 name|NestHost
 parameter_list|(
 specifier|final
@@ -208,7 +208,7 @@ name|this
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Dump NestHost attribute to file stream in binary format.      *      * @param file Output file stream      * @throws IOException if an I/O error occurs.      */
+comment|/**      * Dumps NestHost attribute to file stream in binary format.      *      * @param file Output file stream      * @throws IOException if an I/O error occurs.      */
 annotation|@
 name|Override
 specifier|public
