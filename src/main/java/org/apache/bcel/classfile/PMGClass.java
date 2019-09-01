@@ -230,7 +230,6 @@ comment|/**      * Dump source file attribute to file stream in binary format.  
 annotation|@
 name|Override
 specifier|public
-specifier|final
 name|void
 name|dump
 parameter_list|(
@@ -265,7 +264,6 @@ expr_stmt|;
 block|}
 comment|/**      * @return Index in constant pool of source file name.      */
 specifier|public
-specifier|final
 name|int
 name|getPMGClassIndex
 parameter_list|()
@@ -276,7 +274,6 @@ return|;
 block|}
 comment|/**      * @param pmg_class_index      */
 specifier|public
-specifier|final
 name|void
 name|setPMGClassIndex
 parameter_list|(
@@ -294,7 +291,6 @@ expr_stmt|;
 block|}
 comment|/**      * @return Index in constant pool of source file name.      */
 specifier|public
-specifier|final
 name|int
 name|getPMGIndex
 parameter_list|()
@@ -305,7 +301,6 @@ return|;
 block|}
 comment|/**      * @param pmg_index      */
 specifier|public
-specifier|final
 name|void
 name|setPMGIndex
 parameter_list|(
@@ -323,7 +318,6 @@ expr_stmt|;
 block|}
 comment|/**      * @return PMG name.      */
 specifier|public
-specifier|final
 name|String
 name|getPMGName
 parameter_list|()
@@ -358,7 +352,6 @@ return|;
 block|}
 comment|/**      * @return PMG class name.      */
 specifier|public
-specifier|final
 name|String
 name|getPMGClassName
 parameter_list|()
@@ -395,7 +388,6 @@ comment|/**      * @return String representation      */
 annotation|@
 name|Override
 specifier|public
-specifier|final
 name|String
 name|toString
 parameter_list|()

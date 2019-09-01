@@ -159,7 +159,6 @@ comment|/**      * Dump constant float to file stream in binary format.      *  
 annotation|@
 name|Override
 specifier|public
-specifier|final
 name|void
 name|dump
 parameter_list|(
@@ -190,7 +189,6 @@ expr_stmt|;
 block|}
 comment|/**      * @return data, i.e., 4 bytes.      */
 specifier|public
-specifier|final
 name|float
 name|getBytes
 parameter_list|()
@@ -201,7 +199,6 @@ return|;
 block|}
 comment|/**      * @param bytes the raw bytes that represent this float      */
 specifier|public
-specifier|final
 name|void
 name|setBytes
 parameter_list|(
@@ -221,7 +218,6 @@ comment|/**      * @return String representation.      */
 annotation|@
 name|Override
 specifier|public
-specifier|final
 name|String
 name|toString
 parameter_list|()

@@ -324,7 +324,6 @@ expr_stmt|;
 block|}
 comment|/**      * @return Code attribute of method, if any      */
 specifier|public
-specifier|final
 name|Code
 name|getCode
 parameter_list|()
@@ -362,7 +361,6 @@ return|;
 block|}
 comment|/**      * @return ExceptionTable attribute of method, if any, i.e., list all      * exceptions the method may throw not exception handlers!      */
 specifier|public
-specifier|final
 name|ExceptionTable
 name|getExceptionTable
 parameter_list|()
@@ -400,7 +398,6 @@ return|;
 block|}
 comment|/** @return LocalVariableTable of code attribute if any, i.e. the call is forwarded      * to the Code atribute.      */
 specifier|public
-specifier|final
 name|LocalVariableTable
 name|getLocalVariableTable
 parameter_list|()
@@ -432,7 +429,6 @@ return|;
 block|}
 comment|/** @return LineNumberTable of code attribute if any, i.e. the call is forwarded      * to the Code atribute.      */
 specifier|public
-specifier|final
 name|LineNumberTable
 name|getLineNumberTable
 parameter_list|()
@@ -466,7 +462,6 @@ comment|/**      * Return string representation close to declaration format,    
 annotation|@
 name|Override
 specifier|public
-specifier|final
 name|String
 name|toString
 parameter_list|()
@@ -680,7 +675,6 @@ return|;
 block|}
 comment|/**      * @return deep copy of this method      */
 specifier|public
-specifier|final
 name|Method
 name|copy
 parameter_list|(

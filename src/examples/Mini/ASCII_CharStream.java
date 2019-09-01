@@ -604,7 +604,6 @@ block|}
 block|}
 specifier|static
 specifier|public
-specifier|final
 name|char
 name|BeginToken
 parameter_list|()
@@ -759,7 +758,6 @@ expr_stmt|;
 block|}
 specifier|static
 specifier|public
-specifier|final
 name|char
 name|readChar
 parameter_list|()
@@ -856,7 +854,6 @@ return|;
 block|}
 specifier|static
 specifier|public
-specifier|final
 name|int
 name|getEndColumn
 parameter_list|()
@@ -870,7 +867,6 @@ return|;
 block|}
 specifier|static
 specifier|public
-specifier|final
 name|int
 name|getEndLine
 parameter_list|()
@@ -884,7 +880,6 @@ return|;
 block|}
 specifier|static
 specifier|public
-specifier|final
 name|int
 name|getBeginColumn
 parameter_list|()
@@ -898,7 +893,6 @@ return|;
 block|}
 specifier|static
 specifier|public
-specifier|final
 name|int
 name|getBeginLine
 parameter_list|()
@@ -912,7 +906,6 @@ return|;
 block|}
 specifier|static
 specifier|public
-specifier|final
 name|void
 name|backup
 parameter_list|(
@@ -1358,7 +1351,6 @@ expr_stmt|;
 block|}
 specifier|static
 specifier|public
-specifier|final
 name|String
 name|GetImage
 parameter_list|()
@@ -1417,7 +1409,6 @@ block|}
 block|}
 specifier|static
 specifier|public
-specifier|final
 name|char
 index|[]
 name|GetSuffix

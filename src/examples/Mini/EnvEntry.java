@@ -18,17 +18,14 @@ specifier|public
 interface|interface
 name|EnvEntry
 block|{
-specifier|public
 name|String
 name|getHashKey
 parameter_list|()
 function_decl|;
-specifier|public
 name|int
 name|getLine
 parameter_list|()
 function_decl|;
-specifier|public
 name|int
 name|getColumn
 parameter_list|()

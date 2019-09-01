@@ -212,7 +212,6 @@ comment|/**      * Dump NestHost attribute to file stream in binary format.     
 annotation|@
 name|Override
 specifier|public
-specifier|final
 name|void
 name|dump
 parameter_list|(
@@ -240,7 +239,6 @@ expr_stmt|;
 block|}
 comment|/**      * @return index into constant pool of host class name.      */
 specifier|public
-specifier|final
 name|int
 name|getHostClassIndex
 parameter_list|()
@@ -251,7 +249,6 @@ return|;
 block|}
 comment|/**      * @param int the host class index      */
 specifier|public
-specifier|final
 name|void
 name|setHostClassIndex
 parameter_list|(
@@ -271,7 +268,6 @@ comment|/**      * @return String representation      */
 annotation|@
 name|Override
 specifier|public
-specifier|final
 name|String
 name|toString
 parameter_list|()

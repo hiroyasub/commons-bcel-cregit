@@ -219,7 +219,6 @@ comment|/**      * Dump source file attribute to file stream in binary format.  
 annotation|@
 name|Override
 specifier|public
-specifier|final
 name|void
 name|dump
 parameter_list|(
@@ -247,7 +246,6 @@ expr_stmt|;
 block|}
 comment|/**      * @return Index in constant pool of source file name.      */
 specifier|public
-specifier|final
 name|int
 name|getSignatureIndex
 parameter_list|()
@@ -258,7 +256,6 @@ return|;
 block|}
 comment|/**      * @param signature_index the index info the constant pool of this signature      */
 specifier|public
-specifier|final
 name|void
 name|setSignatureIndex
 parameter_list|(
@@ -276,7 +273,6 @@ expr_stmt|;
 block|}
 comment|/**      * @return GJ signature.      */
 specifier|public
-specifier|final
 name|String
 name|getSignature
 parameter_list|()
@@ -334,7 +330,6 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
-specifier|final
 name|String
 name|getData
 parameter_list|()
@@ -347,7 +342,6 @@ name|buf
 argument_list|)
 return|;
 block|}
-specifier|final
 name|void
 name|unread
 parameter_list|()
@@ -971,7 +965,6 @@ comment|/**      * @return String representation      */
 annotation|@
 name|Override
 specifier|public
-specifier|final
 name|String
 name|toString
 parameter_list|()

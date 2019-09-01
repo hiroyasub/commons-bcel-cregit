@@ -222,7 +222,6 @@ expr_stmt|;
 block|}
 comment|/**      * Dump inner class attribute to file stream in binary format.      *      * @param file Output file stream      * @throws IOException      */
 specifier|public
-specifier|final
 name|void
 name|dump
 parameter_list|(
@@ -264,7 +263,6 @@ expr_stmt|;
 block|}
 comment|/**      * @return access flags of inner class.      */
 specifier|public
-specifier|final
 name|int
 name|getInnerAccessFlags
 parameter_list|()
@@ -275,7 +273,6 @@ return|;
 block|}
 comment|/**      * @return class index of inner class.      */
 specifier|public
-specifier|final
 name|int
 name|getInnerClassIndex
 parameter_list|()
@@ -286,7 +283,6 @@ return|;
 block|}
 comment|/**      * @return name index of inner class.      */
 specifier|public
-specifier|final
 name|int
 name|getInnerNameIndex
 parameter_list|()
@@ -297,7 +293,6 @@ return|;
 block|}
 comment|/**      * @return class index of outer class.      */
 specifier|public
-specifier|final
 name|int
 name|getOuterClassIndex
 parameter_list|()
@@ -308,7 +303,6 @@ return|;
 block|}
 comment|/**      * @param inner_access_flags access flags for this inner class      */
 specifier|public
-specifier|final
 name|void
 name|setInnerAccessFlags
 parameter_list|(
@@ -326,7 +320,6 @@ expr_stmt|;
 block|}
 comment|/**      * @param inner_class_index index into the constant pool for this class      */
 specifier|public
-specifier|final
 name|void
 name|setInnerClassIndex
 parameter_list|(
@@ -344,7 +337,6 @@ expr_stmt|;
 block|}
 comment|/**      * @param inner_name_index index into the constant pool for this class's name      */
 specifier|public
-specifier|final
 name|void
 name|setInnerNameIndex
 parameter_list|(
@@ -363,7 +355,6 @@ expr_stmt|;
 block|}
 comment|/**      * @param outer_class_index index into the constant pool for the owning class      */
 specifier|public
-specifier|final
 name|void
 name|setOuterClassIndex
 parameter_list|(
@@ -384,7 +375,6 @@ comment|/**      * @return String representation.      */
 annotation|@
 name|Override
 specifier|public
-specifier|final
 name|String
 name|toString
 parameter_list|()
@@ -411,7 +401,6 @@ return|;
 block|}
 comment|/**      * @return Resolved string representation      */
 specifier|public
-specifier|final
 name|String
 name|toString
 parameter_list|(

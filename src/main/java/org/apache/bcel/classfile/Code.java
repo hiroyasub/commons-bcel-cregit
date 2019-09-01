@@ -484,7 +484,6 @@ comment|/**      * Dump code attribute to file stream in binary format.      *  
 annotation|@
 name|Override
 specifier|public
-specifier|final
 name|void
 name|dump
 parameter_list|(
@@ -593,7 +592,6 @@ block|}
 block|}
 comment|/**      * @return Collection of code attributes.      * @see Attribute      */
 specifier|public
-specifier|final
 name|Attribute
 index|[]
 name|getAttributes
@@ -673,7 +671,6 @@ return|;
 block|}
 comment|/**      * @return Actual byte code of the method.      */
 specifier|public
-specifier|final
 name|byte
 index|[]
 name|getCode
@@ -685,7 +682,6 @@ return|;
 block|}
 comment|/**      * @return Table of handled exceptions.      * @see CodeException      */
 specifier|public
-specifier|final
 name|CodeException
 index|[]
 name|getExceptionTable
@@ -697,7 +693,6 @@ return|;
 block|}
 comment|/**      * @return Number of local variables.      */
 specifier|public
-specifier|final
 name|int
 name|getMaxLocals
 parameter_list|()
@@ -708,7 +703,6 @@ return|;
 block|}
 comment|/**      * @return Maximum size of stack used by this method.      */
 specifier|public
-specifier|final
 name|int
 name|getMaxStack
 parameter_list|()
@@ -808,7 +802,6 @@ return|;
 block|}
 comment|/**      * @param attributes the attributes to set for this Code      */
 specifier|public
-specifier|final
 name|void
 name|setAttributes
 parameter_list|(
@@ -846,7 +839,6 @@ comment|// Adjust length
 block|}
 comment|/**      * @param code byte code      */
 specifier|public
-specifier|final
 name|void
 name|setCode
 parameter_list|(
@@ -884,7 +876,6 @@ comment|// Adjust length
 block|}
 comment|/**      * @param exception_table exception table      */
 specifier|public
-specifier|final
 name|void
 name|setExceptionTable
 parameter_list|(
@@ -922,7 +913,6 @@ comment|// Adjust length
 block|}
 comment|/**      * @param max_locals maximum number of local variables      */
 specifier|public
-specifier|final
 name|void
 name|setMaxLocals
 parameter_list|(
@@ -940,7 +930,6 @@ expr_stmt|;
 block|}
 comment|/**      * @param max_stack maximum stack size      */
 specifier|public
-specifier|final
 name|void
 name|setMaxStack
 parameter_list|(
@@ -958,7 +947,6 @@ expr_stmt|;
 block|}
 comment|/**      * @return String representation of code chunk.      */
 specifier|public
-specifier|final
 name|String
 name|toString
 parameter_list|(
@@ -1143,7 +1131,6 @@ comment|/**      * @return String representation of code chunk.      */
 annotation|@
 name|Override
 specifier|public
-specifier|final
 name|String
 name|toString
 parameter_list|()

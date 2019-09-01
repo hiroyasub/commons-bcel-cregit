@@ -264,7 +264,6 @@ comment|/**      * Dump line number table attribute to file stream in binary for
 annotation|@
 name|Override
 specifier|public
-specifier|final
 name|void
 name|dump
 parameter_list|(
@@ -311,7 +310,6 @@ block|}
 block|}
 comment|/**      * @return Array of (pc offset, line number) pairs.      */
 specifier|public
-specifier|final
 name|LineNumber
 index|[]
 name|getLineNumberTable
@@ -323,7 +321,6 @@ return|;
 block|}
 comment|/**      * @param line_number_table the line number entries for this table      */
 specifier|public
-specifier|final
 name|void
 name|setLineNumberTable
 parameter_list|(
@@ -344,7 +341,6 @@ comment|/**      * @return String representation.      */
 annotation|@
 name|Override
 specifier|public
-specifier|final
 name|String
 name|toString
 parameter_list|()
@@ -734,7 +730,6 @@ name|c
 return|;
 block|}
 specifier|public
-specifier|final
 name|int
 name|getTableLength
 parameter_list|()

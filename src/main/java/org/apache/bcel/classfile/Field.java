@@ -312,7 +312,6 @@ expr_stmt|;
 block|}
 comment|/**      * @return constant value associated with this field (may be null)      */
 specifier|public
-specifier|final
 name|ConstantValue
 name|getConstantValue
 parameter_list|()
@@ -357,7 +356,6 @@ comment|/**      * Return string representation close to declaration format,    
 annotation|@
 name|Override
 specifier|public
-specifier|final
 name|String
 name|toString
 parameter_list|()
@@ -525,7 +523,6 @@ return|;
 block|}
 comment|/**      * @return deep copy of this field      */
 specifier|public
-specifier|final
 name|Field
 name|copy
 parameter_list|(

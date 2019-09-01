@@ -170,7 +170,6 @@ expr_stmt|;
 block|}
 comment|/**      * Dump line number/pc pair to file stream in binary format.      *      * @param file Output file stream      * @throws IOException if an I/O Exception occurs in writeShort      */
 specifier|public
-specifier|final
 name|void
 name|dump
 parameter_list|(
@@ -198,7 +197,6 @@ expr_stmt|;
 block|}
 comment|/**      * @return Corresponding source line      */
 specifier|public
-specifier|final
 name|int
 name|getLineNumber
 parameter_list|()
@@ -211,7 +209,6 @@ return|;
 block|}
 comment|/**      * @return PC in code      */
 specifier|public
-specifier|final
 name|int
 name|getStartPC
 parameter_list|()
@@ -224,7 +221,6 @@ return|;
 block|}
 comment|/**      * @param line_number the source line number      */
 specifier|public
-specifier|final
 name|void
 name|setLineNumber
 parameter_list|(
@@ -245,7 +241,6 @@ expr_stmt|;
 block|}
 comment|/**      * @param start_pc the pc for this line number      */
 specifier|public
-specifier|final
 name|void
 name|setStartPC
 parameter_list|(
@@ -268,7 +263,6 @@ comment|/**      * @return String representation      */
 annotation|@
 name|Override
 specifier|public
-specifier|final
 name|String
 name|toString
 parameter_list|()

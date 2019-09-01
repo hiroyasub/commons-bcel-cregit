@@ -143,7 +143,6 @@ block|}
 comment|// TODO add more getters and setters?
 comment|/**      * Dump table entry to file stream in binary format.      *      * @param file Output file stream      * @throws IOException if an I/O Exception occurs in writeShort      */
 specifier|public
-specifier|final
 name|void
 name|dump
 parameter_list|(
@@ -180,7 +179,6 @@ comment|/**      * @return String representation      */
 annotation|@
 name|Override
 specifier|public
-specifier|final
 name|String
 name|toString
 parameter_list|()
@@ -210,7 +208,6 @@ return|;
 block|}
 comment|/**      * @return Resolved string representation      */
 specifier|public
-specifier|final
 name|String
 name|toString
 parameter_list|(

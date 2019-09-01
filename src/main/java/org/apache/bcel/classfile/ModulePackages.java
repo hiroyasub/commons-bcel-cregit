@@ -264,7 +264,6 @@ comment|/**      * Dump ModulePackages attribute to file stream in binary format
 annotation|@
 name|Override
 specifier|public
-specifier|final
 name|void
 name|dump
 parameter_list|(
@@ -311,7 +310,6 @@ block|}
 block|}
 comment|/**      * @return array of indices into constant pool of package names.      */
 specifier|public
-specifier|final
 name|int
 index|[]
 name|getPackageIndexTable
@@ -323,7 +321,6 @@ return|;
 block|}
 comment|/**      * @return Length of package table.      */
 specifier|public
-specifier|final
 name|int
 name|getNumberOfPackages
 parameter_list|()
@@ -342,7 +339,6 @@ return|;
 block|}
 comment|/**      * @return string array of package names      */
 specifier|public
-specifier|final
 name|String
 index|[]
 name|getPackageNames
@@ -414,7 +410,6 @@ return|;
 block|}
 comment|/**      * @param package_index_table the list of package indexes      * Also redefines number_of_packages according to table length.      */
 specifier|public
-specifier|final
 name|void
 name|setPackageIndexTable
 parameter_list|(
@@ -445,7 +440,6 @@ comment|/**      * @return String representation, i.e., a list of packages.     
 annotation|@
 name|Override
 specifier|public
-specifier|final
 name|String
 name|toString
 parameter_list|()

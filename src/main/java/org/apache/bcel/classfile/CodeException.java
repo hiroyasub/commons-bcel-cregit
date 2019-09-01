@@ -240,7 +240,6 @@ expr_stmt|;
 block|}
 comment|/**      * Dump code exception to file stream in binary format.      *      * @param file Output file stream      * @throws IOException      */
 specifier|public
-specifier|final
 name|void
 name|dump
 parameter_list|(
@@ -282,7 +281,6 @@ expr_stmt|;
 block|}
 comment|/**      * @return 0, if the handler catches any exception, otherwise it points to      * the exception class which is to be caught.      */
 specifier|public
-specifier|final
 name|int
 name|getCatchType
 parameter_list|()
@@ -293,7 +291,6 @@ return|;
 block|}
 comment|/**      * @return Exclusive end index of the region where the handler is active.      */
 specifier|public
-specifier|final
 name|int
 name|getEndPC
 parameter_list|()
@@ -304,7 +301,6 @@ return|;
 block|}
 comment|/**      * @return Starting address of exception handler, relative to the code.      */
 specifier|public
-specifier|final
 name|int
 name|getHandlerPC
 parameter_list|()
@@ -315,7 +311,6 @@ return|;
 block|}
 comment|/**      * @return Inclusive start index of the region where the handler is active.      */
 specifier|public
-specifier|final
 name|int
 name|getStartPC
 parameter_list|()
@@ -326,7 +321,6 @@ return|;
 block|}
 comment|/**      * @param catch_type the type of exception that is caught      */
 specifier|public
-specifier|final
 name|void
 name|setCatchType
 parameter_list|(
@@ -344,7 +338,6 @@ expr_stmt|;
 block|}
 comment|/**      * @param end_pc end of handled block      */
 specifier|public
-specifier|final
 name|void
 name|setEndPC
 parameter_list|(
@@ -362,7 +355,6 @@ expr_stmt|;
 block|}
 comment|/**      * @param handler_pc where the actual code is      */
 specifier|public
-specifier|final
 name|void
 name|setHandlerPC
 parameter_list|(
@@ -381,7 +373,6 @@ expr_stmt|;
 block|}
 comment|/**      * @param start_pc start of handled block      */
 specifier|public
-specifier|final
 name|void
 name|setStartPC
 parameter_list|(
@@ -402,7 +393,6 @@ comment|/**      * @return String representation.      */
 annotation|@
 name|Override
 specifier|public
-specifier|final
 name|String
 name|toString
 parameter_list|()
@@ -429,7 +419,6 @@ return|;
 block|}
 comment|/**      * @return String representation.      */
 specifier|public
-specifier|final
 name|String
 name|toString
 parameter_list|(
@@ -509,7 +498,6 @@ name|str
 return|;
 block|}
 specifier|public
-specifier|final
 name|String
 name|toString
 parameter_list|(

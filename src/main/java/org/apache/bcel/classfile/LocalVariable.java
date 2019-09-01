@@ -387,7 +387,6 @@ expr_stmt|;
 block|}
 comment|/**      * Dump local variable to file stream in binary format.      *      * @param file Output file stream      * @throws IOException      */
 specifier|public
-specifier|final
 name|void
 name|dump
 parameter_list|(
@@ -436,7 +435,6 @@ expr_stmt|;
 block|}
 comment|/**      * @return Constant pool used by this object.      */
 specifier|public
-specifier|final
 name|ConstantPool
 name|getConstantPool
 parameter_list|()
@@ -447,7 +445,6 @@ return|;
 block|}
 comment|/**      * @return Variable is valid within getStartPC() .. getStartPC()+getLength()      */
 specifier|public
-specifier|final
 name|int
 name|getLength
 parameter_list|()
@@ -458,7 +455,6 @@ return|;
 block|}
 comment|/**      * @return Variable name.      */
 specifier|public
-specifier|final
 name|String
 name|getName
 parameter_list|()
@@ -491,7 +487,6 @@ return|;
 block|}
 comment|/**      * @return Index in constant pool of variable name.      */
 specifier|public
-specifier|final
 name|int
 name|getNameIndex
 parameter_list|()
@@ -502,7 +497,6 @@ return|;
 block|}
 comment|/**      * @return Signature.      */
 specifier|public
-specifier|final
 name|String
 name|getSignature
 parameter_list|()
@@ -535,7 +529,6 @@ return|;
 block|}
 comment|/**      * @return Index in constant pool of variable signature.      */
 specifier|public
-specifier|final
 name|int
 name|getSignatureIndex
 parameter_list|()
@@ -546,7 +539,6 @@ return|;
 block|}
 comment|/**      * @return index of register where variable is stored      */
 specifier|public
-specifier|final
 name|int
 name|getIndex
 parameter_list|()
@@ -557,7 +549,6 @@ return|;
 block|}
 comment|/**      * @return index of register where variable was originally stored      */
 specifier|public
-specifier|final
 name|int
 name|getOrigIndex
 parameter_list|()
@@ -568,7 +559,6 @@ return|;
 block|}
 comment|/**      * @return Start of range where he variable is valid      */
 specifier|public
-specifier|final
 name|int
 name|getStartPC
 parameter_list|()
@@ -578,7 +568,6 @@ name|start_pc
 return|;
 block|}
 comment|/*      * Helper method shared with LocalVariableTypeTable      */
-specifier|final
 name|String
 name|toStringShared
 parameter_list|(
@@ -650,7 +639,6 @@ return|;
 block|}
 comment|/**      * @param constant_pool Constant pool to be used for this object.      */
 specifier|public
-specifier|final
 name|void
 name|setConstantPool
 parameter_list|(
@@ -668,7 +656,6 @@ expr_stmt|;
 block|}
 comment|/**      * @param length the length of this local variable      */
 specifier|public
-specifier|final
 name|void
 name|setLength
 parameter_list|(
@@ -686,7 +673,6 @@ expr_stmt|;
 block|}
 comment|/**      * @param name_index the index into the constant pool for the name of this variable      */
 specifier|public
-specifier|final
 name|void
 name|setNameIndex
 parameter_list|(
@@ -705,7 +691,6 @@ expr_stmt|;
 block|}
 comment|/**      * @param signature_index the index into the constant pool for the signature of this variable      */
 specifier|public
-specifier|final
 name|void
 name|setSignatureIndex
 parameter_list|(
@@ -724,7 +709,6 @@ expr_stmt|;
 block|}
 comment|/**      * @param index the index in the local variable table of this variable      */
 specifier|public
-specifier|final
 name|void
 name|setIndex
 parameter_list|(
@@ -743,7 +727,6 @@ expr_stmt|;
 block|}
 comment|/**      * @param start_pc Specify range where the local variable is valid.      */
 specifier|public
-specifier|final
 name|void
 name|setStartPC
 parameter_list|(
@@ -764,7 +747,6 @@ comment|/**      * @return string representation.      */
 annotation|@
 name|Override
 specifier|public
-specifier|final
 name|String
 name|toString
 parameter_list|()

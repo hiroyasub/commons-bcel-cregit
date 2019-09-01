@@ -239,7 +239,6 @@ comment|/**      * Dump source file attribute to file stream in binary format.  
 annotation|@
 name|Override
 specifier|public
-specifier|final
 name|void
 name|dump
 parameter_list|(
@@ -285,7 +284,6 @@ block|}
 block|}
 comment|/**      * @return data bytes.      */
 specifier|public
-specifier|final
 name|byte
 index|[]
 name|getBytes
@@ -297,7 +295,6 @@ return|;
 block|}
 comment|/**      * @param bytes      */
 specifier|public
-specifier|final
 name|void
 name|setBytes
 parameter_list|(
@@ -318,7 +315,6 @@ comment|/**      * @return String representation.      */
 annotation|@
 name|Override
 specifier|public
-specifier|final
 name|String
 name|toString
 parameter_list|()

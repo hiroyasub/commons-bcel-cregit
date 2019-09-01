@@ -412,7 +412,6 @@ block|}
 comment|// TODO add more getters and setters?
 comment|/**      * @return table of required modules      * @see ModuleRequires      */
 specifier|public
-specifier|final
 name|ModuleRequires
 index|[]
 name|getRequiresTable
@@ -424,7 +423,6 @@ return|;
 block|}
 comment|/**      * @return table of exported interfaces      * @see ModuleExports      */
 specifier|public
-specifier|final
 name|ModuleExports
 index|[]
 name|getExportsTable
@@ -436,7 +434,6 @@ return|;
 block|}
 comment|/**      * @return table of provided interfaces      * @see ModuleOpens      */
 specifier|public
-specifier|final
 name|ModuleOpens
 index|[]
 name|getOpensTable
@@ -448,7 +445,6 @@ return|;
 block|}
 comment|/**      * @return table of provided interfaces      * @see ModuleProvides      */
 specifier|public
-specifier|final
 name|ModuleProvides
 index|[]
 name|getProvidesTable
@@ -462,7 +458,6 @@ comment|/**      * Dump Module attribute to file stream in binary format.      *
 annotation|@
 name|Override
 specifier|public
-specifier|final
 name|void
 name|dump
 parameter_list|(
@@ -636,7 +631,6 @@ comment|/**      * @return String representation, i.e., a list of packages.     
 annotation|@
 name|Override
 specifier|public
-specifier|final
 name|String
 name|toString
 parameter_list|()

@@ -265,7 +265,6 @@ comment|/**      * Dump source file attribute to file stream in binary format.  
 annotation|@
 name|Override
 specifier|public
-specifier|final
 name|void
 name|dump
 parameter_list|(
@@ -312,7 +311,6 @@ block|}
 block|}
 comment|/**      * @return array of inner class "records"      */
 specifier|public
-specifier|final
 name|InnerClass
 index|[]
 name|getInnerClasses
@@ -324,7 +322,6 @@ return|;
 block|}
 comment|/**      * @param inner_classes the array of inner classes      */
 specifier|public
-specifier|final
 name|void
 name|setInnerClasses
 parameter_list|(
@@ -355,7 +352,6 @@ comment|/**      * @return String representation.      */
 annotation|@
 name|Override
 specifier|public
-specifier|final
 name|String
 name|toString
 parameter_list|()

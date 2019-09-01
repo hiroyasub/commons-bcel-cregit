@@ -208,7 +208,6 @@ comment|/**      * Dump constant value attribute to file stream on binary format
 annotation|@
 name|Override
 specifier|public
-specifier|final
 name|void
 name|dump
 parameter_list|(
@@ -236,7 +235,6 @@ expr_stmt|;
 block|}
 comment|/**      * @return Index in constant pool of constant value.      */
 specifier|public
-specifier|final
 name|int
 name|getConstantValueIndex
 parameter_list|()
@@ -247,7 +245,6 @@ return|;
 block|}
 comment|/**      * @param constantvalue_index the index info the constant pool of this constant value      */
 specifier|public
-specifier|final
 name|void
 name|setConstantValueIndex
 parameter_list|(
@@ -267,7 +264,6 @@ comment|/**      * @return String representation of constant value.      */
 annotation|@
 name|Override
 specifier|public
-specifier|final
 name|String
 name|toString
 parameter_list|()

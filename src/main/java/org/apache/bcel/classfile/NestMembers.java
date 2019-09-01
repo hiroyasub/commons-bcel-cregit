@@ -264,7 +264,6 @@ comment|/**      * Dump NestMembers attribute to file stream in binary format.  
 annotation|@
 name|Override
 specifier|public
-specifier|final
 name|void
 name|dump
 parameter_list|(
@@ -311,7 +310,6 @@ block|}
 block|}
 comment|/**      * @return array of indices into constant pool of class names.      */
 specifier|public
-specifier|final
 name|int
 index|[]
 name|getClasses
@@ -323,7 +321,6 @@ return|;
 block|}
 comment|/**      * @return Length of classes table.      */
 specifier|public
-specifier|final
 name|int
 name|getNumberClasses
 parameter_list|()
@@ -342,7 +339,6 @@ return|;
 block|}
 comment|/**      * @return string array of class names      */
 specifier|public
-specifier|final
 name|String
 index|[]
 name|getClassNames
@@ -414,7 +410,6 @@ return|;
 block|}
 comment|/**      * @param classes the list of class indexes      * Also redefines number_of_classes according to table length.      */
 specifier|public
-specifier|final
 name|void
 name|setClasses
 parameter_list|(
@@ -445,7 +440,6 @@ comment|/**      * @return String representation, i.e., a list of classes.      
 annotation|@
 name|Override
 specifier|public
-specifier|final
 name|String
 name|toString
 parameter_list|()

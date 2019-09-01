@@ -208,7 +208,6 @@ comment|/**      * Dump source file attribute to file stream in binary format.  
 annotation|@
 name|Override
 specifier|public
-specifier|final
 name|void
 name|dump
 parameter_list|(
@@ -236,7 +235,6 @@ expr_stmt|;
 block|}
 comment|/**      * @return Index in constant pool of source file name.      */
 specifier|public
-specifier|final
 name|int
 name|getSourceFileIndex
 parameter_list|()
@@ -247,7 +245,6 @@ return|;
 block|}
 comment|/**      * @param sourcefile_index      */
 specifier|public
-specifier|final
 name|void
 name|setSourceFileIndex
 parameter_list|(
@@ -265,7 +262,6 @@ expr_stmt|;
 block|}
 comment|/**      * @return Source file name.      */
 specifier|public
-specifier|final
 name|String
 name|getSourceFileName
 parameter_list|()
@@ -302,7 +298,6 @@ comment|/**      * @return String representation      */
 annotation|@
 name|Override
 specifier|public
-specifier|final
 name|String
 name|toString
 parameter_list|()

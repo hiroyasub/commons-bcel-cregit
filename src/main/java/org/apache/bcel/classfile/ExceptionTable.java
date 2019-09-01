@@ -265,7 +265,6 @@ comment|/**      * Dump exceptions attribute to file stream in binary format.   
 annotation|@
 name|Override
 specifier|public
-specifier|final
 name|void
 name|dump
 parameter_list|(
@@ -312,7 +311,6 @@ block|}
 block|}
 comment|/**      * @return Array of indices into constant pool of thrown exceptions.      */
 specifier|public
-specifier|final
 name|int
 index|[]
 name|getExceptionIndexTable
@@ -324,7 +322,6 @@ return|;
 block|}
 comment|/**      * @return Length of exception table.      */
 specifier|public
-specifier|final
 name|int
 name|getNumberOfExceptions
 parameter_list|()
@@ -343,7 +340,6 @@ return|;
 block|}
 comment|/**      * @return class names of thrown exceptions      */
 specifier|public
-specifier|final
 name|String
 index|[]
 name|getExceptionNames
@@ -415,7 +411,6 @@ return|;
 block|}
 comment|/**      * @param exception_index_table the list of exception indexes      * Also redefines number_of_exceptions according to table length.      */
 specifier|public
-specifier|final
 name|void
 name|setExceptionIndexTable
 parameter_list|(
@@ -446,7 +441,6 @@ comment|/**      * @return String representation, i.e., a list of thrown excepti
 annotation|@
 name|Override
 specifier|public
-specifier|final
 name|String
 name|toString
 parameter_list|()

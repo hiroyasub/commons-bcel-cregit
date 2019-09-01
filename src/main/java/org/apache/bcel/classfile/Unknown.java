@@ -345,7 +345,6 @@ comment|/**      * Dump unknown bytes to file stream.      *      * @param file 
 annotation|@
 name|Override
 specifier|public
-specifier|final
 name|void
 name|dump
 parameter_list|(
@@ -391,7 +390,6 @@ block|}
 block|}
 comment|/**      * @return data bytes.      */
 specifier|public
-specifier|final
 name|byte
 index|[]
 name|getBytes
@@ -405,7 +403,6 @@ comment|/**      * @return name of attribute.      */
 annotation|@
 name|Override
 specifier|public
-specifier|final
 name|String
 name|getName
 parameter_list|()
@@ -416,7 +413,6 @@ return|;
 block|}
 comment|/**      * @param bytes the bytes to set      */
 specifier|public
-specifier|final
 name|void
 name|setBytes
 parameter_list|(
@@ -437,7 +433,6 @@ comment|/**      * @return String representation.      */
 annotation|@
 name|Override
 specifier|public
-specifier|final
 name|String
 name|toString
 parameter_list|()

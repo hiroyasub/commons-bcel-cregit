@@ -205,7 +205,6 @@ comment|/**      * Dump stack map table attribute to file stream in binary forma
 annotation|@
 name|Override
 specifier|public
-specifier|final
 name|void
 name|dump
 parameter_list|(
@@ -252,7 +251,6 @@ block|}
 block|}
 comment|/**      * @return Array of stack map entries      */
 specifier|public
-specifier|final
 name|StackMapEntry
 index|[]
 name|getStackMap
@@ -264,7 +262,6 @@ return|;
 block|}
 comment|/**      * @param map Array of stack map entries      */
 specifier|public
-specifier|final
 name|void
 name|setStackMap
 parameter_list|(
@@ -313,7 +310,6 @@ comment|/**      * @return String representation.      */
 annotation|@
 name|Override
 specifier|public
-specifier|final
 name|String
 name|toString
 parameter_list|()
@@ -488,7 +484,6 @@ argument_list|)
 expr_stmt|;
 block|}
 specifier|public
-specifier|final
 name|int
 name|getMapLength
 parameter_list|()

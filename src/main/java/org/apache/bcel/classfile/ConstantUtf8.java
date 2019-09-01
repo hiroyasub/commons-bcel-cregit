@@ -705,7 +705,6 @@ comment|/**      * Dumps String in Utf8 format to file stream.      *      * @pa
 annotation|@
 name|Override
 specifier|public
-specifier|final
 name|void
 name|dump
 parameter_list|(
@@ -736,7 +735,6 @@ expr_stmt|;
 block|}
 comment|/**      * @return Data converted to string.      */
 specifier|public
-specifier|final
 name|String
 name|getBytes
 parameter_list|()
@@ -753,7 +751,6 @@ name|lang
 operator|.
 name|Deprecated
 specifier|public
-specifier|final
 name|void
 name|setBytes
 parameter_list|(
@@ -772,7 +769,6 @@ comment|/**      * @return String representation      */
 annotation|@
 name|Override
 specifier|public
-specifier|final
 name|String
 name|toString
 parameter_list|()

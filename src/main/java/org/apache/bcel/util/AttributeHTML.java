@@ -400,7 +400,6 @@ operator|+
 literal|"</A>"
 return|;
 block|}
-specifier|final
 name|void
 name|close
 parameter_list|()
@@ -418,7 +417,6 @@ name|close
 argument_list|()
 expr_stmt|;
 block|}
-specifier|final
 name|void
 name|writeAttribute
 parameter_list|(
@@ -441,7 +439,6 @@ literal|0
 argument_list|)
 expr_stmt|;
 block|}
-specifier|final
 name|void
 name|writeAttribute
 parameter_list|(

@@ -626,7 +626,6 @@ expr_stmt|;
 block|}
 comment|/**      * Dump stack map entry      *      * @param file Output file stream      * @throws IOException      */
 specifier|public
-specifier|final
 name|void
 name|dump
 parameter_list|(
@@ -881,7 +880,6 @@ comment|/**      * @return String representation.      */
 annotation|@
 name|Override
 specifier|public
-specifier|final
 name|String
 name|toString
 parameter_list|()
@@ -2142,7 +2140,6 @@ expr_stmt|;
 block|}
 comment|/**      * @return Constant pool used by this object.      */
 specifier|public
-specifier|final
 name|ConstantPool
 name|getConstantPool
 parameter_list|()
@@ -2153,7 +2150,6 @@ return|;
 block|}
 comment|/**      * @param constant_pool Constant pool to be used for this object.      */
 specifier|public
-specifier|final
 name|void
 name|setConstantPool
 parameter_list|(

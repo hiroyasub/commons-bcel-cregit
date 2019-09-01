@@ -159,7 +159,6 @@ comment|/**      * Dump constant package to file stream in binary format.      *
 annotation|@
 name|Override
 specifier|public
-specifier|final
 name|void
 name|dump
 parameter_list|(
@@ -190,7 +189,6 @@ expr_stmt|;
 block|}
 comment|/**      * @return Name index in constant pool of package name.      */
 specifier|public
-specifier|final
 name|int
 name|getNameIndex
 parameter_list|()
@@ -201,7 +199,6 @@ return|;
 block|}
 comment|/**      * @param name_index the name index in the constant pool of this Constant Package      */
 specifier|public
-specifier|final
 name|void
 name|setNameIndex
 parameter_list|(
@@ -280,7 +277,6 @@ comment|/**      * @return String representation.      */
 annotation|@
 name|Override
 specifier|public
-specifier|final
 name|String
 name|toString
 parameter_list|()

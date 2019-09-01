@@ -79,7 +79,6 @@ name|in
 expr_stmt|;
 block|}
 specifier|public
-specifier|final
 name|int
 name|getIndex
 parameter_list|()
@@ -91,7 +90,6 @@ name|getPosition
 argument_list|()
 return|;
 block|}
-specifier|final
 name|void
 name|unreadByte
 parameter_list|()
@@ -124,7 +122,6 @@ name|bytes
 argument_list|)
 expr_stmt|;
 block|}
-specifier|final
 name|int
 name|getPosition
 parameter_list|()
@@ -134,7 +131,6 @@ return|return
 name|pos
 return|;
 block|}
-specifier|final
 name|void
 name|unreadByte
 parameter_list|()

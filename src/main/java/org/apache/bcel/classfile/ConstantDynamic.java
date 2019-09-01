@@ -152,7 +152,6 @@ expr_stmt|;
 block|}
 comment|/**      * @return Reference (index) to bootstrap method this constant refers to.      *      * Note that this method is a functional duplicate of getClassIndex      * for use by ConstantInvokeDynamic.      * @since 6.0      */
 specifier|public
-specifier|final
 name|int
 name|getBootstrapMethodAttrIndex
 parameter_list|()
@@ -169,7 +168,6 @@ comment|/**      * @return String representation      */
 annotation|@
 name|Override
 specifier|public
-specifier|final
 name|String
 name|toString
 parameter_list|()

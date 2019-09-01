@@ -160,7 +160,6 @@ comment|/**      * Dump constant field reference to file stream in binary format
 annotation|@
 name|Override
 specifier|public
-specifier|final
 name|void
 name|dump
 parameter_list|(
@@ -191,7 +190,6 @@ expr_stmt|;
 block|}
 comment|/**      * @return Index in constant pool of the string (ConstantUtf8).      */
 specifier|public
-specifier|final
 name|int
 name|getStringIndex
 parameter_list|()
@@ -202,7 +200,6 @@ return|;
 block|}
 comment|/**      * @param string_index the index into the constant of the string value      */
 specifier|public
-specifier|final
 name|void
 name|setStringIndex
 parameter_list|(
@@ -222,7 +219,6 @@ comment|/**      * @return String representation.      */
 annotation|@
 name|Override
 specifier|public
-specifier|final
 name|String
 name|toString
 parameter_list|()

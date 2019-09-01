@@ -643,7 +643,6 @@ block|}
 annotation|@
 name|Override
 specifier|public
-specifier|final
 name|InstructionList
 name|getInstructionList
 parameter_list|()
@@ -657,7 +656,6 @@ argument_list|)
 return|;
 block|}
 specifier|public
-specifier|final
 name|Instruction
 name|getInstruction
 parameter_list|()
