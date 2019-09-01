@@ -106,7 +106,7 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * @param name_index Index in constant pool      * @param length Content length in bytes      * @param int Host class index      * @param constant_pool Array of constants      */
+comment|/**      * @param name_index Index in constant pool      * @param length Content length in bytes      * @param host_class_index Host class index      * @param constant_pool Array of constants      */
 specifier|public
 name|NestHost
 parameter_list|(
@@ -208,7 +208,7 @@ name|this
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Dump NestHost attribute to file stream in binary format.      *      * @param file Output file stream      * @throws IOException      */
+comment|/**      * Dump NestHost attribute to file stream in binary format.      *      * @param file Output file stream      * @throws IOException if an I/O error occurs.      */
 annotation|@
 name|Override
 specifier|public
@@ -247,7 +247,7 @@ return|return
 name|host_class_index
 return|;
 block|}
-comment|/**      * @param int the host class index      */
+comment|/**      * @param host_class_index the host class index      */
 specifier|public
 name|void
 name|setHostClassIndex
