@@ -64,7 +64,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * A utility class holding the information about  * the names and the types of the local variables in  * a given method.  *  */
+comment|/**  * A utility class holding the information about  * the names and the types of the local variables in  * a given method.  */
 end_comment
 
 begin_class
@@ -121,7 +121,7 @@ argument_list|()
 expr_stmt|;
 block|}
 block|}
-comment|/** Returns the LocalVariableInfo for the given slot. */
+comment|/**      * Returns the LocalVariableInfo for the given slot.      *      * @param slot Slot to query.      * @return The LocalVariableInfo for the given slot.      */
 specifier|public
 name|LocalVariableInfo
 name|getLocalVariableInfo
@@ -159,7 +159,7 @@ name|slot
 index|]
 return|;
 block|}
-comment|/**      * Adds information about the local variable in slot 'slot'. Automatically      * adds information for slot+1 if 't' is Type.LONG or Type.DOUBLE.      * @throws LocalVariableInfoInconsistentException if the new information conflicts      *         with already gathered information.      */
+comment|/**      * Adds information about the local variable in slot 'slot'. Automatically      * adds information for slot+1 if 't' is Type.LONG or Type.DOUBLE.      *      * @param name variable name      * @param startPc Range in which the variable is valid.      * @param length length of ...      * @param type variable type      * @throws LocalVariableInfoInconsistentException if the new information conflicts      *         with already gathered information.      */
 specifier|public
 name|void
 name|add
@@ -174,7 +174,7 @@ name|name
 parameter_list|,
 specifier|final
 name|int
-name|startpc
+name|startPc
 parameter_list|,
 specifier|final
 name|int
@@ -182,7 +182,7 @@ name|length
 parameter_list|,
 specifier|final
 name|Type
-name|t
+name|type
 parameter_list|)
 throws|throws
 name|LocalVariableInfoInconsistentException
@@ -218,16 +218,16 @@ name|add
 argument_list|(
 name|name
 argument_list|,
-name|startpc
+name|startPc
 argument_list|,
 name|length
 argument_list|,
-name|t
+name|type
 argument_list|)
 expr_stmt|;
 if|if
 condition|(
-name|t
+name|type
 operator|==
 name|Type
 operator|.
@@ -245,7 +245,7 @@ name|add
 argument_list|(
 name|name
 argument_list|,
-name|startpc
+name|startPc
 argument_list|,
 name|length
 argument_list|,
@@ -258,7 +258,7 @@ expr_stmt|;
 block|}
 if|if
 condition|(
-name|t
+name|type
 operator|==
 name|Type
 operator|.
@@ -276,7 +276,7 @@ name|add
 argument_list|(
 name|name
 argument_list|,
-name|startpc
+name|startPc
 argument_list|,
 name|length
 argument_list|,
