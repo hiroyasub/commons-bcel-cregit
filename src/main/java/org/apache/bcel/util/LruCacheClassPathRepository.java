@@ -50,7 +50,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Maintains a least-recently-used (LRU) cache of {@link JavaClass} with maximum size {@code cacheSize}.  *  *<p>  * This repository supports a class path consisting of too many JAR files to handle in {@link ClassPathRepository} or  * {@link MemorySensitiveClassPathRepository} without causing {@code OutOfMemoryError}.  *</p>  *   * @since 6.4.0  */
+comment|/**  * Maintains a least-recently-used (LRU) cache of {@link JavaClass} with maximum size {@code cacheSize}.  *  *<p>  * This repository supports a class path consisting of too many JAR files to handle in {@link ClassPathRepository} or  * {@link MemorySensitiveClassPathRepository} without causing {@code OutOfMemoryError}.  *</p>  *  * @since 6.4.0  */
 end_comment
 
 begin_class

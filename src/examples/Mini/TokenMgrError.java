@@ -280,7 +280,7 @@ name|toString
 argument_list|()
 return|;
 block|}
-comment|/**     * Returns a detailed message for the Error when it is thrown by the     * token manager to indicate a lexical error.     * Parameters :      *    EOFSeen     : indicates if EOF caused the lexicl error     *    curLexState : lexical state in which this error occured     *    errorLine   : line number when the error occured     *    errorColumn : column number when the error occured     *    errorAfter  : prefix that was seen before this error occured     *    curchar     : the offending character     * Note: You can customize the lexical error message by modifying this method.     */
+comment|/**     * Returns a detailed message for the Error when it is thrown by the     * token manager to indicate a lexical error.     * Parameters :     *    EOFSeen     : indicates if EOF caused the lexicl error     *    curLexState : lexical state in which this error occured     *    errorLine   : line number when the error occured     *    errorColumn : column number when the error occured     *    errorAfter  : prefix that was seen before this error occured     *    curchar     : the offending character     * Note: You can customize the lexical error message by modifying this method.     */
 specifier|private
 specifier|static
 name|String
@@ -365,7 +365,7 @@ literal|"\""
 operator|)
 return|;
 block|}
-comment|/**     * You can also modify the body of this method to customize your error messages.     * For example, cases like LOOP_DETECTED and INVALID_LEXICAL_STATE are not     * of end-users concern, so you can return something like :      *     *     "Internal Error : Please file a bug report .... "     *     * from this method for such cases in the release version of your parser.     */
+comment|/**     * You can also modify the body of this method to customize your error messages.     * For example, cases like LOOP_DETECTED and INVALID_LEXICAL_STATE are not     * of end-users concern, so you can return something like :     *     *     "Internal Error : Please file a bug report .... "     *     * from this method for such cases in the release version of your parser.     */
 annotation|@
 name|Override
 specifier|public

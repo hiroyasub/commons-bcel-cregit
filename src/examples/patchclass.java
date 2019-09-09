@@ -242,7 +242,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/*      * Replace all occurences of string "<em>old</em>" with       * "<em>replacement</em>" in all Utf8 constants      */
+comment|/*      * Replace all occurences of string "<em>old</em>" with      * "<em>replacement</em>" in all Utf8 constants      */
 specifier|private
 specifier|static
 name|void

@@ -88,7 +88,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Extends the abstract {@link Constant} to represent a reference to a UTF-8 encoded string.  *<p>  * The following system properties govern caching this class performs.  *</p>  *<ul>  *<li>{@value #SYS_PROP_CACHE_MAX_ENTRIES} (since 6.4): The size of the cache, by default 0, meaning caching is disabled.</li>  *<li>{@value #SYS_PROP_CACHE_MAX_ENTRY_SIZE} (since 6.0): The maximum size of the values to cache, by default 200, 0 disables  * caching. Values larger than this are<em>not</em> cached.</li>  *<li>{@value #SYS_PROP_STATISTICS} (since 6.0): Prints statistics on the console when the JVM exits.</li>  *</ul>  *<p>  * Here is a sample Maven invocation with caching disabled:  *</p>  *   *<pre>  * mvn test -Dbcel.statistics=true -Dbcel.maxcached.size=0 -Dbcel.maxcached=0  *</pre>  *<p>  * Here is a sample Maven invocation with caching enabled:  *</p>  *   *<pre>  * mvn test -Dbcel.statistics=true -Dbcel.maxcached.size=100000 -Dbcel.maxcached=5000000  *</pre>  *   * @see Constant  */
+comment|/**  * Extends the abstract {@link Constant} to represent a reference to a UTF-8 encoded string.  *<p>  * The following system properties govern caching this class performs.  *</p>  *<ul>  *<li>{@value #SYS_PROP_CACHE_MAX_ENTRIES} (since 6.4): The size of the cache, by default 0, meaning caching is disabled.</li>  *<li>{@value #SYS_PROP_CACHE_MAX_ENTRY_SIZE} (since 6.0): The maximum size of the values to cache, by default 200, 0 disables  * caching. Values larger than this are<em>not</em> cached.</li>  *<li>{@value #SYS_PROP_STATISTICS} (since 6.0): Prints statistics on the console when the JVM exits.</li>  *</ul>  *<p>  * Here is a sample Maven invocation with caching disabled:  *</p>  *  *<pre>  * mvn test -Dbcel.statistics=true -Dbcel.maxcached.size=0 -Dbcel.maxcached=0  *</pre>  *<p>  * Here is a sample Maven invocation with caching enabled:  *</p>  *  *<pre>  * mvn test -Dbcel.statistics=true -Dbcel.maxcached.size=100000 -Dbcel.maxcached=5000000  *</pre>  *  * @see Constant  */
 end_comment
 
 begin_class
@@ -342,7 +342,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/**      * Clears the cache.      *       * @since 6.4.0      */
+comment|/**      * Clears the cache.      *      * @since 6.4.0      */
 specifier|public
 specifier|static
 specifier|synchronized
@@ -376,7 +376,7 @@ operator|=
 literal|0
 expr_stmt|;
 block|}
-comment|/**      * Gets a new or cached instance of the given value.      *<p>      * See {@link ConstantUtf8} class Javadoc for details.      *</p>      *       * @param value the value.      * @return a new or cached instance of the given value.      * @since 6.0      */
+comment|/**      * Gets a new or cached instance of the given value.      *<p>      * See {@link ConstantUtf8} class Javadoc for details.      *</p>      *      * @param value the value.      * @return a new or cached instance of the given value.      * @since 6.0      */
 specifier|public
 specifier|static
 name|ConstantUtf8
@@ -471,7 +471,7 @@ name|result
 return|;
 block|}
 block|}
-comment|/**      * Gets a new or cached instance of the given value.      *<p>      * See {@link ConstantUtf8} class Javadoc for details.      *</p>      *       * @param dataInput the value.      * @return a new or cached instance of the given value.      * @throws IOException if an I/O error occurs.      * @since 6.0      */
+comment|/**      * Gets a new or cached instance of the given value.      *<p>      * See {@link ConstantUtf8} class Javadoc for details.      *</p>      *      * @param dataInput the value.      * @return a new or cached instance of the given value.      * @throws IOException if an I/O error occurs.      * @since 6.0      */
 specifier|public
 specifier|static
 name|ConstantUtf8
@@ -494,7 +494,7 @@ argument_list|()
 argument_list|)
 return|;
 block|}
-comment|/**      * Gets a new or cached instance of the given value.      *<p>      * See {@link ConstantUtf8} class Javadoc for details.      *</p>      *       * @param value the value.      * @return a new or cached instance of the given value.      * @since 6.0      */
+comment|/**      * Gets a new or cached instance of the given value.      *<p>      * See {@link ConstantUtf8} class Javadoc for details.      *</p>      *      * @param value the value.      * @return a new or cached instance of the given value.      * @since 6.0      */
 specifier|public
 specifier|static
 name|ConstantUtf8
@@ -594,7 +594,7 @@ specifier|final
 name|String
 name|value
 decl_stmt|;
-comment|/**      * Initializes from another object.      *       * @param constantUtf8 the value.      */
+comment|/**      * Initializes from another object.      *      * @param constantUtf8 the value.      */
 specifier|public
 name|ConstantUtf8
 parameter_list|(

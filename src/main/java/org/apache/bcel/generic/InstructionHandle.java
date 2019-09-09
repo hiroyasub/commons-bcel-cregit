@@ -127,7 +127,7 @@ name|Object
 argument_list|>
 name|attributes
 decl_stmt|;
-comment|/**      * Does nothing.      *       * @deprecated Does nothing as of 6.3.1.      */
+comment|/**      * Does nothing.      *      * @deprecated Does nothing as of 6.3.1.      */
 annotation|@
 name|Deprecated
 specifier|protected

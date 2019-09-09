@@ -392,7 +392,7 @@ operator|=
 name|kind
 expr_stmt|;
 block|}
-comment|/* Special constructor, called from ASTTerm.traverse() and    * ASTFactor.traverse(), when traverse()ing the parse tree replace    * themselves with Expr nodes.     */
+comment|/* Special constructor, called from ASTTerm.traverse() and    * ASTFactor.traverse(), when traverse()ing the parse tree replace    * themselves with Expr nodes.    */
 name|ASTExpr
 parameter_list|(
 specifier|final
@@ -656,7 +656,7 @@ name|this
 return|;
 block|}
 block|}
-comment|/**     * Second and third pass    * @return type of expression    * @param expected type    */
+comment|/**    * Second and third pass    * @return type of expression    * @param expected type    */
 specifier|public
 name|int
 name|eval
