@@ -78,7 +78,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * This class implements an array of local variables used for symbolic JVM  * simulation.  *  */
+comment|/**  * This class implements an array of local variables used for symbolic JVM  * simulation.  */
 end_comment
 
 begin_class
