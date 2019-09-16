@@ -107,8 +107,8 @@ decl_stmt|;
 specifier|private
 specifier|final
 name|int
-name|uses_index
 index|[]
+name|uses_index
 decl_stmt|;
 specifier|private
 name|ModuleProvides

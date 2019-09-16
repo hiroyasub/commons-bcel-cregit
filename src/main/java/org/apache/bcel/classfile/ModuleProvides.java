@@ -85,8 +85,8 @@ decl_stmt|;
 specifier|private
 specifier|final
 name|int
-name|provides_with_index
 index|[]
+name|provides_with_index
 decl_stmt|;
 comment|// points to CONSTANT_Class_info
 comment|/**      * Construct object from file stream.      *      * @param file Input stream      * @throws IOException if an I/O Exception occurs in readUnsignedShort      */
