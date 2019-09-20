@@ -107,8 +107,8 @@ decl_stmt|;
 specifier|private
 specifier|final
 name|int
-name|uses_index
 index|[]
+name|uses_index
 decl_stmt|;
 specifier|private
 name|ModuleProvides
@@ -720,7 +720,6 @@ specifier|final
 name|String
 name|version
 init|=
-operator|(
 name|module_version_index
 operator|==
 literal|0
@@ -737,7 +736,6 @@ name|Const
 operator|.
 name|CONSTANT_Utf8
 argument_list|)
-operator|)
 decl_stmt|;
 name|buf
 operator|.

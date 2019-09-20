@@ -158,7 +158,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**   * Display Java .class file data.  * Output is based on javap tool.  * Built using the BCEL libary.  *  */
+comment|/**  * Display Java .class file data.  * Output is based on javap tool.  * Built using the BCEL libary.  *  */
 end_comment
 
 begin_class

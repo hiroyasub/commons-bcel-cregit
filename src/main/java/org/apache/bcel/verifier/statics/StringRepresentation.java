@@ -707,7 +707,7 @@ specifier|final
 name|Node
 name|n
 decl_stmt|;
-comment|/**      * Creates a new StringRepresentation object which is the representation of n.      *      * @see #toString()      */
+comment|/**      * Creates a new StringRepresentation object which is the representation of n.      *      * @param n The node to represent.      * @see #toString()      */
 specifier|public
 name|StringRepresentation
 parameter_list|(

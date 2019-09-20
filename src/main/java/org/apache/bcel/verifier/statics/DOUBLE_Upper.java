@@ -81,7 +81,7 @@ literal|"Double_Upper"
 argument_list|)
 expr_stmt|;
 block|}
-comment|/** Use this method to get the single instance of this class. */
+comment|/**      * Gets the single instance of this class.      *      * @return the single instance of this class.      */
 specifier|public
 specifier|static
 name|DOUBLE_Upper

@@ -388,6 +388,7 @@ specifier|default
 name|void
 name|visitModule
 parameter_list|(
+specifier|final
 name|Module
 name|constantModule
 parameter_list|)
@@ -399,6 +400,7 @@ specifier|default
 name|void
 name|visitModuleRequires
 parameter_list|(
+specifier|final
 name|ModuleRequires
 name|constantModule
 parameter_list|)
@@ -410,6 +412,7 @@ specifier|default
 name|void
 name|visitModuleExports
 parameter_list|(
+specifier|final
 name|ModuleExports
 name|constantModule
 parameter_list|)
@@ -421,6 +424,7 @@ specifier|default
 name|void
 name|visitModuleOpens
 parameter_list|(
+specifier|final
 name|ModuleOpens
 name|constantModule
 parameter_list|)
@@ -432,6 +436,7 @@ specifier|default
 name|void
 name|visitModuleProvides
 parameter_list|(
+specifier|final
 name|ModuleProvides
 name|constantModule
 parameter_list|)
@@ -443,6 +448,7 @@ specifier|default
 name|void
 name|visitModulePackages
 parameter_list|(
+specifier|final
 name|ModulePackages
 name|constantModule
 parameter_list|)
@@ -454,6 +460,7 @@ specifier|default
 name|void
 name|visitModuleMainClass
 parameter_list|(
+specifier|final
 name|ModuleMainClass
 name|obj
 parameter_list|)
@@ -465,6 +472,7 @@ specifier|default
 name|void
 name|visitNestHost
 parameter_list|(
+specifier|final
 name|NestHost
 name|obj
 parameter_list|)
@@ -476,6 +484,7 @@ specifier|default
 name|void
 name|visitNestMembers
 parameter_list|(
+specifier|final
 name|NestMembers
 name|obj
 parameter_list|)

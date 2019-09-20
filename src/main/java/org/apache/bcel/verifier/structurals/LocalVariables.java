@@ -78,7 +78,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * This class implements an array of local variables used for symbolic JVM  * simulation.  *  */
+comment|/**  * This class implements an array of local variables used for symbolic JVM  * simulation.  */
 end_comment
 
 begin_class
@@ -95,13 +95,13 @@ name|Type
 index|[]
 name|locals
 decl_stmt|;
-comment|/**      * Creates a new LocalVariables object.      */
+comment|/**      * Creates a new LocalVariables object.      *      * @param localVariableCount local variable count.      */
 specifier|public
 name|LocalVariables
 parameter_list|(
 specifier|final
 name|int
-name|maxLocals
+name|localVariableCount
 parameter_list|)
 block|{
 name|locals
@@ -109,7 +109,7 @@ operator|=
 operator|new
 name|Type
 index|[
-name|maxLocals
+name|localVariableCount
 index|]
 expr_stmt|;
 for|for
@@ -121,7 +121,7 @@ literal|0
 init|;
 name|i
 operator|<
-name|maxLocals
+name|localVariableCount
 condition|;
 name|i
 operator|++
@@ -194,24 +194,24 @@ return|return
 name|lvs
 return|;
 block|}
-comment|/**      * Returns the type of the local variable slot i.      */
+comment|/**      * Returns the type of the local variable slot index.      *      * @param slotIndex Slot to look up.      * @return the type of the local variable slot index.      */
 specifier|public
 name|Type
 name|get
 parameter_list|(
 specifier|final
 name|int
-name|i
+name|slotIndex
 parameter_list|)
 block|{
 return|return
 name|locals
 index|[
-name|i
+name|slotIndex
 index|]
 return|;
 block|}
-comment|/**      * Returns a (correctly typed) clone of this object.      * This is equivalent to ((LocalVariables) this.clone()).      */
+comment|/**      * Returns a (correctly typed) clone of this object.      * This is equivalent to ((LocalVariables) this.clone()).      *      * @return a (correctly typed) clone of this object.      */
 specifier|public
 name|LocalVariables
 name|getClone
@@ -227,7 +227,7 @@ name|clone
 argument_list|()
 return|;
 block|}
-comment|/**      * Returns the number of local variable slots this      * LocalVariables instance has.      */
+comment|/**      * Returns the number of local variable slots.      *      * @return the number of local variable slots.      */
 specifier|public
 name|int
 name|maxLocals
@@ -239,14 +239,14 @@ operator|.
 name|length
 return|;
 block|}
-comment|/**      * Sets a new Type for the given local variable slot.      */
+comment|/**      * Sets a new Type for the given local variable slot.      *      * @param slotIndex Target slot index.      * @param type Type to save at the given slot index.      */
 specifier|public
 name|void
 name|set
 parameter_list|(
 specifier|final
 name|int
-name|i
+name|slotIndex
 parameter_list|,
 specifier|final
 name|Type
@@ -295,7 +295,7 @@ throw|;
 block|}
 name|locals
 index|[
-name|i
+name|slotIndex
 index|]
 operator|=
 name|type
@@ -419,14 +419,14 @@ return|return
 literal|true
 return|;
 block|}
-comment|/**      * Merges two local variables sets as described in the Java Virtual Machine Specification,      * Second Edition, section 4.9.2, page 146.      */
+comment|/**      * Merges two local variables sets as described in the Java Virtual Machine Specification,      * Second Edition, section 4.9.2, page 146.      *      * @param localVariable other local variable.      */
 specifier|public
 name|void
 name|merge
 parameter_list|(
 specifier|final
 name|LocalVariables
-name|lv
+name|localVariable
 parameter_list|)
 block|{
 if|if
@@ -437,7 +437,7 @@ name|locals
 operator|.
 name|length
 operator|!=
-name|lv
+name|localVariable
 operator|.
 name|locals
 operator|.
@@ -471,7 +471,7 @@ control|)
 block|{
 name|merge
 argument_list|(
-name|lv
+name|localVariable
 argument_list|,
 name|i
 argument_list|)
@@ -878,14 +878,14 @@ name|toString
 argument_list|()
 return|;
 block|}
-comment|/**      * Replaces all occurences of u in this local variables set      * with an "initialized" ObjectType.      */
+comment|/**      * Replaces all occurrences of {@code uninitializedObjectType} in this local variables set      * with an "initialized" ObjectType.      *      * @param uninitializedObjectType the object to match.      */
 specifier|public
 name|void
 name|initializeObject
 parameter_list|(
 specifier|final
 name|UninitializedObjectType
-name|u
+name|uninitializedObjectType
 parameter_list|)
 block|{
 for|for
@@ -912,7 +912,7 @@ index|[
 name|i
 index|]
 operator|==
-name|u
+name|uninitializedObjectType
 condition|)
 block|{
 name|locals
@@ -920,7 +920,7 @@ index|[
 name|i
 index|]
 operator|=
-name|u
+name|uninitializedObjectType
 operator|.
 name|getInitialized
 argument_list|()

@@ -90,8 +90,8 @@ decl_stmt|;
 specifier|private
 specifier|final
 name|int
-name|exports_to_index
 index|[]
+name|exports_to_index
 decl_stmt|;
 comment|// points to CONSTANT_Module_info
 comment|/**      * Construct object from file stream.      *      * @param file Input stream      * @throws IOException if an I/O Exception occurs in readUnsignedShort      */

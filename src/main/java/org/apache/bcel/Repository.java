@@ -93,7 +93,7 @@ operator|.
 name|getInstance
 argument_list|()
 decl_stmt|;
-comment|/**       * @return currently used repository instance      */
+comment|/**      * @return currently used repository instance      */
 specifier|public
 specifier|static
 name|org
@@ -112,7 +112,7 @@ return|return
 name|repository
 return|;
 block|}
-comment|/**       * Sets repository instance to be used for class loading      */
+comment|/**      * Sets repository instance to be used for class loading      */
 specifier|public
 specifier|static
 name|void
@@ -136,7 +136,7 @@ operator|=
 name|rep
 expr_stmt|;
 block|}
-comment|/**       * Lookups class somewhere found on your CLASSPATH, or whereever the      * repository instance looks for it.      *      * @return class object for given fully qualified class name      * @throws ClassNotFoundException if the class could not be found or      * parsed correctly      */
+comment|/**      * Lookups class somewhere found on your CLASSPATH, or whereever the      * repository instance looks for it.      *      * @return class object for given fully qualified class name      * @throws ClassNotFoundException if the class could not be found or      * parsed correctly      */
 specifier|public
 specifier|static
 name|JavaClass
@@ -158,7 +158,7 @@ name|class_name
 argument_list|)
 return|;
 block|}
-comment|/**      * Tries to find class source using the internal repository instance.      *       * @see Class      * @return JavaClass object for given runtime class      * @throws ClassNotFoundException if the class could not be found or      * parsed correctly      */
+comment|/**      * Tries to find class source using the internal repository instance.      *      * @see Class      * @return JavaClass object for given runtime class      * @throws ClassNotFoundException if the class could not be found or      * parsed correctly      */
 specifier|public
 specifier|static
 name|JavaClass
@@ -239,7 +239,7 @@ literal|null
 return|;
 block|}
 block|}
-comment|/**       * Clears the repository.      */
+comment|/**      * Clears the repository.      */
 specifier|public
 specifier|static
 name|void

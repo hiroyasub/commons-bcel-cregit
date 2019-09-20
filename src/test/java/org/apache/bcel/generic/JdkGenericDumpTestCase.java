@@ -464,7 +464,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Test that the generic dump() methods work on the JDK classes Reads each class into an instruction list and then dumps  * the instructions. The output bytes should be the same as the input.  *<p>  * Set the property {@value #EXTRA_JAVA_HOMES} to a {@link File#pathSeparator}-separated list of JRE/JDK paths for  * additional testing.  *</p>  *<p>  * For example:  *</p>  *   *<pre>  * mvn test -Dtest=JdkGenericDumpTestCase -DExtraJavaHomes="C:\Program Files\Java\openjdk\jdk-13;C:\Program Files\Java\openjdk\jdk-14"  *</pre>  */
+comment|/**  * Test that the generic dump() methods work on the JDK classes Reads each class into an instruction list and then dumps  * the instructions. The output bytes should be the same as the input.  *<p>  * Set the property {@value #EXTRA_JAVA_HOMES} to a {@link File#pathSeparator}-separated list of JRE/JDK paths for  * additional testing.  *</p>  *<p>  * For example:  *</p>  *  *<pre>  * mvn test -Dtest=JdkGenericDumpTestCase -DExtraJavaHomes="C:\Program Files\Java\openjdk\jdk-13;C:\Program Files\Java\openjdk\jdk-14"  *</pre>  */
 end_comment
 
 begin_class
@@ -1413,22 +1413,11 @@ name|javaLib
 operator|.
 name|listFiles
 argument_list|(
-operator|new
+operator|(
 name|FileFilter
-argument_list|()
-block|{
-annotation|@
-name|Override
-specifier|public
-name|boolean
-name|accept
-parameter_list|(
-specifier|final
-name|File
+operator|)
 name|file
-parameter_list|)
-block|{
-return|return
+lambda|->
 name|file
 operator|.
 name|getName
@@ -1438,9 +1427,6 @@ name|endsWith
 argument_list|(
 literal|".jar"
 argument_list|)
-return|;
-block|}
-block|}
 argument_list|)
 return|;
 block|}
@@ -1469,22 +1455,11 @@ name|javaLib
 operator|.
 name|listFiles
 argument_list|(
-operator|new
+operator|(
 name|FileFilter
-argument_list|()
-block|{
-annotation|@
-name|Override
-specifier|public
-name|boolean
-name|accept
-parameter_list|(
-specifier|final
-name|File
+operator|)
 name|file
-parameter_list|)
-block|{
-return|return
+lambda|->
 name|file
 operator|.
 name|getName
@@ -1494,9 +1469,6 @@ name|endsWith
 argument_list|(
 literal|".jmod"
 argument_list|)
-return|;
-block|}
-block|}
 argument_list|)
 return|;
 block|}

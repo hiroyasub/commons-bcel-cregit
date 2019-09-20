@@ -110,7 +110,7 @@ specifier|private
 name|int
 name|index
 decl_stmt|;
-comment|/* Variable is `index'th local variable on      * this method's frame.      */
+comment|/* Variable is index'th local variable on      * this method's frame.      */
 specifier|private
 name|ConstantPool
 name|constant_pool
@@ -120,43 +120,43 @@ name|int
 name|orig_index
 decl_stmt|;
 comment|// never changes; used to match up with LocalVariableTypeTable entries
-comment|/**      * Initialize from another object. Note that both objects use the same      * references (shallow copy). Use copy() for a physical copy.      */
+comment|/**      * Initializes from another LocalVariable. Note that both objects use the same      * references (shallow copy). Use copy() for a physical copy.      *      * @param localVariable Another LocalVariable.      */
 specifier|public
 name|LocalVariable
 parameter_list|(
 specifier|final
 name|LocalVariable
-name|c
+name|localVariable
 parameter_list|)
 block|{
 name|this
 argument_list|(
-name|c
+name|localVariable
 operator|.
 name|getStartPC
 argument_list|()
 argument_list|,
-name|c
+name|localVariable
 operator|.
 name|getLength
 argument_list|()
 argument_list|,
-name|c
+name|localVariable
 operator|.
 name|getNameIndex
 argument_list|()
 argument_list|,
-name|c
+name|localVariable
 operator|.
 name|getSignatureIndex
 argument_list|()
 argument_list|,
-name|c
+name|localVariable
 operator|.
 name|getIndex
 argument_list|()
 argument_list|,
-name|c
+name|localVariable
 operator|.
 name|getConstantPool
 argument_list|()
@@ -166,13 +166,13 @@ name|this
 operator|.
 name|orig_index
 operator|=
-name|c
+name|localVariable
 operator|.
 name|getOrigIndex
 argument_list|()
 expr_stmt|;
 block|}
-comment|/**      * Construct object from file stream.      * @param file Input stream      * @throws IOException      */
+comment|/**      * Constructs object from file stream.      * @param file Input stream      * @throws IOException      */
 name|LocalVariable
 parameter_list|(
 specifier|final
@@ -385,47 +385,47 @@ name|this
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Dump local variable to file stream in binary format.      *      * @param file Output file stream      * @throws IOException      */
+comment|/**      * Dumps local variable to file stream in binary format.      *      * @param dataOutputStream Output file stream      * @exception IOException if an I/O error occurs.      * @see java.io.FilterOutputStream#out      */
 specifier|public
 name|void
 name|dump
 parameter_list|(
 specifier|final
 name|DataOutputStream
-name|file
+name|dataOutputStream
 parameter_list|)
 throws|throws
 name|IOException
 block|{
-name|file
+name|dataOutputStream
 operator|.
 name|writeShort
 argument_list|(
 name|start_pc
 argument_list|)
 expr_stmt|;
-name|file
+name|dataOutputStream
 operator|.
 name|writeShort
 argument_list|(
 name|length
 argument_list|)
 expr_stmt|;
-name|file
+name|dataOutputStream
 operator|.
 name|writeShort
 argument_list|(
 name|name_index
 argument_list|)
 expr_stmt|;
-name|file
+name|dataOutputStream
 operator|.
 name|writeShort
 argument_list|(
 name|signature_index
 argument_list|)
 expr_stmt|;
-name|file
+name|dataOutputStream
 operator|.
 name|writeShort
 argument_list|(
@@ -557,7 +557,7 @@ return|return
 name|orig_index
 return|;
 block|}
-comment|/**      * @return Start of range where he variable is valid      */
+comment|/**      * @return Start of range where the variable is valid      */
 specifier|public
 name|int
 name|getStartPC

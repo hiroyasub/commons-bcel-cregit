@@ -2486,7 +2486,7 @@ block|{
 literal|4
 block|,
 literal|5
-block|,  }
+block|, }
 decl_stmt|;
 specifier|public
 specifier|static
@@ -2594,7 +2594,7 @@ block|{
 literal|"DEFAULT"
 block|,
 literal|"SINGLE_LINE_COMMENT_STATE"
-block|,  }
+block|, }
 decl_stmt|;
 specifier|public
 specifier|static
@@ -2730,7 +2730,7 @@ literal|1
 block|,
 operator|-
 literal|1
-block|,  }
+block|, }
 decl_stmt|;
 specifier|static
 specifier|final
@@ -2740,7 +2740,7 @@ name|jjtoToken
 init|=
 block|{
 literal|0x73ffffffe01L
-block|,  }
+block|, }
 decl_stmt|;
 specifier|static
 specifier|final
@@ -2750,7 +2750,7 @@ name|jjtoSkip
 init|=
 block|{
 literal|0xbeL
-block|,  }
+block|, }
 decl_stmt|;
 specifier|static
 specifier|final
@@ -2760,7 +2760,7 @@ name|jjtoSpecial
 init|=
 block|{
 literal|0x80L
-block|,  }
+block|, }
 decl_stmt|;
 specifier|static
 specifier|final
@@ -2770,7 +2770,7 @@ name|jjtoMore
 init|=
 block|{
 literal|0x140L
-block|,  }
+block|, }
 decl_stmt|;
 specifier|static
 specifier|private

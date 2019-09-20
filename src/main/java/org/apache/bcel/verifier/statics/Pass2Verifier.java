@@ -8509,7 +8509,7 @@ name|visit
 argument_list|()
 expr_stmt|;
 block|}
-comment|/**          * Returns if the JavaClass this InnerClassDetector is working on          * has an Inner Class reference in its constant pool.          */
+comment|/**          * Returns if the JavaClass this InnerClassDetector is working on          * has an Inner Class reference in its constant pool.          *          * @return Whether this InnerClassDetector is working on has an Inner Class reference in its constant pool.          */
 specifier|public
 name|boolean
 name|innerClassReferenced

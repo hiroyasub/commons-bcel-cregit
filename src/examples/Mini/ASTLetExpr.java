@@ -230,7 +230,7 @@ block|{
 name|int
 name|i
 decl_stmt|;
-comment|/* length must be a multiple of                                           * two (ident = expr) + 1 (body expr) */
+comment|/* length must be a multiple of                                          * two (ident = expr) + 1 (body expr) */
 specifier|final
 name|int
 name|len_2

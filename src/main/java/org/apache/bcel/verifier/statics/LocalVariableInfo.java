@@ -58,7 +58,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * A utility class holding the information about  * the name and the type of a local variable in  * a given slot (== index). This information  * often changes in course of byte code offsets.  *  */
+comment|/**  * A utility class holding the information about  * the name and the type of a local variable in  * a given slot (== index). This information  * often changes in course of byte code offsets.  */
 end_comment
 
 begin_class
@@ -156,7 +156,7 @@ name|t
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Returns the type of the local variable that uses this local      * variable slot at the given bytecode offset.      * Care for legal bytecode offsets yourself, otherwise the return value      * might be wrong.      * May return 'null' if nothing is known about the type of this local      * variable slot at the given bytecode offset.      */
+comment|/**      * Returns the type of the local variable that uses this local variable slot at the given bytecode offset. Care for      * legal bytecode offsets yourself, otherwise the return value might be wrong. May return 'null' if nothing is known      * about the type of this local variable slot at the given bytecode offset.      *      * @param offset bytecode offset.      * @return the type of the local variable that uses this local variable slot at the given bytecode offset.      */
 specifier|public
 name|Type
 name|getType
@@ -180,7 +180,7 @@ argument_list|)
 argument_list|)
 return|;
 block|}
-comment|/**      * Returns the name of the local variable that uses this local      * variable slot at the given bytecode offset.      * Care for legal bytecode offsets yourself, otherwise the return value      * might be wrong.      * May return 'null' if nothing is known about the type of this local      * variable slot at the given bytecode offset.      */
+comment|/**      * Returns the name of the local variable that uses this local variable slot at the given bytecode offset. Care for      * legal bytecode offsets yourself, otherwise the return value might be wrong. May return 'null' if nothing is known      * about the type of this local variable slot at the given bytecode offset.      *      * @param offset bytecode offset.      * @return the name of the local variable that uses this local variable slot at the given bytecode offset.      */
 specifier|public
 name|String
 name|getName
@@ -204,7 +204,7 @@ argument_list|)
 argument_list|)
 return|;
 block|}
-comment|/**      * Adds some information about this local variable (slot).      * @throws LocalVariableInfoInconsistentException if the new information conflicts      *         with already gathered information.      */
+comment|/**      * Adds some information about this local variable (slot).      *      * @param name variable name      * @param startPc Range in which the variable is valid.      * @param length length of ...      * @param type variable type      *      * @throws LocalVariableInfoInconsistentException if the new information conflicts      *         with already gathered information.      */
 specifier|public
 name|void
 name|add
@@ -215,7 +215,7 @@ name|name
 parameter_list|,
 specifier|final
 name|int
-name|startpc
+name|startPc
 parameter_list|,
 specifier|final
 name|int
@@ -223,7 +223,7 @@ name|length
 parameter_list|,
 specifier|final
 name|Type
-name|t
+name|type
 parameter_list|)
 throws|throws
 name|LocalVariableInfoInconsistentException
@@ -233,11 +233,11 @@ control|(
 name|int
 name|i
 init|=
-name|startpc
+name|startPc
 init|;
 name|i
 operator|<=
-name|startpc
+name|startPc
 operator|+
 name|length
 condition|;
@@ -252,12 +252,12 @@ name|i
 argument_list|,
 name|name
 argument_list|,
-name|t
+name|type
 argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/**      * Adds information about name and type for a given offset.      * @throws LocalVariableInfoInconsistentException if the new information conflicts      *         with already gathered information.      */
+comment|/**      * Adds information about name and type for a given offset.      *      * @throws LocalVariableInfoInconsistentException if the new information conflicts      *         with already gathered information.      */
 specifier|private
 name|void
 name|add
