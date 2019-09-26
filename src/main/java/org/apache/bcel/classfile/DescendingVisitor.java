@@ -2178,11 +2178,6 @@ name|this
 argument_list|)
 expr_stmt|;
 block|}
-name|stack
-operator|.
-name|pop
-argument_list|()
-expr_stmt|;
 specifier|final
 name|ModuleOpens
 index|[]
@@ -2210,11 +2205,6 @@ name|this
 argument_list|)
 expr_stmt|;
 block|}
-name|stack
-operator|.
-name|pop
-argument_list|()
-expr_stmt|;
 specifier|final
 name|ModuleProvides
 index|[]
