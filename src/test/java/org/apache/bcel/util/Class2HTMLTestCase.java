@@ -61,6 +61,16 @@ end_import
 
 begin_import
 import|import
+name|org
+operator|.
+name|junit
+operator|.
+name|Test
+import|;
+end_import
+
+begin_import
+import|import
 name|junit
 operator|.
 name|framework
@@ -156,6 +166,27 @@ literal|"/"
 argument_list|)
 expr_stmt|;
 block|}
+block|}
+comment|/**      * Tests that we do not break binary compatibility with BCEL-330.      */
+annotation|@
+name|Test
+specifier|public
+name|void
+name|testReferenceToConstant
+parameter_list|()
+block|{
+annotation|@
+name|SuppressWarnings
+argument_list|(
+literal|"unused"
+argument_list|)
+name|short
+name|referenceToConstant
+init|=
+name|Class2HTML
+operator|.
+name|AALOAD
+decl_stmt|;
 block|}
 block|}
 end_class
