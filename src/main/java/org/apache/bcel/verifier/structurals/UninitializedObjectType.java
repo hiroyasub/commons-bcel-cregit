@@ -37,18 +37,6 @@ name|apache
 operator|.
 name|bcel
 operator|.
-name|Constants
-import|;
-end_import
-
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|bcel
-operator|.
 name|generic
 operator|.
 name|ObjectType
@@ -79,8 +67,6 @@ class|class
 name|UninitializedObjectType
 extends|extends
 name|ReferenceType
-implements|implements
-name|Constants
 block|{
 comment|/** The "initialized" version. */
 specifier|private

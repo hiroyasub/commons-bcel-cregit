@@ -57,18 +57,6 @@ name|Const
 import|;
 end_import
 
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|bcel
-operator|.
-name|Constants
-import|;
-end_import
-
 begin_comment
 comment|/**  * This class represents a local variable within a method. It contains its  * scope, name, signature and index on the method's frame.  It is used both  * to represent an element of the LocalVariableTable as well as an element  * of the LocalVariableTypeTable.  The nomenclature used here may be a bit confusing;  * while the two items have the same layout in a class file, a LocalVariableTable  * attribute contains a descriptor_index, not a signature_index.  The  * LocalVariableTypeTable attribute does have a signature_index.  * @see org.apache.bcel.classfile.Utility for more details on the difference.  *  * @see     LocalVariableTable  * @see     LocalVariableTypeTable  */
 end_comment
@@ -82,8 +70,6 @@ implements|implements
 name|Cloneable
 implements|,
 name|Node
-implements|,
-name|Constants
 block|{
 specifier|private
 name|int

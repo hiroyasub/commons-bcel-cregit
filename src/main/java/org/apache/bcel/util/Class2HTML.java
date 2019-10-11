@@ -95,18 +95,6 @@ name|apache
 operator|.
 name|bcel
 operator|.
-name|Constants
-import|;
-end_import
-
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|bcel
-operator|.
 name|classfile
 operator|.
 name|Attribute
@@ -191,8 +179,6 @@ begin_class
 specifier|public
 class|class
 name|Class2HTML
-implements|implements
-name|Constants
 block|{
 specifier|private
 specifier|final

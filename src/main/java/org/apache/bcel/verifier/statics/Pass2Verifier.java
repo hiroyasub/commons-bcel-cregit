@@ -87,18 +87,6 @@ name|apache
 operator|.
 name|bcel
 operator|.
-name|Constants
-import|;
-end_import
-
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|bcel
-operator|.
 name|Repository
 import|;
 end_import
@@ -750,8 +738,6 @@ class|class
 name|Pass2Verifier
 extends|extends
 name|PassVerifier
-implements|implements
-name|Constants
 block|{
 comment|/**      * The LocalVariableInfo instances used by Pass3bVerifier.      * localVariablesInfos[i] denotes the information for the      * local variables of method number i in the      * JavaClass this verifier operates on.      */
 specifier|private

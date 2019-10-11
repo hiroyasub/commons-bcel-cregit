@@ -57,18 +57,6 @@ name|Const
 import|;
 end_import
 
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|bcel
-operator|.
-name|Constants
-import|;
-end_import
-
 begin_comment
 comment|/**  * This class represents an entry in the exception table of the<em>Code</em>  * attribute and is used only there. It contains a range in which a  * particular exception handler is active.  *  * @see     Code  */
 end_comment
@@ -82,8 +70,6 @@ implements|implements
 name|Cloneable
 implements|,
 name|Node
-implements|,
-name|Constants
 block|{
 specifier|private
 name|int
