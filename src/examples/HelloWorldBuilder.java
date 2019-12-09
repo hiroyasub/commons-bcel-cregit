@@ -268,11 +268,11 @@ literal|"java.lang.Object"
 argument_list|,
 literal|"<generated>"
 argument_list|,
-name|Constants
+name|Const
 operator|.
 name|ACC_PUBLIC
 operator||
-name|Constants
+name|Const
 operator|.
 name|ACC_SUPER
 argument_list|,
@@ -304,11 +304,11 @@ init|=
 operator|new
 name|MethodGen
 argument_list|(
-name|Constants
+name|Const
 operator|.
 name|ACC_STATIC
 operator||
-name|Constants
+name|Const
 operator|.
 name|ACC_PUBLIC
 argument_list|,
@@ -399,7 +399,7 @@ name|il
 operator|.
 name|append
 argument_list|(
-name|InstructionConstants
+name|InstructionConst
 operator|.
 name|DUP
 argument_list|)
@@ -421,7 +421,7 @@ name|il
 operator|.
 name|append
 argument_list|(
-name|InstructionConstants
+name|InstructionConst
 operator|.
 name|DUP
 argument_list|)
@@ -440,7 +440,7 @@ literal|"in"
 argument_list|,
 name|i_stream
 argument_list|,
-name|Constants
+name|Const
 operator|.
 name|GETSTATIC
 argument_list|)
@@ -470,7 +470,7 @@ block|{
 name|i_stream
 block|}
 argument_list|,
-name|Constants
+name|Const
 operator|.
 name|INVOKESPECIAL
 argument_list|)
@@ -503,7 +503,7 @@ literal|"java.io.Reader"
 argument_list|)
 block|}
 argument_list|,
-name|Constants
+name|Const
 operator|.
 name|INVOKESPECIAL
 argument_list|)
@@ -587,7 +587,7 @@ name|il
 operator|.
 name|append
 argument_list|(
-name|InstructionConstants
+name|InstructionConst
 operator|.
 name|ACONST_NULL
 argument_list|)
@@ -628,7 +628,7 @@ literal|"out"
 argument_list|,
 name|p_stream
 argument_list|,
-name|Constants
+name|Const
 operator|.
 name|GETSTATIC
 argument_list|)
@@ -672,7 +672,7 @@ operator|.
 name|STRING
 block|}
 argument_list|,
-name|Constants
+name|Const
 operator|.
 name|INVOKEVIRTUAL
 argument_list|)
@@ -709,7 +709,7 @@ name|Type
 operator|.
 name|NO_ARGS
 argument_list|,
-name|Constants
+name|Const
 operator|.
 name|INVOKEVIRTUAL
 argument_list|)
@@ -767,7 +767,7 @@ literal|"out"
 argument_list|,
 name|p_stream
 argument_list|,
-name|Constants
+name|Const
 operator|.
 name|GETSTATIC
 argument_list|)
@@ -778,7 +778,7 @@ name|il
 operator|.
 name|append
 argument_list|(
-name|InstructionConstants
+name|InstructionConst
 operator|.
 name|SWAP
 argument_list|)
@@ -808,7 +808,7 @@ operator|.
 name|OBJECT
 block|}
 argument_list|,
-name|Constants
+name|Const
 operator|.
 name|INVOKEVIRTUAL
 argument_list|)
@@ -818,7 +818,7 @@ name|il
 operator|.
 name|append
 argument_list|(
-name|InstructionConstants
+name|InstructionConst
 operator|.
 name|RETURN
 argument_list|)
@@ -859,7 +859,7 @@ literal|"out"
 argument_list|,
 name|p_stream
 argument_list|,
-name|Constants
+name|Const
 operator|.
 name|GETSTATIC
 argument_list|)
@@ -891,7 +891,7 @@ name|il
 operator|.
 name|append
 argument_list|(
-name|InstructionConstants
+name|InstructionConst
 operator|.
 name|DUP
 argument_list|)
@@ -934,7 +934,7 @@ operator|.
 name|STRING
 block|}
 argument_list|,
-name|Constants
+name|Const
 operator|.
 name|INVOKESPECIAL
 argument_list|)
@@ -977,7 +977,7 @@ operator|.
 name|STRING
 block|}
 argument_list|,
-name|Constants
+name|Const
 operator|.
 name|INVOKEVIRTUAL
 argument_list|)
@@ -1003,7 +1003,7 @@ name|Type
 operator|.
 name|NO_ARGS
 argument_list|,
-name|Constants
+name|Const
 operator|.
 name|INVOKEVIRTUAL
 argument_list|)
@@ -1034,7 +1034,7 @@ operator|.
 name|STRING
 block|}
 argument_list|,
-name|Constants
+name|Const
 operator|.
 name|INVOKEVIRTUAL
 argument_list|)
@@ -1044,7 +1044,7 @@ name|il
 operator|.
 name|append
 argument_list|(
-name|InstructionConstants
+name|InstructionConst
 operator|.
 name|RETURN
 argument_list|)
@@ -1078,7 +1078,7 @@ name|cg
 operator|.
 name|addEmptyConstructor
 argument_list|(
-name|Constants
+name|Const
 operator|.
 name|ACC_PUBLIC
 argument_list|)
