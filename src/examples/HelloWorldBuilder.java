@@ -21,7 +21,7 @@ name|apache
 operator|.
 name|bcel
 operator|.
-name|Constants
+name|Const
 import|;
 end_import
 
@@ -119,7 +119,7 @@ name|bcel
 operator|.
 name|generic
 operator|.
-name|InstructionConstants
+name|InstructionConst
 import|;
 end_import
 
