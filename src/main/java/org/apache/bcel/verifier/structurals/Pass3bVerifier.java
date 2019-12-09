@@ -379,6 +379,8 @@ specifier|final
 class|class
 name|InstructionContextQueue
 block|{
+comment|// The following two fields together represent the queue.
+comment|/** The first elements from pairs in the queue. */
 specifier|private
 specifier|final
 name|List
@@ -392,6 +394,7 @@ name|Vector
 argument_list|<>
 argument_list|()
 decl_stmt|;
+comment|/** The second elements from pairs in the queue. */
 specifier|private
 specifier|final
 name|List
@@ -408,6 +411,7 @@ name|Vector
 argument_list|<>
 argument_list|()
 decl_stmt|;
+comment|/**          * Adds an (InstructionContext, ExecutionChain) pair to this queue.          *          * @param ic the InstructionContext          * @param executionChain the ExecutionChain          */
 specifier|public
 name|void
 name|add
@@ -439,6 +443,7 @@ name|executionChain
 argument_list|)
 expr_stmt|;
 block|}
+comment|/**          * Tests if InstructionContext queue is empty.          *          * @return true if the InstructionContext queue is empty.          */
 specifier|public
 name|boolean
 name|isEmpty
@@ -451,6 +456,7 @@ name|isEmpty
 argument_list|()
 return|;
 block|}
+comment|/**          * Removes a specific (InstructionContext, ExecutionChain) pair from their respective queues.          *          * @param i the index of the items to be removed          */
 specifier|public
 name|void
 name|remove
@@ -475,6 +481,7 @@ name|i
 argument_list|)
 expr_stmt|;
 block|}
+comment|/**          * Gets a specific InstructionContext from the queue.          *          * @param i the index of the item to be fetched          * @return the indicated InstructionContext          */
 specifier|public
 name|InstructionContext
 name|getIC
@@ -493,6 +500,7 @@ name|i
 argument_list|)
 return|;
 block|}
+comment|/**          * Gets a specific ExecutionChain from the queue.          *          * @param i the index of the item to be fetched          * @return the indicated ExecutionChain          */
 specifier|public
 name|ArrayList
 argument_list|<
@@ -514,6 +522,7 @@ name|i
 argument_list|)
 return|;
 block|}
+comment|/**          * Gets the size of the InstructionContext queue.          *          * @return the size of the InstructionQueue          */
 specifier|public
 name|int
 name|size
@@ -573,7 +582,7 @@ operator|=
 name|method_no
 expr_stmt|;
 block|}
-comment|/**      * Whenever the outgoing frame      * situation of an InstructionContext changes, all its successors are      * put [back] into the queue [as if they were unvisited].    * The proof of termination is about the existence of a    * fix point of frame merging.      */
+comment|/**      * Whenever the outgoing frame      * situation of an InstructionContext changes, all its successors are      * put [back] into the queue [as if they were unvisited].      * The proof of termination is about the existence of a      * fix point of frame merging.      */
 specifier|private
 name|void
 name|circulationPump
@@ -1669,7 +1678,7 @@ literal|null
 condition|)
 do|;
 block|}
-comment|/**      * Throws an exception indicating the returned type is not compatible with the return type of the given method      * @throws StructuralCodeConstraintException always      * @since 6.0      */
+comment|/**      * Throws an exception indicating the returned type is not compatible with the return type of the given method.      *      * @param returnedType the type of the returned expression      * @param m the method we are processing      * @throws StructuralCodeConstraintException always      * @since 6.0      */
 specifier|public
 name|void
 name|invalidReturnTypeError
@@ -1700,7 +1709,7 @@ argument_list|()
 argument_list|)
 throw|;
 block|}
-comment|/**      * Pass 3b implements the data flow analysis as described in the Java Virtual      * Machine Specification, Second Edition.       * Later versions will use LocalVariablesInfo objects to verify if the       * verifier-inferred types and the class file's debug information (LocalVariables       * attributes) match [TODO].       *       * @see org.apache.bcel.verifier.statics.LocalVariablesInfo       * @see org.apache.bcel.verifier.statics.Pass2Verifier#getLocalVariablesInfo(int)       */
+comment|/**      * Pass 3b implements the data flow analysis as described in the Java Virtual      * Machine Specification, Second Edition.      * Later versions will use LocalVariablesInfo objects to verify if the      * verifier-inferred types and the class file's debug information (LocalVariables      * attributes) match [TODO].      *      * @see org.apache.bcel.verifier.statics.LocalVariablesInfo      * @see org.apache.bcel.verifier.statics.Pass2Verifier#getLocalVariablesInfo(int)      */
 annotation|@
 name|Override
 specifier|public
