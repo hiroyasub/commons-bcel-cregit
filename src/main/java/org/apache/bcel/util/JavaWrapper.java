@@ -220,15 +220,10 @@ name|getMethod
 argument_list|(
 literal|"main"
 argument_list|,
-operator|new
-name|Class
-index|[]
-block|{
 name|argv
 operator|.
 name|getClass
 argument_list|()
-block|}
 argument_list|)
 expr_stmt|;
 comment|/* Method main is sane ?              */
@@ -325,12 +320,7 @@ name|invoke
 argument_list|(
 literal|null
 argument_list|,
-operator|new
-name|Object
-index|[]
-block|{
 name|argv
-block|}
 argument_list|)
 expr_stmt|;
 block|}
