@@ -17,6 +17,16 @@ end_package
 
 begin_import
 import|import
+name|java
+operator|.
+name|util
+operator|.
+name|Objects
+import|;
+end_import
+
+begin_import
+import|import
 name|org
 operator|.
 name|apache
@@ -164,25 +174,19 @@ name|setInstruction
 parameter_list|(
 specifier|final
 name|InstructionHandle
-name|ih
+name|instructionHandle
 parameter_list|)
 block|{
 comment|// TODO could be package-protected?
-if|if
-condition|(
-name|ih
-operator|==
-literal|null
-condition|)
-block|{
-throw|throw
-operator|new
-name|NullPointerException
+name|Objects
+operator|.
+name|requireNonNull
 argument_list|(
-literal|"InstructionHandle may not be null"
+name|instructionHandle
+argument_list|,
+literal|"instructionHandle"
 argument_list|)
-throw|;
-block|}
+expr_stmt|;
 name|BranchInstruction
 operator|.
 name|notifyTarget
@@ -191,7 +195,7 @@ name|this
 operator|.
 name|ih
 argument_list|,
-name|ih
+name|instructionHandle
 argument_list|,
 name|this
 argument_list|)
@@ -200,7 +204,7 @@ name|this
 operator|.
 name|ih
 operator|=
-name|ih
+name|instructionHandle
 expr_stmt|;
 block|}
 annotation|@
