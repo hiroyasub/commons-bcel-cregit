@@ -116,7 +116,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Class for INVOKEDYNAMIC. Not an instance of InvokeInstruction, since that class  * expects to be able to get the class of the method. Ignores the bootstrap  * mechanism entirely.  *  * @see  *<a href="http://docs.oracle.com/javase/specs/jvms/se8/html/jvms-6.html#jvms-6.5.invokedynamic">  * The invokedynamic instruction in The Java Virtual Machine Specification</a>  * @since 6.0  */
+comment|/**  * Class for INVOKEDYNAMIC. Not an instance of InvokeInstruction, since that class  * expects to be able to get the class of the method. Ignores the bootstrap  * mechanism entirely.  *  * @see  *<a href="https://docs.oracle.com/javase/specs/jvms/se8/html/jvms-6.html#jvms-6.5.invokedynamic">  * The invokedynamic instruction in The Java Virtual Machine Specification</a>  * @since 6.0  */
 end_comment
 
 begin_class

@@ -60,7 +60,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * INVOKEVIRTUAL - Invoke instance method; dispatch based on class  *  *<PRE>Stack: ..., objectref, [arg1, [arg2 ...]] -&gt; ...</PRE>  *  * @see  *<a href="http://docs.oracle.com/javase/specs/jvms/se8/html/jvms-6.html#jvms-6.5.invokevirtual">  * The invokevirtual instruction in The Java Virtual Machine Specification</a>  */
+comment|/**  * INVOKEVIRTUAL - Invoke instance method; dispatch based on class  *  *<PRE>Stack: ..., objectref, [arg1, [arg2 ...]] -&gt; ...</PRE>  *  * @see  *<a href="https://docs.oracle.com/javase/specs/jvms/se8/html/jvms-6.html#jvms-6.5.invokevirtual">  * The invokevirtual instruction in The Java Virtual Machine Specification</a>  */
 end_comment
 
 begin_class
