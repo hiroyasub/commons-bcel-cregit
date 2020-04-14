@@ -23,7 +23,7 @@ specifier|final
 class|class
 name|ExceptionConst
 block|{
-comment|/** The mother of all exceptions      */
+comment|/**      * The mother of all exceptions      */
 specifier|public
 specifier|static
 specifier|final
@@ -37,7 +37,7 @@ name|Throwable
 operator|.
 name|class
 decl_stmt|;
-comment|/** Super class of any run-time exception      */
+comment|/**      * Super class of any run-time exception      */
 specifier|public
 specifier|static
 specifier|final
@@ -51,7 +51,7 @@ name|RuntimeException
 operator|.
 name|class
 decl_stmt|;
-comment|/** Super class of any linking exception (aka Linkage Error)      */
+comment|/**      * Super class of any linking exception (aka Linkage Error)      */
 specifier|public
 specifier|static
 specifier|final
@@ -65,7 +65,7 @@ name|LinkageError
 operator|.
 name|class
 decl_stmt|;
-comment|/** Linking Exceptions      */
+comment|/**      * Linking Exceptions      */
 specifier|public
 specifier|static
 specifier|final
@@ -224,7 +224,7 @@ name|class
 decl_stmt|;
 comment|/* UnsupportedClassVersionError is new in JDK 1.2 */
 comment|//    public static final Class UnsupportedClassVersionError = UnsupportedClassVersionError.class;
-comment|/** Run-Time Exceptions      */
+comment|/**      * Run-Time Exceptions      */
 specifier|public
 specifier|static
 specifier|final
