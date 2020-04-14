@@ -77,11 +77,21 @@ end_import
 
 begin_import
 import|import
+name|org
+operator|.
 name|junit
 operator|.
-name|framework
+name|Assert
+import|;
+end_import
+
+begin_import
+import|import
+name|org
 operator|.
-name|TestCase
+name|junit
+operator|.
+name|Test
 import|;
 end_import
 
@@ -89,8 +99,6 @@ begin_class
 specifier|public
 class|class
 name|MethodGenTestCase
-extends|extends
-name|TestCase
 block|{
 annotation_defn|@interface
 name|A
@@ -232,6 +240,8 @@ argument_list|)
 return|;
 block|}
 block|}
+name|Assert
+operator|.
 name|fail
 argument_list|(
 literal|"Method "
@@ -247,6 +257,8 @@ return|return
 literal|null
 return|;
 block|}
+annotation|@
+name|Test
 specifier|public
 name|void
 name|testAnnotationsAreUnpacked
@@ -318,6 +330,8 @@ argument_list|(
 literal|0
 argument_list|)
 decl_stmt|;
+name|Assert
+operator|.
 name|assertEquals
 argument_list|(
 literal|"Wrong number of annotations in the first parameter"
@@ -344,6 +358,8 @@ argument_list|(
 literal|1
 argument_list|)
 decl_stmt|;
+name|Assert
+operator|.
 name|assertEquals
 argument_list|(
 literal|"Wrong number of annotations in the second parameter"
@@ -357,6 +373,8 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
+annotation|@
+name|Test
 specifier|public
 name|void
 name|testRemoveLocalVariable
@@ -389,6 +407,8 @@ index|[
 literal|1
 index|]
 decl_stmt|;
+name|Assert
+operator|.
 name|assertEquals
 argument_list|(
 literal|"variable name"
@@ -419,6 +439,8 @@ operator|.
 name|getEnd
 argument_list|()
 decl_stmt|;
+name|Assert
+operator|.
 name|assertNotNull
 argument_list|(
 literal|"scope start"
@@ -426,6 +448,8 @@ argument_list|,
 name|start
 argument_list|)
 expr_stmt|;
+name|Assert
+operator|.
 name|assertNotNull
 argument_list|(
 literal|"scope end"
@@ -433,6 +457,8 @@ argument_list|,
 name|end
 argument_list|)
 expr_stmt|;
+name|Assert
+operator|.
 name|assertTrue
 argument_list|(
 literal|"scope start not targeted by the local variable"
@@ -453,6 +479,8 @@ name|lv
 argument_list|)
 argument_list|)
 expr_stmt|;
+name|Assert
+operator|.
 name|assertTrue
 argument_list|(
 literal|"scope end not targeted by the local variable"
@@ -481,6 +509,8 @@ argument_list|(
 name|lv
 argument_list|)
 expr_stmt|;
+name|Assert
+operator|.
 name|assertFalse
 argument_list|(
 literal|"scope start still targeted by the removed variable"
@@ -501,6 +531,8 @@ name|lv
 argument_list|)
 argument_list|)
 expr_stmt|;
+name|Assert
+operator|.
 name|assertFalse
 argument_list|(
 literal|"scope end still targeted by the removed variable"
@@ -521,6 +553,8 @@ name|lv
 argument_list|)
 argument_list|)
 expr_stmt|;
+name|Assert
+operator|.
 name|assertNull
 argument_list|(
 literal|"scope start"
@@ -531,6 +565,8 @@ name|getStart
 argument_list|()
 argument_list|)
 expr_stmt|;
+name|Assert
+operator|.
 name|assertNull
 argument_list|(
 literal|"scope end"
@@ -542,6 +578,8 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
+annotation|@
+name|Test
 specifier|public
 name|void
 name|testRemoveLocalVariables
@@ -574,6 +612,8 @@ index|[
 literal|1
 index|]
 decl_stmt|;
+name|Assert
+operator|.
 name|assertEquals
 argument_list|(
 literal|"variable name"
@@ -604,6 +644,8 @@ operator|.
 name|getEnd
 argument_list|()
 decl_stmt|;
+name|Assert
+operator|.
 name|assertNotNull
 argument_list|(
 literal|"scope start"
@@ -611,6 +653,8 @@ argument_list|,
 name|start
 argument_list|)
 expr_stmt|;
+name|Assert
+operator|.
 name|assertNotNull
 argument_list|(
 literal|"scope end"
@@ -618,6 +662,8 @@ argument_list|,
 name|end
 argument_list|)
 expr_stmt|;
+name|Assert
+operator|.
 name|assertTrue
 argument_list|(
 literal|"scope start not targeted by the local variable"
@@ -638,6 +684,8 @@ name|lv
 argument_list|)
 argument_list|)
 expr_stmt|;
+name|Assert
+operator|.
 name|assertTrue
 argument_list|(
 literal|"scope end not targeted by the local variable"
@@ -664,6 +712,8 @@ operator|.
 name|removeLocalVariables
 argument_list|()
 expr_stmt|;
+name|Assert
+operator|.
 name|assertFalse
 argument_list|(
 literal|"scope start still targeted by the removed variable"
@@ -684,6 +734,8 @@ name|lv
 argument_list|)
 argument_list|)
 expr_stmt|;
+name|Assert
+operator|.
 name|assertFalse
 argument_list|(
 literal|"scope end still targeted by the removed variable"
@@ -704,6 +756,8 @@ name|lv
 argument_list|)
 argument_list|)
 expr_stmt|;
+name|Assert
+operator|.
 name|assertNull
 argument_list|(
 literal|"scope start"
@@ -714,6 +768,8 @@ name|getStart
 argument_list|()
 argument_list|)
 expr_stmt|;
+name|Assert
+operator|.
 name|assertNull
 argument_list|(
 literal|"scope end"
