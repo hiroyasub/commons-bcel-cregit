@@ -205,9 +205,6 @@ name|Verifier
 index|[
 name|hashMap
 operator|.
-name|values
-argument_list|()
-operator|.
 name|size
 argument_list|()
 index|]

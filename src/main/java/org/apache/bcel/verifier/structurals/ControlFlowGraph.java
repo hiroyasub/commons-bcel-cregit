@@ -1765,9 +1765,6 @@ name|InstructionContext
 index|[
 name|instructionContexts
 operator|.
-name|values
-argument_list|()
-operator|.
 name|size
 argument_list|()
 index|]
