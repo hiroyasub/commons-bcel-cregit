@@ -852,6 +852,7 @@ argument_list|(
 name|className
 argument_list|)
 decl_stmt|;
+specifier|final
 name|ClassGen
 name|classGen
 init|=
@@ -863,6 +864,7 @@ argument_list|)
 decl_stmt|;
 for|for
 control|(
+specifier|final
 name|Method
 name|method
 range|:

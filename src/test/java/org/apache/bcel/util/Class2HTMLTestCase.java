@@ -180,6 +180,7 @@ name|SuppressWarnings
 argument_list|(
 literal|"unused"
 argument_list|)
+specifier|final
 name|short
 name|referenceToConstant
 init|=

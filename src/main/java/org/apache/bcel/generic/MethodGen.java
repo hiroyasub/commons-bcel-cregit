@@ -2883,6 +2883,7 @@ specifier|public
 name|void
 name|removeRuntimeAttributes
 parameter_list|(
+specifier|final
 name|Attribute
 index|[]
 name|attrs
@@ -3228,6 +3229,7 @@ name|code
 argument_list|)
 expr_stmt|;
 block|}
+specifier|final
 name|Attribute
 index|[]
 name|annotations
@@ -3237,6 +3239,7 @@ argument_list|(
 name|_cp
 argument_list|)
 decl_stmt|;
+specifier|final
 name|Attribute
 index|[]
 name|parameterAnnotations
