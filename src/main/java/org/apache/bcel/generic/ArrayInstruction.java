@@ -339,7 +339,7 @@ throw|throw
 operator|new
 name|ClassGenException
 argument_list|(
-literal|"Oops: unknown case in switch"
+literal|"Unknown case in switch"
 operator|+
 name|_opcode
 argument_list|)

@@ -254,7 +254,7 @@ throw|throw
 operator|new
 name|RuntimeException
 argument_list|(
-literal|"Oops: Unknown invoke kind: "
+literal|"Unknown invoke kind: "
 operator|+
 name|kind
 argument_list|)
@@ -1104,7 +1104,7 @@ throw|throw
 operator|new
 name|RuntimeException
 argument_list|(
-literal|"Oops: No append for this type? "
+literal|"No append for this type? "
 operator|+
 name|type
 argument_list|)
@@ -1216,7 +1216,7 @@ throw|throw
 operator|new
 name|RuntimeException
 argument_list|(
-literal|"Oops: Unknown getfield kind:"
+literal|"Unknown getfield kind:"
 operator|+
 name|kind
 argument_list|)

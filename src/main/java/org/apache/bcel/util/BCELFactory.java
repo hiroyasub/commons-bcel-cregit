@@ -1390,7 +1390,7 @@ throw|throw
 operator|new
 name|RuntimeException
 argument_list|(
-literal|"Oops: "
+literal|"Unhandled opcode: "
 operator|+
 name|opcode
 argument_list|)

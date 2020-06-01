@@ -1302,7 +1302,7 @@ throw|throw
 operator|new
 name|IllegalStateException
 argument_list|(
-literal|"Ooops, what primitive type is "
+literal|"Unknown primitive type "
 operator|+
 name|cl
 argument_list|)

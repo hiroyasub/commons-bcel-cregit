@@ -17,6 +17,16 @@ name|exc
 package|;
 end_package
 
+begin_import
+import|import
+name|java
+operator|.
+name|util
+operator|.
+name|Arrays
+import|;
+end_import
+
 begin_comment
 comment|/**  * Instances of this class should never be thrown. When such an instance is thrown,  * this is due to an INTERNAL ERROR of BCEL's class file verifier&quot;JustIce&quot;.  *  */
 end_comment
@@ -191,7 +201,12 @@ init|=
 operator|new
 name|AssertionViolatedException
 argument_list|(
-literal|"Oops!"
+name|Arrays
+operator|.
+name|toString
+argument_list|(
+name|args
+argument_list|)
 argument_list|)
 decl_stmt|;
 name|ave

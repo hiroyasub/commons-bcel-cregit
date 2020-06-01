@@ -1272,7 +1272,7 @@ throw|throw
 operator|new
 name|RuntimeException
 argument_list|(
-literal|"Oops: Unhandled : "
+literal|"Unhandled : "
 operator|+
 name|super
 operator|.
