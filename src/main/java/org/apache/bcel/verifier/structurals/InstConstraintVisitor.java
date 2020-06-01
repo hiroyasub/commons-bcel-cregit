@@ -14014,7 +14014,7 @@ throw|throw
 operator|new
 name|AssertionViolatedException
 argument_list|(
-literal|"Oops: RET expecting a target!"
+literal|"RET expecting a target!"
 argument_list|)
 throw|;
 block|}

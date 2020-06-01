@@ -2911,7 +2911,7 @@ throw|throw
 operator|new
 name|AssertionViolatedException
 argument_list|(
-literal|"OOPS: Does not BCEL handle that? LDC2_W operand has a problem."
+literal|"Does not BCEL handle that? LDC2_W operand has a problem."
 argument_list|,
 name|e
 argument_list|)

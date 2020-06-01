@@ -1293,7 +1293,7 @@ throw|throw
 operator|new
 name|AssertionViolatedException
 argument_list|(
-literal|"Oops. BCEL did not like NULL as a ConstantPoolGen object."
+literal|"BCEL did not like NULL as a ConstantPoolGen object."
 argument_list|,
 name|re
 argument_list|)

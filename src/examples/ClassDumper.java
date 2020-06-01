@@ -1496,7 +1496,7 @@ name|out
 operator|.
 name|printf
 argument_list|(
-literal|"%nWHOOPS attribute_length: %d pos2-pos1-6: %d pos1: %x(%d) pos2: %x(%d)%n"
+literal|"%nattribute_length: %d pos2-pos1-6: %d pos1: %x(%d) pos2: %x(%d)%n"
 argument_list|,
 name|attribute_length
 argument_list|,

@@ -1283,7 +1283,9 @@ name|err
 operator|.
 name|println
 argument_list|(
-literal|"Ooops"
+literal|"Unhandled case: "
+operator|+
+name|kind
 argument_list|)
 expr_stmt|;
 block|}
@@ -1672,7 +1674,9 @@ name|err
 operator|.
 name|println
 argument_list|(
-literal|"Ooops"
+literal|"Unhandled case: "
+operator|+
+name|kind
 argument_list|)
 expr_stmt|;
 block|}

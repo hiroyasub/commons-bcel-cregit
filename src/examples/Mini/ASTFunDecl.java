@@ -1947,7 +1947,7 @@ name|err
 operator|.
 name|println
 argument_list|(
-literal|"Ooops: "
+literal|"Unexpected: "
 operator|+
 name|e
 argument_list|)
