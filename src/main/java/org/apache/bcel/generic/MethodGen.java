@@ -2878,7 +2878,7 @@ return|return
 name|attrs
 return|;
 block|}
-comment|/**      * Would prefer to make this private, but need a way to test if client is      * using BCEL version 6.4.2 or later that contains fix for BCEL-329.      * @since 6.4.2      */
+comment|/**      * Would prefer to make this private, but need a way to test if client is      * using BCEL version 6.5.0 or later that contains fix for BCEL-329.      * @since 6.5.0      */
 specifier|public
 name|void
 name|removeRuntimeAttributes

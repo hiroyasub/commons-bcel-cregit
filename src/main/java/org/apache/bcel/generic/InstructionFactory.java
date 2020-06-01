@@ -186,7 +186,7 @@ name|INVOKEINTERFACE
 argument_list|)
 return|;
 block|}
-comment|/** Create an invoke instruction. (Except for invokedynamic.)      *      * @param class_name name of the called class      * @param name name of the called method      * @param ret_type return type of method      * @param arg_types argument types of method      * @param kind how to invoke: INVOKEINTERFACE, INVOKESTATIC, INVOKEVIRTUAL, or INVOKESPECIAL      * @param use_interface force use of InterfaceMethodref      * @return A new InvokeInstruction.      * @since 6.4.2      */
+comment|/** Create an invoke instruction. (Except for invokedynamic.)      *      * @param class_name name of the called class      * @param name name of the called method      * @param ret_type return type of method      * @param arg_types argument types of method      * @param kind how to invoke: INVOKEINTERFACE, INVOKESTATIC, INVOKEVIRTUAL, or INVOKESPECIAL      * @param use_interface force use of InterfaceMethodref      * @return A new InvokeInstruction.      * @since 6.5.0      */
 specifier|public
 name|InvokeInstruction
 name|createInvoke
