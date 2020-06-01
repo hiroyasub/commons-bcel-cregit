@@ -187,27 +187,15 @@ block|{
 comment|/* Parse command line arguments.        */
 for|for
 control|(
-name|int
-name|i
-init|=
-literal|0
-init|;
-name|i
-operator|<
+name|String
+name|element
+range|:
 name|argv
-operator|.
-name|length
-condition|;
-name|i
-operator|++
 control|)
 block|{
 if|if
 condition|(
-name|argv
-index|[
-name|i
-index|]
+name|element
 operator|.
 name|charAt
 argument_list|(
@@ -220,10 +208,7 @@ block|{
 comment|// command line switch
 if|if
 condition|(
-name|argv
-index|[
-name|i
-index|]
+name|element
 operator|.
 name|equals
 argument_list|(
@@ -238,10 +223,7 @@ expr_stmt|;
 block|}
 if|else if
 condition|(
-name|argv
-index|[
-name|i
-index|]
+name|element
 operator|.
 name|equals
 argument_list|(
@@ -262,10 +244,7 @@ name|Exception
 argument_list|(
 literal|"Unknown option: "
 operator|+
-name|argv
-index|[
-name|i
-index|]
+name|element
 argument_list|)
 throw|;
 block|}
@@ -279,10 +258,7 @@ name|files
 operator|++
 index|]
 operator|=
-name|argv
-index|[
-name|i
-index|]
+name|element
 expr_stmt|;
 block|}
 block|}
