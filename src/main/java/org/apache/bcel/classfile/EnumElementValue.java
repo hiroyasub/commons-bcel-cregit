@@ -105,7 +105,7 @@ condition|)
 block|{
 throw|throw
 operator|new
-name|RuntimeException
+name|IllegalArgumentException
 argument_list|(
 literal|"Only element values of type enum can be built with this ctor - type specified: "
 operator|+

@@ -128,7 +128,7 @@ comment|// cpool.getConstant(nvp.getNameIndex())
 comment|// if
 comment|// (!nvp.getNameString().equals(((ConstantUtf8)cpool.getConstant(nvp.getNameIndex())).getBytes()))
 comment|// {
-comment|// throw new RuntimeException("envp buggered");
+comment|// throw new IllegalArgumentException("envp buggered");
 comment|// }
 if|if
 condition|(

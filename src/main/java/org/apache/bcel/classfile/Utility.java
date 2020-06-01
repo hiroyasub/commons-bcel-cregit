@@ -5345,7 +5345,7 @@ condition|)
 block|{
 throw|throw
 operator|new
-name|RuntimeException
+name|IllegalArgumentException
 argument_list|(
 literal|"Illegal type: "
 operator|+
@@ -5600,7 +5600,7 @@ condition|)
 block|{
 throw|throw
 operator|new
-name|RuntimeException
+name|IllegalArgumentException
 argument_list|(
 literal|"Illegally nested brackets:"
 operator|+
@@ -5624,7 +5624,7 @@ condition|)
 block|{
 throw|throw
 operator|new
-name|RuntimeException
+name|IllegalArgumentException
 argument_list|(
 literal|"Illegally nested brackets:"
 operator|+
@@ -5652,7 +5652,7 @@ condition|)
 block|{
 throw|throw
 operator|new
-name|RuntimeException
+name|IllegalArgumentException
 argument_list|(
 literal|"Illegally nested brackets:"
 operator|+

@@ -1628,7 +1628,7 @@ block|{
 comment|// Don't know what do do now, so raise RuntimeException
 throw|throw
 operator|new
-name|RuntimeException
+name|IllegalArgumentException
 argument_list|(
 name|e
 argument_list|)

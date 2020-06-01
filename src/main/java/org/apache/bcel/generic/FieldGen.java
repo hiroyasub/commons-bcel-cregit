@@ -1270,7 +1270,7 @@ return|;
 default|default:
 throw|throw
 operator|new
-name|RuntimeException
+name|IllegalStateException
 argument_list|(
 literal|"Unhandled : "
 operator|+

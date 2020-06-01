@@ -135,7 +135,7 @@ condition|)
 block|{
 throw|throw
 operator|new
-name|RuntimeException
+name|IllegalStateException
 argument_list|(
 literal|"Dont call getValueString() on a non STRING ElementValue"
 argument_list|)
@@ -187,7 +187,7 @@ condition|)
 block|{
 throw|throw
 operator|new
-name|RuntimeException
+name|IllegalStateException
 argument_list|(
 literal|"Dont call getValueString() on a non STRING ElementValue"
 argument_list|)
@@ -239,7 +239,7 @@ condition|)
 block|{
 throw|throw
 operator|new
-name|RuntimeException
+name|IllegalStateException
 argument_list|(
 literal|"Dont call getValueByte() on a non BYTE ElementValue"
 argument_list|)
@@ -294,7 +294,7 @@ condition|)
 block|{
 throw|throw
 operator|new
-name|RuntimeException
+name|IllegalStateException
 argument_list|(
 literal|"Dont call getValueChar() on a non CHAR ElementValue"
 argument_list|)
@@ -349,7 +349,7 @@ condition|)
 block|{
 throw|throw
 operator|new
-name|RuntimeException
+name|IllegalStateException
 argument_list|(
 literal|"Dont call getValueLong() on a non LONG ElementValue"
 argument_list|)
@@ -397,7 +397,7 @@ condition|)
 block|{
 throw|throw
 operator|new
-name|RuntimeException
+name|IllegalStateException
 argument_list|(
 literal|"Dont call getValueFloat() on a non FLOAT ElementValue"
 argument_list|)
@@ -445,7 +445,7 @@ condition|)
 block|{
 throw|throw
 operator|new
-name|RuntimeException
+name|IllegalStateException
 argument_list|(
 literal|"Dont call getValueDouble() on a non DOUBLE ElementValue"
 argument_list|)
@@ -493,7 +493,7 @@ condition|)
 block|{
 throw|throw
 operator|new
-name|RuntimeException
+name|IllegalStateException
 argument_list|(
 literal|"Dont call getValueBoolean() on a non BOOLEAN ElementValue"
 argument_list|)
@@ -543,7 +543,7 @@ condition|)
 block|{
 throw|throw
 operator|new
-name|RuntimeException
+name|IllegalStateException
 argument_list|(
 literal|"Dont call getValueShort() on a non SHORT ElementValue"
 argument_list|)
@@ -924,7 +924,7 @@ return|;
 default|default:
 throw|throw
 operator|new
-name|RuntimeException
+name|IllegalStateException
 argument_list|(
 literal|"SimpleElementValue class does not know how to stringify type "
 operator|+
@@ -1007,7 +1007,7 @@ break|break;
 default|default:
 throw|throw
 operator|new
-name|RuntimeException
+name|IllegalStateException
 argument_list|(
 literal|"SimpleElementValue doesnt know how to write out type "
 operator|+

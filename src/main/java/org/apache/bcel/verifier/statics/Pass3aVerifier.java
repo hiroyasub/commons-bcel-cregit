@@ -6000,7 +6000,7 @@ parameter_list|)
 block|{
 throw|throw
 operator|new
-name|RuntimeException
+name|UnsupportedOperationException
 argument_list|(
 literal|"INVOKEDYNAMIC instruction is not supported at this time"
 argument_list|)

@@ -413,7 +413,7 @@ condition|)
 block|{
 throw|throw
 operator|new
-name|RuntimeException
+name|IllegalArgumentException
 argument_list|(
 literal|"Illegal signature: "
 operator|+
@@ -741,7 +741,7 @@ condition|)
 block|{
 throw|throw
 operator|new
-name|RuntimeException
+name|IllegalArgumentException
 argument_list|(
 literal|"Illegal signature: "
 operator|+
@@ -847,7 +847,7 @@ condition|)
 block|{
 throw|throw
 operator|new
-name|RuntimeException
+name|IllegalArgumentException
 argument_list|(
 literal|"Illegal signature: "
 operator|+

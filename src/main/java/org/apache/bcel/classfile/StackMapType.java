@@ -173,7 +173,7 @@ condition|)
 block|{
 throw|throw
 operator|new
-name|RuntimeException
+name|IllegalArgumentException
 argument_list|(
 literal|"Illegal type for StackMapType: "
 operator|+
@@ -230,7 +230,7 @@ condition|)
 block|{
 throw|throw
 operator|new
-name|RuntimeException
+name|IllegalArgumentException
 argument_list|(
 literal|"Illegal type for StackMapType: "
 operator|+

@@ -759,7 +759,7 @@ default|default:
 comment|// Never reached
 throw|throw
 operator|new
-name|RuntimeException
+name|IllegalArgumentException
 argument_list|(
 literal|"Unknown constant type "
 operator|+
@@ -1256,7 +1256,7 @@ break|break;
 default|default:
 throw|throw
 operator|new
-name|RuntimeException
+name|IllegalArgumentException
 argument_list|(
 literal|"getConstantString called with illegal tag "
 operator|+

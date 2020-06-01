@@ -96,7 +96,7 @@ condition|)
 block|{
 throw|throw
 operator|new
-name|IllegalArgumentException
+name|IllegalStateException
 argument_list|(
 literal|"The property 'bcel.classloader' must be defined"
 argument_list|)
@@ -132,7 +132,7 @@ parameter_list|)
 block|{
 throw|throw
 operator|new
-name|RuntimeException
+name|IllegalStateException
 argument_list|(
 name|e
 operator|.

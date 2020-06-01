@@ -170,7 +170,7 @@ condition|)
 block|{
 throw|throw
 operator|new
-name|RuntimeException
+name|IllegalStateException
 argument_list|(
 literal|"physicalSuccessor() called on a shared JsrInstruction."
 argument_list|)

@@ -1388,7 +1388,7 @@ break|break;
 default|default:
 throw|throw
 operator|new
-name|RuntimeException
+name|IllegalArgumentException
 argument_list|(
 literal|"Unhandled opcode: "
 operator|+

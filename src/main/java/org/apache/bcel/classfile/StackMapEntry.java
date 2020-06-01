@@ -1481,7 +1481,7 @@ else|else
 block|{
 throw|throw
 operator|new
-name|RuntimeException
+name|IllegalStateException
 argument_list|(
 literal|"Invalid StackMap frame_type: "
 operator|+
@@ -1618,7 +1618,7 @@ else|else
 block|{
 throw|throw
 operator|new
-name|RuntimeException
+name|IllegalArgumentException
 argument_list|(
 literal|"Invalid StackMap frame_type"
 argument_list|)
@@ -1660,7 +1660,7 @@ condition|)
 block|{
 throw|throw
 operator|new
-name|RuntimeException
+name|IllegalArgumentException
 argument_list|(
 literal|"Invalid StackMap offset: "
 operator|+
@@ -1821,7 +1821,7 @@ else|else
 block|{
 throw|throw
 operator|new
-name|RuntimeException
+name|IllegalStateException
 argument_list|(
 literal|"Invalid StackMap frame_type: "
 operator|+

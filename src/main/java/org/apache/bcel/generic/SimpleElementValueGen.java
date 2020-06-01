@@ -727,7 +727,7 @@ break|break;
 default|default:
 throw|throw
 operator|new
-name|RuntimeException
+name|IllegalArgumentException
 argument_list|(
 literal|"SimpleElementValueGen class does not know how to copy this type "
 operator|+
@@ -793,7 +793,7 @@ condition|)
 block|{
 throw|throw
 operator|new
-name|RuntimeException
+name|IllegalStateException
 argument_list|(
 literal|"Dont call getValueString() on a non STRING ElementValue"
 argument_list|)
@@ -838,7 +838,7 @@ condition|)
 block|{
 throw|throw
 operator|new
-name|RuntimeException
+name|IllegalStateException
 argument_list|(
 literal|"Dont call getValueString() on a non STRING ElementValue"
 argument_list|)
@@ -1147,7 +1147,7 @@ return|;
 default|default:
 throw|throw
 operator|new
-name|RuntimeException
+name|IllegalStateException
 argument_list|(
 literal|"SimpleElementValueGen class does not know how to stringify type "
 operator|+
@@ -1229,7 +1229,7 @@ break|break;
 default|default:
 throw|throw
 operator|new
-name|RuntimeException
+name|IllegalStateException
 argument_list|(
 literal|"SimpleElementValueGen doesnt know how to write out type "
 operator|+

@@ -666,7 +666,7 @@ return|;
 default|default:
 throw|throw
 operator|new
-name|RuntimeException
+name|IllegalArgumentException
 argument_list|(
 literal|"Unexpected element value kind in annotation: "
 operator|+
@@ -836,7 +836,7 @@ return|;
 default|default:
 throw|throw
 operator|new
-name|RuntimeException
+name|UnsupportedOperationException
 argument_list|(
 literal|"Not implemented yet! ("
 operator|+

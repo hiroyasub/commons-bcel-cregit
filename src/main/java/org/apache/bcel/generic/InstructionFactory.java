@@ -252,7 +252,7 @@ condition|)
 block|{
 throw|throw
 operator|new
-name|RuntimeException
+name|IllegalArgumentException
 argument_list|(
 literal|"Unknown invoke kind: "
 operator|+
@@ -1102,7 +1102,7 @@ return|;
 default|default:
 throw|throw
 operator|new
-name|RuntimeException
+name|IllegalArgumentException
 argument_list|(
 literal|"No append for this type? "
 operator|+
@@ -1214,7 +1214,7 @@ return|;
 default|default:
 throw|throw
 operator|new
-name|RuntimeException
+name|IllegalArgumentException
 argument_list|(
 literal|"Unknown getfield kind:"
 operator|+
@@ -1345,7 +1345,7 @@ return|;
 default|default:
 throw|throw
 operator|new
-name|RuntimeException
+name|IllegalArgumentException
 argument_list|(
 literal|"Invalid type: "
 operator|+
@@ -1467,7 +1467,7 @@ return|;
 default|default:
 throw|throw
 operator|new
-name|RuntimeException
+name|IllegalArgumentException
 argument_list|(
 literal|"Invalid operand "
 operator|+
@@ -1589,7 +1589,7 @@ return|;
 default|default:
 throw|throw
 operator|new
-name|RuntimeException
+name|IllegalArgumentException
 argument_list|(
 literal|"Invalid operand "
 operator|+
@@ -1656,7 +1656,7 @@ return|;
 default|default:
 throw|throw
 operator|new
-name|RuntimeException
+name|IllegalArgumentException
 argument_list|(
 literal|"Invalid operand "
 operator|+
@@ -1723,7 +1723,7 @@ return|;
 default|default:
 throw|throw
 operator|new
-name|RuntimeException
+name|IllegalArgumentException
 argument_list|(
 literal|"Invalid operand "
 operator|+
@@ -1832,7 +1832,7 @@ return|;
 default|default:
 throw|throw
 operator|new
-name|RuntimeException
+name|IllegalArgumentException
 argument_list|(
 literal|"Invalid type "
 operator|+
@@ -2060,7 +2060,7 @@ return|;
 default|default:
 throw|throw
 operator|new
-name|RuntimeException
+name|IllegalArgumentException
 argument_list|(
 literal|"Invalid type "
 operator|+
@@ -2180,7 +2180,7 @@ return|;
 default|default:
 throw|throw
 operator|new
-name|RuntimeException
+name|IllegalArgumentException
 argument_list|(
 literal|"Invalid type "
 operator|+
@@ -2301,7 +2301,7 @@ return|;
 default|default:
 throw|throw
 operator|new
-name|RuntimeException
+name|IllegalArgumentException
 argument_list|(
 literal|"Invalid type "
 operator|+
@@ -2422,7 +2422,7 @@ return|;
 default|default:
 throw|throw
 operator|new
-name|RuntimeException
+name|IllegalArgumentException
 argument_list|(
 literal|"Invalid type "
 operator|+
@@ -2575,7 +2575,7 @@ parameter_list|)
 block|{
 throw|throw
 operator|new
-name|RuntimeException
+name|IllegalArgumentException
 argument_list|(
 literal|"Could not find instruction: "
 operator|+
@@ -2652,9 +2652,9 @@ else|else
 block|{
 throw|throw
 operator|new
-name|RuntimeException
+name|IllegalArgumentException
 argument_list|(
-literal|"Can not cast "
+literal|"Cannot cast "
 operator|+
 name|src_type
 operator|+
@@ -3186,7 +3186,7 @@ return|;
 default|default:
 throw|throw
 operator|new
-name|RuntimeException
+name|IllegalArgumentException
 argument_list|(
 literal|"Invalid type: "
 operator|+
@@ -3458,7 +3458,7 @@ return|;
 default|default:
 throw|throw
 operator|new
-name|RuntimeException
+name|IllegalArgumentException
 argument_list|(
 literal|"Invalid opcode: "
 operator|+

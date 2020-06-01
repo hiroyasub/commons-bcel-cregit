@@ -138,7 +138,7 @@ condition|)
 block|{
 throw|throw
 operator|new
-name|RuntimeException
+name|IllegalArgumentException
 argument_list|(
 literal|"Only element values of type annotation can be built with this ctor - type specified: "
 operator|+
@@ -233,7 +233,7 @@ parameter_list|()
 block|{
 throw|throw
 operator|new
-name|RuntimeException
+name|UnsupportedOperationException
 argument_list|(
 literal|"Not implemented yet"
 argument_list|)
