@@ -726,7 +726,7 @@ return|return
 name|this
 return|;
 block|}
-comment|/**      * Second pass      *       * @return type of expression      */
+comment|/**      * Second pass      *      * @return type of expression      */
 specifier|public
 name|int
 name|eval
