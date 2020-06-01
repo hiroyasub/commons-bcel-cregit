@@ -186,7 +186,7 @@ name|INVOKEINTERFACE
 argument_list|)
 return|;
 block|}
-comment|/** Create an invoke instruction. (Except for invokedynamic.)      *      * @param class_name name of the called class      * @param name name of the called method      * @param ret_type return type of method      * @param arg_types argument types of method      * @param kind how to invoke: INVOKEINTERFACE, INVOKESTATIC, INVOKEVIRTUAL, or INVOKESPECIAL      * @param use_interface force use of InterfaceMethodref      * @since 6.4.2      */
+comment|/** Create an invoke instruction. (Except for invokedynamic.)      *      * @param class_name name of the called class      * @param name name of the called method      * @param ret_type return type of method      * @param arg_types argument types of method      * @param kind how to invoke: INVOKEINTERFACE, INVOKESTATIC, INVOKEVIRTUAL, or INVOKESPECIAL      * @param use_interface force use of InterfaceMethodref      * @return A new InvokeInstruction.      * @since 6.4.2      */
 specifier|public
 name|InvokeInstruction
 name|createInvoke
@@ -217,6 +217,49 @@ name|boolean
 name|use_interface
 parameter_list|)
 block|{
+if|if
+condition|(
+name|kind
+operator|!=
+name|Const
+operator|.
+name|INVOKESPECIAL
+operator|&&
+name|kind
+operator|!=
+name|Const
+operator|.
+name|INVOKEVIRTUAL
+operator|&&
+name|kind
+operator|!=
+name|Const
+operator|.
+name|INVOKESTATIC
+operator|&&
+name|kind
+operator|!=
+name|Const
+operator|.
+name|INVOKEINTERFACE
+operator|&&
+name|kind
+operator|!=
+name|Const
+operator|.
+name|INVOKEDYNAMIC
+condition|)
+block|{
+throw|throw
+operator|new
+name|RuntimeException
+argument_list|(
+literal|"Oops: Unknown invoke kind: "
+operator|+
+name|kind
+argument_list|)
+throw|;
+block|}
 name|int
 name|index
 decl_stmt|;
@@ -360,11 +403,12 @@ name|index
 argument_list|)
 return|;
 default|default:
+comment|// Can't happen
 throw|throw
 operator|new
-name|RuntimeException
+name|IllegalStateException
 argument_list|(
-literal|"Oops: Unknown invoke kind: "
+literal|"Unknown invoke kind: "
 operator|+
 name|kind
 argument_list|)
