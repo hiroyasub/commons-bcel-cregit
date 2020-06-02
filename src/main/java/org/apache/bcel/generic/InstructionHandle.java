@@ -727,7 +727,7 @@ name|v
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * @param next the next to set      * @ since 6.0      */
+comment|/**      * @param next the next to set      * @since 6.0      */
 specifier|final
 name|InstructionHandle
 name|setNext
@@ -747,7 +747,7 @@ return|return
 name|next
 return|;
 block|}
-comment|/**      * @param prev the prev to set      * @ since 6.0      */
+comment|/**      * @param prev the prev to set      * @since 6.0      */
 specifier|final
 name|InstructionHandle
 name|setPrev
