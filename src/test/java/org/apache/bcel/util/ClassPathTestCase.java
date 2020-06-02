@@ -90,8 +90,6 @@ specifier|public
 name|void
 name|testGetResource
 parameter_list|()
-throws|throws
-name|IOException
 block|{
 name|Assert
 operator|.
