@@ -3711,8 +3711,6 @@ return|return
 name|type
 return|;
 block|}
-else|else
-block|{
 comment|// Could be Class or Type...
 name|type
 operator|=
@@ -3879,7 +3877,6 @@ operator|.
 name|toString
 argument_list|()
 return|;
-block|}
 block|}
 comment|/**      * Converts a type parameter list signature to a string.      *      * @param  signature signature to convert      * @param  chopit flag that determines whether chopping is executed or not      * @return String containg human readable signature      */
 specifier|private
