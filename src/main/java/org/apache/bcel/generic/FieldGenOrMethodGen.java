@@ -288,7 +288,7 @@ argument_list|)
 expr_stmt|;
 block|}
 comment|/**      * @since 6.0      */
-specifier|protected
+specifier|public
 name|void
 name|addAnnotationEntry
 parameter_list|(
@@ -296,7 +296,6 @@ specifier|final
 name|AnnotationEntryGen
 name|ag
 parameter_list|)
-comment|// TODO could this be package protected?
 block|{
 name|annotation_vec
 operator|.
@@ -325,7 +324,7 @@ argument_list|)
 expr_stmt|;
 block|}
 comment|/**      * @since 6.0      */
-specifier|protected
+specifier|public
 name|void
 name|removeAnnotationEntry
 parameter_list|(
@@ -333,7 +332,6 @@ specifier|final
 name|AnnotationEntryGen
 name|ag
 parameter_list|)
-comment|// TODO could this be package protected?
 block|{
 name|annotation_vec
 operator|.
@@ -356,11 +354,10 @@ argument_list|()
 expr_stmt|;
 block|}
 comment|/**      * @since 6.0      */
-specifier|protected
+specifier|public
 name|void
 name|removeAnnotationEntries
 parameter_list|()
-comment|// TODO could this be package protected?
 block|{
 name|annotation_vec
 operator|.
