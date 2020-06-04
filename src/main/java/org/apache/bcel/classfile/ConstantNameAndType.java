@@ -71,12 +71,12 @@ name|Constant
 block|{
 specifier|private
 name|int
-name|name_index
+name|nameIndex
 decl_stmt|;
 comment|// Name of field/method
 specifier|private
 name|int
-name|signature_index
+name|signatureIndex
 decl_stmt|;
 comment|// and its signature.
 comment|/**      * Initialize from another object.      */
@@ -126,7 +126,7 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * @param name_index Name of field/method      * @param signature_index and its signature      */
+comment|/**      * @param nameIndex Name of field/method      * @param signatureIndex and its signature      */
 specifier|public
 name|ConstantNameAndType
 parameter_list|(
@@ -148,13 +148,13 @@ argument_list|)
 expr_stmt|;
 name|this
 operator|.
-name|name_index
+name|nameIndex
 operator|=
 name|name_index
 expr_stmt|;
 name|this
 operator|.
-name|signature_index
+name|signatureIndex
 operator|=
 name|signature_index
 expr_stmt|;
@@ -207,14 +207,14 @@ name|file
 operator|.
 name|writeShort
 argument_list|(
-name|name_index
+name|nameIndex
 argument_list|)
 expr_stmt|;
 name|file
 operator|.
 name|writeShort
 argument_list|(
-name|signature_index
+name|signatureIndex
 argument_list|)
 expr_stmt|;
 block|}
@@ -225,7 +225,7 @@ name|getNameIndex
 parameter_list|()
 block|{
 return|return
-name|name_index
+name|nameIndex
 return|;
 block|}
 comment|/** @return name      */
@@ -259,7 +259,7 @@ name|getSignatureIndex
 parameter_list|()
 block|{
 return|return
-name|signature_index
+name|signatureIndex
 return|;
 block|}
 comment|/** @return signature      */
@@ -286,7 +286,7 @@ name|CONSTANT_Utf8
 argument_list|)
 return|;
 block|}
-comment|/**      * @param name_index the name index of this constant      */
+comment|/**      * @param nameIndex the name index of this constant      */
 specifier|public
 name|void
 name|setNameIndex
@@ -298,12 +298,12 @@ parameter_list|)
 block|{
 name|this
 operator|.
-name|name_index
+name|nameIndex
 operator|=
 name|name_index
 expr_stmt|;
 block|}
-comment|/**      * @param signature_index the signature index in the constant pool of this type      */
+comment|/**      * @param signatureIndex the signature index in the constant pool of this type      */
 specifier|public
 name|void
 name|setSignatureIndex
@@ -315,7 +315,7 @@ parameter_list|)
 block|{
 name|this
 operator|.
-name|signature_index
+name|signatureIndex
 operator|=
 name|signature_index
 expr_stmt|;
@@ -334,13 +334,13 @@ operator|.
 name|toString
 argument_list|()
 operator|+
-literal|"(name_index = "
+literal|"(nameIndex = "
 operator|+
-name|name_index
+name|nameIndex
 operator|+
-literal|", signature_index = "
+literal|", signatureIndex = "
 operator|+
-name|signature_index
+name|signatureIndex
 operator|+
 literal|")"
 return|;

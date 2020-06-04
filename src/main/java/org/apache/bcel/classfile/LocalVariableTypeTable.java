@@ -146,7 +146,7 @@ comment|//      u2 index;
 end_comment
 
 begin_comment
-comment|//    } local_variable_type_table[local_variable_type_table_length];
+comment|//    } localVariableTypeTable[local_variable_type_table_length];
 end_comment
 
 begin_comment
@@ -171,7 +171,7 @@ block|{
 specifier|private
 name|LocalVariable
 index|[]
-name|local_variable_type_table
+name|localVariableTypeTable
 decl_stmt|;
 comment|// variables
 specifier|public
@@ -242,7 +242,7 @@ argument_list|)
 expr_stmt|;
 name|this
 operator|.
-name|local_variable_type_table
+name|localVariableTypeTable
 operator|=
 name|local_variable_table
 expr_stmt|;
@@ -292,7 +292,7 @@ operator|.
 name|readUnsignedShort
 argument_list|()
 decl_stmt|;
-name|local_variable_type_table
+name|localVariableTypeTable
 operator|=
 operator|new
 name|LocalVariable
@@ -315,7 +315,7 @@ name|i
 operator|++
 control|)
 block|{
-name|local_variable_type_table
+name|localVariableTypeTable
 index|[
 name|i
 index|]
@@ -374,7 +374,7 @@ name|file
 operator|.
 name|writeShort
 argument_list|(
-name|local_variable_type_table
+name|localVariableTypeTable
 operator|.
 name|length
 argument_list|)
@@ -385,7 +385,7 @@ specifier|final
 name|LocalVariable
 name|variable
 range|:
-name|local_variable_type_table
+name|localVariableTypeTable
 control|)
 block|{
 name|variable
@@ -405,7 +405,7 @@ name|getLocalVariableTypeTable
 parameter_list|()
 block|{
 return|return
-name|local_variable_type_table
+name|localVariableTypeTable
 return|;
 block|}
 specifier|public
@@ -424,7 +424,7 @@ specifier|final
 name|LocalVariable
 name|variable
 range|:
-name|local_variable_type_table
+name|localVariableTypeTable
 control|)
 block|{
 if|if
@@ -459,7 +459,7 @@ parameter_list|)
 block|{
 name|this
 operator|.
-name|local_variable_type_table
+name|localVariableTypeTable
 operator|=
 name|local_variable_table
 expr_stmt|;
@@ -490,7 +490,7 @@ literal|0
 init|;
 name|i
 operator|<
-name|local_variable_type_table
+name|localVariableTypeTable
 operator|.
 name|length
 condition|;
@@ -502,7 +502,7 @@ name|buf
 operator|.
 name|append
 argument_list|(
-name|local_variable_type_table
+name|localVariableTypeTable
 index|[
 name|i
 index|]
@@ -517,7 +517,7 @@ if|if
 condition|(
 name|i
 operator|<
-name|local_variable_type_table
+name|localVariableTypeTable
 operator|.
 name|length
 operator|-
@@ -564,12 +564,12 @@ argument_list|()
 decl_stmt|;
 name|c
 operator|.
-name|local_variable_type_table
+name|localVariableTypeTable
 operator|=
 operator|new
 name|LocalVariable
 index|[
-name|local_variable_type_table
+name|localVariableTypeTable
 operator|.
 name|length
 index|]
@@ -583,7 +583,7 @@ literal|0
 init|;
 name|i
 operator|<
-name|local_variable_type_table
+name|localVariableTypeTable
 operator|.
 name|length
 condition|;
@@ -593,12 +593,12 @@ control|)
 block|{
 name|c
 operator|.
-name|local_variable_type_table
+name|localVariableTypeTable
 index|[
 name|i
 index|]
 operator|=
-name|local_variable_type_table
+name|localVariableTypeTable
 index|[
 name|i
 index|]
@@ -625,13 +625,13 @@ name|getTableLength
 parameter_list|()
 block|{
 return|return
-name|local_variable_type_table
+name|localVariableTypeTable
 operator|==
 literal|null
 condition|?
 literal|0
 else|:
-name|local_variable_type_table
+name|localVariableTypeTable
 operator|.
 name|length
 return|;

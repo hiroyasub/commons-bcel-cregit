@@ -71,12 +71,12 @@ name|Attribute
 block|{
 specifier|private
 name|int
-name|max_stack
+name|maxStack
 decl_stmt|;
 comment|// Maximum size of stack used by this method  // TODO this could be made final (setter is not used)
 specifier|private
 name|int
-name|max_locals
+name|maxLocals
 decl_stmt|;
 comment|// Number of local variables  // TODO this could be made final (setter is not used)
 specifier|private
@@ -88,7 +88,7 @@ comment|// Actual byte code
 specifier|private
 name|CodeException
 index|[]
-name|exception_table
+name|exceptionTable
 decl_stmt|;
 comment|// Table of handled exceptions
 specifier|private
@@ -245,7 +245,7 @@ operator|.
 name|readUnsignedShort
 argument_list|()
 decl_stmt|;
-name|exception_table
+name|exceptionTable
 operator|=
 operator|new
 name|CodeException
@@ -268,7 +268,7 @@ name|i
 operator|++
 control|)
 block|{
-name|exception_table
+name|exceptionTable
 index|[
 name|i
 index|]
@@ -337,7 +337,7 @@ name|length
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * @param name_index Index pointing to the name<em>Code</em>      * @param length Content length in bytes      * @param max_stack Maximum size of stack      * @param max_locals Number of local variables      * @param code Actual byte code      * @param exception_table Table of handled exceptions      * @param attributes Attributes of code: LineNumber or LocalVariable      * @param constant_pool Array of constants      */
+comment|/**      * @param name_index Index pointing to the name<em>Code</em>      * @param length Content length in bytes      * @param maxStack Maximum size of stack      * @param maxLocals Number of local variables      * @param code Actual byte code      * @param exceptionTable Table of handled exceptions      * @param attributes Attributes of code: LineNumber or LocalVariable      * @param constant_pool Array of constants      */
 specifier|public
 name|Code
 parameter_list|(
@@ -392,13 +392,13 @@ argument_list|)
 expr_stmt|;
 name|this
 operator|.
-name|max_stack
+name|maxStack
 operator|=
 name|max_stack
 expr_stmt|;
 name|this
 operator|.
-name|max_locals
+name|maxLocals
 operator|=
 name|max_locals
 expr_stmt|;
@@ -420,7 +420,7 @@ index|]
 expr_stmt|;
 name|this
 operator|.
-name|exception_table
+name|exceptionTable
 operator|=
 name|exception_table
 operator|!=
@@ -505,14 +505,14 @@ name|file
 operator|.
 name|writeShort
 argument_list|(
-name|max_stack
+name|maxStack
 argument_list|)
 expr_stmt|;
 name|file
 operator|.
 name|writeShort
 argument_list|(
-name|max_locals
+name|maxLocals
 argument_list|)
 expr_stmt|;
 name|file
@@ -541,7 +541,7 @@ name|file
 operator|.
 name|writeShort
 argument_list|(
-name|exception_table
+name|exceptionTable
 operator|.
 name|length
 argument_list|)
@@ -552,7 +552,7 @@ specifier|final
 name|CodeException
 name|exception
 range|:
-name|exception_table
+name|exceptionTable
 control|)
 block|{
 name|exception
@@ -688,7 +688,7 @@ name|getExceptionTable
 parameter_list|()
 block|{
 return|return
-name|exception_table
+name|exceptionTable
 return|;
 block|}
 comment|/**      * @return Number of local variables.      */
@@ -698,7 +698,7 @@ name|getMaxLocals
 parameter_list|()
 block|{
 return|return
-name|max_locals
+name|maxLocals
 return|;
 block|}
 comment|/**      * @return Maximum size of stack used by this method.      */
@@ -708,7 +708,7 @@ name|getMaxStack
 parameter_list|()
 block|{
 return|return
-name|max_stack
+name|maxStack
 return|;
 block|}
 comment|/**      * @return the internal length of this code attribute (minus the first 6 bytes)      * and excluding all its attributes      */
@@ -719,10 +719,10 @@ parameter_list|()
 block|{
 return|return
 literal|2
-comment|/*max_stack*/
+comment|/*maxStack*/
 operator|+
 literal|2
-comment|/*max_locals*/
+comment|/*maxLocals*/
 operator|+
 literal|4
 comment|/*code length*/
@@ -738,13 +738,13 @@ operator|+
 literal|8
 operator|*
 operator|(
-name|exception_table
+name|exceptionTable
 operator|==
 literal|null
 condition|?
 literal|0
 else|:
-name|exception_table
+name|exceptionTable
 operator|.
 name|length
 operator|)
@@ -874,7 +874,7 @@ argument_list|)
 expr_stmt|;
 comment|// Adjust length
 block|}
-comment|/**      * @param exception_table exception table      */
+comment|/**      * @param exceptionTable exception table      */
 specifier|public
 name|void
 name|setExceptionTable
@@ -887,7 +887,7 @@ parameter_list|)
 block|{
 name|this
 operator|.
-name|exception_table
+name|exceptionTable
 operator|=
 name|exception_table
 operator|!=
@@ -911,7 +911,7 @@ argument_list|)
 expr_stmt|;
 comment|// Adjust length
 block|}
-comment|/**      * @param max_locals maximum number of local variables      */
+comment|/**      * @param maxLocals maximum number of local variables      */
 specifier|public
 name|void
 name|setMaxLocals
@@ -923,12 +923,12 @@ parameter_list|)
 block|{
 name|this
 operator|.
-name|max_locals
+name|maxLocals
 operator|=
 name|max_locals
 expr_stmt|;
 block|}
-comment|/**      * @param max_stack maximum stack size      */
+comment|/**      * @param maxStack maximum stack size      */
 specifier|public
 name|void
 name|setMaxStack
@@ -940,7 +940,7 @@ parameter_list|)
 block|{
 name|this
 operator|.
-name|max_stack
+name|maxStack
 operator|=
 name|max_stack
 expr_stmt|;
@@ -970,22 +970,22 @@ name|buf
 operator|.
 name|append
 argument_list|(
-literal|"Code(max_stack = "
+literal|"Code(maxStack = "
 argument_list|)
 operator|.
 name|append
 argument_list|(
-name|max_stack
+name|maxStack
 argument_list|)
 operator|.
 name|append
 argument_list|(
-literal|", max_locals = "
+literal|", maxLocals = "
 argument_list|)
 operator|.
 name|append
 argument_list|(
-name|max_locals
+name|maxLocals
 argument_list|)
 operator|.
 name|append
@@ -1029,7 +1029,7 @@ argument_list|)
 expr_stmt|;
 if|if
 condition|(
-name|exception_table
+name|exceptionTable
 operator|.
 name|length
 operator|>
@@ -1054,7 +1054,7 @@ specifier|final
 name|CodeException
 name|exception
 range|:
-name|exception_table
+name|exceptionTable
 control|)
 block|{
 name|buf
@@ -1232,12 +1232,12 @@ argument_list|)
 expr_stmt|;
 name|c
 operator|.
-name|exception_table
+name|exceptionTable
 operator|=
 operator|new
 name|CodeException
 index|[
-name|exception_table
+name|exceptionTable
 operator|.
 name|length
 index|]
@@ -1251,7 +1251,7 @@ literal|0
 init|;
 name|i
 operator|<
-name|exception_table
+name|exceptionTable
 operator|.
 name|length
 condition|;
@@ -1261,12 +1261,12 @@ control|)
 block|{
 name|c
 operator|.
-name|exception_table
+name|exceptionTable
 index|[
 name|i
 index|]
 operator|=
-name|exception_table
+name|exceptionTable
 index|[
 name|i
 index|]

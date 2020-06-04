@@ -70,7 +70,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * This class represents a local variable within a method. It contains its  * scope, name, signature and index on the method's frame.  It is used both  * to represent an element of the LocalVariableTable as well as an element  * of the LocalVariableTypeTable.  The nomenclature used here may be a bit confusing;  * while the two items have the same layout in a class file, a LocalVariableTable  * attribute contains a descriptor_index, not a signature_index.  The  * LocalVariableTypeTable attribute does have a signature_index.  * @see org.apache.bcel.classfile.Utility for more details on the difference.  *  * @see     LocalVariableTable  * @see     LocalVariableTypeTable  */
+comment|/**  * This class represents a local variable within a method. It contains its  * scope, name, signature and index on the method's frame.  It is used both  * to represent an element of the LocalVariableTable as well as an element  * of the LocalVariableTypeTable.  The nomenclature used here may be a bit confusing;  * while the two items have the same layout in a class file, a LocalVariableTable  * attribute contains a descriptor_index, not a signatureIndex.  The  * LocalVariableTypeTable attribute does have a signatureIndex.  * @see org.apache.bcel.classfile.Utility for more details on the difference.  *  * @see     LocalVariableTable  * @see     LocalVariableTypeTable  */
 end_comment
 
 begin_class
@@ -87,7 +87,7 @@ name|Constants
 block|{
 specifier|private
 name|int
-name|start_pc
+name|startPc
 decl_stmt|;
 comment|// Range in which the variable is valid
 specifier|private
@@ -96,14 +96,14 @@ name|length
 decl_stmt|;
 specifier|private
 name|int
-name|name_index
+name|nameIndex
 decl_stmt|;
 comment|// Index in constant pool of variable name
 comment|// Technically, a decscriptor_index for a local variable table entry
-comment|// and a signature_index for a local variable type table entry.
+comment|// and a signatureIndex for a local variable type table entry.
 specifier|private
 name|int
-name|signature_index
+name|signatureIndex
 decl_stmt|;
 comment|// Index of variable signature
 specifier|private
@@ -113,11 +113,11 @@ decl_stmt|;
 comment|/* Variable is index'th local variable on      * this method's frame.      */
 specifier|private
 name|ConstantPool
-name|constant_pool
+name|constantPool
 decl_stmt|;
 specifier|private
 name|int
-name|orig_index
+name|origIndex
 decl_stmt|;
 comment|// never changes; used to match up with LocalVariableTypeTable entries
 comment|/**      * Initializes from another LocalVariable. Note that both objects use the same      * references (shallow copy). Use copy() for a physical copy.      *      * @param localVariable Another LocalVariable.      */
@@ -164,7 +164,7 @@ argument_list|)
 expr_stmt|;
 name|this
 operator|.
-name|orig_index
+name|origIndex
 operator|=
 name|localVariable
 operator|.
@@ -217,7 +217,7 @@ name|constant_pool
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * @param start_pc Range in which the variable      * @param length ... is valid      * @param name_index Index in constant pool of variable name      * @param signature_index Index of variable's signature      * @param index Variable is `index'th local variable on the method's frame      * @param constant_pool Array of constants      */
+comment|/**      * @param startPc Range in which the variable      * @param length ... is valid      * @param nameIndex Index in constant pool of variable name      * @param signatureIndex Index of variable's signature      * @param index Variable is `index'th local variable on the method's frame      * @param constantPool Array of constants      */
 specifier|public
 name|LocalVariable
 parameter_list|(
@@ -248,7 +248,7 @@ parameter_list|)
 block|{
 name|this
 operator|.
-name|start_pc
+name|startPc
 operator|=
 name|start_pc
 expr_stmt|;
@@ -260,13 +260,13 @@ name|length
 expr_stmt|;
 name|this
 operator|.
-name|name_index
+name|nameIndex
 operator|=
 name|name_index
 expr_stmt|;
 name|this
 operator|.
-name|signature_index
+name|signatureIndex
 operator|=
 name|signature_index
 expr_stmt|;
@@ -278,18 +278,18 @@ name|index
 expr_stmt|;
 name|this
 operator|.
-name|constant_pool
+name|constantPool
 operator|=
 name|constant_pool
 expr_stmt|;
 name|this
 operator|.
-name|orig_index
+name|origIndex
 operator|=
 name|index
 expr_stmt|;
 block|}
-comment|/**      * @param start_pc Range in which the variable      * @param length ... is valid      * @param name_index Index in constant pool of variable name      * @param signature_index Index of variable's signature      * @param index Variable is `index'th local variable on the method's frame      * @param constant_pool Array of constants      * @param orig_index Variable is `index'th local variable on the method's frame prior to any changes      */
+comment|/**      * @param startPc Range in which the variable      * @param length ... is valid      * @param nameIndex Index in constant pool of variable name      * @param signatureIndex Index of variable's signature      * @param index Variable is `index'th local variable on the method's frame      * @param constantPool Array of constants      * @param origIndex Variable is `index'th local variable on the method's frame prior to any changes      */
 specifier|public
 name|LocalVariable
 parameter_list|(
@@ -324,7 +324,7 @@ parameter_list|)
 block|{
 name|this
 operator|.
-name|start_pc
+name|startPc
 operator|=
 name|start_pc
 expr_stmt|;
@@ -336,13 +336,13 @@ name|length
 expr_stmt|;
 name|this
 operator|.
-name|name_index
+name|nameIndex
 operator|=
 name|name_index
 expr_stmt|;
 name|this
 operator|.
-name|signature_index
+name|signatureIndex
 operator|=
 name|signature_index
 expr_stmt|;
@@ -354,13 +354,13 @@ name|index
 expr_stmt|;
 name|this
 operator|.
-name|constant_pool
+name|constantPool
 operator|=
 name|constant_pool
 expr_stmt|;
 name|this
 operator|.
-name|orig_index
+name|origIndex
 operator|=
 name|orig_index
 expr_stmt|;
@@ -401,7 +401,7 @@ name|dataOutputStream
 operator|.
 name|writeShort
 argument_list|(
-name|start_pc
+name|startPc
 argument_list|)
 expr_stmt|;
 name|dataOutputStream
@@ -415,14 +415,14 @@ name|dataOutputStream
 operator|.
 name|writeShort
 argument_list|(
-name|name_index
+name|nameIndex
 argument_list|)
 expr_stmt|;
 name|dataOutputStream
 operator|.
 name|writeShort
 argument_list|(
-name|signature_index
+name|signatureIndex
 argument_list|)
 expr_stmt|;
 name|dataOutputStream
@@ -440,7 +440,7 @@ name|getConstantPool
 parameter_list|()
 block|{
 return|return
-name|constant_pool
+name|constantPool
 return|;
 block|}
 comment|/**      * @return Variable is valid within getStartPC() .. getStartPC()+getLength()      */
@@ -467,11 +467,11 @@ operator|=
 operator|(
 name|ConstantUtf8
 operator|)
-name|constant_pool
+name|constantPool
 operator|.
 name|getConstant
 argument_list|(
-name|name_index
+name|nameIndex
 argument_list|,
 name|Const
 operator|.
@@ -492,7 +492,7 @@ name|getNameIndex
 parameter_list|()
 block|{
 return|return
-name|name_index
+name|nameIndex
 return|;
 block|}
 comment|/**      * @return Signature.      */
@@ -509,11 +509,11 @@ operator|=
 operator|(
 name|ConstantUtf8
 operator|)
-name|constant_pool
+name|constantPool
 operator|.
 name|getConstant
 argument_list|(
-name|signature_index
+name|signatureIndex
 argument_list|,
 name|Const
 operator|.
@@ -534,7 +534,7 @@ name|getSignatureIndex
 parameter_list|()
 block|{
 return|return
-name|signature_index
+name|signatureIndex
 return|;
 block|}
 comment|/**      * @return index of register where variable is stored      */
@@ -554,7 +554,7 @@ name|getOrigIndex
 parameter_list|()
 block|{
 return|return
-name|orig_index
+name|origIndex
 return|;
 block|}
 comment|/**      * @return Start of range where the variable is valid      */
@@ -564,7 +564,7 @@ name|getStartPC
 parameter_list|()
 block|{
 return|return
-name|start_pc
+name|startPc
 return|;
 block|}
 comment|/*      * Helper method shared with LocalVariableTypeTable      */
@@ -614,9 +614,9 @@ decl_stmt|;
 return|return
 name|label
 operator|+
-literal|"(start_pc = "
+literal|"(startPc = "
 operator|+
-name|start_pc
+name|startPc
 operator|+
 literal|", length = "
 operator|+
@@ -637,7 +637,7 @@ operator|+
 literal|")"
 return|;
 block|}
-comment|/**      * @param constant_pool Constant pool to be used for this object.      */
+comment|/**      * @param constantPool Constant pool to be used for this object.      */
 specifier|public
 name|void
 name|setConstantPool
@@ -649,7 +649,7 @@ parameter_list|)
 block|{
 name|this
 operator|.
-name|constant_pool
+name|constantPool
 operator|=
 name|constant_pool
 expr_stmt|;
@@ -671,7 +671,7 @@ operator|=
 name|length
 expr_stmt|;
 block|}
-comment|/**      * @param name_index the index into the constant pool for the name of this variable      */
+comment|/**      * @param nameIndex the index into the constant pool for the name of this variable      */
 specifier|public
 name|void
 name|setNameIndex
@@ -684,12 +684,12 @@ block|{
 comment|// TODO unused
 name|this
 operator|.
-name|name_index
+name|nameIndex
 operator|=
 name|name_index
 expr_stmt|;
 block|}
-comment|/**      * @param signature_index the index into the constant pool for the signature of this variable      */
+comment|/**      * @param signatureIndex the index into the constant pool for the signature of this variable      */
 specifier|public
 name|void
 name|setSignatureIndex
@@ -702,7 +702,7 @@ block|{
 comment|// TODO unused
 name|this
 operator|.
-name|signature_index
+name|signatureIndex
 operator|=
 name|signature_index
 expr_stmt|;
@@ -725,7 +725,7 @@ operator|=
 name|index
 expr_stmt|;
 block|}
-comment|/**      * @param start_pc Specify range where the local variable is valid.      */
+comment|/**      * @param startPc Specify range where the local variable is valid.      */
 specifier|public
 name|void
 name|setStartPC
@@ -738,7 +738,7 @@ block|{
 comment|// TODO unused
 name|this
 operator|.
-name|start_pc
+name|startPc
 operator|=
 name|start_pc
 expr_stmt|;

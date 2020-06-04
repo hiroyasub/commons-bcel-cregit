@@ -73,25 +73,25 @@ name|Cloneable
 block|{
 specifier|private
 name|int
-name|frame_type
+name|frameType
 decl_stmt|;
 specifier|private
 name|int
-name|byte_code_offset
+name|byteCodeOffset
 decl_stmt|;
 specifier|private
 name|StackMapType
 index|[]
-name|types_of_locals
+name|typesOfLocals
 decl_stmt|;
 specifier|private
 name|StackMapType
 index|[]
-name|types_of_stack_items
+name|typesOfStackItems
 decl_stmt|;
 specifier|private
 name|ConstantPool
-name|constant_pool
+name|constantPool
 decl_stmt|;
 comment|/**      * Construct object from input stream.      *      * @param input Input stream      * @throws IOException      */
 name|StackMapEntry
@@ -128,22 +128,22 @@ argument_list|)
 expr_stmt|;
 if|if
 condition|(
-name|frame_type
+name|frameType
 operator|>=
 name|Const
 operator|.
 name|SAME_FRAME
 operator|&&
-name|frame_type
+name|frameType
 operator|<=
 name|Const
 operator|.
 name|SAME_FRAME_MAX
 condition|)
 block|{
-name|byte_code_offset
+name|byteCodeOffset
 operator|=
-name|frame_type
+name|frameType
 operator|-
 name|Const
 operator|.
@@ -152,28 +152,28 @@ expr_stmt|;
 block|}
 if|else if
 condition|(
-name|frame_type
+name|frameType
 operator|>=
 name|Const
 operator|.
 name|SAME_LOCALS_1_STACK_ITEM_FRAME
 operator|&&
-name|frame_type
+name|frameType
 operator|<=
 name|Const
 operator|.
 name|SAME_LOCALS_1_STACK_ITEM_FRAME_MAX
 condition|)
 block|{
-name|byte_code_offset
+name|byteCodeOffset
 operator|=
-name|frame_type
+name|frameType
 operator|-
 name|Const
 operator|.
 name|SAME_LOCALS_1_STACK_ITEM_FRAME
 expr_stmt|;
-name|types_of_stack_items
+name|typesOfStackItems
 operator|=
 operator|new
 name|StackMapType
@@ -181,7 +181,7 @@ index|[
 literal|1
 index|]
 expr_stmt|;
-name|types_of_stack_items
+name|typesOfStackItems
 index|[
 literal|0
 index|]
@@ -197,21 +197,21 @@ expr_stmt|;
 block|}
 if|else if
 condition|(
-name|frame_type
+name|frameType
 operator|==
 name|Const
 operator|.
 name|SAME_LOCALS_1_STACK_ITEM_FRAME_EXTENDED
 condition|)
 block|{
-name|byte_code_offset
+name|byteCodeOffset
 operator|=
 name|input
 operator|.
 name|readShort
 argument_list|()
 expr_stmt|;
-name|types_of_stack_items
+name|typesOfStackItems
 operator|=
 operator|new
 name|StackMapType
@@ -219,7 +219,7 @@ index|[
 literal|1
 index|]
 expr_stmt|;
-name|types_of_stack_items
+name|typesOfStackItems
 index|[
 literal|0
 index|]
@@ -235,20 +235,20 @@ expr_stmt|;
 block|}
 if|else if
 condition|(
-name|frame_type
+name|frameType
 operator|>=
 name|Const
 operator|.
 name|CHOP_FRAME
 operator|&&
-name|frame_type
+name|frameType
 operator|<=
 name|Const
 operator|.
 name|CHOP_FRAME_MAX
 condition|)
 block|{
-name|byte_code_offset
+name|byteCodeOffset
 operator|=
 name|input
 operator|.
@@ -258,14 +258,14 @@ expr_stmt|;
 block|}
 if|else if
 condition|(
-name|frame_type
+name|frameType
 operator|==
 name|Const
 operator|.
 name|SAME_FRAME_EXTENDED
 condition|)
 block|{
-name|byte_code_offset
+name|byteCodeOffset
 operator|=
 name|input
 operator|.
@@ -275,20 +275,20 @@ expr_stmt|;
 block|}
 if|else if
 condition|(
-name|frame_type
+name|frameType
 operator|>=
 name|Const
 operator|.
 name|APPEND_FRAME
 operator|&&
-name|frame_type
+name|frameType
 operator|<=
 name|Const
 operator|.
 name|APPEND_FRAME_MAX
 condition|)
 block|{
-name|byte_code_offset
+name|byteCodeOffset
 operator|=
 name|input
 operator|.
@@ -299,11 +299,11 @@ specifier|final
 name|int
 name|number_of_locals
 init|=
-name|frame_type
+name|frameType
 operator|-
 literal|251
 decl_stmt|;
-name|types_of_locals
+name|typesOfLocals
 operator|=
 operator|new
 name|StackMapType
@@ -326,7 +326,7 @@ name|i
 operator|++
 control|)
 block|{
-name|types_of_locals
+name|typesOfLocals
 index|[
 name|i
 index|]
@@ -343,14 +343,14 @@ block|}
 block|}
 if|else if
 condition|(
-name|frame_type
+name|frameType
 operator|==
 name|Const
 operator|.
 name|FULL_FRAME
 condition|)
 block|{
-name|byte_code_offset
+name|byteCodeOffset
 operator|=
 name|input
 operator|.
@@ -366,7 +366,7 @@ operator|.
 name|readShort
 argument_list|()
 decl_stmt|;
-name|types_of_locals
+name|typesOfLocals
 operator|=
 operator|new
 name|StackMapType
@@ -389,7 +389,7 @@ name|i
 operator|++
 control|)
 block|{
-name|types_of_locals
+name|typesOfLocals
 index|[
 name|i
 index|]
@@ -412,7 +412,7 @@ operator|.
 name|readShort
 argument_list|()
 decl_stmt|;
-name|types_of_stack_items
+name|typesOfStackItems
 operator|=
 operator|new
 name|StackMapType
@@ -435,7 +435,7 @@ name|i
 operator|++
 control|)
 block|{
-name|types_of_stack_items
+name|typesOfStackItems
 index|[
 name|i
 index|]
@@ -459,7 +459,7 @@ name|ClassFormatException
 argument_list|(
 literal|"Invalid frame type found while parsing stack map table: "
 operator|+
-name|frame_type
+name|frameType
 argument_list|)
 throw|;
 block|}
@@ -503,13 +503,13 @@ parameter_list|)
 block|{
 name|this
 operator|.
-name|byte_code_offset
+name|byteCodeOffset
 operator|=
 name|byteCodeOffset
 expr_stmt|;
 name|this
 operator|.
-name|types_of_locals
+name|typesOfLocals
 operator|=
 name|typesOfLocals
 operator|!=
@@ -525,7 +525,7 @@ index|]
 expr_stmt|;
 name|this
 operator|.
-name|types_of_stack_items
+name|typesOfStackItems
 operator|=
 name|typesOfStackItems
 operator|!=
@@ -541,12 +541,12 @@ index|]
 expr_stmt|;
 name|this
 operator|.
-name|constant_pool
+name|constantPool
 operator|=
 name|constantPool
 expr_stmt|;
 block|}
-comment|/**      * Create an instance      *      * @param tag the frame_type to use      * @param byteCodeOffset      * @param typesOfLocals array of {@link StackMapType}s of locals      * @param typesOfStackItems array ot {@link StackMapType}s of stack items      * @param constantPool the constant pool      */
+comment|/**      * Create an instance      *      * @param tag the frameType to use      * @param byteCodeOffset      * @param typesOfLocals array of {@link StackMapType}s of locals      * @param typesOfStackItems array ot {@link StackMapType}s of stack items      * @param constantPool the constant pool      */
 specifier|public
 name|StackMapEntry
 parameter_list|(
@@ -575,19 +575,19 @@ parameter_list|)
 block|{
 name|this
 operator|.
-name|frame_type
+name|frameType
 operator|=
 name|tag
 expr_stmt|;
 name|this
 operator|.
-name|byte_code_offset
+name|byteCodeOffset
 operator|=
 name|byteCodeOffset
 expr_stmt|;
 name|this
 operator|.
-name|types_of_locals
+name|typesOfLocals
 operator|=
 name|typesOfLocals
 operator|!=
@@ -603,7 +603,7 @@ index|]
 expr_stmt|;
 name|this
 operator|.
-name|types_of_stack_items
+name|typesOfStackItems
 operator|=
 name|typesOfStackItems
 operator|!=
@@ -619,7 +619,7 @@ index|]
 expr_stmt|;
 name|this
 operator|.
-name|constant_pool
+name|constantPool
 operator|=
 name|constantPool
 expr_stmt|;
@@ -640,18 +640,18 @@ name|file
 operator|.
 name|write
 argument_list|(
-name|frame_type
+name|frameType
 argument_list|)
 expr_stmt|;
 if|if
 condition|(
-name|frame_type
+name|frameType
 operator|>=
 name|Const
 operator|.
 name|SAME_FRAME
 operator|&&
-name|frame_type
+name|frameType
 operator|<=
 name|Const
 operator|.
@@ -662,20 +662,20 @@ comment|// nothing to be done
 block|}
 if|else if
 condition|(
-name|frame_type
+name|frameType
 operator|>=
 name|Const
 operator|.
 name|SAME_LOCALS_1_STACK_ITEM_FRAME
 operator|&&
-name|frame_type
+name|frameType
 operator|<=
 name|Const
 operator|.
 name|SAME_LOCALS_1_STACK_ITEM_FRAME_MAX
 condition|)
 block|{
-name|types_of_stack_items
+name|typesOfStackItems
 index|[
 literal|0
 index|]
@@ -688,7 +688,7 @@ expr_stmt|;
 block|}
 if|else if
 condition|(
-name|frame_type
+name|frameType
 operator|==
 name|Const
 operator|.
@@ -699,10 +699,10 @@ name|file
 operator|.
 name|writeShort
 argument_list|(
-name|byte_code_offset
+name|byteCodeOffset
 argument_list|)
 expr_stmt|;
-name|types_of_stack_items
+name|typesOfStackItems
 index|[
 literal|0
 index|]
@@ -715,13 +715,13 @@ expr_stmt|;
 block|}
 if|else if
 condition|(
-name|frame_type
+name|frameType
 operator|>=
 name|Const
 operator|.
 name|CHOP_FRAME
 operator|&&
-name|frame_type
+name|frameType
 operator|<=
 name|Const
 operator|.
@@ -732,13 +732,13 @@ name|file
 operator|.
 name|writeShort
 argument_list|(
-name|byte_code_offset
+name|byteCodeOffset
 argument_list|)
 expr_stmt|;
 block|}
 if|else if
 condition|(
-name|frame_type
+name|frameType
 operator|==
 name|Const
 operator|.
@@ -749,19 +749,19 @@ name|file
 operator|.
 name|writeShort
 argument_list|(
-name|byte_code_offset
+name|byteCodeOffset
 argument_list|)
 expr_stmt|;
 block|}
 if|else if
 condition|(
-name|frame_type
+name|frameType
 operator|>=
 name|Const
 operator|.
 name|APPEND_FRAME
 operator|&&
-name|frame_type
+name|frameType
 operator|<=
 name|Const
 operator|.
@@ -772,7 +772,7 @@ name|file
 operator|.
 name|writeShort
 argument_list|(
-name|byte_code_offset
+name|byteCodeOffset
 argument_list|)
 expr_stmt|;
 for|for
@@ -781,7 +781,7 @@ specifier|final
 name|StackMapType
 name|type
 range|:
-name|types_of_locals
+name|typesOfLocals
 control|)
 block|{
 name|type
@@ -795,7 +795,7 @@ block|}
 block|}
 if|else if
 condition|(
-name|frame_type
+name|frameType
 operator|==
 name|Const
 operator|.
@@ -806,14 +806,14 @@ name|file
 operator|.
 name|writeShort
 argument_list|(
-name|byte_code_offset
+name|byteCodeOffset
 argument_list|)
 expr_stmt|;
 name|file
 operator|.
 name|writeShort
 argument_list|(
-name|types_of_locals
+name|typesOfLocals
 operator|.
 name|length
 argument_list|)
@@ -824,7 +824,7 @@ specifier|final
 name|StackMapType
 name|type
 range|:
-name|types_of_locals
+name|typesOfLocals
 control|)
 block|{
 name|type
@@ -839,7 +839,7 @@ name|file
 operator|.
 name|writeShort
 argument_list|(
-name|types_of_stack_items
+name|typesOfStackItems
 operator|.
 name|length
 argument_list|)
@@ -850,7 +850,7 @@ specifier|final
 name|StackMapType
 name|type
 range|:
-name|types_of_stack_items
+name|typesOfStackItems
 control|)
 block|{
 name|type
@@ -871,7 +871,7 @@ name|ClassFormatException
 argument_list|(
 literal|"Invalid Stack map table tag: "
 operator|+
-name|frame_type
+name|frameType
 argument_list|)
 throw|;
 block|}
@@ -903,13 +903,13 @@ argument_list|)
 expr_stmt|;
 if|if
 condition|(
-name|frame_type
+name|frameType
 operator|>=
 name|Const
 operator|.
 name|SAME_FRAME
 operator|&&
-name|frame_type
+name|frameType
 operator|<=
 name|Const
 operator|.
@@ -926,13 +926,13 @@ expr_stmt|;
 block|}
 if|else if
 condition|(
-name|frame_type
+name|frameType
 operator|>=
 name|Const
 operator|.
 name|SAME_LOCALS_1_STACK_ITEM_FRAME
 operator|&&
-name|frame_type
+name|frameType
 operator|<=
 name|Const
 operator|.
@@ -949,7 +949,7 @@ expr_stmt|;
 block|}
 if|else if
 condition|(
-name|frame_type
+name|frameType
 operator|==
 name|Const
 operator|.
@@ -966,13 +966,13 @@ expr_stmt|;
 block|}
 if|else if
 condition|(
-name|frame_type
+name|frameType
 operator|>=
 name|Const
 operator|.
 name|CHOP_FRAME
 operator|&&
-name|frame_type
+name|frameType
 operator|<=
 name|Const
 operator|.
@@ -994,14 +994,14 @@ name|valueOf
 argument_list|(
 literal|251
 operator|-
-name|frame_type
+name|frameType
 argument_list|)
 argument_list|)
 expr_stmt|;
 block|}
 if|else if
 condition|(
-name|frame_type
+name|frameType
 operator|==
 name|Const
 operator|.
@@ -1018,13 +1018,13 @@ expr_stmt|;
 block|}
 if|else if
 condition|(
-name|frame_type
+name|frameType
 operator|>=
 name|Const
 operator|.
 name|APPEND_FRAME
 operator|&&
-name|frame_type
+name|frameType
 operator|<=
 name|Const
 operator|.
@@ -1044,7 +1044,7 @@ name|String
 operator|.
 name|valueOf
 argument_list|(
-name|frame_type
+name|frameType
 operator|-
 literal|251
 argument_list|)
@@ -1053,7 +1053,7 @@ expr_stmt|;
 block|}
 if|else if
 condition|(
-name|frame_type
+name|frameType
 operator|==
 name|Const
 operator|.
@@ -1079,7 +1079,7 @@ argument_list|)
 operator|.
 name|append
 argument_list|(
-name|frame_type
+name|frameType
 argument_list|)
 operator|.
 name|append
@@ -1097,12 +1097,12 @@ argument_list|)
 operator|.
 name|append
 argument_list|(
-name|byte_code_offset
+name|byteCodeOffset
 argument_list|)
 expr_stmt|;
 if|if
 condition|(
-name|types_of_locals
+name|typesOfLocals
 operator|.
 name|length
 operator|>
@@ -1125,7 +1125,7 @@ literal|0
 init|;
 name|i
 operator|<
-name|types_of_locals
+name|typesOfLocals
 operator|.
 name|length
 condition|;
@@ -1137,7 +1137,7 @@ name|buf
 operator|.
 name|append
 argument_list|(
-name|types_of_locals
+name|typesOfLocals
 index|[
 name|i
 index|]
@@ -1147,7 +1147,7 @@ if|if
 condition|(
 name|i
 operator|<
-name|types_of_locals
+name|typesOfLocals
 operator|.
 name|length
 operator|-
@@ -1173,7 +1173,7 @@ expr_stmt|;
 block|}
 if|if
 condition|(
-name|types_of_stack_items
+name|typesOfStackItems
 operator|.
 name|length
 operator|>
@@ -1196,7 +1196,7 @@ literal|0
 init|;
 name|i
 operator|<
-name|types_of_stack_items
+name|typesOfStackItems
 operator|.
 name|length
 condition|;
@@ -1208,7 +1208,7 @@ name|buf
 operator|.
 name|append
 argument_list|(
-name|types_of_stack_items
+name|typesOfStackItems
 index|[
 name|i
 index|]
@@ -1218,7 +1218,7 @@ if|if
 condition|(
 name|i
 operator|<
-name|types_of_stack_items
+name|typesOfStackItems
 operator|.
 name|length
 operator|-
@@ -1263,13 +1263,13 @@ parameter_list|()
 block|{
 if|if
 condition|(
-name|frame_type
+name|frameType
 operator|>=
 name|Const
 operator|.
 name|SAME_FRAME
 operator|&&
-name|frame_type
+name|frameType
 operator|<=
 name|Const
 operator|.
@@ -1282,13 +1282,13 @@ return|;
 block|}
 if|else if
 condition|(
-name|frame_type
+name|frameType
 operator|>=
 name|Const
 operator|.
 name|SAME_LOCALS_1_STACK_ITEM_FRAME
 operator|&&
-name|frame_type
+name|frameType
 operator|<=
 name|Const
 operator|.
@@ -1299,7 +1299,7 @@ return|return
 literal|1
 operator|+
 operator|(
-name|types_of_stack_items
+name|typesOfStackItems
 index|[
 literal|0
 index|]
@@ -1315,7 +1315,7 @@ return|;
 block|}
 if|else if
 condition|(
-name|frame_type
+name|frameType
 operator|==
 name|Const
 operator|.
@@ -1326,7 +1326,7 @@ return|return
 literal|3
 operator|+
 operator|(
-name|types_of_stack_items
+name|typesOfStackItems
 index|[
 literal|0
 index|]
@@ -1342,13 +1342,13 @@ return|;
 block|}
 if|else if
 condition|(
-name|frame_type
+name|frameType
 operator|>=
 name|Const
 operator|.
 name|CHOP_FRAME
 operator|&&
-name|frame_type
+name|frameType
 operator|<=
 name|Const
 operator|.
@@ -1361,7 +1361,7 @@ return|;
 block|}
 if|else if
 condition|(
-name|frame_type
+name|frameType
 operator|==
 name|Const
 operator|.
@@ -1374,13 +1374,13 @@ return|;
 block|}
 if|else if
 condition|(
-name|frame_type
+name|frameType
 operator|>=
 name|Const
 operator|.
 name|APPEND_FRAME
 operator|&&
-name|frame_type
+name|frameType
 operator|<=
 name|Const
 operator|.
@@ -1398,7 +1398,7 @@ specifier|final
 name|StackMapType
 name|types_of_local
 range|:
-name|types_of_locals
+name|typesOfLocals
 control|)
 block|{
 name|len
@@ -1419,7 +1419,7 @@ return|;
 block|}
 if|else if
 condition|(
-name|frame_type
+name|frameType
 operator|==
 name|Const
 operator|.
@@ -1437,7 +1437,7 @@ specifier|final
 name|StackMapType
 name|types_of_local
 range|:
-name|types_of_locals
+name|typesOfLocals
 control|)
 block|{
 name|len
@@ -1458,7 +1458,7 @@ specifier|final
 name|StackMapType
 name|types_of_stack_item
 range|:
-name|types_of_stack_items
+name|typesOfStackItems
 control|)
 block|{
 name|len
@@ -1483,9 +1483,9 @@ throw|throw
 operator|new
 name|IllegalStateException
 argument_list|(
-literal|"Invalid StackMap frame_type: "
+literal|"Invalid StackMap frameType: "
 operator|+
-name|frame_type
+name|frameType
 argument_list|)
 throw|;
 block|}
@@ -1514,7 +1514,7 @@ operator|.
 name|SAME_FRAME_MAX
 condition|)
 block|{
-name|byte_code_offset
+name|byteCodeOffset
 operator|=
 name|f
 operator|-
@@ -1538,7 +1538,7 @@ operator|.
 name|SAME_LOCALS_1_STACK_ITEM_FRAME_MAX
 condition|)
 block|{
-name|byte_code_offset
+name|byteCodeOffset
 operator|=
 name|f
 operator|-
@@ -1620,11 +1620,11 @@ throw|throw
 operator|new
 name|IllegalArgumentException
 argument_list|(
-literal|"Invalid StackMap frame_type"
+literal|"Invalid StackMap frameType"
 argument_list|)
 throw|;
 block|}
-name|frame_type
+name|frameType
 operator|=
 name|f
 expr_stmt|;
@@ -1635,7 +1635,7 @@ name|getFrameType
 parameter_list|()
 block|{
 return|return
-name|frame_type
+name|frameType
 return|;
 block|}
 specifier|public
@@ -1670,13 +1670,13 @@ throw|;
 block|}
 if|if
 condition|(
-name|frame_type
+name|frameType
 operator|>=
 name|Const
 operator|.
 name|SAME_FRAME
 operator|&&
-name|frame_type
+name|frameType
 operator|<=
 name|Const
 operator|.
@@ -1692,7 +1692,7 @@ operator|.
 name|SAME_FRAME_MAX
 condition|)
 block|{
-name|frame_type
+name|frameType
 operator|=
 name|Const
 operator|.
@@ -1701,7 +1701,7 @@ expr_stmt|;
 block|}
 else|else
 block|{
-name|frame_type
+name|frameType
 operator|=
 name|new_offset
 expr_stmt|;
@@ -1709,13 +1709,13 @@ block|}
 block|}
 if|else if
 condition|(
-name|frame_type
+name|frameType
 operator|>=
 name|Const
 operator|.
 name|SAME_LOCALS_1_STACK_ITEM_FRAME
 operator|&&
-name|frame_type
+name|frameType
 operator|<=
 name|Const
 operator|.
@@ -1731,7 +1731,7 @@ operator|.
 name|SAME_FRAME_MAX
 condition|)
 block|{
-name|frame_type
+name|frameType
 operator|=
 name|Const
 operator|.
@@ -1740,7 +1740,7 @@ expr_stmt|;
 block|}
 else|else
 block|{
-name|frame_type
+name|frameType
 operator|=
 name|Const
 operator|.
@@ -1752,7 +1752,7 @@ block|}
 block|}
 if|else if
 condition|(
-name|frame_type
+name|frameType
 operator|==
 name|Const
 operator|.
@@ -1763,13 +1763,13 @@ comment|// CHECKSTYLE IGNORE EmptyBlock
 block|}
 if|else if
 condition|(
-name|frame_type
+name|frameType
 operator|>=
 name|Const
 operator|.
 name|CHOP_FRAME
 operator|&&
-name|frame_type
+name|frameType
 operator|<=
 name|Const
 operator|.
@@ -1780,7 +1780,7 @@ comment|// CHECKSTYLE IGNORE EmptyBlock
 block|}
 if|else if
 condition|(
-name|frame_type
+name|frameType
 operator|==
 name|Const
 operator|.
@@ -1791,13 +1791,13 @@ comment|// CHECKSTYLE IGNORE EmptyBlock
 block|}
 if|else if
 condition|(
-name|frame_type
+name|frameType
 operator|>=
 name|Const
 operator|.
 name|APPEND_FRAME
 operator|&&
-name|frame_type
+name|frameType
 operator|<=
 name|Const
 operator|.
@@ -1808,7 +1808,7 @@ comment|// CHECKSTYLE IGNORE EmptyBlock
 block|}
 if|else if
 condition|(
-name|frame_type
+name|frameType
 operator|==
 name|Const
 operator|.
@@ -1823,13 +1823,13 @@ throw|throw
 operator|new
 name|IllegalStateException
 argument_list|(
-literal|"Invalid StackMap frame_type: "
+literal|"Invalid StackMap frameType: "
 operator|+
-name|frame_type
+name|frameType
 argument_list|)
 throw|;
 block|}
-name|byte_code_offset
+name|byteCodeOffset
 operator|=
 name|new_offset
 expr_stmt|;
@@ -1846,7 +1846,7 @@ parameter_list|)
 block|{
 name|setByteCodeOffset
 argument_list|(
-name|byte_code_offset
+name|byteCodeOffset
 operator|+
 name|delta
 argument_list|)
@@ -1858,7 +1858,7 @@ name|getByteCodeOffset
 parameter_list|()
 block|{
 return|return
-name|byte_code_offset
+name|byteCodeOffset
 return|;
 block|}
 comment|/**      *      * @deprecated since 6.0      */
@@ -1885,7 +1885,7 @@ name|getNumberOfLocals
 parameter_list|()
 block|{
 return|return
-name|types_of_locals
+name|typesOfLocals
 operator|.
 name|length
 return|;
@@ -1900,7 +1900,7 @@ index|[]
 name|types
 parameter_list|)
 block|{
-name|types_of_locals
+name|typesOfLocals
 operator|=
 name|types
 operator|!=
@@ -1922,7 +1922,7 @@ name|getTypesOfLocals
 parameter_list|()
 block|{
 return|return
-name|types_of_locals
+name|typesOfLocals
 return|;
 block|}
 comment|/**      *      * @deprecated since 6.0      */
@@ -1949,7 +1949,7 @@ name|getNumberOfStackItems
 parameter_list|()
 block|{
 return|return
-name|types_of_stack_items
+name|typesOfStackItems
 operator|.
 name|length
 return|;
@@ -1964,7 +1964,7 @@ index|[]
 name|types
 parameter_list|)
 block|{
-name|types_of_stack_items
+name|typesOfStackItems
 operator|=
 name|types
 operator|!=
@@ -1986,7 +1986,7 @@ name|getTypesOfStackItems
 parameter_list|()
 block|{
 return|return
-name|types_of_stack_items
+name|typesOfStackItems
 return|;
 block|}
 comment|/**      * @return deep copy of this object      */
@@ -2026,12 +2026,12 @@ throw|;
 block|}
 name|e
 operator|.
-name|types_of_locals
+name|typesOfLocals
 operator|=
 operator|new
 name|StackMapType
 index|[
-name|types_of_locals
+name|typesOfLocals
 operator|.
 name|length
 index|]
@@ -2045,7 +2045,7 @@ literal|0
 init|;
 name|i
 operator|<
-name|types_of_locals
+name|typesOfLocals
 operator|.
 name|length
 condition|;
@@ -2055,12 +2055,12 @@ control|)
 block|{
 name|e
 operator|.
-name|types_of_locals
+name|typesOfLocals
 index|[
 name|i
 index|]
 operator|=
-name|types_of_locals
+name|typesOfLocals
 index|[
 name|i
 index|]
@@ -2071,12 +2071,12 @@ expr_stmt|;
 block|}
 name|e
 operator|.
-name|types_of_stack_items
+name|typesOfStackItems
 operator|=
 operator|new
 name|StackMapType
 index|[
-name|types_of_stack_items
+name|typesOfStackItems
 operator|.
 name|length
 index|]
@@ -2090,7 +2090,7 @@ literal|0
 init|;
 name|i
 operator|<
-name|types_of_stack_items
+name|typesOfStackItems
 operator|.
 name|length
 condition|;
@@ -2100,12 +2100,12 @@ control|)
 block|{
 name|e
 operator|.
-name|types_of_stack_items
+name|typesOfStackItems
 index|[
 name|i
 index|]
 operator|=
-name|types_of_stack_items
+name|typesOfStackItems
 index|[
 name|i
 index|]
@@ -2145,10 +2145,10 @@ name|getConstantPool
 parameter_list|()
 block|{
 return|return
-name|constant_pool
+name|constantPool
 return|;
 block|}
-comment|/**      * @param constant_pool Constant pool to be used for this object.      */
+comment|/**      * @param constantPool Constant pool to be used for this object.      */
 specifier|public
 name|void
 name|setConstantPool
@@ -2160,7 +2160,7 @@ parameter_list|)
 block|{
 name|this
 operator|.
-name|constant_pool
+name|constantPool
 operator|=
 name|constant_pool
 expr_stmt|;

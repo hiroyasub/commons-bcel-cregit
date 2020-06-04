@@ -73,7 +73,7 @@ name|ConstantObject
 block|{
 specifier|private
 name|int
-name|name_index
+name|nameIndex
 decl_stmt|;
 comment|// Identical to ConstantString except for the name
 comment|/**      * Initialize from another object.      */
@@ -113,7 +113,7 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * @param name_index Name index in constant pool.  Should refer to a      * ConstantUtf8.      */
+comment|/**      * @param nameIndex Name index in constant pool.  Should refer to a      * ConstantUtf8.      */
 specifier|public
 name|ConstantClass
 parameter_list|(
@@ -131,7 +131,7 @@ argument_list|)
 expr_stmt|;
 name|this
 operator|.
-name|name_index
+name|nameIndex
 operator|=
 name|name_index
 expr_stmt|;
@@ -184,7 +184,7 @@ name|file
 operator|.
 name|writeShort
 argument_list|(
-name|name_index
+name|nameIndex
 argument_list|)
 expr_stmt|;
 block|}
@@ -195,10 +195,10 @@ name|getNameIndex
 parameter_list|()
 block|{
 return|return
-name|name_index
+name|nameIndex
 return|;
 block|}
-comment|/**      * @param name_index the name index in the constant pool of this Constant Class      */
+comment|/**      * @param nameIndex the name index in the constant pool of this Constant Class      */
 specifier|public
 name|void
 name|setNameIndex
@@ -210,7 +210,7 @@ parameter_list|)
 block|{
 name|this
 operator|.
-name|name_index
+name|nameIndex
 operator|=
 name|name_index
 expr_stmt|;
@@ -235,7 +235,7 @@ name|cp
 operator|.
 name|getConstant
 argument_list|(
-name|name_index
+name|nameIndex
 argument_list|,
 name|Const
 operator|.
@@ -288,9 +288,9 @@ operator|.
 name|toString
 argument_list|()
 operator|+
-literal|"(name_index = "
+literal|"(nameIndex = "
 operator|+
-name|name_index
+name|nameIndex
 operator|+
 literal|")"
 return|;

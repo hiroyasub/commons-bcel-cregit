@@ -80,7 +80,7 @@ decl_stmt|;
 specifier|private
 name|LineNumber
 index|[]
-name|line_number_table
+name|lineNumberTable
 decl_stmt|;
 comment|// Table of line/numbers pairs
 comment|/*      * Initialize from another object. Note that both objects use the same      * references (shallow copy). Use copy() for a physical copy.      */
@@ -116,7 +116,7 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
-comment|/*      * @param name_index Index of name      * @param length Content length in bytes      * @param line_number_table Table of line/numbers pairs      * @param constant_pool Array of constants      */
+comment|/*      * @param name_index Index of name      * @param length Content length in bytes      * @param lineNumberTable Table of line/numbers pairs      * @param constant_pool Array of constants      */
 specifier|public
 name|LineNumberTable
 parameter_list|(
@@ -153,7 +153,7 @@ argument_list|)
 expr_stmt|;
 name|this
 operator|.
-name|line_number_table
+name|lineNumberTable
 operator|=
 name|line_number_table
 expr_stmt|;
@@ -204,7 +204,7 @@ operator|.
 name|readUnsignedShort
 argument_list|()
 decl_stmt|;
-name|line_number_table
+name|lineNumberTable
 operator|=
 operator|new
 name|LineNumber
@@ -227,7 +227,7 @@ name|i
 operator|++
 control|)
 block|{
-name|line_number_table
+name|lineNumberTable
 index|[
 name|i
 index|]
@@ -285,7 +285,7 @@ name|file
 operator|.
 name|writeShort
 argument_list|(
-name|line_number_table
+name|lineNumberTable
 operator|.
 name|length
 argument_list|)
@@ -296,7 +296,7 @@ specifier|final
 name|LineNumber
 name|lineNumber
 range|:
-name|line_number_table
+name|lineNumberTable
 control|)
 block|{
 name|lineNumber
@@ -316,10 +316,10 @@ name|getLineNumberTable
 parameter_list|()
 block|{
 return|return
-name|line_number_table
+name|lineNumberTable
 return|;
 block|}
-comment|/**      * @param line_number_table the line number entries for this table      */
+comment|/**      * @param lineNumberTable the line number entries for this table      */
 specifier|public
 name|void
 name|setLineNumberTable
@@ -332,7 +332,7 @@ parameter_list|)
 block|{
 name|this
 operator|.
-name|line_number_table
+name|lineNumberTable
 operator|=
 name|line_number_table
 expr_stmt|;
@@ -383,7 +383,7 @@ literal|0
 init|;
 name|i
 operator|<
-name|line_number_table
+name|lineNumberTable
 operator|.
 name|length
 condition|;
@@ -395,7 +395,7 @@ name|line
 operator|.
 name|append
 argument_list|(
-name|line_number_table
+name|lineNumberTable
 index|[
 name|i
 index|]
@@ -408,7 +408,7 @@ if|if
 condition|(
 name|i
 operator|<
-name|line_number_table
+name|lineNumberTable
 operator|.
 name|length
 operator|-
@@ -437,7 +437,7 @@ operator|&&
 operator|(
 name|i
 operator|<
-name|line_number_table
+name|lineNumberTable
 operator|.
 name|length
 operator|-
@@ -500,7 +500,7 @@ decl_stmt|;
 name|int
 name|r
 init|=
-name|line_number_table
+name|lineNumberTable
 operator|.
 name|length
 operator|-
@@ -549,7 +549,7 @@ specifier|final
 name|int
 name|j
 init|=
-name|line_number_table
+name|lineNumberTable
 index|[
 name|i
 index|]
@@ -565,7 +565,7 @@ name|pos
 condition|)
 block|{
 return|return
-name|line_number_table
+name|lineNumberTable
 index|[
 name|i
 index|]
@@ -640,7 +640,7 @@ literal|1
 return|;
 block|}
 return|return
-name|line_number_table
+name|lineNumberTable
 index|[
 name|min_index
 index|]
@@ -662,7 +662,7 @@ name|_constant_pool
 parameter_list|)
 block|{
 comment|// TODO could use the lower level constructor and thereby allow
-comment|// line_number_table to be made final
+comment|// lineNumberTable to be made final
 specifier|final
 name|LineNumberTable
 name|c
@@ -675,12 +675,12 @@ argument_list|()
 decl_stmt|;
 name|c
 operator|.
-name|line_number_table
+name|lineNumberTable
 operator|=
 operator|new
 name|LineNumber
 index|[
-name|line_number_table
+name|lineNumberTable
 operator|.
 name|length
 index|]
@@ -694,7 +694,7 @@ literal|0
 init|;
 name|i
 operator|<
-name|line_number_table
+name|lineNumberTable
 operator|.
 name|length
 condition|;
@@ -704,12 +704,12 @@ control|)
 block|{
 name|c
 operator|.
-name|line_number_table
+name|lineNumberTable
 index|[
 name|i
 index|]
 operator|=
-name|line_number_table
+name|lineNumberTable
 index|[
 name|i
 index|]
@@ -735,13 +735,13 @@ name|getTableLength
 parameter_list|()
 block|{
 return|return
-name|line_number_table
+name|lineNumberTable
 operator|==
 literal|null
 condition|?
 literal|0
 else|:
-name|line_number_table
+name|lineNumberTable
 operator|.
 name|length
 return|;

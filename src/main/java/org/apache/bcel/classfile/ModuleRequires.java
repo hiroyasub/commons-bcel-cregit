@@ -74,18 +74,18 @@ block|{
 specifier|private
 specifier|final
 name|int
-name|requires_index
+name|requiresIndex
 decl_stmt|;
 comment|// points to CONSTANT_Module_info
 specifier|private
 specifier|final
 name|int
-name|requires_flags
+name|requiresFlags
 decl_stmt|;
 specifier|private
 specifier|final
 name|int
-name|requires_version_index
+name|requiresVersionIndex
 decl_stmt|;
 comment|// either 0 or points to CONSTANT_Utf8_info
 comment|/**      * Construct object from file stream.      *      * @param file Input stream      * @throws IOException if an I/O Exception occurs in readUnsignedShort      */
@@ -98,21 +98,21 @@ parameter_list|)
 throws|throws
 name|IOException
 block|{
-name|requires_index
+name|requiresIndex
 operator|=
 name|file
 operator|.
 name|readUnsignedShort
 argument_list|()
 expr_stmt|;
-name|requires_flags
+name|requiresFlags
 operator|=
 name|file
 operator|.
 name|readUnsignedShort
 argument_list|()
 expr_stmt|;
-name|requires_version_index
+name|requiresVersionIndex
 operator|=
 name|file
 operator|.
@@ -157,21 +157,21 @@ name|file
 operator|.
 name|writeShort
 argument_list|(
-name|requires_index
+name|requiresIndex
 argument_list|)
 expr_stmt|;
 name|file
 operator|.
 name|writeShort
 argument_list|(
-name|requires_flags
+name|requiresFlags
 argument_list|)
 expr_stmt|;
 name|file
 operator|.
 name|writeShort
 argument_list|(
-name|requires_version_index
+name|requiresVersionIndex
 argument_list|)
 expr_stmt|;
 block|}
@@ -186,7 +186,7 @@ block|{
 return|return
 literal|"requires("
 operator|+
-name|requires_index
+name|requiresIndex
 operator|+
 literal|", "
 operator|+
@@ -196,12 +196,12 @@ name|format
 argument_list|(
 literal|"%04x"
 argument_list|,
-name|requires_flags
+name|requiresFlags
 argument_list|)
 operator|+
 literal|", "
 operator|+
-name|requires_version_index
+name|requiresVersionIndex
 operator|+
 literal|")"
 return|;
@@ -232,7 +232,7 @@ name|constant_pool
 operator|.
 name|constantToString
 argument_list|(
-name|requires_index
+name|requiresIndex
 argument_list|,
 name|Const
 operator|.
@@ -268,7 +268,7 @@ name|format
 argument_list|(
 literal|"%04x"
 argument_list|,
-name|requires_flags
+name|requiresFlags
 argument_list|)
 argument_list|)
 expr_stmt|;
@@ -276,7 +276,7 @@ specifier|final
 name|String
 name|version
 init|=
-name|requires_version_index
+name|requiresVersionIndex
 operator|==
 literal|0
 condition|?
@@ -286,7 +286,7 @@ name|constant_pool
 operator|.
 name|getConstantString
 argument_list|(
-name|requires_version_index
+name|requiresVersionIndex
 argument_list|,
 name|Const
 operator|.

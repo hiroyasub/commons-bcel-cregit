@@ -83,7 +83,7 @@ decl_stmt|;
 comment|// Index to CONSTANT_Class or offset
 specifier|private
 name|ConstantPool
-name|constant_pool
+name|constantPool
 decl_stmt|;
 comment|/**      * Construct object from file stream.      * @param file Input stream      * @throws IOException      */
 name|StackMapType
@@ -130,7 +130,7 @@ expr_stmt|;
 block|}
 name|this
 operator|.
-name|constant_pool
+name|constantPool
 operator|=
 name|constant_pool
 expr_stmt|;
@@ -195,7 +195,7 @@ name|index
 expr_stmt|;
 name|this
 operator|.
-name|constant_pool
+name|constantPool
 operator|=
 name|constant_pool
 expr_stmt|;
@@ -359,7 +359,7 @@ block|}
 return|return
 literal|", class="
 operator|+
-name|constant_pool
+name|constantPool
 operator|.
 name|constantToString
 argument_list|(
@@ -453,10 +453,10 @@ name|getConstantPool
 parameter_list|()
 block|{
 return|return
-name|constant_pool
+name|constantPool
 return|;
 block|}
-comment|/**      * @param constant_pool Constant pool to be used for this object.      */
+comment|/**      * @param constantPool Constant pool to be used for this object.      */
 specifier|public
 name|void
 name|setConstantPool
@@ -468,7 +468,7 @@ parameter_list|)
 block|{
 name|this
 operator|.
-name|constant_pool
+name|constantPool
 operator|=
 name|constant_pool
 expr_stmt|;

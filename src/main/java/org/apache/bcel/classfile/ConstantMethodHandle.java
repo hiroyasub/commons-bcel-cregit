@@ -71,11 +71,11 @@ name|Constant
 block|{
 specifier|private
 name|int
-name|reference_kind
+name|referenceKind
 decl_stmt|;
 specifier|private
 name|int
-name|reference_index
+name|referenceIndex
 decl_stmt|;
 comment|/**      * Initialize from another object.      */
 specifier|public
@@ -145,13 +145,13 @@ argument_list|)
 expr_stmt|;
 name|this
 operator|.
-name|reference_kind
+name|referenceKind
 operator|=
 name|reference_kind
 expr_stmt|;
 name|this
 operator|.
-name|reference_index
+name|referenceIndex
 operator|=
 name|reference_index
 expr_stmt|;
@@ -204,14 +204,14 @@ name|file
 operator|.
 name|writeByte
 argument_list|(
-name|reference_kind
+name|referenceKind
 argument_list|)
 expr_stmt|;
 name|file
 operator|.
 name|writeShort
 argument_list|(
-name|reference_index
+name|referenceIndex
 argument_list|)
 expr_stmt|;
 block|}
@@ -221,7 +221,7 @@ name|getReferenceKind
 parameter_list|()
 block|{
 return|return
-name|reference_kind
+name|referenceKind
 return|;
 block|}
 specifier|public
@@ -235,7 +235,7 @@ parameter_list|)
 block|{
 name|this
 operator|.
-name|reference_kind
+name|referenceKind
 operator|=
 name|reference_kind
 expr_stmt|;
@@ -246,7 +246,7 @@ name|getReferenceIndex
 parameter_list|()
 block|{
 return|return
-name|reference_index
+name|referenceIndex
 return|;
 block|}
 specifier|public
@@ -260,7 +260,7 @@ parameter_list|)
 block|{
 name|this
 operator|.
-name|reference_index
+name|referenceIndex
 operator|=
 name|reference_index
 expr_stmt|;
@@ -279,13 +279,13 @@ operator|.
 name|toString
 argument_list|()
 operator|+
-literal|"(reference_kind = "
+literal|"(referenceKind = "
 operator|+
-name|reference_kind
+name|referenceKind
 operator|+
-literal|", reference_index = "
+literal|", referenceIndex = "
 operator|+
-name|reference_index
+name|referenceIndex
 operator|+
 literal|")"
 return|;

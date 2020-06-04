@@ -71,7 +71,7 @@ block|{
 specifier|private
 name|LocalVariable
 index|[]
-name|local_variable_table
+name|localVariableTable
 decl_stmt|;
 comment|// variables
 comment|/**      * Initialize from another object. Note that both objects use the same      * references (shallow copy). Use copy() for a physical copy.      */
@@ -107,7 +107,7 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * @param name_index Index in constant pool to `LocalVariableTable'      * @param length Content length in bytes      * @param local_variable_table Table of local variables      * @param constant_pool Array of constants      */
+comment|/**      * @param name_index Index in constant pool to `LocalVariableTable'      * @param length Content length in bytes      * @param localVariableTable Table of local variables      * @param constant_pool Array of constants      */
 specifier|public
 name|LocalVariableTable
 parameter_list|(
@@ -144,7 +144,7 @@ argument_list|)
 expr_stmt|;
 name|this
 operator|.
-name|local_variable_table
+name|localVariableTable
 operator|=
 name|local_variable_table
 expr_stmt|;
@@ -195,7 +195,7 @@ operator|.
 name|readUnsignedShort
 argument_list|()
 decl_stmt|;
-name|local_variable_table
+name|localVariableTable
 operator|=
 operator|new
 name|LocalVariable
@@ -218,7 +218,7 @@ name|i
 operator|++
 control|)
 block|{
-name|local_variable_table
+name|localVariableTable
 index|[
 name|i
 index|]
@@ -279,7 +279,7 @@ name|file
 operator|.
 name|writeShort
 argument_list|(
-name|local_variable_table
+name|localVariableTable
 operator|.
 name|length
 argument_list|)
@@ -290,7 +290,7 @@ specifier|final
 name|LocalVariable
 name|variable
 range|:
-name|local_variable_table
+name|localVariableTable
 control|)
 block|{
 name|variable
@@ -311,7 +311,7 @@ name|getLocalVariableTable
 parameter_list|()
 block|{
 return|return
-name|local_variable_table
+name|localVariableTable
 return|;
 block|}
 comment|/**      *      * @param index the variable slot      *      * @return the first LocalVariable that matches the slot or null if not found      *      * @deprecated since 5.2 because multiple variables can share the      *             same slot, use getLocalVariable(int index, int pc) instead.      */
@@ -337,7 +337,7 @@ specifier|final
 name|LocalVariable
 name|variable
 range|:
-name|local_variable_table
+name|localVariableTable
 control|)
 block|{
 if|if
@@ -380,7 +380,7 @@ specifier|final
 name|LocalVariable
 name|variable
 range|:
-name|local_variable_table
+name|localVariableTable
 control|)
 block|{
 if|if
@@ -451,7 +451,7 @@ parameter_list|)
 block|{
 name|this
 operator|.
-name|local_variable_table
+name|localVariableTable
 operator|=
 name|local_variable_table
 expr_stmt|;
@@ -482,7 +482,7 @@ literal|0
 init|;
 name|i
 operator|<
-name|local_variable_table
+name|localVariableTable
 operator|.
 name|length
 condition|;
@@ -494,7 +494,7 @@ name|buf
 operator|.
 name|append
 argument_list|(
-name|local_variable_table
+name|localVariableTable
 index|[
 name|i
 index|]
@@ -504,7 +504,7 @@ if|if
 condition|(
 name|i
 operator|<
-name|local_variable_table
+name|localVariableTable
 operator|.
 name|length
 operator|-
@@ -551,12 +551,12 @@ argument_list|()
 decl_stmt|;
 name|c
 operator|.
-name|local_variable_table
+name|localVariableTable
 operator|=
 operator|new
 name|LocalVariable
 index|[
-name|local_variable_table
+name|localVariableTable
 operator|.
 name|length
 index|]
@@ -570,7 +570,7 @@ literal|0
 init|;
 name|i
 operator|<
-name|local_variable_table
+name|localVariableTable
 operator|.
 name|length
 condition|;
@@ -580,12 +580,12 @@ control|)
 block|{
 name|c
 operator|.
-name|local_variable_table
+name|localVariableTable
 index|[
 name|i
 index|]
 operator|=
-name|local_variable_table
+name|localVariableTable
 index|[
 name|i
 index|]
@@ -612,13 +612,13 @@ name|getTableLength
 parameter_list|()
 block|{
 return|return
-name|local_variable_table
+name|localVariableTable
 operator|==
 literal|null
 condition|?
 literal|0
 else|:
-name|local_variable_table
+name|localVariableTable
 operator|.
 name|length
 return|;

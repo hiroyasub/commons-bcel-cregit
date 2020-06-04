@@ -81,13 +81,13 @@ block|{
 comment|/** Index of the CONSTANT_MethodHandle_info structure in the constant_pool table */
 specifier|private
 name|int
-name|bootstrap_method_ref
+name|bootstrapMethodRef
 decl_stmt|;
 comment|/** Array of references to the constant_pool table */
 specifier|private
 name|int
 index|[]
-name|bootstrap_arguments
+name|bootstrapArguments
 decl_stmt|;
 comment|/**      * Initialize from another object.      */
 specifier|public
@@ -144,7 +144,7 @@ literal|0
 init|;
 name|i
 operator|<
-name|bootstrap_arguments
+name|bootstrapArguments
 operator|.
 name|length
 condition|;
@@ -152,7 +152,7 @@ name|i
 operator|++
 control|)
 block|{
-name|bootstrap_arguments
+name|bootstrapArguments
 index|[
 name|i
 index|]
@@ -189,7 +189,7 @@ index|]
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * @param bootstrap_method_ref int index into constant_pool of CONSTANT_MethodHandle      * @param bootstrap_arguments int[] indices into constant_pool of CONSTANT_[type]_info      */
+comment|/**      * @param bootstrapMethodRef int index into constant_pool of CONSTANT_MethodHandle      * @param bootstrapArguments int[] indices into constant_pool of CONSTANT_[type]_info      */
 specifier|public
 name|BootstrapMethod
 parameter_list|(
@@ -205,13 +205,13 @@ parameter_list|)
 block|{
 name|this
 operator|.
-name|bootstrap_method_ref
+name|bootstrapMethodRef
 operator|=
 name|bootstrap_method_ref
 expr_stmt|;
 name|this
 operator|.
-name|bootstrap_arguments
+name|bootstrapArguments
 operator|=
 name|bootstrap_arguments
 expr_stmt|;
@@ -223,10 +223,10 @@ name|getBootstrapMethodRef
 parameter_list|()
 block|{
 return|return
-name|bootstrap_method_ref
+name|bootstrapMethodRef
 return|;
 block|}
-comment|/**      * @param bootstrap_method_ref int index into constant_pool of CONSTANT_MethodHandle      */
+comment|/**      * @param bootstrapMethodRef int index into constant_pool of CONSTANT_MethodHandle      */
 specifier|public
 name|void
 name|setBootstrapMethodRef
@@ -238,7 +238,7 @@ parameter_list|)
 block|{
 name|this
 operator|.
-name|bootstrap_method_ref
+name|bootstrapMethodRef
 operator|=
 name|bootstrap_method_ref
 expr_stmt|;
@@ -251,7 +251,7 @@ name|getBootstrapArguments
 parameter_list|()
 block|{
 return|return
-name|bootstrap_arguments
+name|bootstrapArguments
 return|;
 block|}
 comment|/**      * @return count of number of boostrap arguments      */
@@ -261,12 +261,12 @@ name|getNumBootstrapArguments
 parameter_list|()
 block|{
 return|return
-name|bootstrap_arguments
+name|bootstrapArguments
 operator|.
 name|length
 return|;
 block|}
-comment|/**      * @param bootstrap_arguments int[] indices into constant_pool of CONSTANT_[type]_info      */
+comment|/**      * @param bootstrapArguments int[] indices into constant_pool of CONSTANT_[type]_info      */
 specifier|public
 name|void
 name|setBootstrapArguments
@@ -279,7 +279,7 @@ parameter_list|)
 block|{
 name|this
 operator|.
-name|bootstrap_arguments
+name|bootstrapArguments
 operator|=
 name|bootstrap_arguments
 expr_stmt|;
@@ -296,11 +296,11 @@ block|{
 return|return
 literal|"BootstrapMethod("
 operator|+
-name|bootstrap_method_ref
+name|bootstrapMethodRef
 operator|+
 literal|", "
 operator|+
-name|bootstrap_arguments
+name|bootstrapArguments
 operator|.
 name|length
 operator|+
@@ -310,7 +310,7 @@ name|Arrays
 operator|.
 name|toString
 argument_list|(
-name|bootstrap_arguments
+name|bootstrapArguments
 argument_list|)
 operator|+
 literal|")"
@@ -344,7 +344,7 @@ name|constant_pool
 operator|.
 name|constantToString
 argument_list|(
-name|bootstrap_method_ref
+name|bootstrapMethodRef
 argument_list|,
 name|Const
 operator|.
@@ -369,7 +369,7 @@ specifier|final
 name|int
 name|num_bootstrap_arguments
 init|=
-name|bootstrap_arguments
+name|bootstrapArguments
 operator|.
 name|length
 decl_stmt|;
@@ -431,7 +431,7 @@ name|constant_pool
 operator|.
 name|getConstant
 argument_list|(
-name|bootstrap_arguments
+name|bootstrapArguments
 index|[
 name|i
 index|]
@@ -465,14 +465,14 @@ name|file
 operator|.
 name|writeShort
 argument_list|(
-name|bootstrap_method_ref
+name|bootstrapMethodRef
 argument_list|)
 expr_stmt|;
 name|file
 operator|.
 name|writeShort
 argument_list|(
-name|bootstrap_arguments
+name|bootstrapArguments
 operator|.
 name|length
 argument_list|)
@@ -483,7 +483,7 @@ specifier|final
 name|int
 name|bootstrap_argument
 range|:
-name|bootstrap_arguments
+name|bootstrapArguments
 control|)
 block|{
 name|file

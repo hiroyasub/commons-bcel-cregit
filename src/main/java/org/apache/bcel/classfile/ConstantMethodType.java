@@ -71,7 +71,7 @@ name|Constant
 block|{
 specifier|private
 name|int
-name|descriptor_index
+name|descriptorIndex
 decl_stmt|;
 comment|/**      * Initialize from another object.      */
 specifier|public
@@ -127,7 +127,7 @@ argument_list|)
 expr_stmt|;
 name|this
 operator|.
-name|descriptor_index
+name|descriptorIndex
 operator|=
 name|descriptor_index
 expr_stmt|;
@@ -180,7 +180,7 @@ name|file
 operator|.
 name|writeShort
 argument_list|(
-name|descriptor_index
+name|descriptorIndex
 argument_list|)
 expr_stmt|;
 block|}
@@ -190,7 +190,7 @@ name|getDescriptorIndex
 parameter_list|()
 block|{
 return|return
-name|descriptor_index
+name|descriptorIndex
 return|;
 block|}
 specifier|public
@@ -204,7 +204,7 @@ parameter_list|)
 block|{
 name|this
 operator|.
-name|descriptor_index
+name|descriptorIndex
 operator|=
 name|descriptor_index
 expr_stmt|;
@@ -223,9 +223,9 @@ operator|.
 name|toString
 argument_list|()
 operator|+
-literal|"(descriptor_index = "
+literal|"(descriptorIndex = "
 operator|+
-name|descriptor_index
+name|descriptorIndex
 operator|+
 literal|")"
 return|;

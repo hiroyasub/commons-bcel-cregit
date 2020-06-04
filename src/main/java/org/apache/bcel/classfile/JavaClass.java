@@ -225,33 +225,33 @@ argument_list|>
 block|{
 specifier|private
 name|String
-name|file_name
+name|fileName
 decl_stmt|;
 specifier|private
 name|String
-name|package_name
+name|packageName
 decl_stmt|;
 specifier|private
 name|String
-name|source_file_name
+name|sourceFileName
 init|=
 literal|"<Unknown>"
 decl_stmt|;
 specifier|private
 name|int
-name|class_name_index
+name|classNameIndex
 decl_stmt|;
 specifier|private
 name|int
-name|superclass_name_index
+name|superclassNameIndex
 decl_stmt|;
 specifier|private
 name|String
-name|class_name
+name|className
 decl_stmt|;
 specifier|private
 name|String
-name|superclass_name
+name|superclassName
 decl_stmt|;
 specifier|private
 name|int
@@ -264,7 +264,7 @@ decl_stmt|;
 comment|// Compiler version
 specifier|private
 name|ConstantPool
-name|constant_pool
+name|constantPool
 decl_stmt|;
 comment|// Constant pool
 specifier|private
@@ -276,7 +276,7 @@ comment|// implemented interfaces
 specifier|private
 name|String
 index|[]
-name|interface_names
+name|interfaceNames
 decl_stmt|;
 specifier|private
 name|Field
@@ -475,7 +475,7 @@ operator|.
 name|getInstance
 argument_list|()
 decl_stmt|;
-comment|/**      * Constructor gets all contents as arguments.      *      * @param class_name_index Index into constant pool referencing a      * ConstantClass that represents this class.      * @param superclass_name_index Index into constant pool referencing a      * ConstantClass that represents this class's superclass.      * @param file_name File name      * @param major Major compiler version      * @param minor Minor compiler version      * @param access_flags Access rights defined by bit flags      * @param constant_pool Array of constants      * @param interfaces Implemented interfaces      * @param fields Class fields      * @param methods Class methods      * @param attributes Class attributes      * @param source Read from file or generated in memory?      */
+comment|/**      * Constructor gets all contents as arguments.      *      * @param classNameIndex Index into constant pool referencing a      * ConstantClass that represents this class.      * @param superclassNameIndex Index into constant pool referencing a      * ConstantClass that represents this class's superclass.      * @param fileName File name      * @param major Major compiler version      * @param minor Minor compiler version      * @param access_flags Access rights defined by bit flags      * @param constantPool Array of constants      * @param interfaces Implemented interfaces      * @param fields Class fields      * @param methods Class methods      * @param attributes Class attributes      * @param source Read from file or generated in memory?      */
 specifier|public
 name|JavaClass
 parameter_list|(
@@ -599,19 +599,19 @@ expr_stmt|;
 block|}
 name|this
 operator|.
-name|class_name_index
+name|classNameIndex
 operator|=
 name|class_name_index
 expr_stmt|;
 name|this
 operator|.
-name|superclass_name_index
+name|superclassNameIndex
 operator|=
 name|superclass_name_index
 expr_stmt|;
 name|this
 operator|.
-name|file_name
+name|fileName
 operator|=
 name|file_name
 expr_stmt|;
@@ -629,7 +629,7 @@ name|minor
 expr_stmt|;
 name|this
 operator|.
-name|constant_pool
+name|constantPool
 operator|=
 name|constant_pool
 expr_stmt|;
@@ -680,7 +680,7 @@ operator|instanceof
 name|SourceFile
 condition|)
 block|{
-name|source_file_name
+name|sourceFileName
 operator|=
 operator|(
 operator|(
@@ -696,7 +696,7 @@ break|break;
 block|}
 block|}
 comment|/* According to the specification the following entries must be of type          * `ConstantClass' but we check that anyway via the          * `ConstPool.getConstant' method.          */
-name|class_name
+name|className
 operator|=
 name|constant_pool
 operator|.
@@ -709,13 +709,13 @@ operator|.
 name|CONSTANT_Class
 argument_list|)
 expr_stmt|;
-name|class_name
+name|className
 operator|=
 name|Utility
 operator|.
 name|compactClassName
 argument_list|(
-name|class_name
+name|className
 argument_list|,
 literal|false
 argument_list|)
@@ -724,7 +724,7 @@ specifier|final
 name|int
 name|index
 init|=
-name|class_name
+name|className
 operator|.
 name|lastIndexOf
 argument_list|(
@@ -738,16 +738,16 @@ operator|<
 literal|0
 condition|)
 block|{
-name|package_name
+name|packageName
 operator|=
 literal|""
 expr_stmt|;
 block|}
 else|else
 block|{
-name|package_name
+name|packageName
 operator|=
-name|class_name
+name|className
 operator|.
 name|substring
 argument_list|(
@@ -765,7 +765,7 @@ literal|0
 condition|)
 block|{
 comment|// May be zero -> class is java.lang.Object
-name|superclass_name
+name|superclassName
 operator|=
 name|constant_pool
 operator|.
@@ -778,13 +778,13 @@ operator|.
 name|CONSTANT_Class
 argument_list|)
 expr_stmt|;
-name|superclass_name
+name|superclassName
 operator|=
 name|Utility
 operator|.
 name|compactClassName
 argument_list|(
-name|superclass_name
+name|superclassName
 argument_list|,
 literal|false
 argument_list|)
@@ -792,12 +792,12 @@ expr_stmt|;
 block|}
 else|else
 block|{
-name|superclass_name
+name|superclassName
 operator|=
 literal|"java.lang.Object"
 expr_stmt|;
 block|}
-name|interface_names
+name|interfaceNames
 operator|=
 operator|new
 name|String
@@ -842,7 +842,7 @@ operator|.
 name|CONSTANT_Class
 argument_list|)
 decl_stmt|;
-name|interface_names
+name|interfaceNames
 index|[
 name|i
 index|]
@@ -858,7 +858,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/**      * Constructor gets all contents as arguments.      *      * @param class_name_index Class name      * @param superclass_name_index Superclass name      * @param file_name File name      * @param major Major compiler version      * @param minor Minor compiler version      * @param access_flags Access rights defined by bit flags      * @param constant_pool Array of constants      * @param interfaces Implemented interfaces      * @param fields Class fields      * @param methods Class methods      * @param attributes Class attributes      */
+comment|/**      * Constructor gets all contents as arguments.      *      * @param classNameIndex Class name      * @param superclassNameIndex Superclass name      * @param fileName File name      * @param major Major compiler version      * @param minor Minor compiler version      * @param access_flags Access rights defined by bit flags      * @param constantPool Array of constants      * @param interfaces Implemented interfaces      * @param fields Class fields      * @param methods Class methods      * @param attributes Class attributes      */
 specifier|public
 name|JavaClass
 parameter_list|(
@@ -1077,7 +1077,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/**      * Dump class to a file named file_name.      *      * @param _file_name Output file name      * @throws IOException      */
+comment|/**      * Dump class to a file named fileName.      *      * @param _file_name Output file name      * @throws IOException      */
 specifier|public
 name|void
 name|dump
@@ -1233,7 +1233,7 @@ argument_list|(
 name|major
 argument_list|)
 expr_stmt|;
-name|constant_pool
+name|constantPool
 operator|.
 name|dump
 argument_list|(
@@ -1254,14 +1254,14 @@ name|file
 operator|.
 name|writeShort
 argument_list|(
-name|class_name_index
+name|classNameIndex
 argument_list|)
 expr_stmt|;
 name|file
 operator|.
 name|writeShort
 argument_list|(
-name|superclass_name_index
+name|superclassNameIndex
 argument_list|)
 expr_stmt|;
 name|file
@@ -1439,7 +1439,7 @@ name|getClassName
 parameter_list|()
 block|{
 return|return
-name|class_name
+name|className
 return|;
 block|}
 comment|/**      * @return Package name.      */
@@ -1449,7 +1449,7 @@ name|getPackageName
 parameter_list|()
 block|{
 return|return
-name|package_name
+name|packageName
 return|;
 block|}
 comment|/**      * @return Class name index.      */
@@ -1459,7 +1459,7 @@ name|getClassNameIndex
 parameter_list|()
 block|{
 return|return
-name|class_name_index
+name|classNameIndex
 return|;
 block|}
 comment|/**      * @return Constant pool.      */
@@ -1469,7 +1469,7 @@ name|getConstantPool
 parameter_list|()
 block|{
 return|return
-name|constant_pool
+name|constantPool
 return|;
 block|}
 comment|/**      * @return Fields, i.e., variables of the class. Like the JVM spec      * mandates for the classfile format, these fields are those specific to      * this class, and not those of the superclass or superinterfaces.      */
@@ -1490,7 +1490,7 @@ name|getFileName
 parameter_list|()
 block|{
 return|return
-name|file_name
+name|fileName
 return|;
 block|}
 comment|/**      * @return Names of implemented interfaces.      */
@@ -1501,7 +1501,7 @@ name|getInterfaceNames
 parameter_list|()
 block|{
 return|return
-name|interface_names
+name|interfaceNames
 return|;
 block|}
 comment|/**      * @return Indices in constant pool of implemented interfaces.      */
@@ -1630,7 +1630,7 @@ name|getSourceFileName
 parameter_list|()
 block|{
 return|return
-name|source_file_name
+name|sourceFileName
 return|;
 block|}
 comment|/**      * returns the super class name of this class. In the case that this class is      * java.lang.Object, it will return itself (java.lang.Object). This is probably incorrect      * but isn't fixed at this time to not break existing clients.      *      * @return Superclass name.      */
@@ -1640,7 +1640,7 @@ name|getSuperclassName
 parameter_list|()
 block|{
 return|return
-name|superclass_name
+name|superclassName
 return|;
 block|}
 comment|/**      * @return Class name index.      */
@@ -1650,7 +1650,7 @@ name|getSuperclassNameIndex
 parameter_list|()
 block|{
 return|return
-name|superclass_name_index
+name|superclassNameIndex
 return|;
 block|}
 comment|/**      * @param attributes .      */
@@ -1671,7 +1671,7 @@ operator|=
 name|attributes
 expr_stmt|;
 block|}
-comment|/**      * @param class_name .      */
+comment|/**      * @param className .      */
 specifier|public
 name|void
 name|setClassName
@@ -1683,12 +1683,12 @@ parameter_list|)
 block|{
 name|this
 operator|.
-name|class_name
+name|className
 operator|=
 name|class_name
 expr_stmt|;
 block|}
-comment|/**      * @param class_name_index .      */
+comment|/**      * @param classNameIndex .      */
 specifier|public
 name|void
 name|setClassNameIndex
@@ -1700,12 +1700,12 @@ parameter_list|)
 block|{
 name|this
 operator|.
-name|class_name_index
+name|classNameIndex
 operator|=
 name|class_name_index
 expr_stmt|;
 block|}
-comment|/**      * @param constant_pool .      */
+comment|/**      * @param constantPool .      */
 specifier|public
 name|void
 name|setConstantPool
@@ -1717,7 +1717,7 @@ parameter_list|)
 block|{
 name|this
 operator|.
-name|constant_pool
+name|constantPool
 operator|=
 name|constant_pool
 expr_stmt|;
@@ -1752,12 +1752,12 @@ parameter_list|)
 block|{
 name|this
 operator|.
-name|file_name
+name|fileName
 operator|=
 name|file_name
 expr_stmt|;
 block|}
-comment|/**      * @param interface_names .      */
+comment|/**      * @param interfaceNames .      */
 specifier|public
 name|void
 name|setInterfaceNames
@@ -1770,7 +1770,7 @@ parameter_list|)
 block|{
 name|this
 operator|.
-name|interface_names
+name|interfaceNames
 operator|=
 name|interface_names
 expr_stmt|;
@@ -1857,12 +1857,12 @@ parameter_list|)
 block|{
 name|this
 operator|.
-name|source_file_name
+name|sourceFileName
 operator|=
 name|source_file_name
 expr_stmt|;
 block|}
-comment|/**      * @param superclass_name .      */
+comment|/**      * @param superclassName .      */
 specifier|public
 name|void
 name|setSuperclassName
@@ -1874,12 +1874,12 @@ parameter_list|)
 block|{
 name|this
 operator|.
-name|superclass_name
+name|superclassName
 operator|=
 name|superclass_name
 expr_stmt|;
 block|}
-comment|/**      * @param superclass_name_index .      */
+comment|/**      * @param superclassNameIndex .      */
 specifier|public
 name|void
 name|setSuperclassNameIndex
@@ -1891,7 +1891,7 @@ parameter_list|)
 block|{
 name|this
 operator|.
-name|superclass_name_index
+name|superclassNameIndex
 operator|=
 name|superclass_name_index
 expr_stmt|;
@@ -1971,7 +1971,7 @@ argument_list|)
 operator|.
 name|append
 argument_list|(
-name|class_name
+name|className
 argument_list|)
 operator|.
 name|append
@@ -1985,7 +1985,7 @@ name|Utility
 operator|.
 name|compactClassName
 argument_list|(
-name|superclass_name
+name|superclassName
 argument_list|,
 literal|false
 argument_list|)
@@ -2037,7 +2037,7 @@ name|buf
 operator|.
 name|append
 argument_list|(
-name|interface_names
+name|interfaceNames
 index|[
 name|i
 index|]
@@ -2078,7 +2078,7 @@ argument_list|)
 operator|.
 name|append
 argument_list|(
-name|file_name
+name|fileName
 argument_list|)
 operator|.
 name|append
@@ -2095,7 +2095,7 @@ argument_list|)
 operator|.
 name|append
 argument_list|(
-name|source_file_name
+name|sourceFileName
 argument_list|)
 operator|.
 name|append
@@ -2159,7 +2159,7 @@ argument_list|)
 operator|.
 name|append
 argument_list|(
-name|constant_pool
+name|constantPool
 operator|.
 name|getLength
 argument_list|()
@@ -2485,9 +2485,9 @@ argument_list|()
 expr_stmt|;
 name|c
 operator|.
-name|constant_pool
+name|constantPool
 operator|=
-name|constant_pool
+name|constantPool
 operator|.
 name|copy
 argument_list|()
@@ -2503,9 +2503,9 @@ argument_list|()
 expr_stmt|;
 name|c
 operator|.
-name|interface_names
+name|interfaceNames
 operator|=
-name|interface_names
+name|interfaceNames
 operator|.
 name|clone
 argument_list|()
@@ -2555,7 +2555,7 @@ name|copy
 argument_list|(
 name|c
 operator|.
-name|constant_pool
+name|constantPool
 argument_list|)
 expr_stmt|;
 block|}
@@ -2604,7 +2604,7 @@ name|copy
 argument_list|(
 name|c
 operator|.
-name|constant_pool
+name|constantPool
 argument_list|)
 expr_stmt|;
 block|}
@@ -2653,7 +2653,7 @@ name|copy
 argument_list|(
 name|c
 operator|.
-name|constant_pool
+name|constantPool
 argument_list|)
 expr_stmt|;
 block|}
@@ -2807,7 +2807,7 @@ decl_stmt|;
 name|String
 name|inner_class_name
 init|=
-name|constant_pool
+name|constantPool
 operator|.
 name|getConstantString
 argument_list|(

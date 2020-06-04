@@ -81,7 +81,7 @@ name|Attribute
 block|{
 specifier|private
 name|int
-name|signature_index
+name|signatureIndex
 decl_stmt|;
 comment|/**      * Initialize from another object. Note that both objects use the same      * references (shallow copy). Use clone() for a physical copy.      */
 specifier|public
@@ -153,7 +153,7 @@ name|constant_pool
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * @param name_index Index in constant pool to CONSTANT_Utf8      * @param length Content length in bytes      * @param signature_index Index in constant pool to CONSTANT_Utf8      * @param constant_pool Array of constants      */
+comment|/**      * @param name_index Index in constant pool to CONSTANT_Utf8      * @param length Content length in bytes      * @param signatureIndex Index in constant pool to CONSTANT_Utf8      * @param constant_pool Array of constants      */
 specifier|public
 name|Signature
 parameter_list|(
@@ -189,7 +189,7 @@ argument_list|)
 expr_stmt|;
 name|this
 operator|.
-name|signature_index
+name|signatureIndex
 operator|=
 name|signature_index
 expr_stmt|;
@@ -240,7 +240,7 @@ name|file
 operator|.
 name|writeShort
 argument_list|(
-name|signature_index
+name|signatureIndex
 argument_list|)
 expr_stmt|;
 block|}
@@ -251,10 +251,10 @@ name|getSignatureIndex
 parameter_list|()
 block|{
 return|return
-name|signature_index
+name|signatureIndex
 return|;
 block|}
-comment|/**      * @param signature_index the index info the constant pool of this signature      */
+comment|/**      * @param signatureIndex the index info the constant pool of this signature      */
 specifier|public
 name|void
 name|setSignatureIndex
@@ -266,7 +266,7 @@ parameter_list|)
 block|{
 name|this
 operator|.
-name|signature_index
+name|signatureIndex
 operator|=
 name|signature_index
 expr_stmt|;
@@ -291,7 +291,7 @@ argument_list|()
 operator|.
 name|getConstant
 argument_list|(
-name|signature_index
+name|signatureIndex
 argument_list|,
 name|Const
 operator|.

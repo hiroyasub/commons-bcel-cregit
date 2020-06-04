@@ -71,11 +71,11 @@ name|Attribute
 block|{
 specifier|private
 name|int
-name|pmg_class_index
+name|pmgClassIndex
 decl_stmt|;
 specifier|private
 name|int
-name|pmg_index
+name|pmgIndex
 decl_stmt|;
 comment|/**      * Initialize from another object. Note that both objects use the same      * references (shallow copy). Use copy() for a physical copy.      */
 specifier|public
@@ -157,7 +157,7 @@ name|constant_pool
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * @param name_index Index in constant pool to CONSTANT_Utf8      * @param length Content length in bytes      * @param pmg_index index in constant pool for source file name      * @param pmg_class_index Index in constant pool to CONSTANT_Utf8      * @param constant_pool Array of constants      */
+comment|/**      * @param name_index Index in constant pool to CONSTANT_Utf8      * @param length Content length in bytes      * @param pmgIndex index in constant pool for source file name      * @param pmgClassIndex Index in constant pool to CONSTANT_Utf8      * @param constant_pool Array of constants      */
 specifier|public
 name|PMGClass
 parameter_list|(
@@ -197,13 +197,13 @@ argument_list|)
 expr_stmt|;
 name|this
 operator|.
-name|pmg_index
+name|pmgIndex
 operator|=
 name|pmg_index
 expr_stmt|;
 name|this
 operator|.
-name|pmg_class_index
+name|pmgClassIndex
 operator|=
 name|pmg_class_index
 expr_stmt|;
@@ -251,14 +251,14 @@ name|file
 operator|.
 name|writeShort
 argument_list|(
-name|pmg_index
+name|pmgIndex
 argument_list|)
 expr_stmt|;
 name|file
 operator|.
 name|writeShort
 argument_list|(
-name|pmg_class_index
+name|pmgClassIndex
 argument_list|)
 expr_stmt|;
 block|}
@@ -269,10 +269,10 @@ name|getPMGClassIndex
 parameter_list|()
 block|{
 return|return
-name|pmg_class_index
+name|pmgClassIndex
 return|;
 block|}
-comment|/**      * @param pmg_class_index      */
+comment|/**      * @param pmgClassIndex      */
 specifier|public
 name|void
 name|setPMGClassIndex
@@ -284,7 +284,7 @@ parameter_list|)
 block|{
 name|this
 operator|.
-name|pmg_class_index
+name|pmgClassIndex
 operator|=
 name|pmg_class_index
 expr_stmt|;
@@ -296,10 +296,10 @@ name|getPMGIndex
 parameter_list|()
 block|{
 return|return
-name|pmg_index
+name|pmgIndex
 return|;
 block|}
-comment|/**      * @param pmg_index      */
+comment|/**      * @param pmgIndex      */
 specifier|public
 name|void
 name|setPMGIndex
@@ -311,7 +311,7 @@ parameter_list|)
 block|{
 name|this
 operator|.
-name|pmg_index
+name|pmgIndex
 operator|=
 name|pmg_index
 expr_stmt|;
@@ -336,7 +336,7 @@ argument_list|()
 operator|.
 name|getConstant
 argument_list|(
-name|pmg_index
+name|pmgIndex
 argument_list|,
 name|Const
 operator|.
@@ -370,7 +370,7 @@ argument_list|()
 operator|.
 name|getConstant
 argument_list|(
-name|pmg_class_index
+name|pmgClassIndex
 argument_list|,
 name|Const
 operator|.

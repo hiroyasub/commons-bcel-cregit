@@ -71,7 +71,7 @@ name|Attribute
 block|{
 specifier|private
 name|int
-name|constantvalue_index
+name|constantValueIndex
 decl_stmt|;
 comment|/**      * Initialize from another object. Note that both objects use the same      * references (shallow copy). Use clone() for a physical copy.      */
 specifier|public
@@ -143,7 +143,7 @@ name|constant_pool
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * @param name_index Name index in constant pool      * @param length Content length in bytes      * @param constantvalue_index Index in constant pool      * @param constant_pool Array of constants      */
+comment|/**      * @param name_index Name index in constant pool      * @param length Content length in bytes      * @param constantValueIndex Index in constant pool      * @param constant_pool Array of constants      */
 specifier|public
 name|ConstantValue
 parameter_list|(
@@ -179,7 +179,7 @@ argument_list|)
 expr_stmt|;
 name|this
 operator|.
-name|constantvalue_index
+name|constantValueIndex
 operator|=
 name|constantvalue_index
 expr_stmt|;
@@ -229,7 +229,7 @@ name|file
 operator|.
 name|writeShort
 argument_list|(
-name|constantvalue_index
+name|constantValueIndex
 argument_list|)
 expr_stmt|;
 block|}
@@ -240,10 +240,10 @@ name|getConstantValueIndex
 parameter_list|()
 block|{
 return|return
-name|constantvalue_index
+name|constantValueIndex
 return|;
 block|}
-comment|/**      * @param constantvalue_index the index info the constant pool of this constant value      */
+comment|/**      * @param constantValueIndex the index info the constant pool of this constant value      */
 specifier|public
 name|void
 name|setConstantValueIndex
@@ -255,7 +255,7 @@ parameter_list|)
 block|{
 name|this
 operator|.
-name|constantvalue_index
+name|constantValueIndex
 operator|=
 name|constantvalue_index
 expr_stmt|;
@@ -278,7 +278,7 @@ argument_list|()
 operator|.
 name|getConstant
 argument_list|(
-name|constantvalue_index
+name|constantValueIndex
 argument_list|)
 decl_stmt|;
 name|String

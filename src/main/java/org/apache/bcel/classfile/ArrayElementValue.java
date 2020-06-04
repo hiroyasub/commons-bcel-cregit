@@ -51,7 +51,7 @@ specifier|private
 specifier|final
 name|ElementValue
 index|[]
-name|evalues
+name|elementValues
 decl_stmt|;
 annotation|@
 name|Override
@@ -84,7 +84,7 @@ literal|0
 init|;
 name|i
 operator|<
-name|evalues
+name|elementValues
 operator|.
 name|length
 condition|;
@@ -96,7 +96,7 @@ name|sb
 operator|.
 name|append
 argument_list|(
-name|evalues
+name|elementValues
 index|[
 name|i
 index|]
@@ -110,7 +110,7 @@ operator|+
 literal|1
 operator|)
 operator|<
-name|evalues
+name|elementValues
 operator|.
 name|length
 condition|)
@@ -181,7 +181,7 @@ throw|;
 block|}
 name|this
 operator|.
-name|evalues
+name|elementValues
 operator|=
 name|datums
 expr_stmt|;
@@ -214,7 +214,7 @@ name|dos
 operator|.
 name|writeShort
 argument_list|(
-name|evalues
+name|elementValues
 operator|.
 name|length
 argument_list|)
@@ -225,7 +225,7 @@ specifier|final
 name|ElementValue
 name|evalue
 range|:
-name|evalues
+name|elementValues
 control|)
 block|{
 name|evalue
@@ -268,7 +268,7 @@ literal|0
 init|;
 name|i
 operator|<
-name|evalues
+name|elementValues
 operator|.
 name|length
 condition|;
@@ -280,7 +280,7 @@ name|sb
 operator|.
 name|append
 argument_list|(
-name|evalues
+name|elementValues
 index|[
 name|i
 index|]
@@ -297,7 +297,7 @@ operator|+
 literal|1
 operator|)
 operator|<
-name|evalues
+name|elementValues
 operator|.
 name|length
 condition|)
@@ -332,7 +332,7 @@ name|getElementValuesArray
 parameter_list|()
 block|{
 return|return
-name|evalues
+name|elementValues
 return|;
 block|}
 specifier|public
@@ -341,7 +341,7 @@ name|getElementValuesArraySize
 parameter_list|()
 block|{
 return|return
-name|evalues
+name|elementValues
 operator|.
 name|length
 return|;

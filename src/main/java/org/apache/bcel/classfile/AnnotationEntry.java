@@ -101,12 +101,12 @@ block|{
 specifier|private
 specifier|final
 name|int
-name|type_index
+name|typeIndex
 decl_stmt|;
 specifier|private
 specifier|final
 name|ConstantPool
-name|constant_pool
+name|constantPool
 decl_stmt|;
 specifier|private
 specifier|final
@@ -118,9 +118,9 @@ name|List
 argument_list|<
 name|ElementValuePair
 argument_list|>
-name|element_value_pairs
+name|elementValuePairs
 decl_stmt|;
-comment|/*      * Factory method to create an AnnotionEntry from a DataInput      *      * @param input      * @param constant_pool      * @param isRuntimeVisible      * @return the entry      * @throws IOException      */
+comment|/*      * Factory method to create an AnnotionEntry from a DataInput      *      * @param input      * @param constantPool      * @param isRuntimeVisible      * @return the entry      * @throws IOException      */
 specifier|public
 specifier|static
 name|AnnotationEntry
@@ -169,7 +169,7 @@ argument_list|()
 decl_stmt|;
 name|annotationEntry
 operator|.
-name|element_value_pairs
+name|elementValuePairs
 operator|=
 operator|new
 name|ArrayList
@@ -193,7 +193,7 @@ control|)
 block|{
 name|annotationEntry
 operator|.
-name|element_value_pairs
+name|elementValuePairs
 operator|.
 name|add
 argument_list|(
@@ -241,13 +241,13 @@ parameter_list|)
 block|{
 name|this
 operator|.
-name|type_index
+name|typeIndex
 operator|=
 name|type_index
 expr_stmt|;
 name|this
 operator|.
-name|constant_pool
+name|constantPool
 operator|=
 name|constant_pool
 expr_stmt|;
@@ -264,7 +264,7 @@ name|getTypeIndex
 parameter_list|()
 block|{
 return|return
-name|type_index
+name|typeIndex
 return|;
 block|}
 specifier|public
@@ -273,7 +273,7 @@ name|getConstantPool
 parameter_list|()
 block|{
 return|return
-name|constant_pool
+name|constantPool
 return|;
 block|}
 specifier|public
@@ -318,11 +318,11 @@ init|=
 operator|(
 name|ConstantUtf8
 operator|)
-name|constant_pool
+name|constantPool
 operator|.
 name|getConstant
 argument_list|(
-name|type_index
+name|typeIndex
 argument_list|,
 name|Const
 operator|.
@@ -343,7 +343,7 @@ name|getAnnotationTypeIndex
 parameter_list|()
 block|{
 return|return
-name|type_index
+name|typeIndex
 return|;
 block|}
 comment|/**      * @return the number of element value pairs in this annotation entry      */
@@ -354,7 +354,7 @@ name|getNumElementValuePairs
 parameter_list|()
 block|{
 return|return
-name|element_value_pairs
+name|elementValuePairs
 operator|.
 name|size
 argument_list|()
@@ -369,14 +369,14 @@ parameter_list|()
 block|{
 comment|// TODO return List
 return|return
-name|element_value_pairs
+name|elementValuePairs
 operator|.
 name|toArray
 argument_list|(
 operator|new
 name|ElementValuePair
 index|[
-name|element_value_pairs
+name|elementValuePairs
 operator|.
 name|size
 argument_list|()
@@ -399,7 +399,7 @@ name|dos
 operator|.
 name|writeShort
 argument_list|(
-name|type_index
+name|typeIndex
 argument_list|)
 expr_stmt|;
 comment|// u2 index of type name in cpool
@@ -407,7 +407,7 @@ name|dos
 operator|.
 name|writeShort
 argument_list|(
-name|element_value_pairs
+name|elementValuePairs
 operator|.
 name|size
 argument_list|()
@@ -421,7 +421,7 @@ specifier|final
 name|ElementValuePair
 name|envp
 range|:
-name|element_value_pairs
+name|elementValuePairs
 control|)
 block|{
 name|envp
@@ -442,7 +442,7 @@ name|ElementValuePair
 name|elementNameValuePair
 parameter_list|)
 block|{
-name|element_value_pairs
+name|elementValuePairs
 operator|.
 name|add
 argument_list|(

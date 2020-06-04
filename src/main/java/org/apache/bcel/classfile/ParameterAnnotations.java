@@ -61,7 +61,7 @@ comment|/** Table of parameter annotations */
 specifier|private
 name|ParameterAnnotationEntry
 index|[]
-name|parameter_annotation_table
+name|parameterAnnotationTable
 decl_stmt|;
 comment|/**      * @param parameter_annotation_type the subclass type of the parameter annotation      * @param name_index Index pointing to the name<em>Code</em>      * @param length Content length in bytes      * @param input Input stream      * @param constant_pool Array of constants      */
 name|ParameterAnnotations
@@ -115,7 +115,7 @@ operator|.
 name|readUnsignedByte
 argument_list|()
 decl_stmt|;
-name|parameter_annotation_table
+name|parameterAnnotationTable
 operator|=
 operator|new
 name|ParameterAnnotationEntry
@@ -138,7 +138,7 @@ name|i
 operator|++
 control|)
 block|{
-name|parameter_annotation_table
+name|parameterAnnotationTable
 index|[
 name|i
 index|]
@@ -153,7 +153,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/**      * @param parameter_annotation_type the subclass type of the parameter annotation      * @param name_index Index pointing to the name<em>Code</em>      * @param length Content length in bytes      * @param parameter_annotation_table the actual parameter annotations      * @param constant_pool Array of constants      */
+comment|/**      * @param parameter_annotation_type the subclass type of the parameter annotation      * @param name_index Index pointing to the name<em>Code</em>      * @param length Content length in bytes      * @param parameterAnnotationTable the actual parameter annotations      * @param constant_pool Array of constants      */
 specifier|public
 name|ParameterAnnotations
 parameter_list|(
@@ -192,7 +192,7 @@ argument_list|)
 expr_stmt|;
 name|this
 operator|.
-name|parameter_annotation_table
+name|parameterAnnotationTable
 operator|=
 name|parameter_annotation_table
 expr_stmt|;
@@ -217,7 +217,7 @@ name|this
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * @param parameter_annotation_table the entries to set in this parameter annotation      */
+comment|/**      * @param parameterAnnotationTable the entries to set in this parameter annotation      */
 specifier|public
 specifier|final
 name|void
@@ -231,7 +231,7 @@ parameter_list|)
 block|{
 name|this
 operator|.
-name|parameter_annotation_table
+name|parameterAnnotationTable
 operator|=
 name|parameter_annotation_table
 expr_stmt|;
@@ -245,7 +245,7 @@ name|getParameterAnnotationTable
 parameter_list|()
 block|{
 return|return
-name|parameter_annotation_table
+name|parameterAnnotationTable
 return|;
 block|}
 comment|/**      * returns the array of parameter annotation entries in this parameter annotation      */
@@ -256,7 +256,7 @@ name|getParameterAnnotationEntries
 parameter_list|()
 block|{
 return|return
-name|parameter_annotation_table
+name|parameterAnnotationTable
 return|;
 block|}
 annotation|@
@@ -283,7 +283,7 @@ name|dos
 operator|.
 name|writeByte
 argument_list|(
-name|parameter_annotation_table
+name|parameterAnnotationTable
 operator|.
 name|length
 argument_list|)
@@ -294,7 +294,7 @@ specifier|final
 name|ParameterAnnotationEntry
 name|element
 range|:
-name|parameter_annotation_table
+name|parameterAnnotationTable
 control|)
 block|{
 name|element

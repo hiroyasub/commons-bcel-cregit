@@ -73,9 +73,9 @@ block|{
 specifier|private
 name|Constant
 index|[]
-name|constant_pool
+name|constantPool
 decl_stmt|;
-comment|/**      * @param constant_pool Array of constants      */
+comment|/**      * @param constantPool Array of constants      */
 specifier|public
 name|ConstantPool
 parameter_list|(
@@ -87,7 +87,7 @@ parameter_list|)
 block|{
 name|this
 operator|.
-name|constant_pool
+name|constantPool
 operator|=
 name|constant_pool
 expr_stmt|;
@@ -117,7 +117,7 @@ operator|.
 name|readUnsignedShort
 argument_list|()
 decl_stmt|;
-name|constant_pool
+name|constantPool
 operator|=
 operator|new
 name|Constant
@@ -125,7 +125,7 @@ index|[
 name|constant_pool_count
 index|]
 expr_stmt|;
-comment|/* constant_pool[0] is unused by the compiler and may be used freely          * by the implementation.          */
+comment|/* constantPool[0] is unused by the compiler and may be used freely          * by the implementation.          */
 for|for
 control|(
 name|int
@@ -141,7 +141,7 @@ name|i
 operator|++
 control|)
 block|{
-name|constant_pool
+name|constantPool
 index|[
 name|i
 index|]
@@ -156,7 +156,7 @@ expr_stmt|;
 comment|/* Quote from the JVM specification:              * "All eight byte constants take up two spots in the constant pool.              * If this is the n'th byte in the constant pool, then the next item              * will be numbered n+2"              *              * Thus we have to increment the index counter.              */
 name|tag
 operator|=
-name|constant_pool
+name|constantPool
 index|[
 name|i
 index|]
@@ -960,7 +960,7 @@ name|file
 operator|.
 name|writeShort
 argument_list|(
-name|constant_pool
+name|constantPool
 operator|.
 name|length
 argument_list|)
@@ -974,7 +974,7 @@ literal|1
 init|;
 name|i
 operator|<
-name|constant_pool
+name|constantPool
 operator|.
 name|length
 condition|;
@@ -984,7 +984,7 @@ control|)
 block|{
 if|if
 condition|(
-name|constant_pool
+name|constantPool
 index|[
 name|i
 index|]
@@ -992,7 +992,7 @@ operator|!=
 literal|null
 condition|)
 block|{
-name|constant_pool
+name|constantPool
 index|[
 name|i
 index|]
@@ -1019,7 +1019,7 @@ if|if
 condition|(
 name|index
 operator|>=
-name|constant_pool
+name|constantPool
 operator|.
 name|length
 operator|||
@@ -1038,14 +1038,14 @@ name|index
 operator|+
 literal|". Constant pool size is: "
 operator|+
-name|constant_pool
+name|constantPool
 operator|.
 name|length
 argument_list|)
 throw|;
 block|}
 return|return
-name|constant_pool
+name|constantPool
 index|[
 name|index
 index|]
@@ -1141,7 +1141,7 @@ name|getConstantPool
 parameter_list|()
 block|{
 return|return
-name|constant_pool
+name|constantPool
 return|;
 block|}
 comment|/**      * Gets string from constant pool and bypass the indirection of      * `ConstantClass' and `ConstantString' objects. I.e. these classes have      * an index field that points to another entry of the constant pool of      * type `ConstantUtf8' which contains the real data.      *      * @param  index Index in constant pool      * @param  tag Tag of expected constant, either ConstantClass or ConstantString      * @return Contents of string reference      * @see    ConstantClass      * @see    ConstantString      * @throws  ClassFormatException      */
@@ -1295,13 +1295,13 @@ name|getLength
 parameter_list|()
 block|{
 return|return
-name|constant_pool
+name|constantPool
 operator|==
 literal|null
 condition|?
 literal|0
 else|:
-name|constant_pool
+name|constantPool
 operator|.
 name|length
 return|;
@@ -1320,7 +1320,7 @@ name|Constant
 name|constant
 parameter_list|)
 block|{
-name|constant_pool
+name|constantPool
 index|[
 name|index
 index|]
@@ -1328,7 +1328,7 @@ operator|=
 name|constant
 expr_stmt|;
 block|}
-comment|/**      * @param constant_pool      */
+comment|/**      * @param constantPool      */
 specifier|public
 name|void
 name|setConstantPool
@@ -1341,7 +1341,7 @@ parameter_list|)
 block|{
 name|this
 operator|.
-name|constant_pool
+name|constantPool
 operator|=
 name|constant_pool
 expr_stmt|;
@@ -1371,7 +1371,7 @@ literal|1
 init|;
 name|i
 operator|<
-name|constant_pool
+name|constantPool
 operator|.
 name|length
 condition|;
@@ -1393,7 +1393,7 @@ argument_list|)
 operator|.
 name|append
 argument_list|(
-name|constant_pool
+name|constantPool
 index|[
 name|i
 index|]
@@ -1435,12 +1435,12 @@ argument_list|()
 expr_stmt|;
 name|c
 operator|.
-name|constant_pool
+name|constantPool
 operator|=
 operator|new
 name|Constant
 index|[
-name|constant_pool
+name|constantPool
 operator|.
 name|length
 index|]
@@ -1454,7 +1454,7 @@ literal|1
 init|;
 name|i
 operator|<
-name|constant_pool
+name|constantPool
 operator|.
 name|length
 condition|;
@@ -1464,7 +1464,7 @@ control|)
 block|{
 if|if
 condition|(
-name|constant_pool
+name|constantPool
 index|[
 name|i
 index|]
@@ -1474,12 +1474,12 @@ condition|)
 block|{
 name|c
 operator|.
-name|constant_pool
+name|constantPool
 index|[
 name|i
 index|]
 operator|=
-name|constant_pool
+name|constantPool
 index|[
 name|i
 index|]

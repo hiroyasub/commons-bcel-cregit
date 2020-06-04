@@ -72,7 +72,7 @@ block|{
 specifier|private
 name|int
 index|[]
-name|exception_index_table
+name|exceptionIndexTable
 decl_stmt|;
 comment|// constant pool
 comment|/**      * Initialize from another object. Note that both objects use the same      * references (shallow copy). Use copy() for a physical copy.      */
@@ -108,7 +108,7 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * @param name_index Index in constant pool      * @param length Content length in bytes      * @param exception_index_table Table of indices in constant pool      * @param constant_pool Array of constants      */
+comment|/**      * @param name_index Index in constant pool      * @param length Content length in bytes      * @param exceptionIndexTable Table of indices in constant pool      * @param constant_pool Array of constants      */
 specifier|public
 name|ExceptionTable
 parameter_list|(
@@ -145,7 +145,7 @@ argument_list|)
 expr_stmt|;
 name|this
 operator|.
-name|exception_index_table
+name|exceptionIndexTable
 operator|=
 name|exception_index_table
 operator|!=
@@ -206,7 +206,7 @@ operator|.
 name|readUnsignedShort
 argument_list|()
 decl_stmt|;
-name|exception_index_table
+name|exceptionIndexTable
 operator|=
 operator|new
 name|int
@@ -229,7 +229,7 @@ name|i
 operator|++
 control|)
 block|{
-name|exception_index_table
+name|exceptionIndexTable
 index|[
 name|i
 index|]
@@ -286,7 +286,7 @@ name|file
 operator|.
 name|writeShort
 argument_list|(
-name|exception_index_table
+name|exceptionIndexTable
 operator|.
 name|length
 argument_list|)
@@ -297,7 +297,7 @@ specifier|final
 name|int
 name|index
 range|:
-name|exception_index_table
+name|exceptionIndexTable
 control|)
 block|{
 name|file
@@ -317,7 +317,7 @@ name|getExceptionIndexTable
 parameter_list|()
 block|{
 return|return
-name|exception_index_table
+name|exceptionIndexTable
 return|;
 block|}
 comment|/**      * @return Length of exception table.      */
@@ -327,13 +327,13 @@ name|getNumberOfExceptions
 parameter_list|()
 block|{
 return|return
-name|exception_index_table
+name|exceptionIndexTable
 operator|==
 literal|null
 condition|?
 literal|0
 else|:
-name|exception_index_table
+name|exceptionIndexTable
 operator|.
 name|length
 return|;
@@ -353,7 +353,7 @@ init|=
 operator|new
 name|String
 index|[
-name|exception_index_table
+name|exceptionIndexTable
 operator|.
 name|length
 index|]
@@ -367,7 +367,7 @@ literal|0
 init|;
 name|i
 operator|<
-name|exception_index_table
+name|exceptionIndexTable
 operator|.
 name|length
 condition|;
@@ -387,7 +387,7 @@ argument_list|()
 operator|.
 name|getConstantString
 argument_list|(
-name|exception_index_table
+name|exceptionIndexTable
 index|[
 name|i
 index|]
@@ -409,7 +409,7 @@ return|return
 name|names
 return|;
 block|}
-comment|/**      * @param exception_index_table the list of exception indexes      * Also redefines number_of_exceptions according to table length.      */
+comment|/**      * @param exceptionIndexTable the list of exception indexes      * Also redefines number_of_exceptions according to table length.      */
 specifier|public
 name|void
 name|setExceptionIndexTable
@@ -422,7 +422,7 @@ parameter_list|)
 block|{
 name|this
 operator|.
-name|exception_index_table
+name|exceptionIndexTable
 operator|=
 name|exception_index_table
 operator|!=
@@ -472,7 +472,7 @@ literal|0
 init|;
 name|i
 operator|<
-name|exception_index_table
+name|exceptionIndexTable
 operator|.
 name|length
 condition|;
@@ -489,7 +489,7 @@ argument_list|()
 operator|.
 name|getConstantString
 argument_list|(
-name|exception_index_table
+name|exceptionIndexTable
 index|[
 name|i
 index|]
@@ -517,7 +517,7 @@ if|if
 condition|(
 name|i
 operator|<
-name|exception_index_table
+name|exceptionIndexTable
 operator|.
 name|length
 operator|-
@@ -564,19 +564,19 @@ argument_list|()
 decl_stmt|;
 if|if
 condition|(
-name|exception_index_table
+name|exceptionIndexTable
 operator|!=
 literal|null
 condition|)
 block|{
 name|c
 operator|.
-name|exception_index_table
+name|exceptionIndexTable
 operator|=
 operator|new
 name|int
 index|[
-name|exception_index_table
+name|exceptionIndexTable
 operator|.
 name|length
 index|]
@@ -585,17 +585,17 @@ name|System
 operator|.
 name|arraycopy
 argument_list|(
-name|exception_index_table
+name|exceptionIndexTable
 argument_list|,
 literal|0
 argument_list|,
 name|c
 operator|.
-name|exception_index_table
+name|exceptionIndexTable
 argument_list|,
 literal|0
 argument_list|,
-name|exception_index_table
+name|exceptionIndexTable
 operator|.
 name|length
 argument_list|)

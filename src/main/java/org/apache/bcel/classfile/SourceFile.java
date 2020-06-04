@@ -71,7 +71,7 @@ name|Attribute
 block|{
 specifier|private
 name|int
-name|sourcefile_index
+name|sourcefileIndex
 decl_stmt|;
 comment|/**      * Initialize from another object. Note that both objects use the same      * references (shallow copy). Use clone() for a physical copy.      */
 specifier|public
@@ -143,7 +143,7 @@ name|constant_pool
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * @param name_index Index in constant pool to CONSTANT_Utf8, which      * should represent the string "SourceFile".      * @param length Content length in bytes, the value should be 2.      * @param constant_pool The constant pool that this attribute is      * associated with.      * @param sourcefile_index Index in constant pool to CONSTANT_Utf8.  This      * string will be interpreted as the name of the file from which this      * class was compiled.  It will not be interpreted as indicating the name      * of the directory contqining the file or an absolute path; this      * information has to be supplied the consumer of this attribute - in      * many cases, the JVM.      */
+comment|/**      * @param name_index Index in constant pool to CONSTANT_Utf8, which      * should represent the string "SourceFile".      * @param length Content length in bytes, the value should be 2.      * @param constant_pool The constant pool that this attribute is      * associated with.      * @param sourcefileIndex Index in constant pool to CONSTANT_Utf8.  This      * string will be interpreted as the name of the file from which this      * class was compiled.  It will not be interpreted as indicating the name      * of the directory contqining the file or an absolute path; this      * information has to be supplied the consumer of this attribute - in      * many cases, the JVM.      */
 specifier|public
 name|SourceFile
 parameter_list|(
@@ -179,7 +179,7 @@ argument_list|)
 expr_stmt|;
 name|this
 operator|.
-name|sourcefile_index
+name|sourcefileIndex
 operator|=
 name|sourcefile_index
 expr_stmt|;
@@ -229,7 +229,7 @@ name|file
 operator|.
 name|writeShort
 argument_list|(
-name|sourcefile_index
+name|sourcefileIndex
 argument_list|)
 expr_stmt|;
 block|}
@@ -240,10 +240,10 @@ name|getSourceFileIndex
 parameter_list|()
 block|{
 return|return
-name|sourcefile_index
+name|sourcefileIndex
 return|;
 block|}
-comment|/**      * @param sourcefile_index      */
+comment|/**      * @param sourcefileIndex      */
 specifier|public
 name|void
 name|setSourceFileIndex
@@ -255,7 +255,7 @@ parameter_list|)
 block|{
 name|this
 operator|.
-name|sourcefile_index
+name|sourcefileIndex
 operator|=
 name|sourcefile_index
 expr_stmt|;
@@ -280,7 +280,7 @@ argument_list|()
 operator|.
 name|getConstant
 argument_list|(
-name|sourcefile_index
+name|sourcefileIndex
 argument_list|,
 name|Const
 operator|.

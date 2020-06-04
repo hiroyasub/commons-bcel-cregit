@@ -72,7 +72,7 @@ block|{
 specifier|private
 name|int
 index|[]
-name|package_index_table
+name|packageIndexTable
 decl_stmt|;
 comment|/**      * Initialize from another object. Note that both objects use the same      * references (shallow copy). Use copy() for a physical copy.      */
 specifier|public
@@ -107,7 +107,7 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * @param name_index Index in constant pool      * @param length Content length in bytes      * @param package_index_table Table of indices in constant pool      * @param constant_pool Array of constants      */
+comment|/**      * @param name_index Index in constant pool      * @param length Content length in bytes      * @param packageIndexTable Table of indices in constant pool      * @param constant_pool Array of constants      */
 specifier|public
 name|ModulePackages
 parameter_list|(
@@ -144,7 +144,7 @@ argument_list|)
 expr_stmt|;
 name|this
 operator|.
-name|package_index_table
+name|packageIndexTable
 operator|=
 name|package_index_table
 operator|!=
@@ -205,7 +205,7 @@ operator|.
 name|readUnsignedShort
 argument_list|()
 decl_stmt|;
-name|package_index_table
+name|packageIndexTable
 operator|=
 operator|new
 name|int
@@ -228,7 +228,7 @@ name|i
 operator|++
 control|)
 block|{
-name|package_index_table
+name|packageIndexTable
 index|[
 name|i
 index|]
@@ -285,7 +285,7 @@ name|file
 operator|.
 name|writeShort
 argument_list|(
-name|package_index_table
+name|packageIndexTable
 operator|.
 name|length
 argument_list|)
@@ -296,7 +296,7 @@ specifier|final
 name|int
 name|index
 range|:
-name|package_index_table
+name|packageIndexTable
 control|)
 block|{
 name|file
@@ -316,7 +316,7 @@ name|getPackageIndexTable
 parameter_list|()
 block|{
 return|return
-name|package_index_table
+name|packageIndexTable
 return|;
 block|}
 comment|/**      * @return Length of package table.      */
@@ -326,13 +326,13 @@ name|getNumberOfPackages
 parameter_list|()
 block|{
 return|return
-name|package_index_table
+name|packageIndexTable
 operator|==
 literal|null
 condition|?
 literal|0
 else|:
-name|package_index_table
+name|packageIndexTable
 operator|.
 name|length
 return|;
@@ -352,7 +352,7 @@ init|=
 operator|new
 name|String
 index|[
-name|package_index_table
+name|packageIndexTable
 operator|.
 name|length
 index|]
@@ -366,7 +366,7 @@ literal|0
 init|;
 name|i
 operator|<
-name|package_index_table
+name|packageIndexTable
 operator|.
 name|length
 condition|;
@@ -386,7 +386,7 @@ argument_list|()
 operator|.
 name|getConstantString
 argument_list|(
-name|package_index_table
+name|packageIndexTable
 index|[
 name|i
 index|]
@@ -408,7 +408,7 @@ return|return
 name|names
 return|;
 block|}
-comment|/**      * @param package_index_table the list of package indexes      * Also redefines number_of_packages according to table length.      */
+comment|/**      * @param packageIndexTable the list of package indexes      * Also redefines number_of_packages according to table length.      */
 specifier|public
 name|void
 name|setPackageIndexTable
@@ -421,7 +421,7 @@ parameter_list|)
 block|{
 name|this
 operator|.
-name|package_index_table
+name|packageIndexTable
 operator|=
 name|package_index_table
 operator|!=
@@ -463,7 +463,7 @@ name|buf
 operator|.
 name|append
 argument_list|(
-name|package_index_table
+name|packageIndexTable
 operator|.
 name|length
 argument_list|)
@@ -481,7 +481,7 @@ specifier|final
 name|int
 name|index
 range|:
-name|package_index_table
+name|packageIndexTable
 control|)
 block|{
 specifier|final
@@ -568,19 +568,19 @@ argument_list|()
 decl_stmt|;
 if|if
 condition|(
-name|package_index_table
+name|packageIndexTable
 operator|!=
 literal|null
 condition|)
 block|{
 name|c
 operator|.
-name|package_index_table
+name|packageIndexTable
 operator|=
 operator|new
 name|int
 index|[
-name|package_index_table
+name|packageIndexTable
 operator|.
 name|length
 index|]
@@ -589,17 +589,17 @@ name|System
 operator|.
 name|arraycopy
 argument_list|(
-name|package_index_table
+name|packageIndexTable
 argument_list|,
 literal|0
 argument_list|,
 name|c
 operator|.
-name|package_index_table
+name|packageIndexTable
 argument_list|,
 literal|0
 argument_list|,
-name|package_index_table
+name|packageIndexTable
 operator|.
 name|length
 argument_list|)

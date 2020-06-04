@@ -108,7 +108,7 @@ name|String
 argument_list|,
 name|Unknown
 argument_list|>
-name|unknown_attributes
+name|unknownAttributes
 init|=
 operator|new
 name|HashMap
@@ -130,13 +130,13 @@ init|=
 operator|new
 name|Unknown
 index|[
-name|unknown_attributes
+name|unknownAttributes
 operator|.
 name|size
 argument_list|()
 index|]
 decl_stmt|;
-name|unknown_attributes
+name|unknownAttributes
 operator|.
 name|values
 argument_list|()
@@ -146,7 +146,7 @@ argument_list|(
 name|unknowns
 argument_list|)
 expr_stmt|;
-name|unknown_attributes
+name|unknownAttributes
 operator|.
 name|clear
 argument_list|()
@@ -250,7 +250,7 @@ operator|.
 name|getBytes
 argument_list|()
 expr_stmt|;
-name|unknown_attributes
+name|unknownAttributes
 operator|.
 name|put
 argument_list|(

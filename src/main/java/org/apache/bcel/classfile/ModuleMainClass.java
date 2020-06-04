@@ -71,7 +71,7 @@ name|Attribute
 block|{
 specifier|private
 name|int
-name|main_class_index
+name|mainClassIndex
 decl_stmt|;
 comment|/**      * Initialize from another object. Note that both objects use the same      * references (shallow copy). Use copy() for a physical copy.      */
 specifier|public
@@ -106,7 +106,7 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * @param name_index Index in constant pool      * @param length Content length in bytes      * @param main_class_index Host class index      * @param constant_pool Array of constants      */
+comment|/**      * @param name_index Index in constant pool      * @param length Content length in bytes      * @param mainClassIndex Host class index      * @param constant_pool Array of constants      */
 specifier|public
 name|ModuleMainClass
 parameter_list|(
@@ -142,7 +142,7 @@ argument_list|)
 expr_stmt|;
 name|this
 operator|.
-name|main_class_index
+name|mainClassIndex
 operator|=
 name|main_class_index
 expr_stmt|;
@@ -180,7 +180,7 @@ argument_list|,
 name|constant_pool
 argument_list|)
 expr_stmt|;
-name|main_class_index
+name|mainClassIndex
 operator|=
 name|input
 operator|.
@@ -233,7 +233,7 @@ name|file
 operator|.
 name|writeShort
 argument_list|(
-name|main_class_index
+name|mainClassIndex
 argument_list|)
 expr_stmt|;
 block|}
@@ -244,10 +244,10 @@ name|getHostClassIndex
 parameter_list|()
 block|{
 return|return
-name|main_class_index
+name|mainClassIndex
 return|;
 block|}
-comment|/**      * @param main_class_index the host class index      */
+comment|/**      * @param mainClassIndex the host class index      */
 specifier|public
 name|void
 name|setHostClassIndex
@@ -259,7 +259,7 @@ parameter_list|)
 block|{
 name|this
 operator|.
-name|main_class_index
+name|mainClassIndex
 operator|=
 name|main_class_index
 expr_stmt|;
@@ -298,7 +298,7 @@ argument_list|()
 operator|.
 name|getConstantString
 argument_list|(
-name|main_class_index
+name|mainClassIndex
 argument_list|,
 name|Const
 operator|.

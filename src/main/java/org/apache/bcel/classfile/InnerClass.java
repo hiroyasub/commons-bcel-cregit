@@ -73,19 +73,19 @@ name|Node
 block|{
 specifier|private
 name|int
-name|inner_class_index
+name|innerClassIndex
 decl_stmt|;
 specifier|private
 name|int
-name|outer_class_index
+name|outerClassIndex
 decl_stmt|;
 specifier|private
 name|int
-name|inner_name_index
+name|innerNameIndex
 decl_stmt|;
 specifier|private
 name|int
-name|inner_access_flags
+name|innerAccessFlags
 decl_stmt|;
 comment|/**      * Initialize from another object.      */
 specifier|public
@@ -154,7 +154,7 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * @param inner_class_index Class index in constant pool of inner class      * @param outer_class_index Class index in constant pool of outer class      * @param inner_name_index  Name index in constant pool of inner class      * @param inner_access_flags Access flags of inner class      */
+comment|/**      * @param innerClassIndex Class index in constant pool of inner class      * @param outerClassIndex Class index in constant pool of outer class      * @param innerNameIndex  Name index in constant pool of inner class      * @param innerAccessFlags Access flags of inner class      */
 specifier|public
 name|InnerClass
 parameter_list|(
@@ -177,25 +177,25 @@ parameter_list|)
 block|{
 name|this
 operator|.
-name|inner_class_index
+name|innerClassIndex
 operator|=
 name|inner_class_index
 expr_stmt|;
 name|this
 operator|.
-name|outer_class_index
+name|outerClassIndex
 operator|=
 name|outer_class_index
 expr_stmt|;
 name|this
 operator|.
-name|inner_name_index
+name|innerNameIndex
 operator|=
 name|inner_name_index
 expr_stmt|;
 name|this
 operator|.
-name|inner_access_flags
+name|innerAccessFlags
 operator|=
 name|inner_access_flags
 expr_stmt|;
@@ -236,28 +236,28 @@ name|file
 operator|.
 name|writeShort
 argument_list|(
-name|inner_class_index
+name|innerClassIndex
 argument_list|)
 expr_stmt|;
 name|file
 operator|.
 name|writeShort
 argument_list|(
-name|outer_class_index
+name|outerClassIndex
 argument_list|)
 expr_stmt|;
 name|file
 operator|.
 name|writeShort
 argument_list|(
-name|inner_name_index
+name|innerNameIndex
 argument_list|)
 expr_stmt|;
 name|file
 operator|.
 name|writeShort
 argument_list|(
-name|inner_access_flags
+name|innerAccessFlags
 argument_list|)
 expr_stmt|;
 block|}
@@ -268,7 +268,7 @@ name|getInnerAccessFlags
 parameter_list|()
 block|{
 return|return
-name|inner_access_flags
+name|innerAccessFlags
 return|;
 block|}
 comment|/**      * @return class index of inner class.      */
@@ -278,7 +278,7 @@ name|getInnerClassIndex
 parameter_list|()
 block|{
 return|return
-name|inner_class_index
+name|innerClassIndex
 return|;
 block|}
 comment|/**      * @return name index of inner class.      */
@@ -288,7 +288,7 @@ name|getInnerNameIndex
 parameter_list|()
 block|{
 return|return
-name|inner_name_index
+name|innerNameIndex
 return|;
 block|}
 comment|/**      * @return class index of outer class.      */
@@ -298,10 +298,10 @@ name|getOuterClassIndex
 parameter_list|()
 block|{
 return|return
-name|outer_class_index
+name|outerClassIndex
 return|;
 block|}
-comment|/**      * @param inner_access_flags access flags for this inner class      */
+comment|/**      * @param innerAccessFlags access flags for this inner class      */
 specifier|public
 name|void
 name|setInnerAccessFlags
@@ -313,12 +313,12 @@ parameter_list|)
 block|{
 name|this
 operator|.
-name|inner_access_flags
+name|innerAccessFlags
 operator|=
 name|inner_access_flags
 expr_stmt|;
 block|}
-comment|/**      * @param inner_class_index index into the constant pool for this class      */
+comment|/**      * @param innerClassIndex index into the constant pool for this class      */
 specifier|public
 name|void
 name|setInnerClassIndex
@@ -330,12 +330,12 @@ parameter_list|)
 block|{
 name|this
 operator|.
-name|inner_class_index
+name|innerClassIndex
 operator|=
 name|inner_class_index
 expr_stmt|;
 block|}
-comment|/**      * @param inner_name_index index into the constant pool for this class's name      */
+comment|/**      * @param innerNameIndex index into the constant pool for this class's name      */
 specifier|public
 name|void
 name|setInnerNameIndex
@@ -348,12 +348,12 @@ block|{
 comment|// TODO unused
 name|this
 operator|.
-name|inner_name_index
+name|innerNameIndex
 operator|=
 name|inner_name_index
 expr_stmt|;
 block|}
-comment|/**      * @param outer_class_index index into the constant pool for the owning class      */
+comment|/**      * @param outerClassIndex index into the constant pool for the owning class      */
 specifier|public
 name|void
 name|setOuterClassIndex
@@ -366,7 +366,7 @@ block|{
 comment|// TODO unused
 name|this
 operator|.
-name|outer_class_index
+name|outerClassIndex
 operator|=
 name|outer_class_index
 expr_stmt|;
@@ -382,19 +382,19 @@ block|{
 return|return
 literal|"InnerClass("
 operator|+
-name|inner_class_index
+name|innerClassIndex
 operator|+
 literal|", "
 operator|+
-name|outer_class_index
+name|outerClassIndex
 operator|+
 literal|", "
 operator|+
-name|inner_name_index
+name|innerNameIndex
 operator|+
 literal|", "
 operator|+
-name|inner_access_flags
+name|innerAccessFlags
 operator|+
 literal|")"
 return|;
@@ -422,7 +422,7 @@ name|constant_pool
 operator|.
 name|getConstantString
 argument_list|(
-name|inner_class_index
+name|innerClassIndex
 argument_list|,
 name|Const
 operator|.
@@ -442,7 +442,7 @@ argument_list|)
 expr_stmt|;
 if|if
 condition|(
-name|outer_class_index
+name|outerClassIndex
 operator|!=
 literal|0
 condition|)
@@ -453,7 +453,7 @@ name|constant_pool
 operator|.
 name|getConstantString
 argument_list|(
-name|outer_class_index
+name|outerClassIndex
 argument_list|,
 name|Const
 operator|.
@@ -483,7 +483,7 @@ expr_stmt|;
 block|}
 if|if
 condition|(
-name|inner_name_index
+name|innerNameIndex
 operator|!=
 literal|0
 condition|)
@@ -498,7 +498,7 @@ name|constant_pool
 operator|.
 name|getConstant
 argument_list|(
-name|inner_name_index
+name|innerNameIndex
 argument_list|,
 name|Const
 operator|.
@@ -524,7 +524,7 @@ name|Utility
 operator|.
 name|accessToString
 argument_list|(
-name|inner_access_flags
+name|innerAccessFlags
 argument_list|,
 literal|true
 argument_list|)

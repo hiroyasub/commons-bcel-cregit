@@ -74,19 +74,19 @@ block|{
 specifier|private
 specifier|final
 name|int
-name|provides_index
+name|providesIndex
 decl_stmt|;
 comment|// points to CONSTANT_Class_info
 specifier|private
 specifier|final
 name|int
-name|provides_with_count
+name|providesWithCount
 decl_stmt|;
 specifier|private
 specifier|final
 name|int
 index|[]
-name|provides_with_index
+name|providesWithIndex
 decl_stmt|;
 comment|// points to CONSTANT_Class_info
 comment|/**      * Construct object from file stream.      *      * @param file Input stream      * @throws IOException if an I/O Exception occurs in readUnsignedShort      */
@@ -99,26 +99,26 @@ parameter_list|)
 throws|throws
 name|IOException
 block|{
-name|provides_index
+name|providesIndex
 operator|=
 name|file
 operator|.
 name|readUnsignedShort
 argument_list|()
 expr_stmt|;
-name|provides_with_count
+name|providesWithCount
 operator|=
 name|file
 operator|.
 name|readUnsignedShort
 argument_list|()
 expr_stmt|;
-name|provides_with_index
+name|providesWithIndex
 operator|=
 operator|new
 name|int
 index|[
-name|provides_with_count
+name|providesWithCount
 index|]
 expr_stmt|;
 for|for
@@ -130,13 +130,13 @@ literal|0
 init|;
 name|i
 operator|<
-name|provides_with_count
+name|providesWithCount
 condition|;
 name|i
 operator|++
 control|)
 block|{
-name|provides_with_index
+name|providesWithIndex
 index|[
 name|i
 index|]
@@ -185,14 +185,14 @@ name|file
 operator|.
 name|writeShort
 argument_list|(
-name|provides_index
+name|providesIndex
 argument_list|)
 expr_stmt|;
 name|file
 operator|.
 name|writeShort
 argument_list|(
-name|provides_with_count
+name|providesWithCount
 argument_list|)
 expr_stmt|;
 for|for
@@ -201,7 +201,7 @@ specifier|final
 name|int
 name|entry
 range|:
-name|provides_with_index
+name|providesWithIndex
 control|)
 block|{
 name|file
@@ -224,11 +224,11 @@ block|{
 return|return
 literal|"provides("
 operator|+
-name|provides_index
+name|providesIndex
 operator|+
 literal|", "
 operator|+
-name|provides_with_count
+name|providesWithCount
 operator|+
 literal|", ...)"
 return|;
@@ -259,7 +259,7 @@ name|constant_pool
 operator|.
 name|constantToString
 argument_list|(
-name|provides_index
+name|providesIndex
 argument_list|,
 name|Const
 operator|.
@@ -289,7 +289,7 @@ argument_list|)
 operator|.
 name|append
 argument_list|(
-name|provides_with_count
+name|providesWithCount
 argument_list|)
 operator|.
 name|append
@@ -303,7 +303,7 @@ specifier|final
 name|int
 name|index
 range|:
-name|provides_with_index
+name|providesWithIndex
 control|)
 block|{
 specifier|final

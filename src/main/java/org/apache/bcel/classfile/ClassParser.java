@@ -123,19 +123,19 @@ decl_stmt|;
 specifier|private
 specifier|final
 name|String
-name|file_name
+name|fileName
 decl_stmt|;
 specifier|private
 name|String
-name|zip_file
+name|zipFile
 decl_stmt|;
 specifier|private
 name|int
-name|class_name_index
+name|classNameIndex
 decl_stmt|;
 specifier|private
 name|int
-name|superclass_name_index
+name|superclassNameIndex
 decl_stmt|;
 specifier|private
 name|int
@@ -149,7 +149,7 @@ decl_stmt|;
 comment|// Compiler version
 specifier|private
 name|int
-name|access_flags
+name|accessFlags
 decl_stmt|;
 comment|// Access rights of parsed class
 specifier|private
@@ -160,7 +160,7 @@ decl_stmt|;
 comment|// Names of implemented interfaces
 specifier|private
 name|ConstantPool
-name|constant_pool
+name|constantPool
 decl_stmt|;
 comment|// collection of constants
 specifier|private
@@ -184,7 +184,7 @@ comment|// attributes defined in the class
 specifier|private
 specifier|final
 name|boolean
-name|is_zip
+name|isZip
 decl_stmt|;
 comment|// Loaded from zip file
 specifier|private
@@ -195,7 +195,7 @@ name|BUFSIZE
 init|=
 literal|8192
 decl_stmt|;
-comment|/**      * Parses class from the given stream.      *      * @param inputStream Input stream      * @param file_name File name      */
+comment|/**      * Parses class from the given stream.      *      * @param inputStream Input stream      * @param fileName File name      */
 specifier|public
 name|ClassParser
 parameter_list|(
@@ -210,7 +210,7 @@ parameter_list|)
 block|{
 name|this
 operator|.
-name|file_name
+name|fileName
 operator|=
 name|file_name
 expr_stmt|;
@@ -231,7 +231,7 @@ name|getName
 argument_list|()
 decl_stmt|;
 comment|// Not a very clean solution ...
-name|is_zip
+name|isZip
 operator|=
 name|clazz
 operator|.
@@ -284,7 +284,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/** Parses class from given .class file.      *      * @param file_name file name      */
+comment|/** Parses class from given .class file.      *      * @param fileName file name      */
 specifier|public
 name|ClassParser
 parameter_list|(
@@ -293,13 +293,13 @@ name|String
 name|file_name
 parameter_list|)
 block|{
-name|is_zip
+name|isZip
 operator|=
 literal|false
 expr_stmt|;
 name|this
 operator|.
-name|file_name
+name|fileName
 operator|=
 name|file_name
 expr_stmt|;
@@ -308,7 +308,7 @@ operator|=
 literal|true
 expr_stmt|;
 block|}
-comment|/** Parses class from given .class file in a ZIP-archive      *      * @param zip_file zip file name      * @param file_name file name      */
+comment|/** Parses class from given .class file in a ZIP-archive      *      * @param zipFile zip file name      * @param fileName file name      */
 specifier|public
 name|ClassParser
 parameter_list|(
@@ -321,7 +321,7 @@ name|String
 name|file_name
 parameter_list|)
 block|{
-name|is_zip
+name|isZip
 operator|=
 literal|true
 expr_stmt|;
@@ -331,13 +331,13 @@ literal|true
 expr_stmt|;
 name|this
 operator|.
-name|zip_file
+name|zipFile
 operator|=
 name|zip_file
 expr_stmt|;
 name|this
 operator|.
-name|file_name
+name|fileName
 operator|=
 name|file_name
 expr_stmt|;
@@ -366,7 +366,7 @@ condition|)
 block|{
 if|if
 condition|(
-name|is_zip
+name|isZip
 condition|)
 block|{
 name|zip
@@ -374,7 +374,7 @@ operator|=
 operator|new
 name|ZipFile
 argument_list|(
-name|zip_file
+name|zipFile
 argument_list|)
 expr_stmt|;
 specifier|final
@@ -385,7 +385,7 @@ name|zip
 operator|.
 name|getEntry
 argument_list|(
-name|file_name
+name|fileName
 argument_list|)
 decl_stmt|;
 if|if
@@ -401,7 +401,7 @@ name|IOException
 argument_list|(
 literal|"File "
 operator|+
-name|file_name
+name|fileName
 operator|+
 literal|" not found"
 argument_list|)
@@ -440,7 +440,7 @@ argument_list|(
 operator|new
 name|FileInputStream
 argument_list|(
-name|file_name
+name|fileName
 argument_list|)
 argument_list|,
 name|BUFSIZE
@@ -493,8 +493,8 @@ comment|//      if(file.available()> 0) {
 comment|//        int bytes = file.available();
 comment|//        byte[] buf = new byte[bytes];
 comment|//        file.read(buf);
-comment|//        if(!(is_zip&& (buf.length == 1))) {
-comment|//      System.err.println("WARNING: Trailing garbage at end of " + file_name);
+comment|//        if(!(isZip&& (buf.length == 1))) {
+comment|//      System.err.println("WARNING: Trailing garbage at end of " + fileName);
 comment|//      System.err.println(bytes + " extra bytes: " + Utility.toHexString(buf));
 comment|//        }
 comment|//      }
@@ -564,19 +564,19 @@ return|return
 operator|new
 name|JavaClass
 argument_list|(
-name|class_name_index
+name|classNameIndex
 argument_list|,
-name|superclass_name_index
+name|superclassNameIndex
 argument_list|,
-name|file_name
+name|fileName
 argument_list|,
 name|major
 argument_list|,
 name|minor
 argument_list|,
-name|access_flags
+name|accessFlags
 argument_list|,
-name|constant_pool
+name|constantPool
 argument_list|,
 name|interfaces
 argument_list|,
@@ -586,7 +586,7 @@ name|methods
 argument_list|,
 name|attributes
 argument_list|,
-name|is_zip
+name|isZip
 condition|?
 name|JavaClass
 operator|.
@@ -651,7 +651,7 @@ name|readAttribute
 argument_list|(
 name|dataInputStream
 argument_list|,
-name|constant_pool
+name|constantPool
 argument_list|)
 expr_stmt|;
 block|}
@@ -666,7 +666,7 @@ name|IOException
 throws|,
 name|ClassFormatException
 block|{
-name|access_flags
+name|accessFlags
 operator|=
 name|dataInputStream
 operator|.
@@ -677,7 +677,7 @@ comment|/* Interfaces are implicitely abstract, the flag should be set          
 if|if
 condition|(
 operator|(
-name|access_flags
+name|accessFlags
 operator|&
 name|Const
 operator|.
@@ -687,7 +687,7 @@ operator|!=
 literal|0
 condition|)
 block|{
-name|access_flags
+name|accessFlags
 operator||=
 name|Const
 operator|.
@@ -698,7 +698,7 @@ if|if
 condition|(
 operator|(
 operator|(
-name|access_flags
+name|accessFlags
 operator|&
 name|Const
 operator|.
@@ -710,7 +710,7 @@ operator|)
 operator|&&
 operator|(
 operator|(
-name|access_flags
+name|accessFlags
 operator|&
 name|Const
 operator|.
@@ -727,20 +727,20 @@ name|ClassFormatException
 argument_list|(
 literal|"Class "
 operator|+
-name|file_name
+name|fileName
 operator|+
 literal|" can't be both final and abstract"
 argument_list|)
 throw|;
 block|}
-name|class_name_index
+name|classNameIndex
 operator|=
 name|dataInputStream
 operator|.
 name|readUnsignedShort
 argument_list|()
 expr_stmt|;
-name|superclass_name_index
+name|superclassNameIndex
 operator|=
 name|dataInputStream
 operator|.
@@ -758,7 +758,7 @@ name|IOException
 throws|,
 name|ClassFormatException
 block|{
-name|constant_pool
+name|constantPool
 operator|=
 operator|new
 name|ConstantPool
@@ -819,7 +819,7 @@ name|Field
 argument_list|(
 name|dataInputStream
 argument_list|,
-name|constant_pool
+name|constantPool
 argument_list|)
 expr_stmt|;
 block|}
@@ -851,7 +851,7 @@ throw|throw
 operator|new
 name|ClassFormatException
 argument_list|(
-name|file_name
+name|fileName
 operator|+
 literal|" is not a Java .class file"
 argument_list|)
@@ -964,7 +964,7 @@ name|Method
 argument_list|(
 name|dataInputStream
 argument_list|,
-name|constant_pool
+name|constantPool
 argument_list|)
 expr_stmt|;
 block|}

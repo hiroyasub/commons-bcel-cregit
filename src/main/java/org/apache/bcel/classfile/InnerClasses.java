@@ -72,7 +72,7 @@ block|{
 specifier|private
 name|InnerClass
 index|[]
-name|inner_classes
+name|innerClasses
 decl_stmt|;
 comment|/**      * Initialize from another object. Note that both objects use the same      * references (shallow copy). Use clone() for a physical copy.      */
 specifier|public
@@ -107,7 +107,7 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * @param name_index Index in constant pool to CONSTANT_Utf8      * @param length Content length in bytes      * @param inner_classes array of inner classes attributes      * @param constant_pool Array of constants      */
+comment|/**      * @param name_index Index in constant pool to CONSTANT_Utf8      * @param length Content length in bytes      * @param innerClasses array of inner classes attributes      * @param constant_pool Array of constants      */
 specifier|public
 name|InnerClasses
 parameter_list|(
@@ -144,7 +144,7 @@ argument_list|)
 expr_stmt|;
 name|this
 operator|.
-name|inner_classes
+name|innerClasses
 operator|=
 name|inner_classes
 operator|!=
@@ -205,7 +205,7 @@ operator|.
 name|readUnsignedShort
 argument_list|()
 decl_stmt|;
-name|inner_classes
+name|innerClasses
 operator|=
 operator|new
 name|InnerClass
@@ -228,7 +228,7 @@ name|i
 operator|++
 control|)
 block|{
-name|inner_classes
+name|innerClasses
 index|[
 name|i
 index|]
@@ -286,7 +286,7 @@ name|file
 operator|.
 name|writeShort
 argument_list|(
-name|inner_classes
+name|innerClasses
 operator|.
 name|length
 argument_list|)
@@ -297,7 +297,7 @@ specifier|final
 name|InnerClass
 name|inner_class
 range|:
-name|inner_classes
+name|innerClasses
 control|)
 block|{
 name|inner_class
@@ -317,10 +317,10 @@ name|getInnerClasses
 parameter_list|()
 block|{
 return|return
-name|inner_classes
+name|innerClasses
 return|;
 block|}
-comment|/**      * @param inner_classes the array of inner classes      */
+comment|/**      * @param innerClasses the array of inner classes      */
 specifier|public
 name|void
 name|setInnerClasses
@@ -333,7 +333,7 @@ parameter_list|)
 block|{
 name|this
 operator|.
-name|inner_classes
+name|innerClasses
 operator|=
 name|inner_classes
 operator|!=
@@ -375,7 +375,7 @@ name|buf
 operator|.
 name|append
 argument_list|(
-name|inner_classes
+name|innerClasses
 operator|.
 name|length
 argument_list|)
@@ -393,7 +393,7 @@ specifier|final
 name|InnerClass
 name|inner_class
 range|:
-name|inner_classes
+name|innerClasses
 control|)
 block|{
 name|buf
@@ -459,12 +459,12 @@ argument_list|()
 decl_stmt|;
 name|c
 operator|.
-name|inner_classes
+name|innerClasses
 operator|=
 operator|new
 name|InnerClass
 index|[
-name|inner_classes
+name|innerClasses
 operator|.
 name|length
 index|]
@@ -478,7 +478,7 @@ literal|0
 init|;
 name|i
 operator|<
-name|inner_classes
+name|innerClasses
 operator|.
 name|length
 condition|;
@@ -488,12 +488,12 @@ control|)
 block|{
 name|c
 operator|.
-name|inner_classes
+name|innerClasses
 index|[
 name|i
 index|]
 operator|=
-name|inner_classes
+name|innerClasses
 index|[
 name|i
 index|]

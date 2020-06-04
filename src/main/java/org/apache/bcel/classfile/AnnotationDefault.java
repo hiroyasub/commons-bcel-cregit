@@ -70,7 +70,7 @@ name|Attribute
 block|{
 specifier|private
 name|ElementValue
-name|default_value
+name|defaultValue
 decl_stmt|;
 comment|/**      * @param name_index    Index pointing to the name<em>Code</em>      * @param length        Content length in bytes      * @param input         Input stream      * @param constant_pool Array of constants      */
 name|AnnotationDefault
@@ -108,7 +108,7 @@ argument_list|,
 name|constant_pool
 argument_list|)
 expr_stmt|;
-name|default_value
+name|defaultValue
 operator|=
 name|ElementValue
 operator|.
@@ -156,7 +156,7 @@ argument_list|)
 expr_stmt|;
 name|this
 operator|.
-name|default_value
+name|defaultValue
 operator|=
 name|defaultValue
 expr_stmt|;
@@ -192,7 +192,9 @@ name|ElementValue
 name|defaultValue
 parameter_list|)
 block|{
-name|default_value
+name|this
+operator|.
+name|defaultValue
 operator|=
 name|defaultValue
 expr_stmt|;
@@ -205,7 +207,7 @@ name|getDefaultValue
 parameter_list|()
 block|{
 return|return
-name|default_value
+name|defaultValue
 return|;
 block|}
 annotation|@
@@ -248,7 +250,7 @@ argument_list|(
 name|dos
 argument_list|)
 expr_stmt|;
-name|default_value
+name|defaultValue
 operator|.
 name|dump
 argument_list|(

@@ -71,12 +71,12 @@ block|{
 comment|/** Index of the CONSTANT_Utf8_info structure in the constant_pool table representing the name of the parameter */
 specifier|private
 name|int
-name|name_index
+name|nameIndex
 decl_stmt|;
 comment|/** The access flags */
 specifier|private
 name|int
-name|access_flags
+name|accessFlags
 decl_stmt|;
 specifier|public
 name|MethodParameter
@@ -93,14 +93,14 @@ parameter_list|)
 throws|throws
 name|IOException
 block|{
-name|name_index
+name|nameIndex
 operator|=
 name|input
 operator|.
 name|readUnsignedShort
 argument_list|()
 expr_stmt|;
-name|access_flags
+name|accessFlags
 operator|=
 name|input
 operator|.
@@ -114,7 +114,7 @@ name|getNameIndex
 parameter_list|()
 block|{
 return|return
-name|name_index
+name|nameIndex
 return|;
 block|}
 specifier|public
@@ -128,7 +128,7 @@ parameter_list|)
 block|{
 name|this
 operator|.
-name|name_index
+name|nameIndex
 operator|=
 name|name_index
 expr_stmt|;
@@ -145,7 +145,7 @@ parameter_list|)
 block|{
 if|if
 condition|(
-name|name_index
+name|nameIndex
 operator|==
 literal|0
 condition|)
@@ -163,7 +163,7 @@ name|constant_pool
 operator|.
 name|getConstant
 argument_list|(
-name|name_index
+name|nameIndex
 argument_list|,
 name|Const
 operator|.
@@ -181,7 +181,7 @@ name|getAccessFlags
 parameter_list|()
 block|{
 return|return
-name|access_flags
+name|accessFlags
 return|;
 block|}
 specifier|public
@@ -195,7 +195,7 @@ parameter_list|)
 block|{
 name|this
 operator|.
-name|access_flags
+name|accessFlags
 operator|=
 name|access_flags
 expr_stmt|;
@@ -207,7 +207,7 @@ parameter_list|()
 block|{
 return|return
 operator|(
-name|access_flags
+name|accessFlags
 operator|&
 name|Const
 operator|.
@@ -224,7 +224,7 @@ parameter_list|()
 block|{
 return|return
 operator|(
-name|access_flags
+name|accessFlags
 operator|&
 name|Const
 operator|.
@@ -241,7 +241,7 @@ parameter_list|()
 block|{
 return|return
 operator|(
-name|access_flags
+name|accessFlags
 operator|&
 name|Const
 operator|.
@@ -285,14 +285,14 @@ name|file
 operator|.
 name|writeShort
 argument_list|(
-name|name_index
+name|nameIndex
 argument_list|)
 expr_stmt|;
 name|file
 operator|.
 name|writeShort
 argument_list|(
-name|access_flags
+name|accessFlags
 argument_list|)
 expr_stmt|;
 block|}

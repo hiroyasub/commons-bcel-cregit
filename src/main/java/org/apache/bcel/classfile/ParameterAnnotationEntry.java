@@ -90,7 +90,7 @@ specifier|private
 specifier|final
 name|AnnotationEntry
 index|[]
-name|annotation_table
+name|annotationTable
 decl_stmt|;
 comment|/**      * Construct object from input stream.      *      * @param input Input stream      * @throws IOException      */
 name|ParameterAnnotationEntry
@@ -115,7 +115,7 @@ operator|.
 name|readUnsignedShort
 argument_list|()
 decl_stmt|;
-name|annotation_table
+name|annotationTable
 operator|=
 operator|new
 name|AnnotationEntry
@@ -139,7 +139,7 @@ operator|++
 control|)
 block|{
 comment|// TODO isRuntimeVisible
-name|annotation_table
+name|annotationTable
 index|[
 name|i
 index|]
@@ -185,7 +185,7 @@ name|getAnnotationEntries
 parameter_list|()
 block|{
 return|return
-name|annotation_table
+name|annotationTable
 return|;
 block|}
 specifier|public
@@ -203,7 +203,7 @@ name|dos
 operator|.
 name|writeShort
 argument_list|(
-name|annotation_table
+name|annotationTable
 operator|.
 name|length
 argument_list|)
@@ -214,7 +214,7 @@ specifier|final
 name|AnnotationEntry
 name|entry
 range|:
-name|annotation_table
+name|annotationTable
 control|)
 block|{
 name|entry

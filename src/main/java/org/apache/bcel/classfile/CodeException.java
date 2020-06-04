@@ -87,22 +87,22 @@ name|Constants
 block|{
 specifier|private
 name|int
-name|start_pc
+name|startPc
 decl_stmt|;
 comment|// Range in the code the exception handler is
 specifier|private
 name|int
-name|end_pc
+name|endPc
 decl_stmt|;
-comment|// active. start_pc is inclusive, end_pc exclusive
+comment|// active. startPc is inclusive, endPc exclusive
 specifier|private
 name|int
-name|handler_pc
+name|handlerPc
 decl_stmt|;
 comment|/* Starting address of exception handler, i.e.,      * an offset from start of code.      */
 specifier|private
 name|int
-name|catch_type
+name|catchType
 decl_stmt|;
 comment|/* If this is zero the handler catches any      * exception, otherwise it points to the      * exception class which is to be caught.      */
 comment|/**      * Initialize from another object.      */
@@ -172,7 +172,7 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * @param start_pc Range in the code the exception handler is active,      * start_pc is inclusive while      * @param end_pc is exclusive      * @param handler_pc Starting address of exception handler, i.e.,      * an offset from start of code.      * @param catch_type If zero the handler catches any      * exception, otherwise it points to the exception class which is      * to be caught.      */
+comment|/**      * @param startPc Range in the code the exception handler is active,      * startPc is inclusive while      * @param endPc is exclusive      * @param handlerPc Starting address of exception handler, i.e.,      * an offset from start of code.      * @param catchType If zero the handler catches any      * exception, otherwise it points to the exception class which is      * to be caught.      */
 specifier|public
 name|CodeException
 parameter_list|(
@@ -195,25 +195,25 @@ parameter_list|)
 block|{
 name|this
 operator|.
-name|start_pc
+name|startPc
 operator|=
 name|start_pc
 expr_stmt|;
 name|this
 operator|.
-name|end_pc
+name|endPc
 operator|=
 name|end_pc
 expr_stmt|;
 name|this
 operator|.
-name|handler_pc
+name|handlerPc
 operator|=
 name|handler_pc
 expr_stmt|;
 name|this
 operator|.
-name|catch_type
+name|catchType
 operator|=
 name|catch_type
 expr_stmt|;
@@ -254,28 +254,28 @@ name|file
 operator|.
 name|writeShort
 argument_list|(
-name|start_pc
+name|startPc
 argument_list|)
 expr_stmt|;
 name|file
 operator|.
 name|writeShort
 argument_list|(
-name|end_pc
+name|endPc
 argument_list|)
 expr_stmt|;
 name|file
 operator|.
 name|writeShort
 argument_list|(
-name|handler_pc
+name|handlerPc
 argument_list|)
 expr_stmt|;
 name|file
 operator|.
 name|writeShort
 argument_list|(
-name|catch_type
+name|catchType
 argument_list|)
 expr_stmt|;
 block|}
@@ -286,7 +286,7 @@ name|getCatchType
 parameter_list|()
 block|{
 return|return
-name|catch_type
+name|catchType
 return|;
 block|}
 comment|/**      * @return Exclusive end index of the region where the handler is active.      */
@@ -296,7 +296,7 @@ name|getEndPC
 parameter_list|()
 block|{
 return|return
-name|end_pc
+name|endPc
 return|;
 block|}
 comment|/**      * @return Starting address of exception handler, relative to the code.      */
@@ -306,7 +306,7 @@ name|getHandlerPC
 parameter_list|()
 block|{
 return|return
-name|handler_pc
+name|handlerPc
 return|;
 block|}
 comment|/**      * @return Inclusive start index of the region where the handler is active.      */
@@ -316,10 +316,10 @@ name|getStartPC
 parameter_list|()
 block|{
 return|return
-name|start_pc
+name|startPc
 return|;
 block|}
-comment|/**      * @param catch_type the type of exception that is caught      */
+comment|/**      * @param catchType the type of exception that is caught      */
 specifier|public
 name|void
 name|setCatchType
@@ -331,12 +331,12 @@ parameter_list|)
 block|{
 name|this
 operator|.
-name|catch_type
+name|catchType
 operator|=
 name|catch_type
 expr_stmt|;
 block|}
-comment|/**      * @param end_pc end of handled block      */
+comment|/**      * @param endPc end of handled block      */
 specifier|public
 name|void
 name|setEndPC
@@ -348,12 +348,12 @@ parameter_list|)
 block|{
 name|this
 operator|.
-name|end_pc
+name|endPc
 operator|=
 name|end_pc
 expr_stmt|;
 block|}
-comment|/**      * @param handler_pc where the actual code is      */
+comment|/**      * @param handlerPc where the actual code is      */
 specifier|public
 name|void
 name|setHandlerPC
@@ -366,12 +366,12 @@ block|{
 comment|// TODO unused
 name|this
 operator|.
-name|handler_pc
+name|handlerPc
 operator|=
 name|handler_pc
 expr_stmt|;
 block|}
-comment|/**      * @param start_pc start of handled block      */
+comment|/**      * @param startPc start of handled block      */
 specifier|public
 name|void
 name|setStartPC
@@ -384,7 +384,7 @@ block|{
 comment|// TODO unused
 name|this
 operator|.
-name|start_pc
+name|startPc
 operator|=
 name|start_pc
 expr_stmt|;
@@ -398,21 +398,21 @@ name|toString
 parameter_list|()
 block|{
 return|return
-literal|"CodeException(start_pc = "
+literal|"CodeException(startPc = "
 operator|+
-name|start_pc
+name|startPc
 operator|+
-literal|", end_pc = "
+literal|", endPc = "
 operator|+
-name|end_pc
+name|endPc
 operator|+
-literal|", handler_pc = "
+literal|", handlerPc = "
 operator|+
-name|handler_pc
+name|handlerPc
 operator|+
-literal|", catch_type = "
+literal|", catchType = "
 operator|+
-name|catch_type
+name|catchType
 operator|+
 literal|")"
 return|;
@@ -436,7 +436,7 @@ name|str
 decl_stmt|;
 if|if
 condition|(
-name|catch_type
+name|catchType
 operator|==
 literal|0
 condition|)
@@ -458,7 +458,7 @@ name|cp
 operator|.
 name|getConstantString
 argument_list|(
-name|catch_type
+name|catchType
 argument_list|,
 name|Const
 operator|.
@@ -473,7 +473,7 @@ name|verbose
 condition|?
 literal|"("
 operator|+
-name|catch_type
+name|catchType
 operator|+
 literal|")"
 else|:
@@ -482,15 +482,15 @@ operator|)
 expr_stmt|;
 block|}
 return|return
-name|start_pc
+name|startPc
 operator|+
 literal|"\t"
 operator|+
-name|end_pc
+name|endPc
 operator|+
 literal|"\t"
 operator|+
-name|handler_pc
+name|handlerPc
 operator|+
 literal|"\t"
 operator|+

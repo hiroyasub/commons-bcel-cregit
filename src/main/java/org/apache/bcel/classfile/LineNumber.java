@@ -62,12 +62,12 @@ block|{
 comment|/** Program Counter (PC) corresponds to line */
 specifier|private
 name|short
-name|start_pc
+name|startPc
 decl_stmt|;
 comment|/** number in source file */
 specifier|private
 name|short
-name|line_number
+name|lineNumber
 decl_stmt|;
 comment|/**      * Initialize from another object.      *      * @param c the object to copy      */
 specifier|public
@@ -116,7 +116,7 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * @param start_pc Program Counter (PC) corresponds to      * @param line_number line number in source file      */
+comment|/**      * @param startPc Program Counter (PC) corresponds to      * @param lineNumber line number in source file      */
 specifier|public
 name|LineNumber
 parameter_list|(
@@ -131,7 +131,7 @@ parameter_list|)
 block|{
 name|this
 operator|.
-name|start_pc
+name|startPc
 operator|=
 operator|(
 name|short
@@ -140,7 +140,7 @@ name|start_pc
 expr_stmt|;
 name|this
 operator|.
-name|line_number
+name|lineNumber
 operator|=
 operator|(
 name|short
@@ -184,14 +184,14 @@ name|file
 operator|.
 name|writeShort
 argument_list|(
-name|start_pc
+name|startPc
 argument_list|)
 expr_stmt|;
 name|file
 operator|.
 name|writeShort
 argument_list|(
-name|line_number
+name|lineNumber
 argument_list|)
 expr_stmt|;
 block|}
@@ -204,7 +204,7 @@ block|{
 return|return
 literal|0xffff
 operator|&
-name|line_number
+name|lineNumber
 return|;
 block|}
 comment|/**      * @return PC in code      */
@@ -216,10 +216,10 @@ block|{
 return|return
 literal|0xffff
 operator|&
-name|start_pc
+name|startPc
 return|;
 block|}
-comment|/**      * @param line_number the source line number      */
+comment|/**      * @param lineNumber the source line number      */
 specifier|public
 name|void
 name|setLineNumber
@@ -231,7 +231,7 @@ parameter_list|)
 block|{
 name|this
 operator|.
-name|line_number
+name|lineNumber
 operator|=
 operator|(
 name|short
@@ -239,7 +239,7 @@ operator|)
 name|line_number
 expr_stmt|;
 block|}
-comment|/**      * @param start_pc the pc for this line number      */
+comment|/**      * @param startPc the pc for this line number      */
 specifier|public
 name|void
 name|setStartPC
@@ -251,7 +251,7 @@ parameter_list|)
 block|{
 name|this
 operator|.
-name|start_pc
+name|startPc
 operator|=
 operator|(
 name|short
@@ -270,11 +270,11 @@ block|{
 return|return
 literal|"LineNumber("
 operator|+
-name|start_pc
+name|startPc
 operator|+
 literal|", "
 operator|+
-name|line_number
+name|lineNumber
 operator|+
 literal|")"
 return|;

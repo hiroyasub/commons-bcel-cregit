@@ -71,7 +71,7 @@ block|{
 specifier|private
 name|BootstrapMethod
 index|[]
-name|bootstrap_methods
+name|bootstrapMethods
 decl_stmt|;
 comment|// TODO this could be made final (setter is not used)
 comment|/**      * Initialize from another object. Note that both objects use the same      * references (shallow copy). Use clone() for a physical copy.      */
@@ -107,7 +107,7 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * @param name_index Index in constant pool to CONSTANT_Utf8      * @param length Content length in bytes      * @param bootstrap_methods array of bootstrap methods      * @param constant_pool Array of constants      */
+comment|/**      * @param name_index Index in constant pool to CONSTANT_Utf8      * @param length Content length in bytes      * @param bootstrapMethods array of bootstrap methods      * @param constant_pool Array of constants      */
 specifier|public
 name|BootstrapMethods
 parameter_list|(
@@ -144,7 +144,7 @@ argument_list|)
 expr_stmt|;
 name|this
 operator|.
-name|bootstrap_methods
+name|bootstrapMethods
 operator|=
 name|bootstrap_methods
 expr_stmt|;
@@ -195,7 +195,7 @@ operator|.
 name|readUnsignedShort
 argument_list|()
 decl_stmt|;
-name|bootstrap_methods
+name|bootstrapMethods
 operator|=
 operator|new
 name|BootstrapMethod
@@ -218,7 +218,7 @@ name|i
 operator|++
 control|)
 block|{
-name|bootstrap_methods
+name|bootstrapMethods
 index|[
 name|i
 index|]
@@ -240,10 +240,10 @@ name|getBootstrapMethods
 parameter_list|()
 block|{
 return|return
-name|bootstrap_methods
+name|bootstrapMethods
 return|;
 block|}
-comment|/**      * @param bootstrap_methods the array of bootstrap methods      */
+comment|/**      * @param bootstrapMethods the array of bootstrap methods      */
 specifier|public
 specifier|final
 name|void
@@ -257,7 +257,7 @@ parameter_list|)
 block|{
 name|this
 operator|.
-name|bootstrap_methods
+name|bootstrapMethods
 operator|=
 name|bootstrap_methods
 expr_stmt|;
@@ -306,12 +306,12 @@ argument_list|()
 decl_stmt|;
 name|c
 operator|.
-name|bootstrap_methods
+name|bootstrapMethods
 operator|=
 operator|new
 name|BootstrapMethod
 index|[
-name|bootstrap_methods
+name|bootstrapMethods
 operator|.
 name|length
 index|]
@@ -325,7 +325,7 @@ literal|0
 init|;
 name|i
 operator|<
-name|bootstrap_methods
+name|bootstrapMethods
 operator|.
 name|length
 condition|;
@@ -335,12 +335,12 @@ control|)
 block|{
 name|c
 operator|.
-name|bootstrap_methods
+name|bootstrapMethods
 index|[
 name|i
 index|]
 operator|=
-name|bootstrap_methods
+name|bootstrapMethods
 index|[
 name|i
 index|]
@@ -386,7 +386,7 @@ name|file
 operator|.
 name|writeShort
 argument_list|(
-name|bootstrap_methods
+name|bootstrapMethods
 operator|.
 name|length
 argument_list|)
@@ -397,7 +397,7 @@ specifier|final
 name|BootstrapMethod
 name|bootstrap_method
 range|:
-name|bootstrap_methods
+name|bootstrapMethods
 control|)
 block|{
 name|bootstrap_method
@@ -437,7 +437,7 @@ name|buf
 operator|.
 name|append
 argument_list|(
-name|bootstrap_methods
+name|bootstrapMethods
 operator|.
 name|length
 argument_list|)
@@ -458,7 +458,7 @@ literal|0
 init|;
 name|i
 operator|<
-name|bootstrap_methods
+name|bootstrapMethods
 operator|.
 name|length
 condition|;
@@ -516,7 +516,7 @@ index|[]
 name|lines
 init|=
 operator|(
-name|bootstrap_methods
+name|bootstrapMethods
 index|[
 name|i
 index|]

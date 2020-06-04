@@ -60,7 +60,7 @@ block|{
 specifier|private
 name|AnnotationEntry
 index|[]
-name|annotation_table
+name|annotationTable
 decl_stmt|;
 specifier|private
 specifier|final
@@ -125,7 +125,7 @@ operator|.
 name|readUnsignedShort
 argument_list|()
 decl_stmt|;
-name|annotation_table
+name|annotationTable
 operator|=
 operator|new
 name|AnnotationEntry
@@ -148,7 +148,7 @@ name|i
 operator|++
 control|)
 block|{
-name|annotation_table
+name|annotationTable
 index|[
 name|i
 index|]
@@ -166,7 +166,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/**      * @param annotation_type the subclass type of the annotation      * @param name_index Index pointing to the name<em>Code</em>      * @param length Content length in bytes      * @param annotation_table the actual annotations      * @param constant_pool Array of constants      */
+comment|/**      * @param annotation_type the subclass type of the annotation      * @param name_index Index pointing to the name<em>Code</em>      * @param length Content length in bytes      * @param annotationTable the actual annotations      * @param constant_pool Array of constants      */
 specifier|public
 name|Annotations
 parameter_list|(
@@ -209,7 +209,7 @@ argument_list|)
 expr_stmt|;
 name|this
 operator|.
-name|annotation_table
+name|annotationTable
 operator|=
 name|annotation_table
 expr_stmt|;
@@ -240,7 +240,7 @@ name|this
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * @param annotation_table the entries to set in this annotation      */
+comment|/**      * @param annotationTable the entries to set in this annotation      */
 specifier|public
 specifier|final
 name|void
@@ -254,7 +254,7 @@ parameter_list|)
 block|{
 name|this
 operator|.
-name|annotation_table
+name|annotationTable
 operator|=
 name|annotation_table
 expr_stmt|;
@@ -267,7 +267,7 @@ name|getAnnotationEntries
 parameter_list|()
 block|{
 return|return
-name|annotation_table
+name|annotationTable
 return|;
 block|}
 comment|/**      * @return the number of annotation entries in this annotation      */
@@ -279,7 +279,7 @@ parameter_list|()
 block|{
 if|if
 condition|(
-name|annotation_table
+name|annotationTable
 operator|==
 literal|null
 condition|)
@@ -289,7 +289,7 @@ literal|0
 return|;
 block|}
 return|return
-name|annotation_table
+name|annotationTable
 operator|.
 name|length
 return|;
@@ -316,7 +316,7 @@ name|IOException
 block|{
 if|if
 condition|(
-name|annotation_table
+name|annotationTable
 operator|==
 literal|null
 condition|)
@@ -327,7 +327,7 @@ name|dos
 operator|.
 name|writeShort
 argument_list|(
-name|annotation_table
+name|annotationTable
 operator|.
 name|length
 argument_list|)
@@ -338,7 +338,7 @@ specifier|final
 name|AnnotationEntry
 name|element
 range|:
-name|annotation_table
+name|annotationTable
 control|)
 block|{
 name|element
