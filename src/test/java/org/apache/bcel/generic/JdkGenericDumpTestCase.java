@@ -574,7 +574,7 @@ init|)
 block|{
 specifier|final
 name|ClassParser
-name|parser
+name|classParser
 init|=
 operator|new
 name|ClassParser
@@ -592,9 +592,9 @@ argument_list|)
 decl_stmt|;
 specifier|final
 name|JavaClass
-name|jc
+name|javaClass
 init|=
-name|parser
+name|classParser
 operator|.
 name|parse
 argument_list|()
@@ -603,7 +603,7 @@ name|Assert
 operator|.
 name|assertNotNull
 argument_list|(
-name|jc
+name|javaClass
 argument_list|)
 expr_stmt|;
 block|}
@@ -1253,7 +1253,7 @@ name|name
 parameter_list|,
 specifier|final
 name|Method
-name|m
+name|method
 parameter_list|)
 block|{
 comment|// System.out.println("Method: " + m);
@@ -1261,7 +1261,7 @@ specifier|final
 name|Code
 name|code
 init|=
-name|m
+name|method
 operator|.
 name|getCode
 argument_list|()
@@ -1288,7 +1288,7 @@ argument_list|()
 decl_stmt|;
 specifier|final
 name|InstructionList
-name|il
+name|instructionList
 init|=
 operator|new
 name|InstructionList
@@ -1301,7 +1301,7 @@ name|byte
 index|[]
 name|out
 init|=
-name|il
+name|instructionList
 operator|.
 name|getByteCode
 argument_list|()
@@ -1323,7 +1323,7 @@ name|name
 operator|+
 literal|": "
 operator|+
-name|m
+name|method
 operator|.
 name|toString
 argument_list|()
@@ -1346,7 +1346,7 @@ name|name
 operator|+
 literal|": "
 operator|+
-name|m
+name|method
 operator|.
 name|toString
 argument_list|()
@@ -1392,9 +1392,9 @@ for|for
 control|(
 specifier|final
 name|InstructionHandle
-name|ih
+name|instructionHandle
 range|:
-name|il
+name|instructionList
 control|)
 block|{
 name|System
@@ -1403,7 +1403,7 @@ name|out
 operator|.
 name|println
 argument_list|(
-name|ih
+name|instructionHandle
 operator|.
 name|toString
 argument_list|(
