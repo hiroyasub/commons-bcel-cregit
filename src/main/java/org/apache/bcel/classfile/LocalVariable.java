@@ -223,7 +223,7 @@ name|LocalVariable
 parameter_list|(
 specifier|final
 name|int
-name|start_pc
+name|startPc
 parameter_list|,
 specifier|final
 name|int
@@ -231,11 +231,11 @@ name|length
 parameter_list|,
 specifier|final
 name|int
-name|name_index
+name|nameIndex
 parameter_list|,
 specifier|final
 name|int
-name|signature_index
+name|signatureIndex
 parameter_list|,
 specifier|final
 name|int
@@ -243,14 +243,14 @@ name|index
 parameter_list|,
 specifier|final
 name|ConstantPool
-name|constant_pool
+name|constantPool
 parameter_list|)
 block|{
 name|this
 operator|.
 name|startPc
 operator|=
-name|start_pc
+name|startPc
 expr_stmt|;
 name|this
 operator|.
@@ -262,13 +262,13 @@ name|this
 operator|.
 name|nameIndex
 operator|=
-name|name_index
+name|nameIndex
 expr_stmt|;
 name|this
 operator|.
 name|signatureIndex
 operator|=
-name|signature_index
+name|signatureIndex
 expr_stmt|;
 name|this
 operator|.
@@ -280,7 +280,7 @@ name|this
 operator|.
 name|constantPool
 operator|=
-name|constant_pool
+name|constantPool
 expr_stmt|;
 name|this
 operator|.
@@ -295,7 +295,7 @@ name|LocalVariable
 parameter_list|(
 specifier|final
 name|int
-name|start_pc
+name|startPc
 parameter_list|,
 specifier|final
 name|int
@@ -303,11 +303,11 @@ name|length
 parameter_list|,
 specifier|final
 name|int
-name|name_index
+name|nameIndex
 parameter_list|,
 specifier|final
 name|int
-name|signature_index
+name|signatureIndex
 parameter_list|,
 specifier|final
 name|int
@@ -315,18 +315,18 @@ name|index
 parameter_list|,
 specifier|final
 name|ConstantPool
-name|constant_pool
+name|constantPool
 parameter_list|,
 specifier|final
 name|int
-name|orig_index
+name|origIndex
 parameter_list|)
 block|{
 name|this
 operator|.
 name|startPc
 operator|=
-name|start_pc
+name|startPc
 expr_stmt|;
 name|this
 operator|.
@@ -338,13 +338,13 @@ name|this
 operator|.
 name|nameIndex
 operator|=
-name|name_index
+name|nameIndex
 expr_stmt|;
 name|this
 operator|.
 name|signatureIndex
 operator|=
-name|signature_index
+name|signatureIndex
 expr_stmt|;
 name|this
 operator|.
@@ -356,13 +356,13 @@ name|this
 operator|.
 name|constantPool
 operator|=
-name|constant_pool
+name|constantPool
 expr_stmt|;
 name|this
 operator|.
 name|origIndex
 operator|=
-name|orig_index
+name|origIndex
 expr_stmt|;
 block|}
 comment|/**      * Called by objects that are traversing the nodes of the tree implicitely      * defined by the contents of a Java class. I.e., the hierarchy of methods,      * fields, attributes, etc. spawns a tree of objects.      *      * @param v Visitor object      */
@@ -644,14 +644,14 @@ name|setConstantPool
 parameter_list|(
 specifier|final
 name|ConstantPool
-name|constant_pool
+name|constantPool
 parameter_list|)
 block|{
 name|this
 operator|.
 name|constantPool
 operator|=
-name|constant_pool
+name|constantPool
 expr_stmt|;
 block|}
 comment|/**      * @param length the length of this local variable      */
@@ -678,7 +678,7 @@ name|setNameIndex
 parameter_list|(
 specifier|final
 name|int
-name|name_index
+name|nameIndex
 parameter_list|)
 block|{
 comment|// TODO unused
@@ -686,7 +686,7 @@ name|this
 operator|.
 name|nameIndex
 operator|=
-name|name_index
+name|nameIndex
 expr_stmt|;
 block|}
 comment|/**      * @param signatureIndex the index into the constant pool for the signature of this variable      */
@@ -696,7 +696,7 @@ name|setSignatureIndex
 parameter_list|(
 specifier|final
 name|int
-name|signature_index
+name|signatureIndex
 parameter_list|)
 block|{
 comment|// TODO unused
@@ -704,7 +704,7 @@ name|this
 operator|.
 name|signatureIndex
 operator|=
-name|signature_index
+name|signatureIndex
 expr_stmt|;
 block|}
 comment|/**      * @param index the index in the local variable table of this variable      */
@@ -732,7 +732,7 @@ name|setStartPC
 parameter_list|(
 specifier|final
 name|int
-name|start_pc
+name|startPc
 parameter_list|)
 block|{
 comment|// TODO unused
@@ -740,7 +740,7 @@ name|this
 operator|.
 name|startPc
 operator|=
-name|start_pc
+name|startPc
 expr_stmt|;
 block|}
 comment|/**      * @return string representation.      */

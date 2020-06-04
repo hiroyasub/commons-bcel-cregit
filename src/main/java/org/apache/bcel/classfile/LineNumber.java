@@ -122,11 +122,11 @@ name|LineNumber
 parameter_list|(
 specifier|final
 name|int
-name|start_pc
+name|startPc
 parameter_list|,
 specifier|final
 name|int
-name|line_number
+name|lineNumber
 parameter_list|)
 block|{
 name|this
@@ -136,7 +136,7 @@ operator|=
 operator|(
 name|short
 operator|)
-name|start_pc
+name|startPc
 expr_stmt|;
 name|this
 operator|.
@@ -145,7 +145,7 @@ operator|=
 operator|(
 name|short
 operator|)
-name|line_number
+name|lineNumber
 expr_stmt|;
 block|}
 comment|/**      * Called by objects that are traversing the nodes of the tree implicitely      * defined by the contents of a Java class. I.e., the hierarchy of methods,      * fields, attributes, etc. spawns a tree of objects.      *      * @param v Visitor object      */
@@ -226,7 +226,7 @@ name|setLineNumber
 parameter_list|(
 specifier|final
 name|int
-name|line_number
+name|lineNumber
 parameter_list|)
 block|{
 name|this
@@ -236,7 +236,7 @@ operator|=
 operator|(
 name|short
 operator|)
-name|line_number
+name|lineNumber
 expr_stmt|;
 block|}
 comment|/**      * @param startPc the pc for this line number      */
@@ -246,7 +246,7 @@ name|setStartPC
 parameter_list|(
 specifier|final
 name|int
-name|start_pc
+name|startPc
 parameter_list|)
 block|{
 name|this
@@ -256,7 +256,7 @@ operator|=
 operator|(
 name|short
 operator|)
-name|start_pc
+name|startPc
 expr_stmt|;
 block|}
 comment|/**      * @return String representation      */

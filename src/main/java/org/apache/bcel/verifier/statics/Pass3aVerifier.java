@@ -1203,7 +1203,7 @@ name|owner
 parameter_list|,
 specifier|final
 name|int
-name|method_no
+name|methodNo
 parameter_list|)
 block|{
 name|myOwner
@@ -1214,7 +1214,7 @@ name|this
 operator|.
 name|methodNo
 operator|=
-name|method_no
+name|methodNo
 expr_stmt|;
 block|}
 comment|/**      * Pass 3a is the verification of static constraints of      * JVM code (such as legal targets of branch instructions).      * This is the part of pass 3 where you do not need data      * flow analysis.      * JustIce also delays the checks for a correct exception      * table of a Code attribute and correct line number entries      * in a LineNumberTable attribute of a Code attribute (which      * conceptually belong to pass 2) to this pass. Also, most      * of the check for valid local variable entries in a      * LocalVariableTable attribute of a Code attribute is      * delayed until this pass.      * All these checks need access to the code array of the      * Code attribute.      *      * @throws InvalidMethodException if the method to verify does not exist.      */

@@ -587,11 +587,11 @@ parameter_list|,
 specifier|final
 name|Type
 index|[]
-name|arg_types
+name|argTypes
 parameter_list|,
 name|String
 index|[]
-name|arg_names
+name|argNames
 parameter_list|,
 specifier|final
 name|String
@@ -599,7 +599,7 @@ name|method_name
 parameter_list|,
 specifier|final
 name|String
-name|class_name
+name|className
 parameter_list|,
 specifier|final
 name|InstructionList
@@ -622,12 +622,12 @@ argument_list|)
 expr_stmt|;
 name|setArgumentTypes
 argument_list|(
-name|arg_types
+name|argTypes
 argument_list|)
 expr_stmt|;
 name|setArgumentNames
 argument_list|(
-name|arg_names
+name|argNames
 argument_list|)
 expr_stmt|;
 name|setName
@@ -637,7 +637,7 @@ argument_list|)
 expr_stmt|;
 name|setClassName
 argument_list|(
-name|class_name
+name|className
 argument_list|)
 expr_stmt|;
 name|setInstructionList
@@ -693,7 +693,7 @@ name|isStatic
 argument_list|()
 operator|&&
 operator|(
-name|class_name
+name|className
 operator|!=
 literal|null
 operator|)
@@ -708,7 +708,7 @@ name|ObjectType
 operator|.
 name|getInstance
 argument_list|(
-name|class_name
+name|className
 argument_list|)
 argument_list|,
 name|start
@@ -720,7 +720,7 @@ block|}
 block|}
 if|if
 condition|(
-name|arg_types
+name|argTypes
 operator|!=
 literal|null
 condition|)
@@ -729,7 +729,7 @@ specifier|final
 name|int
 name|size
 init|=
-name|arg_types
+name|argTypes
 operator|.
 name|length
 decl_stmt|;
@@ -739,7 +739,7 @@ specifier|final
 name|Type
 name|arg_type
 range|:
-name|arg_types
+name|argTypes
 control|)
 block|{
 if|if
@@ -762,7 +762,7 @@ block|}
 block|}
 if|if
 condition|(
-name|arg_names
+name|argNames
 operator|!=
 literal|null
 condition|)
@@ -772,7 +772,7 @@ if|if
 condition|(
 name|size
 operator|!=
-name|arg_names
+name|argNames
 operator|.
 name|length
 condition|)
@@ -787,7 +787,7 @@ name|size
 operator|+
 literal|" vs. "
 operator|+
-name|arg_names
+name|argNames
 operator|.
 name|length
 argument_list|)
@@ -797,7 +797,7 @@ block|}
 else|else
 block|{
 comment|// Give them dummy names
-name|arg_names
+name|argNames
 operator|=
 operator|new
 name|String
@@ -820,7 +820,7 @@ name|i
 operator|++
 control|)
 block|{
-name|arg_names
+name|argNames
 index|[
 name|i
 index|]
@@ -832,7 +832,7 @@ expr_stmt|;
 block|}
 name|setArgumentNames
 argument_list|(
-name|arg_names
+name|argNames
 argument_list|)
 expr_stmt|;
 block|}
@@ -859,12 +859,12 @@ control|)
 block|{
 name|addLocalVariable
 argument_list|(
-name|arg_names
+name|argNames
 index|[
 name|i
 index|]
 argument_list|,
-name|arg_types
+name|argTypes
 index|[
 name|i
 index|]
@@ -888,7 +888,7 @@ name|method
 parameter_list|,
 specifier|final
 name|String
-name|class_name
+name|className
 parameter_list|,
 specifier|final
 name|ConstantPoolGen
@@ -930,7 +930,7 @@ operator|.
 name|getName
 argument_list|()
 argument_list|,
-name|class_name
+name|className
 argument_list|,
 operator|(
 operator|(
@@ -2022,7 +2022,7 @@ name|ih
 parameter_list|,
 specifier|final
 name|int
-name|src_line
+name|srcLine
 parameter_list|)
 block|{
 specifier|final
@@ -2034,7 +2034,7 @@ name|LineNumberGen
 argument_list|(
 name|ih
 argument_list|,
-name|src_line
+name|srcLine
 argument_list|)
 decl_stmt|;
 name|lineNumberList
@@ -2419,14 +2419,14 @@ name|addException
 parameter_list|(
 specifier|final
 name|String
-name|class_name
+name|className
 parameter_list|)
 block|{
 name|throwsList
 operator|.
 name|add
 argument_list|(
-name|class_name
+name|className
 argument_list|)
 expr_stmt|;
 block|}
@@ -5052,7 +5052,7 @@ name|copy
 parameter_list|(
 specifier|final
 name|String
-name|class_name
+name|className
 parameter_list|,
 specifier|final
 name|ConstantPoolGen
@@ -5083,7 +5083,7 @@ name|MethodGen
 argument_list|(
 name|m
 argument_list|,
-name|class_name
+name|className
 argument_list|,
 name|super
 operator|.

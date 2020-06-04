@@ -327,14 +327,14 @@ parameter_list|(
 specifier|final
 name|LineNumber
 index|[]
-name|line_number_table
+name|lineNumberTable
 parameter_list|)
 block|{
 name|this
 operator|.
 name|lineNumberTable
 operator|=
-name|line_number_table
+name|lineNumberTable
 expr_stmt|;
 block|}
 comment|/**      * @return String representation.      */

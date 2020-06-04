@@ -106,13 +106,13 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * @param name_index Index in constant pool      * @param length Content length in bytes      * @param hostClassIndex Host class index      * @param constant_pool Array of constants      */
+comment|/**      * @param nameIndex Index in constant pool      * @param length Content length in bytes      * @param hostClassIndex Host class index      * @param constantPool Array of constants      */
 specifier|public
 name|NestHost
 parameter_list|(
 specifier|final
 name|int
-name|name_index
+name|nameIndex
 parameter_list|,
 specifier|final
 name|int
@@ -120,11 +120,11 @@ name|length
 parameter_list|,
 specifier|final
 name|int
-name|host_class_index
+name|hostClassIndex
 parameter_list|,
 specifier|final
 name|ConstantPool
-name|constant_pool
+name|constantPool
 parameter_list|)
 block|{
 name|super
@@ -133,18 +133,18 @@ name|Const
 operator|.
 name|ATTR_NEST_MEMBERS
 argument_list|,
-name|name_index
+name|nameIndex
 argument_list|,
 name|length
 argument_list|,
-name|constant_pool
+name|constantPool
 argument_list|)
 expr_stmt|;
 name|this
 operator|.
 name|hostClassIndex
 operator|=
-name|host_class_index
+name|hostClassIndex
 expr_stmt|;
 block|}
 comment|/**      * Constructs object from input stream.      * @param name_index Index in constant pool      * @param length Content length in bytes      * @param input Input stream      * @param constant_pool Array of constants      * @throws IOException      */
@@ -254,14 +254,14 @@ name|setHostClassIndex
 parameter_list|(
 specifier|final
 name|int
-name|host_class_index
+name|hostClassIndex
 parameter_list|)
 block|{
 name|this
 operator|.
 name|hostClassIndex
 operator|=
-name|host_class_index
+name|hostClassIndex
 expr_stmt|;
 block|}
 comment|/**      * @return String representation      */

@@ -107,13 +107,13 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * @param name_index Index in constant pool to `LocalVariableTable'      * @param length Content length in bytes      * @param localVariableTable Table of local variables      * @param constant_pool Array of constants      */
+comment|/**      * @param nameIndex Index in constant pool to `LocalVariableTable'      * @param length Content length in bytes      * @param localVariableTable Table of local variables      * @param constantPool Array of constants      */
 specifier|public
 name|LocalVariableTable
 parameter_list|(
 specifier|final
 name|int
-name|name_index
+name|nameIndex
 parameter_list|,
 specifier|final
 name|int
@@ -122,11 +122,11 @@ parameter_list|,
 specifier|final
 name|LocalVariable
 index|[]
-name|local_variable_table
+name|localVariableTable
 parameter_list|,
 specifier|final
 name|ConstantPool
-name|constant_pool
+name|constantPool
 parameter_list|)
 block|{
 name|super
@@ -135,18 +135,18 @@ name|Const
 operator|.
 name|ATTR_LOCAL_VARIABLE_TABLE
 argument_list|,
-name|name_index
+name|nameIndex
 argument_list|,
 name|length
 argument_list|,
-name|constant_pool
+name|constantPool
 argument_list|)
 expr_stmt|;
 name|this
 operator|.
 name|localVariableTable
 operator|=
-name|local_variable_table
+name|localVariableTable
 expr_stmt|;
 block|}
 comment|/**      * Construct object from input stream.      * @param name_index Index in constant pool      * @param length Content length in bytes      * @param input Input stream      * @param constant_pool Array of constants      * @throws IOException      */

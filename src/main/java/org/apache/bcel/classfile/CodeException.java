@@ -178,44 +178,44 @@ name|CodeException
 parameter_list|(
 specifier|final
 name|int
-name|start_pc
+name|startPc
 parameter_list|,
 specifier|final
 name|int
-name|end_pc
+name|endPc
 parameter_list|,
 specifier|final
 name|int
-name|handler_pc
+name|handlerPc
 parameter_list|,
 specifier|final
 name|int
-name|catch_type
+name|catchType
 parameter_list|)
 block|{
 name|this
 operator|.
 name|startPc
 operator|=
-name|start_pc
+name|startPc
 expr_stmt|;
 name|this
 operator|.
 name|endPc
 operator|=
-name|end_pc
+name|endPc
 expr_stmt|;
 name|this
 operator|.
 name|handlerPc
 operator|=
-name|handler_pc
+name|handlerPc
 expr_stmt|;
 name|this
 operator|.
 name|catchType
 operator|=
-name|catch_type
+name|catchType
 expr_stmt|;
 block|}
 comment|/**      * Called by objects that are traversing the nodes of the tree implicitely      * defined by the contents of a Java class. I.e., the hierarchy of methods,      * fields, attributes, etc. spawns a tree of objects.      *      * @param v Visitor object      */
@@ -326,14 +326,14 @@ name|setCatchType
 parameter_list|(
 specifier|final
 name|int
-name|catch_type
+name|catchType
 parameter_list|)
 block|{
 name|this
 operator|.
 name|catchType
 operator|=
-name|catch_type
+name|catchType
 expr_stmt|;
 block|}
 comment|/**      * @param endPc end of handled block      */
@@ -343,14 +343,14 @@ name|setEndPC
 parameter_list|(
 specifier|final
 name|int
-name|end_pc
+name|endPc
 parameter_list|)
 block|{
 name|this
 operator|.
 name|endPc
 operator|=
-name|end_pc
+name|endPc
 expr_stmt|;
 block|}
 comment|/**      * @param handlerPc where the actual code is      */
@@ -360,7 +360,7 @@ name|setHandlerPC
 parameter_list|(
 specifier|final
 name|int
-name|handler_pc
+name|handlerPc
 parameter_list|)
 block|{
 comment|// TODO unused
@@ -368,7 +368,7 @@ name|this
 operator|.
 name|handlerPc
 operator|=
-name|handler_pc
+name|handlerPc
 expr_stmt|;
 block|}
 comment|/**      * @param startPc start of handled block      */
@@ -378,7 +378,7 @@ name|setStartPC
 parameter_list|(
 specifier|final
 name|int
-name|start_pc
+name|startPc
 parameter_list|)
 block|{
 comment|// TODO unused
@@ -386,7 +386,7 @@ name|this
 operator|.
 name|startPc
 operator|=
-name|start_pc
+name|startPc
 expr_stmt|;
 block|}
 comment|/**      * @return String representation.      */

@@ -157,7 +157,7 @@ name|length
 parameter_list|,
 specifier|final
 name|int
-name|constantvalue_index
+name|constantValueIndex
 parameter_list|,
 specifier|final
 name|ConstantPool
@@ -181,7 +181,7 @@ name|this
 operator|.
 name|constantValueIndex
 operator|=
-name|constantvalue_index
+name|constantValueIndex
 expr_stmt|;
 block|}
 comment|/**      * Called by objects that are traversing the nodes of the tree implicitely      * defined by the contents of a Java class. I.e., the hierarchy of methods,      * fields, attributes, etc. spawns a tree of objects.      *      * @param v Visitor object      */
@@ -250,14 +250,14 @@ name|setConstantValueIndex
 parameter_list|(
 specifier|final
 name|int
-name|constantvalue_index
+name|constantValueIndex
 parameter_list|)
 block|{
 name|this
 operator|.
 name|constantValueIndex
 operator|=
-name|constantvalue_index
+name|constantValueIndex
 expr_stmt|;
 block|}
 comment|/**      * @return String representation of constant value.      */

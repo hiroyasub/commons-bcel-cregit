@@ -123,7 +123,7 @@ parameter_list|,
 specifier|final
 name|int
 index|[]
-name|exception_index_table
+name|exceptionIndexTable
 parameter_list|,
 specifier|final
 name|ConstantPool
@@ -147,11 +147,11 @@ name|this
 operator|.
 name|exceptionIndexTable
 operator|=
-name|exception_index_table
+name|exceptionIndexTable
 operator|!=
 literal|null
 condition|?
-name|exception_index_table
+name|exceptionIndexTable
 else|:
 operator|new
 name|int
@@ -160,12 +160,12 @@ literal|0
 index|]
 expr_stmt|;
 block|}
-comment|/**      * Construct object from input stream.      * @param name_index Index in constant pool      * @param length Content length in bytes      * @param input Input stream      * @param constant_pool Array of constants      * @throws IOException      */
+comment|/**      * Construct object from input stream.      * @param nameIndex Index in constant pool      * @param length Content length in bytes      * @param input Input stream      * @param constantPool Array of constants      * @throws IOException      */
 name|ExceptionTable
 parameter_list|(
 specifier|final
 name|int
-name|name_index
+name|nameIndex
 parameter_list|,
 specifier|final
 name|int
@@ -177,14 +177,14 @@ name|input
 parameter_list|,
 specifier|final
 name|ConstantPool
-name|constant_pool
+name|constantPool
 parameter_list|)
 throws|throws
 name|IOException
 block|{
 name|this
 argument_list|(
-name|name_index
+name|nameIndex
 argument_list|,
 name|length
 argument_list|,
@@ -194,7 +194,7 @@ index|[]
 operator|)
 literal|null
 argument_list|,
-name|constant_pool
+name|constantPool
 argument_list|)
 expr_stmt|;
 specifier|final
@@ -417,18 +417,18 @@ parameter_list|(
 specifier|final
 name|int
 index|[]
-name|exception_index_table
+name|exceptionIndexTable
 parameter_list|)
 block|{
 name|this
 operator|.
 name|exceptionIndexTable
 operator|=
-name|exception_index_table
+name|exceptionIndexTable
 operator|!=
 literal|null
 condition|?
-name|exception_index_table
+name|exceptionIndexTable
 else|:
 operator|new
 name|int

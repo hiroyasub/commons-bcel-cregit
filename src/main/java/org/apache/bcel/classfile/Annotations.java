@@ -166,17 +166,17 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/**      * @param annotation_type the subclass type of the annotation      * @param name_index Index pointing to the name<em>Code</em>      * @param length Content length in bytes      * @param annotationTable the actual annotations      * @param constant_pool Array of constants      */
+comment|/**      * @param annotationType the subclass type of the annotation      * @param nameIndex Index pointing to the name<em>Code</em>      * @param length Content length in bytes      * @param annotationTable the actual annotations      * @param constantPool Array of constants      */
 specifier|public
 name|Annotations
 parameter_list|(
 specifier|final
 name|byte
-name|annotation_type
+name|annotationType
 parameter_list|,
 specifier|final
 name|int
-name|name_index
+name|nameIndex
 parameter_list|,
 specifier|final
 name|int
@@ -185,11 +185,11 @@ parameter_list|,
 specifier|final
 name|AnnotationEntry
 index|[]
-name|annotation_table
+name|annotationTable
 parameter_list|,
 specifier|final
 name|ConstantPool
-name|constant_pool
+name|constantPool
 parameter_list|,
 specifier|final
 name|boolean
@@ -198,20 +198,20 @@ parameter_list|)
 block|{
 name|super
 argument_list|(
-name|annotation_type
+name|annotationType
 argument_list|,
-name|name_index
+name|nameIndex
 argument_list|,
 name|length
 argument_list|,
-name|constant_pool
+name|constantPool
 argument_list|)
 expr_stmt|;
 name|this
 operator|.
 name|annotationTable
 operator|=
-name|annotation_table
+name|annotationTable
 expr_stmt|;
 name|this
 operator|.
@@ -249,14 +249,14 @@ parameter_list|(
 specifier|final
 name|AnnotationEntry
 index|[]
-name|annotation_table
+name|annotationTable
 parameter_list|)
 block|{
 name|this
 operator|.
 name|annotationTable
 operator|=
-name|annotation_table
+name|annotationTable
 expr_stmt|;
 block|}
 comment|/**      * returns the array of annotation entries in this annotation      */

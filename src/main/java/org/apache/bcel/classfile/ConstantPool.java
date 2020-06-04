@@ -82,14 +82,14 @@ parameter_list|(
 specifier|final
 name|Constant
 index|[]
-name|constant_pool
+name|constantPool
 parameter_list|)
 block|{
 name|this
 operator|.
 name|constantPool
 operator|=
-name|constant_pool
+name|constantPool
 expr_stmt|;
 block|}
 comment|/**      * Reads constants from given input stream.      *      * @param input Input stream      * @throws IOException      * @throws ClassFormatException      */
@@ -1336,14 +1336,14 @@ parameter_list|(
 specifier|final
 name|Constant
 index|[]
-name|constant_pool
+name|constantPool
 parameter_list|)
 block|{
 name|this
 operator|.
 name|constantPool
 operator|=
-name|constant_pool
+name|constantPool
 expr_stmt|;
 block|}
 comment|/**      * @return String representation.      */

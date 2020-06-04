@@ -205,14 +205,14 @@ name|inputStream
 parameter_list|,
 specifier|final
 name|String
-name|file_name
+name|fileName
 parameter_list|)
 block|{
 name|this
 operator|.
 name|fileName
 operator|=
-name|file_name
+name|fileName
 expr_stmt|;
 name|fileOwned
 operator|=
@@ -290,7 +290,7 @@ name|ClassParser
 parameter_list|(
 specifier|final
 name|String
-name|file_name
+name|fileName
 parameter_list|)
 block|{
 name|isZip
@@ -301,7 +301,7 @@ name|this
 operator|.
 name|fileName
 operator|=
-name|file_name
+name|fileName
 expr_stmt|;
 name|fileOwned
 operator|=
@@ -314,11 +314,11 @@ name|ClassParser
 parameter_list|(
 specifier|final
 name|String
-name|zip_file
+name|zipFile
 parameter_list|,
 specifier|final
 name|String
-name|file_name
+name|fileName
 parameter_list|)
 block|{
 name|isZip
@@ -333,13 +333,13 @@ name|this
 operator|.
 name|zipFile
 operator|=
-name|zip_file
+name|zipFile
 expr_stmt|;
 name|this
 operator|.
 name|fileName
 operator|=
-name|file_name
+name|fileName
 expr_stmt|;
 block|}
 comment|/**      * Parses the given Java class file and return an object that represents      * the contained data, i.e., constants, methods, fields and commands.      * A<em>ClassFormatException</em> is raised, if the file is not a valid      * .class file. (This does not include verification of the byte code as it      * is performed by the java interpreter).      *      * @return Class object representing the parsed class file      * @throws  IOException      * @throws  ClassFormatException      */

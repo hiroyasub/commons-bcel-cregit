@@ -153,17 +153,17 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/**      * @param parameter_annotation_type the subclass type of the parameter annotation      * @param name_index Index pointing to the name<em>Code</em>      * @param length Content length in bytes      * @param parameterAnnotationTable the actual parameter annotations      * @param constant_pool Array of constants      */
+comment|/**      * @param parameterAnnotationType the subclass type of the parameter annotation      * @param nameIndex Index pointing to the name<em>Code</em>      * @param length Content length in bytes      * @param parameterAnnotationTable the actual parameter annotations      * @param constantPool Array of constants      */
 specifier|public
 name|ParameterAnnotations
 parameter_list|(
 specifier|final
 name|byte
-name|parameter_annotation_type
+name|parameterAnnotationType
 parameter_list|,
 specifier|final
 name|int
-name|name_index
+name|nameIndex
 parameter_list|,
 specifier|final
 name|int
@@ -172,29 +172,29 @@ parameter_list|,
 specifier|final
 name|ParameterAnnotationEntry
 index|[]
-name|parameter_annotation_table
+name|parameterAnnotationTable
 parameter_list|,
 specifier|final
 name|ConstantPool
-name|constant_pool
+name|constantPool
 parameter_list|)
 block|{
 name|super
 argument_list|(
-name|parameter_annotation_type
+name|parameterAnnotationType
 argument_list|,
-name|name_index
+name|nameIndex
 argument_list|,
 name|length
 argument_list|,
-name|constant_pool
+name|constantPool
 argument_list|)
 expr_stmt|;
 name|this
 operator|.
 name|parameterAnnotationTable
 operator|=
-name|parameter_annotation_table
+name|parameterAnnotationTable
 expr_stmt|;
 block|}
 comment|/**      * Called by objects that are traversing the nodes of the tree implicitely      * defined by the contents of a Java class. I.e., the hierarchy of methods,      * fields, attributes, etc. spawns a tree of objects.      *      * @param v Visitor object      */
@@ -226,14 +226,14 @@ parameter_list|(
 specifier|final
 name|ParameterAnnotationEntry
 index|[]
-name|parameter_annotation_table
+name|parameterAnnotationTable
 parameter_list|)
 block|{
 name|this
 operator|.
 name|parameterAnnotationTable
 operator|=
-name|parameter_annotation_table
+name|parameterAnnotationTable
 expr_stmt|;
 block|}
 comment|/**      * @return the parameter annotation entry table      */

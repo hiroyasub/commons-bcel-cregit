@@ -261,14 +261,14 @@ name|setSignatureIndex
 parameter_list|(
 specifier|final
 name|int
-name|signature_index
+name|signatureIndex
 parameter_list|)
 block|{
 name|this
 operator|.
 name|signatureIndex
 operator|=
-name|signature_index
+name|signatureIndex
 expr_stmt|;
 block|}
 comment|/**      * @return GJ signature.      */

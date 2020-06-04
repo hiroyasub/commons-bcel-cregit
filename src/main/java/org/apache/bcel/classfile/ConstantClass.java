@@ -119,7 +119,7 @@ name|ConstantClass
 parameter_list|(
 specifier|final
 name|int
-name|name_index
+name|nameIndex
 parameter_list|)
 block|{
 name|super
@@ -133,7 +133,7 @@ name|this
 operator|.
 name|nameIndex
 operator|=
-name|name_index
+name|nameIndex
 expr_stmt|;
 block|}
 comment|/**      * Called by objects that are traversing the nodes of the tree implicitely      * defined by the contents of a Java class. I.e., the hierarchy of methods,      * fields, attributes, etc. spawns a tree of objects.      *      * @param v Visitor object      */
@@ -205,14 +205,14 @@ name|setNameIndex
 parameter_list|(
 specifier|final
 name|int
-name|name_index
+name|nameIndex
 parameter_list|)
 block|{
 name|this
 operator|.
 name|nameIndex
 operator|=
-name|name_index
+name|nameIndex
 expr_stmt|;
 block|}
 comment|/** @return String object      */

@@ -337,7 +337,7 @@ name|length
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * @param name_index Index pointing to the name<em>Code</em>      * @param length Content length in bytes      * @param maxStack Maximum size of stack      * @param maxLocals Number of local variables      * @param code Actual byte code      * @param exceptionTable Table of handled exceptions      * @param attributes Attributes of code: LineNumber or LocalVariable      * @param constant_pool Array of constants      */
+comment|/**      * @param name_index Index pointing to the name<em>Code</em>      * @param length Content length in bytes      * @param maxStack Maximum size of stack      * @param maxLocals Number of local variables      * @param code Actual byte code      * @param exceptionTable of handled exceptions      * @param attributes Attributes of code: LineNumber or LocalVariable      * @param constant_pool Array of constants      */
 specifier|public
 name|Code
 parameter_list|(
@@ -351,11 +351,11 @@ name|length
 parameter_list|,
 specifier|final
 name|int
-name|max_stack
+name|maxStack
 parameter_list|,
 specifier|final
 name|int
-name|max_locals
+name|maxLocals
 parameter_list|,
 specifier|final
 name|byte
@@ -365,7 +365,7 @@ parameter_list|,
 specifier|final
 name|CodeException
 index|[]
-name|exception_table
+name|exceptionTable
 parameter_list|,
 specifier|final
 name|Attribute
@@ -394,13 +394,13 @@ name|this
 operator|.
 name|maxStack
 operator|=
-name|max_stack
+name|maxStack
 expr_stmt|;
 name|this
 operator|.
 name|maxLocals
 operator|=
-name|max_locals
+name|maxLocals
 expr_stmt|;
 name|this
 operator|.
@@ -422,11 +422,11 @@ name|this
 operator|.
 name|exceptionTable
 operator|=
-name|exception_table
+name|exceptionTable
 operator|!=
 literal|null
 condition|?
-name|exception_table
+name|exceptionTable
 else|:
 operator|new
 name|CodeException
@@ -882,18 +882,18 @@ parameter_list|(
 specifier|final
 name|CodeException
 index|[]
-name|exception_table
+name|exceptionTable
 parameter_list|)
 block|{
 name|this
 operator|.
 name|exceptionTable
 operator|=
-name|exception_table
+name|exceptionTable
 operator|!=
 literal|null
 condition|?
-name|exception_table
+name|exceptionTable
 else|:
 operator|new
 name|CodeException
@@ -918,14 +918,14 @@ name|setMaxLocals
 parameter_list|(
 specifier|final
 name|int
-name|max_locals
+name|maxLocals
 parameter_list|)
 block|{
 name|this
 operator|.
 name|maxLocals
 operator|=
-name|max_locals
+name|maxLocals
 expr_stmt|;
 block|}
 comment|/**      * @param maxStack maximum stack size      */
@@ -935,14 +935,14 @@ name|setMaxStack
 parameter_list|(
 specifier|final
 name|int
-name|max_stack
+name|maxStack
 parameter_list|)
 block|{
 name|this
 operator|.
 name|maxStack
 operator|=
-name|max_stack
+name|maxStack
 expr_stmt|;
 block|}
 comment|/**      * @return String representation of code chunk.      */

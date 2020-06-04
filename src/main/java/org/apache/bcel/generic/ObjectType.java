@@ -78,14 +78,14 @@ name|getInstance
 parameter_list|(
 specifier|final
 name|String
-name|class_name
+name|className
 parameter_list|)
 block|{
 return|return
 operator|new
 name|ObjectType
 argument_list|(
-name|class_name
+name|className
 argument_list|)
 return|;
 block|}
@@ -95,7 +95,7 @@ name|ObjectType
 parameter_list|(
 specifier|final
 name|String
-name|class_name
+name|className
 parameter_list|)
 block|{
 name|super
@@ -106,7 +106,7 @@ name|T_REFERENCE
 argument_list|,
 literal|"L"
 operator|+
-name|class_name
+name|className
 operator|.
 name|replace
 argument_list|(
@@ -122,7 +122,7 @@ name|this
 operator|.
 name|className
 operator|=
-name|class_name
+name|className
 operator|.
 name|replace
 argument_list|(

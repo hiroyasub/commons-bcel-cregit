@@ -195,25 +195,25 @@ name|BootstrapMethod
 parameter_list|(
 specifier|final
 name|int
-name|bootstrap_method_ref
+name|bootstrapMethodRef
 parameter_list|,
 specifier|final
 name|int
 index|[]
-name|bootstrap_arguments
+name|bootstrapArguments
 parameter_list|)
 block|{
 name|this
 operator|.
 name|bootstrapMethodRef
 operator|=
-name|bootstrap_method_ref
+name|bootstrapMethodRef
 expr_stmt|;
 name|this
 operator|.
 name|bootstrapArguments
 operator|=
-name|bootstrap_arguments
+name|bootstrapArguments
 expr_stmt|;
 block|}
 comment|/**      * @return index into constant_pool of bootstrap_method      */
@@ -233,14 +233,14 @@ name|setBootstrapMethodRef
 parameter_list|(
 specifier|final
 name|int
-name|bootstrap_method_ref
+name|bootstrapMethodRef
 parameter_list|)
 block|{
 name|this
 operator|.
 name|bootstrapMethodRef
 operator|=
-name|bootstrap_method_ref
+name|bootstrapMethodRef
 expr_stmt|;
 block|}
 comment|/**      * @return int[] of bootstrap_method indices into constant_pool of CONSTANT_[type]_info      */
@@ -274,14 +274,14 @@ parameter_list|(
 specifier|final
 name|int
 index|[]
-name|bootstrap_arguments
+name|bootstrapArguments
 parameter_list|)
 block|{
 name|this
 operator|.
 name|bootstrapArguments
 operator|=
-name|bootstrap_arguments
+name|bootstrapArguments
 expr_stmt|;
 block|}
 comment|/**      * @return String representation.      */
@@ -324,7 +324,7 @@ name|toString
 parameter_list|(
 specifier|final
 name|ConstantPool
-name|constant_pool
+name|constantPool
 parameter_list|)
 block|{
 specifier|final
@@ -340,7 +340,7 @@ name|bootstrap_method_name
 decl_stmt|;
 name|bootstrap_method_name
 operator|=
-name|constant_pool
+name|constantPool
 operator|.
 name|constantToString
 argument_list|(
@@ -423,11 +423,11 @@ name|buf
 operator|.
 name|append
 argument_list|(
-name|constant_pool
+name|constantPool
 operator|.
 name|constantToString
 argument_list|(
-name|constant_pool
+name|constantPool
 operator|.
 name|getConstant
 argument_list|(
