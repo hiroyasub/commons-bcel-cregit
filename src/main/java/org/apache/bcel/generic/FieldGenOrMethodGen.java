@@ -118,7 +118,7 @@ name|List
 argument_list|<
 name|Attribute
 argument_list|>
-name|attribute_vec
+name|attributeList
 init|=
 operator|new
 name|ArrayList
@@ -132,7 +132,7 @@ name|List
 argument_list|<
 name|AnnotationEntryGen
 argument_list|>
-name|annotation_vec
+name|annotationList
 init|=
 operator|new
 name|ArrayList
@@ -279,7 +279,7 @@ name|Attribute
 name|a
 parameter_list|)
 block|{
-name|attribute_vec
+name|attributeList
 operator|.
 name|add
 argument_list|(
@@ -297,7 +297,7 @@ name|AnnotationEntryGen
 name|ag
 parameter_list|)
 block|{
-name|annotation_vec
+name|annotationList
 operator|.
 name|add
 argument_list|(
@@ -315,7 +315,7 @@ name|Attribute
 name|a
 parameter_list|)
 block|{
-name|attribute_vec
+name|attributeList
 operator|.
 name|remove
 argument_list|(
@@ -333,7 +333,7 @@ name|AnnotationEntryGen
 name|ag
 parameter_list|)
 block|{
-name|annotation_vec
+name|annotationList
 operator|.
 name|remove
 argument_list|(
@@ -347,7 +347,7 @@ name|void
 name|removeAttributes
 parameter_list|()
 block|{
-name|attribute_vec
+name|attributeList
 operator|.
 name|clear
 argument_list|()
@@ -359,7 +359,7 @@ name|void
 name|removeAnnotationEntries
 parameter_list|()
 block|{
-name|annotation_vec
+name|annotationList
 operator|.
 name|clear
 argument_list|()
@@ -380,13 +380,13 @@ init|=
 operator|new
 name|Attribute
 index|[
-name|attribute_vec
+name|attributeList
 operator|.
 name|size
 argument_list|()
 index|]
 decl_stmt|;
-name|attribute_vec
+name|attributeList
 operator|.
 name|toArray
 argument_list|(
@@ -411,13 +411,13 @@ init|=
 operator|new
 name|AnnotationEntryGen
 index|[
-name|annotation_vec
+name|annotationList
 operator|.
 name|size
 argument_list|()
 index|]
 decl_stmt|;
-name|annotation_vec
+name|annotationList
 operator|.
 name|toArray
 argument_list|(

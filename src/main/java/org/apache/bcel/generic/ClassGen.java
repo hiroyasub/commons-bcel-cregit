@@ -241,20 +241,20 @@ block|{
 comment|/* Corresponds to the fields found in a JavaClass object.      */
 specifier|private
 name|String
-name|class_name
+name|className
 decl_stmt|;
 specifier|private
 name|String
-name|super_class_name
+name|superClassName
 decl_stmt|;
 specifier|private
 specifier|final
 name|String
-name|file_name
+name|fileName
 decl_stmt|;
 specifier|private
 name|int
-name|class_name_index
+name|classNameIndex
 init|=
 operator|-
 literal|1
@@ -294,7 +294,7 @@ name|List
 argument_list|<
 name|Field
 argument_list|>
-name|field_vec
+name|fieldList
 init|=
 operator|new
 name|ArrayList
@@ -307,7 +307,7 @@ name|List
 argument_list|<
 name|Method
 argument_list|>
-name|method_vec
+name|methodList
 init|=
 operator|new
 name|ArrayList
@@ -320,7 +320,7 @@ name|List
 argument_list|<
 name|Attribute
 argument_list|>
-name|attribute_vec
+name|attributeList
 init|=
 operator|new
 name|ArrayList
@@ -333,7 +333,7 @@ name|List
 argument_list|<
 name|String
 argument_list|>
-name|interface_vec
+name|interfaceList
 init|=
 operator|new
 name|ArrayList
@@ -346,7 +346,7 @@ name|List
 argument_list|<
 name|AnnotationEntryGen
 argument_list|>
-name|annotation_vec
+name|annotationList
 init|=
 operator|new
 name|ArrayList
@@ -356,7 +356,7 @@ decl_stmt|;
 specifier|private
 specifier|static
 name|BCELComparator
-name|_cmp
+name|bcelComparator
 init|=
 operator|new
 name|BCELComparator
@@ -444,7 +444,7 @@ return|;
 block|}
 block|}
 decl_stmt|;
-comment|/** Convenience constructor to set up some important values initially.      *      * @param class_name fully qualified class name      * @param super_class_name fully qualified superclass name      * @param file_name source file name      * @param access_flags access qualifiers      * @param interfaces implemented interfaces      * @param cp constant pool to use      */
+comment|/** Convenience constructor to set up some important values initially.      *      * @param className fully qualified class name      * @param superClassName fully qualified superclass name      * @param fileName source file name      * @param access_flags access qualifiers      * @param interfaces implemented interfaces      * @param cp constant pool to use      */
 specifier|public
 name|ClassGen
 parameter_list|(
@@ -481,19 +481,19 @@ argument_list|)
 expr_stmt|;
 name|this
 operator|.
-name|class_name
+name|className
 operator|=
 name|class_name
 expr_stmt|;
 name|this
 operator|.
-name|super_class_name
+name|superClassName
 operator|=
 name|super_class_name
 expr_stmt|;
 name|this
 operator|.
-name|file_name
+name|fileName
 operator|=
 name|file_name
 expr_stmt|;
@@ -540,7 +540,7 @@ argument_list|)
 argument_list|)
 expr_stmt|;
 block|}
-name|class_name_index
+name|classNameIndex
 operator|=
 name|cp
 operator|.
@@ -582,7 +582,7 @@ expr_stmt|;
 block|}
 block|}
 block|}
-comment|/** Convenience constructor to set up some important values initially.      *      * @param class_name fully qualified class name      * @param super_class_name fully qualified superclass name      * @param file_name source file name      * @param access_flags access qualifiers      * @param interfaces implemented interfaces      */
+comment|/** Convenience constructor to set up some important values initially.      *      * @param className fully qualified class name      * @param superClassName fully qualified superclass name      * @param fileName source file name      * @param access_flags access qualifiers      * @param interfaces implemented interfaces      */
 specifier|public
 name|ClassGen
 parameter_list|(
@@ -643,7 +643,7 @@ name|getAccessFlags
 argument_list|()
 argument_list|)
 expr_stmt|;
-name|class_name_index
+name|classNameIndex
 operator|=
 name|clazz
 operator|.
@@ -657,21 +657,21 @@ operator|.
 name|getSuperclassNameIndex
 argument_list|()
 expr_stmt|;
-name|class_name
+name|className
 operator|=
 name|clazz
 operator|.
 name|getClassName
 argument_list|()
 expr_stmt|;
-name|super_class_name
+name|superClassName
 operator|=
 name|clazz
 operator|.
 name|getSuperclassName
 argument_list|()
 expr_stmt|;
-name|file_name
+name|fileName
 operator|=
 name|clazz
 operator|.
@@ -1035,7 +1035,7 @@ literal|null
 decl_stmt|;
 if|if
 condition|(
-name|annotation_vec
+name|annotationList
 operator|.
 name|isEmpty
 argument_list|()
@@ -1070,7 +1070,7 @@ operator|=
 operator|new
 name|Attribute
 index|[
-name|attribute_vec
+name|attributeList
 operator|.
 name|size
 argument_list|()
@@ -1080,7 +1080,7 @@ operator|.
 name|length
 index|]
 expr_stmt|;
-name|attribute_vec
+name|attributeList
 operator|.
 name|toArray
 argument_list|(
@@ -1097,7 +1097,7 @@ literal|0
 argument_list|,
 name|attributes
 argument_list|,
-name|attribute_vec
+name|attributeList
 operator|.
 name|size
 argument_list|()
@@ -1124,11 +1124,11 @@ return|return
 operator|new
 name|JavaClass
 argument_list|(
-name|class_name_index
+name|classNameIndex
 argument_list|,
 name|superclass_name_index
 argument_list|,
-name|file_name
+name|fileName
 argument_list|,
 name|major
 argument_list|,
@@ -1161,7 +1161,7 @@ name|String
 name|name
 parameter_list|)
 block|{
-name|interface_vec
+name|interfaceList
 operator|.
 name|add
 argument_list|(
@@ -1179,7 +1179,7 @@ name|String
 name|name
 parameter_list|)
 block|{
-name|interface_vec
+name|interfaceList
 operator|.
 name|remove
 argument_list|(
@@ -1253,7 +1253,7 @@ name|Attribute
 name|a
 parameter_list|)
 block|{
-name|attribute_vec
+name|attributeList
 operator|.
 name|add
 argument_list|(
@@ -1270,7 +1270,7 @@ name|AnnotationEntryGen
 name|a
 parameter_list|)
 block|{
-name|annotation_vec
+name|annotationList
 operator|.
 name|add
 argument_list|(
@@ -1288,7 +1288,7 @@ name|Method
 name|m
 parameter_list|)
 block|{
-name|method_vec
+name|methodList
 operator|.
 name|add
 argument_list|(
@@ -1335,7 +1335,7 @@ name|cp
 operator|.
 name|addMethodref
 argument_list|(
-name|super_class_name
+name|superClassName
 argument_list|,
 literal|"<init>"
 argument_list|,
@@ -1374,7 +1374,7 @@ literal|null
 argument_list|,
 literal|"<init>"
 argument_list|,
-name|class_name
+name|className
 argument_list|,
 name|il
 argument_list|,
@@ -1407,7 +1407,7 @@ name|Field
 name|f
 parameter_list|)
 block|{
-name|field_vec
+name|fieldList
 operator|.
 name|add
 argument_list|(
@@ -1425,7 +1425,7 @@ name|f
 parameter_list|)
 block|{
 return|return
-name|field_vec
+name|fieldList
 operator|.
 name|contains
 argument_list|(
@@ -1449,7 +1449,7 @@ specifier|final
 name|Field
 name|f
 range|:
-name|field_vec
+name|fieldList
 control|)
 block|{
 if|if
@@ -1494,7 +1494,7 @@ specifier|final
 name|Method
 name|m
 range|:
-name|method_vec
+name|methodList
 control|)
 block|{
 if|if
@@ -1539,7 +1539,7 @@ name|Attribute
 name|a
 parameter_list|)
 block|{
-name|attribute_vec
+name|attributeList
 operator|.
 name|remove
 argument_list|(
@@ -1557,7 +1557,7 @@ name|Method
 name|m
 parameter_list|)
 block|{
-name|method_vec
+name|methodList
 operator|.
 name|remove
 argument_list|(
@@ -1598,7 +1598,7 @@ specifier|final
 name|int
 name|i
 init|=
-name|method_vec
+name|methodList
 operator|.
 name|indexOf
 argument_list|(
@@ -1612,7 +1612,7 @@ operator|<
 literal|0
 condition|)
 block|{
-name|method_vec
+name|methodList
 operator|.
 name|add
 argument_list|(
@@ -1622,7 +1622,7 @@ expr_stmt|;
 block|}
 else|else
 block|{
-name|method_vec
+name|methodList
 operator|.
 name|set
 argument_list|(
@@ -1666,7 +1666,7 @@ specifier|final
 name|int
 name|i
 init|=
-name|field_vec
+name|fieldList
 operator|.
 name|indexOf
 argument_list|(
@@ -1680,7 +1680,7 @@ operator|<
 literal|0
 condition|)
 block|{
-name|field_vec
+name|fieldList
 operator|.
 name|add
 argument_list|(
@@ -1690,7 +1690,7 @@ expr_stmt|;
 block|}
 else|else
 block|{
-name|field_vec
+name|fieldList
 operator|.
 name|set
 argument_list|(
@@ -1711,7 +1711,7 @@ name|Field
 name|f
 parameter_list|)
 block|{
-name|field_vec
+name|fieldList
 operator|.
 name|remove
 argument_list|(
@@ -1725,7 +1725,7 @@ name|getClassName
 parameter_list|()
 block|{
 return|return
-name|class_name
+name|className
 return|;
 block|}
 specifier|public
@@ -1734,7 +1734,7 @@ name|getSuperclassName
 parameter_list|()
 block|{
 return|return
-name|super_class_name
+name|superClassName
 return|;
 block|}
 specifier|public
@@ -1743,7 +1743,7 @@ name|getFileName
 parameter_list|()
 block|{
 return|return
-name|file_name
+name|fileName
 return|;
 block|}
 specifier|public
@@ -1755,7 +1755,7 @@ name|String
 name|name
 parameter_list|)
 block|{
-name|class_name
+name|className
 operator|=
 name|name
 operator|.
@@ -1766,7 +1766,7 @@ argument_list|,
 literal|'.'
 argument_list|)
 expr_stmt|;
-name|class_name_index
+name|classNameIndex
 operator|=
 name|cp
 operator|.
@@ -1785,7 +1785,7 @@ name|String
 name|name
 parameter_list|)
 block|{
-name|super_class_name
+name|superClassName
 operator|=
 name|name
 operator|.
@@ -1813,14 +1813,14 @@ name|getMethods
 parameter_list|()
 block|{
 return|return
-name|method_vec
+name|methodList
 operator|.
 name|toArray
 argument_list|(
 operator|new
 name|Method
 index|[
-name|method_vec
+name|methodList
 operator|.
 name|size
 argument_list|()
@@ -1838,7 +1838,7 @@ index|[]
 name|methods
 parameter_list|)
 block|{
-name|method_vec
+name|methodList
 operator|.
 name|clear
 argument_list|()
@@ -1872,7 +1872,7 @@ name|int
 name|pos
 parameter_list|)
 block|{
-name|method_vec
+name|methodList
 operator|.
 name|set
 argument_list|(
@@ -1892,7 +1892,7 @@ name|pos
 parameter_list|)
 block|{
 return|return
-name|method_vec
+name|methodList
 operator|.
 name|get
 argument_list|(
@@ -1910,7 +1910,7 @@ specifier|final
 name|int
 name|size
 init|=
-name|interface_vec
+name|interfaceList
 operator|.
 name|size
 argument_list|()
@@ -1926,7 +1926,7 @@ index|[
 name|size
 index|]
 decl_stmt|;
-name|interface_vec
+name|interfaceList
 operator|.
 name|toArray
 argument_list|(
@@ -1947,7 +1947,7 @@ specifier|final
 name|int
 name|size
 init|=
-name|interface_vec
+name|interfaceList
 operator|.
 name|size
 argument_list|()
@@ -1987,7 +1987,7 @@ name|cp
 operator|.
 name|addClass
 argument_list|(
-name|interface_vec
+name|interfaceList
 operator|.
 name|get
 argument_list|(
@@ -2007,14 +2007,14 @@ name|getFields
 parameter_list|()
 block|{
 return|return
-name|field_vec
+name|fieldList
 operator|.
 name|toArray
 argument_list|(
 operator|new
 name|Field
 index|[
-name|field_vec
+name|fieldList
 operator|.
 name|size
 argument_list|()
@@ -2029,14 +2029,14 @@ name|getAttributes
 parameter_list|()
 block|{
 return|return
-name|attribute_vec
+name|attributeList
 operator|.
 name|toArray
 argument_list|(
 operator|new
 name|Attribute
 index|[
-name|attribute_vec
+name|attributeList
 operator|.
 name|size
 argument_list|()
@@ -2052,14 +2052,14 @@ name|getAnnotationEntries
 parameter_list|()
 block|{
 return|return
-name|annotation_vec
+name|annotationList
 operator|.
 name|toArray
 argument_list|(
 operator|new
 name|AnnotationEntryGen
 index|[
-name|annotation_vec
+name|annotationList
 operator|.
 name|size
 argument_list|()
@@ -2101,11 +2101,11 @@ parameter_list|)
 block|{
 name|this
 operator|.
-name|class_name_index
+name|classNameIndex
 operator|=
 name|class_name_index
 expr_stmt|;
-name|class_name
+name|className
 operator|=
 name|cp
 operator|.
@@ -2144,7 +2144,7 @@ name|superclass_name_index
 operator|=
 name|superclass_name_index
 expr_stmt|;
-name|super_class_name
+name|superClassName
 operator|=
 name|cp
 operator|.
@@ -2183,7 +2183,7 @@ name|getClassNameIndex
 parameter_list|()
 block|{
 return|return
-name|class_name_index
+name|classNameIndex
 return|;
 block|}
 specifier|private
@@ -2325,7 +2325,7 @@ name|getComparator
 parameter_list|()
 block|{
 return|return
-name|_cmp
+name|bcelComparator
 return|;
 block|}
 comment|/**      * @param comparator Comparison strategy object      */
@@ -2339,7 +2339,7 @@ name|BCELComparator
 name|comparator
 parameter_list|)
 block|{
-name|_cmp
+name|bcelComparator
 operator|=
 name|comparator
 expr_stmt|;
@@ -2357,7 +2357,7 @@ name|obj
 parameter_list|)
 block|{
 return|return
-name|_cmp
+name|bcelComparator
 operator|.
 name|equals
 argument_list|(
@@ -2376,7 +2376,7 @@ name|hashCode
 parameter_list|()
 block|{
 return|return
-name|_cmp
+name|bcelComparator
 operator|.
 name|hashCode
 argument_list|(

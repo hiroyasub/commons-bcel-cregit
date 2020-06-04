@@ -261,7 +261,7 @@ block|{
 specifier|private
 specifier|final
 name|String
-name|class_name
+name|className
 decl_stmt|;
 comment|// name of current class
 comment|//    private Method[] methods; // Methods to print
@@ -273,17 +273,17 @@ decl_stmt|;
 comment|// file to write to
 specifier|private
 name|BitSet
-name|goto_set
+name|gotoSet
 decl_stmt|;
 specifier|private
 specifier|final
 name|ConstantPool
-name|constant_pool
+name|constantPool
 decl_stmt|;
 specifier|private
 specifier|final
 name|ConstantHTML
-name|constant_html
+name|constantHtml
 decl_stmt|;
 specifier|private
 specifier|static
@@ -320,20 +320,20 @@ name|IOException
 block|{
 name|this
 operator|.
-name|class_name
+name|className
 operator|=
 name|class_name
 expr_stmt|;
 comment|//        this.methods = methods;
 name|this
 operator|.
-name|constant_pool
+name|constantPool
 operator|=
 name|constant_pool
 expr_stmt|;
 name|this
 operator|.
-name|constant_html
+name|constantHtml
 operator|=
 name|constant_html
 expr_stmt|;
@@ -1378,7 +1378,7 @@ init|=
 operator|(
 name|ConstantFieldref
 operator|)
-name|constant_pool
+name|constantPool
 operator|.
 name|getConstant
 argument_list|(
@@ -1398,7 +1398,7 @@ argument_list|()
 expr_stmt|;
 name|name
 operator|=
-name|constant_pool
+name|constantPool
 operator|.
 name|getConstantString
 argument_list|(
@@ -1431,7 +1431,7 @@ specifier|final
 name|String
 name|field_name
 init|=
-name|constant_pool
+name|constantPool
 operator|.
 name|constantToString
 argument_list|(
@@ -1448,7 +1448,7 @@ name|name
 operator|.
 name|equals
 argument_list|(
-name|class_name
+name|className
 argument_list|)
 condition|)
 block|{
@@ -1462,7 +1462,7 @@ argument_list|)
 operator|.
 name|append
 argument_list|(
-name|class_name
+name|className
 argument_list|)
 operator|.
 name|append
@@ -1497,7 +1497,7 @@ name|buf
 operator|.
 name|append
 argument_list|(
-name|constant_html
+name|constantHtml
 operator|.
 name|referenceConstant
 argument_list|(
@@ -1544,7 +1544,7 @@ name|buf
 operator|.
 name|append
 argument_list|(
-name|constant_html
+name|constantHtml
 operator|.
 name|referenceConstant
 argument_list|(
@@ -1622,7 +1622,7 @@ init|=
 operator|(
 name|ConstantInterfaceMethodref
 operator|)
-name|constant_pool
+name|constantPool
 operator|.
 name|getConstant
 argument_list|(
@@ -1686,7 +1686,7 @@ init|=
 operator|(
 name|ConstantInvokeDynamic
 operator|)
-name|constant_pool
+name|constantPool
 operator|.
 name|getConstant
 argument_list|(
@@ -1726,7 +1726,7 @@ init|=
 operator|(
 name|ConstantMethodref
 operator|)
-name|constant_pool
+name|constantPool
 operator|.
 name|getConstant
 argument_list|(
@@ -1767,11 +1767,11 @@ name|Class2HTML
 operator|.
 name|toHTML
 argument_list|(
-name|constant_pool
+name|constantPool
 operator|.
 name|constantToString
 argument_list|(
-name|constant_pool
+name|constantPool
 operator|.
 name|getConstant
 argument_list|(
@@ -1792,7 +1792,7 @@ init|=
 operator|(
 name|ConstantNameAndType
 operator|)
-name|constant_pool
+name|constantPool
 operator|.
 name|getConstant
 argument_list|(
@@ -1805,7 +1805,7 @@ argument_list|)
 decl_stmt|;
 name|signature
 operator|=
-name|constant_pool
+name|constantPool
 operator|.
 name|constantToString
 argument_list|(
@@ -1860,7 +1860,7 @@ argument_list|)
 operator|.
 name|append
 argument_list|(
-name|class_name
+name|className
 argument_list|)
 operator|.
 name|append
@@ -1992,7 +1992,7 @@ argument_list|)
 operator|.
 name|append
 argument_list|(
-name|class_name
+name|className
 argument_list|)
 operator|.
 name|append
@@ -2016,13 +2016,13 @@ name|Class2HTML
 operator|.
 name|toHTML
 argument_list|(
-name|constant_pool
+name|constantPool
 operator|.
 name|constantToString
 argument_list|(
 name|index
 argument_list|,
-name|constant_pool
+name|constantPool
 operator|.
 name|getConstant
 argument_list|(
@@ -2062,7 +2062,7 @@ argument_list|)
 operator|.
 name|append
 argument_list|(
-name|class_name
+name|className
 argument_list|)
 operator|.
 name|append
@@ -2086,13 +2086,13 @@ name|Class2HTML
 operator|.
 name|toHTML
 argument_list|(
-name|constant_pool
+name|constantPool
 operator|.
 name|constantToString
 argument_list|(
 name|index
 argument_list|,
-name|constant_pool
+name|constantPool
 operator|.
 name|getConstant
 argument_list|(
@@ -2128,7 +2128,7 @@ name|buf
 operator|.
 name|append
 argument_list|(
-name|constant_html
+name|constantHtml
 operator|.
 name|referenceConstant
 argument_list|(
@@ -2163,7 +2163,7 @@ name|buf
 operator|.
 name|append
 argument_list|(
-name|constant_html
+name|constantHtml
 operator|.
 name|referenceConstant
 argument_list|(
@@ -2413,7 +2413,7 @@ block|{
 name|int
 name|index
 decl_stmt|;
-name|goto_set
+name|gotoSet
 operator|=
 operator|new
 name|BitSet
@@ -2454,7 +2454,7 @@ range|:
 name|ce
 control|)
 block|{
-name|goto_set
+name|gotoSet
 operator|.
 name|set
 argument_list|(
@@ -2464,7 +2464,7 @@ name|getStartPC
 argument_list|()
 argument_list|)
 expr_stmt|;
-name|goto_set
+name|gotoSet
 operator|.
 name|set
 argument_list|(
@@ -2474,7 +2474,7 @@ name|getEndPC
 argument_list|()
 argument_list|)
 expr_stmt|;
-name|goto_set
+name|gotoSet
 operator|.
 name|set
 argument_list|(
@@ -2561,14 +2561,14 @@ operator|.
 name|getLength
 argument_list|()
 decl_stmt|;
-name|goto_set
+name|gotoSet
 operator|.
 name|set
 argument_list|(
 name|start
 argument_list|)
 expr_stmt|;
-name|goto_set
+name|gotoSet
 operator|.
 name|set
 argument_list|(
@@ -2723,7 +2723,7 @@ name|default_offset
 operator|+=
 name|offset
 expr_stmt|;
-name|goto_set
+name|gotoSet
 operator|.
 name|set
 argument_list|(
@@ -2760,7 +2760,7 @@ operator|.
 name|readInt
 argument_list|()
 expr_stmt|;
-name|goto_set
+name|gotoSet
 operator|.
 name|set
 argument_list|(
@@ -2798,7 +2798,7 @@ name|default_offset
 operator|+=
 name|offset
 expr_stmt|;
-name|goto_set
+name|gotoSet
 operator|.
 name|set
 argument_list|(
@@ -2835,7 +2835,7 @@ operator|.
 name|readInt
 argument_list|()
 expr_stmt|;
-name|goto_set
+name|gotoSet
 operator|.
 name|set
 argument_list|(
@@ -2950,7 +2950,7 @@ argument_list|()
 operator|-
 literal|1
 expr_stmt|;
-name|goto_set
+name|gotoSet
 operator|.
 name|set
 argument_list|(
@@ -2983,7 +2983,7 @@ argument_list|()
 operator|-
 literal|1
 expr_stmt|;
-name|goto_set
+name|gotoSet
 operator|.
 name|set
 argument_list|(
@@ -3147,7 +3147,7 @@ argument_list|)
 operator|+
 literal|"</A>&nbsp<A HREF=\""
 operator|+
-name|class_name
+name|className
 operator|+
 literal|"_methods.html#method"
 operator|+
@@ -3289,7 +3289,7 @@ name|print
 argument_list|(
 literal|"<LI><A HREF=\""
 operator|+
-name|class_name
+name|className
 operator|+
 literal|"_attributes.html#method"
 operator|+
@@ -3405,7 +3405,7 @@ name|print
 argument_list|(
 literal|"<LI><A HREF=\""
 operator|+
-name|class_name
+name|className
 operator|+
 literal|"_attributes.html#"
 operator|+
@@ -3459,7 +3459,7 @@ literal|null
 condition|)
 block|{
 comment|// No code, an abstract method, e.g.
-comment|//System.out.println(name + "\n" + Utility.codeToString(code, constant_pool, 0, -1));
+comment|//System.out.println(name + "\n" + Utility.codeToString(code, constantPool, 0, -1));
 comment|// Print the byte code
 try|try
 init|(
@@ -3544,7 +3544,7 @@ decl_stmt|;
 comment|/*                      * Set an anchor mark if this line is targetted by a goto, jsr, etc. Defining an anchor for every                      * line is very inefficient!                      */
 if|if
 condition|(
-name|goto_set
+name|gotoSet
 operator|.
 name|get
 argument_list|(

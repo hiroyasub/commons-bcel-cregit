@@ -556,7 +556,7 @@ comment|/** The method number to verify. */
 specifier|private
 specifier|final
 name|int
-name|method_no
+name|methodNo
 decl_stmt|;
 comment|/**      * This class should only be instantiated by a Verifier.      *      * @see org.apache.bcel.verifier.Verifier      */
 specifier|public
@@ -577,7 +577,7 @@ name|owner
 expr_stmt|;
 name|this
 operator|.
-name|method_no
+name|methodNo
 operator|=
 name|method_no
 expr_stmt|;
@@ -1724,7 +1724,7 @@ name|myOwner
 operator|.
 name|doPass3a
 argument_list|(
-name|method_no
+name|methodNo
 argument_list|)
 operator|.
 name|equals
@@ -1835,7 +1835,7 @@ operator|.
 name|getMethods
 argument_list|()
 decl_stmt|;
-comment|// Method no "method_no" exists, we ran Pass3a before on it!
+comment|// Method no "methodNo" exists, we ran Pass3a before on it!
 try|try
 block|{
 specifier|final
@@ -1847,7 +1847,7 @@ name|MethodGen
 argument_list|(
 name|methods
 index|[
-name|method_no
+name|methodNo
 index|]
 argument_list|,
 name|myOwner
@@ -2199,7 +2199,7 @@ literal|"Constraint violated in method '"
 operator|+
 name|methods
 index|[
-name|method_no
+name|methodNo
 index|]
 operator|+
 literal|"':\n"
@@ -2270,7 +2270,7 @@ literal|"', method '"
 operator|+
 name|methods
 index|[
-name|method_no
+name|methodNo
 index|]
 operator|+
 literal|"'. Original RuntimeException's stack trace:\n---\n"
@@ -2296,7 +2296,7 @@ name|getMethodNo
 parameter_list|()
 block|{
 return|return
-name|method_no
+name|methodNo
 return|;
 block|}
 block|}

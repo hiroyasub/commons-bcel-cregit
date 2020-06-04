@@ -338,25 +338,25 @@ name|FieldGenOrMethodGen
 block|{
 specifier|private
 name|String
-name|class_name
+name|className
 decl_stmt|;
 specifier|private
 name|Type
 index|[]
-name|arg_types
+name|argTypes
 decl_stmt|;
 specifier|private
 name|String
 index|[]
-name|arg_names
+name|argNames
 decl_stmt|;
 specifier|private
 name|int
-name|max_locals
+name|maxLocals
 decl_stmt|;
 specifier|private
 name|int
-name|max_stack
+name|maxStack
 decl_stmt|;
 specifier|private
 name|InstructionList
@@ -364,11 +364,11 @@ name|il
 decl_stmt|;
 specifier|private
 name|boolean
-name|strip_attributes
+name|stripAttributes
 decl_stmt|;
 specifier|private
 name|LocalVariableTypeTable
-name|local_variable_type_table
+name|localVariableTypeTable
 init|=
 literal|null
 decl_stmt|;
@@ -378,7 +378,7 @@ name|List
 argument_list|<
 name|LocalVariableGen
 argument_list|>
-name|variable_vec
+name|variableList
 init|=
 operator|new
 name|ArrayList
@@ -391,7 +391,7 @@ name|List
 argument_list|<
 name|LineNumberGen
 argument_list|>
-name|line_number_vec
+name|lineNumberList
 init|=
 operator|new
 name|ArrayList
@@ -404,7 +404,7 @@ name|List
 argument_list|<
 name|CodeExceptionGen
 argument_list|>
-name|exception_vec
+name|exceptionList
 init|=
 operator|new
 name|ArrayList
@@ -417,7 +417,7 @@ name|List
 argument_list|<
 name|String
 argument_list|>
-name|throws_vec
+name|throwsList
 init|=
 operator|new
 name|ArrayList
@@ -430,7 +430,7 @@ name|List
 argument_list|<
 name|Attribute
 argument_list|>
-name|code_attrs_vec
+name|codeAttrsList
 init|=
 operator|new
 name|ArrayList
@@ -443,7 +443,7 @@ argument_list|<
 name|AnnotationEntryGen
 argument_list|>
 index|[]
-name|param_annotations
+name|paramAnnotations
 decl_stmt|;
 comment|// Array of lists containing AnnotationGen objects
 specifier|private
@@ -572,7 +572,7 @@ return|;
 block|}
 block|}
 decl_stmt|;
-comment|/**      * Declare method. If the method is non-static the constructor      * automatically declares a local variable `$this' in slot 0. The      * actual code is contained in the `il' parameter, which may further      * manipulated by the user. But he must take care not to remove any      * instruction (handles) that are still referenced from this object.      *      * For example one may not add a local variable and later remove the      * instructions it refers to without causing havoc. It is safe      * however if you remove that local variable, too.      *      * @param access_flags access qualifiers      * @param return_type  method type      * @param arg_types argument types      * @param arg_names argument names (if this is null, default names will be provided      * for them)      * @param method_name name of method      * @param class_name class name containing this method (may be null, if you don't care)      * @param il instruction list associated with this method, may be null only for      * abstract or native methods      * @param cp constant pool      */
+comment|/**      * Declare method. If the method is non-static the constructor      * automatically declares a local variable `$this' in slot 0. The      * actual code is contained in the `il' parameter, which may further      * manipulated by the user. But he must take care not to remove any      * instruction (handles) that are still referenced from this object.      *      * For example one may not add a local variable and later remove the      * instructions it refers to without causing havoc. It is safe      * however if you remove that local variable, too.      *      * @param access_flags access qualifiers      * @param return_type  method type      * @param argTypes argument types      * @param argNames argument names (if this is null, default names will be provided      * for them)      * @param method_name name of method      * @param className class name containing this method (may be null, if you don't care)      * @param il instruction list associated with this method, may be null only for      * abstract or native methods      * @param cp constant pool      */
 specifier|public
 name|MethodGen
 parameter_list|(
@@ -878,7 +878,7 @@ block|}
 block|}
 block|}
 block|}
-comment|/**      * Instantiate from existing method.      *      * @param method method      * @param class_name class name containing this method      * @param cp constant pool      */
+comment|/**      * Instantiate from existing method.      *      * @param method method      * @param className class name containing this method      * @param cp constant pool      */
 specifier|public
 name|MethodGen
 parameter_list|(
@@ -1299,7 +1299,7 @@ condition|)
 block|{
 name|this
 operator|.
-name|local_variable_type_table
+name|localVariableTypeTable
 operator|=
 operator|(
 name|LocalVariableTypeTable
@@ -1535,10 +1535,10 @@ name|slot
 operator|+
 name|add
 operator|>
-name|max_locals
+name|maxLocals
 condition|)
 block|{
-name|max_locals
+name|maxLocals
 operator|=
 name|slot
 operator|+
@@ -1573,7 +1573,7 @@ condition|(
 operator|(
 name|i
 operator|=
-name|variable_vec
+name|variableList
 operator|.
 name|indexOf
 argument_list|(
@@ -1584,7 +1584,7 @@ operator|>=
 literal|0
 condition|)
 block|{
-name|variable_vec
+name|variableList
 operator|.
 name|set
 argument_list|(
@@ -1596,7 +1596,7 @@ expr_stmt|;
 block|}
 else|else
 block|{
-name|variable_vec
+name|variableList
 operator|.
 name|add
 argument_list|(
@@ -1692,7 +1692,7 @@ name|name
 argument_list|,
 name|type
 argument_list|,
-name|max_locals
+name|maxLocals
 argument_list|,
 name|start
 argument_list|,
@@ -1715,7 +1715,7 @@ operator|.
 name|dispose
 argument_list|()
 expr_stmt|;
-name|variable_vec
+name|variableList
 operator|.
 name|remove
 argument_list|(
@@ -1735,7 +1735,7 @@ specifier|final
 name|LocalVariableGen
 name|lv
 range|:
-name|variable_vec
+name|variableList
 control|)
 block|{
 name|lv
@@ -1744,7 +1744,7 @@ name|dispose
 argument_list|()
 expr_stmt|;
 block|}
-name|variable_vec
+name|variableList
 operator|.
 name|clear
 argument_list|()
@@ -1761,7 +1761,7 @@ specifier|final
 name|int
 name|size
 init|=
-name|variable_vec
+name|variableList
 operator|.
 name|size
 argument_list|()
@@ -1777,7 +1777,7 @@ index|[
 name|size
 index|]
 decl_stmt|;
-name|variable_vec
+name|variableList
 operator|.
 name|toArray
 argument_list|(
@@ -2008,7 +2008,7 @@ name|getLocalVariableTypeTable
 parameter_list|()
 block|{
 return|return
-name|local_variable_type_table
+name|localVariableTypeTable
 return|;
 block|}
 comment|/**      * Give an instruction a line number corresponding to the source code line.      *      * @param ih instruction to tag      * @return new line number object      * @see LineNumber      */
@@ -2037,7 +2037,7 @@ argument_list|,
 name|src_line
 argument_list|)
 decl_stmt|;
-name|line_number_vec
+name|lineNumberList
 operator|.
 name|add
 argument_list|(
@@ -2058,7 +2058,7 @@ name|LineNumberGen
 name|l
 parameter_list|)
 block|{
-name|line_number_vec
+name|lineNumberList
 operator|.
 name|remove
 argument_list|(
@@ -2072,7 +2072,7 @@ name|void
 name|removeLineNumbers
 parameter_list|()
 block|{
-name|line_number_vec
+name|lineNumberList
 operator|.
 name|clear
 argument_list|()
@@ -2093,13 +2093,13 @@ init|=
 operator|new
 name|LineNumberGen
 index|[
-name|line_number_vec
+name|lineNumberList
 operator|.
 name|size
 argument_list|()
 index|]
 decl_stmt|;
-name|line_number_vec
+name|lineNumberList
 operator|.
 name|toArray
 argument_list|(
@@ -2124,7 +2124,7 @@ specifier|final
 name|int
 name|size
 init|=
-name|line_number_vec
+name|lineNumberList
 operator|.
 name|size
 argument_list|()
@@ -2160,7 +2160,7 @@ index|[
 name|i
 index|]
 operator|=
-name|line_number_vec
+name|lineNumberList
 operator|.
 name|get
 argument_list|(
@@ -2266,7 +2266,7 @@ argument_list|,
 name|catch_type
 argument_list|)
 decl_stmt|;
-name|exception_vec
+name|exceptionList
 operator|.
 name|add
 argument_list|(
@@ -2287,7 +2287,7 @@ name|CodeExceptionGen
 name|c
 parameter_list|)
 block|{
-name|exception_vec
+name|exceptionList
 operator|.
 name|remove
 argument_list|(
@@ -2301,7 +2301,7 @@ name|void
 name|removeExceptionHandlers
 parameter_list|()
 block|{
-name|exception_vec
+name|exceptionList
 operator|.
 name|clear
 argument_list|()
@@ -2322,13 +2322,13 @@ init|=
 operator|new
 name|CodeExceptionGen
 index|[
-name|exception_vec
+name|exceptionList
 operator|.
 name|size
 argument_list|()
 index|]
 decl_stmt|;
-name|exception_vec
+name|exceptionList
 operator|.
 name|toArray
 argument_list|(
@@ -2350,7 +2350,7 @@ specifier|final
 name|int
 name|size
 init|=
-name|exception_vec
+name|exceptionList
 operator|.
 name|size
 argument_list|()
@@ -2385,7 +2385,7 @@ specifier|final
 name|CodeExceptionGen
 name|c
 init|=
-name|exception_vec
+name|exceptionList
 operator|.
 name|get
 argument_list|(
@@ -2412,7 +2412,7 @@ return|return
 name|c_exc
 return|;
 block|}
-comment|/**      * Add an exception possibly thrown by this method.      *      * @param class_name (fully qualified) name of exception      */
+comment|/**      * Add an exception possibly thrown by this method.      *      * @param className (fully qualified) name of exception      */
 specifier|public
 name|void
 name|addException
@@ -2422,7 +2422,7 @@ name|String
 name|class_name
 parameter_list|)
 block|{
-name|throws_vec
+name|throwsList
 operator|.
 name|add
 argument_list|(
@@ -2440,7 +2440,7 @@ name|String
 name|c
 parameter_list|)
 block|{
-name|throws_vec
+name|throwsList
 operator|.
 name|remove
 argument_list|(
@@ -2454,7 +2454,7 @@ name|void
 name|removeExceptions
 parameter_list|()
 block|{
-name|throws_vec
+name|throwsList
 operator|.
 name|clear
 argument_list|()
@@ -2475,13 +2475,13 @@ init|=
 operator|new
 name|String
 index|[
-name|throws_vec
+name|throwsList
 operator|.
 name|size
 argument_list|()
 index|]
 decl_stmt|;
-name|throws_vec
+name|throwsList
 operator|.
 name|toArray
 argument_list|(
@@ -2506,7 +2506,7 @@ specifier|final
 name|int
 name|size
 init|=
-name|throws_vec
+name|throwsList
 operator|.
 name|size
 argument_list|()
@@ -2546,7 +2546,7 @@ name|cp
 operator|.
 name|addClass
 argument_list|(
-name|throws_vec
+name|throwsList
 operator|.
 name|get
 argument_list|(
@@ -2591,7 +2591,7 @@ name|Attribute
 name|a
 parameter_list|)
 block|{
-name|code_attrs_vec
+name|codeAttrsList
 operator|.
 name|add
 argument_list|(
@@ -2605,7 +2605,7 @@ name|void
 name|removeLocalVariableTypeTable
 parameter_list|( )
 block|{
-name|local_variable_type_table
+name|localVariableTypeTable
 operator|=
 literal|null
 expr_stmt|;
@@ -2620,7 +2620,7 @@ name|Attribute
 name|a
 parameter_list|)
 block|{
-name|code_attrs_vec
+name|codeAttrsList
 operator|.
 name|remove
 argument_list|(
@@ -2634,11 +2634,11 @@ name|void
 name|removeCodeAttributes
 parameter_list|()
 block|{
-name|local_variable_type_table
+name|localVariableTypeTable
 operator|=
 literal|null
 expr_stmt|;
-name|code_attrs_vec
+name|codeAttrsList
 operator|.
 name|clear
 argument_list|()
@@ -2659,13 +2659,13 @@ init|=
 operator|new
 name|Attribute
 index|[
-name|code_attrs_vec
+name|codeAttrsList
 operator|.
 name|size
 argument_list|()
 index|]
 decl_stmt|;
-name|code_attrs_vec
+name|codeAttrsList
 operator|.
 name|toArray
 argument_list|(
@@ -2748,7 +2748,7 @@ name|getParameterAnnotationAttributes
 argument_list|(
 name|cp
 argument_list|,
-name|param_annotations
+name|paramAnnotations
 argument_list|)
 decl_stmt|;
 if|if
@@ -2856,7 +2856,7 @@ name|getParameterAnnotationAttributes
 argument_list|(
 name|cp
 argument_list|,
-name|param_annotations
+name|paramAnnotations
 argument_list|)
 decl_stmt|;
 for|for
@@ -2988,7 +2988,7 @@ comment|/* Create LocalVariableTable and LineNumberTable attributes (for debugge
 if|if
 condition|(
 operator|(
-name|variable_vec
+name|variableList
 operator|.
 name|size
 argument_list|()
@@ -2997,7 +2997,7 @@ literal|0
 operator|)
 operator|&&
 operator|!
-name|strip_attributes
+name|stripAttributes
 condition|)
 block|{
 name|updateLocalVariableTable
@@ -3021,7 +3021,7 @@ expr_stmt|;
 block|}
 if|if
 condition|(
-name|local_variable_type_table
+name|localVariableTypeTable
 operator|!=
 literal|null
 condition|)
@@ -3042,14 +3042,14 @@ expr_stmt|;
 block|}
 name|addCodeAttribute
 argument_list|(
-name|local_variable_type_table
+name|localVariableTypeTable
 argument_list|)
 expr_stmt|;
 block|}
 if|if
 condition|(
 operator|(
-name|line_number_vec
+name|lineNumberList
 operator|.
 name|size
 argument_list|()
@@ -3058,7 +3058,7 @@ literal|0
 operator|)
 operator|&&
 operator|!
-name|strip_attributes
+name|stripAttributes
 condition|)
 block|{
 name|addCodeAttribute
@@ -3207,9 +3207,9 @@ operator|+
 name|attrs_len
 argument_list|,
 comment|// attributes
-name|max_stack
+name|maxStack
 argument_list|,
-name|max_locals
+name|maxLocals
 argument_list|,
 name|byte_code
 argument_list|,
@@ -3256,7 +3256,7 @@ literal|null
 decl_stmt|;
 if|if
 condition|(
-name|throws_vec
+name|throwsList
 operator|.
 name|size
 argument_list|()
@@ -3317,14 +3317,14 @@ expr_stmt|;
 block|}
 if|if
 condition|(
-name|local_variable_type_table
+name|localVariableTypeTable
 operator|!=
 literal|null
 condition|)
 block|{
 name|removeCodeAttribute
 argument_list|(
-name|local_variable_type_table
+name|localVariableTypeTable
 argument_list|)
 expr_stmt|;
 block|}
@@ -3521,7 +3521,7 @@ name|LocalVariable
 index|[]
 name|lvg
 init|=
-name|local_variable_type_table
+name|localVariableTypeTable
 operator|.
 name|getLocalVariableTypeTable
 argument_list|()
@@ -3733,7 +3733,7 @@ name|int
 name|m
 parameter_list|)
 block|{
-name|max_locals
+name|maxLocals
 operator|=
 name|m
 expr_stmt|;
@@ -3744,7 +3744,7 @@ name|getMaxLocals
 parameter_list|()
 block|{
 return|return
-name|max_locals
+name|maxLocals
 return|;
 block|}
 comment|/**      * Set maximum stack size for this method.      */
@@ -3758,7 +3758,7 @@ name|m
 parameter_list|)
 block|{
 comment|// TODO could be package-protected?
-name|max_stack
+name|maxStack
 operator|=
 name|m
 expr_stmt|;
@@ -3769,7 +3769,7 @@ name|getMaxStack
 parameter_list|()
 block|{
 return|return
-name|max_stack
+name|maxStack
 return|;
 block|}
 comment|/** @return class that contains this method      */
@@ -3779,7 +3779,7 @@ name|getClassName
 parameter_list|()
 block|{
 return|return
-name|class_name
+name|className
 return|;
 block|}
 specifier|public
@@ -3794,7 +3794,7 @@ block|{
 comment|// TODO could be package-protected?
 name|this
 operator|.
-name|class_name
+name|className
 operator|=
 name|class_name
 expr_stmt|;
@@ -3836,7 +3836,7 @@ parameter_list|)
 block|{
 name|this
 operator|.
-name|arg_types
+name|argTypes
 operator|=
 name|arg_types
 expr_stmt|;
@@ -3848,7 +3848,7 @@ name|getArgumentTypes
 parameter_list|()
 block|{
 return|return
-name|arg_types
+name|argTypes
 operator|.
 name|clone
 argument_list|()
@@ -3867,7 +3867,7 @@ name|Type
 name|type
 parameter_list|)
 block|{
-name|arg_types
+name|argTypes
 index|[
 name|i
 index|]
@@ -3885,7 +3885,7 @@ name|i
 parameter_list|)
 block|{
 return|return
-name|arg_types
+name|argTypes
 index|[
 name|i
 index|]
@@ -3903,7 +3903,7 @@ parameter_list|)
 block|{
 name|this
 operator|.
-name|arg_names
+name|argNames
 operator|=
 name|arg_names
 expr_stmt|;
@@ -3915,7 +3915,7 @@ name|getArgumentNames
 parameter_list|()
 block|{
 return|return
-name|arg_names
+name|argNames
 operator|.
 name|clone
 argument_list|()
@@ -3934,7 +3934,7 @@ name|String
 name|name
 parameter_list|)
 block|{
-name|arg_names
+name|argNames
 index|[
 name|i
 index|]
@@ -3952,7 +3952,7 @@ name|i
 parameter_list|)
 block|{
 return|return
-name|arg_names
+name|argNames
 index|[
 name|i
 index|]
@@ -4001,7 +4001,7 @@ operator|.
 name|getType
 argument_list|()
 argument_list|,
-name|arg_types
+name|argTypes
 argument_list|)
 return|;
 block|}
@@ -4019,7 +4019,7 @@ operator|!=
 literal|null
 condition|)
 block|{
-name|max_stack
+name|maxStack
 operator|=
 name|getMaxStack
 argument_list|(
@@ -4037,7 +4037,7 @@ expr_stmt|;
 block|}
 else|else
 block|{
-name|max_stack
+name|maxStack
 operator|=
 literal|0
 expr_stmt|;
@@ -4069,7 +4069,7 @@ literal|1
 decl_stmt|;
 if|if
 condition|(
-name|arg_types
+name|argTypes
 operator|!=
 literal|null
 condition|)
@@ -4080,7 +4080,7 @@ specifier|final
 name|Type
 name|arg_type
 range|:
-name|arg_types
+name|argTypes
 control|)
 block|{
 name|max
@@ -4190,14 +4190,14 @@ expr_stmt|;
 block|}
 block|}
 block|}
-name|max_locals
+name|maxLocals
 operator|=
 name|max
 expr_stmt|;
 block|}
 else|else
 block|{
-name|max_locals
+name|maxLocals
 operator|=
 literal|0
 expr_stmt|;
@@ -4213,7 +4213,7 @@ name|boolean
 name|flag
 parameter_list|)
 block|{
-name|strip_attributes
+name|stripAttributes
 operator|=
 name|flag
 expr_stmt|;
@@ -4919,7 +4919,7 @@ operator|.
 name|getType
 argument_list|()
 argument_list|,
-name|arg_types
+name|argTypes
 argument_list|)
 decl_stmt|;
 name|signature
@@ -5007,7 +5007,7 @@ block|}
 block|}
 if|if
 condition|(
-name|throws_vec
+name|throwsList
 operator|.
 name|size
 argument_list|()
@@ -5021,7 +5021,7 @@ specifier|final
 name|String
 name|throwsDescriptor
 range|:
-name|throws_vec
+name|throwsList
 control|)
 block|{
 name|buf
@@ -5128,7 +5128,7 @@ return|return
 name|mg
 return|;
 block|}
-comment|//J5TODO: Should param_annotations be an array of arrays? Rather than an array of lists, this
+comment|//J5TODO: Should paramAnnotations be an array of arrays? Rather than an array of lists, this
 comment|// is more likely to suggest to the caller it is readonly (which a List does not).
 comment|/**      * Return a list of AnnotationGen objects representing parameter annotations      * @since 6.0      */
 specifier|public
@@ -5153,7 +5153,7 @@ name|hasParameterAnnotations
 operator|||
 name|i
 operator|>
-name|arg_types
+name|argTypes
 operator|.
 name|length
 condition|)
@@ -5163,7 +5163,7 @@ literal|null
 return|;
 block|}
 return|return
-name|param_annotations
+name|paramAnnotations
 index|[
 name|i
 index|]
@@ -5217,7 +5217,7 @@ operator|instanceof
 name|ParameterAnnotations
 condition|)
 block|{
-comment|// Initialize param_annotations
+comment|// Initialize paramAnnotations
 if|if
 condition|(
 operator|!
@@ -5241,12 +5241,12 @@ init|=
 operator|new
 name|List
 index|[
-name|arg_types
+name|argTypes
 operator|.
 name|length
 index|]
 decl_stmt|;
-name|param_annotations
+name|paramAnnotations
 operator|=
 name|parmList
 expr_stmt|;
@@ -5259,7 +5259,7 @@ literal|0
 init|;
 name|j
 operator|<
-name|arg_types
+name|argTypes
 operator|.
 name|length
 condition|;
@@ -5267,7 +5267,7 @@ name|j
 operator|++
 control|)
 block|{
-name|param_annotations
+name|paramAnnotations
 index|[
 name|j
 index|]
@@ -5368,7 +5368,7 @@ argument_list|()
 argument_list|)
 decl_stmt|;
 comment|// ... then add these to any we already know about
-name|param_annotations
+name|paramAnnotations
 index|[
 name|j
 index|]
@@ -5506,12 +5506,12 @@ init|=
 operator|new
 name|List
 index|[
-name|arg_types
+name|argTypes
 operator|.
 name|length
 index|]
 decl_stmt|;
-name|param_annotations
+name|paramAnnotations
 operator|=
 name|parmList
 expr_stmt|;
@@ -5527,7 +5527,7 @@ name|AnnotationEntryGen
 argument_list|>
 name|existingAnnotations
 init|=
-name|param_annotations
+name|paramAnnotations
 index|[
 name|parameterIndex
 index|]
@@ -5568,7 +5568,7 @@ argument_list|(
 name|annotation
 argument_list|)
 expr_stmt|;
-name|param_annotations
+name|paramAnnotations
 index|[
 name|parameterIndex
 index|]

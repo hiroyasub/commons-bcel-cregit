@@ -67,7 +67,7 @@ block|{
 specifier|private
 specifier|final
 name|String
-name|class_name
+name|className
 decl_stmt|;
 comment|// Class name of type
 comment|/**      * @since 6.0      */
@@ -89,7 +89,7 @@ name|class_name
 argument_list|)
 return|;
 block|}
-comment|/**      * @param class_name fully qualified class name, e.g. java.lang.String      */
+comment|/**      * @param className fully qualified class name, e.g. java.lang.String      */
 specifier|public
 name|ObjectType
 parameter_list|(
@@ -120,7 +120,7 @@ argument_list|)
 expr_stmt|;
 name|this
 operator|.
-name|class_name
+name|className
 operator|=
 name|class_name
 operator|.
@@ -139,7 +139,7 @@ name|getClassName
 parameter_list|()
 block|{
 return|return
-name|class_name
+name|className
 return|;
 block|}
 comment|/** @return a hash code value for the object.      */
@@ -151,7 +151,7 @@ name|hashCode
 parameter_list|()
 block|{
 return|return
-name|class_name
+name|className
 operator|.
 name|hashCode
 argument_list|()
@@ -183,11 +183,11 @@ operator|)
 name|type
 operator|)
 operator|.
-name|class_name
+name|className
 operator|.
 name|equals
 argument_list|(
-name|class_name
+name|className
 argument_list|)
 else|:
 literal|false
@@ -211,7 +211,7 @@ name|Repository
 operator|.
 name|lookupClass
 argument_list|(
-name|class_name
+name|className
 argument_list|)
 decl_stmt|;
 return|return
@@ -251,7 +251,7 @@ name|Repository
 operator|.
 name|lookupClass
 argument_list|(
-name|class_name
+name|className
 argument_list|)
 decl_stmt|;
 return|return
@@ -290,7 +290,7 @@ name|Repository
 operator|.
 name|lookupClass
 argument_list|(
-name|class_name
+name|className
 argument_list|)
 decl_stmt|;
 return|return
@@ -316,7 +316,7 @@ name|Repository
 operator|.
 name|lookupClass
 argument_list|(
-name|class_name
+name|className
 argument_list|)
 decl_stmt|;
 return|return
@@ -363,11 +363,11 @@ name|instanceOf
 argument_list|(
 name|this
 operator|.
-name|class_name
+name|className
 argument_list|,
 name|superclass
 operator|.
-name|class_name
+name|className
 argument_list|)
 return|;
 block|}
@@ -391,7 +391,7 @@ name|Repository
 operator|.
 name|lookupClass
 argument_list|(
-name|class_name
+name|className
 argument_list|)
 decl_stmt|;
 if|if
@@ -416,7 +416,7 @@ name|lookupClass
 argument_list|(
 name|accessor
 operator|.
-name|class_name
+name|className
 argument_list|)
 decl_stmt|;
 return|return

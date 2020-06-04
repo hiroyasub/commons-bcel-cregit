@@ -83,7 +83,7 @@ argument_list|<
 name|JavaClass
 argument_list|>
 argument_list|>
-name|_loadedClasses
+name|loadedClasses
 init|=
 operator|new
 name|HashMap
@@ -118,7 +118,7 @@ name|clazz
 parameter_list|)
 block|{
 comment|// Not calling super.storeClass because this subclass maintains the mapping.
-name|_loadedClasses
+name|loadedClasses
 operator|.
 name|put
 argument_list|(
@@ -155,7 +155,7 @@ name|JavaClass
 name|clazz
 parameter_list|)
 block|{
-name|_loadedClasses
+name|loadedClasses
 operator|.
 name|remove
 argument_list|(
@@ -185,7 +185,7 @@ name|JavaClass
 argument_list|>
 name|ref
 init|=
-name|_loadedClasses
+name|loadedClasses
 operator|.
 name|get
 argument_list|(
@@ -218,7 +218,7 @@ name|void
 name|clear
 parameter_list|()
 block|{
-name|_loadedClasses
+name|loadedClasses
 operator|.
 name|clear
 argument_list|()

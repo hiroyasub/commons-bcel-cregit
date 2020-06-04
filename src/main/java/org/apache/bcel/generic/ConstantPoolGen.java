@@ -497,7 +497,7 @@ decl_stmt|;
 if|if
 condition|(
 operator|!
-name|string_table
+name|stringTable
 operator|.
 name|containsKey
 argument_list|(
@@ -505,7 +505,7 @@ name|key
 argument_list|)
 condition|)
 block|{
-name|string_table
+name|stringTable
 operator|.
 name|put
 argument_list|(
@@ -563,7 +563,7 @@ decl_stmt|;
 if|if
 condition|(
 operator|!
-name|class_table
+name|classTable
 operator|.
 name|containsKey
 argument_list|(
@@ -571,7 +571,7 @@ name|key
 argument_list|)
 condition|)
 block|{
-name|class_table
+name|classTable
 operator|.
 name|put
 argument_list|(
@@ -683,7 +683,7 @@ expr_stmt|;
 if|if
 condition|(
 operator|!
-name|n_a_t_table
+name|natTable
 operator|.
 name|containsKey
 argument_list|(
@@ -691,7 +691,7 @@ name|key
 argument_list|)
 condition|)
 block|{
-name|n_a_t_table
+name|natTable
 operator|.
 name|put
 argument_list|(
@@ -734,7 +734,7 @@ decl_stmt|;
 if|if
 condition|(
 operator|!
-name|utf8_table
+name|utf8Table
 operator|.
 name|containsKey
 argument_list|(
@@ -742,7 +742,7 @@ name|key
 argument_list|)
 condition|)
 block|{
-name|utf8_table
+name|utf8Table
 operator|.
 name|put
 argument_list|(
@@ -998,7 +998,7 @@ expr_stmt|;
 if|if
 condition|(
 operator|!
-name|cp_table
+name|cpTable
 operator|.
 name|containsKey
 argument_list|(
@@ -1006,7 +1006,7 @@ name|key
 argument_list|)
 condition|)
 block|{
-name|cp_table
+name|cpTable
 operator|.
 name|put
 argument_list|(
@@ -1248,7 +1248,7 @@ name|String
 argument_list|,
 name|Index
 argument_list|>
-name|string_table
+name|stringTable
 init|=
 operator|new
 name|HashMap
@@ -1269,7 +1269,7 @@ specifier|final
 name|Index
 name|index
 init|=
-name|string_table
+name|stringTable
 operator|.
 name|get
 argument_list|(
@@ -1361,7 +1361,7 @@ expr_stmt|;
 if|if
 condition|(
 operator|!
-name|string_table
+name|stringTable
 operator|.
 name|containsKey
 argument_list|(
@@ -1369,7 +1369,7 @@ name|str
 argument_list|)
 condition|)
 block|{
-name|string_table
+name|stringTable
 operator|.
 name|put
 argument_list|(
@@ -1395,7 +1395,7 @@ name|String
 argument_list|,
 name|Index
 argument_list|>
-name|class_table
+name|classTable
 init|=
 operator|new
 name|HashMap
@@ -1416,7 +1416,7 @@ specifier|final
 name|Index
 name|index
 init|=
-name|class_table
+name|classTable
 operator|.
 name|get
 argument_list|(
@@ -1508,7 +1508,7 @@ expr_stmt|;
 if|if
 condition|(
 operator|!
-name|class_table
+name|classTable
 operator|.
 name|containsKey
 argument_list|(
@@ -1516,7 +1516,7 @@ name|clazz
 argument_list|)
 condition|)
 block|{
-name|class_table
+name|classTable
 operator|.
 name|put
 argument_list|(
@@ -1870,7 +1870,7 @@ name|String
 argument_list|,
 name|Index
 argument_list|>
-name|utf8_table
+name|utf8Table
 init|=
 operator|new
 name|HashMap
@@ -1891,7 +1891,7 @@ specifier|final
 name|Index
 name|index
 init|=
-name|utf8_table
+name|utf8Table
 operator|.
 name|get
 argument_list|(
@@ -1968,7 +1968,7 @@ expr_stmt|;
 if|if
 condition|(
 operator|!
-name|utf8_table
+name|utf8Table
 operator|.
 name|containsKey
 argument_list|(
@@ -1976,7 +1976,7 @@ name|n
 argument_list|)
 condition|)
 block|{
-name|utf8_table
+name|utf8Table
 operator|.
 name|put
 argument_list|(
@@ -2274,7 +2274,7 @@ name|String
 argument_list|,
 name|Index
 argument_list|>
-name|n_a_t_table
+name|natTable
 init|=
 operator|new
 name|HashMap
@@ -2299,7 +2299,7 @@ specifier|final
 name|Index
 name|_index
 init|=
-name|n_a_t_table
+name|natTable
 operator|.
 name|get
 argument_list|(
@@ -2418,7 +2418,7 @@ decl_stmt|;
 if|if
 condition|(
 operator|!
-name|n_a_t_table
+name|natTable
 operator|.
 name|containsKey
 argument_list|(
@@ -2426,7 +2426,7 @@ name|key
 argument_list|)
 condition|)
 block|{
-name|n_a_t_table
+name|natTable
 operator|.
 name|put
 argument_list|(
@@ -2452,7 +2452,7 @@ name|String
 argument_list|,
 name|Index
 argument_list|>
-name|cp_table
+name|cpTable
 init|=
 operator|new
 name|HashMap
@@ -2481,7 +2481,7 @@ specifier|final
 name|Index
 name|index
 init|=
-name|cp_table
+name|cpTable
 operator|.
 name|get
 argument_list|(
@@ -2645,7 +2645,7 @@ decl_stmt|;
 if|if
 condition|(
 operator|!
-name|cp_table
+name|cpTable
 operator|.
 name|containsKey
 argument_list|(
@@ -2653,7 +2653,7 @@ name|key
 argument_list|)
 condition|)
 block|{
-name|cp_table
+name|cpTable
 operator|.
 name|put
 argument_list|(
@@ -2722,7 +2722,7 @@ specifier|final
 name|Index
 name|index
 init|=
-name|cp_table
+name|cpTable
 operator|.
 name|get
 argument_list|(
@@ -2886,7 +2886,7 @@ decl_stmt|;
 if|if
 condition|(
 operator|!
-name|cp_table
+name|cpTable
 operator|.
 name|containsKey
 argument_list|(
@@ -2894,7 +2894,7 @@ name|key
 argument_list|)
 condition|)
 block|{
-name|cp_table
+name|cpTable
 operator|.
 name|put
 argument_list|(
@@ -2963,7 +2963,7 @@ specifier|final
 name|Index
 name|index
 init|=
-name|cp_table
+name|cpTable
 operator|.
 name|get
 argument_list|(
@@ -3098,7 +3098,7 @@ decl_stmt|;
 if|if
 condition|(
 operator|!
-name|cp_table
+name|cpTable
 operator|.
 name|containsKey
 argument_list|(
@@ -3106,7 +3106,7 @@ name|key
 argument_list|)
 condition|)
 block|{
-name|cp_table
+name|cpTable
 operator|.
 name|put
 argument_list|(

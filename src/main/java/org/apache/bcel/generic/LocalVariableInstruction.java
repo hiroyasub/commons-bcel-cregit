@@ -90,7 +90,7 @@ decl_stmt|;
 comment|// index of referenced variable
 specifier|private
 name|short
-name|c_tag
+name|cTag
 init|=
 operator|-
 literal|1
@@ -98,7 +98,7 @@ decl_stmt|;
 comment|// compact version, such as ILOAD_0
 specifier|private
 name|short
-name|canon_tag
+name|canonTag
 init|=
 operator|-
 literal|1
@@ -134,13 +134,13 @@ argument_list|()
 expr_stmt|;
 name|this
 operator|.
-name|canon_tag
+name|canonTag
 operator|=
 name|canon_tag
 expr_stmt|;
 name|this
 operator|.
-name|c_tag
+name|cTag
 operator|=
 name|c_tag
 expr_stmt|;
@@ -150,7 +150,7 @@ name|LocalVariableInstruction
 parameter_list|()
 block|{
 block|}
-comment|/**      * @param opcode Instruction opcode      * @param c_tag Instruction number for compact version, ALOAD_0, e.g.      * @param n local variable index (unsigned short)      */
+comment|/**      * @param opcode Instruction opcode      * @param cTag Instruction number for compact version, ALOAD_0, e.g.      * @param n local variable index (unsigned short)      */
 specifier|protected
 name|LocalVariableInstruction
 parameter_list|(
@@ -179,11 +179,11 @@ argument_list|)
 expr_stmt|;
 name|this
 operator|.
-name|c_tag
+name|cTag
 operator|=
 name|c_tag
 expr_stmt|;
-name|canon_tag
+name|canonTag
 operator|=
 name|opcode
 expr_stmt|;
@@ -586,7 +586,7 @@ operator|(
 name|short
 operator|)
 operator|(
-name|c_tag
+name|cTag
 operator|+
 name|n
 operator|)
@@ -606,7 +606,7 @@ name|super
 operator|.
 name|setOpcode
 argument_list|(
-name|canon_tag
+name|canonTag
 argument_list|)
 expr_stmt|;
 if|if
@@ -642,7 +642,7 @@ name|getCanonicalTag
 parameter_list|()
 block|{
 return|return
-name|canon_tag
+name|canonTag
 return|;
 block|}
 comment|/**      * Returns the type associated with the instruction -      * in case of ALOAD or ASTORE Type.OBJECT is returned.      * This is just a bit incorrect, because ALOAD and ASTORE      * may work on every ReferenceType (including Type.NULL) and      * ASTORE may even work on a ReturnaddressType .      * @return type associated with the instruction      */
@@ -659,7 +659,7 @@ parameter_list|)
 block|{
 switch|switch
 condition|(
-name|canon_tag
+name|canonTag
 condition|)
 block|{
 case|case
@@ -744,7 +744,7 @@ name|ClassGenException
 argument_list|(
 literal|"Unknown case in switch"
 operator|+
-name|canon_tag
+name|canonTag
 argument_list|)
 throw|;
 block|}

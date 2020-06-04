@@ -203,7 +203,7 @@ name|il
 decl_stmt|;
 specifier|private
 name|String
-name|il_string
+name|ilString
 decl_stmt|;
 comment|// instruction list as string
 specifier|private
@@ -303,7 +303,7 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
-name|il_string
+name|ilString
 operator|=
 operator|new
 name|String
@@ -744,14 +744,14 @@ name|regex
 operator|.
 name|matcher
 argument_list|(
-name|il_string
+name|ilString
 argument_list|)
 decl_stmt|;
 while|while
 condition|(
 name|start
 operator|<
-name|il_string
+name|ilString
 operator|.
 name|length
 argument_list|()

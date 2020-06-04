@@ -98,7 +98,7 @@ decl_stmt|;
 specifier|private
 specifier|final
 name|ConstantPoolGen
-name|cpool
+name|constantPoolGen
 decl_stmt|;
 specifier|public
 name|ElementValuePairGen
@@ -118,15 +118,15 @@ parameter_list|)
 block|{
 name|this
 operator|.
-name|cpool
+name|constantPoolGen
 operator|=
 name|cpool
 expr_stmt|;
 comment|// J5ASSERT:
 comment|// Could assert nvp.getNameString() points to the same thing as
-comment|// cpool.getConstant(nvp.getNameIndex())
+comment|// constantPoolGen.getConstant(nvp.getNameIndex())
 comment|// if
-comment|// (!nvp.getNameString().equals(((ConstantUtf8)cpool.getConstant(nvp.getNameIndex())).getBytes()))
+comment|// (!nvp.getNameString().equals(((ConstantUtf8)constantPoolGen.getConstant(nvp.getNameIndex())).getBytes()))
 comment|// {
 comment|// throw new IllegalArgumentException("envp buggered");
 comment|// }
@@ -198,7 +198,7 @@ name|nameIdx
 argument_list|,
 name|immutableValue
 argument_list|,
-name|cpool
+name|constantPoolGen
 operator|.
 name|getConstantPool
 argument_list|()
@@ -235,7 +235,7 @@ name|value
 expr_stmt|;
 name|this
 operator|.
-name|cpool
+name|constantPoolGen
 operator|=
 name|cpool
 expr_stmt|;
@@ -275,7 +275,7 @@ name|value
 expr_stmt|;
 name|this
 operator|.
-name|cpool
+name|constantPoolGen
 operator|=
 name|cpool
 expr_stmt|;
@@ -322,13 +322,13 @@ name|String
 name|getNameString
 parameter_list|()
 block|{
-comment|// ConstantString cu8 = (ConstantString)cpool.getConstant(nameIdx);
+comment|// ConstantString cu8 = (ConstantString)constantPoolGen.getConstant(nameIdx);
 return|return
 operator|(
 operator|(
 name|ConstantUtf8
 operator|)
-name|cpool
+name|constantPoolGen
 operator|.
 name|getConstant
 argument_list|(

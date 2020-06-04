@@ -45,7 +45,7 @@ name|dimensions
 decl_stmt|;
 specifier|private
 name|Type
-name|basic_type
+name|basicType
 decl_stmt|;
 comment|/**      * Convenience constructor for array type, e.g. int[]      *      * @param type array type, e.g. T_INT      */
 specifier|public
@@ -180,11 +180,11 @@ name|array
 operator|.
 name|dimensions
 expr_stmt|;
-name|basic_type
+name|basicType
 operator|=
 name|array
 operator|.
-name|basic_type
+name|basicType
 expr_stmt|;
 break|break;
 case|case
@@ -207,7 +207,7 @@ name|dimensions
 operator|=
 name|dimensions
 expr_stmt|;
-name|basic_type
+name|basicType
 operator|=
 name|type
 expr_stmt|;
@@ -250,7 +250,7 @@ name|buf
 operator|.
 name|append
 argument_list|(
-name|basic_type
+name|basicType
 operator|.
 name|getSignature
 argument_list|()
@@ -274,7 +274,7 @@ name|getBasicType
 parameter_list|()
 block|{
 return|return
-name|basic_type
+name|basicType
 return|;
 block|}
 comment|/**      * @return element type of array, i.e., for int[][][] the element type is int[][]      */
@@ -291,14 +291,14 @@ literal|1
 condition|)
 block|{
 return|return
-name|basic_type
+name|basicType
 return|;
 block|}
 return|return
 operator|new
 name|ArrayType
 argument_list|(
-name|basic_type
+name|basicType
 argument_list|,
 name|dimensions
 operator|-
@@ -325,7 +325,7 @@ name|hashCode
 parameter_list|()
 block|{
 return|return
-name|basic_type
+name|basicType
 operator|.
 name|hashCode
 argument_list|()
@@ -372,11 +372,11 @@ operator|)
 operator|&&
 name|array
 operator|.
-name|basic_type
+name|basicType
 operator|.
 name|equals
 argument_list|(
-name|basic_type
+name|basicType
 argument_list|)
 return|;
 block|}

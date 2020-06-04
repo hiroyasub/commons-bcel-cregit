@@ -120,7 +120,7 @@ argument_list|<
 name|ExceptionHandler
 argument_list|>
 argument_list|>
-name|exceptionhandlers
+name|exceptionHandlers
 decl_stmt|;
 comment|/**      * Constructor. Creates a new ExceptionHandlers instance.      */
 specifier|public
@@ -131,7 +131,7 @@ name|MethodGen
 name|mg
 parameter_list|)
 block|{
-name|exceptionhandlers
+name|exceptionHandlers
 operator|=
 operator|new
 name|HashMap
@@ -211,7 +211,7 @@ name|hs
 decl_stmt|;
 name|hs
 operator|=
-name|exceptionhandlers
+name|exceptionHandlers
 operator|.
 name|get
 argument_list|(
@@ -232,7 +232,7 @@ name|HashSet
 argument_list|<>
 argument_list|()
 expr_stmt|;
-name|exceptionhandlers
+name|exceptionHandlers
 operator|.
 name|put
 argument_list|(
@@ -270,7 +270,7 @@ name|ExceptionHandler
 argument_list|>
 name|hsSet
 init|=
-name|exceptionhandlers
+name|exceptionHandlers
 operator|.
 name|get
 argument_list|(

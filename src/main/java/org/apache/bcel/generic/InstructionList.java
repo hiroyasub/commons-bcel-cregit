@@ -181,7 +181,7 @@ comment|// number of elements in list
 specifier|private
 name|int
 index|[]
-name|byte_positions
+name|bytePositions
 decl_stmt|;
 comment|// byte code offsets corresponding to instructions
 comment|/**      * Create (empty) instruction list.      */
@@ -376,7 +376,7 @@ name|int
 index|[]
 name|positions
 init|=
-name|byte_positions
+name|bytePositions
 decl_stmt|;
 name|InstructionHandle
 name|ih
@@ -591,7 +591,7 @@ name|e
 argument_list|)
 throw|;
 block|}
-name|byte_positions
+name|bytePositions
 operator|=
 operator|new
 name|int
@@ -608,7 +608,7 @@ name|pos
 argument_list|,
 literal|0
 argument_list|,
-name|byte_positions
+name|bytePositions
 argument_list|,
 literal|0
 argument_list|,
@@ -3360,7 +3360,7 @@ name|getLength
 argument_list|()
 expr_stmt|;
 block|}
-name|byte_positions
+name|bytePositions
 operator|=
 operator|new
 name|int
@@ -3377,7 +3377,7 @@ name|pos
 argument_list|,
 literal|0
 argument_list|,
-name|byte_positions
+name|bytePositions
 argument_list|,
 literal|0
 argument_list|,
@@ -3816,7 +3816,7 @@ name|getInstructionPositions
 parameter_list|()
 block|{
 return|return
-name|byte_positions
+name|bytePositions
 return|;
 block|}
 comment|/**      * @return complete, i.e., deep copy of this list      */

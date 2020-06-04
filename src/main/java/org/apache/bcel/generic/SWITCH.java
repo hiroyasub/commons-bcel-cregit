@@ -43,7 +43,7 @@ name|instruction
 decl_stmt|;
 specifier|private
 name|int
-name|match_length
+name|matchLength
 decl_stmt|;
 comment|/**      * Template for switch() constructs. If the match array can be      * sorted in ascending order with gaps no larger than max_gap      * between the numbers, a TABLESWITCH instruction is generated, and      * a LOOKUPSWITCH otherwise. The former may be more efficient, but      * needs more space.      *      * Note, that the key array always will be sorted, though we leave      * the original arrays unaltered.      *      * @param match array of match values (case 2: ... case 7: ..., etc.)      * @param targets the instructions to be branched to for each case      * @param target the default target      * @param max_gap maximum gap that may between case branches      */
 specifier|public
@@ -89,7 +89,7 @@ expr_stmt|;
 if|if
 condition|(
 operator|(
-name|match_length
+name|matchLength
 operator|=
 name|match
 operator|.
@@ -118,7 +118,7 @@ name|sort
 argument_list|(
 literal|0
 argument_list|,
-name|match_length
+name|matchLength
 operator|-
 literal|1
 argument_list|)
@@ -223,9 +223,9 @@ specifier|final
 name|int
 name|max_size
 init|=
-name|match_length
+name|matchLength
 operator|+
-name|match_length
+name|matchLength
 operator|*
 name|max_gap
 decl_stmt|;
@@ -285,7 +285,7 @@ literal|1
 init|;
 name|i
 operator|<
-name|match_length
+name|matchLength
 condition|;
 name|i
 operator|++
@@ -616,7 +616,7 @@ literal|1
 init|;
 name|i
 operator|<
-name|match_length
+name|matchLength
 condition|;
 name|i
 operator|++

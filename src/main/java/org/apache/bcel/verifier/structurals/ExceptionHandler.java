@@ -58,13 +58,13 @@ comment|/** The type of the exception to catch. NULL means ANY. */
 specifier|private
 specifier|final
 name|ObjectType
-name|catchtype
+name|catchType
 decl_stmt|;
 comment|/** The InstructionHandle where the handling begins. */
 specifier|private
 specifier|final
 name|InstructionHandle
-name|handlerpc
+name|handlerPc
 decl_stmt|;
 comment|/** Leave instance creation to JustIce. */
 name|ExceptionHandler
@@ -78,11 +78,11 @@ name|InstructionHandle
 name|handler_pc
 parameter_list|)
 block|{
-name|catchtype
+name|catchType
 operator|=
 name|catch_type
 expr_stmt|;
-name|handlerpc
+name|handlerPc
 operator|=
 name|handler_pc
 expr_stmt|;
@@ -94,7 +94,7 @@ name|getExceptionType
 parameter_list|()
 block|{
 return|return
-name|catchtype
+name|catchType
 return|;
 block|}
 comment|/**      * Returns the InstructionHandle where the handler starts off.      */
@@ -104,7 +104,7 @@ name|getHandlerStart
 parameter_list|()
 block|{
 return|return
-name|handlerpc
+name|handlerPc
 return|;
 block|}
 block|}

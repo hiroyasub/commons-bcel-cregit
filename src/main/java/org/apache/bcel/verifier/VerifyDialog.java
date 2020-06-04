@@ -173,7 +173,7 @@ comment|/**      * This field is here to count the number of open VerifyDialog  
 specifier|private
 specifier|static
 name|int
-name|classes_to_verify
+name|classesToVerify
 decl_stmt|;
 comment|/** Machine-generated. */
 class|class
@@ -1958,7 +1958,7 @@ index|[]
 name|args
 parameter_list|)
 block|{
-name|classes_to_verify
+name|classesToVerify
 operator|=
 name|args
 operator|.
@@ -2024,12 +2024,12 @@ name|WindowEvent
 name|e
 parameter_list|)
 block|{
-name|classes_to_verify
+name|classesToVerify
 operator|--
 expr_stmt|;
 if|if
 condition|(
-name|classes_to_verify
+name|classesToVerify
 operator|==
 literal|0
 condition|)

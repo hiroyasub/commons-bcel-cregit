@@ -45,21 +45,21 @@ name|Cloneable
 block|{
 specifier|private
 name|InstructionHandle
-name|start_pc
+name|startPc
 decl_stmt|;
 specifier|private
 name|InstructionHandle
-name|end_pc
+name|endPc
 decl_stmt|;
 specifier|private
 name|InstructionHandle
-name|handler_pc
+name|handlerPc
 decl_stmt|;
 specifier|private
 name|ObjectType
-name|catch_type
+name|catchType
 decl_stmt|;
-comment|/**      * Add an exception handler, i.e., specify region where a handler is active and an      * instruction where the actual handling is done.      *      * @param start_pc Start of handled region (inclusive)      * @param end_pc End of handled region (inclusive)      * @param handler_pc Where handling is done      * @param catch_type which exception is handled, null for ANY      */
+comment|/**      * Add an exception handler, i.e., specify region where a handler is active and an      * instruction where the actual handling is done.      *      * @param startPc Start of handled region (inclusive)      * @param endPc End of handled region (inclusive)      * @param handlerPc Where handling is done      * @param catchType which exception is handled, null for ANY      */
 specifier|public
 name|CodeExceptionGen
 parameter_list|(
@@ -97,7 +97,7 @@ argument_list|)
 expr_stmt|;
 name|this
 operator|.
-name|catch_type
+name|catchType
 operator|=
 name|catch_type
 expr_stmt|;
@@ -116,17 +116,17 @@ return|return
 operator|new
 name|CodeException
 argument_list|(
-name|start_pc
+name|startPc
 operator|.
 name|getPosition
 argument_list|()
 argument_list|,
-name|end_pc
+name|endPc
 operator|.
 name|getPosition
 argument_list|()
 operator|+
-name|end_pc
+name|endPc
 operator|.
 name|getInstruction
 argument_list|()
@@ -134,13 +134,13 @@ operator|.
 name|getLength
 argument_list|()
 argument_list|,
-name|handler_pc
+name|handlerPc
 operator|.
 name|getPosition
 argument_list|()
 argument_list|,
 operator|(
-name|catch_type
+name|catchType
 operator|==
 literal|null
 operator|)
@@ -151,12 +151,12 @@ name|cp
 operator|.
 name|addClass
 argument_list|(
-name|catch_type
+name|catchType
 argument_list|)
 argument_list|)
 return|;
 block|}
-comment|/* Set start of handler      * @param start_pc Start of handled region (inclusive)      */
+comment|/* Set start of handler      * @param startPc Start of handled region (inclusive)      */
 specifier|public
 name|void
 name|setStartPC
@@ -173,7 +173,7 @@ name|notifyTarget
 argument_list|(
 name|this
 operator|.
-name|start_pc
+name|startPc
 argument_list|,
 name|start_pc
 argument_list|,
@@ -182,12 +182,12 @@ argument_list|)
 expr_stmt|;
 name|this
 operator|.
-name|start_pc
+name|startPc
 operator|=
 name|start_pc
 expr_stmt|;
 block|}
-comment|/* Set end of handler      * @param end_pc End of handled region (inclusive)      */
+comment|/* Set end of handler      * @param endPc End of handled region (inclusive)      */
 specifier|public
 name|void
 name|setEndPC
@@ -204,7 +204,7 @@ name|notifyTarget
 argument_list|(
 name|this
 operator|.
-name|end_pc
+name|endPc
 argument_list|,
 name|end_pc
 argument_list|,
@@ -213,12 +213,12 @@ argument_list|)
 expr_stmt|;
 name|this
 operator|.
-name|end_pc
+name|endPc
 operator|=
 name|end_pc
 expr_stmt|;
 block|}
-comment|/* Set handler code      * @param handler_pc Start of handler      */
+comment|/* Set handler code      * @param handlerPc Start of handler      */
 specifier|public
 name|void
 name|setHandlerPC
@@ -235,7 +235,7 @@ name|notifyTarget
 argument_list|(
 name|this
 operator|.
-name|handler_pc
+name|handlerPc
 argument_list|,
 name|handler_pc
 argument_list|,
@@ -244,7 +244,7 @@ argument_list|)
 expr_stmt|;
 name|this
 operator|.
-name|handler_pc
+name|handlerPc
 operator|=
 name|handler_pc
 expr_stmt|;
@@ -272,7 +272,7 @@ literal|false
 decl_stmt|;
 if|if
 condition|(
-name|start_pc
+name|startPc
 operator|==
 name|old_ih
 condition|)
@@ -289,7 +289,7 @@ expr_stmt|;
 block|}
 if|if
 condition|(
-name|end_pc
+name|endPc
 operator|==
 name|old_ih
 condition|)
@@ -306,7 +306,7 @@ expr_stmt|;
 block|}
 if|if
 condition|(
-name|handler_pc
+name|handlerPc
 operator|==
 name|old_ih
 condition|)
@@ -337,15 +337,15 @@ name|old_ih
 operator|+
 literal|", but {"
 operator|+
-name|start_pc
+name|startPc
 operator|+
 literal|", "
 operator|+
-name|end_pc
+name|endPc
 operator|+
 literal|", "
 operator|+
-name|handler_pc
+name|handlerPc
 operator|+
 literal|"}"
 argument_list|)
@@ -366,19 +366,19 @@ parameter_list|)
 block|{
 return|return
 operator|(
-name|start_pc
+name|startPc
 operator|==
 name|ih
 operator|)
 operator|||
 operator|(
-name|end_pc
+name|endPc
 operator|==
 name|ih
 operator|)
 operator|||
 operator|(
-name|handler_pc
+name|handlerPc
 operator|==
 name|ih
 operator|)
@@ -396,7 +396,7 @@ parameter_list|)
 block|{
 name|this
 operator|.
-name|catch_type
+name|catchType
 operator|=
 name|catch_type
 expr_stmt|;
@@ -408,7 +408,7 @@ name|getCatchType
 parameter_list|()
 block|{
 return|return
-name|catch_type
+name|catchType
 return|;
 block|}
 comment|/** @return start of handled region (inclusive)      */
@@ -418,7 +418,7 @@ name|getStartPC
 parameter_list|()
 block|{
 return|return
-name|start_pc
+name|startPc
 return|;
 block|}
 comment|/** @return end of handled region (inclusive)      */
@@ -428,7 +428,7 @@ name|getEndPC
 parameter_list|()
 block|{
 return|return
-name|end_pc
+name|endPc
 return|;
 block|}
 comment|/** @return start of handler      */
@@ -438,7 +438,7 @@ name|getHandlerPC
 parameter_list|()
 block|{
 return|return
-name|handler_pc
+name|handlerPc
 return|;
 block|}
 annotation|@
@@ -451,15 +451,15 @@ block|{
 return|return
 literal|"CodeExceptionGen("
 operator|+
-name|start_pc
+name|startPc
 operator|+
 literal|", "
 operator|+
-name|end_pc
+name|endPc
 operator|+
 literal|", "
 operator|+
-name|handler_pc
+name|handlerPc
 operator|+
 literal|")"
 return|;

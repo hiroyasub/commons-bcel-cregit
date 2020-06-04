@@ -1181,7 +1181,7 @@ comment|/**      * The method number to verify.      * This is the index in the 
 specifier|private
 specifier|final
 name|int
-name|method_no
+name|methodNo
 decl_stmt|;
 comment|/**      * The one and only InstructionList object used by an instance of this class.      * It's here for performance reasons by do_verify() and its callees.      */
 specifier|private
@@ -1212,7 +1212,7 @@ name|owner
 expr_stmt|;
 name|this
 operator|.
-name|method_no
+name|methodNo
 operator|=
 name|method_no
 expr_stmt|;
@@ -1270,7 +1270,7 @@ argument_list|()
 decl_stmt|;
 if|if
 condition|(
-name|method_no
+name|methodNo
 operator|>=
 name|methods
 operator|.
@@ -1291,7 +1291,7 @@ name|method
 init|=
 name|methods
 index|[
-name|method_no
+name|methodNo
 index|]
 decl_stmt|;
 name|code
@@ -2461,7 +2461,7 @@ name|getMethodNo
 parameter_list|()
 block|{
 return|return
-name|method_no
+name|methodNo
 return|;
 block|}
 comment|/**      * This visitor class does the actual checking for the instruction      * operand's constraints.      */
@@ -2522,7 +2522,7 @@ operator|.
 name|getMethods
 argument_list|()
 index|[
-name|method_no
+name|methodNo
 index|]
 operator|.
 name|getCode
@@ -5749,7 +5749,7 @@ operator|.
 name|getMethods
 argument_list|()
 index|[
-name|method_no
+name|methodNo
 index|]
 operator|.
 name|getName

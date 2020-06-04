@@ -58,7 +58,7 @@ name|ih
 decl_stmt|;
 specifier|private
 name|int
-name|src_line
+name|srcLine
 decl_stmt|;
 comment|/**      * Create a line number.      *      * @param ih instruction handle to reference      */
 specifier|public
@@ -164,7 +164,7 @@ operator|.
 name|getPosition
 argument_list|()
 argument_list|,
-name|src_line
+name|srcLine
 argument_list|)
 return|;
 block|}
@@ -261,7 +261,7 @@ block|{
 comment|// TODO could be package-protected?
 name|this
 operator|.
-name|src_line
+name|srcLine
 operator|=
 name|src_line
 expr_stmt|;
@@ -272,7 +272,7 @@ name|getSourceLine
 parameter_list|()
 block|{
 return|return
-name|src_line
+name|srcLine
 return|;
 block|}
 block|}
