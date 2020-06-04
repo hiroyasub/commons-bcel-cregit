@@ -160,7 +160,7 @@ name|opcode
 parameter_list|,
 specifier|final
 name|short
-name|c_tag
+name|cTag
 parameter_list|,
 specifier|final
 name|int
@@ -181,7 +181,7 @@ name|this
 operator|.
 name|cTag
 operator|=
-name|c_tag
+name|cTag
 expr_stmt|;
 name|canonTag
 operator|=

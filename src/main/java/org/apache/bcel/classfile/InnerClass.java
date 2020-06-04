@@ -160,44 +160,44 @@ name|InnerClass
 parameter_list|(
 specifier|final
 name|int
-name|inner_class_index
+name|innerClassIndex
 parameter_list|,
 specifier|final
 name|int
-name|outer_class_index
+name|outerClassIndex
 parameter_list|,
 specifier|final
 name|int
-name|inner_name_index
+name|innerNameIndex
 parameter_list|,
 specifier|final
 name|int
-name|inner_access_flags
+name|innerAccessFlags
 parameter_list|)
 block|{
 name|this
 operator|.
 name|innerClassIndex
 operator|=
-name|inner_class_index
+name|innerClassIndex
 expr_stmt|;
 name|this
 operator|.
 name|outerClassIndex
 operator|=
-name|outer_class_index
+name|outerClassIndex
 expr_stmt|;
 name|this
 operator|.
 name|innerNameIndex
 operator|=
-name|inner_name_index
+name|innerNameIndex
 expr_stmt|;
 name|this
 operator|.
 name|innerAccessFlags
 operator|=
-name|inner_access_flags
+name|innerAccessFlags
 expr_stmt|;
 block|}
 comment|/**      * Called by objects that are traversing the nodes of the tree implicitely      * defined by the contents of a Java class. I.e., the hierarchy of methods,      * fields, attributes, etc. spawns a tree of objects.      *      * @param v Visitor object      */
@@ -308,14 +308,14 @@ name|setInnerAccessFlags
 parameter_list|(
 specifier|final
 name|int
-name|inner_access_flags
+name|innerAccessFlags
 parameter_list|)
 block|{
 name|this
 operator|.
 name|innerAccessFlags
 operator|=
-name|inner_access_flags
+name|innerAccessFlags
 expr_stmt|;
 block|}
 comment|/**      * @param innerClassIndex index into the constant pool for this class      */
@@ -325,14 +325,14 @@ name|setInnerClassIndex
 parameter_list|(
 specifier|final
 name|int
-name|inner_class_index
+name|innerClassIndex
 parameter_list|)
 block|{
 name|this
 operator|.
 name|innerClassIndex
 operator|=
-name|inner_class_index
+name|innerClassIndex
 expr_stmt|;
 block|}
 comment|/**      * @param innerNameIndex index into the constant pool for this class's name      */
@@ -342,7 +342,7 @@ name|setInnerNameIndex
 parameter_list|(
 specifier|final
 name|int
-name|inner_name_index
+name|innerNameIndex
 parameter_list|)
 block|{
 comment|// TODO unused
@@ -350,7 +350,7 @@ name|this
 operator|.
 name|innerNameIndex
 operator|=
-name|inner_name_index
+name|innerNameIndex
 expr_stmt|;
 block|}
 comment|/**      * @param outerClassIndex index into the constant pool for the owning class      */
@@ -360,7 +360,7 @@ name|setOuterClassIndex
 parameter_list|(
 specifier|final
 name|int
-name|outer_class_index
+name|outerClassIndex
 parameter_list|)
 block|{
 comment|// TODO unused
@@ -368,7 +368,7 @@ name|this
 operator|.
 name|outerClassIndex
 operator|=
-name|outer_class_index
+name|outerClassIndex
 expr_stmt|;
 block|}
 comment|/**      * @return String representation.      */
@@ -406,7 +406,7 @@ name|toString
 parameter_list|(
 specifier|final
 name|ConstantPool
-name|constant_pool
+name|constantPool
 parameter_list|)
 block|{
 name|String
@@ -418,7 +418,7 @@ decl_stmt|;
 name|String
 name|inner_class_name
 init|=
-name|constant_pool
+name|constantPool
 operator|.
 name|getConstantString
 argument_list|(
@@ -449,7 +449,7 @@ condition|)
 block|{
 name|outer_class_name
 operator|=
-name|constant_pool
+name|constantPool
 operator|.
 name|getConstantString
 argument_list|(
@@ -494,7 +494,7 @@ operator|(
 operator|(
 name|ConstantUtf8
 operator|)
-name|constant_pool
+name|constantPool
 operator|.
 name|getConstant
 argument_list|(

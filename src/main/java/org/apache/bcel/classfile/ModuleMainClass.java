@@ -106,7 +106,7 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * @param name_index Index in constant pool      * @param length Content length in bytes      * @param mainClassIndex Host class index      * @param constant_pool Array of constants      */
+comment|/**      * @param name_index Index in constant pool      * @param length Content length in bytes      * @param mainClassIndex Host class index      * @param constantPool Array of constants      */
 specifier|public
 name|ModuleMainClass
 parameter_list|(
@@ -120,11 +120,11 @@ name|length
 parameter_list|,
 specifier|final
 name|int
-name|main_class_index
+name|mainClassIndex
 parameter_list|,
 specifier|final
 name|ConstantPool
-name|constant_pool
+name|constantPool
 parameter_list|)
 block|{
 name|super
@@ -137,22 +137,22 @@ name|name_index
 argument_list|,
 name|length
 argument_list|,
-name|constant_pool
+name|constantPool
 argument_list|)
 expr_stmt|;
 name|this
 operator|.
 name|mainClassIndex
 operator|=
-name|main_class_index
+name|mainClassIndex
 expr_stmt|;
 block|}
-comment|/**      * Construct object from input stream.      * @param name_index Index in constant pool      * @param length Content length in bytes      * @param input Input stream      * @param constant_pool Array of constants      * @throws IOException      */
+comment|/**      * Construct object from input stream.      * @param nameIndex Index in constant pool      * @param length Content length in bytes      * @param input Input stream      * @param constantPool Array of constants      * @throws IOException      */
 name|ModuleMainClass
 parameter_list|(
 specifier|final
 name|int
-name|name_index
+name|nameIndex
 parameter_list|,
 specifier|final
 name|int
@@ -164,20 +164,20 @@ name|input
 parameter_list|,
 specifier|final
 name|ConstantPool
-name|constant_pool
+name|constantPool
 parameter_list|)
 throws|throws
 name|IOException
 block|{
 name|this
 argument_list|(
-name|name_index
+name|nameIndex
 argument_list|,
 name|length
 argument_list|,
 literal|0
 argument_list|,
-name|constant_pool
+name|constantPool
 argument_list|)
 expr_stmt|;
 name|mainClassIndex
@@ -254,14 +254,14 @@ name|setHostClassIndex
 parameter_list|(
 specifier|final
 name|int
-name|main_class_index
+name|mainClassIndex
 parameter_list|)
 block|{
 name|this
 operator|.
 name|mainClassIndex
 operator|=
-name|main_class_index
+name|mainClassIndex
 expr_stmt|;
 block|}
 comment|/**      * @return String representation      */

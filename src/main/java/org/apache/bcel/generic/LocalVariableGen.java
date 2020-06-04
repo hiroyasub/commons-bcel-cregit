@@ -206,7 +206,7 @@ name|end
 parameter_list|,
 specifier|final
 name|int
-name|orig_index
+name|origIndex
 parameter_list|)
 block|{
 name|this
@@ -226,7 +226,7 @@ name|this
 operator|.
 name|origIndex
 operator|=
-name|orig_index
+name|origIndex
 expr_stmt|;
 block|}
 comment|/**      * Gets LocalVariable object.      *      * This relies on that the instruction list has already been dumped to byte code or      * or that the `setPositions' methods has been called for the instruction list.      *      * Note that due to the conversion from byte code offset to InstructionHandle,      * it is impossible to tell the difference between a live range that ends BEFORE      * the last insturction of the method or a live range that ends AFTER the last      * instruction of the method.  Hence the liveToEnd flag to differentiate      * between these two cases.      *      * @param cp constant pool      */

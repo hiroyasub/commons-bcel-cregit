@@ -71,7 +71,7 @@ name|Attribute
 block|{
 specifier|private
 name|int
-name|sourcefileIndex
+name|sourceFileIndex
 decl_stmt|;
 comment|/**      * Initialize from another object. Note that both objects use the same      * references (shallow copy). Use clone() for a physical copy.      */
 specifier|public
@@ -143,7 +143,7 @@ name|constant_pool
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * @param name_index Index in constant pool to CONSTANT_Utf8, which      * should represent the string "SourceFile".      * @param length Content length in bytes, the value should be 2.      * @param constant_pool The constant pool that this attribute is      * associated with.      * @param sourcefileIndex Index in constant pool to CONSTANT_Utf8.  This      * string will be interpreted as the name of the file from which this      * class was compiled.  It will not be interpreted as indicating the name      * of the directory contqining the file or an absolute path; this      * information has to be supplied the consumer of this attribute - in      * many cases, the JVM.      */
+comment|/**      * @param name_index Index in constant pool to CONSTANT_Utf8, which      * should represent the string "SourceFile".      * @param length Content length in bytes, the value should be 2.      * @param constantPool The constant pool that this attribute is      * associated with.      * @param sourceFileIndex Index in constant pool to CONSTANT_Utf8.  This      * string will be interpreted as the name of the file from which this      * class was compiled.  It will not be interpreted as indicating the name      * of the directory contqining the file or an absolute path; this      * information has to be supplied the consumer of this attribute - in      * many cases, the JVM.      */
 specifier|public
 name|SourceFile
 parameter_list|(
@@ -157,11 +157,11 @@ name|length
 parameter_list|,
 specifier|final
 name|int
-name|sourcefile_index
+name|sourceFileIndex
 parameter_list|,
 specifier|final
 name|ConstantPool
-name|constant_pool
+name|constantPool
 parameter_list|)
 block|{
 name|super
@@ -174,14 +174,14 @@ name|name_index
 argument_list|,
 name|length
 argument_list|,
-name|constant_pool
+name|constantPool
 argument_list|)
 expr_stmt|;
 name|this
 operator|.
-name|sourcefileIndex
+name|sourceFileIndex
 operator|=
-name|sourcefile_index
+name|sourceFileIndex
 expr_stmt|;
 block|}
 comment|/**      * Called by objects that are traversing the nodes of the tree implicitely      * defined by the contents of a Java class. I.e., the hierarchy of methods,      * fields, attributes, etc. spawns a tree of objects.      *      * @param v Visitor object      */
@@ -229,7 +229,7 @@ name|file
 operator|.
 name|writeShort
 argument_list|(
-name|sourcefileIndex
+name|sourceFileIndex
 argument_list|)
 expr_stmt|;
 block|}
@@ -240,24 +240,24 @@ name|getSourceFileIndex
 parameter_list|()
 block|{
 return|return
-name|sourcefileIndex
+name|sourceFileIndex
 return|;
 block|}
-comment|/**      * @param sourcefileIndex      */
+comment|/**      * @param sourceFileIndex      */
 specifier|public
 name|void
 name|setSourceFileIndex
 parameter_list|(
 specifier|final
 name|int
-name|sourcefile_index
+name|sourceFileIndex
 parameter_list|)
 block|{
 name|this
 operator|.
-name|sourcefileIndex
+name|sourceFileIndex
 operator|=
-name|sourcefile_index
+name|sourceFileIndex
 expr_stmt|;
 block|}
 comment|/**      * @return Source file name.      */
@@ -280,7 +280,7 @@ argument_list|()
 operator|.
 name|getConstant
 argument_list|(
-name|sourcefileIndex
+name|sourceFileIndex
 argument_list|,
 name|Const
 operator|.

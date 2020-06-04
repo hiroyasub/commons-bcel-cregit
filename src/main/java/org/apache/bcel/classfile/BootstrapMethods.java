@@ -122,7 +122,7 @@ parameter_list|,
 specifier|final
 name|BootstrapMethod
 index|[]
-name|bootstrap_methods
+name|bootstrapMethods
 parameter_list|,
 specifier|final
 name|ConstantPool
@@ -146,7 +146,7 @@ name|this
 operator|.
 name|bootstrapMethods
 operator|=
-name|bootstrap_methods
+name|bootstrapMethods
 expr_stmt|;
 block|}
 comment|/**      * Construct object from Input stream.      *      * @param name_index Index in constant pool to CONSTANT_Utf8      * @param length Content length in bytes      * @param input Input stream      * @param constant_pool Array of constants      * @throws IOException      */
@@ -252,14 +252,14 @@ parameter_list|(
 specifier|final
 name|BootstrapMethod
 index|[]
-name|bootstrap_methods
+name|bootstrapMethods
 parameter_list|)
 block|{
 name|this
 operator|.
 name|bootstrapMethods
 operator|=
-name|bootstrap_methods
+name|bootstrapMethods
 expr_stmt|;
 block|}
 comment|/**      * @param v Visitor object      */
