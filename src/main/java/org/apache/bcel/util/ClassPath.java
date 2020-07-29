@@ -1860,6 +1860,13 @@ argument_list|(
 name|MODULES_FILTER
 argument_list|)
 decl_stmt|;
+if|if
+condition|(
+name|modules
+operator|!=
+literal|null
+condition|)
+block|{
 for|for
 control|(
 name|String
@@ -1884,6 +1891,7 @@ operator|+
 name|module
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 block|}
 block|}
