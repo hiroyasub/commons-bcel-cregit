@@ -6709,6 +6709,11 @@ operator|.
 name|length
 argument_list|)
 expr_stmt|;
+name|gos
+operator|.
+name|close
+argument_list|()
+expr_stmt|;
 name|bytes
 operator|=
 name|baos

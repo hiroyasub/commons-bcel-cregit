@@ -705,7 +705,7 @@ argument_list|)
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Going further than the last test - when we reload the method back in,      * let's change it (adding a new annotation) and then store that, read it      * back in and verify both annotations are there !      */
+comment|/**      * Going further than the last test - when we reload the method back in,      * let's change it (adding a new annotation) and then store that, read it      * back in and verify both annotations are there !      * Also check that we can remove method annotations.      */
 specifier|public
 name|void
 name|testGenerateMethodLevelAnnotations2
@@ -835,7 +835,7 @@ argument_list|)
 decl_stmt|;
 name|assertTrue
 argument_list|(
-literal|"The 'MethodGen' should have one annotations but has "
+literal|"The 'MethodGen' should have one annotation but has "
 operator|+
 name|mainMethod2
 operator|.
@@ -854,10 +854,9 @@ operator|==
 literal|1
 argument_list|)
 expr_stmt|;
-name|mainMethod2
-operator|.
-name|addAnnotationEntry
-argument_list|(
+name|AnnotationEntryGen
+name|fruit
+init|=
 name|createFruitAnnotation
 argument_list|(
 name|cg2
@@ -867,6 +866,12 @@ argument_list|()
 argument_list|,
 literal|"Pear"
 argument_list|)
+decl_stmt|;
+name|mainMethod2
+operator|.
+name|addAnnotationEntry
+argument_list|(
+name|fruit
 argument_list|)
 expr_stmt|;
 name|cg2
@@ -948,6 +953,60 @@ argument_list|,
 name|i
 operator|==
 literal|2
+argument_list|)
+expr_stmt|;
+name|mainMethod2
+operator|.
+name|removeAnnotationEntry
+argument_list|(
+name|fruit
+argument_list|)
+expr_stmt|;
+name|assertTrue
+argument_list|(
+literal|"The 'MethodGen' should have one annotation but has "
+operator|+
+name|mainMethod2
+operator|.
+name|getAnnotationEntries
+argument_list|()
+operator|.
+name|length
+argument_list|,
+name|mainMethod2
+operator|.
+name|getAnnotationEntries
+argument_list|()
+operator|.
+name|length
+operator|==
+literal|1
+argument_list|)
+expr_stmt|;
+name|mainMethod2
+operator|.
+name|removeAnnotationEntries
+argument_list|()
+expr_stmt|;
+name|assertTrue
+argument_list|(
+literal|"The 'MethodGen' should have no annotations but has "
+operator|+
+name|mainMethod2
+operator|.
+name|getAnnotationEntries
+argument_list|()
+operator|.
+name|length
+argument_list|,
+name|mainMethod2
+operator|.
+name|getAnnotationEntries
+argument_list|()
+operator|.
+name|length
+operator|==
+literal|0
 argument_list|)
 expr_stmt|;
 name|assertTrue
