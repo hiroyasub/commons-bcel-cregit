@@ -21,9 +21,29 @@ name|org
 operator|.
 name|junit
 operator|.
-name|Assert
+name|jupiter
+operator|.
+name|api
+operator|.
+name|Assertions
 operator|.
 name|assertEquals
+import|;
+end_import
+
+begin_import
+import|import static
+name|org
+operator|.
+name|junit
+operator|.
+name|jupiter
+operator|.
+name|api
+operator|.
+name|Assertions
+operator|.
+name|fail
 import|;
 end_import
 
@@ -127,15 +147,9 @@ name|org
 operator|.
 name|junit
 operator|.
-name|Assert
-import|;
-end_import
-
-begin_import
-import|import
-name|org
+name|jupiter
 operator|.
-name|junit
+name|api
 operator|.
 name|Test
 import|;
@@ -214,8 +228,6 @@ name|Exception
 name|e
 parameter_list|)
 block|{
-name|Assert
-operator|.
 name|fail
 argument_list|(
 name|e
@@ -456,17 +468,17 @@ argument_list|()
 decl_stmt|;
 name|assertEquals
 argument_list|(
-name|name
-operator|+
-literal|": Mismatch at "
-operator|+
-name|i
-argument_list|,
 name|in
 argument_list|,
 name|out
 operator|&
 literal|0xFF
+argument_list|,
+name|name
+operator|+
+literal|": Mismatch at "
+operator|+
+name|i
 argument_list|)
 expr_stmt|;
 name|i

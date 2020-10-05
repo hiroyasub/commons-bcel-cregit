@@ -195,6 +195,68 @@ name|SyntheticRepository
 import|;
 end_import
 
+begin_import
+import|import
+name|org
+operator|.
+name|junit
+operator|.
+name|jupiter
+operator|.
+name|api
+operator|.
+name|Test
+import|;
+end_import
+
+begin_import
+import|import static
+name|org
+operator|.
+name|junit
+operator|.
+name|jupiter
+operator|.
+name|api
+operator|.
+name|Assertions
+operator|.
+name|assertEquals
+import|;
+end_import
+
+begin_import
+import|import static
+name|org
+operator|.
+name|junit
+operator|.
+name|jupiter
+operator|.
+name|api
+operator|.
+name|Assertions
+operator|.
+name|assertTrue
+import|;
+end_import
+
+begin_import
+import|import static
+name|org
+operator|.
+name|junit
+operator|.
+name|jupiter
+operator|.
+name|api
+operator|.
+name|Assertions
+operator|.
+name|fail
+import|;
+end_import
+
 begin_comment
 comment|/**  * The program that some of the tests generate looks like this:  *  *<pre>  * public class HelloWorld  * {  *  public static void main(String[] argv)  *  {  *      BufferedReader in = new BufferedReader(new InputStreamReader(System.in));  *      String name = null;  *  *      try  *      {  *          name =&quot;Andy&quot;;  *      }  *      catch (IOException e)  *      {  *          return;  *      }  *      System.out.println(&quot;Hello,&quot; + name);  *  }  * }  *</pre>  */
 end_comment
@@ -207,6 +269,8 @@ extends|extends
 name|AbstractTestCase
 block|{
 comment|/**      * Steps in the test:      *<ol>      *<li>Programmatically construct the HelloWorld program</li>      *<li>Add two simple annotations at the class level</li>      *<li>Save the class to disk</li>      *<li>Reload the class using the 'static' variant of the BCEL classes</li>      *<li>Check the attributes are OK</li>      *</ol>      */
+annotation|@
+name|Test
 specifier|public
 name|void
 name|testGenerateClassLevelAnnotations
@@ -315,22 +379,35 @@ argument_list|()
 decl_stmt|;
 name|assertTrue
 argument_list|(
-literal|"Should be two AnnotationEntries but found "
-operator|+
-name|as
-operator|.
-name|length
-argument_list|,
 name|as
 operator|.
 name|length
 operator|==
 literal|2
+argument_list|,
+literal|"Should be two AnnotationEntries but found "
+operator|+
+name|as
+operator|.
+name|length
 argument_list|)
 expr_stmt|;
 comment|// TODO L??;
 name|assertTrue
 argument_list|(
+name|as
+index|[
+literal|0
+index|]
+operator|.
+name|getAnnotationType
+argument_list|()
+operator|.
+name|equals
+argument_list|(
+literal|"LSimpleAnnotation;"
+argument_list|)
+argument_list|,
 literal|"Name of annotation 1 should be LSimpleAnnotation; but it is "
 operator|+
 name|as
@@ -340,10 +417,13 @@ index|]
 operator|.
 name|getAnnotationType
 argument_list|()
-argument_list|,
+argument_list|)
+expr_stmt|;
+name|assertTrue
+argument_list|(
 name|as
 index|[
-literal|0
+literal|1
 index|]
 operator|.
 name|getAnnotationType
@@ -353,10 +433,7 @@ name|equals
 argument_list|(
 literal|"LSimpleAnnotation;"
 argument_list|)
-argument_list|)
-expr_stmt|;
-name|assertTrue
-argument_list|(
+argument_list|,
 literal|"Name of annotation 2 should be LSimpleAnnotation; but it is "
 operator|+
 name|as
@@ -366,19 +443,6 @@ index|]
 operator|.
 name|getAnnotationType
 argument_list|()
-argument_list|,
-name|as
-index|[
-literal|1
-index|]
-operator|.
-name|getAnnotationType
-argument_list|()
-operator|.
-name|equals
-argument_list|(
-literal|"LSimpleAnnotation;"
-argument_list|)
 argument_list|)
 expr_stmt|;
 specifier|final
@@ -405,13 +469,6 @@ index|]
 decl_stmt|;
 name|assertTrue
 argument_list|(
-literal|"Name of element in SimpleAnnotation should be 'id' but it is "
-operator|+
-name|nvp
-operator|.
-name|getNameString
-argument_list|()
-argument_list|,
 name|nvp
 operator|.
 name|getNameString
@@ -421,6 +478,13 @@ name|equals
 argument_list|(
 literal|"id"
 argument_list|)
+argument_list|,
+literal|"Name of element in SimpleAnnotation should be 'id' but it is "
+operator|+
+name|nvp
+operator|.
+name|getNameString
+argument_list|()
 argument_list|)
 expr_stmt|;
 specifier|final
@@ -434,13 +498,6 @@ argument_list|()
 decl_stmt|;
 name|assertTrue
 argument_list|(
-literal|"Type of element value should be int but it is "
-operator|+
-name|ev
-operator|.
-name|getElementValueType
-argument_list|()
-argument_list|,
 name|ev
 operator|.
 name|getElementValueType
@@ -449,17 +506,17 @@ operator|==
 name|ElementValue
 operator|.
 name|PRIMITIVE_INT
+argument_list|,
+literal|"Type of element value should be int but it is "
+operator|+
+name|ev
+operator|.
+name|getElementValueType
+argument_list|()
 argument_list|)
 expr_stmt|;
 name|assertTrue
 argument_list|(
-literal|"Value of element should be 4 but it is "
-operator|+
-name|ev
-operator|.
-name|stringifyValue
-argument_list|()
-argument_list|,
 name|ev
 operator|.
 name|stringifyValue
@@ -469,6 +526,13 @@ name|equals
 argument_list|(
 literal|"4"
 argument_list|)
+argument_list|,
+literal|"Value of element should be 4 but it is "
+operator|+
+name|ev
+operator|.
+name|stringifyValue
+argument_list|()
 argument_list|)
 expr_stmt|;
 name|assertTrue
@@ -484,6 +548,8 @@ argument_list|)
 expr_stmt|;
 block|}
 comment|/**      * Just check that we can dump a class that has a method annotation on it      * and it is still there when we read it back in      */
+annotation|@
+name|Test
 specifier|public
 name|void
 name|testGenerateMethodLevelAnnotations1
@@ -546,13 +612,13 @@ name|length
 decl_stmt|;
 name|assertTrue
 argument_list|(
-literal|"Prior to dumping, main method should have 1 annotation but has "
-operator|+
-name|i
-argument_list|,
 name|i
 operator|==
 literal|1
+argument_list|,
+literal|"Prior to dumping, main method should have 1 annotation but has "
+operator|+
+name|i
 argument_list|)
 expr_stmt|;
 name|dumpClass
@@ -597,13 +663,13 @@ name|length
 expr_stmt|;
 name|assertTrue
 argument_list|(
-literal|"JavaClass should say 1 annotation on main method but says "
-operator|+
-name|i
-argument_list|,
 name|i
 operator|==
 literal|1
+argument_list|,
+literal|"JavaClass should say 1 annotation on main method but says "
+operator|+
+name|i
 argument_list|)
 expr_stmt|;
 specifier|final
@@ -641,13 +707,13 @@ name|length
 expr_stmt|;
 name|assertTrue
 argument_list|(
-literal|"The main 'Method' should have one annotation but has "
-operator|+
-name|i
-argument_list|,
 name|i
 operator|==
 literal|1
+argument_list|,
+literal|"The main 'Method' should have one annotation but has "
+operator|+
+name|i
 argument_list|)
 expr_stmt|;
 specifier|final
@@ -685,13 +751,13 @@ name|length
 expr_stmt|;
 name|assertTrue
 argument_list|(
-literal|"The main 'MethodGen' should have one annotation but has "
-operator|+
-name|i
-argument_list|,
 name|i
 operator|==
 literal|1
+argument_list|,
+literal|"The main 'MethodGen' should have one annotation but has "
+operator|+
+name|i
 argument_list|)
 expr_stmt|;
 name|assertTrue
@@ -706,6 +772,8 @@ argument_list|)
 expr_stmt|;
 block|}
 comment|/**      * Going further than the last test - when we reload the method back in,      * let's change it (adding a new annotation) and then store that, read it      * back in and verify both annotations are there !      * Also check that we can remove method annotations.      */
+annotation|@
+name|Test
 specifier|public
 name|void
 name|testGenerateMethodLevelAnnotations2
@@ -794,15 +862,6 @@ index|]
 decl_stmt|;
 name|assertTrue
 argument_list|(
-literal|"The 'Method' should have one annotations but has "
-operator|+
-name|mainMethod1
-operator|.
-name|getAnnotationEntries
-argument_list|()
-operator|.
-name|length
-argument_list|,
 name|mainMethod1
 operator|.
 name|getAnnotationEntries
@@ -811,6 +870,15 @@ operator|.
 name|length
 operator|==
 literal|1
+argument_list|,
+literal|"The 'Method' should have one annotations but has "
+operator|+
+name|mainMethod1
+operator|.
+name|getAnnotationEntries
+argument_list|()
+operator|.
+name|length
 argument_list|)
 expr_stmt|;
 specifier|final
@@ -835,15 +903,6 @@ argument_list|)
 decl_stmt|;
 name|assertTrue
 argument_list|(
-literal|"The 'MethodGen' should have one annotation but has "
-operator|+
-name|mainMethod2
-operator|.
-name|getAnnotationEntries
-argument_list|()
-operator|.
-name|length
-argument_list|,
 name|mainMethod2
 operator|.
 name|getAnnotationEntries
@@ -852,6 +911,15 @@ operator|.
 name|length
 operator|==
 literal|1
+argument_list|,
+literal|"The 'MethodGen' should have one annotation but has "
+operator|+
+name|mainMethod2
+operator|.
+name|getAnnotationEntries
+argument_list|()
+operator|.
+name|length
 argument_list|)
 expr_stmt|;
 name|AnnotationEntryGen
@@ -946,13 +1014,13 @@ name|length
 decl_stmt|;
 name|assertTrue
 argument_list|(
-literal|"The 'Method' should now have two annotations but has "
-operator|+
-name|i
-argument_list|,
 name|i
 operator|==
 literal|2
+argument_list|,
+literal|"The 'Method' should now have two annotations but has "
+operator|+
+name|i
 argument_list|)
 expr_stmt|;
 name|mainMethod2
@@ -964,15 +1032,6 @@ argument_list|)
 expr_stmt|;
 name|assertTrue
 argument_list|(
-literal|"The 'MethodGen' should have one annotation but has "
-operator|+
-name|mainMethod2
-operator|.
-name|getAnnotationEntries
-argument_list|()
-operator|.
-name|length
-argument_list|,
 name|mainMethod2
 operator|.
 name|getAnnotationEntries
@@ -981,6 +1040,15 @@ operator|.
 name|length
 operator|==
 literal|1
+argument_list|,
+literal|"The 'MethodGen' should have one annotation but has "
+operator|+
+name|mainMethod2
+operator|.
+name|getAnnotationEntries
+argument_list|()
+operator|.
+name|length
 argument_list|)
 expr_stmt|;
 name|mainMethod2
@@ -990,15 +1058,6 @@ argument_list|()
 expr_stmt|;
 name|assertTrue
 argument_list|(
-literal|"The 'MethodGen' should have no annotations but has "
-operator|+
-name|mainMethod2
-operator|.
-name|getAnnotationEntries
-argument_list|()
-operator|.
-name|length
-argument_list|,
 name|mainMethod2
 operator|.
 name|getAnnotationEntries
@@ -1007,6 +1066,15 @@ operator|.
 name|length
 operator|==
 literal|0
+argument_list|,
+literal|"The 'MethodGen' should have no annotations but has "
+operator|+
+name|mainMethod2
+operator|.
+name|getAnnotationEntries
+argument_list|()
+operator|.
+name|length
 argument_list|)
 expr_stmt|;
 name|assertTrue
@@ -1032,6 +1100,8 @@ expr_stmt|;
 block|}
 comment|// J5TODO: Need to add deleteFile calls to many of these tests
 comment|/**      * Transform simple class from an immutable to a mutable object.      */
+annotation|@
+name|Test
 specifier|public
 name|void
 name|testTransformClassToClassGen_SimpleTypes
@@ -1073,21 +1143,23 @@ argument_list|()
 decl_stmt|;
 name|assertTrue
 argument_list|(
-literal|"Expected one annotation but found "
-operator|+
-name|annotations
-operator|.
-name|length
-argument_list|,
 name|annotations
 operator|.
 name|length
 operator|==
 literal|1
+argument_list|,
+literal|"Expected one annotation but found "
+operator|+
+name|annotations
+operator|.
+name|length
 argument_list|)
 expr_stmt|;
 block|}
 comment|/**      * Transform simple class from an immutable to a mutable object. The class      * is annotated with an annotation that uses an enum.      */
+annotation|@
+name|Test
 specifier|public
 name|void
 name|testTransformClassToClassGen_EnumType
@@ -1129,21 +1201,23 @@ argument_list|()
 decl_stmt|;
 name|assertTrue
 argument_list|(
-literal|"Expected one annotation but found "
-operator|+
-name|annotations
-operator|.
-name|length
-argument_list|,
 name|annotations
 operator|.
 name|length
 operator|==
 literal|1
+argument_list|,
+literal|"Expected one annotation but found "
+operator|+
+name|annotations
+operator|.
+name|length
 argument_list|)
 expr_stmt|;
 block|}
 comment|/**      * Transform simple class from an immutable to a mutable object. The class      * is annotated with an annotation that uses an array of SimpleAnnotations.      */
+annotation|@
+name|Test
 specifier|public
 name|void
 name|testTransformClassToClassGen_ArrayAndAnnotationTypes
@@ -1185,17 +1259,17 @@ argument_list|()
 decl_stmt|;
 name|assertTrue
 argument_list|(
-literal|"Expected one annotation but found "
-operator|+
-name|annotations
-operator|.
-name|length
-argument_list|,
 name|annotations
 operator|.
 name|length
 operator|==
 literal|1
+argument_list|,
+literal|"Expected one annotation but found "
+operator|+
+name|annotations
+operator|.
+name|length
 argument_list|)
 expr_stmt|;
 specifier|final
@@ -1209,16 +1283,6 @@ index|]
 decl_stmt|;
 name|assertTrue
 argument_list|(
-literal|"That annotation should only have one value but has "
-operator|+
-name|a
-operator|.
-name|getValues
-argument_list|()
-operator|.
-name|size
-argument_list|()
-argument_list|,
 name|a
 operator|.
 name|getValues
@@ -1228,6 +1292,16 @@ name|size
 argument_list|()
 operator|==
 literal|1
+argument_list|,
+literal|"That annotation should only have one value but has "
+operator|+
+name|a
+operator|.
+name|getValues
+argument_list|()
+operator|.
+name|size
+argument_list|()
 argument_list|)
 expr_stmt|;
 specifier|final
@@ -1255,13 +1329,13 @@ argument_list|()
 decl_stmt|;
 name|assertTrue
 argument_list|(
-literal|"Value should be ArrayElementValueGen but is "
-operator|+
-name|value
-argument_list|,
 name|value
 operator|instanceof
 name|ArrayElementValueGen
+argument_list|,
+literal|"Value should be ArrayElementValueGen but is "
+operator|+
+name|value
 argument_list|)
 expr_stmt|;
 specifier|final
@@ -1275,19 +1349,19 @@ name|value
 decl_stmt|;
 name|assertTrue
 argument_list|(
-literal|"Array value should be size one but is "
-operator|+
-name|arrayValue
-operator|.
-name|getElementValuesSize
-argument_list|()
-argument_list|,
 name|arrayValue
 operator|.
 name|getElementValuesSize
 argument_list|()
 operator|==
 literal|1
+argument_list|,
+literal|"Array value should be size one but is "
+operator|+
+name|arrayValue
+operator|.
+name|getElementValuesSize
+argument_list|()
 argument_list|)
 expr_stmt|;
 specifier|final
@@ -1306,13 +1380,13 @@ argument_list|)
 decl_stmt|;
 name|assertTrue
 argument_list|(
-literal|"Value in the array should be AnnotationElementValueGen but is "
-operator|+
-name|innerValue
-argument_list|,
 name|innerValue
 operator|instanceof
 name|AnnotationElementValueGen
+argument_list|,
+literal|"Value in the array should be AnnotationElementValueGen but is "
+operator|+
+name|innerValue
 argument_list|)
 expr_stmt|;
 specifier|final
@@ -1326,20 +1400,6 @@ name|innerValue
 decl_stmt|;
 name|assertTrue
 argument_list|(
-literal|"Should be called L"
-operator|+
-name|PACKAGE_BASE_SIG
-operator|+
-literal|"/data/SimpleAnnotation; but is called: "
-operator|+
-name|innerAnnotationValue
-operator|.
-name|getAnnotation
-argument_list|()
-operator|.
-name|getTypeName
-argument_list|()
-argument_list|,
 name|innerAnnotationValue
 operator|.
 name|getAnnotation
@@ -1356,6 +1416,20 @@ name|PACKAGE_BASE_SIG
 operator|+
 literal|"/data/SimpleAnnotation;"
 argument_list|)
+argument_list|,
+literal|"Should be called L"
+operator|+
+name|PACKAGE_BASE_SIG
+operator|+
+literal|"/data/SimpleAnnotation; but is called: "
+operator|+
+name|innerAnnotationValue
+operator|.
+name|getAnnotation
+argument_list|()
+operator|.
+name|getTypeName
+argument_list|()
 argument_list|)
 expr_stmt|;
 comment|// check the three methods
@@ -1518,15 +1592,15 @@ argument_list|()
 decl_stmt|;
 name|assertEquals
 argument_list|(
-literal|"For "
-operator|+
-name|methodName
-argument_list|,
 name|expectedNumberAnnotations
 argument_list|,
 name|annos
 operator|.
 name|length
+argument_list|,
+literal|"For "
+operator|+
+name|methodName
 argument_list|)
 expr_stmt|;
 if|if
@@ -1652,8 +1726,6 @@ argument_list|()
 decl_stmt|;
 name|assertEquals
 argument_list|(
-name|methodName
-argument_list|,
 name|expectedNumberOfParmeterAnnotations
 operator|.
 name|length
@@ -1661,6 +1733,8 @@ argument_list|,
 name|parameterAnnotations
 operator|.
 name|length
+argument_list|,
+name|methodName
 argument_list|)
 expr_stmt|;
 name|int
@@ -1699,17 +1773,17 @@ index|]
 decl_stmt|;
 name|assertEquals
 argument_list|(
-name|methodName
-operator|+
-literal|" parameter "
-operator|+
-name|i
-argument_list|,
 name|expectedLength
 argument_list|,
 name|annos
 operator|.
 name|length
+argument_list|,
+name|methodName
+operator|+
+literal|" parameter "
+operator|+
+name|i
 argument_list|)
 expr_stmt|;
 if|if
@@ -1785,6 +1859,8 @@ argument_list|)
 expr_stmt|;
 block|}
 comment|/**      * Transform complex class from an immutable to a mutable object.      */
+annotation|@
+name|Test
 specifier|public
 name|void
 name|testTransformComplexClassToClassGen
@@ -1826,17 +1902,17 @@ argument_list|()
 decl_stmt|;
 name|assertTrue
 argument_list|(
-literal|"Expected one annotation but found "
-operator|+
-name|annotations
-operator|.
-name|length
-argument_list|,
 name|annotations
 operator|.
 name|length
 operator|==
 literal|1
+argument_list|,
+literal|"Expected one annotation but found "
+operator|+
+name|annotations
+operator|.
+name|length
 argument_list|)
 expr_stmt|;
 specifier|final
@@ -1920,13 +1996,15 @@ block|}
 block|}
 name|assertTrue
 argument_list|(
-literal|"Did not find double annotation value with value 33.4"
-argument_list|,
 name|found
+argument_list|,
+literal|"Did not find double annotation value with value 33.4"
 argument_list|)
 expr_stmt|;
 block|}
 comment|/**      * Load a class in and modify it with a new attribute - A SimpleAnnotation      * annotation      */
+annotation|@
+name|Test
 specifier|public
 name|void
 name|testModifyingClasses1
@@ -1978,15 +2056,6 @@ argument_list|)
 expr_stmt|;
 name|assertTrue
 argument_list|(
-literal|"Should now have two annotations but has "
-operator|+
-name|cgen
-operator|.
-name|getAnnotationEntries
-argument_list|()
-operator|.
-name|length
-argument_list|,
 name|cgen
 operator|.
 name|getAnnotationEntries
@@ -1995,6 +2064,15 @@ operator|.
 name|length
 operator|==
 literal|2
+argument_list|,
+literal|"Should now have two annotations but has "
+operator|+
+name|cgen
+operator|.
+name|getAnnotationEntries
+argument_list|()
+operator|.
+name|length
 argument_list|)
 expr_stmt|;
 name|dumpClass
@@ -2014,6 +2092,8 @@ argument_list|)
 expr_stmt|;
 block|}
 comment|/**      * Load a class in and modify it with a new attribute - A ComplexAnnotation      * annotation      */
+annotation|@
+name|Test
 specifier|public
 name|void
 name|testModifyingClasses2
@@ -2063,15 +2143,6 @@ argument_list|)
 expr_stmt|;
 name|assertTrue
 argument_list|(
-literal|"Should now have two annotations but has "
-operator|+
-name|cgen
-operator|.
-name|getAnnotationEntries
-argument_list|()
-operator|.
-name|length
-argument_list|,
 name|cgen
 operator|.
 name|getAnnotationEntries
@@ -2080,6 +2151,15 @@ operator|.
 name|length
 operator|==
 literal|2
+argument_list|,
+literal|"Should now have two annotations but has "
+operator|+
+name|cgen
+operator|.
+name|getAnnotationEntries
+argument_list|()
+operator|.
+name|length
 argument_list|)
 expr_stmt|;
 name|dumpClass

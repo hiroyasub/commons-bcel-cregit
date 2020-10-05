@@ -21,7 +21,11 @@ name|org
 operator|.
 name|junit
 operator|.
-name|Assert
+name|jupiter
+operator|.
+name|api
+operator|.
+name|Assertions
 operator|.
 name|assertEquals
 import|;
@@ -33,9 +37,45 @@ name|org
 operator|.
 name|junit
 operator|.
-name|Assert
+name|jupiter
+operator|.
+name|api
+operator|.
+name|Assertions
+operator|.
+name|assertNotNull
+import|;
+end_import
+
+begin_import
+import|import static
+name|org
+operator|.
+name|junit
+operator|.
+name|jupiter
+operator|.
+name|api
+operator|.
+name|Assertions
 operator|.
 name|assertNull
+import|;
+end_import
+
+begin_import
+import|import static
+name|org
+operator|.
+name|junit
+operator|.
+name|jupiter
+operator|.
+name|api
+operator|.
+name|Assertions
+operator|.
+name|assertThrows
 import|;
 end_import
 
@@ -69,15 +109,9 @@ name|org
 operator|.
 name|junit
 operator|.
-name|Assert
-import|;
-end_import
-
-begin_import
-import|import
-name|org
+name|jupiter
 operator|.
-name|junit
+name|api
 operator|.
 name|Test
 import|;
@@ -139,8 +173,6 @@ argument_list|(
 literal|"java.lang.String"
 argument_list|)
 decl_stmt|;
-name|Assert
-operator|.
 name|assertNotNull
 argument_list|(
 name|class1
@@ -157,8 +189,6 @@ argument_list|(
 literal|"java.lang.Long"
 argument_list|)
 decl_stmt|;
-name|Assert
-operator|.
 name|assertNotNull
 argument_list|(
 name|class2
@@ -176,8 +206,6 @@ literal|"java.lang.Integer"
 argument_list|)
 decl_stmt|;
 comment|// Evicts class1
-name|Assert
-operator|.
 name|assertNotNull
 argument_list|(
 name|class3
@@ -260,8 +288,6 @@ argument_list|(
 literal|"java.lang.String"
 argument_list|)
 decl_stmt|;
-name|Assert
-operator|.
 name|assertNotNull
 argument_list|(
 name|class1
@@ -278,8 +304,6 @@ argument_list|(
 literal|"java.lang.Long"
 argument_list|)
 decl_stmt|;
-name|Assert
-operator|.
 name|assertNotNull
 argument_list|(
 name|class2
@@ -305,8 +329,6 @@ literal|"java.lang.Integer"
 argument_list|)
 decl_stmt|;
 comment|// Evicts class2
-name|Assert
-operator|.
 name|assertNotNull
 argument_list|(
 name|class3
@@ -344,13 +366,6 @@ block|}
 block|}
 annotation|@
 name|Test
-argument_list|(
-name|expected
-operator|=
-name|IllegalArgumentException
-operator|.
-name|class
-argument_list|)
 specifier|public
 name|void
 name|testZeroCacheSize
@@ -371,12 +386,21 @@ literal|""
 argument_list|)
 init|)
 block|{
+name|assertThrows
+argument_list|(
+name|IllegalArgumentException
+operator|.
+name|class
+argument_list|,
+parameter_list|()
+lambda|->
 operator|new
 name|LruCacheClassPathRepository
 argument_list|(
 name|classPath
 argument_list|,
 literal|0
+argument_list|)
 argument_list|)
 expr_stmt|;
 block|}

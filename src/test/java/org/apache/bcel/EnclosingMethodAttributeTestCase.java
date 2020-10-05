@@ -109,7 +109,43 @@ name|org
 operator|.
 name|junit
 operator|.
-name|Assert
+name|jupiter
+operator|.
+name|api
+operator|.
+name|Test
+import|;
+end_import
+
+begin_import
+import|import static
+name|org
+operator|.
+name|junit
+operator|.
+name|jupiter
+operator|.
+name|api
+operator|.
+name|Assertions
+operator|.
+name|assertNotNull
+import|;
+end_import
+
+begin_import
+import|import static
+name|org
+operator|.
+name|junit
+operator|.
+name|jupiter
+operator|.
+name|api
+operator|.
+name|Assertions
+operator|.
+name|assertTrue
 import|;
 end_import
 
@@ -121,6 +157,8 @@ extends|extends
 name|AbstractTestCase
 block|{
 comment|/**      * Verify for an inner class declared inside the 'main' method that the      * enclosing method attribute is set correctly.      */
+annotation|@
+name|Test
 specifier|public
 name|void
 name|testCheckMethodLevelNamedInnerClass
@@ -162,17 +200,17 @@ argument_list|)
 decl_stmt|;
 name|assertTrue
 argument_list|(
-literal|"Expected 1 EnclosingMethod attribute but found "
-operator|+
-name|encMethodAttrs
-operator|.
-name|length
-argument_list|,
 name|encMethodAttrs
 operator|.
 name|length
 operator|==
 literal|1
+argument_list|,
+literal|"Expected 1 EnclosingMethod attribute but found "
+operator|+
+name|encMethodAttrs
+operator|.
+name|length
 argument_list|)
 expr_stmt|;
 specifier|final
@@ -217,14 +255,6 @@ argument_list|)
 decl_stmt|;
 name|assertTrue
 argument_list|(
-literal|"Expected class name to be '"
-operator|+
-name|PACKAGE_BASE_SIG
-operator|+
-literal|"/data/AttributeTestClassEM01' but was "
-operator|+
-name|enclosingClassName
-argument_list|,
 name|enclosingClassName
 operator|.
 name|equals
@@ -233,24 +263,34 @@ name|PACKAGE_BASE_SIG
 operator|+
 literal|"/data/AttributeTestClassEM01"
 argument_list|)
+argument_list|,
+literal|"Expected class name to be '"
+operator|+
+name|PACKAGE_BASE_SIG
+operator|+
+literal|"/data/AttributeTestClassEM01' but was "
+operator|+
+name|enclosingClassName
 argument_list|)
 expr_stmt|;
 name|assertTrue
 argument_list|(
-literal|"Expected method name to be 'main' but was "
-operator|+
-name|enclosingMethodName
-argument_list|,
 name|enclosingMethodName
 operator|.
 name|equals
 argument_list|(
 literal|"main"
 argument_list|)
+argument_list|,
+literal|"Expected method name to be 'main' but was "
+operator|+
+name|enclosingMethodName
 argument_list|)
 expr_stmt|;
 block|}
 comment|/**      * Verify for an inner class declared at the type level that the      * EnclosingMethod attribute is set correctly (i.e. to a null value)      */
+annotation|@
+name|Test
 specifier|public
 name|void
 name|testCheckClassLevelNamedInnerClass
@@ -292,17 +332,17 @@ argument_list|)
 decl_stmt|;
 name|assertTrue
 argument_list|(
-literal|"Expected 1 EnclosingMethod attribute but found "
-operator|+
-name|encMethodAttrs
-operator|.
-name|length
-argument_list|,
 name|encMethodAttrs
 operator|.
 name|length
 operator|==
 literal|1
+argument_list|,
+literal|"Expected 1 EnclosingMethod attribute but found "
+operator|+
+name|encMethodAttrs
+operator|.
+name|length
 argument_list|)
 expr_stmt|;
 specifier|final
@@ -333,31 +373,23 @@ argument_list|)
 decl_stmt|;
 name|assertTrue
 argument_list|(
-literal|"The class is not within a method, so method_index should be null, but it is "
-operator|+
-name|em
-operator|.
-name|getEnclosingMethodIndex
-argument_list|()
-argument_list|,
 name|em
 operator|.
 name|getEnclosingMethodIndex
 argument_list|()
 operator|==
 literal|0
+argument_list|,
+literal|"The class is not within a method, so method_index should be null, but it is "
+operator|+
+name|em
+operator|.
+name|getEnclosingMethodIndex
+argument_list|()
 argument_list|)
 expr_stmt|;
 name|assertTrue
 argument_list|(
-literal|"Expected class name to be '"
-operator|+
-name|PACKAGE_BASE_SIG
-operator|+
-literal|"/data/AttributeTestClassEM02' but was "
-operator|+
-name|enclosingClassName
-argument_list|,
 name|enclosingClassName
 operator|.
 name|equals
@@ -366,10 +398,20 @@ name|PACKAGE_BASE_SIG
 operator|+
 literal|"/data/AttributeTestClassEM02"
 argument_list|)
+argument_list|,
+literal|"Expected class name to be '"
+operator|+
+name|PACKAGE_BASE_SIG
+operator|+
+literal|"/data/AttributeTestClassEM02' but was "
+operator|+
+name|enclosingClassName
 argument_list|)
 expr_stmt|;
 block|}
 comment|/**      * Check that we can save and load the attribute correctly.      */
+annotation|@
+name|Test
 specifier|public
 name|void
 name|testAttributeSerializtion
@@ -413,17 +455,17 @@ argument_list|)
 decl_stmt|;
 name|assertTrue
 argument_list|(
-literal|"Expected 1 EnclosingMethod attribute but found "
-operator|+
-name|encMethodAttrs
-operator|.
-name|length
-argument_list|,
 name|encMethodAttrs
 operator|.
 name|length
 operator|==
 literal|1
+argument_list|,
+literal|"Expected 1 EnclosingMethod attribute but found "
+operator|+
+name|encMethodAttrs
+operator|.
+name|length
 argument_list|)
 expr_stmt|;
 comment|// Write it out
@@ -464,8 +506,6 @@ argument_list|(
 literal|"AttributeTestClassEM02$1"
 argument_list|)
 decl_stmt|;
-name|Assert
-operator|.
 name|assertNotNull
 argument_list|(
 name|clazz2
@@ -500,31 +540,23 @@ argument_list|)
 decl_stmt|;
 name|assertTrue
 argument_list|(
-literal|"The class is not within a method, so method_index should be null, but it is "
-operator|+
-name|em
-operator|.
-name|getEnclosingMethodIndex
-argument_list|()
-argument_list|,
 name|em
 operator|.
 name|getEnclosingMethodIndex
 argument_list|()
 operator|==
 literal|0
+argument_list|,
+literal|"The class is not within a method, so method_index should be null, but it is "
+operator|+
+name|em
+operator|.
+name|getEnclosingMethodIndex
+argument_list|()
 argument_list|)
 expr_stmt|;
 name|assertTrue
 argument_list|(
-literal|"Expected class name to be '"
-operator|+
-name|PACKAGE_BASE_SIG
-operator|+
-literal|"/data/AttributeTestClassEM02' but was "
-operator|+
-name|enclosingClassName
-argument_list|,
 name|enclosingClassName
 operator|.
 name|equals
@@ -533,6 +565,14 @@ name|PACKAGE_BASE_SIG
 operator|+
 literal|"/data/AttributeTestClassEM02"
 argument_list|)
+argument_list|,
+literal|"Expected class name to be '"
+operator|+
+name|PACKAGE_BASE_SIG
+operator|+
+literal|"/data/AttributeTestClassEM02' but was "
+operator|+
+name|enclosingClassName
 argument_list|)
 expr_stmt|;
 name|tfile

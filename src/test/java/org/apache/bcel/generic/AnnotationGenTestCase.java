@@ -165,6 +165,68 @@ name|RuntimeVisibleAnnotations
 import|;
 end_import
 
+begin_import
+import|import
+name|org
+operator|.
+name|junit
+operator|.
+name|jupiter
+operator|.
+name|api
+operator|.
+name|Test
+import|;
+end_import
+
+begin_import
+import|import static
+name|org
+operator|.
+name|junit
+operator|.
+name|jupiter
+operator|.
+name|api
+operator|.
+name|Assertions
+operator|.
+name|assertFalse
+import|;
+end_import
+
+begin_import
+import|import static
+name|org
+operator|.
+name|junit
+operator|.
+name|jupiter
+operator|.
+name|api
+operator|.
+name|Assertions
+operator|.
+name|assertTrue
+import|;
+end_import
+
+begin_import
+import|import static
+name|org
+operator|.
+name|junit
+operator|.
+name|jupiter
+operator|.
+name|api
+operator|.
+name|Assertions
+operator|.
+name|fail
+import|;
+end_import
+
 begin_class
 specifier|public
 class|class
@@ -204,6 +266,8 @@ argument_list|)
 return|;
 block|}
 comment|/**      * Programmatically construct an mutable annotation (AnnotationGen) object.      */
+annotation|@
+name|Test
 specifier|public
 name|void
 name|testConstructMutableAnnotation
@@ -263,13 +327,6 @@ decl_stmt|;
 comment|// Check it looks right
 name|assertTrue
 argument_list|(
-literal|"Should include string 'id=4' but says: "
-operator|+
-name|nvGen
-operator|.
-name|toString
-argument_list|()
-argument_list|,
 name|nvGen
 operator|.
 name|toString
@@ -279,6 +336,13 @@ name|contains
 argument_list|(
 literal|"id=4"
 argument_list|)
+argument_list|,
+literal|"Should include string 'id=4' but says: "
+operator|+
+name|nvGen
+operator|.
+name|toString
+argument_list|()
 argument_list|)
 expr_stmt|;
 specifier|final
@@ -337,6 +401,8 @@ name|cp
 argument_list|)
 expr_stmt|;
 block|}
+annotation|@
+name|Test
 specifier|public
 name|void
 name|testVisibleInvisibleAnnotationGen
@@ -396,13 +462,6 @@ decl_stmt|;
 comment|// Check it looks right
 name|assertTrue
 argument_list|(
-literal|"Should include string 'id=4' but says: "
-operator|+
-name|nvGen
-operator|.
-name|toString
-argument_list|()
-argument_list|,
 name|nvGen
 operator|.
 name|toString
@@ -412,6 +471,13 @@ name|contains
 argument_list|(
 literal|"id=4"
 argument_list|)
+argument_list|,
+literal|"Should include string 'id=4' but says: "
+operator|+
+name|nvGen
+operator|.
+name|toString
+argument_list|()
 argument_list|)
 expr_stmt|;
 specifier|final
@@ -545,9 +611,9 @@ block|}
 block|}
 name|assertTrue
 argument_list|(
-literal|"Should have seen a RuntimeVisibleAnnotation"
-argument_list|,
 name|foundRV
+argument_list|,
+literal|"Should have seen a RuntimeVisibleAnnotation"
 argument_list|)
 expr_stmt|;
 comment|// Build a RIV annotation of type 'SimpleAnnotation' with 'id=4' as the
@@ -652,9 +718,9 @@ block|}
 block|}
 name|assertTrue
 argument_list|(
-literal|"Should have seen a RuntimeInvisibleAnnotation"
-argument_list|,
 name|foundRIV
+argument_list|,
+literal|"Should have seen a RuntimeInvisibleAnnotation"
 argument_list|)
 expr_stmt|;
 block|}

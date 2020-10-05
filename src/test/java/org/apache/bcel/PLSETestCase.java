@@ -195,6 +195,36 @@ name|Type
 import|;
 end_import
 
+begin_import
+import|import
+name|org
+operator|.
+name|junit
+operator|.
+name|jupiter
+operator|.
+name|api
+operator|.
+name|Test
+import|;
+end_import
+
+begin_import
+import|import static
+name|org
+operator|.
+name|junit
+operator|.
+name|jupiter
+operator|.
+name|api
+operator|.
+name|Assertions
+operator|.
+name|assertEquals
+import|;
+end_import
+
 begin_class
 specifier|public
 class|class
@@ -203,6 +233,8 @@ extends|extends
 name|AbstractTestCase
 block|{
 comment|/**      * BCEL-208: A couple of methods in MethodGen.java need to test for      * an empty instruction list.      */
+annotation|@
+name|Test
 specifier|public
 name|void
 name|testB208
@@ -300,6 +332,8 @@ argument_list|)
 expr_stmt|;
 block|}
 comment|/**      * BCEL-79:      */
+annotation|@
+name|Test
 specifier|public
 name|void
 name|testB79
@@ -393,8 +427,6 @@ decl_stmt|;
 comment|//System.out.println(new_lvt);
 name|assertEquals
 argument_list|(
-literal|"number of locals"
-argument_list|,
 name|lvt
 operator|.
 name|getTableLength
@@ -404,10 +436,14 @@ name|new_lvt
 operator|.
 name|getTableLength
 argument_list|()
+argument_list|,
+literal|"number of locals"
 argument_list|)
 expr_stmt|;
 block|}
 comment|/**      * BCEL-262:      */
+annotation|@
+name|Test
 specifier|public
 name|void
 name|testB262
@@ -531,6 +567,8 @@ argument_list|)
 expr_stmt|;
 block|}
 comment|/**      * BCEL-295:      */
+annotation|@
+name|Test
 specifier|public
 name|void
 name|testB295
@@ -652,8 +690,6 @@ comment|// 'i'
 comment|//System.out.println(new_lv);
 name|assertEquals
 argument_list|(
-literal|"live range length"
-argument_list|,
 name|lv
 operator|.
 name|getLength
@@ -663,10 +699,14 @@ name|new_lv
 operator|.
 name|getLength
 argument_list|()
+argument_list|,
+literal|"live range length"
 argument_list|)
 expr_stmt|;
 block|}
 comment|/**      * Test to improve BCEL tests code coverage for classfile/Utility.java.      */
+annotation|@
+name|Test
 specifier|public
 name|void
 name|testCoverage

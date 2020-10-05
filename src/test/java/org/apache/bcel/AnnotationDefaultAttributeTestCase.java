@@ -83,6 +83,36 @@ name|SimpleElementValue
 import|;
 end_import
 
+begin_import
+import|import
+name|org
+operator|.
+name|junit
+operator|.
+name|jupiter
+operator|.
+name|api
+operator|.
+name|Test
+import|;
+end_import
+
+begin_import
+import|import static
+name|org
+operator|.
+name|junit
+operator|.
+name|jupiter
+operator|.
+name|api
+operator|.
+name|Assertions
+operator|.
+name|assertTrue
+import|;
+end_import
+
 begin_class
 specifier|public
 class|class
@@ -91,6 +121,8 @@ extends|extends
 name|AbstractTestCase
 block|{
 comment|/**      * For values in an annotation that have default values, we should be able      * to query the AnnotationDefault attribute against the method to discover      * the default value that was originally declared.      */
+annotation|@
+name|Test
 specifier|public
 name|void
 name|testMethodAnnotations
@@ -151,13 +183,6 @@ argument_list|()
 decl_stmt|;
 name|assertTrue
 argument_list|(
-literal|"Should be STRING but is "
-operator|+
-name|val
-operator|.
-name|getElementValueType
-argument_list|()
-argument_list|,
 name|val
 operator|.
 name|getElementValueType
@@ -166,17 +191,17 @@ operator|==
 name|ElementValue
 operator|.
 name|STRING
+argument_list|,
+literal|"Should be STRING but is "
+operator|+
+name|val
+operator|.
+name|getElementValueType
+argument_list|()
 argument_list|)
 expr_stmt|;
 name|assertTrue
 argument_list|(
-literal|"Should have default of bananas but default is "
-operator|+
-name|val
-operator|.
-name|getValueString
-argument_list|()
-argument_list|,
 name|val
 operator|.
 name|getValueString
@@ -186,6 +211,13 @@ name|equals
 argument_list|(
 literal|"bananas"
 argument_list|)
+argument_list|,
+literal|"Should have default of bananas but default is "
+operator|+
+name|val
+operator|.
+name|getValueString
+argument_list|()
 argument_list|)
 expr_stmt|;
 block|}

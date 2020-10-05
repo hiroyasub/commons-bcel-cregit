@@ -27,6 +27,52 @@ name|JavaClass
 import|;
 end_import
 
+begin_import
+import|import
+name|org
+operator|.
+name|junit
+operator|.
+name|jupiter
+operator|.
+name|api
+operator|.
+name|Test
+import|;
+end_import
+
+begin_import
+import|import static
+name|org
+operator|.
+name|junit
+operator|.
+name|jupiter
+operator|.
+name|api
+operator|.
+name|Assertions
+operator|.
+name|assertFalse
+import|;
+end_import
+
+begin_import
+import|import static
+name|org
+operator|.
+name|junit
+operator|.
+name|jupiter
+operator|.
+name|api
+operator|.
+name|Assertions
+operator|.
+name|assertTrue
+import|;
+end_import
+
 begin_class
 specifier|public
 class|class
@@ -34,6 +80,8 @@ name|AnonymousClassTestCase
 extends|extends
 name|AbstractTestCase
 block|{
+annotation|@
+name|Test
 specifier|public
 name|void
 name|testRegularClassIsNotAnonymous
@@ -54,25 +102,27 @@ argument_list|)
 decl_stmt|;
 name|assertFalse
 argument_list|(
-literal|"regular outer classes are not anonymous"
-argument_list|,
 name|clazz
 operator|.
 name|isAnonymous
 argument_list|()
+argument_list|,
+literal|"regular outer classes are not anonymous"
 argument_list|)
 expr_stmt|;
 name|assertFalse
 argument_list|(
-literal|"regular outer classes are not nested"
-argument_list|,
 name|clazz
 operator|.
 name|isNested
 argument_list|()
+argument_list|,
+literal|"regular outer classes are not nested"
 argument_list|)
 expr_stmt|;
 block|}
+annotation|@
+name|Test
 specifier|public
 name|void
 name|testNamedInnerClassIsNotAnonymous
@@ -93,25 +143,27 @@ argument_list|)
 decl_stmt|;
 name|assertFalse
 argument_list|(
-literal|"regular inner classes are not anonymous"
-argument_list|,
 name|clazz
 operator|.
 name|isAnonymous
 argument_list|()
+argument_list|,
+literal|"regular inner classes are not anonymous"
 argument_list|)
 expr_stmt|;
 name|assertTrue
 argument_list|(
-literal|"regular inner classes are nested"
-argument_list|,
 name|clazz
 operator|.
 name|isNested
 argument_list|()
+argument_list|,
+literal|"regular inner classes are nested"
 argument_list|)
 expr_stmt|;
 block|}
+annotation|@
+name|Test
 specifier|public
 name|void
 name|testStaticInnerClassIsNotAnonymous
@@ -132,25 +184,27 @@ argument_list|)
 decl_stmt|;
 name|assertFalse
 argument_list|(
-literal|"regular static inner classes are not anonymous"
-argument_list|,
 name|clazz
 operator|.
 name|isAnonymous
 argument_list|()
+argument_list|,
+literal|"regular static inner classes are not anonymous"
 argument_list|)
 expr_stmt|;
 name|assertTrue
 argument_list|(
-literal|"regular static inner classes are nested"
-argument_list|,
 name|clazz
 operator|.
 name|isNested
 argument_list|()
+argument_list|,
+literal|"regular static inner classes are nested"
 argument_list|)
 expr_stmt|;
 block|}
+annotation|@
+name|Test
 specifier|public
 name|void
 name|testAnonymousInnerClassIsAnonymous
@@ -171,22 +225,22 @@ argument_list|)
 decl_stmt|;
 name|assertTrue
 argument_list|(
-literal|"anonymous inner classes are anonymous"
-argument_list|,
 name|clazz
 operator|.
 name|isAnonymous
 argument_list|()
+argument_list|,
+literal|"anonymous inner classes are anonymous"
 argument_list|)
 expr_stmt|;
 name|assertTrue
 argument_list|(
-literal|"anonymous inner classes are anonymous"
-argument_list|,
 name|clazz
 operator|.
 name|isNested
 argument_list|()
+argument_list|,
+literal|"anonymous inner classes are anonymous"
 argument_list|)
 expr_stmt|;
 block|}

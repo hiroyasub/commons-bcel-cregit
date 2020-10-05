@@ -15,6 +15,20 @@ name|verifier
 package|;
 end_package
 
+begin_import
+import|import
+name|org
+operator|.
+name|junit
+operator|.
+name|jupiter
+operator|.
+name|api
+operator|.
+name|Test
+import|;
+end_import
+
 begin_class
 specifier|public
 class|class
@@ -22,6 +36,8 @@ name|VerifierInvokeTestCase
 extends|extends
 name|AbstractVerifierTestCase
 block|{
+annotation|@
+name|Test
 specifier|public
 name|void
 name|testLegalInvokeVirtual
@@ -42,6 +58,8 @@ literal|"Verification of invokevirtual on method defined in superinterface must 
 argument_list|)
 expr_stmt|;
 block|}
+annotation|@
+name|Test
 specifier|public
 name|void
 name|testLegalInvokeStatic
@@ -55,6 +73,8 @@ literal|"Verification of invokestatic on method defined in superclass must pass.
 argument_list|)
 expr_stmt|;
 block|}
+annotation|@
+name|Test
 specifier|public
 name|void
 name|testLegalInvokeInterface
@@ -68,6 +88,8 @@ literal|"Verification of invokeinterface on method defined in superinterface mus
 argument_list|)
 expr_stmt|;
 block|}
+annotation|@
+name|Test
 specifier|public
 name|void
 name|testLegalInvokeSpecial

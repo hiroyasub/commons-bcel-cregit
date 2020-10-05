@@ -89,17 +89,11 @@ name|org
 operator|.
 name|junit
 operator|.
+name|jupiter
+operator|.
+name|api
+operator|.
 name|Test
-import|;
-end_import
-
-begin_import
-import|import
-name|junit
-operator|.
-name|framework
-operator|.
-name|AssertionFailedError
 import|;
 end_import
 
@@ -270,11 +264,11 @@ argument_list|()
 condition|)
 block|{
 specifier|final
-name|AssertionFailedError
+name|AssertionError
 name|error
 init|=
 operator|new
-name|AssertionFailedError
+name|AssertionError
 argument_list|(
 literal|"unexpected instruction at index "
 operator|+
@@ -397,11 +391,11 @@ operator|)
 condition|)
 block|{
 specifier|final
-name|AssertionFailedError
+name|AssertionError
 name|error
 init|=
 operator|new
-name|AssertionFailedError
+name|AssertionError
 argument_list|(
 literal|"corrupt instruction list at index "
 operator|+
@@ -537,11 +531,11 @@ argument_list|()
 condition|)
 block|{
 specifier|final
-name|AssertionFailedError
+name|AssertionError
 name|error
 init|=
 operator|new
-name|AssertionFailedError
+name|AssertionError
 argument_list|(
 literal|"unexpected instruction at index "
 operator|+

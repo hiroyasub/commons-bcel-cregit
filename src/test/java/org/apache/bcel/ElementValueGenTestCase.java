@@ -161,6 +161,52 @@ name|SimpleElementValueGen
 import|;
 end_import
 
+begin_import
+import|import
+name|org
+operator|.
+name|junit
+operator|.
+name|jupiter
+operator|.
+name|api
+operator|.
+name|Test
+import|;
+end_import
+
+begin_import
+import|import static
+name|org
+operator|.
+name|junit
+operator|.
+name|jupiter
+operator|.
+name|api
+operator|.
+name|Assertions
+operator|.
+name|assertTrue
+import|;
+end_import
+
+begin_import
+import|import static
+name|org
+operator|.
+name|junit
+operator|.
+name|jupiter
+operator|.
+name|api
+operator|.
+name|Assertions
+operator|.
+name|fail
+import|;
+end_import
+
 begin_class
 specifier|public
 class|class
@@ -200,6 +246,8 @@ argument_list|)
 return|;
 block|}
 comment|/**      * Create primitive element values      */
+annotation|@
+name|Test
 specifier|public
 name|void
 name|testCreateIntegerElementValue
@@ -245,6 +293,18 @@ comment|// Creation of an element like that should leave a new entry in the
 comment|// cpool
 name|assertTrue
 argument_list|(
+name|evg
+operator|.
+name|getIndex
+argument_list|()
+operator|==
+name|cp
+operator|.
+name|lookupInteger
+argument_list|(
+literal|555
+argument_list|)
+argument_list|,
 literal|"Should have the same index in the constantpool but "
 operator|+
 name|evg
@@ -254,18 +314,6 @@ argument_list|()
 operator|+
 literal|"!="
 operator|+
-name|cp
-operator|.
-name|lookupInteger
-argument_list|(
-literal|555
-argument_list|)
-argument_list|,
-name|evg
-operator|.
-name|getIndex
-argument_list|()
-operator|==
 name|cp
 operator|.
 name|lookupInteger
@@ -282,6 +330,8 @@ name|cp
 argument_list|)
 expr_stmt|;
 block|}
+annotation|@
+name|Test
 specifier|public
 name|void
 name|testCreateFloatElementValue
@@ -327,6 +377,18 @@ comment|// Creation of an element like that should leave a new entry in the
 comment|// cpool
 name|assertTrue
 argument_list|(
+name|evg
+operator|.
+name|getIndex
+argument_list|()
+operator|==
+name|cp
+operator|.
+name|lookupFloat
+argument_list|(
+literal|111.222f
+argument_list|)
+argument_list|,
 literal|"Should have the same index in the constantpool but "
 operator|+
 name|evg
@@ -336,18 +398,6 @@ argument_list|()
 operator|+
 literal|"!="
 operator|+
-name|cp
-operator|.
-name|lookupFloat
-argument_list|(
-literal|111.222f
-argument_list|)
-argument_list|,
-name|evg
-operator|.
-name|getIndex
-argument_list|()
-operator|==
 name|cp
 operator|.
 name|lookupFloat
@@ -364,6 +414,8 @@ name|cp
 argument_list|)
 expr_stmt|;
 block|}
+annotation|@
+name|Test
 specifier|public
 name|void
 name|testCreateDoubleElementValue
@@ -420,6 +472,13 @@ argument_list|)
 decl_stmt|;
 name|assertTrue
 argument_list|(
+name|evg
+operator|.
+name|getIndex
+argument_list|()
+operator|==
+name|idx
+argument_list|,
 literal|"Should have the same index in the constantpool but "
 operator|+
 name|evg
@@ -429,13 +488,6 @@ argument_list|()
 operator|+
 literal|"!="
 operator|+
-name|idx
-argument_list|,
-name|evg
-operator|.
-name|getIndex
-argument_list|()
-operator|==
 name|idx
 argument_list|)
 expr_stmt|;
@@ -447,6 +499,8 @@ name|cp
 argument_list|)
 expr_stmt|;
 block|}
+annotation|@
+name|Test
 specifier|public
 name|void
 name|testCreateLongElementValue
@@ -503,6 +557,13 @@ argument_list|)
 decl_stmt|;
 name|assertTrue
 argument_list|(
+name|evg
+operator|.
+name|getIndex
+argument_list|()
+operator|==
+name|idx
+argument_list|,
 literal|"Should have the same index in the constantpool but "
 operator|+
 name|evg
@@ -512,13 +573,6 @@ argument_list|()
 operator|+
 literal|"!="
 operator|+
-name|idx
-argument_list|,
-name|evg
-operator|.
-name|getIndex
-argument_list|()
-operator|==
 name|idx
 argument_list|)
 expr_stmt|;
@@ -530,6 +584,8 @@ name|cp
 argument_list|)
 expr_stmt|;
 block|}
+annotation|@
+name|Test
 specifier|public
 name|void
 name|testCreateCharElementValue
@@ -586,6 +642,13 @@ argument_list|)
 decl_stmt|;
 name|assertTrue
 argument_list|(
+name|evg
+operator|.
+name|getIndex
+argument_list|()
+operator|==
+name|idx
+argument_list|,
 literal|"Should have the same index in the constantpool but "
 operator|+
 name|evg
@@ -595,13 +658,6 @@ argument_list|()
 operator|+
 literal|"!="
 operator|+
-name|idx
-argument_list|,
-name|evg
-operator|.
-name|getIndex
-argument_list|()
-operator|==
 name|idx
 argument_list|)
 expr_stmt|;
@@ -613,6 +669,8 @@ name|cp
 argument_list|)
 expr_stmt|;
 block|}
+annotation|@
+name|Test
 specifier|public
 name|void
 name|testCreateByteElementValue
@@ -675,6 +733,13 @@ argument_list|)
 decl_stmt|;
 name|assertTrue
 argument_list|(
+name|evg
+operator|.
+name|getIndex
+argument_list|()
+operator|==
+name|idx
+argument_list|,
 literal|"Should have the same index in the constantpool but "
 operator|+
 name|evg
@@ -684,13 +749,6 @@ argument_list|()
 operator|+
 literal|"!="
 operator|+
-name|idx
-argument_list|,
-name|evg
-operator|.
-name|getIndex
-argument_list|()
-operator|==
 name|idx
 argument_list|)
 expr_stmt|;
@@ -702,6 +760,8 @@ name|cp
 argument_list|)
 expr_stmt|;
 block|}
+annotation|@
+name|Test
 specifier|public
 name|void
 name|testCreateBooleanElementValue
@@ -759,6 +819,13 @@ decl_stmt|;
 comment|// 1 == true
 name|assertTrue
 argument_list|(
+name|evg
+operator|.
+name|getIndex
+argument_list|()
+operator|==
+name|idx
+argument_list|,
 literal|"Should have the same index in the constantpool but "
 operator|+
 name|evg
@@ -768,13 +835,6 @@ argument_list|()
 operator|+
 literal|"!="
 operator|+
-name|idx
-argument_list|,
-name|evg
-operator|.
-name|getIndex
-argument_list|()
-operator|==
 name|idx
 argument_list|)
 expr_stmt|;
@@ -786,6 +846,8 @@ name|cp
 argument_list|)
 expr_stmt|;
 block|}
+annotation|@
+name|Test
 specifier|public
 name|void
 name|testCreateShortElementValue
@@ -845,6 +907,13 @@ argument_list|)
 decl_stmt|;
 name|assertTrue
 argument_list|(
+name|evg
+operator|.
+name|getIndex
+argument_list|()
+operator|==
+name|idx
+argument_list|,
 literal|"Should have the same index in the constantpool but "
 operator|+
 name|evg
@@ -854,13 +923,6 @@ argument_list|()
 operator|+
 literal|"!="
 operator|+
-name|idx
-argument_list|,
-name|evg
-operator|.
-name|getIndex
-argument_list|()
-operator|==
 name|idx
 argument_list|)
 expr_stmt|;
@@ -874,6 +936,8 @@ expr_stmt|;
 block|}
 comment|// //
 comment|// Create string element values
+annotation|@
+name|Test
 specifier|public
 name|void
 name|testCreateStringElementValue
@@ -920,6 +984,18 @@ comment|// Creation of an element like that should leave a new entry in the
 comment|// cpool
 name|assertTrue
 argument_list|(
+name|evg
+operator|.
+name|getIndex
+argument_list|()
+operator|==
+name|cp
+operator|.
+name|lookupUtf8
+argument_list|(
+literal|"hello"
+argument_list|)
+argument_list|,
 literal|"Should have the same index in the constantpool but "
 operator|+
 name|evg
@@ -929,18 +1005,6 @@ argument_list|()
 operator|+
 literal|"!="
 operator|+
-name|cp
-operator|.
-name|lookupUtf8
-argument_list|(
-literal|"hello"
-argument_list|)
-argument_list|,
-name|evg
-operator|.
-name|getIndex
-argument_list|()
-operator|==
 name|cp
 operator|.
 name|lookupUtf8
@@ -959,6 +1023,8 @@ expr_stmt|;
 block|}
 comment|// //
 comment|// Create enum element value
+annotation|@
+name|Test
 specifier|public
 name|void
 name|testCreateEnumElementValue
@@ -1014,6 +1080,18 @@ comment|// Creation of an element like that should leave a new entry in the
 comment|// cpool
 name|assertTrue
 argument_list|(
+name|evg
+operator|.
+name|getValueIndex
+argument_list|()
+operator|==
+name|cp
+operator|.
+name|lookupUtf8
+argument_list|(
+literal|"Red"
+argument_list|)
+argument_list|,
 literal|"The new ElementValue value index should match the contents of the constantpool but "
 operator|+
 name|evg
@@ -1023,18 +1101,6 @@ argument_list|()
 operator|+
 literal|"!="
 operator|+
-name|cp
-operator|.
-name|lookupUtf8
-argument_list|(
-literal|"Red"
-argument_list|)
-argument_list|,
-name|evg
-operator|.
-name|getValueIndex
-argument_list|()
-operator|==
 name|cp
 operator|.
 name|lookupUtf8
@@ -1059,6 +1125,8 @@ expr_stmt|;
 block|}
 comment|// //
 comment|// Create class element value
+annotation|@
+name|Test
 specifier|public
 name|void
 name|testCreateClassElementValue
@@ -1108,15 +1176,6 @@ argument_list|)
 decl_stmt|;
 name|assertTrue
 argument_list|(
-literal|"Unexpected value for contained class: '"
-operator|+
-name|evg
-operator|.
-name|getClassString
-argument_list|()
-operator|+
-literal|"'"
-argument_list|,
 name|evg
 operator|.
 name|getClassString
@@ -1126,6 +1185,15 @@ name|contains
 argument_list|(
 literal|"Integer"
 argument_list|)
+argument_list|,
+literal|"Unexpected value for contained class: '"
+operator|+
+name|evg
+operator|.
+name|getClassString
+argument_list|()
+operator|+
+literal|"'"
 argument_list|)
 expr_stmt|;
 name|checkSerialize

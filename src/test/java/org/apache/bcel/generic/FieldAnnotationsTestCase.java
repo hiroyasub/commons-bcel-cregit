@@ -117,6 +117,52 @@ name|SyntheticRepository
 import|;
 end_import
 
+begin_import
+import|import
+name|org
+operator|.
+name|junit
+operator|.
+name|jupiter
+operator|.
+name|api
+operator|.
+name|Test
+import|;
+end_import
+
+begin_import
+import|import static
+name|org
+operator|.
+name|junit
+operator|.
+name|jupiter
+operator|.
+name|api
+operator|.
+name|Assertions
+operator|.
+name|assertTrue
+import|;
+end_import
+
+begin_import
+import|import static
+name|org
+operator|.
+name|junit
+operator|.
+name|jupiter
+operator|.
+name|api
+operator|.
+name|Assertions
+operator|.
+name|fail
+import|;
+end_import
+
 begin_class
 specifier|public
 class|class
@@ -125,6 +171,8 @@ extends|extends
 name|AbstractTestCase
 block|{
 comment|/**      * Check field AnnotationEntrys are retrievable.      */
+annotation|@
+name|Test
 specifier|public
 name|void
 name|testFieldAnnotationEntrys
@@ -180,6 +228,8 @@ argument_list|)
 expr_stmt|;
 block|}
 comment|/**      * Check field AnnotationEntrys (de)serialize ok.      */
+annotation|@
+name|Test
 specifier|public
 name|void
 name|testFieldAnnotationEntrysReadWrite
@@ -311,6 +361,8 @@ argument_list|)
 expr_stmt|;
 block|}
 comment|/**      * Check we can load in a class, modify its field AnnotationEntrys, save it,      * reload it and everything is correct.      */
+annotation|@
+name|Test
 specifier|public
 name|void
 name|testFieldAnnotationModification
@@ -576,15 +628,6 @@ expr_stmt|;
 block|}
 name|assertTrue
 argument_list|(
-literal|"Should be 2 AnnotationEntrys on this field, but there are "
-operator|+
-name|f
-operator|.
-name|getAnnotationEntries
-argument_list|()
-operator|.
-name|length
-argument_list|,
 name|f
 operator|.
 name|getAnnotationEntries
@@ -593,6 +636,15 @@ operator|.
 name|length
 operator|==
 literal|2
+argument_list|,
+literal|"Should be 2 AnnotationEntrys on this field, but there are "
+operator|+
+name|f
+operator|.
+name|getAnnotationEntries
+argument_list|()
+operator|.
+name|length
 argument_list|)
 expr_stmt|;
 block|}
@@ -704,6 +756,16 @@ parameter_list|)
 block|{
 name|assertTrue
 argument_list|(
+name|a
+operator|.
+name|getAnnotationType
+argument_list|()
+operator|.
+name|equals
+argument_list|(
+name|name
+argument_list|)
+argument_list|,
 literal|"Expected AnnotationEntry to have name "
 operator|+
 name|name
@@ -714,29 +776,10 @@ name|a
 operator|.
 name|getAnnotationType
 argument_list|()
-argument_list|,
-name|a
-operator|.
-name|getAnnotationType
-argument_list|()
-operator|.
-name|equals
-argument_list|(
-name|name
-argument_list|)
 argument_list|)
 expr_stmt|;
 name|assertTrue
 argument_list|(
-literal|"Expected AnnotationEntry to have one element but it had "
-operator|+
-name|a
-operator|.
-name|getElementValuePairs
-argument_list|()
-operator|.
-name|length
-argument_list|,
 name|a
 operator|.
 name|getElementValuePairs
@@ -745,6 +788,15 @@ operator|.
 name|length
 operator|==
 literal|1
+argument_list|,
+literal|"Expected AnnotationEntry to have one element but it had "
+operator|+
+name|a
+operator|.
+name|getElementValuePairs
+argument_list|()
+operator|.
+name|length
 argument_list|)
 expr_stmt|;
 specifier|final
@@ -761,6 +813,16 @@ index|]
 decl_stmt|;
 name|assertTrue
 argument_list|(
+name|elementname
+operator|.
+name|equals
+argument_list|(
+name|envp
+operator|.
+name|getNameString
+argument_list|()
+argument_list|)
+argument_list|,
 literal|"Expected element name "
 operator|+
 name|elementname
@@ -771,20 +833,23 @@ name|envp
 operator|.
 name|getNameString
 argument_list|()
-argument_list|,
-name|elementname
+argument_list|)
+expr_stmt|;
+name|assertTrue
+argument_list|(
+name|elementvalue
 operator|.
 name|equals
 argument_list|(
 name|envp
 operator|.
-name|getNameString
+name|getValue
+argument_list|()
+operator|.
+name|stringifyValue
 argument_list|()
 argument_list|)
-argument_list|)
-expr_stmt|;
-name|assertTrue
-argument_list|(
+argument_list|,
 literal|"Expected element value "
 operator|+
 name|elementvalue
@@ -798,19 +863,6 @@ argument_list|()
 operator|.
 name|stringifyValue
 argument_list|()
-argument_list|,
-name|elementvalue
-operator|.
-name|equals
-argument_list|(
-name|envp
-operator|.
-name|getValue
-argument_list|()
-operator|.
-name|stringifyValue
-argument_list|()
-argument_list|)
 argument_list|)
 expr_stmt|;
 block|}

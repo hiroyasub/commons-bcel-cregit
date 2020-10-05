@@ -73,6 +73,20 @@ name|TestArrayAccess04Creator
 import|;
 end_import
 
+begin_import
+import|import
+name|org
+operator|.
+name|junit
+operator|.
+name|jupiter
+operator|.
+name|api
+operator|.
+name|Test
+import|;
+end_import
+
 begin_class
 specifier|public
 class|class
@@ -80,6 +94,8 @@ name|VerifierArrayAccessTestCase
 extends|extends
 name|AbstractVerifierTestCase
 block|{
+annotation|@
+name|Test
 specifier|public
 name|void
 name|testInvalidArrayAccess
@@ -116,6 +132,8 @@ literal|"Verification of an arraystore instruction of an int on an array of refe
 argument_list|)
 expr_stmt|;
 block|}
+annotation|@
+name|Test
 specifier|public
 name|void
 name|testValidArrayAccess

@@ -55,27 +55,27 @@ name|org
 operator|.
 name|junit
 operator|.
-name|Assert
-import|;
-end_import
-
-begin_import
-import|import
-name|org
+name|jupiter
 operator|.
-name|junit
+name|api
 operator|.
 name|Test
 import|;
 end_import
 
 begin_import
-import|import
+import|import static
+name|org
+operator|.
 name|junit
 operator|.
-name|framework
+name|jupiter
 operator|.
-name|TestCase
+name|api
+operator|.
+name|Assertions
+operator|.
+name|assertTrue
 import|;
 end_import
 
@@ -83,9 +83,9 @@ begin_class
 specifier|public
 class|class
 name|Class2HTMLTestCase
-extends|extends
-name|TestCase
 block|{
+annotation|@
+name|Test
 specifier|public
 name|void
 name|testConvertJavaUtil
@@ -113,8 +113,6 @@ argument_list|()
 condition|)
 block|{
 comment|// either was not created or already existed
-name|Assert
-operator|.
 name|assertTrue
 argument_list|(
 name|outputDir

@@ -212,12 +212,18 @@ import|;
 end_import
 
 begin_import
-import|import
+import|import static
+name|org
+operator|.
 name|junit
 operator|.
-name|framework
+name|jupiter
 operator|.
-name|TestCase
+name|api
+operator|.
+name|Assertions
+operator|.
+name|assertTrue
 import|;
 end_import
 
@@ -226,8 +232,6 @@ specifier|public
 specifier|abstract
 class|class
 name|AbstractTestCase
-extends|extends
-name|TestCase
 block|{
 specifier|private
 specifier|static
@@ -731,19 +735,19 @@ block|}
 block|}
 name|assertTrue
 argument_list|(
-literal|"Should be one match: "
-operator|+
-name|chosenAttrsList
-operator|.
-name|size
-argument_list|()
-argument_list|,
 name|chosenAttrsList
 operator|.
 name|size
 argument_list|()
 operator|==
 literal|1
+argument_list|,
+literal|"Should be one match: "
+operator|+
+name|chosenAttrsList
+operator|.
+name|size
+argument_list|()
 argument_list|)
 expr_stmt|;
 return|return

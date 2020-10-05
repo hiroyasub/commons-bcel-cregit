@@ -55,6 +55,20 @@ name|CounterVisitor
 import|;
 end_import
 
+begin_import
+import|import
+name|org
+operator|.
+name|junit
+operator|.
+name|jupiter
+operator|.
+name|api
+operator|.
+name|BeforeEach
+import|;
+end_import
+
 begin_class
 specifier|public
 specifier|abstract
@@ -78,7 +92,7 @@ init|=
 literal|null
 decl_stmt|;
 annotation|@
-name|Override
+name|BeforeEach
 specifier|public
 name|void
 name|setUp

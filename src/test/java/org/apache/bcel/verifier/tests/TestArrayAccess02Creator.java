@@ -190,12 +190,18 @@ import|;
 end_import
 
 begin_import
-import|import
+import|import static
 name|org
 operator|.
 name|junit
 operator|.
-name|Assert
+name|jupiter
+operator|.
+name|api
+operator|.
+name|Assertions
+operator|.
+name|assertNotNull
 import|;
 end_import
 
@@ -368,8 +374,6 @@ literal|0
 argument_list|)
 argument_list|)
 decl_stmt|;
-name|Assert
-operator|.
 name|assertNotNull
 argument_list|(
 name|ih_0
@@ -420,8 +424,6 @@ name|VOID
 argument_list|)
 argument_list|)
 decl_stmt|;
-name|Assert
-operator|.
 name|assertNotNull
 argument_list|(
 name|ih_4
@@ -523,8 +525,6 @@ literal|1
 argument_list|)
 argument_list|)
 decl_stmt|;
-name|Assert
-operator|.
 name|assertNotNull
 argument_list|(
 name|ih_0
@@ -587,8 +587,6 @@ literal|1
 argument_list|)
 argument_list|)
 decl_stmt|;
-name|Assert
-operator|.
 name|assertNotNull
 argument_list|(
 name|ih_5
@@ -650,8 +648,6 @@ literal|1
 argument_list|)
 argument_list|)
 decl_stmt|;
-name|Assert
-operator|.
 name|assertNotNull
 argument_list|(
 name|ih_10
@@ -749,8 +745,6 @@ name|VOID
 argument_list|)
 argument_list|)
 decl_stmt|;
-name|Assert
-operator|.
 name|assertNotNull
 argument_list|(
 name|ih_20

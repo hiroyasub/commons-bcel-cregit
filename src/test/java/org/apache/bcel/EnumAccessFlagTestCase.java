@@ -27,6 +27,36 @@ name|JavaClass
 import|;
 end_import
 
+begin_import
+import|import
+name|org
+operator|.
+name|junit
+operator|.
+name|jupiter
+operator|.
+name|api
+operator|.
+name|Test
+import|;
+end_import
+
+begin_import
+import|import static
+name|org
+operator|.
+name|junit
+operator|.
+name|jupiter
+operator|.
+name|api
+operator|.
+name|Assertions
+operator|.
+name|assertTrue
+import|;
+end_import
+
 begin_class
 specifier|public
 class|class
@@ -35,6 +65,8 @@ extends|extends
 name|AbstractTestCase
 block|{
 comment|/**      * An enumerated type, once compiled, should result in a class file that is      * marked such that we can determine from the access flags (through BCEL)      * that it was originally an enum type declaration.      */
+annotation|@
+name|Test
 specifier|public
 name|void
 name|testEnumClassSaysItIs
@@ -54,12 +86,12 @@ argument_list|)
 decl_stmt|;
 name|assertTrue
 argument_list|(
-literal|"Expected SimpleEnum class to say it was an enum - but it didn't !"
-argument_list|,
 name|clazz
 operator|.
 name|isEnum
 argument_list|()
+argument_list|,
+literal|"Expected SimpleEnum class to say it was an enum - but it didn't !"
 argument_list|)
 expr_stmt|;
 name|clazz
@@ -73,13 +105,13 @@ argument_list|)
 expr_stmt|;
 name|assertTrue
 argument_list|(
-literal|"Expected SimpleClass class to say it was not an enum - but it didn't !"
-argument_list|,
 operator|!
 name|clazz
 operator|.
 name|isEnum
 argument_list|()
+argument_list|,
+literal|"Expected SimpleClass class to say it was not an enum - but it didn't !"
 argument_list|)
 expr_stmt|;
 block|}

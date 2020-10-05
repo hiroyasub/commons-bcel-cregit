@@ -17,11 +17,31 @@ end_package
 
 begin_import
 import|import
+name|org
+operator|.
 name|junit
 operator|.
-name|framework
+name|jupiter
 operator|.
-name|TestCase
+name|api
+operator|.
+name|Test
+import|;
+end_import
+
+begin_import
+import|import static
+name|org
+operator|.
+name|junit
+operator|.
+name|jupiter
+operator|.
+name|api
+operator|.
+name|Assertions
+operator|.
+name|assertEquals
 import|;
 end_import
 
@@ -29,9 +49,9 @@ begin_class
 specifier|public
 class|class
 name|TypeTestCase
-extends|extends
-name|TestCase
 block|{
+annotation|@
+name|Test
 specifier|public
 name|void
 name|testBCEL243
@@ -65,11 +85,11 @@ argument_list|()
 decl_stmt|;
 name|assertEquals
 argument_list|(
-literal|"Type.getType"
-argument_list|,
 name|expectedValue
 argument_list|,
 name|actualValue
+argument_list|,
+literal|"Type.getType"
 argument_list|)
 expr_stmt|;
 block|}

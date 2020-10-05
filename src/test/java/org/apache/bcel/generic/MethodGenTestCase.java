@@ -81,15 +81,9 @@ name|org
 operator|.
 name|junit
 operator|.
-name|Assert
-import|;
-end_import
-
-begin_import
-import|import
-name|org
+name|jupiter
 operator|.
-name|junit
+name|api
 operator|.
 name|Test
 import|;
@@ -104,6 +98,118 @@ operator|.
 name|internet
 operator|.
 name|MailDateFormat
+import|;
+end_import
+
+begin_import
+import|import static
+name|org
+operator|.
+name|junit
+operator|.
+name|jupiter
+operator|.
+name|api
+operator|.
+name|Assertions
+operator|.
+name|assertEquals
+import|;
+end_import
+
+begin_import
+import|import static
+name|org
+operator|.
+name|junit
+operator|.
+name|jupiter
+operator|.
+name|api
+operator|.
+name|Assertions
+operator|.
+name|assertFalse
+import|;
+end_import
+
+begin_import
+import|import static
+name|org
+operator|.
+name|junit
+operator|.
+name|jupiter
+operator|.
+name|api
+operator|.
+name|Assertions
+operator|.
+name|assertNotNull
+import|;
+end_import
+
+begin_import
+import|import static
+name|org
+operator|.
+name|junit
+operator|.
+name|jupiter
+operator|.
+name|api
+operator|.
+name|Assertions
+operator|.
+name|assertNull
+import|;
+end_import
+
+begin_import
+import|import static
+name|org
+operator|.
+name|junit
+operator|.
+name|jupiter
+operator|.
+name|api
+operator|.
+name|Assertions
+operator|.
+name|assertThrows
+import|;
+end_import
+
+begin_import
+import|import static
+name|org
+operator|.
+name|junit
+operator|.
+name|jupiter
+operator|.
+name|api
+operator|.
+name|Assertions
+operator|.
+name|assertTrue
+import|;
+end_import
+
+begin_import
+import|import static
+name|org
+operator|.
+name|junit
+operator|.
+name|jupiter
+operator|.
+name|api
+operator|.
+name|Assertions
+operator|.
+name|fail
 import|;
 end_import
 
@@ -252,8 +358,6 @@ argument_list|)
 return|;
 block|}
 block|}
-name|Assert
-operator|.
 name|fail
 argument_list|(
 literal|"Method "
@@ -342,18 +446,16 @@ argument_list|(
 literal|0
 argument_list|)
 decl_stmt|;
-name|Assert
-operator|.
 name|assertEquals
 argument_list|(
-literal|"Wrong number of annotations in the first parameter"
-argument_list|,
 literal|1
 argument_list|,
 name|firstParamAnnotations
 operator|.
 name|size
 argument_list|()
+argument_list|,
+literal|"Wrong number of annotations in the first parameter"
 argument_list|)
 expr_stmt|;
 specifier|final
@@ -370,18 +472,16 @@ argument_list|(
 literal|1
 argument_list|)
 decl_stmt|;
-name|Assert
-operator|.
 name|assertEquals
 argument_list|(
-literal|"Wrong number of annotations in the second parameter"
-argument_list|,
 literal|1
 argument_list|,
 name|secondParamAnnotations
 operator|.
 name|size
 argument_list|()
+argument_list|,
+literal|"Wrong number of annotations in the second parameter"
 argument_list|)
 expr_stmt|;
 block|}
@@ -419,18 +519,16 @@ index|[
 literal|1
 index|]
 decl_stmt|;
-name|Assert
-operator|.
 name|assertEquals
 argument_list|(
-literal|"variable name"
-argument_list|,
 literal|"a"
 argument_list|,
 name|lv
 operator|.
 name|getName
 argument_list|()
+argument_list|,
+literal|"variable name"
 argument_list|)
 expr_stmt|;
 specifier|final
@@ -451,30 +549,22 @@ operator|.
 name|getEnd
 argument_list|()
 decl_stmt|;
-name|Assert
-operator|.
 name|assertNotNull
 argument_list|(
+name|start
+argument_list|,
 literal|"scope start"
-argument_list|,
-name|start
 argument_list|)
 expr_stmt|;
-name|Assert
-operator|.
 name|assertNotNull
 argument_list|(
-literal|"scope end"
-argument_list|,
 name|end
+argument_list|,
+literal|"scope end"
 argument_list|)
 expr_stmt|;
-name|Assert
-operator|.
 name|assertTrue
 argument_list|(
-literal|"scope start not targeted by the local variable"
-argument_list|,
 name|Arrays
 operator|.
 name|asList
@@ -489,14 +579,12 @@ name|contains
 argument_list|(
 name|lv
 argument_list|)
+argument_list|,
+literal|"scope start not targeted by the local variable"
 argument_list|)
 expr_stmt|;
-name|Assert
-operator|.
 name|assertTrue
 argument_list|(
-literal|"scope end not targeted by the local variable"
-argument_list|,
 name|Arrays
 operator|.
 name|asList
@@ -511,6 +599,8 @@ name|contains
 argument_list|(
 name|lv
 argument_list|)
+argument_list|,
+literal|"scope end not targeted by the local variable"
 argument_list|)
 expr_stmt|;
 comment|// now let's remove the local variable
@@ -521,12 +611,8 @@ argument_list|(
 name|lv
 argument_list|)
 expr_stmt|;
-name|Assert
-operator|.
 name|assertFalse
 argument_list|(
-literal|"scope start still targeted by the removed variable"
-argument_list|,
 name|Arrays
 operator|.
 name|asList
@@ -541,14 +627,12 @@ name|contains
 argument_list|(
 name|lv
 argument_list|)
+argument_list|,
+literal|"scope start still targeted by the removed variable"
 argument_list|)
 expr_stmt|;
-name|Assert
-operator|.
 name|assertFalse
 argument_list|(
-literal|"scope end still targeted by the removed variable"
-argument_list|,
 name|Arrays
 operator|.
 name|asList
@@ -563,30 +647,28 @@ name|contains
 argument_list|(
 name|lv
 argument_list|)
+argument_list|,
+literal|"scope end still targeted by the removed variable"
 argument_list|)
 expr_stmt|;
-name|Assert
-operator|.
 name|assertNull
 argument_list|(
-literal|"scope start"
-argument_list|,
 name|lv
 operator|.
 name|getStart
 argument_list|()
+argument_list|,
+literal|"scope start"
 argument_list|)
 expr_stmt|;
-name|Assert
-operator|.
 name|assertNull
 argument_list|(
-literal|"scope end"
-argument_list|,
 name|lv
 operator|.
 name|getEnd
 argument_list|()
+argument_list|,
+literal|"scope end"
 argument_list|)
 expr_stmt|;
 block|}
@@ -624,18 +706,16 @@ index|[
 literal|1
 index|]
 decl_stmt|;
-name|Assert
-operator|.
 name|assertEquals
 argument_list|(
-literal|"variable name"
-argument_list|,
 literal|"a"
 argument_list|,
 name|lv
 operator|.
 name|getName
 argument_list|()
+argument_list|,
+literal|"variable name"
 argument_list|)
 expr_stmt|;
 specifier|final
@@ -656,30 +736,22 @@ operator|.
 name|getEnd
 argument_list|()
 decl_stmt|;
-name|Assert
-operator|.
 name|assertNotNull
 argument_list|(
+name|start
+argument_list|,
 literal|"scope start"
-argument_list|,
-name|start
 argument_list|)
 expr_stmt|;
-name|Assert
-operator|.
 name|assertNotNull
 argument_list|(
-literal|"scope end"
-argument_list|,
 name|end
+argument_list|,
+literal|"scope end"
 argument_list|)
 expr_stmt|;
-name|Assert
-operator|.
 name|assertTrue
 argument_list|(
-literal|"scope start not targeted by the local variable"
-argument_list|,
 name|Arrays
 operator|.
 name|asList
@@ -694,14 +766,12 @@ name|contains
 argument_list|(
 name|lv
 argument_list|)
+argument_list|,
+literal|"scope start not targeted by the local variable"
 argument_list|)
 expr_stmt|;
-name|Assert
-operator|.
 name|assertTrue
 argument_list|(
-literal|"scope end not targeted by the local variable"
-argument_list|,
 name|Arrays
 operator|.
 name|asList
@@ -716,6 +786,8 @@ name|contains
 argument_list|(
 name|lv
 argument_list|)
+argument_list|,
+literal|"scope end not targeted by the local variable"
 argument_list|)
 expr_stmt|;
 comment|// now let's remove the local variables
@@ -724,12 +796,8 @@ operator|.
 name|removeLocalVariables
 argument_list|()
 expr_stmt|;
-name|Assert
-operator|.
 name|assertFalse
 argument_list|(
-literal|"scope start still targeted by the removed variable"
-argument_list|,
 name|Arrays
 operator|.
 name|asList
@@ -744,14 +812,12 @@ name|contains
 argument_list|(
 name|lv
 argument_list|)
+argument_list|,
+literal|"scope start still targeted by the removed variable"
 argument_list|)
 expr_stmt|;
-name|Assert
-operator|.
 name|assertFalse
 argument_list|(
-literal|"scope end still targeted by the removed variable"
-argument_list|,
 name|Arrays
 operator|.
 name|asList
@@ -766,52 +832,50 @@ name|contains
 argument_list|(
 name|lv
 argument_list|)
+argument_list|,
+literal|"scope end still targeted by the removed variable"
 argument_list|)
 expr_stmt|;
-name|Assert
-operator|.
 name|assertNull
 argument_list|(
-literal|"scope start"
-argument_list|,
 name|lv
 operator|.
 name|getStart
 argument_list|()
+argument_list|,
+literal|"scope start"
 argument_list|)
 expr_stmt|;
-name|Assert
-operator|.
 name|assertNull
 argument_list|(
-literal|"scope end"
-argument_list|,
 name|lv
 operator|.
 name|getEnd
 argument_list|()
+argument_list|,
+literal|"scope end"
 argument_list|)
 expr_stmt|;
 block|}
 annotation|@
 name|Test
-argument_list|(
-name|expected
-operator|=
-name|IllegalStateException
-operator|.
-name|class
-argument_list|)
 specifier|public
 name|void
 name|testInvalidNullMethodBody_MailDateFormat
 parameter_list|()
-throws|throws
-name|Exception
 block|{
+name|assertThrows
+argument_list|(
+name|IllegalStateException
+operator|.
+name|class
+argument_list|,
+parameter_list|()
+lambda|->
 name|testInvalidNullMethodBody
 argument_list|(
 literal|"javax.mail.internet.MailDateFormat"
+argument_list|)
 argument_list|)
 expr_stmt|;
 block|}

@@ -27,6 +27,36 @@ name|JavaClass
 import|;
 end_import
 
+begin_import
+import|import
+name|org
+operator|.
+name|junit
+operator|.
+name|jupiter
+operator|.
+name|api
+operator|.
+name|Test
+import|;
+end_import
+
+begin_import
+import|import static
+name|org
+operator|.
+name|junit
+operator|.
+name|jupiter
+operator|.
+name|api
+operator|.
+name|Assertions
+operator|.
+name|assertTrue
+import|;
+end_import
+
 begin_class
 specifier|public
 class|class
@@ -35,6 +65,8 @@ extends|extends
 name|AbstractTestCase
 block|{
 comment|/**      * If you write an annotation and compile it, the class file generated      * should be marked as an annotation type - which is detectable through      * BCEL.      */
+annotation|@
+name|Test
 specifier|public
 name|void
 name|testAnnotationClassSaysItIs
@@ -54,12 +86,12 @@ argument_list|)
 decl_stmt|;
 name|assertTrue
 argument_list|(
-literal|"Expected SimpleAnnotation class to say it was an annotation - but it didn't !"
-argument_list|,
 name|clazz
 operator|.
 name|isAnnotation
 argument_list|()
+argument_list|,
+literal|"Expected SimpleAnnotation class to say it was an annotation - but it didn't !"
 argument_list|)
 expr_stmt|;
 name|clazz
@@ -73,13 +105,13 @@ argument_list|)
 expr_stmt|;
 name|assertTrue
 argument_list|(
-literal|"Expected SimpleClass class to say it was not an annotation - but it didn't !"
-argument_list|,
 operator|!
 name|clazz
 operator|.
 name|isAnnotation
 argument_list|()
+argument_list|,
+literal|"Expected SimpleClass class to say it was not an annotation - but it didn't !"
 argument_list|)
 expr_stmt|;
 block|}
