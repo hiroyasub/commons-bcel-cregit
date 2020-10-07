@@ -42,6 +42,8 @@ specifier|public
 name|void
 name|testLegalInvokeVirtual
 parameter_list|()
+throws|throws
+name|ClassNotFoundException
 block|{
 name|assertVerifyOK
 argument_list|(
@@ -64,6 +66,8 @@ specifier|public
 name|void
 name|testLegalInvokeStatic
 parameter_list|()
+throws|throws
+name|ClassNotFoundException
 block|{
 name|assertVerifyOK
 argument_list|(
@@ -79,6 +83,8 @@ specifier|public
 name|void
 name|testLegalInvokeInterface
 parameter_list|()
+throws|throws
+name|ClassNotFoundException
 block|{
 name|assertVerifyOK
 argument_list|(
@@ -94,6 +100,8 @@ specifier|public
 name|void
 name|testLegalInvokeSpecial
 parameter_list|()
+throws|throws
+name|ClassNotFoundException
 block|{
 name|assertVerifyOK
 argument_list|(

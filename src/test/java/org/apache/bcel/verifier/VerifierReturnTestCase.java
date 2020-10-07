@@ -86,6 +86,8 @@ name|testInvalidReturn
 parameter_list|()
 throws|throws
 name|IOException
+throws|,
+name|ClassNotFoundException
 block|{
 operator|new
 name|TestReturn01Creator
@@ -122,6 +124,8 @@ specifier|public
 name|void
 name|testValidReturn
 parameter_list|()
+throws|throws
+name|ClassNotFoundException
 block|{
 name|assertVerifyOK
 argument_list|(

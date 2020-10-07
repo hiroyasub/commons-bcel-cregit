@@ -102,6 +102,8 @@ name|testInvalidArrayAccess
 parameter_list|()
 throws|throws
 name|IOException
+throws|,
+name|ClassNotFoundException
 block|{
 operator|new
 name|TestArrayAccess03Creator
@@ -140,6 +142,8 @@ name|testValidArrayAccess
 parameter_list|()
 throws|throws
 name|IOException
+throws|,
+name|ClassNotFoundException
 block|{
 name|assertVerifyOK
 argument_list|(

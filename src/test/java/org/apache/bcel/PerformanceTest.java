@@ -39,16 +39,6 @@ name|java
 operator|.
 name|io
 operator|.
-name|FileFilter
-import|;
-end_import
-
-begin_import
-import|import
-name|java
-operator|.
-name|io
-operator|.
 name|IOException
 import|;
 end_import
@@ -860,9 +850,6 @@ name|javaLib
 operator|.
 name|listFiles
 argument_list|(
-operator|(
-name|FileFilter
-operator|)
 name|file
 lambda|->
 block|{

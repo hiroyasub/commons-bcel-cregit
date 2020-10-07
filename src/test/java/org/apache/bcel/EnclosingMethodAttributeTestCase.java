@@ -129,7 +129,7 @@ name|api
 operator|.
 name|Assertions
 operator|.
-name|assertNotNull
+name|assertEquals
 import|;
 end_import
 
@@ -145,7 +145,7 @@ name|api
 operator|.
 name|Assertions
 operator|.
-name|assertTrue
+name|assertNotNull
 import|;
 end_import
 
@@ -198,19 +198,15 @@ argument_list|,
 name|clazz
 argument_list|)
 decl_stmt|;
-name|assertTrue
+name|assertEquals
 argument_list|(
-name|encMethodAttrs
-operator|.
-name|length
-operator|==
 literal|1
 argument_list|,
-literal|"Expected 1 EnclosingMethod attribute but found "
-operator|+
 name|encMethodAttrs
 operator|.
 name|length
+argument_list|,
+literal|"Wrong number of EnclosingMethod attributes"
 argument_list|)
 expr_stmt|;
 specifier|final
@@ -253,38 +249,24 @@ argument_list|(
 name|pool
 argument_list|)
 decl_stmt|;
-name|assertTrue
-argument_list|(
-name|enclosingClassName
-operator|.
-name|equals
+name|assertEquals
 argument_list|(
 name|PACKAGE_BASE_SIG
 operator|+
 literal|"/data/AttributeTestClassEM01"
-argument_list|)
 argument_list|,
-literal|"Expected class name to be '"
-operator|+
-name|PACKAGE_BASE_SIG
-operator|+
-literal|"/data/AttributeTestClassEM01' but was "
-operator|+
 name|enclosingClassName
+argument_list|,
+literal|"Wrong class name"
 argument_list|)
 expr_stmt|;
-name|assertTrue
+name|assertEquals
 argument_list|(
 name|enclosingMethodName
-operator|.
-name|equals
-argument_list|(
-literal|"main"
-argument_list|)
 argument_list|,
-literal|"Expected method name to be 'main' but was "
-operator|+
-name|enclosingMethodName
+literal|"main"
+argument_list|,
+literal|"Wrong method name"
 argument_list|)
 expr_stmt|;
 block|}
@@ -330,13 +312,13 @@ argument_list|,
 name|clazz
 argument_list|)
 decl_stmt|;
-name|assertTrue
+name|assertEquals
 argument_list|(
+literal|1
+argument_list|,
 name|encMethodAttrs
 operator|.
 name|length
-operator|==
-literal|1
 argument_list|,
 literal|"Expected 1 EnclosingMethod attribute but found "
 operator|+
@@ -371,41 +353,27 @@ argument_list|(
 name|pool
 argument_list|)
 decl_stmt|;
-name|assertTrue
+name|assertEquals
 argument_list|(
 name|em
 operator|.
 name|getEnclosingMethodIndex
 argument_list|()
-operator|==
+argument_list|,
 literal|0
 argument_list|,
-literal|"The class is not within a method, so method_index should be null, but it is "
-operator|+
-name|em
-operator|.
-name|getEnclosingMethodIndex
-argument_list|()
+literal|"The class is not within a method, so method_index should be null"
 argument_list|)
 expr_stmt|;
-name|assertTrue
-argument_list|(
-name|enclosingClassName
-operator|.
-name|equals
+name|assertEquals
 argument_list|(
 name|PACKAGE_BASE_SIG
 operator|+
 literal|"/data/AttributeTestClassEM02"
-argument_list|)
 argument_list|,
-literal|"Expected class name to be '"
-operator|+
-name|PACKAGE_BASE_SIG
-operator|+
-literal|"/data/AttributeTestClassEM02' but was "
-operator|+
 name|enclosingClassName
+argument_list|,
+literal|"Wrong class name"
 argument_list|)
 expr_stmt|;
 block|}
@@ -453,19 +421,15 @@ argument_list|,
 name|clazz
 argument_list|)
 decl_stmt|;
-name|assertTrue
+name|assertEquals
 argument_list|(
-name|encMethodAttrs
-operator|.
-name|length
-operator|==
 literal|1
 argument_list|,
-literal|"Expected 1 EnclosingMethod attribute but found "
-operator|+
 name|encMethodAttrs
 operator|.
 name|length
+argument_list|,
+literal|"Wrong number of EnclosingMethod attributes"
 argument_list|)
 expr_stmt|;
 comment|// Write it out
@@ -538,41 +502,27 @@ argument_list|(
 name|pool
 argument_list|)
 decl_stmt|;
-name|assertTrue
+name|assertEquals
 argument_list|(
 name|em
 operator|.
 name|getEnclosingMethodIndex
 argument_list|()
-operator|==
+argument_list|,
 literal|0
 argument_list|,
-literal|"The class is not within a method, so method_index should be null, but it is "
-operator|+
-name|em
-operator|.
-name|getEnclosingMethodIndex
-argument_list|()
+literal|"The class is not within a method, so method_index should be null"
 argument_list|)
 expr_stmt|;
-name|assertTrue
-argument_list|(
-name|enclosingClassName
-operator|.
-name|equals
+name|assertEquals
 argument_list|(
 name|PACKAGE_BASE_SIG
 operator|+
 literal|"/data/AttributeTestClassEM02"
-argument_list|)
 argument_list|,
-literal|"Expected class name to be '"
-operator|+
-name|PACKAGE_BASE_SIG
-operator|+
-literal|"/data/AttributeTestClassEM02' but was "
-operator|+
 name|enclosingClassName
+argument_list|,
+literal|"Wrong class name"
 argument_list|)
 expr_stmt|;
 name|tfile

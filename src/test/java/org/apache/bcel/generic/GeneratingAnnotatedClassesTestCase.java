@@ -377,39 +377,22 @@ operator|.
 name|getAnnotationEntries
 argument_list|()
 decl_stmt|;
-name|assertTrue
+name|assertEquals
 argument_list|(
-name|as
-operator|.
-name|length
-operator|==
 literal|2
 argument_list|,
-literal|"Should be two AnnotationEntries but found "
-operator|+
 name|as
 operator|.
 name|length
+argument_list|,
+literal|"Wrong number of AnnotationEntries"
 argument_list|)
 expr_stmt|;
 comment|// TODO L??;
-name|assertTrue
-argument_list|(
-name|as
-index|[
-literal|0
-index|]
-operator|.
-name|getAnnotationType
-argument_list|()
-operator|.
-name|equals
+name|assertEquals
 argument_list|(
 literal|"LSimpleAnnotation;"
-argument_list|)
 argument_list|,
-literal|"Name of annotation 1 should be LSimpleAnnotation; but it is "
-operator|+
 name|as
 index|[
 literal|0
@@ -417,25 +400,14 @@ index|]
 operator|.
 name|getAnnotationType
 argument_list|()
+argument_list|,
+literal|"Wrong name of annotation 1"
 argument_list|)
 expr_stmt|;
-name|assertTrue
-argument_list|(
-name|as
-index|[
-literal|1
-index|]
-operator|.
-name|getAnnotationType
-argument_list|()
-operator|.
-name|equals
+name|assertEquals
 argument_list|(
 literal|"LSimpleAnnotation;"
-argument_list|)
 argument_list|,
-literal|"Name of annotation 2 should be LSimpleAnnotation; but it is "
-operator|+
 name|as
 index|[
 literal|1
@@ -443,6 +415,8 @@ index|]
 operator|.
 name|getAnnotationType
 argument_list|()
+argument_list|,
+literal|"Wrong name of annotation 2"
 argument_list|)
 expr_stmt|;
 specifier|final
@@ -467,24 +441,16 @@ index|[
 literal|0
 index|]
 decl_stmt|;
-name|assertTrue
-argument_list|(
-name|nvp
-operator|.
-name|getNameString
-argument_list|()
-operator|.
-name|equals
+name|assertEquals
 argument_list|(
 literal|"id"
-argument_list|)
 argument_list|,
-literal|"Name of element in SimpleAnnotation should be 'id' but it is "
-operator|+
 name|nvp
 operator|.
 name|getNameString
 argument_list|()
+argument_list|,
+literal|"Wrong name of element in SimpleAnnotation"
 argument_list|)
 expr_stmt|;
 specifier|final
@@ -496,43 +462,30 @@ operator|.
 name|getValue
 argument_list|()
 decl_stmt|;
-name|assertTrue
+name|assertEquals
 argument_list|(
-name|ev
-operator|.
-name|getElementValueType
-argument_list|()
-operator|==
 name|ElementValue
 operator|.
 name|PRIMITIVE_INT
 argument_list|,
-literal|"Type of element value should be int but it is "
-operator|+
 name|ev
 operator|.
 name|getElementValueType
 argument_list|()
+argument_list|,
+literal|"Wrong type of element value"
 argument_list|)
 expr_stmt|;
-name|assertTrue
-argument_list|(
-name|ev
-operator|.
-name|stringifyValue
-argument_list|()
-operator|.
-name|equals
+name|assertEquals
 argument_list|(
 literal|"4"
-argument_list|)
 argument_list|,
-literal|"Value of element should be 4 but it is "
-operator|+
 name|ev
 operator|.
 name|stringifyValue
 argument_list|()
+argument_list|,
+literal|"Wrong value of element"
 argument_list|)
 expr_stmt|;
 name|assertTrue
@@ -610,15 +563,13 @@ argument_list|()
 operator|.
 name|length
 decl_stmt|;
-name|assertTrue
+name|assertEquals
 argument_list|(
-name|i
-operator|==
 literal|1
 argument_list|,
-literal|"Prior to dumping, main method should have 1 annotation but has "
-operator|+
 name|i
+argument_list|,
+literal|"Wrong number of annotations of main method prior to dumping"
 argument_list|)
 expr_stmt|;
 name|dumpClass
@@ -661,15 +612,13 @@ argument_list|()
 operator|.
 name|length
 expr_stmt|;
-name|assertTrue
+name|assertEquals
 argument_list|(
-name|i
-operator|==
 literal|1
 argument_list|,
-literal|"JavaClass should say 1 annotation on main method but says "
-operator|+
 name|i
+argument_list|,
+literal|"Wrong number of annotation on JavaClass"
 argument_list|)
 expr_stmt|;
 specifier|final
@@ -705,15 +654,13 @@ argument_list|()
 operator|.
 name|length
 expr_stmt|;
-name|assertTrue
+name|assertEquals
 argument_list|(
-name|i
-operator|==
 literal|1
 argument_list|,
-literal|"The main 'Method' should have one annotation but has "
-operator|+
 name|i
+argument_list|,
+literal|"Wrong number of annotations on the main 'Method'"
 argument_list|)
 expr_stmt|;
 specifier|final
@@ -749,15 +696,13 @@ argument_list|()
 operator|.
 name|length
 expr_stmt|;
-name|assertTrue
+name|assertEquals
 argument_list|(
-name|i
-operator|==
 literal|1
 argument_list|,
-literal|"The main 'MethodGen' should have one annotation but has "
-operator|+
 name|i
+argument_list|,
+literal|"Wrong number of annotations on the main 'MethodGen'"
 argument_list|)
 expr_stmt|;
 name|assertTrue
@@ -860,25 +805,18 @@ index|[
 literal|0
 index|]
 decl_stmt|;
-name|assertTrue
+name|assertEquals
 argument_list|(
-name|mainMethod1
-operator|.
-name|getAnnotationEntries
-argument_list|()
-operator|.
-name|length
-operator|==
 literal|1
 argument_list|,
-literal|"The 'Method' should have one annotations but has "
-operator|+
 name|mainMethod1
 operator|.
 name|getAnnotationEntries
 argument_list|()
 operator|.
 name|length
+argument_list|,
+literal|"Wrong number of annotations of the 'Method'"
 argument_list|)
 expr_stmt|;
 specifier|final
@@ -901,25 +839,18 @@ name|getConstantPool
 argument_list|()
 argument_list|)
 decl_stmt|;
-name|assertTrue
+name|assertEquals
 argument_list|(
-name|mainMethod2
-operator|.
-name|getAnnotationEntries
-argument_list|()
-operator|.
-name|length
-operator|==
 literal|1
 argument_list|,
-literal|"The 'MethodGen' should have one annotation but has "
-operator|+
 name|mainMethod2
 operator|.
 name|getAnnotationEntries
 argument_list|()
 operator|.
 name|length
+argument_list|,
+literal|"Wrong number of annotations of the 'MethodGen'"
 argument_list|)
 expr_stmt|;
 name|AnnotationEntryGen
@@ -1012,15 +943,13 @@ argument_list|()
 operator|.
 name|length
 decl_stmt|;
-name|assertTrue
+name|assertEquals
 argument_list|(
-name|i
-operator|==
 literal|2
 argument_list|,
-literal|"The 'Method' should now have two annotations but has "
-operator|+
 name|i
+argument_list|,
+literal|"Wrong number of annotations on the 'Method'"
 argument_list|)
 expr_stmt|;
 name|mainMethod2
@@ -1030,25 +959,18 @@ argument_list|(
 name|fruit
 argument_list|)
 expr_stmt|;
-name|assertTrue
+name|assertEquals
 argument_list|(
-name|mainMethod2
-operator|.
-name|getAnnotationEntries
-argument_list|()
-operator|.
-name|length
-operator|==
 literal|1
 argument_list|,
-literal|"The 'MethodGen' should have one annotation but has "
-operator|+
 name|mainMethod2
 operator|.
 name|getAnnotationEntries
 argument_list|()
 operator|.
 name|length
+argument_list|,
+literal|"Wrong number of annotations on the 'MethodGen'"
 argument_list|)
 expr_stmt|;
 name|mainMethod2
@@ -1056,25 +978,20 @@ operator|.
 name|removeAnnotationEntries
 argument_list|()
 expr_stmt|;
-name|assertTrue
+name|assertEquals
 argument_list|(
-name|mainMethod2
-operator|.
-name|getAnnotationEntries
-argument_list|()
-operator|.
-name|length
-operator|==
 literal|0
 argument_list|,
-literal|"The 'MethodGen' should have no annotations but has "
-operator|+
 name|mainMethod2
 operator|.
 name|getAnnotationEntries
 argument_list|()
 operator|.
 name|length
+argument_list|,
+literal|0
+argument_list|,
+literal|"Wrong number of annotations on the 'MethodGen'"
 argument_list|)
 expr_stmt|;
 name|assertTrue
@@ -1141,19 +1058,15 @@ operator|.
 name|getAnnotationEntries
 argument_list|()
 decl_stmt|;
-name|assertTrue
+name|assertEquals
 argument_list|(
-name|annotations
-operator|.
-name|length
-operator|==
 literal|1
 argument_list|,
-literal|"Expected one annotation but found "
-operator|+
 name|annotations
 operator|.
 name|length
+argument_list|,
+literal|"Wrong number of annotations"
 argument_list|)
 expr_stmt|;
 block|}
@@ -1199,19 +1112,15 @@ operator|.
 name|getAnnotationEntries
 argument_list|()
 decl_stmt|;
-name|assertTrue
+name|assertEquals
 argument_list|(
-name|annotations
-operator|.
-name|length
-operator|==
 literal|1
 argument_list|,
-literal|"Expected one annotation but found "
-operator|+
 name|annotations
 operator|.
 name|length
+argument_list|,
+literal|"Wrong number of annotations"
 argument_list|)
 expr_stmt|;
 block|}
@@ -1257,19 +1166,15 @@ operator|.
 name|getAnnotationEntries
 argument_list|()
 decl_stmt|;
-name|assertTrue
+name|assertEquals
 argument_list|(
-name|annotations
-operator|.
-name|length
-operator|==
 literal|1
 argument_list|,
-literal|"Expected one annotation but found "
-operator|+
 name|annotations
 operator|.
 name|length
+argument_list|,
+literal|"Wrong number of annotations"
 argument_list|)
 expr_stmt|;
 specifier|final
@@ -1281,20 +1186,10 @@ index|[
 literal|0
 index|]
 decl_stmt|;
-name|assertTrue
+name|assertEquals
 argument_list|(
-name|a
-operator|.
-name|getValues
-argument_list|()
-operator|.
-name|size
-argument_list|()
-operator|==
 literal|1
 argument_list|,
-literal|"That annotation should only have one value but has "
-operator|+
 name|a
 operator|.
 name|getValues
@@ -1302,6 +1197,8 @@ argument_list|()
 operator|.
 name|size
 argument_list|()
+argument_list|,
+literal|"Wrong number of values for the annotation"
 argument_list|)
 expr_stmt|;
 specifier|final
@@ -1347,21 +1244,16 @@ name|ArrayElementValueGen
 operator|)
 name|value
 decl_stmt|;
-name|assertTrue
+name|assertEquals
 argument_list|(
-name|arrayValue
-operator|.
-name|getElementValuesSize
-argument_list|()
-operator|==
 literal|1
 argument_list|,
-literal|"Array value should be size one but is "
-operator|+
 name|arrayValue
 operator|.
 name|getElementValuesSize
 argument_list|()
+argument_list|,
+literal|"Wrong size of the array"
 argument_list|)
 expr_stmt|;
 specifier|final
@@ -1398,8 +1290,14 @@ name|AnnotationElementValueGen
 operator|)
 name|innerValue
 decl_stmt|;
-name|assertTrue
+name|assertEquals
 argument_list|(
+literal|"L"
+operator|+
+name|PACKAGE_BASE_SIG
+operator|+
+literal|"/data/SimpleAnnotation;"
+argument_list|,
 name|innerAnnotationValue
 operator|.
 name|getAnnotation
@@ -1407,29 +1305,8 @@ argument_list|()
 operator|.
 name|getTypeSignature
 argument_list|()
-operator|.
-name|equals
-argument_list|(
-literal|"L"
-operator|+
-name|PACKAGE_BASE_SIG
-operator|+
-literal|"/data/SimpleAnnotation;"
-argument_list|)
 argument_list|,
-literal|"Should be called L"
-operator|+
-name|PACKAGE_BASE_SIG
-operator|+
-literal|"/data/SimpleAnnotation; but is called: "
-operator|+
-name|innerAnnotationValue
-operator|.
-name|getAnnotation
-argument_list|()
-operator|.
-name|getTypeName
-argument_list|()
+literal|"Wrong type signature"
 argument_list|)
 expr_stmt|;
 comment|// check the three methods
@@ -1543,6 +1420,8 @@ else|else
 block|{
 name|fail
 argument_list|(
+parameter_list|()
+lambda|->
 literal|"unexpected method "
 operator|+
 name|method
@@ -1598,6 +1477,8 @@ name|annos
 operator|.
 name|length
 argument_list|,
+parameter_list|()
+lambda|->
 literal|"For "
 operator|+
 name|methodName
@@ -1771,6 +1652,11 @@ name|i
 operator|++
 index|]
 decl_stmt|;
+name|int
+name|j
+init|=
+name|i
+decl_stmt|;
 name|assertEquals
 argument_list|(
 name|expectedLength
@@ -1779,11 +1665,13 @@ name|annos
 operator|.
 name|length
 argument_list|,
+parameter_list|()
+lambda|->
 name|methodName
 operator|+
 literal|" parameter "
 operator|+
-name|i
+name|j
 argument_list|)
 expr_stmt|;
 if|if
@@ -1900,19 +1788,15 @@ operator|.
 name|getAnnotationEntries
 argument_list|()
 decl_stmt|;
-name|assertTrue
+name|assertEquals
 argument_list|(
-name|annotations
-operator|.
-name|length
-operator|==
 literal|1
 argument_list|,
-literal|"Expected one annotation but found "
-operator|+
 name|annotations
 operator|.
 name|length
+argument_list|,
+literal|"Wrong number of annotations"
 argument_list|)
 expr_stmt|;
 specifier|final
@@ -1968,15 +1852,10 @@ condition|)
 block|{
 if|if
 condition|(
-operator|(
-operator|(
-name|SimpleElementValueGen
-operator|)
 name|element
 operator|.
 name|getValue
 argument_list|()
-operator|)
 operator|.
 name|stringifyValue
 argument_list|()
@@ -2054,25 +1933,18 @@ literal|"Pineapple"
 argument_list|)
 argument_list|)
 expr_stmt|;
-name|assertTrue
+name|assertEquals
 argument_list|(
-name|cgen
-operator|.
-name|getAnnotationEntries
-argument_list|()
-operator|.
-name|length
-operator|==
 literal|2
 argument_list|,
-literal|"Should now have two annotations but has "
-operator|+
 name|cgen
 operator|.
 name|getAnnotationEntries
 argument_list|()
 operator|.
 name|length
+argument_list|,
+literal|"Wrong number of annotations"
 argument_list|)
 expr_stmt|;
 name|dumpClass
@@ -2141,25 +2013,18 @@ name|cp
 argument_list|)
 argument_list|)
 expr_stmt|;
-name|assertTrue
+name|assertEquals
 argument_list|(
-name|cgen
-operator|.
-name|getAnnotationEntries
-argument_list|()
-operator|.
-name|length
-operator|==
 literal|2
 argument_list|,
-literal|"Should now have two annotations but has "
-operator|+
 name|cgen
 operator|.
 name|getAnnotationEntries
 argument_list|()
 operator|.
 name|length
+argument_list|,
+literal|"Wrong number of annotations"
 argument_list|)
 expr_stmt|;
 name|dumpClass

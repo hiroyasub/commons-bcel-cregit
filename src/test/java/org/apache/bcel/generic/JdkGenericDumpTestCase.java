@@ -129,16 +129,6 @@ name|java
 operator|.
 name|io
 operator|.
-name|FileFilter
-import|;
-end_import
-
-begin_import
-import|import
-name|java
-operator|.
-name|io
-operator|.
 name|IOException
 import|;
 end_import
@@ -1250,6 +1240,8 @@ name|src
 argument_list|,
 name|out
 argument_list|,
+parameter_list|()
+lambda|->
 name|name
 operator|+
 literal|": "
@@ -1374,9 +1366,6 @@ name|javaLib
 operator|.
 name|listFiles
 argument_list|(
-operator|(
-name|FileFilter
-operator|)
 name|file
 lambda|->
 name|file
@@ -1419,9 +1408,6 @@ name|javaLib
 operator|.
 name|listFiles
 argument_list|(
-operator|(
-name|FileFilter
-operator|)
 name|file
 lambda|->
 name|file

@@ -360,6 +360,8 @@ block|}
 block|}
 name|fail
 argument_list|(
+parameter_list|()
+lambda|->
 literal|"Method "
 operator|+
 name|name

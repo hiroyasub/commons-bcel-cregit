@@ -109,7 +109,7 @@ name|api
 operator|.
 name|Assertions
 operator|.
-name|assertTrue
+name|assertEquals
 import|;
 end_import
 
@@ -181,43 +181,30 @@ operator|.
 name|getDefaultValue
 argument_list|()
 decl_stmt|;
-name|assertTrue
+name|assertEquals
 argument_list|(
-name|val
-operator|.
-name|getElementValueType
-argument_list|()
-operator|==
 name|ElementValue
 operator|.
 name|STRING
 argument_list|,
-literal|"Should be STRING but is "
-operator|+
 name|val
 operator|.
 name|getElementValueType
 argument_list|()
+argument_list|,
+literal|"Wrong element value type"
 argument_list|)
 expr_stmt|;
-name|assertTrue
-argument_list|(
-name|val
-operator|.
-name|getValueString
-argument_list|()
-operator|.
-name|equals
+name|assertEquals
 argument_list|(
 literal|"bananas"
-argument_list|)
 argument_list|,
-literal|"Should have default of bananas but default is "
-operator|+
 name|val
 operator|.
 name|getValueString
 argument_list|()
+argument_list|,
+literal|"Wrong default"
 argument_list|)
 expr_stmt|;
 block|}

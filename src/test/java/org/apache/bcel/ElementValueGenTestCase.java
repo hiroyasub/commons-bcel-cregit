@@ -187,7 +187,7 @@ name|api
 operator|.
 name|Assertions
 operator|.
-name|assertTrue
+name|assertEquals
 import|;
 end_import
 
@@ -203,7 +203,7 @@ name|api
 operator|.
 name|Assertions
 operator|.
-name|fail
+name|assertTrue
 import|;
 end_import
 
@@ -291,13 +291,8 @@ argument_list|)
 decl_stmt|;
 comment|// Creation of an element like that should leave a new entry in the
 comment|// cpool
-name|assertTrue
+name|assertEquals
 argument_list|(
-name|evg
-operator|.
-name|getIndex
-argument_list|()
-operator|==
 name|cp
 operator|.
 name|lookupInteger
@@ -305,21 +300,12 @@ argument_list|(
 literal|555
 argument_list|)
 argument_list|,
-literal|"Should have the same index in the constantpool but "
-operator|+
 name|evg
 operator|.
 name|getIndex
 argument_list|()
-operator|+
-literal|"!="
-operator|+
-name|cp
-operator|.
-name|lookupInteger
-argument_list|(
-literal|555
-argument_list|)
+argument_list|,
+literal|"Should have the same index in the constantpool"
 argument_list|)
 expr_stmt|;
 name|checkSerialize
@@ -375,13 +361,8 @@ argument_list|)
 decl_stmt|;
 comment|// Creation of an element like that should leave a new entry in the
 comment|// cpool
-name|assertTrue
+name|assertEquals
 argument_list|(
-name|evg
-operator|.
-name|getIndex
-argument_list|()
-operator|==
 name|cp
 operator|.
 name|lookupFloat
@@ -389,21 +370,12 @@ argument_list|(
 literal|111.222f
 argument_list|)
 argument_list|,
-literal|"Should have the same index in the constantpool but "
-operator|+
 name|evg
 operator|.
 name|getIndex
 argument_list|()
-operator|+
-literal|"!="
-operator|+
-name|cp
-operator|.
-name|lookupFloat
-argument_list|(
-literal|111.222f
-argument_list|)
+argument_list|,
+literal|"Should have the same index in the constantpool"
 argument_list|)
 expr_stmt|;
 name|checkSerialize
@@ -470,25 +442,16 @@ argument_list|(
 literal|333.44
 argument_list|)
 decl_stmt|;
-name|assertTrue
+name|assertEquals
 argument_list|(
-name|evg
-operator|.
-name|getIndex
-argument_list|()
-operator|==
 name|idx
 argument_list|,
-literal|"Should have the same index in the constantpool but "
-operator|+
 name|evg
 operator|.
 name|getIndex
 argument_list|()
-operator|+
-literal|"!="
-operator|+
-name|idx
+argument_list|,
+literal|"Should have the same index in the constantpool"
 argument_list|)
 expr_stmt|;
 name|checkSerialize
@@ -555,25 +518,16 @@ argument_list|(
 literal|3334455L
 argument_list|)
 decl_stmt|;
-name|assertTrue
+name|assertEquals
 argument_list|(
-name|evg
-operator|.
-name|getIndex
-argument_list|()
-operator|==
 name|idx
 argument_list|,
-literal|"Should have the same index in the constantpool but "
-operator|+
 name|evg
 operator|.
 name|getIndex
 argument_list|()
-operator|+
-literal|"!="
-operator|+
-name|idx
+argument_list|,
+literal|"Should have the same index in the constantpool"
 argument_list|)
 expr_stmt|;
 name|checkSerialize
@@ -640,25 +594,16 @@ argument_list|(
 literal|'t'
 argument_list|)
 decl_stmt|;
-name|assertTrue
+name|assertEquals
 argument_list|(
-name|evg
-operator|.
-name|getIndex
-argument_list|()
-operator|==
 name|idx
 argument_list|,
-literal|"Should have the same index in the constantpool but "
-operator|+
 name|evg
 operator|.
 name|getIndex
 argument_list|()
-operator|+
-literal|"!="
-operator|+
-name|idx
+argument_list|,
+literal|"Should have the same index in the constantpool"
 argument_list|)
 expr_stmt|;
 name|checkSerialize
@@ -731,25 +676,16 @@ operator|)
 literal|'z'
 argument_list|)
 decl_stmt|;
-name|assertTrue
+name|assertEquals
 argument_list|(
-name|evg
-operator|.
-name|getIndex
-argument_list|()
-operator|==
 name|idx
 argument_list|,
-literal|"Should have the same index in the constantpool but "
-operator|+
 name|evg
 operator|.
 name|getIndex
 argument_list|()
-operator|+
-literal|"!="
-operator|+
-name|idx
+argument_list|,
+literal|"Should have the same index in the constantpool"
 argument_list|)
 expr_stmt|;
 name|checkSerialize
@@ -817,25 +753,16 @@ literal|1
 argument_list|)
 decl_stmt|;
 comment|// 1 == true
-name|assertTrue
+name|assertEquals
 argument_list|(
-name|evg
-operator|.
-name|getIndex
-argument_list|()
-operator|==
 name|idx
 argument_list|,
-literal|"Should have the same index in the constantpool but "
-operator|+
 name|evg
 operator|.
 name|getIndex
 argument_list|()
-operator|+
-literal|"!="
-operator|+
-name|idx
+argument_list|,
+literal|"Should have the same index in the constantpool"
 argument_list|)
 expr_stmt|;
 name|checkSerialize
@@ -905,25 +832,16 @@ argument_list|(
 literal|42
 argument_list|)
 decl_stmt|;
-name|assertTrue
+name|assertEquals
 argument_list|(
-name|evg
-operator|.
-name|getIndex
-argument_list|()
-operator|==
 name|idx
 argument_list|,
-literal|"Should have the same index in the constantpool but "
-operator|+
 name|evg
 operator|.
 name|getIndex
 argument_list|()
-operator|+
-literal|"!="
-operator|+
-name|idx
+argument_list|,
+literal|"Should have the same index in the constantpool"
 argument_list|)
 expr_stmt|;
 name|checkSerialize
@@ -982,13 +900,8 @@ argument_list|)
 decl_stmt|;
 comment|// Creation of an element like that should leave a new entry in the
 comment|// cpool
-name|assertTrue
+name|assertEquals
 argument_list|(
-name|evg
-operator|.
-name|getIndex
-argument_list|()
-operator|==
 name|cp
 operator|.
 name|lookupUtf8
@@ -996,21 +909,12 @@ argument_list|(
 literal|"hello"
 argument_list|)
 argument_list|,
-literal|"Should have the same index in the constantpool but "
-operator|+
 name|evg
 operator|.
 name|getIndex
 argument_list|()
-operator|+
-literal|"!="
-operator|+
-name|cp
-operator|.
-name|lookupUtf8
-argument_list|(
-literal|"hello"
-argument_list|)
+argument_list|,
+literal|"Should have the same index in the constantpool"
 argument_list|)
 expr_stmt|;
 name|checkSerialize
@@ -1078,13 +982,8 @@ argument_list|)
 decl_stmt|;
 comment|// Creation of an element like that should leave a new entry in the
 comment|// cpool
-name|assertTrue
+name|assertEquals
 argument_list|(
-name|evg
-operator|.
-name|getValueIndex
-argument_list|()
-operator|==
 name|cp
 operator|.
 name|lookupUtf8
@@ -1092,21 +991,12 @@ argument_list|(
 literal|"Red"
 argument_list|)
 argument_list|,
-literal|"The new ElementValue value index should match the contents of the constantpool but "
-operator|+
 name|evg
 operator|.
 name|getValueIndex
 argument_list|()
-operator|+
-literal|"!="
-operator|+
-name|cp
-operator|.
-name|lookupUtf8
-argument_list|(
-literal|"Red"
-argument_list|)
+argument_list|,
+literal|"The new ElementValue value index should match the contents of the constantpool"
 argument_list|)
 expr_stmt|;
 comment|// BCELBUG: Should the class signature or class name be in the constant
@@ -1304,31 +1194,15 @@ operator|.
 name|stringifyValue
 argument_list|()
 decl_stmt|;
-if|if
-condition|(
-operator|!
-name|beforeValue
-operator|.
-name|equals
+name|assertEquals
 argument_list|(
-name|afterValue
-argument_list|)
-condition|)
-block|{
-name|fail
-argument_list|(
-literal|"Deserialization failed: before='"
-operator|+
 name|beforeValue
-operator|+
-literal|"' after='"
-operator|+
+argument_list|,
 name|afterValue
-operator|+
-literal|"'"
+argument_list|,
+literal|"Deserialization failed"
 argument_list|)
 expr_stmt|;
-block|}
 block|}
 block|}
 end_class

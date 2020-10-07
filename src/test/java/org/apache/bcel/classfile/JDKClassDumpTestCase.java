@@ -93,16 +93,6 @@ name|java
 operator|.
 name|io
 operator|.
-name|FileFilter
-import|;
-end_import
-
-begin_import
-import|import
-name|java
-operator|.
-name|io
-operator|.
 name|InputStream
 import|;
 end_import
@@ -194,9 +184,6 @@ name|javaLib
 operator|.
 name|listFiles
 argument_list|(
-operator|(
-name|FileFilter
-operator|)
 name|file
 lambda|->
 block|{
@@ -466,6 +453,11 @@ operator|.
 name|read
 argument_list|()
 decl_stmt|;
+name|int
+name|j
+init|=
+name|i
+decl_stmt|;
 name|assertEquals
 argument_list|(
 name|in
@@ -474,11 +466,15 @@ name|out
 operator|&
 literal|0xFF
 argument_list|,
+parameter_list|()
+lambda|->
+operator|(
 name|name
 operator|+
 literal|": Mismatch at "
 operator|+
-name|i
+name|j
+operator|)
 argument_list|)
 expr_stmt|;
 name|i
