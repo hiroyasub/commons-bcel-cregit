@@ -521,7 +521,27 @@ name|toShortString
 argument_list|()
 argument_list|)
 expr_stmt|;
+name|result
+operator|.
+name|append
+argument_list|(
+literal|", "
+argument_list|)
+expr_stmt|;
 block|}
+comment|// remove last ", "
+name|result
+operator|.
+name|setLength
+argument_list|(
+name|result
+operator|.
+name|length
+argument_list|()
+operator|-
+literal|2
+argument_list|)
+expr_stmt|;
 name|result
 operator|.
 name|append

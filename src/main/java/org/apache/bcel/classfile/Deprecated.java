@@ -328,6 +328,8 @@ name|Const
 operator|.
 name|ATTR_DEPRECATED
 argument_list|)
+operator|+
+literal|": true"
 return|;
 block|}
 comment|/**      * @return deep copy of this attribute      */
