@@ -79,7 +79,7 @@ specifier|final
 name|boolean
 name|isRuntimeVisible
 decl_stmt|;
-comment|/**      * @param annotation_type the subclass type of the annotation      * @param name_index Index pointing to the name<em>Code</em>      * @param length Content length in bytes      * @param input Input stream      * @param constant_pool Array of constants      * @param isRuntimeVisible is Annotation visible at runtime?      */
+comment|/**      * @param annotation_type the subclass type of the annotation      * @param name_index Index pointing to the name<em>Code</em>      * @param length Content length in bytes      * @param input Input stream      * @param constant_pool Array of constants      * @param isRuntimeVisible whether this Annotation visible at runtime      * @throws IOException if an I/O error occurs.      */
 name|Annotations
 parameter_list|(
 specifier|final
@@ -178,7 +178,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/**      * @param annotationType the subclass type of the annotation      * @param nameIndex Index pointing to the name<em>Code</em>      * @param length Content length in bytes      * @param annotationTable the actual annotations      * @param constantPool Array of constants      * @param isRuntimeVisible is Annotation visible at runtime?      */
+comment|/**      * @param annotationType the subclass type of the annotation      * @param nameIndex Index pointing to the name<em>Code</em>      * @param length Content length in bytes      * @param annotationTable the actual annotations      * @param constantPool Array of constants      * @param isRuntimeVisible whether this Annotation visible at runtime      */
 specifier|public
 name|Annotations
 parameter_list|(
