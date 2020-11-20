@@ -56,9 +56,6 @@ specifier|public
 name|StructuralCodeConstraintException
 parameter_list|()
 block|{
-name|super
-argument_list|()
-expr_stmt|;
 block|}
 block|}
 end_class

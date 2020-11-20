@@ -42,9 +42,6 @@ comment|/**      * Constructs a new CodeConstraintException with null as its err
 name|CodeConstraintException
 parameter_list|()
 block|{
-name|super
-argument_list|()
-expr_stmt|;
 block|}
 comment|/**      * Constructs a new CodeConstraintException with the specified error message.      */
 name|CodeConstraintException

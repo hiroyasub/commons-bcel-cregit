@@ -58,9 +58,6 @@ specifier|public
 name|AssertionViolatedException
 parameter_list|()
 block|{
-name|super
-argument_list|()
-expr_stmt|;
 block|}
 comment|/**      * Constructs a new AssertionViolatedException with the specified error message preceded      * by&quot;INTERNAL ERROR:&quot;.      */
 specifier|public

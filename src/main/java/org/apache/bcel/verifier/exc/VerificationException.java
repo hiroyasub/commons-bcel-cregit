@@ -41,9 +41,6 @@ comment|/**      * Constructs a new VerificationException with null as its error
 name|VerificationException
 parameter_list|()
 block|{
-name|super
-argument_list|()
-expr_stmt|;
 block|}
 comment|/**      * Constructs a new VerificationException with the specified error message.      */
 name|VerificationException

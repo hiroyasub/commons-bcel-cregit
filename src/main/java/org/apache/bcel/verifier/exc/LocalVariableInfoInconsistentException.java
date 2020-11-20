@@ -42,9 +42,6 @@ specifier|public
 name|LocalVariableInfoInconsistentException
 parameter_list|()
 block|{
-name|super
-argument_list|()
-expr_stmt|;
 block|}
 comment|/**      * Constructs a new LocalVariableInfoInconsistentException with the specified error message.      */
 specifier|public

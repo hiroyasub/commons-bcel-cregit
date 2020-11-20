@@ -39,9 +39,6 @@ specifier|public
 name|ClassFormatException
 parameter_list|()
 block|{
-name|super
-argument_list|()
-expr_stmt|;
 block|}
 specifier|public
 name|ClassFormatException

@@ -86,9 +86,6 @@ name|int
 name|c
 parameter_list|)
 block|{
-name|super
-argument_list|()
-expr_stmt|;
 comment|// Default behavior of LocalVariableInstruction causes error
 name|super
 operator|.

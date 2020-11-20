@@ -42,9 +42,6 @@ specifier|public
 name|ClassConstraintException
 parameter_list|()
 block|{
-name|super
-argument_list|()
-expr_stmt|;
 block|}
 comment|/**      * Constructs a new ClassConstraintException with the specified error message.      */
 specifier|public

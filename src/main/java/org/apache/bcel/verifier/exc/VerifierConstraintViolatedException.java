@@ -48,9 +48,6 @@ comment|/**      * Constructs a new VerifierConstraintViolatedException with nul
 name|VerifierConstraintViolatedException
 parameter_list|()
 block|{
-name|super
-argument_list|()
-expr_stmt|;
 block|}
 comment|/**      * Constructs a new VerifierConstraintViolatedException with the specified error message.      */
 name|VerifierConstraintViolatedException

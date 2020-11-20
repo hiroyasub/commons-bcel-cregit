@@ -87,9 +87,6 @@ specifier|public
 name|NameSignatureInstruction
 parameter_list|()
 block|{
-name|super
-argument_list|()
-expr_stmt|;
 block|}
 specifier|public
 name|NameSignatureInstruction

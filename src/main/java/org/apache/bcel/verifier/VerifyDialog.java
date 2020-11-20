@@ -306,9 +306,6 @@ specifier|public
 name|VerifyDialog
 parameter_list|()
 block|{
-name|super
-argument_list|()
-expr_stmt|;
 name|initialize
 argument_list|()
 expr_stmt|;
@@ -521,9 +518,6 @@ name|String
 name|fully_qualified_class_name
 parameter_list|)
 block|{
-name|super
-argument_list|()
-expr_stmt|;
 specifier|final
 name|int
 name|dotclasspos
