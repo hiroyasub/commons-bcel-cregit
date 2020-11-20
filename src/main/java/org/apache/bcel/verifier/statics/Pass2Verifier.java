@@ -5450,12 +5450,6 @@ literal|"'."
 argument_list|)
 throw|;
 block|}
-name|Method
-name|m
-init|=
-literal|null
-decl_stmt|;
-comment|// satisfy compiler
 if|if
 condition|(
 operator|!
@@ -5490,8 +5484,10 @@ argument_list|)
 expr_stmt|;
 return|return;
 block|}
+specifier|final
+name|Method
 name|m
-operator|=
+init|=
 operator|(
 name|Method
 operator|)
@@ -5499,7 +5495,7 @@ name|carrier
 operator|.
 name|predecessor
 argument_list|()
-expr_stmt|;
+decl_stmt|;
 comment|// we can assume this method was visited before;
 comment|// i.e. the data consistency was verified.
 if|if

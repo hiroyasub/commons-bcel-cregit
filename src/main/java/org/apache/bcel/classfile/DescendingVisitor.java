@@ -59,7 +59,7 @@ name|Stack
 argument_list|<>
 argument_list|()
 decl_stmt|;
-comment|/**      * @return container of current entitity, i.e., predecessor during traversal      */
+comment|/**      * @return container of current entity, i.e., predecessor during traversal      */
 specifier|public
 name|Object
 name|predecessor
@@ -72,7 +72,7 @@ literal|0
 argument_list|)
 return|;
 block|}
-comment|/**      * @param level      *            nesting level, i.e., 0 returns the direct predecessor      * @return container of current entitity, i.e., predecessor during traversal      */
+comment|/**      * @param level      *            nesting level, i.e., 0 returns the direct predecessor      * @return container of current entity, i.e., predecessor during traversal      */
 specifier|public
 name|Object
 name|predecessor
