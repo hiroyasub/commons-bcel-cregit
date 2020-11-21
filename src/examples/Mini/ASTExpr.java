@@ -793,6 +793,7 @@ block|}
 comment|// Get type of subexpressions
 for|for
 control|(
+specifier|final
 name|ASTExpr
 name|expr
 range|:
@@ -1947,6 +1948,7 @@ condition|)
 block|{
 for|for
 control|(
+specifier|final
 name|ASTExpr
 name|expr
 range|:

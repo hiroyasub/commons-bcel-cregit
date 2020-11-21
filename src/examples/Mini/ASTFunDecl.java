@@ -590,6 +590,7 @@ expr_stmt|;
 comment|// Put arguments into hash table aka environment
 for|for
 control|(
+specifier|final
 name|ASTIdent
 name|element
 range|:
@@ -1834,6 +1835,7 @@ argument_list|)
 expr_stmt|;
 for|for
 control|(
+specifier|final
 name|InstructionHandle
 name|target
 range|:
@@ -1852,6 +1854,7 @@ argument_list|()
 decl_stmt|;
 for|for
 control|(
+specifier|final
 name|InstructionTargeter
 name|targeter
 range|:
@@ -2167,6 +2170,7 @@ argument_list|)
 expr_stmt|;
 for|for
 control|(
+specifier|final
 name|ASTIdent
 name|element
 range|:

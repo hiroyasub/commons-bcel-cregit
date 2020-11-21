@@ -304,6 +304,7 @@ condition|)
 block|{
 for|for
 control|(
+specifier|final
 name|Node
 name|element
 range|:

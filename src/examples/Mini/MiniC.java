@@ -187,6 +187,7 @@ block|{
 comment|/* Parse command line arguments.        */
 for|for
 control|(
+specifier|final
 name|String
 name|element
 range|:

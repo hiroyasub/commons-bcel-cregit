@@ -613,6 +613,7 @@ block|{
 comment|// Put function names into hash table aka. environment
 for|for
 control|(
+specifier|final
 name|ASTFunDecl
 name|fun_decl
 range|:
@@ -835,6 +836,7 @@ parameter_list|)
 block|{
 for|for
 control|(
+specifier|final
 name|ASTFunDecl
 name|fun_decl
 range|:
@@ -980,6 +982,7 @@ argument_list|)
 expr_stmt|;
 for|for
 control|(
+specifier|final
 name|ASTFunDecl
 name|fun_decl
 range|:
@@ -1781,6 +1784,7 @@ argument_list|)
 expr_stmt|;
 for|for
 control|(
+specifier|final
 name|ASTFunDecl
 name|fun_decl
 range|:
@@ -1823,6 +1827,7 @@ argument_list|)
 expr_stmt|;
 for|for
 control|(
+specifier|final
 name|ASTFunDecl
 name|fun_decl
 range|:

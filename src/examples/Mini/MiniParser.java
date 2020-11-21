@@ -4506,6 +4506,7 @@ literal|0
 expr_stmt|;
 for|for
 control|(
+specifier|final
 name|JJCalls
 name|jj_2_rtn
 range|:
@@ -5002,6 +5003,7 @@ literal|false
 decl_stmt|;
 for|for
 control|(
+specifier|final
 name|int
 index|[]
 name|j

@@ -150,6 +150,7 @@ literal|0
 decl_stmt|;
 for|for
 control|(
+specifier|final
 name|int
 index|[]
 name|expectedTokenSequence

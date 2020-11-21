@@ -569,6 +569,7 @@ argument_list|)
 decl_stmt|;
 for|for
 control|(
+specifier|final
 name|String
 name|element
 range|:
@@ -716,6 +717,7 @@ return|return;
 block|}
 for|for
 control|(
+specifier|final
 name|String
 name|element
 range|:
