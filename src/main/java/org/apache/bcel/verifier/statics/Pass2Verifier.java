@@ -5988,6 +5988,7 @@ argument_list|()
 decl_stmt|;
 for|for
 control|(
+specifier|final
 name|Attribute
 name|att
 range|:
