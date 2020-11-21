@@ -5988,19 +5988,10 @@ argument_list|()
 decl_stmt|;
 for|for
 control|(
-name|int
-name|a
-init|=
-literal|0
-init|;
-name|a
-operator|<
+name|Attribute
+name|att
+range|:
 name|atts
-operator|.
-name|length
-condition|;
-name|a
-operator|++
 control|)
 block|{
 if|if
@@ -6008,10 +5999,7 @@ condition|(
 operator|(
 operator|!
 operator|(
-name|atts
-index|[
-name|a
-index|]
+name|att
 operator|instanceof
 name|LineNumberTable
 operator|)
@@ -6020,10 +6008,7 @@ operator|&&
 operator|(
 operator|!
 operator|(
-name|atts
-index|[
-name|a
-index|]
+name|att
 operator|instanceof
 name|LocalVariableTable
 operator|)
@@ -6036,10 +6021,7 @@ literal|"Attribute '"
 operator|+
 name|tostring
 argument_list|(
-name|atts
-index|[
-name|a
-index|]
+name|att
 argument_list|)
 operator|+
 literal|"' as an attribute of Code attribute '"
@@ -6066,10 +6048,7 @@ literal|"Attribute '"
 operator|+
 name|tostring
 argument_list|(
-name|atts
-index|[
-name|a
-index|]
+name|att
 argument_list|)
 operator|+
 literal|"' as an attribute of Code attribute '"
@@ -6093,10 +6072,7 @@ comment|//(possibly more than one) LocalVariableTables belonging to
 comment|//one certain Code attribute.
 if|if
 condition|(
-name|atts
-index|[
-name|a
-index|]
+name|att
 operator|instanceof
 name|LocalVariableTable
 condition|)
@@ -6109,10 +6085,7 @@ init|=
 operator|(
 name|LocalVariableTable
 operator|)
-name|atts
-index|[
-name|a
-index|]
+name|att
 decl_stmt|;
 name|checkIndex
 argument_list|(
