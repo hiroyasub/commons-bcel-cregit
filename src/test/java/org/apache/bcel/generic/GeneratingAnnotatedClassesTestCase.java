@@ -853,6 +853,7 @@ argument_list|,
 literal|"Wrong number of annotations of the 'MethodGen'"
 argument_list|)
 expr_stmt|;
+specifier|final
 name|AnnotationEntryGen
 name|fruit
 init|=
@@ -1652,6 +1653,7 @@ name|i
 operator|++
 index|]
 decl_stmt|;
+specifier|final
 name|int
 name|j
 init|=

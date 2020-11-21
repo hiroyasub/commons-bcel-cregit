@@ -208,6 +208,7 @@ specifier|public
 name|void
 name|testListJreModules
 parameter_list|(
+specifier|final
 name|ModularRuntimeImage
 name|modularRuntimeImage
 parameter_list|)
@@ -266,6 +267,7 @@ specifier|public
 name|void
 name|testListJreModule
 parameter_list|(
+specifier|final
 name|ModularRuntimeImage
 name|modularRuntimeImage
 parameter_list|)
@@ -326,6 +328,7 @@ specifier|public
 name|void
 name|testListJreModulePackageDir
 parameter_list|(
+specifier|final
 name|ModularRuntimeImage
 name|modularRuntimeImage
 parameter_list|)
@@ -386,6 +389,7 @@ specifier|public
 name|void
 name|testListJrePackages
 parameter_list|(
+specifier|final
 name|ModularRuntimeImage
 name|modularRuntimeImage
 parameter_list|)

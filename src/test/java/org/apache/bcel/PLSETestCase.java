@@ -744,6 +744,7 @@ name|getMethods
 argument_list|()
 control|)
 block|{
+specifier|final
 name|String
 name|signature
 init|=

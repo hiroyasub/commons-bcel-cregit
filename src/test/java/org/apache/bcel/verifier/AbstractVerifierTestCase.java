@@ -190,6 +190,7 @@ argument_list|(
 name|classname
 argument_list|)
 decl_stmt|;
+specifier|final
 name|int
 name|nbMethods
 init|=

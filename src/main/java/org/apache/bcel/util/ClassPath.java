@@ -1455,6 +1455,7 @@ block|{
 comment|// don't use a for each loop to avoid creating an iterator for the GC to collect.
 for|for
 control|(
+specifier|final
 name|JrtModule
 name|module
 range|:
@@ -1501,6 +1502,7 @@ block|{
 comment|// don't use a for each loop to avoid creating an iterator for the GC to collect.
 for|for
 control|(
+specifier|final
 name|JrtModule
 name|module
 range|:
@@ -1549,6 +1551,7 @@ block|{
 comment|// don't use a for each loop to avoid creating an iterator for the GC to collect.
 for|for
 control|(
+specifier|final
 name|JrtModule
 name|module
 range|:
@@ -1595,6 +1598,7 @@ block|{
 comment|// don't use a for each loop to avoid creating an iterator for the GC to collect.
 for|for
 control|(
+specifier|final
 name|JrtModule
 name|module
 range|:
@@ -1873,6 +1877,7 @@ condition|)
 block|{
 for|for
 control|(
+specifier|final
 name|String
 name|module
 range|:

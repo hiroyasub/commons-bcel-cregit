@@ -453,6 +453,7 @@ operator|.
 name|read
 argument_list|()
 decl_stmt|;
+specifier|final
 name|int
 name|j
 init|=
