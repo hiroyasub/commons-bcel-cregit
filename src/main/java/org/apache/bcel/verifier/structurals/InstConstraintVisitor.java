@@ -4513,11 +4513,6 @@ literal|"'."
 argument_list|)
 expr_stmt|;
 block|}
-else|else
-block|{
-return|return;
-comment|// Form 2
-block|}
 block|}
 else|else
 block|{

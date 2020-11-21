@@ -836,7 +836,6 @@ operator|.
 name|unread
 argument_list|()
 expr_stmt|;
-return|return;
 block|}
 if|else if
 condition|(
