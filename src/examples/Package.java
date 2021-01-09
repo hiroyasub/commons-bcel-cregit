@@ -1315,7 +1315,7 @@ return|return;
 block|}
 throw|throw
 operator|new
-name|IOException
+name|IllegalArgumentException
 argument_list|(
 literal|"Can't recognize class name ="
 operator|+
