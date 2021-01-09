@@ -274,8 +274,6 @@ parameter_list|,
 name|String
 name|suffix
 parameter_list|)
-throws|throws
-name|IOException
 function_decl|;
 specifier|abstract
 name|URL
@@ -364,8 +362,6 @@ specifier|final
 name|String
 name|suffix
 parameter_list|)
-throws|throws
-name|IOException
 block|{
 specifier|final
 name|ZipEntry
@@ -694,8 +690,6 @@ specifier|final
 name|String
 name|suffix
 parameter_list|)
-throws|throws
-name|IOException
 block|{
 specifier|final
 name|File
@@ -1070,8 +1064,6 @@ specifier|final
 name|String
 name|suffix
 parameter_list|)
-throws|throws
-name|IOException
 block|{
 specifier|final
 name|Path
@@ -1496,8 +1488,6 @@ specifier|final
 name|String
 name|suffix
 parameter_list|)
-throws|throws
-name|IOException
 block|{
 comment|// don't use a for each loop to avoid creating an iterator for the GC to collect.
 for|for
@@ -2899,8 +2889,6 @@ specifier|final
 name|String
 name|suffix
 parameter_list|)
-throws|throws
-name|IOException
 block|{
 for|for
 control|(
@@ -2964,7 +2952,7 @@ literal|".class"
 argument_list|)
 return|;
 block|}
-comment|/**      * Return stream for class or resource on CLASSPATH.      *      * @param name      *            fully qualified file name, e.g. java/lang/String      * @param suffix      *            file name ends with suff, e.g. .java      * @return input stream for file on class path      */
+comment|/**      * Return stream for class or resource on CLASSPATH.      *      * @param name      *            fully qualified file name, e.g. java/lang/String      * @param suffix      *            file name ends with suff, e.g. .java      * @return input stream for file on class path      * @throws IOException       */
 specifier|public
 name|InputStream
 name|getInputStream
