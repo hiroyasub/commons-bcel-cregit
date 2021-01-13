@@ -285,36 +285,26 @@ block|}
 comment|/* How many chars have been consumed      * during parsing in typeSignatureToString().      * Read by methodSignatureToString().      * Set by side effect, but only internally.      */
 specifier|private
 specifier|static
+specifier|final
 name|ThreadLocal
 argument_list|<
 name|Integer
 argument_list|>
-name|consumed_chars
+name|CONSUMER_CHARS
 init|=
-operator|new
 name|ThreadLocal
-argument_list|<
-name|Integer
-argument_list|>
-argument_list|()
-block|{
-annotation|@
-name|Override
-specifier|protected
-name|Integer
-name|initialValue
+operator|.
+name|withInitial
+argument_list|(
 parameter_list|()
-block|{
-return|return
+lambda|->
 name|Integer
 operator|.
 name|valueOf
 argument_list|(
 literal|0
 argument_list|)
-return|;
-block|}
-block|}
+argument_list|)
 decl_stmt|;
 comment|/* The `WIDE' instruction is used in the      * byte code to allow 16-bit wide indices      * for local variables. This opcode      * precedes an `ILOAD', e.g.. The opcode      * immediately following takes an extra      * byte which is combined with the      * following byte to form a      * 16-bit value.      */
 specifier|private
@@ -2847,7 +2837,7 @@ name|index
 operator|+=
 name|unwrap
 argument_list|(
-name|consumed_chars
+name|CONSUMER_CHARS
 argument_list|)
 expr_stmt|;
 comment|// update position
@@ -3298,7 +3288,7 @@ name|index
 operator|+=
 name|unwrap
 argument_list|(
-name|consumed_chars
+name|CONSUMER_CHARS
 argument_list|)
 expr_stmt|;
 comment|// update position
@@ -3646,7 +3636,7 @@ name|index
 operator|+=
 name|unwrap
 argument_list|(
-name|consumed_chars
+name|CONSUMER_CHARS
 argument_list|)
 expr_stmt|;
 comment|// update position
@@ -3687,7 +3677,7 @@ name|index
 operator|+=
 name|unwrap
 argument_list|(
-name|consumed_chars
+name|CONSUMER_CHARS
 argument_list|)
 expr_stmt|;
 comment|// update position
@@ -3712,7 +3702,7 @@ name|index
 operator|+=
 name|unwrap
 argument_list|(
-name|consumed_chars
+name|CONSUMER_CHARS
 argument_list|)
 expr_stmt|;
 comment|// update position
@@ -3740,7 +3730,7 @@ name|index
 operator|+=
 name|unwrap
 argument_list|(
-name|consumed_chars
+name|CONSUMER_CHARS
 argument_list|)
 expr_stmt|;
 comment|// update position
@@ -3833,7 +3823,7 @@ name|index
 operator|+=
 name|unwrap
 argument_list|(
-name|consumed_chars
+name|CONSUMER_CHARS
 argument_list|)
 expr_stmt|;
 comment|// update position
@@ -3876,7 +3866,7 @@ name|index
 operator|+=
 name|unwrap
 argument_list|(
-name|consumed_chars
+name|CONSUMER_CHARS
 argument_list|)
 expr_stmt|;
 comment|// update position
@@ -3942,7 +3932,7 @@ name|index
 operator|+=
 name|unwrap
 argument_list|(
-name|consumed_chars
+name|CONSUMER_CHARS
 argument_list|)
 expr_stmt|;
 comment|// update position
@@ -3987,14 +3977,14 @@ name|index
 operator|+=
 name|unwrap
 argument_list|(
-name|consumed_chars
+name|CONSUMER_CHARS
 argument_list|)
 expr_stmt|;
 comment|// update position
 block|}
 name|wrap
 argument_list|(
-name|consumed_chars
+name|CONSUMER_CHARS
 argument_list|,
 name|index
 operator|+
@@ -4119,7 +4109,7 @@ name|index
 operator|+=
 name|unwrap
 argument_list|(
-name|consumed_chars
+name|CONSUMER_CHARS
 argument_list|)
 expr_stmt|;
 comment|// update position
@@ -4169,14 +4159,14 @@ name|index
 operator|+=
 name|unwrap
 argument_list|(
-name|consumed_chars
+name|CONSUMER_CHARS
 argument_list|)
 expr_stmt|;
 comment|// update position
 block|}
 name|wrap
 argument_list|(
-name|consumed_chars
+name|CONSUMER_CHARS
 argument_list|,
 name|index
 argument_list|)
@@ -4265,7 +4255,7 @@ name|index
 operator|+=
 name|unwrap
 argument_list|(
-name|consumed_chars
+name|CONSUMER_CHARS
 argument_list|)
 expr_stmt|;
 comment|// update position
@@ -4311,14 +4301,14 @@ name|index
 operator|+=
 name|unwrap
 argument_list|(
-name|consumed_chars
+name|CONSUMER_CHARS
 argument_list|)
 expr_stmt|;
 comment|// update position
 block|}
 name|wrap
 argument_list|(
-name|consumed_chars
+name|CONSUMER_CHARS
 argument_list|,
 name|index
 operator|+
@@ -4358,7 +4348,7 @@ block|{
 comment|//corrected concurrent private static field acess
 name|wrap
 argument_list|(
-name|consumed_chars
+name|CONSUMER_CHARS
 argument_list|,
 literal|1
 argument_list|)
@@ -4449,7 +4439,7 @@ block|}
 comment|//corrected concurrent private static field acess
 name|wrap
 argument_list|(
-name|consumed_chars
+name|CONSUMER_CHARS
 argument_list|,
 name|index
 operator|+
@@ -4594,7 +4584,7 @@ block|{
 comment|// just a class identifier
 name|wrap
 argument_list|(
-name|consumed_chars
+name|CONSUMER_CHARS
 argument_list|,
 name|index
 operator|+
@@ -4655,7 +4645,7 @@ block|{
 comment|// just a class identifier
 name|wrap
 argument_list|(
-name|consumed_chars
+name|CONSUMER_CHARS
 argument_list|,
 name|fromIndex
 operator|+
@@ -4813,7 +4803,7 @@ name|unwrap
 argument_list|(
 name|Utility
 operator|.
-name|consumed_chars
+name|CONSUMER_CHARS
 argument_list|)
 operator|+
 name|consumed_chars
@@ -4822,7 +4812,7 @@ name|wrap
 argument_list|(
 name|Utility
 operator|.
-name|consumed_chars
+name|CONSUMER_CHARS
 argument_list|,
 name|consumed_chars
 argument_list|)
@@ -4944,7 +4934,7 @@ name|unwrap
 argument_list|(
 name|Utility
 operator|.
-name|consumed_chars
+name|CONSUMER_CHARS
 argument_list|)
 operator|+
 name|consumed_chars
@@ -4953,7 +4943,7 @@ name|wrap
 argument_list|(
 name|Utility
 operator|.
-name|consumed_chars
+name|CONSUMER_CHARS
 argument_list|,
 name|consumed_chars
 argument_list|)
@@ -5023,7 +5013,7 @@ name|unwrap
 argument_list|(
 name|Utility
 operator|.
-name|consumed_chars
+name|CONSUMER_CHARS
 argument_list|)
 operator|+
 name|consumed_chars
@@ -5032,7 +5022,7 @@ name|wrap
 argument_list|(
 name|Utility
 operator|.
-name|consumed_chars
+name|CONSUMER_CHARS
 argument_list|,
 name|consumed_chars
 argument_list|)
@@ -5070,7 +5060,7 @@ name|wrap
 argument_list|(
 name|Utility
 operator|.
-name|consumed_chars
+name|CONSUMER_CHARS
 argument_list|,
 name|consumed_chars
 operator|+
@@ -5180,7 +5170,7 @@ name|unwrap
 argument_list|(
 name|Utility
 operator|.
-name|consumed_chars
+name|CONSUMER_CHARS
 argument_list|)
 operator|+
 name|consumed_chars
@@ -5189,7 +5179,7 @@ name|wrap
 argument_list|(
 name|Utility
 operator|.
-name|consumed_chars
+name|CONSUMER_CHARS
 argument_list|,
 name|_temp
 argument_list|)

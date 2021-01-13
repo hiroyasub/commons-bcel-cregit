@@ -647,32 +647,21 @@ name|ThreadLocal
 argument_list|<
 name|Integer
 argument_list|>
-name|consumed_chars
+name|CONSUMED_CHARS
 init|=
-operator|new
 name|ThreadLocal
-argument_list|<
-name|Integer
-argument_list|>
-argument_list|()
-block|{
-annotation|@
-name|Override
-specifier|protected
-name|Integer
-name|initialValue
+operator|.
+name|withInitial
+argument_list|(
 parameter_list|()
-block|{
-return|return
+lambda|->
 name|Integer
 operator|.
 name|valueOf
 argument_list|(
 literal|0
 argument_list|)
-return|;
-block|}
-block|}
+argument_list|)
 decl_stmt|;
 comment|//int consumed_chars=0; // Remember position in string, see getArgumentTypes
 specifier|private
@@ -765,7 +754,7 @@ block|{
 comment|//corrected concurrent private static field acess
 name|wrap
 argument_list|(
-name|consumed_chars
+name|CONSUMED_CHARS
 argument_list|,
 literal|1
 argument_list|)
@@ -835,14 +824,14 @@ name|_temp
 init|=
 name|unwrap
 argument_list|(
-name|consumed_chars
+name|CONSUMED_CHARS
 argument_list|)
 operator|+
 name|dim
 decl_stmt|;
 name|wrap
 argument_list|(
-name|consumed_chars
+name|CONSUMED_CHARS
 argument_list|,
 name|_temp
 argument_list|)
@@ -876,7 +865,7 @@ argument_list|)
 decl_stmt|;
 name|wrap
 argument_list|(
-name|consumed_chars
+name|CONSUMED_CHARS
 argument_list|,
 name|parsedSignature
 operator|.
@@ -1058,7 +1047,7 @@ name|index
 operator|+=
 name|unwrap
 argument_list|(
-name|consumed_chars
+name|CONSUMED_CHARS
 argument_list|)
 expr_stmt|;
 comment|// update position
