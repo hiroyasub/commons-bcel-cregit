@@ -51,6 +51,20 @@ name|org
 operator|.
 name|apache
 operator|.
+name|commons
+operator|.
+name|lang3
+operator|.
+name|ArrayUtils
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
 name|bcel
 operator|.
 name|Const
@@ -152,11 +166,9 @@ literal|null
 condition|?
 name|packageIndexTable
 else|:
-operator|new
-name|int
-index|[
-literal|0
-index|]
+name|ArrayUtils
+operator|.
+name|EMPTY_INT_ARRAY
 expr_stmt|;
 block|}
 comment|/**      * Construct object from input stream.      * @param name_index Index in constant pool      * @param length Content length in bytes      * @param input Input stream      * @param constant_pool Array of constants      * @throws IOException      */
@@ -429,11 +441,9 @@ literal|null
 condition|?
 name|packageIndexTable
 else|:
-operator|new
-name|int
-index|[
-literal|0
-index|]
+name|ArrayUtils
+operator|.
+name|EMPTY_INT_ARRAY
 expr_stmt|;
 block|}
 comment|/**      * @return String representation, i.e., a list of packages.      */

@@ -68,16 +68,26 @@ name|MethodParameters
 extends|extends
 name|Attribute
 block|{
+comment|/**      * Empty array.      */
 specifier|private
+specifier|static
+specifier|final
 name|MethodParameter
 index|[]
-name|parameters
+name|EMPTY_METHOD_PARAMETER_ARRAY
 init|=
 operator|new
 name|MethodParameter
 index|[
 literal|0
 index|]
+decl_stmt|;
+specifier|private
+name|MethodParameter
+index|[]
+name|parameters
+init|=
+name|EMPTY_METHOD_PARAMETER_ARRAY
 decl_stmt|;
 name|MethodParameters
 parameter_list|(

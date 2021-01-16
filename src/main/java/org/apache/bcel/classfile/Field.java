@@ -211,6 +211,19 @@ return|;
 block|}
 block|}
 decl_stmt|;
+comment|/**      * Empty array.      */
+specifier|static
+specifier|final
+name|Field
+index|[]
+name|EMPTY_FIELD_ARRAY
+init|=
+operator|new
+name|Field
+index|[
+literal|0
+index|]
+decl_stmt|;
 comment|/**      * Initialize from another object. Note that both objects use the same      * references (shallow copy). Use clone() for a physical copy.      */
 specifier|public
 name|Field

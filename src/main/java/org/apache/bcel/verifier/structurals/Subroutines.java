@@ -2505,17 +2505,6 @@ block|{
 specifier|final
 name|InstructionHandle
 index|[]
-name|empty
-init|=
-operator|new
-name|InstructionHandle
-index|[
-literal|0
-index|]
-decl_stmt|;
-specifier|final
-name|InstructionHandle
-index|[]
 name|single
 init|=
 operator|new
@@ -2541,7 +2530,9 @@ name|RET
 condition|)
 block|{
 return|return
-name|empty
+name|InstructionHandle
+operator|.
+name|EMPTY_INSTRUCTION_HANDLE_ARRAY
 return|;
 block|}
 comment|// Terminates method normally.
@@ -2553,7 +2544,9 @@ name|ReturnInstruction
 condition|)
 block|{
 return|return
-name|empty
+name|InstructionHandle
+operator|.
+name|EMPTY_INSTRUCTION_HANDLE_ARRAY
 return|;
 block|}
 comment|// Terminates method abnormally, because JustIce mandates
@@ -2566,7 +2559,9 @@ name|ATHROW
 condition|)
 block|{
 return|return
-name|empty
+name|InstructionHandle
+operator|.
+name|EMPTY_INSTRUCTION_HANDLE_ARRAY
 return|;
 block|}
 comment|// See method comment.

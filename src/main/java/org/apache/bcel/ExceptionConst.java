@@ -348,6 +348,7 @@ name|NO_SUCH_METHOD_ERROR
 block|}
 decl_stmt|;
 comment|// Chapter 5.2
+comment|/**      * Empty array.      */
 specifier|private
 specifier|static
 specifier|final
@@ -365,6 +366,7 @@ literal|0
 index|]
 decl_stmt|;
 comment|// Chapter 5.3 (as below)
+comment|/**      * Empty array.      */
 specifier|private
 specifier|static
 specifier|final

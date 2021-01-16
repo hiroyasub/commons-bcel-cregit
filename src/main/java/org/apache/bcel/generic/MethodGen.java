@@ -2838,11 +2838,9 @@ name|hasParameterAnnotations
 condition|)
 block|{
 return|return
-operator|new
 name|Attribute
-index|[
-literal|0
-index|]
+operator|.
+name|EMPTY_ATTRIBUTE_ARRAY
 return|;
 block|}
 specifier|final

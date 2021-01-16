@@ -100,7 +100,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * This class allows easy access to ExceptionHandler objects.  *  */
+comment|/**  * This class allows easy access to ExceptionHandler objects.  */
 end_comment
 
 begin_class
@@ -108,7 +108,21 @@ specifier|public
 class|class
 name|ExceptionHandlers
 block|{
-comment|/**      * The ExceptionHandler instances.      * Key: InstructionHandle objects, Values: HashSet<ExceptionHandler> instances.      */
+comment|/**      * Empty array.      */
+specifier|private
+specifier|static
+specifier|final
+name|ExceptionHandler
+index|[]
+name|EMPTY_EXCEPTION_HANDLER_ARRAY
+init|=
+operator|new
+name|ExceptionHandler
+index|[
+literal|0
+index|]
+decl_stmt|;
+comment|/**      * The ExceptionHandler instances. Key: InstructionHandle objects, Values: HashSet<ExceptionHandler> instances.      */
 specifier|private
 specifier|final
 name|Map
@@ -252,7 +266,7 @@ expr_stmt|;
 block|}
 block|}
 block|}
-comment|/**      * Returns all the ExceptionHandler instances representing exception      * handlers that protect the instruction ih.      */
+comment|/**      * Returns all the ExceptionHandler instances representing exception handlers that protect the instruction ih.      */
 specifier|public
 name|ExceptionHandler
 index|[]
@@ -285,11 +299,7 @@ literal|null
 condition|)
 block|{
 return|return
-operator|new
-name|ExceptionHandler
-index|[
-literal|0
-index|]
+name|EMPTY_EXCEPTION_HANDLER_ARRAY
 return|;
 block|}
 return|return

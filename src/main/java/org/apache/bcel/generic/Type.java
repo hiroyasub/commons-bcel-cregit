@@ -288,6 +288,7 @@ argument_list|(
 literal|"java.lang.Throwable"
 argument_list|)
 decl_stmt|;
+comment|/**      * Empty array.      */
 specifier|public
 specifier|static
 specifier|final
@@ -301,7 +302,6 @@ index|[
 literal|0
 index|]
 decl_stmt|;
-comment|// EMPTY, so immutable
 specifier|public
 specifier|static
 specifier|final

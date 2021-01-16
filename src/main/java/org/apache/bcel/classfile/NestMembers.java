@@ -57,6 +57,20 @@ name|Const
 import|;
 end_import
 
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|commons
+operator|.
+name|lang3
+operator|.
+name|ArrayUtils
+import|;
+end_import
+
 begin_comment
 comment|/**  * This class is derived from<em>Attribute</em> and records the classes and interfaces that  * are authorized to claim membership in the nest hosted by the current class or interface.  * There may be at most one NestMembers attribute in a ClassFile structure.  *  * @see     Attribute  */
 end_comment
@@ -152,11 +166,9 @@ literal|null
 condition|?
 name|classes
 else|:
-operator|new
-name|int
-index|[
-literal|0
-index|]
+name|ArrayUtils
+operator|.
+name|EMPTY_INT_ARRAY
 expr_stmt|;
 block|}
 comment|/**      * Construct object from input stream.      * @param name_index Index in constant pool      * @param length Content length in bytes      * @param input Input stream      * @param constant_pool Array of constants      * @throws IOException      */
@@ -429,11 +441,9 @@ literal|null
 condition|?
 name|classes
 else|:
-operator|new
-name|int
-index|[
-literal|0
-index|]
+name|ArrayUtils
+operator|.
+name|EMPTY_INT_ARRAY
 expr_stmt|;
 block|}
 comment|/**      * @return String representation, i.e., a list of classes.      */

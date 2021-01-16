@@ -203,6 +203,20 @@ name|SyntheticRepository
 import|;
 end_import
 
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|commons
+operator|.
+name|lang3
+operator|.
+name|ArrayUtils
+import|;
+end_import
+
 begin_comment
 comment|/**  * Represents a Java class, i.e., the data structures, constant pool,  * fields, methods and commands contained in a Java .class file.  * See<a href="https://docs.oracle.com/javase/specs/">JVM specification</a> for details.  * The intent of this class is to represent a parsed or otherwise existing  * class file.  Those interested in programmatically generating classes  * should see the<a href="../generic/ClassGen.html">ClassGen</a> class.   * @see org.apache.bcel.generic.ClassGen  */
 end_comment
@@ -542,11 +556,9 @@ condition|)
 block|{
 name|interfaces
 operator|=
-operator|new
-name|int
-index|[
-literal|0
-index|]
+name|ArrayUtils
+operator|.
+name|EMPTY_INT_ARRAY
 expr_stmt|;
 block|}
 if|if
@@ -558,11 +570,9 @@ condition|)
 block|{
 name|attributes
 operator|=
-operator|new
 name|Attribute
-index|[
-literal|0
-index|]
+operator|.
+name|EMPTY_ATTRIBUTE_ARRAY
 expr_stmt|;
 block|}
 if|if
@@ -574,11 +584,9 @@ condition|)
 block|{
 name|fields
 operator|=
-operator|new
 name|Field
-index|[
-literal|0
-index|]
+operator|.
+name|EMPTY_FIELD_ARRAY
 expr_stmt|;
 block|}
 if|if
@@ -590,11 +598,9 @@ condition|)
 block|{
 name|methods
 operator|=
-operator|new
 name|Method
-index|[
-literal|0
-index|]
+operator|.
+name|EMPTY_METHOD_ARRAY
 expr_stmt|;
 block|}
 name|this

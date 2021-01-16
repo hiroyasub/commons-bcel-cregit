@@ -57,6 +57,20 @@ name|Const
 import|;
 end_import
 
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|commons
+operator|.
+name|lang3
+operator|.
+name|ArrayUtils
+import|;
+end_import
+
 begin_comment
 comment|/**  * This class represents the table of exceptions that are thrown by a  * method. This attribute may be used once per method.  The name of  * this class is<em>ExceptionTable</em> for historical reasons; The  * Java Virtual Machine Specification, Second Edition defines this  * attribute using the name<em>Exceptions</em> (which is inconsistent  * with the other classes).  *  * @see     Code  */
 end_comment
@@ -153,11 +167,9 @@ literal|null
 condition|?
 name|exceptionIndexTable
 else|:
-operator|new
-name|int
-index|[
-literal|0
-index|]
+name|ArrayUtils
+operator|.
+name|EMPTY_INT_ARRAY
 expr_stmt|;
 block|}
 comment|/**      * Construct object from input stream.      * @param nameIndex Index in constant pool      * @param length Content length in bytes      * @param input Input stream      * @param constantPool Array of constants      * @throws IOException      */
@@ -430,11 +442,9 @@ literal|null
 condition|?
 name|exceptionIndexTable
 else|:
-operator|new
-name|int
-index|[
-literal|0
-index|]
+name|ArrayUtils
+operator|.
+name|EMPTY_INT_ARRAY
 expr_stmt|;
 block|}
 comment|/**      * @return String representation, i.e., a list of thrown exceptions.      */

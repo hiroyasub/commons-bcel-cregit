@@ -105,6 +105,19 @@ name|int
 name|catchType
 decl_stmt|;
 comment|/* If this is zero the handler catches any      * exception, otherwise it points to the      * exception class which is to be caught.      */
+comment|/**      * Empty array.      */
+specifier|static
+specifier|final
+name|CodeException
+index|[]
+name|EMPTY_CODE_EXCEPTION_ARRAY
+init|=
+operator|new
+name|CodeException
+index|[
+literal|0
+index|]
+decl_stmt|;
 comment|/**      * Initialize from another object.      */
 specifier|public
 name|CodeException

@@ -88,6 +88,33 @@ specifier|public
 class|class
 name|InstructionHandle
 block|{
+comment|/**      * Empty array.      *      * @since 6.6.0      */
+specifier|public
+specifier|static
+specifier|final
+name|InstructionHandle
+index|[]
+name|EMPTY_INSTRUCTION_HANDLE_ARRAY
+init|=
+operator|new
+name|InstructionHandle
+index|[
+literal|0
+index|]
+decl_stmt|;
+comment|/**      * Empty array.      */
+specifier|static
+specifier|final
+name|InstructionTargeter
+index|[]
+name|EMPTY_INSTRUCTION_TARGETER_ARRAY
+init|=
+operator|new
+name|InstructionTargeter
+index|[
+literal|0
+index|]
+decl_stmt|;
 specifier|private
 name|InstructionHandle
 name|next
@@ -498,11 +525,7 @@ argument_list|()
 condition|)
 block|{
 return|return
-operator|new
-name|InstructionTargeter
-index|[
-literal|0
-index|]
+name|EMPTY_INSTRUCTION_TARGETER_ARRAY
 return|;
 block|}
 specifier|final

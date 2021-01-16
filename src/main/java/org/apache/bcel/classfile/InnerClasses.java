@@ -69,6 +69,20 @@ name|InnerClasses
 extends|extends
 name|Attribute
 block|{
+comment|/**      * Empty array.      */
+specifier|private
+specifier|static
+specifier|final
+name|InnerClass
+index|[]
+name|EMPTY_INNER_CLASSE_ARRAY
+init|=
+operator|new
+name|InnerClass
+index|[
+literal|0
+index|]
+decl_stmt|;
 specifier|private
 name|InnerClass
 index|[]
@@ -152,11 +166,7 @@ literal|null
 condition|?
 name|innerClasses
 else|:
-operator|new
-name|InnerClass
-index|[
-literal|0
-index|]
+name|EMPTY_INNER_CLASSE_ARRAY
 expr_stmt|;
 block|}
 comment|/**      * Construct object from input stream.      *      * @param name_index Index in constant pool to CONSTANT_Utf8      * @param length Content length in bytes      * @param input Input stream      * @param constant_pool Array of constants      * @throws IOException      */
@@ -341,11 +351,7 @@ literal|null
 condition|?
 name|innerClasses
 else|:
-operator|new
-name|InnerClass
-index|[
-literal|0
-index|]
+name|EMPTY_INNER_CLASSE_ARRAY
 expr_stmt|;
 block|}
 comment|/**      * @return String representation.      */
