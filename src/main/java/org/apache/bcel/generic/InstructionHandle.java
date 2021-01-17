@@ -501,12 +501,11 @@ literal|null
 operator|)
 operator|&&
 operator|(
+operator|!
 name|targeters
 operator|.
-name|size
+name|isEmpty
 argument_list|()
-operator|>
-literal|0
 operator|)
 return|;
 block|}
