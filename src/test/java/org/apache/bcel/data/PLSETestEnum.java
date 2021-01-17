@@ -21,7 +21,7 @@ enum|enum
 name|PLSETestEnum
 block|{
 name|TEST_VALUE
-block|; }
+block|}
 end_enum
 
 end_unit

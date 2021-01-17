@@ -6947,6 +6947,7 @@ literal|48
 decl_stmt|;
 specifier|private
 specifier|static
+specifier|final
 name|int
 index|[]
 name|CHAR_MAP
@@ -6959,6 +6960,7 @@ index|]
 decl_stmt|;
 specifier|private
 specifier|static
+specifier|final
 name|int
 index|[]
 name|MAP_CHAR

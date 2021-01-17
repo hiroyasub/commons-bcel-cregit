@@ -40,10 +40,12 @@ extends|extends
 name|ReferenceType
 block|{
 specifier|private
+specifier|final
 name|int
 name|dimensions
 decl_stmt|;
 specifier|private
+specifier|final
 name|Type
 name|basicType
 decl_stmt|;

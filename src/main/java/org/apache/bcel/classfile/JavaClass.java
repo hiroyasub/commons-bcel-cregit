@@ -242,6 +242,7 @@ name|String
 name|fileName
 decl_stmt|;
 specifier|private
+specifier|final
 name|String
 name|packageName
 decl_stmt|;

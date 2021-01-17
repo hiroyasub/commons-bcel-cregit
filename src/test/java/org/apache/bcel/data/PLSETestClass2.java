@@ -27,8 +27,8 @@ name|main
 parameter_list|(
 specifier|final
 name|String
-name|args
 index|[]
+name|args
 parameter_list|)
 block|{
 name|int

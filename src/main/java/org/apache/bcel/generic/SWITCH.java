@@ -38,10 +38,12 @@ index|[]
 name|targets
 decl_stmt|;
 specifier|private
+specifier|final
 name|Select
 name|instruction
 decl_stmt|;
 specifier|private
+specifier|final
 name|int
 name|matchLength
 decl_stmt|;

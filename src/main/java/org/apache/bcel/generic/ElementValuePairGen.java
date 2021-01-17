@@ -87,6 +87,7 @@ class|class
 name|ElementValuePairGen
 block|{
 specifier|private
+specifier|final
 name|int
 name|nameIdx
 decl_stmt|;

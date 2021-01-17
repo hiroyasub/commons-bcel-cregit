@@ -51,7 +51,6 @@ specifier|public
 annotation_defn|@interface
 name|CombinedAnnotation
 block|{
-specifier|public
 name|SimpleAnnotation
 index|[]
 name|value

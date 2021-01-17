@@ -148,6 +148,7 @@ comment|// For primitive types and string type, this points to the value entry i
 comment|// the cpGen
 comment|// For 'class' this points to the class entry in the cpGen
 specifier|private
+specifier|final
 name|int
 name|idx
 decl_stmt|;

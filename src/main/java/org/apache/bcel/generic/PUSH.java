@@ -44,6 +44,7 @@ implements|,
 name|InstructionConstants
 block|{
 specifier|private
+specifier|final
 name|Instruction
 name|instruction
 decl_stmt|;

@@ -1890,12 +1890,10 @@ name|that
 parameter_list|)
 block|{
 return|return
-operator|(
 name|that
 operator|instanceof
 name|Instruction
-operator|)
-condition|?
+operator|&&
 name|cmp
 operator|.
 name|equals
@@ -1907,8 +1905,6 @@ name|Instruction
 operator|)
 name|that
 argument_list|)
-else|:
-literal|false
 return|;
 block|}
 comment|/** calculate the hashCode of this object      * @return the hashCode      * @since 6.0      */
