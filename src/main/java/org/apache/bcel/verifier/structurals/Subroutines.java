@@ -1802,7 +1802,7 @@ name|List
 argument_list|<
 name|InstructionHandle
 argument_list|>
-name|Q
+name|qList
 init|=
 operator|new
 name|ArrayList
@@ -1853,12 +1853,12 @@ name|GRAY
 argument_list|)
 expr_stmt|;
 comment|// Init Queue
-name|Q
+name|qList
 operator|.
 name|clear
 argument_list|()
 expr_stmt|;
-name|Q
+name|qList
 operator|.
 name|add
 argument_list|(
@@ -1900,7 +1900,7 @@ operator|.
 name|GRAY
 argument_list|)
 expr_stmt|;
-name|Q
+name|qList
 operator|.
 name|add
 argument_list|(
@@ -1916,19 +1916,18 @@ comment|/* CONTINUE NORMAL BFS ALGORITHM */
 comment|// Loop until Queue is empty
 while|while
 condition|(
-name|Q
+operator|!
+name|qList
 operator|.
-name|size
+name|isEmpty
 argument_list|()
-operator|!=
-literal|0
 condition|)
 block|{
 specifier|final
 name|InstructionHandle
 name|u
 init|=
-name|Q
+name|qList
 operator|.
 name|remove
 argument_list|(
@@ -1979,7 +1978,7 @@ operator|.
 name|GRAY
 argument_list|)
 expr_stmt|;
-name|Q
+name|qList
 operator|.
 name|add
 argument_list|(
