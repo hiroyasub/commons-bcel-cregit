@@ -3369,12 +3369,11 @@ name|access
 operator|+
 operator|(
 operator|(
+operator|!
 name|access
 operator|.
-name|length
+name|isEmpty
 argument_list|()
-operator|>
-literal|0
 operator|)
 condition|?
 literal|" "
