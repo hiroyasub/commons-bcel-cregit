@@ -3739,10 +3739,8 @@ condition|(
 operator|(
 name|typeParams
 operator|.
-name|length
+name|isEmpty
 argument_list|()
-operator|==
-literal|0
 operator|)
 operator|&&
 operator|(
