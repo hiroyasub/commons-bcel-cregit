@@ -495,10 +495,8 @@ if|if
 condition|(
 name|errors
 operator|.
-name|size
+name|isEmpty
 argument_list|()
-operator|==
-literal|0
 condition|)
 block|{
 name|System
@@ -524,10 +522,8 @@ if|if
 condition|(
 name|errors
 operator|.
-name|size
+name|isEmpty
 argument_list|()
-operator|==
-literal|0
 condition|)
 block|{
 name|System
@@ -619,10 +615,8 @@ if|if
 condition|(
 name|errors
 operator|.
-name|size
+name|isEmpty
 argument_list|()
-operator|==
-literal|0
 condition|)
 block|{
 if|if

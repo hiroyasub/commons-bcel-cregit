@@ -527,10 +527,8 @@ if|if
 condition|(
 name|file_name
 operator|.
-name|size
+name|isEmpty
 argument_list|()
-operator|==
-literal|0
 condition|)
 block|{
 name|System
