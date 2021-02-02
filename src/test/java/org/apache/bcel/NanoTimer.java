@@ -20,7 +20,7 @@ name|NanoTimer
 block|{
 specifier|private
 name|long
-name|time
+name|timeNanos
 init|=
 literal|0
 decl_stmt|;
@@ -29,7 +29,7 @@ name|NanoTimer
 name|start
 parameter_list|()
 block|{
-name|time
+name|timeNanos
 operator|-=
 name|System
 operator|.
@@ -45,7 +45,7 @@ name|void
 name|stop
 parameter_list|()
 block|{
-name|time
+name|timeNanos
 operator|+=
 name|System
 operator|.
@@ -62,11 +62,11 @@ name|NanoTimer
 name|o
 parameter_list|)
 block|{
-name|time
+name|timeNanos
 operator|-=
 name|o
 operator|.
-name|time
+name|timeNanos
 expr_stmt|;
 block|}
 specifier|public
@@ -74,7 +74,7 @@ name|void
 name|reset
 parameter_list|()
 block|{
-name|time
+name|timeNanos
 operator|=
 literal|0
 expr_stmt|;
@@ -92,7 +92,7 @@ operator|(
 operator|(
 name|double
 operator|)
-name|time
+name|timeNanos
 operator|/
 literal|1000000000
 operator|)
