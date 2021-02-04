@@ -90,18 +90,6 @@ import|;
 end_import
 
 begin_import
-import|import
-name|javax
-operator|.
-name|mail
-operator|.
-name|internet
-operator|.
-name|MailDateFormat
-import|;
-end_import
-
-begin_import
 import|import static
 name|org
 operator|.

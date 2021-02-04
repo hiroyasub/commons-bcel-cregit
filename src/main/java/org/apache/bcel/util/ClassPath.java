@@ -2952,7 +2952,7 @@ literal|".class"
 argument_list|)
 return|;
 block|}
-comment|/**      * Return stream for class or resource on CLASSPATH.      *      * @param name      *            fully qualified file name, e.g. java/lang/String      * @param suffix      *            file name ends with suff, e.g. .java      * @return input stream for file on class path      * @throws IOException       */
+comment|/**      * Return stream for class or resource on CLASSPATH.      *      * @param name      *            fully qualified file name, e.g. java/lang/String      * @param suffix      *            file name ends with suff, e.g. .java      * @return input stream for file on class path      * @throws IOException      */
 specifier|public
 name|InputStream
 name|getInputStream
