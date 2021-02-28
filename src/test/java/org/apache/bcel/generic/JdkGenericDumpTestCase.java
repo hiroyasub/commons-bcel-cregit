@@ -1128,10 +1128,7 @@ name|isNoneBlank
 argument_list|(
 name|javaHome
 argument_list|)
-condition|)
-block|{
-if|if
-condition|(
+operator|&&
 operator|new
 name|File
 argument_list|(
@@ -1149,7 +1146,6 @@ argument_list|(
 name|javaHome
 argument_list|)
 expr_stmt|;
-block|}
 block|}
 block|}
 block|}

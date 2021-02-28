@@ -585,16 +585,15 @@ block|}
 comment|// If we just didn't know that it was initialized, we have now learned.
 if|if
 condition|(
+operator|(
 name|locals
 index|[
 name|i
 index|]
 operator|instanceof
 name|UninitializedObjectType
-condition|)
-block|{
-if|if
-condition|(
+operator|)
+operator|&&
 operator|!
 operator|(
 name|lv
@@ -626,7 +625,6 @@ operator|.
 name|getInitialized
 argument_list|()
 expr_stmt|;
-block|}
 block|}
 if|if
 condition|(

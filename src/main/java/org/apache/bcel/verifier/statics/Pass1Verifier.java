@@ -232,16 +232,15 @@ name|getJavaClass
 argument_list|()
 expr_stmt|;
 comment|//loads in the class file if not already done.
-if|if
-condition|(
-name|jc
-operator|!=
-literal|null
-condition|)
-block|{
 comment|/* If we find more constraints to check, we should do this in an own method. */
 if|if
 condition|(
+operator|(
+name|jc
+operator|!=
+literal|null
+operator|)
+operator|&&
 operator|!
 name|myOwner
 operator|.
@@ -280,7 +279,6 @@ operator|+
 literal|"'."
 argument_list|)
 throw|;
-block|}
 block|}
 block|}
 catch|catch

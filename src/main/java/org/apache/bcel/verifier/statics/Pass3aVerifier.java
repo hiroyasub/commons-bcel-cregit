@@ -5656,10 +5656,7 @@ name|f
 operator|.
 name|isFinal
 argument_list|()
-condition|)
-block|{
-if|if
-condition|(
+operator|&&
 operator|!
 operator|(
 name|myOwner
@@ -5707,7 +5704,6 @@ operator|+
 literal|"'."
 argument_list|)
 expr_stmt|;
-block|}
 block|}
 if|if
 condition|(
@@ -6474,10 +6470,8 @@ name|current
 operator|.
 name|isSuper
 argument_list|()
-condition|)
-block|{
-if|if
-condition|(
+operator|&&
+operator|(
 operator|(
 name|Repository
 operator|.
@@ -6497,6 +6491,7 @@ name|equals
 argument_list|(
 name|jc
 argument_list|)
+operator|)
 operator|)
 condition|)
 block|{
@@ -6681,7 +6676,6 @@ operator|+
 literal|"' with proper signature not declared in superclass hierarchy."
 argument_list|)
 expr_stmt|;
-block|}
 block|}
 block|}
 block|}

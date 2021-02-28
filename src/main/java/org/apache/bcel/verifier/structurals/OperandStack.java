@@ -880,6 +880,7 @@ block|}
 comment|// on the other hand...
 if|if
 condition|(
+operator|(
 name|stack
 operator|.
 name|get
@@ -888,11 +889,8 @@ name|i
 argument_list|)
 operator|instanceof
 name|UninitializedObjectType
-condition|)
-block|{
-comment|//if we have an uninitialized object here
-if|if
-condition|(
+operator|)
+operator|&&
 operator|!
 operator|(
 name|s
@@ -934,7 +932,6 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 comment|//note that.
-block|}
 block|}
 if|if
 condition|(

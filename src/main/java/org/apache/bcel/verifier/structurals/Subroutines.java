@@ -2159,6 +2159,7 @@ control|)
 block|{
 if|if
 condition|(
+operator|(
 name|sub
 operator|!=
 name|subroutines
@@ -2170,11 +2171,8 @@ index|[
 literal|0
 index|]
 argument_list|)
-condition|)
-block|{
-comment|// We don't want to forbid top-level exception handlers.
-if|if
-condition|(
+operator|)
+operator|&&
 name|sub
 operator|.
 name|contains
@@ -2198,7 +2196,6 @@ operator|+
 literal|"'. This is forbidden by the JustIce verifier due to its clear definition of subroutines."
 argument_list|)
 throw|;
-block|}
 block|}
 block|}
 name|_protected

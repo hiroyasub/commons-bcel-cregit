@@ -1204,7 +1204,7 @@ name|LoadInstruction
 name|o
 parameter_list|)
 block|{
-comment|//visitLocalVariableInstruction(o) is called before, because it is more generic.
+comment|// visitLocalVariableInstruction(o) is called before, because it is more generic.
 comment|// LOAD instructions must not read Type.UNKNOWN
 if|if
 condition|(
@@ -1244,6 +1244,7 @@ comment|// as a symbol for the higher halve at index N+1
 comment|// [suppose some instruction put an int at N+1--- our double at N is defective]
 if|if
 condition|(
+operator|(
 name|o
 operator|.
 name|getType
@@ -1255,10 +1256,9 @@ name|getSize
 argument_list|()
 operator|==
 literal|2
-condition|)
-block|{
-if|if
-condition|(
+operator|)
+operator|&&
+operator|(
 name|locals
 argument_list|()
 operator|.
@@ -1275,6 +1275,7 @@ operator|!=
 name|Type
 operator|.
 name|UNKNOWN
+operator|)
 condition|)
 block|{
 name|constraintViolated
@@ -1302,7 +1303,6 @@ operator|+
 literal|" where the latter one is destroyed."
 argument_list|)
 expr_stmt|;
-block|}
 block|}
 comment|// LOAD instructions must read the correct type.
 if|if
@@ -1411,7 +1411,7 @@ argument_list|)
 expr_stmt|;
 block|}
 comment|// ALOAD __IS ALLOWED__ to put uninitialized objects onto the stack!
-comment|//referenceTypeIsInitialized(o, (ReferenceType) (locals().get(o.getIndex())));
+comment|// referenceTypeIsInitialized(o, (ReferenceType) (locals().get(o.getIndex())));
 block|}
 comment|// LOAD instructions must have enough free stack slots.
 if|if
@@ -1879,10 +1879,7 @@ name|o
 argument_list|,
 name|arrayref
 argument_list|)
-condition|)
-block|{
-if|if
-condition|(
+operator|&&
 operator|!
 operator|(
 operator|(
@@ -1920,7 +1917,6 @@ argument_list|)
 expr_stmt|;
 block|}
 comment|//referenceTypeIsInitialized(o, (ReferenceType) (((ArrayType) arrayref).getElementType()));
-block|}
 block|}
 comment|/**      * Ensures the specific preconditions of the said instruction.      */
 annotation|@
@@ -2013,10 +2009,7 @@ name|o
 argument_list|,
 name|arrayref
 argument_list|)
-condition|)
-block|{
-if|if
-condition|(
+operator|&&
 operator|!
 operator|(
 operator|(
@@ -2054,7 +2047,6 @@ argument_list|)
 expr_stmt|;
 block|}
 comment|// No check for array element assignment compatibility. This is done at runtime.
-block|}
 block|}
 comment|/**      * Ensures the specific preconditions of the said instruction.      */
 annotation|@
@@ -2530,10 +2522,7 @@ name|o
 argument_list|,
 name|arrayref
 argument_list|)
-condition|)
-block|{
-if|if
-condition|(
+operator|&&
 operator|!
 operator|(
 operator|(
@@ -2595,7 +2584,6 @@ operator|+
 literal|"'."
 argument_list|)
 expr_stmt|;
-block|}
 block|}
 block|}
 comment|/**      * Ensures the specific preconditions of the said instruction.      */
@@ -2668,10 +2656,7 @@ name|o
 argument_list|,
 name|arrayref
 argument_list|)
-condition|)
-block|{
-if|if
-condition|(
+operator|&&
 operator|!
 operator|(
 operator|(
@@ -2733,7 +2718,6 @@ operator|+
 literal|"'."
 argument_list|)
 expr_stmt|;
-block|}
 block|}
 block|}
 comment|/**      * Ensures the specific preconditions of the said instruction.      */
@@ -2891,10 +2875,7 @@ name|o
 argument_list|,
 name|arrayref
 argument_list|)
-condition|)
-block|{
-if|if
-condition|(
+operator|&&
 operator|!
 operator|(
 operator|(
@@ -2933,7 +2914,6 @@ operator|+
 literal|"."
 argument_list|)
 expr_stmt|;
-block|}
 block|}
 block|}
 comment|/**      * Ensures the specific preconditions of the said instruction.      */
@@ -14041,11 +14021,8 @@ name|Const
 operator|.
 name|CONSTRUCTOR_NAME
 argument_list|)
-condition|)
-block|{
-comment|// If we leave an<init> method
-if|if
-condition|(
+operator|&&
+operator|(
 operator|(
 name|Frame
 operator|.
@@ -14074,6 +14051,7 @@ argument_list|()
 argument_list|)
 operator|)
 operator|)
+operator|)
 condition|)
 block|{
 name|constraintViolated
@@ -14083,7 +14061,6 @@ argument_list|,
 literal|"Leaving a constructor that itself did not call a constructor."
 argument_list|)
 expr_stmt|;
-block|}
 block|}
 block|}
 comment|/**      * Ensures the specific preconditions of the said instruction.      */

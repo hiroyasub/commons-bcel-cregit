@@ -2467,14 +2467,12 @@ literal|'.'
 argument_list|)
 expr_stmt|;
 comment|// Is `/' on all systems, even DOS
-if|if
-condition|(
-name|chopit
-condition|)
-block|{
 comment|// If string starts with `prefix' and contains no further dots
 if|if
 condition|(
+name|chopit
+operator|&&
+operator|(
 name|str
 operator|.
 name|startsWith
@@ -2498,6 +2496,7 @@ operator|==
 operator|-
 literal|1
 operator|)
+operator|)
 condition|)
 block|{
 name|str
@@ -2509,7 +2508,6 @@ argument_list|(
 name|len
 argument_list|)
 expr_stmt|;
-block|}
 block|}
 return|return
 name|str

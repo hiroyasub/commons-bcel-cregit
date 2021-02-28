@@ -645,10 +645,7 @@ if|if
 condition|(
 operator|!
 name|created
-condition|)
-block|{
-if|if
-condition|(
+operator|&&
 operator|!
 name|store
 operator|.
@@ -669,7 +666,6 @@ operator|+
 literal|" but failed"
 argument_list|)
 expr_stmt|;
-block|}
 block|}
 block|}
 block|}

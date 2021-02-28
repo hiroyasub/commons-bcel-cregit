@@ -1037,11 +1037,7 @@ name|dir
 operator|.
 name|mkdirs
 argument_list|()
-condition|)
-block|{
-comment|// either was not created or already existed
-if|if
-condition|(
+operator|&&
 operator|!
 name|dir
 operator|.
@@ -1058,7 +1054,6 @@ operator|+
 name|dir
 argument_list|)
 throw|;
-block|}
 block|}
 block|}
 try|try

@@ -285,6 +285,7 @@ comment|/* If T is an interface type, this must implement interface T.          
 if|if
 condition|(
 operator|(
+operator|(
 name|T
 operator|instanceof
 name|ObjectType
@@ -301,10 +302,8 @@ operator|.
 name|referencesInterfaceExact
 argument_list|()
 operator|)
-condition|)
-block|{
-if|if
-condition|(
+operator|)
+operator|&&
 name|Repository
 operator|.
 name|implementationOf
@@ -336,7 +335,6 @@ literal|true
 return|;
 block|}
 block|}
-block|}
 comment|/* If this is an interface type, then:          */
 if|if
 condition|(
@@ -363,6 +361,7 @@ comment|/* If T is a class type, then T must be Object (ï¿½2.4.7).           
 if|if
 condition|(
 operator|(
+operator|(
 name|T
 operator|instanceof
 name|ObjectType
@@ -379,10 +378,8 @@ operator|.
 name|referencesClassExact
 argument_list|()
 operator|)
-condition|)
-block|{
-if|if
-condition|(
+operator|)
+operator|&&
 name|T
 operator|.
 name|equals
@@ -396,7 +393,6 @@ block|{
 return|return
 literal|true
 return|;
-block|}
 block|}
 comment|/* If T is an interface type, then T must be the same interface              * as this or a superinterface of this (ï¿½2.13.2).              */
 if|if
@@ -480,6 +476,7 @@ comment|/* If T is a class type, then T must be Object (ï¿½2.4.7).           
 if|if
 condition|(
 operator|(
+operator|(
 name|T
 operator|instanceof
 name|ObjectType
@@ -496,10 +493,8 @@ operator|.
 name|referencesClassExact
 argument_list|()
 operator|)
-condition|)
-block|{
-if|if
-condition|(
+operator|)
+operator|&&
 name|T
 operator|.
 name|equals
@@ -513,7 +508,6 @@ block|{
 return|return
 literal|true
 return|;
-block|}
 block|}
 comment|/* If T is an array type TC[], that is, an array of components              * of type TC, then one of the following must be true:              */
 if|if

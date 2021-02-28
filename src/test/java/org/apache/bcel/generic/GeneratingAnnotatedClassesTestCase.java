@@ -1850,10 +1850,7 @@ name|equals
 argument_list|(
 literal|"dval"
 argument_list|)
-condition|)
-block|{
-if|if
-condition|(
+operator|&&
 name|element
 operator|.
 name|getValue
@@ -1872,7 +1869,6 @@ name|found
 operator|=
 literal|true
 expr_stmt|;
-block|}
 block|}
 block|}
 name|assertTrue
