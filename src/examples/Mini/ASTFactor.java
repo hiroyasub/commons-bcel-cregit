@@ -118,8 +118,6 @@ name|env
 argument_list|)
 return|;
 block|}
-else|else
-block|{
 return|return
 operator|new
 name|ASTExpr
@@ -138,7 +136,6 @@ argument_list|(
 name|env
 argument_list|)
 return|;
-block|}
 block|}
 block|}
 end_class

@@ -556,13 +556,10 @@ name|IOException
 argument_list|()
 throw|;
 block|}
-else|else
-block|{
 name|maxNextCharInd
 operator|+=
 name|i
 expr_stmt|;
-block|}
 return|return;
 block|}
 catch|catch
@@ -1378,8 +1375,6 @@ literal|1
 argument_list|)
 return|;
 block|}
-else|else
-block|{
 return|return
 operator|new
 name|String
@@ -1405,7 +1400,6 @@ operator|+
 literal|1
 argument_list|)
 return|;
-block|}
 block|}
 specifier|static
 specifier|public

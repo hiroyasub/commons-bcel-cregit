@@ -340,7 +340,7 @@ name|i
 index|]
 return|;
 block|}
-if|else if
+if|if
 condition|(
 name|target
 operator|<
@@ -2034,7 +2034,7 @@ name|end
 argument_list|)
 throw|;
 block|}
-if|else if
+if|if
 condition|(
 name|ih
 operator|==

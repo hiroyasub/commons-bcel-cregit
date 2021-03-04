@@ -563,17 +563,9 @@ block|{
 if|if
 condition|(
 name|target
-operator|==
+operator|!=
 name|old_ih
 condition|)
-block|{
-name|setTarget
-argument_list|(
-name|new_ih
-argument_list|)
-expr_stmt|;
-block|}
-else|else
 block|{
 throw|throw
 operator|new
@@ -589,6 +581,11 @@ name|target
 argument_list|)
 throw|;
 block|}
+name|setTarget
+argument_list|(
+name|new_ih
+argument_list|)
+expr_stmt|;
 block|}
 comment|/**      * @return true, if ih is target of this instruction      */
 annotation|@

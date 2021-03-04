@@ -67,18 +67,28 @@ if|if
 condition|(
 operator|(
 name|i
-operator|>=
+operator|<
 operator|-
 literal|1
 operator|)
-operator|&&
+operator|||
 operator|(
 name|i
-operator|<=
+operator|>
 literal|5
 operator|)
 condition|)
 block|{
+throw|throw
+operator|new
+name|ClassGenException
+argument_list|(
+literal|"ICONST can be used only for value between -1 and 5: "
+operator|+
+name|i
+argument_list|)
+throw|;
+block|}
 name|super
 operator|.
 name|setOpcode
@@ -102,19 +112,6 @@ operator|)
 argument_list|)
 expr_stmt|;
 comment|// Even works for i == -1
-block|}
-else|else
-block|{
-throw|throw
-operator|new
-name|ClassGenException
-argument_list|(
-literal|"ICONST can be used only for value between -1 and 5: "
-operator|+
-name|i
-argument_list|)
-throw|;
-block|}
 name|value
 operator|=
 name|i

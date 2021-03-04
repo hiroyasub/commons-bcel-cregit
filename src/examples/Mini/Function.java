@@ -246,14 +246,11 @@ operator|+
 name|column
 return|;
 block|}
-else|else
-block|{
 return|return
 name|prefix
 operator|+
 literal|"<predefined function>"
 return|;
-block|}
 block|}
 specifier|public
 name|int

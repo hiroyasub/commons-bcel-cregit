@@ -511,10 +511,12 @@ if|if
 condition|(
 operator|++
 name|i
-operator|<
+operator|>=
 name|size
 condition|)
 block|{
+break|break;
+block|}
 name|ch
 operator|=
 name|lower
@@ -524,11 +526,6 @@ argument_list|(
 name|i
 argument_list|)
 expr_stmt|;
-block|}
-else|else
-block|{
-break|break;
-block|}
 block|}
 name|i
 operator|--

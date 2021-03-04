@@ -1640,7 +1640,7 @@ name|ENGLISH
 argument_list|)
 return|;
 block|}
-if|else if
+if|if
 condition|(
 name|type
 operator|.
@@ -1657,7 +1657,7 @@ return|return
 literal|"Type.STRING"
 return|;
 block|}
-if|else if
+if|if
 condition|(
 name|type
 operator|.
@@ -1674,7 +1674,7 @@ return|return
 literal|"Type.OBJECT"
 return|;
 block|}
-if|else if
+if|if
 condition|(
 name|type
 operator|.
@@ -1691,7 +1691,7 @@ return|return
 literal|"Type.STRINGBUFFER"
 return|;
 block|}
-if|else if
+if|if
 condition|(
 name|type
 operator|instanceof
@@ -1728,8 +1728,6 @@ operator|+
 literal|")"
 return|;
 block|}
-else|else
-block|{
 return|return
 literal|"new ObjectType(\""
 operator|+
@@ -1744,7 +1742,6 @@ argument_list|)
 operator|+
 literal|"\")"
 return|;
-block|}
 block|}
 comment|/** Default main method      */
 specifier|public

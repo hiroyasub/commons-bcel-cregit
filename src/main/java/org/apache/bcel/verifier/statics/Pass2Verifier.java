@@ -1977,16 +1977,8 @@ condition|)
 block|{
 if|if
 condition|(
-operator|!
 name|foundSourceFile
 condition|)
-block|{
-name|foundSourceFile
-operator|=
-literal|true
-expr_stmt|;
-block|}
-else|else
 block|{
 throw|throw
 operator|new
@@ -2004,6 +1996,10 @@ argument_list|)
 throw|;
 comment|//vmspec2 4.7.7
 block|}
+name|foundSourceFile
+operator|=
+literal|true
+expr_stmt|;
 block|}
 if|if
 condition|(

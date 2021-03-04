@@ -4848,8 +4848,6 @@ name|kind
 operator|)
 return|;
 block|}
-else|else
-block|{
 return|return
 operator|(
 name|jj_ntk
@@ -4859,7 +4857,6 @@ operator|.
 name|kind
 operator|)
 return|;
-block|}
 block|}
 specifier|static
 specifier|private

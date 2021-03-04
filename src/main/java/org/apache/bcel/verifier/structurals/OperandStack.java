@@ -958,6 +958,7 @@ condition|)
 block|{
 if|if
 condition|(
+operator|!
 operator|(
 name|stack
 operator|.
@@ -968,7 +969,8 @@ argument_list|)
 operator|instanceof
 name|ReferenceType
 operator|)
-operator|&&
+operator|||
+operator|!
 operator|(
 name|s
 operator|.
@@ -983,6 +985,20 @@ name|ReferenceType
 operator|)
 condition|)
 block|{
+throw|throw
+operator|new
+name|StructuralCodeConstraintException
+argument_list|(
+literal|"Cannot merge stacks of different types:\nStack A:\n"
+operator|+
+name|this
+operator|+
+literal|"\nStack B:\n"
+operator|+
+name|s
+argument_list|)
+throw|;
+block|}
 name|stack
 operator|.
 name|set
@@ -1019,23 +1035,6 @@ operator|)
 argument_list|)
 argument_list|)
 expr_stmt|;
-block|}
-else|else
-block|{
-throw|throw
-operator|new
-name|StructuralCodeConstraintException
-argument_list|(
-literal|"Cannot merge stacks of different types:\nStack A:\n"
-operator|+
-name|this
-operator|+
-literal|"\nStack B:\n"
-operator|+
-name|s
-argument_list|)
-throw|;
-block|}
 block|}
 block|}
 block|}

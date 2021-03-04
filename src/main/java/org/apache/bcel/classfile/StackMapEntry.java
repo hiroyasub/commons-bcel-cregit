@@ -1278,7 +1278,7 @@ return|return
 literal|1
 return|;
 block|}
-if|else if
+if|if
 condition|(
 name|frameType
 operator|>=
@@ -1311,7 +1311,7 @@ literal|1
 operator|)
 return|;
 block|}
-if|else if
+if|if
 condition|(
 name|frameType
 operator|==
@@ -1338,7 +1338,7 @@ literal|1
 operator|)
 return|;
 block|}
-if|else if
+if|if
 condition|(
 name|frameType
 operator|>=
@@ -1357,7 +1357,7 @@ return|return
 literal|3
 return|;
 block|}
-if|else if
+if|if
 condition|(
 name|frameType
 operator|==
@@ -1370,7 +1370,7 @@ return|return
 literal|3
 return|;
 block|}
-if|else if
+if|if
 condition|(
 name|frameType
 operator|>=
@@ -1415,15 +1415,25 @@ return|return
 name|len
 return|;
 block|}
-if|else if
+if|if
 condition|(
 name|frameType
-operator|==
+operator|!=
 name|Const
 operator|.
 name|FULL_FRAME
 condition|)
 block|{
+throw|throw
+operator|new
+name|IllegalStateException
+argument_list|(
+literal|"Invalid StackMap frameType: "
+operator|+
+name|frameType
+argument_list|)
+throw|;
+block|}
 name|int
 name|len
 init|=
@@ -1474,19 +1484,6 @@ block|}
 return|return
 name|len
 return|;
-block|}
-else|else
-block|{
-throw|throw
-operator|new
-name|IllegalStateException
-argument_list|(
-literal|"Invalid StackMap frameType: "
-operator|+
-name|frameType
-argument_list|)
-throw|;
-block|}
 block|}
 specifier|public
 name|void

@@ -2589,14 +2589,16 @@ return|return
 name|i
 return|;
 block|}
-if|else if
+if|if
 condition|(
+operator|!
 operator|(
 name|src_type
 operator|instanceof
 name|ReferenceType
 operator|)
-operator|&&
+operator|||
+operator|!
 operator|(
 name|dest_type
 operator|instanceof
@@ -2604,6 +2606,20 @@ name|ReferenceType
 operator|)
 condition|)
 block|{
+throw|throw
+operator|new
+name|IllegalArgumentException
+argument_list|(
+literal|"Cannot cast "
+operator|+
+name|src_type
+operator|+
+literal|" to "
+operator|+
+name|dest_type
+argument_list|)
+throw|;
+block|}
 if|if
 condition|(
 name|dest_type
@@ -2647,23 +2663,6 @@ argument_list|()
 argument_list|)
 argument_list|)
 return|;
-block|}
-else|else
-block|{
-throw|throw
-operator|new
-name|IllegalArgumentException
-argument_list|(
-literal|"Cannot cast "
-operator|+
-name|src_type
-operator|+
-literal|" to "
-operator|+
-name|dest_type
-argument_list|)
-throw|;
-block|}
 block|}
 specifier|public
 name|GETFIELD
@@ -2996,7 +2995,7 @@ argument_list|)
 argument_list|)
 return|;
 block|}
-if|else if
+if|if
 condition|(
 name|t
 operator|instanceof
@@ -3019,8 +3018,6 @@ argument_list|)
 argument_list|)
 return|;
 block|}
-else|else
-block|{
 return|return
 operator|new
 name|NEWARRAY
@@ -3031,7 +3028,6 @@ name|getType
 argument_list|()
 argument_list|)
 return|;
-block|}
 block|}
 name|ArrayType
 name|at

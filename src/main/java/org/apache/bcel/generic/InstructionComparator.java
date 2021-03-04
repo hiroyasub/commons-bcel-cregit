@@ -61,7 +61,7 @@ return|;
 comment|//                } else if (i1 == i2) { TODO consider adding this shortcut
 comment|//                    return true; // this must be AFTER the BI test
 block|}
-if|else if
+if|if
 condition|(
 name|i1
 operator|instanceof
@@ -93,7 +93,7 @@ argument_list|()
 argument_list|)
 return|;
 block|}
-if|else if
+if|if
 condition|(
 name|i1
 operator|instanceof
@@ -122,7 +122,7 @@ name|getIndex
 argument_list|()
 return|;
 block|}
-if|else if
+if|if
 condition|(
 name|i1
 operator|instanceof
@@ -151,12 +151,9 @@ name|getTypecode
 argument_list|()
 return|;
 block|}
-else|else
-block|{
 return|return
 literal|true
 return|;
-block|}
 block|}
 return|return
 literal|false

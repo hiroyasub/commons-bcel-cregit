@@ -615,8 +615,6 @@ argument_list|)
 return|;
 comment|// --> Replaced by successor
 block|}
-else|else
-block|{
 for|for
 control|(
 name|int
@@ -654,7 +652,6 @@ block|}
 return|return
 name|this
 return|;
-block|}
 block|}
 comment|/**    * Second and third pass    * @return type of expression    * @param expected type    */
 specifier|public

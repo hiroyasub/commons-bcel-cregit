@@ -701,19 +701,9 @@ decl_stmt|;
 if|if
 condition|(
 name|sup
-operator|!=
+operator|==
 literal|null
 condition|)
-block|{
-name|locals
-index|[
-name|i
-index|]
-operator|=
-name|sup
-expr_stmt|;
-block|}
-else|else
 block|{
 comment|// We should have checked this in Pass2!
 throw|throw
@@ -740,6 +730,13 @@ literal|"'."
 argument_list|)
 throw|;
 block|}
+name|locals
+index|[
+name|i
+index|]
+operator|=
+name|sup
+expr_stmt|;
 block|}
 block|}
 else|else

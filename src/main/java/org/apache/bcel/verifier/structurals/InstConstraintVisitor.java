@@ -1665,12 +1665,14 @@ block|{
 if|if
 condition|(
 name|method_type
-operator|!=
+operator|==
 name|Type
 operator|.
 name|VOID
 condition|)
 block|{
+return|return;
+block|}
 name|constraintViolated
 argument_list|(
 name|o
@@ -1678,11 +1680,6 @@ argument_list|,
 literal|"RETURN instruction in non-void method."
 argument_list|)
 expr_stmt|;
-block|}
-else|else
-block|{
-return|return;
-block|}
 block|}
 if|if
 condition|(
@@ -4653,10 +4650,13 @@ argument_list|)
 operator|.
 name|getSize
 argument_list|()
-operator|!=
+operator|==
 literal|1
 condition|)
 block|{
+return|return;
+comment|// Form 2
+block|}
 name|constraintViolated
 argument_list|(
 name|o
@@ -4689,12 +4689,6 @@ operator|+
 literal|"'."
 argument_list|)
 expr_stmt|;
-block|}
-else|else
-block|{
-return|return;
-comment|// Form 2
-block|}
 block|}
 else|else
 block|{

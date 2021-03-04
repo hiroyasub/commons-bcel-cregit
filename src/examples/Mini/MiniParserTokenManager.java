@@ -1101,7 +1101,7 @@ literal|18
 argument_list|)
 return|;
 block|}
-if|else if
+if|if
 condition|(
 operator|(
 name|active0
@@ -1121,7 +1121,7 @@ literal|19
 argument_list|)
 return|;
 block|}
-if|else if
+if|if
 condition|(
 operator|(
 name|active0
@@ -1141,7 +1141,7 @@ literal|20
 argument_list|)
 return|;
 block|}
-if|else if
+if|if
 condition|(
 operator|(
 name|active0
@@ -1698,7 +1698,7 @@ literal|1
 argument_list|)
 return|;
 block|}
-if|else if
+if|if
 condition|(
 operator|(
 name|active0
@@ -1878,7 +1878,7 @@ literal|1
 argument_list|)
 return|;
 block|}
-if|else if
+if|if
 condition|(
 operator|(
 name|active0
@@ -3000,13 +3000,10 @@ name|INVALID_LEXICAL_STATE
 argument_list|)
 throw|;
 block|}
-else|else
-block|{
 name|curLexState
 operator|=
 name|lexState
 expr_stmt|;
-block|}
 block|}
 specifier|static
 specifier|private
@@ -3400,7 +3397,7 @@ return|return
 name|matchedToken
 return|;
 block|}
-if|else if
+if|if
 condition|(
 operator|(
 name|jjtoSkip

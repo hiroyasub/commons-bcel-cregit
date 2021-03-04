@@ -574,7 +574,7 @@ name|getLineNumber
 argument_list|()
 return|;
 block|}
-if|else if
+if|if
 condition|(
 name|pos
 operator|<

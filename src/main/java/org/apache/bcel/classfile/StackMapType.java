@@ -371,7 +371,7 @@ name|CONSTANT_Class
 argument_list|)
 return|;
 block|}
-if|else if
+if|if
 condition|(
 name|type
 operator|==
@@ -386,12 +386,9 @@ operator|+
 name|index
 return|;
 block|}
-else|else
-block|{
 return|return
 literal|""
 return|;
-block|}
 block|}
 comment|/**      * @return String representation      */
 annotation|@
