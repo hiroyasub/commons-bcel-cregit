@@ -291,8 +291,6 @@ comment|// file to write to
 specifier|private
 name|int
 name|attr_count
-init|=
-literal|0
 decl_stmt|;
 specifier|private
 specifier|final
@@ -1170,9 +1168,11 @@ range|:
 name|classes
 control|)
 block|{
+specifier|final
 name|String
 name|name
 decl_stmt|;
+specifier|final
 name|String
 name|access
 decl_stmt|;

@@ -369,8 +369,6 @@ decl_stmt|;
 specifier|private
 name|LocalVariableTypeTable
 name|localVariableTypeTable
-init|=
-literal|null
 decl_stmt|;
 specifier|private
 specifier|final
@@ -449,14 +447,10 @@ comment|// Array of lists containing AnnotationGen objects
 specifier|private
 name|boolean
 name|hasParameterAnnotations
-init|=
-literal|false
 decl_stmt|;
 specifier|private
 name|boolean
 name|haveUnpackedParameterAnnotations
-init|=
-literal|false
 decl_stmt|;
 specifier|private
 specifier|static

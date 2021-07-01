@@ -153,14 +153,10 @@ decl_stmt|;
 specifier|private
 name|String
 name|signatureAttributeString
-init|=
-literal|null
 decl_stmt|;
 specifier|private
 name|boolean
 name|searchedForSignatureAttribute
-init|=
-literal|false
 decl_stmt|;
 name|FieldOrMethod
 parameter_list|()

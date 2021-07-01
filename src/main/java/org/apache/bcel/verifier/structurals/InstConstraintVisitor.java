@@ -316,22 +316,16 @@ comment|/**      * The Execution Frame we're working on.      *      * @see #set
 specifier|private
 name|Frame
 name|frame
-init|=
-literal|null
 decl_stmt|;
 comment|/**      * The ConstantPoolGen we're working on.      *      * @see #setConstantPoolGen(ConstantPoolGen cpg)      */
 specifier|private
 name|ConstantPoolGen
 name|cpg
-init|=
-literal|null
 decl_stmt|;
 comment|/**      * The MethodGen we're working on.      *      * @see #setMethodGen(MethodGen mg)      */
 specifier|private
 name|MethodGen
 name|mg
-init|=
-literal|null
 decl_stmt|;
 comment|/**      * The OperandStack we're working on.      *      * @see #setFrame(Frame f)      */
 specifier|private

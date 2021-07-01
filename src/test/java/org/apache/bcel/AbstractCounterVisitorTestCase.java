@@ -88,8 +88,6 @@ function_decl|;
 specifier|private
 name|CounterVisitor
 name|visitor
-init|=
-literal|null
 decl_stmt|;
 annotation|@
 name|BeforeEach

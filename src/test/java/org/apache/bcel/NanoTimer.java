@@ -21,8 +21,6 @@ block|{
 specifier|private
 name|long
 name|timeNanos
-init|=
-literal|0
 decl_stmt|;
 specifier|public
 name|NanoTimer

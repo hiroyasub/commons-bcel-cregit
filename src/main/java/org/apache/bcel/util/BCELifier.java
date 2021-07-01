@@ -1316,7 +1316,10 @@ operator|.
 name|append
 argument_list|(
 name|CONSTANT_PREFIX
-operator|+
+argument_list|)
+operator|.
+name|append
+argument_list|(
 literal|"ACC_SUPER | "
 argument_list|)
 expr_stmt|;
@@ -1345,7 +1348,10 @@ operator|.
 name|append
 argument_list|(
 name|CONSTANT_PREFIX
-operator|+
+argument_list|)
+operator|.
+name|append
+argument_list|(
 literal|"ACC_BRIDGE | "
 argument_list|)
 expr_stmt|;
@@ -1374,7 +1380,10 @@ operator|.
 name|append
 argument_list|(
 name|CONSTANT_PREFIX
-operator|+
+argument_list|)
+operator|.
+name|append
+argument_list|(
 literal|"ACC_VARARGS | "
 argument_list|)
 expr_stmt|;
@@ -1395,7 +1404,10 @@ operator|.
 name|append
 argument_list|(
 name|CONSTANT_PREFIX
-operator|+
+argument_list|)
+operator|.
+name|append
+argument_list|(
 literal|"ACC_"
 argument_list|)
 operator|.

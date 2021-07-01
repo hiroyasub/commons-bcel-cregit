@@ -211,8 +211,6 @@ block|{
 specifier|private
 name|Object
 name|value
-init|=
-literal|null
 decl_stmt|;
 specifier|private
 specifier|static

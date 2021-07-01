@@ -287,8 +287,6 @@ argument_list|<
 name|InstructionContext
 argument_list|>
 name|executionPredecessors
-init|=
-literal|null
 decl_stmt|;
 comment|// Type: InstructionContext
 comment|/**          * Creates an InstructionHandleImpl object from an InstructionHandle.          * Creation of one per InstructionHandle suffices. Don't create more.          */
@@ -968,13 +966,17 @@ name|String
 name|getExecutionChain
 parameter_list|()
 block|{
-name|String
+name|StringBuilder
 name|s
 init|=
+operator|new
+name|StringBuilder
+argument_list|(
 name|this
 operator|.
 name|toString
 argument_list|()
+argument_list|)
 decl_stmt|;
 for|for
 control|(
@@ -997,7 +999,11 @@ operator|--
 control|)
 block|{
 name|s
-operator|=
+operator|.
+name|insert
+argument_list|(
+literal|0
+argument_list|,
 name|executionPredecessors
 operator|.
 name|get
@@ -1006,12 +1012,14 @@ name|i
 argument_list|)
 operator|+
 literal|"\n"
-operator|+
-name|s
+argument_list|)
 expr_stmt|;
 block|}
 return|return
 name|s
+operator|.
+name|toString
+argument_list|()
 return|;
 block|}
 comment|/**          * Extends the StructuralCodeConstraintException ("e") object with an at-the-end-extended message.          * This extended message will then reflect the execution flow needed to get to the constraint          * violation that triggered the throwing of the "e" object.          */

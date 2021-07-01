@@ -572,13 +572,10 @@ operator|.
 name|append
 argument_list|(
 literal|"          "
-operator|.
-name|substring
-argument_list|(
+argument_list|,
 literal|0
 argument_list|,
 name|indent_count
-argument_list|)
 argument_list|)
 operator|.
 name|append

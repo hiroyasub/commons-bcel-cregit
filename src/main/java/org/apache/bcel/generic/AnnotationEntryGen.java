@@ -235,8 +235,6 @@ decl_stmt|;
 specifier|private
 name|boolean
 name|isRuntimeVisible
-init|=
-literal|false
 decl_stmt|;
 comment|/**      * Here we are taking a fixed annotation of type Annotation and building a      * modifiable AnnotationGen object. If the pool passed in is for a different      * class file, then copyPoolEntries should have been passed as true as that      * will force us to do a deep copy of the annotation and move the cpool      * entries across. We need to copy the type and the element name value pairs      * and the visibility.      */
 specifier|public
@@ -1301,10 +1299,7 @@ argument_list|(
 operator|new
 name|Attribute
 index|[
-name|newAttributes
-operator|.
-name|size
-argument_list|()
+literal|0
 index|]
 argument_list|)
 return|;
@@ -1828,10 +1823,7 @@ argument_list|(
 operator|new
 name|Attribute
 index|[
-name|newAttributes
-operator|.
-name|size
-argument_list|()
+literal|0
 index|]
 argument_list|)
 return|;

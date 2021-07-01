@@ -289,8 +289,6 @@ specifier|private
 specifier|static
 name|boolean
 name|wide
-init|=
-literal|false
 decl_stmt|;
 name|CodeHTML
 parameter_list|(

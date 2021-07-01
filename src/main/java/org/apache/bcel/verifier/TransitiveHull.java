@@ -56,8 +56,6 @@ comment|/** Used for indentation. */
 specifier|private
 name|int
 name|indent
-init|=
-literal|0
 decl_stmt|;
 comment|/** Not publicly instantiable. */
 specifier|private

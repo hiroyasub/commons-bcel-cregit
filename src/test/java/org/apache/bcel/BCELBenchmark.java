@@ -411,6 +411,7 @@ parameter_list|()
 throws|throws
 name|IOException
 block|{
+specifier|final
 name|String
 name|javaHome
 init|=

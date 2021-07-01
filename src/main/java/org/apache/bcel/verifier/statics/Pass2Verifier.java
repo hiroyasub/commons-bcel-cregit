@@ -8426,8 +8426,6 @@ block|{
 specifier|private
 name|boolean
 name|hasInnerClass
-init|=
-literal|false
 decl_stmt|;
 specifier|private
 specifier|final

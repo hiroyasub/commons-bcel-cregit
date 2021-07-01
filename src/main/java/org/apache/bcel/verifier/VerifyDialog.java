@@ -83,8 +83,6 @@ name|swing
 operator|.
 name|JPanel
 name|ivjJDialogContentPane
-init|=
-literal|null
 decl_stmt|;
 comment|/** Machine-generated. */
 specifier|private
@@ -94,8 +92,6 @@ name|swing
 operator|.
 name|JPanel
 name|ivjPass1Panel
-init|=
-literal|null
 decl_stmt|;
 comment|/** Machine-generated. */
 specifier|private
@@ -105,8 +101,6 @@ name|swing
 operator|.
 name|JPanel
 name|ivjPass2Panel
-init|=
-literal|null
 decl_stmt|;
 comment|/** Machine-generated. */
 specifier|private
@@ -116,8 +110,6 @@ name|swing
 operator|.
 name|JPanel
 name|ivjPass3Panel
-init|=
-literal|null
 decl_stmt|;
 comment|/** Machine-generated. */
 specifier|private
@@ -127,8 +119,6 @@ name|swing
 operator|.
 name|JButton
 name|ivjPass1Button
-init|=
-literal|null
 decl_stmt|;
 comment|/** Machine-generated. */
 specifier|private
@@ -138,8 +128,6 @@ name|swing
 operator|.
 name|JButton
 name|ivjPass2Button
-init|=
-literal|null
 decl_stmt|;
 comment|/** Machine-generated. */
 specifier|private
@@ -149,8 +137,6 @@ name|swing
 operator|.
 name|JButton
 name|ivjPass3Button
-init|=
-literal|null
 decl_stmt|;
 comment|/** Machine-generated. */
 specifier|private
@@ -298,8 +284,6 @@ name|swing
 operator|.
 name|JButton
 name|ivjFlushButton
-init|=
-literal|null
 decl_stmt|;
 comment|/** Machine-generated. */
 specifier|public
@@ -1969,6 +1953,7 @@ control|)
 block|{
 try|try
 block|{
+specifier|final
 name|VerifyDialog
 name|aVerifyDialog
 decl_stmt|;

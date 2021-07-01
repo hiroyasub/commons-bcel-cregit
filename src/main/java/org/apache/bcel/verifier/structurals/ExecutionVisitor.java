@@ -164,15 +164,11 @@ comment|/**      * The executionframe we're operating on.      */
 specifier|private
 name|Frame
 name|frame
-init|=
-literal|null
 decl_stmt|;
 comment|/**      * The ConstantPoolGen we're working with.      * @see #setConstantPoolGen(ConstantPoolGen)      */
 specifier|private
 name|ConstantPoolGen
 name|cpg
-init|=
-literal|null
 decl_stmt|;
 comment|/**      * Constructor. Constructs a new instance of this class.      */
 specifier|public

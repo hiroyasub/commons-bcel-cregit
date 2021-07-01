@@ -302,10 +302,7 @@ argument_list|(
 operator|new
 name|ParameterAnnotationEntry
 index|[
-name|accumulatedAnnotations
-operator|.
-name|size
-argument_list|()
+literal|0
 index|]
 argument_list|)
 return|;

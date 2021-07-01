@@ -376,10 +376,7 @@ argument_list|(
 operator|new
 name|ElementValuePair
 index|[
-name|elementValuePairs
-operator|.
-name|size
-argument_list|()
+literal|0
 index|]
 argument_list|)
 return|;
@@ -645,10 +642,7 @@ argument_list|(
 operator|new
 name|AnnotationEntry
 index|[
-name|accumulatedAnnotations
-operator|.
-name|size
-argument_list|()
+literal|0
 index|]
 argument_list|)
 return|;

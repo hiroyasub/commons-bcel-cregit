@@ -311,8 +311,6 @@ specifier|private
 specifier|static
 name|boolean
 name|wide
-init|=
-literal|false
 decl_stmt|;
 comment|/**      * Convert bit field of flags into string such as `static final'.      *      * @param  access_flags Access flags      * @return String representation of flags      */
 specifier|public
@@ -2869,10 +2867,7 @@ argument_list|(
 operator|new
 name|String
 index|[
-name|vec
-operator|.
-name|size
-argument_list|()
+literal|0
 index|]
 argument_list|)
 return|;
@@ -3483,13 +3478,10 @@ operator|.
 name|append
 argument_list|(
 name|str
-operator|.
-name|substring
-argument_list|(
+argument_list|,
 name|old_index
 argument_list|,
 name|index
-argument_list|)
 argument_list|)
 expr_stmt|;
 comment|// append prefix

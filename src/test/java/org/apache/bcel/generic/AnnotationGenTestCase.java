@@ -803,6 +803,7 @@ argument_list|(
 name|bs
 argument_list|)
 decl_stmt|;
+specifier|final
 name|AnnotationEntryGen
 name|annAfter
 decl_stmt|;

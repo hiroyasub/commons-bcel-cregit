@@ -63,8 +63,6 @@ comment|/** The VerificationResult cache. */
 specifier|private
 name|VerificationResult
 name|verificationResult
-init|=
-literal|null
 decl_stmt|;
 comment|/**      * This method runs a verification pass conforming to the      * Java Virtual Machine Specification, 2nd edition, on a      * class file.      * PassVerifier instances perform caching;      * i.e. if the verify() method once determined a VerificationResult,      * then this result may be returned after every invocation of this      * method instead of running the verification pass anew; likewise with      * the result of getMessages().      *      * @see #getMessages()      * @see #addMessage(String)      */
 specifier|public
@@ -133,10 +131,7 @@ argument_list|(
 operator|new
 name|String
 index|[
-name|messages
-operator|.
-name|size
-argument_list|()
+literal|0
 index|]
 argument_list|)
 return|;

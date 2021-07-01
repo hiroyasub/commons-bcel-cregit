@@ -176,20 +176,14 @@ block|{
 specifier|private
 name|InstructionHandle
 name|start
-init|=
-literal|null
 decl_stmt|;
 specifier|private
 name|InstructionHandle
 name|end
-init|=
-literal|null
 decl_stmt|;
 specifier|private
 name|int
 name|length
-init|=
-literal|0
 decl_stmt|;
 comment|// number of elements in list
 specifier|private
@@ -3586,10 +3580,7 @@ argument_list|(
 operator|new
 name|Instruction
 index|[
-name|instructions
-operator|.
-name|size
-argument_list|()
+literal|0
 index|]
 argument_list|)
 return|;
