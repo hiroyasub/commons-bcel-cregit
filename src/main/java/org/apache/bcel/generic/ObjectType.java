@@ -170,11 +170,9 @@ name|type
 parameter_list|)
 block|{
 return|return
-operator|(
 name|type
 operator|instanceof
 name|ObjectType
-operator|)
 condition|?
 operator|(
 operator|(

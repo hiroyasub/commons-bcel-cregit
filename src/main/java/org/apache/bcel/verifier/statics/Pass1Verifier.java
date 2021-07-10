@@ -235,11 +235,9 @@ comment|//loads in the class file if not already done.
 comment|/* If we find more constraints to check, we should do this in an own method. */
 if|if
 condition|(
-operator|(
 name|jc
 operator|!=
 literal|null
-operator|)
 operator|&&
 operator|!
 name|myOwner

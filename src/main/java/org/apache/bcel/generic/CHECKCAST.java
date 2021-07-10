@@ -145,11 +145,9 @@ argument_list|()
 expr_stmt|;
 block|}
 return|return
-operator|(
 name|t
 operator|instanceof
 name|ObjectType
-operator|)
 condition|?
 operator|(
 name|ObjectType

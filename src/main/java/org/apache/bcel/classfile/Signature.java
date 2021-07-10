@@ -586,12 +586,10 @@ comment|//System.out.println("within ident:"+ (char)ch);
 block|}
 do|while
 condition|(
-operator|(
 name|ch
 operator|!=
 operator|-
 literal|1
-operator|)
 operator|&&
 operator|(
 name|Character
@@ -604,11 +602,9 @@ operator|)
 name|ch
 argument_list|)
 operator|||
-operator|(
 name|ch
 operator|==
 literal|'/'
-operator|)
 operator|)
 condition|)
 do|;
@@ -678,11 +674,9 @@ argument_list|()
 expr_stmt|;
 if|if
 condition|(
-operator|(
 name|ch
 operator|==
 literal|'<'
-operator|)
 operator|||
 name|ch
 operator|==
@@ -711,7 +705,6 @@ expr_stmt|;
 while|while
 condition|(
 operator|(
-operator|(
 name|ch
 operator|=
 name|in
@@ -721,13 +714,10 @@ argument_list|()
 operator|)
 operator|!=
 literal|'>'
-operator|)
 operator|&&
-operator|(
 name|ch
 operator|!=
 literal|')'
-operator|)
 condition|)
 block|{
 comment|// List of parameters
@@ -921,7 +911,6 @@ argument_list|(
 literal|"<"
 argument_list|)
 operator|&&
-operator|(
 name|s
 operator|.
 name|indexOf
@@ -930,7 +919,6 @@ literal|':'
 argument_list|)
 operator|>
 literal|0
-operator|)
 return|;
 block|}
 comment|// @since 6.0 is no longer final

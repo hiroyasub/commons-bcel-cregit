@@ -222,7 +222,6 @@ throw|;
 block|}
 if|if
 condition|(
-operator|(
 name|this
 operator|.
 name|getClass
@@ -231,13 +230,10 @@ operator|!=
 name|BranchHandle
 operator|.
 name|class
-operator|)
 operator|&&
-operator|(
 name|i
 operator|instanceof
 name|BranchInstruction
-operator|)
 condition|)
 block|{
 throw|throw
@@ -494,19 +490,15 @@ name|hasTargeters
 parameter_list|()
 block|{
 return|return
-operator|(
 name|targeters
 operator|!=
 literal|null
-operator|)
 operator|&&
-operator|(
 operator|!
 name|targeters
 operator|.
 name|isEmpty
 argument_list|()
-operator|)
 return|;
 block|}
 comment|/**      * @return null, if there are no targeters      */

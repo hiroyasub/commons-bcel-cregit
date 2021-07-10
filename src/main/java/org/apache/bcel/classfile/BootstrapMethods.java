@@ -515,7 +515,6 @@ name|String
 index|[]
 name|lines
 init|=
-operator|(
 name|bootstrapMethods
 index|[
 name|i
@@ -528,7 +527,6 @@ operator|.
 name|getConstantPool
 argument_list|()
 argument_list|)
-operator|)
 operator|.
 name|split
 argument_list|(

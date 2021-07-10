@@ -538,12 +538,10 @@ init|=
 operator|(
 name|InvokeInstruction
 operator|)
-operator|(
 name|ih
 operator|.
 name|getInstruction
 argument_list|()
-operator|)
 decl_stmt|;
 comment|// without fix, the getClassName() will throw:
 comment|//   java.lang.IllegalArgumentException: Cannot be used on an array type

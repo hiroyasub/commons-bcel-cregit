@@ -600,17 +600,13 @@ if|if
 condition|(
 operator|!
 operator|(
-operator|(
 name|attribute
 operator|instanceof
 name|Code
-operator|)
 operator|||
-operator|(
 name|attribute
 operator|instanceof
 name|ExceptionTable
-operator|)
 operator|)
 condition|)
 block|{

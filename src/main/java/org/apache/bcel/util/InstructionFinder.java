@@ -801,11 +801,9 @@ argument_list|)
 decl_stmt|;
 if|if
 condition|(
-operator|(
 name|constraint
 operator|==
 literal|null
-operator|)
 operator|||
 name|constraint
 operator|.

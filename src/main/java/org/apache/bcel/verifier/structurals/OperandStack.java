@@ -722,7 +722,6 @@ try|try
 block|{
 if|if
 condition|(
-operator|(
 name|slotsUsed
 argument_list|()
 operator|!=
@@ -730,9 +729,7 @@ name|s
 operator|.
 name|slotsUsed
 argument_list|()
-operator|)
 operator|||
-operator|(
 name|size
 argument_list|()
 operator|!=
@@ -740,7 +737,6 @@ name|s
 operator|.
 name|size
 argument_list|()
-operator|)
 condition|)
 block|{
 throw|throw
@@ -777,7 +773,6 @@ comment|// If the object _was_ initialized and we're supposed to merge
 comment|// in some uninitialized object, we reject the code (see vmspec2, 4.9.4, last paragraph).
 if|if
 condition|(
-operator|(
 operator|!
 operator|(
 name|stack
@@ -789,9 +784,7 @@ argument_list|)
 operator|instanceof
 name|UninitializedObjectType
 operator|)
-operator|)
 operator|&&
-operator|(
 name|s
 operator|.
 name|stack
@@ -802,7 +795,6 @@ name|i
 argument_list|)
 operator|instanceof
 name|UninitializedObjectType
-operator|)
 condition|)
 block|{
 throw|throw
@@ -817,9 +809,7 @@ comment|// Even harder, we're not initialized but are supposed to broaden
 comment|// the known object type
 if|if
 condition|(
-operator|(
 operator|!
-operator|(
 name|stack
 operator|.
 name|get
@@ -838,10 +828,7 @@ argument_list|(
 name|i
 argument_list|)
 argument_list|)
-operator|)
-operator|)
 operator|&&
-operator|(
 name|stack
 operator|.
 name|get
@@ -850,9 +837,7 @@ name|i
 argument_list|)
 operator|instanceof
 name|UninitializedObjectType
-operator|)
 operator|&&
-operator|(
 operator|!
 operator|(
 name|s
@@ -865,7 +850,6 @@ name|i
 argument_list|)
 operator|instanceof
 name|UninitializedObjectType
-operator|)
 operator|)
 condition|)
 block|{
@@ -880,7 +864,6 @@ block|}
 comment|// on the other hand...
 if|if
 condition|(
-operator|(
 name|stack
 operator|.
 name|get
@@ -889,7 +872,6 @@ name|i
 argument_list|)
 operator|instanceof
 name|UninitializedObjectType
-operator|)
 operator|&&
 operator|!
 operator|(
@@ -917,14 +899,12 @@ operator|(
 operator|(
 name|UninitializedObjectType
 operator|)
-operator|(
 name|stack
 operator|.
 name|get
 argument_list|(
 name|i
 argument_list|)
-operator|)
 operator|)
 operator|.
 name|getInitialized
@@ -1022,7 +1002,6 @@ argument_list|(
 operator|(
 name|ReferenceType
 operator|)
-operator|(
 name|s
 operator|.
 name|stack
@@ -1031,7 +1010,6 @@ name|get
 argument_list|(
 name|i
 argument_list|)
-operator|)
 argument_list|)
 argument_list|)
 expr_stmt|;

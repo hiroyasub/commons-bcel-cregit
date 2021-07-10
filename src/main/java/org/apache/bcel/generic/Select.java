@@ -277,7 +277,6 @@ operator|(
 literal|4
 operator|-
 operator|(
-operator|(
 name|getPosition
 argument_list|()
 operator|+
@@ -285,7 +284,6 @@ literal|1
 operator|)
 operator|%
 literal|4
-operator|)
 operator|)
 operator|%
 literal|4
@@ -404,14 +402,12 @@ operator|=
 operator|(
 literal|4
 operator|-
-operator|(
 name|bytes
 operator|.
 name|getIndex
 argument_list|()
 operator|%
 literal|4
-operator|)
 operator|)
 operator|%
 literal|4

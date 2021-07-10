@@ -415,17 +415,13 @@ argument_list|()
 decl_stmt|;
 if|if
 condition|(
-operator|(
 name|pc
 operator|>=
 name|start_pc
-operator|)
 operator|&&
-operator|(
 name|pc
 operator|<=
 name|end_pc
-operator|)
 condition|)
 block|{
 return|return

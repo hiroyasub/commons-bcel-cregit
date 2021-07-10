@@ -565,7 +565,7 @@ name|executionPredecessors
 operator|=
 name|clone
 expr_stmt|;
-comment|//sanity check
+comment|// sanity check
 if|if
 condition|(
 operator|(
@@ -573,9 +573,7 @@ name|lastExecutionJSR
 argument_list|()
 operator|==
 literal|null
-operator|)
 operator|&&
-operator|(
 name|subroutines
 operator|.
 name|subroutineOf
@@ -589,30 +587,13 @@ operator|.
 name|getTopLevel
 argument_list|()
 operator|)
-condition|)
-block|{
-throw|throw
-operator|new
-name|AssertionViolatedException
-argument_list|(
-literal|"Huh?! Am I '"
-operator|+
-name|this
-operator|+
-literal|"' part of a subroutine or not?"
-argument_list|)
-throw|;
-block|}
-if|if
-condition|(
+operator|||
 operator|(
 name|lastExecutionJSR
 argument_list|()
 operator|!=
 literal|null
-operator|)
 operator|&&
-operator|(
 name|subroutines
 operator|.
 name|subroutineOf
@@ -687,7 +668,7 @@ name|inFrame
 argument_list|)
 condition|)
 block|{
-comment|//shortcut: no need to merge equal frames.
+comment|// shortcut: no need to merge equal frames.
 return|return
 literal|false
 return|;
@@ -797,7 +778,7 @@ argument_list|(
 name|ev
 argument_list|)
 expr_stmt|;
-comment|//getInstruction().accept(ExecutionVisitor.withFrame(workingFrame));
+comment|// getInstruction().accept(ExecutionVisitor.withFrame(workingFrame));
 name|outFrames
 operator|.
 name|put
@@ -966,6 +947,7 @@ name|String
 name|getExecutionChain
 parameter_list|()
 block|{
+specifier|final
 name|StringBuilder
 name|s
 init|=
@@ -1107,14 +1089,12 @@ init|=
 operator|(
 name|InstructionContextImpl
 operator|)
-operator|(
 name|executionPredecessors
 operator|.
 name|get
 argument_list|(
 name|i
 argument_list|)
-operator|)
 decl_stmt|;
 specifier|final
 name|Instruction
@@ -1311,26 +1291,21 @@ name|ret
 return|;
 block|}
 comment|// Terminates method normally.
-if|if
-condition|(
-name|inst
-operator|instanceof
-name|ReturnInstruction
-condition|)
-block|{
-return|return
-name|InstructionHandle
-operator|.
-name|EMPTY_INSTRUCTION_HANDLE_ARRAY
-return|;
-block|}
 comment|// Terminates method abnormally, because JustIce mandates
 comment|// subroutines not to be protected by exception handlers.
 if|if
 condition|(
+operator|(
+name|inst
+operator|instanceof
+name|ReturnInstruction
+operator|)
+operator|||
+operator|(
 name|inst
 operator|instanceof
 name|ATHROW
+operator|)
 condition|)
 block|{
 return|return

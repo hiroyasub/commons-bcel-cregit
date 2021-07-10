@@ -2074,18 +2074,14 @@ argument_list|)
 decl_stmt|;
 if|if
 condition|(
-operator|(
 name|classname
 operator|==
 literal|null
-operator|)
 operator|||
-operator|(
 name|classname
 operator|.
 name|isEmpty
 argument_list|()
-operator|)
 condition|)
 block|{
 return|return;
@@ -2318,7 +2314,6 @@ name|Color
 operator|.
 name|green
 else|:
-operator|(
 name|rejected
 condition|?
 name|Color
@@ -2328,7 +2323,6 @@ else|:
 name|Color
 operator|.
 name|yellow
-operator|)
 argument_list|)
 expr_stmt|;
 block|}
@@ -2542,7 +2536,6 @@ name|Color
 operator|.
 name|green
 else|:
-operator|(
 name|rejected
 condition|?
 name|Color
@@ -2552,7 +2545,6 @@ else|:
 name|Color
 operator|.
 name|yellow
-operator|)
 argument_list|)
 expr_stmt|;
 block|}

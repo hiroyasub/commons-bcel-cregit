@@ -264,7 +264,6 @@ name|sum
 decl_stmt|;
 if|if
 condition|(
-operator|(
 name|super
 operator|.
 name|getOpcode
@@ -273,9 +272,7 @@ operator|==
 name|Const
 operator|.
 name|INVOKESTATIC
-operator|)
 operator|||
-operator|(
 name|super
 operator|.
 name|getOpcode
@@ -284,7 +281,6 @@ operator|==
 name|Const
 operator|.
 name|INVOKEDYNAMIC
-operator|)
 condition|)
 block|{
 name|sum

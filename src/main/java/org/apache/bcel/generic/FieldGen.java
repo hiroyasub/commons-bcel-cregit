@@ -1462,11 +1462,9 @@ argument_list|()
 condition|?
 literal|""
 else|:
-operator|(
 name|access
 operator|+
 literal|" "
-operator|)
 expr_stmt|;
 name|signature
 operator|=

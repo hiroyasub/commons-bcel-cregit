@@ -425,16 +425,13 @@ expr_stmt|;
 block|}
 if|if
 condition|(
-operator|(
 name|line
 operator|.
 name|length
 argument_list|()
 operator|>
 name|MAX_LINE_LENGTH
-operator|)
 operator|&&
-operator|(
 name|i
 operator|<
 name|lineNumberTable
@@ -442,7 +439,6 @@ operator|.
 name|length
 operator|-
 literal|1
-operator|)
 condition|)
 block|{
 name|line
@@ -537,11 +533,9 @@ specifier|final
 name|int
 name|i
 init|=
-operator|(
 name|l
 operator|+
 name|r
-operator|)
 operator|>>>
 literal|1
 decl_stmt|;

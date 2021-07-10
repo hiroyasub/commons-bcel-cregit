@@ -104,11 +104,9 @@ argument_list|)
 expr_stmt|;
 if|if
 condition|(
-operator|(
 name|i
 operator|+
 literal|1
-operator|)
 operator|<
 name|elementValues
 operator|.
@@ -291,11 +289,9 @@ argument_list|)
 expr_stmt|;
 if|if
 condition|(
-operator|(
 name|i
 operator|+
 literal|1
-operator|)
 operator|<
 name|elementValues
 operator|.

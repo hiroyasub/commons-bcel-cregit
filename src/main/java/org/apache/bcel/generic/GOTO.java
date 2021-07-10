@@ -201,13 +201,11 @@ argument_list|(
 name|i
 argument_list|)
 operator|>=
-operator|(
 name|Short
 operator|.
 name|MAX_VALUE
 operator|-
 name|max_offset
-operator|)
 condition|)
 block|{
 comment|// to large for short (estimate)

@@ -93,17 +93,13 @@ argument_list|()
 decl_stmt|;
 if|if
 condition|(
-operator|(
 name|size
 operator|<
 literal|2
-operator|)
 operator|||
-operator|(
 name|level
 operator|<
 literal|0
-operator|)
 condition|)
 block|{
 return|return

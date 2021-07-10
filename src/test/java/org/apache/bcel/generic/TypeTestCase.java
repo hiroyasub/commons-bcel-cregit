@@ -71,14 +71,12 @@ specifier|final
 name|String
 name|actualValue
 init|=
-operator|(
 name|Type
 operator|.
 name|getType
 argument_list|(
 literal|"Ljava/util/Map<TX;Ljava/util/List<TY;>;>;"
 argument_list|)
-operator|)
 operator|.
 name|getSignature
 argument_list|()

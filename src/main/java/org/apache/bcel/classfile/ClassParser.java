@@ -697,7 +697,6 @@ block|}
 if|if
 condition|(
 operator|(
-operator|(
 name|accessFlags
 operator|&
 name|Const
@@ -706,9 +705,7 @@ name|ACC_ABSTRACT
 operator|)
 operator|!=
 literal|0
-operator|)
 operator|&&
-operator|(
 operator|(
 name|accessFlags
 operator|&
@@ -718,7 +715,6 @@ name|ACC_FINAL
 operator|)
 operator|!=
 literal|0
-operator|)
 condition|)
 block|{
 throw|throw

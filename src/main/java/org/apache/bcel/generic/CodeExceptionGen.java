@@ -139,11 +139,9 @@ operator|.
 name|getPosition
 argument_list|()
 argument_list|,
-operator|(
 name|catchType
 operator|==
 literal|null
-operator|)
 condition|?
 literal|0
 else|:
@@ -365,23 +363,17 @@ name|ih
 parameter_list|)
 block|{
 return|return
-operator|(
 name|startPc
 operator|==
 name|ih
-operator|)
 operator|||
-operator|(
 name|endPc
 operator|==
 name|ih
-operator|)
 operator|||
-operator|(
 name|handlerPc
 operator|==
 name|ih
-operator|)
 return|;
 block|}
 comment|/** Sets the type of the Exception to catch. Set 'null' for ANY. */

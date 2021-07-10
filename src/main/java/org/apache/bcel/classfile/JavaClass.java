@@ -1572,7 +1572,6 @@ name|getName
 argument_list|()
 argument_list|)
 operator|&&
-operator|(
 name|m
 operator|.
 name|getModifiers
@@ -1582,7 +1581,6 @@ name|method
 operator|.
 name|getModifiers
 argument_list|()
-operator|)
 operator|&&
 name|Type
 operator|.
@@ -1924,11 +1922,9 @@ argument_list|()
 condition|?
 literal|""
 else|:
-operator|(
 name|access
 operator|+
 literal|" "
-operator|)
 expr_stmt|;
 specifier|final
 name|StringBuilder

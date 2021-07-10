@@ -87,13 +87,11 @@ parameter_list|()
 block|{
 return|return
 operator|(
-operator|(
 name|double
 operator|)
 name|timeNanos
 operator|/
 literal|1000000000
-operator|)
 operator|+
 literal|" s"
 return|;

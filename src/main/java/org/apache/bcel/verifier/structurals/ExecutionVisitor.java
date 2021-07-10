@@ -5762,14 +5762,12 @@ argument_list|(
 operator|(
 name|ObjectType
 operator|)
-operator|(
 name|o
 operator|.
 name|getType
 argument_list|(
 name|cpg
 argument_list|)
-operator|)
 argument_list|)
 argument_list|)
 expr_stmt|;

@@ -206,7 +206,6 @@ operator|)
 name|o
 decl_stmt|;
 return|return
-operator|(
 name|other
 operator|.
 name|numeric
@@ -214,7 +213,6 @@ operator|==
 name|this
 operator|.
 name|numeric
-operator|)
 operator|&&
 name|other
 operator|.

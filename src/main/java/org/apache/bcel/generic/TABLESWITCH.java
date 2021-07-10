@@ -165,11 +165,9 @@ specifier|final
 name|int
 name|low
 init|=
-operator|(
 name|_match_length
 operator|>
 literal|0
-operator|)
 condition|?
 name|super
 operator|.
@@ -191,11 +189,9 @@ specifier|final
 name|int
 name|high
 init|=
-operator|(
 name|_match_length
 operator|>
 literal|0
-operator|)
 condition|?
 name|super
 operator|.

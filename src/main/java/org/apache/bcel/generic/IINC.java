@@ -246,13 +246,11 @@ name|wide
 operator|=
 name|wide
 operator|||
-operator|(
 name|c
 operator|>
 name|Byte
 operator|.
 name|MAX_VALUE
-operator|)
 expr_stmt|;
 block|}
 else|else
@@ -261,13 +259,11 @@ name|wide
 operator|=
 name|wide
 operator|||
-operator|(
 name|c
 operator|<
 name|Byte
 operator|.
 name|MIN_VALUE
-operator|)
 expr_stmt|;
 block|}
 if|if

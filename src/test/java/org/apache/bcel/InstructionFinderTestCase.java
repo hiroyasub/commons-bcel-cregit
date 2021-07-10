@@ -186,7 +186,6 @@ argument_list|(
 literal|"search"
 argument_list|)
 operator|&&
-operator|(
 name|m
 operator|.
 name|getArgumentTypes
@@ -195,7 +194,6 @@ operator|.
 name|length
 operator|==
 literal|3
-operator|)
 condition|)
 block|{
 name|searchM

@@ -538,11 +538,9 @@ argument_list|()
 condition|?
 literal|""
 else|:
-operator|(
 name|access
 operator|+
 literal|" "
-operator|)
 expr_stmt|;
 return|return
 literal|"  "

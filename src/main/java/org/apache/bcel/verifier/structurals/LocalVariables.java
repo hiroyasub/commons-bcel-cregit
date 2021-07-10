@@ -487,7 +487,6 @@ comment|// We won't accept an unitialized object if we know it was initialized;
 comment|// compare vmspec2, 4.9.4, last paragraph.
 if|if
 condition|(
-operator|(
 operator|!
 operator|(
 name|locals
@@ -497,9 +496,7 @@ index|]
 operator|instanceof
 name|UninitializedObjectType
 operator|)
-operator|)
 operator|&&
-operator|(
 name|lv
 operator|.
 name|locals
@@ -508,7 +505,6 @@ name|i
 index|]
 operator|instanceof
 name|UninitializedObjectType
-operator|)
 condition|)
 block|{
 throw|throw
@@ -522,9 +518,7 @@ block|}
 comment|// Even harder, what about _different_ uninitialized object types?!
 if|if
 condition|(
-operator|(
 operator|!
-operator|(
 name|locals
 index|[
 name|i
@@ -539,19 +533,14 @@ index|[
 name|i
 index|]
 argument_list|)
-operator|)
-operator|)
 operator|&&
-operator|(
 name|locals
 index|[
 name|i
 index|]
 operator|instanceof
 name|UninitializedObjectType
-operator|)
 operator|&&
-operator|(
 name|lv
 operator|.
 name|locals
@@ -560,7 +549,6 @@ name|i
 index|]
 operator|instanceof
 name|UninitializedObjectType
-operator|)
 condition|)
 block|{
 throw|throw
@@ -574,14 +562,12 @@ block|}
 comment|// If we just didn't know that it was initialized, we have now learned.
 if|if
 condition|(
-operator|(
 name|locals
 index|[
 name|i
 index|]
 operator|instanceof
 name|UninitializedObjectType
-operator|)
 operator|&&
 operator|!
 operator|(
@@ -617,16 +603,13 @@ expr_stmt|;
 block|}
 if|if
 condition|(
-operator|(
 name|locals
 index|[
 name|i
 index|]
 operator|instanceof
 name|ReferenceType
-operator|)
 operator|&&
-operator|(
 name|lv
 operator|.
 name|locals
@@ -635,7 +618,6 @@ name|i
 index|]
 operator|instanceof
 name|ReferenceType
-operator|)
 condition|)
 block|{
 if|if
@@ -677,14 +659,12 @@ argument_list|(
 operator|(
 name|ReferenceType
 operator|)
-operator|(
 name|lv
 operator|.
 name|locals
 index|[
 name|i
 index|]
-operator|)
 argument_list|)
 decl_stmt|;
 if|if
@@ -733,7 +713,6 @@ block|{
 if|if
 condition|(
 operator|!
-operator|(
 name|locals
 index|[
 name|i
@@ -748,7 +727,6 @@ index|[
 name|i
 index|]
 argument_list|)
-operator|)
 condition|)
 block|{
 comment|/*TODO                 if ((locals[i] instanceof org.apache.bcel.generic.ReturnaddressType)&&                     (lv.locals[i] instanceof org.apache.bcel.generic.ReturnaddressType)) {                     //System.err.println("merging "+locals[i]+" and "+lv.locals[i]);                     throw new AssertionViolatedException("Merging different ReturnAddresses: '"+locals[i]+"' and '"+lv.locals[i]+"'.");                 } */

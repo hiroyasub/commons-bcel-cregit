@@ -80,11 +80,9 @@ argument_list|)
 decl_stmt|;
 if|if
 condition|(
-operator|(
 name|s
 operator|==
 literal|null
-operator|)
 operator|||
 literal|""
 operator|.
@@ -274,13 +272,11 @@ argument_list|(
 name|m
 argument_list|)
 operator|||
-operator|(
 name|r
 operator|!=
 name|Void
 operator|.
 name|TYPE
-operator|)
 condition|)
 block|{
 throw|throw
