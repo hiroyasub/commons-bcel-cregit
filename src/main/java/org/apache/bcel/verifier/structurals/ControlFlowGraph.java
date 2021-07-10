@@ -666,15 +666,7 @@ name|equals
 argument_list|(
 name|inFrame
 argument_list|)
-condition|)
-block|{
-comment|// shortcut: no need to merge equal frames.
-return|return
-literal|false
-return|;
-block|}
-if|if
-condition|(
+operator|||
 operator|!
 name|mergeInFrames
 argument_list|(
