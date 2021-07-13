@@ -208,19 +208,12 @@ block|{
 return|return
 name|loadedClasses
 operator|.
-name|containsKey
+name|getOrDefault
 argument_list|(
 name|className
-argument_list|)
-condition|?
-name|loadedClasses
-operator|.
-name|get
-argument_list|(
-name|className
-argument_list|)
-else|:
+argument_list|,
 literal|null
+argument_list|)
 return|;
 block|}
 comment|/**      * Lookup a JavaClass object from the Class Name provided.      */

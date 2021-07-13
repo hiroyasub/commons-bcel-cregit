@@ -636,9 +636,7 @@ name|vanillaFrame
 argument_list|,
 operator|new
 name|ArrayList
-argument_list|<
-name|InstructionContext
-argument_list|>
+argument_list|<>
 argument_list|()
 argument_list|,
 name|icv
@@ -656,9 +654,7 @@ name|start
 argument_list|,
 operator|new
 name|ArrayList
-argument_list|<
-name|InstructionContext
-argument_list|>
+argument_list|<>
 argument_list|()
 argument_list|)
 expr_stmt|;
@@ -1309,9 +1305,7 @@ argument_list|)
 argument_list|,
 operator|new
 name|ArrayList
-argument_list|<
-name|InstructionContext
-argument_list|>
+argument_list|<>
 argument_list|()
 argument_list|,
 name|icv
@@ -1328,9 +1322,7 @@ name|v
 argument_list|,
 operator|new
 name|ArrayList
-argument_list|<
-name|InstructionContext
-argument_list|>
+argument_list|<>
 argument_list|()
 argument_list|)
 expr_stmt|;
@@ -1389,9 +1381,7 @@ name|getOutFrame
 argument_list|(
 operator|new
 name|ArrayList
-argument_list|<
-name|InstructionContext
-argument_list|>
+argument_list|<>
 argument_list|()
 argument_list|)
 decl_stmt|;
