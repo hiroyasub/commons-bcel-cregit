@@ -7149,10 +7149,7 @@ operator|)
 name|j
 block|}
 decl_stmt|;
-specifier|final
-name|int
-name|s
-init|=
+return|return
 name|Integer
 operator|.
 name|parseInt
@@ -7165,9 +7162,6 @@ argument_list|)
 argument_list|,
 literal|16
 argument_list|)
-decl_stmt|;
-return|return
-name|s
 return|;
 block|}
 return|return

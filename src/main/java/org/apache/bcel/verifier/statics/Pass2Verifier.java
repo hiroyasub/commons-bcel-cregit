@@ -6085,12 +6085,6 @@ literal|"'."
 argument_list|)
 throw|;
 block|}
-specifier|final
-name|Code
-name|code
-init|=
-name|obj
-decl_stmt|;
 comment|//In JustIce, the check for correct offsets into the code array is delayed to Pass 3a.
 specifier|final
 name|LocalVariable
@@ -6289,7 +6283,7 @@ else|:
 name|localindex
 operator|)
 operator|>=
-name|code
+name|obj
 operator|.
 name|getMaxLocals
 argument_list|()
@@ -6315,7 +6309,7 @@ argument_list|)
 operator|+
 literal|"' with an index that exceeds the surrounding Code attribute's max_locals value of '"
 operator|+
-name|code
+name|obj
 operator|.
 name|getMaxLocals
 argument_list|()

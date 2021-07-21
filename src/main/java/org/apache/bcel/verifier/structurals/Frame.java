@@ -110,10 +110,7 @@ name|Object
 name|clone
 parameter_list|()
 block|{
-specifier|final
-name|Frame
-name|f
-init|=
+return|return
 operator|new
 name|Frame
 argument_list|(
@@ -127,9 +124,6 @@ operator|.
 name|getClone
 argument_list|()
 argument_list|)
-decl_stmt|;
-return|return
-name|f
 return|;
 block|}
 comment|/**      *      */

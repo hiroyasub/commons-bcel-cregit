@@ -798,10 +798,7 @@ block|{
 comment|//TODO: Put information in the brackets, e.g.
 comment|//      Is this an ExceptionHandler? Is this a RET? Is this the start of
 comment|//      a subroutine?
-specifier|final
-name|String
-name|ret
-init|=
+return|return
 name|getInstruction
 argument_list|()
 operator|.
@@ -811,9 +808,6 @@ literal|false
 argument_list|)
 operator|+
 literal|"\t[InstructionContext]"
-decl_stmt|;
-return|return
-name|ret
 return|;
 block|}
 comment|/**          * Does the actual merging (vmspec2, page 146).          * Returns true IFF this.inFrame was changed in course of merging with inFrame.          */

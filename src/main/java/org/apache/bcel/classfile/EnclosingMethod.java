@@ -269,10 +269,7 @@ name|ConstantClass
 name|getEnclosingClass
 parameter_list|()
 block|{
-specifier|final
-name|ConstantClass
-name|c
-init|=
+return|return
 operator|(
 name|ConstantClass
 operator|)
@@ -289,9 +286,6 @@ name|Const
 operator|.
 name|CONSTANT_Class
 argument_list|)
-decl_stmt|;
-return|return
-name|c
 return|;
 block|}
 specifier|public
@@ -311,10 +305,7 @@ return|return
 literal|null
 return|;
 block|}
-specifier|final
-name|ConstantNameAndType
-name|nat
-init|=
+return|return
 operator|(
 name|ConstantNameAndType
 operator|)
@@ -331,9 +322,6 @@ name|Const
 operator|.
 name|CONSTANT_NameAndType
 argument_list|)
-decl_stmt|;
-return|return
-name|nat
 return|;
 block|}
 annotation|@

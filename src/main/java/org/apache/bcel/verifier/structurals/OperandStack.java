@@ -391,10 +391,7 @@ name|Type
 name|pop
 parameter_list|()
 block|{
-specifier|final
-name|Type
-name|e
-init|=
+return|return
 name|stack
 operator|.
 name|remove
@@ -404,9 +401,6 @@ argument_list|()
 operator|-
 literal|1
 argument_list|)
-decl_stmt|;
-return|return
-name|e
 return|;
 block|}
 comment|/**      * Pops i elements off the stack. ALWAYS RETURNS "null"!!!      */
