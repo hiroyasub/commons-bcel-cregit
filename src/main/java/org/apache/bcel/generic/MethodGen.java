@@ -576,7 +576,7 @@ return|;
 block|}
 block|}
 decl_stmt|;
-comment|/**      * Declare method. If the method is non-static the constructor      * automatically declares a local variable `$this' in slot 0. The      * actual code is contained in the `il' parameter, which may further      * manipulated by the user. But he must take care not to remove any      * instruction (handles) that are still referenced from this object.      *      * For example one may not add a local variable and later remove the      * instructions it refers to without causing havoc. It is safe      * however if you remove that local variable, too.      *      * @param access_flags access qualifiers      * @param return_type  method type      * @param argTypes argument types      * @param argNames argument names (if this is null, default names will be provided      * for them)      * @param method_name name of method      * @param className class name containing this method (may be null, if you don't care)      * @param il instruction list associated with this method, may be null only for      * abstract or native methods      * @param cp constant pool      */
+comment|/**      * Declare method. If the method is non-static the constructor      * automatically declares a local variable `$this' in slot 0. The      * actual code is contained in the `il' parameter, which may further      * manipulated by the user. But they must take care not to remove any      * instruction (handles) that are still referenced from this object.      *      * For example one may not add a local variable and later remove the      * instructions it refers to without causing havoc. It is safe      * however if you remove that local variable, too.      *      * @param access_flags access qualifiers      * @param return_type  method type      * @param argTypes argument types      * @param argNames argument names (if this is null, default names will be provided      * for them)      * @param method_name name of method      * @param className class name containing this method (may be null, if you don't care)      * @param il instruction list associated with this method, may be null only for      * abstract or native methods      * @param cp constant pool      */
 specifier|public
 name|MethodGen
 parameter_list|(
@@ -4802,7 +4802,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/** Call notify() method on all observers. This method is not called      * automatically whenever the state has changed, but has to be      * called by the user after he has finished editing the object.      */
+comment|/** Call notify() method on all observers. This method is not called      * automatically whenever the state has changed, but has to be      * called by the user after they have finished editing the object.      */
 specifier|public
 name|void
 name|update

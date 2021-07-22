@@ -1367,7 +1367,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/** Call notify() method on all observers. This method is not called      * automatically whenever the state has changed, but has to be      * called by the user after he has finished editing the object.      */
+comment|/** Call notify() method on all observers. This method is not called      * automatically whenever the state has changed, but has to be      * called by the user after they have finished editing the object.      */
 specifier|public
 name|void
 name|update
