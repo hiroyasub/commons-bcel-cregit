@@ -385,7 +385,7 @@ name|this
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Dumps local variable to file stream in binary format.      *      * @param dataOutputStream Output file stream      * @exception IOException if an I/O error occurs.      * @see java.io.FilterOutputStream#out      */
+comment|/**      * Dumps local variable to file stream in binary format.      *      * @param dataOutputStream Output file stream      * @throws IOException if an I/O error occurs.      * @see java.io.FilterOutputStream#out      */
 specifier|public
 name|void
 name|dump
