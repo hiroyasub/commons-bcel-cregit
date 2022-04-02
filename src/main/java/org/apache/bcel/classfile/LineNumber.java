@@ -202,9 +202,9 @@ name|getLineNumber
 parameter_list|()
 block|{
 return|return
-literal|0xffff
-operator|&
 name|lineNumber
+operator|&
+literal|0xffff
 return|;
 block|}
 comment|/**      * @return PC in code      */
@@ -214,9 +214,9 @@ name|getStartPC
 parameter_list|()
 block|{
 return|return
-literal|0xffff
-operator|&
 name|startPc
+operator|&
+literal|0xffff
 return|;
 block|}
 comment|/**      * @param lineNumber the source line number      */
@@ -270,11 +270,13 @@ block|{
 return|return
 literal|"LineNumber("
 operator|+
-name|startPc
+name|getStartPC
+argument_list|()
 operator|+
 literal|", "
 operator|+
-name|lineNumber
+name|getLineNumber
+argument_list|()
 operator|+
 literal|")"
 return|;
