@@ -1391,9 +1391,7 @@ expr_stmt|;
 block|}
 block|}
 block|}
-else|else
-block|{
-if|if
+if|else if
 condition|(
 operator|!
 name|method
@@ -1415,7 +1413,6 @@ name|getClassName
 argument_list|()
 argument_list|)
 expr_stmt|;
-block|}
 block|}
 block|}
 name|jc
@@ -2005,9 +2002,7 @@ operator|=
 literal|true
 expr_stmt|;
 block|}
-else|else
-block|{
-if|if
+if|else if
 condition|(
 name|hasInnerClass
 condition|)
@@ -2030,7 +2025,6 @@ operator|+
 literal|" More than one InnerClasses attribute was found."
 argument_list|)
 throw|;
-block|}
 block|}
 if|if
 condition|(
@@ -5136,7 +5130,6 @@ argument_list|)
 decl_stmt|;
 if|if
 condition|(
-operator|(
 name|CONST_Long
 operator|.
 name|isInstance
@@ -5152,9 +5145,7 @@ name|Type
 operator|.
 name|LONG
 argument_list|)
-operator|)
 operator|||
-operator|(
 name|CONST_Float
 operator|.
 name|isInstance
@@ -5170,7 +5161,6 @@ name|Type
 operator|.
 name|FLOAT
 argument_list|)
-operator|)
 condition|)
 block|{
 return|return;

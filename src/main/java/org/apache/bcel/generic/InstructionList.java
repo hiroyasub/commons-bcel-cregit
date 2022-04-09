@@ -303,11 +303,9 @@ specifier|final
 name|int
 name|i
 init|=
-operator|(
 name|l
 operator|+
 name|r
-operator|)
 operator|>>>
 literal|1
 decl_stmt|;
@@ -1925,17 +1923,13 @@ block|{
 comment|// Step 1: Check constraints
 if|if
 condition|(
-operator|(
 name|start
 operator|==
 literal|null
-operator|)
 operator|||
-operator|(
 name|end
 operator|==
 literal|null
-operator|)
 condition|)
 block|{
 throw|throw
@@ -1954,17 +1948,13 @@ throw|;
 block|}
 if|if
 condition|(
-operator|(
 name|target
 operator|==
 name|start
-operator|)
 operator|||
-operator|(
 name|target
 operator|==
 name|end
-operator|)
 condition|)
 block|{
 throw|throw
@@ -2280,17 +2270,13 @@ decl_stmt|;
 comment|// First and last deleted instruction
 if|if
 condition|(
-operator|(
 name|prev
 operator|==
 literal|null
-operator|)
 operator|&&
-operator|(
 name|next
 operator|==
 literal|null
-operator|)
 condition|)
 block|{
 name|first

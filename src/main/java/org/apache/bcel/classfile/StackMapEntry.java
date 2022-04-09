@@ -79,11 +79,7 @@ name|StackMapType
 index|[]
 name|EMPTY_STACK_MAP_TYPE_ARRAY
 init|=
-operator|new
-name|StackMapType
-index|[
-literal|0
-index|]
+block|{}
 decl_stmt|;
 specifier|private
 name|int
@@ -1340,7 +1336,6 @@ return|;
 block|}
 if|if
 condition|(
-operator|(
 name|frameType
 operator|>=
 name|Const
@@ -1352,15 +1347,12 @@ operator|<=
 name|Const
 operator|.
 name|CHOP_FRAME_MAX
-operator|)
 operator|||
-operator|(
 name|frameType
 operator|==
 name|Const
 operator|.
 name|SAME_FRAME_EXTENDED
-operator|)
 condition|)
 block|{
 return|return

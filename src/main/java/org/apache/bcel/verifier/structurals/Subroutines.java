@@ -2507,23 +2507,17 @@ comment|// Terminates method abnormally, because JustIce mandates
 comment|// subroutines not to be protected by exception handlers.
 if|if
 condition|(
-operator|(
 name|inst
 operator|instanceof
 name|RET
-operator|)
 operator|||
-operator|(
 name|inst
 operator|instanceof
 name|ReturnInstruction
-operator|)
 operator|||
-operator|(
 name|inst
 operator|instanceof
 name|ATHROW
-operator|)
 condition|)
 block|{
 return|return

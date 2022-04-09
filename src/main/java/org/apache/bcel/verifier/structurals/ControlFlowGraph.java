@@ -568,7 +568,6 @@ expr_stmt|;
 comment|// sanity check
 if|if
 condition|(
-operator|(
 name|lastExecutionJSR
 argument_list|()
 operator|==
@@ -586,9 +585,7 @@ name|subroutines
 operator|.
 name|getTopLevel
 argument_list|()
-operator|)
 operator|||
-operator|(
 name|lastExecutionJSR
 argument_list|()
 operator|!=
@@ -606,7 +603,6 @@ name|subroutines
 operator|.
 name|getTopLevel
 argument_list|()
-operator|)
 condition|)
 block|{
 throw|throw
@@ -1281,17 +1277,13 @@ comment|// Terminates method abnormally, because JustIce mandates
 comment|// subroutines not to be protected by exception handlers.
 if|if
 condition|(
-operator|(
 name|inst
 operator|instanceof
 name|ReturnInstruction
-operator|)
 operator|||
-operator|(
 name|inst
 operator|instanceof
 name|ATHROW
-operator|)
 condition|)
 block|{
 return|return

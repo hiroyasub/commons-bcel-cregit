@@ -1351,10 +1351,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-else|else
-block|{
-comment|// we deal with an ALOAD
-if|if
+if|else if
 condition|(
 operator|!
 operator|(
@@ -1396,7 +1393,6 @@ expr_stmt|;
 block|}
 comment|// ALOAD __IS ALLOWED__ to put uninitialized objects onto the stack!
 comment|// referenceTypeIsInitialized(o, (ReferenceType) (locals().get(o.getIndex())));
-block|}
 comment|// LOAD instructions must have enough free stack slots.
 if|if
 condition|(
@@ -1750,9 +1746,7 @@ comment|//    constraintViolated(o, "Type on stack top which should be returned 
 comment|//    "' which is not assignment compatible with the return type of this method, '"+mg.getType()+"'.");
 comment|//}
 block|}
-else|else
-block|{
-if|if
+if|else if
 condition|(
 operator|!
 name|method_type
@@ -1793,7 +1787,6 @@ operator|+
 literal|"'."
 argument_list|)
 expr_stmt|;
-block|}
 block|}
 block|}
 comment|/***************************************************************/
@@ -4561,7 +4554,6 @@ block|{
 comment|// stack top size is 2, next-to-top's size is 1
 if|if
 condition|(
-operator|(
 name|stack
 argument_list|()
 operator|.
@@ -4574,9 +4566,7 @@ name|getSize
 argument_list|()
 operator|==
 literal|2
-operator|)
 operator|||
-operator|(
 name|stack
 argument_list|()
 operator|.
@@ -4589,7 +4579,6 @@ name|getSize
 argument_list|()
 operator|==
 literal|1
-operator|)
 condition|)
 block|{
 return|return;
@@ -4628,10 +4617,7 @@ literal|"'."
 argument_list|)
 expr_stmt|;
 block|}
-else|else
-block|{
-comment|// stack top is of size 1
-if|if
+if|else if
 condition|(
 name|stack
 argument_list|()
@@ -4645,10 +4631,7 @@ name|getSize
 argument_list|()
 operator|==
 literal|1
-condition|)
-block|{
-if|if
-condition|(
+operator|&&
 operator|(
 name|stack
 argument_list|()
@@ -4662,9 +4645,7 @@ name|getSize
 argument_list|()
 operator|==
 literal|2
-operator|)
 operator|||
-operator|(
 name|stack
 argument_list|()
 operator|.
@@ -4682,8 +4663,6 @@ condition|)
 block|{
 return|return;
 comment|// Form 1
-block|}
-block|}
 block|}
 name|constraintViolated
 argument_list|(
@@ -13235,9 +13214,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-else|else
-block|{
-if|if
+if|else if
 condition|(
 name|shouldbe
 operator|!=
@@ -13259,7 +13236,6 @@ operator|+
 literal|"' as expected."
 argument_list|)
 expr_stmt|;
-block|}
 block|}
 if|if
 condition|(
@@ -13735,9 +13711,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-else|else
-block|{
-if|if
+if|else if
 condition|(
 name|shouldbe
 operator|!=
@@ -13760,9 +13734,6 @@ literal|"' as expected."
 argument_list|)
 expr_stmt|;
 block|}
-block|}
-comment|// TODO: Interface fields may be assigned to only once. (Hard to implement in
-comment|//       JustIce's execution model). This may only happen in<clinit>, see Pass 3a.
 block|}
 catch|catch
 parameter_list|(
