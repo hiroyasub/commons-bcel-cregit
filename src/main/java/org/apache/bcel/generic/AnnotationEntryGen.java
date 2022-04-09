@@ -1296,11 +1296,9 @@ name|newAttributes
 operator|.
 name|toArray
 argument_list|(
-operator|new
 name|Attribute
-index|[
-literal|0
-index|]
+operator|.
+name|EMPTY_ATTRIBUTE_ARRAY
 argument_list|)
 return|;
 block|}
@@ -1820,11 +1818,9 @@ name|newAttributes
 operator|.
 name|toArray
 argument_list|(
-operator|new
 name|Attribute
-index|[
-literal|0
-index|]
+operator|.
+name|EMPTY_ATTRIBUTE_ARRAY
 argument_list|)
 return|;
 block|}
