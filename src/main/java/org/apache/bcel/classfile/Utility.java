@@ -215,6 +215,20 @@ name|ByteSequence
 import|;
 end_import
 
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|commons
+operator|.
+name|lang3
+operator|.
+name|ArrayUtils
+import|;
+end_import
+
 begin_comment
 comment|/**  * Utility functions that do not really belong to any class in particular.  *  */
 end_comment
@@ -2840,11 +2854,9 @@ name|vec
 operator|.
 name|toArray
 argument_list|(
-operator|new
-name|String
-index|[
-literal|0
-index|]
+name|ArrayUtils
+operator|.
+name|EMPTY_STRING_ARRAY
 argument_list|)
 return|;
 block|}

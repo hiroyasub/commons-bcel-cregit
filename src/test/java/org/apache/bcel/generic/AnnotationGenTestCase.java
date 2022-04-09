@@ -563,11 +563,9 @@ name|v
 operator|.
 name|toArray
 argument_list|(
-operator|new
 name|AnnotationEntryGen
-index|[
-literal|0
-index|]
+operator|.
+name|EMPTY_ARRAY
 argument_list|)
 argument_list|)
 decl_stmt|;
@@ -670,11 +668,9 @@ name|v2
 operator|.
 name|toArray
 argument_list|(
-operator|new
 name|AnnotationEntryGen
-index|[
-literal|0
-index|]
+operator|.
+name|EMPTY_ARRAY
 argument_list|)
 argument_list|)
 decl_stmt|;

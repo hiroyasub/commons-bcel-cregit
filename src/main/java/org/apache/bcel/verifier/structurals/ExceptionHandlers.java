@@ -114,7 +114,7 @@ specifier|static
 specifier|final
 name|ExceptionHandler
 index|[]
-name|EMPTY_EXCEPTION_HANDLER_ARRAY
+name|EMPTY_ARRAY
 init|=
 operator|new
 name|ExceptionHandler
@@ -282,7 +282,7 @@ literal|null
 condition|)
 block|{
 return|return
-name|EMPTY_EXCEPTION_HANDLER_ARRAY
+name|EMPTY_ARRAY
 return|;
 block|}
 return|return
@@ -290,11 +290,9 @@ name|hsSet
 operator|.
 name|toArray
 argument_list|(
-operator|new
 name|ExceptionHandler
-index|[
-literal|0
-index|]
+operator|.
+name|EMPTY_ARRAY
 argument_list|)
 return|;
 block|}

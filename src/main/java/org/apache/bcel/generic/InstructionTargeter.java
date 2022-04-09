@@ -24,6 +24,7 @@ specifier|public
 interface|interface
 name|InstructionTargeter
 block|{
+comment|//static final InstructionTargeter[] EMPTY_ARRAY = new InstructionTargeter[0];
 comment|/**      * Checks whether this targeter targets the specified instruction handle.      */
 name|boolean
 name|containsTarget

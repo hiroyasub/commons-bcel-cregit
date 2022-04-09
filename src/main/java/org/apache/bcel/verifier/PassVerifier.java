@@ -35,6 +35,20 @@ name|List
 import|;
 end_import
 
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|commons
+operator|.
+name|lang3
+operator|.
+name|ArrayUtils
+import|;
+end_import
+
 begin_comment
 comment|/**  * A PassVerifier actually verifies a class file; it is instantiated  * by a Verifier.  * The verification should conform with a certain pass as described  * in The Java Virtual Machine Specification, 2nd edition.  * This book describes four passes. Pass one means loading the  * class and verifying a few static constraints. Pass two actually  * verifies some other constraints that could enforce loading in  * referenced class files. Pass three is the first pass that actually  * checks constraints in the code array of a method in the class file;  * it has two parts with the first verifying static constraints and  * the second part verifying structural constraints (where a data flow  * analysis is used for). The fourth pass, finally, performs checks  * that can only be done at run-time.  * JustIce does not have a run-time pass, but certain constraints that  * are usually delayed until run-time for performance reasons are also  * checked during the second part of pass three.  * PassVerifier instances perform caching.  * That means, if you really want a new verification run of a certain  * pass you must use a new instance of a given PassVerifier.  *  * @see Verifier  * @see #verify()  */
 end_comment
@@ -128,11 +142,9 @@ name|messages
 operator|.
 name|toArray
 argument_list|(
-operator|new
-name|String
-index|[
-literal|0
-index|]
+name|ArrayUtils
+operator|.
+name|EMPTY_STRING_ARRAY
 argument_list|)
 return|;
 block|}

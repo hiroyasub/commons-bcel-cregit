@@ -56,6 +56,14 @@ specifier|public
 class|class
 name|ElementValuePair
 block|{
+specifier|static
+specifier|final
+name|ElementValuePair
+index|[]
+name|EMPTY_ARRAY
+init|=
+block|{}
+decl_stmt|;
 specifier|private
 specifier|final
 name|ElementValue

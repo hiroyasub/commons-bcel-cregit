@@ -97,6 +97,16 @@ name|Field
 extends|extends
 name|FieldOrMethod
 block|{
+comment|/**      * Empty array constant.      *      * @since 6.6.0      */
+specifier|public
+specifier|static
+specifier|final
+name|Field
+index|[]
+name|EMPTY_ARRAY
+init|=
+block|{}
+decl_stmt|;
 specifier|private
 specifier|static
 name|BCELComparator

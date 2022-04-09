@@ -216,6 +216,14 @@ specifier|public
 class|class
 name|AnnotationEntryGen
 block|{
+specifier|static
+specifier|final
+name|AnnotationEntryGen
+index|[]
+name|EMPTY_ARRAY
+init|=
+block|{}
+decl_stmt|;
 specifier|private
 name|int
 name|typeIndex

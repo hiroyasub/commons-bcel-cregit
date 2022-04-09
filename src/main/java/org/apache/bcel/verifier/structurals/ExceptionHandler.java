@@ -54,6 +54,14 @@ specifier|public
 class|class
 name|ExceptionHandler
 block|{
+specifier|static
+specifier|final
+name|ExceptionHandler
+index|[]
+name|EMPTY_ARRAY
+init|=
+block|{}
+decl_stmt|;
 comment|/** The type of the exception to catch. NULL means ANY. */
 specifier|private
 specifier|final

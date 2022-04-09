@@ -87,6 +87,14 @@ name|Instruction
 implements|implements
 name|Cloneable
 block|{
+specifier|static
+specifier|final
+name|Instruction
+index|[]
+name|EMPTY_ARRAY
+init|=
+block|{}
+decl_stmt|;
 comment|/**      * @deprecated (since 6.0) will be made private; do not access directly, use getter/setter      */
 annotation|@
 name|Deprecated

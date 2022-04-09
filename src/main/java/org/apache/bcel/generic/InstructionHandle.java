@@ -94,7 +94,7 @@ specifier|static
 specifier|final
 name|InstructionHandle
 index|[]
-name|EMPTY_INSTRUCTION_HANDLE_ARRAY
+name|EMPTY_ARRAY
 init|=
 operator|new
 name|InstructionHandle

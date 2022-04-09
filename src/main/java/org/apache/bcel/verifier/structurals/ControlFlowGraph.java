@@ -1289,7 +1289,7 @@ block|{
 return|return
 name|InstructionHandle
 operator|.
-name|EMPTY_INSTRUCTION_HANDLE_ARRAY
+name|EMPTY_ARRAY
 return|;
 block|}
 comment|// See method comment.

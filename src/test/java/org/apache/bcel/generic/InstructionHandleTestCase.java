@@ -259,11 +259,9 @@ index|[
 literal|0
 index|]
 argument_list|,
-operator|new
 name|InstructionHandle
-index|[
-literal|0
-index|]
+operator|.
+name|EMPTY_ARRAY
 argument_list|,
 name|ih
 argument_list|)
@@ -277,11 +275,9 @@ index|[
 literal|0
 index|]
 argument_list|,
-operator|new
 name|InstructionHandle
-index|[
-literal|0
-index|]
+operator|.
+name|EMPTY_ARRAY
 argument_list|,
 name|ih
 argument_list|)

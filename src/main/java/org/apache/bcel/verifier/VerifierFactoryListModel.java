@@ -79,6 +79,20 @@ name|ListDataListener
 import|;
 end_import
 
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|commons
+operator|.
+name|lang3
+operator|.
+name|ArrayUtils
+import|;
+end_import
+
 begin_comment
 comment|/**  * This class implements an adapter; it implements both a Swing ListModel and a VerifierFactoryObserver.  *  */
 end_comment
@@ -314,11 +328,9 @@ name|cache
 operator|.
 name|toArray
 argument_list|(
-operator|new
-name|String
-index|[
-literal|0
-index|]
+name|ArrayUtils
+operator|.
+name|EMPTY_STRING_ARRAY
 argument_list|)
 index|[
 name|index

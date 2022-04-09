@@ -59,6 +59,20 @@ name|JavaClass
 import|;
 end_import
 
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|commons
+operator|.
+name|lang3
+operator|.
+name|ArrayUtils
+import|;
+end_import
+
 begin_comment
 comment|/**  * Utility class implementing a (typesafe) set of JavaClass objects.  * Since JavaClass has no equals() method, the name of the class is  * used for comparison.  *  * @see ClassStack  */
 end_comment
@@ -221,11 +235,9 @@ argument_list|()
 operator|.
 name|toArray
 argument_list|(
-operator|new
-name|String
-index|[
-literal|0
-index|]
+name|ArrayUtils
+operator|.
+name|EMPTY_STRING_ARRAY
 argument_list|)
 return|;
 block|}

@@ -3563,11 +3563,9 @@ name|instructions
 operator|.
 name|toArray
 argument_list|(
-operator|new
 name|Instruction
-index|[
-literal|0
-index|]
+operator|.
+name|EMPTY_ARRAY
 argument_list|)
 return|;
 block|}
