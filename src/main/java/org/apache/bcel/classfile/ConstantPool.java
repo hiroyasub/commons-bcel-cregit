@@ -1249,6 +1249,23 @@ name|getNameIndex
 argument_list|()
 expr_stmt|;
 break|break;
+case|case
+name|Const
+operator|.
+name|CONSTANT_Utf8
+case|:
+return|return
+operator|(
+operator|(
+name|ConstantUtf8
+operator|)
+name|c
+operator|)
+operator|.
+name|getBytes
+argument_list|()
+return|;
+comment|// fallthrough
 default|default:
 throw|throw
 operator|new
