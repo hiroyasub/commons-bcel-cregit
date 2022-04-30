@@ -65,6 +65,20 @@ name|bcel
 operator|.
 name|classfile
 operator|.
+name|ClassFormatException
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|bcel
+operator|.
+name|classfile
+operator|.
 name|Code
 import|;
 end_import
@@ -1365,7 +1379,10 @@ name|VERIFIED_REJECTED
 argument_list|,
 literal|"Bad bytecode in the code array of the Code attribute of method '"
 operator|+
+name|tostring
+argument_list|(
 name|method
+argument_list|)
 operator|+
 literal|"'."
 argument_list|)
@@ -1397,6 +1414,8 @@ catch|catch
 parameter_list|(
 specifier|final
 name|ClassConstraintException
+decl||
+name|ClassFormatException
 name|cce
 parameter_list|)
 block|{
@@ -1432,6 +1451,8 @@ catch|catch
 parameter_list|(
 specifier|final
 name|StaticCodeConstraintException
+decl||
+name|ClassFormatException
 name|scce
 parameter_list|)
 block|{
@@ -1660,7 +1681,10 @@ name|ClassConstraintException
 argument_list|(
 literal|"Code attribute '"
 operator|+
+name|tostring
+argument_list|(
 name|code
+argument_list|)
 operator|+
 literal|"' has a LineNumberTable attribute '"
 operator|+
@@ -1774,7 +1798,10 @@ name|ClassConstraintException
 argument_list|(
 literal|"Code attribute '"
 operator|+
+name|tostring
+argument_list|(
 name|code
+argument_list|)
 operator|+
 literal|"' has a LocalVariableTable attribute '"
 operator|+
@@ -1816,7 +1843,10 @@ name|ClassConstraintException
 argument_list|(
 literal|"Code attribute '"
 operator|+
+name|tostring
+argument_list|(
 name|code
+argument_list|)
 operator|+
 literal|"' has a LocalVariableTable attribute '"
 operator|+
@@ -1905,7 +1935,10 @@ name|ClassConstraintException
 argument_list|(
 literal|"Code attribute '"
 operator|+
+name|tostring
+argument_list|(
 name|code
+argument_list|)
 operator|+
 literal|"' has an exception_table entry '"
 operator|+
@@ -1940,7 +1973,10 @@ name|ClassConstraintException
 argument_list|(
 literal|"Code attribute '"
 operator|+
+name|tostring
+argument_list|(
 name|code
+argument_list|)
 operator|+
 literal|"' has an exception_table entry '"
 operator|+
@@ -1975,7 +2011,10 @@ name|ClassConstraintException
 argument_list|(
 literal|"Code attribute '"
 operator|+
+name|tostring
+argument_list|(
 name|code
+argument_list|)
 operator|+
 literal|"' has an exception_table entry '"
 operator|+
@@ -2010,7 +2049,10 @@ name|ClassConstraintException
 argument_list|(
 literal|"Code attribute '"
 operator|+
+name|tostring
+argument_list|(
 name|code
+argument_list|)
 operator|+
 literal|"' has an exception_table entry '"
 operator|+
@@ -2057,7 +2099,10 @@ name|StaticCodeInstructionConstraintException
 argument_list|(
 literal|"Code array in code attribute '"
 operator|+
+name|tostring
+argument_list|(
 name|code
+argument_list|)
 operator|+
 literal|"' too big: must be smaller than "
 operator|+
@@ -2321,7 +2366,10 @@ literal|"Due to JustIce's clear definition of subroutines, no JSR or JSR_W may h
 operator|+
 literal|" (such as the very first instruction, which is targeted by instruction '"
 operator|+
+name|tostring
+argument_list|(
 name|ih
+argument_list|)
 operator|+
 literal|"' as its target."
 argument_list|)
@@ -2348,11 +2396,17 @@ literal|"Due to JustIce's clear definition of subroutines, no JSR or JSR_W may t
 operator|+
 literal|" than an ASTORE instruction. Instruction '"
 operator|+
+name|tostring
+argument_list|(
 name|ih
+argument_list|)
 operator|+
 literal|"' targets '"
 operator|+
+name|tostring
+argument_list|(
 name|target
+argument_list|)
 operator|+
 literal|"'."
 argument_list|)
@@ -2557,7 +2611,10 @@ name|StaticCodeInstructionOperandConstraintException
 argument_list|(
 literal|"Instruction "
 operator|+
+name|tostring
+argument_list|(
 name|i
+argument_list|)
 operator|+
 literal|" constraint violated: "
 operator|+
@@ -2756,7 +2813,10 @@ name|addMessage
 argument_list|(
 literal|"Operand of LDC or LDC_W is CONSTANT_Class '"
 operator|+
+name|tostring
+argument_list|(
 name|c
+argument_list|)
 operator|+
 literal|"' - this is only supported in JDK 1.5 and higher."
 argument_list|)
@@ -2788,7 +2848,10 @@ name|ldc
 argument_list|,
 literal|"Operand of LDC or LDC_W must be one of CONSTANT_Integer, CONSTANT_Float or CONSTANT_String, but is '"
 operator|+
+name|tostring
+argument_list|(
 name|c
+argument_list|)
 operator|+
 literal|"'."
 argument_list|)
@@ -2853,7 +2916,10 @@ name|o
 argument_list|,
 literal|"Operand of LDC2_W must be CONSTANT_Long or CONSTANT_Double, but is '"
 operator|+
+name|tostring
+argument_list|(
 name|c
+argument_list|)
 operator|+
 literal|"'."
 argument_list|)
@@ -2994,7 +3060,10 @@ name|o
 argument_list|,
 literal|"Indexing a constant that's not a CONSTANT_Fieldref but a '"
 operator|+
+name|tostring
+argument_list|(
 name|c
+argument_list|)
 operator|+
 literal|"'."
 argument_list|)
@@ -3384,7 +3453,10 @@ name|o
 argument_list|,
 literal|"Indexing a constant that's not a CONSTANT_Methodref but a '"
 operator|+
+name|tostring
+argument_list|(
 name|c
+argument_list|)
 operator|+
 literal|"'."
 argument_list|)
@@ -3502,7 +3574,6 @@ block|}
 block|}
 else|else
 block|{
-comment|//if (o instanceof INVOKEINTERFACE) {
 specifier|final
 name|Constant
 name|c
@@ -3533,7 +3604,10 @@ name|o
 argument_list|,
 literal|"Indexing a constant that's not a CONSTANT_InterfaceMethodref but a '"
 operator|+
+name|tostring
+argument_list|(
 name|c
+argument_list|)
 operator|+
 literal|"'."
 argument_list|)
@@ -3897,7 +3971,10 @@ name|o
 argument_list|,
 literal|"Expecting a CONSTANT_Class operand, but found a '"
 operator|+
+name|tostring
+argument_list|(
 name|c
+argument_list|)
 operator|+
 literal|"'."
 argument_list|)
@@ -3956,7 +4033,10 @@ name|o
 argument_list|,
 literal|"Expecting a CONSTANT_Class operand, but found a '"
 operator|+
+name|tostring
+argument_list|(
 name|c
+argument_list|)
 operator|+
 literal|"'."
 argument_list|)
@@ -4015,7 +4095,10 @@ name|o
 argument_list|,
 literal|"Expecting a CONSTANT_Class operand, but found a '"
 operator|+
+name|tostring
+argument_list|(
 name|c
+argument_list|)
 operator|+
 literal|"'."
 argument_list|)
@@ -4132,7 +4215,10 @@ name|o
 argument_list|,
 literal|"Expecting a CONSTANT_Class operand, but found a '"
 operator|+
+name|tostring
+argument_list|(
 name|c
+argument_list|)
 operator|+
 literal|"'."
 argument_list|)
@@ -4283,7 +4369,10 @@ name|o
 argument_list|,
 literal|"Expecting a CONSTANT_Class operand, but found a '"
 operator|+
+name|tostring
+argument_list|(
 name|c
+argument_list|)
 operator|+
 literal|"'."
 argument_list|)
@@ -4429,7 +4518,14 @@ name|constraintViolated
 argument_list|(
 name|o
 argument_list|,
-literal|"Illegal type code '+t+' for 'atype' operand."
+literal|"Illegal type code '"
+operator|+
+name|tostring
+argument_list|(
+name|t
+argument_list|)
+operator|+
+literal|"' for 'atype' operand."
 argument_list|)
 expr_stmt|;
 block|}
@@ -6865,17 +6961,17 @@ name|e
 parameter_list|)
 block|{
 comment|// FIXME: maybe not the best way to handle this
-throw|throw
-operator|new
-name|AssertionViolatedException
+comment|//throw new AssertionViolatedException("Missing class: " + e, e);
+name|addMessage
 argument_list|(
-literal|"Missing class: "
+literal|"Unable to verify INVOKEVITUAL as cannot load target class: "
 operator|+
 name|e
-argument_list|,
-name|e
+operator|.
+name|getCause
+argument_list|()
 argument_list|)
-throw|;
+expr_stmt|;
 block|}
 block|}
 comment|// WIDE stuff is BCEL-internal and cannot be checked here.
@@ -6953,6 +7049,78 @@ return|return
 literal|true
 return|;
 block|}
+block|}
+comment|/**      * This method is a slightly modified version of      * verifier.statics.StringRepresentation.toString(final Node obj)      * that accepts any Object, not just a Node.      *      * Returns the String representation of the Object obj;      * this is obj.toString() if it does not throw any RuntimeException,      * or else it is a string derived only from obj's class name.      */
+specifier|protected
+name|String
+name|tostring
+parameter_list|(
+specifier|final
+name|Object
+name|obj
+parameter_list|)
+block|{
+name|String
+name|ret
+decl_stmt|;
+try|try
+block|{
+name|ret
+operator|=
+name|obj
+operator|.
+name|toString
+argument_list|()
+expr_stmt|;
+block|}
+catch|catch
+parameter_list|(
+specifier|final
+name|RuntimeException
+name|e
+parameter_list|)
+block|{
+comment|// including ClassFormatException, trying to convert the "signature" of a ReturnaddressType LocalVariable
+comment|// (shouldn't occur, but people do crazy things)
+name|String
+name|s
+init|=
+name|obj
+operator|.
+name|getClass
+argument_list|()
+operator|.
+name|getName
+argument_list|()
+decl_stmt|;
+name|s
+operator|=
+name|s
+operator|.
+name|substring
+argument_list|(
+name|s
+operator|.
+name|lastIndexOf
+argument_list|(
+literal|"."
+argument_list|)
+operator|+
+literal|1
+argument_list|)
+expr_stmt|;
+name|ret
+operator|=
+literal|"<<"
+operator|+
+name|s
+operator|+
+literal|">>"
+expr_stmt|;
+block|}
+return|return
+name|ret
+return|;
 block|}
 block|}
 end_class

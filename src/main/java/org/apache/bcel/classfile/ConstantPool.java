@@ -92,7 +92,7 @@ operator|=
 name|constantPool
 expr_stmt|;
 block|}
-comment|/**      * Reads constants from given input stream.      *      * @param input Input stream      * @throws IOException      * @throws ClassFormatException      */
+comment|/**      * Reads constants from given input stream.      *      * @param input Input stream      * @throws IOException if problem in readUnsignedShort or readConstant      */
 specifier|public
 name|ConstantPool
 parameter_list|(
@@ -102,8 +102,6 @@ name|input
 parameter_list|)
 throws|throws
 name|IOException
-throws|,
-name|ClassFormatException
 block|{
 name|byte
 name|tag
@@ -205,7 +203,7 @@ name|this
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Resolves constant to a string representation.      *      * @param  c Constant to be printed      * @return String representation      */
+comment|/**      * Resolves constant to a string representation.      *      * @param  c Constant to be printed      * @return String representation      * @throws IllegalArgumentException if c is unknown constant type      */
 specifier|public
 name|String
 name|constantToString
@@ -214,7 +212,7 @@ name|Constant
 name|c
 parameter_list|)
 throws|throws
-name|ClassFormatException
+name|IllegalArgumentException
 block|{
 name|String
 name|str
@@ -919,8 +917,6 @@ specifier|final
 name|byte
 name|tag
 parameter_list|)
-throws|throws
-name|ClassFormatException
 block|{
 specifier|final
 name|Constant
@@ -940,7 +936,7 @@ name|c
 argument_list|)
 return|;
 block|}
-comment|/**      * Dump constant pool to file stream in binary format.      *      * @param file Output file stream      * @throws IOException      */
+comment|/**      * Dump constant pool to file stream in binary format.      *      * @param file Output file stream      * @throws IOException if problem in writeShort or dump      */
 specifier|public
 name|void
 name|dump
@@ -1001,7 +997,7 @@ expr_stmt|;
 block|}
 block|}
 block|}
-comment|/**      * Gets constant from constant pool.      *      * @param  index Index in constant pool      * @return Constant value      * @see    Constant      */
+comment|/**      * Gets constant from constant pool.      *      * @param  index Index in constant pool      * @return Constant value      * @see    Constant      * @throws ClassFormatException if index is invalid      */
 specifier|public
 name|Constant
 name|getConstant
@@ -1010,6 +1006,8 @@ specifier|final
 name|int
 name|index
 parameter_list|)
+throws|throws
+name|ClassFormatException
 block|{
 if|if
 condition|(
@@ -1040,14 +1038,38 @@ name|length
 argument_list|)
 throw|;
 block|}
-return|return
+name|Constant
+name|ret
+init|=
 name|constantPool
 index|[
 name|index
 index|]
+decl_stmt|;
+if|if
+condition|(
+name|ret
+operator|==
+literal|null
+condition|)
+block|{
+throw|throw
+operator|new
+name|ClassFormatException
+argument_list|(
+literal|"Constant pool at index "
+operator|+
+name|index
+operator|+
+literal|" is null."
+argument_list|)
+throw|;
+block|}
+return|return
+name|ret
 return|;
 block|}
-comment|/**      * Gets constant from constant pool and check whether it has the      * expected type.      *      * @param  index Index in constant pool      * @param  tag Tag of expected constant, i.e., its type      * @return Constant value      * @see    Constant      * @throws  ClassFormatException      */
+comment|/**      * Gets constant from constant pool and check whether it has the      * expected type.      *      * @param  index Index in constant pool      * @param  tag Tag of expected constant, i.e., its type      * @return Constant value      * @see    Constant      * @throws  ClassFormatException if constant type does not match tag      */
 specifier|public
 name|Constant
 name|getConstant
@@ -1065,33 +1087,12 @@ name|ClassFormatException
 block|{
 name|Constant
 name|c
-decl_stmt|;
-name|c
-operator|=
+init|=
 name|getConstant
 argument_list|(
 name|index
 argument_list|)
-expr_stmt|;
-if|if
-condition|(
-name|c
-operator|==
-literal|null
-condition|)
-block|{
-throw|throw
-operator|new
-name|ClassFormatException
-argument_list|(
-literal|"Constant pool at index "
-operator|+
-name|index
-operator|+
-literal|" is null."
-argument_list|)
-throw|;
-block|}
+decl_stmt|;
 if|if
 condition|(
 name|c
@@ -1140,7 +1141,7 @@ return|return
 name|constantPool
 return|;
 block|}
-comment|/**      * Gets string from constant pool and bypass the indirection of      * `ConstantClass' and `ConstantString' objects. I.e. these classes have      * an index field that points to another entry of the constant pool of      * type `ConstantUtf8' which contains the real data.      *      * @param  index Index in constant pool      * @param  tag Tag of expected constant, either ConstantClass or ConstantString      * @return Contents of string reference      * @see    ConstantClass      * @see    ConstantString      * @throws  ClassFormatException      */
+comment|/**      * Gets string from constant pool and bypass the indirection of      * `ConstantClass' and `ConstantString' objects. I.e. these classes have      * an index field that points to another entry of the constant pool of      * type `ConstantUtf8' which contains the real data.      *      * @param  index Index in constant pool      * @param  tag Tag of expected constant, either ConstantClass or ConstantString      * @return Contents of string reference      * @see    ConstantClass      * @see    ConstantString      * @throws  IllegalArgumentException if tag is invalid      */
 specifier|public
 name|String
 name|getConstantString
@@ -1154,7 +1155,7 @@ name|byte
 name|tag
 parameter_list|)
 throws|throws
-name|ClassFormatException
+name|IllegalArgumentException
 block|{
 name|Constant
 name|c

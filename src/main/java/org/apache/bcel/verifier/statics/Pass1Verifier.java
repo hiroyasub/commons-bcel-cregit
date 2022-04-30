@@ -115,22 +115,6 @@ name|LoadingException
 import|;
 end_import
 
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|bcel
-operator|.
-name|verifier
-operator|.
-name|exc
-operator|.
-name|Utility
-import|;
-end_import
-
 begin_comment
 comment|/**  * This PassVerifier verifies a class file according to pass 1 as  * described in The Java Virtual Machine Specification, 2nd edition.  * More detailed information is to be found at the do_verify() method's  * documentation.  *  * @see #do_verify()  */
 end_comment
@@ -256,6 +240,26 @@ condition|)
 block|{
 comment|// This should maybe caught by BCEL: In case of renamed .class files we get wrong
 comment|// JavaClass objects here.
+comment|// This test should be much more complicated.  It needs to take the classname, remove any portion at the
+comment|// end that matches the file name and then see if the remainder matches anything on the class path.
+comment|// Dumb test for now, see if the class name ends with the file name.
+if|if
+condition|(
+operator|!
+name|jc
+operator|.
+name|getClassName
+argument_list|()
+operator|.
+name|endsWith
+argument_list|(
+name|myOwner
+operator|.
+name|getClassName
+argument_list|()
+argument_list|)
+condition|)
+block|{
 throw|throw
 operator|new
 name|LoadingException
@@ -277,6 +281,7 @@ operator|+
 literal|"'."
 argument_list|)
 throw|;
+block|}
 block|}
 block|}
 catch|catch
@@ -322,24 +327,16 @@ name|VERIFIED_REJECTED
 argument_list|,
 literal|"Parsing via BCEL did not succeed. "
 operator|+
+literal|" exception occured:\n"
+operator|+
 name|e
 operator|.
-name|getClass
+name|toString
 argument_list|()
-operator|.
-name|getName
-argument_list|()
-operator|+
-literal|" occured:\n"
-operator|+
-name|Utility
-operator|.
-name|getStackTrace
-argument_list|(
-name|e
-argument_list|)
 argument_list|)
 return|;
+comment|// Don't think we want to dump a stack trace unless we have some sort of a debug option.
+comment|//e.getClass().getName()+" occured:\n"+Utility.getStackTrace(e));
 block|}
 if|if
 condition|(
