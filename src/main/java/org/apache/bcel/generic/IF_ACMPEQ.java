@@ -55,25 +55,6 @@ name|target
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * @return negation of instruction      */
-annotation|@
-name|Override
-specifier|public
-name|IfInstruction
-name|negate
-parameter_list|()
-block|{
-return|return
-operator|new
-name|IF_ACMPNE
-argument_list|(
-name|super
-operator|.
-name|getTarget
-argument_list|()
-argument_list|)
-return|;
-block|}
 comment|/**      * Call corresponding visitor method(s). The order is:      * Call visitor methods of implemented interfaces first, then      * call methods according to the class hierarchy in descending order,      * i.e., the most specific visitXXX() call comes last.      *      * @param v Visitor object      */
 annotation|@
 name|Override
@@ -114,6 +95,25 @@ argument_list|(
 name|this
 argument_list|)
 expr_stmt|;
+block|}
+comment|/**      * @return negation of instruction      */
+annotation|@
+name|Override
+specifier|public
+name|IfInstruction
+name|negate
+parameter_list|()
+block|{
+return|return
+operator|new
+name|IF_ACMPNE
+argument_list|(
+name|super
+operator|.
+name|getTarget
+argument_list|()
+argument_list|)
+return|;
 block|}
 block|}
 end_class

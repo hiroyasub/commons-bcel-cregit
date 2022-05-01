@@ -54,24 +54,6 @@ literal|1
 argument_list|)
 expr_stmt|;
 block|}
-comment|/** @return Type.NULL      */
-annotation|@
-name|Override
-specifier|public
-name|Type
-name|getType
-parameter_list|(
-specifier|final
-name|ConstantPoolGen
-name|cp
-parameter_list|)
-block|{
-return|return
-name|Type
-operator|.
-name|NULL
-return|;
-block|}
 comment|/**      * Call corresponding visitor method(s). The order is:      * Call visitor methods of implemented interfaces first, then      * call methods according to the class hierarchy in descending order,      * i.e., the most specific visitXXX() call comes last.      *      * @param v Visitor object      */
 annotation|@
 name|Override
@@ -112,6 +94,24 @@ argument_list|(
 name|this
 argument_list|)
 expr_stmt|;
+block|}
+comment|/** @return Type.NULL      */
+annotation|@
+name|Override
+specifier|public
+name|Type
+name|getType
+parameter_list|(
+specifier|final
+name|ConstantPoolGen
+name|cp
+parameter_list|)
+block|{
+return|return
+name|Type
+operator|.
+name|NULL
+return|;
 block|}
 block|}
 end_class

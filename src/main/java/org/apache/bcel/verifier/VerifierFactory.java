@@ -96,11 +96,43 @@ name|Vector
 argument_list|<>
 argument_list|()
 decl_stmt|;
-comment|/**      * The VerifierFactory is not instantiable.      */
-specifier|private
-name|VerifierFactory
-parameter_list|()
+comment|/**      * Adds the VerifierFactoryObserver o to the list of observers.      */
+specifier|public
+specifier|static
+name|void
+name|attach
+parameter_list|(
+specifier|final
+name|VerifierFactoryObserver
+name|o
+parameter_list|)
 block|{
+name|observers
+operator|.
+name|add
+argument_list|(
+name|o
+argument_list|)
+expr_stmt|;
+block|}
+comment|/**      * Removes the VerifierFactoryObserver o from the list of observers.      */
+specifier|public
+specifier|static
+name|void
+name|detach
+parameter_list|(
+specifier|final
+name|VerifierFactoryObserver
+name|o
+parameter_list|)
+block|{
+name|observers
+operator|.
+name|remove
+argument_list|(
+name|o
+argument_list|)
+expr_stmt|;
 block|}
 comment|/**      * Returns the (only) verifier responsible for the class with the given name.      * Possibly a new Verifier object is transparently created.      * @return the (only) verifier responsible for the class with the given name.      */
 specifier|public
@@ -157,36 +189,6 @@ return|return
 name|v
 return|;
 block|}
-comment|/**      * Notifies the observers of a newly generated Verifier.      */
-specifier|private
-specifier|static
-name|void
-name|notify
-parameter_list|(
-specifier|final
-name|String
-name|fullyQualifiedClassName
-parameter_list|)
-block|{
-comment|// notify the observers
-for|for
-control|(
-specifier|final
-name|VerifierFactoryObserver
-name|vfo
-range|:
-name|observers
-control|)
-block|{
-name|vfo
-operator|.
-name|update
-argument_list|(
-name|fullyQualifiedClassName
-argument_list|)
-expr_stmt|;
-block|}
-block|}
 comment|/**      * Returns all Verifier instances created so far.      * This is useful when a Verifier recursively lets      * the VerifierFactory create other Verifier instances      * and if you want to verify the transitive hull of      * referenced class files.      */
 specifier|public
 specifier|static
@@ -222,43 +224,41 @@ argument_list|)
 return|;
 comment|// Because vs is big enough, vs is used to store the values into and returned!
 block|}
-comment|/**      * Adds the VerifierFactoryObserver o to the list of observers.      */
-specifier|public
+comment|/**      * Notifies the observers of a newly generated Verifier.      */
+specifier|private
 specifier|static
 name|void
-name|attach
+name|notify
 parameter_list|(
 specifier|final
-name|VerifierFactoryObserver
-name|o
+name|String
+name|fullyQualifiedClassName
 parameter_list|)
 block|{
+comment|// notify the observers
+for|for
+control|(
+specifier|final
+name|VerifierFactoryObserver
+name|vfo
+range|:
 name|observers
+control|)
+block|{
+name|vfo
 operator|.
-name|add
+name|update
 argument_list|(
-name|o
+name|fullyQualifiedClassName
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Removes the VerifierFactoryObserver o from the list of observers.      */
-specifier|public
-specifier|static
-name|void
-name|detach
-parameter_list|(
-specifier|final
-name|VerifierFactoryObserver
-name|o
-parameter_list|)
+block|}
+comment|/**      * The VerifierFactory is not instantiable.      */
+specifier|private
+name|VerifierFactory
+parameter_list|()
 block|{
-name|observers
-operator|.
-name|remove
-argument_list|(
-name|o
-argument_list|)
-expr_stmt|;
 block|}
 block|}
 end_class

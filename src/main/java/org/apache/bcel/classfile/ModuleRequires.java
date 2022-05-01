@@ -141,6 +141,35 @@ argument_list|)
 expr_stmt|;
 block|}
 comment|// TODO add more getters and setters?
+comment|/**      * @return deep copy of this object      */
+specifier|public
+name|ModuleRequires
+name|copy
+parameter_list|()
+block|{
+try|try
+block|{
+return|return
+operator|(
+name|ModuleRequires
+operator|)
+name|clone
+argument_list|()
+return|;
+block|}
+catch|catch
+parameter_list|(
+specifier|final
+name|CloneNotSupportedException
+name|e
+parameter_list|)
+block|{
+comment|// TODO should this throw?
+block|}
+return|return
+literal|null
+return|;
+block|}
 comment|/**      * Dump table entry to file stream in binary format.      *      * @param file Output file stream      * @throws IOException if an I/O Exception occurs in writeShort      */
 specifier|public
 name|void
@@ -310,35 +339,6 @@ name|buf
 operator|.
 name|toString
 argument_list|()
-return|;
-block|}
-comment|/**      * @return deep copy of this object      */
-specifier|public
-name|ModuleRequires
-name|copy
-parameter_list|()
-block|{
-try|try
-block|{
-return|return
-operator|(
-name|ModuleRequires
-operator|)
-name|clone
-argument_list|()
-return|;
-block|}
-catch|catch
-parameter_list|(
-specifier|final
-name|CloneNotSupportedException
-name|e
-parameter_list|)
-block|{
-comment|// TODO should this throw?
-block|}
-return|return
-literal|null
 return|;
 block|}
 block|}

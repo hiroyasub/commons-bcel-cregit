@@ -78,6 +78,53 @@ specifier|private
 name|VerificationResult
 name|verificationResult
 decl_stmt|;
+comment|/**      * This method adds a (warning) message to the message pool of this      * PassVerifier. This method is normally only internally used by      * BCEL's class file verifier "JustIce" and should not be used from      * the outside.      *      * @see #getMessages()      */
+specifier|public
+name|void
+name|addMessage
+parameter_list|(
+specifier|final
+name|String
+name|message
+parameter_list|)
+block|{
+name|messages
+operator|.
+name|add
+argument_list|(
+name|message
+argument_list|)
+expr_stmt|;
+block|}
+comment|/** Does the real verification work, uncached. */
+specifier|public
+specifier|abstract
+name|VerificationResult
+name|do_verify
+parameter_list|()
+function_decl|;
+comment|/**      * Returns the (warning) messages that this PassVerifier accumulated      * during its do_verify()ing work.      *      * @see #addMessage(String)      * @see #do_verify()      */
+specifier|public
+name|String
+index|[]
+name|getMessages
+parameter_list|()
+block|{
+name|verify
+argument_list|()
+expr_stmt|;
+comment|// create messages if not already done (cached!)
+return|return
+name|messages
+operator|.
+name|toArray
+argument_list|(
+name|ArrayUtils
+operator|.
+name|EMPTY_STRING_ARRAY
+argument_list|)
+return|;
+block|}
 comment|/**      * This method runs a verification pass conforming to the      * Java Virtual Machine Specification, 2nd edition, on a      * class file.      * PassVerifier instances perform caching;      * i.e. if the verify() method once determined a VerificationResult,      * then this result may be returned after every invocation of this      * method instead of running the verification pass anew; likewise with      * the result of getMessages().      *      * @see #getMessages()      * @see #addMessage(String)      */
 specifier|public
 name|VerificationResult
@@ -99,53 +146,6 @@ expr_stmt|;
 block|}
 return|return
 name|verificationResult
-return|;
-block|}
-comment|/** Does the real verification work, uncached. */
-specifier|public
-specifier|abstract
-name|VerificationResult
-name|do_verify
-parameter_list|()
-function_decl|;
-comment|/**      * This method adds a (warning) message to the message pool of this      * PassVerifier. This method is normally only internally used by      * BCEL's class file verifier "JustIce" and should not be used from      * the outside.      *      * @see #getMessages()      */
-specifier|public
-name|void
-name|addMessage
-parameter_list|(
-specifier|final
-name|String
-name|message
-parameter_list|)
-block|{
-name|messages
-operator|.
-name|add
-argument_list|(
-name|message
-argument_list|)
-expr_stmt|;
-block|}
-comment|/**      * Returns the (warning) messages that this PassVerifier accumulated      * during its do_verify()ing work.      *      * @see #addMessage(String)      * @see #do_verify()      */
-specifier|public
-name|String
-index|[]
-name|getMessages
-parameter_list|()
-block|{
-name|verify
-argument_list|()
-expr_stmt|;
-comment|// create messages if not already done (cached!)
-return|return
-name|messages
-operator|.
-name|toArray
-argument_list|(
-name|ArrayUtils
-operator|.
-name|EMPTY_STRING_ARRAY
-argument_list|)
 return|;
 block|}
 block|}

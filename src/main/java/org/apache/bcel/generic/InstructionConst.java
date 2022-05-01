@@ -2271,12 +2271,6 @@ operator|=
 name|MONITOREXIT
 expr_stmt|;
 block|}
-specifier|private
-name|InstructionConst
-parameter_list|()
-block|{
-block|}
-comment|// non-instantiable
 comment|/**      * Gets the Instruction.      * @param index the index, e.g. {@link Const#RETURN}      * @return the entry from the private INSTRUCTIONS table      */
 specifier|public
 specifier|static
@@ -2295,6 +2289,12 @@ name|index
 index|]
 return|;
 block|}
+specifier|private
+name|InstructionConst
+parameter_list|()
+block|{
+block|}
+comment|// non-instantiable
 block|}
 end_class
 

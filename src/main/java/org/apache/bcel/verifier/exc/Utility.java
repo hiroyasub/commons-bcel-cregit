@@ -47,12 +47,6 @@ specifier|final
 class|class
 name|Utility
 block|{
-comment|/** This class is not instantiable. */
-specifier|private
-name|Utility
-parameter_list|()
-block|{
-block|}
 comment|/** This method returns the stack trace of a Throwable instance as a String. */
 specifier|public
 specifier|static
@@ -95,6 +89,12 @@ operator|.
 name|toString
 argument_list|()
 return|;
+block|}
+comment|/** This class is not instantiable. */
+specifier|private
+name|Utility
+parameter_list|()
+block|{
 block|}
 block|}
 end_class

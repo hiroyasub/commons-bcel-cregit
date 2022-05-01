@@ -84,7 +84,7 @@ annotation|@
 name|Test
 specifier|public
 name|void
-name|testRegularClassIsNotAnonymous
+name|testAnonymousInnerClassIsAnonymous
 parameter_list|()
 throws|throws
 name|ClassNotFoundException
@@ -97,27 +97,27 @@ name|getTestClass
 argument_list|(
 name|PACKAGE_BASE_NAME
 operator|+
-literal|".data.AnonymousClassTest"
+literal|".data.AnonymousClassTest$1"
 argument_list|)
 decl_stmt|;
-name|assertFalse
+name|assertTrue
 argument_list|(
 name|clazz
 operator|.
 name|isAnonymous
 argument_list|()
 argument_list|,
-literal|"regular outer classes are not anonymous"
+literal|"anonymous inner classes are anonymous"
 argument_list|)
 expr_stmt|;
-name|assertFalse
+name|assertTrue
 argument_list|(
 name|clazz
 operator|.
 name|isNested
 argument_list|()
 argument_list|,
-literal|"regular outer classes are not nested"
+literal|"anonymous inner classes are anonymous"
 argument_list|)
 expr_stmt|;
 block|}
@@ -166,6 +166,47 @@ annotation|@
 name|Test
 specifier|public
 name|void
+name|testRegularClassIsNotAnonymous
+parameter_list|()
+throws|throws
+name|ClassNotFoundException
+block|{
+specifier|final
+name|JavaClass
+name|clazz
+init|=
+name|getTestClass
+argument_list|(
+name|PACKAGE_BASE_NAME
+operator|+
+literal|".data.AnonymousClassTest"
+argument_list|)
+decl_stmt|;
+name|assertFalse
+argument_list|(
+name|clazz
+operator|.
+name|isAnonymous
+argument_list|()
+argument_list|,
+literal|"regular outer classes are not anonymous"
+argument_list|)
+expr_stmt|;
+name|assertFalse
+argument_list|(
+name|clazz
+operator|.
+name|isNested
+argument_list|()
+argument_list|,
+literal|"regular outer classes are not nested"
+argument_list|)
+expr_stmt|;
+block|}
+annotation|@
+name|Test
+specifier|public
+name|void
 name|testStaticInnerClassIsNotAnonymous
 parameter_list|()
 throws|throws
@@ -200,47 +241,6 @@ name|isNested
 argument_list|()
 argument_list|,
 literal|"regular static inner classes are nested"
-argument_list|)
-expr_stmt|;
-block|}
-annotation|@
-name|Test
-specifier|public
-name|void
-name|testAnonymousInnerClassIsAnonymous
-parameter_list|()
-throws|throws
-name|ClassNotFoundException
-block|{
-specifier|final
-name|JavaClass
-name|clazz
-init|=
-name|getTestClass
-argument_list|(
-name|PACKAGE_BASE_NAME
-operator|+
-literal|".data.AnonymousClassTest$1"
-argument_list|)
-decl_stmt|;
-name|assertTrue
-argument_list|(
-name|clazz
-operator|.
-name|isAnonymous
-argument_list|()
-argument_list|,
-literal|"anonymous inner classes are anonymous"
-argument_list|)
-expr_stmt|;
-name|assertTrue
-argument_list|(
-name|clazz
-operator|.
-name|isNested
-argument_list|()
-argument_list|,
-literal|"anonymous inner classes are anonymous"
 argument_list|)
 expr_stmt|;
 block|}

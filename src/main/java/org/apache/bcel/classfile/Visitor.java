@@ -24,6 +24,38 @@ specifier|public
 interface|interface
 name|Visitor
 block|{
+comment|/**      * @since 6.0      */
+name|void
+name|visitAnnotation
+parameter_list|(
+name|Annotations
+name|obj
+parameter_list|)
+function_decl|;
+comment|/**      * @since 6.0      */
+name|void
+name|visitAnnotationDefault
+parameter_list|(
+name|AnnotationDefault
+name|obj
+parameter_list|)
+function_decl|;
+comment|/**      * @since 6.0      */
+name|void
+name|visitAnnotationEntry
+parameter_list|(
+name|AnnotationEntry
+name|obj
+parameter_list|)
+function_decl|;
+comment|/**      * @since 6.0      */
+name|void
+name|visitBootstrapMethods
+parameter_list|(
+name|BootstrapMethods
+name|obj
+parameter_list|)
+function_decl|;
 name|void
 name|visitCode
 parameter_list|(
@@ -52,6 +84,18 @@ name|ConstantDouble
 name|obj
 parameter_list|)
 function_decl|;
+comment|/**      * @since 6.3      */
+specifier|default
+name|void
+name|visitConstantDynamic
+parameter_list|(
+specifier|final
+name|ConstantDynamic
+name|constantDynamic
+parameter_list|)
+block|{
+comment|// empty
+block|}
 name|void
 name|visitConstantFieldref
 parameter_list|(
@@ -94,6 +138,14 @@ name|ConstantLong
 name|obj
 parameter_list|)
 function_decl|;
+comment|/**      * @since 6.0      */
+name|void
+name|visitConstantMethodHandle
+parameter_list|(
+name|ConstantMethodHandle
+name|obj
+parameter_list|)
+function_decl|;
 name|void
 name|visitConstantMethodref
 parameter_list|(
@@ -101,11 +153,35 @@ name|ConstantMethodref
 name|obj
 parameter_list|)
 function_decl|;
+comment|/**      * @since 6.0      */
+name|void
+name|visitConstantMethodType
+parameter_list|(
+name|ConstantMethodType
+name|obj
+parameter_list|)
+function_decl|;
+comment|/**      * @since 6.1      */
+name|void
+name|visitConstantModule
+parameter_list|(
+name|ConstantModule
+name|constantModule
+parameter_list|)
+function_decl|;
 name|void
 name|visitConstantNameAndType
 parameter_list|(
 name|ConstantNameAndType
 name|obj
+parameter_list|)
+function_decl|;
+comment|/**      * @since 6.1      */
+name|void
+name|visitConstantPackage
+parameter_list|(
+name|ConstantPackage
+name|constantPackage
 parameter_list|)
 function_decl|;
 name|void
@@ -140,6 +216,14 @@ name|void
 name|visitDeprecated
 parameter_list|(
 name|Deprecated
+name|obj
+parameter_list|)
+function_decl|;
+comment|/**      * @since 6.0      */
+name|void
+name|visitEnclosingMethod
+parameter_list|(
+name|EnclosingMethod
 name|obj
 parameter_list|)
 function_decl|;
@@ -206,87 +290,6 @@ name|LocalVariableTable
 name|obj
 parameter_list|)
 function_decl|;
-name|void
-name|visitMethod
-parameter_list|(
-name|Method
-name|obj
-parameter_list|)
-function_decl|;
-name|void
-name|visitSignature
-parameter_list|(
-name|Signature
-name|obj
-parameter_list|)
-function_decl|;
-name|void
-name|visitSourceFile
-parameter_list|(
-name|SourceFile
-name|obj
-parameter_list|)
-function_decl|;
-name|void
-name|visitSynthetic
-parameter_list|(
-name|Synthetic
-name|obj
-parameter_list|)
-function_decl|;
-name|void
-name|visitUnknown
-parameter_list|(
-name|Unknown
-name|obj
-parameter_list|)
-function_decl|;
-name|void
-name|visitStackMap
-parameter_list|(
-name|StackMap
-name|obj
-parameter_list|)
-function_decl|;
-name|void
-name|visitStackMapEntry
-parameter_list|(
-name|StackMapEntry
-name|obj
-parameter_list|)
-function_decl|;
-comment|/**      * @since 6.0      */
-name|void
-name|visitAnnotation
-parameter_list|(
-name|Annotations
-name|obj
-parameter_list|)
-function_decl|;
-comment|/**      * @since 6.0      */
-name|void
-name|visitParameterAnnotation
-parameter_list|(
-name|ParameterAnnotations
-name|obj
-parameter_list|)
-function_decl|;
-comment|/**      * @since 6.0      */
-name|void
-name|visitAnnotationEntry
-parameter_list|(
-name|AnnotationEntry
-name|obj
-parameter_list|)
-function_decl|;
-comment|/**      * @since 6.0      */
-name|void
-name|visitAnnotationDefault
-parameter_list|(
-name|AnnotationDefault
-name|obj
-parameter_list|)
-function_decl|;
 comment|/**      * @since 6.0      */
 name|void
 name|visitLocalVariableTypeTable
@@ -295,27 +298,10 @@ name|LocalVariableTypeTable
 name|obj
 parameter_list|)
 function_decl|;
-comment|/**      * @since 6.0      */
 name|void
-name|visitEnclosingMethod
+name|visitMethod
 parameter_list|(
-name|EnclosingMethod
-name|obj
-parameter_list|)
-function_decl|;
-comment|/**      * @since 6.0      */
-name|void
-name|visitBootstrapMethods
-parameter_list|(
-name|BootstrapMethods
-name|obj
-parameter_list|)
-function_decl|;
-comment|/**      * @since 6.0      */
-name|void
-name|visitMethodParameters
-parameter_list|(
-name|MethodParameters
+name|Method
 name|obj
 parameter_list|)
 function_decl|;
@@ -333,56 +319,12 @@ comment|// empty
 block|}
 comment|/**      * @since 6.0      */
 name|void
-name|visitConstantMethodType
+name|visitMethodParameters
 parameter_list|(
-name|ConstantMethodType
+name|MethodParameters
 name|obj
 parameter_list|)
 function_decl|;
-comment|/**      * @since 6.0      */
-name|void
-name|visitConstantMethodHandle
-parameter_list|(
-name|ConstantMethodHandle
-name|obj
-parameter_list|)
-function_decl|;
-comment|/**      * @since 6.0      */
-name|void
-name|visitParameterAnnotationEntry
-parameter_list|(
-name|ParameterAnnotationEntry
-name|obj
-parameter_list|)
-function_decl|;
-comment|/**      * @since 6.1      */
-name|void
-name|visitConstantPackage
-parameter_list|(
-name|ConstantPackage
-name|constantPackage
-parameter_list|)
-function_decl|;
-comment|/**      * @since 6.1      */
-name|void
-name|visitConstantModule
-parameter_list|(
-name|ConstantModule
-name|constantModule
-parameter_list|)
-function_decl|;
-comment|/**      * @since 6.3      */
-specifier|default
-name|void
-name|visitConstantDynamic
-parameter_list|(
-specifier|final
-name|ConstantDynamic
-name|constantDynamic
-parameter_list|)
-block|{
-comment|// empty
-block|}
 comment|/**      * @since 6.4.0      */
 specifier|default
 name|void
@@ -390,18 +332,6 @@ name|visitModule
 parameter_list|(
 specifier|final
 name|Module
-name|constantModule
-parameter_list|)
-block|{
-comment|// empty
-block|}
-comment|/**      * @since 6.4.0      */
-specifier|default
-name|void
-name|visitModuleRequires
-parameter_list|(
-specifier|final
-name|ModuleRequires
 name|constantModule
 parameter_list|)
 block|{
@@ -422,11 +352,11 @@ block|}
 comment|/**      * @since 6.4.0      */
 specifier|default
 name|void
-name|visitModuleOpens
+name|visitModuleMainClass
 parameter_list|(
 specifier|final
-name|ModuleOpens
-name|constantModule
+name|ModuleMainClass
+name|obj
 parameter_list|)
 block|{
 comment|// empty
@@ -434,10 +364,10 @@ block|}
 comment|/**      * @since 6.4.0      */
 specifier|default
 name|void
-name|visitModuleProvides
+name|visitModuleOpens
 parameter_list|(
 specifier|final
-name|ModuleProvides
+name|ModuleOpens
 name|constantModule
 parameter_list|)
 block|{
@@ -458,11 +388,23 @@ block|}
 comment|/**      * @since 6.4.0      */
 specifier|default
 name|void
-name|visitModuleMainClass
+name|visitModuleProvides
 parameter_list|(
 specifier|final
-name|ModuleMainClass
-name|obj
+name|ModuleProvides
+name|constantModule
+parameter_list|)
+block|{
+comment|// empty
+block|}
+comment|/**      * @since 6.4.0      */
+specifier|default
+name|void
+name|visitModuleRequires
+parameter_list|(
+specifier|final
+name|ModuleRequires
+name|constantModule
 parameter_list|)
 block|{
 comment|// empty
@@ -491,6 +433,64 @@ parameter_list|)
 block|{
 comment|// empty
 block|}
+comment|/**      * @since 6.0      */
+name|void
+name|visitParameterAnnotation
+parameter_list|(
+name|ParameterAnnotations
+name|obj
+parameter_list|)
+function_decl|;
+comment|/**      * @since 6.0      */
+name|void
+name|visitParameterAnnotationEntry
+parameter_list|(
+name|ParameterAnnotationEntry
+name|obj
+parameter_list|)
+function_decl|;
+name|void
+name|visitSignature
+parameter_list|(
+name|Signature
+name|obj
+parameter_list|)
+function_decl|;
+name|void
+name|visitSourceFile
+parameter_list|(
+name|SourceFile
+name|obj
+parameter_list|)
+function_decl|;
+name|void
+name|visitStackMap
+parameter_list|(
+name|StackMap
+name|obj
+parameter_list|)
+function_decl|;
+name|void
+name|visitStackMapEntry
+parameter_list|(
+name|StackMapEntry
+name|obj
+parameter_list|)
+function_decl|;
+name|void
+name|visitSynthetic
+parameter_list|(
+name|Synthetic
+name|obj
+parameter_list|)
+function_decl|;
+name|void
+name|visitUnknown
+parameter_list|(
+name|Unknown
+name|obj
+parameter_list|)
+function_decl|;
 block|}
 end_interface
 

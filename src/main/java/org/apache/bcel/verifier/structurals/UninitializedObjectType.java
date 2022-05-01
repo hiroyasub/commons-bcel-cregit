@@ -118,31 +118,6 @@ operator|=
 name|t
 expr_stmt|;
 block|}
-comment|/**      * Returns the ObjectType of the same class as the one of the uninitialized object      * represented by this UninitializedObjectType instance.      */
-specifier|public
-name|ObjectType
-name|getInitialized
-parameter_list|()
-block|{
-return|return
-name|initialized
-return|;
-block|}
-comment|/** @return a hash code value for the object.      */
-annotation|@
-name|Override
-specifier|public
-name|int
-name|hashCode
-parameter_list|()
-block|{
-return|return
-name|initialized
-operator|.
-name|hashCode
-argument_list|()
-return|;
-block|}
 comment|/**      * Returns true on equality of this and o.      * Equality means the ObjectType instances of "initialized"      * equal one another in this and the o instance.      *      */
 annotation|@
 name|Override
@@ -183,6 +158,31 @@ operator|)
 operator|.
 name|initialized
 argument_list|)
+return|;
+block|}
+comment|/**      * Returns the ObjectType of the same class as the one of the uninitialized object      * represented by this UninitializedObjectType instance.      */
+specifier|public
+name|ObjectType
+name|getInitialized
+parameter_list|()
+block|{
+return|return
+name|initialized
+return|;
+block|}
+comment|/** @return a hash code value for the object.      */
+annotation|@
+name|Override
+specifier|public
+name|int
+name|hashCode
+parameter_list|()
+block|{
+return|return
+name|initialized
+operator|.
+name|hashCode
+argument_list|()
 return|;
 block|}
 block|}

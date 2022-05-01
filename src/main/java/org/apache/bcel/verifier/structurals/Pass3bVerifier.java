@@ -443,6 +443,47 @@ name|executionChain
 argument_list|)
 expr_stmt|;
 block|}
+comment|/**          * Gets a specific ExecutionChain from the queue.          *          * @param i the index of the item to be fetched          * @return the indicated ExecutionChain          */
+specifier|public
+name|ArrayList
+argument_list|<
+name|InstructionContext
+argument_list|>
+name|getEC
+parameter_list|(
+specifier|final
+name|int
+name|i
+parameter_list|)
+block|{
+return|return
+name|ecs
+operator|.
+name|get
+argument_list|(
+name|i
+argument_list|)
+return|;
+block|}
+comment|/**          * Gets a specific InstructionContext from the queue.          *          * @param i the index of the item to be fetched          * @return the indicated InstructionContext          */
+specifier|public
+name|InstructionContext
+name|getIC
+parameter_list|(
+specifier|final
+name|int
+name|i
+parameter_list|)
+block|{
+return|return
+name|ics
+operator|.
+name|get
+argument_list|(
+name|i
+argument_list|)
+return|;
+block|}
 comment|/**          * Tests if InstructionContext queue is empty.          *          * @return true if the InstructionContext queue is empty.          */
 specifier|public
 name|boolean
@@ -480,47 +521,6 @@ argument_list|(
 name|i
 argument_list|)
 expr_stmt|;
-block|}
-comment|/**          * Gets a specific InstructionContext from the queue.          *          * @param i the index of the item to be fetched          * @return the indicated InstructionContext          */
-specifier|public
-name|InstructionContext
-name|getIC
-parameter_list|(
-specifier|final
-name|int
-name|i
-parameter_list|)
-block|{
-return|return
-name|ics
-operator|.
-name|get
-argument_list|(
-name|i
-argument_list|)
-return|;
-block|}
-comment|/**          * Gets a specific ExecutionChain from the queue.          *          * @param i the index of the item to be fetched          * @return the indicated ExecutionChain          */
-specifier|public
-name|ArrayList
-argument_list|<
-name|InstructionContext
-argument_list|>
-name|getEC
-parameter_list|(
-specifier|final
-name|int
-name|i
-parameter_list|)
-block|{
-return|return
-name|ecs
-operator|.
-name|get
-argument_list|(
-name|i
-argument_list|)
-return|;
 block|}
 comment|/**          * Gets the size of the InstructionContext queue.          *          * @return the size of the InstructionQueue          */
 specifier|public
@@ -1646,37 +1646,6 @@ literal|null
 condition|)
 do|;
 block|}
-comment|/**      * Throws an exception indicating the returned type is not compatible with the return type of the given method.      *      * @param returnedType the type of the returned expression      * @param m the method we are processing      * @throws StructuralCodeConstraintException always      * @since 6.0      */
-specifier|public
-name|void
-name|invalidReturnTypeError
-parameter_list|(
-specifier|final
-name|Type
-name|returnedType
-parameter_list|,
-specifier|final
-name|MethodGen
-name|m
-parameter_list|)
-block|{
-throw|throw
-operator|new
-name|StructuralCodeConstraintException
-argument_list|(
-literal|"Returned type "
-operator|+
-name|returnedType
-operator|+
-literal|" does not match Method's return type "
-operator|+
-name|m
-operator|.
-name|getReturnType
-argument_list|()
-argument_list|)
-throw|;
-block|}
 comment|/**      * Pass 3b implements the data flow analysis as described in the Java Virtual      * Machine Specification, Second Edition.      * Later versions will use LocalVariablesInfo objects to verify if the      * verifier-inferred types and the class file's debug information (LocalVariables      * attributes) match [TODO].      *      * @see org.apache.bcel.verifier.statics.LocalVariablesInfo      * @see org.apache.bcel.verifier.statics.Pass2Verifier#getLocalVariablesInfo(int)      */
 annotation|@
 name|Override
@@ -2266,6 +2235,37 @@ block|{
 return|return
 name|methodNo
 return|;
+block|}
+comment|/**      * Throws an exception indicating the returned type is not compatible with the return type of the given method.      *      * @param returnedType the type of the returned expression      * @param m the method we are processing      * @throws StructuralCodeConstraintException always      * @since 6.0      */
+specifier|public
+name|void
+name|invalidReturnTypeError
+parameter_list|(
+specifier|final
+name|Type
+name|returnedType
+parameter_list|,
+specifier|final
+name|MethodGen
+name|m
+parameter_list|)
+block|{
+throw|throw
+operator|new
+name|StructuralCodeConstraintException
+argument_list|(
+literal|"Returned type "
+operator|+
+name|returnedType
+operator|+
+literal|" does not match Method's return type "
+operator|+
+name|m
+operator|.
+name|getReturnType
+argument_list|()
+argument_list|)
+throw|;
 block|}
 block|}
 end_class

@@ -17,6 +17,14 @@ name|tests
 package|;
 end_package
 
+begin_interface
+interface|interface
+name|Interface01
+extends|extends
+name|Runnable
+block|{  }
+end_interface
+
 begin_class
 specifier|public
 class|class
@@ -40,14 +48,6 @@ expr_stmt|;
 block|}
 block|}
 end_class
-
-begin_interface
-interface|interface
-name|Interface01
-extends|extends
-name|Runnable
-block|{  }
-end_interface
 
 end_unit
 

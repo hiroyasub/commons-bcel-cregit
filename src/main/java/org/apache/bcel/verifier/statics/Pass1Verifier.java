@@ -138,51 +138,6 @@ specifier|final
 name|Verifier
 name|myOwner
 decl_stmt|;
-comment|/**      * Used to load in and return the myOwner-matching JavaClass object when needed.      * Avoids loading in a class file when it's not really needed!      */
-specifier|private
-name|JavaClass
-name|getJavaClass
-parameter_list|()
-block|{
-if|if
-condition|(
-name|jc
-operator|==
-literal|null
-condition|)
-block|{
-try|try
-block|{
-name|jc
-operator|=
-name|Repository
-operator|.
-name|lookupClass
-argument_list|(
-name|myOwner
-operator|.
-name|getClassName
-argument_list|()
-argument_list|)
-expr_stmt|;
-block|}
-catch|catch
-parameter_list|(
-specifier|final
-name|ClassNotFoundException
-name|e
-parameter_list|)
-block|{
-comment|// FIXME: currently, Pass1Verifier treats jc == null as a special
-comment|// case, so we don't need to do anything here.  A better solution
-comment|// would be to simply throw the ClassNotFoundException
-comment|// out of this method.
-block|}
-block|}
-return|return
-name|jc
-return|;
-block|}
 comment|/**      * Should only be instantiated by a Verifier.      *      * @see Verifier      */
 specifier|public
 name|Pass1Verifier
@@ -363,6 +318,51 @@ name|VERIFIED_REJECTED
 argument_list|,
 literal|"Repository.lookup() failed. FILE NOT FOUND?"
 argument_list|)
+return|;
+block|}
+comment|/**      * Used to load in and return the myOwner-matching JavaClass object when needed.      * Avoids loading in a class file when it's not really needed!      */
+specifier|private
+name|JavaClass
+name|getJavaClass
+parameter_list|()
+block|{
+if|if
+condition|(
+name|jc
+operator|==
+literal|null
+condition|)
+block|{
+try|try
+block|{
+name|jc
+operator|=
+name|Repository
+operator|.
+name|lookupClass
+argument_list|(
+name|myOwner
+operator|.
+name|getClassName
+argument_list|()
+argument_list|)
+expr_stmt|;
+block|}
+catch|catch
+parameter_list|(
+specifier|final
+name|ClassNotFoundException
+name|e
+parameter_list|)
+block|{
+comment|// FIXME: currently, Pass1Verifier treats jc == null as a special
+comment|// case, so we don't need to do anything here.  A better solution
+comment|// would be to simply throw the ClassNotFoundException
+comment|// out of this method.
+block|}
+block|}
+return|return
+name|jc
 return|;
 block|}
 comment|/**      * Currently this returns an empty array of String.      * One could parse the error messages of BCEL      * (written to java.lang.System.err) when loading      * a class file such as detecting unknown attributes      * or trailing garbage at the end of a class file.      * However, Markus Dahm does not like the idea so this      * method is currently useless and therefore marked as      *<B>TODO</B>.      */

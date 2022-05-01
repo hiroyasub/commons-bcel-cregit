@@ -20,6 +20,13 @@ specifier|public
 class|class
 name|AnonymousClassTest
 block|{
+class|class
+name|X
+block|{     }
+specifier|static
+class|class
+name|Y
+block|{     }
 specifier|public
 name|void
 name|foo
@@ -43,13 +50,6 @@ name|run
 argument_list|()
 expr_stmt|;
 block|}
-class|class
-name|X
-block|{     }
-specifier|static
-class|class
-name|Y
-block|{     }
 block|}
 end_class
 

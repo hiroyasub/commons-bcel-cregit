@@ -25,12 +25,6 @@ specifier|abstract
 class|class
 name|NativeVerifier
 block|{
-comment|/**      * This class must not be instantiated.      */
-specifier|private
-name|NativeVerifier
-parameter_list|()
-block|{
-block|}
 comment|/**      * Works only on the first argument.      */
 specifier|public
 specifier|static
@@ -307,6 +301,12 @@ argument_list|(
 literal|0
 argument_list|)
 expr_stmt|;
+block|}
+comment|/**      * This class must not be instantiated.      */
+specifier|private
+name|NativeVerifier
+parameter_list|()
+block|{
 block|}
 block|}
 end_class

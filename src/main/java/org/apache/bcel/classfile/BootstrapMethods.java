@@ -231,37 +231,6 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/**      * @return array of bootstrap method "records"      */
-specifier|public
-specifier|final
-name|BootstrapMethod
-index|[]
-name|getBootstrapMethods
-parameter_list|()
-block|{
-return|return
-name|bootstrapMethods
-return|;
-block|}
-comment|/**      * @param bootstrapMethods the array of bootstrap methods      */
-specifier|public
-specifier|final
-name|void
-name|setBootstrapMethods
-parameter_list|(
-specifier|final
-name|BootstrapMethod
-index|[]
-name|bootstrapMethods
-parameter_list|)
-block|{
-name|this
-operator|.
-name|bootstrapMethods
-operator|=
-name|bootstrapMethods
-expr_stmt|;
-block|}
 comment|/**      * @param v Visitor object      */
 annotation|@
 name|Override
@@ -408,6 +377,37 @@ name|file
 argument_list|)
 expr_stmt|;
 block|}
+block|}
+comment|/**      * @return array of bootstrap method "records"      */
+specifier|public
+specifier|final
+name|BootstrapMethod
+index|[]
+name|getBootstrapMethods
+parameter_list|()
+block|{
+return|return
+name|bootstrapMethods
+return|;
+block|}
+comment|/**      * @param bootstrapMethods the array of bootstrap methods      */
+specifier|public
+specifier|final
+name|void
+name|setBootstrapMethods
+parameter_list|(
+specifier|final
+name|BootstrapMethod
+index|[]
+name|bootstrapMethods
+parameter_list|)
+block|{
+name|this
+operator|.
+name|bootstrapMethods
+operator|=
+name|bootstrapMethods
+expr_stmt|;
 block|}
 comment|/**      * @return String representation.      */
 annotation|@

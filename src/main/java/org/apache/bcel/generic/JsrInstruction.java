@@ -33,6 +33,11 @@ name|TypedInstruction
 implements|,
 name|StackProducer
 block|{
+comment|/**      * Empty constructor needed for Instruction.readInstruction.      * Not to be used otherwise.      */
+name|JsrInstruction
+parameter_list|()
+block|{
+block|}
 name|JsrInstruction
 parameter_list|(
 specifier|final
@@ -51,11 +56,6 @@ argument_list|,
 name|target
 argument_list|)
 expr_stmt|;
-block|}
-comment|/**      * Empty constructor needed for Instruction.readInstruction.      * Not to be used otherwise.      */
-name|JsrInstruction
-parameter_list|()
-block|{
 block|}
 comment|/** @return return address type      */
 annotation|@

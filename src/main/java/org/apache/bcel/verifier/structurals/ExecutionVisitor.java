@@ -176,19 +176,6 @@ name|ExecutionVisitor
 parameter_list|()
 block|{
 block|}
-comment|/**      * The OperandStack from the current Frame we're operating on.      * @see #setFrame(Frame)      */
-specifier|private
-name|OperandStack
-name|stack
-parameter_list|()
-block|{
-return|return
-name|frame
-operator|.
-name|getStack
-argument_list|()
-return|;
-block|}
 comment|/**      * The LocalVariables from the current Frame we're operating on.      * @see #setFrame(Frame)      */
 specifier|private
 name|LocalVariables
@@ -237,6 +224,19 @@ name|frame
 operator|=
 name|f
 expr_stmt|;
+block|}
+comment|/**      * The OperandStack from the current Frame we're operating on.      * @see #setFrame(Frame)      */
+specifier|private
+name|OperandStack
+name|stack
+parameter_list|()
+block|{
+return|return
+name|frame
+operator|.
+name|getStack
+argument_list|()
+return|;
 block|}
 comment|///** Symbolically executes the corresponding Java Virtual Machine instruction. */
 comment|//public void visitWIDE(WIDE o) {

@@ -218,16 +218,6 @@ name|signatureIndex
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * @return Name index in constant pool of field/method name.      */
-specifier|public
-name|int
-name|getNameIndex
-parameter_list|()
-block|{
-return|return
-name|nameIndex
-return|;
-block|}
 comment|/** @return name      */
 specifier|public
 name|String
@@ -252,14 +242,14 @@ name|CONSTANT_Utf8
 argument_list|)
 return|;
 block|}
-comment|/**      * @return Index in constant pool of field/method signature.      */
+comment|/**      * @return Name index in constant pool of field/method name.      */
 specifier|public
 name|int
-name|getSignatureIndex
+name|getNameIndex
 parameter_list|()
 block|{
 return|return
-name|signatureIndex
+name|nameIndex
 return|;
 block|}
 comment|/** @return signature      */
@@ -284,6 +274,16 @@ name|Const
 operator|.
 name|CONSTANT_Utf8
 argument_list|)
+return|;
+block|}
+comment|/**      * @return Index in constant pool of field/method signature.      */
+specifier|public
+name|int
+name|getSignatureIndex
+parameter_list|()
+block|{
+return|return
+name|signatureIndex
 return|;
 block|}
 comment|/**      * @param nameIndex the name index of this constant      */

@@ -73,39 +73,6 @@ specifier|private
 name|int
 name|sourceFileIndex
 decl_stmt|;
-comment|/**      * Initialize from another object. Note that both objects use the same      * references (shallow copy). Use clone() for a physical copy.      */
-specifier|public
-name|SourceFile
-parameter_list|(
-specifier|final
-name|SourceFile
-name|c
-parameter_list|)
-block|{
-name|this
-argument_list|(
-name|c
-operator|.
-name|getNameIndex
-argument_list|()
-argument_list|,
-name|c
-operator|.
-name|getLength
-argument_list|()
-argument_list|,
-name|c
-operator|.
-name|getSourceFileIndex
-argument_list|()
-argument_list|,
-name|c
-operator|.
-name|getConstantPool
-argument_list|()
-argument_list|)
-expr_stmt|;
-block|}
 comment|/**      * Construct object from input stream.      * @param name_index Index in constant pool to CONSTANT_Utf8      * @param length Content length in bytes      * @param input Input stream      * @param constant_pool Array of constants      * @throws IOException      */
 name|SourceFile
 parameter_list|(
@@ -184,6 +151,39 @@ operator|=
 name|sourceFileIndex
 expr_stmt|;
 block|}
+comment|/**      * Initialize from another object. Note that both objects use the same      * references (shallow copy). Use clone() for a physical copy.      */
+specifier|public
+name|SourceFile
+parameter_list|(
+specifier|final
+name|SourceFile
+name|c
+parameter_list|)
+block|{
+name|this
+argument_list|(
+name|c
+operator|.
+name|getNameIndex
+argument_list|()
+argument_list|,
+name|c
+operator|.
+name|getLength
+argument_list|()
+argument_list|,
+name|c
+operator|.
+name|getSourceFileIndex
+argument_list|()
+argument_list|,
+name|c
+operator|.
+name|getConstantPool
+argument_list|()
+argument_list|)
+expr_stmt|;
+block|}
 comment|/**      * Called by objects that are traversing the nodes of the tree implicitely      * defined by the contents of a Java class. I.e., the hierarchy of methods,      * fields, attributes, etc. spawns a tree of objects.      *      * @param v Visitor object      */
 annotation|@
 name|Override
@@ -203,6 +203,26 @@ argument_list|(
 name|this
 argument_list|)
 expr_stmt|;
+block|}
+comment|/**      * @return deep copy of this attribute      */
+annotation|@
+name|Override
+specifier|public
+name|Attribute
+name|copy
+parameter_list|(
+specifier|final
+name|ConstantPool
+name|_constant_pool
+parameter_list|)
+block|{
+return|return
+operator|(
+name|Attribute
+operator|)
+name|clone
+argument_list|()
+return|;
 block|}
 comment|/**      * Dump source file attribute to file stream in binary format.      *      * @param file Output file stream      * @throws IOException      */
 annotation|@
@@ -243,23 +263,6 @@ return|return
 name|sourceFileIndex
 return|;
 block|}
-comment|/**      * @param sourceFileIndex      */
-specifier|public
-name|void
-name|setSourceFileIndex
-parameter_list|(
-specifier|final
-name|int
-name|sourceFileIndex
-parameter_list|)
-block|{
-name|this
-operator|.
-name|sourceFileIndex
-operator|=
-name|sourceFileIndex
-expr_stmt|;
-block|}
 comment|/**      * @return Source file name.      */
 specifier|public
 name|String
@@ -294,6 +297,23 @@ name|getBytes
 argument_list|()
 return|;
 block|}
+comment|/**      * @param sourceFileIndex      */
+specifier|public
+name|void
+name|setSourceFileIndex
+parameter_list|(
+specifier|final
+name|int
+name|sourceFileIndex
+parameter_list|)
+block|{
+name|this
+operator|.
+name|sourceFileIndex
+operator|=
+name|sourceFileIndex
+expr_stmt|;
+block|}
 comment|/**      * @return String representation      */
 annotation|@
 name|Override
@@ -306,26 +326,6 @@ return|return
 literal|"SourceFile: "
 operator|+
 name|getSourceFileName
-argument_list|()
-return|;
-block|}
-comment|/**      * @return deep copy of this attribute      */
-annotation|@
-name|Override
-specifier|public
-name|Attribute
-name|copy
-parameter_list|(
-specifier|final
-name|ConstantPool
-name|_constant_pool
-parameter_list|)
-block|{
-return|return
-operator|(
-name|Attribute
-operator|)
-name|clone
 argument_list|()
 return|;
 block|}

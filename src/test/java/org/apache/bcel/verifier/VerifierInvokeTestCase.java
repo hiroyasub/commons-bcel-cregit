@@ -40,47 +40,6 @@ annotation|@
 name|Test
 specifier|public
 name|void
-name|testLegalInvokeVirtual
-parameter_list|()
-throws|throws
-name|ClassNotFoundException
-block|{
-name|assertVerifyOK
-argument_list|(
-literal|"TestLegalInvokeVirtual01"
-argument_list|,
-literal|"Verification of invokevirtual on method defined in superclass must pass."
-argument_list|)
-expr_stmt|;
-name|assertVerifyOK
-argument_list|(
-literal|"TestLegalInvokeVirtual02"
-argument_list|,
-literal|"Verification of invokevirtual on method defined in superinterface must pass."
-argument_list|)
-expr_stmt|;
-block|}
-annotation|@
-name|Test
-specifier|public
-name|void
-name|testLegalInvokeStatic
-parameter_list|()
-throws|throws
-name|ClassNotFoundException
-block|{
-name|assertVerifyOK
-argument_list|(
-literal|"TestLegalInvokeStatic01"
-argument_list|,
-literal|"Verification of invokestatic on method defined in superclass must pass."
-argument_list|)
-expr_stmt|;
-block|}
-annotation|@
-name|Test
-specifier|public
-name|void
 name|testLegalInvokeInterface
 parameter_list|()
 throws|throws
@@ -115,6 +74,47 @@ argument_list|(
 literal|"TestLegalInvokeSpecial02"
 argument_list|,
 literal|"Verification of invokespecial on method defined in superclass must pass."
+argument_list|)
+expr_stmt|;
+block|}
+annotation|@
+name|Test
+specifier|public
+name|void
+name|testLegalInvokeStatic
+parameter_list|()
+throws|throws
+name|ClassNotFoundException
+block|{
+name|assertVerifyOK
+argument_list|(
+literal|"TestLegalInvokeStatic01"
+argument_list|,
+literal|"Verification of invokestatic on method defined in superclass must pass."
+argument_list|)
+expr_stmt|;
+block|}
+annotation|@
+name|Test
+specifier|public
+name|void
+name|testLegalInvokeVirtual
+parameter_list|()
+throws|throws
+name|ClassNotFoundException
+block|{
+name|assertVerifyOK
+argument_list|(
+literal|"TestLegalInvokeVirtual01"
+argument_list|,
+literal|"Verification of invokevirtual on method defined in superclass must pass."
+argument_list|)
+expr_stmt|;
+name|assertVerifyOK
+argument_list|(
+literal|"TestLegalInvokeVirtual02"
+argument_list|,
+literal|"Verification of invokevirtual on method defined in superinterface must pass."
 argument_list|)
 expr_stmt|;
 block|}

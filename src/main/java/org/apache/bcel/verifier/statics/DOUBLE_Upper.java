@@ -66,6 +66,17 @@ operator|new
 name|DOUBLE_Upper
 argument_list|()
 decl_stmt|;
+comment|/**      * Gets the single instance of this class.      *      * @return the single instance of this class.      */
+specifier|public
+specifier|static
+name|DOUBLE_Upper
+name|theInstance
+parameter_list|()
+block|{
+return|return
+name|singleton
+return|;
+block|}
 comment|/** The constructor; this class must not be instantiated from the outside. */
 specifier|private
 name|DOUBLE_Upper
@@ -80,17 +91,6 @@ argument_list|,
 literal|"Double_Upper"
 argument_list|)
 expr_stmt|;
-block|}
-comment|/**      * Gets the single instance of this class.      *      * @return the single instance of this class.      */
-specifier|public
-specifier|static
-name|DOUBLE_Upper
-name|theInstance
-parameter_list|()
-block|{
-return|return
-name|singleton
-return|;
 block|}
 block|}
 end_class

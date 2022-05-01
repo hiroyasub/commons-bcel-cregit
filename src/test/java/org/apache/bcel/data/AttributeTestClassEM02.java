@@ -20,6 +20,18 @@ specifier|public
 class|class
 name|AttributeTestClassEM02
 block|{
+specifier|public
+specifier|static
+name|void
+name|main
+parameter_list|(
+specifier|final
+name|String
+index|[]
+name|argv
+parameter_list|)
+block|{
+block|}
 name|Runnable
 name|r
 init|=
@@ -46,18 +58,6 @@ expr_stmt|;
 block|}
 block|}
 decl_stmt|;
-specifier|public
-specifier|static
-name|void
-name|main
-parameter_list|(
-specifier|final
-name|String
-index|[]
-name|argv
-parameter_list|)
-block|{
-block|}
 block|}
 end_class
 

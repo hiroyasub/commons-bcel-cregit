@@ -34,6 +34,35 @@ specifier|static
 name|UninitializedObjectType
 name|_this
 decl_stmt|;
+comment|/**      * @return the _this      * @since 6.0      */
+specifier|public
+specifier|static
+name|UninitializedObjectType
+name|getThis
+parameter_list|()
+block|{
+return|return
+name|_this
+return|;
+block|}
+comment|/**      * @param _this the _this to set      * @since 6.0      */
+specifier|public
+specifier|static
+name|void
+name|setThis
+parameter_list|(
+specifier|final
+name|UninitializedObjectType
+name|_this
+parameter_list|)
+block|{
+name|Frame
+operator|.
+name|_this
+operator|=
+name|_this
+expr_stmt|;
+block|}
 comment|/**      *      */
 specifier|private
 specifier|final
@@ -127,60 +156,6 @@ argument_list|)
 return|;
 block|}
 comment|/**      *      */
-specifier|public
-name|Frame
-name|getClone
-parameter_list|()
-block|{
-return|return
-operator|(
-name|Frame
-operator|)
-name|clone
-argument_list|()
-return|;
-block|}
-comment|/**      *      */
-specifier|public
-name|LocalVariables
-name|getLocals
-parameter_list|()
-block|{
-return|return
-name|locals
-return|;
-block|}
-comment|/**      *      */
-specifier|public
-name|OperandStack
-name|getStack
-parameter_list|()
-block|{
-return|return
-name|stack
-return|;
-block|}
-comment|/** @return a hash code value for the object.      */
-annotation|@
-name|Override
-specifier|public
-name|int
-name|hashCode
-parameter_list|()
-block|{
-return|return
-name|stack
-operator|.
-name|hashCode
-argument_list|()
-operator|^
-name|locals
-operator|.
-name|hashCode
-argument_list|()
-return|;
-block|}
-comment|/**      *      */
 annotation|@
 name|Override
 specifier|public
@@ -240,6 +215,60 @@ name|locals
 argument_list|)
 return|;
 block|}
+comment|/**      *      */
+specifier|public
+name|Frame
+name|getClone
+parameter_list|()
+block|{
+return|return
+operator|(
+name|Frame
+operator|)
+name|clone
+argument_list|()
+return|;
+block|}
+comment|/**      *      */
+specifier|public
+name|LocalVariables
+name|getLocals
+parameter_list|()
+block|{
+return|return
+name|locals
+return|;
+block|}
+comment|/**      *      */
+specifier|public
+name|OperandStack
+name|getStack
+parameter_list|()
+block|{
+return|return
+name|stack
+return|;
+block|}
+comment|/** @return a hash code value for the object.      */
+annotation|@
+name|Override
+specifier|public
+name|int
+name|hashCode
+parameter_list|()
+block|{
+return|return
+name|stack
+operator|.
+name|hashCode
+argument_list|()
+operator|^
+name|locals
+operator|.
+name|hashCode
+argument_list|()
+return|;
+block|}
 comment|/**      * Returns a String representation of the Frame instance.      */
 annotation|@
 name|Override
@@ -268,35 +297,6 @@ expr_stmt|;
 return|return
 name|s
 return|;
-block|}
-comment|/**      * @return the _this      * @since 6.0      */
-specifier|public
-specifier|static
-name|UninitializedObjectType
-name|getThis
-parameter_list|()
-block|{
-return|return
-name|_this
-return|;
-block|}
-comment|/**      * @param _this the _this to set      * @since 6.0      */
-specifier|public
-specifier|static
-name|void
-name|setThis
-parameter_list|(
-specifier|final
-name|UninitializedObjectType
-name|_this
-parameter_list|)
-block|{
-name|Frame
-operator|.
-name|_this
-operator|=
-name|_this
-expr_stmt|;
 block|}
 block|}
 end_class

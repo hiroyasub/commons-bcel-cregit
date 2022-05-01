@@ -259,6 +259,11 @@ class|class
 name|CodeHTML
 block|{
 specifier|private
+specifier|static
+name|boolean
+name|wide
+decl_stmt|;
+specifier|private
 specifier|final
 name|String
 name|className
@@ -284,11 +289,6 @@ specifier|private
 specifier|final
 name|ConstantHTML
 name|constantHtml
-decl_stmt|;
-specifier|private
-specifier|static
-name|boolean
-name|wide
 decl_stmt|;
 name|CodeHTML
 parameter_list|(

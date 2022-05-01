@@ -133,43 +133,6 @@ operator|=
 name|message
 expr_stmt|;
 block|}
-comment|/**      * Returns one of the {@link #VERIFIED_OK}, {@link #VERIFIED_NOTYET},      * {@link #VERIFIED_REJECTED} constants.      */
-specifier|public
-name|int
-name|getStatus
-parameter_list|()
-block|{
-return|return
-name|numeric
-return|;
-block|}
-comment|/** Returns a detailed message. */
-specifier|public
-name|String
-name|getMessage
-parameter_list|()
-block|{
-return|return
-name|detailMessage
-return|;
-block|}
-comment|/**      * @return a hash code value for the object.      */
-annotation|@
-name|Override
-specifier|public
-name|int
-name|hashCode
-parameter_list|()
-block|{
-return|return
-name|numeric
-operator|^
-name|detailMessage
-operator|.
-name|hashCode
-argument_list|()
-return|;
-block|}
 comment|/**      * Returns if two VerificationResult instances are equal.      */
 annotation|@
 name|Override
@@ -224,6 +187,43 @@ name|this
 operator|.
 name|detailMessage
 argument_list|)
+return|;
+block|}
+comment|/** Returns a detailed message. */
+specifier|public
+name|String
+name|getMessage
+parameter_list|()
+block|{
+return|return
+name|detailMessage
+return|;
+block|}
+comment|/**      * Returns one of the {@link #VERIFIED_OK}, {@link #VERIFIED_NOTYET},      * {@link #VERIFIED_REJECTED} constants.      */
+specifier|public
+name|int
+name|getStatus
+parameter_list|()
+block|{
+return|return
+name|numeric
+return|;
+block|}
+comment|/**      * @return a hash code value for the object.      */
+annotation|@
+name|Override
+specifier|public
+name|int
+name|hashCode
+parameter_list|()
+block|{
+return|return
+name|numeric
+operator|^
+name|detailMessage
+operator|.
+name|hashCode
+argument_list|()
 return|;
 block|}
 comment|/**      * Returns a String representation of the VerificationResult.      */

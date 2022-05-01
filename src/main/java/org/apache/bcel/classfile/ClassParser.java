@@ -112,6 +112,14 @@ class|class
 name|ClassParser
 block|{
 specifier|private
+specifier|static
+specifier|final
+name|int
+name|BUFSIZE
+init|=
+literal|8192
+decl_stmt|;
+specifier|private
 name|DataInputStream
 name|dataInputStream
 decl_stmt|;
@@ -187,14 +195,6 @@ name|boolean
 name|isZip
 decl_stmt|;
 comment|// Loaded from zip file
-specifier|private
-specifier|static
-specifier|final
-name|int
-name|BUFSIZE
-init|=
-literal|8192
-decl_stmt|;
 comment|/**      * Parses class from the given stream.      *      * @param inputStream Input stream      * @param fileName File name      */
 specifier|public
 name|ClassParser

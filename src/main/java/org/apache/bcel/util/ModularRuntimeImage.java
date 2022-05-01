@@ -420,6 +420,15 @@ argument_list|()
 expr_stmt|;
 block|}
 block|}
+specifier|public
+name|FileSystem
+name|getFileSystem
+parameter_list|()
+block|{
+return|return
+name|fileSystem
+return|;
+block|}
 comment|/**      * Lists all entries in the given directory.      *      * @param dirPath      *            directory path.      * @return a list of dir entries if an I/O error occurs      * @throws IOException      *             an I/O error occurs accessing the file system      */
 specifier|public
 name|List
@@ -560,15 +569,6 @@ name|list
 argument_list|(
 name|PACKAGES_PATH
 argument_list|)
-return|;
-block|}
-specifier|public
-name|FileSystem
-name|getFileSystem
-parameter_list|()
-block|{
-return|return
-name|fileSystem
 return|;
 block|}
 block|}

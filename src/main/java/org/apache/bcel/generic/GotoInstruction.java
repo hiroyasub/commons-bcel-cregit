@@ -29,6 +29,11 @@ name|BranchInstruction
 implements|implements
 name|UnconditionalBranch
 block|{
+comment|/**      * Empty constructor needed for Instruction.readInstruction.      * Not to be used otherwise.      */
+name|GotoInstruction
+parameter_list|()
+block|{
+block|}
 name|GotoInstruction
 parameter_list|(
 specifier|final
@@ -47,11 +52,6 @@ argument_list|,
 name|target
 argument_list|)
 expr_stmt|;
-block|}
-comment|/**      * Empty constructor needed for Instruction.readInstruction.      * Not to be used otherwise.      */
-name|GotoInstruction
-parameter_list|()
-block|{
 block|}
 block|}
 end_class

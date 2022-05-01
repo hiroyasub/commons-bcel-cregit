@@ -75,29 +75,6 @@ specifier|private
 name|float
 name|bytes
 decl_stmt|;
-comment|/**      * @param bytes Data      */
-specifier|public
-name|ConstantFloat
-parameter_list|(
-specifier|final
-name|float
-name|bytes
-parameter_list|)
-block|{
-name|super
-argument_list|(
-name|Const
-operator|.
-name|CONSTANT_Float
-argument_list|)
-expr_stmt|;
-name|this
-operator|.
-name|bytes
-operator|=
-name|bytes
-expr_stmt|;
-block|}
 comment|/**      * Initialize from another object. Note that both objects use the same      * references (shallow copy). Use clone() for a physical copy.      */
 specifier|public
 name|ConstantFloat
@@ -133,6 +110,29 @@ operator|.
 name|readFloat
 argument_list|()
 argument_list|)
+expr_stmt|;
+block|}
+comment|/**      * @param bytes Data      */
+specifier|public
+name|ConstantFloat
+parameter_list|(
+specifier|final
+name|float
+name|bytes
+parameter_list|)
+block|{
+name|super
+argument_list|(
+name|Const
+operator|.
+name|CONSTANT_Float
+argument_list|)
+expr_stmt|;
+name|this
+operator|.
+name|bytes
+operator|=
+name|bytes
 expr_stmt|;
 block|}
 comment|/**      * Called by objects that are traversing the nodes of the tree implicitely      * defined by the contents of a Java class. I.e., the hierarchy of methods,      * fields, attributes, etc. spawns a tree of objects.      *      * @param v Visitor object      */
@@ -197,6 +197,27 @@ return|return
 name|bytes
 return|;
 block|}
+comment|/** @return Float object      */
+annotation|@
+name|Override
+specifier|public
+name|Object
+name|getConstantValue
+parameter_list|(
+specifier|final
+name|ConstantPool
+name|cp
+parameter_list|)
+block|{
+return|return
+name|Float
+operator|.
+name|valueOf
+argument_list|(
+name|bytes
+argument_list|)
+return|;
+block|}
 comment|/**      * @param bytes the raw bytes that represent this float      */
 specifier|public
 name|void
@@ -233,27 +254,6 @@ operator|+
 name|bytes
 operator|+
 literal|")"
-return|;
-block|}
-comment|/** @return Float object      */
-annotation|@
-name|Override
-specifier|public
-name|Object
-name|getConstantValue
-parameter_list|(
-specifier|final
-name|ConstantPool
-name|cp
-parameter_list|)
-block|{
-return|return
-name|Float
-operator|.
-name|valueOf
-argument_list|(
-name|bytes
-argument_list|)
 return|;
 block|}
 block|}

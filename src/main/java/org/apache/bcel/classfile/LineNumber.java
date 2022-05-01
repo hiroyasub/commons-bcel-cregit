@@ -69,29 +69,6 @@ specifier|private
 name|short
 name|lineNumber
 decl_stmt|;
-comment|/**      * Initialize from another object.      *      * @param c the object to copy      */
-specifier|public
-name|LineNumber
-parameter_list|(
-specifier|final
-name|LineNumber
-name|c
-parameter_list|)
-block|{
-name|this
-argument_list|(
-name|c
-operator|.
-name|getStartPC
-argument_list|()
-argument_list|,
-name|c
-operator|.
-name|getLineNumber
-argument_list|()
-argument_list|)
-expr_stmt|;
-block|}
 comment|/**      * Construct object from file stream.      *      * @param file Input stream      * @throws IOException if an I/O Exception occurs in readUnsignedShort      */
 name|LineNumber
 parameter_list|(
@@ -148,6 +125,29 @@ operator|)
 name|lineNumber
 expr_stmt|;
 block|}
+comment|/**      * Initialize from another object.      *      * @param c the object to copy      */
+specifier|public
+name|LineNumber
+parameter_list|(
+specifier|final
+name|LineNumber
+name|c
+parameter_list|)
+block|{
+name|this
+argument_list|(
+name|c
+operator|.
+name|getStartPC
+argument_list|()
+argument_list|,
+name|c
+operator|.
+name|getLineNumber
+argument_list|()
+argument_list|)
+expr_stmt|;
+block|}
 comment|/**      * Called by objects that are traversing the nodes of the tree implicitely      * defined by the contents of a Java class. I.e., the hierarchy of methods,      * fields, attributes, etc. spawns a tree of objects.      *      * @param v Visitor object      */
 annotation|@
 name|Override
@@ -167,6 +167,35 @@ argument_list|(
 name|this
 argument_list|)
 expr_stmt|;
+block|}
+comment|/**      * @return deep copy of this object      */
+specifier|public
+name|LineNumber
+name|copy
+parameter_list|()
+block|{
+try|try
+block|{
+return|return
+operator|(
+name|LineNumber
+operator|)
+name|clone
+argument_list|()
+return|;
+block|}
+catch|catch
+parameter_list|(
+specifier|final
+name|CloneNotSupportedException
+name|e
+parameter_list|)
+block|{
+comment|// TODO should this throw?
+block|}
+return|return
+literal|null
+return|;
 block|}
 comment|/**      * Dump line number/pc pair to file stream in binary format.      *      * @param file Output file stream      * @throws IOException if an I/O Exception occurs in writeShort      */
 specifier|public
@@ -279,35 +308,6 @@ name|getLineNumber
 argument_list|()
 operator|+
 literal|")"
-return|;
-block|}
-comment|/**      * @return deep copy of this object      */
-specifier|public
-name|LineNumber
-name|copy
-parameter_list|()
-block|{
-try|try
-block|{
-return|return
-operator|(
-name|LineNumber
-operator|)
-name|clone
-argument_list|()
-return|;
-block|}
-catch|catch
-parameter_list|(
-specifier|final
-name|CloneNotSupportedException
-name|e
-parameter_list|)
-block|{
-comment|// TODO should this throw?
-block|}
-return|return
-literal|null
 return|;
 block|}
 block|}

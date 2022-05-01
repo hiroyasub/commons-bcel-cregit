@@ -23,6 +23,16 @@ name|long
 name|timeNanos
 decl_stmt|;
 specifier|public
+name|void
+name|reset
+parameter_list|()
+block|{
+name|timeNanos
+operator|=
+literal|0
+expr_stmt|;
+block|}
+specifier|public
 name|NanoTimer
 name|start
 parameter_list|()
@@ -65,16 +75,6 @@ operator|-=
 name|o
 operator|.
 name|timeNanos
-expr_stmt|;
-block|}
-specifier|public
-name|void
-name|reset
-parameter_list|()
-block|{
-name|timeNanos
-operator|=
-literal|0
 expr_stmt|;
 block|}
 comment|/**      * May ony be called after stop has been called as many times as start.      */

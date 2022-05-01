@@ -188,32 +188,25 @@ name|nameIndex
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * @return Name index in constant pool of class name.      */
+comment|/** @return dereferenced string      */
 specifier|public
-name|int
-name|getNameIndex
-parameter_list|()
-block|{
-return|return
-name|nameIndex
-return|;
-block|}
-comment|/**      * @param nameIndex the name index in the constant pool of this Constant Class      */
-specifier|public
-name|void
-name|setNameIndex
+name|String
+name|getBytes
 parameter_list|(
 specifier|final
-name|int
-name|nameIndex
+name|ConstantPool
+name|cp
 parameter_list|)
 block|{
-name|this
-operator|.
-name|nameIndex
-operator|=
-name|nameIndex
-expr_stmt|;
+return|return
+operator|(
+name|String
+operator|)
+name|getConstantValue
+argument_list|(
+name|cp
+argument_list|)
+return|;
 block|}
 comment|/** @return String object      */
 annotation|@
@@ -254,25 +247,32 @@ name|getBytes
 argument_list|()
 return|;
 block|}
-comment|/** @return dereferenced string      */
+comment|/**      * @return Name index in constant pool of class name.      */
 specifier|public
-name|String
-name|getBytes
-parameter_list|(
-specifier|final
-name|ConstantPool
-name|cp
-parameter_list|)
+name|int
+name|getNameIndex
+parameter_list|()
 block|{
 return|return
-operator|(
-name|String
-operator|)
-name|getConstantValue
-argument_list|(
-name|cp
-argument_list|)
+name|nameIndex
 return|;
+block|}
+comment|/**      * @param nameIndex the name index in the constant pool of this Constant Class      */
+specifier|public
+name|void
+name|setNameIndex
+parameter_list|(
+specifier|final
+name|int
+name|nameIndex
+parameter_list|)
+block|{
+name|this
+operator|.
+name|nameIndex
+operator|=
+name|nameIndex
+expr_stmt|;
 block|}
 comment|/**      * @return String representation.      */
 annotation|@

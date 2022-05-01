@@ -85,6 +85,15 @@ name|Node
 implements|,
 name|Constants
 block|{
+comment|/**      * Empty array.      */
+specifier|static
+specifier|final
+name|CodeException
+index|[]
+name|EMPTY_CODE_EXCEPTION_ARRAY
+init|=
+block|{}
+decl_stmt|;
 specifier|private
 name|int
 name|startPc
@@ -105,15 +114,6 @@ name|int
 name|catchType
 decl_stmt|;
 comment|/* If this is zero the handler catches any      * exception, otherwise it points to the      * exception class which is to be caught.      */
-comment|/**      * Empty array.      */
-specifier|static
-specifier|final
-name|CodeException
-index|[]
-name|EMPTY_CODE_EXCEPTION_ARRAY
-init|=
-block|{}
-decl_stmt|;
 comment|/**      * Initialize from another object.      */
 specifier|public
 name|CodeException
@@ -246,6 +246,35 @@ argument_list|(
 name|this
 argument_list|)
 expr_stmt|;
+block|}
+comment|/**      * @return deep copy of this object      */
+specifier|public
+name|CodeException
+name|copy
+parameter_list|()
+block|{
+try|try
+block|{
+return|return
+operator|(
+name|CodeException
+operator|)
+name|clone
+argument_list|()
+return|;
+block|}
+catch|catch
+parameter_list|(
+specifier|final
+name|CloneNotSupportedException
+name|e
+parameter_list|)
+block|{
+comment|// TODO should this throw?
+block|}
+return|return
+literal|null
+return|;
 block|}
 comment|/**      * Dump code exception to file stream in binary format.      *      * @param file Output file stream      * @throws IOException      */
 specifier|public
@@ -426,6 +455,24 @@ operator|+
 literal|")"
 return|;
 block|}
+specifier|public
+name|String
+name|toString
+parameter_list|(
+specifier|final
+name|ConstantPool
+name|cp
+parameter_list|)
+block|{
+return|return
+name|toString
+argument_list|(
+name|cp
+argument_list|,
+literal|true
+argument_list|)
+return|;
+block|}
 comment|/**      * @return String representation.      */
 specifier|public
 name|String
@@ -504,53 +551,6 @@ operator|+
 literal|"\t"
 operator|+
 name|str
-return|;
-block|}
-specifier|public
-name|String
-name|toString
-parameter_list|(
-specifier|final
-name|ConstantPool
-name|cp
-parameter_list|)
-block|{
-return|return
-name|toString
-argument_list|(
-name|cp
-argument_list|,
-literal|true
-argument_list|)
-return|;
-block|}
-comment|/**      * @return deep copy of this object      */
-specifier|public
-name|CodeException
-name|copy
-parameter_list|()
-block|{
-try|try
-block|{
-return|return
-operator|(
-name|CodeException
-operator|)
-name|clone
-argument_list|()
-return|;
-block|}
-catch|catch
-parameter_list|(
-specifier|final
-name|CloneNotSupportedException
-name|e
-parameter_list|)
-block|{
-comment|// TODO should this throw?
-block|}
-return|return
-literal|null
 return|;
 block|}
 block|}
