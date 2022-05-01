@@ -69,11 +69,11 @@ name|str
 parameter_list|)
 block|{
 specifier|final
-name|StringBuffer
+name|StringBuilder
 name|retval
 init|=
 operator|new
-name|StringBuffer
+name|StringBuilder
 argument_list|()
 decl_stmt|;
 name|char
