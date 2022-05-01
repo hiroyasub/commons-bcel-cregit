@@ -57,6 +57,18 @@ end_import
 
 begin_import
 import|import
+name|java
+operator|.
+name|nio
+operator|.
+name|charset
+operator|.
+name|StandardCharsets
+import|;
+end_import
+
+begin_import
+import|import
 name|org
 operator|.
 name|apache
@@ -100,7 +112,11 @@ argument_list|(
 name|data
 operator|.
 name|getBytes
-argument_list|()
+argument_list|(
+name|StandardCharsets
+operator|.
+name|UTF_8
+argument_list|)
 argument_list|)
 expr_stmt|;
 block|}
@@ -113,6 +129,10 @@ operator|new
 name|String
 argument_list|(
 name|buf
+argument_list|,
+name|StandardCharsets
+operator|.
+name|UTF_8
 argument_list|)
 return|;
 block|}
