@@ -3360,9 +3360,7 @@ name|clazz
 argument_list|)
 expr_stmt|;
 block|}
-else|else
-block|{
-if|if
+if|else if
 condition|(
 name|souper
 operator|!=
@@ -3376,7 +3374,6 @@ argument_list|(
 name|souper
 argument_list|)
 expr_stmt|;
-block|}
 block|}
 for|for
 control|(
