@@ -76,11 +76,7 @@ name|MethodParameter
 index|[]
 name|EMPTY_METHOD_PARAMETER_ARRAY
 init|=
-operator|new
-name|MethodParameter
-index|[
-literal|0
-index|]
+block|{}
 decl_stmt|;
 specifier|private
 name|MethodParameter
