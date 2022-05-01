@@ -297,12 +297,12 @@ throws|,
 name|IOException
 block|{
 name|JavaClass
-name|java_class
+name|javaClass
 decl_stmt|;
 if|if
 condition|(
 operator|(
-name|java_class
+name|javaClass
 operator|=
 name|Repository
 operator|.
@@ -315,7 +315,7 @@ operator|==
 literal|null
 condition|)
 block|{
-name|java_class
+name|javaClass
 operator|=
 operator|new
 name|ClassParser
@@ -329,7 +329,7 @@ expr_stmt|;
 comment|// May throw IOException
 block|}
 return|return
-name|java_class
+name|javaClass
 return|;
 block|}
 comment|/** Default main method      */
@@ -376,9 +376,12 @@ expr_stmt|;
 return|return;
 block|}
 specifier|final
-name|JavaClass
-name|java_class
+name|BCELifier
+name|bcelifier
 init|=
+operator|new
+name|BCELifier
+argument_list|(
 name|getJavaClass
 argument_list|(
 name|argv
@@ -386,15 +389,6 @@ index|[
 literal|0
 index|]
 argument_list|)
-decl_stmt|;
-specifier|final
-name|BCELifier
-name|bcelifier
-init|=
-operator|new
-name|BCELifier
-argument_list|(
-name|java_class
 argument_list|,
 name|System
 operator|.
@@ -414,12 +408,12 @@ parameter_list|(
 specifier|final
 name|Type
 index|[]
-name|arg_types
+name|argTypes
 parameter_list|)
 block|{
 if|if
 condition|(
-name|arg_types
+name|argTypes
 operator|.
 name|length
 operator|==
@@ -447,7 +441,7 @@ literal|0
 init|;
 name|i
 operator|<
-name|arg_types
+name|argTypes
 operator|.
 name|length
 condition|;
@@ -461,7 +455,7 @@ name|append
 argument_list|(
 name|printType
 argument_list|(
-name|arg_types
+name|argTypes
 index|[
 name|i
 index|]
@@ -472,7 +466,7 @@ if|if
 condition|(
 name|i
 operator|<
-name|arg_types
+name|argTypes
 operator|.
 name|length
 operator|-
@@ -944,17 +938,17 @@ block|}
 specifier|private
 specifier|final
 name|JavaClass
-name|_clazz
+name|clazz
 decl_stmt|;
 specifier|private
 specifier|final
 name|PrintWriter
-name|_out
+name|printWriter
 decl_stmt|;
 specifier|private
 specifier|final
 name|ConstantPoolGen
-name|_cp
+name|constantPoolGen
 decl_stmt|;
 comment|/** @param clazz Java class to "decompile"      * @param out where to output Java program      */
 specifier|public
@@ -969,11 +963,15 @@ name|OutputStream
 name|out
 parameter_list|)
 block|{
-name|_clazz
+name|this
+operator|.
+name|clazz
 operator|=
 name|clazz
 expr_stmt|;
-name|_out
+name|this
+operator|.
+name|printWriter
 operator|=
 operator|new
 name|PrintWriter
@@ -981,12 +979,16 @@ argument_list|(
 name|out
 argument_list|)
 expr_stmt|;
-name|_cp
+name|this
+operator|.
+name|constantPoolGen
 operator|=
 operator|new
 name|ConstantPoolGen
 argument_list|(
-name|_clazz
+name|this
+operator|.
+name|clazz
 operator|.
 name|getConstantPool
 argument_list|()
@@ -998,7 +1000,7 @@ name|void
 name|printCreate
 parameter_list|()
 block|{
-name|_out
+name|printWriter
 operator|.
 name|println
 argument_list|(
@@ -1010,7 +1012,7 @@ name|Field
 index|[]
 name|fields
 init|=
-name|_clazz
+name|clazz
 operator|.
 name|getFields
 argument_list|()
@@ -1024,7 +1026,7 @@ operator|>
 literal|0
 condition|)
 block|{
-name|_out
+name|printWriter
 operator|.
 name|println
 argument_list|(
@@ -1037,7 +1039,7 @@ name|Method
 index|[]
 name|methods
 init|=
-name|_clazz
+name|clazz
 operator|.
 name|getMethods
 argument_list|()
@@ -1059,7 +1061,7 @@ name|i
 operator|++
 control|)
 block|{
-name|_out
+name|printWriter
 operator|.
 name|println
 argument_list|(
@@ -1071,21 +1073,21 @@ literal|"();"
 argument_list|)
 expr_stmt|;
 block|}
-name|_out
+name|printWriter
 operator|.
 name|println
 argument_list|(
 literal|"    _cg.getJavaClass().dump(out);"
 argument_list|)
 expr_stmt|;
-name|_out
+name|printWriter
 operator|.
 name|println
 argument_list|(
 literal|"  }"
 argument_list|)
 expr_stmt|;
-name|_out
+name|printWriter
 operator|.
 name|println
 argument_list|()
@@ -1100,19 +1102,19 @@ specifier|final
 name|String
 name|class_name
 init|=
-name|_clazz
+name|clazz
 operator|.
 name|getClassName
 argument_list|()
 decl_stmt|;
-name|_out
+name|printWriter
 operator|.
 name|println
 argument_list|(
 literal|"  public static void main(String[] args) throws Exception {"
 argument_list|)
 expr_stmt|;
-name|_out
+name|printWriter
 operator|.
 name|println
 argument_list|(
@@ -1127,7 +1129,7 @@ operator|+
 literal|"Creator();"
 argument_list|)
 expr_stmt|;
-name|_out
+name|printWriter
 operator|.
 name|println
 argument_list|(
@@ -1138,7 +1140,7 @@ operator|+
 literal|".class\"));"
 argument_list|)
 expr_stmt|;
-name|_out
+name|printWriter
 operator|.
 name|println
 argument_list|(
@@ -1154,10 +1156,10 @@ parameter_list|()
 block|{
 name|visitJavaClass
 argument_list|(
-name|_clazz
+name|clazz
 argument_list|)
 expr_stmt|;
-name|_out
+name|printWriter
 operator|.
 name|flush
 argument_list|()
@@ -1174,12 +1176,12 @@ name|Field
 name|field
 parameter_list|)
 block|{
-name|_out
+name|printWriter
 operator|.
 name|println
 argument_list|()
 expr_stmt|;
-name|_out
+name|printWriter
 operator|.
 name|println
 argument_list|(
@@ -1238,7 +1240,7 @@ operator|.
 name|toString
 argument_list|()
 decl_stmt|;
-name|_out
+name|printWriter
 operator|.
 name|println
 argument_list|(
@@ -1250,7 +1252,7 @@ literal|")"
 argument_list|)
 expr_stmt|;
 block|}
-name|_out
+name|printWriter
 operator|.
 name|println
 argument_list|(
@@ -1338,7 +1340,7 @@ operator|+
 literal|1
 argument_list|)
 expr_stmt|;
-name|_out
+name|printWriter
 operator|.
 name|println
 argument_list|(
@@ -1349,13 +1351,13 @@ operator|+
 literal|";"
 argument_list|)
 expr_stmt|;
-name|_out
+name|printWriter
 operator|.
 name|println
 argument_list|()
 expr_stmt|;
 block|}
-name|_out
+name|printWriter
 operator|.
 name|println
 argument_list|(
@@ -1366,7 +1368,7 @@ operator|+
 literal|".generic.*;"
 argument_list|)
 expr_stmt|;
-name|_out
+name|printWriter
 operator|.
 name|println
 argument_list|(
@@ -1377,7 +1379,7 @@ operator|+
 literal|".classfile.*;"
 argument_list|)
 expr_stmt|;
-name|_out
+name|printWriter
 operator|.
 name|println
 argument_list|(
@@ -1388,19 +1390,19 @@ operator|+
 literal|".*;"
 argument_list|)
 expr_stmt|;
-name|_out
+name|printWriter
 operator|.
 name|println
 argument_list|(
 literal|"import java.io.*;"
 argument_list|)
 expr_stmt|;
-name|_out
+name|printWriter
 operator|.
 name|println
 argument_list|()
 expr_stmt|;
-name|_out
+name|printWriter
 operator|.
 name|println
 argument_list|(
@@ -1411,33 +1413,33 @@ operator|+
 literal|"Creator {"
 argument_list|)
 expr_stmt|;
-name|_out
+name|printWriter
 operator|.
 name|println
 argument_list|(
 literal|"  private InstructionFactory _factory;"
 argument_list|)
 expr_stmt|;
-name|_out
+name|printWriter
 operator|.
 name|println
 argument_list|(
 literal|"  private ConstantPoolGen    _cp;"
 argument_list|)
 expr_stmt|;
-name|_out
+name|printWriter
 operator|.
 name|println
 argument_list|(
 literal|"  private ClassGen           _cg;"
 argument_list|)
 expr_stmt|;
-name|_out
+name|printWriter
 operator|.
 name|println
 argument_list|()
 expr_stmt|;
-name|_out
+name|printWriter
 operator|.
 name|println
 argument_list|(
@@ -1448,7 +1450,7 @@ operator|+
 literal|"Creator() {"
 argument_list|)
 expr_stmt|;
-name|_out
+name|printWriter
 operator|.
 name|println
 argument_list|(
@@ -1507,7 +1509,7 @@ operator|+
 literal|" });"
 argument_list|)
 expr_stmt|;
-name|_out
+name|printWriter
 operator|.
 name|println
 argument_list|(
@@ -1521,7 +1523,7 @@ operator|+
 literal|");"
 argument_list|)
 expr_stmt|;
-name|_out
+name|printWriter
 operator|.
 name|println
 argument_list|(
@@ -1535,33 +1537,33 @@ operator|+
 literal|");"
 argument_list|)
 expr_stmt|;
-name|_out
+name|printWriter
 operator|.
 name|println
 argument_list|()
 expr_stmt|;
-name|_out
+name|printWriter
 operator|.
 name|println
 argument_list|(
 literal|"    _cp = _cg.getConstantPool();"
 argument_list|)
 expr_stmt|;
-name|_out
+name|printWriter
 operator|.
 name|println
 argument_list|(
 literal|"    _factory = new InstructionFactory(_cg, _cp);"
 argument_list|)
 expr_stmt|;
-name|_out
+name|printWriter
 operator|.
 name|println
 argument_list|(
 literal|"  }"
 argument_list|)
 expr_stmt|;
-name|_out
+name|printWriter
 operator|.
 name|println
 argument_list|()
@@ -1588,14 +1590,14 @@ operator|>
 literal|0
 condition|)
 block|{
-name|_out
+name|printWriter
 operator|.
 name|println
 argument_list|(
 literal|"  private void createFields() {"
 argument_list|)
 expr_stmt|;
-name|_out
+name|printWriter
 operator|.
 name|println
 argument_list|(
@@ -1619,14 +1621,14 @@ name|this
 argument_list|)
 expr_stmt|;
 block|}
-name|_out
+name|printWriter
 operator|.
 name|println
 argument_list|(
 literal|"  }"
 argument_list|)
 expr_stmt|;
-name|_out
+name|printWriter
 operator|.
 name|println
 argument_list|()
@@ -1659,7 +1661,7 @@ name|i
 operator|++
 control|)
 block|{
-name|_out
+name|printWriter
 operator|.
 name|println
 argument_list|(
@@ -1680,14 +1682,14 @@ argument_list|(
 name|this
 argument_list|)
 expr_stmt|;
-name|_out
+name|printWriter
 operator|.
 name|println
 argument_list|(
 literal|"  }"
 argument_list|)
 expr_stmt|;
-name|_out
+name|printWriter
 operator|.
 name|println
 argument_list|()
@@ -1696,7 +1698,7 @@ block|}
 name|printMain
 argument_list|()
 expr_stmt|;
-name|_out
+name|printWriter
 operator|.
 name|println
 argument_list|(
@@ -1724,22 +1726,22 @@ name|MethodGen
 argument_list|(
 name|method
 argument_list|,
-name|_clazz
+name|clazz
 operator|.
 name|getClassName
 argument_list|()
 argument_list|,
-name|_cp
+name|constantPoolGen
 argument_list|)
 decl_stmt|;
-name|_out
+name|printWriter
 operator|.
 name|println
 argument_list|(
 literal|"    InstructionList il = new InstructionList();"
 argument_list|)
 expr_stmt|;
-name|_out
+name|printWriter
 operator|.
 name|println
 argument_list|(
@@ -1804,7 +1806,7 @@ argument_list|()
 operator|+
 literal|"\", \""
 operator|+
-name|_clazz
+name|clazz
 operator|.
 name|getClassName
 argument_list|()
@@ -1812,7 +1814,7 @@ operator|+
 literal|"\", il, _cp);"
 argument_list|)
 expr_stmt|;
-name|_out
+name|printWriter
 operator|.
 name|println
 argument_list|()
@@ -1826,7 +1828,7 @@ name|BCELFactory
 argument_list|(
 name|mg
 argument_list|,
-name|_out
+name|printWriter
 argument_list|)
 decl_stmt|;
 name|factory
@@ -1834,28 +1836,28 @@ operator|.
 name|start
 argument_list|()
 expr_stmt|;
-name|_out
+name|printWriter
 operator|.
 name|println
 argument_list|(
 literal|"    method.setMaxStack();"
 argument_list|)
 expr_stmt|;
-name|_out
+name|printWriter
 operator|.
 name|println
 argument_list|(
 literal|"    method.setMaxLocals();"
 argument_list|)
 expr_stmt|;
-name|_out
+name|printWriter
 operator|.
 name|println
 argument_list|(
 literal|"    _cg.addMethod(method.getMethod());"
 argument_list|)
 expr_stmt|;
-name|_out
+name|printWriter
 operator|.
 name|println
 argument_list|(
