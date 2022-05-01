@@ -1089,17 +1089,6 @@ operator|.
 name|trim
 argument_list|()
 decl_stmt|;
-name|System
-operator|.
-name|out
-operator|.
-name|println
-argument_list|(
-literal|"S: "
-operator|+
-name|s
-argument_list|)
-expr_stmt|;
 name|assertTrue
 argument_list|(
 name|s
