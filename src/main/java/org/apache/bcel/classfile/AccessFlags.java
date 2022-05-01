@@ -162,10 +162,7 @@ name|flag
 expr_stmt|;
 block|}
 block|}
-else|else
-block|{
-comment|// Flag not set
-if|if
+if|else if
 condition|(
 name|set
 condition|)
@@ -174,7 +171,6 @@ name|access_flags
 operator||=
 name|flag
 expr_stmt|;
-block|}
 block|}
 block|}
 specifier|public
