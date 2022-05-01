@@ -77,11 +77,7 @@ name|InnerClass
 index|[]
 name|EMPTY_INNER_CLASSE_ARRAY
 init|=
-operator|new
-name|InnerClass
-index|[
-literal|0
-index|]
+block|{}
 decl_stmt|;
 specifier|private
 name|InnerClass
