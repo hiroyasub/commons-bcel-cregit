@@ -182,7 +182,7 @@ decl_stmt|;
 specifier|private
 specifier|final
 name|AttributeHTML
-name|attribute_html
+name|attributeHtml
 decl_stmt|;
 name|MethodHTML
 parameter_list|(
@@ -192,7 +192,7 @@ name|dir
 parameter_list|,
 specifier|final
 name|String
-name|class_name
+name|className
 parameter_list|,
 specifier|final
 name|Method
@@ -206,11 +206,11 @@ name|fields
 parameter_list|,
 specifier|final
 name|ConstantHTML
-name|constant_html
+name|constantHtml
 parameter_list|,
 specifier|final
 name|AttributeHTML
-name|attribute_html
+name|attributeHtml
 parameter_list|,
 specifier|final
 name|Charset
@@ -223,19 +223,19 @@ name|this
 operator|.
 name|className
 operator|=
-name|class_name
+name|className
 expr_stmt|;
 name|this
 operator|.
-name|attribute_html
+name|attributeHtml
 operator|=
-name|attribute_html
+name|attributeHtml
 expr_stmt|;
 name|this
 operator|.
 name|constantHtml
 operator|=
-name|constant_html
+name|constantHtml
 expr_stmt|;
 name|printWriter
 operator|=
@@ -247,7 +247,7 @@ name|FileOutputStream
 argument_list|(
 name|dir
 operator|+
-name|class_name
+name|className
 operator|+
 literal|"_methods.html"
 argument_list|)
@@ -483,7 +483,7 @@ name|i
 operator|++
 control|)
 block|{
-name|attribute_html
+name|attributeHtml
 operator|.
 name|writeAttribute
 argument_list|(
@@ -590,7 +590,7 @@ name|method
 parameter_list|,
 specifier|final
 name|int
-name|method_number
+name|methodNumber
 parameter_list|)
 block|{
 comment|// Get raw signature
@@ -643,7 +643,7 @@ name|getName
 argument_list|()
 decl_stmt|;
 name|String
-name|html_name
+name|htmlName
 decl_stmt|;
 comment|// Get method's access flags
 name|String
@@ -684,7 +684,7 @@ argument_list|,
 literal|"&nbsp;"
 argument_list|)
 expr_stmt|;
-name|html_name
+name|htmlName
 operator|=
 name|Class2HTML
 operator|.
@@ -699,7 +699,7 @@ name|print
 argument_list|(
 literal|"<TR VALIGN=TOP><TD><FONT COLOR=\"#FF0000\"><A NAME=method"
 operator|+
-name|method_number
+name|methodNumber
 operator|+
 literal|">"
 operator|+
@@ -729,11 +729,11 @@ name|className
 operator|+
 literal|"_code.html#method"
 operator|+
-name|method_number
+name|methodNumber
 operator|+
 literal|" TARGET=Code>"
 operator|+
-name|html_name
+name|htmlName
 operator|+
 literal|"</A></TD>\n<TD>("
 argument_list|)
@@ -815,7 +815,7 @@ name|i
 operator|++
 control|)
 block|{
-name|attribute_html
+name|attributeHtml
 operator|.
 name|writeAttribute
 argument_list|(
@@ -826,13 +826,13 @@ index|]
 argument_list|,
 literal|"method"
 operator|+
-name|method_number
+name|methodNumber
 operator|+
 literal|"@"
 operator|+
 name|i
 argument_list|,
-name|method_number
+name|methodNumber
 argument_list|)
 expr_stmt|;
 specifier|final
@@ -953,7 +953,7 @@ block|{
 specifier|final
 name|Attribute
 index|[]
-name|c_a
+name|attributeArray
 init|=
 operator|(
 operator|(
@@ -977,7 +977,7 @@ literal|0
 init|;
 name|j
 operator|<
-name|c_a
+name|attributeArray
 operator|.
 name|length
 condition|;
@@ -985,18 +985,18 @@ name|j
 operator|++
 control|)
 block|{
-name|attribute_html
+name|attributeHtml
 operator|.
 name|writeAttribute
 argument_list|(
-name|c_a
+name|attributeArray
 index|[
 name|j
 index|]
 argument_list|,
 literal|"method"
 operator|+
-name|method_number
+name|methodNumber
 operator|+
 literal|"@"
 operator|+
@@ -1006,7 +1006,7 @@ literal|"@"
 operator|+
 name|j
 argument_list|,
-name|method_number
+name|methodNumber
 argument_list|)
 expr_stmt|;
 block|}
