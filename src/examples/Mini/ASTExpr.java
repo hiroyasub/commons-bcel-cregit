@@ -709,8 +709,7 @@ expr_stmt|;
 comment|// !
 block|}
 block|}
-else|else
-block|{
+if|else
 comment|// Compute expected type
 if|if
 condition|(
@@ -785,7 +784,6 @@ name|type
 operator|=
 name|T_BOOLEAN
 expr_stmt|;
-block|}
 block|}
 comment|// Get type of subexpressions
 for|for
