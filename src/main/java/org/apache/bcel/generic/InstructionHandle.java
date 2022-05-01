@@ -96,11 +96,7 @@ name|InstructionHandle
 index|[]
 name|EMPTY_ARRAY
 init|=
-operator|new
-name|InstructionHandle
-index|[
-literal|0
-index|]
+block|{}
 decl_stmt|;
 comment|/**      * Empty array.      */
 specifier|static
@@ -109,11 +105,7 @@ name|InstructionTargeter
 index|[]
 name|EMPTY_INSTRUCTION_TARGETER_ARRAY
 init|=
-operator|new
-name|InstructionTargeter
-index|[
-literal|0
-index|]
+block|{}
 decl_stmt|;
 specifier|private
 name|InstructionHandle
