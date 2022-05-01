@@ -495,14 +495,12 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-else|else
-block|{
-comment|// add file name to list
-if|if
+if|else if
 condition|(
 name|exclude
 condition|)
 block|{
+comment|// add file name to list
 name|exclude_name
 operator|.
 name|add
@@ -520,7 +518,6 @@ argument_list|(
 name|arg
 argument_list|)
 expr_stmt|;
-block|}
 block|}
 block|}
 if|if
