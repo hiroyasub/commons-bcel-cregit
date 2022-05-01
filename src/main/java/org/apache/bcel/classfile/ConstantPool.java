@@ -1038,6 +1038,7 @@ name|length
 argument_list|)
 throw|;
 block|}
+specifier|final
 name|Constant
 name|ret
 init|=
@@ -1085,6 +1086,7 @@ parameter_list|)
 throws|throws
 name|ClassFormatException
 block|{
+specifier|final
 name|Constant
 name|c
 init|=
