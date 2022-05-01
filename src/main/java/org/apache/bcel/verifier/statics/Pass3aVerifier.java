@@ -2822,9 +2822,7 @@ literal|"' - this is only supported in JDK 1.5 and higher."
 argument_list|)
 expr_stmt|;
 block|}
-else|else
-block|{
-if|if
+if|else if
 condition|(
 operator|!
 operator|(
@@ -2856,7 +2854,6 @@ operator|+
 literal|"'."
 argument_list|)
 expr_stmt|;
-block|}
 block|}
 block|}
 comment|/** Checks if the constraints of operands of the said instruction(s) are satisfied. */
@@ -6497,10 +6494,7 @@ name|equals
 argument_list|(
 name|jc
 argument_list|)
-condition|)
-block|{
-if|if
-condition|(
+operator|&&
 operator|!
 name|o
 operator|.
@@ -6672,7 +6666,6 @@ operator|+
 literal|"' with proper signature not declared in superclass hierarchy."
 argument_list|)
 expr_stmt|;
-block|}
 block|}
 block|}
 block|}
