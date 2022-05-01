@@ -273,7 +273,7 @@ name|index
 decl_stmt|,
 name|old_index
 decl_stmt|;
-name|StringBuffer
+name|StringBuilder
 name|buf
 decl_stmt|;
 comment|// Loop through constant pool
@@ -346,7 +346,7 @@ comment|// `old' found in str
 name|buf
 operator|=
 operator|new
-name|StringBuffer
+name|StringBuilder
 argument_list|()
 expr_stmt|;
 comment|// target buffer
