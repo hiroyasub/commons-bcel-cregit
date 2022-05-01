@@ -104,7 +104,7 @@ specifier|static
 specifier|final
 name|String
 index|[]
-name|short_names
+name|shortNames
 init|=
 block|{
 literal|"C"
@@ -127,7 +127,7 @@ specifier|static
 specifier|final
 name|MethodObject
 index|[]
-name|append_mos
+name|appendMethodObjects
 init|=
 block|{
 operator|new
@@ -2074,7 +2074,7 @@ block|{
 return|return
 name|createInvoke
 argument_list|(
-name|append_mos
+name|appendMethodObjects
 index|[
 literal|0
 index|]
@@ -2133,7 +2133,7 @@ case|:
 return|return
 name|createInvoke
 argument_list|(
-name|append_mos
+name|appendMethodObjects
 index|[
 name|t
 index|]
@@ -2156,7 +2156,7 @@ case|:
 return|return
 name|createInvoke
 argument_list|(
-name|append_mos
+name|appendMethodObjects
 index|[
 literal|1
 index|]
@@ -2262,7 +2262,7 @@ name|name
 init|=
 literal|"org.apache.bcel.generic."
 operator|+
-name|short_names
+name|shortNames
 index|[
 name|src
 operator|-
@@ -2273,7 +2273,7 @@ index|]
 operator|+
 literal|"2"
 operator|+
-name|short_names
+name|shortNames
 index|[
 name|dest
 operator|-

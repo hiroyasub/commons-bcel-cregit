@@ -68,7 +68,7 @@ name|String
 argument_list|,
 name|JavaClass
 argument_list|>
-name|_loadedClasses
+name|loadedClasses
 init|=
 operator|new
 name|HashMap
@@ -98,7 +98,7 @@ name|void
 name|clear
 parameter_list|()
 block|{
-name|_loadedClasses
+name|loadedClasses
 operator|.
 name|clear
 argument_list|()
@@ -117,7 +117,7 @@ name|className
 parameter_list|)
 block|{
 return|return
-name|_loadedClasses
+name|loadedClasses
 operator|.
 name|get
 argument_list|(
@@ -137,7 +137,7 @@ name|JavaClass
 name|javaClass
 parameter_list|)
 block|{
-name|_loadedClasses
+name|loadedClasses
 operator|.
 name|remove
 argument_list|(
@@ -160,7 +160,7 @@ name|JavaClass
 name|javaClass
 parameter_list|)
 block|{
-name|_loadedClasses
+name|loadedClasses
 operator|.
 name|put
 argument_list|(

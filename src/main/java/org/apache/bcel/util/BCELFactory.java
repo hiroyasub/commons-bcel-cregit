@@ -535,17 +535,17 @@ decl_stmt|;
 specifier|private
 specifier|final
 name|MethodGen
-name|_mg
+name|methodGen
 decl_stmt|;
 specifier|private
 specifier|final
 name|PrintWriter
-name|_out
+name|printWriter
 decl_stmt|;
 specifier|private
 specifier|final
 name|ConstantPoolGen
-name|_cp
+name|constantPoolGen
 decl_stmt|;
 specifier|private
 specifier|final
@@ -587,18 +587,18 @@ name|PrintWriter
 name|out
 parameter_list|)
 block|{
-name|_mg
+name|methodGen
 operator|=
 name|mg
 expr_stmt|;
-name|_cp
+name|constantPoolGen
 operator|=
 name|mg
 operator|.
 name|getConstantPool
 argument_list|()
 expr_stmt|;
-name|_out
+name|printWriter
 operator|=
 name|out
 expr_stmt|;
@@ -720,7 +720,7 @@ operator|+
 literal|"\")"
 expr_stmt|;
 block|}
-name|_out
+name|printWriter
 operator|.
 name|println
 argument_list|(
@@ -740,13 +740,13 @@ block|{
 if|if
 condition|(
 operator|!
-name|_mg
+name|methodGen
 operator|.
 name|isAbstract
 argument_list|()
 operator|&&
 operator|!
-name|_mg
+name|methodGen
 operator|.
 name|isNative
 argument_list|()
@@ -757,7 +757,7 @@ control|(
 name|InstructionHandle
 name|ih
 init|=
-name|_mg
+name|methodGen
 operator|.
 name|getInstructionList
 argument_list|()
@@ -819,7 +819,7 @@ operator|instanceof
 name|BranchInstruction
 condition|)
 block|{
-name|_out
+name|printWriter
 operator|.
 name|println
 argument_list|(
@@ -836,7 +836,7 @@ expr_stmt|;
 block|}
 else|else
 block|{
-name|_out
+name|printWriter
 operator|.
 name|print
 argument_list|(
@@ -854,7 +854,7 @@ block|}
 block|}
 else|else
 block|{
-name|_out
+name|printWriter
 operator|.
 name|print
 argument_list|(
@@ -939,7 +939,7 @@ operator|+
 name|pos
 decl_stmt|;
 name|int
-name|t_pos
+name|targetPos
 init|=
 name|bh
 operator|.
@@ -949,7 +949,7 @@ operator|.
 name|getPosition
 argument_list|()
 decl_stmt|;
-name|_out
+name|printWriter
 operator|.
 name|println
 argument_list|(
@@ -959,7 +959,7 @@ name|name
 operator|+
 literal|".setTarget(ih_"
 operator|+
-name|t_pos
+name|targetPos
 operator|+
 literal|");"
 argument_list|)
@@ -1003,7 +1003,7 @@ name|j
 operator|++
 control|)
 block|{
-name|t_pos
+name|targetPos
 operator|=
 name|ihs
 index|[
@@ -1013,7 +1013,7 @@ operator|.
 name|getPosition
 argument_list|()
 expr_stmt|;
-name|_out
+name|printWriter
 operator|.
 name|println
 argument_list|(
@@ -1027,7 +1027,7 @@ name|j
 operator|+
 literal|", ih_"
 operator|+
-name|t_pos
+name|targetPos
 operator|+
 literal|");"
 argument_list|)
@@ -1046,7 +1046,7 @@ name|CodeExceptionGen
 index|[]
 name|handlers
 init|=
-name|_mg
+name|methodGen
 operator|.
 name|getExceptionHandlers
 argument_list|()
@@ -1083,7 +1083,7 @@ name|getCatchType
 argument_list|()
 argument_list|)
 decl_stmt|;
-name|_out
+name|printWriter
 operator|.
 name|println
 argument_list|(
@@ -1164,7 +1164,7 @@ operator|)
 operator|.
 name|getType
 argument_list|(
-name|_cp
+name|constantPoolGen
 argument_list|)
 expr_stmt|;
 block|}
@@ -1212,7 +1212,7 @@ name|Const
 operator|.
 name|NEW
 case|:
-name|_out
+name|printWriter
 operator|.
 name|println
 argument_list|(
@@ -1280,7 +1280,7 @@ name|getBasicType
 argument_list|()
 expr_stmt|;
 block|}
-name|_out
+name|printWriter
 operator|.
 name|println
 argument_list|(
@@ -1341,7 +1341,7 @@ name|i
 operator|.
 name|getType
 argument_list|(
-name|_cp
+name|constantPoolGen
 argument_list|)
 decl_stmt|;
 specifier|final
@@ -1358,7 +1358,7 @@ literal|"Load"
 else|:
 literal|"Store"
 decl_stmt|;
-name|_out
+name|printWriter
 operator|.
 name|println
 argument_list|(
@@ -1523,7 +1523,7 @@ argument_list|(
 literal|" }"
 argument_list|)
 expr_stmt|;
-name|_out
+name|printWriter
 operator|.
 name|print
 argument_list|(
@@ -1569,7 +1569,7 @@ name|i
 operator|++
 control|)
 block|{
-name|_out
+name|printWriter
 operator|.
 name|print
 argument_list|(
@@ -1587,7 +1587,7 @@ operator|-
 literal|1
 condition|)
 block|{
-name|_out
+name|printWriter
 operator|.
 name|print
 argument_list|(
@@ -1596,7 +1596,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-name|_out
+name|printWriter
 operator|.
 name|println
 argument_list|(
@@ -1649,7 +1649,7 @@ operator|=
 literal|"null"
 expr_stmt|;
 block|}
-name|_out
+name|printWriter
 operator|.
 name|println
 argument_list|(
@@ -1689,7 +1689,7 @@ name|hasTargeters
 argument_list|()
 condition|)
 block|{
-name|_out
+name|printWriter
 operator|.
 name|println
 argument_list|(
@@ -1707,7 +1707,7 @@ expr_stmt|;
 block|}
 else|else
 block|{
-name|_out
+name|printWriter
 operator|.
 name|println
 argument_list|(
@@ -1739,10 +1739,10 @@ name|i
 operator|.
 name|getType
 argument_list|(
-name|_cp
+name|constantPoolGen
 argument_list|)
 decl_stmt|;
-name|_out
+name|printWriter
 operator|.
 name|println
 argument_list|(
@@ -1801,24 +1801,24 @@ argument_list|()
 decl_stmt|;
 specifier|final
 name|String
-name|class_name
+name|className
 init|=
 name|i
 operator|.
 name|getClassName
 argument_list|(
-name|_cp
+name|constantPoolGen
 argument_list|)
 decl_stmt|;
 specifier|final
 name|String
-name|field_name
+name|fieldName
 init|=
 name|i
 operator|.
 name|getFieldName
 argument_list|(
-name|_cp
+name|constantPoolGen
 argument_list|)
 decl_stmt|;
 specifier|final
@@ -1829,20 +1829,20 @@ name|i
 operator|.
 name|getFieldType
 argument_list|(
-name|_cp
+name|constantPoolGen
 argument_list|)
 decl_stmt|;
-name|_out
+name|printWriter
 operator|.
 name|println
 argument_list|(
 literal|"il.append(_factory.createFieldAccess(\""
 operator|+
-name|class_name
+name|className
 operator|+
 literal|"\", \""
 operator|+
-name|field_name
+name|fieldName
 operator|+
 literal|"\", "
 operator|+
@@ -1894,10 +1894,10 @@ name|i
 operator|.
 name|getType
 argument_list|(
-name|_cp
+name|constantPoolGen
 argument_list|)
 decl_stmt|;
-name|_out
+name|printWriter
 operator|.
 name|println
 argument_list|(
@@ -1959,7 +1959,7 @@ operator|)
 condition|)
 block|{
 comment|// Handled below
-name|_out
+name|printWriter
 operator|.
 name|println
 argument_list|(
@@ -2010,24 +2010,24 @@ argument_list|()
 decl_stmt|;
 specifier|final
 name|String
-name|class_name
+name|className
 init|=
 name|i
 operator|.
 name|getClassName
 argument_list|(
-name|_cp
+name|constantPoolGen
 argument_list|)
 decl_stmt|;
 specifier|final
 name|String
-name|method_name
+name|methodName
 init|=
 name|i
 operator|.
 name|getMethodName
 argument_list|(
-name|_cp
+name|constantPoolGen
 argument_list|)
 decl_stmt|;
 specifier|final
@@ -2038,7 +2038,7 @@ name|i
 operator|.
 name|getReturnType
 argument_list|(
-name|_cp
+name|constantPoolGen
 argument_list|)
 decl_stmt|;
 specifier|final
@@ -2050,20 +2050,20 @@ name|i
 operator|.
 name|getArgumentTypes
 argument_list|(
-name|_cp
+name|constantPoolGen
 argument_list|)
 decl_stmt|;
-name|_out
+name|printWriter
 operator|.
 name|println
 argument_list|(
 literal|"il.append(_factory.createInvoke(\""
 operator|+
-name|class_name
+name|className
 operator|+
 literal|"\", \""
 operator|+
-name|method_name
+name|methodName
 operator|+
 literal|"\", "
 operator|+
@@ -2122,7 +2122,7 @@ name|i
 operator|.
 name|getValue
 argument_list|(
-name|_cp
+name|constantPoolGen
 argument_list|)
 argument_list|)
 expr_stmt|;
@@ -2144,7 +2144,7 @@ name|i
 operator|.
 name|getValue
 argument_list|(
-name|_cp
+name|constantPoolGen
 argument_list|)
 argument_list|)
 expr_stmt|;
@@ -2177,7 +2177,7 @@ name|i
 operator|.
 name|getType
 argument_list|(
-name|_cp
+name|constantPoolGen
 argument_list|)
 decl_stmt|;
 if|if
@@ -2189,7 +2189,7 @@ operator|.
 name|IINC
 condition|)
 block|{
-name|_out
+name|printWriter
 operator|.
 name|println
 argument_list|(
@@ -2232,7 +2232,7 @@ literal|"Load"
 else|:
 literal|"Store"
 decl_stmt|;
-name|_out
+name|printWriter
 operator|.
 name|println
 argument_list|(
@@ -2272,7 +2272,7 @@ name|RET
 name|i
 parameter_list|)
 block|{
-name|_out
+name|printWriter
 operator|.
 name|println
 argument_list|(
@@ -2306,10 +2306,10 @@ name|i
 operator|.
 name|getType
 argument_list|(
-name|_cp
+name|constantPoolGen
 argument_list|)
 decl_stmt|;
-name|_out
+name|printWriter
 operator|.
 name|println
 argument_list|(

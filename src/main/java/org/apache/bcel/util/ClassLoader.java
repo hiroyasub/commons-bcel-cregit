@@ -204,7 +204,7 @@ specifier|private
 specifier|final
 name|String
 index|[]
-name|ignored_packages
+name|ignoredPackages
 decl_stmt|;
 specifier|private
 name|Repository
@@ -246,7 +246,7 @@ argument_list|)
 expr_stmt|;
 name|this
 operator|.
-name|ignored_packages
+name|ignoredPackages
 operator|=
 name|DEFAULT_IGNORED_PACKAGES
 expr_stmt|;
@@ -307,7 +307,7 @@ parameter_list|)
 block|{
 name|this
 operator|.
-name|ignored_packages
+name|ignoredPackages
 operator|=
 name|ignored_packages
 expr_stmt|;
@@ -532,7 +532,7 @@ specifier|final
 name|String
 name|ignored_package
 range|:
-name|ignored_packages
+name|ignoredPackages
 control|)
 block|{
 if|if

@@ -281,7 +281,7 @@ block|{
 specifier|private
 specifier|final
 name|String
-name|class_name
+name|className
 decl_stmt|;
 comment|// name of current class
 specifier|private
@@ -292,17 +292,17 @@ decl_stmt|;
 comment|// file to write to
 specifier|private
 name|int
-name|attr_count
+name|attrCount
 decl_stmt|;
 specifier|private
 specifier|final
 name|ConstantHTML
-name|constant_html
+name|constantHtml
 decl_stmt|;
 specifier|private
 specifier|final
 name|ConstantPool
-name|constant_pool
+name|constantPool
 decl_stmt|;
 name|AttributeHTML
 parameter_list|(
@@ -331,19 +331,19 @@ name|IOException
 block|{
 name|this
 operator|.
-name|class_name
+name|className
 operator|=
 name|class_name
 expr_stmt|;
 name|this
 operator|.
-name|constant_pool
+name|constantPool
 operator|=
 name|constant_pool
 expr_stmt|;
 name|this
 operator|.
-name|constant_html
+name|constantHtml
 operator|=
 name|constant_html
 expr_stmt|;
@@ -429,7 +429,7 @@ block|{
 return|return
 literal|"<A HREF=\""
 operator|+
-name|class_name
+name|className
 operator|+
 literal|"_code.html#code"
 operator|+
@@ -507,13 +507,13 @@ condition|)
 block|{
 return|return;
 block|}
-name|attr_count
+name|attrCount
 operator|++
 expr_stmt|;
 comment|// Increment number of attributes found so far
 if|if
 condition|(
-name|attr_count
+name|attrCount
 operator|%
 literal|2
 operator|==
@@ -548,7 +548,7 @@ name|anchor
 operator|+
 literal|"\">"
 operator|+
-name|attr_count
+name|attrCount
 operator|+
 literal|" "
 operator|+
@@ -603,7 +603,7 @@ argument_list|()
 operator|+
 literal|"</LI>\n<LI><A HREF=\""
 operator|+
-name|class_name
+name|className
 operator|+
 literal|"_code.html#method"
 operator|+
@@ -682,7 +682,7 @@ name|printWriter
 operator|.
 name|print
 argument_list|(
-name|constant_html
+name|constantHtml
 operator|.
 name|referenceConstant
 argument_list|(
@@ -779,7 +779,7 @@ name|print
 argument_list|(
 literal|"<UL><LI><A HREF=\""
 operator|+
-name|class_name
+name|className
 operator|+
 literal|"_cp.html#cp"
 operator|+
@@ -817,7 +817,7 @@ name|print
 argument_list|(
 literal|"<UL><LI><A HREF=\""
 operator|+
-name|class_name
+name|className
 operator|+
 literal|"_cp.html#cp"
 operator|+
@@ -874,7 +874,7 @@ name|print
 argument_list|(
 literal|"<LI><A HREF=\""
 operator|+
-name|class_name
+name|className
 operator|+
 literal|"_cp.html#cp"
 operator|+
@@ -1041,7 +1041,7 @@ operator|(
 operator|(
 name|ConstantUtf8
 operator|)
-name|constant_pool
+name|constantPool
 operator|.
 name|getConstant
 argument_list|(
@@ -1118,7 +1118,7 @@ literal|"<BR>Valid from lines "
 operator|+
 literal|"<A HREF=\""
 operator|+
-name|class_name
+name|className
 operator|+
 literal|"_code.html#code"
 operator|+
@@ -1136,7 +1136,7 @@ literal|"</A> to "
 operator|+
 literal|"<A HREF=\""
 operator|+
-name|class_name
+name|className
 operator|+
 literal|"_code.html#code"
 operator|+
@@ -1227,7 +1227,7 @@ operator|(
 operator|(
 name|ConstantUtf8
 operator|)
-name|constant_pool
+name|constantPool
 operator|.
 name|getConstant
 argument_list|(
@@ -1272,7 +1272,7 @@ name|access
 operator|+
 literal|"</FONT> "
 operator|+
-name|constant_html
+name|constantHtml
 operator|.
 name|referenceConstant
 argument_list|(
@@ -1284,7 +1284,7 @@ argument_list|)
 operator|+
 literal|" in&nbsp;class "
 operator|+
-name|constant_html
+name|constantHtml
 operator|.
 name|referenceConstant
 argument_list|(
