@@ -1374,9 +1374,7 @@ literal|"ACC_VARARGS | "
 argument_list|)
 expr_stmt|;
 block|}
-else|else
-block|{
-if|if
+if|else if
 condition|(
 name|i
 operator|<
@@ -1438,7 +1436,6 @@ name|pow
 argument_list|)
 argument_list|)
 expr_stmt|;
-block|}
 block|}
 block|}
 name|pow
