@@ -560,7 +560,6 @@ name|maxNextCharInd
 operator|+=
 name|i
 expr_stmt|;
-return|return;
 block|}
 catch|catch
 parameter_list|(
