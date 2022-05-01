@@ -158,11 +158,11 @@ name|toString
 parameter_list|()
 block|{
 specifier|final
-name|StringBuffer
+name|StringBuilder
 name|buf
 init|=
 operator|new
-name|StringBuffer
+name|StringBuilder
 argument_list|()
 decl_stmt|;
 for|for
@@ -270,6 +270,8 @@ return|return
 name|name
 return|;
 block|}
+annotation|@
+name|Override
 specifier|public
 name|String
 name|getHashKey
@@ -279,6 +281,8 @@ return|return
 name|fun_name
 return|;
 block|}
+annotation|@
+name|Override
 specifier|public
 name|int
 name|getLine
@@ -288,6 +292,8 @@ return|return
 name|line
 return|;
 block|}
+annotation|@
+name|Override
 specifier|public
 name|int
 name|getColumn
