@@ -224,8 +224,9 @@ operator|.
 name|CONSTANT_Double
 case|:
 return|return
-operator|new
 name|Double
+operator|.
+name|valueOf
 argument_list|(
 operator|(
 operator|(
