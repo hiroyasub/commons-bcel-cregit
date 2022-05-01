@@ -197,19 +197,19 @@ block|{
 specifier|private
 specifier|static
 name|String
-name|class_package
+name|classPackage
 decl_stmt|;
 comment|// name of package, unclean to make it static, but ...
 specifier|private
 specifier|static
 name|String
-name|class_name
+name|className
 decl_stmt|;
 comment|// name of current class, dito
 specifier|private
 specifier|static
 name|ConstantPool
-name|constant_pool
+name|constantPool
 decl_stmt|;
 specifier|private
 specifier|static
@@ -218,7 +218,7 @@ name|Set
 argument_list|<
 name|String
 argument_list|>
-name|basic_types
+name|basicTypes
 init|=
 operator|new
 name|HashSet
@@ -227,63 +227,63 @@ argument_list|()
 decl_stmt|;
 static|static
 block|{
-name|basic_types
+name|basicTypes
 operator|.
 name|add
 argument_list|(
 literal|"int"
 argument_list|)
 expr_stmt|;
-name|basic_types
+name|basicTypes
 operator|.
 name|add
 argument_list|(
 literal|"short"
 argument_list|)
 expr_stmt|;
-name|basic_types
+name|basicTypes
 operator|.
 name|add
 argument_list|(
 literal|"boolean"
 argument_list|)
 expr_stmt|;
-name|basic_types
+name|basicTypes
 operator|.
 name|add
 argument_list|(
 literal|"void"
 argument_list|)
 expr_stmt|;
-name|basic_types
+name|basicTypes
 operator|.
 name|add
 argument_list|(
 literal|"char"
 argument_list|)
 expr_stmt|;
-name|basic_types
+name|basicTypes
 operator|.
 name|add
 argument_list|(
 literal|"byte"
 argument_list|)
 expr_stmt|;
-name|basic_types
+name|basicTypes
 operator|.
 name|add
 argument_list|(
 literal|"long"
 argument_list|)
 expr_stmt|;
-name|basic_types
+name|basicTypes
 operator|.
 name|add
 argument_list|(
 literal|"double"
 argument_list|)
 expr_stmt|;
-name|basic_types
+name|basicTypes
 operator|.
 name|add
 argument_list|(
@@ -307,7 +307,7 @@ block|{
 specifier|final
 name|String
 index|[]
-name|file_name
+name|fileName
 init|=
 operator|new
 name|String
@@ -328,12 +328,12 @@ init|=
 literal|null
 decl_stmt|;
 name|JavaClass
-name|java_class
+name|javaClass
 init|=
 literal|null
 decl_stmt|;
 name|String
-name|zip_file
+name|zipFile
 init|=
 literal|null
 decl_stmt|;
@@ -499,7 +499,7 @@ literal|"-zip"
 argument_list|)
 condition|)
 block|{
-name|zip_file
+name|zipFile
 operator|=
 name|argv
 index|[
@@ -528,7 +528,7 @@ block|}
 block|}
 else|else
 block|{
-name|file_name
+name|fileName
 index|[
 name|files
 operator|++
@@ -584,7 +584,7 @@ name|print
 argument_list|(
 literal|"Processing "
 operator|+
-name|file_name
+name|fileName
 index|[
 name|i
 index|]
@@ -594,7 +594,7 @@ argument_list|)
 expr_stmt|;
 if|if
 condition|(
-name|zip_file
+name|zipFile
 operator|==
 literal|null
 condition|)
@@ -604,7 +604,7 @@ operator|=
 operator|new
 name|ClassParser
 argument_list|(
-name|file_name
+name|fileName
 index|[
 name|i
 index|]
@@ -619,9 +619,9 @@ operator|=
 operator|new
 name|ClassParser
 argument_list|(
-name|zip_file
+name|zipFile
 argument_list|,
-name|file_name
+name|fileName
 index|[
 name|i
 index|]
@@ -629,7 +629,7 @@ argument_list|)
 expr_stmt|;
 comment|// Create parser object from zip file
 block|}
-name|java_class
+name|javaClass
 operator|=
 name|parser
 operator|.
@@ -639,7 +639,7 @@ expr_stmt|;
 operator|new
 name|Class2HTML
 argument_list|(
-name|java_class
+name|javaClass
 argument_list|,
 name|dir
 argument_list|)
@@ -669,7 +669,7 @@ block|{
 name|String
 name|str
 init|=
-name|constant_pool
+name|constantPool
 operator|.
 name|getConstantString
 argument_list|(
@@ -697,7 +697,7 @@ name|compactClassName
 argument_list|(
 name|str
 argument_list|,
-name|class_package
+name|classPackage
 operator|+
 literal|"."
 argument_list|,
@@ -707,7 +707,7 @@ expr_stmt|;
 return|return
 literal|"<A HREF=\""
 operator|+
-name|class_name
+name|className
 operator|+
 literal|"_cp.html#cp"
 operator|+
@@ -730,7 +730,7 @@ name|type
 parameter_list|)
 block|{
 name|String
-name|short_type
+name|shortType
 init|=
 name|Utility
 operator|.
@@ -739,15 +739,15 @@ argument_list|(
 name|type
 argument_list|)
 decl_stmt|;
-name|short_type
+name|shortType
 operator|=
 name|Utility
 operator|.
 name|compactClassName
 argument_list|(
-name|short_type
+name|shortType
 argument_list|,
-name|class_package
+name|classPackage
 operator|+
 literal|"."
 argument_list|,
@@ -767,7 +767,7 @@ argument_list|)
 decl_stmt|;
 comment|// Type is an array?
 name|String
-name|base_type
+name|baseType
 init|=
 name|type
 decl_stmt|;
@@ -779,7 +779,7 @@ operator|-
 literal|1
 condition|)
 block|{
-name|base_type
+name|baseType
 operator|=
 name|type
 operator|.
@@ -795,11 +795,11 @@ block|}
 comment|// test for basic type
 if|if
 condition|(
-name|basic_types
+name|basicTypes
 operator|.
 name|contains
 argument_list|(
-name|base_type
+name|baseType
 argument_list|)
 condition|)
 block|{
@@ -814,11 +814,11 @@ block|}
 return|return
 literal|"<A HREF=\""
 operator|+
-name|base_type
+name|baseType
 operator|+
 literal|".html\" TARGET=_top>"
 operator|+
-name|short_type
+name|shortType
 operator|+
 literal|"</A>"
 return|;
@@ -937,7 +937,7 @@ block|}
 specifier|private
 specifier|final
 name|JavaClass
-name|java_class
+name|javaClass
 decl_stmt|;
 comment|// current class object
 specifier|private
@@ -945,13 +945,13 @@ specifier|final
 name|String
 name|dir
 decl_stmt|;
-comment|/**      * Write contents of the given JavaClass into HTML files.      *      * @param java_class The class to write      * @param dir The directory to put the files in      */
+comment|/**      * Write contents of the given JavaClass into HTML files.      *      * @param javaClass The class to write      * @param dir The directory to put the files in      */
 specifier|public
 name|Class2HTML
 parameter_list|(
 specifier|final
 name|JavaClass
-name|java_class
+name|javaClass
 parameter_list|,
 specifier|final
 name|String
@@ -965,16 +965,16 @@ name|Method
 index|[]
 name|methods
 init|=
-name|java_class
+name|javaClass
 operator|.
 name|getMethods
 argument_list|()
 decl_stmt|;
 name|this
 operator|.
-name|java_class
+name|javaClass
 operator|=
-name|java_class
+name|javaClass
 expr_stmt|;
 name|this
 operator|.
@@ -982,17 +982,17 @@ name|dir
 operator|=
 name|dir
 expr_stmt|;
-name|class_name
+name|className
 operator|=
-name|java_class
+name|javaClass
 operator|.
 name|getClassName
 argument_list|()
 expr_stmt|;
 comment|// Remember full name
-name|constant_pool
+name|constantPool
 operator|=
-name|java_class
+name|javaClass
 operator|.
 name|getConstantPool
 argument_list|()
@@ -1002,7 +1002,7 @@ specifier|final
 name|int
 name|index
 init|=
-name|class_name
+name|className
 operator|.
 name|lastIndexOf
 argument_list|(
@@ -1017,9 +1017,9 @@ operator|-
 literal|1
 condition|)
 block|{
-name|class_package
+name|classPackage
 operator|=
-name|class_name
+name|className
 operator|.
 name|substring
 argument_list|(
@@ -1031,7 +1031,7 @@ expr_stmt|;
 block|}
 else|else
 block|{
-name|class_package
+name|classPackage
 operator|=
 literal|""
 expr_stmt|;
@@ -1039,37 +1039,37 @@ comment|// default package
 block|}
 specifier|final
 name|ConstantHTML
-name|constant_html
+name|constantHtml
 init|=
 operator|new
 name|ConstantHTML
 argument_list|(
 name|dir
 argument_list|,
-name|class_name
+name|className
 argument_list|,
-name|class_package
+name|classPackage
 argument_list|,
 name|methods
 argument_list|,
-name|constant_pool
+name|constantPool
 argument_list|)
 decl_stmt|;
 comment|/* Attributes can't be written in one step, so we just open a file          * which will be written consequently.          */
 specifier|final
 name|AttributeHTML
-name|attribute_html
+name|attributeHtml
 init|=
 operator|new
 name|AttributeHTML
 argument_list|(
 name|dir
 argument_list|,
-name|class_name
+name|className
 argument_list|,
-name|constant_pool
+name|constantPool
 argument_list|,
-name|constant_html
+name|constantHtml
 argument_list|)
 decl_stmt|;
 operator|new
@@ -1077,24 +1077,24 @@ name|MethodHTML
 argument_list|(
 name|dir
 argument_list|,
-name|class_name
+name|className
 argument_list|,
 name|methods
 argument_list|,
-name|java_class
+name|javaClass
 operator|.
 name|getFields
 argument_list|()
 argument_list|,
-name|constant_html
+name|constantHtml
 argument_list|,
-name|attribute_html
+name|attributeHtml
 argument_list|)
 expr_stmt|;
 comment|// Write main file (with frames, yuk)
 name|writeMainHTML
 argument_list|(
-name|attribute_html
+name|attributeHtml
 argument_list|)
 expr_stmt|;
 operator|new
@@ -1102,16 +1102,16 @@ name|CodeHTML
 argument_list|(
 name|dir
 argument_list|,
-name|class_name
+name|className
 argument_list|,
 name|methods
 argument_list|,
-name|constant_pool
+name|constantPool
 argument_list|,
-name|constant_html
+name|constantHtml
 argument_list|)
 expr_stmt|;
-name|attribute_html
+name|attributeHtml
 operator|.
 name|close
 argument_list|()
@@ -1123,7 +1123,7 @@ name|writeMainHTML
 parameter_list|(
 specifier|final
 name|AttributeHTML
-name|attribute_html
+name|attributeHtml
 parameter_list|)
 throws|throws
 name|IOException
@@ -1141,7 +1141,7 @@ name|FileOutputStream
 argument_list|(
 name|dir
 operator|+
-name|class_name
+name|className
 operator|+
 literal|".html"
 argument_list|)
@@ -1156,7 +1156,7 @@ literal|"<HTML>\n"
 operator|+
 literal|"<HEAD><TITLE>Documentation for "
 operator|+
-name|class_name
+name|className
 operator|+
 literal|"</TITLE>"
 operator|+
@@ -1168,7 +1168,7 @@ literal|"<FRAMESET BORDER=1 rows=\"80%,*\">\n"
 operator|+
 literal|"<FRAME NAME=\"ConstantPool\" SRC=\""
 operator|+
-name|class_name
+name|className
 operator|+
 literal|"_cp.html"
 operator|+
@@ -1178,7 +1178,7 @@ literal|"MARGINHEIGHT=\"0\" FRAMEBORDER=\"1\" SCROLLING=\"AUTO\">\n"
 operator|+
 literal|"<FRAME NAME=\"Attributes\" SRC=\""
 operator|+
-name|class_name
+name|className
 operator|+
 literal|"_attributes.html"
 operator|+
@@ -1192,7 +1192,7 @@ literal|"<FRAMESET BORDER=1 rows=\"80%,*\">\n"
 operator|+
 literal|"<FRAME NAME=\"Code\" SRC=\""
 operator|+
-name|class_name
+name|className
 operator|+
 literal|"_code.html\"\n MARGINWIDTH=0 "
 operator|+
@@ -1200,7 +1200,7 @@ literal|"MARGINHEIGHT=0 FRAMEBORDER=1 SCROLLING=\"AUTO\">\n"
 operator|+
 literal|"<FRAME NAME=\"Methods\" SRC=\""
 operator|+
-name|class_name
+name|className
 operator|+
 literal|"_methods.html\"\n MARGINWIDTH=0 "
 operator|+
@@ -1215,7 +1215,7 @@ name|Attribute
 index|[]
 name|attributes
 init|=
-name|java_class
+name|javaClass
 operator|.
 name|getAttributes
 argument_list|()
@@ -1237,7 +1237,7 @@ name|i
 operator|++
 control|)
 block|{
-name|attribute_html
+name|attributeHtml
 operator|.
 name|writeAttribute
 argument_list|(
