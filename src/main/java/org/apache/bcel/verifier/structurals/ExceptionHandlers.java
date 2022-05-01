@@ -116,11 +116,7 @@ name|ExceptionHandler
 index|[]
 name|EMPTY_ARRAY
 init|=
-operator|new
-name|ExceptionHandler
-index|[
-literal|0
-index|]
+block|{}
 decl_stmt|;
 comment|/**      * The ExceptionHandler instances. Key: InstructionHandle objects, Values: HashSet<ExceptionHandler> instances.      */
 specifier|private
