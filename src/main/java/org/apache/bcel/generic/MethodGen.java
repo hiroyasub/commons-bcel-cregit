@@ -4641,8 +4641,7 @@ name|stackDepth
 argument_list|)
 expr_stmt|;
 block|}
-else|else
-block|{
+if|else
 comment|// check for instructions that terminate the method.
 if|if
 condition|(
@@ -4675,7 +4674,6 @@ name|ih
 operator|=
 literal|null
 expr_stmt|;
-block|}
 block|}
 comment|// normal case, go to the next instruction.
 if|if
