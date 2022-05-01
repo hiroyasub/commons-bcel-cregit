@@ -367,9 +367,7 @@ literal|"."
 argument_list|)
 expr_stmt|;
 block|}
-else|else
-block|{
-if|if
+if|else if
 condition|(
 operator|!
 operator|(
@@ -485,7 +483,6 @@ operator|.
 name|getName
 argument_list|()
 expr_stmt|;
-block|}
 block|}
 block|}
 if|if
@@ -885,11 +882,11 @@ expr_stmt|;
 block|}
 block|}
 specifier|final
-name|StringBuffer
+name|StringBuilder
 name|call
 init|=
 operator|new
-name|StringBuffer
+name|StringBuilder
 argument_list|(
 name|fname
 operator|+
