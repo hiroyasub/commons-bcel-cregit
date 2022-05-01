@@ -327,7 +327,7 @@ name|close
 argument_list|()
 expr_stmt|;
 block|}
-comment|/**      * Print field of class.      *      * @param field field to print      * @throws java.io.IOException      */
+comment|/**      * Print field of class.      *      * @param field field to print      */
 specifier|private
 name|void
 name|writeField
@@ -336,8 +336,6 @@ specifier|final
 name|Field
 name|field
 parameter_list|)
-throws|throws
-name|IOException
 block|{
 specifier|final
 name|String
