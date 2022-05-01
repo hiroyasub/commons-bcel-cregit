@@ -420,8 +420,9 @@ operator|.
 name|CONSTANT_Float
 case|:
 return|return
-operator|new
 name|Float
+operator|.
+name|valueOf
 argument_list|(
 operator|(
 operator|(
