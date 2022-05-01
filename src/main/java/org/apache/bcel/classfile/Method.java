@@ -234,11 +234,7 @@ name|Method
 index|[]
 name|EMPTY_METHOD_ARRAY
 init|=
-operator|new
-name|Method
-index|[
-literal|0
-index|]
+block|{}
 decl_stmt|;
 comment|/**      * Empty constructor, all attributes have to be defined via `setXXX'      * methods. Use at your own risk.      */
 specifier|public
