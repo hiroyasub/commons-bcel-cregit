@@ -167,6 +167,8 @@ return|return
 name|name
 return|;
 block|}
+annotation|@
+name|Override
 specifier|public
 name|String
 name|getHashKey
@@ -176,6 +178,8 @@ return|return
 name|var_name
 return|;
 block|}
+annotation|@
+name|Override
 specifier|public
 name|int
 name|getLine
@@ -185,6 +189,8 @@ return|return
 name|line
 return|;
 block|}
+annotation|@
+name|Override
 specifier|public
 name|int
 name|getColumn
