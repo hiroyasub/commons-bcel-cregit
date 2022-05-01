@@ -813,8 +813,9 @@ condition|)
 block|{
 name|value
 operator|=
-operator|new
 name|Float
+operator|.
+name|valueOf
 argument_list|(
 name|f
 argument_list|)
@@ -846,8 +847,9 @@ condition|)
 block|{
 name|value
 operator|=
-operator|new
 name|Double
+operator|.
+name|valueOf
 argument_list|(
 name|d
 argument_list|)
