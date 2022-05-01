@@ -240,12 +240,10 @@ specifier|final
 name|FileSystem
 name|fileSystem
 decl_stmt|;
-comment|/**      * Constructs a default instance.      *      * @throws IOException      *             an I/O error occurs accessing the file system      */
+comment|/**      * Constructs a default instance.      */
 specifier|public
 name|ModularRuntimeImage
 parameter_list|()
-throws|throws
-name|IOException
 block|{
 name|this
 argument_list|(
