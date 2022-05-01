@@ -208,10 +208,10 @@ name|boolean
 name|verbose
 decl_stmt|;
 name|boolean
-name|classdep
+name|classDep
 decl_stmt|;
 name|boolean
-name|nocontents
+name|noContents
 decl_stmt|;
 name|boolean
 name|recurse
@@ -228,7 +228,7 @@ name|List
 argument_list|<
 name|String
 argument_list|>
-name|exclude_name
+name|excludeName
 decl_stmt|;
 specifier|public
 specifier|static
@@ -246,7 +246,7 @@ name|List
 argument_list|<
 name|String
 argument_list|>
-name|file_name
+name|fileName
 init|=
 operator|new
 name|ArrayList
@@ -258,7 +258,7 @@ name|List
 argument_list|<
 name|String
 argument_list|>
-name|exclude_name
+name|excludeName
 init|=
 operator|new
 name|ArrayList
@@ -501,7 +501,7 @@ name|exclude
 condition|)
 block|{
 comment|// add file name to list
-name|exclude_name
+name|excludeName
 operator|.
 name|add
 argument_list|(
@@ -511,7 +511,7 @@ expr_stmt|;
 block|}
 else|else
 block|{
-name|file_name
+name|fileName
 operator|.
 name|add
 argument_list|(
@@ -522,7 +522,7 @@ block|}
 block|}
 if|if
 condition|(
-name|file_name
+name|fileName
 operator|.
 name|isEmpty
 argument_list|()
@@ -559,7 +559,7 @@ name|nocontents
 argument_list|,
 name|recurse
 argument_list|,
-name|exclude_name
+name|excludeName
 argument_list|)
 decl_stmt|;
 for|for
@@ -568,7 +568,7 @@ specifier|final
 name|String
 name|element
 range|:
-name|file_name
+name|fileName
 control|)
 block|{
 name|name
@@ -602,11 +602,11 @@ name|verbose
 parameter_list|,
 specifier|final
 name|boolean
-name|classdep
+name|classDep
 parameter_list|,
 specifier|final
 name|boolean
-name|nocontents
+name|noContents
 parameter_list|,
 specifier|final
 name|boolean
@@ -617,7 +617,7 @@ name|List
 argument_list|<
 name|String
 argument_list|>
-name|exclude_name
+name|excludeName
 parameter_list|)
 block|{
 name|this
@@ -640,15 +640,15 @@ name|verbose
 expr_stmt|;
 name|this
 operator|.
-name|classdep
+name|classDep
 operator|=
-name|classdep
+name|classDep
 expr_stmt|;
 name|this
 operator|.
-name|nocontents
+name|noContents
 operator|=
-name|nocontents
+name|noContents
 expr_stmt|;
 name|this
 operator|.
@@ -667,9 +667,9 @@ argument_list|()
 expr_stmt|;
 name|this
 operator|.
-name|exclude_name
+name|excludeName
 operator|=
-name|exclude_name
+name|excludeName
 expr_stmt|;
 block|}
 comment|/**      * Print the given class on screen      */
@@ -685,7 +685,7 @@ block|{
 try|try
 block|{
 name|JavaClass
-name|java_class
+name|javaClass
 decl_stmt|;
 if|if
 condition|(
@@ -716,7 +716,7 @@ specifier|final
 name|String
 name|element
 range|:
-name|exclude_name
+name|excludeName
 control|)
 block|{
 if|if
@@ -742,7 +742,7 @@ literal|".class"
 argument_list|)
 condition|)
 block|{
-name|java_class
+name|javaClass
 operator|=
 operator|new
 name|ClassParser
@@ -757,7 +757,7 @@ comment|// May throw IOException
 block|}
 else|else
 block|{
-name|java_class
+name|javaClass
 operator|=
 name|Repository
 operator|.
@@ -769,7 +769,7 @@ expr_stmt|;
 block|}
 if|if
 condition|(
-name|nocontents
+name|noContents
 condition|)
 block|{
 name|System
@@ -778,7 +778,7 @@ name|out
 operator|.
 name|println
 argument_list|(
-name|java_class
+name|javaClass
 operator|.
 name|getClassName
 argument_list|()
@@ -793,7 +793,7 @@ name|out
 operator|.
 name|println
 argument_list|(
-name|java_class
+name|javaClass
 argument_list|)
 expr_stmt|;
 comment|// Dump the contents
@@ -809,7 +809,7 @@ name|out
 operator|.
 name|println
 argument_list|(
-name|java_class
+name|javaClass
 operator|.
 name|getConstantPool
 argument_list|()
@@ -823,7 +823,7 @@ condition|)
 block|{
 name|printCode
 argument_list|(
-name|java_class
+name|javaClass
 operator|.
 name|getMethods
 argument_list|()
@@ -834,12 +834,12 @@ expr_stmt|;
 block|}
 if|if
 condition|(
-name|classdep
+name|classDep
 condition|)
 block|{
 name|printClassDependencies
 argument_list|(
-name|java_class
+name|javaClass
 operator|.
 name|getConstantPool
 argument_list|()
@@ -867,7 +867,7 @@ name|dependencies
 init|=
 name|getClassDependencies
 argument_list|(
-name|java_class
+name|javaClass
 operator|.
 name|getConstantPool
 argument_list|()
