@@ -651,10 +651,7 @@ operator|=
 name|inFrame
 expr_stmt|;
 block|}
-else|else
-block|{
-comment|// if there was an "old" inFrame
-if|if
+if|else if
 condition|(
 name|inF
 operator|.
@@ -670,10 +667,10 @@ name|inFrame
 argument_list|)
 condition|)
 block|{
+comment|// if there was an "old" inFrame
 return|return
 literal|false
 return|;
-block|}
 block|}
 comment|// Now we're sure the inFrame has changed!
 comment|// new inFrame is already merged in, see above.
