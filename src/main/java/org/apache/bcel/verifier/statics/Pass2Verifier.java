@@ -1364,9 +1364,7 @@ literal|" was introduced by JLS 8.4.6 (not vmspec2) and the behavior of the Sun 
 argument_list|)
 expr_stmt|;
 block|}
-else|else
-block|{
-if|if
+if|else if
 condition|(
 operator|!
 name|method
@@ -1388,7 +1386,6 @@ name|getClassName
 argument_list|()
 argument_list|)
 expr_stmt|;
-block|}
 block|}
 block|}
 if|else if
@@ -3840,10 +3837,7 @@ throw|;
 block|}
 block|}
 block|}
-else|else
-block|{
-comment|// isInterface!
-if|if
+if|else if
 condition|(
 operator|!
 name|name
@@ -4049,7 +4043,6 @@ operator|+
 literal|" ACC_NATIVE, ACC_ABSTRACT, ACC_STRICT modifiers set."
 argument_list|)
 throw|;
-block|}
 block|}
 block|}
 block|}
