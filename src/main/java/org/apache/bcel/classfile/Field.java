@@ -228,11 +228,7 @@ name|Field
 index|[]
 name|EMPTY_FIELD_ARRAY
 init|=
-operator|new
-name|Field
-index|[
-literal|0
-index|]
+block|{}
 decl_stmt|;
 comment|/**      * Initialize from another object. Note that both objects use the same      * references (shallow copy). Use clone() for a physical copy.      */
 specifier|public
