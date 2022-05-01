@@ -31,16 +31,6 @@ name|java
 operator|.
 name|io
 operator|.
-name|FileInputStream
-import|;
-end_import
-
-begin_import
-import|import
-name|java
-operator|.
-name|io
-operator|.
 name|ByteArrayOutputStream
 import|;
 end_import
@@ -52,30 +42,6 @@ operator|.
 name|io
 operator|.
 name|IOException
-import|;
-end_import
-
-begin_import
-import|import
-name|java
-operator|.
-name|nio
-operator|.
-name|file
-operator|.
-name|Path
-import|;
-end_import
-
-begin_import
-import|import
-name|java
-operator|.
-name|nio
-operator|.
-name|file
-operator|.
-name|Paths
 import|;
 end_import
 
@@ -106,16 +72,6 @@ operator|.
 name|util
 operator|.
 name|List
-import|;
-end_import
-
-begin_import
-import|import
-name|java
-operator|.
-name|util
-operator|.
-name|Map
 import|;
 end_import
 
@@ -158,22 +114,6 @@ operator|.
 name|exec
 operator|.
 name|DefaultExecutor
-import|;
-end_import
-
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|commons
-operator|.
-name|exec
-operator|.
-name|environment
-operator|.
-name|EnvironmentUtils
 import|;
 end_import
 
@@ -423,9 +363,11 @@ specifier|private
 name|void
 name|testVerify
 parameter_list|(
+specifier|final
 name|String
 name|directory
 parameter_list|,
+specifier|final
 name|String
 name|className
 parameter_list|)
@@ -455,6 +397,7 @@ operator|+
 name|directory
 operator|)
 decl_stmt|;
+specifier|final
 name|File
 name|origFile
 init|=
@@ -470,6 +413,7 @@ operator|+
 literal|".classx"
 argument_list|)
 decl_stmt|;
+specifier|final
 name|File
 name|testFile
 init|=
@@ -522,6 +466,7 @@ expr_stmt|;
 block|}
 catch|catch
 parameter_list|(
+specifier|final
 name|Exception
 name|e
 parameter_list|)
@@ -569,13 +514,16 @@ name|String
 argument_list|>
 name|buildVerifyCommand
 parameter_list|(
+specifier|final
 name|String
 name|className
 parameter_list|,
+specifier|final
 name|String
 name|testDir
 parameter_list|)
 block|{
+specifier|final
 name|List
 argument_list|<
 name|String
@@ -647,6 +595,7 @@ specifier|private
 name|String
 name|run
 parameter_list|(
+specifier|final
 name|List
 argument_list|<
 name|String
@@ -667,6 +616,7 @@ literal|30
 operator|*
 literal|1000
 decl_stmt|;
+specifier|final
 name|String
 index|[]
 name|args
@@ -682,6 +632,7 @@ literal|0
 index|]
 argument_list|)
 decl_stmt|;
+specifier|final
 name|CommandLine
 name|cmdLine
 init|=
@@ -713,6 +664,7 @@ name|length
 argument_list|)
 argument_list|)
 expr_stmt|;
+specifier|final
 name|DefaultExecuteResultHandler
 name|resultHandler
 init|=
@@ -720,6 +672,7 @@ operator|new
 name|DefaultExecuteResultHandler
 argument_list|()
 decl_stmt|;
+specifier|final
 name|DefaultExecutor
 name|executor
 init|=
@@ -760,6 +713,7 @@ operator|new
 name|ByteArrayOutputStream
 argument_list|()
 decl_stmt|;
+specifier|final
 name|PumpStreamHandler
 name|streamHandler
 init|=
@@ -810,6 +764,7 @@ expr_stmt|;
 block|}
 catch|catch
 parameter_list|(
+specifier|final
 name|InterruptedException
 name|e
 parameter_list|)
