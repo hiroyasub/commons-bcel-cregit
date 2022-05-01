@@ -224,10 +224,8 @@ operator|)
 operator|.
 name|referencesClassExact
 argument_list|()
-condition|)
-block|{
-if|if
-condition|(
+operator|&&
+operator|(
 name|this
 operator|.
 name|equals
@@ -259,12 +257,12 @@ operator|.
 name|getClassName
 argument_list|()
 argument_list|)
+operator|)
 condition|)
 block|{
 return|return
 literal|true
 return|;
-block|}
 block|}
 comment|/* If T is an interface type, this must implement interface T.              */
 if|if
@@ -379,10 +377,8 @@ operator|)
 operator|.
 name|referencesInterfaceExact
 argument_list|()
-condition|)
-block|{
-if|if
-condition|(
+operator|&&
+operator|(
 name|this
 operator|.
 name|equals
@@ -414,12 +410,12 @@ operator|.
 name|getClassName
 argument_list|()
 argument_list|)
+operator|)
 condition|)
 block|{
 return|return
 literal|true
 return|;
-block|}
 block|}
 block|}
 comment|/* If this is an array type, namely, the type SC[], that is, an          * array of components of type SC, then:          */
