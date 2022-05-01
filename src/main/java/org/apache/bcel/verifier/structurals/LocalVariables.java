@@ -708,9 +708,7 @@ name|sup
 expr_stmt|;
 block|}
 block|}
-else|else
-block|{
-if|if
+if|else if
 condition|(
 operator|!
 name|locals
@@ -729,7 +727,7 @@ index|]
 argument_list|)
 condition|)
 block|{
-comment|/*TODO                 if ((locals[i] instanceof org.apache.bcel.generic.ReturnaddressType)&&                     (lv.locals[i] instanceof org.apache.bcel.generic.ReturnaddressType)) {                     //System.err.println("merging "+locals[i]+" and "+lv.locals[i]);                     throw new AssertionViolatedException("Merging different ReturnAddresses: '"+locals[i]+"' and '"+lv.locals[i]+"'.");                 } */
+comment|/*TODO             if ((locals[i] instanceof org.apache.bcel.generic.ReturnaddressType)&&                 (lv.locals[i] instanceof org.apache.bcel.generic.ReturnaddressType)) {                 //System.err.println("merging "+locals[i]+" and "+lv.locals[i]);                 throw new AssertionViolatedException("Merging different ReturnAddresses: '"+locals[i]+"' and '"+lv.locals[i]+"'.");             } */
 name|locals
 index|[
 name|i
@@ -739,7 +737,6 @@ name|Type
 operator|.
 name|UNKNOWN
 expr_stmt|;
-block|}
 block|}
 block|}
 catch|catch
