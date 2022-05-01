@@ -296,11 +296,7 @@ name|Type
 index|[]
 name|NO_ARGS
 init|=
-operator|new
-name|Type
-index|[
-literal|0
-index|]
+block|{}
 decl_stmt|;
 specifier|public
 specifier|static
