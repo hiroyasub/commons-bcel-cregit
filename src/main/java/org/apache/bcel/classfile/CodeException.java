@@ -112,11 +112,7 @@ name|CodeException
 index|[]
 name|EMPTY_CODE_EXCEPTION_ARRAY
 init|=
-operator|new
-name|CodeException
-index|[
-literal|0
-index|]
+block|{}
 decl_stmt|;
 comment|/**      * Initialize from another object.      */
 specifier|public
