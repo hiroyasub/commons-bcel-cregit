@@ -252,8 +252,9 @@ name|marks
 operator|.
 name|push
 argument_list|(
-operator|new
 name|Integer
+operator|.
+name|valueOf
 argument_list|(
 name|mk
 argument_list|)
