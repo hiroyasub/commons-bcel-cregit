@@ -21,16 +21,6 @@ name|java
 operator|.
 name|io
 operator|.
-name|FileOutputStream
-import|;
-end_import
-
-begin_import
-import|import
-name|java
-operator|.
-name|io
-operator|.
 name|IOException
 import|;
 end_import
@@ -42,6 +32,18 @@ operator|.
 name|io
 operator|.
 name|PrintWriter
+import|;
+end_import
+
+begin_import
+import|import
+name|java
+operator|.
+name|nio
+operator|.
+name|charset
+operator|.
+name|Charset
 import|;
 end_import
 
@@ -250,7 +252,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Convert code into HTML file.  *  *  */
+comment|/**  * Convert code into HTML file.  */
 end_comment
 
 begin_class
@@ -273,7 +275,7 @@ comment|//    private Method[] methods; // Methods to print
 specifier|private
 specifier|final
 name|PrintWriter
-name|file
+name|printWriter
 decl_stmt|;
 comment|// file to write to
 specifier|private
@@ -312,6 +314,10 @@ parameter_list|,
 specifier|final
 name|ConstantHTML
 name|constant_html
+parameter_list|,
+specifier|final
+name|Charset
+name|charset
 parameter_list|)
 throws|throws
 name|IOException
@@ -335,27 +341,52 @@ name|constantHtml
 operator|=
 name|constant_html
 expr_stmt|;
-name|file
+name|printWriter
 operator|=
 operator|new
 name|PrintWriter
-argument_list|(
-operator|new
-name|FileOutputStream
 argument_list|(
 name|dir
 operator|+
 name|class_name
 operator|+
 literal|"_code.html"
-argument_list|)
+argument_list|,
+name|charset
+operator|.
+name|name
+argument_list|()
 argument_list|)
 expr_stmt|;
-name|file
+name|printWriter
+operator|.
+name|print
+argument_list|(
+literal|"<HTML><head><meta charset=\""
+argument_list|)
+expr_stmt|;
+name|printWriter
+operator|.
+name|print
+argument_list|(
+name|charset
+operator|.
+name|name
+argument_list|()
+argument_list|)
+expr_stmt|;
+name|printWriter
 operator|.
 name|println
 argument_list|(
-literal|"<HTML><BODY BGCOLOR=\"#C0C0C0\">"
+literal|"\"></head>"
+argument_list|)
+expr_stmt|;
+name|printWriter
+operator|.
+name|println
+argument_list|(
+literal|"<BODY BGCOLOR=\"#C0C0C0\">"
 argument_list|)
 expr_stmt|;
 for|for
@@ -386,14 +417,14 @@ name|i
 argument_list|)
 expr_stmt|;
 block|}
-name|file
+name|printWriter
 operator|.
 name|println
 argument_list|(
 literal|"</BODY></HTML>"
 argument_list|)
 expr_stmt|;
-name|file
+name|printWriter
 operator|.
 name|close
 argument_list|()
@@ -3110,7 +3141,7 @@ operator|.
 name|getAttributes
 argument_list|()
 decl_stmt|;
-name|file
+name|printWriter
 operator|.
 name|print
 argument_list|(
@@ -3165,7 +3196,7 @@ name|i
 operator|++
 control|)
 block|{
-name|file
+name|printWriter
 operator|.
 name|print
 argument_list|(
@@ -3191,7 +3222,7 @@ operator|-
 literal|1
 condition|)
 block|{
-name|file
+name|printWriter
 operator|.
 name|print
 argument_list|(
@@ -3200,7 +3231,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-name|file
+name|printWriter
 operator|.
 name|println
 argument_list|(
@@ -3227,7 +3258,7 @@ operator|>
 literal|0
 condition|)
 block|{
-name|file
+name|printWriter
 operator|.
 name|print
 argument_list|(
@@ -3271,7 +3302,7 @@ operator|.
 name|ATTR_UNKNOWN
 condition|)
 block|{
-name|file
+name|printWriter
 operator|.
 name|print
 argument_list|(
@@ -3302,7 +3333,7 @@ expr_stmt|;
 block|}
 else|else
 block|{
-name|file
+name|printWriter
 operator|.
 name|print
 argument_list|(
@@ -3353,7 +3384,7 @@ operator|.
 name|getCode
 argument_list|()
 expr_stmt|;
-name|file
+name|printWriter
 operator|.
 name|print
 argument_list|(
@@ -3387,7 +3418,7 @@ operator|.
 name|getTag
 argument_list|()
 expr_stmt|;
-name|file
+name|printWriter
 operator|.
 name|print
 argument_list|(
@@ -3422,7 +3453,7 @@ literal|"</A></LI>\n"
 argument_list|)
 expr_stmt|;
 block|}
-name|file
+name|printWriter
 operator|.
 name|print
 argument_list|(
@@ -3431,7 +3462,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-name|file
+name|printWriter
 operator|.
 name|println
 argument_list|(
@@ -3483,7 +3514,7 @@ operator|.
 name|reset
 argument_list|()
 expr_stmt|;
-name|file
+name|printWriter
 operator|.
 name|println
 argument_list|(
@@ -3596,7 +3627,7 @@ operator|+
 name|offset
 expr_stmt|;
 block|}
-name|file
+name|printWriter
 operator|.
 name|println
 argument_list|(
@@ -3616,14 +3647,14 @@ expr_stmt|;
 block|}
 block|}
 comment|// Mark last line, may be targetted from Attributes window
-name|file
+name|printWriter
 operator|.
 name|println
 argument_list|(
 literal|"<TR><TD></A></TD></TR>"
 argument_list|)
 expr_stmt|;
-name|file
+name|printWriter
 operator|.
 name|println
 argument_list|(

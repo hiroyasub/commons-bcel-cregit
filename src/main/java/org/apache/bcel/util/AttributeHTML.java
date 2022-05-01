@@ -21,16 +21,6 @@ name|java
 operator|.
 name|io
 operator|.
-name|FileOutputStream
-import|;
-end_import
-
-begin_import
-import|import
-name|java
-operator|.
-name|io
-operator|.
 name|IOException
 import|;
 end_import
@@ -42,6 +32,18 @@ operator|.
 name|io
 operator|.
 name|PrintWriter
+import|;
+end_import
+
+begin_import
+import|import
+name|java
+operator|.
+name|nio
+operator|.
+name|charset
+operator|.
+name|Charset
 import|;
 end_import
 
@@ -268,7 +270,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Convert found attributes into HTML file.  *  *  */
+comment|/**  * Convert found attributes into HTML file.  */
 end_comment
 
 begin_class
@@ -285,7 +287,7 @@ comment|// name of current class
 specifier|private
 specifier|final
 name|PrintWriter
-name|file
+name|printWriter
 decl_stmt|;
 comment|// file to write to
 specifier|private
@@ -319,6 +321,10 @@ parameter_list|,
 specifier|final
 name|ConstantHTML
 name|constant_html
+parameter_list|,
+specifier|final
+name|Charset
+name|charset
 parameter_list|)
 throws|throws
 name|IOException
@@ -341,27 +347,52 @@ name|constant_html
 operator|=
 name|constant_html
 expr_stmt|;
-name|file
+name|printWriter
 operator|=
 operator|new
 name|PrintWriter
-argument_list|(
-operator|new
-name|FileOutputStream
 argument_list|(
 name|dir
 operator|+
 name|class_name
 operator|+
 literal|"_attributes.html"
-argument_list|)
+argument_list|,
+name|charset
+operator|.
+name|name
+argument_list|()
 argument_list|)
 expr_stmt|;
-name|file
+name|printWriter
+operator|.
+name|print
+argument_list|(
+literal|"<HTML><head><meta charset=\""
+argument_list|)
+expr_stmt|;
+name|printWriter
+operator|.
+name|print
+argument_list|(
+name|charset
+operator|.
+name|name
+argument_list|()
+argument_list|)
+expr_stmt|;
+name|printWriter
 operator|.
 name|println
 argument_list|(
-literal|"<HTML><BODY BGCOLOR=\"#C0C0C0\"><TABLE BORDER=0>"
+literal|"\"></head>"
+argument_list|)
+expr_stmt|;
+name|printWriter
+operator|.
+name|println
+argument_list|(
+literal|"<BODY BGCOLOR=\"#C0C0C0\"><TABLE BORDER=0>"
 argument_list|)
 expr_stmt|;
 block|}
@@ -369,14 +400,14 @@ name|void
 name|close
 parameter_list|()
 block|{
-name|file
+name|printWriter
 operator|.
 name|println
 argument_list|(
 literal|"</TABLE></BODY></HTML>"
 argument_list|)
 expr_stmt|;
-name|file
+name|printWriter
 operator|.
 name|close
 argument_list|()
@@ -489,7 +520,7 @@ operator|==
 literal|0
 condition|)
 block|{
-name|file
+name|printWriter
 operator|.
 name|print
 argument_list|(
@@ -499,7 +530,7 @@ expr_stmt|;
 block|}
 else|else
 block|{
-name|file
+name|printWriter
 operator|.
 name|print
 argument_list|(
@@ -507,7 +538,7 @@ literal|"<TR BGCOLOR=\"#A0A0A0\"><TD>"
 argument_list|)
 expr_stmt|;
 block|}
-name|file
+name|printWriter
 operator|.
 name|println
 argument_list|(
@@ -552,7 +583,7 @@ operator|)
 name|attribute
 decl_stmt|;
 comment|// Some directly printable values
-name|file
+name|printWriter
 operator|.
 name|print
 argument_list|(
@@ -607,7 +638,7 @@ operator|>
 literal|0
 condition|)
 block|{
-name|file
+name|printWriter
 operator|.
 name|print
 argument_list|(
@@ -633,7 +664,7 @@ name|getCatchType
 argument_list|()
 decl_stmt|;
 comment|// Index in constant pool
-name|file
+name|printWriter
 operator|.
 name|print
 argument_list|(
@@ -647,7 +678,7 @@ operator|!=
 literal|0
 condition|)
 block|{
-name|file
+name|printWriter
 operator|.
 name|print
 argument_list|(
@@ -663,7 +694,7 @@ comment|// Create Link to _cp.html
 block|}
 else|else
 block|{
-name|file
+name|printWriter
 operator|.
 name|print
 argument_list|(
@@ -671,7 +702,7 @@ literal|"Any Exception"
 argument_list|)
 expr_stmt|;
 block|}
-name|file
+name|printWriter
 operator|.
 name|print
 argument_list|(
@@ -715,7 +746,7 @@ literal|")</LI>"
 argument_list|)
 expr_stmt|;
 block|}
-name|file
+name|printWriter
 operator|.
 name|print
 argument_list|(
@@ -742,7 +773,7 @@ name|getConstantValueIndex
 argument_list|()
 expr_stmt|;
 comment|// Reference _cp.html
-name|file
+name|printWriter
 operator|.
 name|print
 argument_list|(
@@ -780,7 +811,7 @@ name|getSourceFileIndex
 argument_list|()
 expr_stmt|;
 comment|// Reference _cp.html
-name|file
+name|printWriter
 operator|.
 name|print
 argument_list|(
@@ -821,7 +852,7 @@ operator|.
 name|getExceptionIndexTable
 argument_list|()
 decl_stmt|;
-name|file
+name|printWriter
 operator|.
 name|print
 argument_list|(
@@ -837,7 +868,7 @@ range|:
 name|indices
 control|)
 block|{
-name|file
+name|printWriter
 operator|.
 name|print
 argument_list|(
@@ -857,7 +888,7 @@ literal|")</A>\n"
 argument_list|)
 expr_stmt|;
 block|}
-name|file
+name|printWriter
 operator|.
 name|print
 argument_list|(
@@ -886,7 +917,7 @@ name|getLineNumberTable
 argument_list|()
 decl_stmt|;
 comment|// List line number pairs
-name|file
+name|printWriter
 operator|.
 name|print
 argument_list|(
@@ -910,7 +941,7 @@ name|i
 operator|++
 control|)
 block|{
-name|file
+name|printWriter
 operator|.
 name|print
 argument_list|(
@@ -948,7 +979,7 @@ operator|-
 literal|1
 condition|)
 block|{
-name|file
+name|printWriter
 operator|.
 name|print
 argument_list|(
@@ -980,7 +1011,7 @@ name|getLocalVariableTable
 argument_list|()
 decl_stmt|;
 comment|// List name, range and type
-name|file
+name|printWriter
 operator|.
 name|print
 argument_list|(
@@ -1056,7 +1087,7 @@ operator|.
 name|getLength
 argument_list|()
 decl_stmt|;
-name|file
+name|printWriter
 operator|.
 name|println
 argument_list|(
@@ -1123,7 +1154,7 @@ literal|"</A></LI>"
 argument_list|)
 expr_stmt|;
 block|}
-name|file
+name|printWriter
 operator|.
 name|print
 argument_list|(
@@ -1152,7 +1183,7 @@ name|getInnerClasses
 argument_list|()
 decl_stmt|;
 comment|// List inner classes
-name|file
+name|printWriter
 operator|.
 name|print
 argument_list|(
@@ -1231,7 +1262,7 @@ name|getInnerAccessFlags
 argument_list|()
 argument_list|)
 expr_stmt|;
-name|file
+name|printWriter
 operator|.
 name|print
 argument_list|(
@@ -1271,7 +1302,7 @@ literal|"</LI>\n"
 argument_list|)
 expr_stmt|;
 block|}
-name|file
+name|printWriter
 operator|.
 name|print
 argument_list|(
@@ -1281,7 +1312,7 @@ expr_stmt|;
 break|break;
 default|default:
 comment|// Such as Unknown attribute or Deprecated
-name|file
+name|printWriter
 operator|.
 name|print
 argument_list|(
@@ -1291,14 +1322,14 @@ name|attribute
 argument_list|)
 expr_stmt|;
 block|}
-name|file
+name|printWriter
 operator|.
 name|println
 argument_list|(
 literal|"</TD></TR>"
 argument_list|)
 expr_stmt|;
-name|file
+name|printWriter
 operator|.
 name|flush
 argument_list|()

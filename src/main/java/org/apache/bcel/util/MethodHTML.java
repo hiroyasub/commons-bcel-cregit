@@ -47,6 +47,18 @@ end_import
 
 begin_import
 import|import
+name|java
+operator|.
+name|nio
+operator|.
+name|charset
+operator|.
+name|Charset
+import|;
+end_import
+
+begin_import
+import|import
 name|org
 operator|.
 name|apache
@@ -142,7 +154,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Convert methods and fields into HTML file.  *  *  */
+comment|/**  * Convert methods and fields into HTML file.  */
 end_comment
 
 begin_class
@@ -159,7 +171,7 @@ comment|// name of current class
 specifier|private
 specifier|final
 name|PrintWriter
-name|file
+name|printWriter
 decl_stmt|;
 comment|// file to write to
 specifier|private
@@ -199,6 +211,10 @@ parameter_list|,
 specifier|final
 name|AttributeHTML
 name|attribute_html
+parameter_list|,
+specifier|final
+name|Charset
+name|charset
 parameter_list|)
 throws|throws
 name|IOException
@@ -221,7 +237,7 @@ name|constantHtml
 operator|=
 name|constant_html
 expr_stmt|;
-name|file
+name|printWriter
 operator|=
 operator|new
 name|PrintWriter
@@ -237,14 +253,38 @@ literal|"_methods.html"
 argument_list|)
 argument_list|)
 expr_stmt|;
-name|file
+name|printWriter
+operator|.
+name|print
+argument_list|(
+literal|"<HTML><head><meta charset=\""
+argument_list|)
+expr_stmt|;
+name|printWriter
+operator|.
+name|print
+argument_list|(
+name|charset
+operator|.
+name|name
+argument_list|()
+argument_list|)
+expr_stmt|;
+name|printWriter
 operator|.
 name|println
 argument_list|(
-literal|"<HTML><BODY BGCOLOR=\"#C0C0C0\"><TABLE BORDER=0>"
+literal|"\"></head>"
 argument_list|)
 expr_stmt|;
-name|file
+name|printWriter
+operator|.
+name|println
+argument_list|(
+literal|"<BODY BGCOLOR=\"#C0C0C0\"><TABLE BORDER=0>"
+argument_list|)
+expr_stmt|;
+name|printWriter
 operator|.
 name|println
 argument_list|(
@@ -268,14 +308,14 @@ name|field
 argument_list|)
 expr_stmt|;
 block|}
-name|file
+name|printWriter
 operator|.
 name|println
 argument_list|(
 literal|"</TABLE>"
 argument_list|)
 expr_stmt|;
-name|file
+name|printWriter
 operator|.
 name|println
 argument_list|(
@@ -314,14 +354,14 @@ name|i
 argument_list|)
 expr_stmt|;
 block|}
-name|file
+name|printWriter
 operator|.
 name|println
 argument_list|(
 literal|"</TABLE></BODY></HTML>"
 argument_list|)
 expr_stmt|;
-name|file
+name|printWriter
 operator|.
 name|close
 argument_list|()
@@ -390,7 +430,7 @@ argument_list|,
 literal|"&nbsp;"
 argument_list|)
 expr_stmt|;
-name|file
+name|printWriter
 operator|.
 name|print
 argument_list|(
@@ -506,7 +546,7 @@ name|toString
 argument_list|()
 decl_stmt|;
 comment|// Reference attribute in _attributes.html
-name|file
+name|printWriter
 operator|.
 name|print
 argument_list|(
@@ -532,7 +572,7 @@ expr_stmt|;
 break|break;
 block|}
 block|}
-name|file
+name|printWriter
 operator|.
 name|println
 argument_list|(
@@ -653,7 +693,7 @@ argument_list|(
 name|name
 argument_list|)
 expr_stmt|;
-name|file
+name|printWriter
 operator|.
 name|print
 argument_list|(
@@ -668,7 +708,7 @@ operator|+
 literal|"</A></FONT></TD>"
 argument_list|)
 expr_stmt|;
-name|file
+name|printWriter
 operator|.
 name|print
 argument_list|(
@@ -715,7 +755,7 @@ name|i
 operator|++
 control|)
 block|{
-name|file
+name|printWriter
 operator|.
 name|print
 argument_list|(
@@ -741,7 +781,7 @@ operator|-
 literal|1
 condition|)
 block|{
-name|file
+name|printWriter
 operator|.
 name|print
 argument_list|(
@@ -750,7 +790,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-name|file
+name|printWriter
 operator|.
 name|print
 argument_list|(
@@ -816,7 +856,7 @@ operator|.
 name|ATTR_EXCEPTIONS
 condition|)
 block|{
-name|file
+name|printWriter
 operator|.
 name|print
 argument_list|(
@@ -858,7 +898,7 @@ name|j
 operator|++
 control|)
 block|{
-name|file
+name|printWriter
 operator|.
 name|print
 argument_list|(
@@ -884,7 +924,7 @@ operator|-
 literal|1
 condition|)
 block|{
-name|file
+name|printWriter
 operator|.
 name|print
 argument_list|(
@@ -893,7 +933,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-name|file
+name|printWriter
 operator|.
 name|println
 argument_list|(

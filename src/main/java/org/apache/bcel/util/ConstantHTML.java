@@ -21,16 +21,6 @@ name|java
 operator|.
 name|io
 operator|.
-name|FileOutputStream
-import|;
-end_import
-
-begin_import
-import|import
-name|java
-operator|.
-name|io
-operator|.
 name|IOException
 import|;
 end_import
@@ -42,6 +32,18 @@ operator|.
 name|io
 operator|.
 name|PrintWriter
+import|;
+end_import
+
+begin_import
+import|import
+name|java
+operator|.
+name|nio
+operator|.
+name|charset
+operator|.
+name|Charset
 import|;
 end_import
 
@@ -198,7 +200,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Convert constant pool into HTML file.  *  *  */
+comment|/**  * Convert constant pool into HTML file.  */
 end_comment
 
 begin_class
@@ -227,7 +229,7 @@ comment|// reference to constant pool
 specifier|private
 specifier|final
 name|PrintWriter
-name|file
+name|printWriter
 decl_stmt|;
 comment|// file to write to
 specifier|private
@@ -272,6 +274,10 @@ parameter_list|,
 specifier|final
 name|ConstantPool
 name|constant_pool
+parameter_list|,
+specifier|final
+name|Charset
+name|charset
 parameter_list|)
 throws|throws
 name|IOException
@@ -307,20 +313,21 @@ operator|.
 name|getConstantPool
 argument_list|()
 expr_stmt|;
-name|file
+name|printWriter
 operator|=
 operator|new
 name|PrintWriter
-argument_list|(
-operator|new
-name|FileOutputStream
 argument_list|(
 name|dir
 operator|+
 name|class_name
 operator|+
 literal|"_cp.html"
-argument_list|)
+argument_list|,
+name|charset
+operator|.
+name|name
+argument_list|()
 argument_list|)
 expr_stmt|;
 name|constantRef
@@ -340,11 +347,35 @@ index|]
 operator|=
 literal|"&lt;unknown&gt;"
 expr_stmt|;
-name|file
+name|printWriter
+operator|.
+name|print
+argument_list|(
+literal|"<HTML><head><meta charset=\""
+argument_list|)
+expr_stmt|;
+name|printWriter
+operator|.
+name|print
+argument_list|(
+name|charset
+operator|.
+name|name
+argument_list|()
+argument_list|)
+expr_stmt|;
+name|printWriter
 operator|.
 name|println
 argument_list|(
-literal|"<HTML><BODY BGCOLOR=\"#C0C0C0\"><TABLE BORDER=0>"
+literal|"\"></head>"
+argument_list|)
+expr_stmt|;
+name|printWriter
+operator|.
+name|println
+argument_list|(
+literal|"<BODY BGCOLOR=\"#C0C0C0\"><TABLE BORDER=0>"
 argument_list|)
 expr_stmt|;
 comment|// Loop through constants, constants[0] is reserved
@@ -374,7 +405,7 @@ operator|==
 literal|0
 condition|)
 block|{
-name|file
+name|printWriter
 operator|.
 name|print
 argument_list|(
@@ -384,7 +415,7 @@ expr_stmt|;
 block|}
 else|else
 block|{
-name|file
+name|printWriter
 operator|.
 name|print
 argument_list|(
@@ -408,7 +439,7 @@ name|i
 argument_list|)
 expr_stmt|;
 block|}
-name|file
+name|printWriter
 operator|.
 name|print
 argument_list|(
@@ -416,14 +447,14 @@ literal|"</TD></TR>\n"
 argument_list|)
 expr_stmt|;
 block|}
-name|file
+name|printWriter
 operator|.
 name|println
 argument_list|(
 literal|"</TABLE></BODY></HTML>"
 argument_list|)
 expr_stmt|;
-name|file
+name|printWriter
 operator|.
 name|close
 argument_list|()
@@ -541,7 +572,7 @@ name|String
 name|ref
 decl_stmt|;
 comment|// The header is always the same
-name|file
+name|printWriter
 operator|.
 name|println
 argument_list|(
@@ -970,7 +1001,7 @@ literal|"</A>&nbsp;"
 operator|+
 name|arg_types
 expr_stmt|;
-name|file
+name|printWriter
 operator|.
 name|println
 argument_list|(
@@ -1181,7 +1212,7 @@ name|field_name
 operator|+
 literal|"</A>"
 expr_stmt|;
-name|file
+name|printWriter
 operator|.
 name|println
 argument_list|(
@@ -1317,7 +1348,7 @@ name|short_class_name
 operator|+
 literal|"</A>"
 expr_stmt|;
-name|file
+name|printWriter
 operator|.
 name|println
 argument_list|(
@@ -1387,7 +1418,7 @@ name|tag
 argument_list|)
 argument_list|)
 decl_stmt|;
-name|file
+name|printWriter
 operator|.
 name|println
 argument_list|(
@@ -1448,7 +1479,7 @@ operator|.
 name|getSignatureIndex
 argument_list|()
 decl_stmt|;
-name|file
+name|printWriter
 operator|.
 name|println
 argument_list|(
@@ -1493,7 +1524,7 @@ argument_list|)
 expr_stmt|;
 break|break;
 default|default:
-name|file
+name|printWriter
 operator|.
 name|println
 argument_list|(
