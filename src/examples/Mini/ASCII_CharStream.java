@@ -415,10 +415,6 @@ name|void
 name|FillBuff
 parameter_list|()
 throws|throws
-name|java
-operator|.
-name|io
-operator|.
 name|IOException
 block|{
 if|if
@@ -604,10 +600,6 @@ name|char
 name|BeginToken
 parameter_list|()
 throws|throws
-name|java
-operator|.
-name|io
-operator|.
 name|IOException
 block|{
 name|tokenBegin
@@ -758,10 +750,6 @@ name|char
 name|readChar
 parameter_list|()
 throws|throws
-name|java
-operator|.
-name|io
-operator|.
 name|IOException
 block|{
 if|if

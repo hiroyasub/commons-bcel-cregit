@@ -83,7 +83,7 @@ name|MethodParameter
 parameter_list|()
 block|{
 block|}
-comment|/**      * Construct object from input stream.      *      * @param input Input stream      * @throws java.io.IOException      * @throws ClassFormatException      */
+comment|/**      * Construct object from input stream.      *      * @param input Input stream      * @throws IOException      * @throws ClassFormatException      */
 name|MethodParameter
 parameter_list|(
 specifier|final
