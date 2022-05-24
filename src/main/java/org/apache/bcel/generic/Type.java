@@ -37,6 +37,16 @@ end_import
 
 begin_import
 import|import
+name|java
+operator|.
+name|util
+operator|.
+name|Objects
+import|;
+end_import
+
+begin_import
+import|import
 name|org
 operator|.
 name|apache
@@ -899,7 +909,7 @@ name|toString
 argument_list|()
 return|;
 block|}
-comment|/** Convert runtime java.lang.Class to BCEL Type object.      * @param cl Java class      * @return corresponding Type object      */
+comment|/** Convert runtime java.lang.Class to BCEL Type object.      * @param cls Java class      * @return corresponding Type object      */
 specifier|public
 specifier|static
 name|Type
@@ -914,28 +924,22 @@ name|Class
 argument_list|<
 name|?
 argument_list|>
-name|cl
+name|cls
 parameter_list|)
 block|{
-if|if
-condition|(
-name|cl
-operator|==
-literal|null
-condition|)
-block|{
-throw|throw
-operator|new
-name|IllegalArgumentException
+name|Objects
+operator|.
+name|requireNonNull
 argument_list|(
-literal|"Class must not be null"
+name|cls
+argument_list|,
+literal|"cls"
 argument_list|)
-throw|;
-block|}
+expr_stmt|;
 comment|/* That's an amzingly easy case, because getName() returns          * the signature. That's what we would have liked anyway.          */
 if|if
 condition|(
-name|cl
+name|cls
 operator|.
 name|isArray
 argument_list|()
@@ -944,7 +948,7 @@ block|{
 return|return
 name|getType
 argument_list|(
-name|cl
+name|cls
 operator|.
 name|getName
 argument_list|()
@@ -954,7 +958,7 @@ block|}
 if|if
 condition|(
 operator|!
-name|cl
+name|cls
 operator|.
 name|isPrimitive
 argument_list|()
@@ -966,7 +970,7 @@ name|ObjectType
 operator|.
 name|getInstance
 argument_list|(
-name|cl
+name|cls
 operator|.
 name|getName
 argument_list|()
@@ -975,7 +979,7 @@ return|;
 block|}
 if|if
 condition|(
-name|cl
+name|cls
 operator|==
 name|Integer
 operator|.
@@ -988,7 +992,7 @@ return|;
 block|}
 if|if
 condition|(
-name|cl
+name|cls
 operator|==
 name|Void
 operator|.
@@ -1001,7 +1005,7 @@ return|;
 block|}
 if|if
 condition|(
-name|cl
+name|cls
 operator|==
 name|Double
 operator|.
@@ -1014,7 +1018,7 @@ return|;
 block|}
 if|if
 condition|(
-name|cl
+name|cls
 operator|==
 name|Float
 operator|.
@@ -1027,7 +1031,7 @@ return|;
 block|}
 if|if
 condition|(
-name|cl
+name|cls
 operator|==
 name|Boolean
 operator|.
@@ -1040,7 +1044,7 @@ return|;
 block|}
 if|if
 condition|(
-name|cl
+name|cls
 operator|==
 name|Byte
 operator|.
@@ -1053,7 +1057,7 @@ return|;
 block|}
 if|if
 condition|(
-name|cl
+name|cls
 operator|==
 name|Short
 operator|.
@@ -1066,7 +1070,7 @@ return|;
 block|}
 if|if
 condition|(
-name|cl
+name|cls
 operator|==
 name|Long
 operator|.
@@ -1079,7 +1083,7 @@ return|;
 block|}
 if|if
 condition|(
-name|cl
+name|cls
 operator|==
 name|Character
 operator|.
@@ -1096,7 +1100,7 @@ name|IllegalStateException
 argument_list|(
 literal|"Unknown primitive type "
 operator|+
-name|cl
+name|cls
 argument_list|)
 throw|;
 block|}
