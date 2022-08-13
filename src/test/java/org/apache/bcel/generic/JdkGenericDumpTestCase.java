@@ -487,6 +487,12 @@ specifier|final
 name|PathMatcher
 name|matcher
 decl_stmt|;
+annotation|@
+name|SuppressWarnings
+argument_list|(
+literal|"resource"
+argument_list|)
+comment|// FileSystems.getDefault() returns a singleton
 name|ClassParserFilesVisitor
 parameter_list|(
 specifier|final
@@ -575,18 +581,12 @@ name|toString
 argument_list|()
 argument_list|)
 decl_stmt|;
-specifier|final
-name|JavaClass
-name|javaClass
-init|=
+name|assertNotNull
+argument_list|(
 name|classParser
 operator|.
 name|parse
 argument_list|()
-decl_stmt|;
-name|assertNotNull
-argument_list|(
-name|javaClass
 argument_list|)
 expr_stmt|;
 block|}
