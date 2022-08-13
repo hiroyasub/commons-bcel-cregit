@@ -619,7 +619,7 @@ name|String
 name|getBase
 parameter_list|()
 function_decl|;
-comment|/**          * @return input stream for class file.          */
+comment|/**          * @return input stream for class file.          * @throws IOException if an I/O error occurs.          */
 name|InputStream
 name|getInputStream
 parameter_list|()
@@ -2650,7 +2650,7 @@ return|return
 literal|false
 return|;
 block|}
-comment|/**      * @return byte array for class      */
+comment|/**      * @param name      *            fully qualified file name, e.g. java/lang/String      * @return byte array for class      * @throws IOException if an I/O error occurs.      */
 specifier|public
 name|byte
 index|[]
@@ -2672,7 +2672,7 @@ literal|".class"
 argument_list|)
 return|;
 block|}
-comment|/**      * @param name      *            fully qualified file name, e.g. java/lang/String      * @param suffix      *            file name ends with suffix, e.g. .java      * @return byte array for file on class path      */
+comment|/**      * @param name      *            fully qualified file name, e.g. java/lang/String      * @param suffix      *            file name ends with suffix, e.g. .java      * @return byte array for file on class path      * @throws IOException if an I/O error occurs.      */
 specifier|public
 name|byte
 index|[]
@@ -2776,7 +2776,7 @@ expr_stmt|;
 block|}
 block|}
 block|}
-comment|/**      * @param name      *            fully qualified class name, e.g. java.lang.String      * @return input stream for class      */
+comment|/**      * @param name      *            fully qualified class name, e.g. java.lang.String      * @return input stream for class      * @throws IOException if an I/O error occurs.      */
 specifier|public
 name|ClassFile
 name|getClassFile
@@ -2797,7 +2797,7 @@ literal|".class"
 argument_list|)
 return|;
 block|}
-comment|/**      * @param name      *            fully qualified file name, e.g. java/lang/String      * @param suffix      *            file name ends with suff, e.g. .java      * @return class file for the java class      */
+comment|/**      * @param name      *            fully qualified file name, e.g. java/lang/String      * @param suffix      *            file name ends with suff, e.g. .java      * @return class file for the java class      * @throws IOException if an I/O error occurs.      */
 specifier|public
 name|ClassFile
 name|getClassFile
@@ -2928,7 +2928,7 @@ return|return
 literal|null
 return|;
 block|}
-comment|/**      * @param name      *            fully qualified class name, e.g. java.lang.String      * @return input stream for class      */
+comment|/**      * @param name      *            fully qualified class name, e.g. java.lang.String      * @return input stream for class      * @throws IOException if an I/O error occurs.      */
 specifier|public
 name|InputStream
 name|getInputStream
@@ -2952,7 +2952,7 @@ literal|".class"
 argument_list|)
 return|;
 block|}
-comment|/**      * Return stream for class or resource on CLASSPATH.      *      * @param name      *            fully qualified file name, e.g. java/lang/String      * @param suffix      *            file name ends with suff, e.g. .java      * @return input stream for file on class path      * @throws IOException      */
+comment|/**      * Return stream for class or resource on CLASSPATH.      *      * @param name      *            fully qualified file name, e.g. java/lang/String      * @param suffix      *            file name ends with suff, e.g. .java      * @return input stream for file on class path      * @throws IOException if an I/O error occurs.      */
 specifier|public
 name|InputStream
 name|getInputStream
@@ -3024,7 +3024,7 @@ name|getInputStream
 argument_list|()
 return|;
 block|}
-comment|/**      * @param name      *            name of file to search for, e.g. java/lang/String.java      * @return full (canonical) path for file      */
+comment|/**      * @param name      *            name of file to search for, e.g. java/lang/String.java      * @return full (canonical) path for file      * @throws IOException if an I/O error occurs.      */
 specifier|public
 name|String
 name|getPath
@@ -3088,7 +3088,7 @@ name|suffix
 argument_list|)
 return|;
 block|}
-comment|/**      * @param name      *            name of file to search for, e.g. java/lang/String      * @param suffix      *            file name suffix, e.g. .java      * @return full (canonical) path for file, if it exists      */
+comment|/**      * @param name      *            name of file to search for, e.g. java/lang/String      * @param suffix      *            file name suffix, e.g. .java      * @return full (canonical) path for file, if it exists      * @throws IOException if an I/O error occurs.      */
 specifier|public
 name|String
 name|getPath
