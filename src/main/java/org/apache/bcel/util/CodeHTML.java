@@ -341,8 +341,11 @@ name|constantHtml
 operator|=
 name|constant_html
 expr_stmt|;
-name|printWriter
-operator|=
+try|try
+init|(
+name|PrintWriter
+name|newPrintWriter
+init|=
 operator|new
 name|PrintWriter
 argument_list|(
@@ -357,6 +360,11 @@ operator|.
 name|name
 argument_list|()
 argument_list|)
+init|)
+block|{
+name|printWriter
+operator|=
+name|newPrintWriter
 expr_stmt|;
 name|printWriter
 operator|.
@@ -424,11 +432,7 @@ argument_list|(
 literal|"</BODY></HTML>"
 argument_list|)
 expr_stmt|;
-name|printWriter
-operator|.
-name|close
-argument_list|()
-expr_stmt|;
+block|}
 block|}
 comment|/**      * Disassemble a stream of byte codes and return the      * string representation.      *      * @param  stream data input stream      * @return String representation of byte code      */
 specifier|private

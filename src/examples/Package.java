@@ -684,7 +684,7 @@ operator|+
 name|defaultJar
 argument_list|)
 expr_stmt|;
-comment|// starting processing: Grab from the dependents list an add back to it
+comment|// starting processing: Grab from the dependents list and add back to it
 comment|// and the allClasses list. see addDependents
 while|while
 condition|(
@@ -728,7 +728,7 @@ literal|null
 condition|)
 block|{
 try|try
-block|{
+init|(
 specifier|final
 name|InputStream
 name|is
@@ -739,7 +739,8 @@ name|getInputStream
 argument_list|(
 name|name
 argument_list|)
-decl_stmt|;
+init|)
+block|{
 name|clazz
 operator|=
 operator|new

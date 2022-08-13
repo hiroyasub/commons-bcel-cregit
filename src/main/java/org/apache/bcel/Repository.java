@@ -550,7 +550,7 @@ name|class_name
 parameter_list|)
 block|{
 try|try
-block|{
+init|(
 specifier|final
 name|ClassPath
 name|path
@@ -559,7 +559,8 @@ name|repository
 operator|.
 name|getClassPath
 argument_list|()
-decl_stmt|;
+init|)
+block|{
 if|if
 condition|(
 name|path
