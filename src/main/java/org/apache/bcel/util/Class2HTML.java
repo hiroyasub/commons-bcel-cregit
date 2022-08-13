@@ -1102,6 +1102,8 @@ name|charset
 argument_list|)
 decl_stmt|;
 comment|/*          * Attributes can't be written in one step, so we just open a file which will be written consequently.          */
+try|try
+init|(
 specifier|final
 name|AttributeHTML
 name|attributeHtml
@@ -1119,7 +1121,8 @@ name|constantHtml
 argument_list|,
 name|charset
 argument_list|)
-decl_stmt|;
+init|)
+block|{
 operator|new
 name|MethodHTML
 argument_list|(
@@ -1165,11 +1168,7 @@ argument_list|,
 name|charset
 argument_list|)
 expr_stmt|;
-name|attributeHtml
-operator|.
-name|close
-argument_list|()
-expr_stmt|;
+block|}
 block|}
 specifier|private
 name|void

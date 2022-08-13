@@ -21,6 +21,16 @@ name|java
 operator|.
 name|io
 operator|.
+name|Closeable
+import|;
+end_import
+
+begin_import
+import|import
+name|java
+operator|.
+name|io
+operator|.
 name|IOException
 import|;
 end_import
@@ -277,6 +287,8 @@ begin_class
 specifier|final
 class|class
 name|AttributeHTML
+implements|implements
+name|Closeable
 block|{
 specifier|private
 specifier|final
@@ -396,6 +408,9 @@ literal|"<BODY BGCOLOR=\"#C0C0C0\"><TABLE BORDER=0>"
 argument_list|)
 expr_stmt|;
 block|}
+annotation|@
+name|Override
+specifier|public
 name|void
 name|close
 parameter_list|()
