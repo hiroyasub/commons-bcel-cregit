@@ -16,7 +16,7 @@ package|;
 end_package
 
 begin_import
-import|import
+import|import static
 name|org
 operator|.
 name|junit
@@ -25,7 +25,9 @@ name|jupiter
 operator|.
 name|api
 operator|.
-name|Test
+name|Assertions
+operator|.
+name|assertEquals
 import|;
 end_import
 
@@ -40,7 +42,7 @@ import|;
 end_import
 
 begin_import
-import|import static
+import|import
 name|org
 operator|.
 name|junit
@@ -49,9 +51,7 @@ name|jupiter
 operator|.
 name|api
 operator|.
-name|Assertions
-operator|.
-name|assertEquals
+name|Test
 import|;
 end_import
 

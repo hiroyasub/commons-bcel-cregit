@@ -13,6 +13,16 @@ name|Mini
 package|;
 end_package
 
+begin_import
+import|import
+name|java
+operator|.
+name|io
+operator|.
+name|IOException
+import|;
+end_import
+
 begin_comment
 comment|/**  * An implementation of interface CharStream, where the stream is assumed to  * contain only ASCII characters (without unicode processing).  */
 end_comment

@@ -51,11 +51,9 @@ name|org
 operator|.
 name|apache
 operator|.
-name|commons
+name|bcel
 operator|.
-name|lang3
-operator|.
-name|ArrayUtils
+name|Const
 import|;
 end_import
 
@@ -65,9 +63,11 @@ name|org
 operator|.
 name|apache
 operator|.
-name|bcel
+name|commons
 operator|.
-name|Const
+name|lang3
+operator|.
+name|ArrayUtils
 import|;
 end_import
 
