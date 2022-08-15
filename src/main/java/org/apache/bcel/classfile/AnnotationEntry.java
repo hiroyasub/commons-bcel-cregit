@@ -61,7 +61,7 @@ name|java
 operator|.
 name|util
 operator|.
-name|Collections
+name|List
 import|;
 end_import
 
@@ -71,7 +71,9 @@ name|java
 operator|.
 name|util
 operator|.
-name|List
+name|stream
+operator|.
+name|Stream
 import|;
 end_import
 
@@ -88,7 +90,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * represents one annotation in the annotation table  *  * @since 6.0  */
+comment|/**  * Represents one annotation in the annotation table  *  * @since 6.0  */
 end_comment
 
 begin_class
@@ -120,73 +122,53 @@ name|attrs
 parameter_list|)
 block|{
 comment|// Find attributes that contain annotation data
-specifier|final
-name|List
-argument_list|<
-name|AnnotationEntry
-argument_list|>
-name|accumulatedAnnotations
-init|=
-operator|new
-name|ArrayList
-argument_list|<>
+return|return
+name|Stream
+operator|.
+name|of
 argument_list|(
 name|attrs
-operator|.
-name|length
 argument_list|)
-decl_stmt|;
-for|for
-control|(
-specifier|final
-name|Attribute
-name|attribute
-range|:
-name|attrs
-control|)
-block|{
-if|if
-condition|(
-name|attribute
-operator|instanceof
+operator|.
+name|filter
+argument_list|(
 name|Annotations
-condition|)
-block|{
-specifier|final
-name|Annotations
-name|runtimeAnnotations
-init|=
+operator|.
+name|class
+operator|::
+name|isInstance
+argument_list|)
+operator|.
+name|flatMap
+argument_list|(
+name|e
+lambda|->
+name|Stream
+operator|.
+name|of
+argument_list|(
+operator|(
 operator|(
 name|Annotations
 operator|)
-name|attribute
-decl_stmt|;
-name|Collections
-operator|.
-name|addAll
-argument_list|(
-name|accumulatedAnnotations
-argument_list|,
-name|runtimeAnnotations
+name|e
+operator|)
 operator|.
 name|getAnnotationEntries
 argument_list|()
 argument_list|)
-expr_stmt|;
-block|}
-block|}
-return|return
-name|accumulatedAnnotations
+argument_list|)
 operator|.
 name|toArray
 argument_list|(
 name|AnnotationEntry
-operator|.
-name|EMPTY_ARRAY
+index|[]
+operator|::
+operator|new
 argument_list|)
 return|;
 block|}
-comment|/*      * Factory method to create an AnnotionEntry from a DataInput      *      * @param input      * @param constantPool      * @param isRuntimeVisible      * @return the entry      * @throws IOException      */
+comment|/**      * Factory method to create an AnnotionEntry from a DataInput      *      * @param input      * @param constantPool      * @param isRuntimeVisible      * @return the entry      * @throws IOException if an I/O error occurs.      */
 specifier|public
 specifier|static
 name|AnnotationEntry
@@ -198,7 +180,7 @@ name|input
 parameter_list|,
 specifier|final
 name|ConstantPool
-name|constant_pool
+name|constantPool
 parameter_list|,
 specifier|final
 name|boolean
@@ -219,7 +201,7 @@ operator|.
 name|readUnsignedShort
 argument_list|()
 argument_list|,
-name|constant_pool
+name|constantPool
 argument_list|,
 name|isRuntimeVisible
 argument_list|)
@@ -277,10 +259,10 @@ name|readElementValue
 argument_list|(
 name|input
 argument_list|,
-name|constant_pool
+name|constantPool
 argument_list|)
 argument_list|,
-name|constant_pool
+name|constantPool
 argument_list|)
 argument_list|)
 expr_stmt|;

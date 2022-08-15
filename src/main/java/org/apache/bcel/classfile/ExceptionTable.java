@@ -345,7 +345,7 @@ return|return
 name|c
 return|;
 block|}
-comment|/**      * Dump exceptions attribute to file stream in binary format.      *      * @param file Output file stream      * @throws IOException      */
+comment|/**      * Dump exceptions attribute to file stream in binary format.      *      * @param file Output file stream      * @throws IOException if an I/O error occurs.      */
 annotation|@
 name|Override
 specifier|public

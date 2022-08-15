@@ -162,7 +162,7 @@ name|FieldOrMethod
 parameter_list|()
 block|{
 block|}
-comment|/**      * Construct object from file stream.      * @param file Input stream      * @throws IOException      * @throws ClassFormatException      */
+comment|/**      * Construct object from file stream.      * @param file Input stream      * @throws IOException if an I/O error occurs.      */
 specifier|protected
 name|FieldOrMethod
 parameter_list|(
@@ -172,12 +172,10 @@ name|file
 parameter_list|,
 specifier|final
 name|ConstantPool
-name|constant_pool
+name|constantPool
 parameter_list|)
 throws|throws
 name|IOException
-throws|,
-name|ClassFormatException
 block|{
 name|this
 argument_list|(
@@ -198,7 +196,7 @@ argument_list|()
 argument_list|,
 literal|null
 argument_list|,
-name|constant_pool
+name|constantPool
 argument_list|)
 expr_stmt|;
 specifier|final
@@ -244,7 +242,7 @@ name|readAttribute
 argument_list|(
 name|file
 argument_list|,
-name|constant_pool
+name|constantPool
 argument_list|)
 expr_stmt|;
 block|}
@@ -256,7 +254,7 @@ name|attributes_count
 expr_stmt|;
 comment|// init deprecated field
 block|}
-comment|/**      * Construct object from file stream.      * @param file Input stream      * @throws IOException      * @throws ClassFormatException      * @deprecated (6.0) Use {@link #FieldOrMethod(java.io.DataInput, ConstantPool)} instead.      */
+comment|/**      * Construct object from file stream.      * @param file Input stream      * @throws IOException if an I/O error occurs.      * @deprecated (6.0) Use {@link #FieldOrMethod(java.io.DataInput, ConstantPool)} instead.      */
 annotation|@
 name|java
 operator|.
@@ -272,12 +270,10 @@ name|file
 parameter_list|,
 specifier|final
 name|ConstantPool
-name|constant_pool
+name|constantPool
 parameter_list|)
 throws|throws
 name|IOException
-throws|,
-name|ClassFormatException
 block|{
 name|this
 argument_list|(
@@ -286,7 +282,7 @@ name|DataInput
 operator|)
 name|file
 argument_list|,
-name|constant_pool
+name|constantPool
 argument_list|)
 expr_stmt|;
 block|}
@@ -390,7 +386,7 @@ name|copy_
 parameter_list|(
 specifier|final
 name|ConstantPool
-name|_constant_pool
+name|constantPool
 parameter_list|)
 block|{
 name|FieldOrMethod
@@ -482,7 +478,7 @@ return|return
 name|c
 return|;
 block|}
-comment|/**      * Dump object to file stream on binary format.      *      * @param file Output file stream      * @throws IOException      */
+comment|/**      * Dump object to file stream on binary format.      *      * @param file Output file stream      * @throws IOException if an I/O error occurs.      */
 specifier|public
 specifier|final
 name|void

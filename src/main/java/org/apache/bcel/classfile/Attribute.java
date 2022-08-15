@@ -230,7 +230,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/**      * Class method reads one attribute from the input data stream. This method      * must not be accessible from the outside. It is called by the Field and      * Method constructor methods.      *      * @see Field      * @see Method      *      * @param file Input stream      * @param constant_pool Array of constants      * @return Attribute      * @throws IOException      * @throws ClassFormatException      * @since 6.0      */
+comment|/**      * Class method reads one attribute from the input data stream. This method      * must not be accessible from the outside. It is called by the Field and      * Method constructor methods.      *      * @see Field      * @see Method      *      * @param file Input stream      * @param constant_pool Array of constants      * @return Attribute      * @throws IOException if an I/O error occurs.      * @since 6.0      */
 specifier|public
 specifier|static
 name|Attribute
@@ -246,8 +246,6 @@ name|constant_pool
 parameter_list|)
 throws|throws
 name|IOException
-throws|,
-name|ClassFormatException
 block|{
 name|byte
 name|tag
@@ -915,7 +913,7 @@ argument_list|)
 throw|;
 block|}
 block|}
-comment|/**      * Class method reads one attribute from the input data stream. This method      * must not be accessible from the outside. It is called by the Field and      * Method constructor methods.      *      * @see Field      * @see Method      *      * @param file Input stream      * @param constant_pool Array of constants      * @return Attribute      * @throws IOException      * @throws ClassFormatException      */
+comment|/**      * Class method reads one attribute from the input data stream. This method      * must not be accessible from the outside. It is called by the Field and      * Method constructor methods.      *      * @see Field      * @see Method      *      * @param file Input stream      * @param constant_pool Array of constants      * @return Attribute      * @throws IOException if an I/O error occurs.      */
 specifier|public
 specifier|static
 name|Attribute
@@ -931,8 +929,6 @@ name|constant_pool
 parameter_list|)
 throws|throws
 name|IOException
-throws|,
-name|ClassFormatException
 block|{
 return|return
 name|readAttribute
@@ -1126,7 +1122,7 @@ name|ConstantPool
 name|_constant_pool
 parameter_list|)
 function_decl|;
-comment|/**      * Dump attribute to file stream in binary format.      *      * @param file      *            Output file stream      * @throws IOException      */
+comment|/**      * Dump attribute to file stream in binary format.      *      * @param file      *            Output file stream      * @throws IOException if an I/O error occurs.      */
 specifier|public
 name|void
 name|dump
