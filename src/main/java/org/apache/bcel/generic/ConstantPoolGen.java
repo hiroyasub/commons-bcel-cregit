@@ -113,6 +113,20 @@ name|bcel
 operator|.
 name|classfile
 operator|.
+name|ConstantDynamic
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|bcel
+operator|.
+name|classfile
+operator|.
 name|ConstantFieldref
 import|;
 end_import
@@ -896,8 +910,31 @@ name|getBootstrapMethodAttrIndex
 argument_list|()
 argument_list|)
 expr_stmt|;
-comment|// since name can't begin with digit, can  use
-comment|// METHODREF_DELIM with out fear of duplicates.
+block|}
+if|else if
+condition|(
+name|c
+operator|instanceof
+name|ConstantDynamic
+condition|)
+block|{
+name|class_name
+operator|=
+name|Integer
+operator|.
+name|toString
+argument_list|(
+operator|(
+operator|(
+name|ConstantDynamic
+operator|)
+name|m
+operator|)
+operator|.
+name|getBootstrapMethodAttrIndex
+argument_list|()
+argument_list|)
+expr_stmt|;
 block|}
 else|else
 block|{
@@ -1003,6 +1040,7 @@ operator|.
 name|getBytes
 argument_list|()
 decl_stmt|;
+comment|// Since name cannot begin with digit, we can use METHODREF_DELIM without fear of duplicates
 name|String
 name|delim
 init|=
