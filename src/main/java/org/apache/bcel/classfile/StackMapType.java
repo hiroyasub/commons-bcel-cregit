@@ -146,7 +146,7 @@ operator|=
 name|constant_pool
 expr_stmt|;
 block|}
-comment|/**      * Construct object from file stream.      * @param file Input stream      * @throws IOException      */
+comment|/**      * Construct object from file stream.      * @param file Input stream      * @throws IOException if an I/O error occurs.      */
 name|StackMapType
 parameter_list|(
 specifier|final
@@ -225,7 +225,7 @@ return|return
 literal|null
 return|;
 block|}
-comment|/**      * Dump type entries to file.      *      * @param file Output file stream      * @throws IOException      */
+comment|/**      * Dump type entries to file.      *      * @param file Output file stream      * @throws IOException if an I/O error occurs.      */
 specifier|public
 name|void
 name|dump

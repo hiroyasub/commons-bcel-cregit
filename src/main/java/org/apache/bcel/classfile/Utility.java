@@ -4233,7 +4233,7 @@ operator|!=
 literal|0
 return|;
 block|}
-comment|/**      * Converts argument list portion of method signature to string with all class names compacted.      *      * @param  signature    Method signature      * @return String Array of argument types      * @throws ClassFormatException      */
+comment|/**      * Converts argument list portion of method signature to string with all class names compacted.      *      * @param  signature    Method signature      * @return String Array of argument types      * @throws ClassFormatException if a class is malformed or cannot be interpreted as a class file      */
 specifier|public
 specifier|static
 name|String
@@ -4256,7 +4256,7 @@ literal|true
 argument_list|)
 return|;
 block|}
-comment|/**      * Converts argument list portion of method signature to string.      *      * @param  signature    Method signature      * @param  chopit flag that determines whether chopping is executed or not      * @return String Array of argument types      * @throws ClassFormatException      */
+comment|/**      * Converts argument list portion of method signature to string.      *      * @param  signature    Method signature      * @param  chopit flag that determines whether chopping is executed or not      * @return String Array of argument types      * @throws ClassFormatException if a class is malformed or cannot be interpreted as a class file      */
 specifier|public
 specifier|static
 name|String
@@ -4391,7 +4391,7 @@ name|EMPTY_STRING_ARRAY
 argument_list|)
 return|;
 block|}
-comment|/**      * Converts return type portion of method signature to string with all class names compacted.      *      * @param  signature    Method signature      * @return String representation of method return type      * @throws ClassFormatException      */
+comment|/**      * Converts return type portion of method signature to string with all class names compacted.      *      * @param  signature    Method signature      * @return String representation of method return type      * @throws ClassFormatException if a class is malformed or cannot be interpreted as a class file      */
 specifier|public
 specifier|static
 name|String
@@ -4413,7 +4413,7 @@ literal|true
 argument_list|)
 return|;
 block|}
-comment|/**      * Converts return type portion of method signature to string.      *      * @param  signature    Method signature      * @param  chopit flag that determines whether chopping is executed or not      * @return String representation of method return type      * @throws ClassFormatException      */
+comment|/**      * Converts return type portion of method signature to string.      *      * @param  signature    Method signature      * @param  chopit flag that determines whether chopping is executed or not      * @return String representation of method return type      * @throws ClassFormatException if a class is malformed or cannot be interpreted as a class file      */
 specifier|public
 specifier|static
 name|String
@@ -4576,7 +4576,7 @@ literal|null
 argument_list|)
 return|;
 block|}
-comment|/**      * This method converts a method signature string into a Java type declaration like      * `void main(String[])' and throws a `ClassFormatException' when the parsed      * type is invalid.      *      * @param  signature    Method signature      * @param  name         Method name      * @param  access       Method access rights      * @param  chopit flag that determines whether chopping is executed or not      * @param  vars the LocalVariableTable for the method      * @return Java type declaration      * @throws ClassFormatException      */
+comment|/**      * This method converts a method signature string into a Java type declaration like      * `void main(String[])' and throws a `ClassFormatException' when the parsed      * type is invalid.      *      * @param  signature    Method signature      * @param  name         Method name      * @param  access       Method access rights      * @param  chopit flag that determines whether chopping is executed or not      * @param  vars the LocalVariableTable for the method      * @return Java type declaration      * @throws ClassFormatException if a class is malformed or cannot be interpreted as a class file      */
 specifier|public
 specifier|static
 name|String
@@ -6642,7 +6642,7 @@ name|toString
 argument_list|()
 return|;
 block|}
-comment|/**      *      * This method converts a type signature string into a Java type declaration such as      * `String[]' and throws a `ClassFormatException' when the parsed type is invalid.      *      * @param  signature type signature      * @param  chopit flag that determines whether chopping is executed or not      * @return string containing human readable type signature      * @throws ClassFormatException      * @since 6.4.0      */
+comment|/**      *      * This method converts a type signature string into a Java type declaration such as      * `String[]' and throws a `ClassFormatException' when the parsed type is invalid.      *      * @param  signature type signature      * @param  chopit flag that determines whether chopping is executed or not      * @return string containing human readable type signature      * @throws ClassFormatException if a class is malformed or cannot be interpreted as a class file      * @since 6.4.0      */
 specifier|public
 specifier|static
 name|String

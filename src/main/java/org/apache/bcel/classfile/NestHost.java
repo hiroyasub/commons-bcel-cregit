@@ -73,7 +73,7 @@ specifier|private
 name|int
 name|hostClassIndex
 decl_stmt|;
-comment|/**      * Constructs object from input stream.      * @param name_index Index in constant pool      * @param length Content length in bytes      * @param input Input stream      * @param constant_pool Array of constants      * @throws IOException      */
+comment|/**      * Constructs object from input stream.      * @param name_index Index in constant pool      * @param length Content length in bytes      * @param input Input stream      * @param constant_pool Array of constants      * @throws IOException if an I/O error occurs.      */
 name|NestHost
 parameter_list|(
 specifier|final

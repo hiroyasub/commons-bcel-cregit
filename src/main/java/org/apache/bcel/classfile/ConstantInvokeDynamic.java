@@ -82,7 +82,7 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Initialize instance from file data.      *      * @param file Input stream      * @throws IOException      */
+comment|/**      * Initialize instance from file data.      *      * @param file Input stream      * @throws IOException if an I/O error occurs.      */
 name|ConstantInvokeDynamic
 parameter_list|(
 specifier|final

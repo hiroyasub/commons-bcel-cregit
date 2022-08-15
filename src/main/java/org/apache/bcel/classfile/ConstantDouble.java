@@ -93,7 +93,7 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Initialize instance from file data.      *      * @param file Input stream      * @throws IOException      */
+comment|/**      * Initialize instance from file data.      *      * @param file Input stream      * @throws IOException if an I/O error occurs.      */
 name|ConstantDouble
 parameter_list|(
 specifier|final
@@ -155,7 +155,7 @@ name|this
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Dump constant double to file stream in binary format.      *      * @param file Output file stream      * @throws IOException      */
+comment|/**      * Dump constant double to file stream in binary format.      *      * @param file Output file stream      * @throws IOException if an I/O error occurs.      */
 annotation|@
 name|Override
 specifier|public

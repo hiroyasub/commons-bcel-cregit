@@ -149,7 +149,7 @@ operator|=
 name|bootstrapMethods
 expr_stmt|;
 block|}
-comment|/**      * Construct object from Input stream.      *      * @param name_index Index in constant pool to CONSTANT_Utf8      * @param length Content length in bytes      * @param input Input stream      * @param constant_pool Array of constants      * @throws IOException      */
+comment|/**      * Construct object from Input stream.      *      * @param name_index Index in constant pool to CONSTANT_Utf8      * @param length Content length in bytes      * @param input Input stream      * @param constant_pool Array of constants      * @throws IOException if an I/O error occurs.      */
 name|BootstrapMethods
 parameter_list|(
 specifier|final
@@ -329,7 +329,7 @@ return|return
 name|c
 return|;
 block|}
-comment|/**      * Dump bootstrap methods attribute to file stream in binary format.      *      * @param file Output file stream      * @throws IOException      */
+comment|/**      * Dump bootstrap methods attribute to file stream in binary format.      *      * @param file Output file stream      * @throws IOException if an I/O error occurs.      */
 annotation|@
 name|Override
 specifier|public

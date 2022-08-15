@@ -73,7 +73,7 @@ specifier|private
 name|int
 name|mainClassIndex
 decl_stmt|;
-comment|/**      * Construct object from input stream.      * @param nameIndex Index in constant pool      * @param length Content length in bytes      * @param input Input stream      * @param constantPool Array of constants      * @throws IOException      */
+comment|/**      * Construct object from input stream.      * @param nameIndex Index in constant pool      * @param length Content length in bytes      * @param input Input stream      * @param constantPool Array of constants      * @throws IOException if an I/O error occurs.      */
 name|ModuleMainClass
 parameter_list|(
 specifier|final

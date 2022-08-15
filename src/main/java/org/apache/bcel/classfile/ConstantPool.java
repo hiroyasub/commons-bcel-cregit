@@ -1197,7 +1197,7 @@ return|return
 name|ret
 return|;
 block|}
-comment|/**      * Gets constant from constant pool and check whether it has the      * expected type.      *      * @param  index Index in constant pool      * @param  tag Tag of expected constant, i.e., its type      * @return Constant value      * @see    Constant      * @throws  ClassFormatException if constant type does not match tag      */
+comment|/**      * Gets constant from constant pool and check whether it has the      * expected type.      *      * @param  index Index in constant pool      * @param  tag Tag of expected constant, i.e., its type      * @return Constant value      * @see    Constant      * @throws ClassFormatException if constant type does not match tag      */
 specifier|public
 name|Constant
 name|getConstant

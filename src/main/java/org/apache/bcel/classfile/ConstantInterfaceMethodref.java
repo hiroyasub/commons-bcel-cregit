@@ -86,7 +86,7 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Initialize instance from input data.      *      * @param input input stream      * @throws IOException      */
+comment|/**      * Initialize instance from input data.      *      * @param input input stream      * @throws IOException if an I/O error occurs.      */
 name|ConstantInterfaceMethodref
 parameter_list|(
 specifier|final

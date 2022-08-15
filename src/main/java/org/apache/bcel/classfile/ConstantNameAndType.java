@@ -102,7 +102,7 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Initialize instance from file data.      *      * @param file Input stream      * @throws IOException      */
+comment|/**      * Initialize instance from file data.      *      * @param file Input stream      * @throws IOException if an I/O error occurs.      */
 name|ConstantNameAndType
 parameter_list|(
 specifier|final
@@ -179,7 +179,7 @@ name|this
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Dump name and signature index to file stream in binary format.      *      * @param file Output file stream      * @throws IOException      */
+comment|/**      * Dump name and signature index to file stream in binary format.      *      * @param file Output file stream      * @throws IOException if an I/O error occurs.      */
 annotation|@
 name|Override
 specifier|public

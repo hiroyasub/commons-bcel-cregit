@@ -342,7 +342,7 @@ operator|=
 name|fileName
 expr_stmt|;
 block|}
-comment|/**      * Parses the given Java class file and return an object that represents      * the contained data, i.e., constants, methods, fields and commands.      * A<em>ClassFormatException</em> is raised, if the file is not a valid      * .class file. (This does not include verification of the byte code as it      * is performed by the java interpreter).      *      * @return Class object representing the parsed class file      * @throws  IOException      * @throws  ClassFormatException      */
+comment|/**      * Parses the given Java class file and return an object that represents      * the contained data, i.e., constants, methods, fields and commands.      * A<em>ClassFormatException</em> is raised, if the file is not a valid      * .class file. (This does not include verification of the byte code as it      * is performed by the java interpreter).      *      * @return Class object representing the parsed class file      * @throws IOException if an I/O error occurs.      * @throws ClassFormatException if a class is malformed or cannot be interpreted as a class file      */
 specifier|public
 name|JavaClass
 name|parse
@@ -598,7 +598,7 @@ name|FILE
 argument_list|)
 return|;
 block|}
-comment|/**      * Reads information about the attributes of the class.      * @throws  IOException      * @throws  ClassFormatException      */
+comment|/**      * Reads information about the attributes of the class.      * @throws IOException if an I/O error occurs.      * @throws ClassFormatException if a class is malformed or cannot be interpreted as a class file      */
 specifier|private
 name|void
 name|readAttributes
@@ -656,7 +656,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/**      * Reads information about the class and its super class.      * @throws  IOException      * @throws  ClassFormatException      */
+comment|/**      * Reads information about the class and its super class.      * @throws IOException if an I/O error occurs.      * @throws ClassFormatException if a class is malformed or cannot be interpreted as a class file      */
 specifier|private
 name|void
 name|readClassInfo
@@ -744,7 +744,7 @@ name|readUnsignedShort
 argument_list|()
 expr_stmt|;
 block|}
-comment|/**      * Reads constant pool entries.      * @throws  IOException      * @throws  ClassFormatException      */
+comment|/**      * Reads constant pool entries.      * @throws IOException if an I/O error occurs.      * @throws ClassFormatException if a class is malformed or cannot be interpreted as a class file      */
 specifier|private
 name|void
 name|readConstantPool
@@ -763,7 +763,7 @@ name|dataInputStream
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Reads information about the fields of the class, i.e., its variables.      * @throws  IOException      * @throws  ClassFormatException      */
+comment|/**      * Reads information about the fields of the class, i.e., its variables.      * @throws IOException if an I/O error occurs.      * @throws ClassFormatException if a class is malformed or cannot be interpreted as a class file      */
 specifier|private
 name|void
 name|readFields
@@ -821,7 +821,7 @@ expr_stmt|;
 block|}
 block|}
 comment|/******************** Private utility methods **********************/
-comment|/**      * Checks whether the header of the file is ok.      * Of course, this has to be the first action on successive file reads.      * @throws  IOException      * @throws  ClassFormatException      */
+comment|/**      * Checks whether the header of the file is ok.      * Of course, this has to be the first action on successive file reads.      * @throws IOException if an I/O error occurs.      * @throws ClassFormatException if a class is malformed or cannot be interpreted as a class file      */
 specifier|private
 name|void
 name|readID
@@ -854,7 +854,7 @@ argument_list|)
 throw|;
 block|}
 block|}
-comment|/**      * Reads information about the interfaces implemented by this class.      * @throws  IOException      * @throws  ClassFormatException      */
+comment|/**      * Reads information about the interfaces implemented by this class.      * @throws IOException if an I/O error occurs.      * @throws ClassFormatException if a class is malformed or cannot be interpreted as a class file      */
 specifier|private
 name|void
 name|readInterfaces
@@ -908,15 +908,13 @@ argument_list|()
 expr_stmt|;
 block|}
 block|}
-comment|/**      * Reads information about the methods of the class.      * @throws  IOException      * @throws  ClassFormatException      */
+comment|/**      * Reads information about the methods of the class.      * @throws IOException if an I/O error occurs.      * @throws ClassFormatException if a class is malformed or cannot be interpreted as a class file      */
 specifier|private
 name|void
 name|readMethods
 parameter_list|()
 throws|throws
 name|IOException
-throws|,
-name|ClassFormatException
 block|{
 specifier|final
 name|int
@@ -965,7 +963,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/**      * Reads major and minor version of compiler which created the file.      * @throws  IOException      * @throws  ClassFormatException      */
+comment|/**      * Reads major and minor version of compiler which created the file.      * @throws IOException if an I/O error occurs.      * @throws ClassFormatException if a class is malformed or cannot be interpreted as a class file      */
 specifier|private
 name|void
 name|readVersion

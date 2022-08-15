@@ -83,7 +83,7 @@ name|MethodParameter
 parameter_list|()
 block|{
 block|}
-comment|/**      * Construct object from input stream.      *      * @param input Input stream      * @throws IOException      * @throws ClassFormatException      */
+comment|/**      * Construct object from input stream.      *      * @param input Input stream      * @throws IOException if an I/O error occurs.      * @throws ClassFormatException if a class is malformed or cannot be interpreted as a class file      */
 name|MethodParameter
 parameter_list|(
 specifier|final
@@ -154,7 +154,7 @@ return|return
 literal|null
 return|;
 block|}
-comment|/**      * Dump object to file stream on binary format.      *      * @param file Output file stream      * @throws IOException      */
+comment|/**      * Dump object to file stream on binary format.      *      * @param file Output file stream      * @throws IOException if an I/O error occurs.      */
 specifier|public
 specifier|final
 name|void

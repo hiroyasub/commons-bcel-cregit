@@ -120,7 +120,7 @@ name|int
 name|origIndex
 decl_stmt|;
 comment|// never changes; used to match up with LocalVariableTypeTable entries
-comment|/**      * Constructs object from file stream.      * @param file Input stream      * @throws IOException      */
+comment|/**      * Constructs object from file stream.      * @param file Input stream      * @throws IOException if an I/O error occurs.      */
 name|LocalVariable
 parameter_list|(
 specifier|final

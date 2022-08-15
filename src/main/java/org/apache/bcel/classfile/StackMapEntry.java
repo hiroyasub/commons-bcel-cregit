@@ -103,7 +103,7 @@ specifier|private
 name|ConstantPool
 name|constantPool
 decl_stmt|;
-comment|/**      * Construct object from input stream.      *      * @param input Input stream      * @throws IOException      */
+comment|/**      * Construct object from input stream.      *      * @param input Input stream      * @throws IOException if an I/O error occurs.      */
 name|StackMapEntry
 parameter_list|(
 specifier|final
@@ -767,7 +767,7 @@ return|return
 name|e
 return|;
 block|}
-comment|/**      * Dump stack map entry      *      * @param file Output file stream      * @throws IOException      */
+comment|/**      * Dump stack map entry      *      * @param file Output file stream      * @throws IOException if an I/O error occurs.      */
 specifier|public
 name|void
 name|dump

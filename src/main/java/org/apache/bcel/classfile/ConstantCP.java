@@ -97,7 +97,7 @@ name|int
 name|name_and_type_index
 decl_stmt|;
 comment|// TODO make private (has getter& setter)
-comment|/**      * Initialize instance from file data.      *      * @param tag  Constant type tag      * @param file Input stream      * @throws IOException      */
+comment|/**      * Initialize instance from file data.      *      * @param tag  Constant type tag      * @param file Input stream      * @throws IOException if an I/O error occurs.      */
 name|ConstantCP
 parameter_list|(
 specifier|final
@@ -190,7 +190,7 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Dump constant field reference to file stream in binary format.      *      * @param file Output file stream      * @throws IOException      */
+comment|/**      * Dump constant field reference to file stream in binary format.      *      * @param file Output file stream      * @throws IOException if an I/O error occurs.      */
 annotation|@
 name|Override
 specifier|public

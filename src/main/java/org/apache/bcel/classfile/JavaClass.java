@@ -1466,7 +1466,7 @@ return|return
 name|c
 return|;
 block|}
-comment|/**      * Dump Java class to output stream in binary format.      *      * @param file Output stream      * @throws IOException      */
+comment|/**      * Dump Java class to output stream in binary format.      *      * @param file Output stream      * @throws IOException if an I/O error occurs.      */
 specifier|public
 name|void
 name|dump
@@ -1660,7 +1660,7 @@ name|flush
 argument_list|()
 expr_stmt|;
 block|}
-comment|/**      * Dump class to a file.      *      * @param file Output file      * @throws IOException      */
+comment|/**      * Dump class to a file.      *      * @param file Output file      * @throws IOException if an I/O error occurs.      */
 specifier|public
 name|void
 name|dump
@@ -1747,7 +1747,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/**      * Dump Java class to output stream in binary format.      *      * @param file Output stream      * @throws IOException      */
+comment|/**      * Dump Java class to output stream in binary format.      *      * @param file Output stream      * @throws IOException if an I/O error occurs.      */
 specifier|public
 name|void
 name|dump
@@ -1769,7 +1769,7 @@ argument_list|)
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Dump class to a file named fileName.      *      * @param _file_name Output file name      * @throws IOException      */
+comment|/**      * Dump class to a file named fileName.      *      * @param _file_name Output file name      * @throws IOException if an I/O error occurs.      */
 specifier|public
 name|void
 name|dump

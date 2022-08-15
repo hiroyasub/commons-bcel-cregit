@@ -605,7 +605,7 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Initializes instance from file data.      *      * @param dataInput Input stream      * @throws IOException      */
+comment|/**      * Initializes instance from file data.      *      * @param dataInput Input stream      * @throws IOException if an I/O error occurs.      */
 name|ConstantUtf8
 parameter_list|(
 specifier|final
@@ -686,7 +686,7 @@ name|this
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Dumps String in Utf8 format to file stream.      *      * @param file Output file stream      * @throws IOException      */
+comment|/**      * Dumps String in Utf8 format to file stream.      *      * @param file Output file stream      * @throws IOException if an I/O error occurs.      */
 annotation|@
 name|Override
 specifier|public

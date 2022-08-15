@@ -147,7 +147,7 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Construct object from file stream.      * @param file Input stream      * @throws IOException      */
+comment|/**      * Construct object from file stream.      * @param file Input stream      * @throws IOException if an I/O error occurs.      */
 name|CodeException
 parameter_list|(
 specifier|final
@@ -276,7 +276,7 @@ return|return
 literal|null
 return|;
 block|}
-comment|/**      * Dump code exception to file stream in binary format.      *      * @param file Output file stream      * @throws IOException      */
+comment|/**      * Dump code exception to file stream in binary format.      *      * @param file Output file stream      * @throws IOException if an I/O error occurs.      */
 specifier|public
 name|void
 name|dump
