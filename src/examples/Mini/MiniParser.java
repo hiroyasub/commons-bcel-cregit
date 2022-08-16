@@ -17,13 +17,13 @@ begin_class
 specifier|public
 class|class
 name|MiniParser
-comment|/*@bgen(jjtree)*/
+comment|/* @bgen(jjtree) */
 implements|implements
 name|MiniParserTreeConstants
 implements|,
 name|MiniParserConstants
 block|{
-comment|/*@bgen(jjtree)*/
+comment|/* @bgen(jjtree) */
 specifier|private
 specifier|static
 specifier|final
@@ -104,7 +104,7 @@ name|lookingAhead
 init|=
 literal|false
 decl_stmt|;
-comment|//  static private boolean jj_semLA;
+comment|// static private boolean jj_semLA;
 specifier|static
 specifier|private
 name|int
@@ -658,7 +658,7 @@ parameter_list|()
 throws|throws
 name|ParseException
 block|{
-comment|/*@bgen(jjtree) Expr */
+comment|/* @bgen(jjtree) Expr */
 specifier|final
 name|ASTExpr
 name|jjtn000
@@ -969,7 +969,7 @@ parameter_list|()
 throws|throws
 name|ParseException
 block|{
-comment|/*@bgen(jjtree) Factor */
+comment|/* @bgen(jjtree) Factor */
 specifier|final
 name|ASTFactor
 name|jjtn000
@@ -1221,7 +1221,7 @@ parameter_list|()
 throws|throws
 name|ParseException
 block|{
-comment|/*@bgen(jjtree) FunAppl */
+comment|/* @bgen(jjtree) FunAppl */
 specifier|final
 name|ASTFunAppl
 name|jjtn000
@@ -1544,7 +1544,7 @@ literal|"Missing return statement in function"
 argument_list|)
 throw|;
 block|}
-comment|/* "FUN" Ident() "(" NameList() ")" = Expr()  */
+comment|/*      * "FUN" Ident() "(" NameList() ")" = Expr()      */
 specifier|static
 specifier|public
 name|void
@@ -1553,7 +1553,7 @@ parameter_list|()
 throws|throws
 name|ParseException
 block|{
-comment|/*@bgen(jjtree) FunDecl */
+comment|/* @bgen(jjtree) FunDecl */
 specifier|final
 name|ASTFunDecl
 name|jjtn000
@@ -2240,7 +2240,7 @@ parameter_list|()
 throws|throws
 name|ParseException
 block|{
-comment|/*@bgen(jjtree) Ident */
+comment|/* @bgen(jjtree) Ident */
 specifier|final
 name|ASTIdent
 name|jjtn000
@@ -2446,7 +2446,7 @@ literal|"Missing return statement in function"
 argument_list|)
 throw|;
 block|}
-comment|/*  * The disambiguating algorithm of JavaCC automatically binds dangling  * else's to the innermost if statement. The LOOKAHEAD specification  * is to tell JavaCC that we know what we are doing.  */
+comment|/*      * The disambiguating algorithm of JavaCC automatically binds dangling else's to the innermost if statement. The      * LOOKAHEAD specification is to tell JavaCC that we know what we are doing.      */
 specifier|static
 specifier|public
 name|void
@@ -2455,7 +2455,7 @@ parameter_list|()
 throws|throws
 name|ParseException
 block|{
-comment|/*@bgen(jjtree) IfExpr */
+comment|/* @bgen(jjtree) IfExpr */
 specifier|final
 name|ASTIfExpr
 name|jjtn000
@@ -2686,7 +2686,7 @@ parameter_list|()
 throws|throws
 name|ParseException
 block|{
-comment|/*@bgen(jjtree) Integer */
+comment|/* @bgen(jjtree) Integer */
 specifier|final
 name|ASTInteger
 name|jjtn000
@@ -4014,7 +4014,7 @@ parameter_list|()
 throws|throws
 name|ParseException
 block|{
-comment|/*@bgen(jjtree) LetExpr */
+comment|/* @bgen(jjtree) LetExpr */
 specifier|final
 name|ASTLetExpr
 name|jjtn000
@@ -4368,7 +4368,7 @@ literal|"Missing return statement in function"
 argument_list|)
 throw|;
 block|}
-comment|/* A program consists of a number of function declarations with a  * distinguished function `main' that starts the program.  */
+comment|/*      * A program consists of a number of function declarations with a distinguished function `main' that starts the program.      */
 specifier|static
 specifier|public
 name|void
@@ -4377,7 +4377,7 @@ parameter_list|()
 throws|throws
 name|ParseException
 block|{
-comment|/*@bgen(jjtree) Program */
+comment|/* @bgen(jjtree) Program */
 specifier|final
 name|ASTProgram
 name|jjtn000
@@ -4786,7 +4786,7 @@ parameter_list|()
 throws|throws
 name|ParseException
 block|{
-comment|/*@bgen(jjtree) Term */
+comment|/* @bgen(jjtree) Term */
 specifier|final
 name|ASTTerm
 name|jjtn000

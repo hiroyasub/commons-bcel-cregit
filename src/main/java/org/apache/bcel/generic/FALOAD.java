@@ -16,7 +16,7 @@ package|;
 end_package
 
 begin_comment
-comment|/**  * FALOAD - Load float from array  *<PRE>Stack: ..., arrayref, index -&gt; ..., value</PRE>  *  */
+comment|/**  * FALOAD - Load float from array  *   *<PRE>  * Stack: ..., arrayref, index -&gt; ..., value  *</PRE>  *  */
 end_comment
 
 begin_class
@@ -28,7 +28,7 @@ name|ArrayInstruction
 implements|implements
 name|StackProducer
 block|{
-comment|/** Load float from array      */
+comment|/**      * Load float from array      */
 specifier|public
 name|FALOAD
 parameter_list|()
@@ -47,7 +47,7 @@ name|FALOAD
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Call corresponding visitor method(s). The order is:      * Call visitor methods of implemented interfaces first, then      * call methods according to the class hierarchy in descending order,      * i.e., the most specific visitXXX() call comes last.      *      * @param v Visitor object      */
+comment|/**      * Call corresponding visitor method(s). The order is: Call visitor methods of implemented interfaces first, then call      * methods according to the class hierarchy in descending order, i.e., the most specific visitXXX() call comes last.      *      * @param v Visitor object      */
 annotation|@
 name|Override
 specifier|public

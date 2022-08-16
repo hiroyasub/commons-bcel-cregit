@@ -86,7 +86,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * This class represents the method info structure, i.e., the representation  * for a method in the class. See JVM specification for details.  * A method has access flags, a name, a signature and a number of attributes.  *  */
+comment|/**  * This class represents the method info structure, i.e., the representation for a method in the class. See JVM  * specification for details. A method has access flags, a name, a signature and a number of attributes.  *  */
 end_comment
 
 begin_class
@@ -263,13 +263,13 @@ name|ParameterAnnotationEntry
 index|[]
 name|parameterAnnotationEntries
 decl_stmt|;
-comment|/**      * Empty constructor, all attributes have to be defined via `setXXX'      * methods. Use at your own risk.      */
+comment|/**      * Empty constructor, all attributes have to be defined via `setXXX' methods. Use at your own risk.      */
 specifier|public
 name|Method
 parameter_list|()
 block|{
 block|}
-comment|/**      * Construct object from file stream.      * @param file Input stream      * @throws IOException if an I/O error occurs.      * @throws ClassFormatException if a class is malformed or cannot be interpreted as a class file      */
+comment|/**      * Construct object from file stream.      *       * @param file Input stream      * @throws IOException if an I/O error occurs.      * @throws ClassFormatException if a class is malformed or cannot be interpreted as a class file      */
 name|Method
 parameter_list|(
 specifier|final
@@ -333,7 +333,7 @@ name|constant_pool
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Initialize from another object. Note that both objects use the same      * references (shallow copy). Use clone() for a physical copy.      */
+comment|/**      * Initialize from another object. Note that both objects use the same references (shallow copy). Use clone() for a      * physical copy.      */
 specifier|public
 name|Method
 parameter_list|(
@@ -348,7 +348,7 @@ name|c
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Called by objects that are traversing the nodes of the tree implicitely      * defined by the contents of a Java class. I.e., the hierarchy of methods,      * fields, attributes, etc. spawns a tree of objects.      *      * @param v Visitor object      */
+comment|/**      * Called by objects that are traversing the nodes of the tree implicitely defined by the contents of a Java class.      * I.e., the hierarchy of methods, fields, attributes, etc. spawns a tree of objects.      *      * @param v Visitor object      */
 annotation|@
 name|Override
 specifier|public
@@ -388,7 +388,7 @@ name|_constant_pool
 argument_list|)
 return|;
 block|}
-comment|/**      * Return value as defined by given BCELComparator strategy.      * By default two method objects are said to be equal when      * their names and signatures are equal.      *      * @see java.lang.Object#equals(java.lang.Object)      */
+comment|/**      * Return value as defined by given BCELComparator strategy. By default two method objects are said to be equal when      * their names and signatures are equal.      *      * @see java.lang.Object#equals(java.lang.Object)      */
 annotation|@
 name|Override
 specifier|public
@@ -465,7 +465,7 @@ return|return
 literal|null
 return|;
 block|}
-comment|/**      * @return ExceptionTable attribute of method, if any, i.e., list all      * exceptions the method may throw not exception handlers!      */
+comment|/**      * @return ExceptionTable attribute of method, if any, i.e., list all exceptions the method may throw not exception      *         handlers!      */
 specifier|public
 name|ExceptionTable
 name|getExceptionTable
@@ -502,7 +502,7 @@ return|return
 literal|null
 return|;
 block|}
-comment|/** @return LineNumberTable of code attribute if any, i.e. the call is forwarded      * to the Code atribute.      */
+comment|/**      * @return LineNumberTable of code attribute if any, i.e. the call is forwarded to the Code atribute.      */
 specifier|public
 name|LineNumberTable
 name|getLineNumberTable
@@ -533,7 +533,7 @@ name|getLineNumberTable
 argument_list|()
 return|;
 block|}
-comment|/** @return LocalVariableTable of code attribute if any, i.e. the call is forwarded      * to the Code atribute.      */
+comment|/**      * @return LocalVariableTable of code attribute if any, i.e. the call is forwarded to the Code atribute.      */
 specifier|public
 name|LocalVariableTable
 name|getLocalVariableTable
@@ -609,7 +609,7 @@ argument_list|()
 argument_list|)
 return|;
 block|}
-comment|/**      * Return value as defined by given BCELComparator strategy.      * By default return the hashcode of the method's name XOR signature.      *      * @see java.lang.Object#hashCode()      */
+comment|/**      * Return value as defined by given BCELComparator strategy. By default return the hashcode of the method's name XOR      * signature.      *      * @see java.lang.Object#hashCode()      */
 annotation|@
 name|Override
 specifier|public
@@ -626,7 +626,7 @@ name|this
 argument_list|)
 return|;
 block|}
-comment|/**      * Return string representation close to declaration format,      * `public static void main(String[] args) throws IOException', e.g.      *      * @return String representation of the method.      */
+comment|/**      * Return string representation close to declaration format, `public static void main(String[] args) throws      * IOException', e.g.      *      * @return String representation of the method.      */
 annotation|@
 name|Override
 specifier|public

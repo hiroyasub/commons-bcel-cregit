@@ -16,7 +16,7 @@ package|;
 end_package
 
 begin_comment
-comment|/**  * ICONST - Push value between -1, ..., 5, other values cause an exception  *  *<PRE>Stack: ... -&gt; ...,</PRE>  *  */
+comment|/**  * ICONST - Push value between -1, ..., 5, other values cause an exception  *  *<PRE>  * Stack: ... -&gt; ...,  *</PRE>  *  */
 end_comment
 
 begin_class
@@ -32,7 +32,7 @@ specifier|private
 name|int
 name|value
 decl_stmt|;
-comment|/**      * Empty constructor needed for Instruction.readInstruction.      * Not to be used otherwise.      */
+comment|/**      * Empty constructor needed for Instruction.readInstruction. Not to be used otherwise.      */
 name|ICONST
 parameter_list|()
 block|{
@@ -113,7 +113,7 @@ operator|=
 name|i
 expr_stmt|;
 block|}
-comment|/**      * Call corresponding visitor method(s). The order is:      * Call visitor methods of implemented interfaces first, then      * call methods according to the class hierarchy in descending order,      * i.e., the most specific visitXXX() call comes last.      *      * @param v Visitor object      */
+comment|/**      * Call corresponding visitor method(s). The order is: Call visitor methods of implemented interfaces first, then call      * methods according to the class hierarchy in descending order, i.e., the most specific visitXXX() call comes last.      *      * @param v Visitor object      */
 annotation|@
 name|Override
 specifier|public
@@ -161,7 +161,7 @@ name|this
 argument_list|)
 expr_stmt|;
 block|}
-comment|/** @return Type.INT      */
+comment|/**      * @return Type.INT      */
 annotation|@
 name|Override
 specifier|public

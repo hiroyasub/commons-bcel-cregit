@@ -42,7 +42,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Represents a local variable within a method. It contains its  * scope, name and type. The generated LocalVariable object can be obtained  * with getLocalVariable which needs the instruction list and the constant  * pool as parameters.  *  * @see     LocalVariable  * @see     MethodGen  */
+comment|/**  * Represents a local variable within a method. It contains its scope, name and type. The generated LocalVariable object  * can be obtained with getLocalVariable which needs the instruction list and the constant pool as parameters.  *  * @see LocalVariable  * @see MethodGen  */
 end_comment
 
 begin_class
@@ -85,7 +85,7 @@ specifier|private
 name|boolean
 name|liveToEnd
 decl_stmt|;
-comment|/**      * Generate a local variable that with index `index'. Note that double and long      * variables need two indexs. Index indices have to be provided by the user.      *      * @param index index of local variable      * @param name its name      * @param type its type      * @param start from where the instruction is valid (null means from the start)      * @param end until where the instruction is valid (null means to the end)      */
+comment|/**      * Generate a local variable that with index `index'. Note that double and long variables need two indexs. Index indices      * have to be provided by the user.      *      * @param index index of local variable      * @param name its name      * @param type its type      * @param start from where the instruction is valid (null means from the start)      * @param end until where the instruction is valid (null means to the end)      */
 specifier|public
 name|LocalVariableGen
 parameter_list|(
@@ -176,7 +176,7 @@ operator|==
 literal|null
 expr_stmt|;
 block|}
-comment|/**      * Generates a local variable that with index `index'. Note that double and long      * variables need two indexs. Index indices have to be provided by the user.      *      * @param index index of local variable      * @param name its name      * @param type its type      * @param start from where the instruction is valid (null means from the start)      * @param end until where the instruction is valid (null means to the end)      * @param origIndex index of local variable prior to any changes to index      */
+comment|/**      * Generates a local variable that with index `index'. Note that double and long variables need two indexs. Index      * indices have to be provided by the user.      *      * @param index index of local variable      * @param name its name      * @param type its type      * @param start from where the instruction is valid (null means from the start)      * @param end until where the instruction is valid (null means to the end)      * @param origIndex index of local variable prior to any changes to index      */
 specifier|public
 name|LocalVariableGen
 parameter_list|(
@@ -296,7 +296,7 @@ literal|null
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * We consider to local variables to be equal, if the use the same index and      * are valid in the same range.      */
+comment|/**      * We consider to local variables to be equal, if the use the same index and are valid in the same range.      */
 annotation|@
 name|Override
 specifier|public
@@ -378,7 +378,7 @@ return|return
 name|liveToEnd
 return|;
 block|}
-comment|/**      * Gets LocalVariable object.      *      * This relies on that the instruction list has already been dumped to byte code or      * or that the `setPositions' methods has been called for the instruction list.      *      * Note that due to the conversion from byte code offset to InstructionHandle,      * it is impossible to tell the difference between a live range that ends BEFORE      * the last insturction of the method or a live range that ends AFTER the last      * instruction of the method.  Hence the liveToEnd flag to differentiate      * between these two cases.      *      * @param cp constant pool      */
+comment|/**      * Gets LocalVariable object.      *      * This relies on that the instruction list has already been dumped to byte code or or that the `setPositions' methods      * has been called for the instruction list.      *      * Note that due to the conversion from byte code offset to InstructionHandle, it is impossible to tell the difference      * between a live range that ends BEFORE the last insturction of the method or a live range that ends AFTER the last      * instruction of the method. Hence the liveToEnd flag to differentiate between these two cases.      *      * @param cp constant pool      */
 specifier|public
 name|LocalVariable
 name|getLocalVariable

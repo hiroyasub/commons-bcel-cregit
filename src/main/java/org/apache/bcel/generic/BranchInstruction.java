@@ -50,7 +50,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Abstract super class for branching instructions like GOTO, IFEQ, etc..  * Branch instructions may have a variable length, namely GOTO, JSR,  * LOOKUPSWITCH and TABLESWITCH.  *  * @see InstructionList  */
+comment|/**  * Abstract super class for branching instructions like GOTO, IFEQ, etc.. Branch instructions may have a variable  * length, namely GOTO, JSR, LOOKUPSWITCH and TABLESWITCH.  *  * @see InstructionList  */
 end_comment
 
 begin_class
@@ -136,12 +136,12 @@ name|int
 name|position
 decl_stmt|;
 comment|// Byte code offset
-comment|/**      * Empty constructor needed for Instruction.readInstruction.      * Not to be used otherwise.      */
+comment|/**      * Empty constructor needed for Instruction.readInstruction. Not to be used otherwise.      */
 name|BranchInstruction
 parameter_list|()
 block|{
 block|}
-comment|/** Common super constructor      * @param opcode Instruction opcode      * @param target instruction to branch to      */
+comment|/**      * Common super constructor      *       * @param opcode Instruction opcode      * @param target instruction to branch to      */
 specifier|protected
 name|BranchInstruction
 parameter_list|(
@@ -211,7 +211,7 @@ operator|-
 literal|1
 expr_stmt|;
 block|}
-comment|/**      * Dump instruction as byte code to stream out.      * @param out Output stream      */
+comment|/**      * Dump instruction as byte code to stream out.      *       * @param out Output stream      */
 annotation|@
 name|Override
 specifier|public
@@ -312,7 +312,7 @@ name|target
 argument_list|)
 return|;
 block|}
-comment|/**      * @param _target branch target      * @return the offset to  `target' relative to this instruction      */
+comment|/**      * @param _target branch target      * @return the offset to `target' relative to this instruction      */
 specifier|protected
 name|int
 name|getTargetOffset
@@ -391,7 +391,7 @@ operator|-
 name|position
 return|;
 block|}
-comment|/**      * Read needed data (e.g. index) from file. Conversion to a InstructionHandle      * is done in InstructionList(byte[]).      *      * @param bytes input stream      * @param wide wide prefix?      * @see InstructionList      */
+comment|/**      * Read needed data (e.g. index) from file. Conversion to a InstructionHandle is done in InstructionList(byte[]).      *      * @param bytes input stream      * @param wide wide prefix?      * @see InstructionList      */
 annotation|@
 name|Override
 specifier|protected
@@ -458,7 +458,7 @@ operator|=
 name|position
 expr_stmt|;
 block|}
-comment|/**      * Set branch target      * @param target branch target      */
+comment|/**      * Set branch target      *       * @param target branch target      */
 specifier|public
 name|void
 name|setTarget
@@ -486,7 +486,7 @@ operator|=
 name|target
 expr_stmt|;
 block|}
-comment|/**      * Long output format:      *      *&lt;position in byte code&gt;      *&lt;name of opcode&gt; "["&lt;opcode number&gt;"]"      * "("&lt;length of instruction&gt;")"      * "&lt;"&lt;target instruction&gt;"&gt;" "@"&lt;branch target offset&gt;      *      * @param verbose long/short format switch      * @return mnemonic for instruction      */
+comment|/**      * Long output format:      *      *&lt;position in byte code&gt;&lt;name of opcode&gt; "["&lt;opcode number&gt;"]" "("&lt;length of instruction&gt;")"      * "&lt;"&lt;target instruction&gt;"&gt;" "@"&lt;branch target offset&gt;      *      * @param verbose long/short format switch      * @return mnemonic for instruction      */
 annotation|@
 name|Override
 specifier|public
@@ -560,7 +560,7 @@ else|else
 block|{
 comment|// I'm more interested in the address of the target then
 comment|// the instruction located there.
-comment|//t = target.getInstruction().toString(false); // Avoid circles
+comment|// t = target.getInstruction().toString(false); // Avoid circles
 name|t
 operator|=
 literal|""
@@ -581,7 +581,7 @@ operator|.
 name|getPosition
 argument_list|()
 expr_stmt|;
-comment|// index = getTargetOffset();  crashes if positions haven't been set
+comment|// index = getTargetOffset(); crashes if positions haven't been set
 comment|// t = "" + (index + position);
 name|t
 operator|=
@@ -599,7 +599,7 @@ operator|+
 name|t
 return|;
 block|}
-comment|/**      * Called by InstructionList.setPositions when setting the position for every      * instruction. In the presence of variable length instructions `setPositions'      * performs multiple passes over the instruction list to calculate the      * correct (byte) positions and offsets by calling this function.      *      * @param offset additional offset caused by preceding (variable length) instructions      * @param max_offset the maximum offset that may be caused by these instructions      * @return additional offset caused by possible change of this instruction's length      */
+comment|/**      * Called by InstructionList.setPositions when setting the position for every instruction. In the presence of variable      * length instructions `setPositions' performs multiple passes over the instruction list to calculate the correct (byte)      * positions and offsets by calling this function.      *      * @param offset additional offset caused by preceding (variable length) instructions      * @param max_offset the maximum offset that may be caused by these instructions      * @return additional offset caused by possible change of this instruction's length      */
 specifier|protected
 name|int
 name|updatePosition

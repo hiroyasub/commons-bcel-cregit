@@ -58,7 +58,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * This class is derived from<em>Attribute</em> and declares this class as  * `synthetic', i.e., it needs special handling.  The JVM specification  * states "A class member that does not appear in the source code must be  * marked using a Synthetic attribute."  It may appear in the ClassFile  * attribute table, a field_info table or a method_info table.  This class  * is intended to be instantiated from the  *<em>Attribute.readAttribute()</em> method.  *  * @see     Attribute  */
+comment|/**  * This class is derived from<em>Attribute</em> and declares this class as `synthetic', i.e., it needs special  * handling. The JVM specification states "A class member that does not appear in the source code must be marked using a  * Synthetic attribute." It may appear in the ClassFile attribute table, a field_info table or a method_info table. This  * class is intended to be instantiated from the<em>Attribute.readAttribute()</em> method.  *  * @see Attribute  */
 end_comment
 
 begin_class
@@ -74,7 +74,7 @@ name|byte
 index|[]
 name|bytes
 decl_stmt|;
-comment|/**      * @param name_index Index in constant pool to CONSTANT_Utf8, which      * should represent the string "Synthetic".      * @param length Content length in bytes - should be zero.      * @param bytes Attribute contents      * @param constant_pool The constant pool this attribute is associated      * with.      */
+comment|/**      * @param name_index Index in constant pool to CONSTANT_Utf8, which should represent the string "Synthetic".      * @param length Content length in bytes - should be zero.      * @param bytes Attribute contents      * @param constant_pool The constant pool this attribute is associated with.      */
 specifier|public
 name|Synthetic
 parameter_list|(
@@ -182,7 +182,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/**      * Initialize from another object. Note that both objects use the same      * references (shallow copy). Use copy() for a physical copy.      */
+comment|/**      * Initialize from another object. Note that both objects use the same references (shallow copy). Use copy() for a      * physical copy.      */
 specifier|public
 name|Synthetic
 parameter_list|(
@@ -215,7 +215,7 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Called by objects that are traversing the nodes of the tree implicitely      * defined by the contents of a Java class. I.e., the hierarchy of methods,      * fields, attributes, etc. spawns a tree of objects.      *      * @param v Visitor object      */
+comment|/**      * Called by objects that are traversing the nodes of the tree implicitely defined by the contents of a Java class.      * I.e., the hierarchy of methods, fields, attributes, etc. spawns a tree of objects.      *      * @param v Visitor object      */
 annotation|@
 name|Override
 specifier|public

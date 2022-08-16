@@ -40,7 +40,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * LDC_W - Push item from constant pool (wide index)  *  *<PRE>Stack: ... -&gt; ..., item.word1, item.word2</PRE>  *  */
+comment|/**  * LDC_W - Push item from constant pool (wide index)  *  *<PRE>  * Stack: ... -&gt; ..., item.word1, item.word2  *</PRE>  *  */
 end_comment
 
 begin_class
@@ -50,7 +50,7 @@ name|LDC_W
 extends|extends
 name|LDC
 block|{
-comment|/**      * Empty constructor needed for Instruction.readInstruction.      * Not to be used otherwise.      */
+comment|/**      * Empty constructor needed for Instruction.readInstruction. Not to be used otherwise.      */
 name|LDC_W
 parameter_list|()
 block|{

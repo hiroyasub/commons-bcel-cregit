@@ -58,7 +58,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * This class represents the constant pool, i.e., a table of constants, of  * a parsed classfile. It may contain null references, due to the JVM  * specification that skips an entry after an 8-byte constant (double,  * long) entry.  Those interested in generating constant pools  * programmatically should see<a href="../generic/ConstantPoolGen.html">  * ConstantPoolGen</a>.   * @see     Constant  * @see     org.apache.bcel.generic.ConstantPoolGen  */
+comment|/**  * This class represents the constant pool, i.e., a table of constants, of a parsed classfile. It may contain null  * references, due to the JVM specification that skips an entry after an 8-byte constant (double, long) entry. Those  * interested in generating constant pools programmatically should see<a href="../generic/ConstantPoolGen.html">  * ConstantPoolGen</a>.  *   * @see Constant  * @see org.apache.bcel.generic.ConstantPoolGen  */
 end_comment
 
 begin_class
@@ -262,7 +262,7 @@ index|[
 name|constant_pool_count
 index|]
 expr_stmt|;
-comment|/* constantPool[0] is unused by the compiler and may be used freely          * by the implementation.          */
+comment|/*          * constantPool[0] is unused by the compiler and may be used freely by the implementation.          */
 for|for
 control|(
 name|int
@@ -290,7 +290,7 @@ argument_list|(
 name|input
 argument_list|)
 expr_stmt|;
-comment|/* Quote from the JVM specification:              * "All eight byte constants take up two spots in the constant pool.              * If this is the n'th byte in the constant pool, then the next item              * will be numbered n+2"              *              * Thus we have to increment the index counter.              */
+comment|/*              * Quote from the JVM specification: "All eight byte constants take up two spots in the constant pool. If this is the              * n'th byte in the constant pool, then the next item will be numbered n+2"              *              * Thus we have to increment the index counter.              */
 name|tag
 operator|=
 name|constantPool
@@ -322,7 +322,7 @@ expr_stmt|;
 block|}
 block|}
 block|}
-comment|/**      * Called by objects that are traversing the nodes of the tree implicitely      * defined by the contents of a Java class. I.e., the hierarchy of methods,      * fields, attributes, etc. spawns a tree of objects.      *      * @param v Visitor object      */
+comment|/**      * Called by objects that are traversing the nodes of the tree implicitely defined by the contents of a Java class.      * I.e., the hierarchy of methods, fields, attributes, etc. spawns a tree of objects.      *      * @param v Visitor object      */
 annotation|@
 name|Override
 specifier|public
@@ -342,7 +342,7 @@ name|this
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Resolves constant to a string representation.      *      * @param  c Constant to be printed      * @return String representation      * @throws IllegalArgumentException if c is unknown constant type      */
+comment|/**      * Resolves constant to a string representation.      *      * @param c Constant to be printed      * @return String representation      * @throws IllegalArgumentException if c is unknown constant type      */
 specifier|public
 name|String
 name|constantToString
@@ -940,7 +940,7 @@ return|return
 name|str
 return|;
 block|}
-comment|/**      * Retrieves constant at `index' from constant pool and resolve it to      * a string representation.      *      * @param  index of constant in constant pool      * @param  tag expected type      * @return String representation      */
+comment|/**      * Retrieves constant at `index' from constant pool and resolve it to a string representation.      *      * @param index of constant in constant pool      * @param tag expected type      * @return String representation      */
 specifier|public
 name|String
 name|constantToString
@@ -1124,7 +1124,7 @@ expr_stmt|;
 block|}
 block|}
 block|}
-comment|/**      * Gets constant from constant pool.      *      * @param  index Index in constant pool      * @return Constant value      * @see    Constant      * @throws ClassFormatException if index is invalid      */
+comment|/**      * Gets constant from constant pool.      *      * @param index Index in constant pool      * @return Constant value      * @see Constant      * @throws ClassFormatException if index is invalid      */
 specifier|public
 name|Constant
 name|getConstant
@@ -1197,7 +1197,7 @@ return|return
 name|ret
 return|;
 block|}
-comment|/**      * Gets constant from constant pool and check whether it has the      * expected type.      *      * @param  index Index in constant pool      * @param  tag Tag of expected constant, i.e., its type      * @return Constant value      * @see    Constant      * @throws ClassFormatException if constant type does not match tag      */
+comment|/**      * Gets constant from constant pool and check whether it has the expected type.      *      * @param index Index in constant pool      * @param tag Tag of expected constant, i.e., its type      * @return Constant value      * @see Constant      * @throws ClassFormatException if constant type does not match tag      */
 specifier|public
 name|Constant
 name|getConstant
@@ -1259,7 +1259,7 @@ return|return
 name|c
 return|;
 block|}
-comment|/**      * @return Array of constants.      * @see    Constant      */
+comment|/**      * @return Array of constants.      * @see Constant      */
 specifier|public
 name|Constant
 index|[]
@@ -1270,7 +1270,7 @@ return|return
 name|constantPool
 return|;
 block|}
-comment|/**      * Gets string from constant pool and bypass the indirection of      * `ConstantClass' and `ConstantString' objects. I.e. these classes have      * an index field that points to another entry of the constant pool of      * type `ConstantUtf8' which contains the real data.      *      * @param  index Index in constant pool      * @param  tag Tag of expected constant, either ConstantClass or ConstantString      * @return Contents of string reference      * @see    ConstantClass      * @see    ConstantString      * @throws  IllegalArgumentException if tag is invalid      */
+comment|/**      * Gets string from constant pool and bypass the indirection of `ConstantClass' and `ConstantString' objects. I.e. these      * classes have an index field that points to another entry of the constant pool of type `ConstantUtf8' which contains      * the real data.      *      * @param index Index in constant pool      * @param tag Tag of expected constant, either ConstantClass or ConstantString      * @return Contents of string reference      * @see ConstantClass      * @see ConstantString      * @throws IllegalArgumentException if tag is invalid      */
 specifier|public
 name|String
 name|getConstantString
@@ -1301,7 +1301,7 @@ argument_list|,
 name|tag
 argument_list|)
 expr_stmt|;
-comment|/* This switch() is not that elegant, since the four classes have the          * same contents, they just differ in the name of the index          * field variable.          * But we want to stick to the JVM naming conventions closely though          * we could have solved these more elegantly by using the same          * variable name or by subclassing.          */
+comment|/*          * This switch() is not that elegant, since the four classes have the same contents, they just differ in the name of the          * index field variable. But we want to stick to the JVM naming conventions closely though we could have solved these          * more elegantly by using the same variable name or by subclassing.          */
 switch|switch
 condition|(
 name|tag

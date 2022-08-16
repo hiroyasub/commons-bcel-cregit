@@ -16,7 +16,7 @@ package|;
 end_package
 
 begin_comment
-comment|/**  * SWITCH - Branch depending on int value, generates either LOOKUPSWITCH or  * TABLESWITCH instruction, depending on whether the match values (int[]) can be  * sorted with no gaps between the numbers.  *  */
+comment|/**  * SWITCH - Branch depending on int value, generates either LOOKUPSWITCH or TABLESWITCH instruction, depending on  * whether the match values (int[]) can be sorted with no gaps between the numbers.  *  */
 end_comment
 
 begin_class
@@ -77,7 +77,7 @@ literal|1
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Template for switch() constructs. If the match array can be      * sorted in ascending order with gaps no larger than max_gap      * between the numbers, a TABLESWITCH instruction is generated, and      * a LOOKUPSWITCH otherwise. The former may be more efficient, but      * needs more space.      *      * Note, that the key array always will be sorted, though we leave      * the original arrays unaltered.      *      * @param match array of match values (case 2: ... case 7: ..., etc.)      * @param targets the instructions to be branched to for each case      * @param target the default target      * @param max_gap maximum gap that may between case branches      */
+comment|/**      * Template for switch() constructs. If the match array can be sorted in ascending order with gaps no larger than      * max_gap between the numbers, a TABLESWITCH instruction is generated, and a LOOKUPSWITCH otherwise. The former may be      * more efficient, but needs more space.      *      * Note, that the key array always will be sorted, though we leave the original arrays unaltered.      *      * @param match array of match values (case 2: ... case 7: ..., etc.)      * @param targets the instructions to be branched to for each case      * @param target the default target      * @param max_gap maximum gap that may between case branches      */
 specifier|public
 name|SWITCH
 parameter_list|(

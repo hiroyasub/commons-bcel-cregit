@@ -76,7 +76,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * MULTIANEWARRAY - Create new mutidimensional array of references  *<PRE>Stack: ..., count1, [count2, ...] -&gt; ..., arrayref</PRE>  *  */
+comment|/**  * MULTIANEWARRAY - Create new mutidimensional array of references  *   *<PRE>  * Stack: ..., count1, [count2, ...] -&gt; ..., arrayref  *</PRE>  *  */
 end_comment
 
 begin_class
@@ -96,7 +96,7 @@ specifier|private
 name|short
 name|dimensions
 decl_stmt|;
-comment|/**      * Empty constructor needed for Instruction.readInstruction.      * Not to be used otherwise.      */
+comment|/**      * Empty constructor needed for Instruction.readInstruction. Not to be used otherwise.      */
 name|MULTIANEWARRAY
 parameter_list|()
 block|{
@@ -159,7 +159,7 @@ literal|4
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Call corresponding visitor method(s). The order is:      * Call visitor methods of implemented interfaces first, then      * call methods according to the class hierarchy in descending order,      * i.e., the most specific visitXXX() call comes last.      *      * @param v Visitor object      */
+comment|/**      * Call corresponding visitor method(s). The order is: Call visitor methods of implemented interfaces first, then call      * methods according to the class hierarchy in descending order, i.e., the most specific visitXXX() call comes last.      *      * @param v Visitor object      */
 annotation|@
 name|Override
 specifier|public
@@ -214,7 +214,7 @@ name|this
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Also works for instructions whose stack effect depends on the      * constant pool entry they reference.      * @return Number of words consumed from stack by this instruction      */
+comment|/**      * Also works for instructions whose stack effect depends on the constant pool entry they reference.      *       * @return Number of words consumed from stack by this instruction      */
 annotation|@
 name|Override
 specifier|public
@@ -230,7 +230,7 @@ return|return
 name|dimensions
 return|;
 block|}
-comment|/**      * Dump instruction as byte code to stream out.      * @param out Output stream      */
+comment|/**      * Dump instruction as byte code to stream out.      *       * @param out Output stream      */
 annotation|@
 name|Override
 specifier|public

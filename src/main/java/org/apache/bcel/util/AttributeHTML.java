@@ -577,7 +577,7 @@ operator|+
 literal|"</A></H4>"
 argument_list|)
 expr_stmt|;
-comment|/* Handle different attributes          */
+comment|/*          * Handle different attributes          */
 switch|switch
 condition|(
 name|tag

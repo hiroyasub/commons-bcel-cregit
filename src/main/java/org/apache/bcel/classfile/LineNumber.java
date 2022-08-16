@@ -46,7 +46,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * This class represents a (PC offset, line number) pair, i.e., a line number in  * the source that corresponds to a relative address in the byte code. This  * is used for debugging purposes.  *  * @see     LineNumberTable  */
+comment|/**  * This class represents a (PC offset, line number) pair, i.e., a line number in the source that corresponds to a  * relative address in the byte code. This is used for debugging purposes.  *  * @see LineNumberTable  */
 end_comment
 
 begin_class
@@ -148,7 +148,7 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Called by objects that are traversing the nodes of the tree implicitely      * defined by the contents of a Java class. I.e., the hierarchy of methods,      * fields, attributes, etc. spawns a tree of objects.      *      * @param v Visitor object      */
+comment|/**      * Called by objects that are traversing the nodes of the tree implicitely defined by the contents of a Java class.      * I.e., the hierarchy of methods, fields, attributes, etc. spawns a tree of objects.      *      * @param v Visitor object      */
 annotation|@
 name|Override
 specifier|public

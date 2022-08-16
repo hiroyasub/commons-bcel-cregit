@@ -210,7 +210,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Template class for building up a field.  The only extraordinary thing  * one can do is to add a constant value attribute to a field (which must of  * course be compatible with to the declared type).  *  * @see Field  */
+comment|/**  * Template class for building up a field. The only extraordinary thing one can do is to add a constant value attribute  * to a field (which must of course be compatible with to the declared type).  *  * @see Field  */
 end_comment
 
 begin_class
@@ -503,7 +503,7 @@ expr_stmt|;
 block|}
 block|}
 block|}
-comment|/**      * Declare a field. If it is static (isStatic() == true) and has a      * basic type like int or String it may have an initial value      * associated with it as defined by setInitValue().      *      * @param access_flags access qualifiers      * @param type  field type      * @param name field name      * @param cp constant pool      */
+comment|/**      * Declare a field. If it is static (isStatic() == true) and has a basic type like int or String it may have an initial      * value associated with it as defined by setInitValue().      *      * @param access_flags access qualifiers      * @param type field type      * @param name field name      * @param cp constant pool      */
 specifier|public
 name|FieldGen
 parameter_list|(
@@ -750,7 +750,7 @@ throw|;
 comment|// sic
 block|}
 block|}
-comment|/** Add observer for this object.      */
+comment|/**      * Add observer for this object.      */
 specifier|public
 name|void
 name|addObserver
@@ -783,7 +783,7 @@ name|o
 argument_list|)
 expr_stmt|;
 block|}
-comment|/** Remove any initial value.      */
+comment|/**      * Remove any initial value.      */
 specifier|public
 name|void
 name|cancelInitValue
@@ -868,7 +868,7 @@ argument_list|)
 throw|;
 block|}
 block|}
-comment|/** @return deep copy of this field      */
+comment|/**      * @return deep copy of this field      */
 specifier|public
 name|FieldGen
 name|copy
@@ -899,7 +899,7 @@ return|return
 name|fg
 return|;
 block|}
-comment|/**      * Return value as defined by given BCELComparator strategy.      * By default two FieldGen objects are said to be equal when      * their names and signatures are equal.      *      * @see java.lang.Object#equals(java.lang.Object)      */
+comment|/**      * Return value as defined by given BCELComparator strategy. By default two FieldGen objects are said to be equal when      * their names and signatures are equal.      *      * @see java.lang.Object#equals(java.lang.Object)      */
 annotation|@
 name|Override
 specifier|public
@@ -1094,7 +1094,7 @@ name|getSignature
 argument_list|()
 return|;
 block|}
-comment|/**      * Return value as defined by given BCELComparator strategy.      * By default return the hashcode of the field's name XOR signature.      *      * @see java.lang.Object#hashCode()      */
+comment|/**      * Return value as defined by given BCELComparator strategy. By default return the hashcode of the field's name XOR      * signature.      *      * @see java.lang.Object#hashCode()      */
 annotation|@
 name|Override
 specifier|public
@@ -1111,7 +1111,7 @@ name|this
 argument_list|)
 return|;
 block|}
-comment|/** Remove observer for this object.      */
+comment|/**      * Remove observer for this object.      */
 specifier|public
 name|void
 name|removeObserver
@@ -1407,7 +1407,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/**      * Set (optional) initial value of field, otherwise it will be set to null/0/false      * by the JVM automatically.      */
+comment|/**      * Set (optional) initial value of field, otherwise it will be set to null/0/false by the JVM automatically.      */
 specifier|public
 name|void
 name|setInitValue
@@ -1487,7 +1487,7 @@ name|cp
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Return string representation close to declaration format,      * `public static final short MAX = 100', e.g..      *      * @return String representation of field      */
+comment|/**      * Return string representation close to declaration format, `public static final short MAX = 100', e.g..      *      * @return String representation of field      */
 annotation|@
 name|Override
 specifier|public
@@ -1613,7 +1613,7 @@ name|toString
 argument_list|()
 return|;
 block|}
-comment|/** Call notify() method on all observers. This method is not called      * automatically whenever the state has changed, but has to be      * called by the user after they have finished editing the object.      */
+comment|/**      * Call notify() method on all observers. This method is not called automatically whenever the state has changed, but      * has to be called by the user after they have finished editing the object.      */
 specifier|public
 name|void
 name|update

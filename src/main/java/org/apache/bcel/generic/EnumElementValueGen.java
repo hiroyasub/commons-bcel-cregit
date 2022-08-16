@@ -174,7 +174,7 @@ argument_list|()
 expr_stmt|;
 block|}
 block|}
-comment|/**      * This ctor assumes the constant pool already contains the right type and      * value - as indicated by typeIdx and valueIdx. This ctor is used for      * deserialization      */
+comment|/**      * This ctor assumes the constant pool already contains the right type and value - as indicated by typeIdx and valueIdx.      * This ctor is used for deserialization      */
 specifier|protected
 name|EnumElementValueGen
 parameter_list|(

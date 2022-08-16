@@ -271,7 +271,7 @@ name|String
 name|className
 decl_stmt|;
 comment|// name of current class
-comment|//    private Method[] methods; // Methods to print
+comment|// private Method[] methods; // Methods to print
 specifier|private
 specifier|final
 name|PrintWriter
@@ -434,7 +434,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/**      * Disassemble a stream of byte codes and return the      * string representation.      *      * @param  stream data input stream      * @return String representation of byte code      */
+comment|/**      * Disassemble a stream of byte codes and return the string representation.      *      * @param stream data input stream      * @return String representation of byte code      */
 specifier|private
 name|String
 name|codeToHTML
@@ -536,7 +536,7 @@ argument_list|(
 literal|"</TT></TD><TD>"
 argument_list|)
 expr_stmt|;
-comment|/* Special case: Skip (0-3) padding bytes, i.e., the          * following bytes are 4-byte-aligned          */
+comment|/*          * Special case: Skip (0-3) padding bytes, i.e., the following bytes are 4-byte-aligned          */
 if|if
 condition|(
 name|opcode
@@ -808,7 +808,7 @@ literal|"</A></TD></TR>\n</TABLE>\n"
 argument_list|)
 expr_stmt|;
 break|break;
-comment|/* Lookup switch has variable length arguments.              */
+comment|/*          * Lookup switch has variable length arguments.          */
 case|case
 name|Const
 operator|.
@@ -1015,7 +1015,7 @@ literal|"</A></TD></TR>\n</TABLE>\n"
 argument_list|)
 expr_stmt|;
 break|break;
-comment|/* Two address bytes + offset from start of byte stream form the              * jump target.              */
+comment|/*          * Two address bytes + offset from start of byte stream form the jump target.          */
 case|case
 name|Const
 operator|.
@@ -1158,7 +1158,7 @@ literal|"</A>"
 argument_list|)
 expr_stmt|;
 break|break;
-comment|/* Same for 32-bit wide jumps              */
+comment|/*          * Same for 32-bit wide jumps          */
 case|case
 name|Const
 operator|.
@@ -1223,7 +1223,7 @@ literal|"</A>"
 argument_list|)
 expr_stmt|;
 break|break;
-comment|/* Index byte references local variable (register)              */
+comment|/*          * Index byte references local variable (register)          */
 case|case
 name|Const
 operator|.
@@ -1320,7 +1320,7 @@ name|vindex
 argument_list|)
 expr_stmt|;
 break|break;
-comment|/*              * Remember wide byte which is used to form a 16-bit address in the              * following instruction. Relies on that the method is called again with              * the following opcode.              */
+comment|/*          * Remember wide byte which is used to form a 16-bit address in the following instruction. Relies on that the method is          * called again with the following opcode.          */
 case|case
 name|Const
 operator|.
@@ -1338,7 +1338,7 @@ literal|"(wide)"
 argument_list|)
 expr_stmt|;
 break|break;
-comment|/* Array of basic type.              */
+comment|/*          * Array of basic type.          */
 case|case
 name|Const
 operator|.
@@ -1370,7 +1370,7 @@ literal|"</FONT>"
 argument_list|)
 expr_stmt|;
 break|break;
-comment|/* Access object/class fields.              */
+comment|/*          * Access object/class fields.          */
 case|case
 name|Const
 operator|.
@@ -1544,7 +1544,7 @@ argument_list|)
 expr_stmt|;
 block|}
 break|break;
-comment|/* Operands are references to classes in constant pool              */
+comment|/*          * Operands are references to classes in constant pool          */
 case|case
 name|Const
 operator|.
@@ -1580,7 +1580,7 @@ argument_list|)
 argument_list|)
 expr_stmt|;
 break|break;
-comment|/* Operands are references to methods in constant pool              */
+comment|/*          * Operands are references to methods in constant pool          */
 case|case
 name|Const
 operator|.
@@ -1745,7 +1745,7 @@ else|else
 block|{
 comment|// UNDONE: Java8 now allows INVOKESPECIAL and INVOKESTATIC to
 comment|// reference EITHER a Methodref OR an InterfaceMethodref.
-comment|// Not sure if that affects this code or not.  (markro)
+comment|// Not sure if that affects this code or not. (markro)
 specifier|final
 name|ConstantMethodref
 name|c
@@ -1992,7 +1992,7 @@ argument_list|)
 argument_list|)
 expr_stmt|;
 break|break;
-comment|/* Operands are references to items in constant pool              */
+comment|/*          * Operands are references to items in constant pool          */
 case|case
 name|Const
 operator|.
@@ -2138,7 +2138,7 @@ literal|"</a>"
 argument_list|)
 expr_stmt|;
 break|break;
-comment|/* Array of references.              */
+comment|/*          * Array of references.          */
 case|case
 name|Const
 operator|.
@@ -2164,7 +2164,7 @@ argument_list|)
 argument_list|)
 expr_stmt|;
 break|break;
-comment|/* Multidimensional array of references.              */
+comment|/*          * Multidimensional array of references.          */
 case|case
 name|Const
 operator|.
@@ -2214,7 +2214,7 @@ literal|"-dimensional"
 argument_list|)
 expr_stmt|;
 break|break;
-comment|/* Increment local variable.              */
+comment|/*          * Increment local variable.          */
 case|case
 name|Const
 operator|.
@@ -2421,7 +2421,7 @@ name|toString
 argument_list|()
 return|;
 block|}
-comment|/**      * Find all target addresses in code, so that they can be marked      * with&lt;A NAME = ...&gt;. Target addresses are kept in an BitSet object.      */
+comment|/**      * Find all target addresses in code, so that they can be marked with&lt;A NAME = ...&gt;. Target addresses are kept in      * an BitSet object.      */
 specifier|private
 name|void
 name|findGotos
@@ -2454,7 +2454,7 @@ expr_stmt|;
 name|int
 name|opcode
 decl_stmt|;
-comment|/* First get Code attribute from method and the exceptions handled          * (try .. catch) in this method. We only need the line number here.          */
+comment|/*          * First get Code attribute from method and the exceptions handled (try .. catch) in this method. We only need the line          * number here.          */
 if|if
 condition|(
 name|code
@@ -2627,7 +2627,7 @@ operator|.
 name|readUnsignedByte
 argument_list|()
 expr_stmt|;
-comment|//System.out.println(getOpcodeName(opcode));
+comment|// System.out.println(getOpcodeName(opcode));
 switch|switch
 condition|(
 name|opcode
@@ -2643,7 +2643,7 @@ name|Const
 operator|.
 name|LOOKUPSWITCH
 case|:
-comment|//bytes.readByte(); // Skip already read byte
+comment|// bytes.readByte(); // Skip already read byte
 specifier|final
 name|int
 name|remainder
@@ -2958,7 +2958,7 @@ name|Const
 operator|.
 name|JSR
 case|:
-comment|//bytes.readByte(); // Skip already read byte
+comment|// bytes.readByte(); // Skip already read byte
 name|index
 operator|=
 name|bytes
@@ -2991,7 +2991,7 @@ name|Const
 operator|.
 name|JSR_W
 case|:
-comment|//bytes.readByte(); // Skip already read byte
+comment|// bytes.readByte(); // Skip already read byte
 name|index
 operator|=
 name|bytes
@@ -3482,7 +3482,7 @@ literal|null
 condition|)
 block|{
 comment|// No code, an abstract method, e.g.
-comment|//System.out.println(name + "\n" + Utility.codeToString(code, constantPool, 0, -1));
+comment|// System.out.println(name + "\n" + Utility.codeToString(code, constantPool, 0, -1));
 comment|// Print the byte code
 try|try
 init|(
@@ -3564,7 +3564,7 @@ name|anchor
 init|=
 literal|""
 decl_stmt|;
-comment|/*                      * Set an anchor mark if this line is targetted by a goto, jsr, etc. Defining an anchor for every                      * line is very inefficient!                      */
+comment|/*                      * Set an anchor mark if this line is targetted by a goto, jsr, etc. Defining an anchor for every line is very                      * inefficient!                      */
 if|if
 condition|(
 name|gotoSet

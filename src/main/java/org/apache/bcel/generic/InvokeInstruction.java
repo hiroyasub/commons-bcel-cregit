@@ -97,7 +97,7 @@ name|StackConsumer
 implements|,
 name|StackProducer
 block|{
-comment|/**      * Empty constructor needed for Instruction.readInstruction.      * Not to be used otherwise.      */
+comment|/**      * Empty constructor needed for Instruction.readInstruction. Not to be used otherwise.      */
 name|InvokeInstruction
 parameter_list|()
 block|{
@@ -123,7 +123,7 @@ name|index
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Also works for instructions whose stack effect depends on the      * constant pool entry they reference.      * @return Number of words consumed from stack by this instruction      */
+comment|/**      * Also works for instructions whose stack effect depends on the constant pool entry they reference.      *       * @return Number of words consumed from stack by this instruction      */
 annotation|@
 name|Override
 specifier|public
@@ -194,7 +194,7 @@ return|return
 name|sum
 return|;
 block|}
-comment|/** @return argument types of referenced method.      */
+comment|/**      * @return argument types of referenced method.      */
 specifier|public
 name|Type
 index|[]
@@ -217,7 +217,7 @@ argument_list|)
 argument_list|)
 return|;
 block|}
-comment|/**      * This overrides the deprecated version as we know here that the referenced class      * may legally be an array.      *      * @return name of the referenced class/interface      * @throws IllegalArgumentException if the referenced class is an array (this should not happen)      */
+comment|/**      * This overrides the deprecated version as we know here that the referenced class may legally be an array.      *      * @return name of the referenced class/interface      * @throws IllegalArgumentException if the referenced class is an array (this should not happen)      */
 annotation|@
 name|Override
 specifier|public
@@ -284,7 +284,7 @@ literal|'.'
 argument_list|)
 return|;
 block|}
-comment|/** @return name of referenced method.      */
+comment|/**      * @return name of referenced method.      */
 specifier|public
 name|String
 name|getMethodName
@@ -301,7 +301,7 @@ name|cpg
 argument_list|)
 return|;
 block|}
-comment|/** @return return type of referenced method.      */
+comment|/**      * @return return type of referenced method.      */
 specifier|public
 name|Type
 name|getReturnType
@@ -323,7 +323,7 @@ argument_list|)
 argument_list|)
 return|;
 block|}
-comment|/** @return return type of referenced method.      */
+comment|/**      * @return return type of referenced method.      */
 annotation|@
 name|Override
 specifier|public
@@ -342,7 +342,7 @@ name|cpg
 argument_list|)
 return|;
 block|}
-comment|/**      * Also works for instructions whose stack effect depends on the      * constant pool entry they reference.      * @return Number of words produced onto stack by this instruction      */
+comment|/**      * Also works for instructions whose stack effect depends on the constant pool entry they reference.      *       * @return Number of words produced onto stack by this instruction      */
 annotation|@
 name|Override
 specifier|public

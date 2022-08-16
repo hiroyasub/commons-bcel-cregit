@@ -600,7 +600,7 @@ operator|+
 literal|"</H4>"
 argument_list|)
 expr_stmt|;
-comment|/* For every constant type get the needed parameters and print them appropiately          */
+comment|/*          * For every constant type get the needed parameters and print them appropiately          */
 switch|switch
 condition|(
 name|tag

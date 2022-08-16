@@ -98,7 +98,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Test for https://issues.apache.org/jira/browse/BCEL-267 "Race conditions on  * static fields in BranchHandle and InstructionHandle".  */
+comment|/**  * Test for https://issues.apache.org/jira/browse/BCEL-267 "Race conditions on static fields in BranchHandle and  * InstructionHandle".  */
 end_comment
 
 begin_class
@@ -124,7 +124,7 @@ name|MAXJ
 init|=
 literal|1000
 decl_stmt|;
-comment|/**      * Asserts that branch handles can be added an instruction list, without      * corrupting the list.      */
+comment|/**      * Asserts that branch handles can be added an instruction list, without corrupting the list.      */
 specifier|static
 name|void
 name|branchHandles
@@ -411,7 +411,7 @@ name|error
 throw|;
 block|}
 block|}
-comment|/**      * Asserts that instruction handles can be added an instruction list, without      * corrupting the list.      */
+comment|/**      * Asserts that instruction handles can be added an instruction list, without corrupting the list.      */
 specifier|static
 name|void
 name|handles
@@ -663,7 +663,7 @@ name|exception
 throw|;
 block|}
 block|}
-comment|/**      * Assert that two independent instruction lists can be modified concurrently.      * Here: inserting branch instructions.      */
+comment|/**      * Assert that two independent instruction lists can be modified concurrently. Here: inserting branch instructions.      */
 annotation|@
 name|Test
 specifier|public
@@ -681,7 +681,7 @@ name|branchHandles
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Assert that two independent instruction lists can be modified concurrently.      * Here: inserting regular instructions.      */
+comment|/**      * Assert that two independent instruction lists can be modified concurrently. Here: inserting regular instructions.      */
 annotation|@
 name|Test
 specifier|public

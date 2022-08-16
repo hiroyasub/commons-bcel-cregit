@@ -54,7 +54,7 @@ index|[]
 name|getAccessedLocalsIndices
 parameter_list|()
 function_decl|;
-comment|/**      * Returns all the JsrInstructions that have the first instruction of this subroutine as their target.<B>Must not      * be invoked on the 'top-level subroutine'.</B>      *      * @return The JsrInstructions that have the first instruction of this subroutine as their target.      */
+comment|/**      * Returns all the JsrInstructions that have the first instruction of this subroutine as their target.<B>Must not be      * invoked on the 'top-level subroutine'.</B>      *      * @return The JsrInstructions that have the first instruction of this subroutine as their target.      */
 name|InstructionHandle
 index|[]
 name|getEnteringJsrInstructions
@@ -66,7 +66,7 @@ index|[]
 name|getInstructions
 parameter_list|()
 function_decl|;
-comment|/**      * Returns the one and only RET that leaves the subroutine. Note that JustIce has a pretty rigid notion of a      * subroutine.<B>Must not be invoked on the 'top-level subroutine'.</B>      *      * @return The one and only RET that leaves the subroutine.      *      * @see Subroutines      */
+comment|/**      * Returns the one and only RET that leaves the subroutine. Note that JustIce has a pretty rigid notion of a subroutine.      *<B>Must not be invoked on the 'top-level subroutine'.</B>      *      * @return The one and only RET that leaves the subroutine.      *      * @see Subroutines      */
 name|InstructionHandle
 name|getLeavingRET
 parameter_list|()

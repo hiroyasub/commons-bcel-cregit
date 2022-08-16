@@ -288,7 +288,7 @@ name|PLSETestCase
 extends|extends
 name|AbstractTestCase
 block|{
-comment|/**      * BCEL-208: A couple of methods in MethodGen.java need to test for      * an empty instruction list.      */
+comment|/**      * BCEL-208: A couple of methods in MethodGen.java need to test for an empty instruction list.      */
 annotation|@
 name|Test
 specifier|public
@@ -490,7 +490,7 @@ name|getInstruction
 argument_list|()
 decl_stmt|;
 comment|// without fix, the getClassName() will throw:
-comment|//   java.lang.IllegalArgumentException: Cannot be used on an array type
+comment|// java.lang.IllegalArgumentException: Cannot be used on an array type
 specifier|final
 name|String
 name|cn
@@ -585,7 +585,7 @@ literal|4
 argument_list|)
 decl_stmt|;
 comment|// 'i'
-comment|//System.out.println(lv);
+comment|// System.out.println(lv);
 specifier|final
 name|MethodGen
 name|mg
@@ -631,7 +631,7 @@ literal|4
 argument_list|)
 decl_stmt|;
 comment|// 'i'
-comment|//System.out.println(new_lv);
+comment|// System.out.println(new_lv);
 name|assertEquals
 argument_list|(
 name|lv
@@ -688,7 +688,7 @@ index|[
 literal|0
 index|]
 decl_stmt|;
-comment|//System.out.println(m.getName());
+comment|// System.out.println(m.getName());
 specifier|final
 name|Code
 name|code
@@ -733,8 +733,8 @@ operator|.
 name|toString
 argument_list|()
 decl_stmt|;
-comment|//System.out.println(data);
-comment|//System.out.println(data.contains("-"));
+comment|// System.out.println(data);
+comment|// System.out.println(data.contains("-"));
 name|assertFalse
 argument_list|(
 name|data
@@ -852,8 +852,8 @@ operator|.
 name|getLocalVariableTable
 argument_list|()
 decl_stmt|;
-comment|//System.out.println(lvt);
-comment|//System.out.println(lvt.getTableLength());
+comment|// System.out.println(lvt);
+comment|// System.out.println(lvt.getTableLength());
 specifier|final
 name|MethodGen
 name|mg
@@ -885,7 +885,7 @@ name|getConstantPool
 argument_list|()
 argument_list|)
 decl_stmt|;
-comment|//System.out.println(new_lvt);
+comment|// System.out.println(new_lvt);
 name|assertEquals
 argument_list|(
 name|lvt

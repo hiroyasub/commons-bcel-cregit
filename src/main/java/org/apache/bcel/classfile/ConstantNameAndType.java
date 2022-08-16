@@ -58,7 +58,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * This class is derived from the abstract {@link Constant}  * and represents a reference to the name and signature  * of a field or method.  *  * @see     Constant  */
+comment|/**  * This class is derived from the abstract {@link Constant} and represents a reference to the name and signature of a  * field or method.  *  * @see Constant  */
 end_comment
 
 begin_class
@@ -159,7 +159,7 @@ operator|=
 name|signatureIndex
 expr_stmt|;
 block|}
-comment|/**      * Called by objects that are traversing the nodes of the tree implicitely      * defined by the contents of a Java class. I.e., the hierarchy of methods,      * fields, attributes, etc. spawns a tree of objects.      *      * @param v Visitor object      */
+comment|/**      * Called by objects that are traversing the nodes of the tree implicitely defined by the contents of a Java class.      * I.e., the hierarchy of methods, fields, attributes, etc. spawns a tree of objects.      *      * @param v Visitor object      */
 annotation|@
 name|Override
 specifier|public
@@ -218,7 +218,7 @@ name|signatureIndex
 argument_list|)
 expr_stmt|;
 block|}
-comment|/** @return name      */
+comment|/**      * @return name      */
 specifier|public
 name|String
 name|getName
@@ -252,7 +252,7 @@ return|return
 name|nameIndex
 return|;
 block|}
-comment|/** @return signature      */
+comment|/**      * @return signature      */
 specifier|public
 name|String
 name|getSignature

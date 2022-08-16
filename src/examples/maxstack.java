@@ -86,7 +86,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Read class file(s) and examine all of its methods, determining the  * maximum stack depth used by analyzing control flow.  *  */
+comment|/**  * Read class file(s) and examine all of its methods, determining the maximum stack depth used by analyzing control  * flow.  *  */
 end_comment
 
 begin_class

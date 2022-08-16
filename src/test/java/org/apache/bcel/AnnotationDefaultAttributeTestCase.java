@@ -120,7 +120,7 @@ name|AnnotationDefaultAttributeTestCase
 extends|extends
 name|AbstractTestCase
 block|{
-comment|/**      * For values in an annotation that have default values, we should be able      * to query the AnnotationDefault attribute against the method to discover      * the default value that was originally declared.      */
+comment|/**      * For values in an annotation that have default values, we should be able to query the AnnotationDefault attribute      * against the method to discover the default value that was originally declared.      */
 annotation|@
 name|Test
 specifier|public

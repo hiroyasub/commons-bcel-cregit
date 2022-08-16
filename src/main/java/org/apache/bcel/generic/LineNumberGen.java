@@ -40,7 +40,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * This class represents a line number within a method, i.e., give an instruction  * a line number corresponding to the source code line.  *  * @see     LineNumber  * @see     MethodGen  */
+comment|/**  * This class represents a line number within a method, i.e., give an instruction a line number corresponding to the  * source code line.  *  * @see LineNumber  * @see MethodGen  */
 end_comment
 
 begin_class
@@ -146,7 +146,7 @@ return|return
 name|ih
 return|;
 block|}
-comment|/**      * Get LineNumber attribute .      *      * This relies on that the instruction list has already been dumped to byte code or      * or that the `setPositions' methods has been called for the instruction list.      */
+comment|/**      * Get LineNumber attribute .      *      * This relies on that the instruction list has already been dumped to byte code or or that the `setPositions' methods      * has been called for the instruction list.      */
 specifier|public
 name|LineNumber
 name|getLineNumber

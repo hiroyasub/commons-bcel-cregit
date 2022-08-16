@@ -48,7 +48,7 @@ name|GotoInstruction
 implements|implements
 name|VariableLengthInstruction
 block|{
-comment|/**      * Empty constructor needed for Instruction.readInstruction.      * Not to be used otherwise.      */
+comment|/**      * Empty constructor needed for Instruction.readInstruction. Not to be used otherwise.      */
 name|GOTO
 parameter_list|()
 block|{
@@ -77,7 +77,7 @@ name|target
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Call corresponding visitor method(s). The order is:      * Call visitor methods of implemented interfaces first, then      * call methods according to the class hierarchy in descending order,      * i.e., the most specific visitXXX() call comes last.      *      * @param v Visitor object      */
+comment|/**      * Call corresponding visitor method(s). The order is: Call visitor methods of implemented interfaces first, then call      * methods according to the class hierarchy in descending order, i.e., the most specific visitXXX() call comes last.      *      * @param v Visitor object      */
 annotation|@
 name|Override
 specifier|public
@@ -125,7 +125,7 @@ name|this
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Dump instruction as byte code to stream out.      * @param out Output stream      */
+comment|/**      * Dump instruction as byte code to stream out.      *       * @param out Output stream      */
 annotation|@
 name|Override
 specifier|public
@@ -207,7 +207,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/**      * Called in pass 2 of InstructionList.setPositions() in order to update      * the branch target, that may shift due to variable length instructions.      *      * @param offset additional offset caused by preceding (variable length) instructions      * @param max_offset the maximum offset that may be caused by these instructions      * @return additional offset caused by possible change of this instruction's length      */
+comment|/**      * Called in pass 2 of InstructionList.setPositions() in order to update the branch target, that may shift due to      * variable length instructions.      *      * @param offset additional offset caused by preceding (variable length) instructions      * @param max_offset the maximum offset that may be caused by these instructions      * @return additional offset caused by possible change of this instruction's length      */
 annotation|@
 name|Override
 specifier|protected

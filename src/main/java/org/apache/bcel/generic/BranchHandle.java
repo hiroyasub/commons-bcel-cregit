@@ -16,7 +16,7 @@ package|;
 end_package
 
 begin_comment
-comment|/**  * BranchHandle is returned by specialized InstructionList.append() whenever a  * BranchInstruction is appended. This is useful when the target of this  * instruction is not known at time of creation and must be set later  * via setTarget().  *  * @see InstructionHandle  * @see Instruction  * @see InstructionList  */
+comment|/**  * BranchHandle is returned by specialized InstructionList.append() whenever a BranchInstruction is appended. This is  * useful when the target of this instruction is not known at time of creation and must be set later via setTarget().  *  * @see InstructionHandle  * @see Instruction  * @see InstructionList  */
 end_comment
 
 begin_class
@@ -27,7 +27,7 @@ name|BranchHandle
 extends|extends
 name|InstructionHandle
 block|{
-comment|/** Factory method.      */
+comment|/**      * Factory method.      */
 specifier|static
 name|BranchHandle
 name|getBranchHandle
@@ -70,7 +70,7 @@ operator|=
 name|i
 expr_stmt|;
 block|}
-comment|/* Override InstructionHandle methods: delegate to branch instruction.      * Through this overriding all access to the private i_position field should      * be prevented.      */
+comment|/*      * Override InstructionHandle methods: delegate to branch instruction. Through this overriding all access to the private      * i_position field should be prevented.      */
 annotation|@
 name|Override
 specifier|public

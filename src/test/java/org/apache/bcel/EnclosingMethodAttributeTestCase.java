@@ -310,7 +310,7 @@ name|deleteOnExit
 argument_list|()
 expr_stmt|;
 block|}
-comment|/**      * Verify for an inner class declared at the type level that the      * EnclosingMethod attribute is set correctly (i.e. to a null value)      */
+comment|/**      * Verify for an inner class declared at the type level that the EnclosingMethod attribute is set correctly (i.e. to a      * null value)      */
 annotation|@
 name|Test
 specifier|public
@@ -417,7 +417,7 @@ literal|"Wrong class name"
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Verify for an inner class declared inside the 'main' method that the      * enclosing method attribute is set correctly.      */
+comment|/**      * Verify for an inner class declared inside the 'main' method that the enclosing method attribute is set correctly.      */
 annotation|@
 name|Test
 specifier|public

@@ -740,7 +740,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * This PassVerifier verifies a class file according to  * pass 2 as described in The Java Virtual Machine  * Specification, 2nd edition.  * More detailed information is to be found at the do_verify()  * method's documentation.  *  * @see #do_verify()  */
+comment|/**  * This PassVerifier verifies a class file according to pass 2 as described in The Java Virtual Machine Specification,  * 2nd edition. More detailed information is to be found at the do_verify() method's documentation.  *  * @see #do_verify()  */
 end_comment
 
 begin_class
@@ -753,7 +753,7 @@ name|PassVerifier
 implements|implements
 name|Constants
 block|{
-comment|/**      * A Visitor class that ensures the constant pool satisfies the static      * constraints.      * The visitXXX() methods throw ClassConstraintException instances otherwise.      *      * @see #constant_pool_entries_satisfy_static_constraints()      */
+comment|/**      * A Visitor class that ensures the constant pool satisfies the static constraints. The visitXXX() methods throw      * ClassConstraintException instances otherwise.      *      * @see #constant_pool_entries_satisfy_static_constraints()      */
 specifier|private
 specifier|final
 class|class
@@ -777,7 +777,7 @@ name|?
 argument_list|>
 name|CONST_Class
 decl_stmt|;
-comment|/*         private Class<?> CONST_Fieldref;         private Class<?> CONST_Methodref;         private Class<?> CONST_InterfaceMethodref;         */
+comment|/*          * private Class<?> CONST_Fieldref; private Class<?> CONST_Methodref; private Class<?> CONST_InterfaceMethodref;          */
 specifier|private
 specifier|final
 name|Class
@@ -927,7 +927,7 @@ name|ConstantClass
 operator|.
 name|class
 expr_stmt|;
-comment|/*             CONST_Fieldref = ConstantFieldref.class;             CONST_Methodref = ConstantMethodref.class;             CONST_InterfaceMethodref = ConstantInterfaceMethodref.class;             */
+comment|/*              * CONST_Fieldref = ConstantFieldref.class; CONST_Methodref = ConstantMethodref.class; CONST_InterfaceMethodref =              * ConstantInterfaceMethodref.class;              */
 name|CONST_String
 operator|=
 name|ConstantString
@@ -1106,7 +1106,7 @@ name|Code
 name|obj
 parameter_list|)
 block|{
-comment|//vmspec2 4.7.3
+comment|// vmspec2 4.7.3
 try|try
 block|{
 comment|// No code attribute allowed for native or abstract methods: see visitMethod(Method).
@@ -1254,7 +1254,7 @@ literal|"') must not be empty."
 argument_list|)
 throw|;
 block|}
-comment|//In JustIce, the check for correct offsets into the code array is delayed to Pass 3a.
+comment|// In JustIce, the check for correct offsets into the code array is delayed to Pass 3a.
 specifier|final
 name|CodeException
 index|[]
@@ -1839,10 +1839,10 @@ literal|"') will effectively be ignored and is only useful for debuggers and suc
 argument_list|)
 expr_stmt|;
 block|}
-comment|//LocalVariableTable check (partially delayed to Pass3a).
-comment|//Here because its easier to collect the information of the
-comment|//(possibly more than one) LocalVariableTables belonging to
-comment|//one certain Code attribute.
+comment|// LocalVariableTable check (partially delayed to Pass3a).
+comment|// Here because its easier to collect the information of the
+comment|// (possibly more than one) LocalVariableTables belonging to
+comment|// one certain Code attribute.
 if|if
 condition|(
 name|att
@@ -1924,7 +1924,7 @@ literal|"'."
 argument_list|)
 throw|;
 block|}
-comment|//In JustIce, the check for correct offsets into the code array is delayed to Pass 3a.
+comment|// In JustIce, the check for correct offsets into the code array is delayed to Pass 3a.
 specifier|final
 name|LocalVariable
 index|[]
@@ -2412,7 +2412,7 @@ literal|"'."
 argument_list|)
 throw|;
 block|}
-comment|//no indices to check
+comment|// no indices to check
 block|}
 annotation|@
 name|Override
@@ -2515,7 +2515,7 @@ literal|"'."
 argument_list|)
 throw|;
 block|}
-comment|//no indices to check
+comment|// no indices to check
 block|}
 annotation|@
 name|Override
@@ -2658,7 +2658,7 @@ literal|"'."
 argument_list|)
 throw|;
 block|}
-comment|//no indices to check
+comment|// no indices to check
 block|}
 annotation|@
 name|Override
@@ -2773,7 +2773,7 @@ argument_list|,
 name|CONST_Utf8
 argument_list|)
 expr_stmt|;
-comment|//checkIndex(obj, obj.getDescriptorIndex(), CONST_Utf8); //inconsistently named in BCEL, see below.
+comment|// checkIndex(obj, obj.getDescriptorIndex(), CONST_Utf8); //inconsistently named in BCEL, see below.
 name|checkIndex
 argument_list|(
 name|obj
@@ -2891,7 +2891,7 @@ literal|"'."
 argument_list|)
 throw|;
 block|}
-comment|//no indices to check
+comment|// no indices to check
 block|}
 comment|////////////////////////////////////////////////////////
 comment|// field_info-structure-ATTRIBUTES (vmspec2 4.5, 4.7) //
@@ -2907,7 +2907,7 @@ name|ConstantValue
 name|obj
 parameter_list|)
 block|{
-comment|//vmspec2 4.7.2
+comment|// vmspec2 4.7.2
 comment|// Despite its name, this really is an Attribute,
 comment|// not a constant!
 name|checkIndex
@@ -2990,7 +2990,7 @@ operator|instanceof
 name|Field
 condition|)
 block|{
-comment|//ConstantValue attributes are quite senseless if the predecessor is not a field.
+comment|// ConstantValue attributes are quite senseless if the predecessor is not a field.
 specifier|final
 name|Field
 name|f
@@ -3255,7 +3255,7 @@ name|Deprecated
 name|obj
 parameter_list|)
 block|{
-comment|//vmspec2 4.7.10
+comment|// vmspec2 4.7.10
 name|checkIndex
 argument_list|(
 name|obj
@@ -3332,7 +3332,7 @@ name|ExceptionTable
 name|obj
 parameter_list|)
 block|{
-comment|//vmspec2 4.7.4
+comment|// vmspec2 4.7.4
 try|try
 block|{
 comment|// incorrectly named, it's the Exceptions attribute (vmspec2 4.7.4)
@@ -3455,7 +3455,7 @@ name|CONST_Utf8
 argument_list|)
 expr_stmt|;
 comment|// can't be sure this ConstantClass has already been visited (checked)!
-comment|//convert internal notation on-the-fly to external notation:
+comment|// convert internal notation on-the-fly to external notation:
 specifier|final
 name|String
 name|cname
@@ -4281,7 +4281,7 @@ name|InnerClasses
 name|obj
 parameter_list|)
 block|{
-comment|//vmspec2 4.7.5
+comment|// vmspec2 4.7.5
 comment|// exactly one InnerClasses attr per ClassFile if some inner class is refernced: see visitJavaClass()
 name|checkIndex
 argument_list|(
@@ -4639,7 +4639,7 @@ operator|+
 literal|"') may have no more than one SourceFile attribute."
 argument_list|)
 throw|;
-comment|//vmspec2 4.7.7
+comment|// vmspec2 4.7.7
 block|}
 name|foundSourceFile
 operator|=
@@ -4717,12 +4717,12 @@ operator|!
 name|foundInnerClasses
 condition|)
 block|{
-comment|//throw new ClassConstraintException("A Classfile structure (like '"+tostring(obj)+
+comment|// throw new ClassConstraintException("A Classfile structure (like '"+tostring(obj)+
 comment|// "') must have exactly one InnerClasses attribute if at least one Inner Class is referenced (which is the case)."+
 comment|// " No InnerClasses attribute was found.");
-comment|//vmspec2, page 125 says it would be a constraint: but existing verifiers
-comment|//don't check it and javac doesn't satisfy it when it comes to anonymous
-comment|//inner classes
+comment|// vmspec2, page 125 says it would be a constraint: but existing verifiers
+comment|// don't check it and javac doesn't satisfy it when it comes to anonymous
+comment|// inner classes
 name|addMessage
 argument_list|(
 literal|"A Classfile structure (like '"
@@ -4770,7 +4770,7 @@ name|LineNumberTable
 name|obj
 parameter_list|)
 block|{
-comment|//vmspec2 4.7.8
+comment|// vmspec2 4.7.8
 name|checkIndex
 argument_list|(
 name|obj
@@ -4835,8 +4835,8 @@ literal|"'."
 argument_list|)
 throw|;
 block|}
-comment|//In JustIce,this check is delayed to Pass 3a.
-comment|//LineNumber[] linenumbers = obj.getLineNumberTable();
+comment|// In JustIce,this check is delayed to Pass 3a.
+comment|// LineNumber[] linenumbers = obj.getLineNumberTable();
 comment|// ...validity check...
 block|}
 comment|//////////
@@ -4868,9 +4868,9 @@ name|LocalVariableTable
 name|obj
 parameter_list|)
 block|{
-comment|//vmspec2 4.7.9
-comment|//In JustIce,this check is partially delayed to Pass 3a.
-comment|//The other part can be found in the visitCode(Code) method.
+comment|// vmspec2 4.7.9
+comment|// In JustIce,this check is partially delayed to Pass 3a.
+comment|// The other part can be found in the visitCode(Code) method.
 block|}
 comment|///////////////////////////
 comment|// METHODS (vmspec2 4.6) //
@@ -5218,7 +5218,8 @@ throw|;
 block|}
 block|}
 block|}
-comment|// Nearly forgot this! Funny return values are allowed, but a non-empty arguments list makes a different method out of it!
+comment|// Nearly forgot this! Funny return values are allowed, but a non-empty arguments list makes a different method out of
+comment|// it!
 if|if
 condition|(
 name|name
@@ -5491,8 +5492,8 @@ name|CONSTRUCTOR_NAME
 argument_list|)
 condition|)
 block|{
-comment|//..may have at most one of ACC_PRIVATE, ACC_PROTECTED, ACC_PUBLIC set: is checked above.
-comment|//..may also have ACC_STRICT set, but none of the other flags in table 4.5 (vmspec2, page 115)
+comment|// ..may have at most one of ACC_PRIVATE, ACC_PROTECTED, ACC_PUBLIC set: is checked above.
+comment|// ..may also have ACC_STRICT set, but none of the other flags in table 4.5 (vmspec2, page 115)
 if|if
 condition|(
 name|obj
@@ -5553,7 +5554,7 @@ name|STATIC_INITIALIZER_NAME
 argument_list|)
 condition|)
 block|{
-comment|//vmspec2, p.116, 2nd paragraph
+comment|// vmspec2, p.116, 2nd paragraph
 if|if
 condition|(
 name|jc
@@ -6009,7 +6010,9 @@ operator|+
 literal|"'."
 argument_list|)
 throw|;
-comment|//vmspec2 page120, 4.7.3
+comment|// vmspec2
+comment|// page120,
+comment|// 4.7.3
 block|}
 if|if
 condition|(
@@ -6076,7 +6079,7 @@ name|SourceFile
 name|obj
 parameter_list|)
 block|{
-comment|//vmspec2 4.7.7
+comment|// vmspec2 4.7.7
 comment|// zero or one SourceFile attr per ClassFile: see visitJavaClass()
 name|checkIndex
 argument_list|(
@@ -6176,7 +6179,7 @@ operator|.
 name|getBytes
 argument_list|()
 decl_stmt|;
-comment|//==obj.getSourceFileName() ?
+comment|// ==obj.getSourceFileName() ?
 specifier|final
 name|String
 name|sourceFileNameLc
@@ -6262,7 +6265,7 @@ name|Synthetic
 name|obj
 parameter_list|)
 block|{
-comment|//vmspec2 4.7.6
+comment|// vmspec2 4.7.6
 name|checkIndex
 argument_list|(
 name|obj
@@ -6342,7 +6345,7 @@ name|Unknown
 name|obj
 parameter_list|)
 block|{
-comment|//vmspec2 4.7.1
+comment|// vmspec2 4.7.1
 comment|// Represents an unknown attribute.
 name|checkIndex
 argument_list|(
@@ -6371,7 +6374,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/**      * A Visitor class that ensures the ConstantCP-subclassed entries      * of the constant pool are valid.      *<B>Precondition: index-style cross referencing in the constant      * pool must be valid.</B>      *      * @see #constant_pool_entries_satisfy_static_constraints()      * @see org.apache.bcel.classfile.ConstantCP      */
+comment|/**      * A Visitor class that ensures the ConstantCP-subclassed entries of the constant pool are valid.<B>Precondition:      * index-style cross referencing in the constant pool must be valid.</B>      *      * @see #constant_pool_entries_satisfy_static_constraints()      * @see org.apache.bcel.classfile.ConstantCP      */
 specifier|private
 specifier|final
 class|class
@@ -7215,7 +7218,7 @@ throw|;
 block|}
 block|}
 block|}
-comment|/**      * This class serves for finding out if a given JavaClass' ConstantPool      * references an Inner Class.      * The Java Virtual Machine Specification, Second Edition is not very precise      * about when an "InnerClasses" attribute has to appear. However, it states that      * there has to be exactly one InnerClasses attribute in the ClassFile structure      * if the constant pool of a class or interface refers to any class or interface      * "that is not a member of a package". Sun does not mean "member of the default      * package". In "Inner Classes Specification" they point out how a "bytecode name"      * is derived so one has to deduce what a class name of a class "that is not a      * member of a package" looks like: there is at least one character in the byte-      * code name that cannot be part of a legal Java Language Class name (and not equal      * to '/'). This assumption is wrong as the delimiter is '$' for which      * Character.isJavaIdentifierPart() == true.      * Hence, you really run into trouble if you have a toplevel class called      * "A$XXX" and another toplevel class called "A" with in inner class called "XXX".      * JustIce cannot repair this; please note that existing verifiers at this      * time even fail to detect missing InnerClasses attributes in pass 2.      */
+comment|/**      * This class serves for finding out if a given JavaClass' ConstantPool references an Inner Class. The Java Virtual      * Machine Specification, Second Edition is not very precise about when an "InnerClasses" attribute has to appear.      * However, it states that there has to be exactly one InnerClasses attribute in the ClassFile structure if the constant      * pool of a class or interface refers to any class or interface "that is not a member of a package". Sun does not mean      * "member of the default package". In "Inner Classes Specification" they point out how a "bytecode name" is derived so      * one has to deduce what a class name of a class "that is not a member of a package" looks like: there is at least one      * character in the byte- code name that cannot be part of a legal Java Language Class name (and not equal to '/'). This      * assumption is wrong as the delimiter is '$' for which Character.isJavaIdentifierPart() == true. Hence, you really run      * into trouble if you have a toplevel class called "A$XXX" and another toplevel class called "A" with in inner class      * called "XXX". JustIce cannot repair this; please note that existing verifiers at this time even fail to detect      * missing InnerClasses attributes in pass 2.      */
 specifier|private
 specifier|static
 class|class
@@ -7273,7 +7276,7 @@ name|visit
 argument_list|()
 expr_stmt|;
 block|}
-comment|/**          * Returns if the JavaClass this InnerClassDetector is working on          * has an Inner Class reference in its constant pool.          *          * @return Whether this InnerClassDetector is working on has an Inner Class reference in its constant pool.          */
+comment|/**          * Returns if the JavaClass this InnerClassDetector is working on has an Inner Class reference in its constant pool.          *          * @return Whether this InnerClassDetector is working on has an Inner Class reference in its constant pool.          */
 specifier|public
 name|boolean
 name|innerClassReferenced
@@ -7316,7 +7319,7 @@ operator|instanceof
 name|ConstantUtf8
 condition|)
 block|{
-comment|//Ignore the case where it's not a ConstantUtf8 here, we'll find out later.
+comment|// Ignore the case where it's not a ConstantUtf8 here, we'll find out later.
 specifier|final
 name|String
 name|classname
@@ -7383,7 +7386,7 @@ name|toString
 argument_list|()
 return|;
 block|}
-comment|/**      * This method returns true if and only if the supplied String      * represents a valid method name that may be referenced by      * ConstantMethodref objects.      */
+comment|/**      * This method returns true if and only if the supplied String represents a valid method name that may be referenced by      * ConstantMethodref objects.      */
 specifier|private
 specifier|static
 name|boolean
@@ -7403,7 +7406,7 @@ literal|false
 argument_list|)
 return|;
 block|}
-comment|/**      * This method returns true if and only if the supplied String      * represents a valid Java class name.      */
+comment|/**      * This method returns true if and only if the supplied String represents a valid Java class name.      */
 specifier|private
 specifier|static
 name|boolean
@@ -7414,12 +7417,12 @@ name|String
 name|name
 parameter_list|)
 block|{
-comment|/*          * TODO: implement.          * Are there any restrictions?          */
+comment|/*          * TODO: implement. Are there any restrictions?          */
 return|return
 literal|true
 return|;
 block|}
-comment|/**      * This method returns true if and only if the supplied String      * represents a valid Java field name.      */
+comment|/**      * This method returns true if and only if the supplied String represents a valid Java field name.      */
 specifier|private
 specifier|static
 name|boolean
@@ -7438,7 +7441,7 @@ name|name
 argument_list|)
 return|;
 block|}
-comment|/**      * This method returns true if and only if the supplied String      * represents a valid Java interface method name that may be      * referenced by ConstantInterfaceMethodref objects.      */
+comment|/**      * This method returns true if and only if the supplied String represents a valid Java interface method name that may be      * referenced by ConstantInterfaceMethodref objects.      */
 specifier|private
 specifier|static
 name|boolean
@@ -7471,7 +7474,7 @@ name|name
 argument_list|)
 return|;
 block|}
-comment|/**      * This method returns true if and only if the supplied String      * represents a valid Java identifier (so-called simple or unqualified name).      */
+comment|/**      * This method returns true if and only if the supplied String represents a valid Java identifier (so-called simple or      * unqualified name).      */
 specifier|private
 specifier|static
 name|boolean
@@ -7551,7 +7554,7 @@ return|return
 literal|true
 return|;
 block|}
-comment|/**      * This method returns true if and only if the supplied String      * represents a valid Java programming language method name stored as a simple      * (non-qualified) name.      * Conforming to: The Java Virtual Machine Specification, Second Edition, ï¿½2.7, ï¿½2.7.1, ï¿½2.2.      */
+comment|/**      * This method returns true if and only if the supplied String represents a valid Java programming language method name      * stored as a simple (non-qualified) name. Conforming to: The Java Virtual Machine Specification, Second Edition,      * ï¿½2.7, ï¿½2.7.1, ï¿½2.2.      */
 specifier|private
 specifier|static
 name|boolean
@@ -7569,7 +7572,7 @@ name|name
 argument_list|)
 return|;
 block|}
-comment|/**      * This method returns true if and only if the supplied String      * represents a valid method name.      * This is basically the same as a valid identifier name in the      * Java programming language, but the special name for      * the instance initialization method is allowed and the special name      * for the class/interface initialization method may be allowed.      */
+comment|/**      * This method returns true if and only if the supplied String represents a valid method name. This is basically the      * same as a valid identifier name in the Java programming language, but the special name for the instance      * initialization method is allowed and the special name for the class/interface initialization method may be allowed.      */
 specifier|private
 specifier|static
 name|boolean
@@ -7632,7 +7635,7 @@ name|CONSTRUCTOR_NAME
 argument_list|)
 return|;
 block|}
-comment|/**      * The LocalVariableInfo instances used by Pass3bVerifier.      * localVariablesInfos[i] denotes the information for the      * local variables of method number i in the      * JavaClass this verifier operates on.      */
+comment|/**      * The LocalVariableInfo instances used by Pass3bVerifier. localVariablesInfos[i] denotes the information for the local      * variables of method number i in the JavaClass this verifier operates on.      */
 specifier|private
 name|LocalVariablesInfo
 index|[]
@@ -7658,7 +7661,7 @@ operator|=
 name|owner
 expr_stmt|;
 block|}
-comment|/**      * Ensures that the constant pool entries satisfy the static constraints      * as described in The Java Virtual Machine Specification, 2nd Edition.      *      * @throws ClassConstraintException otherwise.      */
+comment|/**      * Ensures that the constant pool entries satisfy the static constraints as described in The Java Virtual Machine      * Specification, 2nd Edition.      *      * @throws ClassConstraintException otherwise.      */
 specifier|private
 name|void
 name|constant_pool_entries_satisfy_static_constraints
@@ -7712,7 +7715,7 @@ argument_list|)
 throw|;
 block|}
 block|}
-comment|/**      * Pass 2 is the pass where static properties of the      * class file are checked without looking into "Code"      * arrays of methods.      * This verification pass is usually invoked when      * a class is resolved; and it may be possible that      * this verification pass has to load in other classes      * such as superclasses or implemented interfaces.      * Therefore, Pass 1 is run on them.<BR>      * Note that most referenced classes are<B>not</B> loaded      * in for verification or for an existance check by this      * pass; only the syntactical correctness of their names      * and descriptors (a.k.a. signatures) is checked.<BR>      * Very few checks that conceptually belong here      * are delayed until pass 3a in JustIce. JustIce does      * not only check for syntactical correctness but also      * for semantical sanity - therefore it needs access to      * the "Code" array of methods in a few cases. Please      * see the pass 3a documentation, too.      *      * @see Pass3aVerifier      */
+comment|/**      * Pass 2 is the pass where static properties of the class file are checked without looking into "Code" arrays of      * methods. This verification pass is usually invoked when a class is resolved; and it may be possible that this      * verification pass has to load in other classes such as superclasses or implemented interfaces. Therefore, Pass 1 is      * run on them.<BR>      * Note that most referenced classes are<B>not</B> loaded in for verification or for an existance check by this pass;      * only the syntactical correctness of their names and descriptors (a.k.a. signatures) is checked.<BR>      * Very few checks that conceptually belong here are delayed until pass 3a in JustIce. JustIce does not only check for      * syntactical correctness but also for semantical sanity - therefore it needs access to the "Code" array of methods in      * a few cases. Please see the pass 3a documentation, too.      *      * @see Pass3aVerifier      */
 annotation|@
 name|Override
 specifier|public
@@ -7843,7 +7846,7 @@ argument_list|)
 throw|;
 block|}
 block|}
-comment|/**      * Ensures that every class has a super class and that      *<B>final</B> classes are not subclassed.      * This means, the class this Pass2Verifier operates      * on has proper super classes (transitively) up to      * java.lang.Object.      * The reason for really loading (and Pass1-verifying)      * all of those classes here is that we need them in      * Pass2 anyway to verify no final methods are overridden      * (that could be declared anywhere in the ancestor hierarchy).      *      * @throws ClassConstraintException otherwise.      */
+comment|/**      * Ensures that every class has a super class and that<B>final</B> classes are not subclassed. This means, the class      * this Pass2Verifier operates on has proper super classes (transitively) up to java.lang.Object. The reason for really      * loading (and Pass1-verifying) all of those classes here is that we need them in Pass2 anyway to verify no final      * methods are overridden (that could be declared anywhere in the ancestor hierarchy).      *      * @throws ClassConstraintException otherwise.      */
 specifier|private
 name|void
 name|every_class_has_an_accessible_superclass
@@ -8071,7 +8074,7 @@ argument_list|)
 throw|;
 block|}
 block|}
-comment|/**      * Ensures that the ConstantCP-subclassed entries of the constant      * pool are valid. According to "Yellin: Low Level Security in Java",      * this method does not verify the existence of referenced entities      * (such as classes) but only the formal correctness (such as well-formed      * signatures).      * The visitXXX() methods throw ClassConstraintException instances otherwise.      *<B>Precondition: index-style cross referencing in the constant      * pool must be valid. Simply invoke constant_pool_entries_satisfy_static_constraints()      * before.</B>      *      * @throws ClassConstraintException otherwise.      * @see #constant_pool_entries_satisfy_static_constraints()      */
+comment|/**      * Ensures that the ConstantCP-subclassed entries of the constant pool are valid. According to "Yellin: Low Level      * Security in Java", this method does not verify the existence of referenced entities (such as classes) but only the      * formal correctness (such as well-formed signatures). The visitXXX() methods throw ClassConstraintException instances      * otherwise.<B>Precondition: index-style cross referencing in the constant pool must be valid. Simply invoke      * constant_pool_entries_satisfy_static_constraints() before.</B>      *      * @throws ClassConstraintException otherwise.      * @see #constant_pool_entries_satisfy_static_constraints()      */
 specifier|private
 name|void
 name|field_and_method_refs_are_valid
@@ -8136,7 +8139,7 @@ argument_list|)
 throw|;
 block|}
 block|}
-comment|/**      * Ensures that<B>final</B> methods are not overridden.      *<B>Precondition to run this method:      * constant_pool_entries_satisfy_static_constraints() and      * every_class_has_an_accessible_superclass() have to be invoked before      * (in that order).</B>      *      * @throws ClassConstraintException otherwise.      * @see #constant_pool_entries_satisfy_static_constraints()      * @see #every_class_has_an_accessible_superclass()      */
+comment|/**      * Ensures that<B>final</B> methods are not overridden.<B>Precondition to run this method:      * constant_pool_entries_satisfy_static_constraints() and every_class_has_an_accessible_superclass() have to be invoked      * before (in that order).</B>      *      * @throws ClassConstraintException otherwise.      * @see #constant_pool_entries_satisfy_static_constraints()      * @see #every_class_has_an_accessible_superclass()      */
 specifier|private
 name|void
 name|final_methods_are_not_overridden
@@ -8391,7 +8394,7 @@ argument_list|)
 throw|;
 block|}
 block|}
-comment|/**      * Returns a LocalVariablesInfo object containing information      * about the usage of the local variables in the Code attribute      * of the said method or<B>null</B> if the class file this      * Pass2Verifier operates on could not be pass-2-verified correctly.      * The method number method_nr is the method you get using      *<B>Repository.lookupClass(myOwner.getClassname()).getMethods()[method_nr];</B>.      * You should not add own information. Leave that to JustIce.      */
+comment|/**      * Returns a LocalVariablesInfo object containing information about the usage of the local variables in the Code      * attribute of the said method or<B>null</B> if the class file this Pass2Verifier operates on could not be      * pass-2-verified correctly. The method number method_nr is the method you get using      *<B>Repository.lookupClass(myOwner.getClassname()).getMethods()[method_nr];</B>. You should not add own information.      * Leave that to JustIce.      */
 specifier|public
 name|LocalVariablesInfo
 name|getLocalVariablesInfo

@@ -219,7 +219,7 @@ name|id
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**    * Fifth pass, produce Java byte code.    */
+comment|/**      * Fifth pass, produce Java byte code.      */
 annotation|@
 name|Override
 specifier|public
@@ -470,7 +470,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/**    * Overrides ASTExpr.closeNode()    * Cast children nodes to appropiate types.    */
+comment|/**      * Overrides ASTExpr.closeNode() Cast children nodes to appropiate types.      */
 annotation|@
 name|Override
 specifier|public
@@ -481,7 +481,7 @@ block|{
 name|int
 name|i
 decl_stmt|;
-comment|/* length must be a multiple of                                          * two (ident = expr) + 1 (body expr) */
+comment|/*                 * length must be a multiple of two (ident = expr) + 1 (body expr)                 */
 specifier|final
 name|int
 name|len_2
@@ -577,7 +577,7 @@ literal|null
 expr_stmt|;
 comment|// Throw away old reference
 block|}
-comment|/**    * Fifth pass, produce Java code.    */
+comment|/**      * Fifth pass, produce Java code.      */
 annotation|@
 name|Override
 specifier|public
@@ -631,7 +631,7 @@ name|getType
 argument_list|()
 decl_stmt|;
 comment|// can only be int
-comment|/* Idents have to be declared at start of function for later use.        * Each name is unique, so there shouldn't be a problem in application.        */
+comment|/*              * Idents have to be declared at start of function for later use. Each name is unique, so there shouldn't be a problem              * in application.              */
 name|exprs
 index|[
 name|i
@@ -751,7 +751,7 @@ literal|" "
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**    * Second pass    * Overrides AstExpr.eval()    * @return type of expression    * @param expected type    */
+comment|/**      * Second pass Overrides AstExpr.eval()      *       * @return type of expression      * @param expected type      */
 annotation|@
 name|Override
 specifier|public
@@ -763,7 +763,7 @@ name|int
 name|expected
 parameter_list|)
 block|{
-comment|//is_simple = true;
+comment|// is_simple = true;
 for|for
 control|(
 name|int
@@ -805,7 +805,7 @@ argument_list|(
 name|t
 argument_list|)
 expr_stmt|;
-comment|//      is_simple = is_simple&& exprs[i].isSimple();
+comment|// is_simple = is_simple&& exprs[i].isSimple();
 block|}
 return|return
 name|type
@@ -818,7 +818,7 @@ name|expected
 argument_list|)
 return|;
 block|}
-comment|/**    * Overrides ASTExpr.traverse()    */
+comment|/**      * Overrides ASTExpr.traverse()      */
 annotation|@
 name|Override
 specifier|public

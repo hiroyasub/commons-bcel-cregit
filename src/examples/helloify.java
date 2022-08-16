@@ -240,7 +240,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Read class file(s) and patch all of its methods, so that they print  * "hello" and their name and signature before doing anything else.  *  */
+comment|/**  * Read class file(s) and patch all of its methods, so that they print "hello" and their name and signature before doing  * anything else.  *  */
 end_comment
 
 begin_class

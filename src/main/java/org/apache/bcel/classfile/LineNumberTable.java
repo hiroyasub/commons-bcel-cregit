@@ -58,7 +58,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * This class represents a table of line numbers for debugging  * purposes. This attribute is used by the<em>Code</em> attribute. It  * contains pairs of PCs and line numbers.  *  * @see     Code  * @see LineNumber  */
+comment|/**  * This class represents a table of line numbers for debugging purposes. This attribute is used by the<em>Code</em>  * attribute. It contains pairs of PCs and line numbers.  *  * @see Code  * @see LineNumber  */
 end_comment
 
 begin_class
@@ -83,7 +83,7 @@ index|[]
 name|lineNumberTable
 decl_stmt|;
 comment|// Table of line/numbers pairs
-comment|/**      * Construct object from input stream.      * @param name_index Index of name      * @param length Content length in bytes      * @param input Input stream      * @param constant_pool Array of constants      * @throws IOException if an I/O Exception occurs in readUnsignedShort      */
+comment|/**      * Construct object from input stream.      *       * @param name_index Index of name      * @param length Content length in bytes      * @param input Input stream      * @param constant_pool Array of constants      * @throws IOException if an I/O Exception occurs in readUnsignedShort      */
 name|LineNumberTable
 parameter_list|(
 specifier|final
@@ -165,7 +165,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/*      * @param name_index Index of name      * @param length Content length in bytes      * @param lineNumberTable Table of line/numbers pairs      * @param constant_pool Array of constants      */
+comment|/*      * @param name_index Index of name      *       * @param length Content length in bytes      *       * @param lineNumberTable Table of line/numbers pairs      *       * @param constant_pool Array of constants      */
 specifier|public
 name|LineNumberTable
 parameter_list|(
@@ -207,7 +207,7 @@ operator|=
 name|line_number_table
 expr_stmt|;
 block|}
-comment|/*      * Initialize from another object. Note that both objects use the same      * references (shallow copy). Use copy() for a physical copy.      */
+comment|/*      * Initialize from another object. Note that both objects use the same references (shallow copy). Use copy() for a      * physical copy.      */
 specifier|public
 name|LineNumberTable
 parameter_list|(
@@ -240,7 +240,7 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Called by objects that are traversing the nodes of the tree implicitely      * defined by the contents of a Java class. I.e., the hierarchy of methods,      * fields, attributes, etc. spawns a tree of objects.      *      * @param v Visitor object      */
+comment|/**      * Called by objects that are traversing the nodes of the tree implicitely defined by the contents of a Java class.      * I.e., the hierarchy of methods, fields, attributes, etc. spawns a tree of objects.      *      * @param v Visitor object      */
 annotation|@
 name|Override
 specifier|public
@@ -447,7 +447,7 @@ init|=
 operator|-
 literal|1
 decl_stmt|;
-comment|/* Do a binary search since the array is ordered.          */
+comment|/*          * Do a binary search since the array is ordered.          */
 do|do
 block|{
 specifier|final
@@ -512,7 +512,7 @@ operator|+
 literal|1
 expr_stmt|;
 block|}
-comment|/* If exact match can't be found (which is the most common case)              * return the line number that corresponds to the greatest index less              * than pos.              */
+comment|/*              * If exact match can't be found (which is the most common case) return the line number that corresponds to the greatest              * index less than pos.              */
 if|if
 condition|(
 name|j
@@ -541,7 +541,7 @@ operator|<=
 name|r
 condition|)
 do|;
-comment|/* It's possible that we did not find any valid entry for the bytecode          * offset we were looking for.          */
+comment|/*          * It's possible that we did not find any valid entry for the bytecode offset we were looking for.          */
 if|if
 condition|(
 name|min_index

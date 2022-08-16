@@ -16,7 +16,7 @@ package|;
 end_package
 
 begin_comment
-comment|/**  * D2F - Convert double to float  *<PRE>Stack: ..., value.word1, value.word2 -&gt; ..., result</PRE>  *  */
+comment|/**  * D2F - Convert double to float  *   *<PRE>  * Stack: ..., value.word1, value.word2 -&gt; ..., result  *</PRE>  *  */
 end_comment
 
 begin_class
@@ -26,7 +26,7 @@ name|D2F
 extends|extends
 name|ConversionInstruction
 block|{
-comment|/** Convert double to float      */
+comment|/**      * Convert double to float      */
 specifier|public
 name|D2F
 parameter_list|()
@@ -45,7 +45,7 @@ name|D2F
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Call corresponding visitor method(s). The order is:      * Call visitor methods of implemented interfaces first, then      * call methods according to the class hierarchy in descending order,      * i.e., the most specific visitXXX() call comes last.      *      * @param v Visitor object      */
+comment|/**      * Call corresponding visitor method(s). The order is: Call visitor methods of implemented interfaces first, then call      * methods according to the class hierarchy in descending order, i.e., the most specific visitXXX() call comes last.      *      * @param v Visitor object      */
 annotation|@
 name|Override
 specifier|public

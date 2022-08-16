@@ -58,7 +58,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * This class represents an entry in the requires table of the Module attribute.  * Each entry describes a module on which the parent module depends.  *  * @see   Module  * @since 6.4.0  */
+comment|/**  * This class represents an entry in the requires table of the Module attribute. Each entry describes a module on which  * the parent module depends.  *  * @see Module  * @since 6.4.0  */
 end_comment
 
 begin_class
@@ -120,7 +120,7 @@ name|readUnsignedShort
 argument_list|()
 expr_stmt|;
 block|}
-comment|/**      * Called by objects that are traversing the nodes of the tree implicitely      * defined by the contents of a Java class. I.e., the hierarchy of methods,      * fields, attributes, etc. spawns a tree of objects.      *      * @param v Visitor object      */
+comment|/**      * Called by objects that are traversing the nodes of the tree implicitely defined by the contents of a Java class.      * I.e., the hierarchy of methods, fields, attributes, etc. spawns a tree of objects.      *      * @param v Visitor object      */
 annotation|@
 name|Override
 specifier|public

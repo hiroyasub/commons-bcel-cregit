@@ -88,7 +88,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Verify that a constant pool containing dynamic constants (condy) - in this case created by JaCoCo -  * can be read and the corresponding constant is found after parsing.  */
+comment|/**  * Verify that a constant pool containing dynamic constants (condy) - in this case created by JaCoCo - can be read and  * the corresponding constant is found after parsing.  */
 end_comment
 
 begin_class

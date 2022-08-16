@@ -28,7 +28,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Instances of this class should never be thrown. When such an instance is thrown,  * this is due to an INTERNAL ERROR of BCEL's class file verifier&quot;JustIce&quot;.  *  */
+comment|/**  * Instances of this class should never be thrown. When such an instance is thrown, this is due to an INTERNAL ERROR of  * BCEL's class file verifier&quot;JustIce&quot;.  *  */
 end_comment
 
 begin_class
@@ -99,7 +99,7 @@ name|AssertionViolatedException
 parameter_list|()
 block|{
 block|}
-comment|/**      * Constructs a new AssertionViolatedException with the specified error message preceded      * by&quot;INTERNAL ERROR:&quot;.      */
+comment|/**      * Constructs a new AssertionViolatedException with the specified error message preceded by&quot;INTERNAL ERROR:      *&quot;.      */
 specifier|public
 name|AssertionViolatedException
 parameter_list|(
@@ -122,7 +122,7 @@ operator|=
 name|message
 expr_stmt|;
 block|}
-comment|/**      * Constructs a new AssertionViolationException with the specified error message and initial cause      * @since 6.0      */
+comment|/**      * Constructs a new AssertionViolationException with the specified error message and initial cause      *       * @since 6.0      */
 specifier|public
 name|AssertionViolatedException
 parameter_list|(
@@ -150,7 +150,7 @@ operator|=
 name|message
 expr_stmt|;
 block|}
-comment|/** Extends the error message with a string before ("pre") and after ("post") the         'old' error message. All of these three strings are allowed to be null, and null         is always replaced by the empty string (""). In particular, after invoking this         method, the error message of this object can no longer be null.     */
+comment|/**      * Extends the error message with a string before ("pre") and after ("post") the 'old' error message. All of these three      * strings are allowed to be null, and null is always replaced by the empty string (""). In particular, after invoking      * this method, the error message of this object can no longer be null.      */
 specifier|public
 name|void
 name|extendMessage
@@ -207,7 +207,7 @@ operator|+
 name|post
 expr_stmt|;
 block|}
-comment|/**      * Returns the error message string of this AssertionViolatedException object.      * @return the error message string of this AssertionViolatedException.      */
+comment|/**      * Returns the error message string of this AssertionViolatedException object.      *       * @return the error message string of this AssertionViolatedException.      */
 annotation|@
 name|Override
 specifier|public

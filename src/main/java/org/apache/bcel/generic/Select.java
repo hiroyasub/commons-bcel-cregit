@@ -50,7 +50,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Select - Abstract super class for LOOKUPSWITCH and TABLESWITCH instructions.  *  *<p>We use our super's {@code target} property as the default target.  *  * @see LOOKUPSWITCH  * @see TABLESWITCH  * @see InstructionList  */
+comment|/**  * Select - Abstract super class for LOOKUPSWITCH and TABLESWITCH instructions.  *  *<p>  * We use our super's {@code target} property as the default target.  *  * @see LOOKUPSWITCH  * @see TABLESWITCH  * @see InstructionList  */
 end_comment
 
 begin_class
@@ -119,12 +119,12 @@ name|int
 name|padding
 decl_stmt|;
 comment|// number of pad bytes for alignment TODO could be package-protected?
-comment|/**      * Empty constructor needed for Instruction.readInstruction.      * Not to be used otherwise.      */
+comment|/**      * Empty constructor needed for Instruction.readInstruction. Not to be used otherwise.      */
 name|Select
 parameter_list|()
 block|{
 block|}
-comment|/**      * (Match, target) pairs for switch.      * `Match' and `targets' must have the same length of course.      *      * @param match array of matching values      * @param targets instruction targets      * @param defaultTarget default instruction target      */
+comment|/**      * (Match, target) pairs for switch. `Match' and `targets' must have the same length of course.      *      * @param match array of matching values      * @param targets instruction targets      * @param defaultTarget default instruction target      */
 name|Select
 parameter_list|(
 specifier|final
@@ -366,7 +366,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/**      * Dump instruction as byte code to stream out.      * @param out Output stream      */
+comment|/**      * Dump instruction as byte code to stream out.      *       * @param out Output stream      */
 annotation|@
 name|Override
 specifier|public
@@ -920,7 +920,7 @@ name|toString
 argument_list|()
 return|;
 block|}
-comment|/**      * Since this is a variable length instruction, it may shift the following      * instructions which then need to update their position.      *      * Called by InstructionList.setPositions when setting the position for every      * instruction. In the presence of variable length instructions `setPositions'      * performs multiple passes over the instruction list to calculate the      * correct (byte) positions and offsets by calling this function.      *      * @param offset additional offset caused by preceding (variable length) instructions      * @param max_offset the maximum offset that may be caused by these instructions      * @return additional offset caused by possible change of this instruction's length      */
+comment|/**      * Since this is a variable length instruction, it may shift the following instructions which then need to update their      * position.      *      * Called by InstructionList.setPositions when setting the position for every instruction. In the presence of variable      * length instructions `setPositions' performs multiple passes over the instruction list to calculate the correct (byte)      * positions and offsets by calling this function.      *      * @param offset additional offset caused by preceding (variable length) instructions      * @param max_offset the maximum offset that may be caused by these instructions      * @return additional offset caused by possible change of this instruction's length      */
 annotation|@
 name|Override
 specifier|protected
@@ -957,7 +957,7 @@ operator|.
 name|getLength
 argument_list|()
 decl_stmt|;
-comment|/* Alignment on 4-byte-boundary, + 1, because of tag byte.          */
+comment|/*          * Alignment on 4-byte-boundary, + 1, because of tag byte.          */
 name|padding
 operator|=
 operator|(

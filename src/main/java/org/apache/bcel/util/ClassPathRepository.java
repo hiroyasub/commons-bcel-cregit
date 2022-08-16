@@ -50,7 +50,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * This repository is used in situations where a Class is created outside the realm of a ClassLoader. Classes are loaded from the file systems using the paths  * specified in the given class path. By default, this is the value returned by ClassPath.getClassPath().  *  * @see org.apache.bcel.Repository  */
+comment|/**  * This repository is used in situations where a Class is created outside the realm of a ClassLoader. Classes are loaded  * from the file systems using the paths specified in the given class path. By default, this is the value returned by  * ClassPath.getClassPath().  *  * @see org.apache.bcel.Repository  */
 end_comment
 
 begin_class

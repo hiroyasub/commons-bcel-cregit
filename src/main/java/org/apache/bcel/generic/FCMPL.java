@@ -16,7 +16,7 @@ package|;
 end_package
 
 begin_comment
-comment|/**  * FCMPL - Compare floats: value1&lt; value2  *<PRE>Stack: ..., value1, value2 -&gt; ..., result</PRE>  *  */
+comment|/**  * FCMPL - Compare floats: value1&lt; value2  *   *<PRE>  * Stack: ..., value1, value2 -&gt; ..., result  *</PRE>  *  */
 end_comment
 
 begin_class
@@ -55,7 +55,7 @@ literal|1
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Call corresponding visitor method(s). The order is:      * Call visitor methods of implemented interfaces first, then      * call methods according to the class hierarchy in descending order,      * i.e., the most specific visitXXX() call comes last.      *      * @param v Visitor object      */
+comment|/**      * Call corresponding visitor method(s). The order is: Call visitor methods of implemented interfaces first, then call      * methods according to the class hierarchy in descending order, i.e., the most specific visitXXX() call comes last.      *      * @param v Visitor object      */
 annotation|@
 name|Override
 specifier|public
@@ -96,7 +96,7 @@ name|this
 argument_list|)
 expr_stmt|;
 block|}
-comment|/** @return Type.FLOAT      */
+comment|/**      * @return Type.FLOAT      */
 annotation|@
 name|Override
 specifier|public

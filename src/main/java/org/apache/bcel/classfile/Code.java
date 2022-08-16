@@ -72,7 +72,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * This class represents a chunk of Java byte code contained in a  * method. It is instantiated by the  *<em>Attribute.readAttribute()</em> method. A<em>Code</em>  * attribute contains informations about operand stack, local  * variables, byte code and the exceptions handled within this  * method.  *  * This attribute has attributes itself, namely<em>LineNumberTable</em> which  * is used for debugging purposes and<em>LocalVariableTable</em> which  * contains information about the local variables.  *  * @see     Attribute  * @see     CodeException  * @see     LineNumberTable  * @see LocalVariableTable  */
+comment|/**  * This class represents a chunk of Java byte code contained in a method. It is instantiated by the  *<em>Attribute.readAttribute()</em> method. A<em>Code</em> attribute contains informations about operand stack, local  * variables, byte code and the exceptions handled within this method.  *  * This attribute has attributes itself, namely<em>LineNumberTable</em> which is used for debugging purposes and  *<em>LocalVariableTable</em> which contains information about the local variables.  *  * @see Attribute  * @see CodeException  * @see LineNumberTable  * @see LocalVariableTable  */
 end_comment
 
 begin_class
@@ -87,12 +87,12 @@ specifier|private
 name|int
 name|maxStack
 decl_stmt|;
-comment|// Maximum size of stack used by this method  // TODO this could be made final (setter is not used)
+comment|// Maximum size of stack used by this method // TODO this could be made final (setter is not used)
 specifier|private
 name|int
 name|maxLocals
 decl_stmt|;
-comment|// Number of local variables  // TODO this could be made final (setter is not used)
+comment|// Number of local variables // TODO this could be made final (setter is not used)
 specifier|private
 name|byte
 index|[]
@@ -111,7 +111,7 @@ index|[]
 name|attributes
 decl_stmt|;
 comment|// or LocalVariable
-comment|/**      * Initialize from another object. Note that both objects use the same      * references (shallow copy). Use copy() for a physical copy.      */
+comment|/**      * Initialize from another object. Note that both objects use the same references (shallow copy). Use copy() for a      * physical copy.      */
 specifier|public
 name|Code
 parameter_list|(
@@ -249,7 +249,7 @@ argument_list|(
 name|code
 argument_list|)
 expr_stmt|;
-comment|/* Read exception table that contains all regions where an exception          * handler is active, i.e., a try { ... } catch() block.          */
+comment|/*          * Read exception table that contains all regions where an exception handler is active, i.e., a try { ... } catch()          * block.          */
 specifier|final
 name|int
 name|exception_table_length
@@ -294,7 +294,7 @@ name|file
 argument_list|)
 expr_stmt|;
 block|}
-comment|/* Read all attributes, currently `LineNumberTable' and          * `LocalVariableTable'          */
+comment|/*          * Read all attributes, currently `LineNumberTable' and `LocalVariableTable'          */
 specifier|final
 name|int
 name|attributes_count
@@ -342,7 +342,7 @@ name|constant_pool
 argument_list|)
 expr_stmt|;
 block|}
-comment|/* Adjust length, because of setAttributes in this(), s.b.  length          * is incorrect, because it didn't take the internal attributes          * into account yet! Very subtle bug, fixed in 3.1.1.          */
+comment|/*          * Adjust length, because of setAttributes in this(), s.b. length is incorrect, because it didn't take the internal          * attributes into account yet! Very subtle bug, fixed in 3.1.1.          */
 name|super
 operator|.
 name|setLength
@@ -466,7 +466,7 @@ argument_list|)
 expr_stmt|;
 comment|// Adjust length
 block|}
-comment|/**      * Called by objects that are traversing the nodes of the tree implicitely      * defined by the contents of a Java class. I.e., the hierarchy of methods,      * fields, attributes, etc. spawns a tree of objects.      *      * @param v Visitor object      */
+comment|/**      * Called by objects that are traversing the nodes of the tree implicitely defined by the contents of a Java class.      * I.e., the hierarchy of methods, fields, attributes, etc. spawns a tree of objects.      *      * @param v Visitor object      */
 annotation|@
 name|Override
 specifier|public
@@ -486,7 +486,7 @@ name|this
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * @return the full size of this code attribute, minus its first 6 bytes,      * including the size of all its contained attributes      */
+comment|/**      * @return the full size of this code attribute, minus its first 6 bytes, including the size of all its contained      *         attributes      */
 specifier|private
 name|int
 name|calculateLength
@@ -521,7 +521,7 @@ name|getLength
 argument_list|()
 operator|+
 literal|6
-comment|/*attribute header size*/
+comment|/* attribute header size */
 expr_stmt|;
 block|}
 block|}
@@ -839,7 +839,7 @@ return|return
 name|exceptionTable
 return|;
 block|}
-comment|/**      * @return the internal length of this code attribute (minus the first 6 bytes)      * and excluding all its attributes      */
+comment|/**      * @return the internal length of this code attribute (minus the first 6 bytes) and excluding all its attributes      */
 specifier|private
 name|int
 name|getInternalLength
@@ -847,21 +847,21 @@ parameter_list|()
 block|{
 return|return
 literal|2
-comment|/*maxStack*/
+comment|/* maxStack */
 operator|+
 literal|2
-comment|/*maxLocals*/
+comment|/* maxLocals */
 operator|+
 literal|4
-comment|/*code length*/
+comment|/* code length */
 operator|+
 name|code
 operator|.
 name|length
-comment|/*byte-code*/
+comment|/* byte-code */
 operator|+
 literal|2
-comment|/*exception-table length*/
+comment|/* exception-table length */
 operator|+
 literal|8
 operator|*

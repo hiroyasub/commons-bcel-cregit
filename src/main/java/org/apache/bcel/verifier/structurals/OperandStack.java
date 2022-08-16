@@ -102,7 +102,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * This class implements a stack used for symbolic JVM stack simulation.  * [It's used an an operand stack substitute.]  * Elements of this stack are {@link Type} objects.  *  */
+comment|/**  * This class implements a stack used for symbolic JVM stack simulation. [It's used an an operand stack substitute.]  * Elements of this stack are {@link Type} objects.  *  */
 end_comment
 
 begin_class
@@ -147,7 +147,7 @@ operator|=
 name|maxStack
 expr_stmt|;
 block|}
-comment|/**      * Creates an otherwise empty stack with a maximum of maxStack slots and      * the ObjectType 'obj' at the top.      */
+comment|/**      * Creates an otherwise empty stack with a maximum of maxStack slots and the ObjectType 'obj' at the top.      */
 specifier|public
 name|OperandStack
 parameter_list|(
@@ -188,7 +188,7 @@ argument_list|<>
 argument_list|()
 expr_stmt|;
 block|}
-comment|/**      * Returns a deep copy of this object; that means, the clone operates      * on a new stack. However, the Type objects on the stack are      * shared.      */
+comment|/**      * Returns a deep copy of this object; that means, the clone operates on a new stack. However, the Type objects on the      * stack are shared.      */
 annotation|@
 name|Override
 specifier|public
@@ -244,7 +244,7 @@ return|return
 name|newstack
 return|;
 block|}
-comment|/**      * Returns true if and only if this OperandStack      * equals another, meaning equal lengths and equal      * objects on the stacks.      */
+comment|/**      * Returns true if and only if this OperandStack equals another, meaning equal lengths and equal objects on the stacks.      */
 annotation|@
 name|Override
 specifier|public
@@ -308,7 +308,7 @@ name|clone
 argument_list|()
 return|;
 block|}
-comment|/** @return a hash code value for the object.      */
+comment|/**      * @return a hash code value for the object.      */
 annotation|@
 name|Override
 specifier|public
@@ -323,7 +323,7 @@ name|hashCode
 argument_list|()
 return|;
 block|}
-comment|/**      * Replaces all occurences of u in this OperandStack instance      * with an "initialized" ObjectType.      */
+comment|/**      * Replaces all occurences of u in this OperandStack instance with an "initialized" ObjectType.      */
 specifier|public
 name|void
 name|initializeObject
@@ -378,7 +378,7 @@ expr_stmt|;
 block|}
 block|}
 block|}
-comment|/**      * Returns true IFF this OperandStack is empty.    */
+comment|/**      * Returns true IFF this OperandStack is empty.      */
 specifier|public
 name|boolean
 name|isEmpty
@@ -403,7 +403,7 @@ operator|.
 name|maxStack
 return|;
 block|}
-comment|/**      * Merges another stack state into this instance's stack state.      * See the Java Virtual Machine Specification, Second Edition, page 146: 4.9.2      * for details.      */
+comment|/**      * Merges another stack state into this instance's stack state. See the Java Virtual Machine Specification, Second      * Edition, page 146: 4.9.2 for details.      */
 specifier|public
 name|void
 name|merge
@@ -583,7 +583,8 @@ name|UninitializedObjectType
 operator|)
 condition|)
 block|{
-comment|//that has been initialized by now
+comment|// that has been initialized by
+comment|// now
 name|stack
 operator|.
 name|set
@@ -606,7 +607,7 @@ name|getInitialized
 argument_list|()
 argument_list|)
 expr_stmt|;
-comment|//note that.
+comment|// note that.
 block|}
 if|if
 condition|(
@@ -745,7 +746,7 @@ literal|0
 argument_list|)
 return|;
 block|}
-comment|/**    * Returns the element that's i elements below the top element; that means,    * iff i==0 the top element is returned. The element is not popped off the stack!    */
+comment|/**      * Returns the element that's i elements below the top element; that means, iff i==0 the top element is returned. The      * element is not popped off the stack!      */
 specifier|public
 name|Type
 name|peek
@@ -923,13 +924,13 @@ name|size
 argument_list|()
 return|;
 block|}
-comment|/**      * Returns the number of stack slots used.      * @see #maxStack()      */
+comment|/**      * Returns the number of stack slots used.      *       * @see #maxStack()      */
 specifier|public
 name|int
 name|slotsUsed
 parameter_list|()
 block|{
-comment|/*  XXX change this to a better implementation using a variable             that keeps track of the actual slotsUsed()-value monitoring             all push()es and pop()s.         */
+comment|/*          * XXX change this to a better implementation using a variable that keeps track of the actual slotsUsed()-value          * monitoring all push()es and pop()s.          */
 name|int
 name|slots
 init|=

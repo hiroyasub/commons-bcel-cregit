@@ -65,7 +65,7 @@ name|ReferenceType
 extends|extends
 name|Type
 block|{
-comment|/** Class is non-abstract but not instantiable from the outside      */
+comment|/**      * Class is non-abstract but not instantiable from the outside      */
 name|ReferenceType
 parameter_list|()
 block|{
@@ -99,7 +99,7 @@ name|s
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * This commutative operation returns the first common superclass (narrowest ReferenceType      * referencing a class, not an interface).      * If one of the types is a superclass of the other, the former is returned.      * If "this" is Type.NULL, then t is returned.      * If t is Type.NULL, then "this" is returned.      * If "this" equals t ['this.equals(t)'] "this" is returned.      * If "this" or t is an ArrayType, then Type.OBJECT is returned.      * If "this" or t is a ReferenceType referencing an interface, then Type.OBJECT is returned.      * If not all of the two classes' superclasses cannot be found, "null" is returned.      * See the JVM specification edition 2, "ï¿½4.9.2 The Bytecode Verifier".      *      * @deprecated use getFirstCommonSuperclass(ReferenceType t) which has      *             slightly changed semantics.      * @throws ClassNotFoundException on failure to find superclasses of this      *  type, or the type passed as a parameter      */
+comment|/**      * This commutative operation returns the first common superclass (narrowest ReferenceType referencing a class, not an      * interface). If one of the types is a superclass of the other, the former is returned. If "this" is Type.NULL, then t      * is returned. If t is Type.NULL, then "this" is returned. If "this" equals t ['this.equals(t)'] "this" is returned. If      * "this" or t is an ArrayType, then Type.OBJECT is returned. If "this" or t is a ReferenceType referencing an      * interface, then Type.OBJECT is returned. If not all of the two classes' superclasses cannot be found, "null" is      * returned. See the JVM specification edition 2, "ï¿½4.9.2 The Bytecode Verifier".      *      * @deprecated use getFirstCommonSuperclass(ReferenceType t) which has slightly changed semantics.      * @throws ClassNotFoundException on failure to find superclasses of this type, or the type passed as a parameter      */
 annotation|@
 name|Deprecated
 specifier|public
@@ -151,7 +151,7 @@ block|{
 return|return
 name|this
 return|;
-comment|/*              * TODO: Above sounds a little arbitrary. On the other hand, there is              * no object referenced by Type.NULL so we can also say all the objects              * referenced by Type.NULL were derived from java.lang.Object.              * However, the Java Language's "instanceof" operator proves us wrong:              * "null" is not referring to an instance of java.lang.Object :)              */
+comment|/*              * TODO: Above sounds a little arbitrary. On the other hand, there is no object referenced by Type.NULL so we can also              * say all the objects referenced by Type.NULL were derived from java.lang.Object. However, the Java Language's              * "instanceof" operator proves us wrong: "null" is not referring to an instance of java.lang.Object :)              */
 block|}
 if|if
 condition|(
@@ -417,7 +417,7 @@ return|return
 literal|null
 return|;
 block|}
-comment|/**      * This commutative operation returns the first common superclass (narrowest ReferenceType      * referencing a class, not an interface).      * If one of the types is a superclass of the other, the former is returned.      * If "this" is Type.NULL, then t is returned.      * If t is Type.NULL, then "this" is returned.      * If "this" equals t ['this.equals(t)'] "this" is returned.      * If "this" or t is an ArrayType, then Type.OBJECT is returned;      * unless their dimensions match. Then an ArrayType of the same      * number of dimensions is returned, with its basic type being the      * first common super class of the basic types of "this" and t.      * If "this" or t is a ReferenceType referencing an interface, then Type.OBJECT is returned.      * If not all of the two classes' superclasses cannot be found, "null" is returned.      * See the JVM specification edition 2, "ï¿½4.9.2 The Bytecode Verifier".      *      * @throws ClassNotFoundException on failure to find superclasses of this      *  type, or the type passed as a parameter      */
+comment|/**      * This commutative operation returns the first common superclass (narrowest ReferenceType referencing a class, not an      * interface). If one of the types is a superclass of the other, the former is returned. If "this" is Type.NULL, then t      * is returned. If t is Type.NULL, then "this" is returned. If "this" equals t ['this.equals(t)'] "this" is returned. If      * "this" or t is an ArrayType, then Type.OBJECT is returned; unless their dimensions match. Then an ArrayType of the      * same number of dimensions is returned, with its basic type being the first common super class of the basic types of      * "this" and t. If "this" or t is a ReferenceType referencing an interface, then Type.OBJECT is returned. If not all of      * the two classes' superclasses cannot be found, "null" is returned. See the JVM specification edition 2, "ï¿½4.9.2 The      * Bytecode Verifier".      *      * @throws ClassNotFoundException on failure to find superclasses of this type, or the type passed as a parameter      */
 specifier|public
 name|ReferenceType
 name|getFirstCommonSuperclass
@@ -467,7 +467,7 @@ block|{
 return|return
 name|this
 return|;
-comment|/*              * TODO: Above sounds a little arbitrary. On the other hand, there is              * no object referenced by Type.NULL so we can also say all the objects              * referenced by Type.NULL were derived from java.lang.Object.              * However, the Java Language's "instanceof" operator proves us wrong:              * "null" is not referring to an instance of java.lang.Object :)              */
+comment|/*              * TODO: Above sounds a little arbitrary. On the other hand, there is no object referenced by Type.NULL so we can also              * say all the objects referenced by Type.NULL were derived from java.lang.Object. However, the Java Language's              * "instanceof" operator proves us wrong: "null" is not referring to an instance of java.lang.Object :)              */
 block|}
 comment|/* This code is from a bug report by Konstantin Shagin<konst@cs.technion.ac.il> */
 if|if
@@ -823,7 +823,7 @@ return|return
 literal|null
 return|;
 block|}
-comment|/**      * Return true iff this is assignment compatible with another type t      * as defined in the JVM specification; see the AASTORE definition      * there.      * @throws ClassNotFoundException if any classes or interfaces required      *  to determine assignment compatibility can't be found      */
+comment|/**      * Return true iff this is assignment compatible with another type t as defined in the JVM specification; see the      * AASTORE definition there.      *       * @throws ClassNotFoundException if any classes or interfaces required to determine assignment compatibility can't be      *         found      */
 specifier|public
 name|boolean
 name|isAssignmentCompatibleWith
@@ -875,7 +875,7 @@ literal|true
 return|;
 comment|// This is not explicitely stated, but clear. Isn't it?
 block|}
-comment|/* If this is a class type then          */
+comment|/*          * If this is a class type then          */
 if|if
 condition|(
 name|this
@@ -893,7 +893,7 @@ name|referencesClassExact
 argument_list|()
 condition|)
 block|{
-comment|/* If T is a class type, then this must be the same class as T,              or this must be a subclass of T;              */
+comment|/*              * If T is a class type, then this must be the same class as T, or this must be a subclass of T;              */
 if|if
 condition|(
 name|T
@@ -949,7 +949,7 @@ return|return
 literal|true
 return|;
 block|}
-comment|/* If T is an interface type, this must implement interface T.              */
+comment|/*              * If T is an interface type, this must implement interface T.              */
 if|if
 condition|(
 name|T
@@ -997,7 +997,7 @@ literal|true
 return|;
 block|}
 block|}
-comment|/* If this is an interface type, then:          */
+comment|/*          * If this is an interface type, then:          */
 if|if
 condition|(
 name|this
@@ -1015,7 +1015,7 @@ name|referencesInterfaceExact
 argument_list|()
 condition|)
 block|{
-comment|/* If T is a class type, then T must be Object (ï¿½2.4.7).              */
+comment|/*              * If T is a class type, then T must be Object (ï¿½2.4.7).              */
 if|if
 condition|(
 name|T
@@ -1046,7 +1046,7 @@ return|return
 literal|true
 return|;
 block|}
-comment|/* If T is an interface type, then T must be the same interface              * as this or a superinterface of this (ï¿½2.13.2).              */
+comment|/*              * If T is an interface type, then T must be the same interface as this or a superinterface of this (ï¿½2.13.2).              */
 if|if
 condition|(
 name|T
@@ -1103,7 +1103,7 @@ literal|true
 return|;
 block|}
 block|}
-comment|/* If this is an array type, namely, the type SC[], that is, an          * array of components of type SC, then:          */
+comment|/*          * If this is an array type, namely, the type SC[], that is, an array of components of type SC, then:          */
 if|if
 condition|(
 name|this
@@ -1111,7 +1111,7 @@ operator|instanceof
 name|ArrayType
 condition|)
 block|{
-comment|/* If T is a class type, then T must be Object (ï¿½2.4.7).              */
+comment|/*              * If T is a class type, then T must be Object (ï¿½2.4.7).              */
 if|if
 condition|(
 name|T
@@ -1142,7 +1142,7 @@ return|return
 literal|true
 return|;
 block|}
-comment|/* If T is an array type TC[], that is, an array of components              * of type TC, then one of the following must be true:              */
+comment|/*              * If T is an array type TC[], that is, an array of components of type TC, then one of the following must be true:              */
 if|if
 condition|(
 name|T
@@ -1150,7 +1150,7 @@ operator|instanceof
 name|ArrayType
 condition|)
 block|{
-comment|/* TC and SC are the same primitive type (ï¿½2.4.1).                  */
+comment|/*                  * TC and SC are the same primitive type (ï¿½2.4.1).                  */
 specifier|final
 name|Type
 name|sc
@@ -1201,7 +1201,7 @@ return|return
 literal|true
 return|;
 block|}
-comment|/* TC and SC are reference types (ï¿½2.4.6), and type SC is                  * assignable to TC by these runtime rules.                  */
+comment|/*                  * TC and SC are reference types (ï¿½2.4.6), and type SC is assignable to TC by these runtime rules.                  */
 if|if
 condition|(
 name|tc
@@ -1292,7 +1292,7 @@ literal|false
 return|;
 comment|// default.
 block|}
-comment|/**      * Return true iff this type is castable to another type t as defined in      * the JVM specification.  The case where this is Type.NULL is not      * defined (see the CHECKCAST definition in the JVM specification).      * However, because e.g. CHECKCAST doesn't throw a      * ClassCastException when casting a null reference to any Object,      * true is returned in this case.      *      * @throws ClassNotFoundException if any classes or interfaces required      *  to determine assignment compatibility can't be found      */
+comment|/**      * Return true iff this type is castable to another type t as defined in the JVM specification. The case where this is      * Type.NULL is not defined (see the CHECKCAST definition in the JVM specification). However, because e.g. CHECKCAST      * doesn't throw a ClassCastException when casting a null reference to any Object, true is returned in this case.      *      * @throws ClassNotFoundException if any classes or interfaces required to determine assignment compatibility can't be      *         found      */
 specifier|public
 name|boolean
 name|isCastableTo
@@ -1329,7 +1329,7 @@ argument_list|(
 name|t
 argument_list|)
 return|;
-comment|/* Yes, it's true: It's the same definition.          * See vmspec2 AASTORE / CHECKCAST definitions.          */
+comment|/*          * Yes, it's true: It's the same definition. See vmspec2 AASTORE / CHECKCAST definitions.          */
 block|}
 block|}
 end_class

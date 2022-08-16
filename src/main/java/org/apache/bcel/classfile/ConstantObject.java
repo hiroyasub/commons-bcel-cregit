@@ -16,7 +16,7 @@ package|;
 end_package
 
 begin_comment
-comment|/**  * This interface denotes those constants that have a "natural" value,  * such as ConstantLong, ConstantString, etc..  *  * @see     Constant  */
+comment|/**  * This interface denotes those constants that have a "natural" value, such as ConstantLong, ConstantString, etc..  *  * @see Constant  */
 end_comment
 
 begin_interface
@@ -24,7 +24,7 @@ specifier|public
 interface|interface
 name|ConstantObject
 block|{
-comment|/** @return object representing the constant, e.g., Long for ConstantLong      */
+comment|/**      * @return object representing the constant, e.g., Long for ConstantLong      */
 name|Object
 name|getConstantValue
 parameter_list|(

@@ -341,7 +341,7 @@ operator|new
 name|Environment
 argument_list|()
 expr_stmt|;
-comment|/* Add predefined functions WRITE/READ.      * WRITE has one arg of type T_INT, both return T_INT.      */
+comment|/*          * Add predefined functions WRITE/READ. WRITE has one arg of type T_INT, both return T_INT.          */
 name|ASTIdent
 name|ident
 init|=
@@ -442,7 +442,7 @@ argument_list|(
 name|fun
 argument_list|)
 expr_stmt|;
-comment|/* Add predefined idents TRUE/FALSE of type T_BOOLEAN      */
+comment|/*          * Add predefined idents TRUE/FALSE of type T_BOOLEAN          */
 name|ident
 operator|=
 operator|new
@@ -530,7 +530,7 @@ name|id
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**    * Fifth pass, produce Java byte code.    */
+comment|/**      * Fifth pass, produce Java byte code.      */
 specifier|public
 name|void
 name|byte_code
@@ -544,7 +544,7 @@ name|ConstantPoolGen
 name|cp
 parameter_list|)
 block|{
-comment|/* private static BufferedReader _in;      */
+comment|/*          * private static BufferedReader _in;          */
 name|class_gen
 operator|.
 name|addField
@@ -598,7 +598,7 @@ operator|.
 name|getClassName
 argument_list|()
 decl_stmt|;
-comment|/* Often used constant pool entries      */
+comment|/*          * Often used constant pool entries          */
 specifier|final
 name|int
 name|_in
@@ -733,7 +733,7 @@ operator|.
 name|IRETURN
 argument_list|)
 expr_stmt|;
-comment|/* private static int _readInt() throws IOException      */
+comment|/*          * private static int _readInt() throws IOException          */
 name|method
 operator|=
 operator|new
@@ -788,7 +788,7 @@ name|getMethod
 argument_list|()
 argument_list|)
 expr_stmt|;
-comment|/* private static int _writeInt(int i) throws IOException      */
+comment|/*          * private static int _writeInt(int i) throws IOException          */
 specifier|final
 name|Type
 index|[]
@@ -1023,7 +1023,7 @@ name|getMethod
 argument_list|()
 argument_list|)
 expr_stmt|;
-comment|/* public<init> -- constructor      */
+comment|/*          * public<init> -- constructor          */
 name|il
 operator|.
 name|dispose
@@ -1120,7 +1120,7 @@ name|getMethod
 argument_list|()
 argument_list|)
 expr_stmt|;
-comment|/* class initializer      */
+comment|/*          * class initializer          */
 name|il
 operator|.
 name|dispose
@@ -1327,7 +1327,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/**    * Overrides SimpleNode.closeNode().    * Cast children to appropiate type.    */
+comment|/**      * Overrides SimpleNode.closeNode(). Cast children to appropiate type.      */
 annotation|@
 name|Override
 specifier|public
@@ -1377,7 +1377,7 @@ expr_stmt|;
 comment|// Throw away old reference
 block|}
 block|}
-comment|/**    * Fifth pass, produce Java code.    */
+comment|/**      * Fifth pass, produce Java code.      */
 specifier|public
 name|void
 name|code
@@ -1520,7 +1520,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/**    * Second pass, determine type of each node, if possible.    */
+comment|/**      * Second pass, determine type of each node, if possible.      */
 specifier|public
 name|void
 name|eval
@@ -1601,7 +1601,7 @@ block|}
 block|}
 block|}
 block|}
-comment|/**    * First pass of parse tree.    *    * Put everything into the environment, which is copied appropiately to each    * recursion level, i.e. each FunDecl gets its own copy that it can further    * manipulate.    *    * Checks for name clashes of function declarations.    */
+comment|/**      * First pass of parse tree.      *      * Put everything into the environment, which is copied appropiately to each recursion level, i.e. each FunDecl gets its      * own copy that it can further manipulate.      *      * Checks for name clashes of function declarations.      */
 specifier|public
 name|ASTProgram
 name|traverse

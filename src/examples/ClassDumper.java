@@ -146,7 +146,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Display Java .class file data.  * Output is based on javap tool.  * Built using the BCEL libary.  *  */
+comment|/**  * Display Java .class file data. Output is based on javap tool. Built using the BCEL libary.  *  */
 end_comment
 
 begin_class
@@ -274,7 +274,7 @@ name|c
 argument_list|)
 return|;
 block|}
-comment|/**      * Parses the given Java class file and return an object that represents      * the contained data, i.e., constants, methods, fields and commands.      * A<em>ClassFormatException</em> is raised, if the file is not a valid      * .class file. (This does not include verification of the byte code as it      * is performed by the java interpreter).      *      * @throws  IOException      * @throws  ClassFormatException      */
+comment|/**      * Parses the given Java class file and return an object that represents the contained data, i.e., constants, methods,      * fields and commands. A<em>ClassFormatException</em> is raised, if the file is not a valid .class file. (This does      * not include verification of the byte code as it is performed by the java interpreter).      *      * @throws IOException      * @throws ClassFormatException      */
 specifier|public
 name|void
 name|dump
@@ -345,11 +345,11 @@ name|IOException
 name|ioe
 parameter_list|)
 block|{
-comment|//ignore close exceptions
+comment|// ignore close exceptions
 block|}
 block|}
 block|}
-comment|/**      * Processes information about the attributes of the class.      * @throws  IOException      * @throws  ClassFormatException      */
+comment|/**      * Processes information about the attributes of the class.      *       * @throws IOException      * @throws ClassFormatException      */
 specifier|private
 specifier|final
 name|void
@@ -460,7 +460,7 @@ expr_stmt|;
 block|}
 block|}
 block|}
-comment|/**      * Processes information about the class and its super class.      * @throws  IOException      * @throws  ClassFormatException      */
+comment|/**      * Processes information about the class and its super class.      *       * @throws IOException      * @throws ClassFormatException      */
 specifier|private
 specifier|final
 name|void
@@ -478,7 +478,7 @@ operator|.
 name|readUnsignedShort
 argument_list|()
 expr_stmt|;
-comment|/* Interfaces are implicitely abstract, the flag should be set          * according to the JVM specification.          */
+comment|/*          * Interfaces are implicitely abstract, the flag should be set according to the JVM specification.          */
 if|if
 condition|(
 operator|(
@@ -651,7 +651,7 @@ literal|")"
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Processes constant pool entries.      * @throws  IOException      * @throws  ClassFormatException      */
+comment|/**      * Processes constant pool entries.      *       * @throws IOException      * @throws ClassFormatException      */
 specifier|private
 specifier|final
 name|void
@@ -832,7 +832,7 @@ expr_stmt|;
 block|}
 block|}
 block|}
-comment|/**      * Constructs object from file stream.      * @param file Input stream      * @throws IOException      * @throws ClassFormatException      */
+comment|/**      * Constructs object from file stream.      *       * @param file Input stream      * @throws IOException      * @throws ClassFormatException      */
 specifier|private
 specifier|final
 name|void
@@ -1019,12 +1019,12 @@ name|reset
 argument_list|()
 expr_stmt|;
 comment|// Usefull for debugging
-comment|// System.out.printf("  attribute_name_index: %d (", attribute_name_index);
+comment|// System.out.printf(" attribute_name_index: %d (", attribute_name_index);
 comment|// System.out.println(constantToString(attribute_name_index) + ")");
-comment|// System.out.printf("  atribute offset in file: %x%n", + file.getStreamPosition());
-comment|// System.out.println("  atribute_length: " + attribute_length);
+comment|// System.out.printf(" atribute offset in file: %x%n", + file.getStreamPosition());
+comment|// System.out.println(" atribute_length: " + attribute_length);
 comment|// A stronger verification test would be to read attribute_length bytes
-comment|// into a buffer.  Then pass that buffer to readAttribute and also
+comment|// into a buffer. Then pass that buffer to readAttribute and also
 comment|// verify we're at EOF of the buffer on return.
 specifier|final
 name|long
@@ -1122,7 +1122,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/**      * Processes information about the fields of the class, i.e., its variables.      * @throws  IOException      * @throws  ClassFormatException      */
+comment|/**      * Processes information about the fields of the class, i.e., its variables.      *       * @throws IOException      * @throws ClassFormatException      */
 specifier|private
 specifier|final
 name|void
@@ -1200,7 +1200,7 @@ expr_stmt|;
 block|}
 block|}
 block|}
-comment|/**      * Checks whether the header of the file is ok.      * Of course, this has to be the first action on successive file reads.      * @throws  IOException      * @throws  ClassFormatException      */
+comment|/**      * Checks whether the header of the file is ok. Of course, this has to be the first action on successive file reads.      *       * @throws IOException      * @throws ClassFormatException      */
 specifier|private
 specifier|final
 name|void
@@ -1280,7 +1280,7 @@ name|magic
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Processes information about the interfaces implemented by this class.      * @throws  IOException      * @throws  ClassFormatException      */
+comment|/**      * Processes information about the interfaces implemented by this class.      *       * @throws IOException      * @throws ClassFormatException      */
 specifier|private
 specifier|final
 name|void
@@ -1430,7 +1430,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/**      * Processes information about the methods of the class.      * @throws  IOException      * @throws  ClassFormatException      */
+comment|/**      * Processes information about the methods of the class.      *       * @throws IOException      * @throws ClassFormatException      */
 specifier|private
 specifier|final
 name|void
@@ -1507,7 +1507,7 @@ expr_stmt|;
 block|}
 block|}
 block|}
-comment|/**      * Processes major and minor version of compiler which created the file.      * @throws  IOException      * @throws  ClassFormatException      */
+comment|/**      * Processes major and minor version of compiler which created the file.      *       * @throws IOException      * @throws ClassFormatException      */
 specifier|private
 specifier|final
 name|void

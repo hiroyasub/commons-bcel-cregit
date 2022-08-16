@@ -78,7 +78,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * This class represents a reference to an unknown (i.e.,  * application-specific) attribute of a class.  It is instantiated from the  * {@link Attribute#readAttribute(java.io.DataInput, ConstantPool)} method.  * Applications that need to read in application-specific attributes should create an  * {@link UnknownAttributeReader} implementation and attach it via  * {@link Attribute#addAttributeReader(String, UnknownAttributeReader)}.   *  * @see Attribute  * @see UnknownAttributeReader  */
+comment|/**  * This class represents a reference to an unknown (i.e., application-specific) attribute of a class. It is instantiated  * from the {@link Attribute#readAttribute(java.io.DataInput, ConstantPool)} method. Applications that need to read in  * application-specific attributes should create an {@link UnknownAttributeReader} implementation and attach it via  * {@link Attribute#addAttributeReader(String, UnknownAttributeReader)}.  *  *   * @see Attribute  * @see UnknownAttributeReader  */
 end_comment
 
 begin_class
@@ -105,7 +105,7 @@ name|HashMap
 argument_list|<>
 argument_list|()
 decl_stmt|;
-comment|/** @return array of unknown attributes, but just one for each kind.      */
+comment|/**      * @return array of unknown attributes, but just one for each kind.      */
 specifier|static
 name|Unknown
 index|[]
@@ -288,7 +288,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/**      * Initialize from another object. Note that both objects use the same      * references (shallow copy). Use clone() for a physical copy.      */
+comment|/**      * Initialize from another object. Note that both objects use the same references (shallow copy). Use clone() for a      * physical copy.      */
 specifier|public
 name|Unknown
 parameter_list|(
@@ -321,7 +321,7 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Called by objects that are traversing the nodes of the tree implicitely      * defined by the contents of a Java class. I.e., the hierarchy of methods,      * fields, attributes, etc. spawns a tree of objects.      *      * @param v Visitor object      */
+comment|/**      * Called by objects that are traversing the nodes of the tree implicitely defined by the contents of a Java class.      * I.e., the hierarchy of methods, fields, attributes, etc. spawns a tree of objects.      *      * @param v Visitor object      */
 annotation|@
 name|Override
 specifier|public

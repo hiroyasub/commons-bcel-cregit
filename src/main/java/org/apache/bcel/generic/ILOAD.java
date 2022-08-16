@@ -16,7 +16,7 @@ package|;
 end_package
 
 begin_comment
-comment|/**  * ILOAD - Load int from local variable onto stack  *<PRE>Stack: ... -&gt; ..., result</PRE>  *  */
+comment|/**  * ILOAD - Load int from local variable onto stack  *   *<PRE>  * Stack: ... -&gt; ..., result  *</PRE>  *  */
 end_comment
 
 begin_class
@@ -26,7 +26,7 @@ name|ILOAD
 extends|extends
 name|LoadInstruction
 block|{
-comment|/**      * Empty constructor needed for Instruction.readInstruction.      * Not to be used otherwise.      */
+comment|/**      * Empty constructor needed for Instruction.readInstruction. Not to be used otherwise.      */
 name|ILOAD
 parameter_list|()
 block|{
@@ -54,7 +54,7 @@ name|ILOAD_0
 argument_list|)
 expr_stmt|;
 block|}
-comment|/** Load int from local variable      * @param n index of local variable      */
+comment|/**      * Load int from local variable      *       * @param n index of local variable      */
 specifier|public
 name|ILOAD
 parameter_list|(
@@ -89,7 +89,7 @@ name|n
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Call corresponding visitor method(s). The order is:      * Call visitor methods of implemented interfaces first, then      * call methods according to the class hierarchy in descending order,      * i.e., the most specific visitXXX() call comes last.      *      * @param v Visitor object      */
+comment|/**      * Call corresponding visitor method(s). The order is: Call visitor methods of implemented interfaces first, then call      * methods according to the class hierarchy in descending order, i.e., the most specific visitXXX() call comes last.      *      * @param v Visitor object      */
 annotation|@
 name|Override
 specifier|public

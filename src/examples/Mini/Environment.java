@@ -20,7 +20,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * For efficiency and convenience reasons we want our own hash table. It does  * not conform to java.util.Dictionary(yet).  *  * That environment contains all function definitions and identifiers.  * Hash keys are Strings (identifiers), which are mapped to a table index.  *  * The table consists of `SIZE' fields which have `SLOTS' subfields. Thus  * the maximum number of storable items is `SLOTS' * `SIZE'.  *  */
+comment|/**  * For efficiency and convenience reasons we want our own hash table. It does not conform to java.util.Dictionary(yet).  *  * That environment contains all function definitions and identifiers. Hash keys are Strings (identifiers), which are  * mapped to a table index.  *  * The table consists of `SIZE' fields which have `SLOTS' subfields. Thus the maximum number of storable items is  * `SLOTS' * `SIZE'.  *  */
 end_comment
 
 begin_class
@@ -268,7 +268,7 @@ name|clone
 argument_list|()
 expr_stmt|;
 comment|// Copies references
-comment|/*         int len = table[i].size();          copy[i] = new Vector(len);         try {           for(int j=0; j< len; j++)             copy[i].addElement(table[i].elementAt(j));         } catch(ArrayIndexOutOfBoundsException e) {}*/
+comment|/*                  * int len = table[i].size();                  *                   * copy[i] = new Vector(len); try { for(int j=0; j< len; j++) copy[i].addElement(table[i].elementAt(j)); }                  * catch(ArrayIndexOutOfBoundsException e) {}                  */
 block|}
 block|}
 return|return
@@ -279,7 +279,7 @@ name|copy
 argument_list|)
 return|;
 block|}
-comment|/**    * Delete an object if it does exist.    */
+comment|/**      * Delete an object if it does exist.      */
 specifier|public
 name|void
 name|delete
@@ -363,7 +363,7 @@ parameter_list|)
 block|{
 block|}
 block|}
-comment|/** Get entry from hash table.    */
+comment|/**      * Get entry from hash table.      */
 specifier|public
 name|EnvEntry
 name|get
@@ -590,7 +590,7 @@ operator|%
 name|size
 return|;
 block|}
-comment|/**    * Inserts macro into table or overwrite old contents if it    * was already stored.    */
+comment|/**      * Inserts macro into table or overwrite old contents if it was already stored.      */
 specifier|public
 name|void
 name|put

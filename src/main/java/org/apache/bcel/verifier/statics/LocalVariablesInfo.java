@@ -64,7 +64,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * A utility class holding the information about  * the names and the types of the local variables in  * a given method.  */
+comment|/**  * A utility class holding the information about the names and the types of the local variables in a given method.  */
 end_comment
 
 begin_class
@@ -121,7 +121,7 @@ argument_list|()
 expr_stmt|;
 block|}
 block|}
-comment|/**      * Adds information about the local variable in slot 'slot'. Automatically      * adds information for slot+1 if 't' is Type.LONG or Type.DOUBLE.      *      * @param name variable name      * @param startPc Range in which the variable is valid.      * @param length length of ...      * @param type variable type      * @throws LocalVariableInfoInconsistentException if the new information conflicts      *         with already gathered information.      */
+comment|/**      * Adds information about the local variable in slot 'slot'. Automatically adds information for slot+1 if 't' is      * Type.LONG or Type.DOUBLE.      *      * @param name variable name      * @param startPc Range in which the variable is valid.      * @param length length of ...      * @param type variable type      * @throws LocalVariableInfoInconsistentException if the new information conflicts with already gathered information.      */
 specifier|public
 name|void
 name|add
@@ -149,7 +149,8 @@ parameter_list|)
 throws|throws
 name|LocalVariableInfoInconsistentException
 block|{
-comment|// The add operation on LocalVariableInfo may throw the '...Inconsistent...' exception, we don't throw it explicitely here.
+comment|// The add operation on LocalVariableInfo may throw the '...Inconsistent...' exception, we don't throw it explicitely
+comment|// here.
 if|if
 condition|(
 name|slot

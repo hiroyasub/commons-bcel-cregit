@@ -58,7 +58,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * This class is derived from<em>Attribute</em> and represents a constant  * value, i.e., a default value for initializing a class field.  * This class is instantiated by the<em>Attribute.readAttribute()</em> method.  *  * @see     Attribute  */
+comment|/**  * This class is derived from<em>Attribute</em> and represents a constant value, i.e., a default value for initializing  * a class field. This class is instantiated by the<em>Attribute.readAttribute()</em> method.  *  * @see Attribute  */
 end_comment
 
 begin_class
@@ -73,7 +73,7 @@ specifier|private
 name|int
 name|constantValueIndex
 decl_stmt|;
-comment|/**      * Initialize from another object. Note that both objects use the same      * references (shallow copy). Use clone() for a physical copy.      */
+comment|/**      * Initialize from another object. Note that both objects use the same references (shallow copy). Use clone() for a      * physical copy.      */
 specifier|public
 name|ConstantValue
 parameter_list|(
@@ -106,7 +106,7 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Construct object from input stream.      * @param name_index Name index in constant pool      * @param length Content length in bytes      * @param input Input stream      * @param constant_pool Array of constants      * @throws IOException if an I/O error occurs.      */
+comment|/**      * Construct object from input stream.      *       * @param name_index Name index in constant pool      * @param length Content length in bytes      * @param input Input stream      * @param constant_pool Array of constants      * @throws IOException if an I/O error occurs.      */
 name|ConstantValue
 parameter_list|(
 specifier|final
@@ -184,7 +184,7 @@ operator|=
 name|constantValueIndex
 expr_stmt|;
 block|}
-comment|/**      * Called by objects that are traversing the nodes of the tree implicitely      * defined by the contents of a Java class. I.e., the hierarchy of methods,      * fields, attributes, etc. spawns a tree of objects.      *      * @param v Visitor object      */
+comment|/**      * Called by objects that are traversing the nodes of the tree implicitely defined by the contents of a Java class.      * I.e., the hierarchy of methods, fields, attributes, etc. spawns a tree of objects.      *      * @param v Visitor object      */
 annotation|@
 name|Override
 specifier|public

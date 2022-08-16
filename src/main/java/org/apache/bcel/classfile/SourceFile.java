@@ -58,7 +58,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * This class is derived from<em>Attribute</em> and represents a reference  * to the source file of this class.  At most one SourceFile attribute  * should appear per classfile.  The intention of this class is that it is  * instantiated from the<em>Attribute.readAttribute()</em> method.  *  * @see     Attribute  */
+comment|/**  * This class is derived from<em>Attribute</em> and represents a reference to the source file of this class. At most  * one SourceFile attribute should appear per classfile. The intention of this class is that it is instantiated from the  *<em>Attribute.readAttribute()</em> method.  *  * @see Attribute  */
 end_comment
 
 begin_class
@@ -73,7 +73,7 @@ specifier|private
 name|int
 name|sourceFileIndex
 decl_stmt|;
-comment|/**      * Construct object from input stream.      * @param name_index Index in constant pool to CONSTANT_Utf8      * @param length Content length in bytes      * @param input Input stream      * @param constant_pool Array of constants      * @throws IOException if an I/O error occurs.      */
+comment|/**      * Construct object from input stream.      *       * @param name_index Index in constant pool to CONSTANT_Utf8      * @param length Content length in bytes      * @param input Input stream      * @param constant_pool Array of constants      * @throws IOException if an I/O error occurs.      */
 name|SourceFile
 parameter_list|(
 specifier|final
@@ -110,7 +110,7 @@ name|constant_pool
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * @param name_index Index in constant pool to CONSTANT_Utf8, which      * should represent the string "SourceFile".      * @param length Content length in bytes, the value should be 2.      * @param constantPool The constant pool that this attribute is      * associated with.      * @param sourceFileIndex Index in constant pool to CONSTANT_Utf8.  This      * string will be interpreted as the name of the file from which this      * class was compiled.  It will not be interpreted as indicating the name      * of the directory contqining the file or an absolute path; this      * information has to be supplied the consumer of this attribute - in      * many cases, the JVM.      */
+comment|/**      * @param name_index Index in constant pool to CONSTANT_Utf8, which should represent the string "SourceFile".      * @param length Content length in bytes, the value should be 2.      * @param constantPool The constant pool that this attribute is associated with.      * @param sourceFileIndex Index in constant pool to CONSTANT_Utf8. This string will be interpreted as the name of the      *        file from which this class was compiled. It will not be interpreted as indicating the name of the directory      *        contqining the file or an absolute path; this information has to be supplied the consumer of this attribute -      *        in many cases, the JVM.      */
 specifier|public
 name|SourceFile
 parameter_list|(
@@ -151,7 +151,7 @@ operator|=
 name|sourceFileIndex
 expr_stmt|;
 block|}
-comment|/**      * Initialize from another object. Note that both objects use the same      * references (shallow copy). Use clone() for a physical copy.      */
+comment|/**      * Initialize from another object. Note that both objects use the same references (shallow copy). Use clone() for a      * physical copy.      */
 specifier|public
 name|SourceFile
 parameter_list|(
@@ -184,7 +184,7 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Called by objects that are traversing the nodes of the tree implicitely      * defined by the contents of a Java class. I.e., the hierarchy of methods,      * fields, attributes, etc. spawns a tree of objects.      *      * @param v Visitor object      */
+comment|/**      * Called by objects that are traversing the nodes of the tree implicitely defined by the contents of a Java class.      * I.e., the hierarchy of methods, fields, attributes, etc. spawns a tree of objects.      *      * @param v Visitor object      */
 annotation|@
 name|Override
 specifier|public

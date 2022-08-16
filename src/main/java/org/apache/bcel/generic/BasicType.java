@@ -185,7 +185,7 @@ argument_list|)
 throw|;
 block|}
 block|}
-comment|/** @return true if both type objects refer to the same type      */
+comment|/**      * @return true if both type objects refer to the same type      */
 annotation|@
 name|Override
 specifier|public
@@ -220,7 +220,7 @@ else|:
 literal|false
 return|;
 block|}
-comment|/** @return a hash code value for the object.      */
+comment|/**      * @return a hash code value for the object.      */
 annotation|@
 name|Override
 specifier|public

@@ -18,7 +18,7 @@ package|;
 end_package
 
 begin_comment
-comment|/**  * Instances of this class are thrown by BCEL's class file verifier "JustIce"  * whenever  * verification proves that some constraint of a class file (as stated in the  * Java Virtual Machine Specification, Edition 2) is violated.  * This is roughly equivalent to the VerifyError the JVM-internal verifiers  * throw.  *  */
+comment|/**  * Instances of this class are thrown by BCEL's class file verifier "JustIce" whenever verification proves that some  * constraint of a class file (as stated in the Java Virtual Machine Specification, Edition 2) is violated. This is  * roughly equivalent to the VerifyError the JVM-internal verifiers throw.  *  */
 end_comment
 
 begin_class
@@ -92,7 +92,7 @@ operator|=
 name|message
 expr_stmt|;
 block|}
-comment|/** Extends the error message with a string before ("pre") and after ("post") the         'old' error message. All of these three strings are allowed to be null, and null         is always replaced by the empty string (""). In particular, after invoking this         method, the error message of this object can no longer be null.     */
+comment|/**      * Extends the error message with a string before ("pre") and after ("post") the 'old' error message. All of these three      * strings are allowed to be null, and null is always replaced by the empty string (""). In particular, after invoking      * this method, the error message of this object can no longer be null.      */
 specifier|public
 name|void
 name|extendMessage
@@ -149,7 +149,7 @@ operator|+
 name|post
 expr_stmt|;
 block|}
-comment|/**      * Returns the error message string of this VerifierConstraintViolatedException object.      * @return the error message string of this VerifierConstraintViolatedException.      */
+comment|/**      * Returns the error message string of this VerifierConstraintViolatedException object.      *       * @return the error message string of this VerifierConstraintViolatedException.      */
 annotation|@
 name|Override
 specifier|public

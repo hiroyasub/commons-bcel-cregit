@@ -58,7 +58,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * This class represents a inner class attribute, i.e., the class  * indices of the inner and outer classes, the name and the attributes  * of the inner class.  *  * @see InnerClasses  */
+comment|/**  * This class represents a inner class attribute, i.e., the class indices of the inner and outer classes, the name and  * the attributes of the inner class.  *  * @see InnerClasses  */
 end_comment
 
 begin_class
@@ -87,7 +87,7 @@ specifier|private
 name|int
 name|innerAccessFlags
 decl_stmt|;
-comment|/**      * Construct object from file stream.      * @param file Input stream      * @throws IOException if an I/O error occurs.      */
+comment|/**      * Construct object from file stream.      *       * @param file Input stream      * @throws IOException if an I/O error occurs.      */
 name|InnerClass
 parameter_list|(
 specifier|final
@@ -154,7 +154,7 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * @param innerClassIndex Class index in constant pool of inner class      * @param outerClassIndex Class index in constant pool of outer class      * @param innerNameIndex  Name index in constant pool of inner class      * @param innerAccessFlags Access flags of inner class      */
+comment|/**      * @param innerClassIndex Class index in constant pool of inner class      * @param outerClassIndex Class index in constant pool of outer class      * @param innerNameIndex Name index in constant pool of inner class      * @param innerAccessFlags Access flags of inner class      */
 specifier|public
 name|InnerClass
 parameter_list|(
@@ -200,7 +200,7 @@ operator|=
 name|innerAccessFlags
 expr_stmt|;
 block|}
-comment|/**      * Called by objects that are traversing the nodes of the tree implicitely      * defined by the contents of a Java class. I.e., the hierarchy of methods,      * fields, attributes, etc. spawns a tree of objects.      *      * @param v Visitor object      */
+comment|/**      * Called by objects that are traversing the nodes of the tree implicitely defined by the contents of a Java class.      * I.e., the hierarchy of methods, fields, attributes, etc. spawns a tree of objects.      *      * @param v Visitor object      */
 annotation|@
 name|Override
 specifier|public

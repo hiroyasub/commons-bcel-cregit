@@ -58,7 +58,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * This class is derived from the abstract {@link Constant}  * and represents a reference to a module.  *  *<p>Note: Early access Java 9 support- currently subject to change</p>  *  * @see     Constant  * @since 6.1  */
+comment|/**  * This class is derived from the abstract {@link Constant} and represents a reference to a module.  *  *<p>  * Note: Early access Java 9 support- currently subject to change  *</p>  *  * @see Constant  * @since 6.1  */
 end_comment
 
 begin_class
@@ -112,7 +112,7 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * @param nameIndex Name index in constant pool.  Should refer to a      * ConstantUtf8.      */
+comment|/**      * @param nameIndex Name index in constant pool. Should refer to a ConstantUtf8.      */
 specifier|public
 name|ConstantModule
 parameter_list|(
@@ -135,7 +135,7 @@ operator|=
 name|nameIndex
 expr_stmt|;
 block|}
-comment|/**      * Called by objects that are traversing the nodes of the tree implicitly      * defined by the contents of a Java class. I.e., the hierarchy of methods,      * fields, attributes, etc. spawns a tree of objects.      *      * @param v Visitor object      */
+comment|/**      * Called by objects that are traversing the nodes of the tree implicitly defined by the contents of a Java class. I.e.,      * the hierarchy of methods, fields, attributes, etc. spawns a tree of objects.      *      * @param v Visitor object      */
 annotation|@
 name|Override
 specifier|public
@@ -187,7 +187,7 @@ name|nameIndex
 argument_list|)
 expr_stmt|;
 block|}
-comment|/** @return dereferenced string      */
+comment|/**      * @return dereferenced string      */
 specifier|public
 name|String
 name|getBytes
@@ -207,7 +207,7 @@ name|cp
 argument_list|)
 return|;
 block|}
-comment|/** @return String object      */
+comment|/**      * @return String object      */
 annotation|@
 name|Override
 specifier|public

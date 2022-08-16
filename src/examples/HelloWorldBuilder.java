@@ -236,7 +236,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Create HelloWorld class:  *<PRE>  * import java.io.*;  *  * public class HelloWorld {  *     public static void main(String[] argv) {  *         BufferedReader in   = new BufferedReader(new InputStreamReader(System.in));  *         String name = null;  *  *         try {  *             System.out.print("Please enter your name> ");  *             name = in.readLine();  *         } catch(IOException e) {  *             System.out.println(e);  *             return;  *         }  *  *         System.out.println("Hello, " + name);  *     }  * }  *</PRE>  *  */
+comment|/**  * Create HelloWorld class:  *   *<PRE>  * import java.io.*;  *  * public class HelloWorld {  *     public static void main(String[] argv) {  *         BufferedReader in = new BufferedReader(new InputStreamReader(System.in));  *         String name = null;  *  *         try {  *             System.out.print("Please enter your name> ");  *             name = in.readLine();  *         } catch (IOException e) {  *             System.out.println(e);  *             return;  *         }  *  *         System.out.println("Hello, " + name);  *     }  * }  *</PRE>  *  */
 end_comment
 
 begin_class
@@ -748,7 +748,7 @@ argument_list|(
 name|g
 argument_list|)
 decl_stmt|;
-comment|/* } catch() { ... }          * Add exception handler: print exception and return from method          */
+comment|/*          * } catch() { ... } Add exception handler: print exception and return from method          */
 specifier|final
 name|InstructionHandle
 name|handler

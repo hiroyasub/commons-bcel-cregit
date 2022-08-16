@@ -258,7 +258,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * The program that some of the tests generate looks like this:  *  *<pre>  * public class HelloWorld  * {  *  public static void main(String[] argv)  *  {  *      BufferedReader in = new BufferedReader(new InputStreamReader(System.in));  *      String name = null;  *  *      try  *      {  *          name =&quot;Andy&quot;;  *      }  *      catch (IOException e)  *      {  *          return;  *      }  *      System.out.println(&quot;Hello,&quot; + name);  *  }  * }  *</pre>  */
+comment|/**  * The program that some of the tests generate looks like this:  *  *<pre>  * public class HelloWorld {  *     public static void main(String[] argv) {  *         BufferedReader in = new BufferedReader(new InputStreamReader(System.in));  *         String name = null;  *  *         try {  *             name =&quot;Andy&quot;;  *         } catch (IOException e) {  *             return;  *         }  *         System.out.println(&quot;Hello,&quot; + name);  *     }  * }  *</pre>  */
 end_comment
 
 begin_class
@@ -2628,7 +2628,7 @@ argument_list|,
 name|il
 argument_list|)
 expr_stmt|;
-comment|//System.out.println(cg.getJavaClass().toString());
+comment|// System.out.println(cg.getJavaClass().toString());
 name|dumpClass
 argument_list|(
 name|cg
@@ -2780,7 +2780,7 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Just check that we can dump a class that has a method annotation on it      * and it is still there when we read it back in      */
+comment|/**      * Just check that we can dump a class that has a method annotation on it and it is still there when we read it back in      */
 annotation|@
 name|Test
 specifier|public
@@ -2996,7 +2996,7 @@ argument_list|)
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Going further than the last test - when we reload the method back in,      * let's change it (adding a new annotation) and then store that, read it      * back in and verify both annotations are there !      * Also check that we can remove method annotations.      */
+comment|/**      * Going further than the last test - when we reload the method back in, let's change it (adding a new annotation) and      * then store that, read it back in and verify both annotations are there ! Also check that we can remove method      * annotations.      */
 annotation|@
 name|Test
 specifier|public
@@ -3296,7 +3296,7 @@ argument_list|)
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Load a class in and modify it with a new attribute - A SimpleAnnotation      * annotation      */
+comment|/**      * Load a class in and modify it with a new attribute - A SimpleAnnotation annotation      */
 annotation|@
 name|Test
 specifier|public
@@ -3378,7 +3378,7 @@ argument_list|)
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Load a class in and modify it with a new attribute - A ComplexAnnotation      * annotation      */
+comment|/**      * Load a class in and modify it with a new attribute - A ComplexAnnotation annotation      */
 annotation|@
 name|Test
 specifier|public
@@ -3475,7 +3475,7 @@ argument_list|)
 expr_stmt|;
 comment|// System.err.println(jc2.toString());
 block|}
-comment|/**      * Transform simple class from an immutable to a mutable object. The class      * is annotated with an annotation that uses an array of SimpleAnnotations.      */
+comment|/**      * Transform simple class from an immutable to a mutable object. The class is annotated with an annotation that uses an      * array of SimpleAnnotations.      */
 annotation|@
 name|Test
 specifier|public
@@ -3784,7 +3784,7 @@ expr_stmt|;
 block|}
 block|}
 block|}
-comment|/**      * Transform simple class from an immutable to a mutable object. The class      * is annotated with an annotation that uses an enum.      */
+comment|/**      * Transform simple class from an immutable to a mutable object. The class is annotated with an annotation that uses an      * enum.      */
 annotation|@
 name|Test
 specifier|public

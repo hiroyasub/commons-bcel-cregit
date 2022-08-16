@@ -99,7 +99,7 @@ block|,
 literal|"Integer"
 block|,
 literal|"Ident"
-block|,   }
+block|,}
 decl_stmt|;
 block|}
 end_interface

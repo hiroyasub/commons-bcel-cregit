@@ -614,7 +614,7 @@ specifier|public
 interface|interface
 name|ClassFile
 block|{
-comment|/**          * @return base path of found class, i.e. class is contained relative to that path, which may either denote a          *         directory, or zip file          */
+comment|/**          * @return base path of found class, i.e. class is contained relative to that path, which may either denote a directory,          *         or zip file          */
 name|String
 name|getBase
 parameter_list|()
@@ -2650,7 +2650,7 @@ return|return
 literal|false
 return|;
 block|}
-comment|/**      * @param name      *            fully qualified file name, e.g. java/lang/String      * @return byte array for class      * @throws IOException if an I/O error occurs.      */
+comment|/**      * @param name fully qualified file name, e.g. java/lang/String      * @return byte array for class      * @throws IOException if an I/O error occurs.      */
 specifier|public
 name|byte
 index|[]
@@ -2672,7 +2672,7 @@ literal|".class"
 argument_list|)
 return|;
 block|}
-comment|/**      * @param name      *            fully qualified file name, e.g. java/lang/String      * @param suffix      *            file name ends with suffix, e.g. .java      * @return byte array for file on class path      * @throws IOException if an I/O error occurs.      */
+comment|/**      * @param name fully qualified file name, e.g. java/lang/String      * @param suffix file name ends with suffix, e.g. .java      * @return byte array for file on class path      * @throws IOException if an I/O error occurs.      */
 specifier|public
 name|byte
 index|[]
@@ -2776,7 +2776,7 @@ expr_stmt|;
 block|}
 block|}
 block|}
-comment|/**      * @param name      *            fully qualified class name, e.g. java.lang.String      * @return input stream for class      * @throws IOException if an I/O error occurs.      */
+comment|/**      * @param name fully qualified class name, e.g. java.lang.String      * @return input stream for class      * @throws IOException if an I/O error occurs.      */
 specifier|public
 name|ClassFile
 name|getClassFile
@@ -2797,7 +2797,7 @@ literal|".class"
 argument_list|)
 return|;
 block|}
-comment|/**      * @param name      *            fully qualified file name, e.g. java/lang/String      * @param suffix      *            file name ends with suff, e.g. .java      * @return class file for the java class      * @throws IOException if an I/O error occurs.      */
+comment|/**      * @param name fully qualified file name, e.g. java/lang/String      * @param suffix file name ends with suff, e.g. .java      * @return class file for the java class      * @throws IOException if an I/O error occurs.      */
 specifier|public
 name|ClassFile
 name|getClassFile
@@ -2928,7 +2928,7 @@ return|return
 literal|null
 return|;
 block|}
-comment|/**      * @param name      *            fully qualified class name, e.g. java.lang.String      * @return input stream for class      * @throws IOException if an I/O error occurs.      */
+comment|/**      * @param name fully qualified class name, e.g. java.lang.String      * @return input stream for class      * @throws IOException if an I/O error occurs.      */
 specifier|public
 name|InputStream
 name|getInputStream
@@ -2952,7 +2952,7 @@ literal|".class"
 argument_list|)
 return|;
 block|}
-comment|/**      * Return stream for class or resource on CLASSPATH.      *      * @param name      *            fully qualified file name, e.g. java/lang/String      * @param suffix      *            file name ends with suff, e.g. .java      * @return input stream for file on class path      * @throws IOException if an I/O error occurs.      */
+comment|/**      * Return stream for class or resource on CLASSPATH.      *      * @param name fully qualified file name, e.g. java/lang/String      * @param suffix file name ends with suff, e.g. .java      * @return input stream for file on class path      * @throws IOException if an I/O error occurs.      */
 specifier|public
 name|InputStream
 name|getInputStream
@@ -3024,7 +3024,7 @@ name|getInputStream
 argument_list|()
 return|;
 block|}
-comment|/**      * @param name      *            name of file to search for, e.g. java/lang/String.java      * @return full (canonical) path for file      * @throws IOException if an I/O error occurs.      */
+comment|/**      * @param name name of file to search for, e.g. java/lang/String.java      * @return full (canonical) path for file      * @throws IOException if an I/O error occurs.      */
 specifier|public
 name|String
 name|getPath
@@ -3088,7 +3088,7 @@ name|suffix
 argument_list|)
 return|;
 block|}
-comment|/**      * @param name      *            name of file to search for, e.g. java/lang/String      * @param suffix      *            file name suffix, e.g. .java      * @return full (canonical) path for file, if it exists      * @throws IOException if an I/O error occurs.      */
+comment|/**      * @param name name of file to search for, e.g. java/lang/String      * @param suffix file name suffix, e.g. .java      * @return full (canonical) path for file, if it exists      * @throws IOException if an I/O error occurs.      */
 specifier|public
 name|String
 name|getPath
@@ -3116,7 +3116,7 @@ name|getPath
 argument_list|()
 return|;
 block|}
-comment|/**      * @param name      *            fully qualified resource name, e.g. java/lang/String.class      * @return URL supplying the resource, or null if no resource with that name.      * @since 6.0      */
+comment|/**      * @param name fully qualified resource name, e.g. java/lang/String.class      * @return URL supplying the resource, or null if no resource with that name.      * @since 6.0      */
 specifier|public
 name|URL
 name|getResource
@@ -3163,7 +3163,7 @@ return|return
 literal|null
 return|;
 block|}
-comment|/**      * @param name      *            fully qualified resource name, e.g. java/lang/String.class      * @return InputStream supplying the resource, or null if no resource with that name.      * @since 6.0      */
+comment|/**      * @param name fully qualified resource name, e.g. java/lang/String.class      * @return InputStream supplying the resource, or null if no resource with that name.      * @since 6.0      */
 specifier|public
 name|InputStream
 name|getResourceAsStream
@@ -3210,7 +3210,7 @@ return|return
 literal|null
 return|;
 block|}
-comment|/**      * @param name      *            fully qualified resource name, e.g. java/lang/String.class      * @return An Enumeration of URLs supplying the resource, or an empty Enumeration if no resource with that name.      * @since 6.0      */
+comment|/**      * @param name fully qualified resource name, e.g. java/lang/String.class      * @return An Enumeration of URLs supplying the resource, or an empty Enumeration if no resource with that name.      * @since 6.0      */
 specifier|public
 name|Enumeration
 argument_list|<

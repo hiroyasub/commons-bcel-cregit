@@ -16,7 +16,7 @@ package|;
 end_package
 
 begin_comment
-comment|/**  * Denote entity that has both name and type. This is true for local variables,  * methods and fields.  *  */
+comment|/**  * Denote entity that has both name and type. This is true for local variables, methods and fields.  *  */
 end_comment
 
 begin_interface

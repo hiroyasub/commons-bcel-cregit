@@ -54,7 +54,7 @@ name|AccessFlags
 parameter_list|()
 block|{
 block|}
-comment|/**      * @param a      *            inital access flags      */
+comment|/**      * @param a inital access flags      */
 specifier|public
 name|AccessFlags
 parameter_list|(
@@ -698,7 +698,7 @@ name|flag
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Set access flags aka "modifiers".      *      * @param access_flags      *            Access flags of the object.      */
+comment|/**      * Set access flags aka "modifiers".      *      * @param access_flags Access flags of the object.      */
 specifier|public
 specifier|final
 name|void
@@ -764,7 +764,7 @@ name|flag
 expr_stmt|;
 block|}
 block|}
-comment|/**      * Set access flags aka "modifiers".      *      * @param access_flags      *            Access flags of the object.      */
+comment|/**      * Set access flags aka "modifiers".      *      * @param access_flags Access flags of the object.      */
 specifier|public
 specifier|final
 name|void

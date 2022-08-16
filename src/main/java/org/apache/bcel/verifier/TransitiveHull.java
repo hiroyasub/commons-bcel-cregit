@@ -42,7 +42,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * This class has a main method implementing a demonstration program  * of how to use the VerifierFactoryObserver. It transitively verifies  * all class files encountered; this may take up a lot of time and,  * more notably, memory.  *  */
+comment|/**  * This class has a main method implementing a demonstration program of how to use the VerifierFactoryObserver. It  * transitively verifies all class files encountered; this may take up a lot of time and, more notably, memory.  *  */
 end_comment
 
 begin_class
@@ -52,7 +52,7 @@ name|TransitiveHull
 implements|implements
 name|VerifierFactoryObserver
 block|{
-comment|/**      * This method implements a demonstration program      * of how to use the VerifierFactoryObserver. It transitively verifies      * all class files encountered; this may take up a lot of time and,      * more notably, memory.      */
+comment|/**      * This method implements a demonstration program of how to use the VerifierFactoryObserver. It transitively verifies      * all class files encountered; this may take up a lot of time and, more notably, memory.      */
 specifier|public
 specifier|static
 name|void

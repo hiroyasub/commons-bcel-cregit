@@ -43,7 +43,7 @@ name|ExceptionThrower
 implements|,
 name|TypedInstruction
 block|{
-comment|/**      * Empty constructor needed for Instruction.readInstruction.      * Not to be used otherwise.      */
+comment|/**      * Empty constructor needed for Instruction.readInstruction. Not to be used otherwise.      */
 name|ArrayInstruction
 parameter_list|()
 block|{
@@ -92,7 +92,7 @@ name|EXCS_ARRAY_EXCEPTION
 argument_list|)
 return|;
 block|}
-comment|/** @return type associated with the instruction      */
+comment|/**      * @return type associated with the instruction      */
 annotation|@
 name|Override
 specifier|public

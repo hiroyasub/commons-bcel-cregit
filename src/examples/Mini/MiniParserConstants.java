@@ -263,7 +263,7 @@ block|,
 literal|"<INTEGER>"
 block|,
 literal|"<STRING>"
-block|,   }
+block|,}
 decl_stmt|;
 block|}
 end_interface

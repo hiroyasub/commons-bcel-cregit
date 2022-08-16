@@ -200,7 +200,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Represents arithmetic expressions such as `(a + 12 == b) OR c'.  * The parse tree is built initially by the parser and modified, i.e.  * compacted with `traverse()'. Each (Expr, Term, Factor) node  * with kind == -1 is replaced which its successor node, which is  * converted to type `Expr'  *  * A node with  kind == -1 denotes the fact that this expression  * node has just one child branch and thus may be replaced by this  * branch (or leaf) directly without altering the expression  * semantics. Term and Factor nodes are used only to build the parse tree  * obeying the aritmetical precedences (* stronger than +, etc.) and  * are discarded in the first pass. */
+comment|/**  * Represents arithmetic expressions such as `(a + 12 == b) OR c'. The parse tree is built initially by the parser and  * modified, i.e. compacted with `traverse()'. Each (Expr, Term, Factor) node with kind == -1 is replaced which its  * successor node, which is converted to type `Expr'  *  * A node with kind == -1 denotes the fact that this expression node has just one child branch and thus may be replaced  * by this branch (or leaf) directly without altering the expression semantics. Term and Factor nodes are used only to  * build the parse tree obeying the aritmetical precedences (* stronger than +, etc.) and are discarded in the first  * pass.  */
 end_comment
 
 begin_class
@@ -320,14 +320,14 @@ name|boolean
 name|is_simple
 decl_stmt|;
 comment|// true, if simple expression like `12 + f(a)'
-comment|/* Not all children shall inherit this, exceptions are ASTIdent and ASTFunAppl, which   * look up the type in the corresponding environment entry.   */
+comment|/*      * Not all children shall inherit this, exceptions are ASTIdent and ASTFunAppl, which look up the type in the      * corresponding environment entry.      */
 specifier|protected
 name|int
 name|type
 init|=
 name|T_UNKNOWN
 decl_stmt|;
-comment|/* Special constructor, called from ASTTerm.traverse() and    * ASTFactor.traverse(), when traverse()ing the parse tree replace    * themselves with Expr nodes.    */
+comment|/*      * Special constructor, called from ASTTerm.traverse() and ASTFactor.traverse(), when traverse()ing the parse tree      * replace themselves with Expr nodes.      */
 name|ASTExpr
 parameter_list|(
 specifier|final
@@ -465,7 +465,7 @@ name|id
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**    * Fifth pass, produce Java byte code.    */
+comment|/**      * Fifth pass, produce Java byte code.      */
 specifier|public
 name|void
 name|byte_code
@@ -950,7 +950,7 @@ break|break;
 block|}
 block|}
 block|}
-comment|/**    * Overrides SimpleNode.closeNode(). Overridden by some subclasses.    *    * Called by the parser when the construction of this node is finished.    * Casts children Node[] to precise ASTExpr[] type.    */
+comment|/**      * Overrides SimpleNode.closeNode(). Overridden by some subclasses.      *      * Called by the parser when the construction of this node is finished. Casts children Node[] to precise ASTExpr[] type.      */
 annotation|@
 name|Override
 specifier|public
@@ -999,7 +999,7 @@ expr_stmt|;
 comment|// Throw away old reference
 block|}
 block|}
-comment|/**    * Fourth pass, produce Java code.    */
+comment|/**      * Fourth pass, produce Java code.      */
 specifier|public
 name|void
 name|code
@@ -1423,7 +1423,7 @@ expr_stmt|;
 block|}
 block|}
 block|}
-comment|/**    * Second and third pass    * @return type of expression    * @param expected type    */
+comment|/**      * Second and third pass      *       * @return type of expression      * @param expected type      */
 specifier|public
 name|int
 name|eval
@@ -1787,7 +1787,7 @@ operator|=
 name|unop
 expr_stmt|;
 block|}
-comment|/**    * @return name of node, its kind and the number of children.    */
+comment|/**      * @return name of node, its kind and the number of children.      */
 annotation|@
 name|Override
 specifier|public
@@ -1878,7 +1878,7 @@ operator|+
 name|column
 return|;
 block|}
-comment|/**    * First pass    * Overridden by subclasses. Traverse the whole parse tree recursively and    * drop redundant nodes.    */
+comment|/**      * First pass Overridden by subclasses. Traverse the whole parse tree recursively and drop redundant nodes.      */
 specifier|public
 name|ASTExpr
 name|traverse

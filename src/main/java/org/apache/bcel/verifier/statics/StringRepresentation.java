@@ -720,7 +720,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * BCEL's Node classes (those from the classfile API that<B>accept()</B> Visitor  * instances) have<B>toString()</B> methods that were not designed to be robust,  * this gap is closed by this class.  * When performing class file verification, it may be useful to output which  * entity (e.g. a<B>Code</B> instance) is not satisfying the verifier's  * constraints, but in this case it could be possible for the<B>toString()</B>  * method to throw a RuntimeException.  * A (new StringRepresentation(Node n)).toString() never throws any exception.  * Note that this class also serves as a placeholder for more sophisticated message  * handling in future versions of JustIce.  *  */
+comment|/**  * BCEL's Node classes (those from the classfile API that<B>accept()</B> Visitor instances) have<B>toString()</B>  * methods that were not designed to be robust, this gap is closed by this class. When performing class file  * verification, it may be useful to output which entity (e.g. a<B>Code</B> instance) is not satisfying the verifier's  * constraints, but in this case it could be possible for the<B>toString()</B> method to throw a RuntimeException. A  * (new StringRepresentation(Node n)).toString() never throws any exception. Note that this class also serves as a  * placeholder for more sophisticated message handling in future versions of JustIce.  *  */
 end_comment
 
 begin_class
@@ -817,7 +817,7 @@ return|return
 name|tostring
 return|;
 block|}
-comment|/**      * Returns the String representation of the Node object obj;      * this is obj.toString() if it does not throw any RuntimeException,      * or else it is a string derived only from obj's class name.      */
+comment|/**      * Returns the String representation of the Node object obj; this is obj.toString() if it does not throw any      * RuntimeException, or else it is a string derived only from obj's class name.      */
 specifier|private
 name|String
 name|toString
@@ -901,8 +901,8 @@ name|Annotations
 name|obj
 parameter_list|)
 block|{
-comment|//this is invoked whenever an annotation is found
-comment|//when verifier is passed over a class
+comment|// this is invoked whenever an annotation is found
+comment|// when verifier is passed over a class
 name|tostring
 operator|=
 name|toString
@@ -988,7 +988,7 @@ name|Code
 name|obj
 parameter_list|)
 block|{
-comment|//tostring = toString(obj);
+comment|// tostring = toString(obj);
 name|tostring
 operator|=
 literal|"<CODE>"
@@ -1611,8 +1611,8 @@ name|LocalVariableTypeTable
 name|obj
 parameter_list|)
 block|{
-comment|//this is invoked whenever a local variable type is found
-comment|//when verifier is passed over a class
+comment|// this is invoked whenever a local variable type is found
+comment|// when verifier is passed over a class
 name|tostring
 operator|=
 name|toString

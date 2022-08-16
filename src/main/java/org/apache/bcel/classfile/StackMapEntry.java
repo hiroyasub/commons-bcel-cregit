@@ -58,7 +58,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * This class represents a stack map entry recording the types of  * local variables and the the of stack items at a given byte code offset.  * See CLDC specification 5.3.1.2  *  * @see     StackMap  * @see     StackMapType  */
+comment|/**  * This class represents a stack map entry recording the types of local variables and the the of stack items at a given  * byte code offset. See CLDC specification 5.3.1.2  *  * @see StackMap  * @see StackMapType  */
 end_comment
 
 begin_class
@@ -474,7 +474,7 @@ argument_list|)
 throw|;
 block|}
 block|}
-comment|/**      * DO NOT USE      *      * @param byteCodeOffset      * @param numberOfLocals NOT USED      * @param typesOfLocals array of {@link StackMapType}s of locals      * @param numberOfStackItems NOT USED      * @param typesOfStackItems array ot {@link StackMapType}s of stack items      * @param constantPool the constant pool      * @deprecated Since 6.0, use {@link #StackMapEntry(int, int, StackMapType[], StackMapType[], ConstantPool)}      * instead      */
+comment|/**      * DO NOT USE      *      * @param byteCodeOffset      * @param numberOfLocals NOT USED      * @param typesOfLocals array of {@link StackMapType}s of locals      * @param numberOfStackItems NOT USED      * @param typesOfStackItems array ot {@link StackMapType}s of stack items      * @param constantPool the constant pool      * @deprecated Since 6.0, use {@link #StackMapEntry(int, int, StackMapType[], StackMapType[], ConstantPool)} instead      */
 annotation|@
 name|java
 operator|.
@@ -618,7 +618,7 @@ operator|=
 name|constantPool
 expr_stmt|;
 block|}
-comment|/**      * Called by objects that are traversing the nodes of the tree implicitely      * defined by the contents of a Java class. I.e., the hierarchy of methods,      * fields, attributes, etc. spawns a tree of objects.      *      * @param v Visitor object      */
+comment|/**      * Called by objects that are traversing the nodes of the tree implicitely defined by the contents of a Java class.      * I.e., the hierarchy of methods, fields, attributes, etc. spawns a tree of objects.      *      * @param v Visitor object      */
 annotation|@
 name|Override
 specifier|public
@@ -2123,7 +2123,7 @@ name|toString
 argument_list|()
 return|;
 block|}
-comment|/**      * Update the distance (as an offset delta) from this StackMap      * entry to the next.  Note that this might cause the the      * frame type to change.  Note also that delta may be negative.      *      * @param delta offset delta      */
+comment|/**      * Update the distance (as an offset delta) from this StackMap entry to the next. Note that this might cause the the      * frame type to change. Note also that delta may be negative.      *      * @param delta offset delta      */
 specifier|public
 name|void
 name|updateByteCodeOffset

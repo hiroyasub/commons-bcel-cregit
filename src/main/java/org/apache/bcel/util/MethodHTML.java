@@ -665,7 +665,7 @@ operator|.
 name|getAttributes
 argument_list|()
 decl_stmt|;
-comment|/* HTML doesn't like names like<clinit> and spaces are places to break          * lines. Both we don't want...          */
+comment|/*          * HTML doesn't like names like<clinit> and spaces are places to break lines. Both we don't want...          */
 name|access
 operator|=
 name|Utility

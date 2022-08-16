@@ -198,7 +198,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Read class file(s) and convert them into HTML files.  *  * Given a JavaClass object "class" that is in package "package" five files  * will be created in the specified directory.  *  *<OL>  *<LI> "package"."class".html as the main file which defines the frames for  * the following subfiles.  *<LI>  "package"."class"_attributes.html contains all (known) attributes found in the file  *<LI>  "package"."class"_cp.html contains the constant pool  *<LI>  "package"."class"_code.html contains the byte code  *<LI>  "package"."class"_methods.html contains references to all methods and fields of the class  *</OL>  *  * All subfiles reference each other appropriately, e.g. clicking on a  * method in the Method's frame will jump to the appropriate method in  * the Code frame.  *  */
+comment|/**  * Read class file(s) and convert them into HTML files.  *  * Given a JavaClass object "class" that is in package "package" five files will be created in the specified directory.  *  *<OL>  *<LI>"package"."class".html as the main file which defines the frames for the following subfiles.  *<LI>"package"."class"_attributes.html contains all (known) attributes found in the file  *<LI>"package"."class"_cp.html contains the constant pool  *<LI>"package"."class"_code.html contains the byte code  *<LI>"package"."class"_methods.html contains references to all methods and fields of the class  *</OL>  *  * All subfiles reference each other appropriately, e.g. clicking on a method in the Method's frame will jump to the  * appropriate method in the Code frame.  *  */
 end_comment
 
 begin_class
@@ -367,7 +367,7 @@ operator|+
 name|sep
 decl_stmt|;
 comment|// Where to store HTML files
-comment|/* Parse command line arguments.          */
+comment|/*          * Parse command line arguments.          */
 for|for
 control|(
 name|int
@@ -670,7 +670,7 @@ expr_stmt|;
 block|}
 block|}
 block|}
-comment|/**      * Utility method that converts a class reference in the constant pool,      * i.e., an index to a string.      */
+comment|/**      * Utility method that converts a class reference in the constant pool, i.e., an index to a string.      */
 specifier|static
 name|String
 name|referenceClass

@@ -60,7 +60,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * INVOKEVIRTUAL - Invoke instance method; dispatch based on class  *  *<PRE>Stack: ..., objectref, [arg1, [arg2 ...]] -&gt; ...</PRE>  *  * @see  *<a href="https://docs.oracle.com/javase/specs/jvms/se8/html/jvms-6.html#jvms-6.5.invokevirtual">  * The invokevirtual instruction in The Java Virtual Machine Specification</a>  */
+comment|/**  * INVOKEVIRTUAL - Invoke instance method; dispatch based on class  *  *<PRE>  * Stack: ..., objectref, [arg1, [arg2 ...]] -&gt; ...  *</PRE>  *  * @see<a href="https://docs.oracle.com/javase/specs/jvms/se8/html/jvms-6.html#jvms-6.5.invokevirtual"> The  *      invokevirtual instruction in The Java Virtual Machine Specification</a>  */
 end_comment
 
 begin_class
@@ -70,7 +70,7 @@ name|INVOKEVIRTUAL
 extends|extends
 name|InvokeInstruction
 block|{
-comment|/**      * Empty constructor needed for Instruction.readInstruction.      * Not to be used otherwise.      */
+comment|/**      * Empty constructor needed for Instruction.readInstruction. Not to be used otherwise.      */
 name|INVOKEVIRTUAL
 parameter_list|()
 block|{
@@ -93,7 +93,7 @@ name|index
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Call corresponding visitor method(s). The order is:      * Call visitor methods of implemented interfaces first, then      * call methods according to the class hierarchy in descending order,      * i.e., the most specific visitXXX() call comes last.      *      * @param v Visitor object      */
+comment|/**      * Call corresponding visitor method(s). The order is: Call visitor methods of implemented interfaces first, then call      * methods according to the class hierarchy in descending order, i.e., the most specific visitXXX() call comes last.      *      * @param v Visitor object      */
 annotation|@
 name|Override
 specifier|public
@@ -169,7 +169,7 @@ name|this
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Dump instruction as byte code to stream out.      * @param out Output stream      */
+comment|/**      * Dump instruction as byte code to stream out.      *       * @param out Output stream      */
 annotation|@
 name|Override
 specifier|public

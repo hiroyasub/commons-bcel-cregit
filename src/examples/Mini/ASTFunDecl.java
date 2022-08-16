@@ -873,7 +873,7 @@ name|boolean
 name|is_recursive
 decl_stmt|;
 comment|// Not used yet, TODO
-comment|//  private int         max_depth; // max. expression tree depth
+comment|// private int max_depth; // max. expression tree depth
 specifier|private
 name|Environment
 name|env
@@ -2338,7 +2338,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/*          * Update entry of this function, i.e. set argument references. The entry is already in there by garantuee, but          * may be of wrong type, i.e. the user defined a function `TRUE', e.g. and `TRUE' is of type `Variable'.          */
+comment|/*          * Update entry of this function, i.e. set argument references. The entry is already in there by garantuee, but may be          * of wrong type, i.e. the user defined a function `TRUE', e.g. and `TRUE' is of type `Variable'.          */
 try|try
 block|{
 specifier|final

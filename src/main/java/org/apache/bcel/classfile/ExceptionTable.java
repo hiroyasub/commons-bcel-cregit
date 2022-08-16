@@ -72,7 +72,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * This class represents the table of exceptions that are thrown by a  * method. This attribute may be used once per method.  The name of  * this class is<em>ExceptionTable</em> for historical reasons; The  * Java Virtual Machine Specification, Second Edition defines this  * attribute using the name<em>Exceptions</em> (which is inconsistent  * with the other classes).  *  * @see     Code  */
+comment|/**  * This class represents the table of exceptions that are thrown by a method. This attribute may be used once per  * method. The name of this class is<em>ExceptionTable</em> for historical reasons; The Java Virtual Machine  * Specification, Second Edition defines this attribute using the name<em>Exceptions</em> (which is inconsistent with  * the other classes).  *  * @see Code  */
 end_comment
 
 begin_class
@@ -89,7 +89,7 @@ index|[]
 name|exceptionIndexTable
 decl_stmt|;
 comment|// constant pool
-comment|/**      * Initialize from another object. Note that both objects use the same      * references (shallow copy). Use copy() for a physical copy.      */
+comment|/**      * Initialize from another object. Note that both objects use the same references (shallow copy). Use copy() for a      * physical copy.      */
 specifier|public
 name|ExceptionTable
 parameter_list|(
@@ -122,7 +122,7 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Construct object from input stream.      * @param nameIndex Index in constant pool      * @param length Content length in bytes      * @param input Input stream      * @param constantPool Array of constants      * @throws IOException if an I/O error occurs.      */
+comment|/**      * Construct object from input stream.      *       * @param nameIndex Index in constant pool      * @param length Content length in bytes      * @param input Input stream      * @param constantPool Array of constants      * @throws IOException if an I/O error occurs.      */
 name|ExceptionTable
 parameter_list|(
 specifier|final
@@ -253,7 +253,7 @@ operator|.
 name|EMPTY_INT_ARRAY
 expr_stmt|;
 block|}
-comment|/**      * Called by objects that are traversing the nodes of the tree implicitely      * defined by the contents of a Java class. I.e., the hierarchy of methods,      * fields, attributes, etc. spawns a tree of objects.      *      * @param v Visitor object      */
+comment|/**      * Called by objects that are traversing the nodes of the tree implicitely defined by the contents of a Java class.      * I.e., the hierarchy of methods, fields, attributes, etc. spawns a tree of objects.      *      * @param v Visitor object      */
 annotation|@
 name|Override
 specifier|public
@@ -493,7 +493,7 @@ operator|.
 name|length
 return|;
 block|}
-comment|/**      * @param exceptionIndexTable the list of exception indexes      * Also redefines number_of_exceptions according to table length.      */
+comment|/**      * @param exceptionIndexTable the list of exception indexes Also redefines number_of_exceptions according to table      *        length.      */
 specifier|public
 name|void
 name|setExceptionIndexTable

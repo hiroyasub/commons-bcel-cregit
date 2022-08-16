@@ -1174,7 +1174,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * This PassVerifier verifies a class file according to  * pass 3, static part as described in The Java Virtual  * Machine Specification, 2nd edition.  * More detailed information is to be found at the do_verify()  * method's documentation.  *  * @see #do_verify()  */
+comment|/**  * This PassVerifier verifies a class file according to pass 3, static part as described in The Java Virtual Machine  * Specification, 2nd edition. More detailed information is to be found at the do_verify() method's documentation.  *  * @see #do_verify()  */
 end_comment
 
 begin_class
@@ -1185,7 +1185,7 @@ name|Pass3aVerifier
 extends|extends
 name|PassVerifier
 block|{
-comment|/**      * This visitor class does the actual checking for the instruction      * operand's constraints.      */
+comment|/**      * This visitor class does the actual checking for the instruction operand's constraints.      */
 specifier|private
 class|class
 name|InstOperandConstraintVisitor
@@ -1252,7 +1252,7 @@ name|message
 argument_list|)
 throw|;
 block|}
-comment|/**          * Looks for the method referenced by the given invoke instruction in the given class.          * @param jc the class that defines the referenced method          * @param invoke the instruction that references the method          * @return the referenced method or null if not found.          */
+comment|/**          * Looks for the method referenced by the given invoke instruction in the given class.          *           * @param jc the class that defines the referenced method          * @param invoke the instruction that references the method          * @return the referenced method or null if not found.          */
 specifier|private
 name|Method
 name|getMethod
@@ -1352,7 +1352,7 @@ return|return
 literal|null
 return|;
 block|}
-comment|/**          * Looks for the method referenced by the given invoke instruction in the given class          * or its super classes and super interfaces.          * @param jc the class that defines the referenced method          * @param invoke the instruction that references the method          * @return the referenced method or null if not found.          */
+comment|/**          * Looks for the method referenced by the given invoke instruction in the given class or its super classes and super          * interfaces.          *           * @param jc the class that defines the referenced method          * @param invoke the instruction that references the method          * @return the referenced method or null if not found.          */
 specifier|private
 name|Method
 name|getMethodRecursive
@@ -1371,7 +1371,7 @@ block|{
 name|Method
 name|m
 decl_stmt|;
-comment|//look in the given class
+comment|// look in the given class
 name|m
 operator|=
 name|getMethod
@@ -1388,12 +1388,12 @@ operator|!=
 literal|null
 condition|)
 block|{
-comment|//method found in given class
+comment|// method found in given class
 return|return
 name|m
 return|;
 block|}
-comment|//method not found, look in super classes
+comment|// method not found, look in super classes
 for|for
 control|(
 specifier|final
@@ -1422,13 +1422,13 @@ operator|!=
 literal|null
 condition|)
 block|{
-comment|//method found in super class
+comment|// method found in super class
 return|return
 name|m
 return|;
 block|}
 block|}
-comment|//method not found, look in super interfaces
+comment|// method not found, look in super interfaces
 for|for
 control|(
 specifier|final
@@ -1457,13 +1457,13 @@ operator|!=
 literal|null
 condition|)
 block|{
-comment|//method found in super interface
+comment|// method found in super interface
 return|return
 name|m
 return|;
 block|}
 block|}
-comment|//method not found in the hierarchy
+comment|// method not found in the hierarchy
 return|return
 literal|null
 return|;
@@ -1519,7 +1519,7 @@ comment|// The target of each jump and branch instruction [...] must be the opco
 comment|// BCEL _DOES_ handle this.
 comment|// tableswitch: BCEL will do it, supposedly.
 comment|// lookupswitch: BCEL will do it, supposedly.
-comment|/**          * A utility method to raise an exception if the index is not          * a valid constant pool index.          */
+comment|/**          * A utility method to raise an exception if the index is not a valid constant pool index.          */
 specifier|private
 name|void
 name|indexValid
@@ -1560,7 +1560,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/**          * Utility method to return the max_locals value of the method verified          * by the surrounding Pass3aVerifier instance.          */
+comment|/**          * Utility method to return the max_locals value of the method verified by the surrounding Pass3aVerifier instance.          */
 specifier|private
 name|int
 name|max_locals
@@ -1613,7 +1613,7 @@ argument_list|)
 throw|;
 block|}
 block|}
-comment|/**          * A utility method like equals(Object) for arrays.          * The equality of the elements is based on their equals(Object)          * method instead of their object identity.          */
+comment|/**          * A utility method like equals(Object) for arrays. The equality of the elements is based on their equals(Object) method          * instead of their object identity.          */
 specifier|private
 name|boolean
 name|objarrayequals
@@ -2180,7 +2180,7 @@ block|}
 block|}
 block|}
 comment|/** Checks if the constraints of operands of the said instruction(s) are satisfied. */
-comment|//getfield, putfield, getstatic, putstatic
+comment|// getfield, putfield, getstatic, putstatic
 annotation|@
 name|Override
 specifier|public
@@ -2332,7 +2332,7 @@ argument_list|(
 name|constantPoolGen
 argument_list|)
 decl_stmt|;
-comment|/* TODO: Check if assignment compatibility is sufficient.                    * What does Sun do?                    */
+comment|/*                          * TODO: Check if assignment compatibility is sufficient. What does Sun do?                          */
 if|if
 condition|(
 name|f_type
@@ -2510,7 +2510,7 @@ block|}
 block|}
 else|else
 block|{
-comment|/* TODO: Check if assignment compatibility is sufficient.                    What does Sun do? */
+comment|/*                      * TODO: Check if assignment compatibility is sufficient. What does Sun do?                      */
 name|Type
 operator|.
 name|getType
@@ -2532,10 +2532,10 @@ comment|//                Type f_type = Type.getType(f.getSignature());
 comment|//                Type o_type = o.getType(cpg);
 comment|// Argh. Sun's implementation allows us to have multiple fields of
 comment|// the same name but with a different signature.
-comment|//if (! f_type.equals(o_type)) {
-comment|//    constraintViolated(o,
-comment|//        "Referenced field '"+field_name+"' has type '"+f_type+"' instead of '"+o_type+"' as expected.");
-comment|//}
+comment|// if (! f_type.equals(o_type)) {
+comment|// constraintViolated(o,
+comment|// "Referenced field '"+field_name+"' has type '"+f_type+"' instead of '"+o_type+"' as expected.");
+comment|// }
 comment|/* TODO: Check for access modifiers here. */
 block|}
 block|}
@@ -4355,7 +4355,7 @@ name|e
 parameter_list|)
 block|{
 comment|// FIXME: maybe not the best way to handle this
-comment|//throw new AssertionViolatedException("Missing class: " + e, e);
+comment|// throw new AssertionViolatedException("Missing class: " + e, e);
 name|addMessage
 argument_list|(
 literal|"Unable to verify INVOKEVITUAL as cannot load target class: "
@@ -4715,7 +4715,7 @@ block|}
 comment|///////////////////////////////////////////////////////////
 comment|// The Java Virtual Machine Specification, pages 134-137 //
 comment|///////////////////////////////////////////////////////////
-comment|/**          * Assures the generic preconditions of a LoadClass instance.          * The referenced class is loaded and pass2-verified.          */
+comment|/**          * Assures the generic preconditions of a LoadClass instance. The referenced class is loaded and pass2-verified.          */
 annotation|@
 name|Override
 specifier|public
@@ -4811,13 +4811,13 @@ block|}
 block|}
 block|}
 comment|/* Checks if the constraints of operands of the said instruction(s) are satisfied. */
-comment|//public void visitPUTFIELD(PUTFIELD o) {
+comment|// public void visitPUTFIELD(PUTFIELD o) {
 comment|// for performance reasons done in Pass 3b
-comment|//}
+comment|// }
 comment|/* Checks if the constraints of operands of the said instruction(s) are satisfied. */
-comment|//public void visitGETFIELD(GETFIELD o) {
+comment|// public void visitGETFIELD(GETFIELD o) {
 comment|// for performance reasons done in Pass 3b
-comment|//}
+comment|// }
 comment|/** Checks if the constraints of operands of the said instruction(s) are satisfied. */
 annotation|@
 name|Override
@@ -5773,18 +5773,18 @@ specifier|final
 name|Verifier
 name|myOwner
 decl_stmt|;
-comment|/**      * The method number to verify.      * This is the index in the array returned      * by JavaClass.getMethods().      */
+comment|/**      * The method number to verify. This is the index in the array returned by JavaClass.getMethods().      */
 specifier|private
 specifier|final
 name|int
 name|methodNo
 decl_stmt|;
-comment|/**      * The one and only InstructionList object used by an instance of this class.      * It's here for performance reasons by do_verify() and its callees.      */
+comment|/**      * The one and only InstructionList object used by an instance of this class. It's here for performance reasons by      * do_verify() and its callees.      */
 specifier|private
 name|InstructionList
 name|instructionList
 decl_stmt|;
-comment|/**      * The one and only Code object used by an instance of this class.      *  It's here for performance reasons by do_verify() and its callees.      */
+comment|/**      * The one and only Code object used by an instance of this class. It's here for performance reasons by do_verify() and      * its callees.      */
 specifier|private
 name|Code
 name|code
@@ -5813,7 +5813,7 @@ operator|=
 name|methodNo
 expr_stmt|;
 block|}
-comment|/**      * These are the checks that could be done in pass 2 but are delayed to pass 3      * for performance reasons. Also, these checks need access to the code array      * of the Code attribute of a Method so it's okay to perform them here.      * Also see the description of the do_verify() method.      *      * @throws ClassConstraintException if the verification fails.      * @see #do_verify()      */
+comment|/**      * These are the checks that could be done in pass 2 but are delayed to pass 3 for performance reasons. Also, these      * checks need access to the code array of the Code attribute of a Method so it's okay to perform them here. Also see      * the description of the do_verify() method.      *      * @throws ClassConstraintException if the verification fails.      * @see #do_verify()      */
 specifier|private
 name|void
 name|delayedPass2Checks
@@ -5992,7 +5992,7 @@ block|}
 comment|///////////////////////////
 comment|// LocalVariableTable(s) //
 comment|///////////////////////////
-comment|/* We cannot use code.getLocalVariableTable() because there could be more            than only one. This is a bug in BCEL. */
+comment|/*          * We cannot use code.getLocalVariableTable() because there could be more than only one. This is a bug in BCEL.          */
 specifier|final
 name|Attribute
 index|[]
@@ -6352,7 +6352,7 @@ throw|;
 block|}
 block|}
 block|}
-comment|/**      * Pass 3a is the verification of static constraints of      * JVM code (such as legal targets of branch instructions).      * This is the part of pass 3 where you do not need data      * flow analysis.      * JustIce also delays the checks for a correct exception      * table of a Code attribute and correct line number entries      * in a LineNumberTable attribute of a Code attribute (which      * conceptually belong to pass 2) to this pass. Also, most      * of the check for valid local variable entries in a      * LocalVariableTable attribute of a Code attribute is      * delayed until this pass.      * All these checks need access to the code array of the      * Code attribute.      *      * @throws InvalidMethodException if the method to verify does not exist.      */
+comment|/**      * Pass 3a is the verification of static constraints of JVM code (such as legal targets of branch instructions). This is      * the part of pass 3 where you do not need data flow analysis. JustIce also delays the checks for a correct exception      * table of a Code attribute and correct line number entries in a LineNumberTable attribute of a Code attribute (which      * conceptually belong to pass 2) to this pass. Also, most of the check for valid local variable entries in a      * LocalVariableTable attribute of a Code attribute is delayed until this pass. All these checks need access to the code      * array of the Code attribute.      *      * @throws InvalidMethodException if the method to verify does not exist.      */
 annotation|@
 name|Override
 specifier|public
@@ -6524,7 +6524,7 @@ name|VerificationResult
 operator|.
 name|VR_OK
 decl_stmt|;
-comment|//default
+comment|// default
 try|try
 block|{
 name|delayedPass2Checks
@@ -6622,7 +6622,7 @@ return|return
 name|vr
 return|;
 block|}
-comment|//did not pass Pass 2.
+comment|// did not pass Pass 2.
 return|return
 name|VerificationResult
 operator|.
@@ -6660,7 +6660,7 @@ return|return
 name|methodNo
 return|;
 block|}
-comment|/**      * These are the checks if constraints are satisfied which are described in the      * Java Virtual Machine Specification, Second Edition as Static Constraints on      * the instructions of Java Virtual Machine Code (chapter 4.8.1).      *      * @throws StaticCodeConstraintException if the verification fails.      */
+comment|/**      * These are the checks if constraints are satisfied which are described in the Java Virtual Machine Specification,      * Second Edition as Static Constraints on the instructions of Java Virtual Machine Code (chapter 4.8.1).      *      * @throws StaticCodeConstraintException if the verification fails.      */
 specifier|private
 name|void
 name|pass3StaticInstructionChecks
@@ -6715,8 +6715,8 @@ comment|// code_length-1 : See the do_verify() comments. We actually don't itera
 comment|// byte array, but use an InstructionList so we cannot check for this. But BCEL does
 comment|// things right, so it's implicitly okay.
 comment|// TODO: Check how BCEL handles (and will handle) instructions like IMPDEP1, IMPDEP2,
-comment|//       BREAKPOINT... that BCEL knows about but which are illegal anyway.
-comment|//       We currently go the safe way here.
+comment|// BREAKPOINT... that BCEL knows about but which are illegal anyway.
+comment|// We currently go the safe way here.
 name|InstructionHandle
 name|ih
 init|=
@@ -6845,7 +6845,7 @@ argument_list|)
 throw|;
 block|}
 block|}
-comment|/**      * These are the checks for the satisfaction of constraints which are described in the      * Java Virtual Machine Specification, Second Edition as Static Constraints on      * the operands of instructions of Java Virtual Machine Code (chapter 4.8.1).      * BCEL parses the code array to create an InstructionList and therefore has to check      * some of these constraints. Additional checks are also implemented here.      *      * @throws StaticCodeConstraintException if the verification fails.      */
+comment|/**      * These are the checks for the satisfaction of constraints which are described in the Java Virtual Machine      * Specification, Second Edition as Static Constraints on the operands of instructions of Java Virtual Machine Code      * (chapter 4.8.1). BCEL parses the code array to create an InstructionList and therefore has to check some of these      * constraints. Additional checks are also implemented here.      *      * @throws StaticCodeConstraintException if the verification fails.      */
 specifier|private
 name|void
 name|pass3StaticInstructionOperandsChecks
@@ -6857,10 +6857,10 @@ comment|// When building up the InstructionList, BCEL has already done all those
 comment|// mentioned in The Java Virtual Machine Specification, Second Edition, as
 comment|// "static constraints on the operands of instructions in the code array".
 comment|// TODO: see the do_verify() comments. Maybe we should really work on the
-comment|//       byte array first to give more comprehensive messages.
+comment|// byte array first to give more comprehensive messages.
 comment|// TODO: Review Exception API, possibly build in some "offending instruction" thing
-comment|//       when we're ready to insulate the offending instruction by doing the
-comment|//       above thing.
+comment|// when we're ready to insulate the offending instruction by doing the
+comment|// above thing.
 comment|// TODO: Implement as much as possible here. BCEL does _not_ check everything.
 specifier|final
 name|ConstantPoolGen
@@ -7043,7 +7043,7 @@ argument_list|)
 throw|;
 block|}
 block|}
-comment|/**      * This method is a slightly modified version of      * verifier.statics.StringRepresentation.toString(final Node obj)      * that accepts any Object, not just a Node.      *      * Returns the String representation of the Object obj;      * this is obj.toString() if it does not throw any RuntimeException,      * or else it is a string derived only from obj's class name.      */
+comment|/**      * This method is a slightly modified version of verifier.statics.StringRepresentation.toString(final Node obj) that      * accepts any Object, not just a Node.      *      * Returns the String representation of the Object obj; this is obj.toString() if it does not throw any      * RuntimeException, or else it is a string derived only from obj's class name.      */
 specifier|protected
 name|String
 name|tostring

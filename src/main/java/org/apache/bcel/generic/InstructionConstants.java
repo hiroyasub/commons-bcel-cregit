@@ -28,7 +28,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * This interface contains shareable instruction objects.  *  * In order to save memory you can use some instructions multiply,  * since they have an immutable state and are directly derived from  * Instruction.  I.e. they have no instance fields that could be  * changed. Since some of these instructions like ICONST_0 occur  * very frequently this can save a lot of time and space. This  * feature is an adaptation of the FlyWeight design pattern, we  * just use an array instead of a factory.  *  * The Instructions can also accessed directly under their names, so  * it's possible to write il.append(Instruction.ICONST_0);  *  * @deprecated (since 6.0) Do not use. Use InstructionConst instead.  */
+comment|/**  * This interface contains shareable instruction objects.  *  * In order to save memory you can use some instructions multiply, since they have an immutable state and are directly  * derived from Instruction. I.e. they have no instance fields that could be changed. Since some of these instructions  * like ICONST_0 occur very frequently this can save a lot of time and space. This feature is an adaptation of the  * FlyWeight design pattern, we just use an array instead of a factory.  *  * The Instructions can also accessed directly under their names, so it's possible to write  * il.append(Instruction.ICONST_0);  *  * @deprecated (since 6.0) Do not use. Use InstructionConst instead.  */
 end_comment
 
 begin_interface
@@ -1009,8 +1009,8 @@ name|MONITOREXIT
 expr_stmt|;
 block|}
 block|}
-comment|/** Predefined instruction objects      */
-comment|/*      * NOTE these are not currently immutable, because Instruction      * has mutable protected fields opcode and length.      */
+comment|/**      * Predefined instruction objects      */
+comment|/*      * NOTE these are not currently immutable, because Instruction has mutable protected fields opcode and length.      */
 name|Instruction
 name|NOP
 init|=
@@ -1789,7 +1789,7 @@ operator|new
 name|MONITOREXIT
 argument_list|()
 decl_stmt|;
-comment|/** You can use these constants in multiple places safely, if you can guarantee      * that you will never alter their internal values, e.g. call setIndex().      */
+comment|/**      * You can use these constants in multiple places safely, if you can guarantee that you will never alter their internal      * values, e.g. call setIndex().      */
 name|LocalVariableInstruction
 name|THIS
 init|=
@@ -1903,7 +1903,7 @@ argument_list|(
 literal|2
 argument_list|)
 decl_stmt|;
-comment|/** Get object via its opcode, for immutable instructions like      * branch instructions entries are set to null.      */
+comment|/**      * Get object via its opcode, for immutable instructions like branch instructions entries are set to null.      */
 name|Instruction
 index|[]
 name|INSTRUCTIONS
@@ -1914,7 +1914,7 @@ index|[
 literal|256
 index|]
 decl_stmt|;
-comment|/** Interfaces may have no static initializers, so we simulate this      * with an inner class.      */
+comment|/**      * Interfaces may have no static initializers, so we simulate this with an inner class.      */
 name|Clinit
 name|bla
 init|=

@@ -16,7 +16,7 @@ package|;
 end_package
 
 begin_comment
-comment|/**  * The NativeVerifier class implements a main(String[] args) method that's  * roughly compatible to the one in the Verifier class, but that uses the  * JVM's internal verifier for its class file verification.  * This can be used for comparison runs between the JVM-internal verifier  * and JustIce.  *  */
+comment|/**  * The NativeVerifier class implements a main(String[] args) method that's roughly compatible to the one in the Verifier  * class, but that uses the JVM's internal verifier for its class file verification. This can be used for comparison  * runs between the JVM-internal verifier and JustIce.  *  */
 end_comment
 
 begin_class
@@ -120,7 +120,7 @@ argument_list|,
 literal|'.'
 argument_list|)
 expr_stmt|;
-comment|//System.out.println(args[0]);
+comment|// System.out.println(args[0]);
 try|try
 block|{
 name|Class
@@ -141,7 +141,7 @@ name|ExceptionInInitializerError
 name|eiie
 parameter_list|)
 block|{
-comment|//subclass of LinkageError!
+comment|// subclass of LinkageError!
 name|System
 operator|.
 name|out

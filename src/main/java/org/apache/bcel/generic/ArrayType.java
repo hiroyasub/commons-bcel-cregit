@@ -265,7 +265,7 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
-comment|/** @return true if both type objects refer to the same array type.      */
+comment|/**      * @return true if both type objects refer to the same array type.      */
 annotation|@
 name|Override
 specifier|public
@@ -324,7 +324,7 @@ return|return
 name|basicType
 return|;
 block|}
-comment|/** @return number of dimensions of array      */
+comment|/**      * @return number of dimensions of array      */
 specifier|public
 name|int
 name|getDimensions
@@ -363,7 +363,7 @@ literal|1
 argument_list|)
 return|;
 block|}
-comment|/** @return a hash code value for the object.      */
+comment|/**      * @return a hash code value for the object.      */
 annotation|@
 name|Override
 specifier|public

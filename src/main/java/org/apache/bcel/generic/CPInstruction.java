@@ -92,7 +92,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Abstract super class for instructions that use an index into the  * constant pool such as LDC, INVOKEVIRTUAL, etc.  *  * @see ConstantPoolGen  * @see LDC  * @see INVOKEVIRTUAL  *  */
+comment|/**  * Abstract super class for instructions that use an index into the constant pool such as LDC, INVOKEVIRTUAL, etc.  *  * @see ConstantPoolGen  * @see LDC  * @see INVOKEVIRTUAL  *  */
 end_comment
 
 begin_class
@@ -115,7 +115,7 @@ name|int
 name|index
 decl_stmt|;
 comment|// index to constant pool
-comment|/**      * Empty constructor needed for Instruction.readInstruction.      * Not to be used otherwise.      */
+comment|/**      * Empty constructor needed for Instruction.readInstruction. Not to be used otherwise.      */
 name|CPInstruction
 parameter_list|()
 block|{
@@ -149,7 +149,7 @@ name|index
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Dump instruction as byte code to stream out.      * @param out Output stream      */
+comment|/**      * Dump instruction as byte code to stream out.      *       * @param out Output stream      */
 annotation|@
 name|Override
 specifier|public
@@ -194,7 +194,7 @@ return|return
 name|index
 return|;
 block|}
-comment|/** @return type related with this instruction.      */
+comment|/**      * @return type related with this instruction.      */
 annotation|@
 name|Override
 specifier|public
@@ -264,7 +264,7 @@ name|name
 argument_list|)
 return|;
 block|}
-comment|/**      * Read needed data (i.e., index) from file.      * @param bytes input stream      * @param wide wide prefix?      */
+comment|/**      * Read needed data (i.e., index) from file.      *       * @param bytes input stream      * @param wide wide prefix?      */
 annotation|@
 name|Override
 specifier|protected
@@ -298,7 +298,7 @@ literal|3
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Set the index to constant pool.      * @param index in  constant pool.      */
+comment|/**      * Set the index to constant pool.      *       * @param index in constant pool.      */
 annotation|@
 name|Override
 specifier|public
@@ -335,7 +335,7 @@ operator|=
 name|index
 expr_stmt|;
 block|}
-comment|/**      * Long output format:      *      *&lt;name of opcode&gt; "["&lt;opcode number&gt;"]"      * "("&lt;length of instruction&gt;")" "&lt;"&lt; constant pool index&gt;"&gt;"      *      * @param verbose long/short format switch      * @return mnemonic for instruction      */
+comment|/**      * Long output format:      *      *&lt;name of opcode&gt; "["&lt;opcode number&gt;"]" "("&lt;length of instruction&gt;")" "&lt;"&lt; constant pool      * index&gt;"&gt;"      *      * @param verbose long/short format switch      * @return mnemonic for instruction      */
 annotation|@
 name|Override
 specifier|public

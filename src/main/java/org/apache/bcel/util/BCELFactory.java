@@ -508,7 +508,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Factory creates il.append() statements, and sets instruction targets.  * A helper class for BCELifier.  *  * @see BCELifier  */
+comment|/**  * Factory creates il.append() statements, and sets instruction targets. A helper class for BCELifier.  *  * @see BCELifier  */
 end_comment
 
 begin_class

@@ -72,7 +72,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * This class is derived from<em>Attribute</em> and records the classes and interfaces that  * are authorized to claim membership in the nest hosted by the current class or interface.  * There may be at most one NestMembers attribute in a ClassFile structure.  *  * @see     Attribute  */
+comment|/**  * This class is derived from<em>Attribute</em> and records the classes and interfaces that are authorized to claim  * membership in the nest hosted by the current class or interface. There may be at most one NestMembers attribute in a  * ClassFile structure.  *  * @see Attribute  */
 end_comment
 
 begin_class
@@ -88,7 +88,7 @@ name|int
 index|[]
 name|classes
 decl_stmt|;
-comment|/**      * Construct object from input stream.      * @param name_index Index in constant pool      * @param length Content length in bytes      * @param input Input stream      * @param constant_pool Array of constants      * @throws IOException if an I/O error occurs.      */
+comment|/**      * Construct object from input stream.      *       * @param name_index Index in constant pool      * @param length Content length in bytes      * @param input Input stream      * @param constant_pool Array of constants      * @throws IOException if an I/O error occurs.      */
 name|NestMembers
 parameter_list|(
 specifier|final
@@ -219,7 +219,7 @@ operator|.
 name|EMPTY_INT_ARRAY
 expr_stmt|;
 block|}
-comment|/**      * Initialize from another object. Note that both objects use the same      * references (shallow copy). Use copy() for a physical copy.      */
+comment|/**      * Initialize from another object. Note that both objects use the same references (shallow copy). Use copy() for a      * physical copy.      */
 specifier|public
 name|NestMembers
 parameter_list|(
@@ -252,7 +252,7 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Called by objects that are traversing the nodes of the tree implicitely      * defined by the contents of a Java class. I.e., the hierarchy of methods,      * fields, attributes, etc. spawns a tree of objects.      *      * @param v Visitor object      */
+comment|/**      * Called by objects that are traversing the nodes of the tree implicitely defined by the contents of a Java class.      * I.e., the hierarchy of methods, fields, attributes, etc. spawns a tree of objects.      *      * @param v Visitor object      */
 annotation|@
 name|Override
 specifier|public
@@ -492,7 +492,7 @@ operator|.
 name|length
 return|;
 block|}
-comment|/**      * @param classes the list of class indexes      * Also redefines number_of_classes according to table length.      */
+comment|/**      * @param classes the list of class indexes Also redefines number_of_classes according to table length.      */
 specifier|public
 name|void
 name|setClasses

@@ -278,7 +278,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * A Visitor class testing for valid preconditions of JVM instructions.  * The instance of this class will throw a StructuralCodeConstraintException  * instance if an instruction is visitXXX()ed which has preconditions that are  * not satisfied.  * TODO: Currently, the JVM's behavior concerning monitors (MONITORENTER,  * MONITOREXIT) is not modeled in JustIce.  *  * @see StructuralCodeConstraintException  */
+comment|/**  * A Visitor class testing for valid preconditions of JVM instructions. The instance of this class will throw a  * StructuralCodeConstraintException instance if an instruction is visitXXX()ed which has preconditions that are not  * satisfied. TODO: Currently, the JVM's behavior concerning monitors (MONITORENTER, MONITOREXIT) is not modeled in  * JustIce.  *  * @see StructuralCodeConstraintException  */
 end_comment
 
 begin_class
@@ -328,9 +328,9 @@ parameter_list|()
 block|{
 block|}
 comment|/***************************************************************/
-comment|/* MISC                                                        */
+comment|/* MISC */
 comment|/***************************************************************/
-comment|/**      * Ensures the general preconditions of an instruction that accesses the stack.      * This method is here because BCEL has no such superinterface for the stack      * accessing instructions; and there are funny unexpected exceptions in the      * semantices of the superinterfaces and superclasses provided.      * E.g. SWAP is a StackConsumer, but DUP_X1 is not a StackProducer.      * Therefore, this method is called by all StackProducer, StackConsumer,      * and StackInstruction instances via their visitXXX() method.      * Unfortunately, as the superclasses and superinterfaces overlap, some instructions      * cause this method to be called two or three times. [TODO: Fix this.]      *      * @see #visitStackConsumer(StackConsumer o)      * @see #visitStackProducer(StackProducer o)      * @see #visitStackInstruction(StackInstruction o)      */
+comment|/**      * Ensures the general preconditions of an instruction that accesses the stack. This method is here because BCEL has no      * such superinterface for the stack accessing instructions; and there are funny unexpected exceptions in the semantices      * of the superinterfaces and superclasses provided. E.g. SWAP is a StackConsumer, but DUP_X1 is not a StackProducer.      * Therefore, this method is called by all StackProducer, StackConsumer, and StackInstruction instances via their      * visitXXX() method. Unfortunately, as the superclasses and superinterfaces overlap, some instructions cause this      * method to be called two or three times. [TODO: Fix this.]      *      * @see #visitStackConsumer(StackConsumer o)      * @see #visitStackProducer(StackProducer o)      * @see #visitStackInstruction(StackInstruction o)      */
 specifier|private
 name|void
 name|_visitStackAccessor
@@ -454,7 +454,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/**      * Assures arrayref is of ArrayType or NULL;      * returns true if and only if arrayref is non-NULL.      * @throws StructuralCodeConstraintException if the above constraint is violated.       */
+comment|/**      * Assures arrayref is of ArrayType or NULL; returns true if and only if arrayref is non-NULL.      *       * @throws StructuralCodeConstraintException if the above constraint is violated.      */
 specifier|private
 name|boolean
 name|arrayrefOfArrayType
@@ -505,7 +505,7 @@ operator|instanceof
 name|ArrayType
 return|;
 block|}
-comment|/**    * This method is called by the visitXXX() to notify the acceptor of this InstConstraintVisitor    * that a constraint violation has occured. This is done by throwing an instance of a    * StructuralCodeConstraintException.    * @throws StructuralCodeConstraintException always.    */
+comment|/**      * This method is called by the visitXXX() to notify the acceptor of this InstConstraintVisitor that a constraint      * violation has occured. This is done by throwing an instance of a StructuralCodeConstraintException.      *       * @throws StructuralCodeConstraintException always.      */
 specifier|private
 name|void
 name|constraintViolated
@@ -604,7 +604,7 @@ return|return
 literal|null
 return|;
 block|}
-comment|/**      * Assures index is of type INT.      * @throws StructuralCodeConstraintException if the above constraint is not satisfied.      */
+comment|/**      * Assures index is of type INT.      *       * @throws StructuralCodeConstraintException if the above constraint is not satisfied.      */
 specifier|private
 name|void
 name|indexOfInt
@@ -657,7 +657,7 @@ name|getLocals
 argument_list|()
 return|;
 block|}
-comment|/**      * Assures the ReferenceType r is initialized (or Type.NULL).      * Formally, this means (!(r instanceof UninitializedObjectType)), because      * there are no uninitialized array types.      * @throws StructuralCodeConstraintException if the above constraint is not satisfied.      */
+comment|/**      * Assures the ReferenceType r is initialized (or Type.NULL). Formally, this means (!(r instanceof      * UninitializedObjectType)), because there are no uninitialized array types.      *       * @throws StructuralCodeConstraintException if the above constraint is not satisfied.      */
 specifier|private
 name|void
 name|referenceTypeIsInitialized
@@ -691,7 +691,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/**      * Sets the ConstantPoolGen instance needed for constraint      * checking prior to execution.      */
+comment|/**      * Sets the ConstantPoolGen instance needed for constraint checking prior to execution.      */
 specifier|public
 name|void
 name|setConstantPoolGen
@@ -709,7 +709,7 @@ operator|=
 name|cpg
 expr_stmt|;
 block|}
-comment|/**      * This returns the single instance of the InstConstraintVisitor class.      * To operate correctly, other values must have been set before actually      * using the instance.      * Use this method for performance reasons.      *      * @see #setConstantPoolGen(ConstantPoolGen cpg)      * @see #setMethodGen(MethodGen mg)      */
+comment|/**      * This returns the single instance of the InstConstraintVisitor class. To operate correctly, other values must have      * been set before actually using the instance. Use this method for performance reasons.      *      * @see #setConstantPoolGen(ConstantPoolGen cpg)      * @see #setMethodGen(MethodGen mg)      */
 specifier|public
 name|void
 name|setFrame
@@ -726,10 +726,10 @@ name|frame
 operator|=
 name|f
 expr_stmt|;
-comment|//if (singleInstance.mg == null || singleInstance.cpg == null)
+comment|// if (singleInstance.mg == null || singleInstance.cpg == null)
 comment|// throw new AssertionViolatedException("Forgot to set important values first.");
 block|}
-comment|/**      * Sets the MethodGen instance needed for constraint      * checking prior to execution.      */
+comment|/**      * Sets the MethodGen instance needed for constraint checking prior to execution.      */
 specifier|public
 name|void
 name|setMethodGen
@@ -760,7 +760,7 @@ argument_list|()
 return|;
 block|}
 comment|/***************************************************************/
-comment|/* "generic"visitXXXX methods where XXXX is an interface       */
+comment|/* "generic"visitXXXX methods where XXXX is an interface */
 comment|/* therefore, we don't know the order of visiting; but we know */
 comment|/* these methods are called before the visitYYYY methods below */
 comment|/***************************************************************/
@@ -892,7 +892,7 @@ literal|"."
 argument_list|)
 expr_stmt|;
 block|}
-comment|//referenceTypeIsInitialized(o, (ReferenceType) (((ArrayType) arrayref).getElementType()));
+comment|// referenceTypeIsInitialized(o, (ReferenceType) (((ArrayType) arrayref).getElementType()));
 block|}
 comment|/**      * Ensures the specific preconditions of the said instruction.      */
 annotation|@
@@ -973,7 +973,7 @@ expr_stmt|;
 block|}
 else|else
 block|{
-comment|//referenceTypeIsInitialized(o, (ReferenceType) value);
+comment|// referenceTypeIsInitialized(o, (ReferenceType) value);
 block|}
 comment|// Don't bother further with "referenceTypeIsInitialized()", there are no arrays
 comment|// of an uninitialized object type.
@@ -1050,7 +1050,7 @@ name|ALOAD
 name|o
 parameter_list|)
 block|{
-comment|//visitLoadInstruction(LoadInstruction) is called before.
+comment|// visitLoadInstruction(LoadInstruction) is called before.
 comment|// Nothing else needs to be done here.
 block|}
 comment|/**      * Ensures the specific preconditions of the said instruction.      */
@@ -1172,10 +1172,10 @@ expr_stmt|;
 comment|// The check below should already done via visitReturnInstruction(ReturnInstruction), see there.
 comment|// It cannot be done using Staerk-et-al's "set of object types" instead of a
 comment|// "wider cast object type", anyway.
-comment|//if (! objectref.isAssignmentCompatibleWith(mg.getReturnType() )) {
-comment|//    constraintViolated(o, "The 'objectref' type "+objectref+
+comment|// if (! objectref.isAssignmentCompatibleWith(mg.getReturnType() )) {
+comment|// constraintViolated(o, "The 'objectref' type "+objectref+
 comment|// " at the stack top is not assignment compatible with the return type '"+mg.getReturnType()+"' of the method.");
-comment|//}
+comment|// }
 block|}
 comment|/**      * Ensures the specific preconditions of the said instruction.      */
 annotation|@
@@ -1259,9 +1259,9 @@ literal|"."
 argument_list|)
 expr_stmt|;
 block|}
-comment|//if (stack().peek() instanceof ReferenceType) {
-comment|//    referenceTypeIsInitialized(o, (ReferenceType) (stack().peek()) );
-comment|//}
+comment|// if (stack().peek() instanceof ReferenceType) {
+comment|// referenceTypeIsInitialized(o, (ReferenceType) (stack().peek()) );
+comment|// }
 block|}
 comment|/**      * Ensures the specific preconditions of the said instruction.      */
 annotation|@
@@ -1912,9 +1912,9 @@ literal|"."
 argument_list|)
 expr_stmt|;
 block|}
-comment|//else{
-comment|//    referenceTypeIsInitialized(o, (ReferenceType) objectref);
-comment|//}
+comment|// else{
+comment|// referenceTypeIsInitialized(o, (ReferenceType) objectref);
+comment|// }
 comment|// The unsigned indexbyte1 and indexbyte2 are used to construct an index into the runtime constant pool of the
 comment|// current class (ï¿½3.6), where the value of the index is (indexbyte1<< 8) | indexbyte2. The runtime constant
 comment|// pool item at the index must be a symbolic reference to a class, array, or interface type.
@@ -1956,8 +1956,8 @@ expr_stmt|;
 block|}
 block|}
 comment|/***************************************************************/
-comment|/* "generic" visitYYYY methods where YYYY is a superclass.     */
-comment|/* therefore, we know the order of visiting; we know           */
+comment|/* "generic" visitYYYY methods where YYYY is a superclass. */
+comment|/* therefore, we know the order of visiting; we know */
 comment|/* these methods are called after the visitXXXX methods above. */
 comment|/***************************************************************/
 comment|/**      * Ensures the general preconditions of a CPInstruction instance.      */
@@ -2735,7 +2735,7 @@ name|DLOAD
 name|o
 parameter_list|)
 block|{
-comment|//visitLoadInstruction(LoadInstruction) is called before.
+comment|// visitLoadInstruction(LoadInstruction) is called before.
 comment|// Nothing else needs to be done here.
 block|}
 comment|/**      * Ensures the specific preconditions of the said instruction.      */
@@ -2984,7 +2984,7 @@ name|DSTORE
 name|o
 parameter_list|)
 block|{
-comment|//visitStoreInstruction(StoreInstruction) is called before.
+comment|// visitStoreInstruction(StoreInstruction) is called before.
 comment|// Nothing else needs to be done here.
 block|}
 comment|/**      * Ensures the specific preconditions of the said instruction.      */
@@ -3289,7 +3289,7 @@ block|{
 return|return;
 comment|// Form 2, okay.
 block|}
-comment|//stack().peek(1).getSize == 1.
+comment|// stack().peek(1).getSize == 1.
 if|if
 condition|(
 name|stack
@@ -3369,7 +3369,7 @@ block|{
 return|return;
 comment|// Form 2, okay.
 block|}
-comment|//stack().peek().getSize() == 1.
+comment|// stack().peek().getSize() == 1.
 if|if
 condition|(
 name|stack
@@ -4609,7 +4609,7 @@ name|FLOAD
 name|o
 parameter_list|)
 block|{
-comment|//visitLoadInstruction(LoadInstruction) is called before.
+comment|// visitLoadInstruction(LoadInstruction) is called before.
 comment|// Nothing else needs to be done here.
 block|}
 comment|/**      * Ensures the specific preconditions of the said instruction.      */
@@ -4858,7 +4858,7 @@ name|FSTORE
 name|o
 parameter_list|)
 block|{
-comment|//visitStoreInstruction(StoreInstruction) is called before.
+comment|// visitStoreInstruction(StoreInstruction) is called before.
 comment|// Nothing else needs to be done here.
 block|}
 comment|/**      * Ensures the specific preconditions of the said instruction.      */
@@ -5077,7 +5077,7 @@ argument_list|(
 name|cpg
 argument_list|)
 decl_stmt|;
-comment|/* TODO: Check if assignment compatibility is sufficient.                    * What does Sun do?                    */
+comment|/*                      * TODO: Check if assignment compatibility is sufficient. What does Sun do?                      */
 if|if
 condition|(
 name|f_type
@@ -5371,10 +5371,10 @@ argument_list|)
 operator|)
 condition|)
 block|{
-comment|//TODO: One day move to Staerk-et-al's "Set of object types" instead of "wider" object types
-comment|//      created during the verification.
-comment|//      "Wider" object types don't allow us to check for things like that below.
-comment|//constraintViolated(o, "The referenced field has the ACC_PROTECTED modifier, "+
+comment|// TODO: One day move to Staerk-et-al's "Set of object types" instead of "wider" object types
+comment|// created during the verification.
+comment|// "Wider" object types don't allow us to check for things like that below.
+comment|// constraintViolated(o, "The referenced field has the ACC_PROTECTED modifier, "+
 comment|// "and it's a member of the current class or a superclass of the current class."+
 comment|// " However, the referenced object type '"+stack().peek()+
 comment|// "' is not the current class or a subclass of the current class.");
@@ -6155,7 +6155,7 @@ name|ICONST
 name|o
 parameter_list|)
 block|{
-comment|//nothing to do here.
+comment|// nothing to do here.
 block|}
 comment|/**      * Ensures the specific preconditions of the said instruction.      */
 annotation|@
@@ -6274,7 +6274,7 @@ literal|"'."
 argument_list|)
 expr_stmt|;
 block|}
-comment|//referenceTypeIsInitialized(o, (ReferenceType) (stack().peek()) );
+comment|// referenceTypeIsInitialized(o, (ReferenceType) (stack().peek()) );
 if|if
 condition|(
 operator|!
@@ -6309,7 +6309,7 @@ literal|"'."
 argument_list|)
 expr_stmt|;
 block|}
-comment|//referenceTypeIsInitialized(o, (ReferenceType) (stack().peek(1)) );
+comment|// referenceTypeIsInitialized(o, (ReferenceType) (stack().peek(1)) );
 block|}
 comment|/**      * Ensures the specific preconditions of the said instruction.      */
 annotation|@
@@ -6352,7 +6352,7 @@ operator|+
 literal|"'."
 argument_list|)
 expr_stmt|;
-comment|//referenceTypeIsInitialized(o, (ReferenceType) (stack().peek()) );
+comment|// referenceTypeIsInitialized(o, (ReferenceType) (stack().peek()) );
 block|}
 if|if
 condition|(
@@ -6387,7 +6387,7 @@ operator|+
 literal|"'."
 argument_list|)
 expr_stmt|;
-comment|//referenceTypeIsInitialized(o, (ReferenceType) (stack().peek(1)) );
+comment|// referenceTypeIsInitialized(o, (ReferenceType) (stack().peek(1)) );
 block|}
 block|}
 comment|/**      * Ensures the specific preconditions of the said instruction.      */
@@ -7497,9 +7497,9 @@ literal|"."
 argument_list|)
 expr_stmt|;
 block|}
-comment|//else{
-comment|//    referenceTypeIsInitialized(o, (ReferenceType) objectref);
-comment|//}
+comment|// else{
+comment|// referenceTypeIsInitialized(o, (ReferenceType) objectref);
+comment|// }
 comment|// The unsigned indexbyte1 and indexbyte2 are used to construct an index into the runtime constant pool of the
 comment|// current class (ï¿½3.6), where the value of the index is (indexbyte1<< 8) | indexbyte2. The runtime constant
 comment|// pool item at the index must be a symbolic reference to a class, array, or interface type.
@@ -7540,7 +7540,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/**      * Ensures the specific preconditions of the said instruction.      * @since 6.0      */
+comment|/**      * Ensures the specific preconditions of the said instruction.      *       * @since 6.0      */
 annotation|@
 name|Override
 specifier|public
@@ -7575,7 +7575,7 @@ block|{
 comment|// visitLoadClass(o) has been called before: Every FieldOrMethod
 comment|// implements LoadClass.
 comment|// visitCPInstruction(o) has been called before.
-comment|//TODO
+comment|// TODO
 block|}
 comment|/**      * Ensures the specific preconditions of the said instruction.      */
 annotation|@
@@ -7616,7 +7616,7 @@ expr_stmt|;
 block|}
 comment|// It is a ConstantInterfaceMethodref, Pass 3a made it sure.
 comment|// TODO: Do we want to do anything with it?
-comment|//ConstantInterfaceMethodref cimr = (ConstantInterfaceMethodref) (cpg.getConstant(o.getIndex()));
+comment|// ConstantInterfaceMethodref cimr = (ConstantInterfaceMethodref) (cpg.getConstant(o.getIndex()));
 comment|// the o.getClassType(cpg) type has passed pass 2; see visitLoadClass(o).
 specifier|final
 name|Type
@@ -7826,13 +7826,13 @@ name|ReferenceType
 operator|)
 name|fromStack
 decl_stmt|;
-comment|//ReferenceType rFromDesc = (ReferenceType) fromDesc;
+comment|// ReferenceType rFromDesc = (ReferenceType) fromDesc;
 comment|// TODO: This can only be checked when using Staerk-et-al's "set of object types"
 comment|// instead of a "wider cast object type" created during verification.
-comment|//if ( ! rFromStack.isAssignmentCompatibleWith(rFromDesc) ) {
-comment|//    constraintViolated(o, "Expecting a '"+fromDesc+"' but found a '"+fromStack+
-comment|//    "' on the stack (which is not assignment compatible).");
-comment|//}
+comment|// if ( ! rFromStack.isAssignmentCompatibleWith(rFromDesc) ) {
+comment|// constraintViolated(o, "Expecting a '"+fromDesc+"' but found a '"+fromStack+
+comment|// "' on the stack (which is not assignment compatible).");
+comment|// }
 name|referenceTypeIsInitialized
 argument_list|(
 name|o
@@ -7959,10 +7959,10 @@ block|}
 comment|// String objref_classname = ((ObjectType) objref).getClassName();
 comment|// String theInterface = o.getClassName(cpg);
 comment|// TODO: This can only be checked if we're using Staerk-et-al's "set of object types"
-comment|//       instead of "wider cast object types" generated during verification.
-comment|//if ( ! Repository.implementationOf(objref_classname, theInterface) ) {
-comment|//    constraintViolated(o, "The 'objref' item '"+objref+"' does not implement '"+theInterface+"' as expected.");
-comment|//}
+comment|// instead of "wider cast object types" generated during verification.
+comment|// if ( ! Repository.implementationOf(objref_classname, theInterface) ) {
+comment|// constraintViolated(o, "The 'objref' item '"+objref+"' does not implement '"+theInterface+"' as expected.");
+comment|// }
 name|int
 name|counted_count
 init|=
@@ -9718,7 +9718,7 @@ name|ISTORE
 name|o
 parameter_list|)
 block|{
-comment|//visitStoreInstruction(StoreInstruction) is called before.
+comment|// visitStoreInstruction(StoreInstruction) is called before.
 comment|// Nothing else needs to be done here.
 block|}
 comment|/**      * Ensures the specific preconditions of the said instruction.      */
@@ -10877,7 +10877,7 @@ name|LLOAD
 name|o
 parameter_list|)
 block|{
-comment|//visitLoadInstruction(LoadInstruction) is called before.
+comment|// visitLoadInstruction(LoadInstruction) is called before.
 comment|// Nothing else needs to be done here.
 block|}
 comment|/**      * Ensures the specific preconditions of the said instruction.      */
@@ -10997,7 +10997,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/**      * Assures the generic preconditions of a LoadClass instance.      * The referenced class is loaded and pass2-verified.      */
+comment|/**      * Assures the generic preconditions of a LoadClass instance. The referenced class is loaded and pass2-verified.      */
 annotation|@
 name|Override
 specifier|public
@@ -11349,7 +11349,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/**      * Assures the generic preconditions of a LocalVariableInstruction instance.      * That is, the index of the local variable must be valid.      */
+comment|/**      * Assures the generic preconditions of a LocalVariableInstruction instance. That is, the index of the local variable      * must be valid.      */
 annotation|@
 name|Override
 specifier|public
@@ -11802,7 +11802,7 @@ name|LSTORE
 name|o
 parameter_list|)
 block|{
-comment|//visitStoreInstruction(StoreInstruction) is called before.
+comment|// visitStoreInstruction(StoreInstruction) is called before.
 comment|// Nothing else needs to be done here.
 block|}
 comment|/**      * Ensures the specific preconditions of the said instruction.      */
@@ -12072,7 +12072,7 @@ literal|"'."
 argument_list|)
 expr_stmt|;
 block|}
-comment|//referenceTypeIsInitialized(o, (ReferenceType) (stack().peek()) );
+comment|// referenceTypeIsInitialized(o, (ReferenceType) (stack().peek()) );
 block|}
 comment|/**      * Ensures the specific preconditions of the said instruction.      */
 annotation|@
@@ -12116,7 +12116,7 @@ literal|"'."
 argument_list|)
 expr_stmt|;
 block|}
-comment|//referenceTypeIsInitialized(o, (ReferenceType) (stack().peek()) );
+comment|// referenceTypeIsInitialized(o, (ReferenceType) (stack().peek()) );
 block|}
 comment|/**      * Ensures the specific preconditions of the said instruction.      */
 annotation|@
@@ -12198,8 +12198,8 @@ name|NEW
 name|o
 parameter_list|)
 block|{
-comment|//visitCPInstruction(CPInstruction) has been called before.
-comment|//visitLoadClass(LoadClass) has been called before.
+comment|// visitCPInstruction(CPInstruction) has been called before.
+comment|// visitLoadClass(LoadClass) has been called before.
 specifier|final
 name|Type
 name|t
@@ -12260,7 +12260,7 @@ name|ObjectType
 operator|)
 name|t
 decl_stmt|;
-comment|//e.g.: Don't instantiate interfaces
+comment|// e.g.: Don't instantiate interfaces
 try|try
 block|{
 if|if
@@ -12617,7 +12617,7 @@ argument_list|(
 name|cpg
 argument_list|)
 decl_stmt|;
-comment|/* TODO: Check if assignment compatibility is sufficient.                    * What does Sun do?                    */
+comment|/*                      * TODO: Check if assignment compatibility is sufficient. What does Sun do?                      */
 if|if
 condition|(
 name|f_type
@@ -13114,7 +13114,7 @@ argument_list|(
 name|cpg
 argument_list|)
 decl_stmt|;
-comment|/* TODO: Check if assignment compatibility is sufficient.                    * What does Sun do?                    */
+comment|/*                      * TODO: Check if assignment compatibility is sufficient. What does Sun do?                      */
 if|if
 condition|(
 name|f_type
@@ -13641,13 +13641,13 @@ name|peek
 argument_list|()
 argument_list|)
 expr_stmt|;
-comment|//ReferenceType objectref = (ReferenceType) (stack().peek());
+comment|// ReferenceType objectref = (ReferenceType) (stack().peek());
 comment|// TODO: This can only be checked if using Staerk-et-al's "set of object types" instead of a
 comment|// "wider cast object type" created during verification.
-comment|//if (! (objectref.isAssignmentCompatibleWith(mg.getType())) ) {
-comment|//    constraintViolated(o, "Type on stack top which should be returned is a '"+stack().peek()+
-comment|//    "' which is not assignment compatible with the return type of this method, '"+mg.getType()+"'.");
-comment|//}
+comment|// if (! (objectref.isAssignmentCompatibleWith(mg.getType())) ) {
+comment|// constraintViolated(o, "Type on stack top which should be returned is a '"+stack().peek()+
+comment|// "' which is not assignment compatible with the return type of this method, '"+mg.getType()+"'.");
+comment|// }
 block|}
 if|else if
 condition|(
@@ -14053,7 +14053,7 @@ name|StoreInstruction
 name|o
 parameter_list|)
 block|{
-comment|//visitLocalVariableInstruction(o) is called before, because it is more generic.
+comment|// visitLocalVariableInstruction(o) is called before, because it is more generic.
 if|if
 condition|(
 name|stack
@@ -14174,9 +14174,9 @@ literal|"'; Instruction expects a ReferenceType or a ReturnadressType."
 argument_list|)
 expr_stmt|;
 block|}
-comment|//if (stacktop instanceof ReferenceType) {
-comment|//    referenceTypeIsInitialized(o, (ReferenceType) stacktop);
-comment|//}
+comment|// if (stacktop instanceof ReferenceType) {
+comment|// referenceTypeIsInitialized(o, (ReferenceType) stacktop);
+comment|// }
 block|}
 block|}
 comment|/**      * Ensures the specific preconditions of the said instruction.      */

@@ -50,7 +50,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * BIPUSH - Push byte on stack  *  *<PRE>Stack: ... -&gt; ..., value</PRE>  *  */
+comment|/**  * BIPUSH - Push byte on stack  *  *<PRE>  * Stack: ... -&gt; ..., value  *</PRE>  *  */
 end_comment
 
 begin_class
@@ -66,12 +66,12 @@ specifier|private
 name|byte
 name|b
 decl_stmt|;
-comment|/**      * Empty constructor needed for Instruction.readInstruction.      * Not to be used otherwise.      */
+comment|/**      * Empty constructor needed for Instruction.readInstruction. Not to be used otherwise.      */
 name|BIPUSH
 parameter_list|()
 block|{
 block|}
-comment|/** Push byte on stack      */
+comment|/**      * Push byte on stack      */
 specifier|public
 name|BIPUSH
 parameter_list|(
@@ -105,7 +105,7 @@ operator|=
 name|b
 expr_stmt|;
 block|}
-comment|/**      * Call corresponding visitor method(s). The order is:      * Call visitor methods of implemented interfaces first, then      * call methods according to the class hierarchy in descending order,      * i.e., the most specific visitXXX() call comes last.      *      * @param v Visitor object      */
+comment|/**      * Call corresponding visitor method(s). The order is: Call visitor methods of implemented interfaces first, then call      * methods according to the class hierarchy in descending order, i.e., the most specific visitXXX() call comes last.      *      * @param v Visitor object      */
 annotation|@
 name|Override
 specifier|public
@@ -182,7 +182,7 @@ name|b
 argument_list|)
 expr_stmt|;
 block|}
-comment|/** @return Type.BYTE      */
+comment|/**      * @return Type.BYTE      */
 annotation|@
 name|Override
 specifier|public

@@ -206,7 +206,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Test a number of BCEL issues related to running the Verifier on  * a bad or malformed .class file and having it die with an exception  * rather than report a verification failure.  */
+comment|/**  * Test a number of BCEL issues related to running the Verifier on a bad or malformed .class file and having it die with  * an exception rather than report a verification failure.  */
 end_comment
 
 begin_class
@@ -297,7 +297,7 @@ return|return
 name|command
 return|;
 block|}
-comment|/**      * Runs the given command synchronously in the given directory. If the      * command completes normally, returns a {@link Status} object capturing the command, exit status,      * and output from the process.      *      * @param command the command to be run in the process      * @return a String capturing the error output of executing the command      * @throws ExecuteException if executor fails      * @throws IOException if executor fails      */
+comment|/**      * Runs the given command synchronously in the given directory. If the command completes normally, returns a      * {@link Status} object capturing the command, exit status, and output from the process.      *      * @param command the command to be run in the process      * @return a String capturing the error output of executing the command      * @throws ExecuteException if executor fails      * @throws IOException if executor fails      */
 specifier|private
 name|String
 name|run
@@ -503,7 +503,7 @@ return|return
 literal|"Command timed out."
 return|;
 block|}
-comment|//return "stdout: " + outStream.toString() + "\nstderr: " + errStream.toString();
+comment|// return "stdout: " + outStream.toString() + "\nstderr: " + errStream.toString();
 return|return
 name|errStream
 operator|.
@@ -607,7 +607,7 @@ literal|"Hello"
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * BCEL-312: AssertionViolation: INTERNAL ERROR Please adapt StringRepresentation      *           to deal with ConstantPackage in Verifier Pass 2      */
+comment|/**      * BCEL-312: AssertionViolation: INTERNAL ERROR Please adapt StringRepresentation to deal with ConstantPackage in      * Verifier Pass 2      */
 annotation|@
 name|Test
 specifier|public
@@ -655,7 +655,7 @@ literal|"A"
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Note that the test classes are bad or malformed and this causes the      * animal-sniffer-maven-plugin to fail during the build/verification      * process. I was not able to figure out the right incantations to get      * it to ignore these files.  Hence, their file extension is '.classx'      * to avoid this problem.  As part of the test process we rename them      * to '.class' and then back to '.classx' after the test.  If we can      * get animal-sniffer to ignore the files, these steps could be omitted.      */
+comment|/**      * Note that the test classes are bad or malformed and this causes the animal-sniffer-maven-plugin to fail during the      * build/verification process. I was not able to figure out the right incantations to get it to ignore these files.      * Hence, their file extension is '.classx' to avoid this problem. As part of the test process we rename them to      * '.class' and then back to '.classx' after the test. If we can get animal-sniffer to ignore the files, these steps      * could be omitted.      */
 specifier|private
 name|void
 name|testVerify

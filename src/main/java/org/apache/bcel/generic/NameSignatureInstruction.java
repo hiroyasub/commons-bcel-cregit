@@ -72,7 +72,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Super class for FieldOrMethod and INVOKEDYNAMIC, since they both have  * names and signatures  *  * @since 6.0  */
+comment|/**  * Super class for FieldOrMethod and INVOKEDYNAMIC, since they both have names and signatures  *  * @since 6.0  */
 end_comment
 
 begin_class
@@ -108,7 +108,7 @@ name|index
 argument_list|)
 expr_stmt|;
 block|}
-comment|/** @return name of referenced method/field.      */
+comment|/**      * @return name of referenced method/field.      */
 specifier|public
 name|String
 name|getName
@@ -206,7 +206,7 @@ argument_list|()
 argument_list|)
 return|;
 block|}
-comment|/** @return signature of referenced method/field.      */
+comment|/**      * @return signature of referenced method/field.      */
 specifier|public
 name|String
 name|getSignature

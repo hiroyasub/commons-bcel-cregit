@@ -88,7 +88,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * INVOKEINTERFACE - Invoke interface method  *<PRE>Stack: ..., objectref, [arg1, [arg2 ...]] -&gt; ...</PRE>  *  * @see  *<a href="https://docs.oracle.com/javase/specs/jvms/se8/html/jvms-6.html#jvms-6.5.invokeinterface">  * The invokeinterface instruction in The Java Virtual Machine Specification</a>  */
+comment|/**  * INVOKEINTERFACE - Invoke interface method  *   *<PRE>  * Stack: ..., objectref, [arg1, [arg2 ...]] -&gt; ...  *</PRE>  *  * @see<a href="https://docs.oracle.com/javase/specs/jvms/se8/html/jvms-6.html#jvms-6.5.invokeinterface"> The  *      invokeinterface instruction in The Java Virtual Machine Specification</a>  */
 end_comment
 
 begin_class
@@ -104,7 +104,7 @@ name|int
 name|nargs
 decl_stmt|;
 comment|// Number of arguments on stack (number of stack slots), called "count" in vmspec2
-comment|/**      * Empty constructor needed for Instruction.readInstruction.      * Not to be used otherwise.      */
+comment|/**      * Empty constructor needed for Instruction.readInstruction. Not to be used otherwise.      */
 name|INVOKEINTERFACE
 parameter_list|()
 block|{
@@ -161,7 +161,7 @@ operator|=
 name|nargs
 expr_stmt|;
 block|}
-comment|/**      * Call corresponding visitor method(s). The order is:      * Call visitor methods of implemented interfaces first, then      * call methods according to the class hierarchy in descending order,      * i.e., the most specific visitXXX() call comes last.      *      * @param v Visitor object      */
+comment|/**      * Call corresponding visitor method(s). The order is: Call visitor methods of implemented interfaces first, then call      * methods according to the class hierarchy in descending order, i.e., the most specific visitXXX() call comes last.      *      * @param v Visitor object      */
 annotation|@
 name|Override
 specifier|public
@@ -254,7 +254,7 @@ name|nargs
 return|;
 comment|// nargs includes this reference
 block|}
-comment|/**      * Dump instruction as byte code to stream out.      * @param out Output stream      */
+comment|/**      * Dump instruction as byte code to stream out.      *       * @param out Output stream      */
 annotation|@
 name|Override
 specifier|public
@@ -303,7 +303,7 @@ literal|0
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * The<B>count</B> argument according to the Java Language Specification,      * Second Edition.      */
+comment|/**      * The<B>count</B> argument according to the Java Language Specification, Second Edition.      */
 specifier|public
 name|int
 name|getCount

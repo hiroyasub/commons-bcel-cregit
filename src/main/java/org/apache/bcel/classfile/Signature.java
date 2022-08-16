@@ -80,7 +80,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * This class is derived from<em>Attribute</em> and represents a reference  * to a GJ attribute.  *  * @see     Attribute  */
+comment|/**  * This class is derived from<em>Attribute</em> and represents a reference to a GJ attribute.  *  * @see Attribute  */
 end_comment
 
 begin_class
@@ -272,7 +272,7 @@ literal|'('
 condition|)
 block|{
 comment|// Parameterized or method
-comment|//System.out.println("Enter<");
+comment|// System.out.println("Enter<");
 name|buf
 operator|.
 name|append
@@ -332,7 +332,7 @@ literal|" reaching EOF"
 argument_list|)
 throw|;
 block|}
-comment|//System.out.println("Still no>");
+comment|// System.out.println("Still no>");
 name|buf
 operator|.
 name|append
@@ -354,7 +354,7 @@ argument_list|)
 expr_stmt|;
 comment|// Recursive call
 block|}
-comment|//System.out.println("Exit>");
+comment|// System.out.println("Exit>");
 name|buf
 operator|.
 name|append
@@ -490,7 +490,7 @@ literal|" no ident, reaching EOF"
 argument_list|)
 throw|;
 block|}
-comment|//System.out.println("return from ident:" + (char)ch);
+comment|// System.out.println("return from ident:" + (char)ch);
 if|if
 condition|(
 operator|!
@@ -584,7 +584,7 @@ operator|.
 name|unread
 argument_list|()
 expr_stmt|;
-comment|//System.out.println("so far:" + buf2 + ":next:" +(char)ch);
+comment|// System.out.println("so far:" + buf2 + ":next:" +(char)ch);
 block|}
 else|else
 block|{
@@ -646,7 +646,7 @@ operator|.
 name|read
 argument_list|()
 expr_stmt|;
-comment|//System.out.println("within ident:"+ (char)ch);
+comment|// System.out.println("within ident:"+ (char)ch);
 block|}
 do|while
 condition|(
@@ -689,7 +689,7 @@ literal|'.'
 argument_list|)
 argument_list|)
 expr_stmt|;
-comment|//System.out.println("regular return ident:"+ (char)ch + ":" + buf2);
+comment|// System.out.println("regular return ident:"+ (char)ch + ":" + buf2);
 if|if
 condition|(
 name|ch
@@ -715,7 +715,7 @@ name|String
 name|s
 parameter_list|)
 block|{
-comment|//System.out.println("Sig:" + s);
+comment|// System.out.println("Sig:" + s);
 specifier|final
 name|StringBuilder
 name|buf
@@ -746,7 +746,7 @@ specifier|private
 name|int
 name|signatureIndex
 decl_stmt|;
-comment|/**      * Construct object from file stream.      * @param name_index Index in constant pool to CONSTANT_Utf8      * @param length Content length in bytes      * @param input Input stream      * @param constant_pool Array of constants      * @throws IOException if an I/O error occurs.      */
+comment|/**      * Construct object from file stream.      *       * @param name_index Index in constant pool to CONSTANT_Utf8      * @param length Content length in bytes      * @param input Input stream      * @param constant_pool Array of constants      * @throws IOException if an I/O error occurs.      */
 name|Signature
 parameter_list|(
 specifier|final
@@ -824,7 +824,7 @@ operator|=
 name|signatureIndex
 expr_stmt|;
 block|}
-comment|/**      * Initialize from another object. Note that both objects use the same      * references (shallow copy). Use clone() for a physical copy.      */
+comment|/**      * Initialize from another object. Note that both objects use the same references (shallow copy). Use clone() for a      * physical copy.      */
 specifier|public
 name|Signature
 parameter_list|(
@@ -857,7 +857,7 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Called by objects that are traversing the nodes of the tree implicitely      * defined by the contents of a Java class. I.e., the hierarchy of methods,      * fields, attributes, etc. spawns a tree of objects.      *      * @param v Visitor object      */
+comment|/**      * Called by objects that are traversing the nodes of the tree implicitely defined by the contents of a Java class.      * I.e., the hierarchy of methods, fields, attributes, etc. spawns a tree of objects.      *      * @param v Visitor object      */
 annotation|@
 name|Override
 specifier|public
@@ -869,7 +869,7 @@ name|Visitor
 name|v
 parameter_list|)
 block|{
-comment|//System.err.println("Visiting non-standard Signature object");
+comment|// System.err.println("Visiting non-standard Signature object");
 name|v
 operator|.
 name|visitSignature

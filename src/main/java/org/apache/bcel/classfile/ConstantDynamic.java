@@ -48,7 +48,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * This class is derived from the abstract {@link Constant}  * and represents a reference to a dynamically computed constant.  *  * @see     Constant  * @see<a href="https://bugs.openjdk.java.net/secure/attachment/74618/constant-dynamic.html">  * Change request for JEP 309</a>  * @since 6.3  */
+comment|/**  * This class is derived from the abstract {@link Constant} and represents a reference to a dynamically computed  * constant.  *  * @see Constant  * @see<a href="https://bugs.openjdk.java.net/secure/attachment/74618/constant-dynamic.html"> Change request for JEP  *      309</a>  * @since 6.3  */
 end_comment
 
 begin_class
@@ -130,7 +130,7 @@ name|name_and_type_index
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Called by objects that are traversing the nodes of the tree implicitly      * defined by the contents of a Java class. I.e., the hierarchy of methods,      * fields, attributes, etc. spawns a tree of objects.      *      * @param v Visitor object      */
+comment|/**      * Called by objects that are traversing the nodes of the tree implicitly defined by the contents of a Java class. I.e.,      * the hierarchy of methods, fields, attributes, etc. spawns a tree of objects.      *      * @param v Visitor object      */
 annotation|@
 name|Override
 specifier|public
@@ -150,7 +150,7 @@ name|this
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * @return Reference (index) to bootstrap method this constant refers to.      *      * Note that this method is a functional duplicate of getClassIndex      * for use by ConstantInvokeDynamic.      * @since 6.0      */
+comment|/**      * @return Reference (index) to bootstrap method this constant refers to.      *      *         Note that this method is a functional duplicate of getClassIndex for use by ConstantInvokeDynamic.      * @since 6.0      */
 specifier|public
 name|int
 name|getBootstrapMethodAttrIndex

@@ -58,7 +58,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * This class is derived from the abstract {@link Constant}  * and represents a reference to a String object.  *  * @see     Constant  */
+comment|/**  * This class is derived from the abstract {@link Constant} and represents a reference to a String object.  *  * @see Constant  */
 end_comment
 
 begin_class
@@ -136,7 +136,7 @@ operator|=
 name|stringIndex
 expr_stmt|;
 block|}
-comment|/**      * Called by objects that are traversing the nodes of the tree implicitely      * defined by the contents of a Java class. I.e., the hierarchy of methods,      * fields, attributes, etc. spawns a tree of objects.      *      * @param v Visitor object      */
+comment|/**      * Called by objects that are traversing the nodes of the tree implicitely defined by the contents of a Java class.      * I.e., the hierarchy of methods, fields, attributes, etc. spawns a tree of objects.      *      * @param v Visitor object      */
 annotation|@
 name|Override
 specifier|public
@@ -188,7 +188,7 @@ name|stringIndex
 argument_list|)
 expr_stmt|;
 block|}
-comment|/** @return dereferenced string      */
+comment|/**      * @return dereferenced string      */
 specifier|public
 name|String
 name|getBytes
@@ -208,7 +208,7 @@ name|cp
 argument_list|)
 return|;
 block|}
-comment|/** @return String object      */
+comment|/**      * @return String object      */
 annotation|@
 name|Override
 specifier|public

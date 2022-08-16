@@ -16,7 +16,7 @@ package|;
 end_package
 
 begin_comment
-comment|/**  * A VerificationResult is what a PassVerifier returns  * after verifying.  *  */
+comment|/**  * A VerificationResult is what a PassVerifier returns after verifying.  *  */
 end_comment
 
 begin_class
@@ -24,7 +24,7 @@ specifier|public
 class|class
 name|VerificationResult
 block|{
-comment|/**      * Constant to indicate verification has not been tried yet.      * This happens if some earlier verification pass did not return VERIFIED_OK.      */
+comment|/**      * Constant to indicate verification has not been tried yet. This happens if some earlier verification pass did not      * return VERIFIED_OK.      */
 specifier|public
 specifier|static
 specifier|final
@@ -51,7 +51,7 @@ name|VERIFIED_REJECTED
 init|=
 literal|2
 decl_stmt|;
-comment|/**      * This string is the canonical message for verifications that have not been tried yet.      * This happens if some earlier verification pass did not return {@link #VERIFIED_OK}.      */
+comment|/**      * This string is the canonical message for verifications that have not been tried yet. This happens if some earlier      * verification pass did not return {@link #VERIFIED_OK}.      */
 specifier|private
 specifier|static
 specifier|final
@@ -69,7 +69,7 @@ name|VERIFIED_OK_MSG
 init|=
 literal|"Passed verification."
 decl_stmt|;
-comment|/**      * Canonical VerificationResult for not-yet-tried verifications.      * This happens if some earlier verification pass did not return {@link #VERIFIED_OK}.      */
+comment|/**      * Canonical VerificationResult for not-yet-tried verifications. This happens if some earlier verification pass did not      * return {@link #VERIFIED_OK}.      */
 specifier|public
 specifier|static
 specifier|final
@@ -199,7 +199,7 @@ return|return
 name|detailMessage
 return|;
 block|}
-comment|/**      * Returns one of the {@link #VERIFIED_OK}, {@link #VERIFIED_NOTYET},      * {@link #VERIFIED_REJECTED} constants.      */
+comment|/**      * Returns one of the {@link #VERIFIED_OK}, {@link #VERIFIED_NOTYET}, {@link #VERIFIED_REJECTED} constants.      */
 specifier|public
 name|int
 name|getStatus

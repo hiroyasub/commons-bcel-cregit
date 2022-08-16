@@ -434,7 +434,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Disassemble Java class object into the<a href="http://jasmin.sourceforge.net">  * Jasmin</a> format.  *  */
+comment|/**  * Disassemble Java class object into the<a href="http://jasmin.sourceforge.net"> Jasmin</a> format.  *  */
 end_comment
 
 begin_class
@@ -810,7 +810,7 @@ literal|1
 argument_list|)
 return|;
 block|}
-comment|/**      * Unfortunately Jasmin expects ".end method" after each method. Thus we've to check      * for every of the method's attributes if it's the last one and print ".end method"      * then.      */
+comment|/**      * Unfortunately Jasmin expects ".end method" after each method. Thus we've to check for every of the method's      * attributes if it's the last one and print ".end method" then.      */
 specifier|private
 name|void
 name|printEndMethod
@@ -1004,7 +1004,7 @@ operator|.
 name|getInstructionHandles
 argument_list|()
 decl_stmt|;
-comment|/* Pass 1: Give all referenced instruction handles a symbolic name, i.e. a      * label.      */
+comment|/*          * Pass 1: Give all referenced instruction handles a symbolic name, i.e. a label.          */
 name|map
 operator|=
 operator|new

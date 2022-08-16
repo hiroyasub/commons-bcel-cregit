@@ -58,7 +58,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * This class is derived from<em>Attribute</em> and indicates the main class of a module.  * There may be at most one ModuleMainClass attribute in a ClassFile structure.  *  * @see     Attribute  */
+comment|/**  * This class is derived from<em>Attribute</em> and indicates the main class of a module. There may be at most one  * ModuleMainClass attribute in a ClassFile structure.  *  * @see Attribute  */
 end_comment
 
 begin_class
@@ -73,7 +73,7 @@ specifier|private
 name|int
 name|mainClassIndex
 decl_stmt|;
-comment|/**      * Construct object from input stream.      * @param nameIndex Index in constant pool      * @param length Content length in bytes      * @param input Input stream      * @param constantPool Array of constants      * @throws IOException if an I/O error occurs.      */
+comment|/**      * Construct object from input stream.      *       * @param nameIndex Index in constant pool      * @param length Content length in bytes      * @param input Input stream      * @param constantPool Array of constants      * @throws IOException if an I/O error occurs.      */
 name|ModuleMainClass
 parameter_list|(
 specifier|final
@@ -155,7 +155,7 @@ operator|=
 name|mainClassIndex
 expr_stmt|;
 block|}
-comment|/**      * Initialize from another object. Note that both objects use the same      * references (shallow copy). Use copy() for a physical copy.      */
+comment|/**      * Initialize from another object. Note that both objects use the same references (shallow copy). Use copy() for a      * physical copy.      */
 specifier|public
 name|ModuleMainClass
 parameter_list|(
@@ -188,7 +188,7 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Called by objects that are traversing the nodes of the tree implicitly      * defined by the contents of a Java class. I.e., the hierarchy of methods,      * fields, attributes, etc. spawns a tree of objects.      *      * @param v Visitor object      */
+comment|/**      * Called by objects that are traversing the nodes of the tree implicitly defined by the contents of a Java class. I.e.,      * the hierarchy of methods, fields, attributes, etc. spawns a tree of objects.      *      * @param v Visitor object      */
 annotation|@
 name|Override
 specifier|public

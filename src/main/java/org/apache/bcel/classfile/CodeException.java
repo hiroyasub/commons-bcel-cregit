@@ -70,7 +70,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * This class represents an entry in the exception table of the<em>Code</em>  * attribute and is used only there. It contains a range in which a  * particular exception handler is active.  *  * @see     Code  */
+comment|/**  * This class represents an entry in the exception table of the<em>Code</em> attribute and is used only there. It  * contains a range in which a particular exception handler is active.  *  * @see Code  */
 end_comment
 
 begin_class
@@ -108,12 +108,12 @@ specifier|private
 name|int
 name|handlerPc
 decl_stmt|;
-comment|/* Starting address of exception handler, i.e.,      * an offset from start of code.      */
+comment|/*                             * Starting address of exception handler, i.e., an offset from start of code.                             */
 specifier|private
 name|int
 name|catchType
 decl_stmt|;
-comment|/* If this is zero the handler catches any      * exception, otherwise it points to the      * exception class which is to be caught.      */
+comment|/*                             * If this is zero the handler catches any exception, otherwise it points to the exception class which is to be caught.                             */
 comment|/**      * Initialize from another object.      */
 specifier|public
 name|CodeException
@@ -147,7 +147,7 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Construct object from file stream.      * @param file Input stream      * @throws IOException if an I/O error occurs.      */
+comment|/**      * Construct object from file stream.      *       * @param file Input stream      * @throws IOException if an I/O error occurs.      */
 name|CodeException
 parameter_list|(
 specifier|final
@@ -181,7 +181,7 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * @param startPc Range in the code the exception handler is active,      * startPc is inclusive while      * @param endPc is exclusive      * @param handlerPc Starting address of exception handler, i.e.,      * an offset from start of code.      * @param catchType If zero the handler catches any      * exception, otherwise it points to the exception class which is      * to be caught.      */
+comment|/**      * @param startPc Range in the code the exception handler is active, startPc is inclusive while      * @param endPc is exclusive      * @param handlerPc Starting address of exception handler, i.e., an offset from start of code.      * @param catchType If zero the handler catches any exception, otherwise it points to the exception class which is to be      *        caught.      */
 specifier|public
 name|CodeException
 parameter_list|(
@@ -227,7 +227,7 @@ operator|=
 name|catchType
 expr_stmt|;
 block|}
-comment|/**      * Called by objects that are traversing the nodes of the tree implicitely      * defined by the contents of a Java class. I.e., the hierarchy of methods,      * fields, attributes, etc. spawns a tree of objects.      *      * @param v Visitor object      */
+comment|/**      * Called by objects that are traversing the nodes of the tree implicitely defined by the contents of a Java class.      * I.e., the hierarchy of methods, fields, attributes, etc. spawns a tree of objects.      *      * @param v Visitor object      */
 annotation|@
 name|Override
 specifier|public
@@ -317,7 +317,7 @@ name|catchType
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * @return 0, if the handler catches any exception, otherwise it points to      * the exception class which is to be caught.      */
+comment|/**      * @return 0, if the handler catches any exception, otherwise it points to the exception class which is to be caught.      */
 specifier|public
 name|int
 name|getCatchType

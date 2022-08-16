@@ -132,7 +132,7 @@ literal|'.'
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Java Virtual Machine Specification edition 2, ï¿½ 5.4.4 Access Control      * @throws ClassNotFoundException if the class referenced by this type      *   can't be found      */
+comment|/**      * Java Virtual Machine Specification edition 2, ï¿½ 5.4.4 Access Control      *       * @throws ClassNotFoundException if the class referenced by this type can't be found      */
 specifier|public
 name|boolean
 name|accessibleTo
@@ -195,7 +195,7 @@ argument_list|()
 argument_list|)
 return|;
 block|}
-comment|/** @return true if both type objects refer to the same class.      */
+comment|/**      * @return true if both type objects refer to the same class.      */
 annotation|@
 name|Override
 specifier|public
@@ -229,7 +229,7 @@ else|:
 literal|false
 return|;
 block|}
-comment|/** @return name of referenced class      */
+comment|/**      * @return name of referenced class      */
 specifier|public
 name|String
 name|getClassName
@@ -239,7 +239,7 @@ return|return
 name|className
 return|;
 block|}
-comment|/** @return a hash code value for the object.      */
+comment|/**      * @return a hash code value for the object.      */
 annotation|@
 name|Override
 specifier|public
@@ -254,7 +254,7 @@ name|hashCode
 argument_list|()
 return|;
 block|}
-comment|/**      * If "this" doesn't reference a class, it references an interface      * or a non-existant entity.      * @deprecated (since 6.0) this method returns an inaccurate result      *   if the class or interface referenced cannot      *   be found: use referencesClassExact() instead      */
+comment|/**      * If "this" doesn't reference a class, it references an interface or a non-existant entity.      *       * @deprecated (since 6.0) this method returns an inaccurate result if the class or interface referenced cannot be      *             found: use referencesClassExact() instead      */
 annotation|@
 name|Deprecated
 specifier|public
@@ -294,7 +294,7 @@ literal|false
 return|;
 block|}
 block|}
-comment|/**      * Return true if this type references a class,      * false if it references an interface.      * @return true if the type references a class, false if      *   it references an interface      * @throws ClassNotFoundException if the class or interface      *   referenced by this type can't be found      */
+comment|/**      * Return true if this type references a class, false if it references an interface.      *       * @return true if the type references a class, false if it references an interface      * @throws ClassNotFoundException if the class or interface referenced by this type can't be found      */
 specifier|public
 name|boolean
 name|referencesClassExact
@@ -320,7 +320,7 @@ name|isClass
 argument_list|()
 return|;
 block|}
-comment|/**      * If "this" doesn't reference an interface, it references a class      * or a non-existant entity.      * @deprecated (since 6.0) this method returns an inaccurate result      *   if the class or interface referenced cannot      *   be found: use referencesInterfaceExact() instead      */
+comment|/**      * If "this" doesn't reference an interface, it references a class or a non-existant entity.      *       * @deprecated (since 6.0) this method returns an inaccurate result if the class or interface referenced cannot be      *             found: use referencesInterfaceExact() instead      */
 annotation|@
 name|Deprecated
 specifier|public
@@ -361,7 +361,7 @@ literal|false
 return|;
 block|}
 block|}
-comment|/**      * Return true if this type references an interface,      * false if it references a class.      * @return true if the type references an interface, false if      *   it references a class      * @throws ClassNotFoundException if the class or interface      *   referenced by this type can't be found      */
+comment|/**      * Return true if this type references an interface, false if it references a class.      *       * @return true if the type references an interface, false if it references a class      * @throws ClassNotFoundException if the class or interface referenced by this type can't be found      */
 specifier|public
 name|boolean
 name|referencesInterfaceExact
@@ -388,7 +388,7 @@ name|isClass
 argument_list|()
 return|;
 block|}
-comment|/**      * Return true if this type is a subclass of given ObjectType.      * @throws ClassNotFoundException if any of this class's superclasses      *  can't be found      */
+comment|/**      * Return true if this type is a subclass of given ObjectType.      *       * @throws ClassNotFoundException if any of this class's superclasses can't be found      */
 specifier|public
 name|boolean
 name|subclassOf

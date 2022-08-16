@@ -60,7 +60,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Patch all Utf8 constants in the given class file<em>file</em>.class  * and save the result in _<em>file</em>.class.  *  * Usage: patch<oldstring><newstring> files  *  */
+comment|/**  * Patch all Utf8 constants in the given class file<em>file</em>.class and save the result in _<em>file</em>.class.  *  * Usage: patch<oldstring><newstring> files  *  */
 end_comment
 
 begin_class
@@ -242,7 +242,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/*      * Replace all occurences of string "<em>old</em>" with      * "<em>replacement</em>" in all Utf8 constants      */
+comment|/*      * Replace all occurences of string "<em>old</em>" with "<em>replacement</em>" in all Utf8 constants      */
 specifier|private
 specifier|static
 name|void

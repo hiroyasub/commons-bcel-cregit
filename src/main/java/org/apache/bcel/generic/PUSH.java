@@ -28,7 +28,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Wrapper class for push operations, which are implemented either as BIPUSH,  * LDC or xCONST_n instructions.  *  */
+comment|/**  * Wrapper class for push operations, which are implemented either as BIPUSH, LDC or xCONST_n instructions.  *  */
 end_comment
 
 begin_class
@@ -105,7 +105,7 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * creates a push object from a Character value. Warning: Make sure not to attempt to allow      * autoboxing to create this value parameter, as an alternative constructor will be called      *      * @param cp Constant pool      * @param value to be pushed      */
+comment|/**      * creates a push object from a Character value. Warning: Make sure not to attempt to allow autoboxing to create this      * value parameter, as an alternative constructor will be called      *      * @param cp Constant pool      * @param value to be pushed      */
 specifier|public
 name|PUSH
 parameter_list|(

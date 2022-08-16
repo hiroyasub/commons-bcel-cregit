@@ -131,8 +131,8 @@ operator|new
 name|VerifierAppFrame
 argument_list|()
 decl_stmt|;
-comment|//Frames ï¿½berprï¿½fen, die voreingestellte Grï¿½ï¿½e haben
-comment|//Frames packen, die nutzbare bevorzugte Grï¿½ï¿½eninformationen enthalten, z.B. aus ihrem Layout
+comment|// Frames ï¿½berprï¿½fen, die voreingestellte Grï¿½ï¿½e haben
+comment|// Frames packen, die nutzbare bevorzugte Grï¿½ï¿½eninformationen enthalten, z.B. aus ihrem Layout
 if|if
 condition|(
 name|packFrame
@@ -152,7 +152,7 @@ name|validate
 argument_list|()
 expr_stmt|;
 block|}
-comment|//Das Fenster zentrieren
+comment|// Das Fenster zentrieren
 specifier|final
 name|Dimension
 name|screenSize

@@ -179,7 +179,7 @@ return|return
 name|returnTarget
 return|;
 block|}
-comment|/** @return a hash code value for the object.      */
+comment|/**      * @return a hash code value for the object.      */
 annotation|@
 name|Override
 specifier|public

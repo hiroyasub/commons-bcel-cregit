@@ -104,12 +104,12 @@ operator|-
 literal|1
 decl_stmt|;
 comment|// canonical tag such as ILOAD
-comment|/**      * Empty constructor needed for Instruction.readInstruction.      * Also used by IINC()!      */
+comment|/**      * Empty constructor needed for Instruction.readInstruction. Also used by IINC()!      */
 name|LocalVariableInstruction
 parameter_list|()
 block|{
 block|}
-comment|/**      * Empty constructor needed for Instruction.readInstruction.      * Not to be used otherwise.      * tag and length are defined in readInstruction and initFromFile, respectively.      */
+comment|/**      * Empty constructor needed for Instruction.readInstruction. Not to be used otherwise. tag and length are defined in      * readInstruction and initFromFile, respectively.      */
 name|LocalVariableInstruction
 parameter_list|(
 specifier|final
@@ -177,7 +177,7 @@ name|n
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Dump instruction as byte code to stream out.      * @param out Output stream      */
+comment|/**      * Dump instruction as byte code to stream out.      *       * @param out Output stream      */
 annotation|@
 name|Override
 specifier|public
@@ -254,7 +254,7 @@ expr_stmt|;
 block|}
 block|}
 block|}
-comment|/** @return canonical tag for instruction, e.g., ALOAD for ALOAD_0      */
+comment|/**      * @return canonical tag for instruction, e.g., ALOAD for ALOAD_0      */
 specifier|public
 name|short
 name|getCanonicalTag
@@ -277,7 +277,7 @@ return|return
 name|n
 return|;
 block|}
-comment|/**      * Returns the type associated with the instruction -      * in case of ALOAD or ASTORE Type.OBJECT is returned.      * This is just a bit incorrect, because ALOAD and ASTORE      * may work on every ReferenceType (including Type.NULL) and      * ASTORE may even work on a ReturnaddressType .      * @return type associated with the instruction      */
+comment|/**      * Returns the type associated with the instruction - in case of ALOAD or ASTORE Type.OBJECT is returned. This is just a      * bit incorrect, because ALOAD and ASTORE may work on every ReferenceType (including Type.NULL) and ASTORE may even      * work on a ReturnaddressType .      *       * @return type associated with the instruction      */
 annotation|@
 name|Override
 specifier|public
@@ -381,7 +381,7 @@ argument_list|)
 throw|;
 block|}
 block|}
-comment|/**      * Read needed data (e.g. index) from file.      *<pre>      * (ILOAD&lt;= tag&lt;= ALOAD_3) || (ISTORE&lt;= tag&lt;= ASTORE_3)      *</pre>      */
+comment|/**      * Read needed data (e.g. index) from file.      *       *<pre>      * (ILOAD&lt;= tag&lt;= ALOAD_3) || (ISTORE&lt;= tag&lt;= ASTORE_3)      *</pre>      */
 annotation|@
 name|Override
 specifier|protected
@@ -527,7 +527,7 @@ expr_stmt|;
 block|}
 block|}
 block|}
-comment|/**      * Set the local variable index.      * also updates opcode and length      * TODO Why?      * @see #setIndexOnly(int)      */
+comment|/**      * Set the local variable index. also updates opcode and length TODO Why?      *       * @see #setIndexOnly(int)      */
 annotation|@
 name|Override
 specifier|public
@@ -635,7 +635,7 @@ expr_stmt|;
 block|}
 block|}
 block|}
-comment|/**      * Sets the index of the referenced variable (n) only      * @since 6.0      * @see #setIndex(int)      */
+comment|/**      * Sets the index of the referenced variable (n) only      *       * @since 6.0      * @see #setIndex(int)      */
 specifier|final
 name|void
 name|setIndexOnly
@@ -652,7 +652,7 @@ operator|=
 name|n
 expr_stmt|;
 block|}
-comment|/**      * Long output format:      *      *&lt;name of opcode&gt; "["&lt;opcode number&gt;"]"      * "("&lt;length of instruction&gt;")" "&lt;"&lt; local variable index&gt;"&gt;"      *      * @param verbose long/short format switch      * @return mnemonic for instruction      */
+comment|/**      * Long output format:      *      *&lt;name of opcode&gt; "["&lt;opcode number&gt;"]" "("&lt;length of instruction&gt;")" "&lt;"&lt; local variable      * index&gt;"&gt;"      *      * @param verbose long/short format switch      * @return mnemonic for instruction      */
 annotation|@
 name|Override
 specifier|public

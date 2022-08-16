@@ -28,7 +28,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * ARRAYLENGTH -  Get length of array  *<PRE>Stack: ..., arrayref -&gt; ..., length</PRE>  *  */
+comment|/**  * ARRAYLENGTH - Get length of array  *   *<PRE>  * Stack: ..., arrayref -&gt; ..., length  *</PRE>  *  */
 end_comment
 
 begin_class
@@ -45,7 +45,7 @@ implements|,
 name|StackConsumer
 comment|/* since 6.0 */
 block|{
-comment|/** Get length of array      */
+comment|/**      * Get length of array      */
 specifier|public
 name|ARRAYLENGTH
 parameter_list|()
@@ -69,7 +69,7 @@ literal|1
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Call corresponding visitor method(s). The order is:      * Call visitor methods of implemented interfaces first, then      * call methods according to the class hierarchy in descending order,      * i.e., the most specific visitXXX() call comes last.      *      * @param v Visitor object      */
+comment|/**      * Call corresponding visitor method(s). The order is: Call visitor methods of implemented interfaces first, then call      * methods according to the class hierarchy in descending order, i.e., the most specific visitXXX() call comes last.      *      * @param v Visitor object      */
 annotation|@
 name|Override
 specifier|public
@@ -103,7 +103,7 @@ name|this
 argument_list|)
 expr_stmt|;
 block|}
-comment|/** @return exceptions this instruction may cause      */
+comment|/**      * @return exceptions this instruction may cause      */
 annotation|@
 name|Override
 specifier|public

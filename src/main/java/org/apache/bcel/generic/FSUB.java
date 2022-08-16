@@ -16,7 +16,7 @@ package|;
 end_package
 
 begin_comment
-comment|/**  * FSUB - Substract floats  *<PRE>Stack: ..., value1, value2 -&gt; result</PRE>  *  */
+comment|/**  * FSUB - Substract floats  *   *<PRE>  * Stack: ..., value1, value2 -&gt; result  *</PRE>  *  */
 end_comment
 
 begin_class
@@ -26,7 +26,7 @@ name|FSUB
 extends|extends
 name|ArithmeticInstruction
 block|{
-comment|/** Substract floats      */
+comment|/**      * Substract floats      */
 specifier|public
 name|FSUB
 parameter_list|()
@@ -45,7 +45,7 @@ name|FSUB
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Call corresponding visitor method(s). The order is:      * Call visitor methods of implemented interfaces first, then      * call methods according to the class hierarchy in descending order,      * i.e., the most specific visitXXX() call comes last.      *      * @param v Visitor object      */
+comment|/**      * Call corresponding visitor method(s). The order is: Call visitor methods of implemented interfaces first, then call      * methods according to the class hierarchy in descending order, i.e., the most specific visitXXX() call comes last.      *      * @param v Visitor object      */
 annotation|@
 name|Override
 specifier|public

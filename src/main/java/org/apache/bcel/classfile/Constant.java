@@ -82,7 +82,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Abstract superclass for classes to represent the different constant types  * in the constant pool of a class file. The classes keep closely to  * the JVM specification.  */
+comment|/**  * Abstract superclass for classes to represent the different constant types in the constant pool of a class file. The  * classes keep closely to the JVM specification.  */
 end_comment
 
 begin_class
@@ -460,7 +460,7 @@ operator|=
 name|comparator
 expr_stmt|;
 block|}
-comment|/* In fact this tag is redundant since we can distinguish different      * `Constant' objects by their type, i.e., via `instanceof'. In some      * places we will use the tag for switch()es anyway.      *      * First, we want match the specification as closely as possible. Second we      * need the tag as an index to select the corresponding class name from the      * `CONSTANT_NAMES' array.      */
+comment|/*      * In fact this tag is redundant since we can distinguish different `Constant' objects by their type, i.e., via      * `instanceof'. In some places we will use the tag for switch()es anyway.      *      * First, we want match the specification as closely as possible. Second we need the tag as an index to select the      * corresponding class name from the `CONSTANT_NAMES' array.      */
 comment|/**      * @deprecated (since 6.0) will be made private; do not access directly, use getter/setter      */
 annotation|@
 name|java
@@ -487,7 +487,7 @@ operator|=
 name|tag
 expr_stmt|;
 block|}
-comment|/**      * Called by objects that are traversing the nodes of the tree implicitely      * defined by the contents of a Java class. I.e., the hierarchy of methods,      * fields, attributes, etc. spawns a tree of objects.      *      * @param v Visitor object      */
+comment|/**      * Called by objects that are traversing the nodes of the tree implicitely defined by the contents of a Java class.      * I.e., the hierarchy of methods, fields, attributes, etc. spawns a tree of objects.      *      * @param v Visitor object      */
 annotation|@
 name|Override
 specifier|public
@@ -574,7 +574,7 @@ parameter_list|)
 throws|throws
 name|IOException
 function_decl|;
-comment|/**      * Returns value as defined by given BCELComparator strategy.      * By default two Constant objects are said to be equal when      * the result of toString() is equal.      *      * @see java.lang.Object#equals(java.lang.Object)      */
+comment|/**      * Returns value as defined by given BCELComparator strategy. By default two Constant objects are said to be equal when      * the result of toString() is equal.      *      * @see java.lang.Object#equals(java.lang.Object)      */
 annotation|@
 name|Override
 specifier|public
@@ -597,7 +597,7 @@ name|obj
 argument_list|)
 return|;
 block|}
-comment|/**      * @return Tag of constant, i.e., its type. No setTag() method to avoid      * confusion.      */
+comment|/**      * @return Tag of constant, i.e., its type. No setTag() method to avoid confusion.      */
 specifier|public
 specifier|final
 name|byte
@@ -608,7 +608,7 @@ return|return
 name|tag
 return|;
 block|}
-comment|/**      * Returns value as defined by given BCELComparator strategy.      * By default return the hashcode of the result of toString().      *      * @see java.lang.Object#hashCode()      */
+comment|/**      * Returns value as defined by given BCELComparator strategy. By default return the hashcode of the result of      * toString().      *      * @see java.lang.Object#hashCode()      */
 annotation|@
 name|Override
 specifier|public

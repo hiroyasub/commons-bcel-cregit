@@ -218,7 +218,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Represents a Java class, i.e., the data structures, constant pool,  * fields, methods and commands contained in a Java .class file.  * See<a href="https://docs.oracle.com/javase/specs/">JVM specification</a> for details.  * The intent of this class is to represent a parsed or otherwise existing  * class file.  Those interested in programmatically generating classes  * should see the<a href="../generic/ClassGen.html">ClassGen</a> class.   * @see org.apache.bcel.generic.ClassGen  */
+comment|/**  * Represents a Java class, i.e., the data structures, constant pool, fields, methods and commands contained in a Java  * .class file. See<a href="https://docs.oracle.com/javase/specs/">JVM specification</a> for details. The intent of  * this class is to represent a parsed or otherwise existing class file. Those interested in programmatically generating  * classes should see the<a href="../generic/ClassGen.html">ClassGen</a> class.  *   * @see org.apache.bcel.generic.ClassGen  */
 end_comment
 
 begin_class
@@ -374,7 +374,7 @@ return|;
 block|}
 block|}
 decl_stmt|;
-comment|/* Print debug information depending on `JavaClass.debug'      */
+comment|/*      * Print debug information depending on `JavaClass.debug'      */
 specifier|static
 name|void
 name|Debug
@@ -595,7 +595,7 @@ specifier|private
 name|boolean
 name|computedNestedTypeStatus
 decl_stmt|;
-comment|/**      * In cases where we go ahead and create something,      * use the default SyntheticRepository, because we      * don't know any better.      */
+comment|/**      * In cases where we go ahead and create something, use the default SyntheticRepository, because we don't know any      * better.      */
 specifier|private
 specifier|transient
 name|org
@@ -695,7 +695,7 @@ name|HEAP
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Constructor gets all contents as arguments.      *      * @param classNameIndex Index into constant pool referencing a      * ConstantClass that represents this class.      * @param superclassNameIndex Index into constant pool referencing a      * ConstantClass that represents this class's superclass.      * @param fileName File name      * @param major Major compiler version      * @param minor Minor compiler version      * @param access_flags Access rights defined by bit flags      * @param constantPool Array of constants      * @param interfaces Implemented interfaces      * @param fields Class fields      * @param methods Class methods      * @param attributes Class attributes      * @param source Read from file or generated in memory?      */
+comment|/**      * Constructor gets all contents as arguments.      *      * @param classNameIndex Index into constant pool referencing a ConstantClass that represents this class.      * @param superclassNameIndex Index into constant pool referencing a ConstantClass that represents this class's      *        superclass.      * @param fileName File name      * @param major Major compiler version      * @param minor Minor compiler version      * @param access_flags Access rights defined by bit flags      * @param constantPool Array of constants      * @param interfaces Implemented interfaces      * @param fields Class fields      * @param methods Class methods      * @param attributes Class attributes      * @param source Read from file or generated in memory?      */
 specifier|public
 name|JavaClass
 parameter_list|(
@@ -907,7 +907,7 @@ expr_stmt|;
 break|break;
 block|}
 block|}
-comment|/* According to the specification the following entries must be of type          * `ConstantClass' but we check that anyway via the          * `ConstPool.getConstant' method.          */
+comment|/*          * According to the specification the following entries must be of type `ConstantClass' but we check that anyway via the          * `ConstPool.getConstant' method.          */
 name|className
 operator|=
 name|constantPool
@@ -1070,7 +1070,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/**      * Called by objects that are traversing the nodes of the tree implicitely      * defined by the contents of a Java class. I.e., the hierarchy of methods,      * fields, attributes, etc. spawns a tree of objects.      *      * @param v Visitor object      */
+comment|/**      * Called by objects that are traversing the nodes of the tree implicitely defined by the contents of a Java class.      * I.e., the hierarchy of methods, fields, attributes, etc. spawns a tree of objects.      *      * @param v Visitor object      */
 annotation|@
 name|Override
 specifier|public
@@ -1090,7 +1090,7 @@ name|this
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Return the natural ordering of two JavaClasses.      * This ordering is based on the class name      * @since 6.0      */
+comment|/**      * Return the natural ordering of two JavaClasses. This ordering is based on the class name      *       * @since 6.0      */
 annotation|@
 name|Override
 specifier|public
@@ -1791,7 +1791,7 @@ argument_list|)
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Return value as defined by given BCELComparator strategy.      * By default two JavaClass objects are said to be equal when      * their class names are equal.      *      * @see java.lang.Object#equals(java.lang.Object)      */
+comment|/**      * Return value as defined by given BCELComparator strategy. By default two JavaClass objects are said to be equal when      * their class names are equal.      *      * @see java.lang.Object#equals(java.lang.Object)      */
 annotation|@
 name|Override
 specifier|public
@@ -2094,7 +2094,7 @@ return|return
 name|constantPool
 return|;
 block|}
-comment|/**      * @return Fields, i.e., variables of the class. Like the JVM spec      * mandates for the classfile format, these fields are those specific to      * this class, and not those of the superclass or superinterfaces.      */
+comment|/**      * @return Fields, i.e., variables of the class. Like the JVM spec mandates for the classfile format, these fields are      *         those specific to this class, and not those of the superclass or superinterfaces.      */
 specifier|public
 name|Field
 index|[]
@@ -2214,7 +2214,7 @@ return|return
 name|major
 return|;
 block|}
-comment|/**      * @return A {@link Method} corresponding to      * java.lang.reflect.Method if any      */
+comment|/**      * @return A {@link Method} corresponding to java.lang.reflect.Method if any      */
 specifier|public
 name|Method
 name|getMethod
@@ -2321,7 +2321,7 @@ name|packageName
 return|;
 block|}
 comment|/********************* New repository functionality *********************/
-comment|/**      * Gets the ClassRepository which holds its definition. By default      * this is the same as SyntheticRepository.getInstance();      */
+comment|/**      * Gets the ClassRepository which holds its definition. By default this is the same as      * SyntheticRepository.getInstance();      */
 specifier|public
 name|org
 operator|.
@@ -2339,7 +2339,7 @@ return|return
 name|repository
 return|;
 block|}
-comment|/** @return returns either HEAP (generated), FILE, or ZIP      */
+comment|/**      * @return returns either HEAP (generated), FILE, or ZIP      */
 specifier|public
 specifier|final
 name|byte
@@ -2360,7 +2360,7 @@ return|return
 name|sourceFileName
 return|;
 block|}
-comment|/**      * @return the superclass for this JavaClass object, or null if this      * is java.lang.Object      * @throws ClassNotFoundException if the superclass can't be found      */
+comment|/**      * @return the superclass for this JavaClass object, or null if this is java.lang.Object      * @throws ClassNotFoundException if the superclass can't be found      */
 specifier|public
 name|JavaClass
 name|getSuperClass
@@ -2393,7 +2393,7 @@ argument_list|()
 argument_list|)
 return|;
 block|}
-comment|/**      * @return list of super classes of this class in ascending order, i.e.,      * java.lang.Object is always the last element      * @throws ClassNotFoundException if any of the superclasses can't be found      */
+comment|/**      * @return list of super classes of this class in ascending order, i.e., java.lang.Object is always the last element      * @throws ClassNotFoundException if any of the superclasses can't be found      */
 specifier|public
 name|JavaClass
 index|[]
@@ -2459,7 +2459,7 @@ name|EMPTY_ARRAY
 argument_list|)
 return|;
 block|}
-comment|/**      * returns the super class name of this class. In the case that this class is      * java.lang.Object, it will return itself (java.lang.Object). This is probably incorrect      * but isn't fixed at this time to not break existing clients.      *      * @return Superclass name.      */
+comment|/**      * returns the super class name of this class. In the case that this class is java.lang.Object, it will return itself      * (java.lang.Object). This is probably incorrect but isn't fixed at this time to not break existing clients.      *      * @return Superclass name.      */
 specifier|public
 name|String
 name|getSuperclassName
@@ -2479,7 +2479,7 @@ return|return
 name|superclassNameIndex
 return|;
 block|}
-comment|/**      * Return value as defined by given BCELComparator strategy.      * By default return the hashcode of the class name.      *      * @see java.lang.Object#hashCode()      */
+comment|/**      * Return value as defined by given BCELComparator strategy. By default return the hashcode of the class name.      *      * @see java.lang.Object#hashCode()      */
 annotation|@
 name|Override
 specifier|public
@@ -2496,7 +2496,7 @@ name|this
 argument_list|)
 return|;
 block|}
-comment|/**      * @return true, if this class is an implementation of interface inter      * @throws ClassNotFoundException if superclasses or superinterfaces      *   of this class can't be found      */
+comment|/**      * @return true, if this class is an implementation of interface inter      * @throws ClassNotFoundException if superclasses or superinterfaces of this class can't be found      */
 specifier|public
 name|boolean
 name|implementationOf
@@ -2580,7 +2580,7 @@ return|return
 literal|false
 return|;
 block|}
-comment|/** Equivalent to runtime "instanceof" operator.      *      * @return true if this JavaClass is derived from the super class      * @throws ClassNotFoundException if superclasses or superinterfaces      *   of this object can't be found      */
+comment|/**      * Equivalent to runtime "instanceof" operator.      *      * @return true if this JavaClass is derived from the super class      * @throws ClassNotFoundException if superclasses or superinterfaces of this object can't be found      */
 specifier|public
 specifier|final
 name|boolean
@@ -2924,7 +2924,7 @@ operator|=
 name|minor
 expr_stmt|;
 block|}
-comment|/**      * Sets the ClassRepository which loaded the JavaClass.      * Should be called immediately after parsing is done.      */
+comment|/**      * Sets the ClassRepository which loaded the JavaClass. Should be called immediately after parsing is done.      */
 specifier|public
 name|void
 name|setRepository

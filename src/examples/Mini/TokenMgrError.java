@@ -20,8 +20,8 @@ name|TokenMgrError
 extends|extends
 name|Error
 block|{
-comment|/*     * Ordinals for various reasons why an Error of this type can be thrown.     */
-comment|/**     * Lexical error occured.     */
+comment|/*      * Ordinals for various reasons why an Error of this type can be thrown.      */
+comment|/**      * Lexical error occured.      */
 specifier|static
 specifier|final
 name|int
@@ -29,7 +29,7 @@ name|LEXICAL_ERROR
 init|=
 literal|0
 decl_stmt|;
-comment|/**     * An attempt wass made to create a second instance of a static token manager.     */
+comment|/**      * An attempt wass made to create a second instance of a static token manager.      */
 specifier|static
 specifier|final
 name|int
@@ -37,7 +37,7 @@ name|STATIC_LEXER_ERROR
 init|=
 literal|1
 decl_stmt|;
-comment|/**     * Tried to change to an invalid lexical state.     */
+comment|/**      * Tried to change to an invalid lexical state.      */
 specifier|static
 specifier|final
 name|int
@@ -45,7 +45,7 @@ name|INVALID_LEXICAL_STATE
 init|=
 literal|2
 decl_stmt|;
-comment|/**     * Detected (and bailed out of) an infinite loop in the token manager.     */
+comment|/**      * Detected (and bailed out of) an infinite loop in the token manager.      */
 specifier|static
 specifier|final
 name|int
@@ -53,7 +53,7 @@ name|LOOP_DETECTED
 init|=
 literal|3
 decl_stmt|;
-comment|/**     * Replaces unprintable characters by their espaced (or unicode escaped)     * equivalents in the given string     */
+comment|/**      * Replaces unprintable characters by their espaced (or unicode escaped) equivalents in the given string      */
 specifier|protected
 specifier|static
 name|String
@@ -271,7 +271,7 @@ name|toString
 argument_list|()
 return|;
 block|}
-comment|/**     * Returns a detailed message for the Error when it is thrown by the     * token manager to indicate a lexical error.     * Parameters :     *    EOFSeen     : indicates if EOF caused the lexicl error     *    curLexState : lexical state in which this error occured     *    errorLine   : line number when the error occured     *    errorColumn : column number when the error occured     *    errorAfter  : prefix that was seen before this error occured     *    curchar     : the offending character     * Note: You can customize the lexical error message by modifying this method.     */
+comment|/**      * Returns a detailed message for the Error when it is thrown by the token manager to indicate a lexical error.      * Parameters : EOFSeen : indicates if EOF caused the lexicl error curLexState : lexical state in which this error      * occured errorLine : line number when the error occured errorColumn : column number when the error occured errorAfter      * : prefix that was seen before this error occured curchar : the offending character Note: You can customize the      * lexical error message by modifying this method.      */
 specifier|private
 specifier|static
 name|String
@@ -356,7 +356,7 @@ literal|"\""
 operator|)
 return|;
 block|}
-comment|/**     * Indicates the reason why the exception is thrown. It will have     * one of the above 4 values.     */
+comment|/**      * Indicates the reason why the exception is thrown. It will have one of the above 4 values.      */
 name|int
 name|errorCode
 decl_stmt|;
@@ -365,7 +365,7 @@ name|TokenMgrError
 parameter_list|()
 block|{
 block|}
-comment|/*     * Constructors of various flavors follow.     */
+comment|/*      * Constructors of various flavors follow.      */
 specifier|public
 name|TokenMgrError
 parameter_list|(
@@ -441,7 +441,7 @@ operator|=
 name|reason
 expr_stmt|;
 block|}
-comment|/**     * You can also modify the body of this method to customize your error messages.     * For example, cases like LOOP_DETECTED and INVALID_LEXICAL_STATE are not     * of end-users concern, so you can return something like :     *     *     "Internal Error : Please file a bug report .... "     *     * from this method for such cases in the release version of your parser.     */
+comment|/**      * You can also modify the body of this method to customize your error messages. For example, cases like LOOP_DETECTED      * and INVALID_LEXICAL_STATE are not of end-users concern, so you can return something like :      *      * "Internal Error : Please file a bug report .... "      *      * from this method for such cases in the release version of your parser.      */
 annotation|@
 name|Override
 specifier|public

@@ -58,7 +58,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Abstract super class for Fieldref, Methodref, InterfaceMethodref and  *                          InvokeDynamic constants.  *  * @see     ConstantFieldref  * @see     ConstantMethodref  * @see     ConstantInterfaceMethodref  * @see     ConstantInvokeDynamic  */
+comment|/**  * Abstract super class for Fieldref, Methodref, InterfaceMethodref and InvokeDynamic constants.  *  * @see ConstantFieldref  * @see ConstantMethodref  * @see ConstantInterfaceMethodref  * @see ConstantInvokeDynamic  */
 end_comment
 
 begin_class
@@ -69,7 +69,7 @@ name|ConstantCP
 extends|extends
 name|Constant
 block|{
-comment|/** References to the constants containing the class and the field signature      */
+comment|/**      * References to the constants containing the class and the field signature      */
 comment|// Note that this field is used to store the
 comment|// bootstrap_method_attr_index of a ConstantInvokeDynamic.
 comment|/**      * @deprecated (since 6.0) will be made private; do not access directly, use getter/setter      */
@@ -97,7 +97,7 @@ name|int
 name|name_and_type_index
 decl_stmt|;
 comment|// TODO make private (has getter& setter)
-comment|/**      * Initialize instance from file data.      *      * @param tag  Constant type tag      * @param file Input stream      * @throws IOException if an I/O error occurs.      */
+comment|/**      * Initialize instance from file data.      *      * @param tag Constant type tag      * @param file Input stream      * @throws IOException if an I/O error occurs.      */
 name|ConstantCP
 parameter_list|(
 specifier|final
@@ -311,7 +311,7 @@ operator|=
 name|name_and_type_index
 expr_stmt|;
 block|}
-comment|/**      * @return String representation.      *      * not final as ConstantInvokeDynamic needs to modify      */
+comment|/**      * @return String representation.      *      *         not final as ConstantInvokeDynamic needs to modify      */
 annotation|@
 name|Override
 specifier|public

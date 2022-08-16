@@ -943,7 +943,7 @@ name|name
 argument_list|)
 return|;
 block|}
-comment|/**      * Delete a file under the TESTDATA directory      * @param name      * @return      */
+comment|/**      * Delete a file under the TESTDATA directory      *       * @param name      * @return      */
 specifier|protected
 name|boolean
 name|wipe
@@ -966,7 +966,7 @@ name|delete
 argument_list|()
 return|;
 block|}
-comment|/**      * Delete a directory and file under the TESTDATA directory      * @param dir      * @param name      * @return true if the file was deleted      */
+comment|/**      * Delete a directory and file under the TESTDATA directory      *       * @param dir      * @param name      * @return true if the file was deleted      */
 specifier|protected
 name|boolean
 name|wipe

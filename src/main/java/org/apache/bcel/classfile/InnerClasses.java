@@ -58,7 +58,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * This class is derived from<em>Attribute</em> and denotes that this class  * is an Inner class of another.  * to the source file of this class.  * It is instantiated from the<em>Attribute.readAttribute()</em> method.  *  * @see     Attribute  */
+comment|/**  * This class is derived from<em>Attribute</em> and denotes that this class is an Inner class of another. to the source  * file of this class. It is instantiated from the<em>Attribute.readAttribute()</em> method.  *  * @see Attribute  */
 end_comment
 
 begin_class
@@ -84,7 +84,7 @@ name|InnerClass
 index|[]
 name|innerClasses
 decl_stmt|;
-comment|/**      * Initialize from another object. Note that both objects use the same      * references (shallow copy). Use clone() for a physical copy.      */
+comment|/**      * Initialize from another object. Note that both objects use the same references (shallow copy). Use clone() for a      * physical copy.      */
 specifier|public
 name|InnerClasses
 parameter_list|(
@@ -247,7 +247,7 @@ else|:
 name|EMPTY_INNER_CLASSE_ARRAY
 expr_stmt|;
 block|}
-comment|/**      * Called by objects that are traversing the nodes of the tree implicitely      * defined by the contents of a Java class. I.e., the hierarchy of methods,      * fields, attributes, etc. spawns a tree of objects.      *      * @param v Visitor object      */
+comment|/**      * Called by objects that are traversing the nodes of the tree implicitely defined by the contents of a Java class.      * I.e., the hierarchy of methods, fields, attributes, etc. spawns a tree of objects.      *      * @param v Visitor object      */
 annotation|@
 name|Override
 specifier|public

@@ -16,7 +16,7 @@ package|;
 end_package
 
 begin_comment
-comment|/**  * Denotes an unparameterized instruction to store a value into a local variable,  * e.g. ISTORE.  *  */
+comment|/**  * Denotes an unparameterized instruction to store a value into a local variable, e.g. ISTORE.  *  */
 end_comment
 
 begin_class
@@ -29,7 +29,7 @@ name|LocalVariableInstruction
 implements|implements
 name|PopInstruction
 block|{
-comment|/**      * Empty constructor needed for Instruction.readInstruction.      * Not to be used otherwise.      * tag and length are defined in readInstruction and initFromFile, respectively.      */
+comment|/**      * Empty constructor needed for Instruction.readInstruction. Not to be used otherwise. tag and length are defined in      * readInstruction and initFromFile, respectively.      */
 name|StoreInstruction
 parameter_list|(
 specifier|final
@@ -76,7 +76,7 @@ name|n
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Call corresponding visitor method(s). The order is:      * Call visitor methods of implemented interfaces first, then      * call methods according to the class hierarchy in descending order,      * i.e., the most specific visitXXX() call comes last.      *      * @param v Visitor object      */
+comment|/**      * Call corresponding visitor method(s). The order is: Call visitor methods of implemented interfaces first, then call      * methods according to the class hierarchy in descending order, i.e., the most specific visitXXX() call comes last.      *      * @param v Visitor object      */
 annotation|@
 name|Override
 specifier|public

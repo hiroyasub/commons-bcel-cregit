@@ -58,7 +58,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * This class represents colection of local variables in a  * method. This attribute is contained in the<em>Code</em> attribute.  *  * @see     Code  * @see LocalVariable  */
+comment|/**  * This class represents colection of local variables in a method. This attribute is contained in the<em>Code</em>  * attribute.  *  * @see Code  * @see LocalVariable  */
 end_comment
 
 begin_class
@@ -74,7 +74,7 @@ index|[]
 name|localVariableTable
 decl_stmt|;
 comment|// variables
-comment|/**      * Construct object from input stream.      * @param name_index Index in constant pool      * @param length Content length in bytes      * @param input Input stream      * @param constant_pool Array of constants      * @throws IOException if an I/O error occurs.      */
+comment|/**      * Construct object from input stream.      *       * @param name_index Index in constant pool      * @param length Content length in bytes      * @param input Input stream      * @param constant_pool Array of constants      * @throws IOException if an I/O error occurs.      */
 name|LocalVariableTable
 parameter_list|(
 specifier|final
@@ -200,7 +200,7 @@ operator|=
 name|localVariableTable
 expr_stmt|;
 block|}
-comment|/**      * Initialize from another object. Note that both objects use the same      * references (shallow copy). Use copy() for a physical copy.      */
+comment|/**      * Initialize from another object. Note that both objects use the same references (shallow copy). Use copy() for a      * physical copy.      */
 specifier|public
 name|LocalVariableTable
 parameter_list|(
@@ -233,7 +233,7 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Called by objects that are traversing the nodes of the tree implicitely      * defined by the contents of a Java class. I.e., the hierarchy of methods,      * fields, attributes, etc. spawns a tree of objects.      *      * @param v Visitor object      */
+comment|/**      * Called by objects that are traversing the nodes of the tree implicitely defined by the contents of a Java class.      * I.e., the hierarchy of methods, fields, attributes, etc. spawns a tree of objects.      *      * @param v Visitor object      */
 annotation|@
 name|Override
 specifier|public
@@ -380,7 +380,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/**      *      * @param index the variable slot      *      * @return the first LocalVariable that matches the slot or null if not found      *      * @deprecated since 5.2 because multiple variables can share the      *             same slot, use getLocalVariable(int index, int pc) instead.      */
+comment|/**      *      * @param index the variable slot      *      * @return the first LocalVariable that matches the slot or null if not found      *      * @deprecated since 5.2 because multiple variables can share the same slot, use getLocalVariable(int index, int pc)      *             instead.      */
 annotation|@
 name|java
 operator|.

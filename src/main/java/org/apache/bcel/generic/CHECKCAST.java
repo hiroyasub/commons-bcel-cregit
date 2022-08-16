@@ -28,7 +28,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * CHECKCAST - Check whether object is of given type  *<PRE>Stack: ..., objectref -&gt; ..., objectref</PRE>  *  */
+comment|/**  * CHECKCAST - Check whether object is of given type  *   *<PRE>  * Stack: ..., objectref -&gt; ..., objectref  *</PRE>  *  */
 end_comment
 
 begin_class
@@ -46,12 +46,12 @@ name|StackProducer
 implements|,
 name|StackConsumer
 block|{
-comment|/**      * Empty constructor needed for Instruction.readInstruction.      * Not to be used otherwise.      */
+comment|/**      * Empty constructor needed for Instruction.readInstruction. Not to be used otherwise.      */
 name|CHECKCAST
 parameter_list|()
 block|{
 block|}
-comment|/** Check whether object is of given type      * @param index index to class in constant pool      */
+comment|/**      * Check whether object is of given type      *       * @param index index to class in constant pool      */
 specifier|public
 name|CHECKCAST
 parameter_list|(
@@ -76,7 +76,7 @@ name|index
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Call corresponding visitor method(s). The order is:      * Call visitor methods of implemented interfaces first, then      * call methods according to the class hierarchy in descending order,      * i.e., the most specific visitXXX() call comes last.      *      * @param v Visitor object      */
+comment|/**      * Call corresponding visitor method(s). The order is: Call visitor methods of implemented interfaces first, then call      * methods according to the class hierarchy in descending order, i.e., the most specific visitXXX() call comes last.      *      * @param v Visitor object      */
 annotation|@
 name|Override
 specifier|public
@@ -138,7 +138,7 @@ name|this
 argument_list|)
 expr_stmt|;
 block|}
-comment|/** @return exceptions this instruction may cause      */
+comment|/**      * @return exceptions this instruction may cause      */
 annotation|@
 name|Override
 specifier|public

@@ -41,7 +41,7 @@ name|FieldInstruction
 extends|extends
 name|FieldOrMethod
 block|{
-comment|/**      * Empty constructor needed for Instruction.readInstruction.      * Not to be used otherwise.      */
+comment|/**      * Empty constructor needed for Instruction.readInstruction. Not to be used otherwise.      */
 name|FieldInstruction
 parameter_list|()
 block|{
@@ -67,7 +67,7 @@ name|index
 argument_list|)
 expr_stmt|;
 block|}
-comment|/** @return name of referenced field.      */
+comment|/**      * @return name of referenced field.      */
 specifier|public
 name|String
 name|getFieldName
@@ -84,7 +84,7 @@ name|cpg
 argument_list|)
 return|;
 block|}
-comment|/** @return size of field (1 or 2)      */
+comment|/**      * @return size of field (1 or 2)      */
 specifier|protected
 name|int
 name|getFieldSize
@@ -111,7 +111,7 @@ argument_list|)
 argument_list|)
 return|;
 block|}
-comment|/** @return type of field      */
+comment|/**      * @return type of field      */
 specifier|public
 name|Type
 name|getFieldType
@@ -133,7 +133,7 @@ argument_list|)
 argument_list|)
 return|;
 block|}
-comment|/** @return return type of referenced field      */
+comment|/**      * @return return type of referenced field      */
 annotation|@
 name|Override
 specifier|public

@@ -16,7 +16,7 @@ package|;
 end_package
 
 begin_comment
-comment|/**  * Implement this interface if you're interested in changes to an InstructionList object  * and register yourself with addObserver().  *  */
+comment|/**  * Implement this interface if you're interested in changes to an InstructionList object and register yourself with  * addObserver().  *  */
 end_comment
 
 begin_interface

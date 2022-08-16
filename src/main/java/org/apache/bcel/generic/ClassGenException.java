@@ -16,7 +16,7 @@ package|;
 end_package
 
 begin_comment
-comment|/**  * Thrown on internal errors. Extends RuntimeException so it hasn't to be declared  * in the throws clause every time.  *  */
+comment|/**  * Thrown on internal errors. Extends RuntimeException so it hasn't to be declared in the throws clause every time.  *  */
 end_comment
 
 begin_class

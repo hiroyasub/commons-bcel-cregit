@@ -272,7 +272,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * This class is used to build up a constant pool. The user adds  * constants via `addXXX' methods, `addString', `addClass',  * etc.. These methods return an index into the constant  * pool. Finally, `getFinalConstantPool()' returns the constant pool  * built up. Intermediate versions of the constant pool can be  * obtained with `getConstantPool()'. A constant pool has capacity for  * Constants.MAX_SHORT entries. Note that the first (0) is used by the  * JVM and that Double and Long constants need two slots.  *  * @see Constant  */
+comment|/**  * This class is used to build up a constant pool. The user adds constants via `addXXX' methods, `addString',  * `addClass', etc.. These methods return an index into the constant pool. Finally, `getFinalConstantPool()' returns the  * constant pool built up. Intermediate versions of the constant pool can be obtained with `getConstantPool()'. A  * constant pool has capacity for Constants.MAX_SHORT entries. Note that the first (0) is used by the JVM and that  * Double and Long constants need two slots.  *  * @see Constant  */
 end_comment
 
 begin_class
@@ -1302,7 +1302,7 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Add a reference to an array class (e.g. String[][]) as needed by MULTIANEWARRAY      * instruction, e.g. to the ConstantPool.      *      * @param type type of array class      * @return index of entry      */
+comment|/**      * Add a reference to an array class (e.g. String[][]) as needed by MULTIANEWARRAY instruction, e.g. to the      * ConstantPool.      *      * @param type type of array class      * @return index of entry      */
 specifier|public
 name|int
 name|addArrayClass
@@ -1455,7 +1455,7 @@ return|return
 name|ret
 return|;
 block|}
-comment|/** Import constant from another ConstantPool and return new index.      */
+comment|/**      * Import constant from another ConstantPool and return new index.      */
 specifier|public
 name|int
 name|addConstant
@@ -1993,7 +1993,7 @@ return|return
 name|ret
 return|;
 block|}
-comment|/**      * Add a new Fieldref constant to the ConstantPool, if it is not already      * in there.      *      * @param class_name class name string to add      * @param field_name field name string to add      * @param signature signature string to add      * @return index of entry      */
+comment|/**      * Add a new Fieldref constant to the ConstantPool, if it is not already in there.      *      * @param class_name class name string to add      * @param field_name field name string to add      * @param signature signature string to add      * @return index of entry      */
 specifier|public
 name|int
 name|addFieldref
@@ -2265,7 +2265,7 @@ argument_list|()
 argument_list|)
 return|;
 block|}
-comment|/**      * Add a new InterfaceMethodref constant to the ConstantPool, if it is not already      * in there.      *      * @param class_name class name string to add      * @param method_name method name string to add      * @param signature signature string to add      * @return index of entry      */
+comment|/**      * Add a new InterfaceMethodref constant to the ConstantPool, if it is not already in there.      *      * @param class_name class name string to add      * @param method_name method name string to add      * @param signature signature string to add      * @return index of entry      */
 specifier|public
 name|int
 name|addInterfaceMethodref
@@ -2485,7 +2485,7 @@ argument_list|()
 argument_list|)
 return|;
 block|}
-comment|/**      * Add a new Methodref constant to the ConstantPool, if it is not already      * in there.      *      * @param class_name class name string to add      * @param method_name method name string to add      * @param signature method signature string to add      * @return index of entry      */
+comment|/**      * Add a new Methodref constant to the ConstantPool, if it is not already in there.      *      * @param class_name class name string to add      * @param method_name method name string to add      * @param signature method signature string to add      * @return index of entry      */
 specifier|public
 name|int
 name|addMethodref
@@ -2616,7 +2616,7 @@ return|return
 name|ret
 return|;
 block|}
-comment|/**      * Add a new NameAndType constant to the ConstantPool if it is not already      * in there.      *      * @param name Name string to add      * @param signature signature string to add      * @return index of entry      */
+comment|/**      * Add a new NameAndType constant to the ConstantPool if it is not already in there.      *      * @param name Name string to add      * @param signature signature string to add      * @return index of entry      */
 specifier|public
 name|int
 name|addNameAndType
@@ -2912,7 +2912,7 @@ return|return
 name|ret
 return|;
 block|}
-comment|/** Resize internal array of constants.      */
+comment|/**      * Resize internal array of constants.      */
 specifier|protected
 name|void
 name|adjustSize

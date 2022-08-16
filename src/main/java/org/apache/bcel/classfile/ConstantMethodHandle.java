@@ -58,7 +58,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * This class is derived from the abstract {@link Constant}  * and represents a reference to a method handle.  *  * @see     Constant  * @since 6.0  */
+comment|/**  * This class is derived from the abstract {@link Constant} and represents a reference to a method handle.  *  * @see Constant  * @since 6.0  */
 end_comment
 
 begin_class
@@ -156,7 +156,7 @@ operator|=
 name|reference_index
 expr_stmt|;
 block|}
-comment|/**      * Called by objects that are traversing the nodes of the tree implicitly      * defined by the contents of a Java class. I.e., the hierarchy of methods,      * fields, attributes, etc. spawns a tree of objects.      *      * @param v Visitor object      */
+comment|/**      * Called by objects that are traversing the nodes of the tree implicitly defined by the contents of a Java class. I.e.,      * the hierarchy of methods, fields, attributes, etc. spawns a tree of objects.      *      * @param v Visitor object      */
 annotation|@
 name|Override
 specifier|public

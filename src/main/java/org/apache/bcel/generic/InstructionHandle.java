@@ -80,7 +80,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Instances of this class give users a handle to the instructions contained in  * an InstructionList. Instruction objects may be used more than once within a  * list, this is useful because it saves memory and may be much faster.  *  * Within an InstructionList an InstructionHandle object is wrapped  * around all instructions, i.e., it implements a cell in a  * doubly-linked list. From the outside only the next and the  * previous instruction (handle) are accessible. One  * can traverse the list via an Enumeration returned by  * InstructionList.elements().  *  * @see Instruction  * @see BranchHandle  * @see InstructionList  */
+comment|/**  * Instances of this class give users a handle to the instructions contained in an InstructionList. Instruction objects  * may be used more than once within a list, this is useful because it saves memory and may be much faster.  *  * Within an InstructionList an InstructionHandle object is wrapped around all instructions, i.e., it implements a cell  * in a doubly-linked list. From the outside only the next and the previous instruction (handle) are accessible. One can  * traverse the list via an Enumeration returned by InstructionList.elements().  *  * @see Instruction  * @see BranchHandle  * @see InstructionList  */
 end_comment
 
 begin_class
@@ -107,7 +107,7 @@ name|EMPTY_INSTRUCTION_TARGETER_ARRAY
 init|=
 block|{}
 decl_stmt|;
-comment|/** Factory method.      */
+comment|/**      * Factory method.      */
 specifier|static
 name|InstructionHandle
 name|getInstructionHandle
@@ -164,7 +164,7 @@ name|Object
 argument_list|>
 name|attributes
 decl_stmt|;
-comment|/*private*/
+comment|/* private */
 specifier|protected
 name|InstructionHandle
 parameter_list|(
@@ -179,7 +179,7 @@ name|i
 argument_list|)
 expr_stmt|;
 block|}
-comment|/** Convenience method, simply calls accept() on the contained instruction.      *      * @param v Visitor object      */
+comment|/**      * Convenience method, simply calls accept() on the contained instruction.      *      * @param v Visitor object      */
 specifier|public
 name|void
 name|accept
@@ -197,7 +197,7 @@ name|v
 argument_list|)
 expr_stmt|;
 block|}
-comment|/** Add an attribute to an instruction handle.      *      * @param key the key object to store/retrieve the attribute      * @param attr the attribute to associate with this handle      */
+comment|/**      * Add an attribute to an instruction handle.      *      * @param key the key object to store/retrieve the attribute      * @param attr the attribute to associate with this handle      */
 specifier|public
 name|void
 name|addAttribute
@@ -273,7 +273,7 @@ argument_list|<>
 argument_list|()
 expr_stmt|;
 block|}
-comment|//if(!targeters.contains(t))
+comment|// if(!targeters.contains(t))
 name|targeters
 operator|.
 name|add
@@ -315,7 +315,7 @@ name|removeAllTargeters
 argument_list|()
 expr_stmt|;
 block|}
-comment|/** Get attribute of an instruction handle.      *      * @param key the key object to store/retrieve the attribute      */
+comment|/**      * Get attribute of an instruction handle.      *      * @param key the key object to store/retrieve the attribute      */
 specifier|public
 name|Object
 name|getAttribute
@@ -345,7 +345,7 @@ return|return
 literal|null
 return|;
 block|}
-comment|/** @return all attributes associated with this handle      */
+comment|/**      * @return all attributes associated with this handle      */
 specifier|public
 name|Collection
 argument_list|<
@@ -398,7 +398,7 @@ return|return
 name|next
 return|;
 block|}
-comment|/** @return the position, i.e., the byte code offset of the contained      * instruction. This is accurate only after      * InstructionList.setPositions() has been called.      */
+comment|/**      * @return the position, i.e., the byte code offset of the contained instruction. This is accurate only after      *         InstructionList.setPositions() has been called.      */
 specifier|public
 name|int
 name|getPosition
@@ -478,7 +478,7 @@ name|isEmpty
 argument_list|()
 return|;
 block|}
-comment|/** Remove all targeters, if any.      */
+comment|/**      * Remove all targeters, if any.      */
 specifier|public
 name|void
 name|removeAllTargeters
@@ -498,7 +498,7 @@ argument_list|()
 expr_stmt|;
 block|}
 block|}
-comment|/** Delete an attribute of an instruction handle.      *      * @param key the key object to retrieve the attribute      */
+comment|/**      * Delete an attribute of an instruction handle.      *      * @param key the key object to retrieve the attribute      */
 specifier|public
 name|void
 name|removeAttribute
@@ -550,7 +550,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/**      * Replace current instruction contained in this handle.      * Old instruction is disposed using Instruction.dispose().      */
+comment|/**      * Replace current instruction contained in this handle. Old instruction is disposed using Instruction.dispose().      */
 specifier|public
 name|void
 name|setInstruction
@@ -642,7 +642,7 @@ return|return
 name|next
 return|;
 block|}
-comment|/** Set the position, i.e., the byte code offset of the contained      * instruction.      */
+comment|/**      * Set the position, i.e., the byte code offset of the contained instruction.      */
 name|void
 name|setPosition
 parameter_list|(
@@ -676,7 +676,7 @@ return|return
 name|prev
 return|;
 block|}
-comment|/**      * Temporarily swap the current instruction, without disturbing      * anything. Meant to be used by a debugger, implementing      * breakpoints. Current instruction is returned.      *<p>      * Warning: if this is used on a BranchHandle then some methods such as      * getPosition() will still refer to the original cached instruction, whereas      * other BH methods may affect the cache and the replacement instruction.      */
+comment|/**      * Temporarily swap the current instruction, without disturbing anything. Meant to be used by a debugger, implementing      * breakpoints. Current instruction is returned.      *<p>      * Warning: if this is used on a BranchHandle then some methods such as getPosition() will still refer to the original      * cached instruction, whereas other BH methods may affect the cache and the replacement instruction.      */
 comment|// See BCEL-273
 comment|// TODO remove this method in any redesign of BCEL
 specifier|public
@@ -702,7 +702,7 @@ return|return
 name|oldInstruction
 return|;
 block|}
-comment|/** @return a string representation of the contained instruction.      */
+comment|/**      * @return a string representation of the contained instruction.      */
 annotation|@
 name|Override
 specifier|public
@@ -717,7 +717,7 @@ literal|true
 argument_list|)
 return|;
 block|}
-comment|/** @return a (verbose) string representation of the contained instruction.      */
+comment|/**      * @return a (verbose) string representation of the contained instruction.      */
 specifier|public
 name|String
 name|toString
@@ -751,7 +751,7 @@ name|verbose
 argument_list|)
 return|;
 block|}
-comment|/**      * Called by InstructionList.setPositions when setting the position for every      * instruction. In the presence of variable length instructions `setPositions()'      * performs multiple passes over the instruction list to calculate the      * correct (byte) positions and offsets by calling this function.      *      * @param offset additional offset caused by preceding (variable length) instructions      * @param max_offset the maximum offset that may be caused by these instructions      * @return additional offset caused by possible change of this instruction's length      */
+comment|/**      * Called by InstructionList.setPositions when setting the position for every instruction. In the presence of variable      * length instructions `setPositions()' performs multiple passes over the instruction list to calculate the correct      * (byte) positions and offsets by calling this function.      *      * @param offset additional offset caused by preceding (variable length) instructions      * @param max_offset the maximum offset that may be caused by these instructions      * @return additional offset caused by possible change of this instruction's length      */
 specifier|protected
 name|int
 name|updatePosition

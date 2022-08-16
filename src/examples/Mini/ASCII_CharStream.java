@@ -24,7 +24,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * An implementation of interface CharStream, where the stream is assumed to  * contain only ASCII characters (without unicode processing).  */
+comment|/**  * An implementation of interface CharStream, where the stream is assumed to contain only ASCII characters (without  * unicode processing).  */
 end_comment
 
 begin_class
@@ -130,7 +130,7 @@ name|inBuf
 init|=
 literal|0
 decl_stmt|;
-comment|/**    * Method to adjust line and column numbers for the start of a token.<BR>    */
+comment|/**      * Method to adjust line and column numbers for the start of a token.<BR>      */
 specifier|static
 specifier|public
 name|void
@@ -1540,7 +1540,7 @@ operator|)
 operator|)
 expr_stmt|;
 break|break;
-default|default :
+default|default:
 break|break;
 block|}
 name|bufline

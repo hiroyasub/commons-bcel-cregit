@@ -150,7 +150,7 @@ comment|//CHECKSTYLE:ON
 end_comment
 
 begin_comment
-comment|/**  * This Visitor class may be used for a type-based Java Virtual Machine  * simulation.  *  *<p>It does not check for correct types on the OperandStack or in the  * LocalVariables; nor does it check their sizes are sufficiently big.  * Thus, to use this Visitor for bytecode verifying, you have to make sure  * externally that the type constraints of the Java Virtual Machine instructions  * are satisfied. An InstConstraintVisitor may be used for this.  * Anyway, this Visitor does not mandate it. For example, when you  * visitIADD(IADD o), then there are two stack slots popped and one  * stack slot containing a Type.INT is pushed (where you could also  * pop only one slot if you know there are two Type.INT on top of the  * stack). Monitor-specific behavior is not simulated.</p>  *  *<b>Conventions:</b>  *  *<p>Type.VOID will never be pushed onto the stack. Type.DOUBLE and Type.LONG  * that would normally take up two stack slots (like Double_HIGH and  * Double_LOW) are represented by a simple single Type.DOUBLE or Type.LONG  * object on the stack here.</p>  *  *<p>If a two-slot type is stored into a local variable, the next variable  * is given the type Type.UNKNOWN.</p>  *  * @see #visitDSTORE(DSTORE o)  * @see InstConstraintVisitor  */
+comment|/**  * This Visitor class may be used for a type-based Java Virtual Machine simulation.  *  *<p>  * It does not check for correct types on the OperandStack or in the LocalVariables; nor does it check their sizes are  * sufficiently big. Thus, to use this Visitor for bytecode verifying, you have to make sure externally that the type  * constraints of the Java Virtual Machine instructions are satisfied. An InstConstraintVisitor may be used for this.  * Anyway, this Visitor does not mandate it. For example, when you visitIADD(IADD o), then there are two stack slots  * popped and one stack slot containing a Type.INT is pushed (where you could also pop only one slot if you know there  * are two Type.INT on top of the stack). Monitor-specific behavior is not simulated.  *</p>  *  *<b>Conventions:</b>  *  *<p>  * Type.VOID will never be pushed onto the stack. Type.DOUBLE and Type.LONG that would normally take up two stack slots  * (like Double_HIGH and Double_LOW) are represented by a simple single Type.DOUBLE or Type.LONG object on the stack  * here.  *</p>  *  *<p>  * If a two-slot type is stored into a local variable, the next variable is given the type Type.UNKNOWN.  *</p>  *  * @see #visitDSTORE(DSTORE o)  * @see InstConstraintVisitor  */
 end_comment
 
 begin_class
@@ -165,7 +165,7 @@ specifier|private
 name|Frame
 name|frame
 decl_stmt|;
-comment|/**      * The ConstantPoolGen we're working with.      * @see #setConstantPoolGen(ConstantPoolGen)      */
+comment|/**      * The ConstantPoolGen we're working with.      *       * @see #setConstantPoolGen(ConstantPoolGen)      */
 specifier|private
 name|ConstantPoolGen
 name|cpg
@@ -176,7 +176,7 @@ name|ExecutionVisitor
 parameter_list|()
 block|{
 block|}
-comment|/**      * The LocalVariables from the current Frame we're operating on.      * @see #setFrame(Frame)      */
+comment|/**      * The LocalVariables from the current Frame we're operating on.      *       * @see #setFrame(Frame)      */
 specifier|private
 name|LocalVariables
 name|locals
@@ -207,7 +207,7 @@ operator|=
 name|cpg
 expr_stmt|;
 block|}
-comment|/**      * The only method granting access to the single instance of      * the ExecutionVisitor class. Before actively using this      * instance,<B>SET THE ConstantPoolGen FIRST</B>.      * @see #setConstantPoolGen(ConstantPoolGen)      */
+comment|/**      * The only method granting access to the single instance of the ExecutionVisitor class. Before actively using this      * instance,<B>SET THE ConstantPoolGen FIRST</B>.      *       * @see #setConstantPoolGen(ConstantPoolGen)      */
 specifier|public
 name|void
 name|setFrame
@@ -225,7 +225,7 @@ operator|=
 name|f
 expr_stmt|;
 block|}
-comment|/**      * The OperandStack from the current Frame we're operating on.      * @see #setFrame(Frame)      */
+comment|/**      * The OperandStack from the current Frame we're operating on.      *       * @see #setFrame(Frame)      */
 specifier|private
 name|OperandStack
 name|stack
@@ -238,15 +238,15 @@ name|getStack
 argument_list|()
 return|;
 block|}
-comment|///** Symbolically executes the corresponding Java Virtual Machine instruction. */
-comment|//public void visitWIDE(WIDE o) {
+comment|/// ** Symbolically executes the corresponding Java Virtual Machine instruction. */
+comment|// public void visitWIDE(WIDE o) {
 comment|// The WIDE instruction is modelled as a flag
 comment|// of the embedded instructions in BCEL.
 comment|// Therefore BCEL checks for possible errors
 comment|// when parsing in the .class file: We don't
 comment|// have even the possibilty to care for WIDE
 comment|// here.
-comment|//}
+comment|// }
 comment|/** Symbolically executes the corresponding Java Virtual Machine instruction. */
 annotation|@
 name|Override
@@ -425,7 +425,7 @@ operator|.
 name|pop
 argument_list|()
 expr_stmt|;
-comment|//count
+comment|// count
 name|stack
 argument_list|()
 operator|.
@@ -523,7 +523,7 @@ name|pop
 argument_list|()
 argument_list|)
 expr_stmt|;
-comment|//System.err.println("TODO-DEBUG:    set LV '"+o.getIndex()+"' to '"+locals().get(o.getIndex())+"'.");
+comment|// System.err.println("TODO-DEBUG: set LV '"+o.getIndex()+"' to '"+locals().get(o.getIndex())+"'.");
 block|}
 comment|/** Symbolically executes the corresponding Java Virtual Machine instruction. */
 annotation|@
@@ -761,8 +761,8 @@ block|{
 comment|// It's possibly wrong to do so, but SUN's
 comment|// ByteCode verifier seems to do (only) this, too.
 comment|// TODO: One could use a sophisticated analysis here to check
-comment|//       if a type cannot possibly be cated to another and by
-comment|//       so doing predict the ClassCastException at run-time.
+comment|// if a type cannot possibly be cated to another and by
+comment|// so doing predict the ClassCastException at run-time.
 name|stack
 argument_list|()
 operator|.
@@ -1696,7 +1696,7 @@ expr_stmt|;
 block|}
 else|else
 block|{
-comment|//t.getSize() is1
+comment|// t.getSize() is1
 specifier|final
 name|Type
 name|u
@@ -1884,7 +1884,7 @@ block|}
 block|}
 else|else
 block|{
-comment|//t.getSize() is 1
+comment|// t.getSize() is 1
 specifier|final
 name|Type
 name|u
@@ -3579,7 +3579,7 @@ name|INT
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Symbolically executes the corresponding Java Virtual Machine instruction.      * @since 6.0      */
+comment|/**      * Symbolically executes the corresponding Java Virtual Machine instruction.      *       * @since 6.0      */
 annotation|@
 name|Override
 specifier|public
@@ -3722,7 +3722,7 @@ operator|.
 name|pop
 argument_list|()
 expr_stmt|;
-comment|//objectref
+comment|// objectref
 for|for
 control|(
 name|int
@@ -3928,7 +3928,7 @@ operator|.
 name|pop
 argument_list|()
 expr_stmt|;
-comment|//objectref
+comment|// objectref
 for|for
 control|(
 name|int
@@ -4185,7 +4185,7 @@ operator|.
 name|pop
 argument_list|()
 expr_stmt|;
-comment|//objectref
+comment|// objectref
 for|for
 control|(
 name|int
@@ -5337,7 +5337,7 @@ operator|.
 name|pop
 argument_list|()
 expr_stmt|;
-comment|//key
+comment|// key
 block|}
 comment|/** Symbolically executes the corresponding Java Virtual Machine instruction. */
 annotation|@

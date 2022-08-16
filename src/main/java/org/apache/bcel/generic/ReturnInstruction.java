@@ -57,7 +57,7 @@ name|TypedInstruction
 implements|,
 name|StackConsumer
 block|{
-comment|/**      * Empty constructor needed for Instruction.readInstruction.      * Not to be used otherwise.      */
+comment|/**      * Empty constructor needed for Instruction.readInstruction. Not to be used otherwise.      */
 name|ReturnInstruction
 parameter_list|()
 block|{
@@ -196,7 +196,7 @@ argument_list|)
 throw|;
 block|}
 block|}
-comment|/** @return type associated with the instruction      */
+comment|/**      * @return type associated with the instruction      */
 annotation|@
 name|Override
 specifier|public

@@ -86,7 +86,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Abstract super class for all possible java types, namely basic types  * such as int, object types like String and array types, e.g. int[]  *  */
+comment|/**  * Abstract super class for all possible java types, namely basic types such as int, object types like String and array  * types, e.g. int[]  *  */
 end_comment
 
 begin_class
@@ -95,7 +95,7 @@ specifier|abstract
 class|class
 name|Type
 block|{
-comment|/** Predefined constants      */
+comment|/**      * Predefined constants      */
 specifier|public
 specifier|static
 specifier|final
@@ -343,7 +343,7 @@ literal|0
 argument_list|)
 argument_list|)
 decl_stmt|;
-comment|//int consumed_chars=0; // Remember position in string, see getArgumentTypes
+comment|// int consumed_chars=0; // Remember position in string, see getArgumentTypes
 specifier|static
 name|int
 name|consumed
@@ -380,7 +380,7 @@ operator||
 name|size
 return|;
 block|}
-comment|/**      * Convert arguments of a method (signature) to an array of Type objects.      * @param signature signature string such as (Ljava/lang/String;)V      * @return array of argument types      */
+comment|/**      * Convert arguments of a method (signature) to an array of Type objects.      *       * @param signature signature string such as (Ljava/lang/String;)V      * @return array of argument types      */
 specifier|public
 specifier|static
 name|Type
@@ -469,7 +469,7 @@ argument_list|)
 argument_list|)
 argument_list|)
 expr_stmt|;
-comment|//corrected concurrent private static field acess
+comment|// corrected concurrent private static field acess
 name|index
 operator|+=
 name|unwrap
@@ -636,7 +636,7 @@ return|return
 name|res
 return|;
 block|}
-comment|/**      * Convert type to Java method signature, e.g. int[] f(java.lang.String x)      * becomes (Ljava/lang/String;)[I      *      * @param return_type what the method returns      * @param arg_types what are the argument types      * @return method signature for given type(s).      */
+comment|/**      * Convert type to Java method signature, e.g. int[] f(java.lang.String x) becomes (Ljava/lang/String;)[I      *      * @param return_type what the method returns      * @param arg_types what are the argument types      * @return method signature for given type(s).      */
 specifier|public
 specifier|static
 name|String
@@ -909,7 +909,7 @@ name|toString
 argument_list|()
 return|;
 block|}
-comment|/** Convert runtime java.lang.Class to BCEL Type object.      * @param cls Java class      * @return corresponding Type object      */
+comment|/**      * Convert runtime java.lang.Class to BCEL Type object.      *       * @param cls Java class      * @return corresponding Type object      */
 specifier|public
 specifier|static
 name|Type
@@ -936,7 +936,7 @@ argument_list|,
 literal|"cls"
 argument_list|)
 expr_stmt|;
-comment|/* That's an amzingly easy case, because getName() returns          * the signature. That's what we would have liked anyway.          */
+comment|/*          * That's an amzingly easy case, because getName() returns the signature. That's what we would have liked anyway.          */
 if|if
 condition|(
 name|cls
@@ -1104,7 +1104,7 @@ name|cls
 argument_list|)
 throw|;
 block|}
-comment|/**      * Convert signature to a Type object.      * @param signature signature string such as Ljava/lang/String;      * @return type object      */
+comment|/**      * Convert signature to a Type object.      *       * @param signature signature string such as Ljava/lang/String;      * @return type object      */
 comment|// @since 6.0 no longer final
 specifier|public
 specifier|static
@@ -1138,7 +1138,7 @@ operator|.
 name|T_VOID
 condition|)
 block|{
-comment|//corrected concurrent private static field acess
+comment|// corrected concurrent private static field acess
 name|wrap
 argument_list|(
 name|CONSUMED_CHARS
@@ -1247,8 +1247,8 @@ name|dim
 argument_list|)
 argument_list|)
 decl_stmt|;
-comment|//corrected concurrent private static field acess
-comment|//  consumed_chars += dim; // update counter - is replaced by
+comment|// corrected concurrent private static field acess
+comment|// consumed_chars += dim; // update counter - is replaced by
 specifier|final
 name|int
 name|_temp
@@ -1277,7 +1277,7 @@ name|dim
 argument_list|)
 return|;
 block|}
-comment|/**      * Convert runtime java.lang.Class[] to BCEL Type objects.      * @param classes an array of runtime class objects      * @return array of corresponding Type objects      */
+comment|/**      * Convert runtime java.lang.Class[] to BCEL Type objects.      *       * @param classes an array of runtime class objects      * @return array of corresponding Type objects      */
 specifier|public
 specifier|static
 name|Type
@@ -1724,7 +1724,7 @@ name|hashCode
 argument_list|()
 return|;
 block|}
-comment|/**      * boolean, short and char variable are considered as int in the stack or local variable area.      * Returns {@link Type#INT} for {@link Type#BOOLEAN}, {@link Type#SHORT} or {@link Type#CHAR}, otherwise      * returns the given type.      * @since 6.0      */
+comment|/**      * boolean, short and char variable are considered as int in the stack or local variable area. Returns {@link Type#INT}      * for {@link Type#BOOLEAN}, {@link Type#SHORT} or {@link Type#CHAR}, otherwise returns the given type.      *       * @since 6.0      */
 specifier|public
 name|Type
 name|normalizeForStackOrLocal
@@ -1767,7 +1767,7 @@ return|return
 name|this
 return|;
 block|}
-comment|/*      * Currently only used by the ArrayType constructor.      * The signature has a complicated dependency on other parameter      * so it's tricky to do it in a call to the super ctor.      */
+comment|/*      * Currently only used by the ArrayType constructor. The signature has a complicated dependency on other parameter so      * it's tricky to do it in a call to the super ctor.      */
 name|void
 name|setSignature
 parameter_list|(

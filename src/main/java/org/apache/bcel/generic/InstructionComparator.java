@@ -16,7 +16,7 @@ package|;
 end_package
 
 begin_comment
-comment|/**  * Equality of instructions isn't clearly to be defined. You might  * wish, for example, to compare whether instructions have the same  * meaning. E.g., whether two INVOKEVIRTUALs describe the same  * call.  *<p>  * The DEFAULT comparator however, considers two instructions  * to be equal if they have same opcode and point to the same indexes  * (if any) in the constant pool or the same local variable index. Branch  * instructions must have the same target.  *</p>  *  * @see Instruction  */
+comment|/**  * Equality of instructions isn't clearly to be defined. You might wish, for example, to compare whether instructions  * have the same meaning. E.g., whether two INVOKEVIRTUALs describe the same call.  *<p>  * The DEFAULT comparator however, considers two instructions to be equal if they have same opcode and point to the same  * indexes (if any) in the constant pool or the same local variable index. Branch instructions must have the same  * target.  *</p>  *  * @see Instruction  */
 end_comment
 
 begin_interface

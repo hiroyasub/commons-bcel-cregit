@@ -16,7 +16,7 @@ package|;
 end_package
 
 begin_comment
-comment|/**  * Get the type associated with an instruction, int for ILOAD, or the type  * of the field of a PUTFIELD instruction, e.g..  *  */
+comment|/**  * Get the type associated with an instruction, int for ILOAD, or the type of the field of a PUTFIELD instruction, e.g..  *  */
 end_comment
 
 begin_interface

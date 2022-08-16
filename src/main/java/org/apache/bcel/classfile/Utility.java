@@ -243,7 +243,7 @@ specifier|abstract
 class|class
 name|Utility
 block|{
-comment|/**      * Decode characters into bytes.      * Used by<a href="Utility.html#decode(java.lang.String, boolean)">decode()</a>      */
+comment|/**      * Decode characters into bytes. Used by<a href="Utility.html#decode(java.lang.String, boolean)">decode()</a>      */
 specifier|private
 specifier|static
 class|class
@@ -451,7 +451,7 @@ name|len
 return|;
 block|}
 block|}
-comment|/**      * Encode bytes into valid java identifier characters.      * Used by<a href="Utility.html#encode(byte[], boolean)">encode()</a>      */
+comment|/**      * Encode bytes into valid java identifier characters. Used by      *<a href="Utility.html#encode(byte[], boolean)">encode()</a>      */
 specifier|private
 specifier|static
 class|class
@@ -697,7 +697,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/* How many chars have been consumed      * during parsing in typeSignatureToString().      * Read by methodSignatureToString().      * Set by side effect, but only internally.      */
+comment|/*      * How many chars have been consumed during parsing in typeSignatureToString(). Read by methodSignatureToString(). Set      * by side effect, but only internally.      */
 specifier|private
 specifier|static
 specifier|final
@@ -721,7 +721,7 @@ literal|0
 argument_list|)
 argument_list|)
 decl_stmt|;
-comment|/* The `WIDE' instruction is used in the      * byte code to allow 16-bit wide indices      * for local variables. This opcode      * precedes an `ILOAD', e.g.. The opcode      * immediately following takes an extra      * byte which is combined with the      * following byte to form a      * 16-bit value.      */
+comment|/*      * The `WIDE' instruction is used in the byte code to allow 16-bit wide indices for local variables. This opcode      * precedes an `ILOAD', e.g.. The opcode immediately following takes an extra byte which is combined with the following      * byte to form a 16-bit value.      */
 specifier|private
 specifier|static
 name|boolean
@@ -876,7 +876,7 @@ operator|=
 name|j
 expr_stmt|;
 block|}
-comment|/**      * Convert bit field of flags into string such as `static final'.      *      * @param  access_flags Access flags      * @return String representation of flags      */
+comment|/**      * Convert bit field of flags into string such as `static final'.      *      * @param access_flags Access flags      * @return String representation of flags      */
 specifier|public
 specifier|static
 name|String
@@ -896,7 +896,7 @@ literal|false
 argument_list|)
 return|;
 block|}
-comment|/**      * Convert bit field of flags into string such as `static final'.      *      * Special case: Classes compiled with new compilers and with the      * `ACC_SUPER' flag would be said to be "synchronized". This is      * because SUN used the same value for the flags `ACC_SUPER' and      * `ACC_SYNCHRONIZED'.      *      * @param  access_flags Access flags      * @param  for_class access flags are for class qualifiers ?      * @return String representation of flags      */
+comment|/**      * Convert bit field of flags into string such as `static final'.      *      * Special case: Classes compiled with new compilers and with the `ACC_SUPER' flag would be said to be "synchronized".      * This is because SUN used the same value for the flags `ACC_SUPER' and `ACC_SYNCHRONIZED'.      *      * @param access_flags Access flags      * @param for_class access flags are for class qualifiers ?      * @return String representation of flags      */
 specifier|public
 specifier|static
 name|String
@@ -960,7 +960,7 @@ operator|!=
 literal|0
 condition|)
 block|{
-comment|/* Special case: Classes compiled with new compilers and with the                  * `ACC_SUPER' flag would be said to be "synchronized". This is                  * because SUN used the same value for the flags `ACC_SUPER' and                  * `ACC_SYNCHRONIZED'.                  */
+comment|/*                  * Special case: Classes compiled with new compilers and with the `ACC_SUPER' flag would be said to be "synchronized".                  * This is because SUN used the same value for the flags `ACC_SUPER' and `ACC_SYNCHRONIZED'.                  */
 if|if
 condition|(
 name|for_class
@@ -1011,7 +1011,7 @@ name|trim
 argument_list|()
 return|;
 block|}
-comment|/**      * Convert (signed) byte to (unsigned) short value, i.e., all negative      * values become positive.      */
+comment|/**      * Convert (signed) byte to (unsigned) short value, i.e., all negative values become positive.      */
 specifier|private
 specifier|static
 name|short
@@ -1147,7 +1147,7 @@ literal|true
 argument_list|)
 return|;
 block|}
-comment|/**      * Disassemble a byte array of JVM byte codes starting from code line      * `index' and return the disassembled string representation. Decode only      * `num' opcodes (including their operands), use -1 if you want to      * decompile everything.      *      * @param  code byte code array      * @param  constant_pool Array of constants      * @param  index offset in `code' array      *<EM>(number of opcodes, not bytes!)</EM>      * @param  length number of opcodes to decompile, -1 for all      * @param  verbose be verbose, e.g. print constant pool index      * @return String representation of byte codes      */
+comment|/**      * Disassemble a byte array of JVM byte codes starting from code line `index' and return the disassembled string      * representation. Decode only `num' opcodes (including their operands), use -1 if you want to decompile everything.      *      * @param code byte code array      * @param constant_pool Array of constants      * @param index offset in `code' array<EM>(number of opcodes, not bytes!)</EM>      * @param length number of opcodes to decompile, -1 for all      * @param verbose be verbose, e.g. print constant pool index      * @return String representation of byte codes      */
 specifier|public
 specifier|static
 name|String
@@ -1359,7 +1359,7 @@ literal|true
 argument_list|)
 return|;
 block|}
-comment|/**      * Disassemble a stream of byte codes and return the      * string representation.      *      * @param  bytes stream of bytes      * @param  constant_pool Array of constants      * @param  verbose be verbose, e.g. print constant pool index      * @return String representation of byte code      *      * @throws IOException if a failure from reading from the bytes argument occurs      */
+comment|/**      * Disassemble a stream of byte codes and return the string representation.      *      * @param bytes stream of bytes      * @param constant_pool Array of constants      * @param verbose be verbose, e.g. print constant pool index      * @return String representation of byte code      *      * @throws IOException if a failure from reading from the bytes argument occurs      */
 specifier|public
 specifier|static
 name|String
@@ -1446,7 +1446,7 @@ name|opcode
 argument_list|)
 argument_list|)
 decl_stmt|;
-comment|/* Special case: Skip (0-3) padding bytes, i.e., the          * following bytes are 4-byte-aligned          */
+comment|/*          * Special case: Skip (0-3) padding bytes, i.e., the following bytes are 4-byte-aligned          */
 if|if
 condition|(
 name|opcode
@@ -1553,7 +1553,7 @@ condition|(
 name|opcode
 condition|)
 block|{
-comment|/* Table switch has variable length arguments.              */
+comment|/*          * Table switch has variable length arguments.          */
 case|case
 name|Const
 operator|.
@@ -1706,7 +1706,7 @@ literal|")"
 argument_list|)
 expr_stmt|;
 break|break;
-comment|/* Lookup switch has variable length arguments.              */
+comment|/*          * Lookup switch has variable length arguments.          */
 case|case
 name|Const
 operator|.
@@ -1877,7 +1877,7 @@ argument_list|)
 expr_stmt|;
 block|}
 break|break;
-comment|/* Two address bytes + offset from start of byte stream form the              * jump target              */
+comment|/*          * Two address bytes + offset from start of byte stream form the jump target          */
 case|case
 name|Const
 operator|.
@@ -1991,7 +1991,7 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 break|break;
-comment|/* 32-bit wide jumps              */
+comment|/*          * 32-bit wide jumps          */
 case|case
 name|Const
 operator|.
@@ -2025,7 +2025,7 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 break|break;
-comment|/* Index byte references local variable (register)              */
+comment|/*          * Index byte references local variable (register)          */
 case|case
 name|Const
 operator|.
@@ -2122,7 +2122,7 @@ name|vindex
 argument_list|)
 expr_stmt|;
 break|break;
-comment|/*              * Remember wide byte which is used to form a 16-bit address in the              * following instruction. Relies on that the method is called again with              * the following opcode.              */
+comment|/*          * Remember wide byte which is used to form a 16-bit address in the following instruction. Relies on that the method is          * called again with the following opcode.          */
 case|case
 name|Const
 operator|.
@@ -2140,7 +2140,7 @@ literal|"\t(wide)"
 argument_list|)
 expr_stmt|;
 break|break;
-comment|/* Array of basic type.              */
+comment|/*          * Array of basic type.          */
 case|case
 name|Const
 operator|.
@@ -2172,7 +2172,7 @@ literal|">"
 argument_list|)
 expr_stmt|;
 break|break;
-comment|/* Access object/class fields.              */
+comment|/*          * Access object/class fields.          */
 case|case
 name|Const
 operator|.
@@ -2235,7 +2235,7 @@ literal|""
 argument_list|)
 expr_stmt|;
 break|break;
-comment|/* Operands are references to classes in constant pool              */
+comment|/*          * Operands are references to classes in constant pool          */
 case|case
 name|Const
 operator|.
@@ -2306,7 +2306,7 @@ literal|""
 argument_list|)
 expr_stmt|;
 break|break;
-comment|/* Operands are references to methods in constant pool              */
+comment|/*          * Operands are references to methods in constant pool          */
 case|case
 name|Const
 operator|.
@@ -2336,7 +2336,7 @@ name|index
 argument_list|)
 decl_stmt|;
 comment|// With Java8 operand may be either a CONSTANT_Methodref
-comment|// or a CONSTANT_InterfaceMethodref.   (markro)
+comment|// or a CONSTANT_InterfaceMethodref. (markro)
 name|buf
 operator|.
 name|append
@@ -2561,7 +2561,7 @@ argument_list|)
 expr_stmt|;
 comment|// Last byte is a reserved space
 break|break;
-comment|/* Operands are references to items in constant pool              */
+comment|/*          * Operands are references to items in constant pool          */
 case|case
 name|Const
 operator|.
@@ -2673,7 +2673,7 @@ literal|""
 argument_list|)
 expr_stmt|;
 break|break;
-comment|/* Array of references.              */
+comment|/*          * Array of references.          */
 case|case
 name|Const
 operator|.
@@ -2731,7 +2731,7 @@ literal|""
 argument_list|)
 expr_stmt|;
 break|break;
-comment|/* Multidimensional array of references.              */
+comment|/*          * Multidimensional array of references.          */
 case|case
 name|Const
 operator|.
@@ -2805,7 +2805,7 @@ argument_list|)
 expr_stmt|;
 block|}
 break|break;
-comment|/* Increment local variable.              */
+comment|/*          * Increment local variable.          */
 case|case
 name|Const
 operator|.
@@ -2995,7 +2995,7 @@ name|toString
 argument_list|()
 return|;
 block|}
-comment|/**      * Shorten long class names,<em>java/lang/String</em> becomes      *<em>String</em>.      *      * @param str The long class name      * @return Compacted class name      */
+comment|/**      * Shorten long class names,<em>java/lang/String</em> becomes<em>String</em>.      *      * @param str The long class name      * @return Compacted class name      */
 specifier|public
 specifier|static
 name|String
@@ -3015,7 +3015,7 @@ literal|true
 argument_list|)
 return|;
 block|}
-comment|/**      * Shorten long class names,<em>java/lang/String</em> becomes      *<em>java.lang.String</em>,      * e.g.. If<em>chopit</em> is<em>true</em> the prefix<em>java.lang</em>      * is also removed.      *      * @param str The long class name      * @param chopit flag that determines whether chopping is executed or not      * @return Compacted class name      */
+comment|/**      * Shorten long class names,<em>java/lang/String</em> becomes<em>java.lang.String</em>, e.g.. If<em>chopit</em> is      *<em>true</em> the prefix<em>java.lang</em> is also removed.      *      * @param str The long class name      * @param chopit flag that determines whether chopping is executed or not      * @return Compacted class name      */
 specifier|public
 specifier|static
 name|String
@@ -3041,7 +3041,7 @@ name|chopit
 argument_list|)
 return|;
 block|}
-comment|/**      * Shorten long class name<em>str</em>, i.e., chop off the<em>prefix</em>,      * if the      * class name starts with this string and the flag<em>chopit</em> is true.      * Slashes<em>/</em> are converted to dots<em>.</em>.      *      * @param str The long class name      * @param prefix The prefix the get rid off      * @param chopit flag that determines whether chopping is executed or not      * @return Compacted class name      */
+comment|/**      * Shorten long class name<em>str</em>, i.e., chop off the<em>prefix</em>, if the class name starts with this string      * and the flag<em>chopit</em> is true. Slashes<em>/</em> are converted to dots<em>.</em>.      *      * @param str The long class name      * @param prefix The prefix the get rid off      * @param chopit flag that determines whether chopping is executed or not      * @return Compacted class name      */
 specifier|public
 specifier|static
 name|String
@@ -3534,7 +3534,7 @@ return|return
 name|bytes
 return|;
 block|}
-comment|/**      * Encode byte array it into Java identifier string, i.e., a string      * that only contains the following characters: (a, ... z, A, ... Z,      * 0, ... 9, _, $).  The encoding algorithm itself is not too      * clever: if the current byte's ASCII value already is a valid Java      * identifier part, leave it as it is. Otherwise it writes the      * escape character($) followed by:      *      *<ul>      *<li> the ASCII value as a hexadecimal string, if the value is not in the range 200..247</li>      *<li>a Java identifier char not used in a lowercase hexadecimal string, if the value is in the range 200..247</li>      *</ul>      *      *<p>This operation inflates the original byte array by roughly 40-50%</p>      *      * @param bytes the byte array to convert      * @param compress use gzip to minimize string      *      * @throws IOException if there's a gzip exception      */
+comment|/**      * Encode byte array it into Java identifier string, i.e., a string that only contains the following characters: (a, ...      * z, A, ... Z, 0, ... 9, _, $). The encoding algorithm itself is not too clever: if the current byte's ASCII value      * already is a valid Java identifier part, leave it as it is. Otherwise it writes the escape character($) followed by:      *      *<ul>      *<li>the ASCII value as a hexadecimal string, if the value is not in the range 200..247</li>      *<li>a Java identifier char not used in a lowercase hexadecimal string, if the value is in the range 200..247</li>      *</ul>      *      *<p>      * This operation inflates the original byte array by roughly 40-50%      *</p>      *      * @param bytes the byte array to convert      * @param compress use gzip to minimize string      *      * @throws IOException if there's a gzip exception      */
 specifier|public
 specifier|static
 name|String
@@ -3815,8 +3815,8 @@ operator|+
 name|str
 return|;
 block|}
-comment|/**      * WARNING:      *      * There is some nomenclature confusion through much of the BCEL code base with      * respect to the terms Descriptor and Signature.  For the offical definitions see:      *      * @see<a href="https://docs.oracle.com/javase/specs/jvms/se8/html/jvms-4.html#jvms-4.3">      * Descriptors in The Java Virtual Machine Specification</a>      *      * @see<a href="https://docs.oracle.com/javase/specs/jvms/se8/html/jvms-4.html#jvms-4.7.9.1">      * Signatures in The Java Virtual Machine Specification</a>      *      * In brief, a descriptor is a string representing the type of a field or method.      * Signatures are similar, but more complex.  Signatures are used to encode declarations      * written in the Java programming language that use types outside the type system of the      * Java Virtual Machine.  They are used to describe the type of any class, interface,      * constructor, method or field whose declaration uses type variables or parameterized types.      *      * To parse a descriptor, call typeSignatureToString.      * To parse a signature, call signatureToString.      *      * Note that if the signature string is a single, non-generic item, the call to      * signatureToString reduces to a call to typeSignatureToString.      * Also note, that if you only wish to parse the first item in a longer signature      * string, you should call typeSignatureToString directly.      */
-comment|/**      * Return a string for an integer justified left or right and filled up with      * `fill' characters if necessary.      *      * @param i integer to format      * @param length length of desired string      * @param left_justify format left or right      * @param fill fill character      * @return formatted int      */
+comment|/**      * WARNING:      *      * There is some nomenclature confusion through much of the BCEL code base with respect to the terms Descriptor and      * Signature. For the offical definitions see:      *      * @see<a href="https://docs.oracle.com/javase/specs/jvms/se8/html/jvms-4.html#jvms-4.3"> Descriptors in The Java      *      Virtual Machine Specification</a>      *      * @see<a href="https://docs.oracle.com/javase/specs/jvms/se8/html/jvms-4.html#jvms-4.7.9.1"> Signatures in The Java      *      Virtual Machine Specification</a>      *      *      In brief, a descriptor is a string representing the type of a field or method. Signatures are similar, but more      *      complex. Signatures are used to encode declarations written in the Java programming language that use types      *      outside the type system of the Java Virtual Machine. They are used to describe the type of any class, interface,      *      constructor, method or field whose declaration uses type variables or parameterized types.      *      *      To parse a descriptor, call typeSignatureToString. To parse a signature, call signatureToString.      *      *      Note that if the signature string is a single, non-generic item, the call to signatureToString reduces to a call      *      to typeSignatureToString. Also note, that if you only wish to parse the first item in a longer signature string,      *      you should call typeSignatureToString directly.      */
+comment|/**      * Return a string for an integer justified left or right and filled up with `fill' characters if necessary.      *      * @param i integer to format      * @param length length of desired string      * @param left_justify format left or right      * @param fill fill character      * @return formatted int      */
 specifier|public
 specifier|static
 name|String
@@ -3857,7 +3857,7 @@ name|fill
 argument_list|)
 return|;
 block|}
-comment|/** Parse Java type such as "char", or "java.lang.String[]" and return the      * signature in byte code format, e.g. "C" or "[Ljava/lang/String;" respectively.      *      * @param  type Java type      * @return byte code signature      */
+comment|/**      * Parse Java type such as "char", or "java.lang.String[]" and return the signature in byte code format, e.g. "C" or      * "[Ljava/lang/String;" respectively.      *      * @param type Java type      * @return byte code signature      */
 specifier|public
 specifier|static
 name|String
@@ -4233,7 +4233,7 @@ operator|!=
 literal|0
 return|;
 block|}
-comment|/**      * Converts argument list portion of method signature to string with all class names compacted.      *      * @param  signature    Method signature      * @return String Array of argument types      * @throws ClassFormatException if a class is malformed or cannot be interpreted as a class file      */
+comment|/**      * Converts argument list portion of method signature to string with all class names compacted.      *      * @param signature Method signature      * @return String Array of argument types      * @throws ClassFormatException if a class is malformed or cannot be interpreted as a class file      */
 specifier|public
 specifier|static
 name|String
@@ -4256,7 +4256,7 @@ literal|true
 argument_list|)
 return|;
 block|}
-comment|/**      * Converts argument list portion of method signature to string.      *      * @param  signature    Method signature      * @param  chopit flag that determines whether chopping is executed or not      * @return String Array of argument types      * @throws ClassFormatException if a class is malformed or cannot be interpreted as a class file      */
+comment|/**      * Converts argument list portion of method signature to string.      *      * @param signature Method signature      * @param chopit flag that determines whether chopping is executed or not      * @return String Array of argument types      * @throws ClassFormatException if a class is malformed or cannot be interpreted as a class file      */
 specifier|public
 specifier|static
 name|String
@@ -4349,7 +4349,7 @@ name|chopit
 argument_list|)
 argument_list|)
 expr_stmt|;
-comment|//corrected concurrent private static field acess
+comment|// corrected concurrent private static field acess
 name|index
 operator|+=
 name|unwrap
@@ -4391,7 +4391,7 @@ name|EMPTY_STRING_ARRAY
 argument_list|)
 return|;
 block|}
-comment|/**      * Converts return type portion of method signature to string with all class names compacted.      *      * @param  signature    Method signature      * @return String representation of method return type      * @throws ClassFormatException if a class is malformed or cannot be interpreted as a class file      */
+comment|/**      * Converts return type portion of method signature to string with all class names compacted.      *      * @param signature Method signature      * @return String representation of method return type      * @throws ClassFormatException if a class is malformed or cannot be interpreted as a class file      */
 specifier|public
 specifier|static
 name|String
@@ -4413,7 +4413,7 @@ literal|true
 argument_list|)
 return|;
 block|}
-comment|/**      * Converts return type portion of method signature to string.      *      * @param  signature    Method signature      * @param  chopit flag that determines whether chopping is executed or not      * @return String representation of method return type      * @throws ClassFormatException if a class is malformed or cannot be interpreted as a class file      */
+comment|/**      * Converts return type portion of method signature to string.      *      * @param signature Method signature      * @param chopit flag that determines whether chopping is executed or not      * @return String representation of method return type      * @throws ClassFormatException if a class is malformed or cannot be interpreted as a class file      */
 specifier|public
 specifier|static
 name|String
@@ -4506,7 +4506,7 @@ return|return
 name|type
 return|;
 block|}
-comment|/**      * Converts method signature to string with all class names compacted.      *      * @param  signature to convert      * @param  name of method      * @param  access flags of method      * @return Human readable signature      */
+comment|/**      * Converts method signature to string with all class names compacted.      *      * @param signature to convert      * @param name of method      * @param access flags of method      * @return Human readable signature      */
 specifier|public
 specifier|static
 name|String
@@ -4538,7 +4538,7 @@ literal|true
 argument_list|)
 return|;
 block|}
-comment|/**      * Converts method signature to string.      *      * @param  signature to convert      * @param  name of method      * @param  access flags of method      * @param  chopit flag that determines whether chopping is executed or not      * @return Human readable signature      */
+comment|/**      * Converts method signature to string.      *      * @param signature to convert      * @param name of method      * @param access flags of method      * @param chopit flag that determines whether chopping is executed or not      * @return Human readable signature      */
 specifier|public
 specifier|static
 name|String
@@ -4576,7 +4576,7 @@ literal|null
 argument_list|)
 return|;
 block|}
-comment|/**      * This method converts a method signature string into a Java type declaration like      * `void main(String[])' and throws a `ClassFormatException' when the parsed      * type is invalid.      *      * @param  signature    Method signature      * @param  name         Method name      * @param  access       Method access rights      * @param  chopit flag that determines whether chopping is executed or not      * @param  vars the LocalVariableTable for the method      * @return Java type declaration      * @throws ClassFormatException if a class is malformed or cannot be interpreted as a class file      */
+comment|/**      * This method converts a method signature string into a Java type declaration like `void main(String[])' and throws a      * `ClassFormatException' when the parsed type is invalid.      *      * @param signature Method signature      * @param name Method name      * @param access Method access rights      * @param chopit flag that determines whether chopping is executed or not      * @param vars the LocalVariableTable for the method      * @return Java type declaration      * @throws ClassFormatException if a class is malformed or cannot be interpreted as a class file      */
 specifier|public
 specifier|static
 name|String
@@ -4795,7 +4795,7 @@ argument_list|(
 literal|", "
 argument_list|)
 expr_stmt|;
-comment|//corrected concurrent private static field acess
+comment|// corrected concurrent private static field acess
 name|index
 operator|+=
 name|unwrap
@@ -4904,7 +4904,7 @@ name|toString
 argument_list|()
 return|;
 block|}
-comment|/**      * Converts string containing the method return and argument types      * to a byte code method signature.      *      * @param  ret Return type of method      * @param  argv Types of method arguments      * @return Byte code representation of method signature      *      * @throws ClassFormatException if the signature is for Void      */
+comment|/**      * Converts string containing the method return and argument types to a byte code method signature.      *      * @param ret Return type of method      * @param argv Types of method arguments      * @return Byte code representation of method signature      *      * @throws ClassFormatException if the signature is for Void      */
 specifier|public
 specifier|static
 name|String
@@ -5433,7 +5433,7 @@ return|return
 name|str
 return|;
 block|}
-comment|/** Map opcode names to opcode numbers. E.g., return Constants.ALOAD for "aload"      */
+comment|/**      * Map opcode names to opcode numbers. E.g., return Constants.ALOAD for "aload"      */
 specifier|public
 specifier|static
 name|short
@@ -5520,7 +5520,7 @@ name|i
 argument_list|)
 return|;
 block|}
-comment|/**      * Converts a signature to a string with all class names compacted.      * Class, Method and Type signatures are supported.      * Enum and Interface signatures are not supported.      *      * @param  signature signature to convert      * @return String containg human readable signature      */
+comment|/**      * Converts a signature to a string with all class names compacted. Class, Method and Type signatures are supported.      * Enum and Interface signatures are not supported.      *      * @param signature signature to convert      * @return String containg human readable signature      */
 specifier|public
 specifier|static
 name|String
@@ -5540,7 +5540,7 @@ literal|true
 argument_list|)
 return|;
 block|}
-comment|/**      * Converts a signature to a string.      * Class, Method and Type signatures are supported.      * Enum and Interface signatures are not supported.      *      * @param  signature signature to convert      * @param  chopit flag that determines whether chopping is executed or not      * @return String containg human readable signature      */
+comment|/**      * Converts a signature to a string. Class, Method and Type signatures are supported. Enum and Interface signatures are      * not supported.      *      * @param signature signature to convert      * @param chopit flag that determines whether chopping is executed or not      * @return String containg human readable signature      */
 specifier|public
 specifier|static
 name|String
@@ -5832,7 +5832,7 @@ name|toString
 argument_list|()
 return|;
 block|}
-comment|/** Convert bytes into hexadecimal string      *      * @param bytes an array of bytes to convert to hexadecimal      *      * @return bytes as hexadecimal string, e.g. 00 fa 12 ...      */
+comment|/**      * Convert bytes into hexadecimal string      *      * @param bytes an array of bytes to convert to hexadecimal      *      * @return bytes as hexadecimal string, e.g. 00 fa 12 ...      */
 specifier|public
 specifier|static
 name|String
@@ -5941,7 +5941,7 @@ name|toString
 argument_list|()
 return|;
 block|}
-comment|/**      * Return type of method signature as a byte value as defined in<em>Constants</em>      *      * @param  signature in format described above      * @return type of method signature      * @see    Const      *      * @throws ClassFormatException if signature is not a method signature      */
+comment|/**      * Return type of method signature as a byte value as defined in<em>Constants</em>      *      * @param signature in format described above      * @return type of method signature      * @see Const      *      * @throws ClassFormatException if signature is not a method signature      */
 specifier|public
 specifier|static
 name|byte
@@ -6024,7 +6024,7 @@ argument_list|)
 throw|;
 block|}
 block|}
-comment|/**      * Return type of signature as a byte value as defined in<em>Constants</em>      *      * @param  signature in format described above      * @return type of signature      * @see    Const      *      * @throws ClassFormatException if signature isn't a known type      */
+comment|/**      * Return type of signature as a byte value as defined in<em>Constants</em>      *      * @param signature in format described above      * @return type of signature      * @see Const      *      * @throws ClassFormatException if signature isn't a known type      */
 specifier|public
 specifier|static
 name|byte
@@ -6192,7 +6192,7 @@ argument_list|)
 throw|;
 block|}
 block|}
-comment|/**      * Converts a type parameter list signature to a string.      *      * @param  signature signature to convert      * @param  chopit flag that determines whether chopping is executed or not      * @return String containg human readable signature      */
+comment|/**      * Converts a type parameter list signature to a string.      *      * @param signature signature to convert      * @param chopit flag that determines whether chopping is executed or not      * @return String containg human readable signature      */
 specifier|private
 specifier|static
 name|String
@@ -6318,7 +6318,7 @@ name|toString
 argument_list|()
 return|;
 block|}
-comment|/**      * Converts a type parameter signature to a string.      *      * @param  signature signature to convert      * @param  chopit flag that determines whether chopping is executed or not      * @return String containg human readable signature      */
+comment|/**      * Converts a type parameter signature to a string.      *      * @param signature signature to convert      * @param chopit flag that determines whether chopping is executed or not      * @return String containg human readable signature      */
 specifier|private
 specifier|static
 name|String
@@ -6492,7 +6492,7 @@ name|toString
 argument_list|()
 return|;
 block|}
-comment|/**      * Converts a list of type signatures to a string.      *      * @param  signature signature to convert      * @param  chopit flag that determines whether chopping is executed or not      * @param  term character indicating the end of the list      * @return String containg human readable signature      */
+comment|/**      * Converts a list of type signatures to a string.      *      * @param signature signature to convert      * @param chopit flag that determines whether chopping is executed or not      * @param term character indicating the end of the list      * @return String containg human readable signature      */
 specifier|private
 specifier|static
 name|String
@@ -6642,7 +6642,7 @@ name|toString
 argument_list|()
 return|;
 block|}
-comment|/**      *      * This method converts a type signature string into a Java type declaration such as      * `String[]' and throws a `ClassFormatException' when the parsed type is invalid.      *      * @param  signature type signature      * @param  chopit flag that determines whether chopping is executed or not      * @return string containing human readable type signature      * @throws ClassFormatException if a class is malformed or cannot be interpreted as a class file      * @since 6.4.0      */
+comment|/**      *      * This method converts a type signature string into a Java type declaration such as `String[]' and throws a      * `ClassFormatException' when the parsed type is invalid.      *      * @param signature type signature      * @param chopit flag that determines whether chopping is executed or not      * @return string containing human readable type signature      * @throws ClassFormatException if a class is malformed or cannot be interpreted as a class file      * @since 6.4.0      */
 specifier|public
 specifier|static
 name|String
@@ -6659,7 +6659,7 @@ parameter_list|)
 throws|throws
 name|ClassFormatException
 block|{
-comment|//corrected concurrent private static field acess
+comment|// corrected concurrent private static field acess
 name|wrap
 argument_list|(
 name|CONSUMER_CHARS
@@ -6750,7 +6750,7 @@ name|signature
 argument_list|)
 throw|;
 block|}
-comment|//corrected concurrent private static field acess
+comment|// corrected concurrent private static field acess
 name|wrap
 argument_list|(
 name|CONSUMER_CHARS
@@ -6783,7 +6783,7 @@ case|:
 block|{
 comment|// Full class name
 comment|// should this be a while loop? can there be more than
-comment|// one generic clause?  (markro)
+comment|// one generic clause? (markro)
 name|int
 name|fromIndex
 init|=
@@ -7474,8 +7474,8 @@ argument_list|,
 name|chopit
 argument_list|)
 expr_stmt|;
-comment|//corrected concurrent private static field acess
-comment|//Utility.consumed_chars += consumed_chars; is replaced by:
+comment|// corrected concurrent private static field acess
+comment|// Utility.consumed_chars += consumed_chars; is replaced by:
 specifier|final
 name|int
 name|_temp

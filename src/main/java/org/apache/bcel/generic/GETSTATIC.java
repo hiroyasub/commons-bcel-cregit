@@ -40,7 +40,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * GETSTATIC - Fetch static field from class  *<PRE>Stack: ..., -&gt; ..., value</PRE>  * OR  *<PRE>Stack: ..., -&gt; ..., value.word1, value.word2</PRE>  *  */
+comment|/**  * GETSTATIC - Fetch static field from class  *   *<PRE>  * Stack: ..., -&gt; ..., value  *</PRE>  *   * OR  *   *<PRE>  * Stack: ..., -&gt; ..., value.word1, value.word2  *</PRE>  *  */
 end_comment
 
 begin_class
@@ -54,7 +54,7 @@ name|PushInstruction
 implements|,
 name|ExceptionThrower
 block|{
-comment|/**      * Empty constructor needed for Instruction.readInstruction.      * Not to be used otherwise.      */
+comment|/**      * Empty constructor needed for Instruction.readInstruction. Not to be used otherwise.      */
 name|GETSTATIC
 parameter_list|()
 block|{
@@ -77,7 +77,7 @@ name|index
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Call corresponding visitor method(s). The order is:      * Call visitor methods of implemented interfaces first, then      * call methods according to the class hierarchy in descending order,      * i.e., the most specific visitXXX() call comes last.      *      * @param v Visitor object      */
+comment|/**      * Call corresponding visitor method(s). The order is: Call visitor methods of implemented interfaces first, then call      * methods according to the class hierarchy in descending order, i.e., the most specific visitXXX() call comes last.      *      * @param v Visitor object      */
 annotation|@
 name|Override
 specifier|public

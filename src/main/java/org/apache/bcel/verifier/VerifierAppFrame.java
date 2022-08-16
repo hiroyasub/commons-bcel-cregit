@@ -274,7 +274,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * This class implements a machine-generated frame for use with  * the GraphicalVerfifier.  *  * @see GraphicalVerifier  */
+comment|/**  * This class implements a machine-generated frame for use with the GraphicalVerfifier.  *  * @see GraphicalVerifier  */
 end_comment
 
 begin_class
@@ -770,7 +770,7 @@ parameter_list|()
 throws|throws
 name|Exception
 block|{
-comment|//setIconImage(Toolkit.getDefaultToolkit().createImage(Frame1.class.getResource("[Ihr Symbol]")));
+comment|// setIconImage(Toolkit.getDefaultToolkit().createImage(Frame1.class.getResource("[Ihr Symbol]")));
 name|contentPane
 operator|=
 operator|(
@@ -2363,7 +2363,7 @@ argument_list|(
 name|current_class
 argument_list|)
 decl_stmt|;
-comment|/*                  boolean all3aok = true;                  boolean all3bok = true;                  String all3amsg = "";                  String all3bmsg = "";                  */
+comment|/*                  * boolean all3aok = true; boolean all3bok = true; String all3amsg = ""; String all3bmsg = "";                  */
 specifier|final
 name|String
 index|[]

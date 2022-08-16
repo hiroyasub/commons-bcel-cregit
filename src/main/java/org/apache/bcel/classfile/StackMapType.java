@@ -58,7 +58,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * This class represents the type of a local variable or item on stack  * used in the StackMap entries.  *  * @see     StackMapEntry  * @see     StackMap  * @see     Const  */
+comment|/**  * This class represents the type of a local variable or item on stack used in the StackMap entries.  *  * @see StackMapEntry  * @see StackMap  * @see Const  */
 end_comment
 
 begin_class
@@ -146,7 +146,7 @@ operator|=
 name|constant_pool
 expr_stmt|;
 block|}
-comment|/**      * Construct object from file stream.      * @param file Input stream      * @throws IOException if an I/O error occurs.      */
+comment|/**      * Construct object from file stream.      *       * @param file Input stream      * @throws IOException if an I/O error occurs.      */
 name|StackMapType
 parameter_list|(
 specifier|final
@@ -270,7 +270,7 @@ return|return
 name|constantPool
 return|;
 block|}
-comment|/** @return index to constant pool if type == ITEM_Object, or offset      * in byte code, if type == ITEM_NewObject, and -1 otherwise      */
+comment|/**      * @return index to constant pool if type == ITEM_Object, or offset in byte code, if type == ITEM_NewObject, and -1      *         otherwise      */
 specifier|public
 name|int
 name|getIndex
@@ -289,7 +289,7 @@ return|return
 name|type
 return|;
 block|}
-comment|/** @return true, if type is either ITEM_Object or ITEM_NewObject      */
+comment|/**      * @return true, if type is either ITEM_Object or ITEM_NewObject      */
 specifier|public
 name|boolean
 name|hasIndex

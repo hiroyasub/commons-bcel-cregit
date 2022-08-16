@@ -28,7 +28,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Instances of this class may be used, e.g., to generate typed  * versions of instructions. Its main purpose is to be used as the  * byte code generating backend of a compiler. You can subclass it to  * add your own create methods.  *<p>  * Note: The static createXXX methods return singleton instances  * from the {@link InstructionConst} class.  *  * @see Const  * @see InstructionConst  */
+comment|/**  * Instances of this class may be used, e.g., to generate typed versions of instructions. Its main purpose is to be used  * as the byte code generating backend of a compiler. You can subclass it to add your own create methods.  *<p>  * Note: The static createXXX methods return singleton instances from the {@link InstructionConst} class.  *  * @see Const  * @see InstructionConst  */
 end_comment
 
 begin_class
@@ -846,8 +846,8 @@ argument_list|)
 throw|;
 block|}
 block|}
-comment|/** Create an invokedynamic instruction.      *      * @param bootstrap_index index into the bootstrap_methods array      * @param name name of the called method      * @param ret_type return type of method      * @param arg_types argument types of method      * @see Constants      */
-comment|/*  * createInvokeDynamic only needed if instrumention code wants to generate  * a new invokedynamic instruction.  I don't think we need.  (markro)  *     public InvokeInstruction createInvokeDynamic( int bootstrap_index, String name, Type ret_type,             Type[] arg_types) {         int index;         int nargs = 0;         String signature = Type.getMethodSignature(ret_type, arg_types);         for (int i = 0; i< arg_types.length; i++) {             nargs += arg_types[i].getSize();         }         // UNDONE - needs to be added to ConstantPoolGen         //index = cp.addInvokeDynamic(bootstrap_index, name, signature);         index = 0;         return new INVOKEDYNAMIC(index);     }  */
+comment|/**      * Create an invokedynamic instruction.      *      * @param bootstrap_index index into the bootstrap_methods array      * @param name name of the called method      * @param ret_type return type of method      * @param arg_types argument types of method      * @see Constants      */
+comment|/*      * createInvokeDynamic only needed if instrumention code wants to generate a new invokedynamic instruction. I don't      * think we need. (markro)      *      * public InvokeInstruction createInvokeDynamic( int bootstrap_index, String name, Type ret_type, Type[] arg_types) {      * int index; int nargs = 0; String signature = Type.getMethodSignature(ret_type, arg_types); for (int i = 0; i<      * arg_types.length; i++) { nargs += arg_types[i].getSize(); } // UNDONE - needs to be added to ConstantPoolGen //index      * = cp.addInvokeDynamic(bootstrap_index, name, signature); index = 0; return new INVOKEDYNAMIC(index); }      */
 specifier|private
 specifier|static
 name|ArithmeticInstruction
@@ -1079,7 +1079,7 @@ argument_list|)
 throw|;
 block|}
 block|}
-comment|/** Create branch instruction by given opcode, except LOOKUPSWITCH and TABLESWITCH.      * For those you should use the SWITCH compound instruction.      */
+comment|/**      * Create branch instruction by given opcode, except LOOKUPSWITCH and TABLESWITCH. For those you should use the SWITCH      * compound instruction.      */
 specifier|public
 specifier|static
 name|BranchInstruction
@@ -1546,7 +1546,7 @@ argument_list|)
 throw|;
 block|}
 block|}
-comment|/** Create "null" value for reference types, 0 for basic types like int      */
+comment|/**      * Create "null" value for reference types, 0 for basic types like int      */
 specifier|public
 specifier|static
 name|Instruction
@@ -1687,7 +1687,7 @@ operator|.
 name|POP
 return|;
 block|}
-comment|/** Create typed return      */
+comment|/**      * Create typed return      */
 specifier|public
 specifier|static
 name|ReturnInstruction
@@ -1923,7 +1923,7 @@ argument_list|)
 throw|;
 block|}
 block|}
-comment|/** Create reference to `this'      */
+comment|/**      * Create reference to `this'      */
 specifier|public
 specifier|static
 name|Instruction
@@ -1983,7 +1983,7 @@ specifier|protected
 name|ConstantPoolGen
 name|cp
 decl_stmt|;
-comment|/** Initialize with ClassGen object      */
+comment|/**      * Initialize with ClassGen object      */
 specifier|public
 name|InstructionFactory
 parameter_list|(
@@ -2028,7 +2028,7 @@ operator|=
 name|cp
 expr_stmt|;
 block|}
-comment|/** Initialize just with ConstantPoolGen object      */
+comment|/**      * Initialize just with ConstantPoolGen object      */
 specifier|public
 name|InstructionFactory
 parameter_list|(
@@ -2178,7 +2178,7 @@ argument_list|)
 throw|;
 block|}
 block|}
-comment|/** Create conversion operation for two stack operands, this may be an I2C, instruction, e.g.,      * if the operands are basic types and CHECKCAST if they are reference types.      */
+comment|/**      * Create conversion operation for two stack operands, this may be an I2C, instruction, e.g., if the operands are basic      * types and CHECKCAST if they are reference types.      */
 specifier|public
 name|Instruction
 name|createCast
@@ -2455,7 +2455,7 @@ argument_list|)
 argument_list|)
 return|;
 block|}
-comment|/** Uses PUSH to push a constant value onto the stack.      * @param value must be of type Number, Boolean, Character or String      */
+comment|/**      * Uses PUSH to push a constant value onto the stack.      *       * @param value must be of type Number, Boolean, Character or String      */
 specifier|public
 name|Instruction
 name|createConstant
@@ -2574,7 +2574,7 @@ name|getInstruction
 argument_list|()
 return|;
 block|}
-comment|/** Create a field instruction.      *      * @param class_name name of the accessed class      * @param name name of the referenced field      * @param type  type of field      * @param kind how to access, i.e., GETFIELD, PUTFIELD, GETSTATIC, PUTSTATIC      * @see Const      */
+comment|/**      * Create a field instruction.      *      * @param class_name name of the accessed class      * @param name name of the referenced field      * @param type type of field      * @param kind how to access, i.e., GETFIELD, PUTFIELD, GETSTATIC, PUTSTATIC      * @see Const      */
 specifier|public
 name|FieldInstruction
 name|createFieldAccess
@@ -2844,7 +2844,7 @@ name|kind
 argument_list|)
 return|;
 block|}
-comment|/** Create an invoke instruction. (Except for invokedynamic.)      *      * @param class_name name of the called class      * @param name name of the called method      * @param ret_type return type of method      * @param arg_types argument types of method      * @param kind how to invoke, i.e., INVOKEINTERFACE, INVOKESTATIC, INVOKEVIRTUAL,      * or INVOKESPECIAL      * @see Const      */
+comment|/**      * Create an invoke instruction. (Except for invokedynamic.)      *      * @param class_name name of the called class      * @param name name of the called method      * @param ret_type return type of method      * @param arg_types argument types of method      * @param kind how to invoke, i.e., INVOKEINTERFACE, INVOKESTATIC, INVOKEVIRTUAL, or INVOKESPECIAL      * @see Const      */
 specifier|public
 name|InvokeInstruction
 name|createInvoke
@@ -2892,7 +2892,7 @@ name|INVOKEINTERFACE
 argument_list|)
 return|;
 block|}
-comment|/** Create an invoke instruction. (Except for invokedynamic.)      *      * @param class_name name of the called class      * @param name name of the called method      * @param ret_type return type of method      * @param arg_types argument types of method      * @param kind how to invoke: INVOKEINTERFACE, INVOKESTATIC, INVOKEVIRTUAL, or INVOKESPECIAL      * @param use_interface force use of InterfaceMethodref      * @return A new InvokeInstruction.      * @since 6.5.0      */
+comment|/**      * Create an invoke instruction. (Except for invokedynamic.)      *      * @param class_name name of the called class      * @param name name of the called method      * @param ret_type return type of method      * @param arg_types argument types of method      * @param kind how to invoke: INVOKEINTERFACE, INVOKESTATIC, INVOKEVIRTUAL, or INVOKESPECIAL      * @param use_interface force use of InterfaceMethodref      * @return A new InvokeInstruction.      * @since 6.5.0      */
 specifier|public
 name|InvokeInstruction
 name|createInvoke
@@ -3164,7 +3164,7 @@ argument_list|)
 argument_list|)
 return|;
 block|}
-comment|/** Create new array of given size and type.      * @return an instruction that creates the corresponding array at runtime, i.e. is an AllocationInstruction      */
+comment|/**      * Create new array of given size and type.      *       * @return an instruction that creates the corresponding array at runtime, i.e. is an AllocationInstruction      */
 specifier|public
 name|Instruction
 name|createNewArray
@@ -3288,7 +3288,7 @@ name|dim
 argument_list|)
 return|;
 block|}
-comment|/** Create a call to the most popular System.out.println() method.      *      * @param s the string to print      */
+comment|/**      * Create a call to the most popular System.out.println() method.      *      * @param s the string to print      */
 specifier|public
 name|InstructionList
 name|createPrintln

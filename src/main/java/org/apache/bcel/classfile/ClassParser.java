@@ -102,7 +102,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Wrapper class that parses a given Java .class file. The method<A  * href ="#parse">parse</A> returns a<A href ="JavaClass.html">  * JavaClass</A> object on success. When an I/O error or an  * inconsistency occurs an appropiate exception is propagated back to  * the caller.  *  * The structure and the names comply, except for a few conveniences,  * exactly with the<A href="http://docs.oracle.com/javase/specs/">  * JVM specification 1.0</a>. See this paper for  * further details about the structure of a bytecode file.  *  */
+comment|/**  * Wrapper class that parses a given Java .class file. The method<A href ="#parse">parse</A> returns a  *<A href ="JavaClass.html"> JavaClass</A> object on success. When an I/O error or an inconsistency occurs an  * appropiate exception is propagated back to the caller.  *  * The structure and the names comply, except for a few conveniences, exactly with the  *<A href="http://docs.oracle.com/javase/specs/"> JVM specification 1.0</a>. See this paper for further details about  * the structure of a bytecode file.  *  */
 end_comment
 
 begin_class
@@ -284,7 +284,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/** Parses class from given .class file.      *      * @param fileName file name      */
+comment|/**      * Parses class from given .class file.      *      * @param fileName file name      */
 specifier|public
 name|ClassParser
 parameter_list|(
@@ -308,7 +308,7 @@ operator|=
 literal|true
 expr_stmt|;
 block|}
-comment|/** Parses class from given .class file in a ZIP-archive      *      * @param zipFile zip file name      * @param fileName file name      */
+comment|/**      * Parses class from given .class file in a ZIP-archive      *      * @param zipFile zip file name      * @param fileName file name      */
 specifier|public
 name|ClassParser
 parameter_list|(
@@ -342,7 +342,7 @@ operator|=
 name|fileName
 expr_stmt|;
 block|}
-comment|/**      * Parses the given Java class file and return an object that represents      * the contained data, i.e., constants, methods, fields and commands.      * A<em>ClassFormatException</em> is raised, if the file is not a valid      * .class file. (This does not include verification of the byte code as it      * is performed by the java interpreter).      *      * @return Class object representing the parsed class file      * @throws IOException if an I/O error occurs.      * @throws ClassFormatException if a class is malformed or cannot be interpreted as a class file      */
+comment|/**      * Parses the given Java class file and return an object that represents the contained data, i.e., constants, methods,      * fields and commands. A<em>ClassFormatException</em> is raised, if the file is not a valid .class file. (This does      * not include verification of the byte code as it is performed by the java interpreter).      *      * @return Class object representing the parsed class file      * @throws IOException if an I/O error occurs.      * @throws ClassFormatException if a class is malformed or cannot be interpreted as a class file      */
 specifier|public
 name|JavaClass
 name|parse
@@ -485,19 +485,19 @@ name|readAttributes
 argument_list|()
 expr_stmt|;
 comment|// Check for unknown variables
-comment|//Unknown[] u = Unknown.getUnknownAttributes();
-comment|//for (int i=0; i< u.length; i++)
-comment|//  System.err.println("WARNING: " + u[i]);
+comment|// Unknown[] u = Unknown.getUnknownAttributes();
+comment|// for (int i=0; i< u.length; i++)
+comment|// System.err.println("WARNING: " + u[i]);
 comment|// Everything should have been read now
-comment|//      if(file.available()> 0) {
-comment|//        int bytes = file.available();
-comment|//        byte[] buf = new byte[bytes];
-comment|//        file.read(buf);
-comment|//        if(!(isZip&& (buf.length == 1))) {
-comment|//      System.err.println("WARNING: Trailing garbage at end of " + fileName);
-comment|//      System.err.println(bytes + " extra bytes: " + Utility.toHexString(buf));
-comment|//        }
-comment|//      }
+comment|// if(file.available()> 0) {
+comment|// int bytes = file.available();
+comment|// byte[] buf = new byte[bytes];
+comment|// file.read(buf);
+comment|// if(!(isZip&& (buf.length == 1))) {
+comment|// System.err.println("WARNING: Trailing garbage at end of " + fileName);
+comment|// System.err.println(bytes + " extra bytes: " + Utility.toHexString(buf));
+comment|// }
+comment|// }
 block|}
 finally|finally
 block|{
@@ -530,7 +530,7 @@ name|IOException
 name|ioe
 parameter_list|)
 block|{
-comment|//ignore close exceptions
+comment|// ignore close exceptions
 block|}
 block|}
 try|try
@@ -556,7 +556,7 @@ name|IOException
 name|ioe
 parameter_list|)
 block|{
-comment|//ignore close exceptions
+comment|// ignore close exceptions
 block|}
 block|}
 comment|// Return the information we have gathered in a new object
@@ -598,7 +598,7 @@ name|FILE
 argument_list|)
 return|;
 block|}
-comment|/**      * Reads information about the attributes of the class.      * @throws IOException if an I/O error occurs.      * @throws ClassFormatException if a class is malformed or cannot be interpreted as a class file      */
+comment|/**      * Reads information about the attributes of the class.      *       * @throws IOException if an I/O error occurs.      * @throws ClassFormatException if a class is malformed or cannot be interpreted as a class file      */
 specifier|private
 name|void
 name|readAttributes
@@ -656,7 +656,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/**      * Reads information about the class and its super class.      * @throws IOException if an I/O error occurs.      * @throws ClassFormatException if a class is malformed or cannot be interpreted as a class file      */
+comment|/**      * Reads information about the class and its super class.      *       * @throws IOException if an I/O error occurs.      * @throws ClassFormatException if a class is malformed or cannot be interpreted as a class file      */
 specifier|private
 name|void
 name|readClassInfo
@@ -673,7 +673,7 @@ operator|.
 name|readUnsignedShort
 argument_list|()
 expr_stmt|;
-comment|/* Interfaces are implicitely abstract, the flag should be set          * according to the JVM specification.          */
+comment|/*          * Interfaces are implicitely abstract, the flag should be set according to the JVM specification.          */
 if|if
 condition|(
 operator|(
@@ -744,7 +744,7 @@ name|readUnsignedShort
 argument_list|()
 expr_stmt|;
 block|}
-comment|/**      * Reads constant pool entries.      * @throws IOException if an I/O error occurs.      * @throws ClassFormatException if a class is malformed or cannot be interpreted as a class file      */
+comment|/**      * Reads constant pool entries.      *       * @throws IOException if an I/O error occurs.      * @throws ClassFormatException if a class is malformed or cannot be interpreted as a class file      */
 specifier|private
 name|void
 name|readConstantPool
@@ -763,7 +763,7 @@ name|dataInputStream
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Reads information about the fields of the class, i.e., its variables.      * @throws IOException if an I/O error occurs.      * @throws ClassFormatException if a class is malformed or cannot be interpreted as a class file      */
+comment|/**      * Reads information about the fields of the class, i.e., its variables.      *       * @throws IOException if an I/O error occurs.      * @throws ClassFormatException if a class is malformed or cannot be interpreted as a class file      */
 specifier|private
 name|void
 name|readFields
@@ -821,7 +821,7 @@ expr_stmt|;
 block|}
 block|}
 comment|/******************** Private utility methods **********************/
-comment|/**      * Checks whether the header of the file is ok.      * Of course, this has to be the first action on successive file reads.      * @throws IOException if an I/O error occurs.      * @throws ClassFormatException if a class is malformed or cannot be interpreted as a class file      */
+comment|/**      * Checks whether the header of the file is ok. Of course, this has to be the first action on successive file reads.      *       * @throws IOException if an I/O error occurs.      * @throws ClassFormatException if a class is malformed or cannot be interpreted as a class file      */
 specifier|private
 name|void
 name|readID
@@ -854,7 +854,7 @@ argument_list|)
 throw|;
 block|}
 block|}
-comment|/**      * Reads information about the interfaces implemented by this class.      * @throws IOException if an I/O error occurs.      * @throws ClassFormatException if a class is malformed or cannot be interpreted as a class file      */
+comment|/**      * Reads information about the interfaces implemented by this class.      *       * @throws IOException if an I/O error occurs.      * @throws ClassFormatException if a class is malformed or cannot be interpreted as a class file      */
 specifier|private
 name|void
 name|readInterfaces
@@ -908,7 +908,7 @@ argument_list|()
 expr_stmt|;
 block|}
 block|}
-comment|/**      * Reads information about the methods of the class.      * @throws IOException if an I/O error occurs.      * @throws ClassFormatException if a class is malformed or cannot be interpreted as a class file      */
+comment|/**      * Reads information about the methods of the class.      *       * @throws IOException if an I/O error occurs.      * @throws ClassFormatException if a class is malformed or cannot be interpreted as a class file      */
 specifier|private
 name|void
 name|readMethods
@@ -963,7 +963,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/**      * Reads major and minor version of compiler which created the file.      * @throws IOException if an I/O error occurs.      * @throws ClassFormatException if a class is malformed or cannot be interpreted as a class file      */
+comment|/**      * Reads major and minor version of compiler which created the file.      *       * @throws IOException if an I/O error occurs.      * @throws ClassFormatException if a class is malformed or cannot be interpreted as a class file      */
 specifier|private
 name|void
 name|readVersion

@@ -118,7 +118,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Tests {@link ClassPathRepository}, {@link MemorySensitiveClassPathRepository}, and {@link  * LruCacheClassPathRepository} for their common attributes of caching.  *  *<p>Without memory scarcity, these classes behave in the same manner.  */
+comment|/**  * Tests {@link ClassPathRepository}, {@link MemorySensitiveClassPathRepository}, and  * {@link LruCacheClassPathRepository} for their common attributes of caching.  *  *<p>  * Without memory scarcity, these classes behave in the same manner.  */
 end_comment
 
 begin_class

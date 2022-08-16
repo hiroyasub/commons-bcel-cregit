@@ -142,7 +142,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  *<p>Drop in replacement for the standard class loader of the JVM. You can use it  * in conjunction with the JavaWrapper to dynamically modify/create classes  * as they're requested.</p>  *  *<p>This class loader recognizes special requests in a distinct  * format, i.e., when the name of the requested class contains with  * "$$BCEL$$" it calls the createClass() method with that name  * (everything bevor the $$BCEL$$ is considered to be the package  * name. You can subclass the class loader and override that  * method. "Normal" classes class can be modified by overriding the  * modifyClass() method which is called just before defineClass().</p>  *  *<p>There may be a number of packages where you have to use the  * default class loader (which may also be faster). You can define the  * set of packages where to use the system class loader in the  * constructor. The default value contains "java.", "sun.",  * "javax."</p>  *  * @see JavaWrapper  * @see ClassPath  * @deprecated 6.0 Do not use - does not work  */
+comment|/**  *<p>  * Drop in replacement for the standard class loader of the JVM. You can use it in conjunction with the JavaWrapper to  * dynamically modify/create classes as they're requested.  *</p>  *  *<p>  * This class loader recognizes special requests in a distinct format, i.e., when the name of the requested class  * contains with "$$BCEL$$" it calls the createClass() method with that name (everything bevor the $$BCEL$$ is  * considered to be the package name. You can subclass the class loader and override that method. "Normal" classes class  * can be modified by overriding the modifyClass() method which is called just before defineClass().  *</p>  *  *<p>  * There may be a number of packages where you have to use the default class loader (which may also be faster). You can  * define the set of packages where to use the system class loader in the constructor. The default value contains  * "java.", "sun.", "javax."  *</p>  *  * @see JavaWrapper  * @see ClassPath  * @deprecated 6.0 Do not use - does not work  */
 end_comment
 
 begin_class
@@ -215,7 +215,7 @@ operator|.
 name|getInstance
 argument_list|()
 decl_stmt|;
-comment|/** Ignored packages are by default ( "java.", "sun.",      * "javax."), i.e. loaded by system class loader      */
+comment|/**      * Ignored packages are by default ( "java.", "sun.", "javax."), i.e. loaded by system class loader      */
 specifier|public
 name|ClassLoader
 parameter_list|()
@@ -226,7 +226,7 @@ name|DEFAULT_IGNORED_PACKAGES
 argument_list|)
 expr_stmt|;
 block|}
-comment|/** @param deferTo delegate class loader to use for ignored packages      */
+comment|/**      * @param deferTo delegate class loader to use for ignored packages      */
 specifier|public
 name|ClassLoader
 parameter_list|(
@@ -261,7 +261,7 @@ name|deferTo
 argument_list|)
 expr_stmt|;
 block|}
-comment|/** @param ignored_packages classes contained in these packages will be loaded      * with the system class loader      * @param deferTo delegate class loader to use for ignored packages      */
+comment|/**      * @param ignored_packages classes contained in these packages will be loaded with the system class loader      * @param deferTo delegate class loader to use for ignored packages      */
 specifier|public
 name|ClassLoader
 parameter_list|(
@@ -295,7 +295,7 @@ name|deferTo
 argument_list|)
 expr_stmt|;
 block|}
-comment|/** @param ignored_packages classes contained in these packages will be loaded      * with the system class loader      */
+comment|/**      * @param ignored_packages classes contained in these packages will be loaded with the system class loader      */
 specifier|public
 name|ClassLoader
 parameter_list|(
@@ -312,7 +312,7 @@ operator|=
 name|ignored_packages
 expr_stmt|;
 block|}
-comment|/**      * Override this method to create you own classes on the fly. The      * name contains the special token $$BCEL$$. Everything before that      * token is considered to be a package name. You can encode your own      * arguments into the subsequent string. You must ensure however not      * to use any "illegal" characters, i.e., characters that may not      * appear in a Java class name too      *<p>      * The default implementation interprets the string as a encoded compressed      * Java class, unpacks and decodes it with the Utility.decode() method, and      * parses the resulting byte array and returns the resulting JavaClass object.      *</p>      *      * @param class_name compressed byte code with "$$BCEL$$" in it      */
+comment|/**      * Override this method to create you own classes on the fly. The name contains the special token $$BCEL$$. Everything      * before that token is considered to be a package name. You can encode your own arguments into the subsequent string.      * You must ensure however not to use any "illegal" characters, i.e., characters that may not appear in a Java class      * name too      *<p>      * The default implementation interprets the string as a encoded compressed Java class, unpacks and decodes it with the      * Utility.decode() method, and parses the resulting byte array and returns the resulting JavaClass object.      *</p>      *      * @param class_name compressed byte code with "$$BCEL$$" in it      */
 specifier|protected
 name|JavaClass
 name|createClass
@@ -508,7 +508,7 @@ name|cl
 init|=
 literal|null
 decl_stmt|;
-comment|/* First try: lookup hash table.          */
+comment|/*          * First try: lookup hash table.          */
 if|if
 condition|(
 operator|(
@@ -525,7 +525,7 @@ operator|==
 literal|null
 condition|)
 block|{
-comment|/* Second try: Load system class using system class loader. You better              * don't mess around with them.              */
+comment|/*              * Second try: Load system class using system class loader. You better don't mess around with them.              */
 for|for
 control|(
 specifier|final
@@ -570,7 +570,7 @@ name|clazz
 init|=
 literal|null
 decl_stmt|;
-comment|/* Third try: Special request?                  */
+comment|/*                  * Third try: Special request?                  */
 if|if
 condition|(
 name|class_name
@@ -695,7 +695,7 @@ return|return
 name|cl
 return|;
 block|}
-comment|/** Override this method if you want to alter a class before it gets actually      * loaded. Does nothing by default.      */
+comment|/**      * Override this method if you want to alter a class before it gets actually loaded. Does nothing by default.      */
 specifier|protected
 name|JavaClass
 name|modifyClass

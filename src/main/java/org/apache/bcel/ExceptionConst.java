@@ -14,7 +14,7 @@ package|;
 end_package
 
 begin_comment
-comment|/**  * Exception constants.  * @since 6.0 (intended to replace the InstructionConstant interface)  */
+comment|/**  * Exception constants.  *   * @since 6.0 (intended to replace the InstructionConstant interface)  */
 end_comment
 
 begin_class
@@ -23,7 +23,7 @@ specifier|final
 class|class
 name|ExceptionConst
 block|{
-comment|/**      * Enum corresponding to the various Exception Class arrays,      * used by {@link ExceptionConst#createExceptions(EXCS, Class...)}      */
+comment|/**      * Enum corresponding to the various Exception Class arrays, used by      * {@link ExceptionConst#createExceptions(EXCS, Class...)}      */
 specifier|public
 enum|enum
 name|EXCS
@@ -318,7 +318,7 @@ name|IllegalMonitorStateException
 operator|.
 name|class
 decl_stmt|;
-comment|/**      * Pre-defined exception arrays according to chapters 5.1-5.4 of the Java Virtual      * Machine Specification      */
+comment|/**      * Pre-defined exception arrays according to chapters 5.1-5.4 of the Java Virtual Machine Specification      */
 specifier|private
 specifier|static
 specifier|final
@@ -415,7 +415,7 @@ block|,
 name|ARRAY_INDEX_OUT_OF_BOUNDS_EXCEPTION
 block|}
 decl_stmt|;
-comment|/**      * Creates a copy of the specified Exception Class array combined with any additional Exception classes.      * @param type the basic array type      * @param extraClasses additional classes, if any      * @return the merged array      */
+comment|/**      * Creates a copy of the specified Exception Class array combined with any additional Exception classes.      *       * @param type the basic array type      * @param extraClasses additional classes, if any      * @return the merged array      */
 specifier|public
 specifier|static
 name|Class

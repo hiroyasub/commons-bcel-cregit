@@ -56,7 +56,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * This class produces instances of the Verifier class. Its purpose is to make  * sure that they are singleton instances with respect to the class name they  * operate on. That means, for every class (represented by a unique fully qualified  * class name) there is exactly one Verifier.  *  * @see Verifier  */
+comment|/**  * This class produces instances of the Verifier class. Its purpose is to make sure that they are singleton instances  * with respect to the class name they operate on. That means, for every class (represented by a unique fully qualified  * class name) there is exactly one Verifier.  *  * @see Verifier  */
 end_comment
 
 begin_class
@@ -134,7 +134,7 @@ name|o
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Returns the (only) verifier responsible for the class with the given name.      * Possibly a new Verifier object is transparently created.      * @return the (only) verifier responsible for the class with the given name.      */
+comment|/**      * Returns the (only) verifier responsible for the class with the given name. Possibly a new Verifier object is      * transparently created.      *       * @return the (only) verifier responsible for the class with the given name.      */
 specifier|public
 specifier|static
 name|Verifier
@@ -189,7 +189,7 @@ return|return
 name|v
 return|;
 block|}
-comment|/**      * Returns all Verifier instances created so far.      * This is useful when a Verifier recursively lets      * the VerifierFactory create other Verifier instances      * and if you want to verify the transitive hull of      * referenced class files.      */
+comment|/**      * Returns all Verifier instances created so far. This is useful when a Verifier recursively lets the VerifierFactory      * create other Verifier instances and if you want to verify the transitive hull of referenced class files.      */
 specifier|public
 specifier|static
 name|Verifier

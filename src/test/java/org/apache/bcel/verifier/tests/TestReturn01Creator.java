@@ -227,7 +227,7 @@ argument_list|,
 operator|new
 name|String
 index|[]
-block|{  }
+block|{}
 argument_list|)
 expr_stmt|;
 name|_cp
@@ -313,7 +313,7 @@ argument_list|,
 operator|new
 name|String
 index|[]
-block|{  }
+block|{}
 argument_list|,
 literal|"<init>"
 argument_list|,
@@ -467,7 +467,7 @@ argument_list|,
 operator|new
 name|String
 index|[]
-block|{  }
+block|{}
 argument_list|,
 literal|"foo"
 argument_list|,

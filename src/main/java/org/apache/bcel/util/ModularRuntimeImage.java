@@ -253,7 +253,7 @@ argument_list|)
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Constructs an instance using the JRT file system implementation from a specific Java Home.      *      * @param javaHome      *            Path to a Java 9 or greater home.      *      * @throws IOException      *             an I/O error occurs accessing the file system      */
+comment|/**      * Constructs an instance using the JRT file system implementation from a specific Java Home.      *      * @param javaHome Path to a Java 9 or greater home.      *      * @throws IOException an I/O error occurs accessing the file system      */
 specifier|public
 name|ModularRuntimeImage
 parameter_list|(
@@ -417,7 +417,7 @@ return|return
 name|fileSystem
 return|;
 block|}
-comment|/**      * Lists all entries in the given directory.      *      * @param dirPath      *            directory path.      * @return a list of dir entries if an I/O error occurs      * @throws IOException      *             an I/O error occurs accessing the file system      */
+comment|/**      * Lists all entries in the given directory.      *      * @param dirPath directory path.      * @return a list of dir entries if an I/O error occurs      * @throws IOException an I/O error occurs accessing the file system      */
 specifier|public
 name|List
 argument_list|<
@@ -474,7 +474,7 @@ return|return
 name|list
 return|;
 block|}
-comment|/**      * Lists all entries in the given directory.      *      * @param dirName      *            directory path.      * @return a list of dir entries if an I/O error occurs      * @throws IOException      *             an I/O error occurs accessing the file system      */
+comment|/**      * Lists all entries in the given directory.      *      * @param dirName directory path.      * @return a list of dir entries if an I/O error occurs      * @throws IOException an I/O error occurs accessing the file system      */
 specifier|public
 name|List
 argument_list|<
@@ -501,7 +501,7 @@ argument_list|)
 argument_list|)
 return|;
 block|}
-comment|/**      * Lists all modules.      *      * @return a list of modules      * @throws IOException      *             an I/O error occurs accessing the file system      */
+comment|/**      * Lists all modules.      *      * @return a list of modules      * @throws IOException an I/O error occurs accessing the file system      */
 specifier|public
 name|List
 argument_list|<
@@ -519,7 +519,7 @@ name|MODULES_PATH
 argument_list|)
 return|;
 block|}
-comment|/**      * Lists all packages.      *      * @return a list of modules      * @throws IOException      *             an I/O error occurs accessing the file system      */
+comment|/**      * Lists all packages.      *      * @return a list of modules      * @throws IOException an I/O error occurs accessing the file system      */
 specifier|public
 name|List
 argument_list|<

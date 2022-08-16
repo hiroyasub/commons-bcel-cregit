@@ -76,7 +76,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Super class for FieldGen and MethodGen objects, since they have  * some methods in common!  *  */
+comment|/**  * Super class for FieldGen and MethodGen objects, since they have some methods in common!  *  */
 end_comment
 
 begin_class
@@ -178,7 +178,7 @@ name|ag
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Add an attribute to this method. Currently, the JVM knows about      * the `Code', `ConstantValue', `Synthetic' and `Exceptions'      * attributes. Other attributes will be ignored by the JVM but do no      * harm.      *      * @param a attribute to be added      */
+comment|/**      * Add an attribute to this method. Currently, the JVM knows about the `Code', `ConstantValue', `Synthetic' and      * `Exceptions' attributes. Other attributes will be ignored by the JVM but do no harm.      *      * @param a attribute to be added      */
 specifier|public
 name|void
 name|addAttribute
@@ -301,7 +301,7 @@ return|return
 name|cp
 return|;
 block|}
-comment|/** @return name of method/field.      */
+comment|/**      * @return name of method/field.      */
 annotation|@
 name|Override
 specifier|public
@@ -313,7 +313,7 @@ return|return
 name|name
 return|;
 block|}
-comment|/** @return signature of method/field.      */
+comment|/**      * @return signature of method/field.      */
 specifier|public
 specifier|abstract
 name|String

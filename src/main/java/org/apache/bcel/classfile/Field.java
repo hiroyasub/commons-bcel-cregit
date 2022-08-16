@@ -86,7 +86,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * This class represents the field info structure, i.e., the representation  * for a variable in the class. See JVM specification for details.  *  */
+comment|/**  * This class represents the field info structure, i.e., the representation for a variable in the class. See JVM  * specification for details.  *  */
 end_comment
 
 begin_class
@@ -257,7 +257,7 @@ operator|=
 name|comparator
 expr_stmt|;
 block|}
-comment|/**      * Construct object from file stream.      * @param file Input stream      */
+comment|/**      * Construct object from file stream.      *       * @param file Input stream      */
 name|Field
 parameter_list|(
 specifier|final
@@ -281,7 +281,7 @@ name|constant_pool
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Initialize from another object. Note that both objects use the same      * references (shallow copy). Use clone() for a physical copy.      */
+comment|/**      * Initialize from another object. Note that both objects use the same references (shallow copy). Use clone() for a      * physical copy.      */
 specifier|public
 name|Field
 parameter_list|(
@@ -336,7 +336,7 @@ name|constant_pool
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Called by objects that are traversing the nodes of the tree implicitely      * defined by the contents of a Java class. I.e., the hierarchy of methods,      * fields, attributes, etc. spawns a tree of objects.      *      * @param v Visitor object      */
+comment|/**      * Called by objects that are traversing the nodes of the tree implicitely defined by the contents of a Java class.      * I.e., the hierarchy of methods, fields, attributes, etc. spawns a tree of objects.      *      * @param v Visitor object      */
 annotation|@
 name|Override
 specifier|public
@@ -376,7 +376,7 @@ name|_constant_pool
 argument_list|)
 return|;
 block|}
-comment|/**      * Return value as defined by given BCELComparator strategy.      * By default two Field objects are said to be equal when      * their names and signatures are equal.      *      * @see java.lang.Object#equals(java.lang.Object)      */
+comment|/**      * Return value as defined by given BCELComparator strategy. By default two Field objects are said to be equal when      * their names and signatures are equal.      *      * @see java.lang.Object#equals(java.lang.Object)      */
 annotation|@
 name|Override
 specifier|public
@@ -457,7 +457,7 @@ argument_list|()
 argument_list|)
 return|;
 block|}
-comment|/**      * Return value as defined by given BCELComparator strategy.      * By default return the hashcode of the field's name XOR signature.      *      * @see java.lang.Object#hashCode()      */
+comment|/**      * Return value as defined by given BCELComparator strategy. By default return the hashcode of the field's name XOR      * signature.      *      * @see java.lang.Object#hashCode()      */
 annotation|@
 name|Override
 specifier|public
@@ -474,7 +474,7 @@ name|this
 argument_list|)
 return|;
 block|}
-comment|/**      * Return string representation close to declaration format,      * `public static final short MAX = 100', e.g..      *      * @return String representation of field, including the signature.      */
+comment|/**      * Return string representation close to declaration format, `public static final short MAX = 100', e.g..      *      * @return String representation of field, including the signature.      */
 annotation|@
 name|Override
 specifier|public

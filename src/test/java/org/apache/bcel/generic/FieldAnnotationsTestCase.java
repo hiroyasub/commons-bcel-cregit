@@ -532,7 +532,7 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Check we can load in a class, modify its field AnnotationEntrys, save it,      * reload it and everything is correct.      */
+comment|/**      * Check we can load in a class, modify its field AnnotationEntrys, save it, reload it and everything is correct.      */
 annotation|@
 name|Test
 specifier|public

@@ -229,7 +229,7 @@ name|type
 expr_stmt|;
 block|}
 comment|// closeNode, dump inherited
-comment|/**    * Fifth pass, produce Java byte code.    */
+comment|/**      * Fifth pass, produce Java byte code.      */
 annotation|@
 name|Override
 specifier|public
@@ -329,7 +329,7 @@ name|push
 argument_list|()
 expr_stmt|;
 block|}
-comment|/**    * Fourth pass, produce Java code.    */
+comment|/**      * Fourth pass, produce Java code.      */
 annotation|@
 name|Override
 specifier|public
@@ -394,7 +394,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/**    * Overrides AstExpr.eval()    */
+comment|/**      * Overrides AstExpr.eval()      */
 annotation|@
 name|Override
 specifier|public
@@ -540,7 +540,7 @@ operator|=
 name|name
 expr_stmt|;
 block|}
-comment|/**    * @return identifier and line/column number of appearance    */
+comment|/**      * @return identifier and line/column number of appearance      */
 annotation|@
 name|Override
 specifier|public
@@ -559,7 +559,7 @@ operator|+
 name|name
 return|;
 block|}
-comment|/**    * Overrides ASTExpr.traverse()    */
+comment|/**      * Overrides ASTExpr.traverse()      */
 annotation|@
 name|Override
 specifier|public

@@ -58,7 +58,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * This attribute exists for local or  * anonymous classes and ... there can be only one.  *  * @since 6.0  */
+comment|/**  * This attribute exists for local or anonymous classes and ... there can be only one.  *  * @since 6.0  */
 end_comment
 
 begin_class
@@ -76,10 +76,10 @@ name|classIndex
 decl_stmt|;
 comment|// If the current class is not immediately enclosed by a method or
 comment|// constructor, then the value of the method_index item must be zero.
-comment|// Otherwise, the value of the  method_index item must point to a
+comment|// Otherwise, the value of the method_index item must point to a
 comment|// CONSTANT_NameAndType_info structure representing the name and the
 comment|// type of a method in the class referenced by the class we point
-comment|// to in the class_index.  *It is the compiler responsibility* to
+comment|// to in the class_index. *It is the compiler responsibility* to
 comment|// ensure that the method identified by this index is the closest
 comment|// lexically enclosing method that includes the local/anonymous class.
 specifier|private

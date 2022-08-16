@@ -58,7 +58,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * This class represents an entry in the provides table of the Module attribute.  * Each entry describes a service implementation that the parent module provides.  *  * @see   Module  * @since 6.4.0  */
+comment|/**  * This class represents an entry in the provides table of the Module attribute. Each entry describes a service  * implementation that the parent module provides.  *  * @see Module  * @since 6.4.0  */
 end_comment
 
 begin_class
@@ -148,7 +148,7 @@ argument_list|()
 expr_stmt|;
 block|}
 block|}
-comment|/**      * Called by objects that are traversing the nodes of the tree implicitely      * defined by the contents of a Java class. I.e., the hierarchy of methods,      * fields, attributes, etc. spawns a tree of objects.      *      * @param v Visitor object      */
+comment|/**      * Called by objects that are traversing the nodes of the tree implicitely defined by the contents of a Java class.      * I.e., the hierarchy of methods, fields, attributes, etc. spawns a tree of objects.      *      * @param v Visitor object      */
 annotation|@
 name|Override
 specifier|public

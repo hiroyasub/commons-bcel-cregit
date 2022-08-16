@@ -30,7 +30,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * This class represents an exception handler, i.e., specifies the  region where  * a handler is active and an instruction where the actual handling is done.  * pool as parameters. Opposed to the JVM specification the end of the handled  * region is set to be inclusive, i.e. all instructions between start and end  * are protected including the start and end instructions (handles) themselves.  * The end of the region is automatically mapped to be exclusive when calling  * getCodeException(), i.e., there is no difference semantically.  *  * @see     MethodGen  * @see     CodeException  * @see     InstructionHandle  */
+comment|/**  * This class represents an exception handler, i.e., specifies the region where a handler is active and an instruction  * where the actual handling is done. pool as parameters. Opposed to the JVM specification the end of the handled region  * is set to be inclusive, i.e. all instructions between start and end are protected including the start and end  * instructions (handles) themselves. The end of the region is automatically mapped to be exclusive when calling  * getCodeException(), i.e., there is no difference semantically.  *  * @see MethodGen  * @see CodeException  * @see InstructionHandle  */
 end_comment
 
 begin_class
@@ -59,7 +59,7 @@ specifier|private
 name|ObjectType
 name|catchType
 decl_stmt|;
-comment|/**      * Add an exception handler, i.e., specify region where a handler is active and an      * instruction where the actual handling is done.      *      * @param startPc Start of handled region (inclusive)      * @param endPc End of handled region (inclusive)      * @param handlerPc Where handling is done      * @param catchType which exception is handled, null for ANY      */
+comment|/**      * Add an exception handler, i.e., specify region where a handler is active and an instruction where the actual handling      * is done.      *      * @param startPc Start of handled region (inclusive)      * @param endPc End of handled region (inclusive)      * @param handlerPc Where handling is done      * @param catchType which exception is handled, null for ANY      */
 specifier|public
 name|CodeExceptionGen
 parameter_list|(
@@ -171,7 +171,7 @@ return|return
 name|catchType
 return|;
 block|}
-comment|/**      * Get CodeException object.<BR>      *      * This relies on that the instruction list has already been dumped      * to byte code or or that the `setPositions' methods has been      * called for the instruction list.      *      * @param cp constant pool      */
+comment|/**      * Get CodeException object.<BR>      *      * This relies on that the instruction list has already been dumped to byte code or or that the `setPositions' methods      * has been called for the instruction list.      *      * @param cp constant pool      */
 specifier|public
 name|CodeException
 name|getCodeException
@@ -223,7 +223,7 @@ argument_list|)
 argument_list|)
 return|;
 block|}
-comment|/** @return end of handled region (inclusive)      */
+comment|/**      * @return end of handled region (inclusive)      */
 specifier|public
 name|InstructionHandle
 name|getEndPC
@@ -233,7 +233,7 @@ return|return
 name|endPc
 return|;
 block|}
-comment|/** @return start of handler      */
+comment|/**      * @return start of handler      */
 specifier|public
 name|InstructionHandle
 name|getHandlerPC
@@ -243,7 +243,7 @@ return|return
 name|handlerPc
 return|;
 block|}
-comment|/** @return start of handled region (inclusive)      */
+comment|/**      * @return start of handled region (inclusive)      */
 specifier|public
 name|InstructionHandle
 name|getStartPC
@@ -270,7 +270,7 @@ operator|=
 name|catchType
 expr_stmt|;
 block|}
-comment|/* Set end of handler      * @param endPc End of handled region (inclusive)      */
+comment|/*      * Set end of handler      *       * @param endPc End of handled region (inclusive)      */
 specifier|public
 name|void
 name|setEndPC
@@ -301,7 +301,7 @@ operator|=
 name|end_pc
 expr_stmt|;
 block|}
-comment|/* Set handler code      * @param handlerPc Start of handler      */
+comment|/*      * Set handler code      *       * @param handlerPc Start of handler      */
 specifier|public
 name|void
 name|setHandlerPC
@@ -332,7 +332,7 @@ operator|=
 name|handler_pc
 expr_stmt|;
 block|}
-comment|/* Set start of handler      * @param startPc Start of handled region (inclusive)      */
+comment|/*      * Set start of handler      *       * @param startPc Start of handled region (inclusive)      */
 specifier|public
 name|void
 name|setStartPC

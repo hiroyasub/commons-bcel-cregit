@@ -257,7 +257,7 @@ name|PRIMITIVE_BOOLEAN
 init|=
 literal|'Z'
 decl_stmt|;
-comment|/**      * Creates an (modifiable) ElementValueGen copy of an (immutable)      * ElementValue - constant pool is assumed correct.      */
+comment|/**      * Creates an (modifiable) ElementValueGen copy of an (immutable) ElementValue - constant pool is assumed correct.      */
 specifier|public
 specifier|static
 name|ElementValueGen

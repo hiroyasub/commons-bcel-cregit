@@ -336,7 +336,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Template class for building up a method. This is done by defining exception  * handlers, adding thrown exceptions, local variables and attributes, whereas  * the `LocalVariableTable' and `LineNumberTable' attributes will be set  * automatically for the code. Use stripAttributes() if you don't like this.  *  * While generating code it may be necessary to insert NOP operations. You can  * use the `removeNOPs' method to get rid off them.  * The resulting method object can be obtained via the `getMethod()' method.  *  * @see     InstructionList  * @see     Method  */
+comment|/**  * Template class for building up a method. This is done by defining exception handlers, adding thrown exceptions, local  * variables and attributes, whereas the `LocalVariableTable' and `LineNumberTable' attributes will be set automatically  * for the code. Use stripAttributes() if you don't like this.  *  * While generating code it may be necessary to insert NOP operations. You can use the `removeNOPs' method to get rid  * off them. The resulting method object can be obtained via the `getMethod()' method.  *  * @see InstructionList  * @see Method  */
 end_comment
 
 begin_class
@@ -739,7 +739,7 @@ operator|new
 name|BranchStack
 argument_list|()
 decl_stmt|;
-comment|/* Initially, populate the branch stack with the exception          * handlers, because these aren't (necessarily) branched to          * explicitly. in each case, the stack will have depth 1,          * containing the exception object.          */
+comment|/*          * Initially, populate the branch stack with the exception handlers, because these aren't (necessarily) branched to          * explicitly. in each case, the stack will have depth 1, containing the exception object.          */
 for|for
 control|(
 specifier|final
@@ -1217,7 +1217,7 @@ name|MethodObserver
 argument_list|>
 name|observers
 decl_stmt|;
-comment|/**      * Declare method. If the method is non-static the constructor      * automatically declares a local variable `$this' in slot 0. The      * actual code is contained in the `il' parameter, which may further      * manipulated by the user. But they must take care not to remove any      * instruction (handles) that are still referenced from this object.      *      * For example one may not add a local variable and later remove the      * instructions it refers to without causing havoc. It is safe      * however if you remove that local variable, too.      *      * @param access_flags access qualifiers      * @param return_type  method type      * @param argTypes argument types      * @param argNames argument names (if this is null, default names will be provided      * for them)      * @param method_name name of method      * @param className class name containing this method (may be null, if you don't care)      * @param il instruction list associated with this method, may be null only for      * abstract or native methods      * @param cp constant pool      */
+comment|/**      * Declare method. If the method is non-static the constructor automatically declares a local variable `$this' in slot      * 0. The actual code is contained in the `il' parameter, which may further manipulated by the user. But they must take      * care not to remove any instruction (handles) that are still referenced from this object.      *      * For example one may not add a local variable and later remove the instructions it refers to without causing havoc. It      * is safe however if you remove that local variable, too.      *      * @param access_flags access qualifiers      * @param return_type method type      * @param argTypes argument types      * @param argNames argument names (if this is null, default names will be provided for them)      * @param method_name name of method      * @param className class name containing this method (may be null, if you don't care)      * @param il instruction list associated with this method, may be null only for abstract or native methods      * @param cp constant pool      */
 specifier|public
 name|MethodGen
 parameter_list|(
@@ -1330,7 +1330,7 @@ name|getStart
 argument_list|()
 expr_stmt|;
 comment|// end == null => live to end of method
-comment|/* Add local variables, namely the implicit `this' and the arguments              */
+comment|/*              * Add local variables, namely the implicit `this' and the arguments              */
 if|if
 condition|(
 operator|!
@@ -2107,7 +2107,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/**      * Add an attribute to the code. Currently, the JVM knows about the      * LineNumberTable, LocalVariableTable and StackMap attributes,      * where the former two will be generated automatically and the      * latter is used for the MIDP only. Other attributes will be      * ignored by the JVM but do no harm.      *      * @param a attribute to be added      */
+comment|/**      * Add an attribute to the code. Currently, the JVM knows about the LineNumberTable, LocalVariableTable and StackMap      * attributes, where the former two will be generated automatically and the latter is used for the MIDP only. Other      * attributes will be ignored by the JVM but do no harm.      *      * @param a attribute to be added      */
 specifier|public
 name|void
 name|addCodeAttribute
@@ -2143,7 +2143,7 @@ name|className
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Add an exception handler, i.e., specify region where a handler is active and an      * instruction where the actual handling is done.      *      * @param start_pc Start of region (inclusive)      * @param end_pc End of region (inclusive)      * @param handler_pc Where handling is done      * @param catch_type class type of handled exception or null if any      * exception is handled      * @return new exception handler object      */
+comment|/**      * Add an exception handler, i.e., specify region where a handler is active and an instruction where the actual handling      * is done.      *      * @param start_pc Start of region (inclusive)      * @param end_pc End of region (inclusive)      * @param handler_pc Where handling is done      * @param catch_type class type of handled exception or null if any exception is handled      * @return new exception handler object      */
 specifier|public
 name|CodeExceptionGen
 name|addExceptionHandler
@@ -2252,7 +2252,7 @@ return|return
 name|l
 return|;
 block|}
-comment|/**      * Adds a local variable to this method and assigns an index automatically.      *      * @param name variable name      * @param type variable type      * @param start from where the variable is valid, if this is null,      * it is valid from the start      * @param end until where the variable is valid, if this is null,      * it is valid to the end      * @return new local variable object      * @see LocalVariable      */
+comment|/**      * Adds a local variable to this method and assigns an index automatically.      *      * @param name variable name      * @param type variable type      * @param start from where the variable is valid, if this is null, it is valid from the start      * @param end until where the variable is valid, if this is null, it is valid to the end      * @return new local variable object      * @see LocalVariable      */
 specifier|public
 name|LocalVariableGen
 name|addLocalVariable
@@ -2289,7 +2289,7 @@ name|end
 argument_list|)
 return|;
 block|}
-comment|/**      * Adds a local variable to this method.      *      * @param name variable name      * @param type variable type      * @param slot the index of the local variable, if type is long or double, the next available      * index is slot+2      * @param start from where the variable is valid      * @param end until where the variable is valid      * @return new local variable object      * @see LocalVariable      */
+comment|/**      * Adds a local variable to this method.      *      * @param name variable name      * @param type variable type      * @param slot the index of the local variable, if type is long or double, the next available index is slot+2      * @param start from where the variable is valid      * @param end until where the variable is valid      * @return new local variable object      * @see LocalVariable      */
 specifier|public
 name|LocalVariableGen
 name|addLocalVariable
@@ -2332,7 +2332,7 @@ name|slot
 argument_list|)
 return|;
 block|}
-comment|/**      * Adds a local variable to this method.      *      * @param name variable name      * @param type variable type      * @param slot the index of the local variable, if type is long or double, the next available      * index is slot+2      * @param start from where the variable is valid      * @param end until where the variable is valid      * @param orig_index the index of the local variable prior to any modifications      * @return new local variable object      * @see LocalVariable      */
+comment|/**      * Adds a local variable to this method.      *      * @param name variable name      * @param type variable type      * @param slot the index of the local variable, if type is long or double, the next available index is slot+2      * @param start from where the variable is valid      * @param end until where the variable is valid      * @param orig_index the index of the local variable prior to any modifications      * @return new local variable object      * @see LocalVariable      */
 specifier|public
 name|LocalVariableGen
 name|addLocalVariable
@@ -2480,7 +2480,7 @@ literal|" as type for local variable"
 argument_list|)
 throw|;
 block|}
-comment|/** Add observer for this object.      */
+comment|/**      * Add observer for this object.      */
 specifier|public
 name|void
 name|addObserver
@@ -2888,7 +2888,7 @@ block|}
 block|}
 block|}
 block|}
-comment|/** @return deep copy of this method      */
+comment|/**      * @return deep copy of this method      */
 specifier|public
 name|MethodGen
 name|copy
@@ -2971,7 +2971,7 @@ return|return
 name|mg
 return|;
 block|}
-comment|/**      * Goes through the attributes on the method and identifies any that are      * RuntimeParameterAnnotations, extracting their contents and storing them      * as parameter annotations. There are two kinds of parameter annotation -      * visible and invisible. Once they have been unpacked, these attributes are      * deleted. (The annotations will be rebuilt as attributes when someone      * builds a Method object out of this MethodGen object).      */
+comment|/**      * Goes through the attributes on the method and identifies any that are RuntimeParameterAnnotations, extracting their      * contents and storing them as parameter annotations. There are two kinds of parameter annotation - visible and      * invisible. Once they have been unpacked, these attributes are deleted. (The annotations will be rebuilt as attributes      * when someone builds a Method object out of this MethodGen object).      */
 specifier|private
 name|void
 name|ensureExistingParameterAnnotationsUnpacked
@@ -3214,7 +3214,7 @@ operator|=
 literal|true
 expr_stmt|;
 block|}
-comment|/**      * Return value as defined by given BCELComparator strategy.      * By default two MethodGen objects are said to be equal when      * their names and signatures are equal.      *      * @see java.lang.Object#equals(java.lang.Object)      */
+comment|/**      * Return value as defined by given BCELComparator strategy. By default two MethodGen objects are said to be equal when      * their names and signatures are equal.      *      * @see java.lang.Object#equals(java.lang.Object)      */
 annotation|@
 name|Override
 specifier|public
@@ -3237,9 +3237,9 @@ name|obj
 argument_list|)
 return|;
 block|}
-comment|//J5TODO: Should paramAnnotations be an array of arrays? Rather than an array of lists, this
+comment|// J5TODO: Should paramAnnotations be an array of arrays? Rather than an array of lists, this
 comment|// is more likely to suggest to the caller it is readonly (which a List does not).
-comment|/**      * Return a list of AnnotationGen objects representing parameter annotations      * @since 6.0      */
+comment|/**      * Return a list of AnnotationGen objects representing parameter annotations      *       * @since 6.0      */
 specifier|public
 name|List
 argument_list|<
@@ -3336,7 +3336,7 @@ name|clone
 argument_list|()
 return|;
 block|}
-comment|/** @return class that contains this method      */
+comment|/**      * @return class that contains this method      */
 specifier|public
 name|String
 name|getClassName
@@ -3734,7 +3734,7 @@ argument_list|()
 argument_list|)
 return|;
 block|}
-comment|/*      * If the range of the variable has not been set yet, it will be set to be valid from      * the start to the end of the instruction list.      *      * @return array of declared local variables sorted by index      */
+comment|/*      * If the range of the variable has not been set yet, it will be set to be valid from the start to the end of the      * instruction list.      *      * @return array of declared local variables sorted by index      */
 specifier|public
 name|LocalVariableGen
 index|[]
@@ -3998,7 +3998,7 @@ return|return
 name|maxStack
 return|;
 block|}
-comment|/**      * Get method object. Never forget to call setMaxStack() or setMaxStack(max), respectively,      * before calling this method (the same applies for max locals).      *      * @return method object      */
+comment|/**      * Get method object. Never forget to call setMaxStack() or setMaxStack(max), respectively, before calling this method      * (the same applies for max locals).      *      * @return method object      */
 specifier|public
 name|Method
 name|getMethod
@@ -4045,7 +4045,7 @@ argument_list|(
 name|signature
 argument_list|)
 decl_stmt|;
-comment|/* Also updates positions of instructions, i.e., their indices          */
+comment|/*          * Also updates positions of instructions, i.e., their indices          */
 name|byte
 index|[]
 name|byte_code
@@ -4077,7 +4077,7 @@ name|lvt
 init|=
 literal|null
 decl_stmt|;
-comment|/* Create LocalVariableTable and LineNumberTable attributes (for debuggers, e.g.)          */
+comment|/*          * Create LocalVariableTable and LineNumberTable attributes (for debuggers, e.g.)          */
 if|if
 condition|(
 operator|!
@@ -4116,7 +4116,8 @@ operator|!=
 literal|null
 condition|)
 block|{
-comment|// LocalVariable length in LocalVariableTypeTable is not updated automatically. It's a difference with LocalVariableTable.
+comment|// LocalVariable length in LocalVariableTypeTable is not updated automatically. It's a difference with
+comment|// LocalVariableTable.
 if|if
 condition|(
 name|lvt
@@ -4167,7 +4168,7 @@ init|=
 name|getCodeAttributes
 argument_list|()
 decl_stmt|;
-comment|/* Each attribute causes 6 additional header bytes          */
+comment|/*          * Each attribute causes 6 additional header bytes          */
 name|int
 name|attrs_len
 init|=
@@ -4496,7 +4497,7 @@ name|argTypes
 argument_list|)
 return|;
 block|}
-comment|/**      * Return value as defined by given BCELComparator strategy.      * By default return the hashcode of the method's name XOR signature.      *      * @see java.lang.Object#hashCode()      */
+comment|/**      * Return value as defined by given BCELComparator strategy. By default return the hashcode of the method's name XOR      * signature.      *      * @see java.lang.Object#hashCode()      */
 annotation|@
 name|Override
 specifier|public
@@ -4692,7 +4693,7 @@ name|clear
 argument_list|()
 expr_stmt|;
 block|}
-comment|/**      * Remove a local variable, its slot will not be reused, if you do not use addLocalVariable      * with an explicit index argument.      */
+comment|/**      * Remove a local variable, its slot will not be reused, if you do not use addLocalVariable with an explicit index      * argument.      */
 specifier|public
 name|void
 name|removeLocalVariable
@@ -4746,14 +4747,14 @@ comment|/**      * Remove the LocalVariableTypeTable      */
 specifier|public
 name|void
 name|removeLocalVariableTypeTable
-parameter_list|( )
+parameter_list|()
 block|{
 name|localVariableTypeTable
 operator|=
 literal|null
 expr_stmt|;
 block|}
-comment|/**      * Remove all NOPs from the instruction list (if possible) and update every      * object referring to them, i.e., branch instructions, local variables and      * exception handlers.      */
+comment|/**      * Remove all NOPs from the instruction list (if possible) and update every object referring to them, i.e., branch      * instructions, local variables and exception handlers.      */
 specifier|public
 name|void
 name|removeNOPs
@@ -4769,7 +4770,7 @@ block|{
 name|InstructionHandle
 name|next
 decl_stmt|;
-comment|/* Check branch instructions.              */
+comment|/*              * Check branch instructions.              */
 for|for
 control|(
 name|InstructionHandle
@@ -4867,7 +4868,7 @@ block|}
 block|}
 block|}
 block|}
-comment|/** Remove observer for this object.      */
+comment|/**      * Remove observer for this object.      */
 specifier|public
 name|void
 name|removeObserver
@@ -4893,7 +4894,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/**      * Would prefer to make this private, but need a way to test if client is      * using BCEL version 6.5.0 or later that contains fix for BCEL-329.      * @since 6.5.0      */
+comment|/**      * Would prefer to make this private, but need a way to test if client is using BCEL version 6.5.0 or later that      * contains fix for BCEL-329.      *       * @since 6.5.0      */
 specifier|public
 name|void
 name|removeRuntimeAttributes
@@ -5268,7 +5269,7 @@ name|return_type
 argument_list|)
 expr_stmt|;
 block|}
-comment|/** Do not/Do produce attributes code attributesLineNumberTable and      * LocalVariableTable, like javac -O      */
+comment|/**      * Do not/Do produce attributes code attributesLineNumberTable and LocalVariableTable, like javac -O      */
 specifier|public
 name|void
 name|stripAttributes
@@ -5283,7 +5284,7 @@ operator|=
 name|flag
 expr_stmt|;
 block|}
-comment|/**      * Return string representation close to declaration format,      * `public static void main(String[]) throws IOException', e.g.      *      * @return String representation of the method.      */
+comment|/**      * Return string representation close to declaration format, `public static void main(String[]) throws IOException',      * e.g.      *      * @return String representation of the method.      */
 annotation|@
 name|Override
 specifier|public
@@ -5439,7 +5440,7 @@ name|toString
 argument_list|()
 return|;
 block|}
-comment|/** Call notify() method on all observers. This method is not called      * automatically whenever the state has changed, but has to be      * called by the user after they have finished editing the object.      */
+comment|/**      * Call notify() method on all observers. This method is not called automatically whenever the state has changed, but      * has to be called by the user after they have finished editing the object.      */
 specifier|public
 name|void
 name|update

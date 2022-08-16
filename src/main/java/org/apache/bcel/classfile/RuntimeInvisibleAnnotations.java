@@ -58,7 +58,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * represents an annotation that is represented in the class file but is not  * provided to the JVM.  *  * @since 6.0  */
+comment|/**  * represents an annotation that is represented in the class file but is not provided to the JVM.  *  * @since 6.0  */
 end_comment
 
 begin_class
@@ -68,7 +68,7 @@ name|RuntimeInvisibleAnnotations
 extends|extends
 name|Annotations
 block|{
-comment|/**      * @param name_index      *            Index pointing to the name<em>Code</em>      * @param length      *            Content length in bytes      * @param input      *            Input stream      * @param constant_pool      *            Array of constants      */
+comment|/**      * @param name_index Index pointing to the name<em>Code</em>      * @param length Content length in bytes      * @param input Input stream      * @param constant_pool Array of constants      */
 specifier|public
 name|RuntimeInvisibleAnnotations
 parameter_list|(

@@ -28,7 +28,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * NEW - Create new object  *<PRE>Stack: ... -&gt; ..., objectref</PRE>  *  */
+comment|/**  * NEW - Create new object  *   *<PRE>  * Stack: ... -&gt; ..., objectref  *</PRE>  *  */
 end_comment
 
 begin_class
@@ -46,7 +46,7 @@ name|ExceptionThrower
 implements|,
 name|StackProducer
 block|{
-comment|/**      * Empty constructor needed for Instruction.readInstruction.      * Not to be used otherwise.      */
+comment|/**      * Empty constructor needed for Instruction.readInstruction. Not to be used otherwise.      */
 name|NEW
 parameter_list|()
 block|{
@@ -75,7 +75,7 @@ name|index
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Call corresponding visitor method(s). The order is:      * Call visitor methods of implemented interfaces first, then      * call methods according to the class hierarchy in descending order,      * i.e., the most specific visitXXX() call comes last.      *      * @param v Visitor object      */
+comment|/**      * Call corresponding visitor method(s). The order is: Call visitor methods of implemented interfaces first, then call      * methods according to the class hierarchy in descending order, i.e., the most specific visitXXX() call comes last.      *      * @param v Visitor object      */
 annotation|@
 name|Override
 specifier|public

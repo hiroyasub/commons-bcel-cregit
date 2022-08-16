@@ -16,7 +16,7 @@ package|;
 end_package
 
 begin_comment
-comment|/**  * Denotes an unparameterized instruction to pop a value on top from the stack,  * such as ISTORE, POP, PUTSTATIC.  *  * @see ISTORE  * @see POP  */
+comment|/**  * Denotes an unparameterized instruction to pop a value on top from the stack, such as ISTORE, POP, PUTSTATIC.  *  * @see ISTORE  * @see POP  */
 end_comment
 
 begin_interface

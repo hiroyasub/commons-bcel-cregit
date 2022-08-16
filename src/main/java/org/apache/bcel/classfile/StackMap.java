@@ -58,7 +58,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * This class represents a stack map attribute used for  * preverification of Java classes for the<a  * href="http://java.sun.com/j2me/"> Java 2 Micro Edition</a>  * (J2ME). This attribute is used by the<a  * href="http://java.sun.com/products/cldc/">KVM</a> and contained  * within the Code attribute of a method. See CLDC specification  * ï¿½5.3.1.2  *  * @see     Code  * @see     StackMapEntry  * @see     StackMapType  */
+comment|/**  * This class represents a stack map attribute used for preverification of Java classes for the  *<a href="http://java.sun.com/j2me/"> Java 2 Micro Edition</a> (J2ME). This attribute is used by the  *<a href="http://java.sun.com/products/cldc/">KVM</a> and contained within the Code attribute of a method. See CLDC  * specification ï¿½5.3.1.2  *  * @see Code  * @see StackMapEntry  * @see StackMapType  */
 end_comment
 
 begin_class
@@ -159,7 +159,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/*      * @param name_index Index of name      * @param length Content length in bytes      * @param map Table of stack map entries      * @param constant_pool Array of constants      */
+comment|/*      * @param name_index Index of name      *       * @param length Content length in bytes      *       * @param map Table of stack map entries      *       * @param constant_pool Array of constants      */
 specifier|public
 name|StackMap
 parameter_list|(
@@ -201,7 +201,7 @@ operator|=
 name|map
 expr_stmt|;
 block|}
-comment|/**      * Called by objects that are traversing the nodes of the tree implicitely      * defined by the contents of a Java class. I.e., the hierarchy of methods,      * fields, attributes, etc. spawns a tree of objects.      *      * @param v Visitor object      */
+comment|/**      * Called by objects that are traversing the nodes of the tree implicitely defined by the contents of a Java class.      * I.e., the hierarchy of methods, fields, attributes, etc. spawns a tree of objects.      *      * @param v Visitor object      */
 annotation|@
 name|Override
 specifier|public

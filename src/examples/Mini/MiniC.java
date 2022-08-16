@@ -399,7 +399,7 @@ literal|true
 decl_stmt|;
 try|try
 block|{
-comment|/* Parse command line arguments.        */
+comment|/*              * Parse command line arguments.              */
 for|for
 control|(
 specifier|final
@@ -973,7 +973,7 @@ operator|+
 literal|".java"
 block|}
 decl_stmt|;
-comment|//sun.tools.javac.Main compiler = new sun.tools.javac.Main(System.err, "javac");
+comment|// sun.tools.javac.Main compiler = new sun.tools.javac.Main(System.err, "javac");
 try|try
 block|{
 specifier|final
@@ -1013,7 +1013,7 @@ name|e
 argument_list|)
 expr_stmt|;
 block|}
-comment|//compiler.compile(args);
+comment|// compiler.compile(args);
 block|}
 block|}
 if|if

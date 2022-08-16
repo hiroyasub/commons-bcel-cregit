@@ -220,7 +220,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * This class takes a given JavaClass object and converts it to a  * Java program that creates that very class using BCEL. This  * gives new users of BCEL a useful example showing how things  * are done with BCEL. It does not cover all features of BCEL,  * but tries to mimic hand-written code as close as possible.  *  */
+comment|/**  * This class takes a given JavaClass object and converts it to a Java program that creates that very class using BCEL.  * This gives new users of BCEL a useful example showing how things are done with BCEL. It does not cover all features  * of BCEL, but tries to mimic hand-written code as close as possible.  *  */
 end_comment
 
 begin_class
@@ -332,7 +332,7 @@ return|return
 name|javaClass
 return|;
 block|}
-comment|/** Default main method      */
+comment|/**      * Default main method      */
 specifier|public
 specifier|static
 name|void
@@ -513,7 +513,7 @@ name|UNKNOWN
 argument_list|)
 return|;
 block|}
-comment|/**      * Return a string with the flag settings      * @param flags the flags field to interpret      * @param location the item type      * @return the formatted string      * @since 6.0 made public      */
+comment|/**      * Return a string with the flag settings      *       * @param flags the flags field to interpret      * @param location the item type      * @return the formatted string      * @since 6.0 made public      */
 specifier|public
 specifier|static
 name|String
@@ -950,7 +950,7 @@ specifier|final
 name|ConstantPoolGen
 name|constantPoolGen
 decl_stmt|;
-comment|/** @param clazz Java class to "decompile"      * @param out where to output Java program      */
+comment|/**      * @param clazz Java class to "decompile"      * @param out where to output Java program      */
 specifier|public
 name|BCELifier
 parameter_list|(
@@ -1148,7 +1148,7 @@ literal|"  }"
 argument_list|)
 expr_stmt|;
 block|}
-comment|/** Start Java code generation      */
+comment|/**      * Start Java code generation      */
 specifier|public
 name|void
 name|start

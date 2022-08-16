@@ -27,7 +27,7 @@ name|StackInstruction
 extends|extends
 name|Instruction
 block|{
-comment|/**      * Empty constructor needed for Instruction.readInstruction.      * Not to be used otherwise.      */
+comment|/**      * Empty constructor needed for Instruction.readInstruction. Not to be used otherwise.      */
 name|StackInstruction
 parameter_list|()
 block|{
@@ -52,7 +52,7 @@ literal|1
 argument_list|)
 expr_stmt|;
 block|}
-comment|/** @return Type.UNKNOWN      */
+comment|/**      * @return Type.UNKNOWN      */
 specifier|public
 name|Type
 name|getType

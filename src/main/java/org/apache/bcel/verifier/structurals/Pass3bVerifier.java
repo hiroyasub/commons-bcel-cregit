@@ -360,7 +360,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * This PassVerifier verifies a method of class file according to pass 3,  * so-called structural verification as described in The Java Virtual Machine  * Specification, 2nd edition.  * More detailed information is to be found at the do_verify() method's  * documentation.  *  * @see #do_verify()  */
+comment|/**  * This PassVerifier verifies a method of class file according to pass 3, so-called structural verification as described  * in The Java Virtual Machine Specification, 2nd edition. More detailed information is to be found at the do_verify()  * method's documentation.  *  * @see #do_verify()  */
 end_comment
 
 begin_class
@@ -371,8 +371,8 @@ name|Pass3bVerifier
 extends|extends
 name|PassVerifier
 block|{
-comment|/* TODO:    Throughout pass 3b, upper halves of LONG and DOUBLE                         are represented by Type.UNKNOWN. This should be changed                         in favour of LONG_Upper and DOUBLE_Upper as in pass 2. */
-comment|/**      * An InstructionContextQueue is a utility class that holds      * (InstructionContext, ArrayList) pairs in a Queue data structure.      * This is used to hold information about InstructionContext objects      * externally --- i.e. that information is not saved inside the      * InstructionContext object itself. This is useful to save the      * execution path of the symbolic execution of the      * Pass3bVerifier - this is not information      * that belongs into the InstructionContext object itself.      * Only at "execute()"ing      * time, an InstructionContext object will get the current information      * we have about its symbolic execution predecessors.      */
+comment|/*      * TODO: Throughout pass 3b, upper halves of LONG and DOUBLE are represented by Type.UNKNOWN. This should be changed in      * favour of LONG_Upper and DOUBLE_Upper as in pass 2.      */
+comment|/**      * An InstructionContextQueue is a utility class that holds (InstructionContext, ArrayList) pairs in a Queue data      * structure. This is used to hold information about InstructionContext objects externally --- i.e. that information is      * not saved inside the InstructionContext object itself. This is useful to save the execution path of the symbolic      * execution of the Pass3bVerifier - this is not information that belongs into the InstructionContext object itself.      * Only at "execute()"ing time, an InstructionContext object will get the current information we have about its symbolic      * execution predecessors.      */
 specifier|private
 specifier|static
 specifier|final
@@ -582,7 +582,7 @@ operator|=
 name|method_no
 expr_stmt|;
 block|}
-comment|/**      * Whenever the outgoing frame      * situation of an InstructionContext changes, all its successors are      * put [back] into the queue [as if they were unvisited].      * The proof of termination is about the existence of a      * fix point of frame merging.      */
+comment|/**      * Whenever the outgoing frame situation of an InstructionContext changes, all its successors are put [back] into the      * queue [as if they were unvisited]. The proof of termination is about the existence of a fix point of frame merging.      */
 specifier|private
 name|void
 name|circulationPump
@@ -644,8 +644,8 @@ argument_list|,
 name|ev
 argument_list|)
 expr_stmt|;
-comment|// new ArrayList()<=>    no Instruction was executed before
-comment|//                                    => Top-Level routine (no jsr call before)
+comment|// new ArrayList()<=> no Instruction was executed before
+comment|// => Top-Level routine (no jsr call before)
 name|icq
 operator|.
 name|add
@@ -1246,10 +1246,10 @@ comment|// Example: a JSR with an exception handler as its successor does not
 comment|// mean we're in a subroutine if we go to the exception handler.
 comment|// We should address this problem later; by now we simply "cut" the chain
 comment|// by using an empty chain for the exception handlers.
-comment|//if (v.execute(new Frame(u.getOutFrame(oldchain).getLocals(),
+comment|// if (v.execute(new Frame(u.getOutFrame(oldchain).getLocals(),
 comment|// new OperandStack (u.getOutFrame().getStack().maxStack(),
 comment|// (exc_hds[s].getExceptionType()==null? Type.THROWABLE : exc_hds[s].getExceptionType())) ), newchain), icv, ev) {
-comment|//icq.add(v, (ArrayList) newchain.clone());
+comment|// icq.add(v, (ArrayList) newchain.clone());
 if|if
 condition|(
 name|v
@@ -1497,7 +1497,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|//see JVM $4.8.2
+comment|// see JVM $4.8.2
 name|Type
 name|returnedType
 init|=
@@ -1646,7 +1646,7 @@ literal|null
 condition|)
 do|;
 block|}
-comment|/**      * Pass 3b implements the data flow analysis as described in the Java Virtual      * Machine Specification, Second Edition.      * Later versions will use LocalVariablesInfo objects to verify if the      * verifier-inferred types and the class file's debug information (LocalVariables      * attributes) match [TODO].      *      * @see org.apache.bcel.verifier.statics.LocalVariablesInfo      * @see org.apache.bcel.verifier.statics.Pass2Verifier#getLocalVariablesInfo(int)      */
+comment|/**      * Pass 3b implements the data flow analysis as described in the Java Virtual Machine Specification, Second Edition.      * Later versions will use LocalVariablesInfo objects to verify if the verifier-inferred types and the class file's      * debug information (LocalVariables attributes) match [TODO].      *      * @see org.apache.bcel.verifier.statics.LocalVariablesInfo      * @see org.apache.bcel.verifier.statics.Pass2Verifier#getLocalVariablesInfo(int)      */
 annotation|@
 name|Override
 specifier|public

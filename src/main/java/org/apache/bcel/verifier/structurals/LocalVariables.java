@@ -78,7 +78,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * This class implements an array of local variables used for symbolic JVM  * simulation.  */
+comment|/**  * This class implements an array of local variables used for symbolic JVM simulation.  */
 end_comment
 
 begin_class
@@ -138,7 +138,7 @@ name|UNKNOWN
 expr_stmt|;
 block|}
 block|}
-comment|/**      * Returns a deep copy of this object; i.e. the clone      * operates on a new local variable array.      * However, the Type objects in the array are shared.      */
+comment|/**      * Returns a deep copy of this object; i.e. the clone operates on a new local variable array. However, the Type objects      * in the array are shared.      */
 annotation|@
 name|Override
 specifier|public
@@ -277,7 +277,7 @@ index|]
 argument_list|)
 condition|)
 block|{
-comment|//System.out.println(this.locals[i]+" is not "+lv.locals[i]);
+comment|// System.out.println(this.locals[i]+" is not "+lv.locals[i]);
 return|return
 literal|false
 return|;
@@ -304,7 +304,7 @@ name|slotIndex
 index|]
 return|;
 block|}
-comment|/**      * Returns a (correctly typed) clone of this object.      * This is equivalent to ((LocalVariables) this.clone()).      *      * @return a (correctly typed) clone of this object.      */
+comment|/**      * Returns a (correctly typed) clone of this object. This is equivalent to ((LocalVariables) this.clone()).      *      * @return a (correctly typed) clone of this object.      */
 specifier|public
 name|LocalVariables
 name|getClone
@@ -320,7 +320,7 @@ name|clone
 argument_list|()
 return|;
 block|}
-comment|/** @return a hash code value for the object.      */
+comment|/**      * @return a hash code value for the object.      */
 annotation|@
 name|Override
 specifier|public
@@ -334,7 +334,7 @@ operator|.
 name|length
 return|;
 block|}
-comment|/**      * Replaces all occurrences of {@code uninitializedObjectType} in this local variables set      * with an "initialized" ObjectType.      *      * @param uninitializedObjectType the object to match.      */
+comment|/**      * Replaces all occurrences of {@code uninitializedObjectType} in this local variables set with an "initialized"      * ObjectType.      *      * @param uninitializedObjectType the object to match.      */
 specifier|public
 name|void
 name|initializeObject
@@ -396,7 +396,7 @@ operator|.
 name|length
 return|;
 block|}
-comment|/**      * Merges two local variables sets as described in the Java Virtual Machine Specification,      * Second Edition, section 4.9.2, page 146.      *      * @param localVariable other local variable.      */
+comment|/**      * Merges two local variables sets as described in the Java Virtual Machine Specification, Second Edition, section      * 4.9.2, page 146.      *      * @param localVariable other local variable.      */
 specifier|public
 name|void
 name|merge
@@ -715,7 +715,7 @@ index|]
 argument_list|)
 condition|)
 block|{
-comment|/*TODO             if ((locals[i] instanceof org.apache.bcel.generic.ReturnaddressType)&&                 (lv.locals[i] instanceof org.apache.bcel.generic.ReturnaddressType)) {                 //System.err.println("merging "+locals[i]+" and "+lv.locals[i]);                 throw new AssertionViolatedException("Merging different ReturnAddresses: '"+locals[i]+"' and '"+lv.locals[i]+"'.");             } */
+comment|/*                  * TODO if ((locals[i] instanceof org.apache.bcel.generic.ReturnaddressType)&& (lv.locals[i] instanceof                  * org.apache.bcel.generic.ReturnaddressType)) { //System.err.println("merging "+locals[i]+" and "+lv.locals[i]); throw                  * new AssertionViolatedException("Merging different ReturnAddresses: '"+locals[i]+"' and '"+lv.locals[i]+"'."); }                  */
 name|locals
 index|[
 name|i

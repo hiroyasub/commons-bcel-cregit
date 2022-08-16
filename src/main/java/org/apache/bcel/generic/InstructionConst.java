@@ -28,7 +28,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * This interface contains shareable instruction objects.  *  * In order to save memory you can use some instructions multiply,  * since they have an immutable state and are directly derived from  * Instruction.  I.e. they have no instance fields that could be  * changed. Since some of these instructions like ICONST_0 occur  * very frequently this can save a lot of time and space. This  * feature is an adaptation of the FlyWeight design pattern, we  * just use an array instead of a factory.  *  * The Instructions can also accessed directly under their names, so  * it's possible to write il.append(Instruction.ICONST_0);  *  */
+comment|/**  * This interface contains shareable instruction objects.  *  * In order to save memory you can use some instructions multiply, since they have an immutable state and are directly  * derived from Instruction. I.e. they have no instance fields that could be changed. Since some of these instructions  * like ICONST_0 occur very frequently this can save a lot of time and space. This feature is an adaptation of the  * FlyWeight design pattern, we just use an array instead of a factory.  *  * The Instructions can also accessed directly under their names, so it's possible to write  * il.append(Instruction.ICONST_0);  *  */
 end_comment
 
 begin_class
@@ -38,7 +38,7 @@ class|class
 name|InstructionConst
 block|{
 comment|/**      * Predefined instruction objects      */
-comment|/*      * NOTE these are not currently immutable, because Instruction      * has mutable protected fields opcode and length.      */
+comment|/*      * NOTE these are not currently immutable, because Instruction has mutable protected fields opcode and length.      */
 specifier|public
 specifier|static
 specifier|final
@@ -1138,7 +1138,7 @@ operator|new
 name|MONITOREXIT
 argument_list|()
 decl_stmt|;
-comment|/** You can use these constants in multiple places safely, if you can guarantee      * that you will never alter their internal values, e.g. call setIndex().      */
+comment|/**      * You can use these constants in multiple places safely, if you can guarantee that you will never alter their internal      * values, e.g. call setIndex().      */
 specifier|public
 specifier|static
 specifier|final
@@ -1291,7 +1291,7 @@ argument_list|(
 literal|2
 argument_list|)
 decl_stmt|;
-comment|/** Get object via its opcode, for immutable instructions like      * branch instructions entries are set to null.      */
+comment|/**      * Get object via its opcode, for immutable instructions like branch instructions entries are set to null.      */
 specifier|private
 specifier|static
 specifier|final
@@ -2271,7 +2271,7 @@ operator|=
 name|MONITOREXIT
 expr_stmt|;
 block|}
-comment|/**      * Gets the Instruction.      * @param index the index, e.g. {@link Const#RETURN}      * @return the entry from the private INSTRUCTIONS table      */
+comment|/**      * Gets the Instruction.      *       * @param index the index, e.g. {@link Const#RETURN}      * @return the entry from the private INSTRUCTIONS table      */
 specifier|public
 specifier|static
 name|Instruction

@@ -244,7 +244,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/**      * Called by objects that are traversing the nodes of the tree implicitely      * defined by the contents of a Java class. I.e., the hierarchy of methods,      * fields, attributes, etc. spawns a tree of objects.      *      * @param v Visitor object      */
+comment|/**      * Called by objects that are traversing the nodes of the tree implicitely defined by the contents of a Java class.      * I.e., the hierarchy of methods, fields, attributes, etc. spawns a tree of objects.      *      * @param v Visitor object      */
 annotation|@
 name|Override
 specifier|public
@@ -302,7 +302,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/**  * returns the array of annotation entries in this annotation  */
+comment|/**      * returns the array of annotation entries in this annotation      */
 specifier|public
 name|AnnotationEntry
 index|[]

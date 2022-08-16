@@ -16,7 +16,7 @@ package|;
 end_package
 
 begin_comment
-comment|/**  * DNEG - Negate double  *<PRE>Stack: ..., value.word1, value.word2 -&gt; ..., result.word1, result.word2</PRE>  *  */
+comment|/**  * DNEG - Negate double  *   *<PRE>  * Stack: ..., value.word1, value.word2 -&gt; ..., result.word1, result.word2  *</PRE>  *  */
 end_comment
 
 begin_class
@@ -44,7 +44,7 @@ name|DNEG
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Call corresponding visitor method(s). The order is:      * Call visitor methods of implemented interfaces first, then      * call methods according to the class hierarchy in descending order,      * i.e., the most specific visitXXX() call comes last.      *      * @param v Visitor object      */
+comment|/**      * Call corresponding visitor method(s). The order is: Call visitor methods of implemented interfaces first, then call      * methods according to the class hierarchy in descending order, i.e., the most specific visitXXX() call comes last.      *      * @param v Visitor object      */
 annotation|@
 name|Override
 specifier|public

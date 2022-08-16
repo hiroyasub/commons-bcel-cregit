@@ -33,7 +33,7 @@ name|TypedInstruction
 implements|,
 name|StackProducer
 block|{
-comment|/**      * Empty constructor needed for Instruction.readInstruction.      * Not to be used otherwise.      */
+comment|/**      * Empty constructor needed for Instruction.readInstruction. Not to be used otherwise.      */
 name|JsrInstruction
 parameter_list|()
 block|{
@@ -57,7 +57,7 @@ name|target
 argument_list|)
 expr_stmt|;
 block|}
-comment|/** @return return address type      */
+comment|/**      * @return return address type      */
 annotation|@
 name|Override
 specifier|public
@@ -78,7 +78,7 @@ argument_list|()
 argument_list|)
 return|;
 block|}
-comment|/**      * Returns an InstructionHandle to the physical successor      * of this JsrInstruction.<B>For this method to work,      * this JsrInstruction object must not be shared between      * multiple InstructionHandle objects!</B>      * Formally, there must not be InstructionHandle objects      * i, j where i != j and i.getInstruction() == this ==      * j.getInstruction().      * @return an InstructionHandle to the "next" instruction that      * will be executed when RETurned from a subroutine.      */
+comment|/**      * Returns an InstructionHandle to the physical successor of this JsrInstruction.<B>For this method to work, this      * JsrInstruction object must not be shared between multiple InstructionHandle objects!</B> Formally, there must not be      * InstructionHandle objects i, j where i != j and i.getInstruction() == this == j.getInstruction().      *       * @return an InstructionHandle to the "next" instruction that will be executed when RETurned from a subroutine.      */
 specifier|public
 name|InstructionHandle
 name|physicalSuccessor

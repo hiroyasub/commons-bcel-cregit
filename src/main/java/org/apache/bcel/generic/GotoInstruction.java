@@ -29,7 +29,7 @@ name|BranchInstruction
 implements|implements
 name|UnconditionalBranch
 block|{
-comment|/**      * Empty constructor needed for Instruction.readInstruction.      * Not to be used otherwise.      */
+comment|/**      * Empty constructor needed for Instruction.readInstruction. Not to be used otherwise.      */
 name|GotoInstruction
 parameter_list|()
 block|{

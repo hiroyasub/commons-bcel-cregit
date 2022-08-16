@@ -80,7 +80,7 @@ name|AnnotationAccessFlagTestCase
 extends|extends
 name|AbstractTestCase
 block|{
-comment|/**      * If you write an annotation and compile it, the class file generated      * should be marked as an annotation type - which is detectable through      * BCEL.      */
+comment|/**      * If you write an annotation and compile it, the class file generated should be marked as an annotation type - which is      * detectable through BCEL.      */
 annotation|@
 name|Test
 specifier|public

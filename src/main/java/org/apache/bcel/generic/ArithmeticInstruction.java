@@ -45,7 +45,7 @@ name|StackProducer
 implements|,
 name|StackConsumer
 block|{
-comment|/**      * Empty constructor needed for Instruction.readInstruction.      * Not to be used otherwise.      */
+comment|/**      * Empty constructor needed for Instruction.readInstruction. Not to be used otherwise.      */
 name|ArithmeticInstruction
 parameter_list|()
 block|{
@@ -70,7 +70,7 @@ literal|1
 argument_list|)
 expr_stmt|;
 block|}
-comment|/** @return type associated with the instruction      */
+comment|/**      * @return type associated with the instruction      */
 annotation|@
 name|Override
 specifier|public

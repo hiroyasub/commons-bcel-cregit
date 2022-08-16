@@ -104,7 +104,7 @@ name|InstructionComparator
 operator|.
 name|DEFAULT
 decl_stmt|;
-comment|/** Get Comparator object used in the equals() method to determine      * equality of instructions.      *      * @return currently used comparator for equals()      * @deprecated (6.0) use the built in comparator, or wrap this class in another object that implements these methods      */
+comment|/**      * Get Comparator object used in the equals() method to determine equality of instructions.      *      * @return currently used comparator for equals()      * @deprecated (6.0) use the built in comparator, or wrap this class in another object that implements these methods      */
 annotation|@
 name|Deprecated
 specifier|public
@@ -117,7 +117,7 @@ return|return
 name|cmp
 return|;
 block|}
-comment|/**      * Check if the value can fit in a byte (signed)      * @param value the value to check      * @return true if the value is in range      * @since 6.0      */
+comment|/**      * Check if the value can fit in a byte (signed)      *       * @param value the value to check      * @return true if the value is in range      * @since 6.0      */
 specifier|public
 specifier|static
 name|boolean
@@ -142,7 +142,7 @@ operator|.
 name|MAX_VALUE
 return|;
 block|}
-comment|/**      * Check if the value can fit in a short (signed)      * @param value the value to check      * @return true if the value is in range      * @since 6.0      */
+comment|/**      * Check if the value can fit in a short (signed)      *       * @param value the value to check      * @return true if the value is in range      * @since 6.0      */
 specifier|public
 specifier|static
 name|boolean
@@ -167,7 +167,7 @@ operator|.
 name|MAX_VALUE
 return|;
 block|}
-comment|/**      * Read an instruction from (byte code) input stream and return the      * appropiate object.      *<p>      * If the Instruction is defined in {@link InstructionConst}, then the      * singleton instance is returned.      * @param bytes input stream bytes      * @return instruction object being read      * @see InstructionConst#getInstruction(int)      */
+comment|/**      * Read an instruction from (byte code) input stream and return the appropiate object.      *<p>      * If the Instruction is defined in {@link InstructionConst}, then the singleton instance is returned.      *       * @param bytes input stream bytes      * @return instruction object being read      * @see InstructionConst#getInstruction(int)      */
 comment|// @since 6.0 no longer final
 specifier|public
 specifier|static
@@ -1561,7 +1561,7 @@ return|return
 name|obj
 return|;
 block|}
-comment|/** Set comparator to be used for equals().       * @deprecated (6.0) use the built in comparator, or wrap this class in another object that implements these methods      */
+comment|/**      * Set comparator to be used for equals().      *       * @deprecated (6.0) use the built in comparator, or wrap this class in another object that implements these methods      */
 annotation|@
 name|Deprecated
 specifier|public
@@ -1600,7 +1600,7 @@ operator|-
 literal|1
 decl_stmt|;
 comment|// Opcode number
-comment|/**      * Empty constructor needed for Instruction.readInstruction.      * Not to be used otherwise.      */
+comment|/**      * Empty constructor needed for Instruction.readInstruction. Not to be used otherwise.      */
 name|Instruction
 parameter_list|()
 block|{
@@ -1630,7 +1630,7 @@ operator|=
 name|opcode
 expr_stmt|;
 block|}
-comment|/**      * Call corresponding visitor method(s). The order is:      * Call visitor methods of implemented interfaces first, then      * call methods according to the class hierarchy in descending order,      * i.e., the most specific visitXXX() call comes last.      *      * @param v Visitor object      */
+comment|/**      * Call corresponding visitor method(s). The order is: Call visitor methods of implemented interfaces first, then call      * methods according to the class hierarchy in descending order, i.e., the most specific visitXXX() call comes last.      *      * @param v Visitor object      */
 specifier|public
 specifier|abstract
 name|void
@@ -1640,7 +1640,7 @@ name|Visitor
 name|v
 parameter_list|)
 function_decl|;
-comment|/**      * This method also gives right results for instructions whose      * effect on the stack depends on the constant pool entry they      * reference.      *  @return Number of words consumed from stack by this instruction,      * or Constants.UNPREDICTABLE, if this can not be computed statically      */
+comment|/**      * This method also gives right results for instructions whose effect on the stack depends on the constant pool entry      * they reference.      *       * @return Number of words consumed from stack by this instruction, or Constants.UNPREDICTABLE, if this can not be      *         computed statically      */
 specifier|public
 name|int
 name|consumeStack
@@ -1659,7 +1659,7 @@ name|opcode
 argument_list|)
 return|;
 block|}
-comment|/**      * Use with caution, since `BranchInstruction's have a `target' reference which      * is not copied correctly (only basic types are). This also applies for      * `Select' instructions with their multiple branch targets.      *      * @see BranchInstruction      * @return (shallow) copy of an instruction      */
+comment|/**      * Use with caution, since `BranchInstruction's have a `target' reference which is not copied correctly (only basic      * types are). This also applies for `Select' instructions with their multiple branch targets.      *      * @see BranchInstruction      * @return (shallow) copy of an instruction      */
 specifier|public
 name|Instruction
 name|copy
@@ -1726,13 +1726,13 @@ return|return
 name|i
 return|;
 block|}
-comment|/** Some instructions may be reused, so don't do anything by default.      */
+comment|/**      * Some instructions may be reused, so don't do anything by default.      */
 name|void
 name|dispose
 parameter_list|()
 block|{
 block|}
-comment|/**      * Dump instruction as byte code to stream out.      * @param out Output stream      */
+comment|/**      * Dump instruction as byte code to stream out.      *       * @param out Output stream      */
 specifier|public
 name|void
 name|dump
@@ -1753,7 +1753,7 @@ argument_list|)
 expr_stmt|;
 comment|// Common for all instructions
 block|}
-comment|/** Check for equality, delegated to comparator      * @return true if that is an Instruction and has the same opcode      */
+comment|/**      * Check for equality, delegated to comparator      *       * @return true if that is an Instruction and has the same opcode      */
 annotation|@
 name|Override
 specifier|public
@@ -1793,7 +1793,7 @@ return|return
 name|length
 return|;
 block|}
-comment|/** @return name of instruction, i.e., opcode name      */
+comment|/**      * @return name of instruction, i.e., opcode name      */
 specifier|public
 name|String
 name|getName
@@ -1818,7 +1818,7 @@ return|return
 name|opcode
 return|;
 block|}
-comment|/** calculate the hashCode of this object      * @return the hashCode      * @since 6.0      */
+comment|/**      * calculate the hashCode of this object      *       * @return the hashCode      * @since 6.0      */
 annotation|@
 name|Override
 specifier|public
@@ -1847,7 +1847,7 @@ throws|throws
 name|IOException
 block|{
 block|}
-comment|/**      * This method also gives right results for instructions whose      * effect on the stack depends on the constant pool entry they      * reference.      * @return Number of words produced onto stack by this instruction,      * or Constants.UNPREDICTABLE, if this can not be computed statically      */
+comment|/**      * This method also gives right results for instructions whose effect on the stack depends on the constant pool entry      * they reference.      *       * @return Number of words produced onto stack by this instruction, or Constants.UNPREDICTABLE, if this can not be      *         computed statically      */
 specifier|public
 name|int
 name|produceStack
@@ -1866,7 +1866,7 @@ name|opcode
 argument_list|)
 return|;
 block|}
-comment|/**      * Needed in readInstruction and subclasses in this package      * @since 6.0      */
+comment|/**      * Needed in readInstruction and subclasses in this package      *       * @since 6.0      */
 specifier|final
 name|void
 name|setLength
@@ -1919,7 +1919,7 @@ literal|true
 argument_list|)
 return|;
 block|}
-comment|/**      * Long output format:      *      *&lt;name of opcode&gt; "["&lt;opcode number&gt;"]"      * "("&lt;length of instruction&gt;")"      *      * @param verbose long/short format switch      * @return mnemonic for instruction      */
+comment|/**      * Long output format:      *      *&lt;name of opcode&gt; "["&lt;opcode number&gt;"]" "("&lt;length of instruction&gt;")"      *      * @param verbose long/short format switch      * @return mnemonic for instruction      */
 specifier|public
 name|String
 name|toString

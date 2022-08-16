@@ -58,7 +58,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * A utility class holding the information about  * the name and the type of a local variable in  * a given slot (== index). This information  * often changes in course of byte code offsets.  */
+comment|/**  * A utility class holding the information about the name and the type of a local variable in a given slot (== index).  * This information often changes in course of byte code offsets.  */
 end_comment
 
 begin_class
@@ -98,7 +98,7 @@ name|Hashtable
 argument_list|<>
 argument_list|()
 decl_stmt|;
-comment|/**      * Adds information about name and type for a given offset.      *      * @throws LocalVariableInfoInconsistentException if the new information conflicts      *         with already gathered information.      */
+comment|/**      * Adds information about name and type for a given offset.      *      * @throws LocalVariableInfoInconsistentException if the new information conflicts with already gathered information.      */
 specifier|private
 name|void
 name|add
@@ -221,7 +221,7 @@ name|t
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Adds some information about this local variable (slot).      *      * @param name variable name      * @param startPc Range in which the variable is valid.      * @param length length of ...      * @param type variable type      *      * @throws LocalVariableInfoInconsistentException if the new information conflicts      *         with already gathered information.      */
+comment|/**      * Adds some information about this local variable (slot).      *      * @param name variable name      * @param startPc Range in which the variable is valid.      * @param length length of ...      * @param type variable type      *      * @throws LocalVariableInfoInconsistentException if the new information conflicts with already gathered information.      */
 specifier|public
 name|void
 name|add
@@ -322,7 +322,7 @@ argument_list|)
 argument_list|)
 return|;
 block|}
-comment|/**      * Adds a name of a local variable and a certain slot to our 'names'      * (Hashtable) database.      */
+comment|/**      * Adds a name of a local variable and a certain slot to our 'names' (Hashtable) database.      */
 specifier|private
 name|void
 name|setName
@@ -351,7 +351,7 @@ name|name
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Adds a type of a local variable and a certain slot to our 'types'      * (Hashtable) database.      */
+comment|/**      * Adds a type of a local variable and a certain slot to our 'types' (Hashtable) database.      */
 specifier|private
 name|void
 name|setType

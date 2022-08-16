@@ -46,7 +46,7 @@ block|{
 literal|4
 block|,
 literal|5
-block|, }
+block|,}
 decl_stmt|;
 specifier|public
 specifier|static
@@ -141,7 +141,7 @@ block|,
 literal|null
 block|,
 literal|null
-block|, }
+block|,}
 decl_stmt|;
 specifier|public
 specifier|static
@@ -154,7 +154,7 @@ block|{
 literal|"DEFAULT"
 block|,
 literal|"SINGLE_LINE_COMMENT_STATE"
-block|, }
+block|,}
 decl_stmt|;
 specifier|public
 specifier|static
@@ -290,7 +290,7 @@ literal|1
 block|,
 operator|-
 literal|1
-block|, }
+block|,}
 decl_stmt|;
 specifier|static
 specifier|final
@@ -300,7 +300,7 @@ name|jjtoToken
 init|=
 block|{
 literal|0x73ffffffe01L
-block|, }
+block|,}
 decl_stmt|;
 specifier|static
 specifier|final
@@ -310,7 +310,7 @@ name|jjtoSkip
 init|=
 block|{
 literal|0xbeL
-block|, }
+block|,}
 decl_stmt|;
 specifier|static
 specifier|final
@@ -320,7 +320,7 @@ name|jjtoSpecial
 init|=
 block|{
 literal|0x80L
-block|, }
+block|,}
 decl_stmt|;
 specifier|static
 specifier|final
@@ -330,7 +330,7 @@ name|jjtoMore
 init|=
 block|{
 literal|0x140L
-block|, }
+block|,}
 decl_stmt|;
 specifier|static
 specifier|private
@@ -1458,7 +1458,7 @@ literal|42
 expr_stmt|;
 block|}
 break|break;
-default|default :
+default|default:
 break|break;
 block|}
 block|}
@@ -1579,7 +1579,7 @@ literal|1
 argument_list|)
 expr_stmt|;
 break|break;
-default|default :
+default|default:
 break|break;
 block|}
 block|}
@@ -1654,7 +1654,7 @@ argument_list|)
 expr_stmt|;
 block|}
 break|break;
-default|default :
+default|default:
 break|break;
 block|}
 block|}
@@ -1919,7 +1919,7 @@ literal|1
 expr_stmt|;
 block|}
 break|break;
-default|default :
+default|default:
 break|break;
 block|}
 block|}
@@ -1949,7 +1949,7 @@ name|i
 index|]
 condition|)
 block|{
-default|default :
+default|default:
 break|break;
 block|}
 block|}
@@ -1974,7 +1974,7 @@ name|i
 index|]
 condition|)
 block|{
-default|default :
+default|default:
 break|break;
 block|}
 block|}
@@ -2295,7 +2295,7 @@ argument_list|(
 literal|0x2000000000L
 argument_list|)
 return|;
-default|default :
+default|default:
 return|return
 name|jjMoveNfa_0
 argument_list|(
@@ -2649,7 +2649,7 @@ argument_list|,
 literal|0x200L
 argument_list|)
 return|;
-default|default :
+default|default:
 break|break;
 block|}
 return|return
@@ -2877,7 +2877,7 @@ argument_list|,
 literal|0x1000000L
 argument_list|)
 return|;
-default|default :
+default|default:
 break|break;
 block|}
 return|return
@@ -3083,7 +3083,7 @@ argument_list|,
 literal|0x2000000000L
 argument_list|)
 return|;
-default|default :
+default|default:
 break|break;
 block|}
 return|return
@@ -3215,7 +3215,7 @@ argument_list|)
 return|;
 block|}
 break|break;
-default|default :
+default|default:
 break|break;
 block|}
 return|return
@@ -3529,7 +3529,7 @@ return|return
 operator|-
 literal|1
 return|;
-default|default :
+default|default:
 return|return
 operator|-
 literal|1
@@ -3638,7 +3638,7 @@ condition|(
 name|jjmatchedKind
 condition|)
 block|{
-default|default :
+default|default:
 break|break;
 block|}
 block|}

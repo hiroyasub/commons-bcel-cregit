@@ -40,7 +40,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Java interpreter replacement, i.e., wrapper that uses its own ClassLoader  * to modify/generate classes as they're requested. You can take this as a template  * for your own applications.  *<p>  * Call this wrapper with:  *</p>  *<pre>java org.apache.bcel.util.JavaWrapper&lt;real.class.name&gt; [arguments]</pre>  *<p>  * To use your own class loader you can set the "bcel.classloader" system property.  *</p>  *<pre>java org.apache.bcel.util.JavaWrapper -Dbcel.classloader=foo.MyLoader&lt;real.class.name&gt; [arguments]</pre>  *  * @see ClassLoader  */
+comment|/**  * Java interpreter replacement, i.e., wrapper that uses its own ClassLoader to modify/generate classes as they're  * requested. You can take this as a template for your own applications.  *<p>  * Call this wrapper with:  *</p>  *   *<pre>  * java org.apache.bcel.util.JavaWrapper&lt;real.class.name&gt; [arguments]  *</pre>  *<p>  * To use your own class loader you can set the "bcel.classloader" system property.  *</p>  *   *<pre>  * java org.apache.bcel.util.JavaWrapper -Dbcel.classloader=foo.MyLoader&lt;real.class.name&gt; [arguments]  *</pre>  *  * @see ClassLoader  */
 end_comment
 
 begin_class
@@ -133,7 +133,7 @@ argument_list|)
 throw|;
 block|}
 block|}
-comment|/** Default main method used as wrapper, expects the fully qualified class name      * of the real class as the first argument.      */
+comment|/**      * Default main method used as wrapper, expects the fully qualified class name of the real class as the first argument.      */
 specifier|public
 specifier|static
 name|void
@@ -147,7 +147,7 @@ parameter_list|)
 throws|throws
 name|Exception
 block|{
-comment|/* Expects class name as first argument, other arguments are by-passed.          */
+comment|/*          * Expects class name as first argument, other arguments are by-passed.          */
 if|if
 condition|(
 name|argv
@@ -266,7 +266,7 @@ operator|=
 name|loader
 expr_stmt|;
 block|}
-comment|/** Runs the main method of the given class with the arguments passed in argv      *      * @param class_name the fully qualified class name      * @param argv the arguments just as you would pass them directly      */
+comment|/**      * Runs the main method of the given class with the arguments passed in argv      *      * @param class_name the fully qualified class name      * @param argv the arguments just as you would pass them directly      */
 specifier|public
 name|void
 name|runMain
@@ -318,7 +318,7 @@ name|getClass
 argument_list|()
 argument_list|)
 expr_stmt|;
-comment|/* Method main is sane ?              */
+comment|/*              * Method main is sane ?              */
 specifier|final
 name|int
 name|m

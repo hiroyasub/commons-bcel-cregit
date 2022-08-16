@@ -58,7 +58,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * This class is derived from the abstract {@link Constant}  * and represents a reference to a float object.  *  * @see     Constant  */
+comment|/**  * This class is derived from the abstract {@link Constant} and represents a reference to a float object.  *  * @see Constant  */
 end_comment
 
 begin_class
@@ -75,7 +75,7 @@ specifier|private
 name|float
 name|bytes
 decl_stmt|;
-comment|/**      * Initialize from another object. Note that both objects use the same      * references (shallow copy). Use clone() for a physical copy.      */
+comment|/**      * Initialize from another object. Note that both objects use the same references (shallow copy). Use clone() for a      * physical copy.      */
 specifier|public
 name|ConstantFloat
 parameter_list|(
@@ -135,7 +135,7 @@ operator|=
 name|bytes
 expr_stmt|;
 block|}
-comment|/**      * Called by objects that are traversing the nodes of the tree implicitely      * defined by the contents of a Java class. I.e., the hierarchy of methods,      * fields, attributes, etc. spawns a tree of objects.      *      * @param v Visitor object      */
+comment|/**      * Called by objects that are traversing the nodes of the tree implicitely defined by the contents of a Java class.      * I.e., the hierarchy of methods, fields, attributes, etc. spawns a tree of objects.      *      * @param v Visitor object      */
 annotation|@
 name|Override
 specifier|public
@@ -197,7 +197,7 @@ return|return
 name|bytes
 return|;
 block|}
-comment|/** @return Float object      */
+comment|/**      * @return Float object      */
 annotation|@
 name|Override
 specifier|public

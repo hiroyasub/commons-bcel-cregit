@@ -222,7 +222,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Dynamically creates and uses a proxy for {@code java.awt.event.ActionListener}  * via the classloader mechanism if called with  *<pre>java org.apache.bcel.util.JavaWrapper ProxyCreator</pre>  *  * The trick is to encode the byte code we need into the class name  * using the Utility.encode() method. This will result however in big  * ugly class name, so for many cases it will be more sufficient to  * put some clever creation code into the class loader.  *<p>  * This is comparable to the mechanism provided via  * {@code java.lang.reflect.Proxy}, but much more flexible.  *</p>  *  * @see org.apache.bcel.util.JavaWrapper  * @see Utility  */
+comment|/**  * Dynamically creates and uses a proxy for {@code java.awt.event.ActionListener} via the classloader mechanism if  * called with  *   *<pre>  * java org.apache.bcel.util.JavaWrapper ProxyCreator  *</pre>  *  * The trick is to encode the byte code we need into the class name using the Utility.encode() method. This will result  * however in big ugly class name, so for many cases it will be more sufficient to put some clever creation code into  * the class loader.  *<p>  * This is comparable to the mechanism provided via {@code java.lang.reflect.Proxy}, but much more flexible.  *</p>  *  * @see org.apache.bcel.util.JavaWrapper  * @see Utility  */
 end_comment
 
 begin_class
@@ -289,7 +289,7 @@ return|return
 literal|null
 return|;
 block|}
-comment|/**      * Create JavaClass object for a simple proxy for an java.awt.event.ActionListener      * that just prints the passed arguments, load and use it via the class loader      * mechanism.      */
+comment|/**      * Create JavaClass object for a simple proxy for an java.awt.event.ActionListener that just prints the passed      * arguments, load and use it via the class loader mechanism.      */
 specifier|public
 specifier|static
 name|void

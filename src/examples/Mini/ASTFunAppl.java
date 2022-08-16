@@ -214,7 +214,7 @@ name|id
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**    * Fifth pass, produce Java byte code.    */
+comment|/**      * Fifth pass, produce Java byte code.      */
 annotation|@
 name|Override
 specifier|public
@@ -244,7 +244,7 @@ name|getName
 argument_list|()
 decl_stmt|;
 comment|//    Function   f     = function;
-comment|//ASTIdent   fun   = f.getName();
+comment|// ASTIdent fun = f.getName();
 comment|//    ASTIdent[] args  = f.getArgs();
 specifier|final
 name|String
@@ -407,7 +407,7 @@ name|cp
 argument_list|)
 expr_stmt|;
 block|}
-comment|//ASTFunDecl.push(size);
+comment|// ASTFunDecl.push(size);
 block|}
 name|ASTFunDecl
 operator|.
@@ -453,7 +453,7 @@ name|push
 argument_list|()
 expr_stmt|;
 block|}
-comment|/**    * Overrides ASTExpr.closeNode()    */
+comment|/**      * Overrides ASTExpr.closeNode()      */
 annotation|@
 name|Override
 specifier|public
@@ -518,7 +518,7 @@ literal|null
 expr_stmt|;
 comment|// Throw away old reference
 block|}
-comment|/**    * Fourth pass, produce Java code.    */
+comment|/**      * Fourth pass, produce Java code.      */
 annotation|@
 name|Override
 specifier|public
@@ -729,7 +729,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/**    * Second pass    * Overrides AstExpr.eval()    * @return type of expression    * @param expected type    */
+comment|/**      * Second pass Overrides AstExpr.eval()      *       * @return type of expression      * @param expected type      */
 annotation|@
 name|Override
 specifier|public
@@ -998,7 +998,7 @@ name|getName
 argument_list|()
 return|;
 block|}
-comment|/**    * Overrides ASTExpr.traverse()    */
+comment|/**      * Overrides ASTExpr.traverse()      */
 annotation|@
 name|Override
 specifier|public

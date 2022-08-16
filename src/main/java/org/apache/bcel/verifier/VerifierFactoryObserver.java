@@ -16,7 +16,7 @@ package|;
 end_package
 
 begin_comment
-comment|/**  * VerifierFactoryObserver instances are notified when new Verifier  * instances are created.  *  *  * @see VerifierFactory#getVerifier(String)  * @see VerifierFactory#getVerifiers()  * @see VerifierFactory#attach(VerifierFactoryObserver)  * @see VerifierFactory#detach(VerifierFactoryObserver)  */
+comment|/**  * VerifierFactoryObserver instances are notified when new Verifier instances are created.  *  *  * @see VerifierFactory#getVerifier(String)  * @see VerifierFactory#getVerifiers()  * @see VerifierFactory#attach(VerifierFactoryObserver)  * @see VerifierFactory#detach(VerifierFactoryObserver)  */
 end_comment
 
 begin_interface
@@ -24,7 +24,7 @@ specifier|public
 interface|interface
 name|VerifierFactoryObserver
 block|{
-comment|/**      * VerifierFactoryObserver instances are notified invoking this method.      * The String argument is the fully qualified class name of a class a      * new Verifier instance created by the VerifierFactory operates on.      */
+comment|/**      * VerifierFactoryObserver instances are notified invoking this method. The String argument is the fully qualified class      * name of a class a new Verifier instance created by the VerifierFactory operates on.      */
 name|void
 name|update
 parameter_list|(

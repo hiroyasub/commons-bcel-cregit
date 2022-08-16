@@ -226,7 +226,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Template class for building up a java class. May be initialized with an  * existing java class (file).  *  * @see JavaClass  */
+comment|/**  * Template class for building up a java class. May be initialized with an existing java class (file).  *  * @see JavaClass  */
 end_comment
 
 begin_class
@@ -356,7 +356,7 @@ operator|=
 name|comparator
 expr_stmt|;
 block|}
-comment|/* Corresponds to the fields found in a JavaClass object.      */
+comment|/*      * Corresponds to the fields found in a JavaClass object.      */
 specifier|private
 name|String
 name|className
@@ -478,7 +478,7 @@ name|ClassObserver
 argument_list|>
 name|observers
 decl_stmt|;
-comment|/**      * Initialize with existing class.      * @param clazz JavaClass object (e.g. read from file)      */
+comment|/**      * Initialize with existing class.      *       * @param clazz JavaClass object (e.g. read from file)      */
 specifier|public
 name|ClassGen
 parameter_list|(
@@ -693,7 +693,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/** Convenience constructor to set up some important values initially.      *      * @param className fully qualified class name      * @param superClassName fully qualified superclass name      * @param fileName source file name      * @param accessFlags access qualifiers      * @param interfaces implemented interfaces      */
+comment|/**      * Convenience constructor to set up some important values initially.      *      * @param className fully qualified class name      * @param superClassName fully qualified superclass name      * @param fileName source file name      * @param accessFlags access qualifiers      * @param interfaces implemented interfaces      */
 specifier|public
 name|ClassGen
 parameter_list|(
@@ -737,7 +737,7 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
-comment|/** Convenience constructor to set up some important values initially.      *      * @param className fully qualified class name      * @param superClassName fully qualified superclass name      * @param fileName source file name      * @param accessFlags access qualifiers      * @param interfaces implemented interfaces      * @param cp constant pool to use      */
+comment|/**      * Convenience constructor to set up some important values initially.      *      * @param className fully qualified class name      * @param superClassName fully qualified superclass name      * @param fileName source file name      * @param accessFlags access qualifiers      * @param interfaces implemented interfaces      * @param cp constant pool to use      */
 specifier|public
 name|ClassGen
 parameter_list|(
@@ -892,7 +892,7 @@ name|a
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Add an attribute to this class.      * @param a attribute to add      */
+comment|/**      * Add an attribute to this class.      *       * @param a attribute to add      */
 specifier|public
 name|void
 name|addAttribute
@@ -910,7 +910,7 @@ name|a
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Convenience method.      *      * Add an empty constructor to this class that does nothing but calling super().      * @param access_flags rights for constructor      */
+comment|/**      * Convenience method.      *      * Add an empty constructor to this class that does nothing but calling super().      *       * @param access_flags rights for constructor      */
 specifier|public
 name|void
 name|addEmptyConstructor
@@ -1011,7 +1011,7 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Add a field to this class.      * @param f field to add      */
+comment|/**      * Add a field to this class.      *       * @param f field to add      */
 specifier|public
 name|void
 name|addField
@@ -1029,7 +1029,7 @@ name|f
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Add an interface to this class, i.e., this class has to implement it.      * @param name interface to implement (fully qualified class name)      */
+comment|/**      * Add an interface to this class, i.e., this class has to implement it.      *       * @param name interface to implement (fully qualified class name)      */
 specifier|public
 name|void
 name|addInterface
@@ -1047,7 +1047,7 @@ name|name
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Add a method to this class.      * @param m method to add      */
+comment|/**      * Add a method to this class.      *       * @param m method to add      */
 specifier|public
 name|void
 name|addMethod
@@ -1065,7 +1065,7 @@ name|m
 argument_list|)
 expr_stmt|;
 block|}
-comment|/** Add observer for this object.      */
+comment|/**      * Add observer for this object.      */
 specifier|public
 name|void
 name|addObserver
@@ -1149,7 +1149,7 @@ name|f
 argument_list|)
 return|;
 block|}
-comment|/** @return field object with given name, or null      */
+comment|/**      * @return field object with given name, or null      */
 specifier|public
 name|Field
 name|containsField
@@ -1190,7 +1190,7 @@ return|return
 literal|null
 return|;
 block|}
-comment|/** @return method object with given name and signature, or null      */
+comment|/**      * @return method object with given name and signature, or null      */
 specifier|public
 name|Method
 name|containsMethod
@@ -1245,7 +1245,7 @@ return|return
 literal|null
 return|;
 block|}
-comment|/**      * Return value as defined by given BCELComparator strategy.      * By default two ClassGen objects are said to be equal when      * their class names are equal.      *      * @see java.lang.Object#equals(java.lang.Object)      */
+comment|/**      * Return value as defined by given BCELComparator strategy. By default two ClassGen objects are said to be equal when      * their class names are equal.      *      * @see java.lang.Object#equals(java.lang.Object)      */
 annotation|@
 name|Override
 specifier|public
@@ -1268,7 +1268,7 @@ name|obj
 argument_list|)
 return|;
 block|}
-comment|//  J5TODO: Should we make calling unpackAnnotations() lazy and put it in here?
+comment|// J5TODO: Should we make calling unpackAnnotations() lazy and put it in here?
 specifier|public
 name|AnnotationEntryGen
 index|[]
@@ -1683,7 +1683,7 @@ return|return
 name|superclass_name_index
 return|;
 block|}
-comment|/**      * Return value as defined by given BCELComparator strategy.      * By default return the hashcode of the class name.      *      * @see java.lang.Object#hashCode()      */
+comment|/**      * Return value as defined by given BCELComparator strategy. By default return the hashcode of the class name.      *      * @see java.lang.Object#hashCode()      */
 annotation|@
 name|Override
 specifier|public
@@ -1700,7 +1700,7 @@ name|this
 argument_list|)
 return|;
 block|}
-comment|/**      * Remove an attribute from this class.      * @param a attribute to remove      */
+comment|/**      * Remove an attribute from this class.      *       * @param a attribute to remove      */
 specifier|public
 name|void
 name|removeAttribute
@@ -1718,7 +1718,7 @@ name|a
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Remove a field to this class.      * @param f field to remove      */
+comment|/**      * Remove a field to this class.      *       * @param f field to remove      */
 specifier|public
 name|void
 name|removeField
@@ -1736,7 +1736,7 @@ name|f
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Remove an interface from this class.      * @param name interface to remove (fully qualified name)      */
+comment|/**      * Remove an interface from this class.      *       * @param name interface to remove (fully qualified name)      */
 specifier|public
 name|void
 name|removeInterface
@@ -1754,7 +1754,7 @@ name|name
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Remove a method from this class.      * @param m method to remove      */
+comment|/**      * Remove a method from this class.      *       * @param m method to remove      */
 specifier|public
 name|void
 name|removeMethod
@@ -1772,7 +1772,7 @@ name|m
 argument_list|)
 expr_stmt|;
 block|}
-comment|/** Remove observer for this object.      */
+comment|/**      * Remove observer for this object.      */
 specifier|public
 name|void
 name|removeObserver
@@ -1798,7 +1798,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/** Replace given field with new one. If the old one does not exist      * add the new_ field to the class anyway.      */
+comment|/**      * Replace given field with new one. If the old one does not exist add the new_ field to the class anyway.      */
 specifier|public
 name|void
 name|replaceField
@@ -1866,7 +1866,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/** Replace given method with new one. If the old one does not exist      * add the new_ method to the class anyway.      */
+comment|/**      * Replace given method with new one. If the old one does not exist add the new_ method to the class anyway.      */
 specifier|public
 name|void
 name|replaceMethod
@@ -2017,7 +2017,7 @@ operator|=
 name|constant_pool
 expr_stmt|;
 block|}
-comment|/** Set major version number of class file, default value is 45 (JDK 1.1)      * @param major major version number      */
+comment|/**      * Set major version number of class file, default value is 45 (JDK 1.1)      *       * @param major major version number      */
 specifier|public
 name|void
 name|setMajor
@@ -2089,7 +2089,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/** Set minor version number of class file, default value is 3 (JDK 1.1)      * @param minor minor version number      */
+comment|/**      * Set minor version number of class file, default value is 3 (JDK 1.1)      *       * @param minor minor version number      */
 specifier|public
 name|void
 name|setMinor
@@ -2313,7 +2313,7 @@ name|EMPTY_ARRAY
 argument_list|)
 return|;
 block|}
-comment|/** Call notify() method on all observers. This method is not called      * automatically whenever the state has changed, but has to be      * called by the user after they have finished editing the object.      */
+comment|/**      * Call notify() method on all observers. This method is not called automatically whenever the state has changed, but      * has to be called by the user after they have finished editing the object.      */
 specifier|public
 name|void
 name|update

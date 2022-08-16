@@ -224,7 +224,7 @@ name|EMPTY_ARRAY
 init|=
 block|{}
 decl_stmt|;
-comment|/**      * Converts a list of AnnotationGen objects into a set of attributes      * that can be attached to the class file.      *      * @param cp  The constant pool gen where we can create the necessary name refs      * @param annotationEntryGens An array of AnnotationGen objects      */
+comment|/**      * Converts a list of AnnotationGen objects into a set of attributes that can be attached to the class file.      *      * @param cp The constant pool gen where we can create the necessary name refs      * @param annotationEntryGens An array of AnnotationGen objects      */
 specifier|static
 name|Attribute
 index|[]
@@ -267,7 +267,7 @@ name|countInvisible
 init|=
 literal|0
 decl_stmt|;
-comment|//  put the annotations in the right output stream
+comment|// put the annotations in the right output stream
 for|for
 control|(
 specifier|final
@@ -584,7 +584,7 @@ return|return
 literal|null
 return|;
 block|}
-comment|/**      * Annotations against a class are stored in one of four attribute kinds:      * - RuntimeVisibleParameterAnnotations      * - RuntimeInvisibleParameterAnnotations      */
+comment|/**      * Annotations against a class are stored in one of four attribute kinds: - RuntimeVisibleParameterAnnotations -      * RuntimeInvisibleParameterAnnotations      */
 specifier|static
 name|Attribute
 index|[]
@@ -600,7 +600,7 @@ argument_list|<
 name|AnnotationEntryGen
 argument_list|>
 index|[]
-comment|/*Array of lists, array size depends on #params */
+comment|/* Array of lists, array size depends on #params */
 name|vec
 parameter_list|)
 block|{
@@ -1232,7 +1232,7 @@ specifier|private
 name|boolean
 name|isRuntimeVisible
 decl_stmt|;
-comment|/**      * Here we are taking a fixed annotation of type Annotation and building a      * modifiable AnnotationGen object. If the pool passed in is for a different      * class file, then copyPoolEntries should have been passed as true as that      * will force us to do a deep copy of the annotation and move the cpool      * entries across. We need to copy the type and the element name value pairs      * and the visibility.      */
+comment|/**      * Here we are taking a fixed annotation of type Annotation and building a modifiable AnnotationGen object. If the pool      * passed in is for a different class file, then copyPoolEntries should have been passed as true as that will force us      * to do a deep copy of the annotation and move the cpool entries across. We need to copy the type and the element name      * value pairs and the visibility.      */
 specifier|public
 name|AnnotationEntryGen
 parameter_list|(

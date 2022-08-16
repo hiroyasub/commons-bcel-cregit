@@ -16,7 +16,7 @@ package|;
 end_package
 
 begin_comment
-comment|/**  * Visitor with empty method bodies, can be extended and used in conjunction  * with the DescendingVisitor class, e.g. By courtesy of David Spencer.  *  * @see DescendingVisitor  */
+comment|/**  * Visitor with empty method bodies, can be extended and used in conjunction with the DescendingVisitor class, e.g. By  * courtesy of David Spencer.  *  * @see DescendingVisitor  */
 end_comment
 
 begin_class
@@ -498,8 +498,8 @@ name|obj
 parameter_list|)
 block|{
 block|}
-comment|/**      * @since 6.0     @Override     public void visitStackMapTable(StackMapTable obj)     {     }      */
-comment|/**      * @since 6.0     @Override     public void visitStackMapTableEntry(StackMapTableEntry obj)     {     }      */
+comment|/**      * @since 6.0      * @Override public void visitStackMapTable(StackMapTable obj) { }      */
+comment|/**      * @since 6.0      * @Override public void visitStackMapTableEntry(StackMapTableEntry obj) { }      */
 comment|/**      * @since 6.4.0      */
 annotation|@
 name|Override

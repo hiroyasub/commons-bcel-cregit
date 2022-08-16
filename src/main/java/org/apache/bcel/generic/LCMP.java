@@ -16,7 +16,7 @@ package|;
 end_package
 
 begin_comment
-comment|/**  * LCMP - Compare longs:  *<PRE>Stack: ..., value1.word1, value1.word2, value2.word1, value2.word2 -&gt; ..., result&lt;= -1, 0, 1&gt;</PRE>  *  *  */
+comment|/**  * LCMP - Compare longs:  *   *<PRE>  * Stack: ..., value1.word1, value1.word2, value2.word1, value2.word2 -&gt; ..., result&lt;= -1, 0, 1&gt;  *</PRE>  *  *  */
 end_comment
 
 begin_class
@@ -55,7 +55,7 @@ literal|1
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Call corresponding visitor method(s). The order is:      * Call visitor methods of implemented interfaces first, then      * call methods according to the class hierarchy in descending order,      * i.e., the most specific visitXXX() call comes last.      *      * @param v Visitor object      */
+comment|/**      * Call corresponding visitor method(s). The order is: Call visitor methods of implemented interfaces first, then call      * methods according to the class hierarchy in descending order, i.e., the most specific visitXXX() call comes last.      *      * @param v Visitor object      */
 annotation|@
 name|Override
 specifier|public
@@ -96,7 +96,7 @@ name|this
 argument_list|)
 expr_stmt|;
 block|}
-comment|/** @return Type.LONG      */
+comment|/**      * @return Type.LONG      */
 annotation|@
 name|Override
 specifier|public
