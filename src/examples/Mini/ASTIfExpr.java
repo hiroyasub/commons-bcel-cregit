@@ -550,7 +550,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/**      * Second pass Overrides AstExpr.eval()      *       * @return type of expression      * @param expected type      */
+comment|/**      * Second pass Overrides AstExpr.eval()      *      * @return type of expression      * @param expected type      */
 annotation|@
 name|Override
 specifier|public
@@ -621,17 +621,13 @@ argument_list|)
 expr_stmt|;
 if|if
 condition|(
-operator|(
 name|expected
 operator|!=
 name|T_UNKNOWN
-operator|)
 operator|&&
-operator|(
 name|then_type
 operator|!=
 name|expected
-operator|)
 condition|)
 block|{
 name|MiniC
@@ -684,17 +680,13 @@ argument_list|)
 expr_stmt|;
 if|if
 condition|(
-operator|(
 name|expected
 operator|!=
 name|T_UNKNOWN
-operator|)
 operator|&&
-operator|(
 name|else_type
 operator|!=
 name|expected
-operator|)
 condition|)
 block|{
 name|MiniC

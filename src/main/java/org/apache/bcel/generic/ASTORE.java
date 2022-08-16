@@ -16,7 +16,7 @@ package|;
 end_package
 
 begin_comment
-comment|/**  * ASTORE - Store reference into local variable  *   *<PRE>  * Stack ..., objectref -&gt; ...  *</PRE>  *  */
+comment|/**  * ASTORE - Store reference into local variable  *  *<PRE>  * Stack ..., objectref -&gt; ...  *</PRE>  *  */
 end_comment
 
 begin_class
@@ -54,7 +54,7 @@ name|ASTORE_0
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Store reference into local variable      *       * @param n index of local variable      */
+comment|/**      * Store reference into local variable      *      * @param n index of local variable      */
 specifier|public
 name|ASTORE
 parameter_list|(

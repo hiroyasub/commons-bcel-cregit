@@ -303,7 +303,6 @@ name|curChar
 parameter_list|)
 block|{
 return|return
-operator|(
 literal|"Lexical error at line "
 operator|+
 name|errorLine
@@ -319,7 +318,6 @@ name|EOFSeen
 condition|?
 literal|"<EOF> "
 else|:
-operator|(
 literal|"\""
 operator|+
 name|addEscapes
@@ -333,7 +331,6 @@ argument_list|)
 argument_list|)
 operator|+
 literal|"\""
-operator|)
 operator|+
 literal|" ("
 operator|+
@@ -353,7 +350,6 @@ name|errorAfter
 argument_list|)
 operator|+
 literal|"\""
-operator|)
 return|;
 block|}
 comment|/**      * Indicates the reason why the exception is thrown. It will have one of the above 4 values.      */

@@ -28,7 +28,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * MONITORENTER - Enter monitor for object  *   *<PRE>  * Stack: ..., objectref -&gt; ...  *</PRE>  *  */
+comment|/**  * MONITORENTER - Enter monitor for object  *  *<PRE>  * Stack: ..., objectref -&gt; ...  *</PRE>  *  */
 end_comment
 
 begin_class

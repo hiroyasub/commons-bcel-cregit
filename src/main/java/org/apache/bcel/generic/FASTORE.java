@@ -16,7 +16,7 @@ package|;
 end_package
 
 begin_comment
-comment|/**  * FASTORE - Store into float array  *   *<PRE>  * Stack: ..., arrayref, index, value -&gt; ...  *</PRE>  *  */
+comment|/**  * FASTORE - Store into float array  *  *<PRE>  * Stack: ..., arrayref, index, value -&gt; ...  *</PRE>  *  */
 end_comment
 
 begin_class

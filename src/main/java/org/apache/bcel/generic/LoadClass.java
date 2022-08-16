@@ -24,7 +24,7 @@ specifier|public
 interface|interface
 name|LoadClass
 block|{
-comment|/**      * Returns the ObjectType of the referenced class or interface that may be loaded and resolved.      *       * @return object type that may be loaded or null if a primitive is referenced      */
+comment|/**      * Returns the ObjectType of the referenced class or interface that may be loaded and resolved.      *      * @return object type that may be loaded or null if a primitive is referenced      */
 name|ObjectType
 name|getLoadClassType
 parameter_list|(
@@ -32,7 +32,7 @@ name|ConstantPoolGen
 name|cpg
 parameter_list|)
 function_decl|;
-comment|/**      * Returns the type associated with this instruction. LoadClass instances are always typed, but this type does not      * always refer to the type of the class or interface that it possibly forces to load. For example, GETFIELD would      * return the type of the field and not the type of the class where the field is defined. If no class is forced to be      * loaded,<B>null</B> is returned. An example for this is an ANEWARRAY instruction that creates an int[][].      *       * @see #getLoadClassType(ConstantPoolGen)      */
+comment|/**      * Returns the type associated with this instruction. LoadClass instances are always typed, but this type does not      * always refer to the type of the class or interface that it possibly forces to load. For example, GETFIELD would      * return the type of the field and not the type of the class where the field is defined. If no class is forced to be      * loaded,<B>null</B> is returned. An example for this is an ANEWARRAY instruction that creates an int[][].      *      * @see #getLoadClassType(ConstantPoolGen)      */
 name|Type
 name|getType
 parameter_list|(

@@ -28,7 +28,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * IREM - Remainder of int  *   *<PRE>  * Stack: ..., value1, value2 -&gt; result  *</PRE>  *  */
+comment|/**  * IREM - Remainder of int  *  *<PRE>  * Stack: ..., value1, value2 -&gt; result  *</PRE>  *  */
 end_comment
 
 begin_class

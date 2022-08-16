@@ -513,7 +513,7 @@ name|UNKNOWN
 argument_list|)
 return|;
 block|}
-comment|/**      * Return a string with the flag settings      *       * @param flags the flags field to interpret      * @param location the item type      * @return the formatted string      * @since 6.0 made public      */
+comment|/**      * Return a string with the flag settings      *      * @param flags the flags field to interpret      * @param location the item type      * @return the formatted string      * @since 6.0 made public      */
 specifier|public
 specifier|static
 name|String

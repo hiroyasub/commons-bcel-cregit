@@ -361,7 +361,7 @@ name|getBytes
 argument_list|()
 return|;
 block|}
-comment|/**      * Gets the reference type representing the class, interface, or array class referenced by the instruction.      *       * @param cpg the ConstantPoolGen used to create the instruction      * @return an ObjectType (if the referenced class type is a class or interface), or an ArrayType (if the referenced      *         class type is an array class)      */
+comment|/**      * Gets the reference type representing the class, interface, or array class referenced by the instruction.      *      * @param cpg the ConstantPoolGen used to create the instruction      * @return an ObjectType (if the referenced class type is a class or interface), or an ArrayType (if the referenced      *         class type is an array class)      */
 specifier|public
 name|ReferenceType
 name|getReferenceType

@@ -16,7 +16,7 @@ package|;
 end_package
 
 begin_comment
-comment|/**  * Denotes an instruction to perform an unconditional branch, i.e., GOTO, JSR.  *  *   * @see GOTO  * @see JSR  */
+comment|/**  * Denotes an instruction to perform an unconditional branch, i.e., GOTO, JSR.  *  *  * @see GOTO  * @see JSR  */
 end_comment
 
 begin_interface

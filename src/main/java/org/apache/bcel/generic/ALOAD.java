@@ -16,7 +16,7 @@ package|;
 end_package
 
 begin_comment
-comment|/**  * ALOAD - Load reference from local variable  *   *<PRE>  * Stack: ... -&gt; ..., objectref  *</PRE>  *  */
+comment|/**  * ALOAD - Load reference from local variable  *  *<PRE>  * Stack: ... -&gt; ..., objectref  *</PRE>  *  */
 end_comment
 
 begin_class
@@ -54,7 +54,7 @@ name|ALOAD_0
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Load reference from local variable      *       * @param n index of local variable      */
+comment|/**      * Load reference from local variable      *      * @param n index of local variable      */
 specifier|public
 name|ALOAD
 parameter_list|(

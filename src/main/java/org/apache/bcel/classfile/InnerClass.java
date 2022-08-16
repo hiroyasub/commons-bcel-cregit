@@ -87,7 +87,7 @@ specifier|private
 name|int
 name|innerAccessFlags
 decl_stmt|;
-comment|/**      * Construct object from file stream.      *       * @param file Input stream      * @throws IOException if an I/O error occurs.      */
+comment|/**      * Construct object from file stream.      *      * @param file Input stream      * @throws IOException if an I/O error occurs.      */
 name|InnerClass
 parameter_list|(
 specifier|final

@@ -16,7 +16,7 @@ package|;
 end_package
 
 begin_comment
-comment|/**  * ILOAD - Load int from local variable onto stack  *   *<PRE>  * Stack: ... -&gt; ..., result  *</PRE>  *  */
+comment|/**  * ILOAD - Load int from local variable onto stack  *  *<PRE>  * Stack: ... -&gt; ..., result  *</PRE>  *  */
 end_comment
 
 begin_class
@@ -54,7 +54,7 @@ name|ILOAD_0
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Load int from local variable      *       * @param n index of local variable      */
+comment|/**      * Load int from local variable      *      * @param n index of local variable      */
 specifier|public
 name|ILOAD
 parameter_list|(

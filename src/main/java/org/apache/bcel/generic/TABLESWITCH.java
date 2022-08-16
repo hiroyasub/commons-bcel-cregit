@@ -181,7 +181,7 @@ name|this
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Dump instruction as byte code to stream out.      *       * @param out Output stream      */
+comment|/**      * Dump instruction as byte code to stream out.      *      * @param out Output stream      */
 annotation|@
 name|Override
 specifier|public

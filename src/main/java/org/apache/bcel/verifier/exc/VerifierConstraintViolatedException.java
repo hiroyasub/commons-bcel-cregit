@@ -149,7 +149,7 @@ operator|+
 name|post
 expr_stmt|;
 block|}
-comment|/**      * Returns the error message string of this VerifierConstraintViolatedException object.      *       * @return the error message string of this VerifierConstraintViolatedException.      */
+comment|/**      * Returns the error message string of this VerifierConstraintViolatedException object.      *      * @return the error message string of this VerifierConstraintViolatedException.      */
 annotation|@
 name|Override
 specifier|public

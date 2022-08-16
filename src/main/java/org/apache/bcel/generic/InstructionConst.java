@@ -2271,7 +2271,7 @@ operator|=
 name|MONITOREXIT
 expr_stmt|;
 block|}
-comment|/**      * Gets the Instruction.      *       * @param index the index, e.g. {@link Const#RETURN}      * @return the entry from the private INSTRUCTIONS table      */
+comment|/**      * Gets the Instruction.      *      * @param index the index, e.g. {@link Const#RETURN}      * @return the entry from the private INSTRUCTIONS table      */
 specifier|public
 specifier|static
 name|Instruction

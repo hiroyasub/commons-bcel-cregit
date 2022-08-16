@@ -349,7 +349,7 @@ comment|// ignore close exceptions
 block|}
 block|}
 block|}
-comment|/**      * Processes information about the attributes of the class.      *       * @throws IOException      * @throws ClassFormatException      */
+comment|/**      * Processes information about the attributes of the class.      *      * @throws IOException      * @throws ClassFormatException      */
 specifier|private
 specifier|final
 name|void
@@ -460,7 +460,7 @@ expr_stmt|;
 block|}
 block|}
 block|}
-comment|/**      * Processes information about the class and its super class.      *       * @throws IOException      * @throws ClassFormatException      */
+comment|/**      * Processes information about the class and its super class.      *      * @throws IOException      * @throws ClassFormatException      */
 specifier|private
 specifier|final
 name|void
@@ -502,7 +502,6 @@ block|}
 if|if
 condition|(
 operator|(
-operator|(
 name|access_flags
 operator|&
 name|Const
@@ -511,9 +510,7 @@ name|ACC_ABSTRACT
 operator|)
 operator|!=
 literal|0
-operator|)
 operator|&&
-operator|(
 operator|(
 name|access_flags
 operator|&
@@ -523,7 +520,6 @@ name|ACC_FINAL
 operator|)
 operator|!=
 literal|0
-operator|)
 condition|)
 block|{
 throw|throw
@@ -651,7 +647,7 @@ literal|")"
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Processes constant pool entries.      *       * @throws IOException      * @throws ClassFormatException      */
+comment|/**      * Processes constant pool entries.      *      * @throws IOException      * @throws ClassFormatException      */
 specifier|private
 specifier|final
 name|void
@@ -809,21 +805,17 @@ argument_list|()
 expr_stmt|;
 if|if
 condition|(
-operator|(
 name|tag
 operator|==
 name|Const
 operator|.
 name|CONSTANT_Double
-operator|)
 operator|||
-operator|(
 name|tag
 operator|==
 name|Const
 operator|.
 name|CONSTANT_Long
-operator|)
 condition|)
 block|{
 name|i
@@ -832,7 +824,7 @@ expr_stmt|;
 block|}
 block|}
 block|}
-comment|/**      * Constructs object from file stream.      *       * @param file Input stream      * @throws IOException      * @throws ClassFormatException      */
+comment|/**      * Constructs object from file stream.      *      * @param file Input stream      * @throws IOException      * @throws ClassFormatException      */
 specifier|private
 specifier|final
 name|void
@@ -1060,17 +1052,13 @@ argument_list|()
 decl_stmt|;
 if|if
 condition|(
-operator|(
 name|pos2
 operator|-
 name|pos1
-operator|)
 operator|!=
-operator|(
 name|attribute_length
 operator|+
 literal|6
-operator|)
 condition|)
 block|{
 name|System
@@ -1122,7 +1110,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/**      * Processes information about the fields of the class, i.e., its variables.      *       * @throws IOException      * @throws ClassFormatException      */
+comment|/**      * Processes information about the fields of the class, i.e., its variables.      *      * @throws IOException      * @throws ClassFormatException      */
 specifier|private
 specifier|final
 name|void
@@ -1200,7 +1188,7 @@ expr_stmt|;
 block|}
 block|}
 block|}
-comment|/**      * Checks whether the header of the file is ok. Of course, this has to be the first action on successive file reads.      *       * @throws IOException      * @throws ClassFormatException      */
+comment|/**      * Checks whether the header of the file is ok. Of course, this has to be the first action on successive file reads.      *      * @throws IOException      * @throws ClassFormatException      */
 specifier|private
 specifier|final
 name|void
@@ -1280,7 +1268,7 @@ name|magic
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Processes information about the interfaces implemented by this class.      *       * @throws IOException      * @throws ClassFormatException      */
+comment|/**      * Processes information about the interfaces implemented by this class.      *      * @throws IOException      * @throws ClassFormatException      */
 specifier|private
 specifier|final
 name|void
@@ -1430,7 +1418,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/**      * Processes information about the methods of the class.      *       * @throws IOException      * @throws ClassFormatException      */
+comment|/**      * Processes information about the methods of the class.      *      * @throws IOException      * @throws ClassFormatException      */
 specifier|private
 specifier|final
 name|void
@@ -1507,7 +1495,7 @@ expr_stmt|;
 block|}
 block|}
 block|}
-comment|/**      * Processes major and minor version of compiler which created the file.      *       * @throws IOException      * @throws ClassFormatException      */
+comment|/**      * Processes major and minor version of compiler which created the file.      *      * @throws IOException      * @throws ClassFormatException      */
 specifier|private
 specifier|final
 name|void

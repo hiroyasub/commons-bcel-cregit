@@ -153,6 +153,8 @@ block|}
 block|}
 block|}
 block|}
+annotation|@
+name|Override
 specifier|public
 name|void
 name|jjtAddChild
@@ -236,12 +238,16 @@ operator|=
 name|n
 expr_stmt|;
 block|}
+annotation|@
+name|Override
 specifier|public
 name|void
 name|jjtClose
 parameter_list|()
 block|{
 block|}
+annotation|@
+name|Override
 specifier|public
 name|Node
 name|jjtGetChild
@@ -258,17 +264,17 @@ name|i
 index|]
 return|;
 block|}
+annotation|@
+name|Override
 specifier|public
 name|int
 name|jjtGetNumChildren
 parameter_list|()
 block|{
 return|return
-operator|(
 name|children
 operator|==
 literal|null
-operator|)
 condition|?
 literal|0
 else|:
@@ -277,6 +283,8 @@ operator|.
 name|length
 return|;
 block|}
+annotation|@
+name|Override
 specifier|public
 name|Node
 name|jjtGetParent
@@ -286,6 +294,8 @@ return|return
 name|parent
 return|;
 block|}
+annotation|@
+name|Override
 specifier|public
 name|void
 name|jjtOpen
@@ -293,6 +303,8 @@ parameter_list|()
 block|{
 block|}
 comment|/*      * You can override these two methods in subclasses of SimpleNode to customize the way the node appears when the tree is      * dumped. If your output uses more than one line you should override toString(String), otherwise overriding toString()      * is probably all you need to do.      */
+annotation|@
+name|Override
 specifier|public
 name|void
 name|jjtSetParent

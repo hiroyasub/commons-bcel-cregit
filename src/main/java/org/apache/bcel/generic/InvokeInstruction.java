@@ -123,7 +123,7 @@ name|index
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Also works for instructions whose stack effect depends on the constant pool entry they reference.      *       * @return Number of words consumed from stack by this instruction      */
+comment|/**      * Also works for instructions whose stack effect depends on the constant pool entry they reference.      *      * @return Number of words consumed from stack by this instruction      */
 annotation|@
 name|Override
 specifier|public
@@ -342,7 +342,7 @@ name|cpg
 argument_list|)
 return|;
 block|}
-comment|/**      * Also works for instructions whose stack effect depends on the constant pool entry they reference.      *       * @return Number of words produced onto stack by this instruction      */
+comment|/**      * Also works for instructions whose stack effect depends on the constant pool entry they reference.      *      * @return Number of words produced onto stack by this instruction      */
 annotation|@
 name|Override
 specifier|public

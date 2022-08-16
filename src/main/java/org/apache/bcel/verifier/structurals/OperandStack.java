@@ -924,7 +924,7 @@ name|size
 argument_list|()
 return|;
 block|}
-comment|/**      * Returns the number of stack slots used.      *       * @see #maxStack()      */
+comment|/**      * Returns the number of stack slots used.      *      * @see #maxStack()      */
 specifier|public
 name|int
 name|slotsUsed

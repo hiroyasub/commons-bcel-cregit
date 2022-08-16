@@ -363,7 +363,6 @@ argument_list|()
 decl_stmt|;
 if|if
 condition|(
-operator|(
 name|prev
 operator|!=
 literal|null
@@ -374,9 +373,7 @@ name|getNext
 argument_list|()
 operator|!=
 name|ih
-operator|)
 operator|||
-operator|(
 name|next
 operator|!=
 literal|null
@@ -387,7 +384,6 @@ name|getPrev
 argument_list|()
 operator|!=
 name|ih
-operator|)
 condition|)
 block|{
 specifier|final

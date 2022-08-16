@@ -529,11 +529,9 @@ name|m
 init|=
 name|match
 index|[
-operator|(
 name|l
 operator|+
 name|r
-operator|)
 operator|>>>
 literal|1
 index|]

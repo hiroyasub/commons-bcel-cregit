@@ -389,11 +389,9 @@ operator|.
 name|isAbstract
 argument_list|()
 operator|||
-operator|(
 name|code
 operator|==
 literal|null
-operator|)
 condition|)
 block|{
 return|return

@@ -96,7 +96,7 @@ argument_list|>
 name|executionPredecessors
 parameter_list|)
 function_decl|;
-comment|/**      * Returns the usual control flow successors.      *       * @see #getExceptionHandlers()      */
+comment|/**      * Returns the usual control flow successors.      *      * @see #getExceptionHandlers()      */
 name|InstructionContext
 index|[]
 name|getSuccessors

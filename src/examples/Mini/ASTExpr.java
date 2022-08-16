@@ -1423,7 +1423,7 @@ expr_stmt|;
 block|}
 block|}
 block|}
-comment|/**      * Second and third pass      *       * @return type of expression      * @param expected type      */
+comment|/**      * Second and third pass      *      * @return type of expression      * @param expected type      */
 specifier|public
 name|int
 name|eval
@@ -1483,35 +1483,25 @@ if|else
 comment|// Compute expected type
 if|if
 condition|(
-operator|(
 name|kind
 operator|==
 name|PLUS
-operator|)
 operator|||
-operator|(
 name|kind
 operator|==
 name|MINUS
-operator|)
 operator|||
-operator|(
 name|kind
 operator|==
 name|MULT
-operator|)
 operator|||
-operator|(
 name|kind
 operator|==
 name|MOD
-operator|)
 operator|||
-operator|(
 name|kind
 operator|==
 name|DIV
-operator|)
 condition|)
 block|{
 name|child_type
@@ -1523,17 +1513,13 @@ expr_stmt|;
 block|}
 if|else if
 condition|(
-operator|(
 name|kind
 operator|==
 name|AND
-operator|)
 operator|||
-operator|(
 name|kind
 operator|==
 name|OR
-operator|)
 condition|)
 block|{
 name|child_type
@@ -1804,11 +1790,9 @@ specifier|final
 name|int
 name|len
 init|=
-operator|(
 name|children
 operator|!=
 literal|null
-operator|)
 condition|?
 name|children
 operator|.
@@ -1896,19 +1880,15 @@ name|env
 expr_stmt|;
 if|if
 condition|(
-operator|(
 name|kind
 operator|==
 operator|-
 literal|1
-operator|)
 operator|&&
-operator|(
 name|unop
 operator|==
 operator|-
 literal|1
-operator|)
 condition|)
 block|{
 return|return

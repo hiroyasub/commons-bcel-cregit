@@ -40,7 +40,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * PUTFIELD - Put field in object  *   *<PRE>  * Stack: ..., objectref, value -&gt; ...  *</PRE>  *   * OR  *   *<PRE>  * Stack: ..., objectref, value.word1, value.word2 -&gt; ...  *</PRE>  *  */
+comment|/**  * PUTFIELD - Put field in object  *  *<PRE>  * Stack: ..., objectref, value -&gt; ...  *</PRE>  *  * OR  *  *<PRE>  * Stack: ..., objectref, value.word1, value.word2 -&gt; ...  *</PRE>  *  */
 end_comment
 
 begin_class

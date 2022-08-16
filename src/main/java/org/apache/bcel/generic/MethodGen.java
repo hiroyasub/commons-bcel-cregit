@@ -3239,7 +3239,7 @@ return|;
 block|}
 comment|// J5TODO: Should paramAnnotations be an array of arrays? Rather than an array of lists, this
 comment|// is more likely to suggest to the caller it is readonly (which a List does not).
-comment|/**      * Return a list of AnnotationGen objects representing parameter annotations      *       * @since 6.0      */
+comment|/**      * Return a list of AnnotationGen objects representing parameter annotations      *      * @since 6.0      */
 specifier|public
 name|List
 argument_list|<
@@ -4894,7 +4894,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/**      * Would prefer to make this private, but need a way to test if client is using BCEL version 6.5.0 or later that      * contains fix for BCEL-329.      *       * @since 6.5.0      */
+comment|/**      * Would prefer to make this private, but need a way to test if client is using BCEL version 6.5.0 or later that      * contains fix for BCEL-329.      *      * @since 6.5.0      */
 specifier|public
 name|void
 name|removeRuntimeAttributes

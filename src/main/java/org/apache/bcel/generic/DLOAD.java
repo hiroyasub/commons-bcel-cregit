@@ -16,7 +16,7 @@ package|;
 end_package
 
 begin_comment
-comment|/**  * DLOAD - Load double from local variable  *   *<PRE>  * Stack ... -&gt; ..., result.word1, result.word2  *</PRE>  *  */
+comment|/**  * DLOAD - Load double from local variable  *  *<PRE>  * Stack ... -&gt; ..., result.word1, result.word2  *</PRE>  *  */
 end_comment
 
 begin_class
@@ -54,7 +54,7 @@ name|DLOAD_0
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Load double from local variable      *       * @param n index of local variable      */
+comment|/**      * Load double from local variable      *      * @param n index of local variable      */
 specifier|public
 name|DLOAD
 parameter_list|(

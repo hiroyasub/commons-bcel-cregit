@@ -16,7 +16,7 @@ package|;
 end_package
 
 begin_comment
-comment|/**  * SWAP - Swa top operand stack word  *   *<PRE>  * Stack: ..., word2, word1 -&gt; ..., word1, word2  *</PRE>  *  */
+comment|/**  * SWAP - Swa top operand stack word  *  *<PRE>  * Stack: ..., word2, word1 -&gt; ..., word1, word2  *</PRE>  *  */
 end_comment
 
 begin_class

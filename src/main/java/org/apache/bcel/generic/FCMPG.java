@@ -16,7 +16,7 @@ package|;
 end_package
 
 begin_comment
-comment|/**  * FCMPG - Compare floats: value1&gt; value2  *   *<PRE>  * Stack: ..., value1, value2 -&gt; ..., result  *</PRE>  *  */
+comment|/**  * FCMPG - Compare floats: value1&gt; value2  *  *<PRE>  * Stack: ..., value1, value2 -&gt; ..., result  *</PRE>  *  */
 end_comment
 
 begin_class

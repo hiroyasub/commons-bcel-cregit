@@ -52,7 +52,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * A class for simple graphical class file verification. Use the main(String []) method with fully qualified class names  * as arguments to use it as a stand-alone application. Use the VerifyDialog(String) constructor to use this class in  * your application. [This class was created using VisualAge for Java, but it does not work under VAJ itself (Version  * 3.02 JDK 1.2)]  *   * @see #main(String[])  * @see #VerifyDialog(String)  */
+comment|/**  * A class for simple graphical class file verification. Use the main(String []) method with fully qualified class names  * as arguments to use it as a stand-alone application. Use the VerifyDialog(String) constructor to use this class in  * your application. [This class was created using VisualAge for Java, but it does not work under VAJ itself (Version  * 3.02 JDK 1.2)]  *  * @see #main(String[])  * @see #VerifyDialog(String)  */
 end_comment
 
 begin_class
@@ -196,7 +196,7 @@ specifier|static
 name|int
 name|classesToVerify
 decl_stmt|;
-comment|/**      * Verifies one or more class files. Verification results are presented graphically: Red means 'rejected', green means      * 'passed' while yellow means 'could not be verified yet'.      *       * @param args java.lang.String[] fully qualified names of classes to verify.      */
+comment|/**      * Verifies one or more class files. Verification results are presented graphically: Red means 'rejected', green means      * 'passed' while yellow means 'could not be verified yet'.      *      * @param args java.lang.String[] fully qualified names of classes to verify.      */
 specifier|public
 specifier|static
 name|void
@@ -635,7 +635,7 @@ name|modal
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Use this constructor if you want a possibility to verify other class files than java.lang.Object.      *       * @param fully_qualified_class_name java.lang.String      */
+comment|/**      * Use this constructor if you want a possibility to verify other class files than java.lang.Object.      *      * @param fully_qualified_class_name java.lang.String      */
 specifier|public
 name|VerifyDialog
 parameter_list|(

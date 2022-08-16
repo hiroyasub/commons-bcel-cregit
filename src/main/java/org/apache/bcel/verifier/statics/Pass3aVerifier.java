@@ -1252,7 +1252,7 @@ name|message
 argument_list|)
 throw|;
 block|}
-comment|/**          * Looks for the method referenced by the given invoke instruction in the given class.          *           * @param jc the class that defines the referenced method          * @param invoke the instruction that references the method          * @return the referenced method or null if not found.          */
+comment|/**          * Looks for the method referenced by the given invoke instruction in the given class.          *          * @param jc the class that defines the referenced method          * @param invoke the instruction that references the method          * @return the referenced method or null if not found.          */
 specifier|private
 name|Method
 name|getMethod
@@ -1352,7 +1352,7 @@ return|return
 literal|null
 return|;
 block|}
-comment|/**          * Looks for the method referenced by the given invoke instruction in the given class or its super classes and super          * interfaces.          *           * @param jc the class that defines the referenced method          * @param invoke the instruction that references the method          * @return the referenced method or null if not found.          */
+comment|/**          * Looks for the method referenced by the given invoke instruction in the given class or its super classes and super          * interfaces.          *          * @param jc the class that defines the referenced method          * @param invoke the instruction that references the method          * @return the referenced method or null if not found.          */
 specifier|private
 name|Method
 name|getMethodRecursive

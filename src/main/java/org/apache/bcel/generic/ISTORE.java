@@ -16,7 +16,7 @@ package|;
 end_package
 
 begin_comment
-comment|/**  * ISTORE - Store int from stack into local variable  *   *<PRE>  * Stack: ..., value -&gt; ...  *</PRE>  *  */
+comment|/**  * ISTORE - Store int from stack into local variable  *  *<PRE>  * Stack: ..., value -&gt; ...  *</PRE>  *  */
 end_comment
 
 begin_class
@@ -54,7 +54,7 @@ name|ISTORE_0
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Store int into local variable      *       * @param n index of local variable      */
+comment|/**      * Store int into local variable      *      * @param n index of local variable      */
 specifier|public
 name|ISTORE
 parameter_list|(

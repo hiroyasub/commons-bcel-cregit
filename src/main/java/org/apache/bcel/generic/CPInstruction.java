@@ -149,7 +149,7 @@ name|index
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Dump instruction as byte code to stream out.      *       * @param out Output stream      */
+comment|/**      * Dump instruction as byte code to stream out.      *      * @param out Output stream      */
 annotation|@
 name|Override
 specifier|public
@@ -264,7 +264,7 @@ name|name
 argument_list|)
 return|;
 block|}
-comment|/**      * Read needed data (i.e., index) from file.      *       * @param bytes input stream      * @param wide wide prefix?      */
+comment|/**      * Read needed data (i.e., index) from file.      *      * @param bytes input stream      * @param wide wide prefix?      */
 annotation|@
 name|Override
 specifier|protected
@@ -298,7 +298,7 @@ literal|3
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Set the index to constant pool.      *       * @param index in constant pool.      */
+comment|/**      * Set the index to constant pool.      *      * @param index in constant pool.      */
 annotation|@
 name|Override
 specifier|public

@@ -218,7 +218,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Represents a Java class, i.e., the data structures, constant pool, fields, methods and commands contained in a Java  * .class file. See<a href="https://docs.oracle.com/javase/specs/">JVM specification</a> for details. The intent of  * this class is to represent a parsed or otherwise existing class file. Those interested in programmatically generating  * classes should see the<a href="../generic/ClassGen.html">ClassGen</a> class.  *   * @see org.apache.bcel.generic.ClassGen  */
+comment|/**  * Represents a Java class, i.e., the data structures, constant pool, fields, methods and commands contained in a Java  * .class file. See<a href="https://docs.oracle.com/javase/specs/">JVM specification</a> for details. The intent of  * this class is to represent a parsed or otherwise existing class file. Those interested in programmatically generating  * classes should see the<a href="../generic/ClassGen.html">ClassGen</a> class.  *  * @see org.apache.bcel.generic.ClassGen  */
 end_comment
 
 begin_class
@@ -1090,7 +1090,7 @@ name|this
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Return the natural ordering of two JavaClasses. This ordering is based on the class name      *       * @since 6.0      */
+comment|/**      * Return the natural ordering of two JavaClasses. This ordering is based on the class name      *      * @since 6.0      */
 annotation|@
 name|Override
 specifier|public

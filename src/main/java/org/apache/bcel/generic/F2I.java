@@ -16,7 +16,7 @@ package|;
 end_package
 
 begin_comment
-comment|/**  * F2I - Convert float to int  *   *<PRE>  * Stack: ..., value -&gt; ..., result  *</PRE>  *  */
+comment|/**  * F2I - Convert float to int  *  *<PRE>  * Stack: ..., value -&gt; ..., result  *</PRE>  *  */
 end_comment
 
 begin_class

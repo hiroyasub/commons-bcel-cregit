@@ -141,7 +141,7 @@ name|BranchInstruction
 parameter_list|()
 block|{
 block|}
-comment|/**      * Common super constructor      *       * @param opcode Instruction opcode      * @param target instruction to branch to      */
+comment|/**      * Common super constructor      *      * @param opcode Instruction opcode      * @param target instruction to branch to      */
 specifier|protected
 name|BranchInstruction
 parameter_list|(
@@ -211,7 +211,7 @@ operator|-
 literal|1
 expr_stmt|;
 block|}
-comment|/**      * Dump instruction as byte code to stream out.      *       * @param out Output stream      */
+comment|/**      * Dump instruction as byte code to stream out.      *      * @param out Output stream      */
 annotation|@
 name|Override
 specifier|public
@@ -458,7 +458,7 @@ operator|=
 name|position
 expr_stmt|;
 block|}
-comment|/**      * Set branch target      *       * @param target branch target      */
+comment|/**      * Set branch target      *      * @param target branch target      */
 specifier|public
 name|void
 name|setTarget

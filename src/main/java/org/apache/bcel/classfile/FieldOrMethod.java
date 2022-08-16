@@ -162,7 +162,7 @@ name|FieldOrMethod
 parameter_list|()
 block|{
 block|}
-comment|/**      * Construct object from file stream.      *       * @param file Input stream      * @throws IOException if an I/O error occurs.      */
+comment|/**      * Construct object from file stream.      *      * @param file Input stream      * @throws IOException if an I/O error occurs.      */
 specifier|protected
 name|FieldOrMethod
 parameter_list|(
@@ -254,7 +254,7 @@ name|attributes_count
 expr_stmt|;
 comment|// init deprecated field
 block|}
-comment|/**      * Construct object from file stream.      *       * @param file Input stream      * @throws IOException if an I/O error occurs.      * @deprecated (6.0) Use {@link #FieldOrMethod(java.io.DataInput, ConstantPool)} instead.      */
+comment|/**      * Construct object from file stream.      *      * @param file Input stream      * @throws IOException if an I/O error occurs.      * @deprecated (6.0) Use {@link #FieldOrMethod(java.io.DataInput, ConstantPool)} instead.      */
 annotation|@
 name|java
 operator|.
@@ -600,7 +600,7 @@ return|return
 name|constant_pool
 return|;
 block|}
-comment|/**      * Hunts for a signature attribute on the member and returns its contents. So where the 'regular' signature may be      * (Ljava/util/Vector;)V the signature attribute may in fact say 'Ljava/lang/Vector&lt;Ljava/lang/String&gt;;' Coded for      * performance - searches for the attribute only when requested - only searches for it once.      *       * @since 6.0      */
+comment|/**      * Hunts for a signature attribute on the member and returns its contents. So where the 'regular' signature may be      * (Ljava/util/Vector;)V the signature attribute may in fact say 'Ljava/lang/Vector&lt;Ljava/lang/String&gt;;' Coded for      * performance - searches for the attribute only when requested - only searches for it once.      *      * @since 6.0      */
 specifier|public
 specifier|final
 name|String

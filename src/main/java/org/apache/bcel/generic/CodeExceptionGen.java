@@ -270,7 +270,7 @@ operator|=
 name|catchType
 expr_stmt|;
 block|}
-comment|/*      * Set end of handler      *       * @param endPc End of handled region (inclusive)      */
+comment|/*      * Set end of handler      *      * @param endPc End of handled region (inclusive)      */
 specifier|public
 name|void
 name|setEndPC
@@ -301,7 +301,7 @@ operator|=
 name|end_pc
 expr_stmt|;
 block|}
-comment|/*      * Set handler code      *       * @param handlerPc Start of handler      */
+comment|/*      * Set handler code      *      * @param handlerPc Start of handler      */
 specifier|public
 name|void
 name|setHandlerPC
@@ -332,7 +332,7 @@ operator|=
 name|handler_pc
 expr_stmt|;
 block|}
-comment|/*      * Set start of handler      *       * @param startPc Start of handled region (inclusive)      */
+comment|/*      * Set start of handler      *      * @param startPc Start of handled region (inclusive)      */
 specifier|public
 name|void
 name|setStartPC

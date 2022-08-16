@@ -16,7 +16,7 @@ package|;
 end_package
 
 begin_comment
-comment|/**  * DUP2_X2 - Duplicate two top operand stack words and put four down  *   *<PRE>  * Stack: ..., word4, word3, word2, word1 -&gt; ..., word2, word1, word4, word3, word2, word1  *</PRE>  *  */
+comment|/**  * DUP2_X2 - Duplicate two top operand stack words and put four down  *  *<PRE>  * Stack: ..., word4, word3, word2, word1 -&gt; ..., word2, word1, word4, word3, word2, word1  *</PRE>  *  */
 end_comment
 
 begin_class

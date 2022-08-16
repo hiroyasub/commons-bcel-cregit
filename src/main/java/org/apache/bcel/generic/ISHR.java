@@ -16,7 +16,7 @@ package|;
 end_package
 
 begin_comment
-comment|/**  * ISHR - Arithmetic shift right int  *   *<PRE>  * Stack: ..., value1, value2 -&gt; ..., result  *</PRE>  *  */
+comment|/**  * ISHR - Arithmetic shift right int  *  *<PRE>  * Stack: ..., value1, value2 -&gt; ..., result  *</PRE>  *  */
 end_comment
 
 begin_class

@@ -257,7 +257,7 @@ operator|=
 name|comparator
 expr_stmt|;
 block|}
-comment|/**      * Construct object from file stream.      *       * @param file Input stream      */
+comment|/**      * Construct object from file stream.      *      * @param file Input stream      */
 name|Field
 parameter_list|(
 specifier|final

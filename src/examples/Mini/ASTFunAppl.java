@@ -729,7 +729,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/**      * Second pass Overrides AstExpr.eval()      *       * @return type of expression      * @param expected type      */
+comment|/**      * Second pass Overrides AstExpr.eval()      *      * @return type of expression      * @param expected type      */
 annotation|@
 name|Override
 specifier|public
@@ -844,17 +844,13 @@ decl_stmt|;
 comment|// May be T_UNKNOWN
 if|if
 condition|(
-operator|(
 name|expect
 operator|!=
 name|T_UNKNOWN
-operator|)
 operator|&&
-operator|(
 name|t_e
 operator|!=
 name|expect
-operator|)
 condition|)
 block|{
 name|MiniC
@@ -1103,11 +1099,9 @@ specifier|final
 name|int
 name|len
 init|=
-operator|(
 name|exprs
 operator|!=
 literal|null
-operator|)
 condition|?
 name|exprs
 operator|.

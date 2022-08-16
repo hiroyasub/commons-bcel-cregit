@@ -16,7 +16,7 @@ package|;
 end_package
 
 begin_comment
-comment|/**  * DSTORE - Store double into local variable  *   *<pre>  * Stack: ..., value.word1, value.word2 -&gt; ...  *</PRE>  *  */
+comment|/**  * DSTORE - Store double into local variable  *  *<pre>  * Stack: ..., value.word1, value.word2 -&gt; ...  *</PRE>  *  */
 end_comment
 
 begin_class
@@ -54,7 +54,7 @@ name|DSTORE_0
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Store double into local variable      *       * @param n index of local variable      */
+comment|/**      * Store double into local variable      *      * @param n index of local variable      */
 specifier|public
 name|DSTORE
 parameter_list|(

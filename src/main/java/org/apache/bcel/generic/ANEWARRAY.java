@@ -28,7 +28,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * ANEWARRAY - Create new array of references  *   *<PRE>  * Stack: ..., count -&gt; ..., arrayref  *</PRE>  *  */
+comment|/**  * ANEWARRAY - Create new array of references  *  *<PRE>  * Stack: ..., count -&gt; ..., arrayref  *</PRE>  *  */
 end_comment
 
 begin_class

@@ -14,7 +14,7 @@ package|;
 end_package
 
 begin_comment
-comment|/**  * Exception constants.  *   * @since 6.0 (intended to replace the InstructionConstant interface)  */
+comment|/**  * Exception constants.  *  * @since 6.0 (intended to replace the InstructionConstant interface)  */
 end_comment
 
 begin_class
@@ -415,7 +415,7 @@ block|,
 name|ARRAY_INDEX_OUT_OF_BOUNDS_EXCEPTION
 block|}
 decl_stmt|;
-comment|/**      * Creates a copy of the specified Exception Class array combined with any additional Exception classes.      *       * @param type the basic array type      * @param extraClasses additional classes, if any      * @return the merged array      */
+comment|/**      * Creates a copy of the specified Exception Class array combined with any additional Exception classes.      *      * @param type the basic array type      * @param extraClasses additional classes, if any      * @return the merged array      */
 specifier|public
 specifier|static
 name|Class

@@ -209,7 +209,7 @@ name|value
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Second pass Overrides AstExpr.eval()      *       * @return type of expression      */
+comment|/**      * Second pass Overrides AstExpr.eval()      *      * @return type of expression      */
 annotation|@
 name|Override
 specifier|public

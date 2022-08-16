@@ -117,7 +117,7 @@ return|return
 name|cmp
 return|;
 block|}
-comment|/**      * Check if the value can fit in a byte (signed)      *       * @param value the value to check      * @return true if the value is in range      * @since 6.0      */
+comment|/**      * Check if the value can fit in a byte (signed)      *      * @param value the value to check      * @return true if the value is in range      * @since 6.0      */
 specifier|public
 specifier|static
 name|boolean
@@ -142,7 +142,7 @@ operator|.
 name|MAX_VALUE
 return|;
 block|}
-comment|/**      * Check if the value can fit in a short (signed)      *       * @param value the value to check      * @return true if the value is in range      * @since 6.0      */
+comment|/**      * Check if the value can fit in a short (signed)      *      * @param value the value to check      * @return true if the value is in range      * @since 6.0      */
 specifier|public
 specifier|static
 name|boolean
@@ -167,7 +167,7 @@ operator|.
 name|MAX_VALUE
 return|;
 block|}
-comment|/**      * Read an instruction from (byte code) input stream and return the appropiate object.      *<p>      * If the Instruction is defined in {@link InstructionConst}, then the singleton instance is returned.      *       * @param bytes input stream bytes      * @return instruction object being read      * @see InstructionConst#getInstruction(int)      */
+comment|/**      * Read an instruction from (byte code) input stream and return the appropiate object.      *<p>      * If the Instruction is defined in {@link InstructionConst}, then the singleton instance is returned.      *      * @param bytes input stream bytes      * @return instruction object being read      * @see InstructionConst#getInstruction(int)      */
 comment|// @since 6.0 no longer final
 specifier|public
 specifier|static
@@ -1561,7 +1561,7 @@ return|return
 name|obj
 return|;
 block|}
-comment|/**      * Set comparator to be used for equals().      *       * @deprecated (6.0) use the built in comparator, or wrap this class in another object that implements these methods      */
+comment|/**      * Set comparator to be used for equals().      *      * @deprecated (6.0) use the built in comparator, or wrap this class in another object that implements these methods      */
 annotation|@
 name|Deprecated
 specifier|public
@@ -1640,7 +1640,7 @@ name|Visitor
 name|v
 parameter_list|)
 function_decl|;
-comment|/**      * This method also gives right results for instructions whose effect on the stack depends on the constant pool entry      * they reference.      *       * @return Number of words consumed from stack by this instruction, or Constants.UNPREDICTABLE, if this can not be      *         computed statically      */
+comment|/**      * This method also gives right results for instructions whose effect on the stack depends on the constant pool entry      * they reference.      *      * @return Number of words consumed from stack by this instruction, or Constants.UNPREDICTABLE, if this can not be      *         computed statically      */
 specifier|public
 name|int
 name|consumeStack
@@ -1732,7 +1732,7 @@ name|dispose
 parameter_list|()
 block|{
 block|}
-comment|/**      * Dump instruction as byte code to stream out.      *       * @param out Output stream      */
+comment|/**      * Dump instruction as byte code to stream out.      *      * @param out Output stream      */
 specifier|public
 name|void
 name|dump
@@ -1753,7 +1753,7 @@ argument_list|)
 expr_stmt|;
 comment|// Common for all instructions
 block|}
-comment|/**      * Check for equality, delegated to comparator      *       * @return true if that is an Instruction and has the same opcode      */
+comment|/**      * Check for equality, delegated to comparator      *      * @return true if that is an Instruction and has the same opcode      */
 annotation|@
 name|Override
 specifier|public
@@ -1818,7 +1818,7 @@ return|return
 name|opcode
 return|;
 block|}
-comment|/**      * calculate the hashCode of this object      *       * @return the hashCode      * @since 6.0      */
+comment|/**      * calculate the hashCode of this object      *      * @return the hashCode      * @since 6.0      */
 annotation|@
 name|Override
 specifier|public
@@ -1847,7 +1847,7 @@ throws|throws
 name|IOException
 block|{
 block|}
-comment|/**      * This method also gives right results for instructions whose effect on the stack depends on the constant pool entry      * they reference.      *       * @return Number of words produced onto stack by this instruction, or Constants.UNPREDICTABLE, if this can not be      *         computed statically      */
+comment|/**      * This method also gives right results for instructions whose effect on the stack depends on the constant pool entry      * they reference.      *      * @return Number of words produced onto stack by this instruction, or Constants.UNPREDICTABLE, if this can not be      *         computed statically      */
 specifier|public
 name|int
 name|produceStack
@@ -1866,7 +1866,7 @@ name|opcode
 argument_list|)
 return|;
 block|}
-comment|/**      * Needed in readInstruction and subclasses in this package      *       * @since 6.0      */
+comment|/**      * Needed in readInstruction and subclasses in this package      *      * @since 6.0      */
 specifier|final
 name|void
 name|setLength

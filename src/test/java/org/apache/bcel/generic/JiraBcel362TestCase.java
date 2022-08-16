@@ -116,6 +116,7 @@ argument_list|(
 literal|"issue362.Bcel362"
 argument_list|)
 decl_stmt|;
+specifier|final
 name|ConstantPoolGen
 name|constantPoolGen
 init|=

@@ -16,7 +16,7 @@ package|;
 end_package
 
 begin_comment
-comment|/**  * FLOAD - Load float from local variable  *   *<PRE>  * Stack ... -&gt; ..., result  *</PRE>  *  */
+comment|/**  * FLOAD - Load float from local variable  *  *<PRE>  * Stack ... -&gt; ..., result  *</PRE>  *  */
 end_comment
 
 begin_class
@@ -54,7 +54,7 @@ name|FLOAD_0
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Load float from local variable      *       * @param n index of local variable      */
+comment|/**      * Load float from local variable      *      * @param n index of local variable      */
 specifier|public
 name|FLOAD
 parameter_list|(

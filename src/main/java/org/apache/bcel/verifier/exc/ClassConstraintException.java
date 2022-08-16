@@ -58,7 +58,7 @@ name|message
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Constructs a new ClassConstraintException with the specified error message and cause      *       * @since 6.0      */
+comment|/**      * Constructs a new ClassConstraintException with the specified error message and cause      *      * @since 6.0      */
 specifier|public
 name|ClassConstraintException
 parameter_list|(

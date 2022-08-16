@@ -380,7 +380,7 @@ operator||
 name|size
 return|;
 block|}
-comment|/**      * Convert arguments of a method (signature) to an array of Type objects.      *       * @param signature signature string such as (Ljava/lang/String;)V      * @return array of argument types      */
+comment|/**      * Convert arguments of a method (signature) to an array of Type objects.      *      * @param signature signature string such as (Ljava/lang/String;)V      * @return array of argument types      */
 specifier|public
 specifier|static
 name|Type
@@ -909,7 +909,7 @@ name|toString
 argument_list|()
 return|;
 block|}
-comment|/**      * Convert runtime java.lang.Class to BCEL Type object.      *       * @param cls Java class      * @return corresponding Type object      */
+comment|/**      * Convert runtime java.lang.Class to BCEL Type object.      *      * @param cls Java class      * @return corresponding Type object      */
 specifier|public
 specifier|static
 name|Type
@@ -1104,7 +1104,7 @@ name|cls
 argument_list|)
 throw|;
 block|}
-comment|/**      * Convert signature to a Type object.      *       * @param signature signature string such as Ljava/lang/String;      * @return type object      */
+comment|/**      * Convert signature to a Type object.      *      * @param signature signature string such as Ljava/lang/String;      * @return type object      */
 comment|// @since 6.0 no longer final
 specifier|public
 specifier|static
@@ -1277,7 +1277,7 @@ name|dim
 argument_list|)
 return|;
 block|}
-comment|/**      * Convert runtime java.lang.Class[] to BCEL Type objects.      *       * @param classes an array of runtime class objects      * @return array of corresponding Type objects      */
+comment|/**      * Convert runtime java.lang.Class[] to BCEL Type objects.      *      * @param classes an array of runtime class objects      * @return array of corresponding Type objects      */
 specifier|public
 specifier|static
 name|Type
@@ -1724,7 +1724,7 @@ name|hashCode
 argument_list|()
 return|;
 block|}
-comment|/**      * boolean, short and char variable are considered as int in the stack or local variable area. Returns {@link Type#INT}      * for {@link Type#BOOLEAN}, {@link Type#SHORT} or {@link Type#CHAR}, otherwise returns the given type.      *       * @since 6.0      */
+comment|/**      * boolean, short and char variable are considered as int in the stack or local variable area. Returns {@link Type#INT}      * for {@link Type#BOOLEAN}, {@link Type#SHORT} or {@link Type#CHAR}, otherwise returns the given type.      *      * @since 6.0      */
 specifier|public
 name|Type
 name|normalizeForStackOrLocal

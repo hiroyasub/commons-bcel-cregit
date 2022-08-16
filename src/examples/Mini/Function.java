@@ -245,11 +245,9 @@ name|args
 expr_stmt|;
 name|no_args
 operator|=
-operator|(
 name|args
 operator|==
 literal|null
-operator|)
 condition|?
 literal|0
 else|:

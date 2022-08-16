@@ -127,7 +127,7 @@ name|Pass1Verifier
 extends|extends
 name|PassVerifier
 block|{
-comment|/**      * DON'T USE THIS EVEN PRIVATELY! USE getJavaClass() INSTEAD.      *       * @see #getJavaClass()      */
+comment|/**      * DON'T USE THIS EVEN PRIVATELY! USE getJavaClass() INSTEAD.      *      * @see #getJavaClass()      */
 specifier|private
 name|JavaClass
 name|jc
@@ -172,6 +172,11 @@ argument_list|()
 expr_stmt|;
 comment|// loads in the class file if not already done.
 comment|/* If we find more constraints to check, we should do this in an own method. */
+comment|// This should maybe caught by BCEL: In case of renamed .class files we get wrong
+comment|// JavaClass objects here.
+comment|// This test should be much more complicated. It needs to take the classname, remove any portion at the
+comment|// end that matches the file name and then see if the remainder matches anything on the class path.
+comment|// Dumb test for now, see if the class name ends with the file name.
 if|if
 condition|(
 name|jc
@@ -191,15 +196,7 @@ operator|.
 name|getClassName
 argument_list|()
 argument_list|)
-condition|)
-block|{
-comment|// This should maybe caught by BCEL: In case of renamed .class files we get wrong
-comment|// JavaClass objects here.
-comment|// This test should be much more complicated. It needs to take the classname, remove any portion at the
-comment|// end that matches the file name and then see if the remainder matches anything on the class path.
-comment|// Dumb test for now, see if the class name ends with the file name.
-if|if
-condition|(
+operator|&&
 operator|!
 name|jc
 operator|.
@@ -236,7 +233,6 @@ operator|+
 literal|"'."
 argument_list|)
 throw|;
-block|}
 block|}
 block|}
 catch|catch

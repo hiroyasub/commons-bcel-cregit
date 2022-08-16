@@ -478,7 +478,7 @@ name|ClassObserver
 argument_list|>
 name|observers
 decl_stmt|;
-comment|/**      * Initialize with existing class.      *       * @param clazz JavaClass object (e.g. read from file)      */
+comment|/**      * Initialize with existing class.      *      * @param clazz JavaClass object (e.g. read from file)      */
 specifier|public
 name|ClassGen
 parameter_list|(
@@ -892,7 +892,7 @@ name|a
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Add an attribute to this class.      *       * @param a attribute to add      */
+comment|/**      * Add an attribute to this class.      *      * @param a attribute to add      */
 specifier|public
 name|void
 name|addAttribute
@@ -910,7 +910,7 @@ name|a
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Convenience method.      *      * Add an empty constructor to this class that does nothing but calling super().      *       * @param access_flags rights for constructor      */
+comment|/**      * Convenience method.      *      * Add an empty constructor to this class that does nothing but calling super().      *      * @param access_flags rights for constructor      */
 specifier|public
 name|void
 name|addEmptyConstructor
@@ -1011,7 +1011,7 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Add a field to this class.      *       * @param f field to add      */
+comment|/**      * Add a field to this class.      *      * @param f field to add      */
 specifier|public
 name|void
 name|addField
@@ -1029,7 +1029,7 @@ name|f
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Add an interface to this class, i.e., this class has to implement it.      *       * @param name interface to implement (fully qualified class name)      */
+comment|/**      * Add an interface to this class, i.e., this class has to implement it.      *      * @param name interface to implement (fully qualified class name)      */
 specifier|public
 name|void
 name|addInterface
@@ -1047,7 +1047,7 @@ name|name
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Add a method to this class.      *       * @param m method to add      */
+comment|/**      * Add a method to this class.      *      * @param m method to add      */
 specifier|public
 name|void
 name|addMethod
@@ -1700,7 +1700,7 @@ name|this
 argument_list|)
 return|;
 block|}
-comment|/**      * Remove an attribute from this class.      *       * @param a attribute to remove      */
+comment|/**      * Remove an attribute from this class.      *      * @param a attribute to remove      */
 specifier|public
 name|void
 name|removeAttribute
@@ -1718,7 +1718,7 @@ name|a
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Remove a field to this class.      *       * @param f field to remove      */
+comment|/**      * Remove a field to this class.      *      * @param f field to remove      */
 specifier|public
 name|void
 name|removeField
@@ -1736,7 +1736,7 @@ name|f
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Remove an interface from this class.      *       * @param name interface to remove (fully qualified name)      */
+comment|/**      * Remove an interface from this class.      *      * @param name interface to remove (fully qualified name)      */
 specifier|public
 name|void
 name|removeInterface
@@ -1754,7 +1754,7 @@ name|name
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Remove a method from this class.      *       * @param m method to remove      */
+comment|/**      * Remove a method from this class.      *      * @param m method to remove      */
 specifier|public
 name|void
 name|removeMethod
@@ -2017,7 +2017,7 @@ operator|=
 name|constant_pool
 expr_stmt|;
 block|}
-comment|/**      * Set major version number of class file, default value is 45 (JDK 1.1)      *       * @param major major version number      */
+comment|/**      * Set major version number of class file, default value is 45 (JDK 1.1)      *      * @param major major version number      */
 specifier|public
 name|void
 name|setMajor
@@ -2089,7 +2089,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/**      * Set minor version number of class file, default value is 3 (JDK 1.1)      *       * @param minor minor version number      */
+comment|/**      * Set minor version number of class file, default value is 3 (JDK 1.1)      *      * @param minor minor version number      */
 specifier|public
 name|void
 name|setMinor

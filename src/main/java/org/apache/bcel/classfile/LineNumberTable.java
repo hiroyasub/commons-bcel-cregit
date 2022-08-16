@@ -83,7 +83,7 @@ index|[]
 name|lineNumberTable
 decl_stmt|;
 comment|// Table of line/numbers pairs
-comment|/**      * Construct object from input stream.      *       * @param name_index Index of name      * @param length Content length in bytes      * @param input Input stream      * @param constant_pool Array of constants      * @throws IOException if an I/O Exception occurs in readUnsignedShort      */
+comment|/**      * Construct object from input stream.      *      * @param name_index Index of name      * @param length Content length in bytes      * @param input Input stream      * @param constant_pool Array of constants      * @throws IOException if an I/O Exception occurs in readUnsignedShort      */
 name|LineNumberTable
 parameter_list|(
 specifier|final
@@ -165,7 +165,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/*      * @param name_index Index of name      *       * @param length Content length in bytes      *       * @param lineNumberTable Table of line/numbers pairs      *       * @param constant_pool Array of constants      */
+comment|/*      * @param name_index Index of name      *      * @param length Content length in bytes      *      * @param lineNumberTable Table of line/numbers pairs      *      * @param constant_pool Array of constants      */
 specifier|public
 name|LineNumberTable
 parameter_list|(

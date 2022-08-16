@@ -16,7 +16,7 @@ package|;
 end_package
 
 begin_comment
-comment|/**  * LRETURN - Return long from method  *   *<PRE>  * Stack: ..., value.word1, value.word2 -&gt;&lt;empty&gt;  *</PRE>  *  */
+comment|/**  * LRETURN - Return long from method  *  *<PRE>  * Stack: ..., value.word1, value.word2 -&gt;&lt;empty&gt;  *</PRE>  *  */
 end_comment
 
 begin_class

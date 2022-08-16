@@ -134,7 +134,7 @@ name|o
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Returns the (only) verifier responsible for the class with the given name. Possibly a new Verifier object is      * transparently created.      *       * @return the (only) verifier responsible for the class with the given name.      */
+comment|/**      * Returns the (only) verifier responsible for the class with the given name. Possibly a new Verifier object is      * transparently created.      *      * @return the (only) verifier responsible for the class with the given name.      */
 specifier|public
 specifier|static
 name|Verifier

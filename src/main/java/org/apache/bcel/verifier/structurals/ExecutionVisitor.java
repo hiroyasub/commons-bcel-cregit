@@ -165,7 +165,7 @@ specifier|private
 name|Frame
 name|frame
 decl_stmt|;
-comment|/**      * The ConstantPoolGen we're working with.      *       * @see #setConstantPoolGen(ConstantPoolGen)      */
+comment|/**      * The ConstantPoolGen we're working with.      *      * @see #setConstantPoolGen(ConstantPoolGen)      */
 specifier|private
 name|ConstantPoolGen
 name|cpg
@@ -176,7 +176,7 @@ name|ExecutionVisitor
 parameter_list|()
 block|{
 block|}
-comment|/**      * The LocalVariables from the current Frame we're operating on.      *       * @see #setFrame(Frame)      */
+comment|/**      * The LocalVariables from the current Frame we're operating on.      *      * @see #setFrame(Frame)      */
 specifier|private
 name|LocalVariables
 name|locals
@@ -207,7 +207,7 @@ operator|=
 name|cpg
 expr_stmt|;
 block|}
-comment|/**      * The only method granting access to the single instance of the ExecutionVisitor class. Before actively using this      * instance,<B>SET THE ConstantPoolGen FIRST</B>.      *       * @see #setConstantPoolGen(ConstantPoolGen)      */
+comment|/**      * The only method granting access to the single instance of the ExecutionVisitor class. Before actively using this      * instance,<B>SET THE ConstantPoolGen FIRST</B>.      *      * @see #setConstantPoolGen(ConstantPoolGen)      */
 specifier|public
 name|void
 name|setFrame
@@ -225,7 +225,7 @@ operator|=
 name|f
 expr_stmt|;
 block|}
-comment|/**      * The OperandStack from the current Frame we're operating on.      *       * @see #setFrame(Frame)      */
+comment|/**      * The OperandStack from the current Frame we're operating on.      *      * @see #setFrame(Frame)      */
 specifier|private
 name|OperandStack
 name|stack
@@ -1468,22 +1468,6 @@ argument_list|(
 name|w1
 argument_list|)
 expr_stmt|;
-name|stack
-argument_list|()
-operator|.
-name|push
-argument_list|(
-name|w2
-argument_list|)
-expr_stmt|;
-name|stack
-argument_list|()
-operator|.
-name|push
-argument_list|(
-name|w1
-argument_list|)
-expr_stmt|;
 block|}
 else|else
 block|{
@@ -1513,6 +1497,7 @@ argument_list|(
 name|w3
 argument_list|)
 expr_stmt|;
+block|}
 name|stack
 argument_list|()
 operator|.
@@ -1529,7 +1514,6 @@ argument_list|(
 name|w1
 argument_list|)
 expr_stmt|;
-block|}
 block|}
 comment|/** Symbolically executes the corresponding Java Virtual Machine instruction. */
 annotation|@
@@ -1563,14 +1547,6 @@ operator|==
 literal|2
 condition|)
 block|{
-name|stack
-argument_list|()
-operator|.
-name|push
-argument_list|(
-name|t
-argument_list|)
-expr_stmt|;
 name|stack
 argument_list|()
 operator|.
@@ -1617,6 +1593,7 @@ argument_list|(
 name|u
 argument_list|)
 expr_stmt|;
+block|}
 name|stack
 argument_list|()
 operator|.
@@ -1625,7 +1602,6 @@ argument_list|(
 name|t
 argument_list|)
 expr_stmt|;
-block|}
 block|}
 comment|/** Symbolically executes the corresponding Java Virtual Machine instruction. */
 annotation|@
@@ -1685,14 +1661,6 @@ argument_list|(
 name|u
 argument_list|)
 expr_stmt|;
-name|stack
-argument_list|()
-operator|.
-name|push
-argument_list|(
-name|t
-argument_list|)
-expr_stmt|;
 block|}
 else|else
 block|{
@@ -1749,6 +1717,7 @@ argument_list|(
 name|u
 argument_list|)
 expr_stmt|;
+block|}
 name|stack
 argument_list|()
 operator|.
@@ -1757,7 +1726,6 @@ argument_list|(
 name|t
 argument_list|)
 expr_stmt|;
-block|}
 block|}
 comment|/** Symbolically executes the corresponding Java Virtual Machine instruction. */
 annotation|@
@@ -1819,22 +1787,6 @@ argument_list|(
 name|t
 argument_list|)
 expr_stmt|;
-name|stack
-argument_list|()
-operator|.
-name|push
-argument_list|(
-name|u
-argument_list|)
-expr_stmt|;
-name|stack
-argument_list|()
-operator|.
-name|push
-argument_list|(
-name|t
-argument_list|)
-expr_stmt|;
 block|}
 else|else
 block|{
@@ -1864,6 +1816,7 @@ argument_list|(
 name|v
 argument_list|)
 expr_stmt|;
+block|}
 name|stack
 argument_list|()
 operator|.
@@ -1880,7 +1833,6 @@ argument_list|(
 name|t
 argument_list|)
 expr_stmt|;
-block|}
 block|}
 else|else
 block|{
@@ -1931,30 +1883,6 @@ argument_list|(
 name|t
 argument_list|)
 expr_stmt|;
-name|stack
-argument_list|()
-operator|.
-name|push
-argument_list|(
-name|v
-argument_list|)
-expr_stmt|;
-name|stack
-argument_list|()
-operator|.
-name|push
-argument_list|(
-name|u
-argument_list|)
-expr_stmt|;
-name|stack
-argument_list|()
-operator|.
-name|push
-argument_list|(
-name|t
-argument_list|)
-expr_stmt|;
 block|}
 else|else
 block|{
@@ -1992,6 +1920,7 @@ argument_list|(
 name|w
 argument_list|)
 expr_stmt|;
+block|}
 name|stack
 argument_list|()
 operator|.
@@ -2016,7 +1945,6 @@ argument_list|(
 name|t
 argument_list|)
 expr_stmt|;
-block|}
 block|}
 block|}
 comment|/** Symbolically executes the corresponding Java Virtual Machine instruction. */
@@ -3579,7 +3507,7 @@ name|INT
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Symbolically executes the corresponding Java Virtual Machine instruction.      *       * @since 6.0      */
+comment|/**      * Symbolically executes the corresponding Java Virtual Machine instruction.      *      * @since 6.0      */
 annotation|@
 name|Override
 specifier|public

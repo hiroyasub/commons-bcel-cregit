@@ -380,7 +380,6 @@ name|getInstruction
 argument_list|()
 decl_stmt|;
 return|return
-operator|(
 name|if_icmp
 operator|.
 name|getTarget
@@ -390,9 +389,7 @@ name|match
 index|[
 literal|3
 index|]
-operator|)
 operator|&&
-operator|(
 name|goto_
 operator|.
 name|getTarget
@@ -402,7 +399,6 @@ name|match
 index|[
 literal|4
 index|]
-operator|)
 return|;
 block|}
 decl_stmt|;
@@ -580,7 +576,6 @@ init|=
 operator|(
 name|BranchInstruction
 operator|)
-operator|(
 name|match
 index|[
 literal|4
@@ -588,7 +583,6 @@ index|]
 operator|.
 name|getInstruction
 argument_list|()
-operator|)
 decl_stmt|;
 specifier|final
 name|BranchHandle
@@ -689,23 +683,19 @@ control|)
 block|{
 if|if
 condition|(
-operator|(
 name|target
 operator|!=
 name|match
 index|[
 literal|4
 index|]
-operator|)
 operator|||
-operator|(
 name|targeter
 operator|!=
 name|match
 index|[
 literal|2
 index|]
-operator|)
 condition|)
 block|{
 name|System
@@ -733,10 +723,8 @@ block|{
 return|return
 literal|"_s"
 operator|+
-operator|(
 operator|--
 name|size
-operator|)
 return|;
 block|}
 comment|/**      * Used by byte_code()      */
@@ -1938,17 +1926,13 @@ expr_stmt|;
 comment|// And updated the env
 if|if
 condition|(
-operator|(
 name|expected
 operator|!=
 name|T_UNKNOWN
-operator|)
 operator|&&
-operator|(
 name|type
 operator|!=
 name|expected
-operator|)
 condition|)
 block|{
 name|MiniC

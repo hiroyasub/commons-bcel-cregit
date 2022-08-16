@@ -16,7 +16,7 @@ package|;
 end_package
 
 begin_comment
-comment|/**  * DRETURN - Return double from method  *   *<PRE>  * Stack: ..., value.word1, value.word2 -&gt;&lt;empty&gt;  *</PRE>  *  */
+comment|/**  * DRETURN - Return double from method  *  *<PRE>  * Stack: ..., value.word1, value.word2 -&gt;&lt;empty&gt;  *</PRE>  *  */
 end_comment
 
 begin_class

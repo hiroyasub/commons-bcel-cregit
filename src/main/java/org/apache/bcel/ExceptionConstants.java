@@ -241,7 +241,7 @@ name|IllegalMonitorStateException
 operator|.
 name|class
 decl_stmt|;
-comment|/**      * Pre-defined exception arrays according to chapters 5.1-5.4 of the Java Virtual Machine Specification      *       * @deprecated Do not use these arrays, use the static methods in the ExceptionConst implementation class instead      */
+comment|/**      * Pre-defined exception arrays according to chapters 5.1-5.4 of the Java Virtual Machine Specification      *      * @deprecated Do not use these arrays, use the static methods in the ExceptionConst implementation class instead      */
 annotation|@
 name|Deprecated
 name|Class

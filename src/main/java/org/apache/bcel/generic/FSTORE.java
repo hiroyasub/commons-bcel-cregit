@@ -16,7 +16,7 @@ package|;
 end_package
 
 begin_comment
-comment|/**  * FSTORE - Store float into local variable  *   *<PRE>  * Stack: ..., value -&gt; ...  *</PRE>  *  */
+comment|/**  * FSTORE - Store float into local variable  *  *<PRE>  * Stack: ..., value -&gt; ...  *</PRE>  *  */
 end_comment
 
 begin_class
@@ -54,7 +54,7 @@ name|FSTORE_0
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Store float into local variable      *       * @param n index of local variable      */
+comment|/**      * Store float into local variable      *      * @param n index of local variable      */
 specifier|public
 name|FSTORE
 parameter_list|(

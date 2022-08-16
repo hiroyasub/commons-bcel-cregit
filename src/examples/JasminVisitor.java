@@ -1652,11 +1652,9 @@ specifier|final
 name|String
 name|class_name
 init|=
-operator|(
 name|caught
 operator|==
 literal|null
-operator|)
 condition|?
 comment|// catch any exception, used when compiling finally
 literal|"all"
@@ -2076,19 +2074,15 @@ argument_list|()
 decl_stmt|;
 if|if
 condition|(
-operator|(
 name|attributes
 operator|==
 literal|null
-operator|)
 operator|||
-operator|(
 name|attributes
 operator|.
 name|length
 operator|==
 literal|0
-operator|)
 condition|)
 block|{
 name|out

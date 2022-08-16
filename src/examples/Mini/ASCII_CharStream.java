@@ -609,15 +609,11 @@ name|newbufcolumn
 expr_stmt|;
 name|maxNextCharInd
 operator|=
-operator|(
 name|bufpos
 operator|+=
-operator|(
 name|bufsize
 operator|-
 name|tokenBegin
-operator|)
-operator|)
 expr_stmt|;
 block|}
 else|else
@@ -687,11 +683,9 @@ name|newbufcolumn
 expr_stmt|;
 name|maxNextCharInd
 operator|=
-operator|(
 name|bufpos
 operator|-=
 name|tokenBegin
-operator|)
 expr_stmt|;
 block|}
 block|}
@@ -803,11 +797,9 @@ expr_stmt|;
 block|}
 if|else if
 condition|(
-operator|(
 name|tokenBegin
 operator|-
 name|available
-operator|)
 operator|<
 literal|2048
 condition|)
@@ -1042,11 +1034,9 @@ index|]
 decl_stmt|;
 if|if
 condition|(
-operator|(
 name|bufpos
 operator|+
 literal|1
-operator|)
 operator|>=
 name|len
 condition|)
@@ -1156,13 +1146,11 @@ literal|0xff
 operator|&
 name|buffer
 index|[
-operator|(
 name|bufpos
 operator|==
 name|bufsize
 operator|-
 literal|1
-operator|)
 condition|?
 operator|(
 name|bufpos
@@ -1213,9 +1201,7 @@ name|c
 argument_list|)
 expr_stmt|;
 return|return
-operator|(
 name|c
-operator|)
 return|;
 block|}
 specifier|static
@@ -1460,11 +1446,9 @@ literal|false
 expr_stmt|;
 name|line
 operator|+=
-operator|(
 name|column
 operator|=
 literal|1
-operator|)
 expr_stmt|;
 block|}
 if|else if
@@ -1492,11 +1476,9 @@ else|else
 block|{
 name|line
 operator|+=
-operator|(
 name|column
 operator|=
 literal|1
-operator|)
 expr_stmt|;
 block|}
 block|}
@@ -1529,14 +1511,12 @@ operator|--
 expr_stmt|;
 name|column
 operator|+=
-operator|(
 literal|8
 operator|-
 operator|(
 name|column
 operator|&
 literal|07
-operator|)
 operator|)
 expr_stmt|;
 break|break;

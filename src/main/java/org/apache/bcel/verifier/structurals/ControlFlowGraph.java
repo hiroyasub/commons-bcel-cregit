@@ -670,7 +670,7 @@ return|return
 name|single
 return|;
 block|}
-comment|/**          * "Merges in" (vmspec2, page 146) the "incoming" frame situation; executes the instructions symbolically and therefore          * calculates the "outgoing" frame situation. Returns: True iff the "incoming" frame situation changed after merging          * with "inFrame". The execPreds ArrayList must contain the InstructionContext objects executed so far in the correct          * order. This is just one execution path [out of many]. This is needed to correctly "merge" in the special case of a          * RET's successor.<B>The InstConstraintVisitor and ExecutionVisitor instances must be set up correctly.</B>          *           * @return true - if and only if the "outgoing" frame situation changed from the one before execute()ing.          */
+comment|/**          * "Merges in" (vmspec2, page 146) the "incoming" frame situation; executes the instructions symbolically and therefore          * calculates the "outgoing" frame situation. Returns: True iff the "incoming" frame situation changed after merging          * with "inFrame". The execPreds ArrayList must contain the InstructionContext objects executed so far in the correct          * order. This is just one execution path [out of many]. This is needed to correctly "merge" in the special case of a          * RET's successor.<B>The InstConstraintVisitor and ExecutionVisitor instances must be set up correctly.</B>          *          * @return true - if and only if the "outgoing" frame situation changed from the one before execute()ing.          */
 annotation|@
 name|Override
 specifier|public
@@ -1513,7 +1513,7 @@ name|HashMap
 argument_list|<>
 argument_list|()
 decl_stmt|;
-comment|/**      * A Control Flow Graph; with additional JustIce checks      *       * @param method_gen the method generator instance      */
+comment|/**      * A Control Flow Graph; with additional JustIce checks      *      * @param method_gen the method generator instance      */
 specifier|public
 name|ControlFlowGraph
 parameter_list|(
@@ -1530,7 +1530,7 @@ literal|true
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * A Control Flow Graph.      *       * @param method_gen the method generator instance      * @param enableJustIceCheck if true, additional JustIce checks are performed      * @since 6.0      */
+comment|/**      * A Control Flow Graph.      *      * @param method_gen the method generator instance      * @param enableJustIceCheck if true, additional JustIce checks are performed      * @since 6.0      */
 specifier|public
 name|ControlFlowGraph
 parameter_list|(

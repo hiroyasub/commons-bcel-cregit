@@ -16,7 +16,7 @@ package|;
 end_package
 
 begin_comment
-comment|/**  * IRETURN - Return int from method  *   *<PRE>  * Stack: ..., value -&gt;&lt;empty&gt;  *</PRE>  *  */
+comment|/**  * IRETURN - Return int from method  *  *<PRE>  * Stack: ..., value -&gt;&lt;empty&gt;  *</PRE>  *  */
 end_comment
 
 begin_class

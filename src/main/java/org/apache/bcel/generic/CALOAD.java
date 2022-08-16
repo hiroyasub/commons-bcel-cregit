@@ -16,7 +16,7 @@ package|;
 end_package
 
 begin_comment
-comment|/**  * CALOAD - Load char from array  *   *<PRE>  * Stack: ..., arrayref, index -&gt; ..., value  *</PRE>  *  */
+comment|/**  * CALOAD - Load char from array  *  *<PRE>  * Stack: ..., arrayref, index -&gt; ..., value  *</PRE>  *  */
 end_comment
 
 begin_class

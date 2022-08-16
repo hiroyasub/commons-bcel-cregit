@@ -177,7 +177,7 @@ name|n
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Dump instruction as byte code to stream out.      *       * @param out Output stream      */
+comment|/**      * Dump instruction as byte code to stream out.      *      * @param out Output stream      */
 annotation|@
 name|Override
 specifier|public
@@ -277,7 +277,7 @@ return|return
 name|n
 return|;
 block|}
-comment|/**      * Returns the type associated with the instruction - in case of ALOAD or ASTORE Type.OBJECT is returned. This is just a      * bit incorrect, because ALOAD and ASTORE may work on every ReferenceType (including Type.NULL) and ASTORE may even      * work on a ReturnaddressType .      *       * @return type associated with the instruction      */
+comment|/**      * Returns the type associated with the instruction - in case of ALOAD or ASTORE Type.OBJECT is returned. This is just a      * bit incorrect, because ALOAD and ASTORE may work on every ReferenceType (including Type.NULL) and ASTORE may even      * work on a ReturnaddressType .      *      * @return type associated with the instruction      */
 annotation|@
 name|Override
 specifier|public
@@ -381,7 +381,7 @@ argument_list|)
 throw|;
 block|}
 block|}
-comment|/**      * Read needed data (e.g. index) from file.      *       *<pre>      * (ILOAD&lt;= tag&lt;= ALOAD_3) || (ISTORE&lt;= tag&lt;= ASTORE_3)      *</pre>      */
+comment|/**      * Read needed data (e.g. index) from file.      *      *<pre>      * (ILOAD&lt;= tag&lt;= ALOAD_3) || (ISTORE&lt;= tag&lt;= ASTORE_3)      *</pre>      */
 annotation|@
 name|Override
 specifier|protected
@@ -472,7 +472,9 @@ literal|2
 argument_list|)
 expr_stmt|;
 block|}
-if|else if
+else|else
+block|{
+if|if
 condition|(
 name|_opcode
 operator|<=
@@ -494,13 +496,6 @@ operator|)
 operator|%
 literal|4
 expr_stmt|;
-name|super
-operator|.
-name|setLength
-argument_list|(
-literal|1
-argument_list|)
-expr_stmt|;
 block|}
 else|else
 block|{
@@ -517,6 +512,7 @@ operator|)
 operator|%
 literal|4
 expr_stmt|;
+block|}
 name|super
 operator|.
 name|setLength
@@ -527,7 +523,7 @@ expr_stmt|;
 block|}
 block|}
 block|}
-comment|/**      * Set the local variable index. also updates opcode and length TODO Why?      *       * @see #setIndexOnly(int)      */
+comment|/**      * Set the local variable index. also updates opcode and length TODO Why?      *      * @see #setIndexOnly(int)      */
 annotation|@
 name|Override
 specifier|public
@@ -635,7 +631,7 @@ expr_stmt|;
 block|}
 block|}
 block|}
-comment|/**      * Sets the index of the referenced variable (n) only      *       * @since 6.0      * @see #setIndex(int)      */
+comment|/**      * Sets the index of the referenced variable (n) only      *      * @since 6.0      * @see #setIndex(int)      */
 specifier|final
 name|void
 name|setIndexOnly

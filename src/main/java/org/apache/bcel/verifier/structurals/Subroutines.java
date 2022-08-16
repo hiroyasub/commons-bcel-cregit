@@ -389,7 +389,7 @@ name|SubroutineImpl
 parameter_list|()
 block|{
 block|}
-comment|/**          * A recursive helper method for getRecursivelyAccessedLocalsIndices().          *           * @see #getRecursivelyAccessedLocalsIndices()          */
+comment|/**          * A recursive helper method for getRecursivelyAccessedLocalsIndices().          *          * @see #getRecursivelyAccessedLocalsIndices()          */
 specifier|private
 name|void
 name|_getRecursivelyAccessedLocalsIndicesHelper
@@ -571,7 +571,7 @@ name|jsrInst
 argument_list|)
 expr_stmt|;
 block|}
-comment|/*          * Adds an instruction to this subroutine. All instructions must have been added before invoking setLeavingRET().          *           * @see #setLeavingRET          */
+comment|/*          * Adds an instruction to this subroutine. All instructions must have been added before invoking setLeavingRET().          *          * @see #setLeavingRET          */
 name|void
 name|addInstruction
 parameter_list|(
@@ -1752,7 +1752,7 @@ name|TOPLEVEL
 decl_stmt|;
 comment|// TODO can this be made private?
 comment|// CHECKSTYLE:ON
-comment|/**      * Constructor.      *       * @param mg A MethodGen object representing method to create the Subroutine objects of. Assumes that JustIce strict      *        checks are needed.      */
+comment|/**      * Constructor.      *      * @param mg A MethodGen object representing method to create the Subroutine objects of. Assumes that JustIce strict      *        checks are needed.      */
 specifier|public
 name|Subroutines
 parameter_list|(
@@ -1769,7 +1769,7 @@ literal|true
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Constructor.      *       * @param mg A MethodGen object representing method to create the Subroutine objects of.      * @param enableJustIceCheck whether to enable additional JustIce checks      * @since 6.0      */
+comment|/**      * Constructor.      *      * @param mg A MethodGen object representing method to create the Subroutine objects of.      * @param enableJustIceCheck whether to enable additional JustIce checks      * @since 6.0      */
 specifier|public
 name|Subroutines
 parameter_list|(

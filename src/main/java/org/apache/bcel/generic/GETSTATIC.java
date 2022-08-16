@@ -40,7 +40,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * GETSTATIC - Fetch static field from class  *   *<PRE>  * Stack: ..., -&gt; ..., value  *</PRE>  *   * OR  *   *<PRE>  * Stack: ..., -&gt; ..., value.word1, value.word2  *</PRE>  *  */
+comment|/**  * GETSTATIC - Fetch static field from class  *  *<PRE>  * Stack: ..., -&gt; ..., value  *</PRE>  *  * OR  *  *<PRE>  * Stack: ..., -&gt; ..., value.word1, value.word2  *</PRE>  *  */
 end_comment
 
 begin_class

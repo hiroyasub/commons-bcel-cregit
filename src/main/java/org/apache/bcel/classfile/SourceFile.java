@@ -73,7 +73,7 @@ specifier|private
 name|int
 name|sourceFileIndex
 decl_stmt|;
-comment|/**      * Construct object from input stream.      *       * @param name_index Index in constant pool to CONSTANT_Utf8      * @param length Content length in bytes      * @param input Input stream      * @param constant_pool Array of constants      * @throws IOException if an I/O error occurs.      */
+comment|/**      * Construct object from input stream.      *      * @param name_index Index in constant pool to CONSTANT_Utf8      * @param length Content length in bytes      * @param input Input stream      * @param constant_pool Array of constants      * @throws IOException if an I/O error occurs.      */
 name|SourceFile
 parameter_list|(
 specifier|final

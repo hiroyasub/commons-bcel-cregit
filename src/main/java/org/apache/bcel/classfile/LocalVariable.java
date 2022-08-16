@@ -70,7 +70,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * This class represents a local variable within a method. It contains its scope, name, signature and index on the  * method's frame. It is used both to represent an element of the LocalVariableTable as well as an element of the  * LocalVariableTypeTable. The nomenclature used here may be a bit confusing; while the two items have the same layout  * in a class file, a LocalVariableTable attribute contains a descriptor_index, not a signatureIndex. The  * LocalVariableTypeTable attribute does have a signatureIndex.  *   * @see org.apache.bcel.classfile.Utility for more details on the difference.  *  * @see LocalVariableTable  * @see LocalVariableTypeTable  */
+comment|/**  * This class represents a local variable within a method. It contains its scope, name, signature and index on the  * method's frame. It is used both to represent an element of the LocalVariableTable as well as an element of the  * LocalVariableTypeTable. The nomenclature used here may be a bit confusing; while the two items have the same layout  * in a class file, a LocalVariableTable attribute contains a descriptor_index, not a signatureIndex. The  * LocalVariableTypeTable attribute does have a signatureIndex.  *  * @see org.apache.bcel.classfile.Utility for more details on the difference.  *  * @see LocalVariableTable  * @see LocalVariableTypeTable  */
 end_comment
 
 begin_class
@@ -120,7 +120,7 @@ name|int
 name|origIndex
 decl_stmt|;
 comment|// never changes; used to match up with LocalVariableTypeTable entries
-comment|/**      * Constructs object from file stream.      *       * @param file Input stream      * @throws IOException if an I/O error occurs.      */
+comment|/**      * Constructs object from file stream.      *      * @param file Input stream      * @throws IOException if an I/O error occurs.      */
 name|LocalVariable
 parameter_list|(
 specifier|final

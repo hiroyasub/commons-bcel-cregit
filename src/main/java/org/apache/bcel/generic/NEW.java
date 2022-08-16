@@ -28,7 +28,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * NEW - Create new object  *   *<PRE>  * Stack: ... -&gt; ..., objectref  *</PRE>  *  */
+comment|/**  * NEW - Create new object  *  *<PRE>  * Stack: ... -&gt; ..., objectref  *</PRE>  *  */
 end_comment
 
 begin_class

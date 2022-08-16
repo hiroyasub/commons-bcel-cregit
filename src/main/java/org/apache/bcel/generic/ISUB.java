@@ -16,7 +16,7 @@ package|;
 end_package
 
 begin_comment
-comment|/**  * ISUB - Substract ints  *   *<PRE>  * Stack: ..., value1, value2 -&gt; result  *</PRE>  *  */
+comment|/**  * ISUB - Substract ints  *  *<PRE>  * Stack: ..., value1, value2 -&gt; result  *</PRE>  *  */
 end_comment
 
 begin_class

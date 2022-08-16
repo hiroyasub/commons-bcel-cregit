@@ -2455,7 +2455,7 @@ argument_list|)
 argument_list|)
 return|;
 block|}
-comment|/**      * Uses PUSH to push a constant value onto the stack.      *       * @param value must be of type Number, Boolean, Character or String      */
+comment|/**      * Uses PUSH to push a constant value onto the stack.      *      * @param value must be of type Number, Boolean, Character or String      */
 specifier|public
 name|Instruction
 name|createConstant
@@ -3164,7 +3164,7 @@ argument_list|)
 argument_list|)
 return|;
 block|}
-comment|/**      * Create new array of given size and type.      *       * @return an instruction that creates the corresponding array at runtime, i.e. is an AllocationInstruction      */
+comment|/**      * Create new array of given size and type.      *      * @return an instruction that creates the corresponding array at runtime, i.e. is an AllocationInstruction      */
 specifier|public
 name|Instruction
 name|createNewArray

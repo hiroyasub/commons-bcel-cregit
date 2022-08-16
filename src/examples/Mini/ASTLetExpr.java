@@ -376,11 +376,9 @@ argument_list|)
 expr_stmt|;
 name|start
 operator|=
-operator|(
 name|start
 operator|==
 literal|null
-operator|)
 condition|?
 name|il
 operator|.
@@ -751,7 +749,7 @@ literal|" "
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Second pass Overrides AstExpr.eval()      *       * @return type of expression      * @param expected type      */
+comment|/**      * Second pass Overrides AstExpr.eval()      *      * @return type of expression      * @param expected type      */
 annotation|@
 name|Override
 specifier|public

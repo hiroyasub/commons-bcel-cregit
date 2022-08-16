@@ -269,7 +269,7 @@ name|Method
 parameter_list|()
 block|{
 block|}
-comment|/**      * Construct object from file stream.      *       * @param file Input stream      * @throws IOException if an I/O error occurs.      * @throws ClassFormatException if a class is malformed or cannot be interpreted as a class file      */
+comment|/**      * Construct object from file stream.      *      * @param file Input stream      * @throws IOException if an I/O error occurs.      * @throws ClassFormatException if a class is malformed or cannot be interpreted as a class file      */
 name|Method
 parameter_list|(
 specifier|final

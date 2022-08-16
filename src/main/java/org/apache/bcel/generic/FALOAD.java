@@ -16,7 +16,7 @@ package|;
 end_package
 
 begin_comment
-comment|/**  * FALOAD - Load float from array  *   *<PRE>  * Stack: ..., arrayref, index -&gt; ..., value  *</PRE>  *  */
+comment|/**  * FALOAD - Load float from array  *  *<PRE>  * Stack: ..., arrayref, index -&gt; ..., value  *</PRE>  *  */
 end_comment
 
 begin_class

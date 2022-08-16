@@ -159,7 +159,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/*      * @param name_index Index of name      *       * @param length Content length in bytes      *       * @param map Table of stack map entries      *       * @param constant_pool Array of constants      */
+comment|/*      * @param name_index Index of name      *      * @param length Content length in bytes      *      * @param map Table of stack map entries      *      * @param constant_pool Array of constants      */
 specifier|public
 name|StackMap
 parameter_list|(
