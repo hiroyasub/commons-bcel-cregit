@@ -1434,7 +1434,7 @@ name|expected
 parameter_list|)
 block|{
 name|int
-name|child_type
+name|childType
 init|=
 name|T_UNKNOWN
 decl_stmt|,
@@ -1460,7 +1460,7 @@ operator|==
 name|MINUS
 condition|)
 block|{
-name|child_type
+name|childType
 operator|=
 name|type
 operator|=
@@ -1470,7 +1470,7 @@ comment|// -
 block|}
 else|else
 block|{
-name|child_type
+name|childType
 operator|=
 name|type
 operator|=
@@ -1504,7 +1504,7 @@ operator|==
 name|DIV
 condition|)
 block|{
-name|child_type
+name|childType
 operator|=
 name|type
 operator|=
@@ -1522,7 +1522,7 @@ operator|==
 name|OR
 condition|)
 block|{
-name|child_type
+name|childType
 operator|=
 name|type
 operator|=
@@ -1532,7 +1532,7 @@ block|}
 else|else
 block|{
 comment|// LEQ, GT, etc.
-name|child_type
+name|childType
 operator|=
 name|T_INT
 expr_stmt|;
@@ -1557,14 +1557,14 @@ name|expr
 operator|.
 name|eval
 argument_list|(
-name|child_type
+name|childType
 argument_list|)
 expr_stmt|;
 if|if
 condition|(
 name|t
 operator|!=
-name|child_type
+name|childType
 condition|)
 block|{
 name|MiniC
@@ -1585,7 +1585,7 @@ literal|"Expression has not expected type "
 operator|+
 name|TYPE_NAMES
 index|[
-name|child_type
+name|childType
 index|]
 operator|+
 literal|" but "

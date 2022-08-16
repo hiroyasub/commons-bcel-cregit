@@ -127,7 +127,7 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * @param class_index Reference to the class containing the field      * @param name_and_type_index and the field signature      */
+comment|/**      * @param classIndex Reference to the class containing the field      * @param nameAndTypeIndex and the field signature      */
 specifier|protected
 name|ConstantCP
 parameter_list|(
@@ -137,11 +137,11 @@ name|tag
 parameter_list|,
 specifier|final
 name|int
-name|class_index
+name|classIndex
 parameter_list|,
 specifier|final
 name|int
-name|name_and_type_index
+name|nameAndTypeIndex
 parameter_list|)
 block|{
 name|super
@@ -153,13 +153,13 @@ name|this
 operator|.
 name|class_index
 operator|=
-name|class_index
+name|classIndex
 expr_stmt|;
 name|this
 operator|.
 name|name_and_type_index
 operator|=
-name|name_and_type_index
+name|nameAndTypeIndex
 expr_stmt|;
 block|}
 comment|/**      * Initialize from another object.      */
@@ -293,7 +293,7 @@ operator|=
 name|class_index
 expr_stmt|;
 block|}
-comment|/**      * @param name_and_type_index points to Constant_NameAndType      */
+comment|/**      * @param nameAndTypeIndex points to Constant_NameAndType      */
 specifier|public
 specifier|final
 name|void
@@ -301,14 +301,14 @@ name|setNameAndTypeIndex
 parameter_list|(
 specifier|final
 name|int
-name|name_and_type_index
+name|nameAndTypeIndex
 parameter_list|)
 block|{
 name|this
 operator|.
 name|name_and_type_index
 operator|=
-name|name_and_type_index
+name|nameAndTypeIndex
 expr_stmt|;
 block|}
 comment|/**      * @return String representation.      *      *         not final as ConstantInvokeDynamic needs to modify      */

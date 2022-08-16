@@ -170,7 +170,7 @@ return|return;
 block|}
 specifier|final
 name|String
-name|class_name
+name|className
 init|=
 name|argv
 index|[
@@ -180,7 +180,7 @@ decl_stmt|;
 specifier|final
 name|String
 index|[]
-name|new_argv
+name|newArgv
 init|=
 operator|new
 name|String
@@ -200,11 +200,11 @@ name|argv
 argument_list|,
 literal|1
 argument_list|,
-name|new_argv
+name|newArgv
 argument_list|,
 literal|0
 argument_list|,
-name|new_argv
+name|newArgv
 operator|.
 name|length
 argument_list|)
@@ -221,9 +221,9 @@ name|wrapper
 operator|.
 name|runMain
 argument_list|(
-name|class_name
+name|className
 argument_list|,
-name|new_argv
+name|newArgv
 argument_list|)
 expr_stmt|;
 block|}
@@ -266,14 +266,14 @@ operator|=
 name|loader
 expr_stmt|;
 block|}
-comment|/**      * Runs the main method of the given class with the arguments passed in argv      *      * @param class_name the fully qualified class name      * @param argv the arguments just as you would pass them directly      */
+comment|/**      * Runs the main method of the given class with the arguments passed in argv      *      * @param className the fully qualified class name      * @param argv the arguments just as you would pass them directly      */
 specifier|public
 name|void
 name|runMain
 parameter_list|(
 specifier|final
 name|String
-name|class_name
+name|className
 parameter_list|,
 specifier|final
 name|String
@@ -294,7 +294,7 @@ name|loader
 operator|.
 name|loadClass
 argument_list|(
-name|class_name
+name|className
 argument_list|)
 decl_stmt|;
 name|Method
@@ -395,7 +395,7 @@ name|println
 argument_list|(
 literal|"In class "
 operator|+
-name|class_name
+name|className
 operator|+
 literal|": public static void main(String[] argv) is not defined"
 argument_list|)

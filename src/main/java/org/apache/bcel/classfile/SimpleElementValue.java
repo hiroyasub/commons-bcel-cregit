@@ -107,7 +107,7 @@ name|IOException
 block|{
 specifier|final
 name|int
-name|_type
+name|type
 init|=
 name|super
 operator|.
@@ -118,13 +118,13 @@ name|dos
 operator|.
 name|writeByte
 argument_list|(
-name|_type
+name|type
 argument_list|)
 expr_stmt|;
 comment|// u1 kind of value
 switch|switch
 condition|(
-name|_type
+name|type
 condition|)
 block|{
 case|case
@@ -170,7 +170,7 @@ name|IllegalStateException
 argument_list|(
 literal|"SimpleElementValue doesnt know how to write out type "
 operator|+
-name|_type
+name|type
 argument_list|)
 throw|;
 block|}
@@ -679,7 +679,7 @@ argument_list|()
 decl_stmt|;
 specifier|final
 name|int
-name|_type
+name|type
 init|=
 name|super
 operator|.
@@ -688,7 +688,7 @@ argument_list|()
 decl_stmt|;
 switch|switch
 condition|(
-name|_type
+name|type
 condition|)
 block|{
 case|case
@@ -999,7 +999,7 @@ name|IllegalStateException
 argument_list|(
 literal|"SimpleElementValue class does not know how to stringify type "
 operator|+
-name|_type
+name|type
 argument_list|)
 throw|;
 block|}

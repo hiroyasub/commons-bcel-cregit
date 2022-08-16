@@ -112,7 +112,7 @@ for|for
 control|(
 specifier|final
 name|String
-name|class_name
+name|className
 range|:
 name|argv
 control|)
@@ -124,7 +124,7 @@ name|Repository
 operator|.
 name|lookupClass
 argument_list|(
-name|class_name
+name|className
 argument_list|)
 decl_stmt|;
 if|if
@@ -139,7 +139,7 @@ operator|=
 operator|new
 name|ClassParser
 argument_list|(
-name|class_name
+name|className
 argument_list|)
 operator|.
 name|parse
@@ -196,7 +196,7 @@ name|MethodGen
 argument_list|(
 name|m
 argument_list|,
-name|class_name
+name|className
 argument_list|,
 name|cp
 argument_list|)

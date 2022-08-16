@@ -300,7 +300,7 @@ name|dir
 parameter_list|,
 specifier|final
 name|String
-name|class_name
+name|className
 parameter_list|,
 specifier|final
 name|Method
@@ -309,11 +309,11 @@ name|methods
 parameter_list|,
 specifier|final
 name|ConstantPool
-name|constant_pool
+name|constantPool
 parameter_list|,
 specifier|final
 name|ConstantHTML
-name|constant_html
+name|constantHtml
 parameter_list|,
 specifier|final
 name|Charset
@@ -326,20 +326,20 @@ name|this
 operator|.
 name|className
 operator|=
-name|class_name
+name|className
 expr_stmt|;
 comment|//        this.methods = methods;
 name|this
 operator|.
 name|constantPool
 operator|=
-name|constant_pool
+name|constantPool
 expr_stmt|;
 name|this
 operator|.
 name|constantHtml
 operator|=
-name|constant_html
+name|constantHtml
 expr_stmt|;
 try|try
 init|(
@@ -351,7 +351,7 @@ name|PrintWriter
 argument_list|(
 name|dir
 operator|+
-name|class_name
+name|className
 operator|+
 literal|"_code.html"
 argument_list|,

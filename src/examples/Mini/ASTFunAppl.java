@@ -248,7 +248,7 @@ comment|// ASTIdent fun = f.getName();
 comment|//    ASTIdent[] args  = f.getArgs();
 specifier|final
 name|String
-name|class_name
+name|className
 init|=
 name|method
 operator|.
@@ -276,7 +276,7 @@ name|cp
 operator|.
 name|addMethodref
 argument_list|(
-name|class_name
+name|className
 argument_list|,
 literal|"_readInt"
 argument_list|,
@@ -326,7 +326,7 @@ name|cp
 operator|.
 name|addMethodref
 argument_list|(
-name|class_name
+name|className
 argument_list|,
 literal|"_writeInt"
 argument_list|,
@@ -428,7 +428,7 @@ name|cp
 operator|.
 name|addMethodref
 argument_list|(
-name|class_name
+name|className
 argument_list|,
 name|fname
 argument_list|,

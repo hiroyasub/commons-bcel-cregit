@@ -4680,7 +4680,7 @@ condition|)
 block|{
 specifier|final
 name|String
-name|param_type
+name|paramType
 init|=
 name|typeSignatureToString
 argument_list|(
@@ -4698,7 +4698,7 @@ name|buf
 operator|.
 name|append
 argument_list|(
-name|param_type
+name|paramType
 argument_list|)
 expr_stmt|;
 if|if
@@ -4766,14 +4766,14 @@ literal|"double"
 operator|.
 name|equals
 argument_list|(
-name|param_type
+name|paramType
 argument_list|)
 operator|||
 literal|"long"
 operator|.
 name|equals
 argument_list|(
-name|param_type
+name|paramType
 argument_list|)
 condition|)
 block|{
@@ -7478,7 +7478,7 @@ comment|// corrected concurrent private static field acess
 comment|// Utility.consumed_chars += consumed_chars; is replaced by:
 specifier|final
 name|int
-name|_temp
+name|temp
 init|=
 name|unwrap
 argument_list|(
@@ -7495,7 +7495,7 @@ name|Utility
 operator|.
 name|CONSUMER_CHARS
 argument_list|,
-name|_temp
+name|temp
 argument_list|)
 expr_stmt|;
 return|return

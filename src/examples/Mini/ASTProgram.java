@@ -537,7 +537,7 @@ name|byte_code
 parameter_list|(
 specifier|final
 name|ClassGen
-name|class_gen
+name|classGen
 parameter_list|,
 specifier|final
 name|ConstantPoolGen
@@ -545,7 +545,7 @@ name|cp
 parameter_list|)
 block|{
 comment|/*          * private static BufferedReader _in;          */
-name|class_gen
+name|classGen
 operator|.
 name|addField
 argument_list|(
@@ -591,9 +591,9 @@ argument_list|()
 decl_stmt|;
 specifier|final
 name|String
-name|class_name
+name|className
 init|=
-name|class_gen
+name|classGen
 operator|.
 name|getClassName
 argument_list|()
@@ -607,7 +607,7 @@ name|cp
 operator|.
 name|addFieldref
 argument_list|(
-name|class_name
+name|className
 argument_list|,
 literal|"_in"
 argument_list|,
@@ -757,7 +757,7 @@ literal|null
 argument_list|,
 literal|"_readInt"
 argument_list|,
-name|class_name
+name|className
 argument_list|,
 name|il
 argument_list|,
@@ -778,7 +778,7 @@ argument_list|(
 literal|2
 argument_list|)
 expr_stmt|;
-name|class_gen
+name|classGen
 operator|.
 name|addMethod
 argument_list|(
@@ -999,7 +999,7 @@ name|argv
 argument_list|,
 literal|"_writeInt"
 argument_list|,
-name|class_name
+name|className
 argument_list|,
 name|il
 argument_list|,
@@ -1013,7 +1013,7 @@ argument_list|(
 literal|4
 argument_list|)
 expr_stmt|;
-name|class_gen
+name|classGen
 operator|.
 name|addMethod
 argument_list|(
@@ -1096,7 +1096,7 @@ literal|null
 argument_list|,
 literal|"<init>"
 argument_list|,
-name|class_name
+name|className
 argument_list|,
 name|il
 argument_list|,
@@ -1110,7 +1110,7 @@ argument_list|(
 literal|1
 argument_list|)
 expr_stmt|;
-name|class_gen
+name|classGen
 operator|.
 name|addMethod
 argument_list|(
@@ -1283,7 +1283,7 @@ literal|null
 argument_list|,
 literal|"<clinit>"
 argument_list|,
-name|class_name
+name|className
 argument_list|,
 name|il
 argument_list|,
@@ -1297,7 +1297,7 @@ argument_list|(
 literal|5
 argument_list|)
 expr_stmt|;
-name|class_gen
+name|classGen
 operator|.
 name|addMethod
 argument_list|(
@@ -1320,7 +1320,7 @@ name|fun_decl
 operator|.
 name|byte_code
 argument_list|(
-name|class_gen
+name|classGen
 argument_list|,
 name|cp
 argument_list|)

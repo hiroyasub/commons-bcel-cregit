@@ -363,7 +363,7 @@ name|copy
 parameter_list|(
 specifier|final
 name|ConstantPool
-name|_constant_pool
+name|constantPool
 parameter_list|)
 block|{
 return|return
@@ -372,7 +372,7 @@ name|Field
 operator|)
 name|copy_
 argument_list|(
-name|_constant_pool
+name|constantPool
 argument_list|)
 return|;
 block|}

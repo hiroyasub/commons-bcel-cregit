@@ -194,11 +194,11 @@ name|equals
 parameter_list|(
 specifier|final
 name|Object
-name|_type
+name|type
 parameter_list|)
 block|{
 return|return
-name|_type
+name|type
 operator|instanceof
 name|BasicType
 condition|?
@@ -206,7 +206,7 @@ operator|(
 operator|(
 name|BasicType
 operator|)
-name|_type
+name|type
 operator|)
 operator|.
 name|getType

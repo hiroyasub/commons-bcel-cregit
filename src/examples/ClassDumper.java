@@ -165,11 +165,11 @@ name|file_name
 decl_stmt|;
 specifier|private
 name|int
-name|class_name_index
+name|classNameIndex
 decl_stmt|;
 specifier|private
 name|int
-name|superclass_name_index
+name|superclassNameIndex
 decl_stmt|;
 specifier|private
 name|int
@@ -182,7 +182,7 @@ decl_stmt|;
 comment|// Compiler version
 specifier|private
 name|int
-name|access_flags
+name|accessFlags
 decl_stmt|;
 comment|// Access rights of parsed class
 specifier|private
@@ -193,13 +193,13 @@ decl_stmt|;
 comment|// Names of implemented interfaces
 specifier|private
 name|ConstantPool
-name|constant_pool
+name|constantPool
 decl_stmt|;
 comment|// collection of constants
 specifier|private
 name|Constant
 index|[]
-name|constant_items
+name|constantItems
 decl_stmt|;
 comment|// collection of constants
 specifier|private
@@ -260,13 +260,13 @@ specifier|final
 name|Constant
 name|c
 init|=
-name|constant_items
+name|constantItems
 index|[
 name|index
 index|]
 decl_stmt|;
 return|return
-name|constant_pool
+name|constantPool
 operator|.
 name|constantToString
 argument_list|(
@@ -415,7 +415,7 @@ name|readAttribute
 argument_list|(
 name|file
 argument_list|,
-name|constant_pool
+name|constantPool
 argument_list|)
 expr_stmt|;
 comment|// indent all lines by two spaces
@@ -471,7 +471,7 @@ name|IOException
 throws|,
 name|ClassFormatException
 block|{
-name|access_flags
+name|accessFlags
 operator|=
 name|file
 operator|.
@@ -482,7 +482,7 @@ comment|/*          * Interfaces are implicitely abstract, the flag should be se
 if|if
 condition|(
 operator|(
-name|access_flags
+name|accessFlags
 operator|&
 name|Const
 operator|.
@@ -492,7 +492,7 @@ operator|!=
 literal|0
 condition|)
 block|{
-name|access_flags
+name|accessFlags
 operator||=
 name|Const
 operator|.
@@ -502,7 +502,7 @@ block|}
 if|if
 condition|(
 operator|(
-name|access_flags
+name|accessFlags
 operator|&
 name|Const
 operator|.
@@ -512,7 +512,7 @@ operator|!=
 literal|0
 operator|&&
 operator|(
-name|access_flags
+name|accessFlags
 operator|&
 name|Const
 operator|.
@@ -555,7 +555,7 @@ name|BCELifier
 operator|.
 name|printFlags
 argument_list|(
-name|access_flags
+name|accessFlags
 argument_list|,
 name|BCELifier
 operator|.
@@ -565,7 +565,7 @@ name|CLASS
 argument_list|)
 argument_list|)
 expr_stmt|;
-name|class_name_index
+name|classNameIndex
 operator|=
 name|file
 operator|.
@@ -580,7 +580,7 @@ name|printf
 argument_list|(
 literal|"  this_class: %d ("
 argument_list|,
-name|class_name_index
+name|classNameIndex
 argument_list|)
 expr_stmt|;
 name|System
@@ -591,13 +591,13 @@ name|println
 argument_list|(
 name|constantToString
 argument_list|(
-name|class_name_index
+name|classNameIndex
 argument_list|)
 operator|+
 literal|")"
 argument_list|)
 expr_stmt|;
-name|superclass_name_index
+name|superclassNameIndex
 operator|=
 name|file
 operator|.
@@ -612,12 +612,12 @@ name|printf
 argument_list|(
 literal|"  super_class: %d ("
 argument_list|,
-name|superclass_name_index
+name|superclassNameIndex
 argument_list|)
 expr_stmt|;
 if|if
 condition|(
-name|superclass_name_index
+name|superclassNameIndex
 operator|>
 literal|0
 condition|)
@@ -632,7 +632,7 @@ literal|"%s"
 argument_list|,
 name|constantToString
 argument_list|(
-name|superclass_name_index
+name|superclassNameIndex
 argument_list|)
 argument_list|)
 expr_stmt|;
@@ -670,7 +670,7 @@ operator|.
 name|readUnsignedShort
 argument_list|()
 decl_stmt|;
-name|constant_items
+name|constantItems
 operator|=
 operator|new
 name|Constant
@@ -678,15 +678,15 @@ index|[
 name|constant_pool_count
 index|]
 expr_stmt|;
-name|constant_pool
+name|constantPool
 operator|=
 operator|new
 name|ConstantPool
 argument_list|(
-name|constant_items
+name|constantItems
 argument_list|)
 expr_stmt|;
-comment|// constant_pool[0] is unused by the compiler
+comment|// constantPool[0] is unused by the compiler
 name|System
 operator|.
 name|out
@@ -715,7 +715,7 @@ name|i
 operator|++
 control|)
 block|{
-name|constant_items
+name|constantItems
 index|[
 name|i
 index|]
@@ -786,7 +786,7 @@ name|out
 operator|.
 name|println
 argument_list|(
-name|constant_items
+name|constantItems
 index|[
 name|i
 index|]
@@ -795,7 +795,7 @@ expr_stmt|;
 comment|// All eight byte constants take up two spots in the constant pool
 name|tag
 operator|=
-name|constant_items
+name|constantItems
 index|[
 name|i
 index|]
@@ -884,7 +884,7 @@ name|out
 operator|.
 name|println
 argument_list|(
-literal|"  access_flags: "
+literal|"  accessFlags: "
 operator|+
 name|BCELifier
 operator|.
@@ -1038,7 +1038,7 @@ name|readAttribute
 argument_list|(
 name|file
 argument_list|,
-name|constant_pool
+name|constantPool
 argument_list|)
 expr_stmt|;
 specifier|final
@@ -1399,7 +1399,7 @@ index|]
 operator|+
 literal|" ("
 operator|+
-name|constant_pool
+name|constantPool
 operator|.
 name|getConstantString
 argument_list|(

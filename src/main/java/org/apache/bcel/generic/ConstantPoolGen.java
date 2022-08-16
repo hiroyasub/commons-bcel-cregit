@@ -881,7 +881,7 @@ operator|)
 name|c
 decl_stmt|;
 name|String
-name|class_name
+name|className
 decl_stmt|;
 name|ConstantUtf8
 name|u8
@@ -893,7 +893,7 @@ operator|instanceof
 name|ConstantInvokeDynamic
 condition|)
 block|{
-name|class_name
+name|className
 operator|=
 name|Integer
 operator|.
@@ -918,7 +918,7 @@ operator|instanceof
 name|ConstantDynamic
 condition|)
 block|{
-name|class_name
+name|className
 operator|=
 name|Integer
 operator|.
@@ -966,7 +966,7 @@ name|getNameIndex
 argument_list|()
 index|]
 expr_stmt|;
-name|class_name
+name|className
 operator|=
 name|u8
 operator|.
@@ -1074,7 +1074,7 @@ name|sb
 operator|.
 name|append
 argument_list|(
-name|class_name
+name|className
 argument_list|)
 expr_stmt|;
 name|sb
@@ -1796,7 +1796,7 @@ index|]
 decl_stmt|;
 specifier|final
 name|String
-name|class_name
+name|className
 init|=
 name|u8
 operator|.
@@ -1870,7 +1870,7 @@ case|:
 return|return
 name|addInterfaceMethodref
 argument_list|(
-name|class_name
+name|className
 argument_list|,
 name|name
 argument_list|,
@@ -1885,7 +1885,7 @@ case|:
 return|return
 name|addMethodref
 argument_list|(
-name|class_name
+name|className
 argument_list|,
 name|name
 argument_list|,
@@ -1900,7 +1900,7 @@ case|:
 return|return
 name|addFieldref
 argument_list|(
-name|class_name
+name|className
 argument_list|,
 name|name
 argument_list|,
@@ -1993,14 +1993,14 @@ return|return
 name|ret
 return|;
 block|}
-comment|/**      * Add a new Fieldref constant to the ConstantPool, if it is not already in there.      *      * @param class_name class name string to add      * @param field_name field name string to add      * @param signature signature string to add      * @return index of entry      */
+comment|/**      * Add a new Fieldref constant to the ConstantPool, if it is not already in there.      *      * @param className class name string to add      * @param field_name field name string to add      * @param signature signature string to add      * @return index of entry      */
 specifier|public
 name|int
 name|addFieldref
 parameter_list|(
 specifier|final
 name|String
-name|class_name
+name|className
 parameter_list|,
 specifier|final
 name|String
@@ -2015,10 +2015,10 @@ name|int
 name|ret
 decl_stmt|;
 name|int
-name|class_index
+name|classIndex
 decl_stmt|;
 name|int
-name|name_and_type_index
+name|nameAndTypeIndex
 decl_stmt|;
 if|if
 condition|(
@@ -2027,7 +2027,7 @@ name|ret
 operator|=
 name|lookupFieldref
 argument_list|(
-name|class_name
+name|className
 argument_list|,
 name|field_name
 argument_list|,
@@ -2047,14 +2047,14 @@ block|}
 name|adjustSize
 argument_list|()
 expr_stmt|;
-name|class_index
+name|classIndex
 operator|=
 name|addClass
 argument_list|(
-name|class_name
+name|className
 argument_list|)
 expr_stmt|;
-name|name_and_type_index
+name|nameAndTypeIndex
 operator|=
 name|addNameAndType
 argument_list|(
@@ -2076,16 +2076,16 @@ operator|=
 operator|new
 name|ConstantFieldref
 argument_list|(
-name|class_index
+name|classIndex
 argument_list|,
-name|name_and_type_index
+name|nameAndTypeIndex
 argument_list|)
 expr_stmt|;
 specifier|final
 name|String
 name|key
 init|=
-name|class_name
+name|className
 operator|+
 name|FIELDREF_DELIM
 operator|+
@@ -2265,14 +2265,14 @@ argument_list|()
 argument_list|)
 return|;
 block|}
-comment|/**      * Add a new InterfaceMethodref constant to the ConstantPool, if it is not already in there.      *      * @param class_name class name string to add      * @param method_name method name string to add      * @param signature signature string to add      * @return index of entry      */
+comment|/**      * Add a new InterfaceMethodref constant to the ConstantPool, if it is not already in there.      *      * @param className class name string to add      * @param method_name method name string to add      * @param signature signature string to add      * @return index of entry      */
 specifier|public
 name|int
 name|addInterfaceMethodref
 parameter_list|(
 specifier|final
 name|String
-name|class_name
+name|className
 parameter_list|,
 specifier|final
 name|String
@@ -2287,10 +2287,10 @@ name|int
 name|ret
 decl_stmt|;
 name|int
-name|class_index
+name|classIndex
 decl_stmt|;
 name|int
-name|name_and_type_index
+name|nameAndTypeIndex
 decl_stmt|;
 if|if
 condition|(
@@ -2299,7 +2299,7 @@ name|ret
 operator|=
 name|lookupInterfaceMethodref
 argument_list|(
-name|class_name
+name|className
 argument_list|,
 name|method_name
 argument_list|,
@@ -2319,14 +2319,14 @@ block|}
 name|adjustSize
 argument_list|()
 expr_stmt|;
-name|class_index
+name|classIndex
 operator|=
 name|addClass
 argument_list|(
-name|class_name
+name|className
 argument_list|)
 expr_stmt|;
-name|name_and_type_index
+name|nameAndTypeIndex
 operator|=
 name|addNameAndType
 argument_list|(
@@ -2348,16 +2348,16 @@ operator|=
 operator|new
 name|ConstantInterfaceMethodref
 argument_list|(
-name|class_index
+name|classIndex
 argument_list|,
-name|name_and_type_index
+name|nameAndTypeIndex
 argument_list|)
 expr_stmt|;
 specifier|final
 name|String
 name|key
 init|=
-name|class_name
+name|className
 operator|+
 name|IMETHODREF_DELIM
 operator|+
@@ -2485,14 +2485,14 @@ argument_list|()
 argument_list|)
 return|;
 block|}
-comment|/**      * Add a new Methodref constant to the ConstantPool, if it is not already in there.      *      * @param class_name class name string to add      * @param method_name method name string to add      * @param signature method signature string to add      * @return index of entry      */
+comment|/**      * Add a new Methodref constant to the ConstantPool, if it is not already in there.      *      * @param className class name string to add      * @param method_name method name string to add      * @param signature method signature string to add      * @return index of entry      */
 specifier|public
 name|int
 name|addMethodref
 parameter_list|(
 specifier|final
 name|String
-name|class_name
+name|className
 parameter_list|,
 specifier|final
 name|String
@@ -2507,10 +2507,10 @@ name|int
 name|ret
 decl_stmt|;
 name|int
-name|class_index
+name|classIndex
 decl_stmt|;
 name|int
-name|name_and_type_index
+name|nameAndTypeIndex
 decl_stmt|;
 if|if
 condition|(
@@ -2519,7 +2519,7 @@ name|ret
 operator|=
 name|lookupMethodref
 argument_list|(
-name|class_name
+name|className
 argument_list|,
 name|method_name
 argument_list|,
@@ -2539,7 +2539,7 @@ block|}
 name|adjustSize
 argument_list|()
 expr_stmt|;
-name|name_and_type_index
+name|nameAndTypeIndex
 operator|=
 name|addNameAndType
 argument_list|(
@@ -2548,11 +2548,11 @@ argument_list|,
 name|signature
 argument_list|)
 expr_stmt|;
-name|class_index
+name|classIndex
 operator|=
 name|addClass
 argument_list|(
-name|class_name
+name|className
 argument_list|)
 expr_stmt|;
 name|ret
@@ -2568,16 +2568,16 @@ operator|=
 operator|new
 name|ConstantMethodref
 argument_list|(
-name|class_index
+name|classIndex
 argument_list|,
-name|name_and_type_index
+name|nameAndTypeIndex
 argument_list|)
 expr_stmt|;
 specifier|final
 name|String
 name|key
 init|=
-name|class_name
+name|className
 operator|+
 name|METHODREF_DELIM
 operator|+
@@ -3169,18 +3169,18 @@ operator|-
 literal|1
 return|;
 block|}
-comment|/**      * Look for ConstantFieldref in ConstantPool.      *      * @param class_name Where to find method      * @param field_name Guess what      * @param signature return and argument types      * @return index on success, -1 otherwise      */
+comment|/**      * Look for ConstantFieldref in ConstantPool.      *      * @param className Where to find method      * @param fieldName Guess what      * @param signature return and argument types      * @return index on success, -1 otherwise      */
 specifier|public
 name|int
 name|lookupFieldref
 parameter_list|(
 specifier|final
 name|String
-name|class_name
+name|className
 parameter_list|,
 specifier|final
 name|String
-name|field_name
+name|fieldName
 parameter_list|,
 specifier|final
 name|String
@@ -3195,11 +3195,11 @@ name|cpTable
 operator|.
 name|get
 argument_list|(
-name|class_name
+name|className
 operator|+
 name|FIELDREF_DELIM
 operator|+
-name|field_name
+name|fieldName
 operator|+
 name|FIELDREF_DELIM
 operator|+
@@ -3400,14 +3400,14 @@ argument_list|()
 argument_list|)
 return|;
 block|}
-comment|/**      * Look for ConstantInterfaceMethodref in ConstantPool.      *      * @param class_name Where to find method      * @param method_name Guess what      * @param signature return and argument types      * @return index on success, -1 otherwise      */
+comment|/**      * Look for ConstantInterfaceMethodref in ConstantPool.      *      * @param className Where to find method      * @param method_name Guess what      * @param signature return and argument types      * @return index on success, -1 otherwise      */
 specifier|public
 name|int
 name|lookupInterfaceMethodref
 parameter_list|(
 specifier|final
 name|String
-name|class_name
+name|className
 parameter_list|,
 specifier|final
 name|String
@@ -3426,7 +3426,7 @@ name|cpTable
 operator|.
 name|get
 argument_list|(
-name|class_name
+name|className
 operator|+
 name|IMETHODREF_DELIM
 operator|+
@@ -3547,14 +3547,14 @@ argument_list|()
 argument_list|)
 return|;
 block|}
-comment|/**      * Look for ConstantMethodref in ConstantPool.      *      * @param class_name Where to find method      * @param method_name Guess what      * @param signature return and argument types      * @return index on success, -1 otherwise      */
+comment|/**      * Look for ConstantMethodref in ConstantPool.      *      * @param className Where to find method      * @param method_name Guess what      * @param signature return and argument types      * @return index on success, -1 otherwise      */
 specifier|public
 name|int
 name|lookupMethodref
 parameter_list|(
 specifier|final
 name|String
-name|class_name
+name|className
 parameter_list|,
 specifier|final
 name|String
@@ -3573,7 +3573,7 @@ name|cpTable
 operator|.
 name|get
 argument_list|(
-name|class_name
+name|className
 operator|+
 name|METHODREF_DELIM
 operator|+
@@ -3613,7 +3613,7 @@ parameter_list|)
 block|{
 specifier|final
 name|Index
-name|_index
+name|index
 init|=
 name|natTable
 operator|.
@@ -3627,11 +3627,11 @@ name|signature
 argument_list|)
 decl_stmt|;
 return|return
-name|_index
+name|index
 operator|!=
 literal|null
 condition|?
-name|_index
+name|index
 operator|.
 name|index
 else|:

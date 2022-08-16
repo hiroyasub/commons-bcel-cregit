@@ -413,7 +413,7 @@ decl_stmt|;
 comment|/**      * The class to verify. Default set to 'java.lang.Object' in case this class is instantiated via one of the many      * machine-generated constructors.      */
 specifier|private
 name|String
-name|class_name
+name|className
 init|=
 literal|"java.lang.Object"
 decl_stmt|;
@@ -635,19 +635,19 @@ name|modal
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Use this constructor if you want a possibility to verify other class files than java.lang.Object.      *      * @param fully_qualified_class_name java.lang.String      */
+comment|/**      * Use this constructor if you want a possibility to verify other class files than java.lang.Object.      *      * @param fullyQualifiedClassName java.lang.String      */
 specifier|public
 name|VerifyDialog
 parameter_list|(
 name|String
-name|fully_qualified_class_name
+name|fullyQualifiedClassName
 parameter_list|)
 block|{
 specifier|final
 name|int
 name|dotclasspos
 init|=
-name|fully_qualified_class_name
+name|fullyQualifiedClassName
 operator|.
 name|lastIndexOf
 argument_list|(
@@ -662,9 +662,9 @@ operator|-
 literal|1
 condition|)
 block|{
-name|fully_qualified_class_name
+name|fullyQualifiedClassName
 operator|=
-name|fully_qualified_class_name
+name|fullyQualifiedClassName
 operator|.
 name|substring
 argument_list|(
@@ -674,9 +674,9 @@ name|dotclasspos
 argument_list|)
 expr_stmt|;
 block|}
-name|fully_qualified_class_name
+name|fullyQualifiedClassName
 operator|=
-name|fully_qualified_class_name
+name|fullyQualifiedClassName
 operator|.
 name|replace
 argument_list|(
@@ -685,9 +685,11 @@ argument_list|,
 literal|'.'
 argument_list|)
 expr_stmt|;
-name|class_name
+name|this
+operator|.
+name|className
 operator|=
-name|fully_qualified_class_name
+name|fullyQualifiedClassName
 expr_stmt|;
 name|initialize
 argument_list|()
@@ -913,7 +915,7 @@ name|VerifierFactory
 operator|.
 name|getVerifier
 argument_list|(
-name|class_name
+name|className
 argument_list|)
 operator|.
 name|flush
@@ -923,7 +925,7 @@ name|Repository
 operator|.
 name|removeClass
 argument_list|(
-name|class_name
+name|className
 argument_list|)
 expr_stmt|;
 comment|// Make sure it will be reloaded.
@@ -2048,7 +2050,7 @@ name|setTitle
 argument_list|(
 literal|"'"
 operator|+
-name|class_name
+name|className
 operator|+
 literal|"' verification - JustIce / BCEL"
 argument_list|)
@@ -2079,7 +2081,7 @@ name|VerifierFactory
 operator|.
 name|getVerifier
 argument_list|(
-name|class_name
+name|className
 argument_list|)
 decl_stmt|;
 specifier|final
@@ -2179,7 +2181,7 @@ name|VerifierFactory
 operator|.
 name|getVerifier
 argument_list|(
-name|class_name
+name|className
 argument_list|)
 decl_stmt|;
 specifier|final
@@ -2315,7 +2317,7 @@ name|VerifierFactory
 operator|.
 name|getVerifier
 argument_list|(
-name|class_name
+name|className
 argument_list|)
 decl_stmt|;
 name|VerificationResult
@@ -2351,7 +2353,7 @@ name|Repository
 operator|.
 name|lookupClass
 argument_list|(
-name|class_name
+name|className
 argument_list|)
 expr_stmt|;
 specifier|final

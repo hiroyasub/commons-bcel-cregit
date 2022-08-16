@@ -260,7 +260,7 @@ name|dir
 parameter_list|,
 specifier|final
 name|String
-name|class_name
+name|className
 parameter_list|,
 specifier|final
 name|String
@@ -273,7 +273,7 @@ name|methods
 parameter_list|,
 specifier|final
 name|ConstantPool
-name|constant_pool
+name|constantPool
 parameter_list|,
 specifier|final
 name|Charset
@@ -286,7 +286,7 @@ name|this
 operator|.
 name|className
 operator|=
-name|class_name
+name|className
 expr_stmt|;
 name|this
 operator|.
@@ -298,7 +298,7 @@ name|this
 operator|.
 name|constantPool
 operator|=
-name|constant_pool
+name|constantPool
 expr_stmt|;
 name|this
 operator|.
@@ -308,7 +308,7 @@ name|methods
 expr_stmt|;
 name|constants
 operator|=
-name|constant_pool
+name|constantPool
 operator|.
 name|getConstantPool
 argument_list|()
@@ -323,7 +323,7 @@ name|PrintWriter
 argument_list|(
 name|dir
 operator|+
-name|class_name
+name|className
 operator|+
 literal|"_cp.html"
 argument_list|,
@@ -567,10 +567,10 @@ name|getTag
 argument_list|()
 decl_stmt|;
 name|int
-name|class_index
+name|classIndex
 decl_stmt|;
 name|int
-name|name_index
+name|nameIndex
 decl_stmt|;
 name|String
 name|ref
@@ -644,14 +644,14 @@ operator|.
 name|CONSTANT_Methodref
 argument_list|)
 decl_stmt|;
-name|class_index
+name|classIndex
 operator|=
 name|c
 operator|.
 name|getClassIndex
 argument_list|()
 expr_stmt|;
-name|name_index
+name|nameIndex
 operator|=
 name|c
 operator|.
@@ -679,14 +679,14 @@ operator|.
 name|CONSTANT_InterfaceMethodref
 argument_list|)
 decl_stmt|;
-name|class_index
+name|classIndex
 operator|=
 name|c1
 operator|.
 name|getClassIndex
 argument_list|()
 expr_stmt|;
-name|name_index
+name|nameIndex
 operator|=
 name|c1
 operator|.
@@ -697,13 +697,13 @@ block|}
 comment|// Get method name and its class
 specifier|final
 name|String
-name|method_name
+name|methodName
 init|=
 name|constantPool
 operator|.
 name|constantToString
 argument_list|(
-name|name_index
+name|nameIndex
 argument_list|,
 name|Const
 operator|.
@@ -712,25 +712,25 @@ argument_list|)
 decl_stmt|;
 specifier|final
 name|String
-name|html_method_name
+name|htmlMethodName
 init|=
 name|Class2HTML
 operator|.
 name|toHTML
 argument_list|(
-name|method_name
+name|methodName
 argument_list|)
 decl_stmt|;
 comment|// Partially compacted class name, i.e., / -> .
 specifier|final
 name|String
-name|method_class
+name|methodClass
 init|=
 name|constantPool
 operator|.
 name|constantToString
 argument_list|(
-name|class_index
+name|classIndex
 argument_list|,
 name|Const
 operator|.
@@ -738,23 +738,23 @@ name|CONSTANT_Class
 argument_list|)
 decl_stmt|;
 name|String
-name|short_method_class
+name|shortMethodClass
 init|=
 name|Utility
 operator|.
 name|compactClassName
 argument_list|(
-name|method_class
+name|methodClass
 argument_list|)
 decl_stmt|;
 comment|// I.e., remove java.lang.
-name|short_method_class
+name|shortMethodClass
 operator|=
 name|Utility
 operator|.
 name|compactClassName
 argument_list|(
-name|short_method_class
+name|shortMethodClass
 argument_list|,
 name|classPackage
 operator|+
@@ -776,7 +776,7 @@ name|constantPool
 operator|.
 name|getConstant
 argument_list|(
-name|name_index
+name|nameIndex
 argument_list|,
 name|Const
 operator|.
@@ -832,7 +832,7 @@ argument_list|)
 decl_stmt|;
 specifier|final
 name|String
-name|ret_type
+name|retType
 init|=
 name|Class2HTML
 operator|.
@@ -912,7 +912,7 @@ argument_list|)
 expr_stmt|;
 specifier|final
 name|String
-name|arg_types
+name|argTypes
 init|=
 name|buf
 operator|.
@@ -921,7 +921,7 @@ argument_list|()
 decl_stmt|;
 if|if
 condition|(
-name|method_class
+name|methodClass
 operator|.
 name|equals
 argument_list|(
@@ -939,14 +939,14 @@ literal|"_code.html#method"
 operator|+
 name|getMethodNumber
 argument_list|(
-name|method_name
+name|methodName
 operator|+
 name|signature
 argument_list|)
 operator|+
 literal|"\" TARGET=Code>"
 operator|+
-name|html_method_name
+name|htmlMethodName
 operator|+
 literal|"</A>"
 expr_stmt|;
@@ -957,17 +957,17 @@ name|ref
 operator|=
 literal|"<A HREF=\""
 operator|+
-name|method_class
+name|methodClass
 operator|+
 literal|".html"
 operator|+
 literal|"\" TARGET=_top>"
 operator|+
-name|short_method_class
+name|shortMethodClass
 operator|+
 literal|"</A>."
 operator|+
-name|html_method_name
+name|htmlMethodName
 expr_stmt|;
 block|}
 name|constantRef
@@ -975,7 +975,7 @@ index|[
 name|index
 index|]
 operator|=
-name|ret_type
+name|retType
 operator|+
 literal|"&nbsp;<A HREF=\""
 operator|+
@@ -983,11 +983,11 @@ name|className
 operator|+
 literal|"_cp.html#cp"
 operator|+
-name|class_index
+name|classIndex
 operator|+
 literal|"\" TARGET=Constants>"
 operator|+
-name|short_method_class
+name|shortMethodClass
 operator|+
 literal|"</A>.<A HREF=\""
 operator|+
@@ -999,11 +999,11 @@ name|index
 operator|+
 literal|"\" TARGET=ConstantPool>"
 operator|+
-name|html_method_name
+name|htmlMethodName
 operator|+
 literal|"</A>&nbsp;"
 operator|+
-name|arg_types
+name|argTypes
 expr_stmt|;
 name|printWriter
 operator|.
@@ -1011,33 +1011,33 @@ name|println
 argument_list|(
 literal|"<P><TT>"
 operator|+
-name|ret_type
+name|retType
 operator|+
 literal|"&nbsp;"
 operator|+
 name|ref
 operator|+
-name|arg_types
+name|argTypes
 operator|+
 literal|"&nbsp;</TT>\n<UL>"
 operator|+
 literal|"<LI><A HREF=\"#cp"
 operator|+
-name|class_index
+name|classIndex
 operator|+
 literal|"\">Class index("
 operator|+
-name|class_index
+name|classIndex
 operator|+
 literal|")</A>\n"
 operator|+
 literal|"<LI><A HREF=\"#cp"
 operator|+
-name|name_index
+name|nameIndex
 operator|+
 literal|"\">NameAndType index("
 operator|+
-name|name_index
+name|nameIndex
 operator|+
 literal|")</A></UL>"
 argument_list|)
@@ -1067,14 +1067,14 @@ operator|.
 name|CONSTANT_Fieldref
 argument_list|)
 decl_stmt|;
-name|class_index
+name|classIndex
 operator|=
 name|c3
 operator|.
 name|getClassIndex
 argument_list|()
 expr_stmt|;
-name|name_index
+name|nameIndex
 operator|=
 name|c3
 operator|.
@@ -1090,7 +1090,7 @@ name|constantPool
 operator|.
 name|constantToString
 argument_list|(
-name|class_index
+name|classIndex
 argument_list|,
 name|Const
 operator|.
@@ -1132,7 +1132,7 @@ name|constantPool
 operator|.
 name|constantToString
 argument_list|(
-name|name_index
+name|nameIndex
 argument_list|,
 name|Const
 operator|.
@@ -1196,7 +1196,7 @@ name|className
 operator|+
 literal|"_cp.html#cp"
 operator|+
-name|class_index
+name|classIndex
 operator|+
 literal|"\" TARGET=Constants>"
 operator|+
@@ -1230,21 +1230,21 @@ literal|"<UL>"
 operator|+
 literal|"<LI><A HREF=\"#cp"
 operator|+
-name|class_index
+name|classIndex
 operator|+
 literal|"\">Class("
 operator|+
-name|class_index
+name|classIndex
 operator|+
 literal|")</A><BR>\n"
 operator|+
 literal|"<LI><A HREF=\"#cp"
 operator|+
-name|name_index
+name|nameIndex
 operator|+
 literal|"\">NameAndType("
 operator|+
-name|name_index
+name|nameIndex
 operator|+
 literal|")</A></UL>"
 argument_list|)
@@ -1273,7 +1273,7 @@ operator|.
 name|CONSTANT_Class
 argument_list|)
 decl_stmt|;
-name|name_index
+name|nameIndex
 operator|=
 name|c4
 operator|.
@@ -1282,7 +1282,7 @@ argument_list|()
 expr_stmt|;
 specifier|final
 name|String
-name|class_name2
+name|className2
 init|=
 name|constantPool
 operator|.
@@ -1295,23 +1295,23 @@ argument_list|)
 decl_stmt|;
 comment|// / -> .
 name|String
-name|short_class_name
+name|shortClassName
 init|=
 name|Utility
 operator|.
 name|compactClassName
 argument_list|(
-name|class_name2
+name|className2
 argument_list|)
 decl_stmt|;
 comment|// I.e., remove java.lang.
-name|short_class_name
+name|shortClassName
 operator|=
 name|Utility
 operator|.
 name|compactClassName
 argument_list|(
-name|short_class_name
+name|shortClassName
 argument_list|,
 name|classPackage
 operator|+
@@ -1325,11 +1325,11 @@ name|ref
 operator|=
 literal|"<A HREF=\""
 operator|+
-name|class_name2
+name|className2
 operator|+
 literal|".html\" TARGET=_top>"
 operator|+
-name|short_class_name
+name|shortClassName
 operator|+
 literal|"</A>"
 expr_stmt|;
@@ -1348,7 +1348,7 @@ name|index
 operator|+
 literal|"\" TARGET=ConstantPool>"
 operator|+
-name|short_class_name
+name|shortClassName
 operator|+
 literal|"</A>"
 expr_stmt|;
@@ -1364,11 +1364,11 @@ literal|"</TT><UL>"
 operator|+
 literal|"<LI><A HREF=\"#cp"
 operator|+
-name|name_index
+name|nameIndex
 operator|+
 literal|"\">Name index("
 operator|+
-name|name_index
+name|nameIndex
 operator|+
 literal|")</A></UL>\n"
 argument_list|)
@@ -1397,7 +1397,7 @@ operator|.
 name|CONSTANT_String
 argument_list|)
 decl_stmt|;
-name|name_index
+name|nameIndex
 operator|=
 name|c5
 operator|.
@@ -1434,11 +1434,11 @@ literal|"</TT><UL>"
 operator|+
 literal|"<LI><A HREF=\"#cp"
 operator|+
-name|name_index
+name|nameIndex
 operator|+
 literal|"\">Name index("
 operator|+
-name|name_index
+name|nameIndex
 operator|+
 literal|")</A></UL>\n"
 argument_list|)
@@ -1467,7 +1467,7 @@ operator|.
 name|CONSTANT_NameAndType
 argument_list|)
 decl_stmt|;
-name|name_index
+name|nameIndex
 operator|=
 name|c6
 operator|.
@@ -1507,11 +1507,11 @@ literal|"</TT><UL>"
 operator|+
 literal|"<LI><A HREF=\"#cp"
 operator|+
-name|name_index
+name|nameIndex
 operator|+
 literal|"\">Name index("
 operator|+
-name|name_index
+name|nameIndex
 operator|+
 literal|")</A>\n"
 operator|+

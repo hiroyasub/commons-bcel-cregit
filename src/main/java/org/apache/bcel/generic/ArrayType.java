@@ -75,13 +75,13 @@ name|dimensions
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Convenience constructor for reference array type, e.g. Object[]      *      * @param class_name complete name of class (java.lang.String, e.g.)      */
+comment|/**      * Convenience constructor for reference array type, e.g. Object[]      *      * @param className complete name of class (java.lang.String, e.g.)      */
 specifier|public
 name|ArrayType
 parameter_list|(
 specifier|final
 name|String
-name|class_name
+name|className
 parameter_list|,
 specifier|final
 name|int
@@ -94,7 +94,7 @@ name|ObjectType
 operator|.
 name|getInstance
 argument_list|(
-name|class_name
+name|className
 argument_list|)
 argument_list|,
 name|dimensions
@@ -274,12 +274,12 @@ name|equals
 parameter_list|(
 specifier|final
 name|Object
-name|_type
+name|type
 parameter_list|)
 block|{
 if|if
 condition|(
-name|_type
+name|type
 operator|instanceof
 name|ArrayType
 condition|)
@@ -291,7 +291,7 @@ init|=
 operator|(
 name|ArrayType
 operator|)
-name|_type
+name|type
 decl_stmt|;
 return|return
 name|array

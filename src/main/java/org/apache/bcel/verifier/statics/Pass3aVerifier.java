@@ -2309,7 +2309,7 @@ condition|)
 block|{
 specifier|final
 name|Type
-name|f_type
+name|fType
 init|=
 name|Type
 operator|.
@@ -2323,7 +2323,7 @@ argument_list|)
 decl_stmt|;
 specifier|final
 name|Type
-name|o_type
+name|oType
 init|=
 name|o
 operator|.
@@ -2335,11 +2335,11 @@ decl_stmt|;
 comment|/*                          * TODO: Check if assignment compatibility is sufficient. What does Sun do?                          */
 if|if
 condition|(
-name|f_type
+name|fType
 operator|.
 name|equals
 argument_list|(
-name|o_type
+name|oType
 argument_list|)
 condition|)
 block|{
@@ -2410,7 +2410,7 @@ condition|)
 block|{
 specifier|final
 name|Type
-name|f_type
+name|fType
 init|=
 name|Type
 operator|.
@@ -2424,7 +2424,7 @@ argument_list|)
 decl_stmt|;
 specifier|final
 name|Type
-name|o_type
+name|oType
 init|=
 name|o
 operator|.
@@ -2435,11 +2435,11 @@ argument_list|)
 decl_stmt|;
 if|if
 condition|(
-name|f_type
+name|fType
 operator|.
 name|equals
 argument_list|(
-name|o_type
+name|oType
 argument_list|)
 condition|)
 block|{

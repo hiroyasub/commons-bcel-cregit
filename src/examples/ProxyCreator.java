@@ -242,7 +242,7 @@ name|pack
 parameter_list|,
 specifier|final
 name|String
-name|class_name
+name|className
 parameter_list|)
 block|{
 try|try
@@ -262,7 +262,7 @@ name|pack
 operator|+
 literal|"$$BCEL$$"
 operator|+
-name|class_name
+name|className
 argument_list|)
 decl_stmt|;
 return|return

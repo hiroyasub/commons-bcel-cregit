@@ -111,11 +111,11 @@ name|ConstantInvokeDynamic
 parameter_list|(
 specifier|final
 name|int
-name|bootstrap_method_attr_index
+name|bootstrapMethodAttrIndex
 parameter_list|,
 specifier|final
 name|int
-name|name_and_type_index
+name|nameAndTypeIndex
 parameter_list|)
 block|{
 name|super
@@ -124,9 +124,9 @@ name|Const
 operator|.
 name|CONSTANT_InvokeDynamic
 argument_list|,
-name|bootstrap_method_attr_index
+name|bootstrapMethodAttrIndex
 argument_list|,
-name|name_and_type_index
+name|nameAndTypeIndex
 argument_list|)
 expr_stmt|;
 block|}

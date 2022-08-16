@@ -1175,7 +1175,7 @@ init|=
 literal|false
 decl_stmt|;
 name|String
-name|inner_class_name
+name|innerClassName
 init|=
 name|constantPool
 operator|.
@@ -1191,20 +1191,20 @@ operator|.
 name|CONSTANT_Class
 argument_list|)
 decl_stmt|;
-name|inner_class_name
+name|innerClassName
 operator|=
 name|Utility
 operator|.
 name|compactClassName
 argument_list|(
-name|inner_class_name
+name|innerClassName
 argument_list|,
 literal|false
 argument_list|)
 expr_stmt|;
 if|if
 condition|(
-name|inner_class_name
+name|innerClassName
 operator|.
 name|equals
 argument_list|(
@@ -1769,14 +1769,14 @@ argument_list|)
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Dump class to a file named fileName.      *      * @param _file_name Output file name      * @throws IOException if an I/O error occurs.      */
+comment|/**      * Dump class to a file named fileName.      *      * @param fileName Output file name      * @throws IOException if an I/O error occurs.      */
 specifier|public
 name|void
 name|dump
 parameter_list|(
 specifier|final
 name|String
-name|_file_name
+name|fileName
 parameter_list|)
 throws|throws
 name|IOException
@@ -1786,7 +1786,7 @@ argument_list|(
 operator|new
 name|File
 argument_list|(
-name|_file_name
+name|fileName
 argument_list|)
 argument_list|)
 expr_stmt|;
@@ -1880,7 +1880,7 @@ decl_stmt|;
 specifier|final
 name|JavaClass
 index|[]
-name|_interfaces
+name|interfaces
 init|=
 name|clazz
 operator|.
@@ -1922,16 +1922,16 @@ for|for
 control|(
 specifier|final
 name|JavaClass
-name|_interface
+name|iface
 range|:
-name|_interfaces
+name|interfaces
 control|)
 block|{
 name|queue
 operator|.
 name|enqueue
 argument_list|(
-name|_interface
+name|iface
 argument_list|)
 expr_stmt|;
 block|}
@@ -2149,7 +2149,7 @@ block|{
 specifier|final
 name|String
 index|[]
-name|_interfaces
+name|interfaces
 init|=
 name|getInterfaceNames
 argument_list|()
@@ -2162,7 +2162,7 @@ init|=
 operator|new
 name|JavaClass
 index|[
-name|_interfaces
+name|interfaces
 operator|.
 name|length
 index|]
@@ -2176,7 +2176,7 @@ literal|0
 init|;
 name|i
 operator|<
-name|_interfaces
+name|interfaces
 operator|.
 name|length
 condition|;
@@ -2193,7 +2193,7 @@ name|repository
 operator|.
 name|loadClass
 argument_list|(
-name|_interfaces
+name|interfaces
 index|[
 name|i
 index|]

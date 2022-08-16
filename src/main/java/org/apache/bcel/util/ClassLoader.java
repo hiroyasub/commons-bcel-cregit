@@ -312,21 +312,21 @@ operator|=
 name|ignored_packages
 expr_stmt|;
 block|}
-comment|/**      * Override this method to create you own classes on the fly. The name contains the special token $$BCEL$$. Everything      * before that token is considered to be a package name. You can encode your own arguments into the subsequent string.      * You must ensure however not to use any "illegal" characters, i.e., characters that may not appear in a Java class      * name too      *<p>      * The default implementation interprets the string as a encoded compressed Java class, unpacks and decodes it with the      * Utility.decode() method, and parses the resulting byte array and returns the resulting JavaClass object.      *</p>      *      * @param class_name compressed byte code with "$$BCEL$$" in it      */
+comment|/**      * Override this method to create you own classes on the fly. The name contains the special token $$BCEL$$. Everything      * before that token is considered to be a package name. You can encode your own arguments into the subsequent string.      * You must ensure however not to use any "illegal" characters, i.e., characters that may not appear in a Java class      * name too      *<p>      * The default implementation interprets the string as a encoded compressed Java class, unpacks and decodes it with the      * Utility.decode() method, and parses the resulting byte array and returns the resulting JavaClass object.      *</p>      *      * @param className compressed byte code with "$$BCEL$$" in it      */
 specifier|protected
 name|JavaClass
 name|createClass
 parameter_list|(
 specifier|final
 name|String
-name|class_name
+name|className
 parameter_list|)
 block|{
 specifier|final
 name|int
 name|index
 init|=
-name|class_name
+name|className
 operator|.
 name|indexOf
 argument_list|(
@@ -337,7 +337,7 @@ specifier|final
 name|String
 name|real_name
 init|=
-name|class_name
+name|className
 operator|.
 name|substring
 argument_list|(
@@ -466,7 +466,7 @@ name|name
 operator|.
 name|setBytes
 argument_list|(
-name|class_name
+name|className
 operator|.
 name|replace
 argument_list|(
@@ -491,7 +491,7 @@ name|loadClass
 parameter_list|(
 specifier|final
 name|String
-name|class_name
+name|className
 parameter_list|,
 specifier|final
 name|boolean
@@ -518,7 +518,7 @@ name|classes
 operator|.
 name|get
 argument_list|(
-name|class_name
+name|className
 argument_list|)
 operator|)
 operator|==
@@ -537,7 +537,7 @@ control|)
 block|{
 if|if
 condition|(
-name|class_name
+name|className
 operator|.
 name|startsWith
 argument_list|(
@@ -552,7 +552,7 @@ argument_list|()
 operator|.
 name|loadClass
 argument_list|(
-name|class_name
+name|className
 argument_list|)
 expr_stmt|;
 break|break;
@@ -573,7 +573,7 @@ decl_stmt|;
 comment|/*                  * Third try: Special request?                  */
 if|if
 condition|(
-name|class_name
+name|className
 operator|.
 name|contains
 argument_list|(
@@ -585,7 +585,7 @@ name|clazz
 operator|=
 name|createClass
 argument_list|(
-name|class_name
+name|className
 argument_list|)
 expr_stmt|;
 block|}
@@ -601,7 +601,7 @@ name|repository
 operator|.
 name|loadClass
 argument_list|(
-name|class_name
+name|className
 argument_list|)
 operator|)
 operator|==
@@ -612,7 +612,7 @@ throw|throw
 operator|new
 name|ClassNotFoundException
 argument_list|(
-name|class_name
+name|className
 argument_list|)
 throw|;
 block|}
@@ -645,7 +645,7 @@ name|cl
 operator|=
 name|defineClass
 argument_list|(
-name|class_name
+name|className
 argument_list|,
 name|bytes
 argument_list|,
@@ -665,7 +665,7 @@ name|Class
 operator|.
 name|forName
 argument_list|(
-name|class_name
+name|className
 argument_list|)
 expr_stmt|;
 block|}
@@ -686,7 +686,7 @@ name|classes
 operator|.
 name|put
 argument_list|(
-name|class_name
+name|className
 argument_list|,
 name|cl
 argument_list|)

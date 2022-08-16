@@ -471,12 +471,12 @@ name|void
 name|add
 parameter_list|(
 name|String
-name|class_name
+name|className
 parameter_list|)
 block|{
-name|class_name
+name|className
 operator|=
-name|class_name
+name|className
 operator|.
 name|replace
 argument_list|(
@@ -502,7 +502,7 @@ name|matches
 argument_list|(
 name|anIgnored
 argument_list|,
-name|class_name
+name|className
 argument_list|)
 condition|)
 block|{
@@ -519,7 +519,7 @@ name|Repository
 operator|.
 name|lookupClass
 argument_list|(
-name|class_name
+name|className
 argument_list|)
 decl_stmt|;
 if|if
@@ -729,7 +729,7 @@ parameter_list|)
 block|{
 specifier|final
 name|String
-name|class_name
+name|className
 init|=
 operator|(
 name|String
@@ -743,7 +743,7 @@ argument_list|)
 decl_stmt|;
 name|add
 argument_list|(
-name|class_name
+name|className
 argument_list|)
 expr_stmt|;
 block|}
@@ -819,7 +819,7 @@ parameter_list|)
 block|{
 specifier|final
 name|String
-name|class_name
+name|className
 init|=
 name|ccp
 operator|.
@@ -830,7 +830,7 @@ argument_list|)
 decl_stmt|;
 name|add
 argument_list|(
-name|class_name
+name|className
 argument_list|)
 expr_stmt|;
 specifier|final

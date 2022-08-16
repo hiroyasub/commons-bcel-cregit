@@ -254,7 +254,7 @@ block|{
 specifier|private
 specifier|static
 name|String
-name|class_name
+name|className
 decl_stmt|;
 specifier|private
 specifier|static
@@ -284,7 +284,7 @@ name|JavaClass
 name|java_class
 parameter_list|)
 block|{
-name|class_name
+name|className
 operator|=
 name|java_class
 operator|.
@@ -327,7 +327,7 @@ argument_list|,
 operator|new
 name|ConstantUtf8
 argument_list|(
-name|class_name
+name|className
 operator|.
 name|replace
 argument_list|(
@@ -476,7 +476,7 @@ name|MethodGen
 argument_list|(
 name|m
 argument_list|,
-name|class_name
+name|className
 argument_list|,
 name|cp
 argument_list|)

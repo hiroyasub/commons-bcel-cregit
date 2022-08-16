@@ -379,7 +379,7 @@ literal|1
 decl_stmt|;
 specifier|private
 name|int
-name|superclass_name_index
+name|superclassNameIndex
 init|=
 operator|-
 literal|1
@@ -502,7 +502,7 @@ operator|.
 name|getClassNameIndex
 argument_list|()
 expr_stmt|;
-name|superclass_name_index
+name|superclassNameIndex
 operator|=
 name|clazz
 operator|.
@@ -842,7 +842,7 @@ argument_list|(
 name|className
 argument_list|)
 expr_stmt|;
-name|superclass_name_index
+name|superclassNameIndex
 operator|=
 name|cp
 operator|.
@@ -1570,7 +1570,7 @@ block|}
 comment|// Must be last since the above calls may still add something to it
 specifier|final
 name|ConstantPool
-name|_cp
+name|cp
 init|=
 name|this
 operator|.
@@ -1585,7 +1585,7 @@ name|JavaClass
 argument_list|(
 name|classNameIndex
 argument_list|,
-name|superclass_name_index
+name|superclassNameIndex
 argument_list|,
 name|fileName
 argument_list|,
@@ -1598,7 +1598,7 @@ operator|.
 name|getAccessFlags
 argument_list|()
 argument_list|,
-name|_cp
+name|cp
 argument_list|,
 name|interfaces
 argument_list|,
@@ -1680,7 +1680,7 @@ name|getSuperclassNameIndex
 parameter_list|()
 block|{
 return|return
-name|superclass_name_index
+name|superclassNameIndex
 return|;
 block|}
 comment|/**      * Return value as defined by given BCELComparator strategy. By default return the hashcode of the class name.      *      * @see java.lang.Object#hashCode()      */
@@ -1970,15 +1970,17 @@ name|setClassNameIndex
 parameter_list|(
 specifier|final
 name|int
-name|class_name_index
+name|classNameIndex
 parameter_list|)
 block|{
 name|this
 operator|.
 name|classNameIndex
 operator|=
-name|class_name_index
+name|classNameIndex
 expr_stmt|;
+name|this
+operator|.
 name|className
 operator|=
 name|cp
@@ -1988,7 +1990,7 @@ argument_list|()
 operator|.
 name|getConstantString
 argument_list|(
-name|class_name_index
+name|classNameIndex
 argument_list|,
 name|Const
 operator|.
@@ -2127,7 +2129,7 @@ argument_list|,
 literal|'.'
 argument_list|)
 expr_stmt|;
-name|superclass_name_index
+name|superclassNameIndex
 operator|=
 name|cp
 operator|.
@@ -2143,14 +2145,14 @@ name|setSuperclassNameIndex
 parameter_list|(
 specifier|final
 name|int
-name|superclass_name_index
+name|superclassNameIndex
 parameter_list|)
 block|{
 name|this
 operator|.
-name|superclass_name_index
+name|superclassNameIndex
 operator|=
-name|superclass_name_index
+name|superclassNameIndex
 expr_stmt|;
 name|superClassName
 operator|=
@@ -2161,7 +2163,7 @@ argument_list|()
 operator|.
 name|getConstantString
 argument_list|(
-name|superclass_name_index
+name|superclassNameIndex
 argument_list|,
 name|Const
 operator|.

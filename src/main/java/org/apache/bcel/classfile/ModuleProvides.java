@@ -269,7 +269,7 @@ name|toString
 parameter_list|(
 specifier|final
 name|ConstantPool
-name|constant_pool
+name|constantPool
 parameter_list|)
 block|{
 specifier|final
@@ -284,7 +284,7 @@ specifier|final
 name|String
 name|interface_name
 init|=
-name|constant_pool
+name|constantPool
 operator|.
 name|constantToString
 argument_list|(
@@ -337,9 +337,9 @@ control|)
 block|{
 specifier|final
 name|String
-name|class_name
+name|className
 init|=
-name|constant_pool
+name|constantPool
 operator|.
 name|getConstantString
 argument_list|(
@@ -363,7 +363,7 @@ name|Utility
 operator|.
 name|compactClassName
 argument_list|(
-name|class_name
+name|className
 argument_list|,
 literal|false
 argument_list|)

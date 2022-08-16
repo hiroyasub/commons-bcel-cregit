@@ -526,7 +526,7 @@ argument_list|()
 expr_stmt|;
 block|}
 name|String
-name|class_name
+name|className
 init|=
 name|java_class
 operator|.
@@ -537,7 +537,7 @@ specifier|final
 name|int
 name|index
 init|=
-name|class_name
+name|className
 operator|.
 name|lastIndexOf
 argument_list|(
@@ -548,7 +548,7 @@ specifier|final
 name|String
 name|path
 init|=
-name|class_name
+name|className
 operator|.
 name|substring
 argument_list|(
@@ -568,9 +568,9 @@ operator|.
 name|separatorChar
 argument_list|)
 decl_stmt|;
-name|class_name
+name|className
 operator|=
-name|class_name
+name|className
 operator|.
 name|substring
 argument_list|(
@@ -612,7 +612,7 @@ name|name
 init|=
 name|path
 operator|+
-name|class_name
+name|className
 operator|+
 literal|".j"
 decl_stmt|;
@@ -663,7 +663,7 @@ decl_stmt|;
 specifier|private
 specifier|final
 name|String
-name|class_name
+name|className
 decl_stmt|;
 specifier|private
 specifier|final
@@ -713,7 +713,7 @@ argument_list|)
 expr_stmt|;
 name|this
 operator|.
-name|class_name
+name|className
 operator|=
 name|clazz
 operator|.
@@ -980,7 +980,7 @@ name|MethodGen
 argument_list|(
 name|_method
 argument_list|,
-name|class_name
+name|className
 argument_list|,
 name|cp
 argument_list|)
@@ -1650,7 +1650,7 @@ argument_list|()
 decl_stmt|;
 specifier|final
 name|String
-name|class_name
+name|className
 init|=
 name|caught
 operator|==
@@ -1677,7 +1677,7 @@ name|println
 argument_list|(
 literal|".catch "
 operator|+
-name|class_name
+name|className
 operator|+
 literal|" from "
 operator|+

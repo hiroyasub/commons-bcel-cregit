@@ -532,7 +532,7 @@ name|getInternalLength
 argument_list|()
 return|;
 block|}
-comment|/**      * @return deep copy of this attribute      *      * @param _constant_pool the constant pool to duplicate      */
+comment|/**      * @return deep copy of this attribute      *      * @param constantPool the constant pool to duplicate      */
 annotation|@
 name|Override
 specifier|public
@@ -541,7 +541,7 @@ name|copy
 parameter_list|(
 specifier|final
 name|ConstantPool
-name|_constant_pool
+name|constantPool
 parameter_list|)
 block|{
 specifier|final
@@ -597,7 +597,7 @@ name|c
 operator|.
 name|setConstantPool
 argument_list|(
-name|_constant_pool
+name|constantPool
 argument_list|)
 expr_stmt|;
 name|c
@@ -688,7 +688,7 @@ index|]
 operator|.
 name|copy
 argument_list|(
-name|_constant_pool
+name|constantPool
 argument_list|)
 expr_stmt|;
 block|}

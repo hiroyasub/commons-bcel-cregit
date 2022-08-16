@@ -439,13 +439,13 @@ name|constantPool
 parameter_list|)
 block|{
 name|String
-name|outer_class_name
+name|outerClassName
 decl_stmt|;
 name|String
-name|inner_name
+name|innerName
 decl_stmt|;
 name|String
-name|inner_class_name
+name|innerClassName
 init|=
 name|constantPool
 operator|.
@@ -458,13 +458,13 @@ operator|.
 name|CONSTANT_Class
 argument_list|)
 decl_stmt|;
-name|inner_class_name
+name|innerClassName
 operator|=
 name|Utility
 operator|.
 name|compactClassName
 argument_list|(
-name|inner_class_name
+name|innerClassName
 argument_list|,
 literal|false
 argument_list|)
@@ -476,7 +476,7 @@ operator|!=
 literal|0
 condition|)
 block|{
-name|outer_class_name
+name|outerClassName
 operator|=
 name|constantPool
 operator|.
@@ -489,7 +489,7 @@ operator|.
 name|CONSTANT_Class
 argument_list|)
 expr_stmt|;
-name|outer_class_name
+name|outerClassName
 operator|=
 literal|" of class "
 operator|+
@@ -497,7 +497,7 @@ name|Utility
 operator|.
 name|compactClassName
 argument_list|(
-name|outer_class_name
+name|outerClassName
 argument_list|,
 literal|false
 argument_list|)
@@ -505,7 +505,7 @@ expr_stmt|;
 block|}
 else|else
 block|{
-name|outer_class_name
+name|outerClassName
 operator|=
 literal|""
 expr_stmt|;
@@ -517,7 +517,7 @@ operator|!=
 literal|0
 condition|)
 block|{
-name|inner_name
+name|innerName
 operator|=
 operator|(
 operator|(
@@ -541,7 +541,7 @@ expr_stmt|;
 block|}
 else|else
 block|{
-name|inner_name
+name|innerName
 operator|=
 literal|"(anonymous)"
 expr_stmt|;
@@ -576,13 +576,13 @@ literal|"  "
 operator|+
 name|access
 operator|+
-name|inner_name
+name|innerName
 operator|+
 literal|"=class "
 operator|+
-name|inner_class_name
+name|innerClassName
 operator|+
-name|outer_class_name
+name|outerClassName
 return|;
 block|}
 block|}

@@ -106,17 +106,17 @@ name|input
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * @param class_index Reference to the class containing the Field      * @param name_and_type_index and the Field signature      */
+comment|/**      * @param classIndex Reference to the class containing the Field      * @param nameAndTypeIndex and the Field signature      */
 specifier|public
 name|ConstantFieldref
 parameter_list|(
 specifier|final
 name|int
-name|class_index
+name|classIndex
 parameter_list|,
 specifier|final
 name|int
-name|name_and_type_index
+name|nameAndTypeIndex
 parameter_list|)
 block|{
 name|super
@@ -125,9 +125,9 @@ name|Const
 operator|.
 name|CONSTANT_Fieldref
 argument_list|,
-name|class_index
+name|classIndex
 argument_list|,
-name|name_and_type_index
+name|nameAndTypeIndex
 argument_list|)
 expr_stmt|;
 block|}

@@ -2044,7 +2044,7 @@ decl_stmt|;
 specifier|final
 name|Type
 index|[]
-name|arg_types
+name|argTypes
 init|=
 name|i
 operator|.
@@ -2080,7 +2080,7 @@ name|BCELifier
 operator|.
 name|printArgumentTypes
 argument_list|(
-name|arg_types
+name|argTypes
 argument_list|)
 operator|+
 literal|", "

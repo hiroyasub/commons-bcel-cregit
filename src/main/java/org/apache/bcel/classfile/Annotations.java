@@ -133,16 +133,16 @@ operator|=
 name|isRuntimeVisible
 expr_stmt|;
 block|}
-comment|/**      * @param annotation_type the subclass type of the annotation      * @param name_index Index pointing to the name<em>Code</em>      * @param length Content length in bytes      * @param input Input stream      * @param constant_pool Array of constants      * @param isRuntimeVisible whether this Annotation visible at runtime      * @throws IOException if an I/O error occurs.      */
+comment|/**      * @param annotationType the subclass type of the annotation      * @param nameIndex Index pointing to the name<em>Code</em>      * @param length Content length in bytes      * @param input Input stream      * @param constantPool Array of constants      * @param isRuntimeVisible whether this Annotation visible at runtime      * @throws IOException if an I/O error occurs.      */
 name|Annotations
 parameter_list|(
 specifier|final
 name|byte
-name|annotation_type
+name|annotationType
 parameter_list|,
 specifier|final
 name|int
-name|name_index
+name|nameIndex
 parameter_list|,
 specifier|final
 name|int
@@ -154,7 +154,7 @@ name|input
 parameter_list|,
 specifier|final
 name|ConstantPool
-name|constant_pool
+name|constantPool
 parameter_list|,
 specifier|final
 name|boolean
@@ -165,9 +165,9 @@ name|IOException
 block|{
 name|this
 argument_list|(
-name|annotation_type
+name|annotationType
 argument_list|,
-name|name_index
+name|nameIndex
 argument_list|,
 name|length
 argument_list|,
@@ -177,7 +177,7 @@ index|[]
 operator|)
 literal|null
 argument_list|,
-name|constant_pool
+name|constantPool
 argument_list|,
 name|isRuntimeVisible
 argument_list|)
@@ -225,7 +225,7 @@ name|read
 argument_list|(
 name|input
 argument_list|,
-name|constant_pool
+name|constantPool
 argument_list|,
 name|isRuntimeVisible
 argument_list|)

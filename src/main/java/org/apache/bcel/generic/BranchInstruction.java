@@ -312,19 +312,19 @@ name|target
 argument_list|)
 return|;
 block|}
-comment|/**      * @param _target branch target      * @return the offset to `target' relative to this instruction      */
+comment|/**      * @param target branch target      * @return the offset to `target' relative to this instruction      */
 specifier|protected
 name|int
 name|getTargetOffset
 parameter_list|(
 specifier|final
 name|InstructionHandle
-name|_target
+name|target
 parameter_list|)
 block|{
 if|if
 condition|(
-name|_target
+name|target
 operator|==
 literal|null
 condition|)
@@ -350,7 +350,7 @@ specifier|final
 name|int
 name|t
 init|=
-name|_target
+name|target
 operator|.
 name|getPosition
 argument_list|()
@@ -381,7 +381,7 @@ name|t
 operator|+
 literal|":"
 operator|+
-name|_target
+name|target
 argument_list|)
 throw|;
 block|}

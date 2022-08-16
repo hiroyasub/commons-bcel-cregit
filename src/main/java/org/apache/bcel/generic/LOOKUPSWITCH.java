@@ -105,7 +105,7 @@ expr_stmt|;
 comment|/* alignment remainder assumed 0 here, until dump time. */
 specifier|final
 name|short
-name|_length
+name|length
 init|=
 operator|(
 name|short
@@ -123,12 +123,12 @@ name|super
 operator|.
 name|setLength
 argument_list|(
-name|_length
+name|length
 argument_list|)
 expr_stmt|;
 name|setFixed_length
 argument_list|(
-name|_length
+name|length
 argument_list|)
 expr_stmt|;
 block|}
@@ -203,7 +203,7 @@ argument_list|)
 expr_stmt|;
 specifier|final
 name|int
-name|_match_length
+name|matchLength
 init|=
 name|getMatch_length
 argument_list|()
@@ -212,7 +212,7 @@ name|out
 operator|.
 name|writeInt
 argument_list|(
-name|_match_length
+name|matchLength
 argument_list|)
 expr_stmt|;
 comment|// npairs
@@ -225,7 +225,7 @@ literal|0
 init|;
 name|i
 operator|<
-name|_match_length
+name|matchLength
 condition|;
 name|i
 operator|++
@@ -296,7 +296,7 @@ expr_stmt|;
 comment|// reads padding
 specifier|final
 name|int
-name|_match_length
+name|matchLength
 init|=
 name|bytes
 operator|.
@@ -305,12 +305,12 @@ argument_list|()
 decl_stmt|;
 name|setMatch_length
 argument_list|(
-name|_match_length
+name|matchLength
 argument_list|)
 expr_stmt|;
 specifier|final
 name|short
-name|_fixed_length
+name|fixedLength
 init|=
 operator|(
 name|short
@@ -318,25 +318,25 @@ operator|)
 operator|(
 literal|9
 operator|+
-name|_match_length
+name|matchLength
 operator|*
 literal|8
 operator|)
 decl_stmt|;
 name|setFixed_length
 argument_list|(
-name|_fixed_length
+name|fixedLength
 argument_list|)
 expr_stmt|;
 specifier|final
 name|short
-name|_length
+name|length
 init|=
 operator|(
 name|short
 operator|)
 operator|(
-name|_match_length
+name|matchLength
 operator|+
 name|super
 operator|.
@@ -348,7 +348,7 @@ name|super
 operator|.
 name|setLength
 argument_list|(
-name|_length
+name|length
 argument_list|)
 expr_stmt|;
 name|super
@@ -358,7 +358,7 @@ argument_list|(
 operator|new
 name|int
 index|[
-name|_match_length
+name|matchLength
 index|]
 argument_list|)
 expr_stmt|;
@@ -369,7 +369,7 @@ argument_list|(
 operator|new
 name|int
 index|[
-name|_match_length
+name|matchLength
 index|]
 argument_list|)
 expr_stmt|;
@@ -380,7 +380,7 @@ argument_list|(
 operator|new
 name|InstructionHandle
 index|[
-name|_match_length
+name|matchLength
 index|]
 argument_list|)
 expr_stmt|;
@@ -393,7 +393,7 @@ literal|0
 init|;
 name|i
 operator|<
-name|_match_length
+name|matchLength
 condition|;
 name|i
 operator|++

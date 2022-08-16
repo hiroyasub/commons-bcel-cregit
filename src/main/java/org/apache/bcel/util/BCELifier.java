@@ -1100,7 +1100,7 @@ parameter_list|()
 block|{
 specifier|final
 name|String
-name|class_name
+name|className
 init|=
 name|clazz
 operator|.
@@ -1120,11 +1120,11 @@ name|println
 argument_list|(
 literal|"    "
 operator|+
-name|class_name
+name|className
 operator|+
 literal|"Creator creator = new "
 operator|+
-name|class_name
+name|className
 operator|+
 literal|"Creator();"
 argument_list|)
@@ -1135,7 +1135,7 @@ name|println
 argument_list|(
 literal|"    creator.create(new FileOutputStream(\""
 operator|+
-name|class_name
+name|className
 operator|+
 literal|".class\"));"
 argument_list|)
@@ -1272,7 +1272,7 @@ name|clazz
 parameter_list|)
 block|{
 name|String
-name|class_name
+name|className
 init|=
 name|clazz
 operator|.
@@ -1281,7 +1281,7 @@ argument_list|()
 decl_stmt|;
 specifier|final
 name|String
-name|super_name
+name|superName
 init|=
 name|clazz
 operator|.
@@ -1290,7 +1290,7 @@ argument_list|()
 decl_stmt|;
 specifier|final
 name|String
-name|package_name
+name|packageName
 init|=
 name|clazz
 operator|.
@@ -1322,17 +1322,17 @@ literal|""
 operator|.
 name|equals
 argument_list|(
-name|package_name
+name|packageName
 argument_list|)
 condition|)
 block|{
-name|class_name
+name|className
 operator|=
-name|class_name
+name|className
 operator|.
 name|substring
 argument_list|(
-name|package_name
+name|packageName
 operator|.
 name|length
 argument_list|()
@@ -1346,7 +1346,7 @@ name|println
 argument_list|(
 literal|"package "
 operator|+
-name|package_name
+name|packageName
 operator|+
 literal|";"
 argument_list|)
@@ -1408,7 +1408,7 @@ name|println
 argument_list|(
 literal|"public class "
 operator|+
-name|class_name
+name|className
 operator|+
 literal|"Creator {"
 argument_list|)
@@ -1445,7 +1445,7 @@ name|println
 argument_list|(
 literal|"  public "
 operator|+
-name|class_name
+name|className
 operator|+
 literal|"Creator() {"
 argument_list|)
@@ -1461,21 +1461,21 @@ literal|""
 operator|.
 name|equals
 argument_list|(
-name|package_name
+name|packageName
 argument_list|)
 condition|?
-name|class_name
+name|className
 else|:
-name|package_name
+name|packageName
 operator|+
 literal|"."
 operator|+
-name|class_name
+name|className
 operator|)
 operator|+
 literal|"\", \""
 operator|+
-name|super_name
+name|superName
 operator|+
 literal|"\", "
 operator|+

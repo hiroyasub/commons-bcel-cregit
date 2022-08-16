@@ -282,7 +282,7 @@ name|copy
 parameter_list|(
 specifier|final
 name|ConstantPool
-name|_constant_pool
+name|constantPool
 parameter_list|)
 block|{
 specifier|final
@@ -338,7 +338,7 @@ name|c
 operator|.
 name|setConstantPool
 argument_list|(
-name|_constant_pool
+name|constantPool
 argument_list|)
 expr_stmt|;
 return|return

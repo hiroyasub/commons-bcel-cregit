@@ -887,7 +887,7 @@ name|copy
 parameter_list|(
 specifier|final
 name|ConstantPool
-name|_constant_pool
+name|constantPool
 parameter_list|)
 block|{
 return|return

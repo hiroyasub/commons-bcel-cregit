@@ -63,12 +63,12 @@ name|ParameterAnnotationEntry
 index|[]
 name|parameterAnnotationTable
 decl_stmt|;
-comment|/**      * @param parameter_annotation_type the subclass type of the parameter annotation      * @param name_index Index pointing to the name<em>Code</em>      * @param length Content length in bytes      * @param input Input stream      * @param constant_pool Array of constants      */
+comment|/**      * @param parameterAnnotationType the subclass type of the parameter annotation      * @param name_index Index pointing to the name<em>Code</em>      * @param length Content length in bytes      * @param input Input stream      * @param constant_pool Array of constants      */
 name|ParameterAnnotations
 parameter_list|(
 specifier|final
 name|byte
-name|parameter_annotation_type
+name|parameterAnnotationType
 parameter_list|,
 specifier|final
 name|int
@@ -91,7 +91,7 @@ name|IOException
 block|{
 name|this
 argument_list|(
-name|parameter_annotation_type
+name|parameterAnnotationType
 argument_list|,
 name|name_index
 argument_list|,

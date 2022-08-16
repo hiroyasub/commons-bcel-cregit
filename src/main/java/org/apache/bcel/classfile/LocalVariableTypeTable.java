@@ -212,7 +212,7 @@ argument_list|)
 expr_stmt|;
 specifier|final
 name|int
-name|local_variable_type_table_length
+name|localVariableTypeTableLength
 init|=
 name|input
 operator|.
@@ -224,7 +224,7 @@ operator|=
 operator|new
 name|LocalVariable
 index|[
-name|local_variable_type_table_length
+name|localVariableTypeTableLength
 index|]
 expr_stmt|;
 for|for
@@ -236,7 +236,7 @@ literal|0
 init|;
 name|i
 operator|<
-name|local_variable_type_table_length
+name|localVariableTypeTableLength
 condition|;
 name|i
 operator|++

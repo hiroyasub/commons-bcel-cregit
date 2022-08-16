@@ -46,15 +46,15 @@ block|{
 specifier|final
 name|Type
 index|[]
-name|arg_types
+name|argTypes
 decl_stmt|;
 specifier|final
 name|Type
-name|result_type
+name|resultType
 decl_stmt|;
 specifier|final
 name|String
-name|class_name
+name|className
 decl_stmt|;
 specifier|final
 name|String
@@ -80,19 +80,27 @@ index|[]
 name|a
 parameter_list|)
 block|{
-name|class_name
+name|this
+operator|.
+name|className
 operator|=
 name|c
 expr_stmt|;
+name|this
+operator|.
 name|name
 operator|=
 name|n
 expr_stmt|;
-name|result_type
+name|this
+operator|.
+name|resultType
 operator|=
 name|r
 expr_stmt|;
-name|arg_types
+name|this
+operator|.
+name|argTypes
 operator|=
 name|a
 expr_stmt|;
@@ -846,8 +854,8 @@ argument_list|)
 throw|;
 block|}
 block|}
-comment|/**      * Create an invokedynamic instruction.      *      * @param bootstrap_index index into the bootstrap_methods array      * @param name name of the called method      * @param ret_type return type of method      * @param arg_types argument types of method      * @see Constants      */
-comment|/*      * createInvokeDynamic only needed if instrumention code wants to generate a new invokedynamic instruction. I don't      * think we need. (markro)      *      * public InvokeInstruction createInvokeDynamic( int bootstrap_index, String name, Type ret_type, Type[] arg_types) {      * int index; int nargs = 0; String signature = Type.getMethodSignature(ret_type, arg_types); for (int i = 0; i<      * arg_types.length; i++) { nargs += arg_types[i].getSize(); } // UNDONE - needs to be added to ConstantPoolGen //index      * = cp.addInvokeDynamic(bootstrap_index, name, signature); index = 0; return new INVOKEDYNAMIC(index); }      */
+comment|/**      * Create an invokedynamic instruction.      *      * @param bootstrap_index index into the bootstrap_methods array      * @param name name of the called method      * @param ret_type return type of method      * @param argTypes argument types of method      * @see Constants      */
+comment|/*      * createInvokeDynamic only needed if instrumention code wants to generate a new invokedynamic instruction. I don't      * think we need. (markro)      *      * public InvokeInstruction createInvokeDynamic( int bootstrap_index, String name, Type ret_type, Type[] argTypes) {      * int index; int nargs = 0; String signature = Type.getMethodSignature(ret_type, argTypes); for (int i = 0; i<      * argTypes.length; i++) { nargs += argTypes[i].getSize(); } // UNDONE - needs to be added to ConstantPoolGen //index      * = cp.addInvokeDynamic(bootstrap_index, name, signature); index = 0; return new INVOKEDYNAMIC(index); }      */
 specifier|private
 specifier|static
 name|ArithmeticInstruction
@@ -2185,20 +2193,20 @@ name|createCast
 parameter_list|(
 specifier|final
 name|Type
-name|src_type
+name|srcType
 parameter_list|,
 specifier|final
 name|Type
-name|dest_type
+name|destType
 parameter_list|)
 block|{
 if|if
 condition|(
-name|src_type
+name|srcType
 operator|instanceof
 name|BasicType
 operator|&&
-name|dest_type
+name|destType
 operator|instanceof
 name|BasicType
 condition|)
@@ -2207,7 +2215,7 @@ specifier|final
 name|byte
 name|dest
 init|=
-name|dest_type
+name|destType
 operator|.
 name|getType
 argument_list|()
@@ -2215,7 +2223,7 @@ decl_stmt|;
 name|byte
 name|src
 init|=
-name|src_type
+name|srcType
 operator|.
 name|getType
 argument_list|()
@@ -2336,14 +2344,14 @@ if|if
 condition|(
 operator|!
 operator|(
-name|src_type
+name|srcType
 operator|instanceof
 name|ReferenceType
 operator|)
 operator|||
 operator|!
 operator|(
-name|dest_type
+name|destType
 operator|instanceof
 name|ReferenceType
 operator|)
@@ -2355,17 +2363,17 @@ name|IllegalArgumentException
 argument_list|(
 literal|"Cannot cast "
 operator|+
-name|src_type
+name|srcType
 operator|+
 literal|" to "
 operator|+
-name|dest_type
+name|destType
 argument_list|)
 throw|;
 block|}
 if|if
 condition|(
-name|dest_type
+name|destType
 operator|instanceof
 name|ArrayType
 condition|)
@@ -2381,7 +2389,7 @@ argument_list|(
 operator|(
 name|ArrayType
 operator|)
-name|dest_type
+name|destType
 argument_list|)
 argument_list|)
 return|;
@@ -2398,7 +2406,7 @@ operator|(
 operator|(
 name|ObjectType
 operator|)
-name|dest_type
+name|destType
 operator|)
 operator|.
 name|getClassName
@@ -2574,14 +2582,14 @@ name|getInstruction
 argument_list|()
 return|;
 block|}
-comment|/**      * Create a field instruction.      *      * @param class_name name of the accessed class      * @param name name of the referenced field      * @param type type of field      * @param kind how to access, i.e., GETFIELD, PUTFIELD, GETSTATIC, PUTSTATIC      * @see Const      */
+comment|/**      * Create a field instruction.      *      * @param className name of the accessed class      * @param name name of the referenced field      * @param type type of field      * @param kind how to access, i.e., GETFIELD, PUTFIELD, GETSTATIC, PUTSTATIC      * @see Const      */
 specifier|public
 name|FieldInstruction
 name|createFieldAccess
 parameter_list|(
 specifier|final
 name|String
-name|class_name
+name|className
 parameter_list|,
 specifier|final
 name|String
@@ -2614,7 +2622,7 @@ name|cp
 operator|.
 name|addFieldref
 argument_list|(
-name|class_name
+name|className
 argument_list|,
 name|name
 argument_list|,
@@ -2692,7 +2700,7 @@ name|createGetField
 parameter_list|(
 specifier|final
 name|String
-name|class_name
+name|className
 parameter_list|,
 specifier|final
 name|String
@@ -2711,7 +2719,7 @@ name|cp
 operator|.
 name|addFieldref
 argument_list|(
-name|class_name
+name|className
 argument_list|,
 name|name
 argument_list|,
@@ -2729,7 +2737,7 @@ name|createGetStatic
 parameter_list|(
 specifier|final
 name|String
-name|class_name
+name|className
 parameter_list|,
 specifier|final
 name|String
@@ -2748,7 +2756,7 @@ name|cp
 operator|.
 name|addFieldref
 argument_list|(
-name|class_name
+name|className
 argument_list|,
 name|name
 argument_list|,
@@ -2826,7 +2834,7 @@ name|createInvoke
 argument_list|(
 name|m
 operator|.
-name|class_name
+name|className
 argument_list|,
 name|m
 operator|.
@@ -2834,24 +2842,24 @@ name|name
 argument_list|,
 name|m
 operator|.
-name|result_type
+name|resultType
 argument_list|,
 name|m
 operator|.
-name|arg_types
+name|argTypes
 argument_list|,
 name|kind
 argument_list|)
 return|;
 block|}
-comment|/**      * Create an invoke instruction. (Except for invokedynamic.)      *      * @param class_name name of the called class      * @param name name of the called method      * @param ret_type return type of method      * @param arg_types argument types of method      * @param kind how to invoke, i.e., INVOKEINTERFACE, INVOKESTATIC, INVOKEVIRTUAL, or INVOKESPECIAL      * @see Const      */
+comment|/**      * Create an invoke instruction. (Except for invokedynamic.)      *      * @param className name of the called class      * @param name name of the called method      * @param retType return type of method      * @param argTypes argument types of method      * @param kind how to invoke, i.e., INVOKEINTERFACE, INVOKESTATIC, INVOKEVIRTUAL, or INVOKESPECIAL      * @see Const      */
 specifier|public
 name|InvokeInstruction
 name|createInvoke
 parameter_list|(
 specifier|final
 name|String
-name|class_name
+name|className
 parameter_list|,
 specifier|final
 name|String
@@ -2859,12 +2867,12 @@ name|name
 parameter_list|,
 specifier|final
 name|Type
-name|ret_type
+name|retType
 parameter_list|,
 specifier|final
 name|Type
 index|[]
-name|arg_types
+name|argTypes
 parameter_list|,
 specifier|final
 name|short
@@ -2874,13 +2882,13 @@ block|{
 return|return
 name|createInvoke
 argument_list|(
-name|class_name
+name|className
 argument_list|,
 name|name
 argument_list|,
-name|ret_type
+name|retType
 argument_list|,
-name|arg_types
+name|argTypes
 argument_list|,
 name|kind
 argument_list|,
@@ -2892,14 +2900,14 @@ name|INVOKEINTERFACE
 argument_list|)
 return|;
 block|}
-comment|/**      * Create an invoke instruction. (Except for invokedynamic.)      *      * @param class_name name of the called class      * @param name name of the called method      * @param ret_type return type of method      * @param arg_types argument types of method      * @param kind how to invoke: INVOKEINTERFACE, INVOKESTATIC, INVOKEVIRTUAL, or INVOKESPECIAL      * @param use_interface force use of InterfaceMethodref      * @return A new InvokeInstruction.      * @since 6.5.0      */
+comment|/**      * Create an invoke instruction. (Except for invokedynamic.)      *      * @param className name of the called class      * @param name name of the called method      * @param retType return type of method      * @param argTypes argument types of method      * @param kind how to invoke: INVOKEINTERFACE, INVOKESTATIC, INVOKEVIRTUAL, or INVOKESPECIAL      * @param use_interface force use of InterfaceMethodref      * @return A new InvokeInstruction.      * @since 6.5.0      */
 specifier|public
 name|InvokeInstruction
 name|createInvoke
 parameter_list|(
 specifier|final
 name|String
-name|class_name
+name|className
 parameter_list|,
 specifier|final
 name|String
@@ -2907,12 +2915,12 @@ name|name
 parameter_list|,
 specifier|final
 name|Type
-name|ret_type
+name|retType
 parameter_list|,
 specifier|final
 name|Type
 index|[]
-name|arg_types
+name|argTypes
 parameter_list|,
 specifier|final
 name|short
@@ -2982,23 +2990,23 @@ name|Type
 operator|.
 name|getMethodSignature
 argument_list|(
-name|ret_type
+name|retType
 argument_list|,
-name|arg_types
+name|argTypes
 argument_list|)
 decl_stmt|;
 for|for
 control|(
 specifier|final
 name|Type
-name|arg_type
+name|argType
 range|:
-name|arg_types
+name|argTypes
 control|)
 block|{
 name|nargs
 operator|+=
-name|arg_type
+name|argType
 operator|.
 name|getSize
 argument_list|()
@@ -3015,7 +3023,7 @@ name|cp
 operator|.
 name|addInterfaceMethodref
 argument_list|(
-name|class_name
+name|className
 argument_list|,
 name|name
 argument_list|,
@@ -3031,7 +3039,7 @@ name|cp
 operator|.
 name|addMethodref
 argument_list|(
-name|class_name
+name|className
 argument_list|,
 name|name
 argument_list|,
@@ -3381,7 +3389,7 @@ name|createPutField
 parameter_list|(
 specifier|final
 name|String
-name|class_name
+name|className
 parameter_list|,
 specifier|final
 name|String
@@ -3400,7 +3408,7 @@ name|cp
 operator|.
 name|addFieldref
 argument_list|(
-name|class_name
+name|className
 argument_list|,
 name|name
 argument_list|,
@@ -3418,7 +3426,7 @@ name|createPutStatic
 parameter_list|(
 specifier|final
 name|String
-name|class_name
+name|className
 parameter_list|,
 specifier|final
 name|String
@@ -3437,7 +3445,7 @@ name|cp
 operator|.
 name|addFieldref
 argument_list|(
-name|class_name
+name|className
 argument_list|,
 name|name
 argument_list|,

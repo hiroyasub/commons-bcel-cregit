@@ -1119,7 +1119,7 @@ name|Attribute
 name|copy
 parameter_list|(
 name|ConstantPool
-name|_constant_pool
+name|constantPool
 parameter_list|)
 function_decl|;
 comment|/**      * Dump attribute to file stream in binary format.      *      * @param file Output file stream      * @throws IOException if an I/O error occurs.      */

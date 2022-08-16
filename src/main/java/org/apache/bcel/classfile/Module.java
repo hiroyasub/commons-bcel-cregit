@@ -419,7 +419,7 @@ name|copy
 parameter_list|(
 specifier|final
 name|ConstantPool
-name|_constant_pool
+name|constantPool
 parameter_list|)
 block|{
 specifier|final
@@ -616,7 +616,7 @@ name|c
 operator|.
 name|setConstantPool
 argument_list|(
-name|_constant_pool
+name|constantPool
 argument_list|)
 expr_stmt|;
 return|return
@@ -1150,7 +1150,7 @@ control|)
 block|{
 specifier|final
 name|String
-name|class_name
+name|className
 init|=
 name|cp
 operator|.
@@ -1176,7 +1176,7 @@ name|Utility
 operator|.
 name|compactClassName
 argument_list|(
-name|class_name
+name|className
 argument_list|,
 literal|false
 argument_list|)

@@ -636,7 +636,7 @@ return|return
 name|res
 return|;
 block|}
-comment|/**      * Convert type to Java method signature, e.g. int[] f(java.lang.String x) becomes (Ljava/lang/String;)[I      *      * @param return_type what the method returns      * @param arg_types what are the argument types      * @return method signature for given type(s).      */
+comment|/**      * Convert type to Java method signature, e.g. int[] f(java.lang.String x) becomes (Ljava/lang/String;)[I      *      * @param returnType what the method returns      * @param argTypes what are the argument types      * @return method signature for given type(s).      */
 specifier|public
 specifier|static
 name|String
@@ -644,12 +644,12 @@ name|getMethodSignature
 parameter_list|(
 specifier|final
 name|Type
-name|return_type
+name|returnType
 parameter_list|,
 specifier|final
 name|Type
 index|[]
-name|arg_types
+name|argTypes
 parameter_list|)
 block|{
 specifier|final
@@ -664,7 +664,7 @@ argument_list|)
 decl_stmt|;
 if|if
 condition|(
-name|arg_types
+name|argTypes
 operator|!=
 literal|null
 condition|)
@@ -673,16 +673,16 @@ for|for
 control|(
 specifier|final
 name|Type
-name|arg_type
+name|argType
 range|:
-name|arg_types
+name|argTypes
 control|)
 block|{
 name|buf
 operator|.
 name|append
 argument_list|(
-name|arg_type
+name|argType
 operator|.
 name|getSignature
 argument_list|()
@@ -701,7 +701,7 @@ name|buf
 operator|.
 name|append
 argument_list|(
-name|return_type
+name|returnType
 operator|.
 name|getSignature
 argument_list|()
@@ -1251,7 +1251,7 @@ comment|// corrected concurrent private static field acess
 comment|// consumed_chars += dim; // update counter - is replaced by
 specifier|final
 name|int
-name|_temp
+name|temp
 init|=
 name|unwrap
 argument_list|(
@@ -1264,7 +1264,7 @@ name|wrap
 argument_list|(
 name|CONSUMED_CHARS
 argument_list|,
-name|_temp
+name|temp
 argument_list|)
 expr_stmt|;
 return|return

@@ -149,14 +149,14 @@ argument_list|)
 expr_stmt|;
 specifier|final
 name|short
-name|_opcode
+name|opcode
 init|=
 name|getOpcode
 argument_list|()
 decl_stmt|;
 if|if
 condition|(
-name|_opcode
+name|opcode
 operator|==
 name|org
 operator|.
@@ -192,7 +192,7 @@ name|out
 operator|.
 name|writeByte
 argument_list|(
-name|_opcode
+name|opcode
 argument_list|)
 expr_stmt|;
 name|out

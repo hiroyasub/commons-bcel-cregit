@@ -956,7 +956,7 @@ name|byte_code
 parameter_list|(
 specifier|final
 name|ClassGen
-name|class_gen
+name|classGen
 parameter_list|,
 specifier|final
 name|ConstantPoolGen
@@ -979,9 +979,9 @@ literal|false
 decl_stmt|;
 specifier|final
 name|String
-name|class_name
+name|className
 init|=
-name|class_gen
+name|classGen
 operator|.
 name|getClassName
 argument_list|()
@@ -1057,7 +1057,7 @@ name|arg_names
 argument_list|,
 literal|"main"
 argument_list|,
-name|class_name
+name|className
 argument_list|,
 name|il
 argument_list|,
@@ -1177,7 +1177,7 @@ name|arg_names
 argument_list|,
 name|fname
 argument_list|,
-name|class_name
+name|className
 argument_list|,
 name|il
 argument_list|,
@@ -1269,7 +1269,7 @@ condition|)
 block|{
 specifier|final
 name|ObjectType
-name|e_type
+name|eType
 init|=
 operator|new
 name|ObjectType
@@ -1303,7 +1303,7 @@ name|addLocalVariable
 argument_list|(
 literal|"$e"
 argument_list|,
-name|e_type
+name|eType
 argument_list|,
 literal|null
 argument_list|,
@@ -1441,7 +1441,7 @@ name|end
 argument_list|,
 name|handler
 argument_list|,
-name|e_type
+name|eType
 argument_list|)
 expr_stmt|;
 name|exc
@@ -1491,7 +1491,7 @@ argument_list|(
 name|max_size
 argument_list|)
 expr_stmt|;
-name|class_gen
+name|classGen
 operator|.
 name|addMethod
 argument_list|(

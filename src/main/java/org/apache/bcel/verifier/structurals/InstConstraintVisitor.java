@@ -5054,7 +5054,7 @@ condition|)
 block|{
 specifier|final
 name|Type
-name|f_type
+name|fType
 init|=
 name|Type
 operator|.
@@ -5068,7 +5068,7 @@ argument_list|)
 decl_stmt|;
 specifier|final
 name|Type
-name|o_type
+name|oType
 init|=
 name|o
 operator|.
@@ -5080,11 +5080,11 @@ decl_stmt|;
 comment|/*                      * TODO: Check if assignment compatibility is sufficient. What does Sun do?                      */
 if|if
 condition|(
-name|f_type
+name|fType
 operator|.
 name|equals
 argument_list|(
-name|o_type
+name|oType
 argument_list|)
 condition|)
 block|{
@@ -5155,7 +5155,7 @@ condition|)
 block|{
 specifier|final
 name|Type
-name|f_type
+name|fType
 init|=
 name|Type
 operator|.
@@ -5169,7 +5169,7 @@ argument_list|)
 decl_stmt|;
 specifier|final
 name|Type
-name|o_type
+name|oType
 init|=
 name|o
 operator|.
@@ -5180,11 +5180,11 @@ argument_list|)
 decl_stmt|;
 if|if
 condition|(
-name|f_type
+name|fType
 operator|.
 name|equals
 argument_list|(
-name|o_type
+name|oType
 argument_list|)
 condition|)
 block|{
@@ -12594,7 +12594,7 @@ condition|)
 block|{
 specifier|final
 name|Type
-name|f_type
+name|fType
 init|=
 name|Type
 operator|.
@@ -12608,7 +12608,7 @@ argument_list|)
 decl_stmt|;
 specifier|final
 name|Type
-name|o_type
+name|oType
 init|=
 name|o
 operator|.
@@ -12620,11 +12620,11 @@ decl_stmt|;
 comment|/*                      * TODO: Check if assignment compatibility is sufficient. What does Sun do?                      */
 if|if
 condition|(
-name|f_type
+name|fType
 operator|.
 name|equals
 argument_list|(
-name|o_type
+name|oType
 argument_list|)
 condition|)
 block|{
@@ -13091,7 +13091,7 @@ condition|)
 block|{
 specifier|final
 name|Type
-name|f_type
+name|fType
 init|=
 name|Type
 operator|.
@@ -13105,7 +13105,7 @@ argument_list|)
 decl_stmt|;
 specifier|final
 name|Type
-name|o_type
+name|oType
 init|=
 name|o
 operator|.
@@ -13117,11 +13117,11 @@ decl_stmt|;
 comment|/*                      * TODO: Check if assignment compatibility is sufficient. What does Sun do?                      */
 if|if
 condition|(
-name|f_type
+name|fType
 operator|.
 name|equals
 argument_list|(
-name|o_type
+name|oType
 argument_list|)
 condition|)
 block|{
@@ -13491,7 +13491,7 @@ name|o
 parameter_list|)
 block|{
 name|Type
-name|method_type
+name|methodType
 init|=
 name|mg
 operator|.
@@ -13500,32 +13500,32 @@ argument_list|()
 decl_stmt|;
 if|if
 condition|(
-name|method_type
+name|methodType
 operator|==
 name|Type
 operator|.
 name|BOOLEAN
 operator|||
-name|method_type
+name|methodType
 operator|==
 name|Type
 operator|.
 name|BYTE
 operator|||
-name|method_type
+name|methodType
 operator|==
 name|Type
 operator|.
 name|SHORT
 operator|||
-name|method_type
+name|methodType
 operator|==
 name|Type
 operator|.
 name|CHAR
 condition|)
 block|{
-name|method_type
+name|methodType
 operator|=
 name|Type
 operator|.
@@ -13541,7 +13541,7 @@ condition|)
 block|{
 if|if
 condition|(
-name|method_type
+name|methodType
 operator|==
 name|Type
 operator|.
@@ -13567,7 +13567,7 @@ condition|)
 block|{
 if|if
 condition|(
-name|method_type
+name|methodType
 operator|==
 name|Type
 operator|.
@@ -13652,7 +13652,7 @@ block|}
 if|else if
 condition|(
 operator|!
-name|method_type
+name|methodType
 operator|.
 name|equals
 argument_list|(
@@ -13677,7 +13677,7 @@ argument_list|()
 operator|+
 literal|"' expecting a '"
 operator|+
-name|method_type
+name|methodType
 operator|+
 literal|"' on top of the stack. But stack top is a '"
 operator|+
