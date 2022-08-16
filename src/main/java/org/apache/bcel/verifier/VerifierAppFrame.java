@@ -767,8 +767,6 @@ specifier|private
 name|void
 name|jbInit
 parameter_list|()
-throws|throws
-name|Exception
 block|{
 comment|// setIconImage(Toolkit.getDefaultToolkit().createImage(Frame1.class.getResource("[Ihr Symbol]")));
 name|contentPane

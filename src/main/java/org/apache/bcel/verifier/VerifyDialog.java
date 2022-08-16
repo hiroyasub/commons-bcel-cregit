@@ -1932,12 +1932,6 @@ specifier|private
 name|void
 name|initConnections
 parameter_list|()
-throws|throws
-name|java
-operator|.
-name|lang
-operator|.
-name|Exception
 block|{
 comment|// user code begin {1}
 comment|// user code end
