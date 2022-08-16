@@ -26,28 +26,6 @@ specifier|public
 interface|interface
 name|Node
 block|{
-comment|/** This method is called after the node has been made the current     node.  It indicates that child nodes can now be added to it. */
-name|void
-name|jjtOpen
-parameter_list|()
-function_decl|;
-comment|/** This method is called after all the child nodes have been     added. */
-name|void
-name|jjtClose
-parameter_list|()
-function_decl|;
-comment|/** This pair of methods are used to inform the node of its     parent. */
-name|void
-name|jjtSetParent
-parameter_list|(
-name|Node
-name|n
-parameter_list|)
-function_decl|;
-name|Node
-name|jjtGetParent
-parameter_list|()
-function_decl|;
 comment|/** This method tells the node to add its argument to the node's     list of children.  */
 name|void
 name|jjtAddChild
@@ -58,6 +36,11 @@ parameter_list|,
 name|int
 name|i
 parameter_list|)
+function_decl|;
+comment|/** This method is called after all the child nodes have been     added. */
+name|void
+name|jjtClose
+parameter_list|()
 function_decl|;
 comment|/** This method returns a child node.  The children are numbered      from zero, left to right. */
 name|Node
@@ -71,6 +54,23 @@ comment|/** Return the number of children the node has. */
 name|int
 name|jjtGetNumChildren
 parameter_list|()
+function_decl|;
+name|Node
+name|jjtGetParent
+parameter_list|()
+function_decl|;
+comment|/** This method is called after the node has been made the current     node.  It indicates that child nodes can now be added to it. */
+name|void
+name|jjtOpen
+parameter_list|()
+function_decl|;
+comment|/** This pair of methods are used to inform the node of its     parent. */
+name|void
+name|jjtSetParent
+parameter_list|(
+name|Node
+name|n
+parameter_list|)
 function_decl|;
 block|}
 end_interface
