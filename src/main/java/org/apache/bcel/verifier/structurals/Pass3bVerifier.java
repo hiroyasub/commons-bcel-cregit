@@ -1593,7 +1593,7 @@ name|ClassNotFoundException
 name|e
 parameter_list|)
 block|{
-comment|// Don't know what do do now, so raise RuntimeException
+comment|// Don't know what to do now, so raise RuntimeException
 throw|throw
 operator|new
 name|IllegalArgumentException

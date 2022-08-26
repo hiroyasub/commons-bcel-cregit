@@ -127,7 +127,7 @@ throw|throw
 operator|new
 name|ClassGenException
 argument_list|(
-literal|"Invalid index index: "
+literal|"Invalid index: "
 operator|+
 name|index
 argument_list|)
@@ -378,7 +378,7 @@ return|return
 name|liveToEnd
 return|;
 block|}
-comment|/**      * Gets LocalVariable object.      *      * This relies on that the instruction list has already been dumped to byte code or or that the `setPositions' methods      * has been called for the instruction list.      *      * Note that due to the conversion from byte code offset to InstructionHandle, it is impossible to tell the difference      * between a live range that ends BEFORE the last insturction of the method or a live range that ends AFTER the last      * instruction of the method. Hence the liveToEnd flag to differentiate between these two cases.      *      * @param cp constant pool      */
+comment|/**      * Gets LocalVariable object.      *      * This relies on that the instruction list has already been dumped to byte code or that the `setPositions' methods      * has been called for the instruction list.      *      * Note that due to the conversion from byte code offset to InstructionHandle, it is impossible to tell the difference      * between a live range that ends BEFORE the last insturction of the method or a live range that ends AFTER the last      * instruction of the method. Hence the liveToEnd flag to differentiate between these two cases.      *      * @param cp constant pool      */
 specifier|public
 name|LocalVariable
 name|getLocalVariable

@@ -5859,7 +5859,7 @@ name|o
 parameter_list|)
 block|{
 comment|// do nothing, return address
-comment|// is in in the local variables.
+comment|// is in the local variables.
 block|}
 comment|/** Symbolically executes the corresponding Java Virtual Machine instruction. */
 annotation|@

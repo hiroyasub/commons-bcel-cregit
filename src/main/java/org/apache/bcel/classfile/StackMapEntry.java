@@ -58,7 +58,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * This class represents a stack map entry recording the types of local variables and the the of stack items at a given  * byte code offset. See CLDC specification 5.3.1.2  *  * @see StackMap  * @see StackMapType  */
+comment|/**  * This class represents a stack map entry recording the types of local variables and the of stack items at a given  * byte code offset. See CLDC specification 5.3.1.2  *  * @see StackMap  * @see StackMapType  */
 end_comment
 
 begin_class
@@ -2123,7 +2123,7 @@ name|toString
 argument_list|()
 return|;
 block|}
-comment|/**      * Update the distance (as an offset delta) from this StackMap entry to the next. Note that this might cause the the      * frame type to change. Note also that delta may be negative.      *      * @param delta offset delta      */
+comment|/**      * Update the distance (as an offset delta) from this StackMap entry to the next. Note that this might cause the      * frame type to change. Note also that delta may be negative.      *      * @param delta offset delta      */
 specifier|public
 name|void
 name|updateByteCodeOffset
