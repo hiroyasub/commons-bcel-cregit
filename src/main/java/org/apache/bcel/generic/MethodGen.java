@@ -3214,7 +3214,7 @@ operator|=
 literal|true
 expr_stmt|;
 block|}
-comment|/**      * Return value as defined by given BCELComparator strategy. By default two MethodGen objects are said to be equal when      * their names and signatures are equal.      *      * @see java.lang.Object#equals(Object)      */
+comment|/**      * Return value as defined by given BCELComparator strategy. By default two MethodGen objects are said to be equal when      * their names and signatures are equal.      *      * @see Object#equals(Object)      */
 annotation|@
 name|Override
 specifier|public

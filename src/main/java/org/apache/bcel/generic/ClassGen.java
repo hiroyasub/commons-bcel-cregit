@@ -1245,7 +1245,7 @@ return|return
 literal|null
 return|;
 block|}
-comment|/**      * Return value as defined by given BCELComparator strategy. By default two ClassGen objects are said to be equal when      * their class names are equal.      *      * @see java.lang.Object#equals(Object)      */
+comment|/**      * Return value as defined by given BCELComparator strategy. By default two ClassGen objects are said to be equal when      * their class names are equal.      *      * @see Object#equals(Object)      */
 annotation|@
 name|Override
 specifier|public

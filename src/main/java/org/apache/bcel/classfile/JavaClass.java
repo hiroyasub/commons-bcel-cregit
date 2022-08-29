@@ -1791,7 +1791,7 @@ argument_list|)
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Return value as defined by given BCELComparator strategy. By default two JavaClass objects are said to be equal when      * their class names are equal.      *      * @see java.lang.Object#equals(Object)      */
+comment|/**      * Return value as defined by given BCELComparator strategy. By default two JavaClass objects are said to be equal when      * their class names are equal.      *      * @see Object#equals(Object)      */
 annotation|@
 name|Override
 specifier|public
