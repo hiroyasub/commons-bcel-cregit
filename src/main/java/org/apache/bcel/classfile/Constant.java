@@ -574,7 +574,7 @@ parameter_list|)
 throws|throws
 name|IOException
 function_decl|;
-comment|/**      * Returns value as defined by given BCELComparator strategy. By default two Constant objects are said to be equal when      * the result of toString() is equal.      *      * @see java.lang.Object#equals(java.lang.Object)      */
+comment|/**      * Returns value as defined by given BCELComparator strategy. By default two Constant objects are said to be equal when      * the result of toString() is equal.      *      * @see Object#equals(Object)      */
 annotation|@
 name|Override
 specifier|public
@@ -608,7 +608,7 @@ return|return
 name|tag
 return|;
 block|}
-comment|/**      * Returns value as defined by given BCELComparator strategy. By default return the hashcode of the result of      * toString().      *      * @see java.lang.Object#hashCode()      */
+comment|/**      * Returns value as defined by given BCELComparator strategy. By default return the hashcode of the result of      * toString().      *      * @see Object#hashCode()      */
 annotation|@
 name|Override
 specifier|public

@@ -388,7 +388,7 @@ name|constantPool
 argument_list|)
 return|;
 block|}
-comment|/**      * Return value as defined by given BCELComparator strategy. By default two method objects are said to be equal when      * their names and signatures are equal.      *      * @see java.lang.Object#equals(java.lang.Object)      */
+comment|/**      * Return value as defined by given BCELComparator strategy. By default two method objects are said to be equal when      * their names and signatures are equal.      *      * @see java.lang.Object#equals(Object)      */
 annotation|@
 name|Override
 specifier|public
@@ -609,7 +609,7 @@ argument_list|()
 argument_list|)
 return|;
 block|}
-comment|/**      * Return value as defined by given BCELComparator strategy. By default return the hashcode of the method's name XOR      * signature.      *      * @see java.lang.Object#hashCode()      */
+comment|/**      * Return value as defined by given BCELComparator strategy. By default return the hashcode of the method's name XOR      * signature.      *      * @see Object#hashCode()      */
 annotation|@
 name|Override
 specifier|public
