@@ -17,6 +17,16 @@ name|structurals
 package|;
 end_package
 
+begin_import
+import|import
+name|java
+operator|.
+name|io
+operator|.
+name|Serializable
+import|;
+end_import
+
 begin_comment
 comment|/**  * A placeholder class that can be used to create an ObjectType of which has some of the properties arrays have. They  * implement java.lang.Cloneable and java.io.Serializable and they extend java.lang.Object.  *  */
 end_comment
@@ -25,23 +35,9 @@ begin_class
 specifier|public
 class|class
 name|GenericArray
-extends|extends
-name|java
-operator|.
-name|lang
-operator|.
-name|Object
 implements|implements
-name|java
-operator|.
-name|lang
-operator|.
 name|Cloneable
 implements|,
-name|java
-operator|.
-name|io
-operator|.
 name|Serializable
 block|{
 specifier|private

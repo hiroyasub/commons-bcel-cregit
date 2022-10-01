@@ -67,10 +67,6 @@ argument_list|>
 name|clazz
 parameter_list|)
 throws|throws
-name|java
-operator|.
-name|lang
-operator|.
 name|ClassNotFoundException
 function_decl|;
 comment|/**      * Finds the class with the name provided, if the class isn't there, make an attempt to load it.      */
@@ -81,10 +77,6 @@ name|String
 name|className
 parameter_list|)
 throws|throws
-name|java
-operator|.
-name|lang
-operator|.
 name|ClassNotFoundException
 function_decl|;
 comment|/**      * Removes class from repository      */

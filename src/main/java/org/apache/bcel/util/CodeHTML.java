@@ -2578,17 +2578,15 @@ block|}
 block|}
 block|}
 comment|// Get target addresses from GOTO, JSR, TABLESWITCH, etc.
-for|for
-control|(
-init|;
+while|while
+condition|(
 name|bytes
 operator|.
 name|available
 argument_list|()
 operator|>
 literal|0
-condition|;
-control|)
+condition|)
 block|{
 name|opcode
 operator|=
@@ -3497,17 +3495,15 @@ operator|+
 literal|"<TH ALIGN=LEFT>Instruction</TH><TH ALIGN=LEFT>Argument</TH>"
 argument_list|)
 expr_stmt|;
-for|for
-control|(
-init|;
+while|while
+condition|(
 name|stream
 operator|.
 name|available
 argument_list|()
 operator|>
 literal|0
-condition|;
-control|)
+condition|)
 block|{
 specifier|final
 name|int

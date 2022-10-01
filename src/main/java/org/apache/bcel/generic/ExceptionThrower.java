@@ -24,10 +24,6 @@ specifier|public
 interface|interface
 name|ExceptionThrower
 block|{
-name|java
-operator|.
-name|lang
-operator|.
 name|Class
 argument_list|<
 name|?

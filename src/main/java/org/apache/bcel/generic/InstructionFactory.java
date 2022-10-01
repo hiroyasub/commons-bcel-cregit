@@ -2318,10 +2318,6 @@ operator|=
 operator|(
 name|Instruction
 operator|)
-name|java
-operator|.
-name|lang
-operator|.
 name|Class
 operator|.
 name|forName

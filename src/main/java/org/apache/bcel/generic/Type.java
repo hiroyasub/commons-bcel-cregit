@@ -916,10 +916,6 @@ name|Type
 name|getType
 parameter_list|(
 specifier|final
-name|java
-operator|.
-name|lang
-operator|.
 name|Class
 argument_list|<
 name|?
@@ -1285,10 +1281,6 @@ index|[]
 name|getTypes
 parameter_list|(
 specifier|final
-name|java
-operator|.
-name|lang
-operator|.
 name|Class
 argument_list|<
 name|?
