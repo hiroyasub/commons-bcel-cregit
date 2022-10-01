@@ -301,7 +301,6 @@ name|Type
 operator|.
 name|STRINGBUFFER
 argument_list|,
-comment|// No append(byte)
 operator|new
 name|Type
 index|[]
@@ -312,6 +311,7 @@ name|INT
 block|}
 argument_list|)
 block|,
+comment|// No append(byte)
 operator|new
 name|MethodObject
 argument_list|(
@@ -323,7 +323,6 @@ name|Type
 operator|.
 name|STRINGBUFFER
 argument_list|,
-comment|// No append(short)
 operator|new
 name|Type
 index|[]
@@ -334,6 +333,7 @@ name|INT
 block|}
 argument_list|)
 block|,
+comment|// No append(short)
 operator|new
 name|MethodObject
 argument_list|(
