@@ -45,6 +45,28 @@ name|IOException
 import|;
 end_import
 
+begin_import
+import|import
+name|java
+operator|.
+name|util
+operator|.
+name|Iterator
+import|;
+end_import
+
+begin_import
+import|import
+name|java
+operator|.
+name|util
+operator|.
+name|stream
+operator|.
+name|Stream
+import|;
+end_import
+
 begin_comment
 comment|/**  * base class for parameter annotations  *  * @since 6.0  */
 end_comment
@@ -56,6 +78,11 @@ class|class
 name|ParameterAnnotations
 extends|extends
 name|Attribute
+implements|implements
+name|Iterable
+argument_list|<
+name|ParameterAnnotationEntry
+argument_list|>
 block|{
 comment|/** Table of parameter annotations */
 specifier|private
@@ -305,6 +332,28 @@ parameter_list|()
 block|{
 return|return
 name|parameterAnnotationTable
+return|;
+block|}
+annotation|@
+name|Override
+specifier|public
+name|Iterator
+argument_list|<
+name|ParameterAnnotationEntry
+argument_list|>
+name|iterator
+parameter_list|()
+block|{
+return|return
+name|Stream
+operator|.
+name|of
+argument_list|(
+name|parameterAnnotationTable
+argument_list|)
+operator|.
+name|iterator
+argument_list|()
 return|;
 block|}
 comment|/**      * @param parameterAnnotationTable the entries to set in this parameter annotation      */

@@ -47,6 +47,28 @@ end_import
 
 begin_import
 import|import
+name|java
+operator|.
+name|util
+operator|.
+name|Iterator
+import|;
+end_import
+
+begin_import
+import|import
+name|java
+operator|.
+name|util
+operator|.
+name|stream
+operator|.
+name|Stream
+import|;
+end_import
+
+begin_import
+import|import
 name|org
 operator|.
 name|apache
@@ -68,6 +90,11 @@ class|class
 name|Annotations
 extends|extends
 name|Attribute
+implements|implements
+name|Iterable
+argument_list|<
+name|AnnotationEntry
+argument_list|>
 block|{
 specifier|private
 name|AnnotationEntry
@@ -79,7 +106,7 @@ specifier|final
 name|boolean
 name|isRuntimeVisible
 decl_stmt|;
-comment|/**      * @param annotationType the subclass type of the annotation      * @param nameIndex Index pointing to the name<em>Code</em>      * @param length Content length in bytes      * @param annotationTable the actual annotations      * @param constantPool Array of constants      * @param isRuntimeVisible whether this Annotation visible at runtime      */
+comment|/**      * Constructs an instance.      *      * @param annotationType   the subclass type of the annotation      * @param nameIndex        Index pointing to the name<em>Code</em>      * @param length           Content length in bytes      * @param annotationTable  the actual annotations      * @param constantPool     Array of constants      * @param isRuntimeVisible whether this Annotation visible at runtime      */
 specifier|public
 name|Annotations
 parameter_list|(
@@ -133,7 +160,7 @@ operator|=
 name|isRuntimeVisible
 expr_stmt|;
 block|}
-comment|/**      * @param annotationType the subclass type of the annotation      * @param nameIndex Index pointing to the name<em>Code</em>      * @param length Content length in bytes      * @param input Input stream      * @param constantPool Array of constants      * @param isRuntimeVisible whether this Annotation visible at runtime      * @throws IOException if an I/O error occurs.      */
+comment|/**      * Constructs an instance.      *      * @param annotationType   the subclass type of the annotation      * @param nameIndex        Index pointing to the name<em>Code</em>      * @param length           Content length in bytes      * @param input            Input stream      * @param constantPool     Array of constants      * @param isRuntimeVisible whether this Annotation visible at runtime      * @throws IOException if an I/O error occurs.      */
 name|Annotations
 parameter_list|(
 specifier|final
@@ -232,7 +259,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/**      * Called by objects that are traversing the nodes of the tree implicitely defined by the contents of a Java class.      * I.e., the hierarchy of methods, fields, attributes, etc. spawns a tree of objects.      *      * @param v Visitor object      */
+comment|/**      * Called by objects that are traversing the nodes of the tree implicitely      * defined by the contents of a Java class. I.e., the hierarchy of methods,      * fields, attributes, etc. spawns a tree of objects.      *      * @param v Visitor object      */
 annotation|@
 name|Override
 specifier|public
@@ -252,7 +279,22 @@ name|this
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * returns the array of annotation entries in this annotation      */
+annotation|@
+name|Override
+specifier|public
+name|Attribute
+name|copy
+parameter_list|(
+name|ConstantPool
+name|constantPool
+parameter_list|)
+block|{
+comment|// TODO Auto-generated method stub
+return|return
+literal|null
+return|;
+block|}
+comment|/**      * Gets the array of annotation entries in this annotation      */
 specifier|public
 name|AnnotationEntry
 index|[]
@@ -263,7 +305,7 @@ return|return
 name|annotationTable
 return|;
 block|}
-comment|/**      * @return the number of annotation entries in this annotation      */
+comment|/**      * Gets the number of annotation entries in this annotation.      *      * @return the number of annotation entries in this annotation      */
 specifier|public
 specifier|final
 name|int
@@ -296,7 +338,29 @@ return|return
 name|isRuntimeVisible
 return|;
 block|}
-comment|/**      * @param annotationTable the entries to set in this annotation      */
+annotation|@
+name|Override
+specifier|public
+name|Iterator
+argument_list|<
+name|AnnotationEntry
+argument_list|>
+name|iterator
+parameter_list|()
+block|{
+return|return
+name|Stream
+operator|.
+name|of
+argument_list|(
+name|annotationTable
+argument_list|)
+operator|.
+name|iterator
+argument_list|()
+return|;
+block|}
+comment|/**      * Sets the entries to set in this annotation.      *      * @param annotationTable the entries to set in this annotation      */
 specifier|public
 specifier|final
 name|void
@@ -315,7 +379,7 @@ operator|=
 name|annotationTable
 expr_stmt|;
 block|}
-comment|/**      * @return String representation      */
+comment|/**      * Converts to a String representation.      *      * @return String representation      */
 annotation|@
 name|Override
 specifier|public

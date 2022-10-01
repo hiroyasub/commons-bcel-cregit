@@ -1951,23 +1951,16 @@ argument_list|)
 throw|;
 block|}
 comment|// In JustIce, the check for correct offsets into the code array is delayed to Pass 3a.
-specifier|final
-name|LocalVariable
-index|[]
-name|localvariables
-init|=
-name|lvt
-operator|.
-name|getLocalVariableTable
-argument_list|()
-decl_stmt|;
 for|for
 control|(
 specifier|final
 name|LocalVariable
 name|localvariable
 range|:
-name|localvariables
+name|lvt
+operator|.
+name|getLocalVariableTable
+argument_list|()
 control|)
 block|{
 name|checkIndex
@@ -4304,16 +4297,16 @@ name|visitInnerClasses
 parameter_list|(
 specifier|final
 name|InnerClasses
-name|obj
+name|innerClasses
 parameter_list|)
 block|{
 comment|// vmspec2 4.7.5
 comment|// exactly one InnerClasses attr per ClassFile if some inner class is refernced: see visitJavaClass()
 name|checkIndex
 argument_list|(
-name|obj
+name|innerClasses
 argument_list|,
-name|obj
+name|innerClasses
 operator|.
 name|getNameIndex
 argument_list|()
@@ -4333,7 +4326,7 @@ name|cp
 operator|.
 name|getConstant
 argument_list|(
-name|obj
+name|innerClasses
 operator|.
 name|getNameIndex
 argument_list|()
@@ -4362,7 +4355,7 @@ literal|"The InnerClasses attribute '"
 operator|+
 name|tostring
 argument_list|(
-name|obj
+name|innerClasses
 argument_list|)
 operator|+
 literal|"' is not correctly named 'InnerClasses' but '"
@@ -4373,28 +4366,16 @@ literal|"'."
 argument_list|)
 throw|;
 block|}
-specifier|final
-name|InnerClass
-index|[]
-name|ics
-init|=
-name|obj
+name|innerClasses
 operator|.
-name|getInnerClasses
-argument_list|()
-decl_stmt|;
-for|for
-control|(
-specifier|final
-name|InnerClass
+name|forEach
+argument_list|(
 name|ic
-range|:
-name|ics
-control|)
+lambda|->
 block|{
 name|checkIndex
 argument_list|(
-name|obj
+name|innerClasses
 argument_list|,
 name|ic
 operator|.
@@ -4422,7 +4403,7 @@ condition|)
 block|{
 name|checkIndex
 argument_list|(
-name|obj
+name|innerClasses
 argument_list|,
 name|outer_idx
 argument_list|,
@@ -4448,7 +4429,7 @@ condition|)
 block|{
 name|checkIndex
 argument_list|(
-name|obj
+name|innerClasses
 argument_list|,
 name|innername_idx
 argument_list|,
@@ -4519,7 +4500,7 @@ literal|"' set (InnerClasses attribute '"
 operator|+
 name|tostring
 argument_list|(
-name|obj
+name|innerClasses
 argument_list|)
 operator|+
 literal|"')."
@@ -4527,6 +4508,8 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
+argument_list|)
+expr_stmt|;
 comment|// Semantical consistency is not yet checked by Sun, see vmspec2 4.7.5.
 comment|// [marked TODO in JustIce]
 block|}
