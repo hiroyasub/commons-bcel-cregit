@@ -43,6 +43,18 @@ name|apache
 operator|.
 name|bcel
 operator|.
+name|Const
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|bcel
+operator|.
 name|util
 operator|.
 name|ByteSequence
@@ -50,7 +62,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * IINC - Increment local variable by constant  *  */
+comment|/**  * IINC - Increment local variable by constant  */
 end_comment
 
 begin_class
@@ -91,12 +103,6 @@ name|super
 operator|.
 name|setOpcode
 argument_list|(
-name|org
-operator|.
-name|apache
-operator|.
-name|bcel
-operator|.
 name|Const
 operator|.
 name|IINC
@@ -124,7 +130,7 @@ name|c
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Call corresponding visitor method(s). The order is: Call visitor methods of implemented interfaces first, then call      * methods according to the class hierarchy in descending order, i.e., the most specific visitXXX() call comes last.      *      * @param v Visitor object      */
+comment|/**      * Calls corresponding visitor method(s). The order is: Call visitor methods of implemented interfaces first, then call      * methods according to the class hierarchy in descending order, i.e., the most specific visitXXX() call comes last.      *      * @param v Visitor object      */
 annotation|@
 name|Override
 specifier|public
@@ -151,7 +157,7 @@ name|this
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Dump instruction as byte code to stream out.      *      * @param out Output stream      */
+comment|/**      * Dumps instruction as byte code to stream out.      *      * @param out Output stream      */
 annotation|@
 name|Override
 specifier|public
@@ -174,12 +180,6 @@ name|out
 operator|.
 name|writeByte
 argument_list|(
-name|org
-operator|.
-name|apache
-operator|.
-name|bcel
-operator|.
 name|Const
 operator|.
 name|WIDE
@@ -269,7 +269,7 @@ operator|.
 name|INT
 return|;
 block|}
-comment|/**      * Read needed data (e.g. index) from file.      */
+comment|/**      * Reads needed data (e.g. index) from file.      */
 annotation|@
 name|Override
 specifier|protected
@@ -351,7 +351,7 @@ argument_list|()
 expr_stmt|;
 block|}
 block|}
-comment|/**      * Set increment factor.      */
+comment|/**      * Sets increment factor.      */
 specifier|public
 specifier|final
 name|void
@@ -372,7 +372,7 @@ name|setWide
 argument_list|()
 expr_stmt|;
 block|}
-comment|/**      * Set index of local variable.      */
+comment|/**      * Sets index of local variable.      */
 annotation|@
 name|Override
 specifier|public
@@ -425,12 +425,6 @@ operator|.
 name|getIndex
 argument_list|()
 operator|>
-name|org
-operator|.
-name|apache
-operator|.
-name|bcel
-operator|.
 name|Const
 operator|.
 name|MAX_BYTE
@@ -491,7 +485,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/**      * @return mnemonic for instruction      */
+comment|/**      * Returns mnemonic for instruction.      *      * @return mnemonic for instruction.      */
 annotation|@
 name|Override
 specifier|public

@@ -1522,10 +1522,6 @@ name|LocalVariableInstruction
 operator|||
 name|obj
 operator|instanceof
-name|IINC
-operator|||
-name|obj
-operator|instanceof
 name|RET
 operator|)
 condition|)
