@@ -57,6 +57,11 @@ specifier|final
 name|String
 name|b1
 parameter_list|,
+annotation|@
+name|SuppressWarnings
+argument_list|(
+literal|"rawtypes"
+argument_list|)
 specifier|final
 name|List
 name|b2
