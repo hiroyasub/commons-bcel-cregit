@@ -759,14 +759,6 @@ specifier|final
 class|class
 name|CPESSC_Visitor
 extends|extends
-name|org
-operator|.
-name|apache
-operator|.
-name|bcel
-operator|.
-name|classfile
-operator|.
 name|EmptyVisitor
 block|{
 specifier|private
