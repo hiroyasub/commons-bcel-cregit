@@ -854,7 +854,7 @@ argument_list|)
 throw|;
 block|}
 block|}
-comment|/**      * Create an invokedynamic instruction.      *      * @param bootstrap_index index into the bootstrap_methods array      * @param name name of the called method      * @param ret_type return type of method      * @param argTypes argument types of method      * @see Constants      */
+comment|/**      * Create an invokedynamic instruction.      *      * @param bootstrap_index index into the bootstrap_methods array      * @param name name of the called method      * @param ret_type return type of method      * @param argTypes argument types of method      * @see Const      */
 comment|/*      * createInvokeDynamic only needed if instrumention code wants to generate a new invokedynamic instruction. I don't      * think we need. (markro)      *      * public InvokeInstruction createInvokeDynamic( int bootstrap_index, String name, Type ret_type, Type[] argTypes) {      * int index; int nargs = 0; String signature = Type.getMethodSignature(ret_type, argTypes); for (int i = 0; i<      * argTypes.length; i++) { nargs += argTypes[i].getSize(); } // UNDONE - needs to be added to ConstantPoolGen //index      * = cp.addInvokeDynamic(bootstrap_index, name, signature); index = 0; return new INVOKEDYNAMIC(index); }      */
 specifier|private
 specifier|static
