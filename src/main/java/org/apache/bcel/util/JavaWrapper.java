@@ -39,6 +39,20 @@ name|Modifier
 import|;
 end_import
 
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|commons
+operator|.
+name|lang3
+operator|.
+name|StringUtils
+import|;
+end_import
+
 begin_comment
 comment|/**  * Java interpreter replacement, i.e., wrapper that uses its own ClassLoader to modify/generate classes as they're  * requested. You can take this as a template for your own applications.  *<p>  * Call this wrapper with:  *</p>  *  *<pre>  * java org.apache.bcel.util.JavaWrapper&lt;real.class.name&gt; [arguments]  *</pre>  *<p>  * To use your own class loader you can set the "bcel.classloader" system property.  *</p>  *  *<pre>  * java org.apache.bcel.util.JavaWrapper -Dbcel.classloader=foo.MyLoader&lt;real.class.name&gt; [arguments]  *</pre>  *  * @see ClassLoader  */
 end_comment
@@ -71,13 +85,9 @@ argument_list|)
 decl_stmt|;
 if|if
 condition|(
-name|s
-operator|==
-literal|null
-operator|||
-literal|""
+name|StringUtils
 operator|.
-name|equals
+name|isEmpty
 argument_list|(
 name|s
 argument_list|)

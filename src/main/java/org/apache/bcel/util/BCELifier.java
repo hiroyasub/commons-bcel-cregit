@@ -1493,12 +1493,10 @@ argument_list|(
 literal|"    _cg = new ClassGen(\""
 operator|+
 operator|(
-literal|""
-operator|.
-name|equals
-argument_list|(
 name|packageName
-argument_list|)
+operator|.
+name|isEmpty
+argument_list|()
 condition|?
 name|className
 else|:
