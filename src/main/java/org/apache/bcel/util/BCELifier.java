@@ -241,6 +241,20 @@ name|Type
 import|;
 end_import
 
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|commons
+operator|.
+name|lang3
+operator|.
+name|StringUtils
+import|;
+end_import
+
 begin_comment
 comment|/**  * This class takes a given JavaClass object and converts it to a Java program that creates that very class using BCEL.  * This gives new users of BCEL a useful example showing how things are done with BCEL. It does not cover all features  * of BCEL, but tries to mimic hand-written code as close as possible.  *  */
 end_comment
@@ -1263,22 +1277,13 @@ operator|!=
 literal|null
 condition|)
 block|{
-specifier|final
-name|String
-name|value
-init|=
-name|cv
-operator|.
-name|toString
-argument_list|()
-decl_stmt|;
 name|printWriter
 operator|.
 name|println
 argument_list|(
 literal|"    field.setInitValue("
 operator|+
-name|value
+name|cv
 operator|+
 literal|")"
 argument_list|)
@@ -1349,12 +1354,11 @@ argument_list|)
 decl_stmt|;
 if|if
 condition|(
-operator|!
-literal|""
+name|StringUtils
 operator|.
-name|equals
+name|isNotEmpty
 argument_list|(
-name|packageName
+name|inter
 argument_list|)
 condition|)
 block|{

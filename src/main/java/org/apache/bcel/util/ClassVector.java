@@ -19,6 +19,16 @@ begin_import
 import|import
 name|java
 operator|.
+name|io
+operator|.
+name|Serializable
+import|;
+end_import
+
+begin_import
+import|import
+name|java
+operator|.
 name|util
 operator|.
 name|ArrayList
@@ -60,10 +70,6 @@ specifier|public
 class|class
 name|ClassVector
 implements|implements
-name|java
-operator|.
-name|io
-operator|.
 name|Serializable
 block|{
 specifier|private
