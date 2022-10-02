@@ -2310,7 +2310,6 @@ return|return
 name|packageName
 return|;
 block|}
-comment|/********************* New repository functionality *********************/
 comment|/**      * Gets the ClassRepository which holds its definition. By default this is the same as      * SyntheticRepository.getInstance();      */
 specifier|public
 name|org
@@ -2340,7 +2339,7 @@ return|return
 name|source
 return|;
 block|}
-comment|/**      * @return sbsolute path to file where this class was read from      */
+comment|/**      * @return absolute path to file where this class was read from      */
 specifier|public
 name|String
 name|getSourceFileName
