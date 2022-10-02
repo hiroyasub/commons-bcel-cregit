@@ -214,6 +214,8 @@ name|fileName
 operator|=
 name|fileName
 expr_stmt|;
+name|this
+operator|.
 name|fileOwned
 operator|=
 literal|false
@@ -231,6 +233,8 @@ name|getName
 argument_list|()
 decl_stmt|;
 comment|// Not a very clean solution ...
+name|this
+operator|.
 name|isZip
 operator|=
 name|clazz
@@ -293,6 +297,8 @@ name|String
 name|fileName
 parameter_list|)
 block|{
+name|this
+operator|.
 name|isZip
 operator|=
 literal|false
@@ -303,6 +309,8 @@ name|fileName
 operator|=
 name|fileName
 expr_stmt|;
+name|this
+operator|.
 name|fileOwned
 operator|=
 literal|true
@@ -321,10 +329,14 @@ name|String
 name|fileName
 parameter_list|)
 block|{
+name|this
+operator|.
 name|isZip
 operator|=
 literal|true
 expr_stmt|;
+name|this
+operator|.
 name|fileOwned
 operator|=
 literal|true
