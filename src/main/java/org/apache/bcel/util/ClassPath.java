@@ -2996,7 +2996,7 @@ catch|catch
 parameter_list|(
 specifier|final
 name|Exception
-name|e
+name|ignored
 parameter_list|)
 block|{
 comment|// ignored
