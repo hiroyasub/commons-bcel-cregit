@@ -112,6 +112,7 @@ argument_list|()
 expr_stmt|;
 block|}
 specifier|private
+specifier|static
 specifier|final
 name|boolean
 name|packFrame
