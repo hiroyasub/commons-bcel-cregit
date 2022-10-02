@@ -309,8 +309,9 @@ name|this
 operator|.
 name|classLoader
 operator|=
-operator|new
 name|URLClassLoader
+operator|.
+name|newInstance
 argument_list|(
 operator|new
 name|URL
