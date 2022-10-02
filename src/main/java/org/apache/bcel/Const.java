@@ -666,7 +666,7 @@ name|CONSTANT_Utf8
 init|=
 literal|1
 decl_stmt|;
-comment|/*      * The description of the constant pool is at: http://docs.oracle.com/javase/specs/jvms/se8/html/jvms-4.html#jvms-4.4      * References below are to the individual sections      */
+comment|/*      * The description of the constant pool is at: https://docs.oracle.com/javase/specs/jvms/se8/html/jvms-4.html#jvms-4.4      * References below are to the individual sections      */
 comment|/**      * Marks a constant pool entry as type Integer.      *      * @see<a href="https://docs.oracle.com/javase/specs/jvms/se8/html/jvms-4.html#jvms-4.4.4"> The Constant Pool in The      *      Java Virtual Machine Specification</a>      */
 specifier|public
 specifier|static

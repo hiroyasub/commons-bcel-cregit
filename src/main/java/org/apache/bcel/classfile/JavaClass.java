@@ -423,7 +423,7 @@ parameter_list|)
 block|{
 specifier|final
 name|StringTokenizer
-name|tok
+name|tokenizer
 init|=
 operator|new
 name|StringTokenizer
@@ -446,7 +446,7 @@ argument_list|()
 decl_stmt|;
 while|while
 condition|(
-name|tok
+name|tokenizer
 operator|.
 name|hasMoreTokens
 argument_list|()
@@ -461,7 +461,7 @@ argument_list|)
 operator|.
 name|append
 argument_list|(
-name|tok
+name|tokenizer
 operator|.
 name|nextToken
 argument_list|()
