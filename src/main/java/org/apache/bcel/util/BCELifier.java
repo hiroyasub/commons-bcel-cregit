@@ -41,7 +41,29 @@ name|java
 operator|.
 name|io
 operator|.
+name|OutputStreamWriter
+import|;
+end_import
+
+begin_import
+import|import
+name|java
+operator|.
+name|io
+operator|.
 name|PrintWriter
+import|;
+end_import
+
+begin_import
+import|import
+name|java
+operator|.
+name|nio
+operator|.
+name|charset
+operator|.
+name|StandardCharsets
 import|;
 end_import
 
@@ -950,7 +972,7 @@ specifier|final
 name|ConstantPoolGen
 name|constantPoolGen
 decl_stmt|;
-comment|/**      * @param clazz Java class to "decompile"      * @param out where to output Java program      */
+comment|/**      * Constructs a new instance.      *      * @param clazz Java class to "decompile".      * @param out where to print the Java program in UTF-8.       */
 specifier|public
 name|BCELifier
 parameter_list|(
@@ -976,7 +998,17 @@ operator|=
 operator|new
 name|PrintWriter
 argument_list|(
+operator|new
+name|OutputStreamWriter
+argument_list|(
 name|out
+argument_list|,
+name|StandardCharsets
+operator|.
+name|UTF_8
+argument_list|)
+argument_list|,
+literal|false
 argument_list|)
 expr_stmt|;
 name|this
