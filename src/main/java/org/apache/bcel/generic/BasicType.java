@@ -201,7 +201,7 @@ return|return
 name|type
 operator|instanceof
 name|BasicType
-condition|?
+operator|&&
 operator|(
 operator|(
 name|BasicType
@@ -216,8 +216,6 @@ name|this
 operator|.
 name|getType
 argument_list|()
-else|:
-literal|false
 return|;
 block|}
 comment|/**      * @return a hash code value for the object.      */

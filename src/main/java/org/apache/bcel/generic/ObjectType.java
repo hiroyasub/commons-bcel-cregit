@@ -211,7 +211,7 @@ return|return
 name|type
 operator|instanceof
 name|ObjectType
-condition|?
+operator|&&
 operator|(
 operator|(
 name|ObjectType
@@ -225,8 +225,6 @@ name|equals
 argument_list|(
 name|className
 argument_list|)
-else|:
-literal|false
 return|;
 block|}
 comment|/**      * @return name of referenced class      */
