@@ -860,10 +860,9 @@ name|chosenAttrsList
 operator|.
 name|toArray
 argument_list|(
-operator|new
 name|Attribute
-index|[]
-block|{}
+operator|.
+name|EMPTY_ARRAY
 argument_list|)
 return|;
 block|}

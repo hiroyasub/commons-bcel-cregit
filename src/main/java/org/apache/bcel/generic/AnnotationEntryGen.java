@@ -252,7 +252,7 @@ block|{
 return|return
 name|Attribute
 operator|.
-name|EMPTY_ATTRIBUTE_ARRAY
+name|EMPTY_ARRAY
 return|;
 block|}
 try|try
@@ -554,7 +554,7 @@ name|toArray
 argument_list|(
 name|Attribute
 operator|.
-name|EMPTY_ATTRIBUTE_ARRAY
+name|EMPTY_ARRAY
 argument_list|)
 return|;
 block|}
@@ -1076,7 +1076,7 @@ name|toArray
 argument_list|(
 name|Attribute
 operator|.
-name|EMPTY_ATTRIBUTE_ARRAY
+name|EMPTY_ARRAY
 argument_list|)
 return|;
 block|}

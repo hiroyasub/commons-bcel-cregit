@@ -43,6 +43,14 @@ name|InstructionTargeter
 implements|,
 name|Cloneable
 block|{
+specifier|static
+specifier|final
+name|CodeExceptionGen
+index|[]
+name|EMPTY_ARRAY
+init|=
+block|{}
+decl_stmt|;
 specifier|private
 name|InstructionHandle
 name|startPc

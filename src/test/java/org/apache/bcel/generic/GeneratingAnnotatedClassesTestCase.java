@@ -2944,7 +2944,7 @@ literal|"Wrong number of annotations on the main 'Method'"
 argument_list|)
 expr_stmt|;
 specifier|final
-name|MethodGen
+name|FieldGenOrMethodGen
 name|mg
 init|=
 operator|new

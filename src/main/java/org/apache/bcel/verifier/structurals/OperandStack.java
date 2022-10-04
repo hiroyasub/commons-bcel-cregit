@@ -795,7 +795,7 @@ name|pop
 parameter_list|(
 specifier|final
 name|int
-name|i
+name|count
 parameter_list|)
 block|{
 for|for
@@ -807,7 +807,7 @@ literal|0
 init|;
 name|j
 operator|<
-name|i
+name|count
 condition|;
 name|j
 operator|++

@@ -36,7 +36,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * This repository is used in situations where a Class is created outside the realm of a ClassLoader. Classes are loaded  * from the file systems using the paths specified in the given class path. By default, this is the value returned by  * ClassPath.getClassPath().  *<p>  * This repository uses a factory design, allowing it to maintain a collection of different classpaths, and as such It  * is designed to be used as a singleton per classpath.  *</p>  *  * @see org.apache.bcel.Repository  *  */
+comment|/**  * This repository is used in situations where a Class is created outside the realm of a ClassLoader. Classes are loaded  * from the file systems using the paths specified in the given class path. By default, this is the value returned by  * ClassPath.getClassPath().  *<p>  * This repository uses a factory design, allowing it to maintain a collection of different classpaths, and as such It  * is designed to be used as a singleton per classpath.  *</p>  *  * @see org.apache.bcel.Repository  */
 end_comment
 
 begin_class
@@ -56,7 +56,7 @@ name|ClassPath
 argument_list|,
 name|SyntheticRepository
 argument_list|>
-name|instances
+name|MAP
 init|=
 operator|new
 name|HashMap
@@ -89,43 +89,17 @@ name|ClassPath
 name|classPath
 parameter_list|)
 block|{
-name|SyntheticRepository
-name|rep
-init|=
-name|instances
+return|return
+name|MAP
 operator|.
-name|get
-argument_list|(
-name|classPath
-argument_list|)
-decl_stmt|;
-if|if
-condition|(
-name|rep
-operator|==
-literal|null
-condition|)
-block|{
-name|rep
-operator|=
-operator|new
-name|SyntheticRepository
-argument_list|(
-name|classPath
-argument_list|)
-expr_stmt|;
-name|instances
-operator|.
-name|put
+name|computeIfAbsent
 argument_list|(
 name|classPath
 argument_list|,
-name|rep
+name|SyntheticRepository
+operator|::
+operator|new
 argument_list|)
-expr_stmt|;
-block|}
-return|return
-name|rep
 return|;
 block|}
 specifier|private

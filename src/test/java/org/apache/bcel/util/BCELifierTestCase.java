@@ -364,7 +364,7 @@ name|testClassOnPath
 parameter_list|(
 specifier|final
 name|String
-name|javaClass
+name|javaClassFileName
 parameter_list|)
 throws|throws
 name|Exception
@@ -384,7 +384,7 @@ literal|"-p"
 argument_list|,
 literal|"-c"
 argument_list|,
-name|javaClass
+name|javaClassFileName
 argument_list|)
 decl_stmt|;
 specifier|final
@@ -404,7 +404,7 @@ init|=
 operator|new
 name|File
 argument_list|(
-name|javaClass
+name|javaClassFileName
 argument_list|)
 decl_stmt|;
 specifier|final

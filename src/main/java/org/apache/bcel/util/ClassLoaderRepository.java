@@ -167,11 +167,9 @@ block|{
 return|return
 name|loadedClasses
 operator|.
-name|getOrDefault
+name|get
 argument_list|(
 name|className
-argument_list|,
-literal|null
 argument_list|)
 return|;
 block|}

@@ -308,10 +308,10 @@ range|:
 name|listeners
 control|)
 block|{
-specifier|final
-name|ListDataEvent
-name|e
-init|=
+name|listener
+operator|.
+name|contentsChanged
+argument_list|(
 operator|new
 name|ListDataEvent
 argument_list|(
@@ -327,12 +327,6 @@ name|num_of_verifiers
 operator|-
 literal|1
 argument_list|)
-decl_stmt|;
-name|listener
-operator|.
-name|contentsChanged
-argument_list|(
-name|e
 argument_list|)
 expr_stmt|;
 block|}
