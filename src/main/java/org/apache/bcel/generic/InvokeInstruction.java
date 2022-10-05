@@ -79,6 +79,20 @@ name|ConstantPool
 import|;
 end_import
 
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|bcel
+operator|.
+name|classfile
+operator|.
+name|Utility
+import|;
+end_import
+
 begin_comment
 comment|/**  * Super class for the INVOKExxx family of instructions.  *  */
 end_comment
@@ -274,13 +288,11 @@ name|CONSTANT_Class
 argument_list|)
 decl_stmt|;
 return|return
-name|className
+name|Utility
 operator|.
-name|replace
+name|pathToPackage
 argument_list|(
-literal|'/'
-argument_list|,
-literal|'.'
+name|className
 argument_list|)
 return|;
 block|}

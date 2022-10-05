@@ -83,6 +83,20 @@ name|ConstantUtf8
 import|;
 end_import
 
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|bcel
+operator|.
+name|classfile
+operator|.
+name|Utility
+import|;
+end_import
+
 begin_comment
 comment|/**  * Super class for InvokeInstruction and FieldInstruction, since they have some methods in common!  *  */
 end_comment
@@ -196,13 +210,11 @@ literal|"java.lang.Object"
 return|;
 block|}
 return|return
-name|className
+name|Utility
 operator|.
-name|replace
+name|pathToPackage
 argument_list|(
-literal|'/'
-argument_list|,
-literal|'.'
+name|className
 argument_list|)
 return|;
 block|}
@@ -438,13 +450,11 @@ return|;
 block|}
 name|className
 operator|=
-name|className
+name|Utility
 operator|.
-name|replace
+name|pathToPackage
 argument_list|(
-literal|'/'
-argument_list|,
-literal|'.'
+name|className
 argument_list|)
 expr_stmt|;
 return|return

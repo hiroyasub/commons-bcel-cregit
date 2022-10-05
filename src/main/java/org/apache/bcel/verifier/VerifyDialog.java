@@ -169,6 +169,20 @@ name|JavaClass
 import|;
 end_import
 
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|bcel
+operator|.
+name|classfile
+operator|.
+name|Utility
+import|;
+end_import
+
 begin_comment
 comment|/**  * A class for simple graphical class file verification. Use the main(String []) method with fully qualified class names  * as arguments to use it as a stand-alone application. Use the VerifyDialog(String) constructor to use this class in  * your application. [This class was created using VisualAge for Java, but it does not work under VAJ itself (Version  * 3.02 JDK 1.2)]  *  * @see #main(String[])  * @see #VerifyDialog(String)  */
 end_comment
@@ -698,13 +712,11 @@ expr_stmt|;
 block|}
 name|fullyQualifiedClassName
 operator|=
-name|fullyQualifiedClassName
+name|Utility
 operator|.
-name|replace
+name|pathToPackage
 argument_list|(
-literal|'/'
-argument_list|,
-literal|'.'
+name|fullyQualifiedClassName
 argument_list|)
 expr_stmt|;
 name|this

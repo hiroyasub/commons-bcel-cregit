@@ -441,6 +441,10 @@ name|names
 argument_list|,
 name|i
 lambda|->
+name|Utility
+operator|.
+name|pathToPackage
+argument_list|(
 name|super
 operator|.
 name|getConstantPool
@@ -457,12 +461,6 @@ name|Const
 operator|.
 name|CONSTANT_Class
 argument_list|)
-operator|.
-name|replace
-argument_list|(
-literal|'/'
-argument_list|,
-literal|'.'
 argument_list|)
 argument_list|)
 expr_stmt|;

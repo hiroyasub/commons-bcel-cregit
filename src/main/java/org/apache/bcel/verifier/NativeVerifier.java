@@ -15,6 +15,20 @@ name|verifier
 package|;
 end_package
 
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|bcel
+operator|.
+name|classfile
+operator|.
+name|Utility
+import|;
+end_import
+
 begin_comment
 comment|/**  * The NativeVerifier class implements a main(String[] args) method that's roughly compatible to the one in the Verifier  * class, but that uses the JVM's internal verifier for its class file verification. This can be used for comparison  * runs between the JVM-internal verifier and JustIce.  *  */
 end_comment
@@ -108,16 +122,14 @@ index|[
 literal|0
 index|]
 operator|=
+name|Utility
+operator|.
+name|pathToPackage
+argument_list|(
 name|args
 index|[
 literal|0
 index|]
-operator|.
-name|replace
-argument_list|(
-literal|'/'
-argument_list|,
-literal|'.'
 argument_list|)
 expr_stmt|;
 comment|// System.out.println(args[0]);

@@ -63,6 +63,20 @@ name|JavaClass
 import|;
 end_import
 
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|bcel
+operator|.
+name|classfile
+operator|.
+name|Utility
+import|;
+end_import
+
 begin_comment
 comment|/**  * This abstract class provides a logic of a loading {@link JavaClass} objects class names via {@link ClassPath}.  *  *<p>  * Subclasses can choose caching strategy of the objects by implementing the abstract methods (e.g.,  * {@link #storeClass(JavaClass)} and {@link #findClass(String)}).  *</p>  *  * @since 6.4.0  */
 end_comment
@@ -366,13 +380,11 @@ throw|;
 block|}
 name|className
 operator|=
-name|className
+name|Utility
 operator|.
-name|replace
+name|pathToPackage
 argument_list|(
-literal|'/'
-argument_list|,
-literal|'.'
+name|className
 argument_list|)
 expr_stmt|;
 comment|// Just in case, canonical form

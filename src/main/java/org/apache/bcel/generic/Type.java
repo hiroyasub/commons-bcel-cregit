@@ -1201,13 +1201,11 @@ name|ObjectType
 operator|.
 name|getInstance
 argument_list|(
-name|parsedSignature
+name|Utility
 operator|.
-name|replace
+name|pathToPackage
 argument_list|(
-literal|'/'
-argument_list|,
-literal|'.'
+name|parsedSignature
 argument_list|)
 argument_list|)
 return|;

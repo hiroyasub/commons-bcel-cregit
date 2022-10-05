@@ -3070,13 +3070,9 @@ argument_list|()
 decl_stmt|;
 name|str
 operator|=
-name|str
-operator|.
-name|replace
+name|pathToPackage
 argument_list|(
-literal|'/'
-argument_list|,
-literal|'.'
+name|str
 argument_list|)
 expr_stmt|;
 comment|// Is `/' on all systems, even DOS
@@ -3120,6 +3116,28 @@ expr_stmt|;
 block|}
 return|return
 name|str
+return|;
+block|}
+comment|/**       * Converts a path to a package name.      *      * @param str the source path.      * @return a package name.      * @since 6.6.0      */
+specifier|public
+specifier|static
+name|String
+name|pathToPackage
+parameter_list|(
+specifier|final
+name|String
+name|str
+parameter_list|)
+block|{
+return|return
+name|str
+operator|.
+name|replace
+argument_list|(
+literal|'/'
+argument_list|,
+literal|'.'
+argument_list|)
 return|;
 block|}
 comment|/**      * Escape all occurences of newline chars '\n', quotes \", etc.      */

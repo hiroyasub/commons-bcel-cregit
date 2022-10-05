@@ -788,7 +788,7 @@ literal|1
 argument_list|)
 return|;
 block|}
-comment|/**      * Pops i elements off the stack. ALWAYS RETURNS "null"!!!      */
+comment|/**      * Pops i elements off the stack. Always returns null.      *      * @return Always returns null.      */
 specifier|public
 name|Type
 name|pop

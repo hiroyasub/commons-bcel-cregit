@@ -835,6 +835,10 @@ argument_list|)
 operator|.
 name|append
 argument_list|(
+name|Utility
+operator|.
+name|pathToPackage
+argument_list|(
 name|cp
 operator|.
 name|getConstantString
@@ -845,12 +849,6 @@ name|Const
 operator|.
 name|CONSTANT_Module
 argument_list|)
-operator|.
-name|replace
-argument_list|(
-literal|'/'
-argument_list|,
-literal|'.'
 argument_list|)
 argument_list|)
 operator|.
