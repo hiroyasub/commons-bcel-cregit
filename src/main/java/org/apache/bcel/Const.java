@@ -308,6 +308,60 @@ name|MINOR_13
 init|=
 literal|0
 decl_stmt|;
+comment|/**      * Minor version number of class files for Java 14.      *      * @see #MAJOR_14      * @since 6.4.0      */
+specifier|public
+specifier|static
+specifier|final
+name|short
+name|MINOR_14
+init|=
+literal|0
+decl_stmt|;
+comment|/**      * Minor version number of class files for Java 15.      *      * @see #MAJOR_15      * @since 6.6.0      */
+specifier|public
+specifier|static
+specifier|final
+name|short
+name|MINOR_15
+init|=
+literal|0
+decl_stmt|;
+comment|/**      * Minor version number of class files for Java 16.      *      * @see #MAJOR_16      * @since 6.6.0      */
+specifier|public
+specifier|static
+specifier|final
+name|short
+name|MINOR_16
+init|=
+literal|0
+decl_stmt|;
+comment|/**      * Minor version number of class files for Java 17.      *      * @see #MAJOR_17      * @since 6.6.0      */
+specifier|public
+specifier|static
+specifier|final
+name|short
+name|MINOR_17
+init|=
+literal|0
+decl_stmt|;
+comment|/**      * Minor version number of class files for Java 18.      *      * @see #MAJOR_18      * @since 6.6.0      */
+specifier|public
+specifier|static
+specifier|final
+name|short
+name|MINOR_18
+init|=
+literal|0
+decl_stmt|;
+comment|/**      * Minor version number of class files for Java 19.      *      * @see #MAJOR_19      * @since 6.6.0      */
+specifier|public
+specifier|static
+specifier|final
+name|short
+name|MINOR_19
+init|=
+literal|0
+decl_stmt|;
 comment|/**      * Major version number of class files for Java 14.      *      * @see #MINOR_14      * @since 6.4.0      */
 specifier|public
 specifier|static
@@ -317,14 +371,50 @@ name|MAJOR_14
 init|=
 literal|58
 decl_stmt|;
-comment|/**      * Minor version number of class files for Java 14.      *      * @see #MAJOR_14      * @since 6.4.0      */
+comment|/**      * Major version number of class files for Java 15.      *      * @see #MINOR_15      * @since 6.6.0      */
 specifier|public
 specifier|static
 specifier|final
 name|short
-name|MINOR_14
+name|MAJOR_15
 init|=
-literal|0
+literal|59
+decl_stmt|;
+comment|/**      * Major version number of class files for Java 16.      *      * @see #MINOR_16      * @since 6.6.0      */
+specifier|public
+specifier|static
+specifier|final
+name|short
+name|MAJOR_16
+init|=
+literal|60
+decl_stmt|;
+comment|/**      * Major version number of class files for Java 17.      *      * @see #MINOR_17      * @since 6.6.0      */
+specifier|public
+specifier|static
+specifier|final
+name|short
+name|MAJOR_17
+init|=
+literal|61
+decl_stmt|;
+comment|/**      * Major version number of class files for Java 18.      *      * @see #MINOR_18      * @since 6.6.0      */
+specifier|public
+specifier|static
+specifier|final
+name|short
+name|MAJOR_18
+init|=
+literal|62
+decl_stmt|;
+comment|/**      * Major version number of class files for Java 19.      *      * @see #MINOR_19      * @since 6.6.0      */
+specifier|public
+specifier|static
+specifier|final
+name|short
+name|MAJOR_19
+init|=
+literal|63
 decl_stmt|;
 comment|/**      * Default major version number. Class file is for Java 1.1.      *      * @see #MAJOR_1_1      */
 specifier|public
