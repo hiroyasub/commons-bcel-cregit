@@ -285,6 +285,7 @@ specifier|public
 name|Attribute
 name|copy
 parameter_list|(
+specifier|final
 name|ConstantPool
 name|constantPool
 parameter_list|)

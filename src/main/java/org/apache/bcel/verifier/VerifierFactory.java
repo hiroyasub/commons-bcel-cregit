@@ -155,6 +155,7 @@ argument_list|,
 name|k
 lambda|->
 block|{
+specifier|final
 name|Verifier
 name|v
 init|=

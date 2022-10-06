@@ -837,9 +837,6 @@ specifier|final
 name|ConstantNameAndType
 name|cnat
 init|=
-operator|(
-name|ConstantNameAndType
-operator|)
 name|cp
 operator|.
 name|getConstant
@@ -852,6 +849,10 @@ argument_list|,
 name|Constants
 operator|.
 name|CONSTANT_NameAndType
+argument_list|,
+name|ConstantNameAndType
+operator|.
+name|class
 argument_list|)
 decl_stmt|;
 specifier|final

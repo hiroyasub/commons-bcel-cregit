@@ -255,9 +255,6 @@ name|getEnclosingClass
 parameter_list|()
 block|{
 return|return
-operator|(
-name|ConstantClass
-operator|)
 name|super
 operator|.
 name|getConstantPool
@@ -270,6 +267,10 @@ argument_list|,
 name|Const
 operator|.
 name|CONSTANT_Class
+argument_list|,
+name|ConstantClass
+operator|.
+name|class
 argument_list|)
 return|;
 block|}
@@ -302,9 +303,6 @@ literal|null
 return|;
 block|}
 return|return
-operator|(
-name|ConstantNameAndType
-operator|)
 name|super
 operator|.
 name|getConstantPool
@@ -317,6 +315,10 @@ argument_list|,
 name|Const
 operator|.
 name|CONSTANT_NameAndType
+argument_list|,
+name|ConstantNameAndType
+operator|.
+name|class
 argument_list|)
 return|;
 block|}

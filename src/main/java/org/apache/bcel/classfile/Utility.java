@@ -3118,7 +3118,7 @@ return|return
 name|str
 return|;
 block|}
-comment|/**       * Converts a path to a package name.      *      * @param str the source path.      * @return a package name.      * @since 6.6.0      */
+comment|/**      * Converts a path to a package name.      *      * @param str the source path.      * @return a package name.      * @since 6.6.0      */
 specifier|public
 specifier|static
 name|String

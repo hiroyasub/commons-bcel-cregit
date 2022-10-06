@@ -21,6 +21,14 @@ extends|extends
 name|Error
 block|{
 comment|/*      * Ordinals for various reasons why an Error of this type can be thrown.      */
+specifier|private
+specifier|static
+specifier|final
+name|long
+name|serialVersionUID
+init|=
+literal|1L
+decl_stmt|;
 comment|/**      * Lexical error occured.      */
 specifier|static
 specifier|final

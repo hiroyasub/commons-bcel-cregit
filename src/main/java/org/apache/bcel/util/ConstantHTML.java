@@ -306,6 +306,8 @@ name|methods
 operator|=
 name|methods
 expr_stmt|;
+name|this
+operator|.
 name|constants
 operator|=
 name|constantPool
@@ -630,9 +632,6 @@ specifier|final
 name|ConstantMethodref
 name|c
 init|=
-operator|(
-name|ConstantMethodref
-operator|)
 name|constantPool
 operator|.
 name|getConstant
@@ -642,6 +641,10 @@ argument_list|,
 name|Const
 operator|.
 name|CONSTANT_Methodref
+argument_list|,
+name|ConstantMethodref
+operator|.
+name|class
 argument_list|)
 decl_stmt|;
 name|classIndex
@@ -665,9 +668,6 @@ specifier|final
 name|ConstantInterfaceMethodref
 name|c1
 init|=
-operator|(
-name|ConstantInterfaceMethodref
-operator|)
 name|constantPool
 operator|.
 name|getConstant
@@ -677,6 +677,10 @@ argument_list|,
 name|Const
 operator|.
 name|CONSTANT_InterfaceMethodref
+argument_list|,
+name|ConstantInterfaceMethodref
+operator|.
+name|class
 argument_list|)
 decl_stmt|;
 name|classIndex
@@ -769,9 +773,6 @@ specifier|final
 name|ConstantNameAndType
 name|c2
 init|=
-operator|(
-name|ConstantNameAndType
-operator|)
 name|constantPool
 operator|.
 name|getConstant
@@ -781,6 +782,10 @@ argument_list|,
 name|Const
 operator|.
 name|CONSTANT_NameAndType
+argument_list|,
+name|ConstantNameAndType
+operator|.
+name|class
 argument_list|)
 decl_stmt|;
 specifier|final
@@ -1053,9 +1058,6 @@ specifier|final
 name|ConstantFieldref
 name|c3
 init|=
-operator|(
-name|ConstantFieldref
-operator|)
 name|constantPool
 operator|.
 name|getConstant
@@ -1065,6 +1067,10 @@ argument_list|,
 name|Const
 operator|.
 name|CONSTANT_Fieldref
+argument_list|,
+name|ConstantFieldref
+operator|.
+name|class
 argument_list|)
 decl_stmt|;
 name|classIndex
@@ -1259,9 +1265,6 @@ specifier|final
 name|ConstantClass
 name|c4
 init|=
-operator|(
-name|ConstantClass
-operator|)
 name|constantPool
 operator|.
 name|getConstant
@@ -1271,6 +1274,10 @@ argument_list|,
 name|Const
 operator|.
 name|CONSTANT_Class
+argument_list|,
+name|ConstantClass
+operator|.
+name|class
 argument_list|)
 decl_stmt|;
 name|nameIndex
@@ -1383,9 +1390,6 @@ specifier|final
 name|ConstantString
 name|c5
 init|=
-operator|(
-name|ConstantString
-operator|)
 name|constantPool
 operator|.
 name|getConstant
@@ -1395,6 +1399,10 @@ argument_list|,
 name|Const
 operator|.
 name|CONSTANT_String
+argument_list|,
+name|ConstantString
+operator|.
+name|class
 argument_list|)
 decl_stmt|;
 name|nameIndex
@@ -1453,9 +1461,6 @@ specifier|final
 name|ConstantNameAndType
 name|c6
 init|=
-operator|(
-name|ConstantNameAndType
-operator|)
 name|constantPool
 operator|.
 name|getConstant
@@ -1465,6 +1470,10 @@ argument_list|,
 name|Const
 operator|.
 name|CONSTANT_NameAndType
+argument_list|,
+name|ConstantNameAndType
+operator|.
+name|class
 argument_list|)
 decl_stmt|;
 name|nameIndex

@@ -986,7 +986,7 @@ specifier|final
 name|ConstantPoolGen
 name|constantPoolGen
 decl_stmt|;
-comment|/**      * Constructs a new instance.      *      * @param clazz Java class to "decompile".      * @param out where to print the Java program in UTF-8.       */
+comment|/**      * Constructs a new instance.      *      * @param clazz Java class to "decompile".      * @param out where to print the Java program in UTF-8.      */
 specifier|public
 name|BCELifier
 parameter_list|(

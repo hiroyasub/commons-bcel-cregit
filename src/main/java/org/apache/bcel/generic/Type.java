@@ -506,6 +506,7 @@ name|e
 argument_list|)
 throw|;
 block|}
+specifier|final
 name|Type
 index|[]
 name|types

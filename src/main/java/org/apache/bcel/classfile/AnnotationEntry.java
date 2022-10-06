@@ -77,18 +77,6 @@ name|Stream
 import|;
 end_import
 
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|bcel
-operator|.
-name|Const
-import|;
-end_import
-
 begin_comment
 comment|/**  * Represents one annotation in the annotation table  *  * @since 6.0  */
 end_comment
@@ -420,26 +408,13 @@ name|String
 name|getAnnotationType
 parameter_list|()
 block|{
-specifier|final
-name|ConstantUtf8
-name|c
-init|=
-operator|(
-name|ConstantUtf8
-operator|)
+return|return
 name|constantPool
 operator|.
-name|getConstant
+name|getConstantUtf8
 argument_list|(
 name|typeIndex
-argument_list|,
-name|Const
-operator|.
-name|CONSTANT_Utf8
 argument_list|)
-decl_stmt|;
-return|return
-name|c
 operator|.
 name|getBytes
 argument_list|()

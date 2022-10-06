@@ -445,13 +445,9 @@ operator|.
 name|getConstantPool
 argument_list|()
 operator|.
-name|getConstant
+name|getConstantUtf8
 argument_list|(
 name|i
-argument_list|,
-name|Const
-operator|.
-name|CONSTANT_Utf8
 argument_list|)
 expr_stmt|;
 name|buf
