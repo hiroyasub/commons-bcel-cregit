@@ -877,6 +877,8 @@ argument_list|(
 literal|"Pass 5: Generating Java code ..."
 argument_list|)
 expr_stmt|;
+try|try
+init|(
 specifier|final
 name|PrintWriter
 name|out
@@ -892,7 +894,8 @@ operator|+
 literal|".java"
 argument_list|)
 argument_list|)
-decl_stmt|;
+init|)
+block|{
 name|program
 operator|.
 name|code
@@ -902,11 +905,7 @@ argument_list|,
 name|base_name
 argument_list|)
 expr_stmt|;
-name|out
-operator|.
-name|close
-argument_list|()
-expr_stmt|;
+block|}
 name|System
 operator|.
 name|out

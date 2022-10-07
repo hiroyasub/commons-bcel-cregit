@@ -939,6 +939,8 @@ argument_list|()
 expr_stmt|;
 block|}
 comment|// create the jar
+try|try
+init|(
 specifier|final
 name|JarOutputStream
 name|jarFile
@@ -952,7 +954,8 @@ argument_list|(
 name|defaultJar
 argument_list|)
 argument_list|)
-decl_stmt|;
+init|)
+block|{
 name|jarFile
 operator|.
 name|setLevel
@@ -1044,11 +1047,6 @@ name|length
 expr_stmt|;
 comment|// for logging
 block|}
-name|jarFile
-operator|.
-name|close
-argument_list|()
-expr_stmt|;
 name|System
 operator|.
 name|err
@@ -1069,6 +1067,7 @@ operator|+
 literal|" bytes"
 argument_list|)
 expr_stmt|;
+block|}
 if|if
 condition|(
 operator|!

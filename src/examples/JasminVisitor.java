@@ -616,6 +616,8 @@ name|className
 operator|+
 literal|".j"
 decl_stmt|;
+try|try
+init|(
 specifier|final
 name|FileOutputStream
 name|out
@@ -625,7 +627,8 @@ name|FileOutputStream
 argument_list|(
 name|name
 argument_list|)
-decl_stmt|;
+init|)
+block|{
 operator|new
 name|JasminVisitor
 argument_list|(
@@ -648,6 +651,7 @@ operator|+
 name|name
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 block|}
 specifier|private
