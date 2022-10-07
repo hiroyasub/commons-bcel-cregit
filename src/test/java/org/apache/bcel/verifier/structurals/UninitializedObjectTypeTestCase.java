@@ -21,6 +21,18 @@ begin_import
 import|import
 name|org
 operator|.
+name|apache
+operator|.
+name|bcel
+operator|.
+name|Constants
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
 name|junit
 operator|.
 name|jupiter
@@ -53,7 +65,7 @@ specifier|final
 name|short
 name|referenceToConstant
 init|=
-name|UninitializedObjectType
+name|Constants
 operator|.
 name|AALOAD
 decl_stmt|;

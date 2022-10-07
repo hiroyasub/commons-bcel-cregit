@@ -59,6 +59,18 @@ name|apache
 operator|.
 name|bcel
 operator|.
+name|Constants
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|bcel
+operator|.
 name|classfile
 operator|.
 name|ClassParser
@@ -182,7 +194,7 @@ specifier|final
 name|short
 name|referenceToConstant
 init|=
-name|Class2HTML
+name|Constants
 operator|.
 name|AALOAD
 decl_stmt|;
