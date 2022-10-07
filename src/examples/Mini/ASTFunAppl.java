@@ -99,14 +99,6 @@ extends|extends
 name|ASTExpr
 implements|implements
 name|MiniParserTreeConstants
-implements|,
-name|org
-operator|.
-name|apache
-operator|.
-name|bcel
-operator|.
-name|Constants
 block|{
 specifier|public
 specifier|static
