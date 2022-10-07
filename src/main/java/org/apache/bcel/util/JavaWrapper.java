@@ -219,15 +219,9 @@ operator|.
 name|length
 argument_list|)
 expr_stmt|;
-specifier|final
-name|JavaWrapper
-name|wrapper
-init|=
 operator|new
 name|JavaWrapper
 argument_list|()
-decl_stmt|;
-name|wrapper
 operator|.
 name|runMain
 argument_list|(
