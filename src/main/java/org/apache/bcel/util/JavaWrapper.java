@@ -414,6 +414,10 @@ name|invoke
 argument_list|(
 literal|null
 argument_list|,
+operator|(
+name|Object
+index|[]
+operator|)
 name|argv
 argument_list|)
 expr_stmt|;
