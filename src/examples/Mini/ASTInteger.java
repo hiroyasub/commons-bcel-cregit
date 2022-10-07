@@ -25,6 +25,18 @@ name|apache
 operator|.
 name|bcel
 operator|.
+name|Const
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|bcel
+operator|.
 name|generic
 operator|.
 name|ConstantPoolGen
@@ -229,6 +241,8 @@ comment|// (Very) simple expression, always true
 return|return
 name|type
 operator|=
+name|Const
+operator|.
 name|T_INT
 return|;
 block|}

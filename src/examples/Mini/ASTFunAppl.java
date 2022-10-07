@@ -25,6 +25,30 @@ name|apache
 operator|.
 name|bcel
 operator|.
+name|Const
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|bcel
+operator|.
+name|Constants
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|bcel
+operator|.
 name|generic
 operator|.
 name|ConstantPoolGen
@@ -836,6 +860,8 @@ if|if
 condition|(
 name|expect
 operator|!=
+name|Const
+operator|.
 name|T_UNKNOWN
 operator|&&
 name|t_e
@@ -877,6 +903,8 @@ name|fname
 operator|+
 literal|" is not of type "
 operator|+
+name|Constants
+operator|.
 name|TYPE_NAMES
 index|[
 name|expect
@@ -884,6 +912,8 @@ index|]
 operator|+
 literal|" but "
 operator|+
+name|Constants
+operator|.
 name|TYPE_NAMES
 index|[
 name|t_e
@@ -924,6 +954,8 @@ if|if
 condition|(
 name|t
 operator|==
+name|Const
+operator|.
 name|T_UNKNOWN
 condition|)
 block|{

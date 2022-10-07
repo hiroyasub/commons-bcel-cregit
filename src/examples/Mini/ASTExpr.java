@@ -25,6 +25,30 @@ name|apache
 operator|.
 name|bcel
 operator|.
+name|Const
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|bcel
+operator|.
+name|Constants
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|bcel
+operator|.
 name|generic
 operator|.
 name|BranchHandle
@@ -213,14 +237,6 @@ implements|implements
 name|MiniParserConstants
 implements|,
 name|MiniParserTreeConstants
-implements|,
-name|org
-operator|.
-name|apache
-operator|.
-name|bcel
-operator|.
-name|Constants
 block|{
 specifier|public
 specifier|static
@@ -325,6 +341,8 @@ specifier|protected
 name|int
 name|type
 init|=
+name|Const
+operator|.
 name|T_UNKNOWN
 decl_stmt|;
 comment|/*      * Special constructor, called from ASTTerm.traverse() and ASTFactor.traverse(), when traverse()ing the parse tree      * replace themselves with Expr nodes.      */
@@ -1436,6 +1454,8 @@ block|{
 name|int
 name|childType
 init|=
+name|Const
+operator|.
 name|T_UNKNOWN
 decl_stmt|,
 name|t
@@ -1464,6 +1484,8 @@ name|childType
 operator|=
 name|type
 operator|=
+name|Const
+operator|.
 name|T_INT
 expr_stmt|;
 comment|// -
@@ -1474,6 +1496,8 @@ name|childType
 operator|=
 name|type
 operator|=
+name|Const
+operator|.
 name|T_BOOLEAN
 expr_stmt|;
 comment|// !
@@ -1508,6 +1532,8 @@ name|childType
 operator|=
 name|type
 operator|=
+name|Const
+operator|.
 name|T_INT
 expr_stmt|;
 block|}
@@ -1526,6 +1552,8 @@ name|childType
 operator|=
 name|type
 operator|=
+name|Const
+operator|.
 name|T_BOOLEAN
 expr_stmt|;
 block|}
@@ -1534,10 +1562,14 @@ block|{
 comment|// LEQ, GT, etc.
 name|childType
 operator|=
+name|Const
+operator|.
 name|T_INT
 expr_stmt|;
 name|type
 operator|=
+name|Const
+operator|.
 name|T_BOOLEAN
 expr_stmt|;
 block|}
@@ -1583,6 +1615,8 @@ argument_list|()
 argument_list|,
 literal|"Expression has not expected type "
 operator|+
+name|Constants
+operator|.
 name|TYPE_NAMES
 index|[
 name|childType
@@ -1590,6 +1624,8 @@ index|]
 operator|+
 literal|" but "
 operator|+
+name|Constants
+operator|.
 name|TYPE_NAMES
 index|[
 name|t
@@ -1848,6 +1884,8 @@ name|len
 operator|+
 literal|"]<"
 operator|+
+name|Constants
+operator|.
 name|TYPE_NAMES
 index|[
 name|type

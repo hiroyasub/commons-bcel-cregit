@@ -33,7 +33,7 @@ name|apache
 operator|.
 name|bcel
 operator|.
-name|Constants
+name|Const
 import|;
 end_import
 
@@ -846,7 +846,7 @@ operator|.
 name|getNameAndTypeIndex
 argument_list|()
 argument_list|,
-name|Constants
+name|Const
 operator|.
 name|CONSTANT_NameAndType
 argument_list|,

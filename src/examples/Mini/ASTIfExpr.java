@@ -25,6 +25,30 @@ name|apache
 operator|.
 name|bcel
 operator|.
+name|Const
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|bcel
+operator|.
+name|Constants
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|bcel
+operator|.
 name|generic
 operator|.
 name|BranchHandle
@@ -570,10 +594,14 @@ name|if_expr
 operator|.
 name|eval
 argument_list|(
+name|Const
+operator|.
 name|T_BOOLEAN
 argument_list|)
 operator|)
 operator|!=
+name|Const
+operator|.
 name|T_BOOLEAN
 condition|)
 block|{
@@ -593,6 +621,8 @@ argument_list|()
 argument_list|,
 literal|"IF expression is not of type boolean, but "
 operator|+
+name|Constants
+operator|.
 name|TYPE_NAMES
 index|[
 name|ifType
@@ -615,6 +645,8 @@ if|if
 condition|(
 name|expected
 operator|!=
+name|Const
+operator|.
 name|T_UNKNOWN
 operator|&&
 name|thenType
@@ -638,6 +670,8 @@ argument_list|()
 argument_list|,
 literal|"THEN expression is not of expected type "
 operator|+
+name|Constants
+operator|.
 name|TYPE_NAMES
 index|[
 name|expected
@@ -645,6 +679,8 @@ index|]
 operator|+
 literal|" but "
 operator|+
+name|Constants
+operator|.
 name|TYPE_NAMES
 index|[
 name|thenType
@@ -674,6 +710,8 @@ if|if
 condition|(
 name|expected
 operator|!=
+name|Const
+operator|.
 name|T_UNKNOWN
 operator|&&
 name|elseType
@@ -697,6 +735,8 @@ argument_list|()
 argument_list|,
 literal|"ELSE expression is not of expected type "
 operator|+
+name|Constants
+operator|.
 name|TYPE_NAMES
 index|[
 name|expected
@@ -704,6 +744,8 @@ index|]
 operator|+
 literal|" but "
 operator|+
+name|Constants
+operator|.
 name|TYPE_NAMES
 index|[
 name|elseType
@@ -717,6 +759,8 @@ if|else if
 condition|(
 name|thenType
 operator|==
+name|Const
+operator|.
 name|T_UNKNOWN
 condition|)
 block|{
@@ -761,6 +805,8 @@ name|column
 argument_list|,
 literal|"Type mismatch in THEN-ELSE: "
 operator|+
+name|Constants
+operator|.
 name|TYPE_NAMES
 index|[
 name|thenType
@@ -768,6 +814,8 @@ index|]
 operator|+
 literal|" vs. "
 operator|+
+name|Constants
+operator|.
 name|TYPE_NAMES
 index|[
 name|elseType
