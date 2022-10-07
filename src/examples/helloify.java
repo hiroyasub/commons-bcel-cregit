@@ -11,18 +11,6 @@ name|apache
 operator|.
 name|bcel
 operator|.
-name|Constants
-import|;
-end_import
-
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|bcel
-operator|.
 name|classfile
 operator|.
 name|ClassParser
@@ -248,8 +236,6 @@ specifier|public
 specifier|final
 class|class
 name|helloify
-implements|implements
-name|Constants
 block|{
 specifier|private
 specifier|static

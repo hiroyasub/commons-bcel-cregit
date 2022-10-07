@@ -37,18 +37,6 @@ name|apache
 operator|.
 name|bcel
 operator|.
-name|Constants
-import|;
-end_import
-
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|bcel
-operator|.
 name|generic
 operator|.
 name|BasicType
@@ -662,12 +650,12 @@ name|append
 argument_list|(
 literal|"    "
 operator|+
-name|Constants
+name|Const
 operator|.
-name|TYPE_NAMES
-index|[
+name|getTypeName
+argument_list|(
 name|t
-index|]
+argument_list|)
 operator|+
 literal|" "
 operator|+

@@ -24,7 +24,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * An implementation of interface CharStream, where the stream is assumed to contain only ASCII characters (without  * unicode processing).  */
+comment|/**  * An implementation of interface CharStream, where the stream is assumed to contain only ASCII characters (without  * Unicode processing).  */
 end_comment
 
 begin_class

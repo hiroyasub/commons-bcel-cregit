@@ -81,7 +81,7 @@ name|apache
 operator|.
 name|bcel
 operator|.
-name|Constants
+name|Const
 import|;
 end_import
 
@@ -1589,15 +1589,15 @@ name|println
 argument_list|(
 literal|"\t"
 operator|+
-name|Constants
+name|Const
 operator|.
-name|OPCODE_NAMES
-index|[
+name|getOpcodeName
+argument_list|(
 name|bi
 operator|.
 name|getOpcode
 argument_list|()
-index|]
+argument_list|)
 operator|+
 literal|" "
 operator|+

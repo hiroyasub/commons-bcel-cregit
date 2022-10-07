@@ -278,7 +278,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Root node of everything, direct children are nodes of type FunDecl  *  */
+comment|/**  * Root node of everything, direct children are nodes of type FunDecl.  */
 end_comment
 
 begin_class

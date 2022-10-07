@@ -10,7 +10,7 @@ package|;
 end_package
 
 begin_comment
-comment|/**  * Represents a function declaration and its arguments. Type information is contained in the ASTIdent fields.  *  */
+comment|/**  * Represents a function declaration and its arguments. Type information is contained in the ASTIdent fields.  */
 end_comment
 
 begin_class
@@ -18,14 +18,6 @@ specifier|public
 class|class
 name|Function
 implements|implements
-name|org
-operator|.
-name|apache
-operator|.
-name|bcel
-operator|.
-name|Constants
-implements|,
 name|EnvEntry
 block|{
 specifier|private

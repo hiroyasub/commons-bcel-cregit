@@ -37,18 +37,6 @@ name|apache
 operator|.
 name|bcel
 operator|.
-name|Constants
-import|;
-end_import
-
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|bcel
-operator|.
 name|generic
 operator|.
 name|BranchHandle
@@ -1615,21 +1603,21 @@ argument_list|()
 argument_list|,
 literal|"Expression has not expected type "
 operator|+
-name|Constants
+name|Const
 operator|.
-name|TYPE_NAMES
-index|[
+name|getTypeName
+argument_list|(
 name|childType
-index|]
+argument_list|)
 operator|+
 literal|" but "
 operator|+
-name|Constants
+name|Const
 operator|.
-name|TYPE_NAMES
-index|[
+name|getTypeName
+argument_list|(
 name|t
-index|]
+argument_list|)
 operator|+
 literal|"."
 argument_list|)
@@ -1884,12 +1872,12 @@ name|len
 operator|+
 literal|"]<"
 operator|+
-name|Constants
+name|Const
 operator|.
-name|TYPE_NAMES
-index|[
+name|getTypeName
+argument_list|(
 name|type
-index|]
+argument_list|)
 operator|+
 literal|"> @"
 operator|+

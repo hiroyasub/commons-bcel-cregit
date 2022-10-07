@@ -37,18 +37,6 @@ name|apache
 operator|.
 name|bcel
 operator|.
-name|Constants
-import|;
-end_import
-
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|bcel
-operator|.
 name|generic
 operator|.
 name|BranchHandle
@@ -621,12 +609,12 @@ argument_list|()
 argument_list|,
 literal|"IF expression is not of type boolean, but "
 operator|+
-name|Constants
+name|Const
 operator|.
-name|TYPE_NAMES
-index|[
+name|getTypeName
+argument_list|(
 name|ifType
-index|]
+argument_list|)
 operator|+
 literal|"."
 argument_list|)
@@ -670,21 +658,21 @@ argument_list|()
 argument_list|,
 literal|"THEN expression is not of expected type "
 operator|+
-name|Constants
+name|Const
 operator|.
-name|TYPE_NAMES
-index|[
+name|getTypeName
+argument_list|(
 name|expected
-index|]
+argument_list|)
 operator|+
 literal|" but "
 operator|+
-name|Constants
+name|Const
 operator|.
-name|TYPE_NAMES
-index|[
+name|getTypeName
+argument_list|(
 name|thenType
-index|]
+argument_list|)
 operator|+
 literal|"."
 argument_list|)
@@ -735,21 +723,21 @@ argument_list|()
 argument_list|,
 literal|"ELSE expression is not of expected type "
 operator|+
-name|Constants
+name|Const
 operator|.
-name|TYPE_NAMES
-index|[
+name|getTypeName
+argument_list|(
 name|expected
-index|]
+argument_list|)
 operator|+
 literal|" but "
 operator|+
-name|Constants
+name|Const
 operator|.
-name|TYPE_NAMES
-index|[
+name|getTypeName
+argument_list|(
 name|elseType
-index|]
+argument_list|)
 operator|+
 literal|"."
 argument_list|)
@@ -805,21 +793,21 @@ name|column
 argument_list|,
 literal|"Type mismatch in THEN-ELSE: "
 operator|+
-name|Constants
+name|Const
 operator|.
-name|TYPE_NAMES
-index|[
+name|getTypeName
+argument_list|(
 name|thenType
-index|]
+argument_list|)
 operator|+
 literal|" vs. "
 operator|+
-name|Constants
+name|Const
 operator|.
-name|TYPE_NAMES
-index|[
+name|getTypeName
+argument_list|(
 name|elseType
-index|]
+argument_list|)
 operator|+
 literal|"."
 argument_list|)
