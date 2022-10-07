@@ -2196,7 +2196,7 @@ throw|throw
 operator|new
 name|AssertionViolatedException
 argument_list|(
-literal|"Some RuntimeException occured while verify()ing class '"
+literal|"Some RuntimeException occurred while verify()ing class '"
 operator|+
 name|jc
 operator|.

@@ -278,7 +278,7 @@ name|VERIFIED_REJECTED
 argument_list|,
 literal|"Parsing via BCEL did not succeed. "
 operator|+
-literal|" exception occured:\n"
+literal|" exception occurred:\n"
 operator|+
 name|e
 operator|.
@@ -287,7 +287,7 @@ argument_list|()
 argument_list|)
 return|;
 comment|// Don't think we want to dump a stack trace unless we have some sort of a debug option.
-comment|// e.getClass().getName()+" occured:\n"+Utility.getStackTrace(e));
+comment|// e.getClass().getName()+" occurred:\n"+Utility.getStackTrace(e));
 block|}
 if|if
 condition|(

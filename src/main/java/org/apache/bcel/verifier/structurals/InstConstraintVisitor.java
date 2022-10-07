@@ -505,7 +505,7 @@ operator|instanceof
 name|ArrayType
 return|;
 block|}
-comment|/**      * This method is called by the visitXXX() to notify the acceptor of this InstConstraintVisitor that a constraint      * violation has occured. This is done by throwing an instance of a StructuralCodeConstraintException.      *      * @throws StructuralCodeConstraintException always.      */
+comment|/**      * This method is called by the visitXXX() to notify the acceptor of this InstConstraintVisitor that a constraint      * violation has occurred. This is done by throwing an instance of a StructuralCodeConstraintException.      *      * @throws StructuralCodeConstraintException always.      */
 specifier|private
 name|void
 name|constraintViolated
