@@ -111,14 +111,6 @@ class|class
 name|ASTIdent
 extends|extends
 name|ASTExpr
-implements|implements
-name|org
-operator|.
-name|apache
-operator|.
-name|bcel
-operator|.
-name|Constants
 block|{
 specifier|public
 specifier|static

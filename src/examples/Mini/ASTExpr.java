@@ -153,7 +153,7 @@ name|bcel
 operator|.
 name|generic
 operator|.
-name|InstructionConstants
+name|InstructionConst
 import|;
 end_import
 
@@ -517,7 +517,7 @@ name|il
 operator|.
 name|append
 argument_list|(
-name|InstructionConstants
+name|InstructionConst
 operator|.
 name|INEG
 argument_list|)
@@ -549,7 +549,7 @@ name|il
 operator|.
 name|append
 argument_list|(
-name|InstructionConstants
+name|InstructionConst
 operator|.
 name|IXOR
 argument_list|)
@@ -595,7 +595,7 @@ name|il
 operator|.
 name|append
 argument_list|(
-name|InstructionConstants
+name|InstructionConst
 operator|.
 name|IADD
 argument_list|)
@@ -613,7 +613,7 @@ name|il
 operator|.
 name|append
 argument_list|(
-name|InstructionConstants
+name|InstructionConst
 operator|.
 name|ISUB
 argument_list|)
@@ -631,7 +631,7 @@ name|il
 operator|.
 name|append
 argument_list|(
-name|InstructionConstants
+name|InstructionConst
 operator|.
 name|IMUL
 argument_list|)
@@ -649,7 +649,7 @@ name|il
 operator|.
 name|append
 argument_list|(
-name|InstructionConstants
+name|InstructionConst
 operator|.
 name|IDIV
 argument_list|)
@@ -667,7 +667,7 @@ name|il
 operator|.
 name|append
 argument_list|(
-name|InstructionConstants
+name|InstructionConst
 operator|.
 name|IAND
 argument_list|)
@@ -685,7 +685,7 @@ name|il
 operator|.
 name|append
 argument_list|(
-name|InstructionConstants
+name|InstructionConst
 operator|.
 name|IOR
 argument_list|)
@@ -932,7 +932,7 @@ name|il
 operator|.
 name|append
 argument_list|(
-name|InstructionConstants
+name|InstructionConst
 operator|.
 name|NOP
 argument_list|)

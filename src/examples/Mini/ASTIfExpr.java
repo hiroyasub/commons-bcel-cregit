@@ -83,7 +83,7 @@ name|bcel
 operator|.
 name|generic
 operator|.
-name|InstructionConstants
+name|InstructionConst
 import|;
 end_import
 
@@ -125,14 +125,6 @@ class|class
 name|ASTIfExpr
 extends|extends
 name|ASTExpr
-implements|implements
-name|org
-operator|.
-name|apache
-operator|.
-name|bcel
-operator|.
-name|Constants
 block|{
 specifier|public
 specifier|static
@@ -332,7 +324,7 @@ name|il
 operator|.
 name|append
 argument_list|(
-name|InstructionConstants
+name|InstructionConst
 operator|.
 name|NOP
 argument_list|)

@@ -97,8 +97,6 @@ class|class
 name|ASTFunAppl
 extends|extends
 name|ASTExpr
-implements|implements
-name|MiniParserTreeConstants
 block|{
 specifier|public
 specifier|static

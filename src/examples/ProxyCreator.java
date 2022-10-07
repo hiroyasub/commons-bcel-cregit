@@ -35,7 +35,7 @@ name|apache
 operator|.
 name|bcel
 operator|.
-name|Constants
+name|Const
 import|;
 end_import
 
@@ -133,7 +133,7 @@ name|bcel
 operator|.
 name|generic
 operator|.
-name|InstructionConstants
+name|InstructionConst
 import|;
 end_import
 
@@ -346,7 +346,7 @@ literal|"java.lang.Object"
 argument_list|,
 literal|""
 argument_list|,
-name|Constants
+name|Const
 operator|.
 name|ACC_PUBLIC
 argument_list|,
@@ -363,7 +363,7 @@ name|cg
 operator|.
 name|addEmptyConstructor
 argument_list|(
-name|Constants
+name|Const
 operator|.
 name|ACC_PUBLIC
 argument_list|)
@@ -432,7 +432,7 @@ init|=
 operator|new
 name|MethodGen
 argument_list|(
-name|Constants
+name|Const
 operator|.
 name|ACC_PUBLIC
 argument_list|,
@@ -490,7 +490,7 @@ name|il
 operator|.
 name|append
 argument_list|(
-name|InstructionConstants
+name|InstructionConst
 operator|.
 name|DUP
 argument_list|)
@@ -533,7 +533,7 @@ operator|.
 name|STRING
 block|}
 argument_list|,
-name|Constants
+name|Const
 operator|.
 name|INVOKESPECIAL
 argument_list|)
@@ -579,7 +579,7 @@ name|il
 operator|.
 name|append
 argument_list|(
-name|InstructionConstants
+name|InstructionConst
 operator|.
 name|RETURN
 argument_list|)
