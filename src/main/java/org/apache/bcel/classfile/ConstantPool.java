@@ -347,7 +347,7 @@ expr_stmt|;
 block|}
 block|}
 block|}
-comment|/**      * Called by objects that are traversing the nodes of the tree implicitely defined by the contents of a Java class. I.e., the hierarchy of methods, fields,      * attributes, etc. spawns a tree of objects.      *      * @param v Visitor object      */
+comment|/**      * Called by objects that are traversing the nodes of the tree implicitly defined by the contents of a Java class. I.e., the hierarchy of methods, fields,      * attributes, etc. spawns a tree of objects.      *      * @param v Visitor object      */
 annotation|@
 name|Override
 specifier|public

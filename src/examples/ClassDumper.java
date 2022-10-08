@@ -478,7 +478,7 @@ operator|.
 name|readUnsignedShort
 argument_list|()
 expr_stmt|;
-comment|/*          * Interfaces are implicitely abstract, the flag should be set according to the JVM specification.          */
+comment|/*          * Interfaces are implicitly abstract, the flag should be set according to the JVM specification.          */
 if|if
 condition|(
 operator|(
