@@ -1827,6 +1827,12 @@ name|opcode
 return|;
 block|}
 comment|/**      * Read needed data (e.g. index) from file.      *      * @param bytes byte sequence to read from      * @param wide "wide" instruction flag      * @throws IOException may be thrown if the implementation needs to read data from the file      */
+annotation|@
+name|SuppressWarnings
+argument_list|(
+literal|"unused"
+argument_list|)
+comment|// thrown by subclasses
 specifier|protected
 name|void
 name|initFromFile
