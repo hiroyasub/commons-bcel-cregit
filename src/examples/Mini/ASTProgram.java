@@ -1361,7 +1361,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/**      * Overrides SimpleNode.closeNode(). Cast children to appropiate type.      */
+comment|/**      * Overrides SimpleNode.closeNode(). Cast children to appropriate type.      */
 annotation|@
 name|Override
 specifier|public
@@ -1637,7 +1637,7 @@ block|}
 block|}
 block|}
 block|}
-comment|/**      * First pass of parse tree.      *      * Put everything into the environment, which is copied appropiately to each recursion level, i.e. each FunDecl gets its      * own copy that it can further manipulate.      *      * Checks for name clashes of function declarations.      */
+comment|/**      * First pass of parse tree.      *      * Put everything into the environment, which is copied appropriately to each recursion level, i.e. each FunDecl gets its      * own copy that it can further manipulate.      *      * Checks for name clashes of function declarations.      */
 specifier|public
 name|ASTProgram
 name|traverse

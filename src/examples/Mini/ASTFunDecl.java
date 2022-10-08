@@ -1528,7 +1528,7 @@ name|reset
 argument_list|()
 expr_stmt|;
 block|}
-comment|/**      * Overrides SimpleNode.closeNode() Cast children to appropiate type.      */
+comment|/**      * Overrides SimpleNode.closeNode() Cast children to appropriate type.      */
 annotation|@
 name|Override
 specifier|public

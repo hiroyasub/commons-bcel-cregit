@@ -167,7 +167,7 @@ operator|.
 name|MAX_VALUE
 return|;
 block|}
-comment|/**      * Read an instruction from (byte code) input stream and return the appropiate object.      *<p>      * If the Instruction is defined in {@link InstructionConst}, then the singleton instance is returned.      *      * @param bytes input stream bytes      * @return instruction object being read      * @see InstructionConst#getInstruction(int)      */
+comment|/**      * Read an instruction from (byte code) input stream and return the appropriate object.      *<p>      * If the Instruction is defined in {@link InstructionConst}, then the singleton instance is returned.      *      * @param bytes input stream bytes      * @return instruction object being read      * @see InstructionConst#getInstruction(int)      */
 comment|// @since 6.0 no longer final
 specifier|public
 specifier|static

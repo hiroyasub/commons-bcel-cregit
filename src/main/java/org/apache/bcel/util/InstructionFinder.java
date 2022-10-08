@@ -1001,7 +1001,7 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Replace symbolic names of instructions with the appropiate character and remove all white space from string. Meta      * characters such as +, * are ignored.      *      * @param pattern The pattern to compile      * @return translated regular expression string      */
+comment|/**      * Replace symbolic names of instructions with the appropriate character and remove all white space from string. Meta      * characters such as +, * are ignored.      *      * @param pattern The pattern to compile      * @return translated regular expression string      */
 specifier|private
 specifier|static
 name|String

@@ -472,7 +472,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/**      * Overrides ASTExpr.closeNode() Cast children nodes to appropiate types.      */
+comment|/**      * Overrides ASTExpr.closeNode() Cast children nodes to appropriate types.      */
 annotation|@
 name|Override
 specifier|public

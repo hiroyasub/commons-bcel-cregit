@@ -344,7 +344,7 @@ argument_list|)
 expr_stmt|;
 comment|// May be optimized away later
 block|}
-comment|/**      * Overrides ASTExpr.closeNode() Cast children nodes Node[] to appropiate type ASTExpr[]      */
+comment|/**      * Overrides ASTExpr.closeNode() Cast children nodes Node[] to appropriate type ASTExpr[]      */
 annotation|@
 name|Override
 specifier|public
