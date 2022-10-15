@@ -74,7 +74,7 @@ throws|throws
 name|ClassNotFoundException
 block|{
 return|return
-name|getTestClass
+name|getTestJavaClass
 argument_list|(
 name|PACKAGE_BASE_NAME
 operator|+

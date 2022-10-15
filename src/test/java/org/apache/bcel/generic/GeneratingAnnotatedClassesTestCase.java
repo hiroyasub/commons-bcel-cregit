@@ -3310,7 +3310,7 @@ specifier|final
 name|JavaClass
 name|jc
 init|=
-name|getTestClass
+name|getTestJavaClass
 argument_list|(
 name|PACKAGE_BASE_NAME
 operator|+
@@ -3392,7 +3392,7 @@ specifier|final
 name|JavaClass
 name|jc
 init|=
-name|getTestClass
+name|getTestJavaClass
 argument_list|(
 name|PACKAGE_BASE_NAME
 operator|+
@@ -3489,7 +3489,7 @@ specifier|final
 name|JavaClass
 name|jc
 init|=
-name|getTestClass
+name|getTestJavaClass
 argument_list|(
 name|PACKAGE_BASE_NAME
 operator|+
@@ -3798,7 +3798,7 @@ specifier|final
 name|JavaClass
 name|jc
 init|=
-name|getTestClass
+name|getTestJavaClass
 argument_list|(
 name|PACKAGE_BASE_NAME
 operator|+
@@ -3853,7 +3853,7 @@ specifier|final
 name|JavaClass
 name|jc
 init|=
-name|getTestClass
+name|getTestJavaClass
 argument_list|(
 name|PACKAGE_BASE_NAME
 operator|+
@@ -3907,7 +3907,7 @@ specifier|final
 name|JavaClass
 name|jc
 init|=
-name|getTestClass
+name|getTestJavaClass
 argument_list|(
 name|PACKAGE_BASE_NAME
 operator|+

@@ -483,7 +483,7 @@ specifier|final
 name|JavaClass
 name|clazz
 init|=
-name|getTestClass
+name|getTestJavaClass
 argument_list|(
 name|className
 argument_list|)

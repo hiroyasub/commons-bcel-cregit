@@ -111,7 +111,7 @@ specifier|final
 name|JavaClass
 name|clazz
 init|=
-name|getTestClass
+name|getTestJavaClass
 argument_list|(
 literal|"issue362.Bcel362"
 argument_list|)

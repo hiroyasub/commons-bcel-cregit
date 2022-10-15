@@ -93,7 +93,7 @@ block|{
 name|JavaClass
 name|clazz
 init|=
-name|getTestClass
+name|getTestJavaClass
 argument_list|(
 name|PACKAGE_BASE_NAME
 operator|+
@@ -112,7 +112,7 @@ argument_list|)
 expr_stmt|;
 name|clazz
 operator|=
-name|getTestClass
+name|getTestJavaClass
 argument_list|(
 name|PACKAGE_BASE_NAME
 operator|+
