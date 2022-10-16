@@ -1293,7 +1293,7 @@ return|return
 name|c
 return|;
 block|}
-comment|/**      * Gets constant from constant pool.      *      * @param index Index in constant pool      * @return Constant value      * @see Constant      * @throws ClassFormatException if index is invalid      * @since 6.6.0      */
+comment|/**      * Gets constant from constant pool.      *      * @param<T> A {@link Constant} subclass      * @param index Index in constant pool      * @param castTo The {@link Constant} subclass to cast to.      * @return Constant value      * @see Constant      * @throws ClassFormatException if index is invalid      * @since 6.6.0      */
 specifier|public
 parameter_list|<
 name|T
