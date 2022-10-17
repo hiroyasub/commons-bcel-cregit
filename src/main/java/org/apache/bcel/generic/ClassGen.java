@@ -934,7 +934,9 @@ name|addMethodref
 argument_list|(
 name|superClassName
 argument_list|,
-literal|"<init>"
+name|Const
+operator|.
+name|CONSTRUCTOR_NAME
 argument_list|,
 literal|"()V"
 argument_list|)
@@ -969,7 +971,9 @@ name|NO_ARGS
 argument_list|,
 literal|null
 argument_list|,
-literal|"<init>"
+name|Const
+operator|.
+name|CONSTRUCTOR_NAME
 argument_list|,
 name|className
 argument_list|,

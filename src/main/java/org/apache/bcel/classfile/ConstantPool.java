@@ -1293,7 +1293,7 @@ return|return
 name|c
 return|;
 block|}
-comment|/**      * Gets constant from constant pool.      *      * @param index Index in constant pool      * @return Constant value      * @see Constant      * @throws ClassFormatException if index is invalid      * @since 6.6.0      */
+comment|/**      * Gets constant from constant pool.      *      * @param<T> A {@link Constant} subclass      * @param index Index in constant pool      * @param castTo The {@link Constant} subclass to cast to.      * @return Constant value      * @see Constant      * @throws ClassFormatException if index is invalid      * @since 6.6.0      */
 specifier|public
 parameter_list|<
 name|T
@@ -1367,6 +1367,50 @@ operator|==
 literal|null
 condition|)
 block|{
+if|if
+condition|(
+name|index
+operator|!=
+literal|0
+condition|)
+block|{
+comment|// the 0th element is always null
+specifier|final
+name|Constant
+name|prev
+init|=
+name|constantPool
+index|[
+name|index
+operator|-
+literal|1
+index|]
+decl_stmt|;
+if|if
+condition|(
+name|prev
+operator|==
+literal|null
+operator|||
+name|prev
+operator|.
+name|getTag
+argument_list|()
+operator|!=
+name|Const
+operator|.
+name|CONSTANT_Double
+operator|&&
+name|prev
+operator|.
+name|getTag
+argument_list|()
+operator|!=
+name|Const
+operator|.
+name|CONSTANT_Long
+condition|)
+block|{
 throw|throw
 operator|new
 name|ClassFormatException
@@ -1378,6 +1422,8 @@ operator|+
 literal|" is null."
 argument_list|)
 throw|;
+block|}
+block|}
 block|}
 return|return
 name|c
