@@ -230,7 +230,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Utility functions that do not really belong to any class in particular.  *  */
+comment|/**  * Utility functions that do not really belong to any class in particular.  */
 end_comment
 
 begin_comment

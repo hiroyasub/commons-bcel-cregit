@@ -1,6 +1,6 @@
 begin_unit|revision:1.0.0;language:Java;cregit-version:0.0.1
 begin_comment
-comment|/*  * Licensed to the Apache Software Foundation (ASF) under one or more  * contributor license agreements.  See the NOTICE file distributed with  * this work for additional information regarding copyright ownership.  * The ASF licenses this file to You under the Apache License, Version 2.0  * (the "License"); you may not use this file except in compliance with  * the License.  You may obtain a copy of the License at  *  *      http://www.apache.org/licenses/LICENSE-2.0  *  *  Unless required by applicable law or agreed to in writing, software  *  distributed under the License is distributed on an "AS IS" BASIS,  *  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.  *  See the License for the specific language governing permissions and  *  limitations under the License.  *  */
+comment|/*  * Licensed to the Apache Software Foundation (ASF) under one or more  * contributor license agreements.  See the NOTICE file distributed with  * this work for additional information regarding copyright ownership.  * The ASF licenses this file to You under the Apache License, Version 2.0  * (the "License"); you may not use this file except in compliance with  * the License.  You may obtain a copy of the License at  *  *      http://www.apache.org/licenses/LICENSE-2.0  *  *  Unless required by applicable law or agreed to in writing, software  *  distributed under the License is distributed on an "AS IS" BASIS,  *  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.  *  See the License for the specific language governing permissions and  *  limitations under the License.  */
 end_comment
 
 begin_package
@@ -28,7 +28,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * This interface contains shareable instruction objects.  *  * In order to save memory you can use some instructions multiply, since they have an immutable state and are directly  * derived from Instruction. I.e. they have no instance fields that could be changed. Since some of these instructions  * like ICONST_0 occur very frequently this can save a lot of time and space. This feature is an adaptation of the  * FlyWeight design pattern, we just use an array instead of a factory.  *  * The Instructions can also accessed directly under their names, so it's possible to write  * il.append(Instruction.ICONST_0);  *  */
+comment|/**  * This interface contains shareable instruction objects.  *  * In order to save memory you can use some instructions multiply, since they have an immutable state and are directly  * derived from Instruction. I.e. they have no instance fields that could be changed. Since some of these instructions  * like ICONST_0 occur very frequently this can save a lot of time and space. This feature is an adaptation of the  * FlyWeight design pattern, we just use an array instead of a factory.  *  * The Instructions can also accessed directly under their names, so it's possible to write  * il.append(Instruction.ICONST_0);  */
 end_comment
 
 begin_class
