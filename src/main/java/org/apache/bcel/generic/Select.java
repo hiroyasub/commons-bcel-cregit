@@ -614,21 +614,21 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * @param fixed_length the fixed_length to set      * @since 6.0      */
+comment|/**      * @param fixedLength the fixed_length to set      * @since 6.0      */
 specifier|final
 name|void
 name|setFixed_length
 parameter_list|(
 specifier|final
 name|int
-name|fixed_length
+name|fixedLength
 parameter_list|)
 block|{
 name|this
 operator|.
 name|fixed_length
 operator|=
-name|fixed_length
+name|fixedLength
 expr_stmt|;
 block|}
 comment|/** @since 6.0 */
