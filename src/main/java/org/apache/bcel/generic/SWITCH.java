@@ -452,7 +452,7 @@ name|matchIsOrdered
 parameter_list|(
 specifier|final
 name|int
-name|max_gap
+name|maxGap
 parameter_list|)
 block|{
 for|for
@@ -484,7 +484,7 @@ operator|-
 literal|1
 index|]
 operator|>
-name|max_gap
+name|maxGap
 condition|)
 block|{
 return|return

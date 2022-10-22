@@ -367,7 +367,7 @@ argument_list|)
 argument_list|)
 return|;
 block|}
-comment|/**      * Equivalent to runtime "instanceof" operator.      *      * @return true, if clazz is an instance of super_class      * @throws ClassNotFoundException if any superclasses or superinterfaces of clazz can't be found      */
+comment|/**      * Equivalent to runtime "instanceof" operator.      *      * @return true, if clazz is an instance of superclass      * @throws ClassNotFoundException if any superclasses or superinterfaces of clazz can't be found      */
 specifier|public
 specifier|static
 name|boolean
@@ -393,7 +393,7 @@ name|superclass
 argument_list|)
 return|;
 block|}
-comment|/**      * @return true, if clazz is an instance of super_class      * @throws ClassNotFoundException if super_class can't be found      */
+comment|/**      * @return true, if clazz is an instance of superclass      * @throws ClassNotFoundException if superclass can't be found      */
 specifier|public
 specifier|static
 name|boolean
@@ -422,7 +422,7 @@ argument_list|)
 argument_list|)
 return|;
 block|}
-comment|/**      * @return true, if clazz is an instance of super_class      * @throws ClassNotFoundException if clazz can't be found      */
+comment|/**      * @return true, if clazz is an instance of superclass      * @throws ClassNotFoundException if clazz can't be found      */
 specifier|public
 specifier|static
 name|boolean
@@ -451,7 +451,7 @@ name|superclass
 argument_list|)
 return|;
 block|}
-comment|/**      * @return true, if clazz is an instance of super_class      * @throws ClassNotFoundException if either clazz or super_class can't be found      */
+comment|/**      * @return true, if clazz is an instance of superclass      * @throws ClassNotFoundException if either clazz or superclass can't be found      */
 specifier|public
 specifier|static
 name|boolean

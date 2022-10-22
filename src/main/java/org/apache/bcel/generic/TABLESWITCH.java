@@ -114,7 +114,7 @@ operator|)
 operator|(
 literal|13
 operator|+
-name|getMatch_length
+name|getMatchLength
 argument_list|()
 operator|*
 literal|4
@@ -127,7 +127,7 @@ argument_list|(
 name|length
 argument_list|)
 expr_stmt|;
-name|setFixed_length
+name|setFixedLength
 argument_list|(
 name|length
 argument_list|)
@@ -204,16 +204,16 @@ argument_list|)
 expr_stmt|;
 specifier|final
 name|int
-name|match_length
+name|matchLength
 init|=
-name|getMatch_length
+name|getMatchLength
 argument_list|()
 decl_stmt|;
 specifier|final
 name|int
 name|low
 init|=
-name|match_length
+name|matchLength
 operator|>
 literal|0
 condition|?
@@ -237,7 +237,7 @@ specifier|final
 name|int
 name|high
 init|=
-name|match_length
+name|matchLength
 operator|>
 literal|0
 condition|?
@@ -245,7 +245,7 @@ name|super
 operator|.
 name|getMatch
 argument_list|(
-name|match_length
+name|matchLength
 operator|-
 literal|1
 argument_list|)
@@ -268,7 +268,7 @@ literal|0
 init|;
 name|i
 operator|<
-name|match_length
+name|matchLength
 condition|;
 name|i
 operator|++
@@ -351,7 +351,7 @@ name|low
 operator|+
 literal|1
 decl_stmt|;
-name|setMatch_length
+name|setMatchLength
 argument_list|(
 name|matchLength
 argument_list|)
@@ -371,7 +371,7 @@ operator|*
 literal|4
 operator|)
 decl_stmt|;
-name|setFixed_length
+name|setFixedLength
 argument_list|(
 name|fixedLength
 argument_list|)

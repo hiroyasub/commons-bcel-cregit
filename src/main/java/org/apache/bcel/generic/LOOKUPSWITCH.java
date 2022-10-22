@@ -113,7 +113,7 @@ operator|)
 operator|(
 literal|9
 operator|+
-name|getMatch_length
+name|getMatchLength
 argument_list|()
 operator|*
 literal|8
@@ -126,7 +126,7 @@ argument_list|(
 name|length
 argument_list|)
 expr_stmt|;
-name|setFixed_length
+name|setFixedLength
 argument_list|(
 name|length
 argument_list|)
@@ -205,7 +205,7 @@ specifier|final
 name|int
 name|matchLength
 init|=
-name|getMatch_length
+name|getMatchLength
 argument_list|()
 decl_stmt|;
 name|out
@@ -303,7 +303,7 @@ operator|.
 name|readInt
 argument_list|()
 decl_stmt|;
-name|setMatch_length
+name|setMatchLength
 argument_list|(
 name|matchLength
 argument_list|)
@@ -323,7 +323,7 @@ operator|*
 literal|8
 operator|)
 decl_stmt|;
-name|setFixed_length
+name|setFixedLength
 argument_list|(
 name|fixedLength
 argument_list|)

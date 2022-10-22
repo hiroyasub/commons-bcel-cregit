@@ -767,7 +767,7 @@ name|PassVerifier
 implements|implements
 name|Constants
 block|{
-comment|/**      * A Visitor class that ensures the constant pool satisfies the static constraints. The visitXXX() methods throw      * ClassConstraintException instances otherwise.      *      * @see #constant_pool_entries_satisfy_static_constraints()      */
+comment|/**      * A Visitor class that ensures the constant pool satisfies the static constraints. The visitXXX() methods throw      * ClassConstraintException instances otherwise.      *      * @see #constantPoolEntriesSatisfyStaticConstraints()      */
 specifier|private
 specifier|final
 class|class
@@ -4415,7 +4415,7 @@ expr_stmt|;
 block|}
 specifier|final
 name|int
-name|innername_idx
+name|innernameIdx
 init|=
 name|ic
 operator|.
@@ -4424,7 +4424,7 @@ argument_list|()
 decl_stmt|;
 if|if
 condition|(
-name|innername_idx
+name|innernameIdx
 operator|!=
 literal|0
 condition|)
@@ -4433,7 +4433,7 @@ name|checkIndex
 argument_list|(
 name|innerClasses
 argument_list|,
-name|innername_idx
+name|innernameIdx
 argument_list|,
 name|CONST_Utf8
 argument_list|)
@@ -6380,7 +6380,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/**      * A Visitor class that ensures the ConstantCP-subclassed entries of the constant pool are valid.<B>Precondition:      * index-style cross referencing in the constant pool must be valid.</B>      *      * @see #constant_pool_entries_satisfy_static_constraints()      * @see org.apache.bcel.classfile.ConstantCP      */
+comment|/**      * A Visitor class that ensures the ConstantCP-subclassed entries of the constant pool are valid.<B>Precondition:      * index-style cross referencing in the constant pool must be valid.</B>      *      * @see #constantPoolEntriesSatisfyStaticConstraints()      * @see org.apache.bcel.classfile.ConstantCP      */
 specifier|private
 specifier|final
 class|class
@@ -7672,7 +7672,7 @@ block|}
 comment|/**      * Ensures that the constant pool entries satisfy the static constraints as described in The Java Virtual Machine      * Specification, 2nd Edition.      *      * @throws ClassConstraintException otherwise.      */
 specifier|private
 name|void
-name|constant_pool_entries_satisfy_static_constraints
+name|constantPoolEntriesSatisfyStaticConstraints
 parameter_list|()
 block|{
 try|try
@@ -7787,16 +7787,16 @@ decl_stmt|;
 comment|// default.
 try|try
 block|{
-name|constant_pool_entries_satisfy_static_constraints
+name|constantPoolEntriesSatisfyStaticConstraints
 argument_list|()
 expr_stmt|;
-name|field_and_method_refs_are_valid
+name|fieldAndMethodRefsAreValid
 argument_list|()
 expr_stmt|;
-name|every_class_has_an_accessible_superclass
+name|everyClassHasAnAccessibleSuperclass
 argument_list|()
 expr_stmt|;
-name|final_methods_are_not_overridden
+name|finalMethodsAreNotOverridden
 argument_list|()
 expr_stmt|;
 block|}
@@ -7857,7 +7857,7 @@ block|}
 comment|/**      * Ensures that every class has a super class and that<B>final</B> classes are not subclassed. This means, the class      * this Pass2Verifier operates on has proper super classes (transitively) up to java.lang.Object. The reason for really      * loading (and Pass1-verifying) all of those classes here is that we need them in Pass2 anyway to verify no final      * methods are overridden (that could be declared anywhere in the ancestor hierarchy).      *      * @throws ClassConstraintException otherwise.      */
 specifier|private
 name|void
-name|every_class_has_an_accessible_superclass
+name|everyClassHasAnAccessibleSuperclass
 parameter_list|()
 block|{
 try|try
@@ -8082,10 +8082,10 @@ argument_list|)
 throw|;
 block|}
 block|}
-comment|/**      * Ensures that the ConstantCP-subclassed entries of the constant pool are valid. According to "Yellin: Low Level      * Security in Java", this method does not verify the existence of referenced entities (such as classes) but only the      * formal correctness (such as well-formed signatures). The visitXXX() methods throw ClassConstraintException instances      * otherwise.<B>Precondition: index-style cross referencing in the constant pool must be valid. Simply invoke      * constant_pool_entries_satisfy_static_constraints() before.</B>      *      * @throws ClassConstraintException otherwise.      * @see #constant_pool_entries_satisfy_static_constraints()      */
+comment|/**      * Ensures that the ConstantCP-subclassed entries of the constant pool are valid. According to "Yellin: Low Level      * Security in Java", this method does not verify the existence of referenced entities (such as classes) but only the      * formal correctness (such as well-formed signatures). The visitXXX() methods throw ClassConstraintException instances      * otherwise.<B>Precondition: index-style cross referencing in the constant pool must be valid. Simply invoke      * constant_pool_entries_satisfy_static_constraints() before.</B>      *      * @throws ClassConstraintException otherwise.      * @see #constantPoolEntriesSatisfyStaticConstraints()      */
 specifier|private
 name|void
-name|field_and_method_refs_are_valid
+name|fieldAndMethodRefsAreValid
 parameter_list|()
 block|{
 try|try
@@ -8147,10 +8147,10 @@ argument_list|)
 throw|;
 block|}
 block|}
-comment|/**      * Ensures that<B>final</B> methods are not overridden.<B>Precondition to run this method:      * constant_pool_entries_satisfy_static_constraints() and every_class_has_an_accessible_superclass() have to be invoked      * before (in that order).</B>      *      * @throws ClassConstraintException otherwise.      * @see #constant_pool_entries_satisfy_static_constraints()      * @see #every_class_has_an_accessible_superclass()      */
+comment|/**      * Ensures that<B>final</B> methods are not overridden.<B>Precondition to run this method:      * constant_pool_entries_satisfy_static_constraints() and every_class_has_an_accessible_superclass() have to be invoked      * before (in that order).</B>      *      * @throws ClassConstraintException otherwise.      * @see #constantPoolEntriesSatisfyStaticConstraints()      * @see #everyClassHasAnAccessibleSuperclass()      */
 specifier|private
 name|void
-name|final_methods_are_not_overridden
+name|finalMethodsAreNotOverridden
 parameter_list|()
 block|{
 try|try

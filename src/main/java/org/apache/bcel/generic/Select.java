@@ -436,7 +436,7 @@ block|}
 comment|/**      * @return the fixed_length      * @since 6.0      */
 specifier|final
 name|int
-name|getFixed_length
+name|getFixedLength
 parameter_list|()
 block|{
 return|return
@@ -491,7 +491,7 @@ block|}
 comment|/**      * @return the match_length      * @since 6.0      */
 specifier|final
 name|int
-name|getMatch_length
+name|getMatchLength
 parameter_list|()
 block|{
 return|return
@@ -617,7 +617,7 @@ block|}
 comment|/**      * @param fixedLength the fixed_length to set      * @since 6.0      */
 specifier|final
 name|void
-name|setFixed_length
+name|setFixedLength
 parameter_list|(
 specifier|final
 name|int
@@ -698,7 +698,7 @@ block|}
 comment|/**      * @param matchLength the match_length to set      * @since 6.0      */
 specifier|final
 name|int
-name|setMatch_length
+name|setMatchLength
 parameter_list|(
 specifier|final
 name|int

@@ -885,7 +885,7 @@ init|=
 literal|null
 decl_stmt|;
 name|int
-name|skip_jsr
+name|skipJsr
 init|=
 literal|0
 decl_stmt|;
@@ -911,7 +911,7 @@ control|)
 block|{
 if|if
 condition|(
-name|skip_jsr
+name|skipJsr
 operator|<
 literal|0
 condition|)
@@ -945,7 +945,7 @@ condition|)
 block|{
 if|if
 condition|(
-name|skip_jsr
+name|skipJsr
 operator|==
 literal|0
 condition|)
@@ -961,7 +961,7 @@ argument_list|)
 expr_stmt|;
 break|break;
 block|}
-name|skip_jsr
+name|skipJsr
 operator|--
 expr_stmt|;
 block|}
@@ -983,7 +983,7 @@ operator|instanceof
 name|RET
 condition|)
 block|{
-name|skip_jsr
+name|skipJsr
 operator|++
 expr_stmt|;
 block|}

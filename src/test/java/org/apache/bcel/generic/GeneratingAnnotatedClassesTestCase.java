@@ -959,7 +959,7 @@ argument_list|)
 decl_stmt|;
 specifier|final
 name|int
-name|var_ex_slot
+name|varExSlot
 init|=
 name|varEx
 operator|.
@@ -977,7 +977,7 @@ argument_list|(
 operator|new
 name|ASTORE
 argument_list|(
-name|var_ex_slot
+name|varExSlot
 argument_list|)
 argument_list|)
 decl_stmt|;

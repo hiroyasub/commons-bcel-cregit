@@ -1308,7 +1308,7 @@ name|constantPoolGen
 argument_list|)
 argument_list|)
 operator|&&
-name|objarrayequals
+name|objArrayEquals
 argument_list|(
 name|Type
 operator|.
@@ -1549,7 +1549,7 @@ block|}
 comment|/**          * Utility method to return the max_locals value of the method verified by the surrounding Pass3aVerifier instance.          */
 specifier|private
 name|int
-name|max_locals
+name|maxLocals
 parameter_list|()
 block|{
 try|try
@@ -1602,7 +1602,7 @@ block|}
 comment|/**          * A utility method like equals(Object) for arrays. The equality of the elements is based on their equals(Object) method          * instead of their object identity.          */
 specifier|private
 name|boolean
-name|objarrayequals
+name|objArrayEquals
 parameter_list|(
 specifier|final
 name|Object
@@ -1719,7 +1719,7 @@ specifier|final
 name|int
 name|maxminus1
 init|=
-name|max_locals
+name|maxLocals
 argument_list|()
 operator|-
 literal|1
@@ -1917,7 +1917,7 @@ specifier|final
 name|int
 name|maxminus1
 init|=
-name|max_locals
+name|maxLocals
 argument_list|()
 operator|-
 literal|1
@@ -2057,7 +2057,7 @@ specifier|final
 name|int
 name|maxminus2
 init|=
-name|max_locals
+name|maxLocals
 argument_list|()
 operator|-
 literal|2
@@ -2135,7 +2135,7 @@ specifier|final
 name|int
 name|maxminus2
 init|=
-name|max_locals
+name|maxLocals
 argument_list|()
 operator|-
 literal|2
@@ -2592,7 +2592,7 @@ specifier|final
 name|int
 name|maxminus1
 init|=
-name|max_locals
+name|maxLocals
 argument_list|()
 operator|-
 literal|1
@@ -2668,7 +2668,7 @@ specifier|final
 name|int
 name|maxminus1
 init|=
-name|max_locals
+name|maxLocals
 argument_list|()
 operator|-
 literal|1
@@ -2897,7 +2897,7 @@ specifier|final
 name|int
 name|maxminus1
 init|=
-name|max_locals
+name|maxLocals
 argument_list|()
 operator|-
 literal|1
@@ -2973,7 +2973,7 @@ specifier|final
 name|int
 name|maxminus1
 init|=
-name|max_locals
+name|maxLocals
 argument_list|()
 operator|-
 literal|1
@@ -3992,7 +3992,7 @@ name|constantPoolGen
 argument_list|)
 argument_list|)
 operator|&&
-name|objarrayequals
+name|objArrayEquals
 argument_list|(
 name|Type
 operator|.
@@ -4400,7 +4400,7 @@ specifier|final
 name|int
 name|maxminus1
 init|=
-name|max_locals
+name|maxLocals
 argument_list|()
 operator|-
 literal|1
@@ -4668,7 +4668,7 @@ specifier|final
 name|int
 name|maxminus2
 init|=
-name|max_locals
+name|maxLocals
 argument_list|()
 operator|-
 literal|2
@@ -4957,7 +4957,7 @@ specifier|final
 name|int
 name|maxminus2
 init|=
-name|max_locals
+name|maxLocals
 argument_list|()
 operator|-
 literal|2
@@ -5665,7 +5665,7 @@ specifier|final
 name|int
 name|maxminus1
 init|=
-name|max_locals
+name|maxLocals
 argument_list|()
 operator|-
 literal|1
@@ -5863,7 +5863,7 @@ operator|new
 name|IntList
 argument_list|()
 decl_stmt|;
-name|lineNumber_loop
+name|lineNumberLoop
 label|:
 for|for
 control|(
@@ -5941,7 +5941,7 @@ argument_list|)
 expr_stmt|;
 block|}
 continue|continue
-name|lineNumber_loop
+name|lineNumberLoop
 continue|;
 block|}
 block|}
