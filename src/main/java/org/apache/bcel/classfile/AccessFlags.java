@@ -54,7 +54,7 @@ name|AccessFlags
 parameter_list|()
 block|{
 block|}
-comment|/**      * @param a inital access flags      */
+comment|/**      * @param a initial access flags      */
 specifier|public
 name|AccessFlags
 parameter_list|(
