@@ -612,7 +612,7 @@ comment|// `name' valid from here
 comment|// try { ...
 specifier|final
 name|InstructionHandle
-name|try_start
+name|tryStart
 init|=
 name|il
 operator|.
@@ -739,7 +739,7 @@ argument_list|)
 decl_stmt|;
 specifier|final
 name|InstructionHandle
-name|try_end
+name|tryEnd
 init|=
 name|il
 operator|.
@@ -827,9 +827,9 @@ name|mg
 operator|.
 name|addExceptionHandler
 argument_list|(
-name|try_start
+name|tryStart
 argument_list|,
-name|try_end
+name|tryEnd
 argument_list|,
 name|handler
 argument_list|,

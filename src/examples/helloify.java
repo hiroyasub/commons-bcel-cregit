@@ -651,7 +651,7 @@ argument_list|()
 decl_stmt|;
 specifier|final
 name|String
-name|file_name
+name|fileName
 init|=
 name|arg
 operator|.
@@ -765,7 +765,7 @@ name|javaClass
 operator|.
 name|dump
 argument_list|(
-name|file_name
+name|fileName
 argument_list|)
 expr_stmt|;
 block|}

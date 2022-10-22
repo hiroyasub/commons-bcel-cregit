@@ -947,7 +947,7 @@ name|code
 parameter_list|)
 block|{
 name|int
-name|label_counter
+name|labelCounter
 init|=
 literal|0
 decl_stmt|;
@@ -1075,7 +1075,7 @@ name|target
 argument_list|,
 literal|"Label"
 operator|+
-name|label_counter
+name|labelCounter
 operator|++
 operator|+
 literal|":"
@@ -1098,7 +1098,7 @@ name|ih
 argument_list|,
 literal|"Label"
 operator|+
-name|label_counter
+name|labelCounter
 operator|++
 operator|+
 literal|":"
@@ -1139,7 +1139,7 @@ name|ih
 argument_list|,
 literal|"Label"
 operator|+
-name|label_counter
+name|labelCounter
 operator|++
 operator|+
 literal|":"
@@ -1158,7 +1158,7 @@ name|ih
 argument_list|,
 literal|"Label"
 operator|+
-name|label_counter
+name|labelCounter
 operator|++
 operator|+
 literal|":"
@@ -1198,7 +1198,7 @@ name|ih
 argument_list|,
 literal|"Label"
 operator|+
-name|label_counter
+name|labelCounter
 operator|++
 operator|+
 literal|":"
@@ -1217,7 +1217,7 @@ name|ih
 argument_list|,
 literal|"Label"
 operator|+
-name|label_counter
+name|labelCounter
 operator|++
 operator|+
 literal|":"
@@ -1236,7 +1236,7 @@ name|ih
 argument_list|,
 literal|"Label"
 operator|+
-name|label_counter
+name|labelCounter
 operator|++
 operator|+
 literal|":"
