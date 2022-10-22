@@ -160,13 +160,13 @@ name|FieldGenOrMethodGen
 parameter_list|(
 specifier|final
 name|int
-name|access_flags
+name|accessFlags
 parameter_list|)
 block|{
 comment|// TODO could this be package protected?
 name|super
 argument_list|(
-name|access_flags
+name|accessFlags
 argument_list|)
 expr_stmt|;
 block|}

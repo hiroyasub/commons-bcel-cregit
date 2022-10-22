@@ -299,7 +299,7 @@ name|LocalVariableTypeTable
 parameter_list|(
 specifier|final
 name|int
-name|name_index
+name|nameIndex
 parameter_list|,
 specifier|final
 name|int
@@ -312,7 +312,7 @@ name|local_variable_table
 parameter_list|,
 specifier|final
 name|ConstantPool
-name|constant_pool
+name|constantPool
 parameter_list|)
 block|{
 name|super
@@ -321,11 +321,11 @@ name|Const
 operator|.
 name|ATTR_LOCAL_VARIABLE_TYPE_TABLE
 argument_list|,
-name|name_index
+name|nameIndex
 argument_list|,
 name|length
 argument_list|,
-name|constant_pool
+name|constantPool
 argument_list|)
 expr_stmt|;
 name|this
@@ -395,7 +395,7 @@ name|copy
 parameter_list|(
 specifier|final
 name|ConstantPool
-name|constant_pool
+name|constantPool
 parameter_list|)
 block|{
 specifier|final
@@ -443,7 +443,7 @@ name|c
 operator|.
 name|setConstantPool
 argument_list|(
-name|constant_pool
+name|constantPool
 argument_list|)
 expr_stmt|;
 return|return
@@ -595,14 +595,14 @@ parameter_list|(
 specifier|final
 name|LocalVariable
 index|[]
-name|local_variable_table
+name|localVariableTable
 parameter_list|)
 block|{
 name|this
 operator|.
 name|localVariableTypeTable
 operator|=
-name|local_variable_table
+name|localVariableTable
 expr_stmt|;
 block|}
 comment|/**      * @return String representation.      */

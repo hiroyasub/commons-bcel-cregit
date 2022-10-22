@@ -698,7 +698,7 @@ name|flag
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Set access flags aka "modifiers".      *      * @param access_flags Access flags of the object.      */
+comment|/**      * Set access flags aka "modifiers".      *      * @param accessFlags Access flags of the object.      */
 specifier|public
 specifier|final
 name|void
@@ -706,14 +706,14 @@ name|setAccessFlags
 parameter_list|(
 specifier|final
 name|int
-name|access_flags
+name|accessFlags
 parameter_list|)
 block|{
 name|this
 operator|.
 name|access_flags
 operator|=
-name|access_flags
+name|accessFlags
 expr_stmt|;
 block|}
 specifier|private
@@ -764,7 +764,7 @@ name|flag
 expr_stmt|;
 block|}
 block|}
-comment|/**      * Set access flags aka "modifiers".      *      * @param access_flags Access flags of the object.      */
+comment|/**      * Set access flags aka "modifiers".      *      * @param accessFlags Access flags of the object.      */
 specifier|public
 specifier|final
 name|void
@@ -772,12 +772,12 @@ name|setModifiers
 parameter_list|(
 specifier|final
 name|int
-name|access_flags
+name|accessFlags
 parameter_list|)
 block|{
 name|setAccessFlags
 argument_list|(
-name|access_flags
+name|accessFlags
 argument_list|)
 expr_stmt|;
 block|}

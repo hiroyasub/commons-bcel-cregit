@@ -1090,7 +1090,7 @@ expr_stmt|;
 comment|// Get method name and its class (compacted)
 specifier|final
 name|String
-name|field_class
+name|fieldClass
 init|=
 name|constantPool
 operator|.
@@ -1104,23 +1104,23 @@ name|CONSTANT_Class
 argument_list|)
 decl_stmt|;
 name|String
-name|short_field_class
+name|shortFieldClass
 init|=
 name|Utility
 operator|.
 name|compactClassName
 argument_list|(
-name|field_class
+name|fieldClass
 argument_list|)
 decl_stmt|;
 comment|// I.e., remove java.lang.
-name|short_field_class
+name|shortFieldClass
 operator|=
 name|Utility
 operator|.
 name|compactClassName
 argument_list|(
-name|short_field_class
+name|shortFieldClass
 argument_list|,
 name|classPackage
 operator|+
@@ -1132,7 +1132,7 @@ expr_stmt|;
 comment|// Remove class package prefix
 specifier|final
 name|String
-name|field_name
+name|fieldName
 init|=
 name|constantPool
 operator|.
@@ -1147,7 +1147,7 @@ argument_list|)
 decl_stmt|;
 if|if
 condition|(
-name|field_class
+name|fieldClass
 operator|.
 name|equals
 argument_list|(
@@ -1159,15 +1159,15 @@ name|ref
 operator|=
 literal|"<A HREF=\""
 operator|+
-name|field_class
+name|fieldClass
 operator|+
 literal|"_methods.html#field"
 operator|+
-name|field_name
+name|fieldName
 operator|+
 literal|"\" TARGET=Methods>"
 operator|+
-name|field_name
+name|fieldName
 operator|+
 literal|"</A>"
 expr_stmt|;
@@ -1178,15 +1178,15 @@ name|ref
 operator|=
 literal|"<A HREF=\""
 operator|+
-name|field_class
+name|fieldClass
 operator|+
 literal|".html\" TARGET=_top>"
 operator|+
-name|short_field_class
+name|shortFieldClass
 operator|+
 literal|"</A>."
 operator|+
-name|field_name
+name|fieldName
 operator|+
 literal|"\n"
 expr_stmt|;
@@ -1206,7 +1206,7 @@ name|classIndex
 operator|+
 literal|"\" TARGET=Constants>"
 operator|+
-name|short_field_class
+name|shortFieldClass
 operator|+
 literal|"</A>.<A HREF=\""
 operator|+
@@ -1218,7 +1218,7 @@ name|index
 operator|+
 literal|"\" TARGET=ConstantPool>"
 operator|+
-name|field_name
+name|fieldName
 operator|+
 literal|"</A>"
 expr_stmt|;
@@ -1485,7 +1485,7 @@ argument_list|()
 expr_stmt|;
 specifier|final
 name|int
-name|signature_index
+name|signatureIndex
 init|=
 name|c6
 operator|.
@@ -1526,11 +1526,11 @@ literal|")</A>\n"
 operator|+
 literal|"<LI><A HREF=\"#cp"
 operator|+
-name|signature_index
+name|signatureIndex
 operator|+
 literal|"\">Signature index("
 operator|+
-name|signature_index
+name|signatureIndex
 operator|+
 literal|")</A></UL>\n"
 argument_list|)

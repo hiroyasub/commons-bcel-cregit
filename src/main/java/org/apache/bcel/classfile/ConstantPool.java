@@ -272,7 +272,7 @@ name|tag
 decl_stmt|;
 specifier|final
 name|int
-name|constant_pool_count
+name|constantPoolCount
 init|=
 name|input
 operator|.
@@ -284,7 +284,7 @@ operator|=
 operator|new
 name|Constant
 index|[
-name|constant_pool_count
+name|constantPoolCount
 index|]
 expr_stmt|;
 comment|/*          * constantPool[0] is unused by the compiler and may be used freely by the implementation.          */
@@ -297,7 +297,7 @@ literal|1
 init|;
 name|i
 operator|<
-name|constant_pool_count
+name|constantPoolCount
 condition|;
 name|i
 operator|++

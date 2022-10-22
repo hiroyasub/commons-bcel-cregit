@@ -275,7 +275,7 @@ return|return
 name|name_and_type_index
 return|;
 block|}
-comment|/**      * @param class_index points to Constant_class      */
+comment|/**      * @param classIndex points to Constant_class      */
 specifier|public
 specifier|final
 name|void
@@ -283,14 +283,14 @@ name|setClassIndex
 parameter_list|(
 specifier|final
 name|int
-name|class_index
+name|classIndex
 parameter_list|)
 block|{
 name|this
 operator|.
 name|class_index
 operator|=
-name|class_index
+name|classIndex
 expr_stmt|;
 block|}
 comment|/**      * @param nameAndTypeIndex points to Constant_NameAndType      */

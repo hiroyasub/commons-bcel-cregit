@@ -120,12 +120,12 @@ index|[]
 name|lineNumberTable
 decl_stmt|;
 comment|// Table of line/numbers pairs
-comment|/**      * Construct object from input stream.      *      * @param name_index Index of name      * @param length Content length in bytes      * @param input Input stream      * @param constant_pool Array of constants      * @throws IOException if an I/O Exception occurs in readUnsignedShort      */
+comment|/**      * Construct object from input stream.      *      * @param nameIndex Index of name      * @param length Content length in bytes      * @param input Input stream      * @param constantPool Array of constants      * @throws IOException if an I/O Exception occurs in readUnsignedShort      */
 name|LineNumberTable
 parameter_list|(
 specifier|final
 name|int
-name|name_index
+name|nameIndex
 parameter_list|,
 specifier|final
 name|int
@@ -137,14 +137,14 @@ name|input
 parameter_list|,
 specifier|final
 name|ConstantPool
-name|constant_pool
+name|constantPool
 parameter_list|)
 throws|throws
 name|IOException
 block|{
 name|this
 argument_list|(
-name|name_index
+name|nameIndex
 argument_list|,
 name|length
 argument_list|,
@@ -154,12 +154,12 @@ index|[]
 operator|)
 literal|null
 argument_list|,
-name|constant_pool
+name|constantPool
 argument_list|)
 expr_stmt|;
 specifier|final
 name|int
-name|line_number_table_length
+name|lineNumberTableLength
 init|=
 name|input
 operator|.
@@ -171,7 +171,7 @@ operator|=
 operator|new
 name|LineNumber
 index|[
-name|line_number_table_length
+name|lineNumberTableLength
 index|]
 expr_stmt|;
 for|for
@@ -183,7 +183,7 @@ literal|0
 init|;
 name|i
 operator|<
-name|line_number_table_length
+name|lineNumberTableLength
 condition|;
 name|i
 operator|++
@@ -202,13 +202,13 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/*      * @param name_index Index of name      *      * @param length Content length in bytes      *      * @param lineNumberTable Table of line/numbers pairs      *      * @param constant_pool Array of constants      */
+comment|/*      * @param nameIndex Index of name      *      * @param length Content length in bytes      *      * @param lineNumberTable Table of line/numbers pairs      *      * @param constant_pool Array of constants      */
 specifier|public
 name|LineNumberTable
 parameter_list|(
 specifier|final
 name|int
-name|name_index
+name|nameIndex
 parameter_list|,
 specifier|final
 name|int
@@ -217,11 +217,11 @@ parameter_list|,
 specifier|final
 name|LineNumber
 index|[]
-name|line_number_table
+name|lineNumberTable
 parameter_list|,
 specifier|final
 name|ConstantPool
-name|constant_pool
+name|constantPool
 parameter_list|)
 block|{
 name|super
@@ -230,18 +230,18 @@ name|Const
 operator|.
 name|ATTR_LINE_NUMBER_TABLE
 argument_list|,
-name|name_index
+name|nameIndex
 argument_list|,
 name|length
 argument_list|,
-name|constant_pool
+name|constantPool
 argument_list|)
 expr_stmt|;
 name|this
 operator|.
 name|lineNumberTable
 operator|=
-name|line_number_table
+name|lineNumberTable
 expr_stmt|;
 block|}
 comment|/*      * Initialize from another object. Note that both objects use the same references (shallow copy). Use copy() for a      * physical copy.      */
@@ -459,7 +459,7 @@ literal|1
 return|;
 block|}
 name|int
-name|min_index
+name|minIndex
 init|=
 operator|-
 literal|1
@@ -551,7 +551,7 @@ name|min
 operator|=
 name|j
 expr_stmt|;
-name|min_index
+name|minIndex
 operator|=
 name|i
 expr_stmt|;
@@ -567,7 +567,7 @@ do|;
 comment|/*          * It's possible that we did not find any valid entry for the bytecode offset we were looking for.          */
 if|if
 condition|(
-name|min_index
+name|minIndex
 operator|<
 literal|0
 condition|)
@@ -580,7 +580,7 @@ block|}
 return|return
 name|lineNumberTable
 index|[
-name|min_index
+name|minIndex
 index|]
 operator|.
 name|getLineNumber

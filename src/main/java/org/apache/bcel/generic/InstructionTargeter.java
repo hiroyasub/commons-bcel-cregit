@@ -33,15 +33,15 @@ name|InstructionHandle
 name|ih
 parameter_list|)
 function_decl|;
-comment|/**      * Replaces the target of this targeter from this old handle to the new handle.      *      * @param old_ih the old handle      * @param new_ih the new handle      * @throws ClassGenException if old_ih is not targeted by this object      */
+comment|/**      * Replaces the target of this targeter from this old handle to the new handle.      *      * @param oldIh the old handle      * @param newIh the new handle      * @throws ClassGenException if old_ih is not targeted by this object      */
 name|void
 name|updateTarget
 parameter_list|(
 name|InstructionHandle
-name|old_ih
+name|oldIh
 parameter_list|,
 name|InstructionHandle
-name|new_ih
+name|newIh
 parameter_list|)
 throws|throws
 name|ClassGenException

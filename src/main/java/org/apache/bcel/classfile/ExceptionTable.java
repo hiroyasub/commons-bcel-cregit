@@ -171,7 +171,7 @@ argument_list|)
 expr_stmt|;
 specifier|final
 name|int
-name|number_of_exceptions
+name|exceptionCount
 init|=
 name|input
 operator|.
@@ -183,7 +183,7 @@ operator|=
 operator|new
 name|int
 index|[
-name|number_of_exceptions
+name|exceptionCount
 index|]
 expr_stmt|;
 for|for
@@ -195,7 +195,7 @@ literal|0
 init|;
 name|i
 operator|<
-name|number_of_exceptions
+name|exceptionCount
 condition|;
 name|i
 operator|++
@@ -213,13 +213,13 @@ argument_list|()
 expr_stmt|;
 block|}
 block|}
-comment|/**      * @param name_index Index in constant pool      * @param length Content length in bytes      * @param exceptionIndexTable Table of indices in constant pool      * @param constant_pool Array of constants      */
+comment|/**      * @param nameIndex Index in constant pool      * @param length Content length in bytes      * @param exceptionIndexTable Table of indices in constant pool      * @param constantPool Array of constants      */
 specifier|public
 name|ExceptionTable
 parameter_list|(
 specifier|final
 name|int
-name|name_index
+name|nameIndex
 parameter_list|,
 specifier|final
 name|int
@@ -232,7 +232,7 @@ name|exceptionIndexTable
 parameter_list|,
 specifier|final
 name|ConstantPool
-name|constant_pool
+name|constantPool
 parameter_list|)
 block|{
 name|super
@@ -241,11 +241,11 @@ name|Const
 operator|.
 name|ATTR_EXCEPTIONS
 argument_list|,
-name|name_index
+name|nameIndex
 argument_list|,
 name|length
 argument_list|,
-name|constant_pool
+name|constantPool
 argument_list|)
 expr_stmt|;
 name|this

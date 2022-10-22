@@ -917,7 +917,7 @@ argument_list|()
 decl_stmt|;
 specifier|final
 name|int
-name|name_index
+name|nameIndex
 init|=
 name|super
 operator|.
@@ -934,7 +934,7 @@ argument_list|)
 decl_stmt|;
 specifier|final
 name|int
-name|signature_index
+name|signatureIndex
 init|=
 name|super
 operator|.
@@ -1016,9 +1016,9 @@ operator|.
 name|getAccessFlags
 argument_list|()
 argument_list|,
-name|name_index
+name|nameIndex
 argument_list|,
-name|signature_index
+name|signatureIndex
 argument_list|,
 name|getAttributes
 argument_list|()

@@ -125,12 +125,12 @@ name|ModuleProvides
 index|[]
 name|providesTable
 decl_stmt|;
-comment|/**      * Construct object from input stream.      *      * @param name_index Index in constant pool      * @param length Content length in bytes      * @param input Input stream      * @param constant_pool Array of constants      * @throws IOException if an I/O error occurs.      */
+comment|/**      * Construct object from input stream.      *      * @param nameIndex Index in constant pool      * @param length Content length in bytes      * @param input Input stream      * @param constantPool Array of constants      * @throws IOException if an I/O error occurs.      */
 name|Module
 parameter_list|(
 specifier|final
 name|int
-name|name_index
+name|nameIndex
 parameter_list|,
 specifier|final
 name|int
@@ -142,7 +142,7 @@ name|input
 parameter_list|,
 specifier|final
 name|ConstantPool
-name|constant_pool
+name|constantPool
 parameter_list|)
 throws|throws
 name|IOException
@@ -153,11 +153,11 @@ name|Const
 operator|.
 name|ATTR_MODULE
 argument_list|,
-name|name_index
+name|nameIndex
 argument_list|,
 name|length
 argument_list|,
-name|constant_pool
+name|constantPool
 argument_list|)
 expr_stmt|;
 name|moduleNameIndex
@@ -183,7 +183,7 @@ argument_list|()
 expr_stmt|;
 specifier|final
 name|int
-name|requires_count
+name|requiresCount
 init|=
 name|input
 operator|.
@@ -195,7 +195,7 @@ operator|=
 operator|new
 name|ModuleRequires
 index|[
-name|requires_count
+name|requiresCount
 index|]
 expr_stmt|;
 for|for
@@ -207,7 +207,7 @@ literal|0
 init|;
 name|i
 operator|<
-name|requires_count
+name|requiresCount
 condition|;
 name|i
 operator|++
@@ -227,7 +227,7 @@ expr_stmt|;
 block|}
 specifier|final
 name|int
-name|exports_count
+name|exportsCount
 init|=
 name|input
 operator|.
@@ -239,7 +239,7 @@ operator|=
 operator|new
 name|ModuleExports
 index|[
-name|exports_count
+name|exportsCount
 index|]
 expr_stmt|;
 for|for
@@ -251,7 +251,7 @@ literal|0
 init|;
 name|i
 operator|<
-name|exports_count
+name|exportsCount
 condition|;
 name|i
 operator|++
@@ -271,7 +271,7 @@ expr_stmt|;
 block|}
 specifier|final
 name|int
-name|opens_count
+name|opensCount
 init|=
 name|input
 operator|.
@@ -283,7 +283,7 @@ operator|=
 operator|new
 name|ModuleOpens
 index|[
-name|opens_count
+name|opensCount
 index|]
 expr_stmt|;
 for|for
@@ -295,7 +295,7 @@ literal|0
 init|;
 name|i
 operator|<
-name|opens_count
+name|opensCount
 condition|;
 name|i
 operator|++
@@ -356,7 +356,7 @@ expr_stmt|;
 block|}
 specifier|final
 name|int
-name|provides_count
+name|providesCount
 init|=
 name|input
 operator|.
@@ -368,7 +368,7 @@ operator|=
 operator|new
 name|ModuleProvides
 index|[
-name|provides_count
+name|providesCount
 index|]
 expr_stmt|;
 for|for
@@ -380,7 +380,7 @@ literal|0
 init|;
 name|i
 operator|<
-name|provides_count
+name|providesCount
 condition|;
 name|i
 operator|++

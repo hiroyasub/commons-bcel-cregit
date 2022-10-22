@@ -466,7 +466,7 @@ throws|throws
 name|Exception
 block|{
 name|JavaClass
-name|java_class
+name|javaClass
 decl_stmt|;
 if|if
 condition|(
@@ -500,7 +500,7 @@ block|{
 if|if
 condition|(
 operator|(
-name|java_class
+name|javaClass
 operator|=
 name|Repository
 operator|.
@@ -513,7 +513,7 @@ operator|==
 literal|null
 condition|)
 block|{
-name|java_class
+name|javaClass
 operator|=
 operator|new
 name|ClassParser
@@ -528,7 +528,7 @@ block|}
 name|String
 name|className
 init|=
-name|java_class
+name|javaClass
 operator|.
 name|getClassName
 argument_list|()
@@ -632,7 +632,7 @@ block|{
 operator|new
 name|JasminVisitor
 argument_list|(
-name|java_class
+name|javaClass
 argument_list|,
 name|out
 argument_list|)

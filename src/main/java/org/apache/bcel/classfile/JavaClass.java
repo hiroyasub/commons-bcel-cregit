@@ -707,7 +707,7 @@ name|HEAP
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Constructor gets all contents as arguments.      *      * @param classNameIndex Index into constant pool referencing a ConstantClass that represents this class.      * @param superclassNameIndex Index into constant pool referencing a ConstantClass that represents this class's      *        superclass.      * @param fileName File name      * @param major Major compiler version      * @param minor Minor compiler version      * @param access_flags Access rights defined by bit flags      * @param constantPool Array of constants      * @param interfaces Implemented interfaces      * @param fields Class fields      * @param methods Class methods      * @param attributes Class attributes      * @param source Read from file or generated in memory?      */
+comment|/**      * Constructor gets all contents as arguments.      *      * @param classNameIndex Index into constant pool referencing a ConstantClass that represents this class.      * @param superclassNameIndex Index into constant pool referencing a ConstantClass that represents this class's      *        superclass.      * @param fileName File name      * @param major Major compiler version      * @param minor Minor compiler version      * @param accessFlags Access rights defined by bit flags      * @param constantPool Array of constants      * @param interfaces Implemented interfaces      * @param fields Class fields      * @param methods Class methods      * @param attributes Class attributes      * @param source Read from file or generated in memory?      */
 specifier|public
 name|JavaClass
 parameter_list|(
@@ -733,7 +733,7 @@ name|minor
 parameter_list|,
 specifier|final
 name|int
-name|access_flags
+name|accessFlags
 parameter_list|,
 specifier|final
 name|ConstantPool
@@ -762,7 +762,7 @@ parameter_list|)
 block|{
 name|super
 argument_list|(
-name|access_flags
+name|accessFlags
 argument_list|)
 expr_stmt|;
 if|if
@@ -2481,7 +2481,7 @@ block|}
 specifier|final
 name|JavaClass
 index|[]
-name|super_interfaces
+name|superInterfaces
 init|=
 name|getAllInterfaces
 argument_list|()
@@ -2490,14 +2490,14 @@ for|for
 control|(
 specifier|final
 name|JavaClass
-name|super_interface
+name|superInterface
 range|:
-name|super_interfaces
+name|superInterfaces
 control|)
 block|{
 if|if
 condition|(
-name|super_interface
+name|superInterface
 operator|.
 name|equals
 argument_list|(
@@ -2522,7 +2522,7 @@ name|instanceOf
 parameter_list|(
 specifier|final
 name|JavaClass
-name|super_class
+name|superclass
 parameter_list|)
 throws|throws
 name|ClassNotFoundException
@@ -2533,7 +2533,7 @@ name|this
 operator|.
 name|equals
 argument_list|(
-name|super_class
+name|superclass
 argument_list|)
 condition|)
 block|{
@@ -2564,7 +2564,7 @@ name|super_classe
 operator|.
 name|equals
 argument_list|(
-name|super_class
+name|superclass
 argument_list|)
 condition|)
 block|{
@@ -2575,7 +2575,7 @@ block|}
 block|}
 if|if
 condition|(
-name|super_class
+name|superclass
 operator|.
 name|isInterface
 argument_list|()
@@ -2584,7 +2584,7 @@ block|{
 return|return
 name|implementationOf
 argument_list|(
-name|super_class
+name|superclass
 argument_list|)
 return|;
 block|}

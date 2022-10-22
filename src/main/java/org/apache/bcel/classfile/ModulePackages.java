@@ -98,12 +98,12 @@ name|int
 index|[]
 name|packageIndexTable
 decl_stmt|;
-comment|/**      * Construct object from input stream.      *      * @param name_index Index in constant pool      * @param length Content length in bytes      * @param input Input stream      * @param constant_pool Array of constants      * @throws IOException if an I/O error occurs.      */
+comment|/**      * Construct object from input stream.      *      * @param nameIndex Index in constant pool      * @param length Content length in bytes      * @param input Input stream      * @param constantPool Array of constants      * @throws IOException if an I/O error occurs.      */
 name|ModulePackages
 parameter_list|(
 specifier|final
 name|int
-name|name_index
+name|nameIndex
 parameter_list|,
 specifier|final
 name|int
@@ -115,14 +115,14 @@ name|input
 parameter_list|,
 specifier|final
 name|ConstantPool
-name|constant_pool
+name|constantPool
 parameter_list|)
 throws|throws
 name|IOException
 block|{
 name|this
 argument_list|(
-name|name_index
+name|nameIndex
 argument_list|,
 name|length
 argument_list|,
@@ -132,12 +132,12 @@ index|[]
 operator|)
 literal|null
 argument_list|,
-name|constant_pool
+name|constantPool
 argument_list|)
 expr_stmt|;
 specifier|final
 name|int
-name|number_of_packages
+name|packageCount
 init|=
 name|input
 operator|.
@@ -149,7 +149,7 @@ operator|=
 operator|new
 name|int
 index|[
-name|number_of_packages
+name|packageCount
 index|]
 expr_stmt|;
 for|for
@@ -161,7 +161,7 @@ literal|0
 init|;
 name|i
 operator|<
-name|number_of_packages
+name|packageCount
 condition|;
 name|i
 operator|++

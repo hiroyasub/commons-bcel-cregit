@@ -74,13 +74,13 @@ name|byte
 index|[]
 name|bytes
 decl_stmt|;
-comment|/**      * @param name_index Index in constant pool to CONSTANT_Utf8, which should represent the string "Synthetic".      * @param length Content length in bytes - should be zero.      * @param bytes Attribute contents      * @param constant_pool The constant pool this attribute is associated with.      */
+comment|/**      * @param nameIndex Index in constant pool to CONSTANT_Utf8, which should represent the string "Synthetic".      * @param length Content length in bytes - should be zero.      * @param bytes Attribute contents      * @param constantPool The constant pool this attribute is associated with.      */
 specifier|public
 name|Synthetic
 parameter_list|(
 specifier|final
 name|int
-name|name_index
+name|nameIndex
 parameter_list|,
 specifier|final
 name|int
@@ -93,7 +93,7 @@ name|bytes
 parameter_list|,
 specifier|final
 name|ConstantPool
-name|constant_pool
+name|constantPool
 parameter_list|)
 block|{
 name|super
@@ -102,11 +102,11 @@ name|Const
 operator|.
 name|ATTR_SYNTHETIC
 argument_list|,
-name|name_index
+name|nameIndex
 argument_list|,
 name|length
 argument_list|,
-name|constant_pool
+name|constantPool
 argument_list|)
 expr_stmt|;
 name|this
@@ -116,12 +116,12 @@ operator|=
 name|bytes
 expr_stmt|;
 block|}
-comment|/**      * Construct object from input stream.      *      * @param name_index Index in constant pool to CONSTANT_Utf8      * @param length Content length in bytes      * @param input Input stream      * @param constant_pool Array of constants      * @throws IOException if an I/O error occurs.      */
+comment|/**      * Construct object from input stream.      *      * @param nameIndex Index in constant pool to CONSTANT_Utf8      * @param length Content length in bytes      * @param input Input stream      * @param constantPool Array of constants      * @throws IOException if an I/O error occurs.      */
 name|Synthetic
 parameter_list|(
 specifier|final
 name|int
-name|name_index
+name|nameIndex
 parameter_list|,
 specifier|final
 name|int
@@ -133,14 +133,14 @@ name|input
 parameter_list|,
 specifier|final
 name|ConstantPool
-name|constant_pool
+name|constantPool
 parameter_list|)
 throws|throws
 name|IOException
 block|{
 name|this
 argument_list|(
-name|name_index
+name|nameIndex
 argument_list|,
 name|length
 argument_list|,
@@ -150,7 +150,7 @@ index|[]
 operator|)
 literal|null
 argument_list|,
-name|constant_pool
+name|constantPool
 argument_list|)
 expr_stmt|;
 if|if

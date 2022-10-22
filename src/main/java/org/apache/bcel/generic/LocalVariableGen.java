@@ -389,7 +389,7 @@ name|cp
 parameter_list|)
 block|{
 name|int
-name|start_pc
+name|startPc
 init|=
 literal|0
 decl_stmt|;
@@ -409,7 +409,7 @@ operator|!=
 literal|null
 condition|)
 block|{
-name|start_pc
+name|startPc
 operator|=
 name|start
 operator|.
@@ -423,7 +423,7 @@ operator|.
 name|getPosition
 argument_list|()
 operator|-
-name|start_pc
+name|startPc
 expr_stmt|;
 if|if
 condition|(
@@ -451,7 +451,7 @@ block|}
 block|}
 specifier|final
 name|int
-name|name_index
+name|nameIndex
 init|=
 name|cp
 operator|.
@@ -462,7 +462,7 @@ argument_list|)
 decl_stmt|;
 specifier|final
 name|int
-name|signature_index
+name|signatureIndex
 init|=
 name|cp
 operator|.
@@ -478,13 +478,13 @@ return|return
 operator|new
 name|LocalVariable
 argument_list|(
-name|start_pc
+name|startPc
 argument_list|,
 name|length
 argument_list|,
-name|name_index
+name|nameIndex
 argument_list|,
-name|signature_index
+name|signatureIndex
 argument_list|,
 name|index
 argument_list|,
@@ -610,14 +610,14 @@ name|setLiveToEnd
 parameter_list|(
 specifier|final
 name|boolean
-name|live_to_end
+name|liveToEnd
 parameter_list|)
 block|{
 name|this
 operator|.
 name|liveToEnd
 operator|=
-name|live_to_end
+name|liveToEnd
 expr_stmt|;
 block|}
 annotation|@
@@ -713,7 +713,7 @@ operator|+
 literal|")"
 return|;
 block|}
-comment|/**      * @param old_ih old target, either start or end      * @param new_ih new target      */
+comment|/**      * @param oldIh old target, either start or end      * @param newIh new target      */
 annotation|@
 name|Override
 specifier|public
@@ -722,11 +722,11 @@ name|updateTarget
 parameter_list|(
 specifier|final
 name|InstructionHandle
-name|old_ih
+name|oldIh
 parameter_list|,
 specifier|final
 name|InstructionHandle
-name|new_ih
+name|newIh
 parameter_list|)
 block|{
 name|boolean
@@ -738,7 +738,7 @@ if|if
 condition|(
 name|start
 operator|==
-name|old_ih
+name|oldIh
 condition|)
 block|{
 name|targeted
@@ -747,7 +747,7 @@ literal|true
 expr_stmt|;
 name|setStart
 argument_list|(
-name|new_ih
+name|newIh
 argument_list|)
 expr_stmt|;
 block|}
@@ -755,7 +755,7 @@ if|if
 condition|(
 name|end
 operator|==
-name|old_ih
+name|oldIh
 condition|)
 block|{
 name|targeted
@@ -764,7 +764,7 @@ literal|true
 expr_stmt|;
 name|setEnd
 argument_list|(
-name|new_ih
+name|newIh
 argument_list|)
 expr_stmt|;
 block|}
@@ -780,7 +780,7 @@ name|ClassGenException
 argument_list|(
 literal|"Not targeting "
 operator|+
-name|old_ih
+name|oldIh
 operator|+
 literal|", but {"
 operator|+

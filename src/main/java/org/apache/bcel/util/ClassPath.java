@@ -2030,7 +2030,7 @@ control|)
 block|{
 specifier|final
 name|File
-name|ext_dir
+name|extDir
 init|=
 operator|new
 name|File
@@ -2043,7 +2043,7 @@ name|String
 index|[]
 name|extensions
 init|=
-name|ext_dir
+name|extDir
 operator|.
 name|list
 argument_list|(
@@ -2070,7 +2070,7 @@ name|list
 operator|.
 name|add
 argument_list|(
-name|ext_dir
+name|extDir
 operator|.
 name|getPath
 argument_list|()

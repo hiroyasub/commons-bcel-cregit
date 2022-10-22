@@ -126,7 +126,7 @@ name|MethodParameters
 parameter_list|(
 specifier|final
 name|int
-name|name_index
+name|nameIndex
 parameter_list|,
 specifier|final
 name|int
@@ -138,7 +138,7 @@ name|input
 parameter_list|,
 specifier|final
 name|ConstantPool
-name|constant_pool
+name|constantPool
 parameter_list|)
 throws|throws
 name|IOException
@@ -149,16 +149,16 @@ name|Const
 operator|.
 name|ATTR_METHOD_PARAMETERS
 argument_list|,
-name|name_index
+name|nameIndex
 argument_list|,
 name|length
 argument_list|,
-name|constant_pool
+name|constantPool
 argument_list|)
 expr_stmt|;
 specifier|final
 name|int
-name|parameters_count
+name|parameterCount
 init|=
 name|input
 operator|.
@@ -170,7 +170,7 @@ operator|=
 operator|new
 name|MethodParameter
 index|[
-name|parameters_count
+name|parameterCount
 index|]
 expr_stmt|;
 for|for
@@ -182,7 +182,7 @@ literal|0
 init|;
 name|i
 operator|<
-name|parameters_count
+name|parameterCount
 condition|;
 name|i
 operator|++

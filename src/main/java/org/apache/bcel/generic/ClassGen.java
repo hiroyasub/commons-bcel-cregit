@@ -1764,12 +1764,12 @@ name|old
 parameter_list|,
 specifier|final
 name|Field
-name|new_
+name|newField
 parameter_list|)
 block|{
 if|if
 condition|(
-name|new_
+name|newField
 operator|==
 literal|null
 condition|)
@@ -1804,7 +1804,7 @@ name|fieldList
 operator|.
 name|add
 argument_list|(
-name|new_
+name|newField
 argument_list|)
 expr_stmt|;
 block|}
@@ -1816,12 +1816,12 @@ name|set
 argument_list|(
 name|i
 argument_list|,
-name|new_
+name|newField
 argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/**      * Replace given method with new one. If the old one does not exist add the new_ method to the class anyway.      */
+comment|/**      * Replace given method with new one. If the old one does not exist add the newMethod method to the class anyway.      */
 specifier|public
 name|void
 name|replaceMethod
@@ -1832,12 +1832,12 @@ name|old
 parameter_list|,
 specifier|final
 name|Method
-name|new_
+name|newMethod
 parameter_list|)
 block|{
 if|if
 condition|(
-name|new_
+name|newMethod
 operator|==
 literal|null
 condition|)
@@ -1872,7 +1872,7 @@ name|methodList
 operator|.
 name|add
 argument_list|(
-name|new_
+name|newMethod
 argument_list|)
 expr_stmt|;
 block|}
@@ -1884,7 +1884,7 @@ name|set
 argument_list|(
 name|i
 argument_list|,
-name|new_
+name|newMethod
 argument_list|)
 expr_stmt|;
 block|}
@@ -1962,12 +1962,12 @@ name|setConstantPool
 parameter_list|(
 specifier|final
 name|ConstantPoolGen
-name|constant_pool
+name|constantPool
 parameter_list|)
 block|{
 name|cp
 operator|=
-name|constant_pool
+name|constantPool
 expr_stmt|;
 block|}
 comment|/**      * Set major version number of class file, default value is 45 (JDK 1.1)      *      * @param major major version number      */

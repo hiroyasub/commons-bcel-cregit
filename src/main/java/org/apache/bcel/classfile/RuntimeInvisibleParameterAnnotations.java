@@ -58,13 +58,13 @@ name|RuntimeInvisibleParameterAnnotations
 extends|extends
 name|ParameterAnnotations
 block|{
-comment|/**      * @param name_index Index pointing to the name<em>Code</em>      * @param length Content length in bytes      * @param input Input stream      * @param constant_pool Array of constants      */
+comment|/**      * @param nameIndex Index pointing to the name<em>Code</em>      * @param length Content length in bytes      * @param input Input stream      * @param constantPool Array of constants      */
 specifier|public
 name|RuntimeInvisibleParameterAnnotations
 parameter_list|(
 specifier|final
 name|int
-name|name_index
+name|nameIndex
 parameter_list|,
 specifier|final
 name|int
@@ -76,7 +76,7 @@ name|input
 parameter_list|,
 specifier|final
 name|ConstantPool
-name|constant_pool
+name|constantPool
 parameter_list|)
 throws|throws
 name|IOException
@@ -87,13 +87,13 @@ name|Const
 operator|.
 name|ATTR_RUNTIME_INVISIBLE_PARAMETER_ANNOTATIONS
 argument_list|,
-name|name_index
+name|nameIndex
 argument_list|,
 name|length
 argument_list|,
 name|input
 argument_list|,
-name|constant_pool
+name|constantPool
 argument_list|)
 expr_stmt|;
 block|}

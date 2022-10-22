@@ -555,7 +555,7 @@ name|Instruction
 argument_list|,
 name|InstructionHandle
 argument_list|>
-name|branch_map
+name|branchMap
 init|=
 operator|new
 name|HashMap
@@ -793,7 +793,7 @@ operator|instanceof
 name|BranchInstruction
 condition|)
 block|{
-name|branch_map
+name|branchMap
 operator|.
 name|put
 argument_list|(
@@ -907,7 +907,7 @@ init|=
 operator|(
 name|BranchHandle
 operator|)
-name|branch_map
+name|branchMap
 operator|.
 name|get
 argument_list|(
@@ -1397,7 +1397,7 @@ init|=
 operator|(
 name|BranchHandle
 operator|)
-name|branch_map
+name|branchMap
 operator|.
 name|get
 argument_list|(

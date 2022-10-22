@@ -77,7 +77,7 @@ literal|1
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Template for switch() constructs. If the match array can be sorted in ascending order with gaps no larger than      * max_gap between the numbers, a TABLESWITCH instruction is generated, and a LOOKUPSWITCH otherwise. The former may be      * more efficient, but needs more space.      *      * Note, that the key array always will be sorted, though we leave the original arrays unaltered.      *      * @param match array of match values (case 2: ... case 7: ..., etc.)      * @param targets the instructions to be branched to for each case      * @param target the default target      * @param max_gap maximum gap that may between case branches      */
+comment|/**      * Template for switch() constructs. If the match array can be sorted in ascending order with gaps no larger than      * max_gap between the numbers, a TABLESWITCH instruction is generated, and a LOOKUPSWITCH otherwise. The former may be      * more efficient, but needs more space.      *      * Note, that the key array always will be sorted, though we leave the original arrays unaltered.      *      * @param match array of match values (case 2: ... case 7: ..., etc.)      * @param targets the instructions to be branched to for each case      * @param target the default target      * @param maxGap maximum gap that may between case branches      */
 specifier|public
 name|SWITCH
 parameter_list|(
@@ -97,7 +97,7 @@ name|target
 parameter_list|,
 specifier|final
 name|int
-name|max_gap
+name|maxGap
 parameter_list|)
 block|{
 name|this
@@ -159,13 +159,13 @@ if|if
 condition|(
 name|matchIsOrdered
 argument_list|(
-name|max_gap
+name|maxGap
 argument_list|)
 condition|)
 block|{
 name|fillup
 argument_list|(
-name|max_gap
+name|maxGap
 argument_list|,
 name|target
 argument_list|)
@@ -214,7 +214,7 @@ name|fillup
 parameter_list|(
 specifier|final
 name|int
-name|max_gap
+name|maxGap
 parameter_list|,
 specifier|final
 name|InstructionHandle
@@ -223,34 +223,34 @@ parameter_list|)
 block|{
 specifier|final
 name|int
-name|max_size
+name|maxSize
 init|=
 name|matchLength
 operator|+
 name|matchLength
 operator|*
-name|max_gap
+name|maxGap
 decl_stmt|;
 specifier|final
 name|int
 index|[]
-name|m_vec
+name|mVec
 init|=
 operator|new
 name|int
 index|[
-name|max_size
+name|maxSize
 index|]
 decl_stmt|;
 specifier|final
 name|InstructionHandle
 index|[]
-name|t_vec
+name|tVec
 init|=
 operator|new
 name|InstructionHandle
 index|[
-name|max_size
+name|maxSize
 index|]
 decl_stmt|;
 name|int
@@ -258,7 +258,7 @@ name|count
 init|=
 literal|1
 decl_stmt|;
-name|m_vec
+name|mVec
 index|[
 literal|0
 index|]
@@ -268,7 +268,7 @@ index|[
 literal|0
 index|]
 expr_stmt|;
-name|t_vec
+name|tVec
 index|[
 literal|0
 index|]
@@ -330,7 +330,7 @@ name|j
 operator|++
 control|)
 block|{
-name|m_vec
+name|mVec
 index|[
 name|count
 index|]
@@ -339,7 +339,7 @@ name|prev
 operator|+
 name|j
 expr_stmt|;
-name|t_vec
+name|tVec
 index|[
 name|count
 index|]
@@ -350,7 +350,7 @@ name|count
 operator|++
 expr_stmt|;
 block|}
-name|m_vec
+name|mVec
 index|[
 name|count
 index|]
@@ -360,7 +360,7 @@ index|[
 name|i
 index|]
 expr_stmt|;
-name|t_vec
+name|tVec
 index|[
 name|count
 index|]
@@ -394,7 +394,7 @@ name|System
 operator|.
 name|arraycopy
 argument_list|(
-name|m_vec
+name|mVec
 argument_list|,
 literal|0
 argument_list|,
@@ -409,7 +409,7 @@ name|System
 operator|.
 name|arraycopy
 argument_list|(
-name|t_vec
+name|tVec
 argument_list|,
 literal|0
 argument_list|,

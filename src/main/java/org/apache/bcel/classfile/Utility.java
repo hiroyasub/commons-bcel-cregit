@@ -1121,7 +1121,7 @@ name|code
 parameter_list|,
 specifier|final
 name|ConstantPool
-name|constant_pool
+name|constantPool
 parameter_list|,
 specifier|final
 name|int
@@ -1137,7 +1137,7 @@ name|codeToString
 argument_list|(
 name|code
 argument_list|,
-name|constant_pool
+name|constantPool
 argument_list|,
 name|index
 argument_list|,
@@ -1147,7 +1147,7 @@ literal|true
 argument_list|)
 return|;
 block|}
-comment|/**      * Disassemble a byte array of JVM byte codes starting from code line `index' and return the disassembled string      * representation. Decode only `num' opcodes (including their operands), use -1 if you want to decompile everything.      *      * @param code byte code array      * @param constant_pool Array of constants      * @param index offset in `code' array<EM>(number of opcodes, not bytes!)</EM>      * @param length number of opcodes to decompile, -1 for all      * @param verbose be verbose, e.g. print constant pool index      * @return String representation of byte codes      */
+comment|/**      * Disassemble a byte array of JVM byte codes starting from code line `index' and return the disassembled string      * representation. Decode only `num' opcodes (including their operands), use -1 if you want to decompile everything.      *      * @param code byte code array      * @param constantPool Array of constants      * @param index offset in `code' array<EM>(number of opcodes, not bytes!)</EM>      * @param length number of opcodes to decompile, -1 for all      * @param verbose be verbose, e.g. print constant pool index      * @return String representation of byte codes      */
 specifier|public
 specifier|static
 name|String
@@ -1160,7 +1160,7 @@ name|code
 parameter_list|,
 specifier|final
 name|ConstantPool
-name|constant_pool
+name|constantPool
 parameter_list|,
 specifier|final
 name|int
@@ -1221,7 +1221,7 @@ name|codeToString
 argument_list|(
 name|stream
 argument_list|,
-name|constant_pool
+name|constantPool
 argument_list|,
 name|verbose
 argument_list|)
@@ -1289,7 +1289,7 @@ name|codeToString
 argument_list|(
 name|stream
 argument_list|,
-name|constant_pool
+name|constantPool
 argument_list|,
 name|verbose
 argument_list|)
@@ -1343,7 +1343,7 @@ name|bytes
 parameter_list|,
 specifier|final
 name|ConstantPool
-name|constant_pool
+name|constantPool
 parameter_list|)
 throws|throws
 name|IOException
@@ -1353,13 +1353,13 @@ name|codeToString
 argument_list|(
 name|bytes
 argument_list|,
-name|constant_pool
+name|constantPool
 argument_list|,
 literal|true
 argument_list|)
 return|;
 block|}
-comment|/**      * Disassemble a stream of byte codes and return the string representation.      *      * @param bytes stream of bytes      * @param constant_pool Array of constants      * @param verbose be verbose, e.g. print constant pool index      * @return String representation of byte code      *      * @throws IOException if a failure from reading from the bytes argument occurs      */
+comment|/**      * Disassemble a stream of byte codes and return the string representation.      *      * @param bytes stream of bytes      * @param constantPool Array of constants      * @param verbose be verbose, e.g. print constant pool index      * @return String representation of byte code      *      * @throws IOException if a failure from reading from the bytes argument occurs      */
 specifier|public
 specifier|static
 name|String
@@ -1371,7 +1371,7 @@ name|bytes
 parameter_list|,
 specifier|final
 name|ConstantPool
-name|constant_pool
+name|constantPool
 parameter_list|,
 specifier|final
 name|boolean
@@ -2209,7 +2209,7 @@ argument_list|)
 operator|.
 name|append
 argument_list|(
-name|constant_pool
+name|constantPool
 operator|.
 name|constantToString
 argument_list|(
@@ -2275,7 +2275,7 @@ argument_list|)
 operator|.
 name|append
 argument_list|(
-name|constant_pool
+name|constantPool
 operator|.
 name|constantToString
 argument_list|(
@@ -2328,7 +2328,7 @@ specifier|final
 name|Constant
 name|c
 init|=
-name|constant_pool
+name|constantPool
 operator|.
 name|getConstant
 argument_list|(
@@ -2346,7 +2346,7 @@ argument_list|)
 operator|.
 name|append
 argument_list|(
-name|constant_pool
+name|constantPool
 operator|.
 name|constantToString
 argument_list|(
@@ -2394,7 +2394,7 @@ argument_list|)
 operator|.
 name|append
 argument_list|(
-name|constant_pool
+name|constantPool
 operator|.
 name|constantToString
 argument_list|(
@@ -2451,7 +2451,7 @@ argument_list|)
 operator|.
 name|append
 argument_list|(
-name|constant_pool
+name|constantPool
 operator|.
 name|constantToString
 argument_list|(
@@ -2517,7 +2517,7 @@ argument_list|)
 operator|.
 name|append
 argument_list|(
-name|constant_pool
+name|constantPool
 operator|.
 name|constantToString
 argument_list|(
@@ -2588,13 +2588,13 @@ argument_list|)
 operator|.
 name|append
 argument_list|(
-name|constant_pool
+name|constantPool
 operator|.
 name|constantToString
 argument_list|(
 name|index
 argument_list|,
-name|constant_pool
+name|constantPool
 operator|.
 name|getConstant
 argument_list|(
@@ -2641,13 +2641,13 @@ argument_list|)
 operator|.
 name|append
 argument_list|(
-name|constant_pool
+name|constantPool
 operator|.
 name|constantToString
 argument_list|(
 name|index
 argument_list|,
-name|constant_pool
+name|constantPool
 operator|.
 name|getConstant
 argument_list|(
@@ -2697,7 +2697,7 @@ name|append
 argument_list|(
 name|compactClassName
 argument_list|(
-name|constant_pool
+name|constantPool
 operator|.
 name|getConstantString
 argument_list|(
@@ -2765,7 +2765,7 @@ name|append
 argument_list|(
 name|compactClassName
 argument_list|(
-name|constant_pool
+name|constantPool
 operator|.
 name|getConstantString
 argument_list|(
@@ -4641,7 +4641,7 @@ name|int
 name|index
 decl_stmt|;
 name|int
-name|var_index
+name|varIndex
 init|=
 name|access
 operator|.
@@ -4735,7 +4735,7 @@ name|vars
 operator|.
 name|getLocalVariable
 argument_list|(
-name|var_index
+name|varIndex
 argument_list|,
 literal|0
 argument_list|)
@@ -4775,7 +4775,7 @@ argument_list|)
 operator|.
 name|append
 argument_list|(
-name|var_index
+name|varIndex
 argument_list|)
 expr_stmt|;
 block|}
@@ -4796,14 +4796,14 @@ name|paramType
 argument_list|)
 condition|)
 block|{
-name|var_index
+name|varIndex
 operator|+=
 literal|2
 expr_stmt|;
 block|}
 else|else
 block|{
-name|var_index
+name|varIndex
 operator|++
 expr_stmt|;
 block|}
@@ -5329,7 +5329,7 @@ name|int
 name|index
 decl_stmt|;
 name|int
-name|old_index
+name|oldIndex
 decl_stmt|;
 try|try
 block|{
@@ -5352,7 +5352,7 @@ operator|new
 name|StringBuilder
 argument_list|()
 decl_stmt|;
-name|old_index
+name|oldIndex
 operator|=
 literal|0
 expr_stmt|;
@@ -5369,7 +5369,7 @@ name|indexOf
 argument_list|(
 name|old
 argument_list|,
-name|old_index
+name|oldIndex
 argument_list|)
 operator|)
 operator|!=
@@ -5383,7 +5383,7 @@ name|append
 argument_list|(
 name|str
 argument_list|,
-name|old_index
+name|oldIndex
 argument_list|,
 name|index
 argument_list|)
@@ -5397,7 +5397,7 @@ name|new_
 argument_list|)
 expr_stmt|;
 comment|// append replacement
-name|old_index
+name|oldIndex
 operator|=
 name|index
 operator|+
@@ -5416,7 +5416,7 @@ name|str
 operator|.
 name|substring
 argument_list|(
-name|old_index
+name|oldIndex
 argument_list|)
 argument_list|)
 expr_stmt|;

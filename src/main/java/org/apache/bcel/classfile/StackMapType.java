@@ -99,7 +99,7 @@ name|index
 parameter_list|,
 specifier|final
 name|ConstantPool
-name|constant_pool
+name|constantPool
 parameter_list|)
 block|{
 if|if
@@ -143,7 +143,7 @@ name|this
 operator|.
 name|constantPool
 operator|=
-name|constant_pool
+name|constantPool
 expr_stmt|;
 block|}
 comment|/**      * Construct object from file stream.      *      * @param file Input stream      * @throws IOException if an I/O error occurs.      */
@@ -155,7 +155,7 @@ name|file
 parameter_list|,
 specifier|final
 name|ConstantPool
-name|constant_pool
+name|constantPool
 parameter_list|)
 throws|throws
 name|IOException
@@ -170,7 +170,7 @@ argument_list|,
 operator|-
 literal|1
 argument_list|,
-name|constant_pool
+name|constantPool
 argument_list|)
 expr_stmt|;
 if|if
@@ -193,7 +193,7 @@ name|this
 operator|.
 name|constantPool
 operator|=
-name|constant_pool
+name|constantPool
 expr_stmt|;
 block|}
 comment|/**      * @return deep copy of this object      */

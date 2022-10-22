@@ -115,7 +115,7 @@ name|ConstantMethodType
 parameter_list|(
 specifier|final
 name|int
-name|descriptor_index
+name|descriptorIndex
 parameter_list|)
 block|{
 name|super
@@ -129,7 +129,7 @@ name|this
 operator|.
 name|descriptorIndex
 operator|=
-name|descriptor_index
+name|descriptorIndex
 expr_stmt|;
 block|}
 comment|/**      * Called by objects that are traversing the nodes of the tree implicitly defined by the contents of a Java class. I.e.,      * the hierarchy of methods, fields, attributes, etc. spawns a tree of objects.      *      * @param v Visitor object      */
@@ -199,14 +199,14 @@ name|setDescriptorIndex
 parameter_list|(
 specifier|final
 name|int
-name|descriptor_index
+name|descriptorIndex
 parameter_list|)
 block|{
 name|this
 operator|.
 name|descriptorIndex
 operator|=
-name|descriptor_index
+name|descriptorIndex
 expr_stmt|;
 block|}
 comment|/**      * @return String representation      */

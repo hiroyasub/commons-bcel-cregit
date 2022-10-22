@@ -90,7 +90,7 @@ name|ParameterAnnotationEntry
 index|[]
 name|parameterAnnotationTable
 decl_stmt|;
-comment|/**      * @param parameterAnnotationType the subclass type of the parameter annotation      * @param name_index Index pointing to the name<em>Code</em>      * @param length Content length in bytes      * @param input Input stream      * @param constant_pool Array of constants      */
+comment|/**      * @param parameterAnnotationType the subclass type of the parameter annotation      * @param nameIndex Index pointing to the name<em>Code</em>      * @param length Content length in bytes      * @param input Input stream      * @param constantPool Array of constants      */
 name|ParameterAnnotations
 parameter_list|(
 specifier|final
@@ -99,7 +99,7 @@ name|parameterAnnotationType
 parameter_list|,
 specifier|final
 name|int
-name|name_index
+name|nameIndex
 parameter_list|,
 specifier|final
 name|int
@@ -111,7 +111,7 @@ name|input
 parameter_list|,
 specifier|final
 name|ConstantPool
-name|constant_pool
+name|constantPool
 parameter_list|)
 throws|throws
 name|IOException
@@ -120,7 +120,7 @@ name|this
 argument_list|(
 name|parameterAnnotationType
 argument_list|,
-name|name_index
+name|nameIndex
 argument_list|,
 name|length
 argument_list|,
@@ -130,12 +130,12 @@ index|[]
 operator|)
 literal|null
 argument_list|,
-name|constant_pool
+name|constantPool
 argument_list|)
 expr_stmt|;
 specifier|final
 name|int
-name|num_parameters
+name|numParameters
 init|=
 name|input
 operator|.
@@ -147,7 +147,7 @@ operator|=
 operator|new
 name|ParameterAnnotationEntry
 index|[
-name|num_parameters
+name|numParameters
 index|]
 expr_stmt|;
 for|for
@@ -159,7 +159,7 @@ literal|0
 init|;
 name|i
 operator|<
-name|num_parameters
+name|numParameters
 condition|;
 name|i
 operator|++
@@ -175,7 +175,7 @@ name|ParameterAnnotationEntry
 argument_list|(
 name|input
 argument_list|,
-name|constant_pool
+name|constantPool
 argument_list|)
 expr_stmt|;
 block|}
@@ -253,7 +253,7 @@ name|copy
 parameter_list|(
 specifier|final
 name|ConstantPool
-name|constant_pool
+name|constantPool
 parameter_list|)
 block|{
 return|return

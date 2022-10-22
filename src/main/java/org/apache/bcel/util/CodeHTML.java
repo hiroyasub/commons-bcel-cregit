@@ -455,7 +455,7 @@ name|String
 name|signature
 decl_stmt|;
 name|int
-name|default_offset
+name|defaultOffset
 init|=
 literal|0
 decl_stmt|;
@@ -469,7 +469,7 @@ name|int
 name|index
 decl_stmt|;
 name|int
-name|class_index
+name|classIndex
 decl_stmt|;
 name|int
 name|vindex
@@ -479,10 +479,10 @@ name|constant
 decl_stmt|;
 name|int
 index|[]
-name|jump_table
+name|jumpTable
 decl_stmt|;
 name|int
-name|no_pad_bytes
+name|noPadBytes
 init|=
 literal|0
 decl_stmt|;
@@ -549,7 +549,7 @@ argument_list|()
 operator|%
 literal|4
 decl_stmt|;
-name|no_pad_bytes
+name|noPadBytes
 operator|=
 name|remainder
 operator|==
@@ -570,7 +570,7 @@ literal|0
 init|;
 name|i
 operator|<
-name|no_pad_bytes
+name|noPadBytes
 condition|;
 name|i
 operator|++
@@ -583,7 +583,7 @@ argument_list|()
 expr_stmt|;
 block|}
 comment|// Both cases have a field default_offset in common
-name|default_offset
+name|defaultOffset
 operator|=
 name|bytes
 operator|.
@@ -624,11 +624,11 @@ argument_list|()
 operator|-
 literal|12
 operator|-
-name|no_pad_bytes
+name|noPadBytes
 operator|-
 literal|1
 expr_stmt|;
-name|default_offset
+name|defaultOffset
 operator|+=
 name|offset
 expr_stmt|;
@@ -640,7 +640,7 @@ literal|"<TABLE BORDER=1><TR>"
 argument_list|)
 expr_stmt|;
 comment|// Print switch indices in first row (and default)
-name|jump_table
+name|jumpTable
 operator|=
 operator|new
 name|int
@@ -661,7 +661,7 @@ literal|0
 init|;
 name|i
 operator|<
-name|jump_table
+name|jumpTable
 operator|.
 name|length
 condition|;
@@ -669,7 +669,7 @@ name|i
 operator|++
 control|)
 block|{
-name|jump_table
+name|jumpTable
 index|[
 name|i
 index|]
@@ -715,7 +715,7 @@ specifier|final
 name|int
 name|element
 range|:
-name|jump_table
+name|jumpTable
 control|)
 block|{
 name|buf
@@ -775,7 +775,7 @@ argument_list|)
 operator|.
 name|append
 argument_list|(
-name|default_offset
+name|defaultOffset
 argument_list|)
 operator|.
 name|append
@@ -785,7 +785,7 @@ argument_list|)
 operator|.
 name|append
 argument_list|(
-name|default_offset
+name|defaultOffset
 argument_list|)
 operator|.
 name|append
@@ -818,11 +818,11 @@ argument_list|()
 operator|-
 literal|8
 operator|-
-name|no_pad_bytes
+name|noPadBytes
 operator|-
 literal|1
 expr_stmt|;
-name|jump_table
+name|jumpTable
 operator|=
 operator|new
 name|int
@@ -830,7 +830,7 @@ index|[
 name|npairs
 index|]
 expr_stmt|;
-name|default_offset
+name|defaultOffset
 operator|+=
 name|offset
 expr_stmt|;
@@ -866,7 +866,7 @@ operator|.
 name|readInt
 argument_list|()
 decl_stmt|;
-name|jump_table
+name|jumpTable
 index|[
 name|i
 index|]
@@ -938,7 +938,7 @@ argument_list|)
 operator|.
 name|append
 argument_list|(
-name|jump_table
+name|jumpTable
 index|[
 name|i
 index|]
@@ -951,7 +951,7 @@ argument_list|)
 operator|.
 name|append
 argument_list|(
-name|jump_table
+name|jumpTable
 index|[
 name|i
 index|]
@@ -982,7 +982,7 @@ argument_list|)
 operator|.
 name|append
 argument_list|(
-name|default_offset
+name|defaultOffset
 argument_list|)
 operator|.
 name|append
@@ -992,7 +992,7 @@ argument_list|)
 operator|.
 name|append
 argument_list|(
-name|default_offset
+name|defaultOffset
 argument_list|)
 operator|.
 name|append
@@ -1403,7 +1403,7 @@ operator|.
 name|class
 argument_list|)
 decl_stmt|;
-name|class_index
+name|classIndex
 operator|=
 name|c1
 operator|.
@@ -1416,7 +1416,7 @@ name|constantPool
 operator|.
 name|getConstantString
 argument_list|(
-name|class_index
+name|classIndex
 argument_list|,
 name|Const
 operator|.
@@ -1515,7 +1515,7 @@ name|constantHtml
 operator|.
 name|referenceConstant
 argument_list|(
-name|class_index
+name|classIndex
 argument_list|)
 argument_list|)
 operator|.
@@ -1595,7 +1595,7 @@ name|INVOKEDYNAMIC
 case|:
 specifier|final
 name|int
-name|m_index
+name|mIndex
 init|=
 name|bytes
 operator|.
@@ -1637,7 +1637,7 @@ name|constantPool
 operator|.
 name|getConstant
 argument_list|(
-name|m_index
+name|mIndex
 argument_list|,
 name|Const
 operator|.
@@ -1648,7 +1648,7 @@ operator|.
 name|class
 argument_list|)
 decl_stmt|;
-name|class_index
+name|classIndex
 operator|=
 name|c
 operator|.
@@ -1668,7 +1668,7 @@ name|Class2HTML
 operator|.
 name|referenceClass
 argument_list|(
-name|class_index
+name|classIndex
 argument_list|)
 expr_stmt|;
 block|}
@@ -1702,7 +1702,7 @@ name|constantPool
 operator|.
 name|getConstant
 argument_list|(
-name|m_index
+name|mIndex
 argument_list|,
 name|Const
 operator|.
@@ -1743,7 +1743,7 @@ name|constantPool
 operator|.
 name|getConstant
 argument_list|(
-name|m_index
+name|mIndex
 argument_list|,
 name|Const
 operator|.
@@ -1754,7 +1754,7 @@ operator|.
 name|class
 argument_list|)
 decl_stmt|;
-name|class_index
+name|classIndex
 operator|=
 name|c
 operator|.
@@ -1774,7 +1774,7 @@ name|Class2HTML
 operator|.
 name|referenceClass
 argument_list|(
-name|class_index
+name|classIndex
 argument_list|)
 expr_stmt|;
 block|}
@@ -1888,7 +1888,7 @@ argument_list|)
 operator|.
 name|append
 argument_list|(
-name|m_index
+name|mIndex
 argument_list|)
 operator|.
 name|append

@@ -34,22 +34,22 @@ name|StoreInstruction
 parameter_list|(
 specifier|final
 name|short
-name|canon_tag
+name|canonTag
 parameter_list|,
 specifier|final
 name|short
-name|c_tag
+name|cTag
 parameter_list|)
 block|{
 name|super
 argument_list|(
-name|canon_tag
+name|canonTag
 argument_list|,
-name|c_tag
+name|cTag
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * @param opcode Instruction opcode      * @param c_tag Instruction number for compact version, ASTORE_0, e.g.      * @param n local variable index (unsigned short)      */
+comment|/**      * @param opcode Instruction opcode      * @param cTag Instruction number for compact version, ASTORE_0, e.g.      * @param n local variable index (unsigned short)      */
 specifier|protected
 name|StoreInstruction
 parameter_list|(
@@ -59,7 +59,7 @@ name|opcode
 parameter_list|,
 specifier|final
 name|short
-name|c_tag
+name|cTag
 parameter_list|,
 specifier|final
 name|int
@@ -70,7 +70,7 @@ name|super
 argument_list|(
 name|opcode
 argument_list|,
-name|c_tag
+name|cTag
 argument_list|,
 name|n
 argument_list|)

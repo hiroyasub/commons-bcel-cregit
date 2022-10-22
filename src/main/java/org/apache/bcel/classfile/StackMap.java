@@ -85,12 +85,12 @@ index|[]
 name|table
 decl_stmt|;
 comment|// Table of stack map entries
-comment|/**      * Construct object from input stream.      *      * @param name_index Index of name      * @param length Content length in bytes      * @param input Input stream      * @param constant_pool Array of constants      * @throws IOException if an I/O error occurs.      */
+comment|/**      * Construct object from input stream.      *      * @param nameIndex Index of name      * @param length Content length in bytes      * @param input Input stream      * @param constantPool Array of constants      * @throws IOException if an I/O error occurs.      */
 name|StackMap
 parameter_list|(
 specifier|final
 name|int
-name|name_index
+name|nameIndex
 parameter_list|,
 specifier|final
 name|int
@@ -102,14 +102,14 @@ name|input
 parameter_list|,
 specifier|final
 name|ConstantPool
-name|constant_pool
+name|constantPool
 parameter_list|)
 throws|throws
 name|IOException
 block|{
 name|this
 argument_list|(
-name|name_index
+name|nameIndex
 argument_list|,
 name|length
 argument_list|,
@@ -119,12 +119,12 @@ index|[]
 operator|)
 literal|null
 argument_list|,
-name|constant_pool
+name|constantPool
 argument_list|)
 expr_stmt|;
 specifier|final
 name|int
-name|map_length
+name|mapLength
 init|=
 name|input
 operator|.
@@ -136,7 +136,7 @@ operator|=
 operator|new
 name|StackMapEntry
 index|[
-name|map_length
+name|mapLength
 index|]
 expr_stmt|;
 for|for
@@ -148,7 +148,7 @@ literal|0
 init|;
 name|i
 operator|<
-name|map_length
+name|mapLength
 condition|;
 name|i
 operator|++
@@ -164,18 +164,18 @@ name|StackMapEntry
 argument_list|(
 name|input
 argument_list|,
-name|constant_pool
+name|constantPool
 argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/*      * @param name_index Index of name      *      * @param length Content length in bytes      *      * @param map Table of stack map entries      *      * @param constant_pool Array of constants      */
+comment|/*      * @param nameIndex Index of name      *      * @param length Content length in bytes      *      * @param map Table of stack map entries      *      * @param constant_pool Array of constants      */
 specifier|public
 name|StackMap
 parameter_list|(
 specifier|final
 name|int
-name|name_index
+name|nameIndex
 parameter_list|,
 specifier|final
 name|int
@@ -188,7 +188,7 @@ name|map
 parameter_list|,
 specifier|final
 name|ConstantPool
-name|constant_pool
+name|constantPool
 parameter_list|)
 block|{
 name|super
@@ -197,11 +197,11 @@ name|Const
 operator|.
 name|ATTR_STACK_MAP
 argument_list|,
-name|name_index
+name|nameIndex
 argument_list|,
 name|length
 argument_list|,
-name|constant_pool
+name|constantPool
 argument_list|)
 expr_stmt|;
 name|this

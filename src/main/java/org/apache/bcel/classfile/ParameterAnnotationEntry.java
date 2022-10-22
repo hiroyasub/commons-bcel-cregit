@@ -188,7 +188,7 @@ name|input
 parameter_list|,
 specifier|final
 name|ConstantPool
-name|constant_pool
+name|constantPool
 parameter_list|)
 throws|throws
 name|IOException
@@ -237,7 +237,7 @@ name|read
 argument_list|(
 name|input
 argument_list|,
-name|constant_pool
+name|constantPool
 argument_list|,
 literal|false
 argument_list|)

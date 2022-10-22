@@ -106,12 +106,12 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Construct object from input stream.      *      * @param name_index Name index in constant pool      * @param length Content length in bytes      * @param input Input stream      * @param constant_pool Array of constants      * @throws IOException if an I/O error occurs.      */
+comment|/**      * Construct object from input stream.      *      * @param nameIndex Name index in constant pool      * @param length Content length in bytes      * @param input Input stream      * @param constantPool Array of constants      * @throws IOException if an I/O error occurs.      */
 name|ConstantValue
 parameter_list|(
 specifier|final
 name|int
-name|name_index
+name|nameIndex
 parameter_list|,
 specifier|final
 name|int
@@ -123,14 +123,14 @@ name|input
 parameter_list|,
 specifier|final
 name|ConstantPool
-name|constant_pool
+name|constantPool
 parameter_list|)
 throws|throws
 name|IOException
 block|{
 name|this
 argument_list|(
-name|name_index
+name|nameIndex
 argument_list|,
 name|length
 argument_list|,
@@ -139,17 +139,17 @@ operator|.
 name|readUnsignedShort
 argument_list|()
 argument_list|,
-name|constant_pool
+name|constantPool
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * @param name_index Name index in constant pool      * @param length Content length in bytes      * @param constantValueIndex Index in constant pool      * @param constant_pool Array of constants      */
+comment|/**      * @param nameIndex Name index in constant pool      * @param length Content length in bytes      * @param constantValueIndex Index in constant pool      * @param constantPool Array of constants      */
 specifier|public
 name|ConstantValue
 parameter_list|(
 specifier|final
 name|int
-name|name_index
+name|nameIndex
 parameter_list|,
 specifier|final
 name|int
@@ -161,7 +161,7 @@ name|constantValueIndex
 parameter_list|,
 specifier|final
 name|ConstantPool
-name|constant_pool
+name|constantPool
 parameter_list|)
 block|{
 name|super
@@ -170,11 +170,11 @@ name|Const
 operator|.
 name|ATTR_CONSTANT_VALUE
 argument_list|,
-name|name_index
+name|nameIndex
 argument_list|,
 name|length
 argument_list|,
-name|constant_pool
+name|constantPool
 argument_list|)
 expr_stmt|;
 name|this

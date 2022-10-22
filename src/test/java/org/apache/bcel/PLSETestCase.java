@@ -873,7 +873,7 @@ argument_list|)
 decl_stmt|;
 specifier|final
 name|LocalVariableTable
-name|new_lvt
+name|newLvt
 init|=
 name|mg
 operator|.
@@ -893,7 +893,7 @@ operator|.
 name|getTableLength
 argument_list|()
 argument_list|,
-name|new_lvt
+name|newLvt
 operator|.
 name|getTableLength
 argument_list|()

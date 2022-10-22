@@ -1034,7 +1034,7 @@ index|]
 expr_stmt|;
 specifier|final
 name|String
-name|method_name
+name|methodName
 init|=
 name|u8
 operator|.
@@ -1111,7 +1111,7 @@ name|sb
 operator|.
 name|append
 argument_list|(
-name|method_name
+name|methodName
 argument_list|)
 expr_stmt|;
 name|sb
@@ -2014,7 +2014,7 @@ return|return
 name|ret
 return|;
 block|}
-comment|/**      * Add a new Fieldref constant to the ConstantPool, if it is not already in there.      *      * @param className class name string to add      * @param field_name field name string to add      * @param signature signature string to add      * @return index of entry      */
+comment|/**      * Add a new Fieldref constant to the ConstantPool, if it is not already in there.      *      * @param className class name string to add      * @param fieldName field name string to add      * @param signature signature string to add      * @return index of entry      */
 specifier|public
 name|int
 name|addFieldref
@@ -2025,7 +2025,7 @@ name|className
 parameter_list|,
 specifier|final
 name|String
-name|field_name
+name|fieldName
 parameter_list|,
 specifier|final
 name|String
@@ -2050,7 +2050,7 @@ name|lookupFieldref
 argument_list|(
 name|className
 argument_list|,
-name|field_name
+name|fieldName
 argument_list|,
 name|signature
 argument_list|)
@@ -2079,7 +2079,7 @@ name|nameAndTypeIndex
 operator|=
 name|addNameAndType
 argument_list|(
-name|field_name
+name|fieldName
 argument_list|,
 name|signature
 argument_list|)
@@ -2110,7 +2110,7 @@ name|className
 operator|+
 name|FIELDREF_DELIM
 operator|+
-name|field_name
+name|fieldName
 operator|+
 name|FIELDREF_DELIM
 operator|+
@@ -2286,7 +2286,7 @@ argument_list|()
 argument_list|)
 return|;
 block|}
-comment|/**      * Add a new InterfaceMethodref constant to the ConstantPool, if it is not already in there.      *      * @param className class name string to add      * @param method_name method name string to add      * @param signature signature string to add      * @return index of entry      */
+comment|/**      * Add a new InterfaceMethodref constant to the ConstantPool, if it is not already in there.      *      * @param className class name string to add      * @param methodName method name string to add      * @param signature signature string to add      * @return index of entry      */
 specifier|public
 name|int
 name|addInterfaceMethodref
@@ -2297,7 +2297,7 @@ name|className
 parameter_list|,
 specifier|final
 name|String
-name|method_name
+name|methodName
 parameter_list|,
 specifier|final
 name|String
@@ -2322,7 +2322,7 @@ name|lookupInterfaceMethodref
 argument_list|(
 name|className
 argument_list|,
-name|method_name
+name|methodName
 argument_list|,
 name|signature
 argument_list|)
@@ -2351,7 +2351,7 @@ name|nameAndTypeIndex
 operator|=
 name|addNameAndType
 argument_list|(
-name|method_name
+name|methodName
 argument_list|,
 name|signature
 argument_list|)
@@ -2382,7 +2382,7 @@ name|className
 operator|+
 name|IMETHODREF_DELIM
 operator|+
-name|method_name
+name|methodName
 operator|+
 name|IMETHODREF_DELIM
 operator|+
@@ -2655,10 +2655,10 @@ name|int
 name|ret
 decl_stmt|;
 name|int
-name|name_index
+name|nameIndex
 decl_stmt|;
 name|int
-name|signature_index
+name|signatureIndex
 decl_stmt|;
 if|if
 condition|(
@@ -2685,14 +2685,14 @@ block|}
 name|adjustSize
 argument_list|()
 expr_stmt|;
-name|name_index
+name|nameIndex
 operator|=
 name|addUtf8
 argument_list|(
 name|name
 argument_list|)
 expr_stmt|;
-name|signature_index
+name|signatureIndex
 operator|=
 name|addUtf8
 argument_list|(
@@ -2712,9 +2712,9 @@ operator|=
 operator|new
 name|ConstantNameAndType
 argument_list|(
-name|name_index
+name|nameIndex
 argument_list|,
-name|signature_index
+name|signatureIndex
 argument_list|)
 expr_stmt|;
 specifier|final

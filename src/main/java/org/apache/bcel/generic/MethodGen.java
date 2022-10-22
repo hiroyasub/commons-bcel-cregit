@@ -775,7 +775,7 @@ control|)
 block|{
 specifier|final
 name|InstructionHandle
-name|handler_pc
+name|handlerPc
 init|=
 name|element
 operator|.
@@ -784,7 +784,7 @@ argument_list|()
 decl_stmt|;
 if|if
 condition|(
-name|handler_pc
+name|handlerPc
 operator|!=
 literal|null
 condition|)
@@ -793,7 +793,7 @@ name|branchTargets
 operator|.
 name|push
 argument_list|(
-name|handler_pc
+name|handlerPc
 argument_list|,
 literal|1
 argument_list|)
@@ -1765,7 +1765,7 @@ expr_stmt|;
 block|}
 specifier|final
 name|int
-name|end_pc
+name|endPc
 init|=
 name|ce
 operator|.
@@ -1790,7 +1790,7 @@ if|if
 condition|(
 name|length
 operator|==
-name|end_pc
+name|endPc
 condition|)
 block|{
 comment|// May happen, because end_pc is exclusive
@@ -1810,7 +1810,7 @@ name|il
 operator|.
 name|findHandle
 argument_list|(
-name|end_pc
+name|endPc
 argument_list|)
 expr_stmt|;
 name|end
@@ -1854,7 +1854,7 @@ block|}
 specifier|final
 name|Attribute
 index|[]
-name|c_attributes
+name|cAttributes
 init|=
 name|c
 operator|.
@@ -1865,14 +1865,14 @@ for|for
 control|(
 specifier|final
 name|Attribute
-name|c_attribute
+name|cAttribute
 range|:
-name|c_attributes
+name|cAttributes
 control|)
 block|{
 name|a
 operator|=
-name|c_attribute
+name|cAttribute
 expr_stmt|;
 if|if
 condition|(
@@ -2303,7 +2303,7 @@ name|slot
 argument_list|)
 return|;
 block|}
-comment|/**      * Adds a local variable to this method.      *      * @param name variable name      * @param type variable type      * @param slot the index of the local variable, if type is long or double, the next available index is slot+2      * @param start from where the variable is valid      * @param end until where the variable is valid      * @param orig_index the index of the local variable prior to any modifications      * @return new local variable object      * @see LocalVariable      */
+comment|/**      * Adds a local variable to this method.      *      * @param name variable name      * @param type variable type      * @param slot the index of the local variable, if type is long or double, the next available index is slot+2      * @param start from where the variable is valid      * @param end until where the variable is valid      * @param origIndex the index of the local variable prior to any modifications      * @return new local variable object      * @see LocalVariable      */
 specifier|public
 name|LocalVariableGen
 name|addLocalVariable
@@ -2330,7 +2330,7 @@ name|end
 parameter_list|,
 specifier|final
 name|int
-name|orig_index
+name|origIndex
 parameter_list|)
 block|{
 specifier|final
@@ -2393,7 +2393,7 @@ name|start
 argument_list|,
 name|end
 argument_list|,
-name|orig_index
+name|origIndex
 argument_list|)
 decl_stmt|;
 name|int
@@ -3303,7 +3303,7 @@ decl_stmt|;
 specifier|final
 name|CodeException
 index|[]
-name|c_exc
+name|cExc
 init|=
 operator|new
 name|CodeException
@@ -3315,7 +3315,7 @@ name|Arrays
 operator|.
 name|setAll
 argument_list|(
-name|c_exc
+name|cExc
 argument_list|,
 name|i
 lambda|->
@@ -3336,7 +3336,7 @@ argument_list|)
 argument_list|)
 expr_stmt|;
 return|return
-name|c_exc
+name|cExc
 return|;
 block|}
 comment|/*      * @return array of declared exception handlers      */
@@ -3832,7 +3832,7 @@ argument_list|()
 decl_stmt|;
 specifier|final
 name|int
-name|name_index
+name|nameIndex
 init|=
 name|cp
 operator|.
@@ -3846,7 +3846,7 @@ argument_list|)
 decl_stmt|;
 specifier|final
 name|int
-name|signature_index
+name|signatureIndex
 init|=
 name|cp
 operator|.
@@ -3974,7 +3974,7 @@ argument_list|()
 decl_stmt|;
 comment|/*          * Each attribute causes 6 additional header bytes          */
 name|int
-name|attrs_len
+name|attrsLen
 init|=
 literal|0
 decl_stmt|;
@@ -3982,14 +3982,14 @@ for|for
 control|(
 specifier|final
 name|Attribute
-name|code_attr
+name|codeAttr
 range|:
 name|codeAttrs
 control|)
 block|{
-name|attrs_len
+name|attrsLen
 operator|+=
-name|code_attr
+name|codeAttr
 operator|.
 name|getLength
 argument_list|()
@@ -4007,7 +4007,7 @@ argument_list|()
 decl_stmt|;
 specifier|final
 name|int
-name|exc_len
+name|excLen
 init|=
 name|cExc
 operator|.
@@ -4089,12 +4089,12 @@ operator|+
 comment|// prologue byte code
 literal|2
 operator|+
-name|exc_len
+name|excLen
 operator|+
 comment|// exceptions
 literal|2
 operator|+
-name|attrs_len
+name|attrsLen
 argument_list|,
 comment|// attributes
 name|maxStack
@@ -4177,9 +4177,9 @@ operator|.
 name|getAccessFlags
 argument_list|()
 argument_list|,
-name|name_index
+name|nameIndex
 argument_list|,
-name|signature_index
+name|signatureIndex
 argument_list|,
 name|getAttributes
 argument_list|()

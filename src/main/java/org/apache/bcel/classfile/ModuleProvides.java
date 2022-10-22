@@ -282,7 +282,7 @@ argument_list|()
 decl_stmt|;
 specifier|final
 name|String
-name|interface_name
+name|interfaceName
 init|=
 name|constantPool
 operator|.
@@ -303,7 +303,7 @@ name|Utility
 operator|.
 name|compactClassName
 argument_list|(
-name|interface_name
+name|interfaceName
 argument_list|,
 literal|false
 argument_list|)

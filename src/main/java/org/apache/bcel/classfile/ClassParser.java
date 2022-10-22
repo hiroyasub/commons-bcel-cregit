@@ -622,7 +622,7 @@ name|ClassFormatException
 block|{
 specifier|final
 name|int
-name|attributes_count
+name|attributesCount
 init|=
 name|dataInputStream
 operator|.
@@ -634,7 +634,7 @@ operator|=
 operator|new
 name|Attribute
 index|[
-name|attributes_count
+name|attributesCount
 index|]
 expr_stmt|;
 for|for
@@ -646,7 +646,7 @@ literal|0
 init|;
 name|i
 operator|<
-name|attributes_count
+name|attributesCount
 condition|;
 name|i
 operator|++
@@ -787,7 +787,7 @@ name|ClassFormatException
 block|{
 specifier|final
 name|int
-name|fields_count
+name|fieldsCount
 init|=
 name|dataInputStream
 operator|.
@@ -799,7 +799,7 @@ operator|=
 operator|new
 name|Field
 index|[
-name|fields_count
+name|fieldsCount
 index|]
 expr_stmt|;
 for|for
@@ -811,7 +811,7 @@ literal|0
 init|;
 name|i
 operator|<
-name|fields_count
+name|fieldsCount
 condition|;
 name|i
 operator|++
@@ -878,7 +878,7 @@ name|ClassFormatException
 block|{
 specifier|final
 name|int
-name|interfaces_count
+name|interfacesCount
 init|=
 name|dataInputStream
 operator|.
@@ -890,7 +890,7 @@ operator|=
 operator|new
 name|int
 index|[
-name|interfaces_count
+name|interfacesCount
 index|]
 expr_stmt|;
 for|for
@@ -902,7 +902,7 @@ literal|0
 init|;
 name|i
 operator|<
-name|interfaces_count
+name|interfacesCount
 condition|;
 name|i
 operator|++
@@ -930,7 +930,7 @@ name|IOException
 block|{
 specifier|final
 name|int
-name|methods_count
+name|methodsCount
 init|=
 name|dataInputStream
 operator|.
@@ -942,7 +942,7 @@ operator|=
 operator|new
 name|Method
 index|[
-name|methods_count
+name|methodsCount
 index|]
 expr_stmt|;
 for|for
@@ -954,7 +954,7 @@ literal|0
 init|;
 name|i
 operator|<
-name|methods_count
+name|methodsCount
 condition|;
 name|i
 operator|++

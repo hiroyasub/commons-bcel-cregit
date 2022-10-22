@@ -111,12 +111,12 @@ index|[]
 name|localVariableTable
 decl_stmt|;
 comment|// variables
-comment|/**      * Construct object from input stream.      *      * @param name_index Index in constant pool      * @param length Content length in bytes      * @param input Input stream      * @param constant_pool Array of constants      * @throws IOException if an I/O error occurs.      */
+comment|/**      * Construct object from input stream.      *      * @param nameIndex Index in constant pool      * @param length Content length in bytes      * @param input Input stream      * @param constantPool Array of constants      * @throws IOException if an I/O error occurs.      */
 name|LocalVariableTable
 parameter_list|(
 specifier|final
 name|int
-name|name_index
+name|nameIndex
 parameter_list|,
 specifier|final
 name|int
@@ -128,14 +128,14 @@ name|input
 parameter_list|,
 specifier|final
 name|ConstantPool
-name|constant_pool
+name|constantPool
 parameter_list|)
 throws|throws
 name|IOException
 block|{
 name|this
 argument_list|(
-name|name_index
+name|nameIndex
 argument_list|,
 name|length
 argument_list|,
@@ -145,12 +145,12 @@ index|[]
 operator|)
 literal|null
 argument_list|,
-name|constant_pool
+name|constantPool
 argument_list|)
 expr_stmt|;
 specifier|final
 name|int
-name|local_variable_table_length
+name|localVariableTableLength
 init|=
 name|input
 operator|.
@@ -162,7 +162,7 @@ operator|=
 operator|new
 name|LocalVariable
 index|[
-name|local_variable_table_length
+name|localVariableTableLength
 index|]
 expr_stmt|;
 for|for
@@ -174,7 +174,7 @@ literal|0
 init|;
 name|i
 operator|<
-name|local_variable_table_length
+name|localVariableTableLength
 condition|;
 name|i
 operator|++
@@ -190,7 +190,7 @@ name|LocalVariable
 argument_list|(
 name|input
 argument_list|,
-name|constant_pool
+name|constantPool
 argument_list|)
 expr_stmt|;
 block|}
@@ -583,14 +583,14 @@ parameter_list|(
 specifier|final
 name|LocalVariable
 index|[]
-name|local_variable_table
+name|localVariableTable
 parameter_list|)
 block|{
 name|this
 operator|.
 name|localVariableTable
 operator|=
-name|local_variable_table
+name|localVariableTable
 expr_stmt|;
 block|}
 comment|/**      * @return String representation.      */

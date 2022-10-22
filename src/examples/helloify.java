@@ -267,12 +267,12 @@ name|helloifyClassName
 parameter_list|(
 specifier|final
 name|JavaClass
-name|java_class
+name|javaClass
 parameter_list|)
 block|{
 name|className
 operator|=
-name|java_class
+name|javaClass
 operator|.
 name|getClassName
 argument_list|()
@@ -282,7 +282,7 @@ expr_stmt|;
 name|int
 name|index
 init|=
-name|java_class
+name|javaClass
 operator|.
 name|getClassNameIndex
 argument_list|()
@@ -629,7 +629,7 @@ condition|)
 block|{
 specifier|final
 name|JavaClass
-name|java_class
+name|javaClass
 init|=
 operator|new
 name|ClassParser
@@ -644,7 +644,7 @@ specifier|final
 name|ConstantPool
 name|constants
 init|=
-name|java_class
+name|javaClass
 operator|.
 name|getConstantPool
 argument_list|()
@@ -679,7 +679,7 @@ argument_list|)
 expr_stmt|;
 name|helloifyClassName
 argument_list|(
-name|java_class
+name|javaClass
 argument_list|)
 expr_stmt|;
 name|out
@@ -714,7 +714,7 @@ name|Method
 index|[]
 name|methods
 init|=
-name|java_class
+name|javaClass
 operator|.
 name|getMethods
 argument_list|()
@@ -751,7 +751,7 @@ argument_list|)
 expr_stmt|;
 block|}
 comment|// Finally dump it back to a file.
-name|java_class
+name|javaClass
 operator|.
 name|setConstantPool
 argument_list|(
@@ -761,7 +761,7 @@ name|getFinalConstantPool
 argument_list|()
 argument_list|)
 expr_stmt|;
-name|java_class
+name|javaClass
 operator|.
 name|dump
 argument_list|(

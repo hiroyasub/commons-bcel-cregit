@@ -285,7 +285,7 @@ name|setEndPC
 parameter_list|(
 specifier|final
 name|InstructionHandle
-name|end_pc
+name|endPc
 parameter_list|)
 block|{
 comment|// TODO could be package-protected?
@@ -297,7 +297,7 @@ name|this
 operator|.
 name|endPc
 argument_list|,
-name|end_pc
+name|endPc
 argument_list|,
 name|this
 argument_list|)
@@ -306,7 +306,7 @@ name|this
 operator|.
 name|endPc
 operator|=
-name|end_pc
+name|endPc
 expr_stmt|;
 block|}
 comment|/*      * Set handler code      *      * @param handlerPc Start of handler      */
@@ -316,7 +316,7 @@ name|setHandlerPC
 parameter_list|(
 specifier|final
 name|InstructionHandle
-name|handler_pc
+name|handlerPc
 parameter_list|)
 block|{
 comment|// TODO could be package-protected?
@@ -328,7 +328,7 @@ name|this
 operator|.
 name|handlerPc
 argument_list|,
-name|handler_pc
+name|handlerPc
 argument_list|,
 name|this
 argument_list|)
@@ -337,7 +337,7 @@ name|this
 operator|.
 name|handlerPc
 operator|=
-name|handler_pc
+name|handlerPc
 expr_stmt|;
 block|}
 comment|/*      * Set start of handler      *      * @param startPc Start of handled region (inclusive)      */
@@ -347,7 +347,7 @@ name|setStartPC
 parameter_list|(
 specifier|final
 name|InstructionHandle
-name|start_pc
+name|startPc
 parameter_list|)
 block|{
 comment|// TODO could be package-protected?
@@ -359,7 +359,7 @@ name|this
 operator|.
 name|startPc
 argument_list|,
-name|start_pc
+name|startPc
 argument_list|,
 name|this
 argument_list|)
@@ -368,7 +368,7 @@ name|this
 operator|.
 name|startPc
 operator|=
-name|start_pc
+name|startPc
 expr_stmt|;
 block|}
 annotation|@
@@ -394,7 +394,7 @@ operator|+
 literal|")"
 return|;
 block|}
-comment|/**      * @param old_ih old target, either start or end      * @param new_ih new target      */
+comment|/**      * @param oldIh old target, either start or end      * @param newIh new target      */
 annotation|@
 name|Override
 specifier|public
@@ -403,11 +403,11 @@ name|updateTarget
 parameter_list|(
 specifier|final
 name|InstructionHandle
-name|old_ih
+name|oldIh
 parameter_list|,
 specifier|final
 name|InstructionHandle
-name|new_ih
+name|newIh
 parameter_list|)
 block|{
 name|boolean
@@ -419,7 +419,7 @@ if|if
 condition|(
 name|startPc
 operator|==
-name|old_ih
+name|oldIh
 condition|)
 block|{
 name|targeted
@@ -428,7 +428,7 @@ literal|true
 expr_stmt|;
 name|setStartPC
 argument_list|(
-name|new_ih
+name|newIh
 argument_list|)
 expr_stmt|;
 block|}
@@ -436,7 +436,7 @@ if|if
 condition|(
 name|endPc
 operator|==
-name|old_ih
+name|oldIh
 condition|)
 block|{
 name|targeted
@@ -445,7 +445,7 @@ literal|true
 expr_stmt|;
 name|setEndPC
 argument_list|(
-name|new_ih
+name|newIh
 argument_list|)
 expr_stmt|;
 block|}
@@ -453,7 +453,7 @@ if|if
 condition|(
 name|handlerPc
 operator|==
-name|old_ih
+name|oldIh
 condition|)
 block|{
 name|targeted
@@ -462,7 +462,7 @@ literal|true
 expr_stmt|;
 name|setHandlerPC
 argument_list|(
-name|new_ih
+name|newIh
 argument_list|)
 expr_stmt|;
 block|}
@@ -478,7 +478,7 @@ name|ClassGenException
 argument_list|(
 literal|"Not targeting "
 operator|+
-name|old_ih
+name|oldIh
 operator|+
 literal|", but {"
 operator|+

@@ -154,12 +154,12 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Construct object from input stream.      *      * @param name_index Index in constant pool to CONSTANT_Utf8      * @param length Content length in bytes      * @param input Input stream      * @param constant_pool Array of constants      * @throws IOException if an I/O error occurs.      */
+comment|/**      * Construct object from input stream.      *      * @param nameIndex Index in constant pool to CONSTANT_Utf8      * @param length Content length in bytes      * @param input Input stream      * @param constantPool Array of constants      * @throws IOException if an I/O error occurs.      */
 name|InnerClasses
 parameter_list|(
 specifier|final
 name|int
-name|name_index
+name|nameIndex
 parameter_list|,
 specifier|final
 name|int
@@ -171,14 +171,14 @@ name|input
 parameter_list|,
 specifier|final
 name|ConstantPool
-name|constant_pool
+name|constantPool
 parameter_list|)
 throws|throws
 name|IOException
 block|{
 name|this
 argument_list|(
-name|name_index
+name|nameIndex
 argument_list|,
 name|length
 argument_list|,
@@ -188,12 +188,12 @@ index|[]
 operator|)
 literal|null
 argument_list|,
-name|constant_pool
+name|constantPool
 argument_list|)
 expr_stmt|;
 specifier|final
 name|int
-name|number_of_classes
+name|classCount
 init|=
 name|input
 operator|.
@@ -205,7 +205,7 @@ operator|=
 operator|new
 name|InnerClass
 index|[
-name|number_of_classes
+name|classCount
 index|]
 expr_stmt|;
 for|for
@@ -217,7 +217,7 @@ literal|0
 init|;
 name|i
 operator|<
-name|number_of_classes
+name|classCount
 condition|;
 name|i
 operator|++
@@ -236,13 +236,13 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/**      * @param name_index Index in constant pool to CONSTANT_Utf8      * @param length Content length in bytes      * @param innerClasses array of inner classes attributes      * @param constant_pool Array of constants      */
+comment|/**      * @param nameIndex Index in constant pool to CONSTANT_Utf8      * @param length Content length in bytes      * @param innerClasses array of inner classes attributes      * @param constantPool Array of constants      */
 specifier|public
 name|InnerClasses
 parameter_list|(
 specifier|final
 name|int
-name|name_index
+name|nameIndex
 parameter_list|,
 specifier|final
 name|int
@@ -255,7 +255,7 @@ name|innerClasses
 parameter_list|,
 specifier|final
 name|ConstantPool
-name|constant_pool
+name|constantPool
 parameter_list|)
 block|{
 name|super
@@ -264,11 +264,11 @@ name|Const
 operator|.
 name|ATTR_INNER_CLASSES
 argument_list|,
-name|name_index
+name|nameIndex
 argument_list|,
 name|length
 argument_list|,
-name|constant_pool
+name|constantPool
 argument_list|)
 expr_stmt|;
 name|this
@@ -403,12 +403,12 @@ for|for
 control|(
 specifier|final
 name|InnerClass
-name|inner_class
+name|innerClass
 range|:
 name|innerClasses
 control|)
 block|{
-name|inner_class
+name|innerClass
 operator|.
 name|dump
 argument_list|(

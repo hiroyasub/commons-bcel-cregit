@@ -174,12 +174,12 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * @param name_index Index pointing to the name<em>Code</em>      * @param length Content length in bytes      * @param file Input stream      * @param constant_pool Array of constants      */
+comment|/**      * @param nameIndex Index pointing to the name<em>Code</em>      * @param length Content length in bytes      * @param file Input stream      * @param constantPool Array of constants      */
 name|Code
 parameter_list|(
 specifier|final
 name|int
-name|name_index
+name|nameIndex
 parameter_list|,
 specifier|final
 name|int
@@ -191,7 +191,7 @@ name|file
 parameter_list|,
 specifier|final
 name|ConstantPool
-name|constant_pool
+name|constantPool
 parameter_list|)
 throws|throws
 name|IOException
@@ -199,7 +199,7 @@ block|{
 comment|// Initialize with some default values which will be overwritten later
 name|this
 argument_list|(
-name|name_index
+name|nameIndex
 argument_list|,
 name|length
 argument_list|,
@@ -231,12 +231,12 @@ index|[]
 operator|)
 literal|null
 argument_list|,
-name|constant_pool
+name|constantPool
 argument_list|)
 expr_stmt|;
 specifier|final
 name|int
-name|code_length
+name|codeLength
 init|=
 name|file
 operator|.
@@ -248,7 +248,7 @@ operator|=
 operator|new
 name|byte
 index|[
-name|code_length
+name|codeLength
 index|]
 expr_stmt|;
 comment|// Read byte code
@@ -262,7 +262,7 @@ expr_stmt|;
 comment|/*          * Read exception table that contains all regions where an exception handler is active, i.e., a try { ... } catch()          * block.          */
 specifier|final
 name|int
-name|exception_table_length
+name|exceptionTableLength
 init|=
 name|file
 operator|.
@@ -274,7 +274,7 @@ operator|=
 operator|new
 name|CodeException
 index|[
-name|exception_table_length
+name|exceptionTableLength
 index|]
 expr_stmt|;
 for|for
@@ -286,7 +286,7 @@ literal|0
 init|;
 name|i
 operator|<
-name|exception_table_length
+name|exceptionTableLength
 condition|;
 name|i
 operator|++
@@ -307,7 +307,7 @@ block|}
 comment|/*          * Read all attributes, currently `LineNumberTable' and `LocalVariableTable'          */
 specifier|final
 name|int
-name|attributes_count
+name|attributesCount
 init|=
 name|file
 operator|.
@@ -319,7 +319,7 @@ operator|=
 operator|new
 name|Attribute
 index|[
-name|attributes_count
+name|attributesCount
 index|]
 expr_stmt|;
 for|for
@@ -331,7 +331,7 @@ literal|0
 init|;
 name|i
 operator|<
-name|attributes_count
+name|attributesCount
 condition|;
 name|i
 operator|++
@@ -348,7 +348,7 @@ name|readAttribute
 argument_list|(
 name|file
 argument_list|,
-name|constant_pool
+name|constantPool
 argument_list|)
 expr_stmt|;
 block|}
@@ -361,13 +361,13 @@ name|length
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * @param name_index Index pointing to the name<em>Code</em>      * @param length Content length in bytes      * @param maxStack Maximum size of stack      * @param maxLocals Number of local variables      * @param code Actual byte code      * @param exceptionTable of handled exceptions      * @param attributes Attributes of code: LineNumber or LocalVariable      * @param constant_pool Array of constants      */
+comment|/**      * @param nameIndex Index pointing to the name<em>Code</em>      * @param length Content length in bytes      * @param maxStack Maximum size of stack      * @param maxLocals Number of local variables      * @param code Actual byte code      * @param exceptionTable of handled exceptions      * @param attributes Attributes of code: LineNumber or LocalVariable      * @param constantPool Array of constants      */
 specifier|public
 name|Code
 parameter_list|(
 specifier|final
 name|int
-name|name_index
+name|nameIndex
 parameter_list|,
 specifier|final
 name|int
@@ -398,7 +398,7 @@ name|attributes
 parameter_list|,
 specifier|final
 name|ConstantPool
-name|constant_pool
+name|constantPool
 parameter_list|)
 block|{
 name|super
@@ -407,11 +407,11 @@ name|Const
 operator|.
 name|ATTR_CODE
 argument_list|,
-name|name_index
+name|nameIndex
 argument_list|,
 name|length
 argument_list|,
-name|constant_pool
+name|constantPool
 argument_list|)
 expr_stmt|;
 name|this

@@ -364,7 +364,7 @@ argument_list|)
 decl_stmt|;
 specifier|final
 name|ObjectType
-name|i_stream
+name|iStream
 init|=
 operator|new
 name|ObjectType
@@ -374,7 +374,7 @@ argument_list|)
 decl_stmt|;
 specifier|final
 name|ObjectType
-name|p_stream
+name|pStream
 init|=
 operator|new
 name|ObjectType
@@ -438,7 +438,7 @@ literal|"java.lang.System"
 argument_list|,
 literal|"in"
 argument_list|,
-name|i_stream
+name|iStream
 argument_list|,
 name|Const
 operator|.
@@ -467,7 +467,7 @@ operator|new
 name|Type
 index|[]
 block|{
-name|i_stream
+name|iStream
 block|}
 argument_list|,
 name|Const
@@ -626,7 +626,7 @@ literal|"java.lang.System"
 argument_list|,
 literal|"out"
 argument_list|,
-name|p_stream
+name|pStream
 argument_list|,
 name|Const
 operator|.
@@ -765,7 +765,7 @@ literal|"java.lang.System"
 argument_list|,
 literal|"out"
 argument_list|,
-name|p_stream
+name|pStream
 argument_list|,
 name|Const
 operator|.
@@ -857,7 +857,7 @@ literal|"java.lang.System"
 argument_list|,
 literal|"out"
 argument_list|,
-name|p_stream
+name|pStream
 argument_list|,
 name|Const
 operator|.

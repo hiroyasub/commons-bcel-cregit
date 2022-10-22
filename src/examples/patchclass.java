@@ -84,7 +84,7 @@ block|{
 specifier|final
 name|String
 index|[]
-name|file_name
+name|fileName
 init|=
 operator|new
 name|String
@@ -143,7 +143,7 @@ name|i
 operator|++
 control|)
 block|{
-name|file_name
+name|fileName
 index|[
 name|files
 operator|++
@@ -177,7 +177,7 @@ init|=
 operator|new
 name|ClassParser
 argument_list|(
-name|file_name
+name|fileName
 index|[
 name|i
 index|]
@@ -185,7 +185,7 @@ argument_list|)
 decl_stmt|;
 specifier|final
 name|JavaClass
-name|java_class
+name|javaClass
 init|=
 name|parser
 operator|.
@@ -204,7 +204,7 @@ index|[
 literal|1
 index|]
 argument_list|,
-name|java_class
+name|javaClass
 operator|.
 name|getConstantPool
 argument_list|()
@@ -214,13 +214,13 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 comment|// Dump the changed class to a new file
-name|java_class
+name|javaClass
 operator|.
 name|dump
 argument_list|(
 literal|"_"
 operator|+
-name|file_name
+name|fileName
 index|[
 name|i
 index|]
@@ -234,7 +234,7 @@ name|println
 argument_list|(
 literal|"Results saved in: _"
 operator|+
-name|file_name
+name|fileName
 index|[
 name|i
 index|]
@@ -259,7 +259,7 @@ parameter_list|,
 specifier|final
 name|Constant
 index|[]
-name|constant_pool
+name|constantPool
 parameter_list|)
 block|{
 name|ConstantUtf8
@@ -271,7 +271,7 @@ decl_stmt|;
 name|int
 name|index
 decl_stmt|,
-name|old_index
+name|oldIndex
 decl_stmt|;
 name|StringBuilder
 name|buf
@@ -286,7 +286,7 @@ literal|0
 init|;
 name|i
 operator|<
-name|constant_pool
+name|constantPool
 operator|.
 name|length
 condition|;
@@ -296,7 +296,7 @@ control|)
 block|{
 if|if
 condition|(
-name|constant_pool
+name|constantPool
 index|[
 name|i
 index|]
@@ -312,7 +312,7 @@ operator|=
 operator|(
 name|ConstantUtf8
 operator|)
-name|constant_pool
+name|constantPool
 index|[
 name|i
 index|]
@@ -350,7 +350,7 @@ name|StringBuilder
 argument_list|()
 expr_stmt|;
 comment|// target buffer
-name|old_index
+name|oldIndex
 operator|=
 literal|0
 expr_stmt|;
@@ -367,7 +367,7 @@ name|indexOf
 argument_list|(
 name|old
 argument_list|,
-name|old_index
+name|oldIndex
 argument_list|)
 operator|)
 operator|!=
@@ -383,7 +383,7 @@ name|str
 operator|.
 name|substring
 argument_list|(
-name|old_index
+name|oldIndex
 argument_list|,
 name|index
 argument_list|)
@@ -398,7 +398,7 @@ name|replacement
 argument_list|)
 expr_stmt|;
 comment|// append `replacement'
-name|old_index
+name|oldIndex
 operator|=
 name|index
 operator|+
@@ -417,7 +417,7 @@ name|str
 operator|.
 name|substring
 argument_list|(
-name|old_index
+name|oldIndex
 argument_list|)
 argument_list|)
 expr_stmt|;
@@ -438,7 +438,7 @@ argument_list|(
 name|str
 argument_list|)
 expr_stmt|;
-name|constant_pool
+name|constantPool
 index|[
 name|i
 index|]

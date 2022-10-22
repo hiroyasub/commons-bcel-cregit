@@ -196,7 +196,7 @@ argument_list|)
 decl_stmt|;
 specifier|final
 name|int
-name|num_element_value_pairs
+name|numElementValuePairs
 init|=
 name|input
 operator|.
@@ -221,7 +221,7 @@ literal|0
 init|;
 name|i
 operator|<
-name|num_element_value_pairs
+name|numElementValuePairs
 condition|;
 name|i
 operator|++
@@ -286,11 +286,11 @@ name|AnnotationEntry
 parameter_list|(
 specifier|final
 name|int
-name|type_index
+name|typeIndex
 parameter_list|,
 specifier|final
 name|ConstantPool
-name|constant_pool
+name|constantPool
 parameter_list|,
 specifier|final
 name|boolean
@@ -301,13 +301,13 @@ name|this
 operator|.
 name|typeIndex
 operator|=
-name|type_index
+name|typeIndex
 expr_stmt|;
 name|this
 operator|.
 name|constantPool
 operator|=
-name|constant_pool
+name|constantPool
 expr_stmt|;
 name|this
 operator|.

@@ -261,7 +261,7 @@ name|deferTo
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * @param ignored_packages classes contained in these packages will be loaded with the system class loader      * @param deferTo delegate class loader to use for ignored packages      */
+comment|/**      * @param ignoredPackages classes contained in these packages will be loaded with the system class loader      * @param deferTo delegate class loader to use for ignored packages      */
 specifier|public
 name|ClassLoader
 parameter_list|(
@@ -276,12 +276,12 @@ parameter_list|,
 specifier|final
 name|String
 index|[]
-name|ignored_packages
+name|ignoredPackages
 parameter_list|)
 block|{
 name|this
 argument_list|(
-name|ignored_packages
+name|ignoredPackages
 argument_list|)
 expr_stmt|;
 name|this
@@ -524,7 +524,7 @@ for|for
 control|(
 specifier|final
 name|String
-name|ignored_package
+name|ignoredPackage
 range|:
 name|ignoredPackages
 control|)
@@ -535,7 +535,7 @@ name|className
 operator|.
 name|startsWith
 argument_list|(
-name|ignored_package
+name|ignoredPackage
 argument_list|)
 condition|)
 block|{

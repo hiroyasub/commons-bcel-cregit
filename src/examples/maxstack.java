@@ -118,7 +118,7 @@ name|argv
 control|)
 block|{
 name|JavaClass
-name|java_class
+name|javaClass
 init|=
 name|Repository
 operator|.
@@ -129,12 +129,12 @@ argument_list|)
 decl_stmt|;
 if|if
 condition|(
-name|java_class
+name|javaClass
 operator|==
 literal|null
 condition|)
 block|{
-name|java_class
+name|javaClass
 operator|=
 operator|new
 name|ClassParser
@@ -153,7 +153,7 @@ init|=
 operator|new
 name|ConstantPoolGen
 argument_list|(
-name|java_class
+name|javaClass
 operator|.
 name|getConstantPool
 argument_list|()
@@ -165,7 +165,7 @@ specifier|final
 name|Method
 name|m
 range|:
-name|java_class
+name|javaClass
 operator|.
 name|getMethods
 argument_list|()
@@ -203,7 +203,7 @@ argument_list|)
 decl_stmt|;
 specifier|final
 name|int
-name|compiled_stack
+name|compiledStack
 init|=
 name|mg
 operator|.
@@ -212,7 +212,7 @@ argument_list|()
 decl_stmt|;
 specifier|final
 name|int
-name|compiled_locals
+name|compiledLocals
 init|=
 name|mg
 operator|.
@@ -232,7 +232,7 @@ argument_list|()
 expr_stmt|;
 specifier|final
 name|int
-name|computed_stack
+name|computedStack
 init|=
 name|mg
 operator|.
@@ -241,7 +241,7 @@ argument_list|()
 decl_stmt|;
 specifier|final
 name|int
-name|computed_locals
+name|computedLocals
 init|=
 name|mg
 operator|.
@@ -268,9 +268,9 @@ argument_list|)
 expr_stmt|;
 if|if
 condition|(
-name|computed_stack
+name|computedStack
 operator|==
-name|compiled_stack
+name|compiledStack
 condition|)
 block|{
 name|System
@@ -281,7 +281,7 @@ name|println
 argument_list|(
 literal|"Stack ok("
 operator|+
-name|computed_stack
+name|computedStack
 operator|+
 literal|")"
 argument_list|)
@@ -297,19 +297,19 @@ name|println
 argument_list|(
 literal|"\nCompiled stack size "
 operator|+
-name|compiled_stack
+name|compiledStack
 operator|+
 literal|" computed size "
 operator|+
-name|computed_stack
+name|computedStack
 argument_list|)
 expr_stmt|;
 block|}
 if|if
 condition|(
-name|computed_locals
+name|computedLocals
 operator|==
-name|compiled_locals
+name|compiledLocals
 condition|)
 block|{
 name|System
@@ -320,7 +320,7 @@ name|println
 argument_list|(
 literal|"Locals ok("
 operator|+
-name|computed_locals
+name|computedLocals
 operator|+
 literal|")"
 argument_list|)
@@ -336,11 +336,11 @@ name|println
 argument_list|(
 literal|"\nCompiled locals "
 operator|+
-name|compiled_locals
+name|compiledLocals
 operator|+
 literal|" computed size "
 operator|+
-name|computed_locals
+name|computedLocals
 argument_list|)
 expr_stmt|;
 block|}

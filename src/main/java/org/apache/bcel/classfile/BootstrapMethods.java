@@ -134,13 +134,13 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * @param name_index Index in constant pool to CONSTANT_Utf8      * @param length Content length in bytes      * @param bootstrapMethods array of bootstrap methods      * @param constant_pool Array of constants      */
+comment|/**      * @param nameIndex Index in constant pool to CONSTANT_Utf8      * @param length Content length in bytes      * @param bootstrapMethods array of bootstrap methods      * @param constantPool Array of constants      */
 specifier|public
 name|BootstrapMethods
 parameter_list|(
 specifier|final
 name|int
-name|name_index
+name|nameIndex
 parameter_list|,
 specifier|final
 name|int
@@ -153,7 +153,7 @@ name|bootstrapMethods
 parameter_list|,
 specifier|final
 name|ConstantPool
-name|constant_pool
+name|constantPool
 parameter_list|)
 block|{
 name|super
@@ -162,11 +162,11 @@ name|Const
 operator|.
 name|ATTR_BOOTSTRAP_METHODS
 argument_list|,
-name|name_index
+name|nameIndex
 argument_list|,
 name|length
 argument_list|,
-name|constant_pool
+name|constantPool
 argument_list|)
 expr_stmt|;
 name|this
@@ -176,12 +176,12 @@ operator|=
 name|bootstrapMethods
 expr_stmt|;
 block|}
-comment|/**      * Construct object from Input stream.      *      * @param name_index Index in constant pool to CONSTANT_Utf8      * @param length Content length in bytes      * @param input Input stream      * @param constant_pool Array of constants      * @throws IOException if an I/O error occurs.      */
+comment|/**      * Construct object from Input stream.      *      * @param nameIndex Index in constant pool to CONSTANT_Utf8      * @param length Content length in bytes      * @param input Input stream      * @param constantPool Array of constants      * @throws IOException if an I/O error occurs.      */
 name|BootstrapMethods
 parameter_list|(
 specifier|final
 name|int
-name|name_index
+name|nameIndex
 parameter_list|,
 specifier|final
 name|int
@@ -193,14 +193,14 @@ name|input
 parameter_list|,
 specifier|final
 name|ConstantPool
-name|constant_pool
+name|constantPool
 parameter_list|)
 throws|throws
 name|IOException
 block|{
 name|this
 argument_list|(
-name|name_index
+name|nameIndex
 argument_list|,
 name|length
 argument_list|,
@@ -210,12 +210,12 @@ index|[]
 operator|)
 literal|null
 argument_list|,
-name|constant_pool
+name|constantPool
 argument_list|)
 expr_stmt|;
 specifier|final
 name|int
-name|num_bootstrap_methods
+name|numBootstrapMethods
 init|=
 name|input
 operator|.
@@ -227,7 +227,7 @@ operator|=
 operator|new
 name|BootstrapMethod
 index|[
-name|num_bootstrap_methods
+name|numBootstrapMethods
 index|]
 expr_stmt|;
 for|for
@@ -239,7 +239,7 @@ literal|0
 init|;
 name|i
 operator|<
-name|num_bootstrap_methods
+name|numBootstrapMethods
 condition|;
 name|i
 operator|++
@@ -391,12 +391,12 @@ for|for
 control|(
 specifier|final
 name|BootstrapMethod
-name|bootstrap_method
+name|bootstrapMethod
 range|:
 name|bootstrapMethods
 control|)
 block|{
-name|bootstrap_method
+name|bootstrapMethod
 operator|.
 name|dump
 argument_list|(
@@ -550,7 +550,7 @@ argument_list|)
 expr_stmt|;
 specifier|final
 name|int
-name|indent_count
+name|indentCount
 init|=
 name|buf
 operator|.
@@ -622,7 +622,7 @@ literal|"          "
 argument_list|,
 literal|0
 argument_list|,
-name|indent_count
+name|indentCount
 argument_list|)
 operator|.
 name|append

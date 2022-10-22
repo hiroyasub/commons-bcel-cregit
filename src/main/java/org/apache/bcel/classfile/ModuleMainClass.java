@@ -114,13 +114,13 @@ name|readUnsignedShort
 argument_list|()
 expr_stmt|;
 block|}
-comment|/**      * @param name_index Index in constant pool      * @param length Content length in bytes      * @param mainClassIndex Host class index      * @param constantPool Array of constants      */
+comment|/**      * @param nameIndex Index in constant pool      * @param length Content length in bytes      * @param mainClassIndex Host class index      * @param constantPool Array of constants      */
 specifier|public
 name|ModuleMainClass
 parameter_list|(
 specifier|final
 name|int
-name|name_index
+name|nameIndex
 parameter_list|,
 specifier|final
 name|int
@@ -141,7 +141,7 @@ name|Const
 operator|.
 name|ATTR_NEST_MEMBERS
 argument_list|,
-name|name_index
+name|nameIndex
 argument_list|,
 name|length
 argument_list|,

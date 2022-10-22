@@ -199,7 +199,7 @@ argument_list|)
 expr_stmt|;
 specifier|final
 name|int
-name|attributes_count
+name|attributesCount
 init|=
 name|file
 operator|.
@@ -211,7 +211,7 @@ operator|=
 operator|new
 name|Attribute
 index|[
-name|attributes_count
+name|attributesCount
 index|]
 expr_stmt|;
 for|for
@@ -223,7 +223,7 @@ literal|0
 init|;
 name|i
 operator|<
-name|attributes_count
+name|attributesCount
 condition|;
 name|i
 operator|++
@@ -248,7 +248,7 @@ name|this
 operator|.
 name|attributes_count
 operator|=
-name|attributes_count
+name|attributesCount
 expr_stmt|;
 comment|// init deprecated field
 block|}
@@ -322,21 +322,21 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * @param access_flags Access rights of method      * @param name_index Points to field name in constant pool      * @param signature_index Points to encoded signature      * @param attributes Collection of attributes      * @param constant_pool Array of constants      */
+comment|/**      * @param accessFlags Access rights of method      * @param nameIndex Points to field name in constant pool      * @param signatureIndex Points to encoded signature      * @param attributes Collection of attributes      * @param constantPool Array of constants      */
 specifier|protected
 name|FieldOrMethod
 parameter_list|(
 specifier|final
 name|int
-name|access_flags
+name|accessFlags
 parameter_list|,
 specifier|final
 name|int
-name|name_index
+name|nameIndex
 parameter_list|,
 specifier|final
 name|int
-name|signature_index
+name|signatureIndex
 parameter_list|,
 specifier|final
 name|Attribute
@@ -345,31 +345,31 @@ name|attributes
 parameter_list|,
 specifier|final
 name|ConstantPool
-name|constant_pool
+name|constantPool
 parameter_list|)
 block|{
 name|super
 argument_list|(
-name|access_flags
+name|accessFlags
 argument_list|)
 expr_stmt|;
 name|this
 operator|.
 name|name_index
 operator|=
-name|name_index
+name|nameIndex
 expr_stmt|;
 name|this
 operator|.
 name|signature_index
 operator|=
-name|signature_index
+name|signatureIndex
 expr_stmt|;
 name|this
 operator|.
 name|constant_pool
 operator|=
-name|constant_pool
+name|constantPool
 expr_stmt|;
 name|setAttributes
 argument_list|(
@@ -759,7 +759,7 @@ literal|0
 expr_stmt|;
 comment|// init deprecated field
 block|}
-comment|/**      * @param constant_pool Constant pool to be used for this object.      */
+comment|/**      * @param constantPool Constant pool to be used for this object.      */
 specifier|public
 specifier|final
 name|void
@@ -767,17 +767,17 @@ name|setConstantPool
 parameter_list|(
 specifier|final
 name|ConstantPool
-name|constant_pool
+name|constantPool
 parameter_list|)
 block|{
 name|this
 operator|.
 name|constant_pool
 operator|=
-name|constant_pool
+name|constantPool
 expr_stmt|;
 block|}
-comment|/**      * @param name_index Index in constant pool of object's name.      */
+comment|/**      * @param nameIndex Index in constant pool of object's name.      */
 specifier|public
 specifier|final
 name|void
@@ -785,17 +785,17 @@ name|setNameIndex
 parameter_list|(
 specifier|final
 name|int
-name|name_index
+name|nameIndex
 parameter_list|)
 block|{
 name|this
 operator|.
 name|name_index
 operator|=
-name|name_index
+name|nameIndex
 expr_stmt|;
 block|}
-comment|/**      * @param signature_index Index in constant pool of field signature.      */
+comment|/**      * @param signatureIndex Index in constant pool of field signature.      */
 specifier|public
 specifier|final
 name|void
@@ -803,14 +803,14 @@ name|setSignatureIndex
 parameter_list|(
 specifier|final
 name|int
-name|signature_index
+name|signatureIndex
 parameter_list|)
 block|{
 name|this
 operator|.
 name|signature_index
 operator|=
-name|signature_index
+name|signatureIndex
 expr_stmt|;
 block|}
 block|}

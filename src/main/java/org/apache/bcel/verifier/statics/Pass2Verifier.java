@@ -1290,7 +1290,7 @@ comment|// In JustIce, the check for correct offsets into the code array is dela
 specifier|final
 name|CodeException
 index|[]
-name|exc_table
+name|excTable
 init|=
 name|obj
 operator|.
@@ -1303,12 +1303,12 @@ specifier|final
 name|CodeException
 name|element
 range|:
-name|exc_table
+name|excTable
 control|)
 block|{
 specifier|final
 name|int
-name|exc_index
+name|excIndex
 init|=
 name|element
 operator|.
@@ -1317,7 +1317,7 @@ argument_list|()
 decl_stmt|;
 if|if
 condition|(
-name|exc_index
+name|excIndex
 operator|!=
 literal|0
 condition|)
@@ -1327,7 +1327,7 @@ name|checkIndex
 argument_list|(
 name|obj
 argument_list|,
-name|exc_index
+name|excIndex
 argument_list|,
 name|CONST_Class
 argument_list|)
@@ -1343,7 +1343,7 @@ name|cp
 operator|.
 name|getConstant
 argument_list|(
-name|exc_index
+name|excIndex
 argument_list|)
 decl_stmt|;
 comment|// cannot be sure this ConstantClass has already been visited (checked)!
@@ -1636,7 +1636,7 @@ comment|// Create object for local variables information
 comment|// This is highly unelegant due to usage of the Visitor pattern.
 comment|// TODO: rework it.
 name|int
-name|method_number
+name|methodNumber
 init|=
 operator|-
 literal|1
@@ -1686,7 +1686,7 @@ name|mn
 index|]
 condition|)
 block|{
-name|method_number
+name|methodNumber
 operator|=
 name|mn
 expr_stmt|;
@@ -1697,7 +1697,7 @@ comment|// If the .class file is malformed the loop above may not find a method.
 comment|// Try matching names instead of pointers.
 if|if
 condition|(
-name|method_number
+name|methodNumber
 operator|<
 literal|0
 condition|)
@@ -1738,7 +1738,7 @@ argument_list|()
 argument_list|)
 condition|)
 block|{
-name|method_number
+name|methodNumber
 operator|=
 name|mn
 expr_stmt|;
@@ -1748,7 +1748,7 @@ block|}
 block|}
 if|if
 condition|(
-name|method_number
+name|methodNumber
 operator|<
 literal|0
 condition|)
@@ -1764,7 +1764,7 @@ throw|;
 block|}
 name|localVariablesInfos
 index|[
-name|method_number
+name|methodNumber
 index|]
 operator|=
 operator|new
@@ -1777,7 +1777,7 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 name|int
-name|num_of_lvt_attribs
+name|numOfLvtAttribs
 init|=
 literal|0
 decl_stmt|;
@@ -2184,7 +2184,7 @@ try|try
 block|{
 name|localVariablesInfos
 index|[
-name|method_number
+name|methodNumber
 index|]
 operator|.
 name|add
@@ -2252,7 +2252,7 @@ throw|;
 block|}
 block|}
 comment|// for all local variables localvariables[i] in the LocalVariableTable attribute atts[a] END
-name|num_of_lvt_attribs
+name|numOfLvtAttribs
 operator|++
 expr_stmt|;
 if|if
@@ -2263,7 +2263,7 @@ operator|.
 name|isStatic
 argument_list|()
 operator|&&
-name|num_of_lvt_attribs
+name|numOfLvtAttribs
 operator|>
 name|obj
 operator|.

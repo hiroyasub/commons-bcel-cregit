@@ -218,7 +218,7 @@ name|offset
 parameter_list|,
 specifier|final
 name|int
-name|max_offset
+name|maxOffset
 parameter_list|)
 block|{
 specifier|final
@@ -251,7 +251,7 @@ name|Short
 operator|.
 name|MAX_VALUE
 operator|-
-name|max_offset
+name|maxOffset
 condition|)
 block|{
 comment|// to large for short (estimate)
@@ -272,7 +272,7 @@ argument_list|)
 expr_stmt|;
 specifier|final
 name|short
-name|old_length
+name|oldLength
 init|=
 operator|(
 name|short
@@ -295,7 +295,7 @@ operator|.
 name|getLength
 argument_list|()
 operator|-
-name|old_length
+name|oldLength
 return|;
 block|}
 return|return

@@ -303,7 +303,7 @@ name|argv
 parameter_list|)
 block|{
 name|JavaClass
-name|java_class
+name|javaClass
 decl_stmt|;
 try|try
 block|{
@@ -331,7 +331,7 @@ block|{
 if|if
 condition|(
 operator|(
-name|java_class
+name|javaClass
 operator|=
 name|Repository
 operator|.
@@ -347,7 +347,7 @@ operator|==
 literal|null
 condition|)
 block|{
-name|java_class
+name|javaClass
 operator|=
 operator|new
 name|ClassParser
@@ -369,7 +369,7 @@ init|=
 operator|new
 name|TransitiveHull
 argument_list|(
-name|java_class
+name|javaClass
 argument_list|)
 decl_stmt|;
 name|hull

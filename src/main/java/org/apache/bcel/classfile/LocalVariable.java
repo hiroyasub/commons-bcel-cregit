@@ -117,7 +117,7 @@ name|file
 parameter_list|,
 specifier|final
 name|ConstantPool
-name|constant_pool
+name|constantPool
 parameter_list|)
 throws|throws
 name|IOException
@@ -149,7 +149,7 @@ operator|.
 name|readUnsignedShort
 argument_list|()
 argument_list|,
-name|constant_pool
+name|constantPool
 argument_list|)
 expr_stmt|;
 block|}

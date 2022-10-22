@@ -161,7 +161,7 @@ decl_stmt|;
 specifier|private
 specifier|final
 name|String
-name|file_name
+name|fileName
 decl_stmt|;
 specifier|private
 name|int
@@ -220,7 +220,7 @@ index|[]
 name|attributes
 decl_stmt|;
 comment|// attributes defined in the class
-comment|/**      * Parses class from the given stream.      *      * @param file Input stream      * @param file_name File name      */
+comment|/**      * Parses class from the given stream.      *      * @param file Input stream      * @param fileName File name      */
 specifier|public
 name|ClassDumper
 parameter_list|(
@@ -230,14 +230,14 @@ name|file
 parameter_list|,
 specifier|final
 name|String
-name|file_name
+name|fileName
 parameter_list|)
 block|{
 name|this
 operator|.
-name|file_name
+name|fileName
 operator|=
-name|file_name
+name|fileName
 expr_stmt|;
 name|this
 operator|.
@@ -360,22 +360,21 @@ name|IOException
 throws|,
 name|ClassFormatException
 block|{
+specifier|final
 name|int
-name|attributes_count
-decl_stmt|;
-name|attributes_count
-operator|=
+name|attributesCount
+init|=
 name|file
 operator|.
 name|readUnsignedShort
 argument_list|()
-expr_stmt|;
+decl_stmt|;
 name|attributes
 operator|=
 operator|new
 name|Attribute
 index|[
-name|attributes_count
+name|attributesCount
 index|]
 expr_stmt|;
 name|System
@@ -386,7 +385,7 @@ name|printf
 argument_list|(
 literal|"%nAttributes(%d):%n"
 argument_list|,
-name|attributes_count
+name|attributesCount
 argument_list|)
 expr_stmt|;
 for|for
@@ -398,7 +397,7 @@ literal|0
 init|;
 name|i
 operator|<
-name|attributes_count
+name|attributesCount
 condition|;
 name|i
 operator|++
@@ -528,7 +527,7 @@ name|ClassFormatException
 argument_list|(
 literal|"Class "
 operator|+
-name|file_name
+name|fileName
 operator|+
 literal|" can't be both final and abstract"
 argument_list|)
@@ -663,7 +662,7 @@ name|tag
 decl_stmt|;
 specifier|final
 name|int
-name|constant_pool_count
+name|constantPoolCount
 init|=
 name|file
 operator|.
@@ -675,7 +674,7 @@ operator|=
 operator|new
 name|Constant
 index|[
-name|constant_pool_count
+name|constantPoolCount
 index|]
 expr_stmt|;
 name|constantPool
@@ -695,7 +694,7 @@ name|printf
 argument_list|(
 literal|"%nConstant pool(%d):%n"
 argument_list|,
-name|constant_pool_count
+name|constantPoolCount
 operator|-
 literal|1
 argument_list|)
@@ -709,7 +708,7 @@ literal|1
 init|;
 name|i
 operator|<
-name|constant_pool_count
+name|constantPoolCount
 condition|;
 name|i
 operator|++
@@ -837,7 +836,7 @@ name|ClassFormatException
 block|{
 specifier|final
 name|int
-name|access_flags
+name|accessFlags
 init|=
 name|file
 operator|.
@@ -846,7 +845,7 @@ argument_list|()
 decl_stmt|;
 specifier|final
 name|int
-name|name_index
+name|nameIndex
 init|=
 name|file
 operator|.
@@ -859,9 +858,9 @@ name|out
 operator|.
 name|printf
 argument_list|(
-literal|"  name_index: %d ("
+literal|"  nameIndex: %d ("
 argument_list|,
-name|name_index
+name|nameIndex
 argument_list|)
 expr_stmt|;
 name|System
@@ -872,7 +871,7 @@ name|println
 argument_list|(
 name|constantToString
 argument_list|(
-name|name_index
+name|nameIndex
 argument_list|)
 operator|+
 literal|")"
@@ -890,7 +889,7 @@ name|BCELifier
 operator|.
 name|printFlags
 argument_list|(
-name|access_flags
+name|accessFlags
 argument_list|,
 name|BCELifier
 operator|.
@@ -902,7 +901,7 @@ argument_list|)
 expr_stmt|;
 specifier|final
 name|int
-name|descriptor_index
+name|descriptorIndex
 init|=
 name|file
 operator|.
@@ -915,9 +914,9 @@ name|out
 operator|.
 name|printf
 argument_list|(
-literal|"  descriptor_index: %d ("
+literal|"  descriptorIndex: %d ("
 argument_list|,
-name|descriptor_index
+name|descriptorIndex
 argument_list|)
 expr_stmt|;
 name|System
@@ -928,7 +927,7 @@ name|println
 argument_list|(
 name|constantToString
 argument_list|(
-name|descriptor_index
+name|descriptorIndex
 argument_list|)
 operator|+
 literal|")"
@@ -936,7 +935,7 @@ argument_list|)
 expr_stmt|;
 specifier|final
 name|int
-name|attributes_count
+name|attributesCount
 init|=
 name|file
 operator|.
@@ -951,7 +950,7 @@ init|=
 operator|new
 name|Attribute
 index|[
-name|attributes_count
+name|attributesCount
 index|]
 decl_stmt|;
 name|System
@@ -962,7 +961,7 @@ name|println
 argument_list|(
 literal|"  attribute count: "
 operator|+
-name|attributes_count
+name|attributesCount
 argument_list|)
 expr_stmt|;
 for|for
@@ -974,7 +973,7 @@ literal|0
 init|;
 name|i
 operator|<
-name|attributes_count
+name|attributesCount
 condition|;
 name|i
 operator|++
@@ -988,7 +987,7 @@ argument_list|()
 expr_stmt|;
 specifier|final
 name|int
-name|attribute_name_index
+name|attributeNameIndex
 init|=
 name|file
 operator|.
@@ -997,7 +996,7 @@ argument_list|()
 decl_stmt|;
 specifier|final
 name|int
-name|attribute_length
+name|attributeLength
 init|=
 name|file
 operator|.
@@ -1056,7 +1055,7 @@ name|pos2
 operator|-
 name|pos1
 operator|!=
-name|attribute_length
+name|attributeLength
 operator|+
 literal|6
 condition|)
@@ -1067,9 +1066,9 @@ name|out
 operator|.
 name|printf
 argument_list|(
-literal|"%nattribute_length: %d pos2-pos1-6: %d pos1: %x(%d) pos2: %x(%d)%n"
+literal|"%nattributeLength: %d pos2-pos1-6: %d pos1: %x(%d) pos2: %x(%d)%n"
 argument_list|,
-name|attribute_length
+name|attributeLength
 argument_list|,
 name|pos2
 operator|-
@@ -1121,22 +1120,21 @@ name|IOException
 throws|,
 name|ClassFormatException
 block|{
+specifier|final
 name|int
-name|fields_count
-decl_stmt|;
-name|fields_count
-operator|=
+name|fieldsCount
+init|=
 name|file
 operator|.
 name|readUnsignedShort
 argument_list|()
-expr_stmt|;
+decl_stmt|;
 name|fields
 operator|=
 operator|new
 name|Field
 index|[
-name|fields_count
+name|fieldsCount
 index|]
 expr_stmt|;
 comment|// sometimes fields[0] is magic used for serialization
@@ -1148,7 +1146,7 @@ name|printf
 argument_list|(
 literal|"%nFields(%d):%n"
 argument_list|,
-name|fields_count
+name|fieldsCount
 argument_list|)
 expr_stmt|;
 for|for
@@ -1160,7 +1158,7 @@ literal|0
 init|;
 name|i
 operator|<
-name|fields_count
+name|fieldsCount
 condition|;
 name|i
 operator|++
@@ -1173,7 +1171,7 @@ if|if
 condition|(
 name|i
 operator|<
-name|fields_count
+name|fieldsCount
 operator|-
 literal|1
 condition|)
@@ -1221,7 +1219,7 @@ throw|throw
 operator|new
 name|ClassFormatException
 argument_list|(
-name|file_name
+name|fileName
 operator|+
 literal|" is not a Java .class file"
 argument_list|)
@@ -1244,7 +1242,7 @@ name|println
 argument_list|(
 literal|"  file: "
 operator|+
-name|file_name
+name|fileName
 argument_list|)
 expr_stmt|;
 name|System
@@ -1279,22 +1277,21 @@ name|IOException
 throws|,
 name|ClassFormatException
 block|{
+specifier|final
 name|int
-name|interfaces_count
-decl_stmt|;
-name|interfaces_count
-operator|=
+name|interfacesCount
+init|=
 name|file
 operator|.
 name|readUnsignedShort
 argument_list|()
-expr_stmt|;
+decl_stmt|;
 name|interfaces
 operator|=
 operator|new
 name|int
 index|[
-name|interfaces_count
+name|interfacesCount
 index|]
 expr_stmt|;
 name|System
@@ -1305,7 +1302,7 @@ name|printf
 argument_list|(
 literal|"%nInterfaces(%d):%n"
 argument_list|,
-name|interfaces_count
+name|interfacesCount
 argument_list|)
 expr_stmt|;
 for|for
@@ -1317,7 +1314,7 @@ literal|0
 init|;
 name|i
 operator|<
-name|interfaces_count
+name|interfacesCount
 condition|;
 name|i
 operator|++
@@ -1429,22 +1426,21 @@ name|IOException
 throws|,
 name|ClassFormatException
 block|{
+specifier|final
 name|int
-name|methods_count
-decl_stmt|;
-name|methods_count
-operator|=
+name|methodsCount
+init|=
 name|file
 operator|.
 name|readUnsignedShort
 argument_list|()
-expr_stmt|;
+decl_stmt|;
 name|methods
 operator|=
 operator|new
 name|Method
 index|[
-name|methods_count
+name|methodsCount
 index|]
 expr_stmt|;
 name|System
@@ -1455,7 +1451,7 @@ name|printf
 argument_list|(
 literal|"%nMethods(%d):%n"
 argument_list|,
-name|methods_count
+name|methodsCount
 argument_list|)
 expr_stmt|;
 for|for
@@ -1467,7 +1463,7 @@ literal|0
 init|;
 name|i
 operator|<
-name|methods_count
+name|methodsCount
 condition|;
 name|i
 operator|++
@@ -1480,7 +1476,7 @@ if|if
 condition|(
 name|i
 operator|<
-name|methods_count
+name|methodsCount
 operator|-
 literal|1
 condition|)

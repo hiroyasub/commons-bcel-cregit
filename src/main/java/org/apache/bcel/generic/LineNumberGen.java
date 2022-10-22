@@ -78,7 +78,7 @@ name|ih
 parameter_list|,
 specifier|final
 name|int
-name|src_line
+name|srcLine
 parameter_list|)
 block|{
 name|setInstruction
@@ -88,7 +88,7 @@ argument_list|)
 expr_stmt|;
 name|setSourceLine
 argument_list|(
-name|src_line
+name|srcLine
 argument_list|)
 expr_stmt|;
 block|}
@@ -238,7 +238,7 @@ operator|=
 name|src_line
 expr_stmt|;
 block|}
-comment|/**      * @param old_ih old target      * @param new_ih new target      */
+comment|/**      * @param oldIh old target      * @param newIh new target      */
 annotation|@
 name|Override
 specifier|public
@@ -247,16 +247,16 @@ name|updateTarget
 parameter_list|(
 specifier|final
 name|InstructionHandle
-name|old_ih
+name|oldIh
 parameter_list|,
 specifier|final
 name|InstructionHandle
-name|new_ih
+name|newIh
 parameter_list|)
 block|{
 if|if
 condition|(
-name|old_ih
+name|oldIh
 operator|!=
 name|ih
 condition|)
@@ -267,7 +267,7 @@ name|ClassGenException
 argument_list|(
 literal|"Not targeting "
 operator|+
-name|old_ih
+name|oldIh
 operator|+
 literal|", but "
 operator|+
@@ -279,7 +279,7 @@ throw|;
 block|}
 name|setInstruction
 argument_list|(
-name|new_ih
+name|newIh
 argument_list|)
 expr_stmt|;
 block|}
