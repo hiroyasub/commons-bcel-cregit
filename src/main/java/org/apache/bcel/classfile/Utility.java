@@ -3140,7 +3140,7 @@ literal|'.'
 argument_list|)
 return|;
 block|}
-comment|/**      * Escape all occurences of newline chars '\n', quotes \", etc.      */
+comment|/**      * Escape all occurrences of newline chars '\n', quotes \", etc.      */
 specifier|public
 specifier|static
 name|String

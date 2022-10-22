@@ -323,7 +323,7 @@ name|hashCode
 argument_list|()
 return|;
 block|}
-comment|/**      * Replaces all occurences of u in this OperandStack instance with an "initialized" ObjectType.      */
+comment|/**      * Replaces all occurrences of u in this OperandStack instance with an "initialized" ObjectType.      */
 specifier|public
 name|void
 name|initializeObject
