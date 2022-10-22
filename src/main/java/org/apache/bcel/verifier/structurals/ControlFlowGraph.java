@@ -1509,30 +1509,30 @@ name|HashMap
 argument_list|<>
 argument_list|()
 decl_stmt|;
-comment|/**      * A Control Flow Graph; with additional JustIce checks      *      * @param method_gen the method generator instance      */
+comment|/**      * A Control Flow Graph; with additional JustIce checks      *      * @param methodGen the method generator instance      */
 specifier|public
 name|ControlFlowGraph
 parameter_list|(
 specifier|final
 name|MethodGen
-name|method_gen
+name|methodGen
 parameter_list|)
 block|{
 name|this
 argument_list|(
-name|method_gen
+name|methodGen
 argument_list|,
 literal|true
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * A Control Flow Graph.      *      * @param method_gen the method generator instance      * @param enableJustIceCheck if true, additional JustIce checks are performed      * @since 6.0      */
+comment|/**      * A Control Flow Graph.      *      * @param methodGen the method generator instance      * @param enableJustIceCheck if true, additional JustIce checks are performed      * @since 6.0      */
 specifier|public
 name|ControlFlowGraph
 parameter_list|(
 specifier|final
 name|MethodGen
-name|method_gen
+name|methodGen
 parameter_list|,
 specifier|final
 name|boolean
@@ -1544,7 +1544,7 @@ operator|=
 operator|new
 name|Subroutines
 argument_list|(
-name|method_gen
+name|methodGen
 argument_list|,
 name|enableJustIceCheck
 argument_list|)
@@ -1554,7 +1554,7 @@ operator|=
 operator|new
 name|ExceptionHandlers
 argument_list|(
-name|method_gen
+name|methodGen
 argument_list|)
 expr_stmt|;
 specifier|final
@@ -1562,7 +1562,7 @@ name|InstructionHandle
 index|[]
 name|instructionhandles
 init|=
-name|method_gen
+name|methodGen
 operator|.
 name|getInstructionList
 argument_list|()

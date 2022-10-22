@@ -484,7 +484,7 @@ condition|)
 block|{
 specifier|final
 name|int
-name|start_pc
+name|startPc
 init|=
 name|variable
 operator|.
@@ -493,9 +493,9 @@ argument_list|()
 decl_stmt|;
 specifier|final
 name|int
-name|end_pc
+name|endPc
 init|=
-name|start_pc
+name|startPc
 operator|+
 name|variable
 operator|.
@@ -506,11 +506,11 @@ if|if
 condition|(
 name|pc
 operator|>=
-name|start_pc
+name|startPc
 operator|&&
 name|pc
 operator|<=
-name|end_pc
+name|endPc
 condition|)
 block|{
 return|return

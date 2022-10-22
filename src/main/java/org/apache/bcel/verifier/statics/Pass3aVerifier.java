@@ -2231,7 +2231,7 @@ expr_stmt|;
 block|}
 specifier|final
 name|String
-name|field_name
+name|fieldName
 init|=
 name|o
 operator|.
@@ -2289,7 +2289,7 @@ argument_list|()
 operator|.
 name|equals
 argument_list|(
-name|field_name
+name|fieldName
 argument_list|)
 condition|)
 block|{
@@ -2390,7 +2390,7 @@ argument_list|()
 operator|.
 name|equals
 argument_list|(
-name|field_name
+name|fieldName
 argument_list|)
 condition|)
 block|{
@@ -2480,7 +2480,7 @@ name|o
 argument_list|,
 literal|"Referenced field '"
 operator|+
-name|field_name
+name|fieldName
 operator|+
 literal|"' does not exist in class '"
 operator|+
@@ -2714,7 +2714,7 @@ try|try
 block|{
 specifier|final
 name|String
-name|field_name
+name|fieldName
 init|=
 name|o
 operator|.
@@ -2773,7 +2773,7 @@ argument_list|()
 operator|.
 name|equals
 argument_list|(
-name|field_name
+name|fieldName
 argument_list|)
 condition|)
 block|{
@@ -2797,7 +2797,7 @@ name|AssertionViolatedException
 argument_list|(
 literal|"Field '"
 operator|+
-name|field_name
+name|fieldName
 operator|+
 literal|"' not found in "
 operator|+
@@ -5368,7 +5368,7 @@ try|try
 block|{
 specifier|final
 name|String
-name|field_name
+name|fieldName
 init|=
 name|o
 operator|.
@@ -5427,7 +5427,7 @@ argument_list|()
 operator|.
 name|equals
 argument_list|(
-name|field_name
+name|fieldName
 argument_list|)
 condition|)
 block|{
@@ -5451,7 +5451,7 @@ name|AssertionViolatedException
 argument_list|(
 literal|"Field '"
 operator|+
-name|field_name
+name|fieldName
 operator|+
 literal|"' not found in "
 operator|+
@@ -5538,7 +5538,7 @@ expr_stmt|;
 block|}
 specifier|final
 name|String
-name|meth_name
+name|methName
 init|=
 name|Repository
 operator|.
@@ -5569,7 +5569,7 @@ name|isClass
 argument_list|()
 operator|&&
 operator|!
-name|meth_name
+name|methName
 operator|.
 name|equals
 argument_list|(

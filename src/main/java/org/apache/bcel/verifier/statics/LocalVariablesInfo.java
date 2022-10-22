@@ -94,7 +94,7 @@ name|LocalVariablesInfo
 parameter_list|(
 specifier|final
 name|int
-name|max_locals
+name|maxLocals
 parameter_list|)
 block|{
 name|localVariableInfos
@@ -102,7 +102,7 @@ operator|=
 operator|new
 name|LocalVariableInfo
 index|[
-name|max_locals
+name|maxLocals
 index|]
 expr_stmt|;
 name|Arrays

@@ -562,7 +562,7 @@ control|)
 block|{
 specifier|final
 name|String
-name|package_name
+name|packageName
 init|=
 name|super
 operator|.
@@ -591,7 +591,7 @@ name|Utility
 operator|.
 name|compactClassName
 argument_list|(
-name|package_name
+name|packageName
 argument_list|,
 literal|false
 argument_list|)

@@ -169,7 +169,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/*      * @param nameIndex Index of name      *      * @param length Content length in bytes      *      * @param map Table of stack map entries      *      * @param constant_pool Array of constants      */
+comment|/*      * @param nameIndex Index of name      *      * @param length Content length in bytes      *      * @param map Table of stack map entries      *      * @param constantPool Array of constants      */
 specifier|public
 name|StackMap
 parameter_list|(
@@ -436,7 +436,7 @@ literal|"StackMap("
 argument_list|)
 decl_stmt|;
 name|int
-name|running_offset
+name|runningOffset
 init|=
 operator|-
 literal|1
@@ -459,7 +459,7 @@ name|i
 operator|++
 control|)
 block|{
-name|running_offset
+name|runningOffset
 operator|=
 name|table
 index|[
@@ -469,7 +469,7 @@ operator|.
 name|getByteCodeOffset
 argument_list|()
 operator|+
-name|running_offset
+name|runningOffset
 operator|+
 literal|1
 expr_stmt|;
@@ -483,7 +483,7 @@ name|format
 argument_list|(
 literal|"%n@%03d %s"
 argument_list|,
-name|running_offset
+name|runningOffset
 argument_list|,
 name|table
 index|[

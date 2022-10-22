@@ -876,7 +876,7 @@ operator|=
 name|j
 expr_stmt|;
 block|}
-comment|/**      * Convert bit field of flags into string such as `static final'.      *      * @param access_flags Access flags      * @return String representation of flags      */
+comment|/**      * Convert bit field of flags into string such as `static final'.      *      * @param accessFlags Access flags      * @return String representation of flags      */
 specifier|public
 specifier|static
 name|String
@@ -884,19 +884,19 @@ name|accessToString
 parameter_list|(
 specifier|final
 name|int
-name|access_flags
+name|accessFlags
 parameter_list|)
 block|{
 return|return
 name|accessToString
 argument_list|(
-name|access_flags
+name|accessFlags
 argument_list|,
 literal|false
 argument_list|)
 return|;
 block|}
-comment|/**      * Convert bit field of flags into string such as `static final'.      *      * Special case: Classes compiled with new compilers and with the `ACC_SUPER' flag would be said to be "synchronized".      * This is because SUN used the same value for the flags `ACC_SUPER' and `ACC_SYNCHRONIZED'.      *      * @param access_flags Access flags      * @param for_class access flags are for class qualifiers ?      * @return String representation of flags      */
+comment|/**      * Convert bit field of flags into string such as `static final'.      *      * Special case: Classes compiled with new compilers and with the `ACC_SUPER' flag would be said to be "synchronized".      * This is because SUN used the same value for the flags `ACC_SUPER' and `ACC_SYNCHRONIZED'.      *      * @param accessFlags Access flags      * @param forClass access flags are for class qualifiers ?      * @return String representation of flags      */
 specifier|public
 specifier|static
 name|String
@@ -904,11 +904,11 @@ name|accessToString
 parameter_list|(
 specifier|final
 name|int
-name|access_flags
+name|accessFlags
 parameter_list|,
 specifier|final
 name|boolean
-name|for_class
+name|forClass
 parameter_list|)
 block|{
 specifier|final
@@ -952,7 +952,7 @@ expr_stmt|;
 if|if
 condition|(
 operator|(
-name|access_flags
+name|accessFlags
 operator|&
 name|p
 operator|)
@@ -963,7 +963,7 @@ block|{
 comment|/*                  * Special case: Classes compiled with new compilers and with the `ACC_SUPER' flag would be said to be "synchronized".                  * This is because SUN used the same value for the flags `ACC_SUPER' and `ACC_SYNCHRONIZED'.                  */
 if|if
 condition|(
-name|for_class
+name|forClass
 operator|&&
 operator|(
 name|p
@@ -1042,7 +1042,7 @@ operator|)
 name|b
 return|;
 block|}
-comment|/**      * @param access_flags the class flags      *      * @return "class" or "interface", depending on the ACC_INTERFACE flag      */
+comment|/**      * @param accessFlags the class flags      *      * @return "class" or "interface", depending on the ACC_INTERFACE flag      */
 specifier|public
 specifier|static
 name|String
@@ -1050,12 +1050,12 @@ name|classOrInterface
 parameter_list|(
 specifier|final
 name|int
-name|access_flags
+name|accessFlags
 parameter_list|)
 block|{
 return|return
 operator|(
-name|access_flags
+name|accessFlags
 operator|&
 name|Const
 operator|.
@@ -1393,7 +1393,7 @@ name|readUnsignedByte
 argument_list|()
 decl_stmt|;
 name|int
-name|default_offset
+name|defaultOffset
 init|=
 literal|0
 decl_stmt|;
@@ -1421,10 +1421,10 @@ name|match
 decl_stmt|;
 name|int
 index|[]
-name|jump_table
+name|jumpTable
 decl_stmt|;
 name|int
-name|no_pad_bytes
+name|noPadBytes
 init|=
 literal|0
 decl_stmt|;
@@ -1473,7 +1473,7 @@ argument_list|()
 operator|%
 literal|4
 decl_stmt|;
-name|no_pad_bytes
+name|noPadBytes
 operator|=
 name|remainder
 operator|==
@@ -1494,7 +1494,7 @@ literal|0
 init|;
 name|i
 operator|<
-name|no_pad_bytes
+name|noPadBytes
 condition|;
 name|i
 operator|++
@@ -1540,7 +1540,7 @@ expr_stmt|;
 block|}
 block|}
 comment|// Both cases have a field default_offset in common
-name|default_offset
+name|defaultOffset
 operator|=
 name|bytes
 operator|.
@@ -1582,11 +1582,11 @@ argument_list|()
 operator|-
 literal|12
 operator|-
-name|no_pad_bytes
+name|noPadBytes
 operator|-
 literal|1
 expr_stmt|;
-name|default_offset
+name|defaultOffset
 operator|+=
 name|offset
 expr_stmt|;
@@ -1599,7 +1599,7 @@ argument_list|)
 operator|.
 name|append
 argument_list|(
-name|default_offset
+name|defaultOffset
 argument_list|)
 operator|.
 name|append
@@ -1627,7 +1627,7 @@ argument_list|(
 literal|"("
 argument_list|)
 expr_stmt|;
-name|jump_table
+name|jumpTable
 operator|=
 operator|new
 name|int
@@ -1648,7 +1648,7 @@ literal|0
 init|;
 name|i
 operator|<
-name|jump_table
+name|jumpTable
 operator|.
 name|length
 condition|;
@@ -1656,7 +1656,7 @@ name|i
 operator|++
 control|)
 block|{
-name|jump_table
+name|jumpTable
 index|[
 name|i
 index|]
@@ -1672,7 +1672,7 @@ name|buf
 operator|.
 name|append
 argument_list|(
-name|jump_table
+name|jumpTable
 index|[
 name|i
 index|]
@@ -1682,7 +1682,7 @@ if|if
 condition|(
 name|i
 operator|<
-name|jump_table
+name|jumpTable
 operator|.
 name|length
 operator|-
@@ -1729,7 +1729,7 @@ argument_list|()
 operator|-
 literal|8
 operator|-
-name|no_pad_bytes
+name|noPadBytes
 operator|-
 literal|1
 expr_stmt|;
@@ -1741,7 +1741,7 @@ index|[
 name|npairs
 index|]
 expr_stmt|;
-name|jump_table
+name|jumpTable
 operator|=
 operator|new
 name|int
@@ -1749,7 +1749,7 @@ index|[
 name|npairs
 index|]
 expr_stmt|;
-name|default_offset
+name|defaultOffset
 operator|+=
 name|offset
 expr_stmt|;
@@ -1762,7 +1762,7 @@ argument_list|)
 operator|.
 name|append
 argument_list|(
-name|default_offset
+name|defaultOffset
 argument_list|)
 operator|.
 name|append
@@ -1805,7 +1805,7 @@ operator|.
 name|readInt
 argument_list|()
 expr_stmt|;
-name|jump_table
+name|jumpTable
 index|[
 name|i
 index|]
@@ -1839,7 +1839,7 @@ argument_list|)
 operator|.
 name|append
 argument_list|(
-name|jump_table
+name|jumpTable
 index|[
 name|i
 index|]
@@ -3835,7 +3835,7 @@ name|str
 return|;
 block|}
 comment|/**      * WARNING:      *      * There is some nomenclature confusion through much of the BCEL code base with respect to the terms Descriptor and      * Signature. For the offical definitions see:      *      * @see<a href="https://docs.oracle.com/javase/specs/jvms/se8/html/jvms-4.html#jvms-4.3"> Descriptors in The Java      *      Virtual Machine Specification</a>      *      * @see<a href="https://docs.oracle.com/javase/specs/jvms/se8/html/jvms-4.html#jvms-4.7.9.1"> Signatures in The Java      *      Virtual Machine Specification</a>      *      *      In brief, a descriptor is a string representing the type of a field or method. Signatures are similar, but more      *      complex. Signatures are used to encode declarations written in the Java programming language that use types      *      outside the type system of the Java Virtual Machine. They are used to describe the type of any class, interface,      *      constructor, method or field whose declaration uses type variables or parameterized types.      *      *      To parse a descriptor, call typeSignatureToString. To parse a signature, call signatureToString.      *      *      Note that if the signature string is a single, non-generic item, the call to signatureToString reduces to a call      *      to typeSignatureToString. Also note, that if you only wish to parse the first item in a longer signature string,      *      you should call typeSignatureToString directly.      */
-comment|/**      * Return a string for an integer justified left or right and filled up with `fill' characters if necessary.      *      * @param i integer to format      * @param length length of desired string      * @param left_justify format left or right      * @param fill fill character      * @return formatted int      */
+comment|/**      * Return a string for an integer justified left or right and filled up with `fill' characters if necessary.      *      * @param i integer to format      * @param length length of desired string      * @param leftJustify format left or right      * @param fill fill character      * @return formatted int      */
 specifier|public
 specifier|static
 name|String
@@ -3851,7 +3851,7 @@ name|length
 parameter_list|,
 specifier|final
 name|boolean
-name|left_justify
+name|leftJustify
 parameter_list|,
 specifier|final
 name|char
@@ -3870,7 +3870,7 @@ argument_list|)
 argument_list|,
 name|length
 argument_list|,
-name|left_justify
+name|leftJustify
 argument_list|,
 name|fill
 argument_list|)
@@ -3905,7 +3905,7 @@ name|toCharArray
 argument_list|()
 decl_stmt|;
 name|boolean
-name|char_found
+name|charFound
 init|=
 literal|false
 decl_stmt|;
@@ -3964,7 +3964,7 @@ literal|'\f'
 case|:
 if|if
 condition|(
-name|char_found
+name|charFound
 condition|)
 block|{
 name|delim
@@ -3979,7 +3979,7 @@ case|:
 if|if
 condition|(
 operator|!
-name|char_found
+name|charFound
 condition|)
 block|{
 throw|throw
@@ -4000,7 +4000,7 @@ break|break
 name|loop
 break|;
 default|default:
-name|char_found
+name|charFound
 operator|=
 literal|true
 expr_stmt|;
@@ -7032,7 +7032,7 @@ literal|"<"
 argument_list|)
 decl_stmt|;
 name|int
-name|consumed_chars
+name|consumedChars
 init|=
 name|bracketIndex
 operator|+
@@ -7046,7 +7046,7 @@ name|signature
 operator|.
 name|charAt
 argument_list|(
-name|consumed_chars
+name|consumedChars
 argument_list|)
 operator|==
 literal|'+'
@@ -7059,7 +7059,7 @@ argument_list|(
 literal|"? extends "
 argument_list|)
 expr_stmt|;
-name|consumed_chars
+name|consumedChars
 operator|++
 expr_stmt|;
 block|}
@@ -7069,7 +7069,7 @@ name|signature
 operator|.
 name|charAt
 argument_list|(
-name|consumed_chars
+name|consumedChars
 argument_list|)
 operator|==
 literal|'-'
@@ -7082,7 +7082,7 @@ argument_list|(
 literal|"? super "
 argument_list|)
 expr_stmt|;
-name|consumed_chars
+name|consumedChars
 operator|++
 expr_stmt|;
 block|}
@@ -7093,7 +7093,7 @@ name|signature
 operator|.
 name|charAt
 argument_list|(
-name|consumed_chars
+name|consumedChars
 argument_list|)
 operator|==
 literal|'*'
@@ -7106,7 +7106,7 @@ argument_list|(
 literal|"?"
 argument_list|)
 expr_stmt|;
-name|consumed_chars
+name|consumedChars
 operator|++
 expr_stmt|;
 block|}
@@ -7122,7 +7122,7 @@ name|signature
 operator|.
 name|substring
 argument_list|(
-name|consumed_chars
+name|consumedChars
 argument_list|)
 argument_list|,
 name|chopit
@@ -7130,7 +7130,7 @@ argument_list|)
 argument_list|)
 expr_stmt|;
 comment|// update our consumed count by the number of characters the for type argument
-name|consumed_chars
+name|consumedChars
 operator|=
 name|unwrap
 argument_list|(
@@ -7139,7 +7139,7 @@ operator|.
 name|CONSUMER_CHARS
 argument_list|)
 operator|+
-name|consumed_chars
+name|consumedChars
 expr_stmt|;
 name|wrap
 argument_list|(
@@ -7147,7 +7147,7 @@ name|Utility
 operator|.
 name|CONSUMER_CHARS
 argument_list|,
-name|consumed_chars
+name|consumedChars
 argument_list|)
 expr_stmt|;
 block|}
@@ -7158,7 +7158,7 @@ name|signature
 operator|.
 name|charAt
 argument_list|(
-name|consumed_chars
+name|consumedChars
 argument_list|)
 operator|!=
 literal|'>'
@@ -7178,7 +7178,7 @@ name|signature
 operator|.
 name|charAt
 argument_list|(
-name|consumed_chars
+name|consumedChars
 argument_list|)
 operator|==
 literal|'+'
@@ -7191,7 +7191,7 @@ argument_list|(
 literal|"? extends "
 argument_list|)
 expr_stmt|;
-name|consumed_chars
+name|consumedChars
 operator|++
 expr_stmt|;
 block|}
@@ -7201,7 +7201,7 @@ name|signature
 operator|.
 name|charAt
 argument_list|(
-name|consumed_chars
+name|consumedChars
 argument_list|)
 operator|==
 literal|'-'
@@ -7214,7 +7214,7 @@ argument_list|(
 literal|"? super "
 argument_list|)
 expr_stmt|;
-name|consumed_chars
+name|consumedChars
 operator|++
 expr_stmt|;
 block|}
@@ -7224,7 +7224,7 @@ name|signature
 operator|.
 name|charAt
 argument_list|(
-name|consumed_chars
+name|consumedChars
 argument_list|)
 operator|==
 literal|'*'
@@ -7237,7 +7237,7 @@ argument_list|(
 literal|"?"
 argument_list|)
 expr_stmt|;
-name|consumed_chars
+name|consumedChars
 operator|++
 expr_stmt|;
 block|}
@@ -7253,7 +7253,7 @@ name|signature
 operator|.
 name|substring
 argument_list|(
-name|consumed_chars
+name|consumedChars
 argument_list|)
 argument_list|,
 name|chopit
@@ -7261,7 +7261,7 @@ argument_list|)
 argument_list|)
 expr_stmt|;
 comment|// update our consumed count by the number of characters the for type argument
-name|consumed_chars
+name|consumedChars
 operator|=
 name|unwrap
 argument_list|(
@@ -7270,7 +7270,7 @@ operator|.
 name|CONSUMER_CHARS
 argument_list|)
 operator|+
-name|consumed_chars
+name|consumedChars
 expr_stmt|;
 name|wrap
 argument_list|(
@@ -7278,13 +7278,13 @@ name|Utility
 operator|.
 name|CONSUMER_CHARS
 argument_list|,
-name|consumed_chars
+name|consumedChars
 argument_list|)
 expr_stmt|;
 block|}
 block|}
 comment|// process the closing ">"
-name|consumed_chars
+name|consumedChars
 operator|++
 expr_stmt|;
 name|type
@@ -7300,7 +7300,7 @@ name|signature
 operator|.
 name|charAt
 argument_list|(
-name|consumed_chars
+name|consumedChars
 argument_list|)
 operator|==
 literal|'.'
@@ -7328,7 +7328,7 @@ name|signature
 operator|.
 name|substring
 argument_list|(
-name|consumed_chars
+name|consumedChars
 operator|+
 literal|1
 argument_list|)
@@ -7340,7 +7340,7 @@ expr_stmt|;
 comment|// update our consumed count by the number of characters the for type argument
 comment|// note that this count includes the "L" we added, but that is ok
 comment|// as it accounts for the "." we didn't consume
-name|consumed_chars
+name|consumedChars
 operator|=
 name|unwrap
 argument_list|(
@@ -7349,7 +7349,7 @@ operator|.
 name|CONSUMER_CHARS
 argument_list|)
 operator|+
-name|consumed_chars
+name|consumedChars
 expr_stmt|;
 name|wrap
 argument_list|(
@@ -7357,7 +7357,7 @@ name|Utility
 operator|.
 name|CONSUMER_CHARS
 argument_list|,
-name|consumed_chars
+name|consumedChars
 argument_list|)
 expr_stmt|;
 return|return
@@ -7373,7 +7373,7 @@ name|signature
 operator|.
 name|charAt
 argument_list|(
-name|consumed_chars
+name|consumedChars
 argument_list|)
 operator|!=
 literal|';'
@@ -7395,7 +7395,7 @@ name|Utility
 operator|.
 name|CONSUMER_CHARS
 argument_list|,
-name|consumed_chars
+name|consumedChars
 operator|+
 literal|1
 argument_list|)
@@ -7435,7 +7435,7 @@ name|String
 name|type
 decl_stmt|;
 name|int
-name|consumed_chars
+name|consumedChars
 decl_stmt|;
 comment|// Shadows global var
 name|brackets
@@ -7473,7 +7473,7 @@ literal|"[]"
 argument_list|)
 expr_stmt|;
 block|}
-name|consumed_chars
+name|consumedChars
 operator|=
 name|n
 expr_stmt|;
@@ -7506,7 +7506,7 @@ operator|.
 name|CONSUMER_CHARS
 argument_list|)
 operator|+
-name|consumed_chars
+name|consumedChars
 decl_stmt|;
 name|wrap
 argument_list|(

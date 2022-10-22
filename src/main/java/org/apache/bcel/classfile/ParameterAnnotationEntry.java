@@ -195,7 +195,7 @@ name|IOException
 block|{
 specifier|final
 name|int
-name|annotation_table_length
+name|annotationTableLength
 init|=
 name|input
 operator|.
@@ -207,7 +207,7 @@ operator|=
 operator|new
 name|AnnotationEntry
 index|[
-name|annotation_table_length
+name|annotationTableLength
 index|]
 expr_stmt|;
 for|for
@@ -219,7 +219,7 @@ literal|0
 init|;
 name|i
 operator|<
-name|annotation_table_length
+name|annotationTableLength
 condition|;
 name|i
 operator|++

@@ -202,7 +202,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/*      * @param nameIndex Index of name      *      * @param length Content length in bytes      *      * @param lineNumberTable Table of line/numbers pairs      *      * @param constant_pool Array of constants      */
+comment|/*      * @param nameIndex Index of name      *      * @param length Content length in bytes      *      * @param lineNumberTable Table of line/numbers pairs      *      * @param constantPool Array of constants      */
 specifier|public
 name|LineNumberTable
 parameter_list|(

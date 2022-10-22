@@ -70,11 +70,11 @@ name|notifyTarget
 parameter_list|(
 specifier|final
 name|InstructionHandle
-name|old_ih
+name|oldIh
 parameter_list|,
 specifier|final
 name|InstructionHandle
-name|new_ih
+name|newIh
 parameter_list|,
 specifier|final
 name|InstructionTargeter
@@ -83,12 +83,12 @@ parameter_list|)
 block|{
 if|if
 condition|(
-name|old_ih
+name|oldIh
 operator|!=
 literal|null
 condition|)
 block|{
-name|old_ih
+name|oldIh
 operator|.
 name|removeTargeter
 argument_list|(
@@ -98,12 +98,12 @@ expr_stmt|;
 block|}
 if|if
 condition|(
-name|new_ih
+name|newIh
 operator|!=
 literal|null
 condition|)
 block|{
-name|new_ih
+name|newIh
 operator|.
 name|addTargeter
 argument_list|(
@@ -599,7 +599,7 @@ operator|+
 name|t
 return|;
 block|}
-comment|/**      * Called by InstructionList.setPositions when setting the position for every instruction. In the presence of variable      * length instructions `setPositions' performs multiple passes over the instruction list to calculate the correct (byte)      * positions and offsets by calling this function.      *      * @param offset additional offset caused by preceding (variable length) instructions      * @param max_offset the maximum offset that may be caused by these instructions      * @return additional offset caused by possible change of this instruction's length      */
+comment|/**      * Called by InstructionList.setPositions when setting the position for every instruction. In the presence of variable      * length instructions `setPositions' performs multiple passes over the instruction list to calculate the correct (byte)      * positions and offsets by calling this function.      *      * @param offset additional offset caused by preceding (variable length) instructions      * @param maxOffset the maximum offset that may be caused by these instructions      * @return additional offset caused by possible change of this instruction's length      */
 specifier|protected
 name|int
 name|updatePosition
@@ -610,7 +610,7 @@ name|offset
 parameter_list|,
 specifier|final
 name|int
-name|max_offset
+name|maxOffset
 parameter_list|)
 block|{
 name|position
@@ -621,7 +621,7 @@ return|return
 literal|0
 return|;
 block|}
-comment|/**      * @param old_ih old target      * @param new_ih new target      */
+comment|/**      * @param oldIh old target      * @param newIh new target      */
 annotation|@
 name|Override
 specifier|public
@@ -630,18 +630,18 @@ name|updateTarget
 parameter_list|(
 specifier|final
 name|InstructionHandle
-name|old_ih
+name|oldIh
 parameter_list|,
 specifier|final
 name|InstructionHandle
-name|new_ih
+name|newIh
 parameter_list|)
 block|{
 if|if
 condition|(
 name|target
 operator|!=
-name|old_ih
+name|oldIh
 condition|)
 block|{
 throw|throw
@@ -650,7 +650,7 @@ name|ClassGenException
 argument_list|(
 literal|"Not targeting "
 operator|+
-name|old_ih
+name|oldIh
 operator|+
 literal|", but "
 operator|+
@@ -660,7 +660,7 @@ throw|;
 block|}
 name|setTarget
 argument_list|(
-name|new_ih
+name|newIh
 argument_list|)
 expr_stmt|;
 block|}

@@ -264,7 +264,7 @@ name|className
 parameter_list|,
 specifier|final
 name|String
-name|class_package
+name|classPackage
 parameter_list|,
 specifier|final
 name|Method
@@ -292,7 +292,7 @@ name|this
 operator|.
 name|classPackage
 operator|=
-name|class_package
+name|classPackage
 expr_stmt|;
 name|this
 operator|.

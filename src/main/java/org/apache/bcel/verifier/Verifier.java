@@ -646,12 +646,12 @@ name|Verifier
 parameter_list|(
 specifier|final
 name|String
-name|fully_qualified_classname
+name|fullyQualifiedClassName
 parameter_list|)
 block|{
 name|classname
 operator|=
-name|fully_qualified_classname
+name|fullyQualifiedClassName
 expr_stmt|;
 name|flush
 argument_list|()
@@ -722,7 +722,7 @@ name|doPass3a
 parameter_list|(
 specifier|final
 name|int
-name|method_no
+name|methodNo
 parameter_list|)
 block|{
 specifier|final
@@ -733,7 +733,7 @@ name|Integer
 operator|.
 name|toString
 argument_list|(
-name|method_no
+name|methodNo
 argument_list|)
 decl_stmt|;
 name|Pass3aVerifier
@@ -765,7 +765,7 @@ name|Pass3aVerifier
 argument_list|(
 name|this
 argument_list|,
-name|method_no
+name|methodNo
 argument_list|)
 expr_stmt|;
 name|p3avs
@@ -792,7 +792,7 @@ name|doPass3b
 parameter_list|(
 specifier|final
 name|int
-name|method_no
+name|methodNo
 parameter_list|)
 block|{
 specifier|final
@@ -803,7 +803,7 @@ name|Integer
 operator|.
 name|toString
 argument_list|(
-name|method_no
+name|methodNo
 argument_list|)
 decl_stmt|;
 name|Pass3bVerifier
@@ -835,7 +835,7 @@ name|Pass3bVerifier
 argument_list|(
 name|this
 argument_list|,
-name|method_no
+name|methodNo
 argument_list|)
 expr_stmt|;
 name|p3bvs

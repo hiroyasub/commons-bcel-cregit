@@ -409,7 +409,7 @@ argument_list|)
 decl_stmt|;
 specifier|final
 name|JavaClass
-name|java_class
+name|javaClass
 init|=
 name|BCELifier
 operator|.
@@ -430,7 +430,7 @@ argument_list|)
 decl_stmt|;
 name|assertNotNull
 argument_list|(
-name|java_class
+name|javaClass
 argument_list|)
 expr_stmt|;
 specifier|final
@@ -474,7 +474,7 @@ init|=
 operator|new
 name|BCELifier
 argument_list|(
-name|java_class
+name|javaClass
 argument_list|,
 name|fos
 argument_list|)
@@ -607,7 +607,7 @@ argument_list|()
 decl_stmt|;
 specifier|final
 name|JavaClass
-name|java_class
+name|javaClass
 init|=
 name|BCELifier
 operator|.
@@ -618,7 +618,7 @@ argument_list|)
 decl_stmt|;
 name|assertNotNull
 argument_list|(
-name|java_class
+name|javaClass
 argument_list|)
 expr_stmt|;
 specifier|final
@@ -628,7 +628,7 @@ init|=
 operator|new
 name|BCELifier
 argument_list|(
-name|java_class
+name|javaClass
 argument_list|,
 name|os
 argument_list|)

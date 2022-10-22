@@ -483,13 +483,13 @@ expr_stmt|;
 block|}
 block|}
 block|}
-comment|/**      * Declare a field. If it is static (isStatic() == true) and has a basic type like int or String it may have an initial      * value associated with it as defined by setInitValue().      *      * @param access_flags access qualifiers      * @param type field type      * @param name field name      * @param cp constant pool      */
+comment|/**      * Declare a field. If it is static (isStatic() == true) and has a basic type like int or String it may have an initial      * value associated with it as defined by setInitValue().      *      * @param accessFlags access qualifiers      * @param type field type      * @param name field name      * @param cp constant pool      */
 specifier|public
 name|FieldGen
 parameter_list|(
 specifier|final
 name|int
-name|access_flags
+name|accessFlags
 parameter_list|,
 specifier|final
 name|Type
@@ -506,7 +506,7 @@ parameter_list|)
 block|{
 name|super
 argument_list|(
-name|access_flags
+name|accessFlags
 argument_list|)
 expr_stmt|;
 name|setType

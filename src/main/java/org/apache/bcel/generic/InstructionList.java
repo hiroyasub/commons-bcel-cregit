@@ -3816,7 +3816,7 @@ name|List
 argument_list|<
 name|InstructionHandle
 argument_list|>
-name|target_vec
+name|targetVec
 init|=
 operator|new
 name|ArrayList
@@ -3897,7 +3897,7 @@ argument_list|()
 condition|)
 block|{
 comment|// Still got targeters?
-name|target_vec
+name|targetVec
 operator|.
 name|add
 argument_list|(
@@ -3953,7 +3953,7 @@ expr_stmt|;
 if|if
 condition|(
 operator|!
-name|target_vec
+name|targetVec
 operator|.
 name|isEmpty
 argument_list|()
@@ -3963,7 +3963,7 @@ throw|throw
 operator|new
 name|TargetLostException
 argument_list|(
-name|target_vec
+name|targetVec
 operator|.
 name|toArray
 argument_list|(
@@ -4013,11 +4013,11 @@ name|replaceConstantPool
 parameter_list|(
 specifier|final
 name|ConstantPoolGen
-name|old_cp
+name|oldCp
 parameter_list|,
 specifier|final
 name|ConstantPoolGen
-name|new_cp
+name|newCp
 parameter_list|)
 block|{
 for|for
@@ -4068,7 +4068,7 @@ specifier|final
 name|Constant
 name|c
 init|=
-name|old_cp
+name|oldCp
 operator|.
 name|getConstant
 argument_list|(
@@ -4082,13 +4082,13 @@ name|ci
 operator|.
 name|setIndex
 argument_list|(
-name|new_cp
+name|newCp
 operator|.
 name|addConstant
 argument_list|(
 name|c
 argument_list|,
-name|old_cp
+name|oldCp
 argument_list|)
 argument_list|)
 expr_stmt|;

@@ -893,14 +893,14 @@ name|a
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Convenience method.      *      * Add an empty constructor to this class that does nothing but calling super().      *      * @param access_flags rights for constructor      */
+comment|/**      * Convenience method.      *      * Add an empty constructor to this class that does nothing but calling super().      *      * @param accessFlags rights for constructor      */
 specifier|public
 name|void
 name|addEmptyConstructor
 parameter_list|(
 specifier|final
 name|int
-name|access_flags
+name|accessFlags
 parameter_list|)
 block|{
 specifier|final
@@ -959,7 +959,7 @@ init|=
 operator|new
 name|MethodGen
 argument_list|(
-name|access_flags
+name|accessFlags
 argument_list|,
 name|Type
 operator|.

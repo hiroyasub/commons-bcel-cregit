@@ -442,7 +442,7 @@ argument_list|)
 expr_stmt|;
 specifier|final
 name|int
-name|num_bootstrap_arguments
+name|bootstrapArgumentsLen
 init|=
 name|bootstrapArguments
 operator|.
@@ -450,7 +450,7 @@ name|length
 decl_stmt|;
 if|if
 condition|(
-name|num_bootstrap_arguments
+name|bootstrapArgumentsLen
 operator|>
 literal|0
 condition|)
@@ -471,7 +471,7 @@ literal|0
 init|;
 name|i
 operator|<
-name|num_bootstrap_arguments
+name|bootstrapArgumentsLen
 condition|;
 name|i
 operator|++

@@ -2506,7 +2506,7 @@ argument_list|()
 argument_list|)
 return|;
 block|}
-comment|/**      * Add a new Methodref constant to the ConstantPool, if it is not already in there.      *      * @param className class name string to add      * @param method_name method name string to add      * @param signature method signature string to add      * @return index of entry      */
+comment|/**      * Add a new Methodref constant to the ConstantPool, if it is not already in there.      *      * @param className class name string to add      * @param methodName method name string to add      * @param signature method signature string to add      * @return index of entry      */
 specifier|public
 name|int
 name|addMethodref
@@ -2517,7 +2517,7 @@ name|className
 parameter_list|,
 specifier|final
 name|String
-name|method_name
+name|methodName
 parameter_list|,
 specifier|final
 name|String
@@ -2542,7 +2542,7 @@ name|lookupMethodref
 argument_list|(
 name|className
 argument_list|,
-name|method_name
+name|methodName
 argument_list|,
 name|signature
 argument_list|)
@@ -2564,7 +2564,7 @@ name|nameAndTypeIndex
 operator|=
 name|addNameAndType
 argument_list|(
-name|method_name
+name|methodName
 argument_list|,
 name|signature
 argument_list|)
@@ -2602,7 +2602,7 @@ name|className
 operator|+
 name|METHODREF_DELIM
 operator|+
-name|method_name
+name|methodName
 operator|+
 name|METHODREF_DELIM
 operator|+
@@ -3471,7 +3471,7 @@ argument_list|()
 argument_list|)
 return|;
 block|}
-comment|/**      * Look for ConstantInterfaceMethodref in ConstantPool.      *      * @param className Where to find method      * @param method_name Guess what      * @param signature return and argument types      * @return index on success, -1 otherwise      */
+comment|/**      * Look for ConstantInterfaceMethodref in ConstantPool.      *      * @param className Where to find method      * @param methodName Guess what      * @param signature return and argument types      * @return index on success, -1 otherwise      */
 specifier|public
 name|int
 name|lookupInterfaceMethodref
@@ -3482,7 +3482,7 @@ name|className
 parameter_list|,
 specifier|final
 name|String
-name|method_name
+name|methodName
 parameter_list|,
 specifier|final
 name|String
@@ -3501,7 +3501,7 @@ name|className
 operator|+
 name|IMETHODREF_DELIM
 operator|+
-name|method_name
+name|methodName
 operator|+
 name|IMETHODREF_DELIM
 operator|+
@@ -3618,7 +3618,7 @@ argument_list|()
 argument_list|)
 return|;
 block|}
-comment|/**      * Look for ConstantMethodref in ConstantPool.      *      * @param className Where to find method      * @param method_name Guess what      * @param signature return and argument types      * @return index on success, -1 otherwise      */
+comment|/**      * Look for ConstantMethodref in ConstantPool.      *      * @param className Where to find method      * @param methodName Guess what      * @param signature return and argument types      * @return index on success, -1 otherwise      */
 specifier|public
 name|int
 name|lookupMethodref
@@ -3629,7 +3629,7 @@ name|className
 parameter_list|,
 specifier|final
 name|String
-name|method_name
+name|methodName
 parameter_list|,
 specifier|final
 name|String
@@ -3648,7 +3648,7 @@ name|className
 operator|+
 name|METHODREF_DELIM
 operator|+
-name|method_name
+name|methodName
 operator|+
 name|METHODREF_DELIM
 operator|+

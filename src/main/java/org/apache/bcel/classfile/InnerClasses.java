@@ -517,7 +517,7 @@ for|for
 control|(
 specifier|final
 name|InnerClass
-name|inner_class
+name|innerClass
 range|:
 name|innerClasses
 control|)
@@ -526,7 +526,7 @@ name|buf
 operator|.
 name|append
 argument_list|(
-name|inner_class
+name|innerClass
 operator|.
 name|toString
 argument_list|(

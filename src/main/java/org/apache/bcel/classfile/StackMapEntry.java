@@ -317,7 +317,7 @@ argument_list|()
 expr_stmt|;
 specifier|final
 name|int
-name|number_of_locals
+name|numberOfLocals
 init|=
 name|frameType
 operator|-
@@ -328,7 +328,7 @@ operator|=
 operator|new
 name|StackMapType
 index|[
-name|number_of_locals
+name|numberOfLocals
 index|]
 expr_stmt|;
 for|for
@@ -340,7 +340,7 @@ literal|0
 init|;
 name|i
 operator|<
-name|number_of_locals
+name|numberOfLocals
 condition|;
 name|i
 operator|++
@@ -379,7 +379,7 @@ argument_list|()
 expr_stmt|;
 specifier|final
 name|int
-name|number_of_locals
+name|numberOfLocals
 init|=
 name|input
 operator|.
@@ -391,7 +391,7 @@ operator|=
 operator|new
 name|StackMapType
 index|[
-name|number_of_locals
+name|numberOfLocals
 index|]
 expr_stmt|;
 for|for
@@ -403,7 +403,7 @@ literal|0
 init|;
 name|i
 operator|<
-name|number_of_locals
+name|numberOfLocals
 condition|;
 name|i
 operator|++
@@ -425,7 +425,7 @@ expr_stmt|;
 block|}
 specifier|final
 name|int
-name|number_of_stack_items
+name|numberOfStackItems
 init|=
 name|input
 operator|.
@@ -437,7 +437,7 @@ operator|=
 operator|new
 name|StackMapType
 index|[
-name|number_of_stack_items
+name|numberOfStackItems
 index|]
 expr_stmt|;
 for|for
@@ -449,7 +449,7 @@ literal|0
 init|;
 name|i
 operator|<
-name|number_of_stack_items
+name|numberOfStackItems
 condition|;
 name|i
 operator|++
@@ -1162,14 +1162,14 @@ for|for
 control|(
 specifier|final
 name|StackMapType
-name|types_of_local
+name|typesOfLocal
 range|:
 name|typesOfLocals
 control|)
 block|{
 name|len
 operator|+=
-name|types_of_local
+name|typesOfLocal
 operator|.
 name|hasIndex
 argument_list|()
@@ -1211,14 +1211,14 @@ for|for
 control|(
 specifier|final
 name|StackMapType
-name|types_of_local
+name|typesOfLocal
 range|:
 name|typesOfLocals
 control|)
 block|{
 name|len
 operator|+=
-name|types_of_local
+name|typesOfLocal
 operator|.
 name|hasIndex
 argument_list|()
@@ -1232,14 +1232,14 @@ for|for
 control|(
 specifier|final
 name|StackMapType
-name|types_of_stack_item
+name|typesOfStackItem
 range|:
 name|typesOfStackItems
 control|)
 block|{
 name|len
 operator|+=
-name|types_of_stack_item
+name|typesOfStackItem
 operator|.
 name|hasIndex
 argument_list|()
@@ -1301,16 +1301,16 @@ name|setByteCodeOffset
 parameter_list|(
 specifier|final
 name|int
-name|new_offset
+name|newOffset
 parameter_list|)
 block|{
 if|if
 condition|(
-name|new_offset
+name|newOffset
 operator|<
 literal|0
 operator|||
-name|new_offset
+name|newOffset
 operator|>
 literal|32767
 condition|)
@@ -1321,7 +1321,7 @@ name|IllegalArgumentException
 argument_list|(
 literal|"Invalid StackMap offset: "
 operator|+
-name|new_offset
+name|newOffset
 argument_list|)
 throw|;
 block|}
@@ -1342,7 +1342,7 @@ condition|)
 block|{
 if|if
 condition|(
-name|new_offset
+name|newOffset
 operator|>
 name|Const
 operator|.
@@ -1360,7 +1360,7 @@ else|else
 block|{
 name|frameType
 operator|=
-name|new_offset
+name|newOffset
 expr_stmt|;
 block|}
 block|}
@@ -1381,7 +1381,7 @@ condition|)
 block|{
 if|if
 condition|(
-name|new_offset
+name|newOffset
 operator|>
 name|Const
 operator|.
@@ -1403,7 +1403,7 @@ name|Const
 operator|.
 name|SAME_LOCALS_1_STACK_ITEM_FRAME
 operator|+
-name|new_offset
+name|newOffset
 expr_stmt|;
 block|}
 block|}
@@ -1488,7 +1488,7 @@ throw|;
 block|}
 name|byteCodeOffset
 operator|=
-name|new_offset
+name|newOffset
 expr_stmt|;
 block|}
 comment|/**      * @param constantPool Constant pool to be used for this object.      */

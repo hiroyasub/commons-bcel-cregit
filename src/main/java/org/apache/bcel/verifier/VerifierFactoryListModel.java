@@ -268,7 +268,7 @@ argument_list|()
 decl_stmt|;
 specifier|final
 name|int
-name|num_of_verifiers
+name|verifierLen
 init|=
 name|verifiers
 operator|.
@@ -323,7 +323,7 @@ name|CONTENTS_CHANGED
 argument_list|,
 literal|0
 argument_list|,
-name|num_of_verifiers
+name|verifierLen
 operator|-
 literal|1
 argument_list|)

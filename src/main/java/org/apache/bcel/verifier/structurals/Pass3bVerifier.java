@@ -564,22 +564,24 @@ name|Pass3bVerifier
 parameter_list|(
 specifier|final
 name|Verifier
-name|owner
+name|myOwner
 parameter_list|,
 specifier|final
 name|int
-name|method_no
+name|methodNo
 parameter_list|)
 block|{
+name|this
+operator|.
 name|myOwner
 operator|=
-name|owner
+name|myOwner
 expr_stmt|;
 name|this
 operator|.
 name|methodNo
 operator|=
-name|method_no
+name|methodNo
 expr_stmt|;
 block|}
 comment|/**      * Whenever the outgoing frame situation of an InstructionContext changes, all its successors are put [back] into the      * queue [as if they were unvisited]. The proof of termination is about the existence of a fix point of frame merging.      */
@@ -1208,7 +1210,7 @@ comment|// [subroutines are never protected; mandated by JustIce]
 specifier|final
 name|ExceptionHandler
 index|[]
-name|exc_hds
+name|excHds
 init|=
 name|u
 operator|.
@@ -1219,9 +1221,9 @@ for|for
 control|(
 specifier|final
 name|ExceptionHandler
-name|exc_hd
+name|excHd
 range|:
-name|exc_hds
+name|excHds
 control|)
 block|{
 specifier|final
@@ -1232,7 +1234,7 @@ name|cfg
 operator|.
 name|contextOf
 argument_list|(
-name|exc_hd
+name|excHd
 operator|.
 name|getHandlerStart
 argument_list|()
@@ -1285,7 +1287,7 @@ operator|.
 name|maxStack
 argument_list|()
 argument_list|,
-name|exc_hd
+name|excHd
 operator|.
 name|getExceptionType
 argument_list|()
@@ -1296,7 +1298,7 @@ name|Type
 operator|.
 name|THROWABLE
 else|:
-name|exc_hd
+name|excHd
 operator|.
 name|getExceptionType
 argument_list|()

@@ -308,7 +308,7 @@ parameter_list|,
 specifier|final
 name|LocalVariable
 index|[]
-name|local_variable_table
+name|localVariableTable
 parameter_list|,
 specifier|final
 name|ConstantPool
@@ -332,7 +332,7 @@ name|this
 operator|.
 name|localVariableTypeTable
 operator|=
-name|local_variable_table
+name|localVariableTable
 expr_stmt|;
 block|}
 specifier|public

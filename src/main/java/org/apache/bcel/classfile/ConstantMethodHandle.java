@@ -255,14 +255,14 @@ name|setReferenceKind
 parameter_list|(
 specifier|final
 name|int
-name|reference_kind
+name|referenceKind
 parameter_list|)
 block|{
 name|this
 operator|.
 name|referenceKind
 operator|=
-name|reference_kind
+name|referenceKind
 expr_stmt|;
 block|}
 comment|/**      * @return String representation      */

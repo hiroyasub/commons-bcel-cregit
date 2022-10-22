@@ -1608,7 +1608,7 @@ else|else
 block|{
 specifier|final
 name|int
-name|t_pos
+name|tPos
 init|=
 name|bh
 operator|.
@@ -1625,14 +1625,14 @@ if|if
 condition|(
 name|pos
 operator|>
-name|t_pos
+name|tPos
 condition|)
 block|{
 name|target
 operator|=
 literal|"ih_"
 operator|+
-name|t_pos
+name|tPos
 expr_stmt|;
 block|}
 else|else

@@ -695,24 +695,24 @@ operator|=
 name|value
 expr_stmt|;
 block|}
-comment|/**      * @param match_length the match_length to set      * @since 6.0      */
+comment|/**      * @param matchLength the match_length to set      * @since 6.0      */
 specifier|final
 name|int
 name|setMatch_length
 parameter_list|(
 specifier|final
 name|int
-name|match_length
+name|matchLength
 parameter_list|)
 block|{
 name|this
 operator|.
 name|match_length
 operator|=
-name|match_length
+name|matchLength
 expr_stmt|;
 return|return
-name|match_length
+name|matchLength
 return|;
 block|}
 comment|/**      *      * @param array      * @since 6.0      */

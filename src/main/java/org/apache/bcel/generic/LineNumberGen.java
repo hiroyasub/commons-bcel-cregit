@@ -227,7 +227,7 @@ name|setSourceLine
 parameter_list|(
 specifier|final
 name|int
-name|src_line
+name|srcLine
 parameter_list|)
 block|{
 comment|// TODO could be package-protected?
@@ -235,7 +235,7 @@ name|this
 operator|.
 name|srcLine
 operator|=
-name|src_line
+name|srcLine
 expr_stmt|;
 block|}
 comment|/**      * @param oldIh old target      * @param newIh new target      */

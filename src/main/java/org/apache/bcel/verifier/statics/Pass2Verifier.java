@@ -868,7 +868,7 @@ name|Set
 argument_list|<
 name|String
 argument_list|>
-name|field_names
+name|fieldNames
 init|=
 operator|new
 name|HashSet
@@ -881,7 +881,7 @@ name|Set
 argument_list|<
 name|String
 argument_list|>
-name|field_names_and_desc
+name|fieldNamesAndDesc
 init|=
 operator|new
 name|HashSet
@@ -894,7 +894,7 @@ name|Set
 argument_list|<
 name|String
 argument_list|>
-name|method_names_and_desc
+name|methodNamesAndDesc
 init|=
 operator|new
 name|HashSet
@@ -3426,7 +3426,7 @@ block|}
 specifier|final
 name|int
 index|[]
-name|exc_indices
+name|excIndices
 init|=
 name|obj
 operator|.
@@ -3437,16 +3437,16 @@ for|for
 control|(
 specifier|final
 name|int
-name|exc_indice
+name|excIndice
 range|:
-name|exc_indices
+name|excIndices
 control|)
 block|{
 name|checkIndex
 argument_list|(
 name|obj
 argument_list|,
-name|exc_indice
+name|excIndice
 argument_list|,
 name|CONST_Class
 argument_list|)
@@ -3462,7 +3462,7 @@ name|cp
 operator|.
 name|getConstant
 argument_list|(
-name|exc_indice
+name|excIndice
 argument_list|)
 decl_stmt|;
 name|checkIndex
@@ -4125,7 +4125,7 @@ name|sig
 decl_stmt|;
 if|if
 condition|(
-name|field_names_and_desc
+name|fieldNamesAndDesc
 operator|.
 name|contains
 argument_list|(
@@ -4150,7 +4150,7 @@ throw|;
 block|}
 if|if
 condition|(
-name|field_names
+name|fieldNames
 operator|.
 name|contains
 argument_list|(
@@ -4168,14 +4168,14 @@ literal|"' detected (but with different type descriptors). This is very unusual.
 argument_list|)
 expr_stmt|;
 block|}
-name|field_names_and_desc
+name|fieldNamesAndDesc
 operator|.
 name|add
 argument_list|(
 name|nameanddesc
 argument_list|)
 expr_stmt|;
-name|field_names
+name|fieldNames
 operator|.
 name|add
 argument_list|(
@@ -4389,7 +4389,7 @@ argument_list|)
 expr_stmt|;
 specifier|final
 name|int
-name|outer_idx
+name|outerIdx
 init|=
 name|ic
 operator|.
@@ -4398,7 +4398,7 @@ argument_list|()
 decl_stmt|;
 if|if
 condition|(
-name|outer_idx
+name|outerIdx
 operator|!=
 literal|0
 condition|)
@@ -4407,7 +4407,7 @@ name|checkIndex
 argument_list|(
 name|innerClasses
 argument_list|,
-name|outer_idx
+name|outerIdx
 argument_list|,
 name|CONST_Class
 argument_list|)
@@ -5834,7 +5834,7 @@ name|sig
 decl_stmt|;
 if|if
 condition|(
-name|method_names_and_desc
+name|methodNamesAndDesc
 operator|.
 name|contains
 argument_list|(
@@ -5857,7 +5857,7 @@ literal|"') are allowed have same names and desciptors!"
 argument_list|)
 throw|;
 block|}
-name|method_names_and_desc
+name|methodNamesAndDesc
 operator|.
 name|add
 argument_list|(
@@ -5875,7 +5875,7 @@ name|getAttributes
 argument_list|()
 decl_stmt|;
 name|int
-name|num_code_atts
+name|numCodeAtts
 init|=
 literal|0
 decl_stmt|;
@@ -6027,7 +6027,7 @@ operator|instanceof
 name|Code
 condition|)
 block|{
-name|num_code_atts
+name|numCodeAtts
 operator|++
 expr_stmt|;
 block|}
@@ -6046,7 +6046,7 @@ operator|.
 name|isAbstract
 argument_list|()
 operator|&&
-name|num_code_atts
+name|numCodeAtts
 operator|!=
 literal|1
 condition|)
@@ -6064,7 +6064,7 @@ argument_list|)
 operator|+
 literal|"' must have exactly one Code attribute (found: "
 operator|+
-name|num_code_atts
+name|numCodeAtts
 operator|+
 literal|")."
 argument_list|)

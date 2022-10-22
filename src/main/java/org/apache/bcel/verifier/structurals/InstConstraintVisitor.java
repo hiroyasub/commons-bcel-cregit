@@ -521,7 +521,7 @@ parameter_list|)
 block|{
 specifier|final
 name|String
-name|fq_classname
+name|fqClassName
 init|=
 name|violator
 operator|.
@@ -537,11 +537,11 @@ name|StructuralCodeConstraintException
 argument_list|(
 literal|"Instruction "
 operator|+
-name|fq_classname
+name|fqClassName
 operator|.
 name|substring
 argument_list|(
-name|fq_classname
+name|fqClassName
 operator|.
 name|lastIndexOf
 argument_list|(
@@ -4990,7 +4990,7 @@ expr_stmt|;
 block|}
 specifier|final
 name|String
-name|field_name
+name|fieldName
 init|=
 name|o
 operator|.
@@ -5048,7 +5048,7 @@ argument_list|()
 operator|.
 name|equals
 argument_list|(
-name|field_name
+name|fieldName
 argument_list|)
 condition|)
 block|{
@@ -5149,7 +5149,7 @@ argument_list|()
 operator|.
 name|equals
 argument_list|(
-name|field_name
+name|fieldName
 argument_list|)
 condition|)
 block|{
@@ -5239,7 +5239,7 @@ name|AssertionViolatedException
 argument_list|(
 literal|"Field '"
 operator|+
-name|field_name
+name|fieldName
 operator|+
 literal|"' not found in "
 operator|+
@@ -7964,7 +7964,7 @@ comment|// if ( ! Repository.implementationOf(objref_classname, theInterface) ) 
 comment|// constraintViolated(o, "The 'objref' item '"+objref+"' does not implement '"+theInterface+"' as expected.");
 comment|// }
 name|int
-name|counted_count
+name|countedCount
 init|=
 literal|1
 decl_stmt|;
@@ -7984,7 +7984,7 @@ name|i
 operator|++
 control|)
 block|{
-name|counted_count
+name|countedCount
 operator|+=
 name|argtypes
 index|[
@@ -7999,7 +7999,7 @@ if|if
 condition|(
 name|count
 operator|!=
-name|counted_count
+name|countedCount
 condition|)
 block|{
 name|constraintViolated
@@ -8008,7 +8008,7 @@ name|o
 argument_list|,
 literal|"The 'count' argument should probably read '"
 operator|+
-name|counted_count
+name|countedCount
 operator|+
 literal|"' but is '"
 operator|+
@@ -8405,7 +8405,7 @@ argument_list|)
 expr_stmt|;
 block|}
 name|String
-name|objref_classname
+name|objRefClassName
 init|=
 literal|null
 decl_stmt|;
@@ -8478,7 +8478,7 @@ name|GENERIC_ARRAY
 expr_stmt|;
 block|}
 block|}
-name|objref_classname
+name|objRefClassName
 operator|=
 operator|(
 operator|(
@@ -8515,7 +8515,7 @@ literal|"'. Otherwise, you couldn't invoke a method since an array has no method
 argument_list|)
 expr_stmt|;
 block|}
-name|objref_classname
+name|objRefClassName
 operator|=
 operator|(
 operator|(
@@ -8549,7 +8549,7 @@ name|Repository
 operator|.
 name|instanceOf
 argument_list|(
-name|objref_classname
+name|objRefClassName
 argument_list|,
 name|theClass
 argument_list|)
@@ -9290,7 +9290,7 @@ block|}
 block|}
 specifier|final
 name|String
-name|objref_classname
+name|objRefClassName
 init|=
 operator|(
 operator|(
@@ -9320,7 +9320,7 @@ name|Repository
 operator|.
 name|instanceOf
 argument_list|(
-name|objref_classname
+name|objRefClassName
 argument_list|,
 name|theClass
 argument_list|)
@@ -12529,7 +12529,7 @@ expr_stmt|;
 block|}
 specifier|final
 name|String
-name|field_name
+name|fieldName
 init|=
 name|o
 operator|.
@@ -12588,7 +12588,7 @@ argument_list|()
 operator|.
 name|equals
 argument_list|(
-name|field_name
+name|fieldName
 argument_list|)
 condition|)
 block|{
@@ -12649,7 +12649,7 @@ name|AssertionViolatedException
 argument_list|(
 literal|"Field '"
 operator|+
-name|field_name
+name|fieldName
 operator|+
 literal|"' not found in "
 operator|+
@@ -13026,7 +13026,7 @@ try|try
 block|{
 specifier|final
 name|String
-name|field_name
+name|fieldName
 init|=
 name|o
 operator|.
@@ -13085,7 +13085,7 @@ argument_list|()
 operator|.
 name|equals
 argument_list|(
-name|field_name
+name|fieldName
 argument_list|)
 condition|)
 block|{
@@ -13146,7 +13146,7 @@ name|AssertionViolatedException
 argument_list|(
 literal|"Field '"
 operator|+
-name|field_name
+name|fieldName
 operator|+
 literal|"' not found in "
 operator|+

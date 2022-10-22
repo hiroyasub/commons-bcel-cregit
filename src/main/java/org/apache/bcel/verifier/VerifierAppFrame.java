@@ -474,7 +474,7 @@ argument_list|()
 decl_stmt|;
 specifier|private
 name|String
-name|current_class
+name|currentClass
 decl_stmt|;
 specifier|private
 specifier|final
@@ -723,7 +723,7 @@ condition|)
 block|{
 return|return;
 block|}
-name|current_class
+name|currentClass
 operator|=
 name|classNamesJList
 operator|.
@@ -754,7 +754,7 @@ name|classNamesJList
 operator|.
 name|setSelectedValue
 argument_list|(
-name|current_class
+name|currentClass
 argument_list|,
 literal|true
 argument_list|)
@@ -1633,7 +1633,7 @@ name|VerifierFactory
 operator|.
 name|getVerifier
 argument_list|(
-name|current_class
+name|currentClass
 argument_list|)
 decl_stmt|;
 specifier|final
@@ -1855,7 +1855,7 @@ name|VerifierFactory
 operator|.
 name|getVerifier
 argument_list|(
-name|current_class
+name|currentClass
 argument_list|)
 decl_stmt|;
 specifier|final
@@ -2110,7 +2110,7 @@ name|VerifierFactory
 operator|.
 name|getVerifier
 argument_list|(
-name|current_class
+name|currentClass
 argument_list|)
 decl_stmt|;
 name|v
@@ -2368,7 +2368,7 @@ name|Repository
 operator|.
 name|lookupClass
 argument_list|(
-name|current_class
+name|currentClass
 argument_list|)
 decl_stmt|;
 comment|/*                  * boolean all3aok = true; boolean all3bok = true; String all3amsg = ""; String all3bmsg = "";                  */
@@ -2569,7 +2569,7 @@ argument_list|)
 expr_stmt|;
 name|setTitle
 argument_list|(
-name|current_class
+name|currentClass
 operator|+
 literal|" - "
 operator|+

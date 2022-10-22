@@ -751,7 +751,7 @@ name|verbose
 argument_list|)
 return|;
 block|}
-comment|/**      * Called by InstructionList.setPositions when setting the position for every instruction. In the presence of variable      * length instructions `setPositions()' performs multiple passes over the instruction list to calculate the correct      * (byte) positions and offsets by calling this function.      *      * @param offset additional offset caused by preceding (variable length) instructions      * @param max_offset the maximum offset that may be caused by these instructions      * @return additional offset caused by possible change of this instruction's length      */
+comment|/**      * Called by InstructionList.setPositions when setting the position for every instruction. In the presence of variable      * length instructions `setPositions()' performs multiple passes over the instruction list to calculate the correct      * (byte) positions and offsets by calling this function.      *      * @param offset additional offset caused by preceding (variable length) instructions      * @param maxOffset the maximum offset that may be caused by these instructions      * @return additional offset caused by possible change of this instruction's length      */
 specifier|protected
 name|int
 name|updatePosition
@@ -762,7 +762,7 @@ name|offset
 parameter_list|,
 specifier|final
 name|int
-name|max_offset
+name|maxOffset
 parameter_list|)
 block|{
 name|i_position

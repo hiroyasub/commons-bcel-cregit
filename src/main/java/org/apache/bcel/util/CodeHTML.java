@@ -431,7 +431,7 @@ name|bytes
 parameter_list|,
 specifier|final
 name|int
-name|method_number
+name|methodNumber
 parameter_list|)
 throws|throws
 name|IOException
@@ -727,7 +727,7 @@ argument_list|)
 operator|.
 name|append
 argument_list|(
-name|method_number
+name|methodNumber
 argument_list|)
 operator|.
 name|append
@@ -765,7 +765,7 @@ argument_list|)
 operator|.
 name|append
 argument_list|(
-name|method_number
+name|methodNumber
 argument_list|)
 operator|.
 name|append
@@ -928,7 +928,7 @@ argument_list|)
 operator|.
 name|append
 argument_list|(
-name|method_number
+name|methodNumber
 argument_list|)
 operator|.
 name|append
@@ -972,7 +972,7 @@ argument_list|)
 operator|.
 name|append
 argument_list|(
-name|method_number
+name|methodNumber
 argument_list|)
 operator|.
 name|append
@@ -1115,7 +1115,7 @@ argument_list|)
 operator|.
 name|append
 argument_list|(
-name|method_number
+name|methodNumber
 argument_list|)
 operator|.
 name|append
@@ -1180,7 +1180,7 @@ argument_list|)
 operator|.
 name|append
 argument_list|(
-name|method_number
+name|methodNumber
 argument_list|)
 operator|.
 name|append
@@ -1443,7 +1443,7 @@ argument_list|()
 expr_stmt|;
 specifier|final
 name|String
-name|field_name
+name|fieldName
 init|=
 name|constantPool
 operator|.
@@ -1486,7 +1486,7 @@ argument_list|)
 operator|.
 name|append
 argument_list|(
-name|field_name
+name|fieldName
 argument_list|)
 operator|.
 name|append
@@ -1496,7 +1496,7 @@ argument_list|)
 operator|.
 name|append
 argument_list|(
-name|field_name
+name|fieldName
 argument_list|)
 operator|.
 name|append
@@ -1526,7 +1526,7 @@ argument_list|)
 operator|.
 name|append
 argument_list|(
-name|field_name
+name|fieldName
 argument_list|)
 expr_stmt|;
 block|}
@@ -2630,7 +2630,7 @@ literal|4
 decl_stmt|;
 specifier|final
 name|int
-name|no_pad_bytes
+name|noPadBytes
 init|=
 name|remainder
 operator|==
@@ -2643,7 +2643,7 @@ operator|-
 name|remainder
 decl_stmt|;
 name|int
-name|default_offset
+name|defaultOffset
 decl_stmt|;
 name|int
 name|offset
@@ -2657,7 +2657,7 @@ literal|0
 init|;
 name|j
 operator|<
-name|no_pad_bytes
+name|noPadBytes
 condition|;
 name|j
 operator|++
@@ -2670,7 +2670,7 @@ argument_list|()
 expr_stmt|;
 block|}
 comment|// Both cases have a field default_offset in common
-name|default_offset
+name|defaultOffset
 operator|=
 name|bytes
 operator|.
@@ -2713,11 +2713,11 @@ argument_list|()
 operator|-
 literal|12
 operator|-
-name|no_pad_bytes
+name|noPadBytes
 operator|-
 literal|1
 expr_stmt|;
-name|default_offset
+name|defaultOffset
 operator|+=
 name|offset
 expr_stmt|;
@@ -2725,7 +2725,7 @@ name|gotoSet
 operator|.
 name|set
 argument_list|(
-name|default_offset
+name|defaultOffset
 argument_list|)
 expr_stmt|;
 for|for
@@ -2786,11 +2786,11 @@ argument_list|()
 operator|-
 literal|8
 operator|-
-name|no_pad_bytes
+name|noPadBytes
 operator|-
 literal|1
 expr_stmt|;
-name|default_offset
+name|defaultOffset
 operator|+=
 name|offset
 expr_stmt|;
@@ -2798,7 +2798,7 @@ name|gotoSet
 operator|.
 name|set
 argument_list|(
-name|default_offset
+name|defaultOffset
 argument_list|)
 expr_stmt|;
 for|for
@@ -3015,7 +3015,7 @@ name|method
 parameter_list|,
 specifier|final
 name|int
-name|method_number
+name|methodNumber
 parameter_list|)
 throws|throws
 name|IOException
@@ -3071,7 +3071,7 @@ argument_list|()
 decl_stmt|;
 specifier|final
 name|String
-name|html_name
+name|htmlName
 init|=
 name|Class2HTML
 operator|.
@@ -3130,7 +3130,7 @@ literal|"</FONT>&nbsp;"
 operator|+
 literal|"<A NAME=method"
 operator|+
-name|method_number
+name|methodNumber
 operator|+
 literal|">"
 operator|+
@@ -3147,11 +3147,11 @@ name|className
 operator|+
 literal|"_methods.html#method"
 operator|+
-name|method_number
+name|methodNumber
 operator|+
 literal|"\" TARGET=Methods>"
 operator|+
-name|html_name
+name|htmlName
 operator|+
 literal|"</A>("
 argument_list|)
@@ -3289,7 +3289,7 @@ name|className
 operator|+
 literal|"_attributes.html#method"
 operator|+
-name|method_number
+name|methodNumber
 operator|+
 literal|"@"
 operator|+
@@ -3407,7 +3407,7 @@ literal|"_attributes.html#"
 operator|+
 literal|"method"
 operator|+
-name|method_number
+name|methodNumber
 operator|+
 literal|"@"
 operator|+
@@ -3527,7 +3527,7 @@ name|codeToHTML
 argument_list|(
 name|stream
 argument_list|,
-name|method_number
+name|methodNumber
 argument_list|)
 decl_stmt|;
 name|String
@@ -3550,7 +3550,7 @@ name|anchor
 operator|=
 literal|"<A NAME=code"
 operator|+
-name|method_number
+name|methodNumber
 operator|+
 literal|"@"
 operator|+
@@ -3578,7 +3578,7 @@ name|anchor2
 operator|=
 literal|"<A NAME=code"
 operator|+
-name|method_number
+name|methodNumber
 operator|+
 literal|"@"
 operator|+

@@ -605,7 +605,7 @@ argument_list|)
 decl_stmt|;
 specifier|final
 name|LocalVariableTable
-name|new_lvt
+name|newLvt
 init|=
 name|mg
 operator|.
@@ -619,9 +619,9 @@ argument_list|)
 decl_stmt|;
 specifier|final
 name|LocalVariable
-name|new_lv
+name|newLv
 init|=
-name|new_lvt
+name|newLvt
 operator|.
 name|getLocalVariable
 argument_list|(
@@ -639,7 +639,7 @@ operator|.
 name|getLength
 argument_list|()
 argument_list|,
-name|new_lv
+name|newLv
 operator|.
 name|getLength
 argument_list|()

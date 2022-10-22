@@ -295,21 +295,21 @@ name|deferTo
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * @param ignored_packages classes contained in these packages will be loaded with the system class loader      */
+comment|/**      * @param ignoredPackages classes contained in these packages will be loaded with the system class loader      */
 specifier|public
 name|ClassLoader
 parameter_list|(
 specifier|final
 name|String
 index|[]
-name|ignored_packages
+name|ignoredPackages
 parameter_list|)
 block|{
 name|this
 operator|.
 name|ignoredPackages
 operator|=
-name|ignored_packages
+name|ignoredPackages
 expr_stmt|;
 block|}
 comment|/**      * Override this method to create you own classes on the fly. The name contains the special token $$BCEL$$. Everything      * before that token is considered to be a package name. You can encode your own arguments into the subsequent string.      * You must ensure however not to use any "illegal" characters, i.e., characters that may not appear in a Java class      * name too      *<p>      * The default implementation interprets the string as a encoded compressed Java class, unpacks and decodes it with the      * Utility.decode() method, and parses the resulting byte array and returns the resulting JavaClass object.      *</p>      *      * @param className compressed byte code with "$$BCEL$$" in it      */
@@ -335,7 +335,7 @@ argument_list|)
 decl_stmt|;
 specifier|final
 name|String
-name|real_name
+name|realName
 init|=
 name|className
 operator|.
@@ -365,7 +365,7 @@ name|Utility
 operator|.
 name|decode
 argument_list|(
-name|real_name
+name|realName
 argument_list|,
 literal|true
 argument_list|)

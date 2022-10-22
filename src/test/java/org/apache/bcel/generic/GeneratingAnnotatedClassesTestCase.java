@@ -626,7 +626,7 @@ decl_stmt|;
 comment|// We now define some often used types:
 specifier|final
 name|ObjectType
-name|i_stream
+name|iStream
 init|=
 operator|new
 name|ObjectType
@@ -636,7 +636,7 @@ argument_list|)
 decl_stmt|;
 specifier|final
 name|ObjectType
-name|p_stream
+name|pStream
 init|=
 operator|new
 name|ObjectType
@@ -703,7 +703,7 @@ literal|"java.lang.System"
 argument_list|,
 literal|"in"
 argument_list|,
-name|i_stream
+name|iStream
 argument_list|,
 name|Const
 operator|.
@@ -731,7 +731,7 @@ operator|new
 name|Type
 index|[]
 block|{
-name|i_stream
+name|iStream
 block|}
 argument_list|,
 name|Const
@@ -885,7 +885,7 @@ comment|// il.append(factory.createInvoke("java.io.BufferedReader", "readLine",
 comment|// Type.STRING, Type.NO_ARGS, Constants.INVOKEVIRTUAL));
 specifier|final
 name|InstructionHandle
-name|try_start
+name|tryStart
 init|=
 name|il
 operator|.
@@ -925,7 +925,7 @@ argument_list|)
 decl_stmt|;
 specifier|final
 name|InstructionHandle
-name|try_end
+name|tryEnd
 init|=
 name|il
 operator|.
@@ -937,7 +937,7 @@ decl_stmt|;
 comment|// We add the exception handler which simply returns from the method.
 specifier|final
 name|LocalVariableGen
-name|var_ex
+name|varEx
 init|=
 name|mg
 operator|.
@@ -961,7 +961,7 @@ specifier|final
 name|int
 name|var_ex_slot
 init|=
-name|var_ex
+name|varEx
 operator|.
 name|getIndex
 argument_list|()
@@ -981,14 +981,14 @@ name|var_ex_slot
 argument_list|)
 argument_list|)
 decl_stmt|;
-name|var_ex
+name|varEx
 operator|.
 name|setStart
 argument_list|(
 name|handler
 argument_list|)
 expr_stmt|;
-name|var_ex
+name|varEx
 operator|.
 name|setEnd
 argument_list|(
@@ -1006,9 +1006,9 @@ name|mg
 operator|.
 name|addExceptionHandler
 argument_list|(
-name|try_start
+name|tryStart
 argument_list|,
-name|try_end
+name|tryEnd
 argument_list|,
 name|handler
 argument_list|,
@@ -1037,7 +1037,7 @@ literal|"java.lang.System"
 argument_list|,
 literal|"out"
 argument_list|,
-name|p_stream
+name|pStream
 argument_list|,
 name|Const
 operator|.
@@ -1325,7 +1325,7 @@ expr_stmt|;
 comment|// We now define some often used types:
 specifier|final
 name|ObjectType
-name|i_stream
+name|iStream
 init|=
 operator|new
 name|ObjectType
@@ -1335,7 +1335,7 @@ argument_list|)
 decl_stmt|;
 specifier|final
 name|ObjectType
-name|p_stream
+name|pStream
 init|=
 operator|new
 name|ObjectType
@@ -1402,7 +1402,7 @@ literal|"java.lang.System"
 argument_list|,
 literal|"in"
 argument_list|,
-name|i_stream
+name|iStream
 argument_list|,
 name|Const
 operator|.
@@ -1430,7 +1430,7 @@ operator|new
 name|Type
 index|[]
 block|{
-name|i_stream
+name|iStream
 block|}
 argument_list|,
 name|Const
@@ -1584,7 +1584,7 @@ comment|// il.append(factory.createInvoke("java.io.BufferedReader", "readLine",
 comment|// Type.STRING, Type.NO_ARGS, Constants.INVOKEVIRTUAL));
 specifier|final
 name|InstructionHandle
-name|try_start
+name|tryStart
 init|=
 name|il
 operator|.
@@ -1624,7 +1624,7 @@ argument_list|)
 decl_stmt|;
 specifier|final
 name|InstructionHandle
-name|try_end
+name|tryEnd
 init|=
 name|il
 operator|.
@@ -1636,7 +1636,7 @@ decl_stmt|;
 comment|// We add the exception handler which simply returns from the method.
 specifier|final
 name|LocalVariableGen
-name|var_ex
+name|varEx
 init|=
 name|mg
 operator|.
@@ -1658,9 +1658,9 @@ argument_list|)
 decl_stmt|;
 specifier|final
 name|int
-name|var_ex_slot
+name|varExSlot
 init|=
-name|var_ex
+name|varEx
 operator|.
 name|getIndex
 argument_list|()
@@ -1676,18 +1676,18 @@ argument_list|(
 operator|new
 name|ASTORE
 argument_list|(
-name|var_ex_slot
+name|varExSlot
 argument_list|)
 argument_list|)
 decl_stmt|;
-name|var_ex
+name|varEx
 operator|.
 name|setStart
 argument_list|(
 name|handler
 argument_list|)
 expr_stmt|;
-name|var_ex
+name|varEx
 operator|.
 name|setEnd
 argument_list|(
@@ -1705,9 +1705,9 @@ name|mg
 operator|.
 name|addExceptionHandler
 argument_list|(
-name|try_start
+name|tryStart
 argument_list|,
-name|try_end
+name|tryEnd
 argument_list|,
 name|handler
 argument_list|,
@@ -1736,7 +1736,7 @@ literal|"java.lang.System"
 argument_list|,
 literal|"out"
 argument_list|,
-name|p_stream
+name|pStream
 argument_list|,
 name|Const
 operator|.

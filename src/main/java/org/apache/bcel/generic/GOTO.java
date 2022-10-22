@@ -207,7 +207,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/**      * Called in pass 2 of InstructionList.setPositions() in order to update the branch target, that may shift due to      * variable length instructions.      *      * @param offset additional offset caused by preceding (variable length) instructions      * @param max_offset the maximum offset that may be caused by these instructions      * @return additional offset caused by possible change of this instruction's length      */
+comment|/**      * Called in pass 2 of InstructionList.setPositions() in order to update the branch target, that may shift due to      * variable length instructions.      *      * @param offset additional offset caused by preceding (variable length) instructions      * @param maxOffset the maximum offset that may be caused by these instructions      * @return additional offset caused by possible change of this instruction's length      */
 annotation|@
 name|Override
 specifier|protected
@@ -220,7 +220,7 @@ name|offset
 parameter_list|,
 specifier|final
 name|int
-name|max_offset
+name|maxOffset
 parameter_list|)
 block|{
 specifier|final
@@ -253,7 +253,7 @@ name|Short
 operator|.
 name|MAX_VALUE
 operator|-
-name|max_offset
+name|maxOffset
 condition|)
 block|{
 comment|// to large for short (estimate)
@@ -274,7 +274,7 @@ argument_list|)
 expr_stmt|;
 specifier|final
 name|short
-name|old_length
+name|oldLength
 init|=
 operator|(
 name|short
@@ -297,7 +297,7 @@ operator|.
 name|getLength
 argument_list|()
 operator|-
-name|old_length
+name|oldLength
 return|;
 block|}
 return|return

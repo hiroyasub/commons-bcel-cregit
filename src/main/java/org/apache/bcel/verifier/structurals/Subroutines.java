@@ -1788,7 +1788,7 @@ name|Set
 argument_list|<
 name|InstructionHandle
 argument_list|>
-name|sub_leaders
+name|subLeaders
 init|=
 operator|new
 name|HashSet
@@ -1821,7 +1821,7 @@ operator|instanceof
 name|JsrInstruction
 condition|)
 block|{
-name|sub_leaders
+name|subLeaders
 operator|.
 name|add
 argument_list|(
@@ -1845,7 +1845,7 @@ specifier|final
 name|InstructionHandle
 name|astore
 range|:
-name|sub_leaders
+name|subLeaders
 control|)
 block|{
 specifier|final
@@ -1897,7 +1897,7 @@ argument_list|,
 name|TOPLEVEL
 argument_list|)
 expr_stmt|;
-name|sub_leaders
+name|subLeaders
 operator|.
 name|add
 argument_list|(
@@ -1976,7 +1976,7 @@ name|Set
 argument_list|<
 name|InstructionHandle
 argument_list|>
-name|instructions_assigned
+name|instructionsAssigned
 init|=
 operator|new
 name|HashSet
@@ -2016,7 +2016,7 @@ specifier|final
 name|InstructionHandle
 name|actual
 range|:
-name|sub_leaders
+name|subLeaders
 control|)
 block|{
 comment|// Do some BFS with "actual" as the root of the graph.
@@ -2253,7 +2253,7 @@ argument_list|)
 expr_stmt|;
 if|if
 condition|(
-name|instructions_assigned
+name|instructionsAssigned
 operator|.
 name|contains
 argument_list|(
@@ -2273,7 +2273,7 @@ literal|"' is part of more than one subroutine (or of the top level and a subrou
 argument_list|)
 throw|;
 block|}
-name|instructions_assigned
+name|instructionsAssigned
 operator|.
 name|add
 argument_list|(

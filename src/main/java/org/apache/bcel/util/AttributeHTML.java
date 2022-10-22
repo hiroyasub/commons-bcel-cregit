@@ -410,7 +410,7 @@ name|link
 parameter_list|,
 specifier|final
 name|int
-name|method_number
+name|methodNumber
 parameter_list|)
 block|{
 return|return
@@ -420,7 +420,7 @@ name|className
 operator|+
 literal|"_code.html#code"
 operator|+
-name|method_number
+name|methodNumber
 operator|+
 literal|"@"
 operator|+
@@ -468,7 +468,7 @@ name|anchor
 parameter_list|,
 specifier|final
 name|int
-name|method_number
+name|methodNumber
 parameter_list|)
 block|{
 specifier|final
@@ -594,7 +594,7 @@ name|className
 operator|+
 literal|"_code.html#method"
 operator|+
-name|method_number
+name|methodNumber
 operator|+
 literal|"\" TARGET=Code>Byte code</A></LI></UL>\n"
 argument_list|)
@@ -702,7 +702,7 @@ operator|.
 name|getStartPC
 argument_list|()
 argument_list|,
-name|method_number
+name|methodNumber
 argument_list|)
 operator|+
 literal|" to "
@@ -714,7 +714,7 @@ operator|.
 name|getEndPC
 argument_list|()
 argument_list|,
-name|method_number
+name|methodNumber
 argument_list|)
 operator|+
 literal|", handled at line "
@@ -726,7 +726,7 @@ operator|.
 name|getHandlerPC
 argument_list|()
 argument_list|,
-name|method_number
+name|methodNumber
 argument_list|)
 operator|+
 literal|")</LI>"
@@ -891,7 +891,7 @@ case|:
 specifier|final
 name|LineNumber
 index|[]
-name|line_numbers
+name|lineNumbers
 init|=
 operator|(
 operator|(
@@ -920,7 +920,7 @@ literal|0
 init|;
 name|i
 operator|<
-name|line_numbers
+name|lineNumbers
 operator|.
 name|length
 condition|;
@@ -934,7 +934,7 @@ name|print
 argument_list|(
 literal|"("
 operator|+
-name|line_numbers
+name|lineNumbers
 index|[
 name|i
 index|]
@@ -944,7 +944,7 @@ argument_list|()
 operator|+
 literal|",&nbsp;"
 operator|+
-name|line_numbers
+name|lineNumbers
 index|[
 name|i
 index|]
@@ -959,7 +959,7 @@ if|if
 condition|(
 name|i
 operator|<
-name|line_numbers
+name|lineNumbers
 operator|.
 name|length
 operator|-
@@ -1090,7 +1090,7 @@ name|className
 operator|+
 literal|"_code.html#code"
 operator|+
-name|method_number
+name|methodNumber
 operator|+
 literal|"@"
 operator|+
@@ -1108,7 +1108,7 @@ name|className
 operator|+
 literal|"_code.html#code"
 operator|+
-name|method_number
+name|methodNumber
 operator|+
 literal|"@"
 operator|+
