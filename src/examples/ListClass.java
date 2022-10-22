@@ -190,13 +190,13 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Read class file(s) and display its contents. The command line usage is:  *  *<pre>  * java listclass [-constants] [-code] [-brief] [-dependencies] [-nocontents] [-recurse] class... [-exclude<list>]  *</pre>  *  * where  *<ul>  *<li>{@code -code} List byte code of methods</li>  *<li>{@code -brief} List byte codes briefly</li>  *<li>{@code -constants} Print constants table (constant pool)</li>  *<li>{@code -recurse} Usually intended to be used along with {@code -dependencies} When this flag is set, listclass  * will also print information about all classes which the target class depends on.</li>  *  *<li>{@code -dependencies} Setting this flag makes listclass print a list of all classes which the target class  * depends on. Generated from getting all CONSTANT_Class constants from the constant pool.</li>  *  *<li>{@code -exclude} All non-flag arguments after this flag are added to an 'exclusion list'. Target classes are  * compared with the members of the exclusion list. Any target class whose fully qualified name begins with a name in  * the exclusion list will not be analyzed/listed. This is meant primarily when using both {@code -recurse} to exclude  * java, javax, and sun classes, and is recommended as otherwise the output from {@code -recurse} gets quite long and  * most of it is not interesting. Note that {@code -exclude} prevents listing of classes, it does not prevent class  * names from being printed in the {@code -dependencies} list.</li>  *<li>{@code -nocontents} Do not print JavaClass.toString() for the class. I added this because sometimes I'm only  * interested in dependency information.</li>  *</ul>  *<p>  * Here's a couple examples of how I typically use listclass:  *</p>  *  *<pre>  * java listclass -code MyClass  *</pre>  *  * Print information about the class and the byte code of the methods  *  *<pre>  * java listclass -nocontents -dependencies MyClass  *</pre>  *  * Print a list of all classes which MyClass depends on.  *  *<pre>  * java listclass -nocontents -recurse MyClass -exclude java. javax. sun.  *</pre>  *  * Print a recursive listing of all classes which MyClass depends on. Do not analyze classes beginning with "java.",  * "javax.", or "sun.".  *  *<pre>  * java listclass -nocontents -dependencies -recurse MyClass -exclude java.javax. sun.  *</pre>  *<p>  * Print a recursive listing of dependency information for MyClass and its dependents. Do not analyze classes beginning  * with "java.", "javax.", or "sun."  *</p>  *  *<a href="mailto:twheeler@objectspace.com">Thomas Wheeler</A>  */
+comment|/**  * Read class file(s) and display its contents. The command line usage is:  *  *<pre>  * java ListClass [-constants] [-code] [-brief] [-dependencies] [-nocontents] [-recurse] class... [-exclude<list>]  *</pre>  *  * where  *<ul>  *<li>{@code -code} List byte code of methods</li>  *<li>{@code -brief} List byte codes briefly</li>  *<li>{@code -constants} Print constants table (constant pool)</li>  *<li>{@code -recurse} Usually intended to be used along with {@code -dependencies} When this flag is set, listclass  * will also print information about all classes which the target class depends on.</li>  *  *<li>{@code -dependencies} Setting this flag makes listclass print a list of all classes which the target class  * depends on. Generated from getting all CONSTANT_Class constants from the constant pool.</li>  *  *<li>{@code -exclude} All non-flag arguments after this flag are added to an 'exclusion list'. Target classes are  * compared with the members of the exclusion list. Any target class whose fully qualified name begins with a name in  * the exclusion list will not be analyzed/listed. This is meant primarily when using both {@code -recurse} to exclude  * java, javax, and sun classes, and is recommended as otherwise the output from {@code -recurse} gets quite long and  * most of it is not interesting. Note that {@code -exclude} prevents listing of classes, it does not prevent class  * names from being printed in the {@code -dependencies} list.</li>  *<li>{@code -nocontents} Do not print JavaClass.toString() for the class. I added this because sometimes I'm only  * interested in dependency information.</li>  *</ul>  *<p>  * Here's a couple examples of how I typically use ListClass:  *</p>  *  *<pre>  * java ListClass -code MyClass  *</pre>  *  * Print information about the class and the byte code of the methods  *  *<pre>  * java ListClass -nocontents -dependencies MyClass  *</pre>  *  * Print a list of all classes which MyClass depends on.  *  *<pre>  * java ListClass -nocontents -recurse MyClass -exclude java. javax. sun.  *</pre>  *  * Print a recursive listing of all classes which MyClass depends on. Do not analyze classes beginning with "java.",  * "javax.", or "sun.".  *  *<pre>  * java ListClass -nocontents -dependencies -recurse MyClass -exclude java.javax. sun.  *</pre>  *<p>  * Print a recursive listing of dependency information for MyClass and its dependents. Do not analyze classes beginning  * with "java.", "javax.", or "sun."  *</p>  *  *<a href="mailto:twheeler@objectspace.com">Thomas Wheeler</A>  */
 end_comment
 
 begin_class
 specifier|public
 class|class
-name|listclass
+name|ListClass
 block|{
 specifier|public
 specifier|static
@@ -715,11 +715,11 @@ block|}
 else|else
 block|{
 specifier|final
-name|listclass
+name|ListClass
 name|listClass
 init|=
 operator|new
-name|listclass
+name|ListClass
 argument_list|(
 name|code
 argument_list|,
@@ -904,7 +904,7 @@ argument_list|>
 name|excludeName
 decl_stmt|;
 specifier|public
-name|listclass
+name|ListClass
 parameter_list|(
 specifier|final
 name|boolean

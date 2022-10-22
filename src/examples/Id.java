@@ -114,13 +114,13 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Test BCEL if an input file is identical to the outfile generated with BCEL. Of course there may some small  * differences, e.g., because BCEL generates local variable tables by default.  *  * Try to:  *  *<pre>  * % java id<someclass> % java listclass -code<someclass>&gt; foo % java listclass -code<someclass>.clazz&gt; bar %  * diff foo bar | more  *  *<pre>  */
+comment|/**  * Test BCEL if an input file is identical to the outfile generated with BCEL. Of course there may some small  * differences, e.g., because BCEL generates local variable tables by default.  *  * Try to:  *  *<pre>  * % java Id<someclass> % java listclass -code<someclass>&gt; foo % java listclass -code<someclass>.clazz&gt; bar %  * diff foo bar | more  *  *<pre>  */
 end_comment
 
 begin_class
 specifier|public
 class|class
-name|id
+name|Id
 block|{
 specifier|public
 specifier|static

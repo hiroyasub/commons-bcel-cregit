@@ -60,13 +60,13 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Patch all Utf8 constants in the given class file<em>file</em>.class and save the result in _<em>file</em>.class.  *  * Usage: patch<oldstring><newstring> files  */
+comment|/**  * Patch all Utf8 constants in the given class file<em>file</em>.class and save the result in _<em>file</em>.class.  *  * Usage: PatchClass<oldstring><newstring> files  */
 end_comment
 
 begin_class
 specifier|public
 class|class
-name|patchclass
+name|PatchClass
 block|{
 specifier|public
 specifier|static

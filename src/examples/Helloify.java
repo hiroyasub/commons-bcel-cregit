@@ -235,7 +235,7 @@ begin_class
 specifier|public
 specifier|final
 class|class
-name|helloify
+name|Helloify
 block|{
 specifier|private
 specifier|static
