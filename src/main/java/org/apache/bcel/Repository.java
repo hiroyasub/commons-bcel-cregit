@@ -379,7 +379,7 @@ name|clazz
 parameter_list|,
 specifier|final
 name|JavaClass
-name|super_class
+name|superclass
 parameter_list|)
 throws|throws
 name|ClassNotFoundException
@@ -389,7 +389,7 @@ name|clazz
 operator|.
 name|instanceOf
 argument_list|(
-name|super_class
+name|superclass
 argument_list|)
 return|;
 block|}
@@ -405,7 +405,7 @@ name|clazz
 parameter_list|,
 specifier|final
 name|String
-name|super_class
+name|superclass
 parameter_list|)
 throws|throws
 name|ClassNotFoundException
@@ -417,7 +417,7 @@ name|clazz
 argument_list|,
 name|lookupClass
 argument_list|(
-name|super_class
+name|superclass
 argument_list|)
 argument_list|)
 return|;
@@ -434,7 +434,7 @@ name|clazz
 parameter_list|,
 specifier|final
 name|JavaClass
-name|super_class
+name|superclass
 parameter_list|)
 throws|throws
 name|ClassNotFoundException
@@ -447,7 +447,7 @@ argument_list|(
 name|clazz
 argument_list|)
 argument_list|,
-name|super_class
+name|superclass
 argument_list|)
 return|;
 block|}
@@ -463,7 +463,7 @@ name|clazz
 parameter_list|,
 specifier|final
 name|String
-name|super_class
+name|superclass
 parameter_list|)
 throws|throws
 name|ClassNotFoundException
@@ -478,7 +478,7 @@ argument_list|)
 argument_list|,
 name|lookupClass
 argument_list|(
-name|super_class
+name|superclass
 argument_list|)
 argument_list|)
 return|;
