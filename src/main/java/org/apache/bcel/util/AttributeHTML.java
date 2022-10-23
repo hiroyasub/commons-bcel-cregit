@@ -31,7 +31,7 @@ name|java
 operator|.
 name|io
 operator|.
-name|IOException
+name|FileNotFoundException
 import|;
 end_import
 
@@ -42,6 +42,16 @@ operator|.
 name|io
 operator|.
 name|PrintWriter
+import|;
+end_import
+
+begin_import
+import|import
+name|java
+operator|.
+name|io
+operator|.
+name|UnsupportedEncodingException
 import|;
 end_import
 
@@ -311,7 +321,9 @@ name|Charset
 name|charset
 parameter_list|)
 throws|throws
-name|IOException
+name|FileNotFoundException
+throws|,
+name|UnsupportedEncodingException
 block|{
 name|this
 operator|.
