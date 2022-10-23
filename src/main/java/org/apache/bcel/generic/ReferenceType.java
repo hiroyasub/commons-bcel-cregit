@@ -873,7 +873,7 @@ block|{
 return|return
 literal|true
 return|;
-comment|// This is not explicitely stated, but clear. Isn't it?
+comment|// This is not explicitly stated, but clear. Isn't it?
 block|}
 comment|/*          * If this is a class type then          */
 if|if

@@ -147,7 +147,7 @@ parameter_list|)
 throws|throws
 name|LocalVariableInfoInconsistentException
 block|{
-comment|// The add operation on LocalVariableInfo may throw the '...Inconsistent...' exception, we don't throw it explicitely
+comment|// The add operation on LocalVariableInfo may throw the '...Inconsistent...' exception, we don't throw it explicitly
 comment|// here.
 if|if
 condition|(
