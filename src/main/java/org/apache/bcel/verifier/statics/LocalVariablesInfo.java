@@ -119,7 +119,7 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Adds information about the local variable in slot 'slot'. Automatically adds information for slot+1 if 't' is      * Type.LONG or Type.DOUBLE.      *      * @param name variable name      * @param startPc Range in which the variable is valid.      * @param length length of ...      * @param type variable type      * @throws LocalVariableInfoInconsistentException if the new information conflicts with already gathered information.      */
+comment|/**      * Adds information about the local variable in slot 'slot'. Automatically adds information for slot+1 if 't' is      * Type.LONG or Type.DOUBLE.      *      * @param slot Slot number for local variable information      * @param name variable name      * @param startPc Range in which the variable is valid.      * @param length length of ...      * @param type variable type      * @throws LocalVariableInfoInconsistentException if the new information conflicts with already gathered information.      */
 specifier|public
 name|void
 name|add
