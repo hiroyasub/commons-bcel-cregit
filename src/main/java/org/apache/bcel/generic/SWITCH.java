@@ -77,7 +77,7 @@ literal|1
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Template for switch() constructs. If the match array can be sorted in ascending order with gaps no larger than      * max_gap between the numbers, a TABLESWITCH instruction is generated, and a LOOKUPSWITCH otherwise. The former may be      * more efficient, but needs more space.      *      * Note, that the key array always will be sorted, though we leave the original arrays unaltered.      *      * @param match array of match values (case 2: ... case 7: ..., etc.)      * @param targets the instructions to be branched to for each case      * @param target the default target      * @param maxGap maximum gap that may between case branches      */
+comment|/**      * Template for switch() constructs. If the match array can be sorted in ascending order with gaps no larger than      * maxGap between the numbers, a TABLESWITCH instruction is generated, and a LOOKUPSWITCH otherwise. The former may be      * more efficient, but needs more space.      *      * Note, that the key array always will be sorted, though we leave the original arrays unaltered.      *      * @param match array of match values (case 2: ... case 7: ..., etc.)      * @param targets the instructions to be branched to for each case      * @param target the default target      * @param maxGap maximum gap that may between case branches      */
 specifier|public
 name|SWITCH
 parameter_list|(
@@ -445,7 +445,7 @@ name|instruction
 argument_list|)
 return|;
 block|}
-comment|/**      * @return match is sorted in ascending order with no gap bigger than max_gap?      */
+comment|/**      * @return match is sorted in ascending order with no gap bigger than maxGap?      */
 specifier|private
 name|boolean
 name|matchIsOrdered

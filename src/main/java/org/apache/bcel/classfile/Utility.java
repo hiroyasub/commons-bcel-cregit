@@ -3748,7 +3748,7 @@ return|return
 literal|true
 return|;
 block|}
-comment|/**      * Fillup char with up to length characters with char `fill' and justify it left or right.      *      * @param str string to format      * @param length length of desired string      * @param left_justify format left or right      * @param fill fill character      * @return formatted string      */
+comment|/**      * Fillup char with up to length characters with char `fill' and justify it left or right.      *      * @param str string to format      * @param length length of desired string      * @param leftJustify format left or right      * @param fill fill character      * @return formatted string      */
 specifier|public
 specifier|static
 name|String
@@ -3764,7 +3764,7 @@ name|length
 parameter_list|,
 specifier|final
 name|boolean
-name|left_justify
+name|leftJustify
 parameter_list|,
 specifier|final
 name|char
@@ -3811,7 +3811,7 @@ argument_list|)
 expr_stmt|;
 if|if
 condition|(
-name|left_justify
+name|leftJustify
 condition|)
 block|{
 return|return

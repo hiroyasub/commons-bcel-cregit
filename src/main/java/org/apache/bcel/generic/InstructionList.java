@@ -3363,7 +3363,7 @@ expr_stmt|;
 block|}
 block|}
 block|}
-comment|/**      * Redirect all references from old_target to new_target, i.e., update targets of branch instructions.      *      * @param oldTarget the old target instruction handle      * @param newTarget the new target instruction handle      */
+comment|/**      * Redirect all references from oldTarget to newTarget, i.e., update targets of branch instructions.      *      * @param oldTarget the old target instruction handle      * @param newTarget the new target instruction handle      */
 specifier|public
 name|void
 name|redirectBranches
@@ -3515,7 +3515,7 @@ block|}
 block|}
 block|}
 block|}
-comment|/**      * Redirect all references of exception handlers from old_target to new_target.      *      * @param exceptions array of exception handlers      * @param oldTarget the old target instruction handle      * @param newTarget the new target instruction handle      * @see MethodGen      */
+comment|/**      * Redirect all references of exception handlers from oldTarget to newTarget.      *      * @param exceptions array of exception handlers      * @param oldTarget the old target instruction handle      * @param newTarget the new target instruction handle      * @see MethodGen      */
 specifier|public
 name|void
 name|redirectExceptionHandlers
@@ -3599,7 +3599,7 @@ expr_stmt|;
 block|}
 block|}
 block|}
-comment|/**      * Redirect all references of local variables from old_target to new_target.      *      * @param lg array of local variables      * @param oldTarget the old target instruction handle      * @param newTarget the new target instruction handle      * @see MethodGen      */
+comment|/**      * Redirect all references of local variables from oldTarget to newTarget.      *      * @param lg array of local variables      * @param oldTarget the old target instruction handle      * @param newTarget the new target instruction handle      * @see MethodGen      */
 specifier|public
 name|void
 name|redirectLocalVariables

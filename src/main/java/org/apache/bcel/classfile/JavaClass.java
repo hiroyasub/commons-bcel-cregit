@@ -626,7 +626,7 @@ operator|.
 name|getInstance
 argument_list|()
 decl_stmt|;
-comment|/**      * Constructor gets all contents as arguments.      *      * @param classNameIndex Class name      * @param superclassNameIndex Superclass name      * @param fileName File name      * @param major Major compiler version      * @param minor Minor compiler version      * @param access_flags Access rights defined by bit flags      * @param constantPool Array of constants      * @param interfaces Implemented interfaces      * @param fields Class fields      * @param methods Class methods      * @param attributes Class attributes      */
+comment|/**      * Constructor gets all contents as arguments.      *      * @param classNameIndex Class name      * @param superclassNameIndex Superclass name      * @param fileName File name      * @param major Major compiler version      * @param minor Minor compiler version      * @param accessFlags Access rights defined by bit flags      * @param constantPool Array of constants      * @param interfaces Implemented interfaces      * @param fields Class fields      * @param methods Class methods      * @param attributes Class attributes      */
 specifier|public
 name|JavaClass
 parameter_list|(
@@ -652,7 +652,7 @@ name|minor
 parameter_list|,
 specifier|final
 name|int
-name|access_flags
+name|accessFlags
 parameter_list|,
 specifier|final
 name|ConstantPool
@@ -691,7 +691,7 @@ name|major
 argument_list|,
 name|minor
 argument_list|,
-name|access_flags
+name|accessFlags
 argument_list|,
 name|constantPool
 argument_list|,
