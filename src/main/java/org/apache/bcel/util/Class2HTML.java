@@ -1124,7 +1124,6 @@ decl_stmt|;
 comment|/*          * Attributes can't be written in one step, so we just open a file which will be written consequently.          */
 try|try
 init|(
-specifier|final
 name|AttributeHTML
 name|attributeHtml
 init|=

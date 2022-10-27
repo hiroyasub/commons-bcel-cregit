@@ -539,7 +539,7 @@ catch|catch
 parameter_list|(
 specifier|final
 name|IOException
-name|ioe
+name|ignored
 parameter_list|)
 block|{
 comment|// ignore close exceptions
@@ -565,7 +565,7 @@ catch|catch
 parameter_list|(
 specifier|final
 name|IOException
-name|ioe
+name|ignored
 parameter_list|)
 block|{
 comment|// ignore close exceptions

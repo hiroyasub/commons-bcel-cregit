@@ -348,7 +348,7 @@ catch|catch
 parameter_list|(
 specifier|final
 name|ClassNotFoundException
-name|e
+name|ignored
 parameter_list|)
 block|{
 comment|// FIXME: currently, Pass1Verifier treats jc == null as a special

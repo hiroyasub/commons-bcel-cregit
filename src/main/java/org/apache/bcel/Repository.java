@@ -545,7 +545,6 @@ parameter_list|)
 block|{
 try|try
 init|(
-specifier|final
 name|ClassPath
 name|path
 init|=

@@ -1365,16 +1365,13 @@ condition|(
 name|c
 operator|==
 literal|null
-condition|)
-block|{
-if|if
-condition|(
+comment|// the 0th element is always null
+operator|&&
 name|index
 operator|!=
 literal|0
 condition|)
 block|{
-comment|// the 0th element is always null
 specifier|final
 name|Constant
 name|prev
@@ -1422,7 +1419,6 @@ operator|+
 literal|" is null."
 argument_list|)
 throw|;
-block|}
 block|}
 block|}
 return|return
