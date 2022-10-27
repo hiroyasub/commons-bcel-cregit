@@ -653,9 +653,6 @@ name|classname
 operator|=
 name|fullyQualifiedClassName
 expr_stmt|;
-name|flush
-argument_list|()
-expr_stmt|;
 block|}
 comment|/** Returns the VerificationResult for the given pass. */
 specifier|public
@@ -855,7 +852,7 @@ name|verify
 argument_list|()
 return|;
 block|}
-comment|/**      * Forget everything known about the class file; that means, really start a new verification of a possibly different      * class file from BCEL's repository.      *      */
+comment|/**      * Forget everything known about the class file; that means, really start a new verification of a possibly different      * class file from BCEL's repository.      */
 specifier|public
 name|void
 name|flush
