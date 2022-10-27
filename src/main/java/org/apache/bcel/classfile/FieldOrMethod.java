@@ -403,7 +403,7 @@ name|c
 operator|.
 name|constant_pool
 operator|=
-name|constant_pool
+name|constantPool
 expr_stmt|;
 name|c
 operator|.
@@ -441,7 +441,7 @@ index|]
 operator|.
 name|copy
 argument_list|(
-name|constant_pool
+name|constantPool
 argument_list|)
 argument_list|)
 expr_stmt|;
