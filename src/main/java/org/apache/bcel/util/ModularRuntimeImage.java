@@ -231,6 +231,12 @@ name|FileSystem
 name|fileSystem
 decl_stmt|;
 comment|/**      * Constructs a default instance.      */
+annotation|@
+name|SuppressWarnings
+argument_list|(
+literal|"resource"
+argument_list|)
+comment|// See #close()
 specifier|public
 name|ModularRuntimeImage
 parameter_list|()
