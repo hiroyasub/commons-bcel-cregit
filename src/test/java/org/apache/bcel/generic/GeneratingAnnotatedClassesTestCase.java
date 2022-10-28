@@ -1974,14 +1974,14 @@ name|createClassGen
 parameter_list|(
 specifier|final
 name|String
-name|classname
+name|className
 parameter_list|)
 block|{
 return|return
 operator|new
 name|ClassGen
 argument_list|(
-name|classname
+name|className
 argument_list|,
 literal|"java.lang.Object"
 argument_list|,

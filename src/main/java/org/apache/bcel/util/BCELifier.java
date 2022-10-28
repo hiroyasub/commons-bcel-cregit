@@ -397,7 +397,7 @@ name|out
 operator|.
 name|println
 argument_list|(
-literal|"Usage: BCELifier classname"
+literal|"Usage: BCELifier className"
 argument_list|)
 expr_stmt|;
 name|System

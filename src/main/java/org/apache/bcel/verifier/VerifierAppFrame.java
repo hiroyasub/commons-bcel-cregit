@@ -1565,7 +1565,7 @@ parameter_list|)
 block|{
 specifier|final
 name|String
-name|classname
+name|className
 init|=
 name|JOptionPane
 operator|.
@@ -1576,11 +1576,11 @@ argument_list|)
 decl_stmt|;
 if|if
 condition|(
-name|classname
+name|className
 operator|==
 literal|null
 operator|||
-name|classname
+name|className
 operator|.
 name|isEmpty
 argument_list|()
@@ -1592,7 +1592,7 @@ name|VerifierFactory
 operator|.
 name|getVerifier
 argument_list|(
-name|classname
+name|className
 argument_list|)
 expr_stmt|;
 comment|// let observers do the rest.
@@ -1600,7 +1600,7 @@ name|classNamesJList
 operator|.
 name|setSelectedValue
 argument_list|(
-name|classname
+name|className
 argument_list|,
 literal|true
 argument_list|)

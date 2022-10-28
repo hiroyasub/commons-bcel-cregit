@@ -115,6 +115,23 @@ name|o
 argument_list|)
 expr_stmt|;
 block|}
+comment|/**      * Clears the factory.      */
+specifier|static
+name|void
+name|clear
+parameter_list|()
+block|{
+name|MAP
+operator|.
+name|clear
+argument_list|()
+expr_stmt|;
+name|OBSVERVERS
+operator|.
+name|clear
+argument_list|()
+expr_stmt|;
+block|}
 comment|/**      * Removes the VerifierFactoryObserver o from the list of observers.      */
 specifier|public
 specifier|static

@@ -7330,7 +7330,7 @@ block|{
 comment|// Ignore the case where it's not a ConstantUtf8 here, we'll find out later.
 specifier|final
 name|String
-name|classname
+name|className
 init|=
 operator|(
 operator|(
@@ -7344,7 +7344,7 @@ argument_list|()
 decl_stmt|;
 if|if
 condition|(
-name|classname
+name|className
 operator|.
 name|startsWith
 argument_list|(

@@ -213,7 +213,7 @@ name|update
 parameter_list|(
 specifier|final
 name|String
-name|classname
+name|className
 parameter_list|)
 block|{
 name|System
@@ -253,7 +253,7 @@ name|out
 operator|.
 name|println
 argument_list|(
-name|classname
+name|className
 argument_list|)
 expr_stmt|;
 name|indent
@@ -268,7 +268,7 @@ name|VerifierFactory
 operator|.
 name|getVerifier
 argument_list|(
-name|classname
+name|className
 argument_list|)
 decl_stmt|;
 name|VerificationResult

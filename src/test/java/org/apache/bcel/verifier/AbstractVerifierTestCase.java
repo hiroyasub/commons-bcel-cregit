@@ -142,7 +142,7 @@ name|ClassNotFoundException
 block|{
 specifier|final
 name|String
-name|testClassname
+name|testClassName
 init|=
 name|TEST_PACKAGE
 operator|+
@@ -152,7 +152,7 @@ name|assertTrue
 argument_list|(
 name|doAllPasses
 argument_list|(
-name|testClassname
+name|testClassName
 argument_list|)
 argument_list|,
 name|message

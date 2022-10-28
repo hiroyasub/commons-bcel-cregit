@@ -174,7 +174,7 @@ comment|// loads in the class file if not already done.
 comment|/* If we find more constraints to check, we should do this in an own method. */
 comment|// This should maybe caught by BCEL: In case of renamed .class files we get wrong
 comment|// JavaClass objects here.
-comment|// This test should be much more complicated. It needs to take the classname, remove any portion at the
+comment|// This test should be much more complicated. It needs to take the class name, remove any portion at the
 comment|// end that matches the file name and then see if the remainder matches anything on the class path.
 comment|// Dumb test for now, see if the class name ends with the file name.
 if|if

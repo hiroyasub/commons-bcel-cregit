@@ -3576,7 +3576,7 @@ comment|// INVOKEINTERFACE is an InvokeInstruction, the argument and return type
 comment|// too. So are the allowed method names.
 specifier|final
 name|String
-name|classname
+name|className
 init|=
 name|o
 operator|.
@@ -3593,7 +3593,7 @@ name|Repository
 operator|.
 name|lookupClass
 argument_list|(
-name|classname
+name|className
 argument_list|)
 decl_stmt|;
 specifier|final
@@ -3712,7 +3712,7 @@ comment|// INVOKESPECIAL is an InvokeInstruction, the argument and return types 
 comment|// too. So are the allowed method names.
 specifier|final
 name|String
-name|classname
+name|className
 init|=
 name|o
 operator|.
@@ -3729,7 +3729,7 @@ name|Repository
 operator|.
 name|lookupClass
 argument_list|(
-name|classname
+name|className
 argument_list|)
 decl_stmt|;
 specifier|final
@@ -4037,7 +4037,7 @@ comment|// INVOKESTATIC is an InvokeInstruction, the argument and return types a
 comment|// too. So are the allowed method names.
 specifier|final
 name|String
-name|classname
+name|className
 init|=
 name|o
 operator|.
@@ -4054,7 +4054,7 @@ name|Repository
 operator|.
 name|lookupClass
 argument_list|(
-name|classname
+name|className
 argument_list|)
 decl_stmt|;
 specifier|final
@@ -4177,7 +4177,7 @@ comment|// INVOKEVIRTUAL is an InvokeInstruction, the argument and return types 
 comment|// too. So are the allowed method names.
 specifier|final
 name|String
-name|classname
+name|className
 init|=
 name|o
 operator|.
@@ -4194,7 +4194,7 @@ name|Repository
 operator|.
 name|lookupClass
 argument_list|(
-name|classname
+name|className
 argument_list|)
 decl_stmt|;
 specifier|final
