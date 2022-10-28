@@ -51,6 +51,20 @@ name|jupiter
 operator|.
 name|api
 operator|.
+name|AfterEach
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|junit
+operator|.
+name|jupiter
+operator|.
+name|api
+operator|.
 name|Test
 import|;
 end_import
@@ -61,6 +75,19 @@ class|class
 name|VerifierTestCase
 block|{
 annotation|@
+name|AfterEach
+specifier|public
+name|void
+name|afterEach
+parameter_list|()
+block|{
+name|VerifierFactory
+operator|.
+name|clear
+argument_list|()
+expr_stmt|;
+block|}
+annotation|@
 name|Test
 specifier|public
 name|void
@@ -69,7 +96,7 @@ parameter_list|()
 block|{
 specifier|final
 name|String
-name|classname
+name|className
 init|=
 name|Collection
 operator|.
@@ -86,7 +113,7 @@ name|VerifierFactory
 operator|.
 name|getVerifier
 argument_list|(
-name|classname
+name|className
 argument_list|)
 decl_stmt|;
 name|VerificationResult
@@ -110,7 +137,7 @@ argument_list|()
 argument_list|,
 literal|"Pass 1 verification of "
 operator|+
-name|classname
+name|className
 operator|+
 literal|" failed: "
 operator|+
@@ -140,7 +167,7 @@ argument_list|()
 argument_list|,
 literal|"Pass 2 verification of "
 operator|+
-name|classname
+name|className
 operator|+
 literal|" failed: "
 operator|+

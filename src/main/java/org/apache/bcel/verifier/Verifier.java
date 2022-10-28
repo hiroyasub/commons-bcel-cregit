@@ -597,7 +597,7 @@ comment|/**      * The name of the class this verifier operates on.      */
 specifier|private
 specifier|final
 name|String
-name|classname
+name|className
 decl_stmt|;
 comment|/** A Pass1Verifier for this Verifier instance. */
 specifier|private
@@ -649,7 +649,7 @@ name|String
 name|fullyQualifiedClassName
 parameter_list|)
 block|{
-name|classname
+name|className
 operator|=
 name|fullyQualifiedClassName
 expr_stmt|;
@@ -885,7 +885,7 @@ name|getClassName
 parameter_list|()
 block|{
 return|return
-name|classname
+name|className
 return|;
 block|}
 comment|/**      * This returns all the (warning) messages collected during verification. A prefix shows from which verifying pass a      * message originates.      */
@@ -1022,7 +1022,7 @@ name|Repository
 operator|.
 name|lookupClass
 argument_list|(
-name|classname
+name|className
 argument_list|)
 operator|.
 name|getMethods
@@ -1091,7 +1091,7 @@ name|Repository
 operator|.
 name|lookupClass
 argument_list|(
-name|classname
+name|className
 argument_list|)
 operator|.
 name|getMethods

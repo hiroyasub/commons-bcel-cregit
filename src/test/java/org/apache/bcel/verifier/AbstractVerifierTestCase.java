@@ -73,6 +73,20 @@ name|JavaClass
 import|;
 end_import
 
+begin_import
+import|import
+name|org
+operator|.
+name|junit
+operator|.
+name|jupiter
+operator|.
+name|api
+operator|.
+name|AfterEach
+import|;
+end_import
+
 begin_class
 specifier|public
 specifier|abstract
@@ -97,14 +111,27 @@ argument_list|()
 operator|+
 literal|".tests."
 decl_stmt|;
-comment|/**      * Asserts that the verification of the given class is OK. If it isn't it throws an AssertionFailedError with the given      * message.      *      * @param classname simple classname of the class to verify      * @param message message displayed if assertion fails      */
+annotation|@
+name|AfterEach
+specifier|public
+name|void
+name|afterEach
+parameter_list|()
+block|{
+name|VerifierFactory
+operator|.
+name|clear
+argument_list|()
+expr_stmt|;
+block|}
+comment|/**      * Asserts that the verification of the given class is OK. If it isn't it throws an AssertionFailedError with the given      * message.      *      * @param className simple class name of the class to verify      * @param message message displayed if assertion fails      */
 specifier|public
 name|void
 name|assertVerifyOK
 parameter_list|(
 specifier|final
 name|String
-name|classname
+name|className
 parameter_list|,
 specifier|final
 name|String
@@ -119,7 +146,7 @@ name|testClassname
 init|=
 name|TEST_PACKAGE
 operator|+
-name|classname
+name|className
 decl_stmt|;
 name|assertTrue
 argument_list|(
@@ -132,14 +159,14 @@ name|message
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Asserts that the verification of the given class is rejected. If it isn't it throws an AssertionFailedError with the      * given message.      *      * @param classname simple classname of the class to verify      * @param message message displayed if assertion fails      */
+comment|/**      * Asserts that the verification of the given class is rejected. If it isn't it throws an AssertionFailedError with the      * given message.      *      * @param className simple class name of the class to verify      * @param message message displayed if assertion fails      */
 specifier|public
 name|void
 name|assertVerifyRejected
 parameter_list|(
 specifier|final
 name|String
-name|classname
+name|className
 parameter_list|,
 specifier|final
 name|String
@@ -154,7 +181,7 @@ name|testClassname
 init|=
 name|TEST_PACKAGE
 operator|+
-name|classname
+name|className
 decl_stmt|;
 name|assertFalse
 argument_list|(
@@ -167,14 +194,14 @@ name|message
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Executes all the verification on the given class.      *      * @param classname name of the class to verify      * @return false if the verification fails, true otherwise      */
+comment|/**      * Executes all the verification on the given class.      *      * @param className name of the class to verify      * @return false if the verification fails, true otherwise      */
 specifier|public
 name|boolean
 name|doAllPasses
 parameter_list|(
 specifier|final
 name|String
-name|classname
+name|className
 parameter_list|)
 throws|throws
 name|ClassNotFoundException
@@ -187,7 +214,7 @@ name|Repository
 operator|.
 name|lookupClass
 argument_list|(
-name|classname
+name|className
 argument_list|)
 decl_stmt|;
 specifier|final
@@ -209,7 +236,7 @@ name|VerifierFactory
 operator|.
 name|getVerifier
 argument_list|(
-name|classname
+name|className
 argument_list|)
 decl_stmt|;
 name|VerificationResult
