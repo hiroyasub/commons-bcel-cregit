@@ -3448,7 +3448,6 @@ name|ILLEGAL_TYPE
 block|}
 decl_stmt|;
 comment|/**      * Number of byte code operands for each opcode, i.e., number of bytes after the tag byte itself. Indexed by opcode, so      * NO_OF_OPERANDS[BIPUSH] = the number of operands for a bipush instruction.      */
-specifier|private
 specifier|static
 specifier|final
 name|short
@@ -4175,7 +4174,6 @@ comment|/* impdep2 */
 block|}
 decl_stmt|;
 comment|/**      * How the byte code operands are to be interpreted for each opcode. Indexed by opcode. TYPE_OF_OPERANDS[ILOAD] = an      * array of shorts describing the data types for the instruction.      */
-specifier|private
 specifier|static
 specifier|final
 name|short
@@ -5021,7 +5019,6 @@ comment|/* impdep2 */
 block|}
 decl_stmt|;
 comment|/**      * Names of opcodes. Indexed by opcode. OPCODE_NAMES[ALOAD] = "aload".      */
-specifier|private
 specifier|static
 specifier|final
 name|String
@@ -5554,7 +5551,6 @@ operator|.
 name|length
 decl_stmt|;
 comment|/**      * Number of words consumed on operand stack by instructions. Indexed by opcode. CONSUME_STACK[FALOAD] = number of words      * consumed from the stack by a faload instruction.      */
-specifier|private
 specifier|static
 specifier|final
 name|int
@@ -6281,7 +6277,6 @@ comment|/* impdep2 */
 block|}
 decl_stmt|;
 comment|/**      * Number of words produced onto operand stack by instructions. Indexed by opcode. CONSUME_STACK[DALOAD] = number of      * words consumed from the stack by a daload instruction.      */
-specifier|private
 specifier|static
 specifier|final
 name|int

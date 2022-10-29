@@ -1292,7 +1292,6 @@ literal|2
 argument_list|)
 decl_stmt|;
 comment|/**      * Get object via its opcode, for immutable instructions like branch instructions entries are set to null.      */
-specifier|private
 specifier|static
 specifier|final
 name|Instruction
