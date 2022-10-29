@@ -17,6 +17,16 @@ end_package
 
 begin_import
 import|import
+name|java
+operator|.
+name|util
+operator|.
+name|Objects
+import|;
+end_import
+
+begin_import
+import|import
 name|org
 operator|.
 name|apache
@@ -61,6 +71,15 @@ name|boolean
 name|value
 parameter_list|)
 block|{
+name|Objects
+operator|.
+name|requireNonNull
+argument_list|(
+name|cp
+argument_list|,
+literal|"cp"
+argument_list|)
+expr_stmt|;
 name|instruction
 operator|=
 name|InstructionConst

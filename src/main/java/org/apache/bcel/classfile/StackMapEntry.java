@@ -557,6 +557,36 @@ name|constantPool
 operator|=
 name|constantPool
 expr_stmt|;
+if|if
+condition|(
+name|numberOfLocals
+operator|<
+literal|0
+condition|)
+block|{
+throw|throw
+operator|new
+name|IllegalArgumentException
+argument_list|(
+literal|"numberOfLocals< 0"
+argument_list|)
+throw|;
+block|}
+if|if
+condition|(
+name|numberOfStackItems
+operator|<
+literal|0
+condition|)
+block|{
+throw|throw
+operator|new
+name|IllegalArgumentException
+argument_list|(
+literal|"numberOfStackItems< 0"
+argument_list|)
+throw|;
+block|}
 block|}
 comment|/**      * Create an instance      *      * @param tag the frameType to use      * @param byteCodeOffset      * @param typesOfLocals array of {@link StackMapType}s of locals      * @param typesOfStackItems array ot {@link StackMapType}s of stack items      * @param constantPool the constant pool      */
 specifier|public
@@ -774,23 +804,6 @@ name|frameType
 operator|>=
 name|Const
 operator|.
-name|SAME_FRAME
-operator|&&
-name|frameType
-operator|<=
-name|Const
-operator|.
-name|SAME_FRAME_MAX
-condition|)
-block|{
-comment|// nothing to be done
-block|}
-if|else if
-condition|(
-name|frameType
-operator|>=
-name|Const
-operator|.
 name|SAME_LOCALS_1_STACK_ITEM_FRAME
 operator|&&
 name|frameType
@@ -987,7 +1000,23 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-else|else
+if|else if
+condition|(
+operator|!
+operator|(
+name|frameType
+operator|>=
+name|Const
+operator|.
+name|SAME_FRAME
+operator|&&
+name|frameType
+operator|<=
+name|Const
+operator|.
+name|SAME_FRAME_MAX
+operator|)
+condition|)
 block|{
 comment|/* Can't happen */
 throw|throw
@@ -1295,6 +1324,67 @@ return|return
 name|typesOfStackItems
 return|;
 block|}
+specifier|private
+name|boolean
+name|invalidFrameType
+parameter_list|(
+specifier|final
+name|int
+name|f
+parameter_list|)
+block|{
+comment|// @formatter:off
+return|return
+name|f
+operator|!=
+name|Const
+operator|.
+name|SAME_LOCALS_1_STACK_ITEM_FRAME_EXTENDED
+operator|&&
+operator|!
+operator|(
+name|f
+operator|>=
+name|Const
+operator|.
+name|CHOP_FRAME
+operator|&&
+name|f
+operator|<=
+name|Const
+operator|.
+name|CHOP_FRAME_MAX
+operator|)
+operator|&&
+name|f
+operator|!=
+name|Const
+operator|.
+name|SAME_FRAME_EXTENDED
+operator|&&
+operator|!
+operator|(
+name|f
+operator|>=
+name|Const
+operator|.
+name|APPEND_FRAME
+operator|&&
+name|f
+operator|<=
+name|Const
+operator|.
+name|APPEND_FRAME_MAX
+operator|)
+operator|&&
+name|f
+operator|!=
+name|Const
+operator|.
+name|FULL_FRAME
+return|;
+comment|// @formatter:on
+block|}
 specifier|public
 name|void
 name|setByteCodeOffset
@@ -1409,72 +1499,11 @@ block|}
 block|}
 if|else if
 condition|(
+name|invalidFrameType
+argument_list|(
 name|frameType
-operator|==
-name|Const
-operator|.
-name|SAME_LOCALS_1_STACK_ITEM_FRAME_EXTENDED
+argument_list|)
 condition|)
-block|{
-comment|// CHECKSTYLE IGNORE EmptyBlock
-block|}
-if|else if
-condition|(
-name|frameType
-operator|>=
-name|Const
-operator|.
-name|CHOP_FRAME
-operator|&&
-name|frameType
-operator|<=
-name|Const
-operator|.
-name|CHOP_FRAME_MAX
-condition|)
-block|{
-comment|// CHECKSTYLE IGNORE EmptyBlock
-block|}
-if|else if
-condition|(
-name|frameType
-operator|==
-name|Const
-operator|.
-name|SAME_FRAME_EXTENDED
-condition|)
-block|{
-comment|// CHECKSTYLE IGNORE EmptyBlock
-block|}
-if|else if
-condition|(
-name|frameType
-operator|>=
-name|Const
-operator|.
-name|APPEND_FRAME
-operator|&&
-name|frameType
-operator|<=
-name|Const
-operator|.
-name|APPEND_FRAME_MAX
-condition|)
-block|{
-comment|// CHECKSTYLE IGNORE EmptyBlock
-block|}
-if|else if
-condition|(
-name|frameType
-operator|==
-name|Const
-operator|.
-name|FULL_FRAME
-condition|)
-block|{
-comment|// CHECKSTYLE IGNORE EmptyBlock
-block|}
-else|else
 block|{
 throw|throw
 operator|new
@@ -1514,18 +1543,18 @@ name|setFrameType
 parameter_list|(
 specifier|final
 name|int
-name|f
+name|ft
 parameter_list|)
 block|{
 if|if
 condition|(
-name|f
+name|ft
 operator|>=
 name|Const
 operator|.
 name|SAME_FRAME
 operator|&&
-name|f
+name|ft
 operator|<=
 name|Const
 operator|.
@@ -1534,7 +1563,7 @@ condition|)
 block|{
 name|byteCodeOffset
 operator|=
-name|f
+name|ft
 operator|-
 name|Const
 operator|.
@@ -1543,13 +1572,13 @@ expr_stmt|;
 block|}
 if|else if
 condition|(
-name|f
+name|ft
 operator|>=
 name|Const
 operator|.
 name|SAME_LOCALS_1_STACK_ITEM_FRAME
 operator|&&
-name|f
+name|ft
 operator|<=
 name|Const
 operator|.
@@ -1558,7 +1587,7 @@ condition|)
 block|{
 name|byteCodeOffset
 operator|=
-name|f
+name|ft
 operator|-
 name|Const
 operator|.
@@ -1567,72 +1596,11 @@ expr_stmt|;
 block|}
 if|else if
 condition|(
-name|f
-operator|==
-name|Const
-operator|.
-name|SAME_LOCALS_1_STACK_ITEM_FRAME_EXTENDED
+name|invalidFrameType
+argument_list|(
+name|ft
+argument_list|)
 condition|)
-block|{
-comment|// CHECKSTYLE IGNORE EmptyBlock
-block|}
-if|else if
-condition|(
-name|f
-operator|>=
-name|Const
-operator|.
-name|CHOP_FRAME
-operator|&&
-name|f
-operator|<=
-name|Const
-operator|.
-name|CHOP_FRAME_MAX
-condition|)
-block|{
-comment|// CHECKSTYLE IGNORE EmptyBlock
-block|}
-if|else if
-condition|(
-name|f
-operator|==
-name|Const
-operator|.
-name|SAME_FRAME_EXTENDED
-condition|)
-block|{
-comment|// CHECKSTYLE IGNORE EmptyBlock
-block|}
-if|else if
-condition|(
-name|f
-operator|>=
-name|Const
-operator|.
-name|APPEND_FRAME
-operator|&&
-name|f
-operator|<=
-name|Const
-operator|.
-name|APPEND_FRAME_MAX
-condition|)
-block|{
-comment|// CHECKSTYLE IGNORE EmptyBlock
-block|}
-if|else if
-condition|(
-name|f
-operator|==
-name|Const
-operator|.
-name|FULL_FRAME
-condition|)
-block|{
-comment|// CHECKSTYLE IGNORE EmptyBlock
-block|}
-else|else
 block|{
 throw|throw
 operator|new
@@ -1644,7 +1612,7 @@ throw|;
 block|}
 name|frameType
 operator|=
-name|f
+name|ft
 expr_stmt|;
 block|}
 comment|/**      *      * @deprecated since 6.0      */

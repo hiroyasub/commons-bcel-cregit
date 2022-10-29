@@ -971,10 +971,10 @@ literal|"."
 argument_list|)
 expr_stmt|;
 block|}
-else|else
-block|{
+comment|// } else {
 comment|// referenceTypeIsInitialized(o, (ReferenceType) value);
-block|}
+comment|// }
+comment|//
 comment|// Don't bother further with "referenceTypeIsInitialized()", there are no arrays
 comment|// of an uninitialized object type.
 if|if
@@ -5342,35 +5342,8 @@ literal|"'."
 argument_list|)
 expr_stmt|;
 block|}
-specifier|final
-name|ObjectType
-name|objreftype
-init|=
-operator|(
-name|ObjectType
-operator|)
-name|t
-decl_stmt|;
-if|if
-condition|(
-operator|!
-operator|(
-name|objreftype
-operator|.
-name|equals
-argument_list|(
-name|curr
-argument_list|)
-operator|||
-name|objreftype
-operator|.
-name|subclassOf
-argument_list|(
-name|curr
-argument_list|)
-operator|)
-condition|)
-block|{
+comment|// final ObjectType objreftype = (ObjectType) t;
+comment|// if (!(objreftype.equals(curr) || objreftype.subclassOf(curr))) {
 comment|// TODO: One day move to Staerk-et-al's "Set of object types" instead of "wider" object types
 comment|// created during the verification.
 comment|// "Wider" object types don't allow us to check for things like that below.
@@ -5378,7 +5351,7 @@ comment|// constraintViolated(o, "The referenced field has the ACC_PROTECTED mod
 comment|// "and it's a member of the current class or a superclass of the current class."+
 comment|// " However, the referenced object type '"+stack().peek()+
 comment|// "' is not the current class or a subclass of the current class.");
-block|}
+comment|//}
 block|}
 block|}
 comment|// TODO: Could go into Pass 3a.

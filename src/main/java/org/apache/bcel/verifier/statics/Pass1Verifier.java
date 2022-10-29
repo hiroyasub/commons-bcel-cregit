@@ -115,6 +115,20 @@ name|LoadingException
 import|;
 end_import
 
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|commons
+operator|.
+name|lang3
+operator|.
+name|ArrayUtils
+import|;
+end_import
+
 begin_comment
 comment|/**  * This PassVerifier verifies a class file according to pass 1 as described in The Java Virtual Machine Specification,  * 2nd edition. More detailed information is to be found at the do_verify() method's documentation.  *  * @see #do_verify()  */
 end_comment
@@ -361,7 +375,7 @@ return|return
 name|jc
 return|;
 block|}
-comment|/**      * Currently this returns an empty array of String. One could parse the error messages of BCEL (written to      * java.lang.System.err) when loading a class file such as detecting unknown attributes or trailing garbage at the end      * of a class file. However, Markus Dahm does not like the idea so this method is currently useless and therefore marked      * as<B>TODO</B>.      */
+comment|/**      * Currently this returns an empty array of String. One could parse the error messages of BCEL (written to      * java.lang.System.err) when loading a class file such as detecting unknown attributes or trailing garbage at the end      * of a class file. However, Markus Dahm does not like the idea so this method is currently useless and therefore marked      * as<b>TODO</b>.      */
 annotation|@
 name|Override
 specifier|public
@@ -370,12 +384,10 @@ index|[]
 name|getMessages
 parameter_list|()
 block|{
-comment|// This method is only here to override the javadoc-comment.
 return|return
-name|super
+name|ArrayUtils
 operator|.
-name|getMessages
-argument_list|()
+name|EMPTY_STRING_ARRAY
 return|;
 block|}
 block|}

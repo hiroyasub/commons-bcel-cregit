@@ -1158,136 +1158,28 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-if|else if
-condition|(
-name|c
-operator|==
-literal|null
-condition|)
-block|{
-comment|// entries may be null
-comment|// nothing to do
-block|}
-if|else if
-condition|(
-name|c
-operator|instanceof
-name|ConstantInteger
-condition|)
-block|{
-comment|// nothing to do
-block|}
-if|else if
-condition|(
-name|c
-operator|instanceof
-name|ConstantLong
-condition|)
-block|{
-comment|// nothing to do
-block|}
-if|else if
-condition|(
-name|c
-operator|instanceof
-name|ConstantFloat
-condition|)
-block|{
-comment|// nothing to do
-block|}
-if|else if
-condition|(
-name|c
-operator|instanceof
-name|ConstantDouble
-condition|)
-block|{
-comment|// nothing to do
-block|}
-if|else if
-condition|(
-name|c
-operator|instanceof
-name|org
-operator|.
-name|apache
-operator|.
-name|bcel
-operator|.
-name|classfile
-operator|.
-name|ConstantMethodType
-condition|)
-block|{
-comment|// TODO should this be handled somehow?
-block|}
-if|else if
-condition|(
-name|c
-operator|instanceof
-name|org
-operator|.
-name|apache
-operator|.
-name|bcel
-operator|.
-name|classfile
-operator|.
-name|ConstantMethodHandle
-condition|)
-block|{
-comment|// TODO should this be handled somehow?
-block|}
-if|else if
-condition|(
-name|c
-operator|instanceof
-name|org
-operator|.
-name|apache
-operator|.
-name|bcel
-operator|.
-name|classfile
-operator|.
-name|ConstantModule
-condition|)
-block|{
-comment|// TODO should this be handled somehow?
-block|}
-if|else if
-condition|(
-name|c
-operator|instanceof
-name|org
-operator|.
-name|apache
-operator|.
-name|bcel
-operator|.
-name|classfile
-operator|.
-name|ConstantPackage
-condition|)
-block|{
-comment|// TODO should this be handled somehow?
-block|}
-else|else
-block|{
-assert|assert
-literal|false
-operator|:
-literal|"Unexpected constant type: "
-operator|+
-name|c
-operator|.
-name|getClass
-argument_list|()
-operator|.
-name|getName
-argument_list|()
-assert|;
-block|}
+comment|//            else if (c == null) { // entries may be null
+comment|//                // nothing to do
+comment|//            } else if (c instanceof ConstantInteger) {
+comment|//                // nothing to do
+comment|//            } else if (c instanceof ConstantLong) {
+comment|//                // nothing to do
+comment|//            } else if (c instanceof ConstantFloat) {
+comment|//                // nothing to do
+comment|//            } else if (c instanceof ConstantDouble) {
+comment|//                // nothing to do
+comment|//            } else if (c instanceof org.apache.bcel.classfile.ConstantMethodType) {
+comment|//                // TODO should this be handled somehow?
+comment|//            } else if (c instanceof org.apache.bcel.classfile.ConstantMethodHandle) {
+comment|//                // TODO should this be handled somehow?
+comment|//            } else if (c instanceof org.apache.bcel.classfile.ConstantModule) {
+comment|//                // TODO should this be handled somehow?
+comment|//            } else if (c instanceof org.apache.bcel.classfile.ConstantPackage) {
+comment|//                // TODO should this be handled somehow?
+comment|//            } else {
+comment|//                // Not helpful, should throw an exception.
+comment|//                assert false : "Unexpected constant type: " + c.getClass().getName();
+comment|//            }
 block|}
 block|}
 comment|/**      * Initialize with given constant pool.      */
