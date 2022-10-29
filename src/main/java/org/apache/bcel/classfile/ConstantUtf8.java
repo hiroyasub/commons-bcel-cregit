@@ -351,7 +351,7 @@ name|clear
 argument_list|()
 expr_stmt|;
 block|}
-comment|// for accesss by test code
+comment|// for access by test code
 specifier|static
 specifier|synchronized
 name|void
@@ -516,7 +516,7 @@ name|value
 argument_list|)
 return|;
 block|}
-comment|// for accesss by test code
+comment|// for access by test code
 specifier|static
 name|void
 name|printStats
