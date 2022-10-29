@@ -217,20 +217,6 @@ name|ClassPath
 import|;
 end_import
 
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|commons
-operator|.
-name|lang3
-operator|.
-name|ArraySorter
-import|;
-end_import
-
 begin_comment
 comment|/**  * Package the client. Creates a jar file in the current directory that contains a minimal set of classes needed to run  * the client.  *  * Use BCEL to extract class names and read/write classes  */
 end_comment

@@ -61,6 +61,16 @@ name|java
 operator|.
 name|util
 operator|.
+name|Arrays
+import|;
+end_import
+
+begin_import
+import|import
+name|java
+operator|.
+name|util
+operator|.
 name|HashMap
 import|;
 end_import
@@ -497,28 +507,16 @@ throw|;
 block|}
 name|bytePositions
 operator|=
-operator|new
-name|int
-index|[
-name|count
-index|]
-expr_stmt|;
-comment|// Trim to proper size
-name|System
+name|Arrays
 operator|.
-name|arraycopy
+name|copyOf
 argument_list|(
 name|pos
-argument_list|,
-literal|0
-argument_list|,
-name|bytePositions
-argument_list|,
-literal|0
 argument_list|,
 name|count
 argument_list|)
 expr_stmt|;
+comment|// Trim to proper size
 comment|/*          * Pass 2: Look for BranchInstruction and update their targets, i.e., convert offsets to instruction handles.          */
 for|for
 control|(
