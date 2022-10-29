@@ -63,6 +63,16 @@ name|java
 operator|.
 name|util
 operator|.
+name|Objects
+import|;
+end_import
+
+begin_import
+import|import
+name|java
+operator|.
+name|util
+operator|.
 name|Set
 import|;
 end_import
@@ -7426,6 +7436,15 @@ name|name
 parameter_list|)
 block|{
 comment|/*          * TODO: implement. Are there any restrictions?          */
+name|Objects
+operator|.
+name|requireNonNull
+argument_list|(
+name|name
+argument_list|,
+literal|"name"
+argument_list|)
+expr_stmt|;
 return|return
 literal|true
 return|;
