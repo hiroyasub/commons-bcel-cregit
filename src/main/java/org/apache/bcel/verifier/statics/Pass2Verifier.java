@@ -8162,7 +8162,7 @@ name|String
 argument_list|,
 name|String
 argument_list|>
-name|hashmap
+name|map
 init|=
 operator|new
 name|HashMap
@@ -8237,7 +8237,7 @@ argument_list|()
 decl_stmt|;
 if|if
 condition|(
-name|hashmap
+name|map
 operator|.
 name|containsKey
 argument_list|(
@@ -8272,7 +8272,7 @@ name|nameAndSig
 operator|+
 literal|"' in class '"
 operator|+
-name|hashmap
+name|map
 operator|.
 name|get
 argument_list|(
@@ -8298,7 +8298,7 @@ name|nameAndSig
 operator|+
 literal|"' in class '"
 operator|+
-name|hashmap
+name|map
 operator|.
 name|get
 argument_list|(
@@ -8328,7 +8328,7 @@ argument_list|()
 condition|)
 block|{
 comment|// static methods don't inherit
-name|hashmap
+name|map
 operator|.
 name|put
 argument_list|(
@@ -8352,7 +8352,7 @@ argument_list|()
 condition|)
 block|{
 comment|// static methods don't inherit
-name|hashmap
+name|map
 operator|.
 name|put
 argument_list|(
