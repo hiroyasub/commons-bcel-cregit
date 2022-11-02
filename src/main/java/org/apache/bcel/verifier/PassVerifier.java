@@ -78,7 +78,7 @@ specifier|private
 name|VerificationResult
 name|verificationResult
 decl_stmt|;
-comment|/**      * This method adds a (warning) message to the message pool of this PassVerifier. This method is normally only      * internally used by BCEL's class file verifier "JustIce" and should not be used from the outside.      *      * @param message message to be appended to the message list.       * @see #getMessages()      */
+comment|/**      * This method adds a (warning) message to the message pool of this PassVerifier. This method is normally only      * internally used by BCEL's class file verifier "JustIce" and should not be used from the outside.      *      * @param message message to be appended to the message list.      * @see #getMessages()      */
 specifier|public
 name|void
 name|addMessage
@@ -96,7 +96,7 @@ name|message
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Verifies, not cached.      *       * @return The VerificationResult      */
+comment|/**      * Verifies, not cached.      *      * @return The VerificationResult      */
 specifier|public
 specifier|abstract
 name|VerificationResult
