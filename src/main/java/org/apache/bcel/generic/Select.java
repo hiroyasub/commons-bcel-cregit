@@ -695,6 +695,22 @@ operator|=
 name|value
 expr_stmt|;
 block|}
+comment|/**      *      * @param array      * @since 6.0      */
+specifier|final
+name|void
+name|setMatches
+parameter_list|(
+specifier|final
+name|int
+index|[]
+name|array
+parameter_list|)
+block|{
+name|match
+operator|=
+name|array
+expr_stmt|;
+block|}
 comment|/**      * @param matchLength the match_length to set      * @since 6.0      */
 specifier|final
 name|int
@@ -714,22 +730,6 @@ expr_stmt|;
 return|return
 name|matchLength
 return|;
-block|}
-comment|/**      *      * @param array      * @since 6.0      */
-specifier|final
-name|void
-name|setMatches
-parameter_list|(
-specifier|final
-name|int
-index|[]
-name|array
-parameter_list|)
-block|{
-name|match
-operator|=
-name|array
-expr_stmt|;
 block|}
 comment|/**      * Set branch target for `i'th case      */
 specifier|public

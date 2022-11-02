@@ -68,6 +68,14 @@ specifier|public
 class|class
 name|GraphicalVerifier
 block|{
+specifier|private
+specifier|static
+specifier|final
+name|boolean
+name|packFrame
+init|=
+literal|false
+decl_stmt|;
 comment|/** Main method. */
 specifier|public
 specifier|static
@@ -111,14 +119,6 @@ name|GraphicalVerifier
 argument_list|()
 expr_stmt|;
 block|}
-specifier|private
-specifier|static
-specifier|final
-name|boolean
-name|packFrame
-init|=
-literal|false
-decl_stmt|;
 comment|/** Constructor. */
 specifier|public
 name|GraphicalVerifier
