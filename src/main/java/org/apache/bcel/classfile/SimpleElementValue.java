@@ -434,7 +434,7 @@ throw|throw
 operator|new
 name|IllegalStateException
 argument_list|(
-literal|"Dont call getValueString() on a non STRING ElementValue"
+literal|"Dont call getValueInt() on a non INT ElementValue"
 argument_list|)
 throw|;
 block|}
