@@ -712,7 +712,7 @@ name|verify
 argument_list|()
 return|;
 block|}
-comment|/**      * Returns the VerificationResult for the given pass.      *       * @param methodNo The method to verify      * @return the VerificationResult       */
+comment|/**      * Returns the VerificationResult for the given pass.      *      * @param methodNo The method to verify      * @return the VerificationResult      */
 specifier|public
 name|VerificationResult
 name|doPass3a
@@ -749,7 +749,7 @@ name|verify
 argument_list|()
 return|;
 block|}
-comment|/**      * Returns the VerificationResult for the given pass.      *       * @param methodNo The method to verify      * @return the VerificationResult       */
+comment|/**      * Returns the VerificationResult for the given pass.      *      * @param methodNo The method to verify      * @return the VerificationResult      */
 specifier|public
 name|VerificationResult
 name|doPass3b
