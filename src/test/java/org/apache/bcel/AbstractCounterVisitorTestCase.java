@@ -51,7 +51,7 @@ name|bcel
 operator|.
 name|visitors
 operator|.
-name|CounterVisitor
+name|CountingVisitor
 import|;
 end_import
 
@@ -78,7 +78,7 @@ extends|extends
 name|AbstractTestCase
 block|{
 specifier|private
-name|CounterVisitor
+name|CountingVisitor
 name|visitor
 decl_stmt|;
 specifier|protected
@@ -90,7 +90,7 @@ throws|throws
 name|ClassNotFoundException
 function_decl|;
 specifier|public
-name|CounterVisitor
+name|CountingVisitor
 name|getVisitor
 parameter_list|()
 block|{
@@ -104,7 +104,7 @@ block|{
 name|visitor
 operator|=
 operator|new
-name|CounterVisitor
+name|CountingVisitor
 argument_list|()
 expr_stmt|;
 block|}
@@ -124,7 +124,7 @@ block|{
 name|visitor
 operator|=
 operator|new
-name|CounterVisitor
+name|CountingVisitor
 argument_list|()
 expr_stmt|;
 operator|new
@@ -146,7 +146,7 @@ name|void
 name|setVisitor
 parameter_list|(
 specifier|final
-name|CounterVisitor
+name|CountingVisitor
 name|visitor
 parameter_list|)
 block|{

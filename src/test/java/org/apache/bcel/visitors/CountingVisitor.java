@@ -830,7 +830,7 @@ end_import
 begin_class
 specifier|public
 class|class
-name|CounterVisitor
+name|CountingVisitor
 implements|implements
 name|Visitor
 block|{

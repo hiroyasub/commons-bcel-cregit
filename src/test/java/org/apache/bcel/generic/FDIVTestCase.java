@@ -58,11 +58,11 @@ name|accept
 parameter_list|()
 block|{
 specifier|final
-name|CountVisitor
+name|CountingVisitor
 name|countVisitor
 init|=
 operator|new
-name|CountVisitor
+name|CountingVisitor
 argument_list|()
 decl_stmt|;
 specifier|final
@@ -81,11 +81,11 @@ name|countVisitor
 argument_list|)
 expr_stmt|;
 specifier|final
-name|CountVisitor
+name|CountingVisitor
 name|expected
 init|=
 operator|new
-name|CountVisitor
+name|CountingVisitor
 argument_list|()
 decl_stmt|;
 name|expected
