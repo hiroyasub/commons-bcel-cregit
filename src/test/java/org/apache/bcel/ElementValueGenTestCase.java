@@ -468,7 +468,7 @@ name|SimpleElementValueGen
 argument_list|(
 name|ElementValueGen
 operator|.
-name|PRIMITIVE_CHAR
+name|PRIMITIVE_BYTE
 argument_list|,
 name|cp
 argument_list|,
