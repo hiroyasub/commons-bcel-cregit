@@ -327,133 +327,6 @@ name|InstConstraintVisitor
 parameter_list|()
 block|{
 block|}
-comment|/***************************************************************/
-comment|/* MISC */
-comment|/***************************************************************/
-comment|/**      * Ensures the general preconditions of an instruction that accesses the stack. This method is here because BCEL has no      * such superinterface for the stack accessing instructions; and there are funny unexpected exceptions in the semantices      * of the superinterfaces and superclasses provided. E.g. SWAP is a StackConsumer, but DUP_X1 is not a StackProducer.      * Therefore, this method is called by all StackProducer, StackConsumer, and StackInstruction instances via their      * visitXXX() method. Unfortunately, as the superclasses and superinterfaces overlap, some instructions cause this      * method to be called two or three times. [TODO: Fix this.]      *      * @see #visitStackConsumer(StackConsumer o)      * @see #visitStackProducer(StackProducer o)      * @see #visitStackInstruction(StackInstruction o)      */
-specifier|private
-name|void
-name|_visitStackAccessor
-parameter_list|(
-specifier|final
-name|Instruction
-name|o
-parameter_list|)
-block|{
-specifier|final
-name|int
-name|consume
-init|=
-name|o
-operator|.
-name|consumeStack
-argument_list|(
-name|cpg
-argument_list|)
-decl_stmt|;
-comment|// Stack values are always consumed first; then produced.
-if|if
-condition|(
-name|consume
-operator|>
-name|stack
-argument_list|()
-operator|.
-name|slotsUsed
-argument_list|()
-condition|)
-block|{
-name|constraintViolated
-argument_list|(
-name|o
-argument_list|,
-literal|"Cannot consume "
-operator|+
-name|consume
-operator|+
-literal|" stack slots: only "
-operator|+
-name|stack
-argument_list|()
-operator|.
-name|slotsUsed
-argument_list|()
-operator|+
-literal|" slot(s) left on stack!\nStack:\n"
-operator|+
-name|stack
-argument_list|()
-argument_list|)
-expr_stmt|;
-block|}
-specifier|final
-name|int
-name|produce
-init|=
-name|o
-operator|.
-name|produceStack
-argument_list|(
-name|cpg
-argument_list|)
-operator|-
-name|o
-operator|.
-name|consumeStack
-argument_list|(
-name|cpg
-argument_list|)
-decl_stmt|;
-comment|// Stack values are always consumed first; then produced.
-if|if
-condition|(
-name|produce
-operator|+
-name|stack
-argument_list|()
-operator|.
-name|slotsUsed
-argument_list|()
-operator|>
-name|stack
-argument_list|()
-operator|.
-name|maxStack
-argument_list|()
-condition|)
-block|{
-name|constraintViolated
-argument_list|(
-name|o
-argument_list|,
-literal|"Cannot produce "
-operator|+
-name|produce
-operator|+
-literal|" stack slots: only "
-operator|+
-operator|(
-name|stack
-argument_list|()
-operator|.
-name|maxStack
-argument_list|()
-operator|-
-name|stack
-argument_list|()
-operator|.
-name|slotsUsed
-argument_list|()
-operator|)
-operator|+
-literal|" free stack slot(s) left.\nStack:\n"
-operator|+
-name|stack
-argument_list|()
-argument_list|)
-expr_stmt|;
-block|}
-block|}
 comment|/**      * Assures arrayref is of ArrayType or NULL; returns true if and only if arrayref is non-NULL.      *      * @throws StructuralCodeConstraintException if the above constraint is violated.      */
 specifier|private
 name|boolean
@@ -759,11 +632,6 @@ name|getStack
 argument_list|()
 return|;
 block|}
-comment|/***************************************************************/
-comment|/* "generic"visitXXXX methods where XXXX is an interface */
-comment|/* therefore, we don't know the order of visiting; but we know */
-comment|/* these methods are called before the visitYYYY methods below */
-comment|/***************************************************************/
 comment|/** Assures value is of type INT. */
 specifier|private
 name|void
@@ -804,6 +672,11 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
+comment|/***************************************************************/
+comment|/* "generic"visitXXXX methods where XXXX is an interface */
+comment|/* therefore, we don't know the order of visiting; but we know */
+comment|/* these methods are called before the visitYYYY methods below */
+comment|/***************************************************************/
 comment|/**      * Ensures the specific preconditions of the said instruction.      */
 annotation|@
 name|Override
@@ -1536,9 +1409,6 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/***************************************************************/
-comment|/* "special"visitXXXX methods for one type of instruction each */
-comment|/***************************************************************/
 comment|/**      * Ensures the specific preconditions of the said instruction.      */
 annotation|@
 name|Override
@@ -1669,6 +1539,9 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
+comment|/***************************************************************/
+comment|/* "special"visitXXXX methods for one type of instruction each */
+comment|/***************************************************************/
 comment|/**      * Ensures the specific preconditions of the said instruction.      */
 annotation|@
 name|Override
@@ -13175,6 +13048,133 @@ parameter_list|)
 block|{
 comment|// nothing to do here. Generic visitXXX() methods did the trick before.
 block|}
+comment|/***************************************************************/
+comment|/* MISC */
+comment|/***************************************************************/
+comment|/**      * Ensures the general preconditions of an instruction that accesses the stack. This method is here because BCEL has no      * such superinterface for the stack accessing instructions; and there are funny unexpected exceptions in the semantices      * of the superinterfaces and superclasses provided. E.g. SWAP is a StackConsumer, but DUP_X1 is not a StackProducer.      * Therefore, this method is called by all StackProducer, StackConsumer, and StackInstruction instances via their      * visitXXX() method. Unfortunately, as the superclasses and superinterfaces overlap, some instructions cause this      * method to be called two or three times. [TODO: Fix this.]      *      * @see #visitStackConsumer(StackConsumer o)      * @see #visitStackProducer(StackProducer o)      * @see #visitStackInstruction(StackInstruction o)      */
+specifier|private
+name|void
+name|visitStackAccessor
+parameter_list|(
+specifier|final
+name|Instruction
+name|o
+parameter_list|)
+block|{
+specifier|final
+name|int
+name|consume
+init|=
+name|o
+operator|.
+name|consumeStack
+argument_list|(
+name|cpg
+argument_list|)
+decl_stmt|;
+comment|// Stack values are always consumed first; then produced.
+if|if
+condition|(
+name|consume
+operator|>
+name|stack
+argument_list|()
+operator|.
+name|slotsUsed
+argument_list|()
+condition|)
+block|{
+name|constraintViolated
+argument_list|(
+name|o
+argument_list|,
+literal|"Cannot consume "
+operator|+
+name|consume
+operator|+
+literal|" stack slots: only "
+operator|+
+name|stack
+argument_list|()
+operator|.
+name|slotsUsed
+argument_list|()
+operator|+
+literal|" slot(s) left on stack!\nStack:\n"
+operator|+
+name|stack
+argument_list|()
+argument_list|)
+expr_stmt|;
+block|}
+specifier|final
+name|int
+name|produce
+init|=
+name|o
+operator|.
+name|produceStack
+argument_list|(
+name|cpg
+argument_list|)
+operator|-
+name|o
+operator|.
+name|consumeStack
+argument_list|(
+name|cpg
+argument_list|)
+decl_stmt|;
+comment|// Stack values are always consumed first; then produced.
+if|if
+condition|(
+name|produce
+operator|+
+name|stack
+argument_list|()
+operator|.
+name|slotsUsed
+argument_list|()
+operator|>
+name|stack
+argument_list|()
+operator|.
+name|maxStack
+argument_list|()
+condition|)
+block|{
+name|constraintViolated
+argument_list|(
+name|o
+argument_list|,
+literal|"Cannot produce "
+operator|+
+name|produce
+operator|+
+literal|" stack slots: only "
+operator|+
+operator|(
+name|stack
+argument_list|()
+operator|.
+name|maxStack
+argument_list|()
+operator|-
+name|stack
+argument_list|()
+operator|.
+name|slotsUsed
+argument_list|()
+operator|)
+operator|+
+literal|" free stack slot(s) left.\nStack:\n"
+operator|+
+name|stack
+argument_list|()
+argument_list|)
+expr_stmt|;
+block|}
+block|}
 comment|/**      * Ensures the general preconditions of a StackConsumer instance.      */
 annotation|@
 name|Override
@@ -13187,7 +13187,7 @@ name|StackConsumer
 name|o
 parameter_list|)
 block|{
-name|_visitStackAccessor
+name|visitStackAccessor
 argument_list|(
 operator|(
 name|Instruction
@@ -13208,7 +13208,7 @@ name|StackInstruction
 name|o
 parameter_list|)
 block|{
-name|_visitStackAccessor
+name|visitStackAccessor
 argument_list|(
 name|o
 argument_list|)
@@ -13226,7 +13226,7 @@ name|StackProducer
 name|o
 parameter_list|)
 block|{
-name|_visitStackAccessor
+name|visitStackAccessor
 argument_list|(
 operator|(
 name|Instruction

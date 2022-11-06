@@ -726,7 +726,7 @@ name|c
 decl_stmt|;
 specifier|final
 name|ConstantUtf8
-name|u8
+name|u8NameIdx
 init|=
 operator|(
 name|ConstantUtf8
@@ -741,7 +741,7 @@ index|]
 decl_stmt|;
 specifier|final
 name|ConstantUtf8
-name|u8_2
+name|u8SigIdx
 init|=
 operator|(
 name|ConstantUtf8
@@ -758,7 +758,7 @@ name|sb
 operator|.
 name|append
 argument_list|(
-name|u8
+name|u8NameIdx
 operator|.
 name|getBytes
 argument_list|()
@@ -775,7 +775,7 @@ name|sb
 operator|.
 name|append
 argument_list|(
-name|u8_2
+name|u8SigIdx
 operator|.
 name|getBytes
 argument_list|()
