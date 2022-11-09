@@ -8262,10 +8262,7 @@ name|containsKey
 argument_list|(
 name|nameAndSig
 argument_list|)
-condition|)
-block|{
-if|if
-condition|(
+operator|&&
 name|method
 operator|.
 name|isFinal
@@ -8336,30 +8333,6 @@ operator|+
 literal|" was introduced by JLS 8.4.6 (not vmspec2) and the behavior of the Sun verifiers."
 argument_list|)
 expr_stmt|;
-block|}
-if|else if
-condition|(
-operator|!
-name|method
-operator|.
-name|isStatic
-argument_list|()
-condition|)
-block|{
-comment|// static methods don't inherit
-name|map
-operator|.
-name|put
-argument_list|(
-name|nameAndSig
-argument_list|,
-name|jc
-operator|.
-name|getClassName
-argument_list|()
-argument_list|)
-expr_stmt|;
-block|}
 block|}
 if|else if
 condition|(
