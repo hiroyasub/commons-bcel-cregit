@@ -1933,6 +1933,7 @@ block|}
 name|adjustSize
 argument_list|()
 expr_stmt|;
+specifier|final
 name|int
 name|classIndex
 init|=
@@ -1941,6 +1942,7 @@ argument_list|(
 name|className
 argument_list|)
 decl_stmt|;
+specifier|final
 name|int
 name|nameAndTypeIndex
 init|=
@@ -2180,6 +2182,7 @@ block|}
 name|adjustSize
 argument_list|()
 expr_stmt|;
+specifier|final
 name|int
 name|classIndex
 init|=
@@ -2188,6 +2191,7 @@ argument_list|(
 name|className
 argument_list|)
 decl_stmt|;
+specifier|final
 name|int
 name|nameAndTypeIndex
 init|=
@@ -2375,6 +2379,7 @@ block|}
 name|adjustSize
 argument_list|()
 expr_stmt|;
+specifier|final
 name|int
 name|nameAndTypeIndex
 init|=
@@ -2385,6 +2390,7 @@ argument_list|,
 name|signature
 argument_list|)
 decl_stmt|;
+specifier|final
 name|int
 name|classIndex
 init|=
@@ -2474,6 +2480,7 @@ block|}
 name|adjustSize
 argument_list|()
 expr_stmt|;
+specifier|final
 name|int
 name|nameIndex
 init|=
@@ -2482,6 +2489,7 @@ argument_list|(
 name|name
 argument_list|)
 decl_stmt|;
+specifier|final
 name|int
 name|signatureIndex
 init|=

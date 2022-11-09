@@ -3856,6 +3856,7 @@ name|signature
 argument_list|)
 decl_stmt|;
 comment|/*          * Also updates positions of instructions, i.e., their indices          */
+specifier|final
 name|byte
 index|[]
 name|byteCode
