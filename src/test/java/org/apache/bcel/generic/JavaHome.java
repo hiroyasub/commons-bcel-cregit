@@ -237,6 +237,10 @@ name|Advapi32Util
 import|;
 end_import
 
+begin_comment
+comment|/**  * Used from {@code @MethodSource} for tests.  */
+end_comment
+
 begin_class
 specifier|public
 class|class
@@ -553,6 +557,7 @@ name|from
 argument_list|)
 return|;
 block|}
+comment|/**      * Used from {@code @MethodSource} for tests.      *      * @return a stream of Java homes.      */
 specifier|public
 specifier|static
 name|Stream
