@@ -16,22 +16,6 @@ package|;
 end_package
 
 begin_import
-import|import static
-name|org
-operator|.
-name|junit
-operator|.
-name|jupiter
-operator|.
-name|api
-operator|.
-name|Assertions
-operator|.
-name|fail
-import|;
-end_import
-
-begin_import
 import|import
 name|org
 operator|.
@@ -117,6 +101,22 @@ name|ValueSource
 import|;
 end_import
 
+begin_import
+import|import static
+name|org
+operator|.
+name|junit
+operator|.
+name|jupiter
+operator|.
+name|api
+operator|.
+name|Assertions
+operator|.
+name|fail
+import|;
+end_import
+
 begin_class
 class|class
 name|EmptyVisitorTestCase
@@ -182,7 +182,13 @@ literal|"java.util.Hashtable"
 block|,
 comment|// contains instruction FNEG
 literal|"javax.swing.text.html.CSS"
+block|,
 comment|// contains instruction DUP2_X2
+literal|"org.apache.bcel.generic.LargeJump"
+block|,
+comment|// contains instruction GOTO_W
+literal|"org.apache.commons.lang.SerializationUtils"
+comment|// contains instruction JSR
 comment|// @formatter:on
 block|}
 argument_list|)
