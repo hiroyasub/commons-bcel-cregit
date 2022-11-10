@@ -291,7 +291,7 @@ name|out
 operator|.
 name|println
 argument_list|(
-literal|"parsing "
+literal|"Parsing "
 operator|+
 name|jar
 operator|.
@@ -347,7 +347,7 @@ literal|".class"
 argument_list|)
 condition|)
 block|{
-comment|// System.out.println("parsing " + name);
+comment|// System.out.println("Parsing " + name);
 try|try
 init|(
 name|InputStream

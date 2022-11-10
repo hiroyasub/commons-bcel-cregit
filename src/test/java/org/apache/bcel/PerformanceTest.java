@@ -456,7 +456,7 @@ name|out
 operator|.
 name|println
 argument_list|(
-literal|"parsing "
+literal|"Parsing "
 operator|+
 name|lib
 argument_list|)
