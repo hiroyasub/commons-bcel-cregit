@@ -1034,7 +1034,7 @@ name|ParameterizedTest
 annotation|@
 name|MethodSource
 argument_list|(
-literal|"org.apache.bcel.generic.JavaHome#streamJarPaths"
+literal|"org.apache.bcel.generic.JavaHome#streamJarPath"
 argument_list|)
 specifier|public
 name|void
@@ -1058,7 +1058,7 @@ name|ParameterizedTest
 annotation|@
 name|MethodSource
 argument_list|(
-literal|"org.apache.bcel.generic.JavaHome#streamModulePaths"
+literal|"org.apache.bcel.generic.JavaHome#streamModulePath"
 argument_list|)
 annotation|@
 name|DisabledOnJre
@@ -1091,7 +1091,7 @@ name|ParameterizedTest
 annotation|@
 name|MethodSource
 argument_list|(
-literal|"org.apache.bcel.generic.JavaHome#streamJavaHomes"
+literal|"org.apache.bcel.generic.JavaHome#streamJavaHome"
 argument_list|)
 specifier|public
 name|void

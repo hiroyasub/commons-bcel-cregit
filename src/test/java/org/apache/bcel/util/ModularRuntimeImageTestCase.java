@@ -202,7 +202,7 @@ name|ParameterizedTest
 annotation|@
 name|MethodSource
 argument_list|(
-literal|"org.apache.bcel.generic.JavaHome#streamModularRuntimeImages"
+literal|"org.apache.bcel.generic.JavaHome#streamModularRuntimeImage"
 argument_list|)
 specifier|public
 name|void
@@ -263,7 +263,7 @@ name|ParameterizedTest
 annotation|@
 name|MethodSource
 argument_list|(
-literal|"org.apache.bcel.generic.JavaHome#streamModularRuntimeImages"
+literal|"org.apache.bcel.generic.JavaHome#streamModularRuntimeImage"
 argument_list|)
 specifier|public
 name|void
@@ -324,7 +324,7 @@ name|ParameterizedTest
 annotation|@
 name|MethodSource
 argument_list|(
-literal|"org.apache.bcel.generic.JavaHome#streamModularRuntimeImages"
+literal|"org.apache.bcel.generic.JavaHome#streamModularRuntimeImage"
 argument_list|)
 specifier|public
 name|void
@@ -383,7 +383,7 @@ name|ParameterizedTest
 annotation|@
 name|MethodSource
 argument_list|(
-literal|"org.apache.bcel.generic.JavaHome#streamModularRuntimeImages"
+literal|"org.apache.bcel.generic.JavaHome#streamModularRuntimeImage"
 argument_list|)
 specifier|public
 name|void
