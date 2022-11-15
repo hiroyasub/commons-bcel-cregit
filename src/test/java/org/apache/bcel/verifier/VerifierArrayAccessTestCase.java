@@ -133,7 +133,7 @@ name|verifier
 operator|.
 name|tests
 operator|.
-name|TestArrayAccess04UnknownCreator
+name|TestArrayAccess04ShortCreator
 import|;
 end_import
 
@@ -149,7 +149,7 @@ name|verifier
 operator|.
 name|tests
 operator|.
-name|TestArrayAccess04ShortCreator
+name|TestArrayAccess04UnknownCreator
 import|;
 end_import
 
