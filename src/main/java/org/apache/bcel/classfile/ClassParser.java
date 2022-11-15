@@ -511,6 +511,25 @@ comment|// System.err.println(bytes + " extra bytes: " + Utility.toHexString(buf
 comment|// }
 comment|// }
 block|}
+catch|catch
+parameter_list|(
+name|IllegalArgumentException
+name|e
+parameter_list|)
+block|{
+throw|throw
+operator|new
+name|ClassFormatException
+argument_list|(
+name|e
+operator|.
+name|getMessage
+argument_list|()
+argument_list|,
+name|e
+argument_list|)
+throw|;
+block|}
 finally|finally
 block|{
 comment|// Read everything of interest, so close the file
