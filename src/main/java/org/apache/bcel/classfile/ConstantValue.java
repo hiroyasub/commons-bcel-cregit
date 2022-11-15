@@ -190,9 +190,9 @@ name|Args
 operator|.
 name|require
 argument_list|(
-literal|2
-argument_list|,
 name|length
+argument_list|,
+literal|2
 argument_list|,
 literal|"ConstantValue attribute length"
 argument_list|)
