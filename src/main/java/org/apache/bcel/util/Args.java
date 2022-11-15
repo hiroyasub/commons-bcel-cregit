@@ -50,15 +50,19 @@ specifier|public
 class|class
 name|Args
 block|{
-comment|/**      * Requires a non-0 value.      *      * @param value   The value to test.      * @param message The message prefix      * @return The value to test.      */
+comment|/**      * Requires a specific value.      *      * @param value    The value to test.      * @param required The required value.      * @param message  The message prefix      * @return The value to test.      */
 specifier|public
 specifier|static
 name|int
-name|require0
+name|require
 parameter_list|(
 specifier|final
 name|int
 name|value
+parameter_list|,
+specifier|final
+name|int
+name|required
 parameter_list|,
 specifier|final
 name|String
@@ -69,7 +73,7 @@ if|if
 condition|(
 name|value
 operator|!=
-literal|0
+name|required
 condition|)
 block|{
 throw|throw
@@ -91,6 +95,32 @@ throw|;
 block|}
 return|return
 name|value
+return|;
+block|}
+comment|/**      * Requires a non-0 value.      *      * @param value   The value to test.      * @param message The message prefix      * @return The value to test.      */
+specifier|public
+specifier|static
+name|int
+name|require0
+parameter_list|(
+specifier|final
+name|int
+name|value
+parameter_list|,
+specifier|final
+name|String
+name|message
+parameter_list|)
+block|{
+return|return
+name|require
+argument_list|(
+name|value
+argument_list|,
+literal|0
+argument_list|,
+name|message
+argument_list|)
 return|;
 block|}
 comment|/**      * Requires a u2 value of at least {@code min} and not above {@code max}.      *      * @param value   The value to test.      * @param min     The minimum required u2 value.      * @param max     The maximum required u2 value.      * @param message The message prefix      * @return The value to test.      */
