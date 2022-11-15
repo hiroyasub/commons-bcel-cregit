@@ -388,6 +388,13 @@ comment|// TODO Replace with Apache Commons IO UncheckedFiles later.
 return|return
 name|Files
 operator|.
+name|exists
+argument_list|(
+name|start
+argument_list|)
+condition|?
+name|Files
+operator|.
 name|find
 argument_list|(
 name|start
@@ -398,6 +405,11 @@ name|matcher
 argument_list|,
 name|options
 argument_list|)
+else|:
+name|Stream
+operator|.
+name|empty
+argument_list|()
 return|;
 block|}
 catch|catch
