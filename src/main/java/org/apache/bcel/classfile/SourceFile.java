@@ -57,6 +57,20 @@ name|Const
 import|;
 end_import
 
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|bcel
+operator|.
+name|util
+operator|.
+name|Args
+import|;
+end_import
+
 begin_comment
 comment|/**  * This class is derived from<em>Attribute</em> and represents a reference to the source file of this class. At most  * one SourceFile attribute should appear per classfile. The intention of this class is that it is instantiated from the  *<em>Attribute.readAttribute()</em> method.  *  * @see Attribute  */
 end_comment
@@ -139,7 +153,16 @@ name|ATTR_SOURCE_FILE
 argument_list|,
 name|nameIndex
 argument_list|,
+name|Args
+operator|.
+name|require
+argument_list|(
 name|length
+argument_list|,
+literal|2
+argument_list|,
+literal|"SourceFile length attribute"
+argument_list|)
 argument_list|,
 name|constantPool
 argument_list|)
@@ -148,7 +171,21 @@ name|this
 operator|.
 name|sourceFileIndex
 operator|=
+name|Args
+operator|.
+name|requireU2
+argument_list|(
 name|sourceFileIndex
+argument_list|,
+literal|0
+argument_list|,
+name|constantPool
+operator|.
+name|getLength
+argument_list|()
+argument_list|,
+literal|"SourceFile source file index"
+argument_list|)
 expr_stmt|;
 block|}
 comment|/**      * Initialize from another object. Note that both objects use the same references (shallow copy). Use clone() for a      * physical copy.      */
