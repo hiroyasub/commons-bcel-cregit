@@ -278,6 +278,7 @@ name|EXTRA_JAVA_HOMES
 init|=
 literal|"ExtraJavaHomes"
 decl_stmt|;
+comment|/** A folder containing Java homes, for example, on Windows "C:/Program Files/Eclipse Adoptium/" */
 specifier|private
 specifier|static
 specifier|final
@@ -285,6 +286,38 @@ name|String
 name|EXTRA_JAVA_ROOT
 init|=
 literal|"ExtraJavaRoot"
+decl_stmt|;
+comment|/** The default home for Java installs on Windows for Eclipse Adoptium. */
+specifier|private
+specifier|static
+specifier|final
+name|String
+name|ADOPTIUM_WINDOWS
+init|=
+literal|"C:/Program Files/Eclipse Adoptium/"
+decl_stmt|;
+comment|/** The default home for Java installs on Windows for Eclipse Oracle. */
+specifier|private
+specifier|static
+specifier|final
+name|String
+name|ORACLE_WINDOWS
+init|=
+literal|"C:/Program Files/Java/"
+decl_stmt|;
+specifier|private
+specifier|static
+specifier|final
+name|String
+name|EXTRA_JAVA_ROOT_DEFAULT
+init|=
+name|ADOPTIUM_WINDOWS
+operator|+
+name|File
+operator|.
+name|pathSeparator
+operator|+
+name|ORACLE_WINDOWS
 decl_stmt|;
 specifier|private
 specifier|static
@@ -465,12 +498,18 @@ parameter_list|(
 specifier|final
 name|String
 name|key
+parameter_list|,
+specifier|final
+name|String
+name|defaultValue
 parameter_list|)
 block|{
 return|return
 name|streamPropertyAndEnvVarValues
 argument_list|(
 name|key
+argument_list|,
+name|defaultValue
 argument_list|)
 operator|.
 name|flatMap
@@ -520,6 +559,18 @@ argument_list|>
 name|streamFromCustomKeys
 parameter_list|()
 block|{
+specifier|final
+name|String
+name|defaultRoot
+init|=
+name|SystemUtils
+operator|.
+name|IS_OS_WINDOWS
+condition|?
+name|EXTRA_JAVA_ROOT_DEFAULT
+else|:
+literal|null
+decl_stmt|;
 return|return
 name|Stream
 operator|.
@@ -528,11 +579,15 @@ argument_list|(
 name|streamPropertyAndEnvVarValues
 argument_list|(
 name|EXTRA_JAVA_HOMES
+argument_list|,
+literal|null
 argument_list|)
 argument_list|,
 name|streamFromCustomKey
 argument_list|(
 name|EXTRA_JAVA_ROOT
+argument_list|,
+name|defaultRoot
 argument_list|)
 argument_list|)
 return|;
@@ -767,6 +822,10 @@ parameter_list|(
 specifier|final
 name|String
 name|key
+parameter_list|,
+specifier|final
+name|String
+name|defaultValue
 parameter_list|)
 block|{
 return|return
@@ -781,6 +840,8 @@ operator|.
 name|getProperty
 argument_list|(
 name|key
+argument_list|,
+name|defaultValue
 argument_list|)
 argument_list|)
 argument_list|,
@@ -947,6 +1008,8 @@ argument_list|,
 name|streamPropertyAndEnvVarValues
 argument_list|(
 name|EXTRA_JAVA_HOMES
+argument_list|,
+literal|null
 argument_list|)
 argument_list|)
 operator|.
