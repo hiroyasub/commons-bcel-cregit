@@ -166,7 +166,7 @@ break|break;
 default|default:
 throw|throw
 operator|new
-name|IllegalStateException
+name|ClassFormatException
 argument_list|(
 literal|"SimpleElementValue doesnt know how to write out type "
 operator|+

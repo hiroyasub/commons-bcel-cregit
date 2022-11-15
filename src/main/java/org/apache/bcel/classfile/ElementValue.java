@@ -360,7 +360,7 @@ return|;
 default|default:
 throw|throw
 operator|new
-name|IllegalArgumentException
+name|ClassFormatException
 argument_list|(
 literal|"Unexpected element value kind in annotation: "
 operator|+
