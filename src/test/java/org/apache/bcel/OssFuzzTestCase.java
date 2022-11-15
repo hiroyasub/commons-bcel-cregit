@@ -130,12 +130,14 @@ specifier|private
 name|void
 name|testOssFuzzReproducer
 parameter_list|(
+specifier|final
 name|String
 name|issue
 parameter_list|)
 throws|throws
 name|Exception
 block|{
+specifier|final
 name|File
 name|reproducerFile
 init|=
@@ -149,6 +151,9 @@ operator|+
 literal|"/Test.class"
 argument_list|)
 decl_stmt|;
+try|try
+init|(
+specifier|final
 name|FileInputStream
 name|reproducerInputStream
 init|=
@@ -157,7 +162,9 @@ name|FileInputStream
 argument_list|(
 name|reproducerFile
 argument_list|)
-decl_stmt|;
+init|)
+block|{
+specifier|final
 name|ClassParser
 name|cp
 init|=
@@ -183,6 +190,7 @@ name|parse
 argument_list|()
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 block|}
 end_class
