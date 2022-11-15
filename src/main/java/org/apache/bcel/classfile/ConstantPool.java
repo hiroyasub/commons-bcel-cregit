@@ -1334,7 +1334,7 @@ throw|throw
 operator|new
 name|ClassFormatException
 argument_list|(
-literal|"Invalid constant pool reference: "
+literal|"Invalid constant pool reference using index: "
 operator|+
 name|index
 operator|+
@@ -1346,6 +1346,55 @@ name|length
 argument_list|)
 throw|;
 block|}
+if|if
+condition|(
+name|constantPool
+index|[
+name|index
+index|]
+operator|!=
+literal|null
+operator|&&
+operator|!
+name|castTo
+operator|.
+name|isAssignableFrom
+argument_list|(
+name|constantPool
+index|[
+name|index
+index|]
+operator|.
+name|getClass
+argument_list|()
+argument_list|)
+condition|)
+block|{
+throw|throw
+operator|new
+name|ClassFormatException
+argument_list|(
+literal|"Invalid constant pool reference at index: "
+operator|+
+name|index
+operator|+
+literal|". Expected "
+operator|+
+name|castTo
+operator|+
+literal|" but was "
+operator|+
+name|constantPool
+index|[
+name|index
+index|]
+operator|.
+name|getClass
+argument_list|()
+argument_list|)
+throw|;
+block|}
+comment|// Previous check ensures this won't throw a ClassCastException
 specifier|final
 name|T
 name|c
