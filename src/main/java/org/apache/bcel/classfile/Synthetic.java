@@ -57,6 +57,20 @@ name|Const
 import|;
 end_import
 
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|bcel
+operator|.
+name|util
+operator|.
+name|Args
+import|;
+end_import
+
 begin_comment
 comment|/**  * This class is derived from<em>Attribute</em> and declares this class as `synthetic', i.e., it needs special  * handling. The JVM specification states "A class member that does not appear in the source code must be marked using a  * Synthetic attribute." It may appear in the ClassFile attribute table, a field_info table or a method_info table. This  * class is intended to be instantiated from the<em>Attribute.readAttribute()</em> method.  *  * @see Attribute  */
 end_comment
@@ -104,7 +118,14 @@ name|ATTR_SYNTHETIC
 argument_list|,
 name|nameIndex
 argument_list|,
+name|Args
+operator|.
+name|require0
+argument_list|(
 name|length
+argument_list|,
+literal|"Synthetic attribute length"
+argument_list|)
 argument_list|,
 name|constantPool
 argument_list|)
