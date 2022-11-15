@@ -87,6 +87,20 @@ name|Const
 import|;
 end_import
 
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|bcel
+operator|.
+name|util
+operator|.
+name|Args
+import|;
+end_import
+
 begin_comment
 comment|/**  * Abstract super class for<em>Attribute</em> objects. Currently the<em>ConstantValue</em>,<em>SourceFile</em>,  *<em>Code</em>,<em>Exceptiontable</em>,<em>LineNumberTable</em>,<em>LocalVariableTable</em>,<em>InnerClasses</em>  * and<em>Synthetic</em> attributes are supported. The<em>Unknown</em> attribute stands for non-standard-attributes.  *  * @see ConstantValue  * @see SourceFile  * @see Code  * @see Unknown  * @see ExceptionTable  * @see LineNumberTable  * @see LocalVariableTable  * @see InnerClasses  * @see Synthetic  * @see Deprecated  * @see Signature  */
 end_comment
@@ -1026,7 +1040,21 @@ name|this
 operator|.
 name|name_index
 operator|=
+name|Args
+operator|.
+name|requireU2
+argument_list|(
 name|nameIndex
+argument_list|,
+literal|0
+argument_list|,
+name|constantPool
+operator|.
+name|getLength
+argument_list|()
+argument_list|,
+literal|"Invalid name index"
+argument_list|)
 expr_stmt|;
 name|this
 operator|.
