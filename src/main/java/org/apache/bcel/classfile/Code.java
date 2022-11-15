@@ -121,53 +121,53 @@ index|[]
 name|attributes
 decl_stmt|;
 comment|// or LocalVariable
-comment|/**      * Initialize from another object. Note that both objects use the same references (shallow copy). Use copy() for a      * physical copy.      */
+comment|/**      * Initialize from another object. Note that both objects use the same references (shallow copy). Use copy() for a      * physical copy.      *      * @param code The source Code.      */
 specifier|public
 name|Code
 parameter_list|(
 specifier|final
 name|Code
-name|c
+name|code
 parameter_list|)
 block|{
 name|this
 argument_list|(
-name|c
+name|code
 operator|.
 name|getNameIndex
 argument_list|()
 argument_list|,
-name|c
+name|code
 operator|.
 name|getLength
 argument_list|()
 argument_list|,
-name|c
+name|code
 operator|.
 name|getMaxStack
 argument_list|()
 argument_list|,
-name|c
+name|code
 operator|.
 name|getMaxLocals
 argument_list|()
 argument_list|,
-name|c
+name|code
 operator|.
 name|getCode
 argument_list|()
 argument_list|,
-name|c
+name|code
 operator|.
 name|getExceptionTable
 argument_list|()
 argument_list|,
-name|c
+name|code
 operator|.
 name|getAttributes
 argument_list|()
 argument_list|,
-name|c
+name|code
 operator|.
 name|getConstantPool
 argument_list|()
@@ -251,18 +251,27 @@ literal|1
 operator|||
 name|codeLength
 operator|>
-literal|65535
+name|Const
+operator|.
+name|MAX_SHORT
 condition|)
 block|{
 throw|throw
 operator|new
 name|ClassFormatException
 argument_list|(
-literal|"Invalid length "
-operator|+
+name|String
+operator|.
+name|format
+argument_list|(
+literal|"Invalid length %,d for Code attribute. Must be greater than zero and less than %,d."
+argument_list|,
 name|codeLength
-operator|+
-literal|" for Code attribute. Must be greater than zero and less than 65536."
+argument_list|,
+name|Const
+operator|.
+name|MAX_SHORT
+argument_list|)
 argument_list|)
 throw|;
 block|}
@@ -1105,7 +1114,7 @@ literal|true
 argument_list|)
 return|;
 block|}
-comment|/**      * @return String representation of code chunk.      */
+comment|/**      * Converts this object to a String.      *      * @param verbose Provides verbose output when true.      * @return String representation of code chunk.      */
 specifier|public
 name|String
 name|toString
