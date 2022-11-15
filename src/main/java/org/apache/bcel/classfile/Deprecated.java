@@ -157,7 +157,7 @@ name|require0
 argument_list|(
 name|length
 argument_list|,
-literal|"Invalid Deprecated attribute length"
+literal|"Deprecated attribute length"
 argument_list|)
 argument_list|,
 name|constantPool

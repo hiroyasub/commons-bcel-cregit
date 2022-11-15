@@ -1053,7 +1053,13 @@ operator|.
 name|getLength
 argument_list|()
 argument_list|,
-literal|"Invalid name index"
+name|getClass
+argument_list|()
+operator|.
+name|getSimpleName
+argument_list|()
+operator|+
+literal|" name index"
 argument_list|)
 expr_stmt|;
 name|this

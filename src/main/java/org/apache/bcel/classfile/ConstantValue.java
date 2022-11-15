@@ -194,7 +194,7 @@ literal|2
 argument_list|,
 name|length
 argument_list|,
-literal|"Invalid constant value attribute length"
+literal|"ConstantValue attribute length"
 argument_list|)
 argument_list|,
 name|constantPool

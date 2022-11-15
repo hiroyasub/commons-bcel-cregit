@@ -263,7 +263,7 @@ argument_list|()
 argument_list|,
 literal|1
 argument_list|,
-literal|"Invalid length for Code attribute"
+literal|"Code length attribute"
 argument_list|)
 decl_stmt|;
 name|code
