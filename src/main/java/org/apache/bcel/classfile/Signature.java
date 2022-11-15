@@ -79,6 +79,20 @@ name|Const
 import|;
 end_import
 
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|bcel
+operator|.
+name|util
+operator|.
+name|Args
+import|;
+end_import
+
 begin_comment
 comment|/**  * This class is derived from<em>Attribute</em> and represents a reference to a GJ attribute.  *  * @see Attribute  */
 end_comment
@@ -844,7 +858,16 @@ name|ATTR_SIGNATURE
 argument_list|,
 name|nameIndex
 argument_list|,
+name|Args
+operator|.
+name|require
+argument_list|(
 name|length
+argument_list|,
+literal|2
+argument_list|,
+literal|"Signature length attribute"
+argument_list|)
 argument_list|,
 name|constantPool
 argument_list|)
