@@ -97,7 +97,7 @@ return|return
 name|value
 return|;
 block|}
-comment|/**      * Requires a non-0 value.      *      * @param value   The value to test.      * @param message The message prefix      * @return The value to test.      */
+comment|/**      * Requires a 0 value.      *      * @param value   The value to test.      * @param message The message prefix      * @return The value to test.      */
 specifier|public
 specifier|static
 name|int
