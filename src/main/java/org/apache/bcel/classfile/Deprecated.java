@@ -57,6 +57,20 @@ name|Const
 import|;
 end_import
 
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|bcel
+operator|.
+name|util
+operator|.
+name|Args
+import|;
+end_import
+
 begin_comment
 comment|/**  * This class is derived from<em>Attribute</em> and denotes that this is a deprecated method. It is instantiated from  * the<em>Attribute.readAttribute()</em> method.  *  * @see Attribute  */
 end_comment
@@ -137,7 +151,14 @@ name|ATTR_DEPRECATED
 argument_list|,
 name|nameIndex
 argument_list|,
+name|Args
+operator|.
+name|require0
+argument_list|(
 name|length
+argument_list|,
+literal|"Invalid Deprecated attribute length"
+argument_list|)
 argument_list|,
 name|constantPool
 argument_list|)
