@@ -243,6 +243,29 @@ operator|.
 name|readInt
 argument_list|()
 decl_stmt|;
+if|if
+condition|(
+name|codeLength
+operator|<
+literal|1
+operator|||
+name|codeLength
+operator|>
+literal|65535
+condition|)
+block|{
+throw|throw
+operator|new
+name|ClassFormatException
+argument_list|(
+literal|"Invalid length "
+operator|+
+name|codeLength
+operator|+
+literal|" for Code attribute. Must be greater than zero and less than 65536."
+argument_list|)
+throw|;
+block|}
 name|code
 operator|=
 operator|new
