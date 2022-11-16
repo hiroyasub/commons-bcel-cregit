@@ -66,10 +66,15 @@ name|VerifyJavaHomesTestCase
 extends|extends
 name|AbstractVerifierTestCase
 block|{
+specifier|static
+name|int
+name|count
+decl_stmt|;
+comment|/**      * Eventually runs out of memory? Super now calls VerifierFactory.clear();      *       *<pre>       164800................................................................................       165600...........Exception in thread "fork-1-event-thread" .java.lang.OutOfMemoryError: Java heap space         Exception in thread "fork-1-event-thread" java.lang.OutOfMemoryError: Java heap space         at java.lang.AbstractStringBuilder.<init>(AbstractStringBuilder.java:68)         at java.lang.StringBuilder.<init>(StringBuilder.java:106)         at org.apache.maven.surefire.api.stream.AbstractStreamDecoder.toString(AbstractStreamDecoder.java:364)         at org.apache.maven.surefire.api.stream.AbstractStreamDecoder.readString(AbstractStreamDecoder.java:336)         at org.apache.maven.surefire.api.stream.AbstractStreamDecoder.readString(AbstractStreamDecoder.java:196)         at org.apache.maven.surefire.stream.EventDecoder.decode(EventDecoder.java:176)         at org.apache.maven.plugin.surefire.extensions.EventConsumerThread.run(EventConsumerThread.java:73)      *</pre>      *       * @param name      * @throws ClassNotFoundException      */
 annotation|@
 name|Disabled
 argument_list|(
-literal|"Run once in a while, it takes a long time."
+literal|"Run once in a while, it takes a very long time."
 argument_list|)
 annotation|@
 name|ParameterizedTest
@@ -92,6 +97,54 @@ name|ClassNotFoundException
 block|{
 comment|// System.out.println(jarEntry.getName());
 comment|// Skip $ classes for now
+name|count
+operator|++
+expr_stmt|;
+if|if
+condition|(
+name|count
+operator|%
+literal|10
+operator|==
+literal|0
+condition|)
+block|{
+name|System
+operator|.
+name|out
+operator|.
+name|print
+argument_list|(
+literal|'.'
+argument_list|)
+expr_stmt|;
+block|}
+if|if
+condition|(
+name|count
+operator|%
+literal|800
+operator|==
+literal|0
+condition|)
+block|{
+name|System
+operator|.
+name|out
+operator|.
+name|println
+argument_list|()
+expr_stmt|;
+name|System
+operator|.
+name|out
+operator|.
+name|print
+argument_list|(
+name|count
+argument_list|)
+expr_stmt|;
+block|}
 if|if
 condition|(
 operator|!
