@@ -1571,7 +1571,7 @@ name|Repository
 operator|.
 name|lookupClass
 argument_list|(
-name|myOwner
+name|verifier
 operator|.
 name|getClassName
 argument_list|()
@@ -3790,7 +3790,7 @@ name|Repository
 operator|.
 name|lookupClass
 argument_list|(
-name|myOwner
+name|verifier
 operator|.
 name|getClassName
 argument_list|()
@@ -5410,7 +5410,7 @@ name|isFinal
 argument_list|()
 operator|&&
 operator|!
-name|myOwner
+name|verifier
 operator|.
 name|getClassName
 argument_list|()
@@ -5437,7 +5437,7 @@ name|f
 operator|+
 literal|"' is final and must therefore be declared in the current class '"
 operator|+
-name|myOwner
+name|verifier
 operator|.
 name|getClassName
 argument_list|()
@@ -5484,7 +5484,7 @@ name|Repository
 operator|.
 name|lookupClass
 argument_list|(
-name|myOwner
+name|verifier
 operator|.
 name|getClassName
 argument_list|()
@@ -5697,7 +5697,7 @@ comment|/** The Verifier that created this. */
 specifier|private
 specifier|final
 name|Verifier
-name|myOwner
+name|verifier
 decl_stmt|;
 comment|/**      * The method number to verify. This is the index in the array returned by JavaClass.getMethods().      */
 specifier|private
@@ -5721,16 +5721,18 @@ name|Pass3aVerifier
 parameter_list|(
 specifier|final
 name|Verifier
-name|owner
+name|verifier
 parameter_list|,
 specifier|final
 name|int
 name|methodNo
 parameter_list|)
 block|{
-name|myOwner
+name|this
+operator|.
+name|verifier
 operator|=
-name|owner
+name|verifier
 expr_stmt|;
 name|this
 operator|.
@@ -6276,7 +6278,7 @@ try|try
 block|{
 if|if
 condition|(
-name|myOwner
+name|verifier
 operator|.
 name|doPass2
 argument_list|()
@@ -6299,7 +6301,7 @@ name|Repository
 operator|.
 name|lookupClass
 argument_list|(
-name|myOwner
+name|verifier
 operator|.
 name|getClassName
 argument_list|()
@@ -6785,7 +6787,7 @@ name|Repository
 operator|.
 name|lookupClass
 argument_list|(
-name|myOwner
+name|verifier
 operator|.
 name|getClassName
 argument_list|()

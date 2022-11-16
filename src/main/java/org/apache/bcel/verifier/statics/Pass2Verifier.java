@@ -1660,7 +1660,7 @@ name|Repository
 operator|.
 name|lookupClass
 argument_list|(
-name|myOwner
+name|verifier
 operator|.
 name|getClassName
 argument_list|()
@@ -7672,7 +7672,7 @@ comment|/** The Verifier that created this. */
 specifier|private
 specifier|final
 name|Verifier
-name|myOwner
+name|verifier
 decl_stmt|;
 comment|/**      * Should only be instantiated by a Verifier.      *      * @see Verifier      */
 specifier|public
@@ -7680,12 +7680,14 @@ name|Pass2Verifier
 parameter_list|(
 specifier|final
 name|Verifier
-name|owner
+name|verifier
 parameter_list|)
 block|{
-name|myOwner
+name|this
+operator|.
+name|verifier
 operator|=
-name|owner
+name|verifier
 expr_stmt|;
 block|}
 comment|/**      * Ensures that the constant pool entries satisfy the static constraints as described in The Java Virtual Machine      * Specification, 2nd Edition.      *      * @throws ClassConstraintException otherwise.      */
@@ -7707,7 +7709,7 @@ name|Repository
 operator|.
 name|lookupClass
 argument_list|(
-name|myOwner
+name|verifier
 operator|.
 name|getClassName
 argument_list|()
@@ -7756,7 +7758,7 @@ specifier|final
 name|VerificationResult
 name|vr1
 init|=
-name|myOwner
+name|verifier
 operator|.
 name|doPass1
 argument_list|()
@@ -7784,7 +7786,7 @@ name|Repository
 operator|.
 name|lookupClass
 argument_list|(
-name|myOwner
+name|verifier
 operator|.
 name|getClassName
 argument_list|()
@@ -7901,7 +7903,7 @@ name|Repository
 operator|.
 name|lookupClass
 argument_list|(
-name|myOwner
+name|verifier
 operator|.
 name|getClassName
 argument_list|()
@@ -8117,7 +8119,7 @@ name|Repository
 operator|.
 name|lookupClass
 argument_list|(
-name|myOwner
+name|verifier
 operator|.
 name|getClassName
 argument_list|()
@@ -8195,7 +8197,7 @@ name|Repository
 operator|.
 name|lookupClass
 argument_list|(
-name|myOwner
+name|verifier
 operator|.
 name|getClassName
 argument_list|()
