@@ -172,6 +172,22 @@ name|Verifier
 block|{
 specifier|static
 specifier|final
+name|String
+name|NAME
+init|=
+literal|"Apache Commons BCEL"
+decl_stmt|;
+specifier|static
+specifier|final
+name|String
+name|BANNER
+init|=
+name|NAME
+operator|+
+literal|"\nhttps://commons.apache.org/bcel\n"
+decl_stmt|;
+specifier|static
+specifier|final
 name|Verifier
 index|[]
 name|EMPTY_ARRAY
@@ -196,7 +212,7 @@ name|out
 operator|.
 name|println
 argument_list|(
-literal|"JustIce by Enver Haase, (C) 2001-2002.\n<http://bcel.sourceforge.net>\n<https://commons.apache.org/bcel>\n"
+name|BANNER
 argument_list|)
 expr_stmt|;
 for|for

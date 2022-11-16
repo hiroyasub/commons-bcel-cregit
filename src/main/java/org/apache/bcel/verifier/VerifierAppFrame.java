@@ -304,14 +304,6 @@ operator|-
 literal|542458133073307640L
 decl_stmt|;
 specifier|private
-specifier|static
-specifier|final
-name|String
-name|JUSTICE_VERSION
-init|=
-literal|"JustIce by Enver Haase"
-decl_stmt|;
-specifier|private
 name|JPanel
 name|contentPane
 decl_stmt|;
@@ -692,11 +684,13 @@ name|showMessageDialog
 argument_list|(
 name|this
 argument_list|,
-literal|"JustIce is a Java class file verifier.\n"
-operator|+
-literal|"It was implemented by Enver Haase in 2001, 2002.\n<https://commons.apache.org/bcel/>"
+name|Verifier
+operator|.
+name|BANNER
 argument_list|,
-name|JUSTICE_VERSION
+name|Verifier
+operator|.
+name|NAME
 argument_list|,
 name|JOptionPane
 operator|.
@@ -2573,7 +2567,9 @@ name|currentClass
 operator|+
 literal|" - "
 operator|+
-name|JUSTICE_VERSION
+name|Verifier
+operator|.
+name|NAME
 argument_list|)
 expr_stmt|;
 block|}
@@ -2599,7 +2595,9 @@ literal|" Pass one, Pass two, Pass three (before data flow analysis), Pass three
 operator|+
 literal|"The bottom box to the right shows (warning) messages; warnings do not cause a class to be rejected."
 argument_list|,
-name|JUSTICE_VERSION
+name|Verifier
+operator|.
+name|NAME
 argument_list|,
 name|JOptionPane
 operator|.
