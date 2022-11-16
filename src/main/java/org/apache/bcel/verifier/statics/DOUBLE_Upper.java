@@ -60,7 +60,7 @@ specifier|private
 specifier|static
 specifier|final
 name|DOUBLE_Upper
-name|singleton
+name|INSTANCE
 init|=
 operator|new
 name|DOUBLE_Upper
@@ -74,7 +74,7 @@ name|theInstance
 parameter_list|()
 block|{
 return|return
-name|singleton
+name|INSTANCE
 return|;
 block|}
 comment|/** The constructor; this class must not be instantiated from the outside. */
