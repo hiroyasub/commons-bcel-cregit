@@ -123,6 +123,11 @@ operator|.
 name|clear
 argument_list|()
 expr_stmt|;
+name|Repository
+operator|.
+name|clearCache
+argument_list|()
+expr_stmt|;
 block|}
 comment|/**      * Asserts that the verification of the given class is OK. If it isn't it throws an AssertionFailedError with the given      * message.      *      * @param className simple class name of the class to verify      * @param message message displayed if assertion fails      */
 specifier|public
