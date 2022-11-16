@@ -134,7 +134,7 @@ name|DCONST_0
 init|=
 name|InstructionConst
 operator|.
-name|FCONST_2
+name|DCONST_0
 decl_stmt|;
 name|Instruction
 name|DCONST_1
@@ -791,7 +791,9 @@ decl_stmt|;
 name|LocalVariableInstruction
 name|ALOAD_0
 init|=
-name|THIS
+name|InstructionConst
+operator|.
+name|ALOAD_0
 decl_stmt|;
 name|LocalVariableInstruction
 name|ALOAD_1
