@@ -58,7 +58,7 @@ name|RuntimeInvisibleParameterAnnotations
 extends|extends
 name|ParameterAnnotations
 block|{
-comment|/**      * @param nameIndex Index pointing to the name<em>Code</em>      * @param length Content length in bytes      * @param input Input stream      * @param constantPool Array of constants      */
+comment|/**      * @param nameIndex Index pointing to the name<em>Code</em>      * @param length Content length in bytes      * @param input Input stream      * @param constantPool Array of constants      * @throws IOException Thrown when an I/O exception of some sort has occurred.      */
 specifier|public
 name|RuntimeInvisibleParameterAnnotations
 parameter_list|(

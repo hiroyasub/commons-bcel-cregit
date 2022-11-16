@@ -979,7 +979,7 @@ specifier|final
 name|String
 name|dir
 decl_stmt|;
-comment|/**      * Write contents of the given JavaClass into HTML files.      *      * @param javaClass The class to write      * @param dir The directory to put the files in      */
+comment|/**      * Write contents of the given JavaClass into HTML files.      *      * @param javaClass The class to write      * @param dir The directory to put the files in      * @throws IOException Thrown when an I/O exception of some sort has occurred.      */
 specifier|public
 name|Class2HTML
 parameter_list|(
