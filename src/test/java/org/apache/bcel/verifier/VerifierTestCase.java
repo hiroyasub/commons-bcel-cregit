@@ -597,7 +597,9 @@ name|entryName
 operator|.
 name|endsWith
 argument_list|(
-literal|".class"
+name|JavaClass
+operator|.
+name|EXTENSION
 argument_list|)
 condition|)
 block|{

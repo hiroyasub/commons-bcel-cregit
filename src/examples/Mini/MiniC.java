@@ -874,7 +874,9 @@ name|dump
 argument_list|(
 name|base_name
 operator|+
-literal|".class"
+name|JavaClass
+operator|.
+name|EXTENSION
 argument_list|)
 expr_stmt|;
 block|}

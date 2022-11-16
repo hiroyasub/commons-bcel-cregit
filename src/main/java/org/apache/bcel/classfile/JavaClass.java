@@ -247,6 +247,15 @@ argument_list|<
 name|JavaClass
 argument_list|>
 block|{
+comment|/**      * The standard class file extension.      *      * @since 6.6.2      */
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|EXTENSION
+init|=
+literal|".class"
+decl_stmt|;
 comment|/**      * Empty array.      *      * @since 6.6.0      */
 specifier|public
 specifier|static

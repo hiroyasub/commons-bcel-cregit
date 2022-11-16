@@ -230,7 +230,9 @@ name|getResourceAsStream
 argument_list|(
 name|name
 operator|+
-literal|".class"
+name|JavaClass
+operator|.
+name|EXTENSION
 argument_list|)
 init|)
 block|{

@@ -422,7 +422,9 @@ argument_list|()
 operator|.
 name|replace
 argument_list|(
-literal|".class"
+name|JavaClass
+operator|.
+name|EXTENSION
 argument_list|,
 literal|""
 argument_list|)
@@ -449,7 +451,9 @@ argument_list|()
 operator|.
 name|replace
 argument_list|(
-literal|".class"
+name|JavaClass
+operator|.
+name|EXTENSION
 argument_list|,
 literal|"Creator.java"
 argument_list|)

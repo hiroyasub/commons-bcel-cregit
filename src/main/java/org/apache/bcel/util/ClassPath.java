@@ -245,6 +245,20 @@ name|ZipFile
 import|;
 end_import
 
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|bcel
+operator|.
+name|classfile
+operator|.
+name|JavaClass
+import|;
+end_import
+
 begin_comment
 comment|/**  * Loads class files from the CLASSPATH. Inspired by sun.tools.ClassPath.  */
 end_comment
@@ -2636,7 +2650,9 @@ name|getBytes
 argument_list|(
 name|name
 argument_list|,
-literal|".class"
+name|JavaClass
+operator|.
+name|EXTENSION
 argument_list|)
 return|;
 block|}
@@ -2761,7 +2777,9 @@ name|getClassFile
 argument_list|(
 name|name
 argument_list|,
-literal|".class"
+name|JavaClass
+operator|.
+name|EXTENSION
 argument_list|)
 return|;
 block|}
@@ -2916,7 +2934,9 @@ argument_list|(
 name|name
 argument_list|)
 argument_list|,
-literal|".class"
+name|JavaClass
+operator|.
+name|EXTENSION
 argument_list|)
 return|;
 block|}

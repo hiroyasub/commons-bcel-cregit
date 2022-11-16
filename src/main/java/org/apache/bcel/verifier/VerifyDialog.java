@@ -687,7 +687,9 @@ name|fullyQualifiedClassName
 operator|.
 name|lastIndexOf
 argument_list|(
-literal|".class"
+name|JavaClass
+operator|.
+name|EXTENSION
 argument_list|)
 decl_stmt|;
 if|if

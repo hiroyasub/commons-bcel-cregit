@@ -67,6 +67,20 @@ name|URISyntaxException
 import|;
 end_import
 
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|bcel
+operator|.
+name|classfile
+operator|.
+name|JavaClass
+import|;
+end_import
+
 begin_class
 specifier|public
 specifier|abstract
@@ -221,7 +235,9 @@ name|replace
 argument_list|(
 literal|"Creator"
 argument_list|,
-literal|".class"
+name|JavaClass
+operator|.
+name|EXTENSION
 argument_list|)
 return|;
 block|}

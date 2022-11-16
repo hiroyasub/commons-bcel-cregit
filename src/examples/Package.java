@@ -740,7 +740,9 @@ name|clName
 operator|.
 name|endsWith
 argument_list|(
-literal|".class"
+name|JavaClass
+operator|.
+name|EXTENSION
 argument_list|)
 condition|)
 block|{
@@ -1002,7 +1004,9 @@ name|ZipEntry
 argument_list|(
 name|name
 operator|+
-literal|".class"
+name|JavaClass
+operator|.
+name|EXTENSION
 argument_list|)
 decl_stmt|;
 specifier|final
