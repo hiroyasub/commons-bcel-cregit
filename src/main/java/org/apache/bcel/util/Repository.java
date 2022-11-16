@@ -56,7 +56,7 @@ name|ClassPath
 name|getClassPath
 parameter_list|()
 function_decl|;
-comment|/**      * Finds the JavaClass instance for the given run-time class object      */
+comment|/**      * Finds the JavaClass instance for the given run-time class object.      *      * @throws ClassNotFoundException if the class can't be found.      */
 name|JavaClass
 name|loadClass
 parameter_list|(
@@ -69,7 +69,7 @@ parameter_list|)
 throws|throws
 name|ClassNotFoundException
 function_decl|;
-comment|/**      * Finds the class with the name provided, if the class isn't there, make an attempt to load it.      */
+comment|/**      * Finds the class with the name provided, if the class isn't there, make an attempt to load it.      *      * @throws ClassNotFoundException if the class can't be found.      */
 name|JavaClass
 name|loadClass
 parameter_list|(

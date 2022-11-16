@@ -270,7 +270,7 @@ operator|=
 name|loader
 expr_stmt|;
 block|}
-comment|/**      * Runs the main method of the given class with the arguments passed in argv      *      * @param className the fully qualified class name      * @param argv the arguments just as you would pass them directly      */
+comment|/**      * Runs the main method of the given class with the arguments passed in argv      *      * @param className the fully qualified class name      * @param argv the arguments just as you would pass them directly      * @throws ClassNotFoundException if {@code className} can't be found.      */
 specifier|public
 name|void
 name|runMain

@@ -842,7 +842,7 @@ return|return
 name|className
 return|;
 block|}
-comment|/**      * This returns all the (warning) messages collected during verification. A prefix shows from which verifying pass a      * message originates.      */
+comment|/**      * This returns all the (warning) messages collected during verification. A prefix shows from which verifying pass a      * message originates.      *      * @throws ClassNotFoundException if this class can't be found.      */
 specifier|public
 name|String
 index|[]
