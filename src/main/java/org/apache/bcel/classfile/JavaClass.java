@@ -1782,7 +1782,7 @@ name|obj
 argument_list|)
 return|;
 block|}
-comment|/**      * Get all interfaces implemented by this JavaClass (transitively).      */
+comment|/**      * Get all interfaces implemented by this JavaClass (transitively).      *      * @throws ClassNotFoundException if any of the class's superclasses or interfaces can't be found.      */
 specifier|public
 name|JavaClass
 index|[]
@@ -2081,7 +2081,7 @@ return|return
 name|interfaceNames
 return|;
 block|}
-comment|/**      * Get interfaces directly implemented by this JavaClass.      */
+comment|/**      * Get interfaces directly implemented by this JavaClass.      *      * @throws ClassNotFoundException if any of the class's interfaces can't be found.      */
 specifier|public
 name|JavaClass
 index|[]
