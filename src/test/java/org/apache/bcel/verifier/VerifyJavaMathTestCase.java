@@ -62,7 +62,7 @@ end_import
 begin_class
 specifier|public
 class|class
-name|JavaMathTestCase
+name|VerifyJavaMathTestCase
 extends|extends
 name|AbstractVerifierTestCase
 block|{
