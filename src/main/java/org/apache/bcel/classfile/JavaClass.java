@@ -247,7 +247,7 @@ argument_list|<
 name|JavaClass
 argument_list|>
 block|{
-comment|/**      * The standard class file extension.      *      * @since 6.6.2      */
+comment|/**      * The standard class file extension.      *      * @since 6.7.0      */
 specifier|public
 specifier|static
 specifier|final

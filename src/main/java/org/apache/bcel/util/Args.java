@@ -42,7 +42,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Argument validation.  *  * @since 6.6.2  */
+comment|/**  * Argument validation.  *  * @since 6.7.0  */
 end_comment
 
 begin_class
