@@ -1038,17 +1038,11 @@ name|String
 name|toString
 parameter_list|()
 block|{
-specifier|final
-name|String
-name|s
-init|=
-name|getSignature
-argument_list|()
-decl_stmt|;
 return|return
 literal|"Signature: "
 operator|+
-name|s
+name|getSignature
+argument_list|()
 return|;
 block|}
 block|}
