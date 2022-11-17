@@ -115,7 +115,8 @@ name|o
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Clears the factory.      */
+comment|/**      * Clears the factory.      *      * @since 6.6.2      */
+specifier|public
 specifier|static
 name|void
 name|clear
