@@ -1110,7 +1110,6 @@ argument_list|)
 throw|;
 block|}
 comment|/**      * Convert signature to a Type object.      *      * @param signature signature string such as Ljava/lang/String;      * @return type object      */
-comment|// @since 6.0 no longer final
 specifier|public
 specifier|static
 name|Type
