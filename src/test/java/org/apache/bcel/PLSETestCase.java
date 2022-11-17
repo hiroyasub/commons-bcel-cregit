@@ -293,7 +293,7 @@ annotation|@
 name|Test
 specifier|public
 name|void
-name|testB208
+name|testBCEL208
 parameter_list|()
 throws|throws
 name|ClassNotFoundException
@@ -392,7 +392,7 @@ annotation|@
 name|Test
 specifier|public
 name|void
-name|testB262
+name|testBCEL262
 parameter_list|()
 throws|throws
 name|ClassNotFoundException
@@ -515,7 +515,7 @@ annotation|@
 name|Test
 specifier|public
 name|void
-name|testB295
+name|testBCEL295
 parameter_list|()
 throws|throws
 name|Exception
@@ -653,7 +653,7 @@ annotation|@
 name|Test
 specifier|public
 name|void
-name|testB361
+name|testBCEL361
 parameter_list|()
 throws|throws
 name|Exception
@@ -797,7 +797,7 @@ annotation|@
 name|Test
 specifier|public
 name|void
-name|testB79
+name|testBCEL79
 parameter_list|()
 throws|throws
 name|ClassNotFoundException
