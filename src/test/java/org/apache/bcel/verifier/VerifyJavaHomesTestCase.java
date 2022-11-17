@@ -96,6 +96,16 @@ argument_list|(
 literal|"BCEL.logStep"
 argument_list|)
 decl_stmt|;
+name|boolean
+name|logQuiet
+init|=
+name|Boolean
+operator|.
+name|getBoolean
+argument_list|(
+literal|"BCEL.logQuiet"
+argument_list|)
+decl_stmt|;
 comment|/**      * Eventually runs out of memory? Super now calls VerifierFactory.clear();      *       * @param name      * @throws ClassNotFoundException      */
 annotation|@
 name|Disabled
@@ -145,7 +155,11 @@ name|name
 argument_list|)
 expr_stmt|;
 block|}
-else|else
+if|else if
+condition|(
+operator|!
+name|logQuiet
+condition|)
 block|{
 if|if
 condition|(
