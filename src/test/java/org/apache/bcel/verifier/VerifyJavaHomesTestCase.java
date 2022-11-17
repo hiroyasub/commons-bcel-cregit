@@ -16,6 +16,22 @@ package|;
 end_package
 
 begin_import
+import|import static
+name|org
+operator|.
+name|junit
+operator|.
+name|jupiter
+operator|.
+name|api
+operator|.
+name|Assertions
+operator|.
+name|assertTrue
+import|;
+end_import
+
+begin_import
 import|import
 name|org
 operator|.
@@ -70,7 +86,17 @@ specifier|static
 name|int
 name|count
 decl_stmt|;
-comment|/**      * Eventually runs out of memory? Super now calls VerifierFactory.clear();      *       *<pre>       164800................................................................................       165600...........Exception in thread "fork-1-event-thread" .java.lang.OutOfMemoryError: Java heap space         Exception in thread "fork-1-event-thread" java.lang.OutOfMemoryError: Java heap space         at java.lang.AbstractStringBuilder.<init>(AbstractStringBuilder.java:68)         at java.lang.StringBuilder.<init>(StringBuilder.java:106)         at org.apache.maven.surefire.api.stream.AbstractStreamDecoder.toString(AbstractStreamDecoder.java:364)         at org.apache.maven.surefire.api.stream.AbstractStreamDecoder.readString(AbstractStreamDecoder.java:336)         at org.apache.maven.surefire.api.stream.AbstractStreamDecoder.readString(AbstractStreamDecoder.java:196)         at org.apache.maven.surefire.stream.EventDecoder.decode(EventDecoder.java:176)         at org.apache.maven.plugin.surefire.extensions.EventConsumerThread.run(EventConsumerThread.java:73)      *</pre>      *       * @param name      * @throws ClassNotFoundException      */
+name|boolean
+name|logStep
+init|=
+name|Boolean
+operator|.
+name|getBoolean
+argument_list|(
+literal|"BCEL.logStep"
+argument_list|)
+decl_stmt|;
+comment|/**      * Eventually runs out of memory? Super now calls VerifierFactory.clear();      *       * @param name      * @throws ClassNotFoundException      */
 annotation|@
 name|Disabled
 argument_list|(
@@ -100,6 +126,27 @@ comment|// Skip $ classes for now
 name|count
 operator|++
 expr_stmt|;
+if|if
+condition|(
+name|logStep
+condition|)
+block|{
+name|System
+operator|.
+name|out
+operator|.
+name|printf
+argument_list|(
+literal|"%,d %s%n"
+argument_list|,
+name|count
+argument_list|,
+name|name
+argument_list|)
+expr_stmt|;
+block|}
+else|else
+block|{
 if|if
 condition|(
 name|count
@@ -145,6 +192,7 @@ name|count
 argument_list|)
 expr_stmt|;
 block|}
+block|}
 if|if
 condition|(
 operator|!
@@ -156,9 +204,12 @@ literal|"$"
 argument_list|)
 condition|)
 block|{
+name|assertTrue
+argument_list|(
 name|doAllPasses
 argument_list|(
 name|name
+argument_list|)
 argument_list|)
 expr_stmt|;
 block|}
