@@ -49,7 +49,7 @@ specifier|final
 name|Type
 name|basicType
 decl_stmt|;
-comment|/**      * Convenience constructor for array type, e.g. int[]      *      * @param type array type, e.g. T_INT      */
+comment|/**      * Convenience constructor for array type, e.g. int[]      *      * @param type array type, e.g. T_INT      * @param dimensions array dimensions      */
 specifier|public
 name|ArrayType
 parameter_list|(
@@ -75,7 +75,7 @@ name|dimensions
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Convenience constructor for reference array type, e.g. Object[]      *      * @param className complete name of class (java.lang.String, e.g.)      */
+comment|/**      * Convenience constructor for reference array type, e.g. Object[]      *      * @param className complete name of class (java.lang.String, e.g.)      * @param dimensions array dimensions      */
 specifier|public
 name|ArrayType
 parameter_list|(
@@ -101,7 +101,7 @@ name|dimensions
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Constructor for array of given type      *      * @param type type of array (may be an array itself)      */
+comment|/**      * Constructor for array of given type      *      * @param type type of array (may be an array itself)      * @param dimensions array dimensions      */
 specifier|public
 name|ArrayType
 parameter_list|(
