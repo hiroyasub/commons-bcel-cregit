@@ -88,13 +88,13 @@ specifier|final
 name|ObjectType
 name|initialized
 decl_stmt|;
-comment|/** Creates a new instance. */
+comment|/**      * Creates a new instance.      *      * @param objectType uninitialized object type.      */
 specifier|public
 name|UninitializedObjectType
 parameter_list|(
 specifier|final
 name|ObjectType
-name|t
+name|objectType
 parameter_list|)
 block|{
 name|super
@@ -105,7 +105,7 @@ name|T_UNKNOWN
 argument_list|,
 literal|"<UNINITIALIZED OBJECT OF TYPE '"
 operator|+
-name|t
+name|objectType
 operator|.
 name|getClassName
 argument_list|()
@@ -115,7 +115,7 @@ argument_list|)
 expr_stmt|;
 name|initialized
 operator|=
-name|t
+name|objectType
 expr_stmt|;
 block|}
 comment|/**      * Returns true on equality of this and o. Equality means the ObjectType instances of "initialized" equal one another in      * this and the o instance.      *      */
@@ -160,7 +160,7 @@ name|initialized
 argument_list|)
 return|;
 block|}
-comment|/**      * Returns the ObjectType of the same class as the one of the uninitialized object represented by this      * UninitializedObjectType instance.      */
+comment|/**      * Returns the ObjectType of the same class as the one of the uninitialized object represented by this      * UninitializedObjectType instance.      *      * @return the ObjectType.      */
 specifier|public
 name|ObjectType
 name|getInitialized
