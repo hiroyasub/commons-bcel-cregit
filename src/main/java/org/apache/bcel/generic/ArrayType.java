@@ -324,6 +324,16 @@ return|return
 name|basicType
 return|;
 block|}
+comment|/**      * Gets the name of referenced class.      *      * @return name of referenced class.      * @since 6.7.0      */
+specifier|public
+name|String
+name|getClassName
+parameter_list|()
+block|{
+return|return
+name|signature
+return|;
+block|}
 comment|/**      * @return number of dimensions of array      */
 specifier|public
 name|int
