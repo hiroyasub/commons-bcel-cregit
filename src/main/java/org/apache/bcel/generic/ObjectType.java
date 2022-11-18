@@ -78,7 +78,7 @@ name|ObjectType
 extends|extends
 name|ReferenceType
 block|{
-comment|/**      * @since 6.0      */
+comment|/**      * Constructs a new instance.      *      * @param className fully qualified class name, e.g. java.lang.String      * @return a new instance.      * @since 6.0      */
 specifier|public
 specifier|static
 name|ObjectType
@@ -103,7 +103,7 @@ name|String
 name|className
 decl_stmt|;
 comment|// Class name of type
-comment|/**      * @param className fully qualified class name, e.g. java.lang.String      */
+comment|/**      * Constructs a new instance.      *      * @param className fully qualified class name, e.g. java.lang.String      */
 specifier|public
 name|ObjectType
 parameter_list|(
@@ -264,7 +264,7 @@ name|hashCode
 argument_list|()
 return|;
 block|}
-comment|/**      * If "this" doesn't reference a class, it references an interface or a non-existant entity.      *      * @deprecated (since 6.0) this method returns an inaccurate result if the class or interface referenced cannot be      *             found: use referencesClassExact() instead      */
+comment|/**      * If "this" doesn't reference a class, it references an interface or a non-existant entity.      * @deprecated (since 6.0) this method returns an inaccurate result if the class or interface referenced cannot be      *             found: use referencesClassExact() instead      */
 annotation|@
 name|Deprecated
 specifier|public
