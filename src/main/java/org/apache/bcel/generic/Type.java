@@ -645,6 +645,16 @@ return|return
 name|res
 return|;
 block|}
+specifier|public
+name|String
+name|getClassName
+parameter_list|()
+block|{
+return|return
+name|toString
+argument_list|()
+return|;
+block|}
 comment|/**      * Convert type to Java method signature, e.g. int[] f(java.lang.String x) becomes (Ljava/lang/String;)[I      *      * @param returnType what the method returns      * @param argTypes what are the argument types      * @return method signature for given type(s).      */
 specifier|public
 specifier|static

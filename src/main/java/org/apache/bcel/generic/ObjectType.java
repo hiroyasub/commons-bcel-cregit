@@ -240,6 +240,8 @@ argument_list|)
 return|;
 block|}
 comment|/**      * @return name of referenced class      */
+annotation|@
+name|Override
 specifier|public
 name|String
 name|getClassName

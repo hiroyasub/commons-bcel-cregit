@@ -325,6 +325,8 @@ name|basicType
 return|;
 block|}
 comment|/**      * Gets the name of referenced class.      *      * @return name of referenced class.      * @since 6.7.0      */
+annotation|@
+name|Override
 specifier|public
 name|String
 name|getClassName
