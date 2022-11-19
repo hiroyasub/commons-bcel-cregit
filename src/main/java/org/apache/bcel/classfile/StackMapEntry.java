@@ -197,15 +197,8 @@ name|typesOfStackItems
 operator|=
 operator|new
 name|StackMapType
-index|[
-literal|1
-index|]
-expr_stmt|;
-name|typesOfStackItems
-index|[
-literal|0
-index|]
-operator|=
+index|[]
+block|{
 operator|new
 name|StackMapType
 argument_list|(
@@ -213,6 +206,7 @@ name|dataInput
 argument_list|,
 name|constantPool
 argument_list|)
+block|}
 expr_stmt|;
 block|}
 if|else if
@@ -235,15 +229,8 @@ name|typesOfStackItems
 operator|=
 operator|new
 name|StackMapType
-index|[
-literal|1
-index|]
-expr_stmt|;
-name|typesOfStackItems
-index|[
-literal|0
-index|]
-operator|=
+index|[]
+block|{
 operator|new
 name|StackMapType
 argument_list|(
@@ -251,6 +238,7 @@ name|dataInput
 argument_list|,
 name|constantPool
 argument_list|)
+block|}
 expr_stmt|;
 block|}
 if|else if
