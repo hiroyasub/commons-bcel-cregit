@@ -57,26 +57,6 @@ end_import
 
 begin_import
 import|import
-name|java
-operator|.
-name|util
-operator|.
-name|HashMap
-import|;
-end_import
-
-begin_import
-import|import
-name|java
-operator|.
-name|util
-operator|.
-name|Map
-import|;
-end_import
-
-begin_import
-import|import
 name|org
 operator|.
 name|apache
@@ -88,7 +68,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * This class represents a reference to an unknown (i.e., application-specific) attribute of a class. It is instantiated  * from the {@link Attribute#readAttribute(java.io.DataInput, ConstantPool)} method. Applications that need to read in  * application-specific attributes should create an {@link UnknownAttributeReader} implementation and attach it via  * {@link Attribute#addAttributeReader(String, UnknownAttributeReader)}.  *  *  * @see Attribute  * @see UnknownAttributeReader  */
+comment|/**  * This class represents a reference to an unknown (i.e., application-specific) attribute of a class. It is instantiated  * from the {@link Attribute#readAttribute(java.io.DataInput, ConstantPool)} method. Applications that need to read in  * application-specific attributes should create an {@link UnknownAttributeReader} implementation and attach it via  * {@link Attribute#addAttributeReader(String, UnknownAttributeReader)}.  *  * @see Attribute  * @see UnknownAttributeReader  */
 end_comment
 
 begin_class
@@ -99,62 +79,6 @@ name|Unknown
 extends|extends
 name|Attribute
 block|{
-specifier|private
-specifier|static
-specifier|final
-name|Unknown
-index|[]
-name|EMPTY_ARRAY
-init|=
-block|{}
-decl_stmt|;
-specifier|private
-specifier|static
-specifier|final
-name|Map
-argument_list|<
-name|String
-argument_list|,
-name|Unknown
-argument_list|>
-name|UNKNOWN_ATTRIBUTES
-init|=
-operator|new
-name|HashMap
-argument_list|<>
-argument_list|()
-decl_stmt|;
-comment|/**      * @return array of unknown attributes, but just one for each kind.      */
-specifier|static
-name|Unknown
-index|[]
-name|getUnknownAttributes
-parameter_list|()
-block|{
-try|try
-block|{
-return|return
-name|UNKNOWN_ATTRIBUTES
-operator|.
-name|values
-argument_list|()
-operator|.
-name|toArray
-argument_list|(
-name|EMPTY_ARRAY
-argument_list|)
-return|;
-block|}
-finally|finally
-block|{
-comment|// TODO Does this really make sense?
-name|UNKNOWN_ATTRIBUTES
-operator|.
-name|clear
-argument_list|()
-expr_stmt|;
-block|}
-block|}
 specifier|private
 name|byte
 index|[]
@@ -217,15 +141,6 @@ argument_list|)
 operator|.
 name|getBytes
 argument_list|()
-expr_stmt|;
-name|UNKNOWN_ATTRIBUTES
-operator|.
-name|put
-argument_list|(
-name|name
-argument_list|,
-name|this
-argument_list|)
 expr_stmt|;
 block|}
 comment|/**      * Construct object from input stream.      *      * @param nameIndex Index in constant pool      * @param length Content length in bytes      * @param input Input stream      * @param constantPool Array of constants      * @throws IOException if an I/O error occurs.      */
