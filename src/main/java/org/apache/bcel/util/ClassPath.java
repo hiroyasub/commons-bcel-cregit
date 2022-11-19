@@ -2237,7 +2237,7 @@ block|}
 specifier|private
 specifier|final
 name|String
-name|classPath
+name|classPathString
 decl_stmt|;
 specifier|private
 specifier|final
@@ -2280,7 +2280,7 @@ name|parent
 parameter_list|,
 specifier|final
 name|String
-name|classPath
+name|classPathString
 parameter_list|)
 block|{
 name|this
@@ -2291,9 +2291,9 @@ name|parent
 expr_stmt|;
 name|this
 operator|.
-name|classPath
+name|classPathString
 operator|=
-name|classPath
+name|classPathString
 expr_stmt|;
 name|this
 operator|.
@@ -2313,7 +2313,7 @@ init|=
 operator|new
 name|StringTokenizer
 argument_list|(
-name|classPath
+name|classPathString
 argument_list|,
 name|File
 operator|.
@@ -2571,7 +2571,7 @@ operator|)
 name|o
 decl_stmt|;
 return|return
-name|classPath
+name|classPathString
 operator|.
 name|equals
 argument_list|(
@@ -3252,7 +3252,7 @@ literal|null
 condition|)
 block|{
 return|return
-name|classPath
+name|classPathString
 operator|.
 name|hashCode
 argument_list|()
@@ -3264,7 +3264,7 @@ argument_list|()
 return|;
 block|}
 return|return
-name|classPath
+name|classPathString
 operator|.
 name|hashCode
 argument_list|()
@@ -3292,11 +3292,11 @@ name|File
 operator|.
 name|pathSeparator
 operator|+
-name|classPath
+name|classPathString
 return|;
 block|}
 return|return
-name|classPath
+name|classPathString
 return|;
 block|}
 block|}
