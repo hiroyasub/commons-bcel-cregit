@@ -163,7 +163,7 @@ name|index
 operator|=
 name|file
 operator|.
-name|readShort
+name|readUnsignedShort
 argument_list|()
 expr_stmt|;
 block|}
