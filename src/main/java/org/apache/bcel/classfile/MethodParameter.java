@@ -67,6 +67,8 @@ class|class
 name|MethodParameter
 implements|implements
 name|Cloneable
+implements|,
+name|Node
 block|{
 comment|/** Index of the CONSTANT_Utf8_info structure in the constant_pool table representing the name of the parameter */
 specifier|private
@@ -108,6 +110,8 @@ name|readUnsignedShort
 argument_list|()
 expr_stmt|;
 block|}
+annotation|@
+name|Override
 specifier|public
 name|void
 name|accept
