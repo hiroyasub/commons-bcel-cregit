@@ -96,12 +96,12 @@ name|this
 argument_list|(
 name|file
 operator|.
-name|readShort
+name|readUnsignedShort
 argument_list|()
 argument_list|,
 name|file
 operator|.
-name|readShort
+name|readUnsignedShort
 argument_list|()
 argument_list|)
 expr_stmt|;
