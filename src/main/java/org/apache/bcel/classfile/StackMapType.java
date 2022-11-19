@@ -180,18 +180,18 @@ name|checkType
 parameter_list|(
 specifier|final
 name|byte
-name|t
+name|type
 parameter_list|)
 block|{
 if|if
 condition|(
-name|t
+name|type
 argument_list|<
 name|Const
 operator|.
 name|ITEM_Bogus
 operator|||
-name|t
+name|type
 argument_list|>
 name|Const
 operator|.
@@ -204,12 +204,12 @@ name|IllegalArgumentException
 argument_list|(
 literal|"Illegal type for StackMapType: "
 operator|+
-name|t
+name|type
 argument_list|)
 throw|;
 block|}
 return|return
-name|t
+name|type
 return|;
 block|}
 comment|/**      * @return deep copy of this object      */
