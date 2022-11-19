@@ -60,6 +60,8 @@ import|;
 end_import
 
 begin_class
+annotation|@
+name|Disabled
 specifier|public
 class|class
 name|VerifyJavaUtilTestCase
@@ -68,8 +70,6 @@ name|AbstractVerifierTestCase
 block|{
 annotation|@
 name|Test
-annotation|@
-name|Disabled
 specifier|public
 name|void
 name|testHashMap
@@ -88,8 +88,6 @@ expr_stmt|;
 block|}
 annotation|@
 name|Test
-annotation|@
-name|Disabled
 specifier|public
 name|void
 name|testLinkedHashMap
@@ -108,8 +106,6 @@ expr_stmt|;
 block|}
 annotation|@
 name|Test
-annotation|@
-name|Disabled
 specifier|public
 name|void
 name|testTreeMap

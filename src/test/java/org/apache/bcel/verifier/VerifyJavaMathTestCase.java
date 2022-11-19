@@ -60,6 +60,8 @@ import|;
 end_import
 
 begin_class
+annotation|@
+name|Disabled
 specifier|public
 class|class
 name|VerifyJavaMathTestCase
@@ -68,8 +70,6 @@ name|AbstractVerifierTestCase
 block|{
 annotation|@
 name|Test
-annotation|@
-name|Disabled
 specifier|public
 name|void
 name|testBigDecimal
@@ -88,8 +88,6 @@ expr_stmt|;
 block|}
 annotation|@
 name|Test
-annotation|@
-name|Disabled
 specifier|public
 name|void
 name|testBigInteger
