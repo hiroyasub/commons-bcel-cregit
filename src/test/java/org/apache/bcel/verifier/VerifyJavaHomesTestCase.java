@@ -114,7 +114,6 @@ literal|"Run once in a while, it takes a very long time."
 argument_list|)
 annotation|@
 name|ParameterizedTest
-comment|// @Execution(ExecutionMode.CONCURRENT)
 annotation|@
 name|MethodSource
 argument_list|(
