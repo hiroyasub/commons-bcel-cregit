@@ -79,6 +79,15 @@ name|Module
 extends|extends
 name|Attribute
 block|{
+comment|/**      * The module file name extension.      *      * @since 6.7.0      */
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|EXTENSION
+init|=
+literal|".jmod"
+decl_stmt|;
 specifier|private
 specifier|final
 name|int
