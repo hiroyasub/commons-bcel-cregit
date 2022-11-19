@@ -68,7 +68,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * This class represents a stack map entry recording the types of local variables and the of stack items at a given  * byte code offset. See CLDC specification 5.3.1.2  *  * @see StackMap  * @see StackMapType  */
+comment|/**  * This class represents a stack map entry recording the types of local variables and the of stack items at a given  * byte code offset. See CLDC specification 5.3.1.2.  *  * See also https://docs.oracle.com/javase/specs/jvms/se8/html/jvms-4.html#jvms-4.7.4  *  * @see StackMap  * @see StackMapType  */
 end_comment
 
 begin_class
@@ -222,7 +222,7 @@ name|byteCodeOffset
 operator|=
 name|dataInput
 operator|.
-name|readShort
+name|readUnsignedShort
 argument_list|()
 expr_stmt|;
 name|typesOfStackItems
@@ -260,7 +260,7 @@ name|byteCodeOffset
 operator|=
 name|dataInput
 operator|.
-name|readShort
+name|readUnsignedShort
 argument_list|()
 expr_stmt|;
 block|}
@@ -277,7 +277,7 @@ name|byteCodeOffset
 operator|=
 name|dataInput
 operator|.
-name|readShort
+name|readUnsignedShort
 argument_list|()
 expr_stmt|;
 block|}
@@ -300,7 +300,7 @@ name|byteCodeOffset
 operator|=
 name|dataInput
 operator|.
-name|readShort
+name|readUnsignedShort
 argument_list|()
 expr_stmt|;
 specifier|final
@@ -362,7 +362,7 @@ name|byteCodeOffset
 operator|=
 name|dataInput
 operator|.
-name|readShort
+name|readUnsignedShort
 argument_list|()
 expr_stmt|;
 specifier|final
@@ -371,7 +371,7 @@ name|numberOfLocals
 init|=
 name|dataInput
 operator|.
-name|readShort
+name|readUnsignedShort
 argument_list|()
 decl_stmt|;
 name|typesOfLocals
@@ -417,7 +417,7 @@ name|numberOfStackItems
 init|=
 name|dataInput
 operator|.
-name|readShort
+name|readUnsignedShort
 argument_list|()
 decl_stmt|;
 name|typesOfStackItems
