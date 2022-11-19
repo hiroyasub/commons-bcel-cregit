@@ -113,12 +113,12 @@ specifier|private
 name|ConstantPool
 name|constantPool
 decl_stmt|;
-comment|/**      * Construct object from input stream.      *      * @param input Input stream      * @throws IOException if an I/O error occurs.      */
+comment|/**      * Construct object from input stream.      *      * @param dataInput Input stream      * @throws IOException if an I/O error occurs.      */
 name|StackMapEntry
 parameter_list|(
 specifier|final
 name|DataInput
-name|input
+name|dataInput
 parameter_list|,
 specifier|final
 name|ConstantPool
@@ -129,7 +129,7 @@ name|IOException
 block|{
 name|this
 argument_list|(
-name|input
+name|dataInput
 operator|.
 name|readByte
 argument_list|()
@@ -209,7 +209,7 @@ operator|=
 operator|new
 name|StackMapType
 argument_list|(
-name|input
+name|dataInput
 argument_list|,
 name|constantPool
 argument_list|)
@@ -226,7 +226,7 @@ condition|)
 block|{
 name|byteCodeOffset
 operator|=
-name|input
+name|dataInput
 operator|.
 name|readShort
 argument_list|()
@@ -247,7 +247,7 @@ operator|=
 operator|new
 name|StackMapType
 argument_list|(
-name|input
+name|dataInput
 argument_list|,
 name|constantPool
 argument_list|)
@@ -270,7 +270,7 @@ condition|)
 block|{
 name|byteCodeOffset
 operator|=
-name|input
+name|dataInput
 operator|.
 name|readShort
 argument_list|()
@@ -287,7 +287,7 @@ condition|)
 block|{
 name|byteCodeOffset
 operator|=
-name|input
+name|dataInput
 operator|.
 name|readShort
 argument_list|()
@@ -310,7 +310,7 @@ condition|)
 block|{
 name|byteCodeOffset
 operator|=
-name|input
+name|dataInput
 operator|.
 name|readShort
 argument_list|()
@@ -354,7 +354,7 @@ operator|=
 operator|new
 name|StackMapType
 argument_list|(
-name|input
+name|dataInput
 argument_list|,
 name|constantPool
 argument_list|)
@@ -372,7 +372,7 @@ condition|)
 block|{
 name|byteCodeOffset
 operator|=
-name|input
+name|dataInput
 operator|.
 name|readShort
 argument_list|()
@@ -381,7 +381,7 @@ specifier|final
 name|int
 name|numberOfLocals
 init|=
-name|input
+name|dataInput
 operator|.
 name|readShort
 argument_list|()
@@ -417,7 +417,7 @@ operator|=
 operator|new
 name|StackMapType
 argument_list|(
-name|input
+name|dataInput
 argument_list|,
 name|constantPool
 argument_list|)
@@ -427,7 +427,7 @@ specifier|final
 name|int
 name|numberOfStackItems
 init|=
-name|input
+name|dataInput
 operator|.
 name|readShort
 argument_list|()
@@ -463,7 +463,7 @@ operator|=
 operator|new
 name|StackMapType
 argument_list|(
-name|input
+name|dataInput
 argument_list|,
 name|constantPool
 argument_list|)

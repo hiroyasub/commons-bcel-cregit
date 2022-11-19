@@ -85,7 +85,7 @@ index|[]
 name|table
 decl_stmt|;
 comment|// Table of stack map entries
-comment|/**      * Construct object from input stream.      *      * @param nameIndex Index of name      * @param length Content length in bytes      * @param input Input stream      * @param constantPool Array of constants      * @throws IOException if an I/O error occurs.      */
+comment|/**      * Construct object from input stream.      *      * @param nameIndex Index of name      * @param length Content length in bytes      * @param dataInput Input stream      * @param constantPool Array of constants      * @throws IOException if an I/O error occurs.      */
 name|StackMap
 parameter_list|(
 specifier|final
@@ -98,7 +98,7 @@ name|length
 parameter_list|,
 specifier|final
 name|DataInput
-name|input
+name|dataInput
 parameter_list|,
 specifier|final
 name|ConstantPool
@@ -126,7 +126,7 @@ specifier|final
 name|int
 name|mapLength
 init|=
-name|input
+name|dataInput
 operator|.
 name|readUnsignedShort
 argument_list|()
@@ -162,7 +162,7 @@ operator|=
 operator|new
 name|StackMapEntry
 argument_list|(
-name|input
+name|dataInput
 argument_list|,
 name|constantPool
 argument_list|)

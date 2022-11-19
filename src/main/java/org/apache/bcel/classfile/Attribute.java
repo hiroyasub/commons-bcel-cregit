@@ -244,7 +244,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/**      * Class method reads one attribute from the input data stream. This method must not be accessible from the outside. It      * is called by the Field and Method constructor methods.      *      * @see Field      * @see Method      *      * @param file Input stream      * @param constantPool Array of constants      * @return Attribute      * @throws IOException if an I/O error occurs.      * @since 6.0      */
+comment|/**      * Class method reads one attribute from the input data stream. This method must not be accessible from the outside. It      * is called by the Field and Method constructor methods.      *      * @see Field      * @see Method      *      * @param dataInput Input stream      * @param constantPool Array of constants      * @return Attribute      * @throws IOException if an I/O error occurs.      * @since 6.0      */
 specifier|public
 specifier|static
 name|Attribute
@@ -252,7 +252,7 @@ name|readAttribute
 parameter_list|(
 specifier|final
 name|DataInput
-name|file
+name|dataInput
 parameter_list|,
 specifier|final
 name|ConstantPool
@@ -274,7 +274,7 @@ specifier|final
 name|int
 name|nameIndex
 init|=
-name|file
+name|dataInput
 operator|.
 name|readUnsignedShort
 argument_list|()
@@ -298,7 +298,7 @@ specifier|final
 name|int
 name|length
 init|=
-name|file
+name|dataInput
 operator|.
 name|readInt
 argument_list|()
@@ -387,7 +387,7 @@ name|nameIndex
 argument_list|,
 name|length
 argument_list|,
-name|file
+name|dataInput
 argument_list|,
 name|constantPool
 argument_list|)
@@ -401,7 +401,7 @@ name|nameIndex
 argument_list|,
 name|length
 argument_list|,
-name|file
+name|dataInput
 argument_list|,
 name|constantPool
 argument_list|)
@@ -419,7 +419,7 @@ name|nameIndex
 argument_list|,
 name|length
 argument_list|,
-name|file
+name|dataInput
 argument_list|,
 name|constantPool
 argument_list|)
@@ -437,7 +437,7 @@ name|nameIndex
 argument_list|,
 name|length
 argument_list|,
-name|file
+name|dataInput
 argument_list|,
 name|constantPool
 argument_list|)
@@ -455,7 +455,7 @@ name|nameIndex
 argument_list|,
 name|length
 argument_list|,
-name|file
+name|dataInput
 argument_list|,
 name|constantPool
 argument_list|)
@@ -473,7 +473,7 @@ name|nameIndex
 argument_list|,
 name|length
 argument_list|,
-name|file
+name|dataInput
 argument_list|,
 name|constantPool
 argument_list|)
@@ -491,7 +491,7 @@ name|nameIndex
 argument_list|,
 name|length
 argument_list|,
-name|file
+name|dataInput
 argument_list|,
 name|constantPool
 argument_list|)
@@ -509,7 +509,7 @@ name|nameIndex
 argument_list|,
 name|length
 argument_list|,
-name|file
+name|dataInput
 argument_list|,
 name|constantPool
 argument_list|)
@@ -527,7 +527,7 @@ name|nameIndex
 argument_list|,
 name|length
 argument_list|,
-name|file
+name|dataInput
 argument_list|,
 name|constantPool
 argument_list|)
@@ -545,7 +545,7 @@ name|nameIndex
 argument_list|,
 name|length
 argument_list|,
-name|file
+name|dataInput
 argument_list|,
 name|constantPool
 argument_list|)
@@ -563,7 +563,7 @@ name|nameIndex
 argument_list|,
 name|length
 argument_list|,
-name|file
+name|dataInput
 argument_list|,
 name|constantPool
 argument_list|)
@@ -581,7 +581,7 @@ name|nameIndex
 argument_list|,
 name|length
 argument_list|,
-name|file
+name|dataInput
 argument_list|,
 name|constantPool
 argument_list|)
@@ -599,7 +599,7 @@ name|nameIndex
 argument_list|,
 name|length
 argument_list|,
-name|file
+name|dataInput
 argument_list|,
 name|constantPool
 argument_list|)
@@ -624,7 +624,7 @@ name|nameIndex
 argument_list|,
 name|length
 argument_list|,
-name|file
+name|dataInput
 argument_list|,
 name|constantPool
 argument_list|)
@@ -642,7 +642,7 @@ name|nameIndex
 argument_list|,
 name|length
 argument_list|,
-name|file
+name|dataInput
 argument_list|,
 name|constantPool
 argument_list|)
@@ -660,7 +660,7 @@ name|nameIndex
 argument_list|,
 name|length
 argument_list|,
-name|file
+name|dataInput
 argument_list|,
 name|constantPool
 argument_list|)
@@ -678,7 +678,7 @@ name|nameIndex
 argument_list|,
 name|length
 argument_list|,
-name|file
+name|dataInput
 argument_list|,
 name|constantPool
 argument_list|)
@@ -696,7 +696,7 @@ name|nameIndex
 argument_list|,
 name|length
 argument_list|,
-name|file
+name|dataInput
 argument_list|,
 name|constantPool
 argument_list|)
@@ -714,7 +714,7 @@ name|nameIndex
 argument_list|,
 name|length
 argument_list|,
-name|file
+name|dataInput
 argument_list|,
 name|constantPool
 argument_list|)
@@ -732,7 +732,7 @@ name|nameIndex
 argument_list|,
 name|length
 argument_list|,
-name|file
+name|dataInput
 argument_list|,
 name|constantPool
 argument_list|)
@@ -750,7 +750,7 @@ name|nameIndex
 argument_list|,
 name|length
 argument_list|,
-name|file
+name|dataInput
 argument_list|,
 name|constantPool
 argument_list|)
@@ -770,7 +770,7 @@ name|nameIndex
 argument_list|,
 name|length
 argument_list|,
-name|file
+name|dataInput
 argument_list|,
 name|constantPool
 argument_list|)
@@ -788,7 +788,7 @@ name|nameIndex
 argument_list|,
 name|length
 argument_list|,
-name|file
+name|dataInput
 argument_list|,
 name|constantPool
 argument_list|)
@@ -806,7 +806,7 @@ name|nameIndex
 argument_list|,
 name|length
 argument_list|,
-name|file
+name|dataInput
 argument_list|,
 name|constantPool
 argument_list|)
@@ -824,7 +824,7 @@ name|nameIndex
 argument_list|,
 name|length
 argument_list|,
-name|file
+name|dataInput
 argument_list|,
 name|constantPool
 argument_list|)
@@ -842,7 +842,7 @@ name|nameIndex
 argument_list|,
 name|length
 argument_list|,
-name|file
+name|dataInput
 argument_list|,
 name|constantPool
 argument_list|)
@@ -860,7 +860,7 @@ name|nameIndex
 argument_list|,
 name|length
 argument_list|,
-name|file
+name|dataInput
 argument_list|,
 name|constantPool
 argument_list|)
@@ -878,7 +878,7 @@ name|nameIndex
 argument_list|,
 name|length
 argument_list|,
-name|file
+name|dataInput
 argument_list|,
 name|constantPool
 argument_list|)
@@ -896,7 +896,7 @@ name|nameIndex
 argument_list|,
 name|length
 argument_list|,
-name|file
+name|dataInput
 argument_list|,
 name|constantPool
 argument_list|)
@@ -914,7 +914,7 @@ argument_list|)
 throw|;
 block|}
 block|}
-comment|/**      * Class method reads one attribute from the input data stream. This method must not be accessible from the outside. It      * is called by the Field and Method constructor methods.      *      * @see Field      * @see Method      *      * @param file Input stream      * @param constantPool Array of constants      * @return Attribute      * @throws IOException if an I/O error occurs.      */
+comment|/**      * Class method reads one attribute from the input data stream. This method must not be accessible from the outside. It      * is called by the Field and Method constructor methods.      *      * @see Field      * @see Method      *      * @param dataInputStream Input stream      * @param constantPool Array of constants      * @return Attribute      * @throws IOException if an I/O error occurs.      */
 specifier|public
 specifier|static
 name|Attribute
@@ -922,7 +922,7 @@ name|readAttribute
 parameter_list|(
 specifier|final
 name|DataInputStream
-name|file
+name|dataInputStream
 parameter_list|,
 specifier|final
 name|ConstantPool
@@ -937,7 +937,7 @@ argument_list|(
 operator|(
 name|DataInput
 operator|)
-name|file
+name|dataInputStream
 argument_list|,
 name|constantPool
 argument_list|)
