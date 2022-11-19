@@ -2147,9 +2147,6 @@ name|buf
 operator|.
 name|toString
 argument_list|()
-operator|.
-name|intern
-argument_list|()
 return|;
 block|}
 specifier|private
