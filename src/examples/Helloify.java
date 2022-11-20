@@ -313,13 +313,11 @@ argument_list|,
 operator|new
 name|ConstantUtf8
 argument_list|(
-name|className
+name|Utility
 operator|.
-name|replace
+name|packageToPath
 argument_list|(
-literal|'.'
-argument_list|,
-literal|'/'
+name|className
 argument_list|)
 argument_list|)
 argument_list|)

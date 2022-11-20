@@ -83,6 +83,20 @@ name|JavaClass
 import|;
 end_import
 
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|bcel
+operator|.
+name|classfile
+operator|.
+name|Utility
+import|;
+end_import
+
 begin_comment
 comment|/**  * The repository maintains information about which classes have been loaded.  *  * It loads its data from the ClassLoader implementation passed into its constructor.  *  * @see org.apache.bcel.Repository  */
 end_comment
@@ -229,13 +243,11 @@ specifier|final
 name|String
 name|classFile
 init|=
-name|className
+name|Utility
 operator|.
-name|replace
+name|packageToPath
 argument_list|(
-literal|'.'
-argument_list|,
-literal|'/'
+name|className
 argument_list|)
 decl_stmt|;
 name|JavaClass

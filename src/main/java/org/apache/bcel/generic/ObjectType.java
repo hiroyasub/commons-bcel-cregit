@@ -120,13 +120,11 @@ name|T_REFERENCE
 argument_list|,
 literal|"L"
 operator|+
-name|className
+name|Utility
 operator|.
-name|replace
+name|packageToPath
 argument_list|(
-literal|'.'
-argument_list|,
-literal|'/'
+name|className
 argument_list|)
 operator|+
 literal|";"

@@ -81,6 +81,20 @@ name|JavaClass
 import|;
 end_import
 
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|bcel
+operator|.
+name|classfile
+operator|.
+name|Utility
+import|;
+end_import
+
 begin_class
 specifier|public
 specifier|abstract
@@ -266,6 +280,10 @@ name|getPackageName
 parameter_list|()
 block|{
 return|return
+name|Utility
+operator|.
+name|packageToPath
+argument_list|(
 name|getClass
 argument_list|()
 operator|.
@@ -274,12 +292,6 @@ argument_list|()
 operator|.
 name|getName
 argument_list|()
-operator|.
-name|replace
-argument_list|(
-literal|'.'
-argument_list|,
-literal|'/'
 argument_list|)
 return|;
 block|}

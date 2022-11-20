@@ -4126,13 +4126,9 @@ argument_list|)
 operator|.
 name|append
 argument_list|(
-name|type
-operator|.
-name|replace
+name|packageToPath
 argument_list|(
-literal|'.'
-argument_list|,
-literal|'/'
+name|type
 argument_list|)
 argument_list|)
 operator|.
@@ -4996,6 +4992,28 @@ name|buf
 operator|.
 name|toString
 argument_list|()
+return|;
+block|}
+comment|/**      * Converts '.'s to '/'s.      *      * @param name Source      * @return converted value      * @since 6.7.0      */
+specifier|public
+specifier|static
+name|String
+name|packageToPath
+parameter_list|(
+specifier|final
+name|String
+name|name
+parameter_list|)
+block|{
+return|return
+name|name
+operator|.
+name|replace
+argument_list|(
+literal|'.'
+argument_list|,
+literal|'/'
+argument_list|)
 return|;
 block|}
 comment|/**      * Converts a path to a package name.      *      * @param str the source path.      * @return a package name.      * @since 6.6.0      */

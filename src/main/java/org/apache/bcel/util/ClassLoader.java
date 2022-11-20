@@ -460,13 +460,11 @@ name|name
 operator|.
 name|setBytes
 argument_list|(
-name|className
+name|Utility
 operator|.
-name|replace
+name|packageToPath
 argument_list|(
-literal|'.'
-argument_list|,
-literal|'/'
+name|className
 argument_list|)
 argument_list|)
 expr_stmt|;

@@ -1663,16 +1663,14 @@ condition|?
 comment|// catch any exception, used when compiling finally
 literal|"all"
 else|:
+name|Utility
+operator|.
+name|packageToPath
+argument_list|(
 name|caught
 operator|.
 name|getClassName
 argument_list|()
-operator|.
-name|replace
-argument_list|(
-literal|'.'
-argument_list|,
-literal|'/'
 argument_list|)
 decl_stmt|;
 name|out
@@ -1788,13 +1786,11 @@ name|println
 argument_list|(
 literal|".throws "
 operator|+
-name|name
+name|Utility
 operator|.
-name|replace
+name|packageToPath
 argument_list|(
-literal|'.'
-argument_list|,
-literal|'/'
+name|name
 argument_list|)
 argument_list|)
 expr_stmt|;
@@ -1950,16 +1946,14 @@ argument_list|)
 operator|+
 literal|" "
 operator|+
+name|Utility
+operator|.
+name|packageToPath
+argument_list|(
 name|clazz
 operator|.
 name|getClassName
 argument_list|()
-operator|.
-name|replace
-argument_list|(
-literal|'.'
-argument_list|,
-literal|'/'
 argument_list|)
 argument_list|)
 expr_stmt|;
@@ -1969,16 +1963,14 @@ name|println
 argument_list|(
 literal|".super "
 operator|+
+name|Utility
+operator|.
+name|packageToPath
+argument_list|(
 name|clazz
 operator|.
 name|getSuperclassName
 argument_list|()
-operator|.
-name|replace
-argument_list|(
-literal|'.'
-argument_list|,
-literal|'/'
 argument_list|)
 argument_list|)
 expr_stmt|;
@@ -2000,13 +1992,11 @@ name|println
 argument_list|(
 literal|".implements "
 operator|+
-name|iface
+name|Utility
 operator|.
-name|replace
+name|packageToPath
 argument_list|(
-literal|'.'
-argument_list|,
-literal|'/'
+name|iface
 argument_list|)
 argument_list|)
 expr_stmt|;
