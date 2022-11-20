@@ -774,17 +774,26 @@ argument_list|,
 literal|'/'
 argument_list|)
 expr_stmt|;
-name|clazz
-operator|=
-operator|new
-name|ClassParser
-argument_list|(
+try|try
+init|(
+specifier|final
+name|InputStream
+name|inputStream
+init|=
 name|classPath
 operator|.
 name|getInputStream
 argument_list|(
 name|clName
 argument_list|)
+init|)
+block|{
+name|clazz
+operator|=
+operator|new
+name|ClassParser
+argument_list|(
+name|inputStream
 argument_list|,
 name|clName
 argument_list|)
@@ -792,6 +801,7 @@ operator|.
 name|parse
 argument_list|()
 expr_stmt|;
+block|}
 comment|// here we create the root set of classes to process
 name|addDependents
 argument_list|(
@@ -881,7 +891,7 @@ try|try
 init|(
 specifier|final
 name|InputStream
-name|is
+name|inputStream
 init|=
 name|classPath
 operator|.
@@ -896,7 +906,7 @@ operator|=
 operator|new
 name|ClassParser
 argument_list|(
-name|is
+name|inputStream
 argument_list|,
 name|name
 argument_list|)
