@@ -27,6 +27,18 @@ end_import
 
 begin_import
 import|import
+name|javax
+operator|.
+name|swing
+operator|.
+name|text
+operator|.
+name|Utilities
+import|;
+end_import
+
+begin_import
+import|import
 name|org
 operator|.
 name|apache
@@ -172,6 +184,20 @@ operator|.
 name|classfile
 operator|.
 name|JavaClass
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|bcel
+operator|.
+name|classfile
+operator|.
+name|Utility
 import|;
 end_import
 
@@ -476,13 +502,11 @@ parameter_list|)
 block|{
 name|className
 operator|=
-name|className
+name|Utility
 operator|.
-name|replace
+name|pathToPackage
 argument_list|(
-literal|'/'
-argument_list|,
-literal|'.'
+name|className
 argument_list|)
 expr_stmt|;
 for|for
