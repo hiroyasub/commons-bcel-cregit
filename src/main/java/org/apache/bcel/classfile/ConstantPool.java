@@ -1629,7 +1629,6 @@ operator|.
 name|getBytes
 argument_list|()
 return|;
-comment|// fallthrough
 default|default:
 throw|throw
 operator|new
