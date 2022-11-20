@@ -200,7 +200,7 @@ condition|)
 block|{
 throw|throw
 operator|new
-name|IllegalArgumentException
+name|ClassFormatException
 argument_list|(
 literal|"Illegal type for StackMapType: "
 operator|+
