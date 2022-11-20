@@ -2920,7 +2920,7 @@ return|return
 literal|null
 return|;
 block|}
-comment|/**      * @param name fully qualified class name, e.g. java.lang.String      * @return input stream for class      * @throws IOException if an I/O error occurs.      */
+comment|/**      * Gets an InputStream.      *<p>      * The caller is responsible for closing the InputStream.      *</p>      * @param name fully qualified class name, e.g. java.lang.String      * @return input stream for class      * @throws IOException if an I/O error occurs.      */
 specifier|public
 name|InputStream
 name|getInputStream
@@ -2946,7 +2946,7 @@ name|EXTENSION
 argument_list|)
 return|;
 block|}
-comment|/**      * Return stream for class or resource on CLASSPATH.      *      * @param name fully qualified file name, e.g. java/lang/String      * @param suffix file name ends with suff, e.g. .java      * @return input stream for file on class path      * @throws IOException if an I/O error occurs.      */
+comment|/**      * Gets an InputStream for a class or resource on the classpath.      *<p>      * The caller is responsible for closing the InputStream.      *</p>      *      * @param name   fully qualified file name, e.g. java/lang/String      * @param suffix file name ends with suff, e.g. .java      * @return input stream for file on class path      * @throws IOException if an I/O error occurs.      */
 specifier|public
 name|InputStream
 name|getInputStream
@@ -2962,11 +2962,6 @@ parameter_list|)
 throws|throws
 name|IOException
 block|{
-name|InputStream
-name|inputStream
-init|=
-literal|null
-decl_stmt|;
 try|try
 block|{
 specifier|final
@@ -2983,8 +2978,15 @@ operator|.
 name|getClassLoader
 argument_list|()
 decl_stmt|;
+annotation|@
+name|SuppressWarnings
+argument_list|(
+literal|"resource"
+argument_list|)
+comment|// closed by caller
+name|InputStream
 name|inputStream
-operator|=
+init|=
 name|classLoader
 operator|==
 literal|null
@@ -2999,18 +3001,7 @@ name|name
 operator|+
 name|suffix
 argument_list|)
-expr_stmt|;
-comment|// may return null
-block|}
-catch|catch
-parameter_list|(
-specifier|final
-name|Exception
-name|ignored
-parameter_list|)
-block|{
-comment|// ignored
-block|}
+decl_stmt|;
 if|if
 condition|(
 name|inputStream
@@ -3021,6 +3012,16 @@ block|{
 return|return
 name|inputStream
 return|;
+block|}
+block|}
+catch|catch
+parameter_list|(
+specifier|final
+name|Exception
+name|ignored
+parameter_list|)
+block|{
+comment|// ignored
 block|}
 return|return
 name|getClassFile
