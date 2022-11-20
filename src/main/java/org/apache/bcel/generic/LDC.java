@@ -578,8 +578,9 @@ name|nameIndex
 argument_list|)
 expr_stmt|;
 return|return
-operator|new
-name|ObjectType
+name|Type
+operator|.
+name|getType
 argument_list|(
 operator|(
 operator|(

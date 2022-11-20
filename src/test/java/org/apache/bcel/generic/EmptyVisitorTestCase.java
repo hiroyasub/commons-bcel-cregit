@@ -172,6 +172,9 @@ comment|// contains instruction POP2,
 literal|"java.nio.HeapShortBuffer"
 block|,
 comment|// contains instruction SALOAD, SASTORE
+literal|"Java8Example2"
+block|,
+comment|// contains instruction FREM
 literal|"java.awt.GradientPaintContext"
 block|,
 comment|// contains instruction DREM
