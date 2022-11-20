@@ -2576,6 +2576,7 @@ specifier|public
 name|boolean
 name|equals
 parameter_list|(
+specifier|final
 name|Object
 name|obj
 parameter_list|)
@@ -2617,6 +2618,7 @@ return|return
 literal|false
 return|;
 block|}
+specifier|final
 name|ClassPath
 name|other
 init|=
@@ -2984,6 +2986,7 @@ argument_list|(
 literal|"resource"
 argument_list|)
 comment|// closed by caller
+specifier|final
 name|InputStream
 name|inputStream
 init|=

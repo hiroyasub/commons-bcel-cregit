@@ -423,6 +423,7 @@ argument_list|)
 argument_list|)
 expr_stmt|;
 block|}
+specifier|final
 name|String
 name|output
 init|=
@@ -532,6 +533,7 @@ name|getClassName
 argument_list|()
 argument_list|)
 decl_stmt|;
+specifier|final
 name|String
 name|outFileName
 init|=
@@ -614,6 +616,7 @@ expr_stmt|;
 block|}
 else|else
 block|{
+specifier|final
 name|String
 name|runtimeExecJavaAgent
 init|=
@@ -729,6 +732,7 @@ expr_stmt|;
 block|}
 else|else
 block|{
+specifier|final
 name|String
 name|runtimeExecJavaAgent
 init|=
@@ -876,6 +880,7 @@ expr_stmt|;
 block|}
 else|else
 block|{
+specifier|final
 name|String
 name|runtimeExecJavaAgent
 init|=

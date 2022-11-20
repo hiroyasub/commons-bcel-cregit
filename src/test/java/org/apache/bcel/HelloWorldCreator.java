@@ -185,6 +185,7 @@ specifier|static
 name|void
 name|main
 parameter_list|(
+specifier|final
 name|String
 index|[]
 name|args
@@ -192,6 +193,7 @@ parameter_list|)
 throws|throws
 name|Exception
 block|{
+specifier|final
 name|org
 operator|.
 name|apache
@@ -211,6 +213,7 @@ operator|.
 name|HelloWorldCreator
 argument_list|()
 decl_stmt|;
+specifier|final
 name|Path
 name|path
 init|=
@@ -251,14 +254,17 @@ expr_stmt|;
 block|}
 block|}
 specifier|private
+specifier|final
 name|InstructionFactory
 name|factory
 decl_stmt|;
 specifier|private
+specifier|final
 name|ConstantPoolGen
 name|cp
 decl_stmt|;
 specifier|private
+specifier|final
 name|ClassGen
 name|cg
 decl_stmt|;
@@ -331,6 +337,7 @@ specifier|public
 name|void
 name|create
 parameter_list|(
+specifier|final
 name|OutputStream
 name|out
 parameter_list|)
@@ -359,6 +366,7 @@ name|void
 name|createConstructor
 parameter_list|()
 block|{
+specifier|final
 name|InstructionList
 name|il
 init|=
@@ -366,6 +374,7 @@ operator|new
 name|InstructionList
 argument_list|()
 decl_stmt|;
+specifier|final
 name|MethodGen
 name|method
 init|=
@@ -485,6 +494,7 @@ name|void
 name|createMainMethod
 parameter_list|()
 block|{
+specifier|final
 name|InstructionList
 name|il
 init|=
@@ -495,6 +505,7 @@ argument_list|(
 literal|"Hello World!"
 argument_list|)
 decl_stmt|;
+specifier|final
 name|MethodGen
 name|method
 init|=

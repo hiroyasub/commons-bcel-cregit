@@ -106,7 +106,7 @@ argument_list|(
 literal|"BCEL.logQuiet"
 argument_list|)
 decl_stmt|;
-comment|/**      * Eventually runs out of memory? Super now calls VerifierFactory.clear();      *       * @param name      * @throws ClassNotFoundException      */
+comment|/**      * Eventually runs out of memory? Super now calls VerifierFactory.clear();      *      * @param name      * @throws ClassNotFoundException      */
 annotation|@
 name|Disabled
 argument_list|(

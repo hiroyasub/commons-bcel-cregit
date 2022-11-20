@@ -3358,6 +3358,7 @@ name|s
 argument_list|)
 argument_list|)
 expr_stmt|;
+specifier|final
 name|MethodObject
 name|methodObject
 init|=
