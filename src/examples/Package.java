@@ -759,7 +759,12 @@ operator|.
 name|length
 argument_list|()
 operator|-
-literal|6
+name|JavaClass
+operator|.
+name|EXTENSION
+operator|.
+name|length
+argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
