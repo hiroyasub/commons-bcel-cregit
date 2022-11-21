@@ -203,6 +203,38 @@ name|bytes
 argument_list|)
 expr_stmt|;
 block|}
+if|else if
+condition|(
+name|length
+operator|<
+literal|0
+condition|)
+block|{
+comment|// Length is defined in the JVM specification as an unsigned 4 byte
+comment|// integer but is read as a signed integer. This is not an issue as
+comment|// the JRE API consistently uses byte[] or ByteBuffer for classes.
+comment|// Therefore treat any negative number here as a format error.
+throw|throw
+operator|new
+name|ClassFormatException
+argument_list|(
+name|String
+operator|.
+name|format
+argument_list|(
+literal|"Invalid length %,d for Unknown attribute. Must be greater than or equal to zero and less than %,d"
+argument_list|,
+name|length
+operator|&
+literal|0xFFFFFFFFL
+argument_list|,
+name|Integer
+operator|.
+name|MAX_VALUE
+argument_list|)
+argument_list|)
+throw|;
+block|}
 block|}
 comment|/**      * Initialize from another object. Note that both objects use the same references (shallow copy). Use clone() for a      * physical copy.      *      * @param unknown Source.      */
 specifier|public

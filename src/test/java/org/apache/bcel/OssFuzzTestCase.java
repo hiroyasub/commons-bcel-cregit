@@ -156,6 +156,22 @@ literal|"53543"
 argument_list|)
 expr_stmt|;
 block|}
+comment|/*      * The original issue 53544 was a false positive but reviewing that issue      * did find a valid issue nearby.      */
+annotation|@
+name|Test
+specifier|public
+name|void
+name|testIssue53544a
+parameter_list|()
+throws|throws
+name|Exception
+block|{
+name|testOssFuzzReproducer
+argument_list|(
+literal|"53544a"
+argument_list|)
+expr_stmt|;
+block|}
 specifier|private
 name|void
 name|testOssFuzzReproducer
