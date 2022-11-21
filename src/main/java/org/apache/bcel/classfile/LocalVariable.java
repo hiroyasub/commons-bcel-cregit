@@ -87,6 +87,14 @@ name|Node
 implements|,
 name|Constants
 block|{
+specifier|static
+specifier|final
+name|LocalVariable
+index|[]
+name|EMPTY_ARRAY
+init|=
+block|{}
+decl_stmt|;
 comment|/** Range in which the variable is valid. */
 specifier|private
 name|int
