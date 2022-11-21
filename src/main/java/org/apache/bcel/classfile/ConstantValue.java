@@ -72,7 +72,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * This class is derived from<em>Attribute</em> and represents a constant value, i.e., a default value for initializing  * a class field. This class is instantiated by the<em>Attribute.readAttribute()</em> method.  *  * @see Attribute  */
+comment|/**  * This class is derived from<em>Attribute</em> and represents a constant value, i.e., a default value for initializing  * a class field. This class is instantiated by the<em>Attribute.readAttribute()</em> method.  *  *<pre>  * ConstantValue_attribute {  *   u2 attribute_name_index;  *   u4 attribute_length;  *   u2 constantvalue_index;  * }  *</pre>  * @see Attribute  */
 end_comment
 
 begin_class
