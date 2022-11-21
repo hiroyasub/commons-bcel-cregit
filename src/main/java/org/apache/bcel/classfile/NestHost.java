@@ -57,6 +57,20 @@ name|Const
 import|;
 end_import
 
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|bcel
+operator|.
+name|util
+operator|.
+name|Args
+import|;
+end_import
+
 begin_comment
 comment|/**  * This class is derived from<em>Attribute</em> and records the nest host of the nest to which the current class or  * interface claims to belong. There may be at most one NestHost attribute in a ClassFile structure.  *  * @see Attribute  */
 end_comment
@@ -152,7 +166,14 @@ name|this
 operator|.
 name|hostClassIndex
 operator|=
+name|Args
+operator|.
+name|requireU2
+argument_list|(
 name|hostClassIndex
+argument_list|,
+literal|"hostClassIndex"
+argument_list|)
 expr_stmt|;
 block|}
 comment|/**      * Initializes from another object. Note that both objects use the same references (shallow copy). Use copy() for a      * physical copy.      */
