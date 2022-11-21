@@ -94,27 +94,27 @@ name|EMPTY_CODE_EXCEPTION_ARRAY
 init|=
 block|{}
 decl_stmt|;
+comment|/** Range in the code the exception handler. */
 specifier|private
 name|int
 name|startPc
 decl_stmt|;
-comment|// Range in the code the exception handler is
+comment|/** active. startPc is inclusive, endPc exclusive. */
 specifier|private
 name|int
 name|endPc
 decl_stmt|;
-comment|// active. startPc is inclusive, endPc exclusive
+comment|/**      * Starting address of exception handler, i.e., an offset from start of code.      */
 specifier|private
 name|int
 name|handlerPc
 decl_stmt|;
-comment|/*                             * Starting address of exception handler, i.e., an offset from start of code.                             */
+comment|/*      * If this is zero the handler catches any exception, otherwise it points to the exception class which is to be caught.      */
 specifier|private
 name|int
 name|catchType
 decl_stmt|;
-comment|/*                             * If this is zero the handler catches any exception, otherwise it points to the exception class which is to be caught.                             */
-comment|/**      * Initialize from another object.      */
+comment|/**      * Constructs a new instance from another instance.      *      * @param c Source for copying.      */
 specifier|public
 name|CodeException
 parameter_list|(
@@ -147,7 +147,7 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Construct object from file stream.      *      * @param file Input stream      * @throws IOException if an I/O error occurs.      */
+comment|/**      * Constructs a new instance from a DataInput.      *      * @param file Input stream      * @throws IOException if an I/O error occurs.      */
 name|CodeException
 parameter_list|(
 specifier|final
@@ -181,7 +181,7 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * @param startPc Range in the code the exception handler is active, startPc is inclusive while      * @param endPc is exclusive      * @param handlerPc Starting address of exception handler, i.e., an offset from start of code.      * @param catchType If zero the handler catches any exception, otherwise it points to the exception class which is to be      *        caught.      */
+comment|/**      * Constructs a new instance.      *      * @param startPc Range in the code the exception handler is active, startPc is inclusive while      * @param endPc is exclusive      * @param handlerPc Starting address of exception handler, i.e., an offset from start of code.      * @param catchType If zero the handler catches any exception, otherwise it points to the exception class which is to be      *        caught.      */
 specifier|public
 name|CodeException
 parameter_list|(
@@ -276,7 +276,7 @@ return|return
 literal|null
 return|;
 block|}
-comment|/**      * Dump code exception to file stream in binary format.      *      * @param file Output file stream      * @throws IOException if an I/O error occurs.      */
+comment|/**      * Dumps code exception to file stream in binary format.      *      * @param file Output file stream      * @throws IOException if an I/O error occurs.      */
 specifier|public
 name|void
 name|dump
@@ -473,7 +473,7 @@ literal|true
 argument_list|)
 return|;
 block|}
-comment|/**      * @return String representation.      */
+comment|/**      * @param cp constant pool source.      * @param verbose Output more if true.      * @return String representation.      */
 specifier|public
 name|String
 name|toString
