@@ -87,42 +87,40 @@ name|Node
 implements|,
 name|Constants
 block|{
+comment|/** Range in which the variable is valid. */
 specifier|private
 name|int
 name|startPc
 decl_stmt|;
-comment|// Range in which the variable is valid
 specifier|private
 name|int
 name|length
 decl_stmt|;
+comment|/** Index in constant pool of variable name. */
 specifier|private
 name|int
 name|nameIndex
 decl_stmt|;
-comment|// Index in constant pool of variable name
-comment|// Technically, a decscriptor_index for a local variable table entry
-comment|// and a signatureIndex for a local variable type table entry.
+comment|/**      * Technically, a decscriptor_index for a local variable table entry and a signatureIndex for a local variable type table entry. Index of variable signature      */
 specifier|private
 name|int
 name|signatureIndex
 decl_stmt|;
-comment|// Index of variable signature
+comment|/*      * Variable is index'th local variable on this method's frame.      */
 specifier|private
 name|int
 name|index
 decl_stmt|;
-comment|/*                         * Variable is index'th local variable on this method's frame.                         */
 specifier|private
 name|ConstantPool
 name|constantPool
 decl_stmt|;
+comment|/** Never changes; used to match up with LocalVariableTypeTable entries. */
 specifier|private
 specifier|final
 name|int
 name|origIndex
 decl_stmt|;
-comment|// never changes; used to match up with LocalVariableTypeTable entries
 comment|/**      * Constructs object from file stream.      *      * @param file Input stream      * @throws IOException if an I/O error occurs.      */
 name|LocalVariable
 parameter_list|(
