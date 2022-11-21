@@ -386,6 +386,8 @@ operator|.
 name|MAX_VALUE
 argument_list|,
 name|value
+operator|&
+literal|0xFFFFFFFFL
 argument_list|)
 argument_list|)
 throw|;
