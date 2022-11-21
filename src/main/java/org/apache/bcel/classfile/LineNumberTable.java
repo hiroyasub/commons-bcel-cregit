@@ -89,6 +89,20 @@ name|Const
 import|;
 end_import
 
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|bcel
+operator|.
+name|util
+operator|.
+name|Args
+import|;
+end_import
+
 begin_comment
 comment|/**  * This class represents a table of line numbers for debugging purposes. This attribute is used by the<em>Code</em>  * attribute. It contains pairs of PCs and line numbers.  *  * @see Code  * @see LineNumber  */
 end_comment
@@ -242,6 +256,27 @@ operator|.
 name|lineNumberTable
 operator|=
 name|lineNumberTable
+operator|!=
+literal|null
+condition|?
+name|lineNumberTable
+else|:
+name|LineNumber
+operator|.
+name|EMPTY_ARRAY
+expr_stmt|;
+name|Args
+operator|.
+name|requireU2
+argument_list|(
+name|this
+operator|.
+name|lineNumberTable
+operator|.
+name|length
+argument_list|,
+literal|"lineNumberTable.length"
+argument_list|)
 expr_stmt|;
 block|}
 comment|/*      * Initialize from another object. Note that both objects use the same references (shallow copy). Use copy() for a      * physical copy.      */

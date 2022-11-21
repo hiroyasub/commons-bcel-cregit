@@ -45,6 +45,20 @@ name|IOException
 import|;
 end_import
 
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|bcel
+operator|.
+name|util
+operator|.
+name|Args
+import|;
+end_import
+
 begin_comment
 comment|/**  * This class represents a (PC offset, line number) pair, i.e., a line number in the source that corresponds to a  * relative address in the byte code. This is used for debugging purposes.  *  * @see LineNumberTable  */
 end_comment
@@ -59,14 +73,22 @@ name|Cloneable
 implements|,
 name|Node
 block|{
+specifier|static
+specifier|final
+name|LineNumber
+index|[]
+name|EMPTY_ARRAY
+init|=
+block|{}
+decl_stmt|;
 comment|/** Program Counter (PC) corresponds to line */
 specifier|private
-name|short
+name|int
 name|startPc
 decl_stmt|;
 comment|/** number in source file */
 specifier|private
-name|short
+name|int
 name|lineNumber
 decl_stmt|;
 comment|/**      * Construct object from file stream.      *      * @param file Input stream      * @throws IOException if an I/O Exception occurs in readUnsignedShort      */
@@ -110,19 +132,27 @@ name|this
 operator|.
 name|startPc
 operator|=
-operator|(
-name|short
-operator|)
+name|Args
+operator|.
+name|requireU2
+argument_list|(
 name|startPc
+argument_list|,
+literal|"startPc"
+argument_list|)
 expr_stmt|;
 name|this
 operator|.
 name|lineNumber
 operator|=
-operator|(
-name|short
-operator|)
+name|Args
+operator|.
+name|requireU2
+argument_list|(
 name|lineNumber
+argument_list|,
+literal|"lineNumber"
+argument_list|)
 expr_stmt|;
 block|}
 comment|/**      * Initialize from another object.      *      * @param c the object to copy      */
