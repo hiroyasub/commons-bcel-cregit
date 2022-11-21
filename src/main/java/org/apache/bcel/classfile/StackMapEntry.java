@@ -68,7 +68,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * This class represents a stack map entry recording the types of local variables and the of stack items at a given  * byte code offset. See CLDC specification 5.3.1.2.  *  * See also https://docs.oracle.com/javase/specs/jvms/se8/html/jvms-4.html#jvms-4.7.4  *  * @see StackMap  * @see StackMapType  */
+comment|/**  * This class represents a stack map entry recording the types of local variables and the of stack items at a given  * byte code offset. See CLDC specification 5.3.1.2.  *  * See also https://docs.oracle.com/javase/specs/jvms/se8/html/jvms-4.html#jvms-4.7.4  *  *<pre>  * union stack_map_frame {  *   same_frame;  *   same_locals_1_stack_item_frame;  *   same_locals_1_stack_item_frame_extended;  *   chop_frame;  *   same_frame_extended;  *   append_frame;  *   full_frame;  * }  *</pre>  * @see StackMap  * @see StackMapType  */
 end_comment
 
 begin_class
