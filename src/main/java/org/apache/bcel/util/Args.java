@@ -216,7 +216,9 @@ name|String
 operator|.
 name|format
 argument_list|(
-literal|"Programming error: max %,d> %,d"
+literal|"%s programming error: max %,d> %,d"
+argument_list|,
+name|message
 argument_list|,
 name|max
 argument_list|,
@@ -242,7 +244,9 @@ name|String
 operator|.
 name|format
 argument_list|(
-literal|"Programming error: min %,d< 0"
+literal|"%s programming error: min %,d< 0"
+argument_list|,
+name|message
 argument_list|,
 name|min
 argument_list|)
@@ -381,7 +385,9 @@ name|String
 operator|.
 name|format
 argument_list|(
-literal|"Programming error: min %,d< 0"
+literal|"%s programming error: min %,d< 0"
+argument_list|,
+name|message
 argument_list|,
 name|min
 argument_list|)
