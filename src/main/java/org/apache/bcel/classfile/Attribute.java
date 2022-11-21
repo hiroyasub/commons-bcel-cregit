@@ -102,7 +102,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Abstract super class for<em>Attribute</em> objects. Currently the<em>ConstantValue</em>,<em>SourceFile</em>,  *<em>Code</em>,<em>Exceptiontable</em>,<em>LineNumberTable</em>,<em>LocalVariableTable</em>,<em>InnerClasses</em>  * and<em>Synthetic</em> attributes are supported. The<em>Unknown</em> attribute stands for non-standard-attributes.  *  * @see ConstantValue  * @see SourceFile  * @see Code  * @see Unknown  * @see ExceptionTable  * @see LineNumberTable  * @see LocalVariableTable  * @see InnerClasses  * @see Synthetic  * @see Deprecated  * @see Signature  */
+comment|/**  * Abstract super class for<em>Attribute</em> objects. Currently the<em>ConstantValue</em>,<em>SourceFile</em>,<em>Code</em>,<em>Exceptiontable</em>,  *<em>LineNumberTable</em>,<em>LocalVariableTable</em>,<em>InnerClasses</em> and<em>Synthetic</em> attributes are supported. The<em>Unknown</em> attribute  * stands for non-standard-attributes.  *  *<pre>  * attribute_info {  *   u2 attribute_name_index;  *   u4 attribute_length;  *   u1 info[attribute_length];  * }  *</pre>  *  * @see ConstantValue  * @see SourceFile  * @see Code  * @see Unknown  * @see ExceptionTable  * @see LineNumberTable  * @see LocalVariableTable  * @see InnerClasses  * @see Synthetic  * @see Deprecated  * @see Signature  */
 end_comment
 
 begin_class
@@ -1010,6 +1010,7 @@ name|ConstantPool
 name|constant_pool
 decl_stmt|;
 comment|// TODO make private (has getter& setter)
+comment|/**      * Constructs an instance.      *      *<pre>      * attribute_info {      *   u2 attribute_name_index;      *   u4 attribute_length;      *   u1 info[attribute_length];      * }      *</pre>      *      * @param tag tag.      * @param nameIndex u2 name index.      * @param length u4 length.      * @param constantPool constant pool.      */
 specifier|protected
 name|Attribute
 parameter_list|(
@@ -1066,7 +1067,20 @@ name|this
 operator|.
 name|length
 operator|=
+name|Args
+operator|.
+name|requireU4
+argument_list|(
 name|length
+argument_list|,
+name|getClass
+argument_list|()
+operator|.
+name|getSimpleName
+argument_list|()
+operator|+
+literal|" attribute length"
+argument_list|)
 expr_stmt|;
 name|this
 operator|.
@@ -1133,7 +1147,7 @@ return|return
 name|attr
 return|;
 block|}
-comment|/**      * @return deep copy of this attribute      */
+comment|/**      * @param constantPool constant pool to save.      * @return deep copy of this attribute.      */
 specifier|public
 specifier|abstract
 name|Attribute
@@ -1143,7 +1157,7 @@ name|ConstantPool
 name|constantPool
 parameter_list|)
 function_decl|;
-comment|/**      * Dump attribute to file stream in binary format.      *      * @param file Output file stream      * @throws IOException if an I/O error occurs.      */
+comment|/**      * Dumps attribute to file stream in binary format.      *      * @param file Output file stream      * @throws IOException if an I/O error occurs.      */
 specifier|public
 name|void
 name|dump
