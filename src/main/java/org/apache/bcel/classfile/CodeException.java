@@ -69,8 +69,22 @@ name|Constants
 import|;
 end_import
 
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|bcel
+operator|.
+name|util
+operator|.
+name|Args
+import|;
+end_import
+
 begin_comment
-comment|/**  * This class represents an entry in the exception table of the<em>Code</em> attribute and is used only there. It  * contains a range in which a particular exception handler is active.  *  * @see Code  */
+comment|/**  * This class represents an entry in the exception table of the<em>Code</em> attribute and is used only there. It  * contains a range in which a particular exception handler is active.  *  *<pre>  * Code_attribute {  *   u2 attribute_name_index;  *   u4 attribute_length;  *   u2 max_stack;  *   u2 max_locals;  *   u4 code_length;  *   u1 code[code_length];  *   u2 exception_table_length;  *   {  *     u2 start_pc;  *     u2 end_pc;  *     u2 handler_pc;  *     u2 catch_type;  *   } exception_table[exception_table_length];  *   u2 attributes_count;  *   attribute_info attributes[attributes_count];  * }  *</pre>  *  * @see Code  */
 end_comment
 
 begin_class
@@ -206,25 +220,53 @@ name|this
 operator|.
 name|startPc
 operator|=
+name|Args
+operator|.
+name|requireU2
+argument_list|(
 name|startPc
+argument_list|,
+literal|"startPc"
+argument_list|)
 expr_stmt|;
 name|this
 operator|.
 name|endPc
 operator|=
+name|Args
+operator|.
+name|requireU2
+argument_list|(
 name|endPc
+argument_list|,
+literal|"endPc"
+argument_list|)
 expr_stmt|;
 name|this
 operator|.
 name|handlerPc
 operator|=
+name|Args
+operator|.
+name|requireU2
+argument_list|(
 name|handlerPc
+argument_list|,
+literal|"handlerPc"
+argument_list|)
 expr_stmt|;
 name|this
 operator|.
 name|catchType
 operator|=
+name|Args
+operator|.
+name|requireU2
+argument_list|(
 name|catchType
+argument_list|,
+literal|"catchType"
+argument_list|)
 expr_stmt|;
 block|}
 comment|/**      * Called by objects that are traversing the nodes of the tree implicitly defined by the contents of a Java class.      * I.e., the hierarchy of methods, fields, attributes, etc. spawns a tree of objects.      *      * @param v Visitor object      */
