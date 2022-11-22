@@ -58,7 +58,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * @since 6.0  */
+comment|/**  * The element_value structure is documented at https://docs.oracle.com/javase/specs/jvms/se11/html/jvms-4.html#jvms-4.7.16.1  *  *<pre>  * element_value {  *    u1 tag;  *    union {  *        u2 const_value_index;  *  *        {   u2 type_name_index;  *            u2 const_name_index;  *        } enum_const_value;  *  *        u2 class_info_index;  *  *        annotation annotation_value;  *  *        {   u2            num_values;  *            element_value values[num_values];  *        } array_value;  *    } value;  *}  *</pre>  * @since 6.0  */
 end_comment
 
 begin_class
@@ -171,6 +171,7 @@ name|PRIMITIVE_BOOLEAN
 init|=
 literal|'Z'
 decl_stmt|;
+comment|/**      * Reads an {@code element_value} as an {@code ElementValue}.      *      * @param input Raw data input.      * @param cpool Constant pool.      * @return a new ElementValue.      * @throws IOException if an I/O error occurs.      */
 specifier|public
 specifier|static
 name|ElementValue
@@ -198,7 +199,7 @@ literal|0
 argument_list|)
 return|;
 block|}
-comment|/**      * @since 6.7.0      */
+comment|/**      * Reads an {@code element_value} as an {@code ElementValue}.      *      * @param input Raw data input.      * @param cpool Constant pool.      * @param arrayNesting level of current array nesting.      * @return a new ElementValue.      * @throws IOException if an I/O error occurs.      * @since 6.7.0      */
 specifier|public
 specifier|static
 name|ElementValue
@@ -220,7 +221,7 @@ name|IOException
 block|{
 specifier|final
 name|byte
-name|type
+name|tag
 init|=
 name|input
 operator|.
@@ -229,7 +230,7 @@ argument_list|()
 decl_stmt|;
 switch|switch
 condition|(
-name|type
+name|tag
 condition|)
 block|{
 case|case
@@ -263,7 +264,7 @@ return|return
 operator|new
 name|SimpleElementValue
 argument_list|(
-name|type
+name|tag
 argument_list|,
 name|input
 operator|.
@@ -437,9 +438,9 @@ throw|throw
 operator|new
 name|ClassFormatException
 argument_list|(
-literal|"Unexpected element value kind in annotation: "
+literal|"Unexpected element value tag in annotation: "
 operator|+
-name|type
+name|tag
 argument_list|)
 throw|;
 block|}
