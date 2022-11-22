@@ -89,7 +89,7 @@ specifier|final
 name|String
 name|name
 decl_stmt|;
-comment|/**      * Create a non-standard attribute.      *      * @param nameIndex Index in constant pool      * @param length Content length in bytes      * @param bytes Attribute contents      * @param constantPool Array of constants      */
+comment|/**      * Constructs a new instance for a non-standard attribute.      *      * @param nameIndex Index in constant pool      * @param length Content length in bytes      * @param bytes Attribute contents      * @param constantPool Array of constants      */
 specifier|public
 name|Unknown
 parameter_list|(
@@ -145,7 +145,7 @@ name|getBytes
 argument_list|()
 expr_stmt|;
 block|}
-comment|/**      * Construct object from input stream.      *      * @param nameIndex Index in constant pool      * @param length Content length in bytes      * @param input Input stream      * @param constantPool Array of constants      * @throws IOException if an I/O error occurs.      */
+comment|/**      * Constructs a new instance from an input stream.      *      * @param nameIndex Index in constant pool      * @param length Content length in bytes      * @param input Input stream      * @param constantPool Array of constants      * @throws IOException if an I/O error occurs.      */
 name|Unknown
 parameter_list|(
 specifier|final
@@ -206,7 +206,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/**      * Initialize from another object. Note that both objects use the same references (shallow copy). Use clone() for a      * physical copy.      *      * @param unknown Source.      */
+comment|/**      * Constructs a new instance from another instance. Note that both objects use the same references (shallow copy). Use clone() for a physical copy.      *      * @param unknown Source.      */
 specifier|public
 name|Unknown
 parameter_list|(
@@ -309,7 +309,7 @@ return|return
 name|c
 return|;
 block|}
-comment|/**      * Dump unknown bytes to file stream.      *      * @param file Output file stream      * @throws IOException if an I/O error occurs.      */
+comment|/**      * Dumps unknown bytes to file stream.      *      * @param file Output file stream      * @throws IOException if an I/O error occurs.      */
 annotation|@
 name|Override
 specifier|public
