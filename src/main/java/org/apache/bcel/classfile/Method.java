@@ -251,7 +251,7 @@ name|ParameterAnnotationEntry
 index|[]
 name|parameterAnnotationEntries
 decl_stmt|;
-comment|/**      * Empty constructor, all attributes have to be defined via `setXXX' methods. Use at your own risk.      */
+comment|/**      * Empty constructor, all attributes have to be defined via 'setXXX' methods. Use at your own risk.      */
 specifier|public
 name|Method
 parameter_list|()
@@ -614,7 +614,7 @@ name|this
 argument_list|)
 return|;
 block|}
-comment|/**      * Return string representation close to declaration format, `public static void main(String[] args) throws      * IOException', e.g.      *      * @return String representation of the method.      */
+comment|/**      * Return string representation close to declaration format, 'public static void main(String[] args) throws      * IOException', e.g.      *      * @return String representation of the method.      */
 annotation|@
 name|Override
 specifier|public

@@ -16,7 +16,7 @@ package|;
 end_package
 
 begin_comment
-comment|/**  * Interface to make use of the Visitor pattern programming style. I.e. a class that implements this interface can  * traverse the contents of a Java class just by calling the `accept' method which all classes have.  */
+comment|/**  * Interface to make use of the Visitor pattern programming style. I.e. a class that implements this interface can  * traverse the contents of a Java class just by calling the 'accept' method which all classes have.  */
 end_comment
 
 begin_interface

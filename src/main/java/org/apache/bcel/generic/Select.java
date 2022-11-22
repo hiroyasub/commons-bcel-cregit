@@ -124,7 +124,7 @@ name|Select
 parameter_list|()
 block|{
 block|}
-comment|/**      * (Match, target) pairs for switch. `Match' and `targets' must have the same length of course.      *      * @param match array of matching values      * @param targets instruction targets      * @param defaultTarget default instruction target      */
+comment|/**      * (Match, target) pairs for switch. 'Match' and 'targets' must have the same length of course.      *      * @param match array of matching values      * @param targets instruction targets      * @param defaultTarget default instruction target      */
 name|Select
 parameter_list|(
 specifier|final
@@ -731,7 +731,7 @@ return|return
 name|matchLength
 return|;
 block|}
-comment|/**      * Set branch target for `i'th case      */
+comment|/**      * Set branch target for 'i'th case      */
 specifier|public
 name|void
 name|setTarget
@@ -920,7 +920,7 @@ name|toString
 argument_list|()
 return|;
 block|}
-comment|/**      * Since this is a variable length instruction, it may shift the following instructions which then need to update their      * position.      *      * Called by InstructionList.setPositions when setting the position for every instruction. In the presence of variable      * length instructions `setPositions' performs multiple passes over the instruction list to calculate the correct (byte)      * positions and offsets by calling this function.      *      * @param offset additional offset caused by preceding (variable length) instructions      * @param maxOffset the maximum offset that may be caused by these instructions      * @return additional offset caused by possible change of this instruction's length      */
+comment|/**      * Since this is a variable length instruction, it may shift the following instructions which then need to update their      * position.      *      * Called by InstructionList.setPositions when setting the position for every instruction. In the presence of variable      * length instructions 'setPositions' performs multiple passes over the instruction list to calculate the correct (byte)      * positions and offsets by calling this function.      *      * @param offset additional offset caused by preceding (variable length) instructions      * @param maxOffset the maximum offset that may be caused by these instructions      * @return additional offset caused by possible change of this instruction's length      */
 annotation|@
 name|Override
 specifier|protected

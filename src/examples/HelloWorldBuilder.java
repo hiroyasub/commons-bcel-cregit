@@ -382,7 +382,7 @@ argument_list|(
 literal|"java.io.PrintStream"
 argument_list|)
 decl_stmt|;
-comment|// Create BufferedReader object and store it in local variable `in'.
+comment|// Create BufferedReader object and store it in local variable 'in'.
 name|il
 operator|.
 name|append
@@ -509,7 +509,7 @@ name|INVOKESPECIAL
 argument_list|)
 argument_list|)
 expr_stmt|;
-comment|// Create local variable `in'
+comment|// Create local variable 'in'
 name|LocalVariableGen
 name|lg
 init|=
@@ -555,8 +555,8 @@ argument_list|)
 argument_list|)
 argument_list|)
 expr_stmt|;
-comment|// `i' valid from here
-comment|// Create local variable `name'
+comment|// 'i' valid from here
+comment|// Create local variable 'name'
 name|lg
 operator|=
 name|mg
@@ -608,7 +608,7 @@ argument_list|)
 argument_list|)
 argument_list|)
 expr_stmt|;
-comment|// `name' valid from here
+comment|// 'name' valid from here
 comment|// try { ...
 specifier|final
 name|InstructionHandle

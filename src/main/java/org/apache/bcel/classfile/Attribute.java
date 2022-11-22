@@ -269,7 +269,7 @@ operator|.
 name|ATTR_UNKNOWN
 decl_stmt|;
 comment|// Unknown attribute
-comment|// Get class name from constant pool via `name_index' indirection
+comment|// Get class name from constant pool via 'name_index' indirection
 specifier|final
 name|int
 name|nameIndex
@@ -344,7 +344,7 @@ comment|// found!
 break|break;
 block|}
 block|}
-comment|// Call proper constructor, depending on `tag'
+comment|// Call proper constructor, depending on 'tag'
 switch|switch
 condition|(
 name|tag

@@ -949,7 +949,7 @@ return|return
 name|str
 return|;
 block|}
-comment|/**      * Retrieves constant at `index' from constant pool and resolve it to a string representation.      *      * @param index of constant in constant pool      * @param tag   expected type      * @return String representation      */
+comment|/**      * Retrieves constant at 'index' from constant pool and resolve it to a string representation.      *      * @param index of constant in constant pool      * @param tag   expected type      * @return String representation      */
 specifier|public
 name|String
 name|constantToString
@@ -1270,7 +1270,7 @@ throw|throw
 operator|new
 name|ClassFormatException
 argument_list|(
-literal|"Expected class `"
+literal|"Expected class '"
 operator|+
 name|Const
 operator|.
@@ -1510,7 +1510,7 @@ return|return
 name|constantPool
 return|;
 block|}
-comment|/**      * Gets string from constant pool and bypass the indirection of `ConstantClass' and `ConstantString' objects. I.e. these classes have an index field that      * points to another entry of the constant pool of type `ConstantUtf8' which contains the real data.      *      * @param index Index in constant pool      * @param tag   Tag of expected constant, either ConstantClass or ConstantString      * @return Contents of string reference      * @see ConstantClass      * @see ConstantString      * @throws IllegalArgumentException if tag is invalid      */
+comment|/**      * Gets string from constant pool and bypass the indirection of 'ConstantClass' and 'ConstantString' objects. I.e. these classes have an index field that      * points to another entry of the constant pool of type 'ConstantUtf8' which contains the real data.      *      * @param index Index in constant pool      * @param tag   Tag of expected constant, either ConstantClass or ConstantString      * @return Contents of string reference      * @see ConstantClass      * @see ConstantString      * @throws IllegalArgumentException if tag is invalid      */
 specifier|public
 name|String
 name|getConstantString

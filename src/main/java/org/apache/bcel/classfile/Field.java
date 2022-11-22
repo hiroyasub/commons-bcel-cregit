@@ -474,7 +474,7 @@ name|this
 argument_list|)
 return|;
 block|}
-comment|/**      * Return string representation close to declaration format, `public static final short MAX = 100', e.g..      *      * @return String representation of field, including the signature.      */
+comment|/**      * Return string representation close to declaration format, 'public static final short MAX = 100', e.g..      *      * @return String representation of field, including the signature.      */
 annotation|@
 name|Override
 specifier|public

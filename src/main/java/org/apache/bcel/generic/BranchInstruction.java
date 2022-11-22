@@ -312,7 +312,7 @@ name|target
 argument_list|)
 return|;
 block|}
-comment|/**      * @param target branch target      * @return the offset to `target' relative to this instruction      */
+comment|/**      * @param target branch target      * @return the offset to 'target' relative to this instruction      */
 specifier|protected
 name|int
 name|getTargetOffset
@@ -599,7 +599,7 @@ operator|+
 name|t
 return|;
 block|}
-comment|/**      * Called by InstructionList.setPositions when setting the position for every instruction. In the presence of variable      * length instructions `setPositions' performs multiple passes over the instruction list to calculate the correct (byte)      * positions and offsets by calling this function.      *      * @param offset additional offset caused by preceding (variable length) instructions      * @param maxOffset the maximum offset that may be caused by these instructions      * @return additional offset caused by possible change of this instruction's length      */
+comment|/**      * Called by InstructionList.setPositions when setting the position for every instruction. In the presence of variable      * length instructions 'setPositions' performs multiple passes over the instruction list to calculate the correct (byte)      * positions and offsets by calling this function.      *      * @param offset additional offset caused by preceding (variable length) instructions      * @param maxOffset the maximum offset that may be caused by these instructions      * @return additional offset caused by possible change of this instruction's length      */
 specifier|protected
 name|int
 name|updatePosition

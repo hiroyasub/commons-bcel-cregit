@@ -16,7 +16,7 @@ package|;
 end_package
 
 begin_comment
-comment|/**  * Wrapper class for `compound' operations, virtual instructions that don't exist as byte code, but give a useful  * meaning. For example, the (virtual) PUSH instruction takes an arbitray argument and produces the appropriate code at  * dump time (ICONST, LDC, BIPUSH, ...). Also you can use the SWITCH instruction as a useful template for either  * LOOKUPSWITCH or TABLESWITCH.  *  * The interface provides the possibilty for the user to write `templates' or `macros' for such reuseable code patterns.  *  * @see PUSH  * @see SWITCH  */
+comment|/**  * Wrapper class for 'compound' operations, virtual instructions that don't exist as byte code, but give a useful  * meaning. For example, the (virtual) PUSH instruction takes an arbitray argument and produces the appropriate code at  * dump time (ICONST, LDC, BIPUSH, ...). Also you can use the SWITCH instruction as a useful template for either  * LOOKUPSWITCH or TABLESWITCH.  *  * The interface provides the possibilty for the user to write 'templates' or 'macros' for such reuseable code patterns.  *  * @see PUSH  * @see SWITCH  */
 end_comment
 
 begin_interface

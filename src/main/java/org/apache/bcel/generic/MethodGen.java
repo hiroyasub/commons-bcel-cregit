@@ -360,7 +360,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Template class for building up a method. This is done by defining exception handlers, adding thrown exceptions, local  * variables and attributes, whereas the `LocalVariableTable' and `LineNumberTable' attributes will be set automatically  * for the code. Use stripAttributes() if you don't like this.  *  * While generating code it may be necessary to insert NOP operations. You can use the `removeNOPs' method to get rid  * off them. The resulting method object can be obtained via the `getMethod()' method.  *  * @see InstructionList  * @see Method  */
+comment|/**  * Template class for building up a method. This is done by defining exception handlers, adding thrown exceptions, local  * variables and attributes, whereas the 'LocalVariableTable' and 'LineNumberTable' attributes will be set automatically  * for the code. Use stripAttributes() if you don't like this.  *  * While generating code it may be necessary to insert NOP operations. You can use the 'removeNOPs' method to get rid  * off them. The resulting method object can be obtained via the 'getMethod()' method.  *  * @see InstructionList  * @see Method  */
 end_comment
 
 begin_class
@@ -1241,7 +1241,7 @@ name|MethodObserver
 argument_list|>
 name|observers
 decl_stmt|;
-comment|/**      * Declare method. If the method is non-static the constructor automatically declares a local variable `$this' in slot      * 0. The actual code is contained in the `il' parameter, which may further manipulated by the user. But they must take      * care not to remove any instruction (handles) that are still referenced from this object.      *      * For example one may not add a local variable and later remove the instructions it refers to without causing havoc. It      * is safe however if you remove that local variable, too.      *      * @param accessFlags access qualifiers      * @param returnType method type      * @param argTypes argument types      * @param argNames argument names (if this is null, default names will be provided for them)      * @param methodName name of method      * @param className class name containing this method (may be null, if you don't care)      * @param il instruction list associated with this method, may be null only for abstract or native methods      * @param cp constant pool      */
+comment|/**      * Declare method. If the method is non-static the constructor automatically declares a local variable '$this' in slot      * 0. The actual code is contained in the 'il' parameter, which may further manipulated by the user. But they must take      * care not to remove any instruction (handles) that are still referenced from this object.      *      * For example one may not add a local variable and later remove the instructions it refers to without causing havoc. It      * is safe however if you remove that local variable, too.      *      * @param accessFlags access qualifiers      * @param returnType method type      * @param argTypes argument types      * @param argNames argument names (if this is null, default names will be provided for them)      * @param methodName name of method      * @param className class name containing this method (may be null, if you don't care)      * @param il instruction list associated with this method, may be null only for abstract or native methods      * @param cp constant pool      */
 specifier|public
 name|MethodGen
 parameter_list|(
@@ -1354,7 +1354,7 @@ name|getStart
 argument_list|()
 expr_stmt|;
 comment|// end == null => live to end of method
-comment|/*              * Add local variables, namely the implicit `this' and the arguments              */
+comment|/*              * Add local variables, namely the implicit 'this' and the arguments              */
 if|if
 condition|(
 operator|!
@@ -1366,7 +1366,7 @@ operator|!=
 literal|null
 condition|)
 block|{
-comment|// Instance method -> `this' is local var 0
+comment|// Instance method -> 'this' is local var 0
 name|addLocalVariable
 argument_list|(
 literal|"this"
@@ -3284,7 +3284,7 @@ name|EMPTY_ARRAY
 argument_list|)
 return|;
 block|}
-comment|/**      * @return code exceptions for `Code' attribute      */
+comment|/**      * @return code exceptions for 'Code' attribute      */
 specifier|private
 name|CodeException
 index|[]
@@ -3375,7 +3375,7 @@ name|EMPTY_STRING_ARRAY
 argument_list|)
 return|;
 block|}
-comment|/**      * @return `Exceptions' attribute of all the exceptions thrown by this method.      */
+comment|/**      * @return 'Exceptions' attribute of all the exceptions thrown by this method.      */
 specifier|private
 name|ExceptionTable
 name|getExceptionTable
@@ -3479,7 +3479,7 @@ name|EMPTY_ARRAY
 argument_list|)
 return|;
 block|}
-comment|/**      * @return `LineNumberTable' attribute of all the local variables of this method.      */
+comment|/**      * @return 'LineNumberTable' attribute of all the local variables of this method.      */
 specifier|public
 name|LineNumberTable
 name|getLineNumberTable
@@ -3696,7 +3696,7 @@ return|return
 name|lg
 return|;
 block|}
-comment|/**      * @return `LocalVariableTable' attribute of all the local variables of this method.      */
+comment|/**      * @return 'LocalVariableTable' attribute of all the local variables of this method.      */
 specifier|public
 name|LocalVariableTable
 name|getLocalVariableTable
@@ -3780,7 +3780,7 @@ argument_list|()
 argument_list|)
 return|;
 block|}
-comment|/**      * @return `LocalVariableTypeTable' attribute of this method.      */
+comment|/**      * @return 'LocalVariableTypeTable' attribute of this method.      */
 specifier|public
 name|LocalVariableTypeTable
 name|getLocalVariableTypeTable
@@ -4164,7 +4164,7 @@ name|cp
 argument_list|)
 argument_list|)
 expr_stmt|;
-comment|// Add `Exceptions' if there are "throws" clauses
+comment|// Add 'Exceptions' if there are "throws" clauses
 block|}
 specifier|final
 name|Method
@@ -5083,7 +5083,7 @@ operator|=
 name|flag
 expr_stmt|;
 block|}
-comment|/**      * Return string representation close to declaration format, `public static void main(String[]) throws IOException',      * e.g.      *      * @return String representation of the method.      */
+comment|/**      * Return string representation close to declaration format, 'public static void main(String[]) throws IOException',      * e.g.      *      * @return String representation of the method.      */
 annotation|@
 name|Override
 specifier|public

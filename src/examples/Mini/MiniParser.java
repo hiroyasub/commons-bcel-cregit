@@ -4292,7 +4292,7 @@ literal|"Missing return statement in function"
 argument_list|)
 throw|;
 block|}
-comment|/*      * A program consists of a number of function declarations with a distinguished function `main' that starts the program.      */
+comment|/*      * A program consists of a number of function declarations with a distinguished function 'main' that starts the program.      */
 specifier|static
 specifier|public
 name|void

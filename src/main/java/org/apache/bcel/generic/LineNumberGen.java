@@ -154,7 +154,7 @@ return|return
 name|ih
 return|;
 block|}
-comment|/**      * Get LineNumber attribute.      *      * This relies on that the instruction list has already been dumped to byte code or that the `setPositions' methods      * has been called for the instruction list.      */
+comment|/**      * Get LineNumber attribute.      *      * This relies on that the instruction list has already been dumped to byte code or that the 'setPositions' methods      * has been called for the instruction list.      */
 specifier|public
 name|LineNumber
 name|getLineNumber

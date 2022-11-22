@@ -824,7 +824,7 @@ argument_list|,
 name|index
 argument_list|)
 expr_stmt|;
-comment|// Tack of the `['
+comment|// Tack of the '['
 block|}
 comment|// test for basic type
 if|if
@@ -1061,7 +1061,7 @@ operator|.
 name|getConstantPool
 argument_list|()
 expr_stmt|;
-comment|// Get package name by tacking off everything after the last `.'
+comment|// Get package name by tacking off everything after the last '.'
 specifier|final
 name|int
 name|index

@@ -920,7 +920,7 @@ operator|.
 name|THIS
 argument_list|)
 expr_stmt|;
-comment|// Push `this'
+comment|// Push 'this'
 name|il
 operator|.
 name|append

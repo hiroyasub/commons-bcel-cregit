@@ -1655,7 +1655,7 @@ name|opcode
 argument_list|)
 return|;
 block|}
-comment|/**      * Use with caution, since `BranchInstruction's have a `target' reference which is not copied correctly (only basic      * types are). This also applies for `Select' instructions with their multiple branch targets.      *      * @see BranchInstruction      * @return (shallow) copy of an instruction      */
+comment|/**      * Use with caution, since 'BranchInstruction's have a 'target' reference which is not copied correctly (only basic      * types are). This also applies for 'Select' instructions with their multiple branch targets.      *      * @see BranchInstruction      * @return (shallow) copy of an instruction      */
 specifier|public
 name|Instruction
 name|copy

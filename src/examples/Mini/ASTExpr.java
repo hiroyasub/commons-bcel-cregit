@@ -212,7 +212,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Represents arithmetic expressions such as `(a + 12 == b) OR c'. The parse tree is built initially by the parser and  * modified, i.e. compacted with `traverse()'. Each (Expr, Term, Factor) node with kind == -1 is replaced which its  * successor node, which is converted to type `Expr'  *  * A node with kind == -1 denotes the fact that this expression node has just one child branch and thus may be replaced  * by this branch (or leaf) directly without altering the expression semantics. Term and Factor nodes are used only to  * build the parse tree obeying the aritmetical precedences (* stronger than +, etc.) and are discarded in the first  * pass.  */
+comment|/**  * Represents arithmetic expressions such as '(a + 12 == b) OR c'. The parse tree is built initially by the parser and  * modified, i.e. compacted with 'traverse()'. Each (Expr, Term, Factor) node with kind == -1 is replaced which its  * successor node, which is converted to type 'Expr'  *  * A node with kind == -1 denotes the fact that this expression node has just one child branch and thus may be replaced  * by this branch (or leaf) directly without altering the expression semantics. Term and Factor nodes are used only to  * build the parse tree obeying the aritmetical precedences (* stronger than +, etc.) and are discarded in the first  * pass.  */
 end_comment
 
 begin_class
@@ -323,7 +323,7 @@ specifier|protected
 name|boolean
 name|is_simple
 decl_stmt|;
-comment|// true, if simple expression like `12 + f(a)'
+comment|// true, if simple expression like '12 + f(a)'
 comment|/*      * Not all children shall inherit this, exceptions are ASTIdent and ASTFunAppl, which look up the type in the      * corresponding environment entry.      */
 specifier|protected
 name|int

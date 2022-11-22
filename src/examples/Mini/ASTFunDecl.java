@@ -861,7 +861,7 @@ specifier|private
 name|boolean
 name|is_simple
 decl_stmt|;
-comment|// true, if simple expression like `12 + f(a)'
+comment|// true, if simple expression like '12 + f(a)'
 specifier|private
 name|boolean
 name|is_recursive
@@ -1025,7 +1025,7 @@ literal|1
 argument_list|)
 block|}
 decl_stmt|;
-comment|// default for `main'
+comment|// default for 'main'
 name|String
 index|[]
 name|arg_names
@@ -2346,7 +2346,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/*          * Update entry of this function, i.e. set argument references. The entry is already in there by garantuee, but may be          * of wrong type, i.e. the user defined a function `TRUE', e.g. and `TRUE' is of type `Variable'.          */
+comment|/*          * Update entry of this function, i.e. set argument references. The entry is already in there by garantuee, but may be          * of wrong type, i.e. the user defined a function 'TRUE', e.g. and 'TRUE' is of type 'Variable'.          */
 try|try
 block|{
 specifier|final

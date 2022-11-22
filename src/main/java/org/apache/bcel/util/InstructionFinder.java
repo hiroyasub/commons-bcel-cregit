@@ -1566,7 +1566,7 @@ literal|null
 argument_list|)
 return|;
 block|}
-comment|/**      * Start search beginning from the start of the given instruction list. Check found matches with the constraint object.      *      * @param pattern the instruction pattern to search for, case is ignored      * @param constraint constraints to be checked on matching code      * @return instruction handle or `null' if the match failed      */
+comment|/**      * Start search beginning from the start of the given instruction list. Check found matches with the constraint object.      *      * @param pattern the instruction pattern to search for, case is ignored      * @param constraint constraints to be checked on matching code      * @return instruction handle or 'null' if the match failed      */
 specifier|public
 specifier|final
 name|Iterator
@@ -1599,7 +1599,7 @@ name|constraint
 argument_list|)
 return|;
 block|}
-comment|/**      * Start search beginning from `from'.      *      * @param pattern the instruction pattern to search for, where case is ignored      * @param from where to start the search in the instruction list      * @return iterator of matches where e.nextElement() returns an array of instruction handles describing the matched area      */
+comment|/**      * Start search beginning from 'from'.      *      * @param pattern the instruction pattern to search for, where case is ignored      * @param from where to start the search in the instruction list      * @return iterator of matches where e.nextElement() returns an array of instruction handles describing the matched area      */
 specifier|public
 specifier|final
 name|Iterator

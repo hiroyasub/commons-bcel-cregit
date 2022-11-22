@@ -419,7 +419,7 @@ name|index
 decl_stmt|;
 try|try
 block|{
-comment|// Skip any type arguments to read argument declarations between `(' and `)'
+comment|// Skip any type arguments to read argument declarations between '(' and ')'
 name|index
 operator|=
 name|signature
@@ -550,7 +550,7 @@ name|index
 decl_stmt|;
 try|try
 block|{
-comment|// Skip any type arguments to read argument declarations between `(' and `)'
+comment|// Skip any type arguments to read argument declarations between '(' and ')'
 name|index
 operator|=
 name|signature
@@ -736,7 +736,7 @@ parameter_list|)
 block|{
 try|try
 block|{
-comment|// Read return type after `)'
+comment|// Read return type after ')'
 specifier|final
 name|int
 name|index
@@ -1195,7 +1195,7 @@ operator|+
 literal|2
 argument_list|)
 expr_stmt|;
-comment|// "Lblabla;" `L' and `;' are removed
+comment|// "Lblabla;" 'L' and ';' are removed
 return|return
 name|ObjectType
 operator|.
@@ -1450,7 +1450,7 @@ argument_list|(
 literal|';'
 argument_list|)
 decl_stmt|;
-comment|// Look for closing `;'
+comment|// Look for closing ';'
 if|if
 condition|(
 name|index
@@ -1781,7 +1781,7 @@ operator|=
 name|signature
 expr_stmt|;
 block|}
-comment|/**      * @return Type string, e.g. `int[]'      */
+comment|/**      * @return Type string, e.g. 'int[]'      */
 annotation|@
 name|Override
 specifier|public

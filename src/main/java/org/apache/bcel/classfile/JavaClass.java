@@ -395,7 +395,7 @@ return|;
 block|}
 block|}
 decl_stmt|;
-comment|/*      * Print debug information depending on `JavaClass.debug'      */
+comment|/*      * Print debug information depending on 'JavaClass.debug'      */
 specifier|static
 name|void
 name|Debug
@@ -928,7 +928,7 @@ expr_stmt|;
 break|break;
 block|}
 block|}
-comment|/*          * According to the specification the following entries must be of type `ConstantClass' but we check that anyway via the          * `ConstPool.getConstant' method.          */
+comment|/*          * According to the specification the following entries must be of type 'ConstantClass' but we check that anyway via the          * 'ConstPool.getConstant' method.          */
 name|className
 operator|=
 name|constantPool

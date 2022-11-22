@@ -721,7 +721,7 @@ literal|0
 argument_list|)
 argument_list|)
 decl_stmt|;
-comment|/*      * The `WIDE' instruction is used in the byte code to allow 16-bit wide indices for local variables. This opcode      * precedes an `ILOAD', e.g.. The opcode immediately following takes an extra byte which is combined with the following      * byte to form a 16-bit value.      */
+comment|/*      * The 'WIDE' instruction is used in the byte code to allow 16-bit wide indices for local variables. This opcode      * precedes an 'ILOAD', e.g.. The opcode immediately following takes an extra byte which is combined with the following      * byte to form a 16-bit value.      */
 specifier|private
 specifier|static
 name|boolean
@@ -876,7 +876,7 @@ operator|=
 name|j
 expr_stmt|;
 block|}
-comment|/**      * Convert bit field of flags into string such as `static final'.      *      * @param accessFlags Access flags      * @return String representation of flags      */
+comment|/**      * Convert bit field of flags into string such as 'static final'.      *      * @param accessFlags Access flags      * @return String representation of flags      */
 specifier|public
 specifier|static
 name|String
@@ -896,7 +896,7 @@ literal|false
 argument_list|)
 return|;
 block|}
-comment|/**      * Convert bit field of flags into string such as `static final'.      *      * Special case: Classes compiled with new compilers and with the `ACC_SUPER' flag would be said to be "synchronized".      * This is because SUN used the same value for the flags `ACC_SUPER' and `ACC_SYNCHRONIZED'.      *      * @param accessFlags Access flags      * @param forClass access flags are for class qualifiers ?      * @return String representation of flags      */
+comment|/**      * Convert bit field of flags into string such as 'static final'.      *      * Special case: Classes compiled with new compilers and with the 'ACC_SUPER' flag would be said to be "synchronized".      * This is because SUN used the same value for the flags 'ACC_SUPER' and 'ACC_SYNCHRONIZED'.      *      * @param accessFlags Access flags      * @param forClass access flags are for class qualifiers ?      * @return String representation of flags      */
 specifier|public
 specifier|static
 name|String
@@ -960,7 +960,7 @@ operator|!=
 literal|0
 condition|)
 block|{
-comment|/*                  * Special case: Classes compiled with new compilers and with the `ACC_SUPER' flag would be said to be "synchronized".                  * This is because SUN used the same value for the flags `ACC_SUPER' and `ACC_SYNCHRONIZED'.                  */
+comment|/*                  * Special case: Classes compiled with new compilers and with the 'ACC_SUPER' flag would be said to be "synchronized".                  * This is because SUN used the same value for the flags 'ACC_SUPER' and 'ACC_SYNCHRONIZED'.                  */
 if|if
 condition|(
 name|forClass
@@ -1069,7 +1069,7 @@ else|:
 literal|"class"
 return|;
 block|}
-comment|/**      * @return `flag' with bit `i' set to 0      */
+comment|/**      * @return 'flag' with bit 'i' set to 0      */
 specifier|public
 specifier|static
 name|int
@@ -1147,7 +1147,7 @@ literal|true
 argument_list|)
 return|;
 block|}
-comment|/**      * Disassemble a byte array of JVM byte codes starting from code line `index' and return the disassembled string      * representation. Decode only `num' opcodes (including their operands), use -1 if you want to decompile everything.      *      * @param code byte code array      * @param constantPool Array of constants      * @param index offset in `code' array<EM>(number of opcodes, not bytes!)</EM>      * @param length number of opcodes to decompile, -1 for all      * @param verbose be verbose, e.g. print constant pool index      * @return String representation of byte codes      */
+comment|/**      * Disassemble a byte array of JVM byte codes starting from code line 'index' and return the disassembled string      * representation. Decode only 'num' opcodes (including their operands), use -1 if you want to decompile everything.      *      * @param code byte code array      * @param constantPool Array of constants      * @param index offset in 'code' array<EM>(number of opcodes, not bytes!)</EM>      * @param length number of opcodes to decompile, -1 for all      * @param verbose be verbose, e.g. print constant pool index      * @return String representation of byte codes      */
 specifier|public
 specifier|static
 name|String
@@ -3075,8 +3075,8 @@ argument_list|(
 name|str
 argument_list|)
 expr_stmt|;
-comment|// Is `/' on all systems, even DOS
-comment|// If string starts with `prefix' and contains no further dots
+comment|// Is '/' on all systems, even DOS
+comment|// If string starts with 'prefix' and contains no further dots
 if|if
 condition|(
 name|chopit
@@ -3714,7 +3714,7 @@ return|return
 literal|true
 return|;
 block|}
-comment|/**      * Fillup char with up to length characters with char `fill' and justify it left or right.      *      * @param str string to format      * @param length length of desired string      * @param leftJustify format left or right      * @param fill fill character      * @return formatted string      */
+comment|/**      * Fillup char with up to length characters with char 'fill' and justify it left or right.      *      * @param str string to format      * @param length length of desired string      * @param leftJustify format left or right      * @param fill fill character      * @return formatted string      */
 specifier|public
 specifier|static
 name|String
@@ -3800,7 +3800,7 @@ operator|+
 name|str
 return|;
 block|}
-comment|/**      * Return a string for an integer justified left or right and filled up with `fill' characters if necessary.      *      * @param i integer to format      * @param length length of desired string      * @param leftJustify format left or right      * @param fill fill character      * @return formatted int      */
+comment|/**      * Return a string for an integer justified left or right and filled up with 'fill' characters if necessary.      *      * @param i integer to format      * @param length length of desired string      * @param leftJustify format left or right      * @param fill fill character      * @return formatted int      */
 specifier|public
 specifier|static
 name|String
@@ -4186,7 +4186,7 @@ operator|==
 literal|'_'
 return|;
 block|}
-comment|/**      * @return true, if bit `i' in `flag' is set      */
+comment|/**      * @return true, if bit 'i' in 'flag' is set      */
 specifier|public
 specifier|static
 name|boolean
@@ -4272,7 +4272,7 @@ name|index
 decl_stmt|;
 try|try
 block|{
-comment|// Skip any type arguments to read argument declarations between `(' and `)'
+comment|// Skip any type arguments to read argument declarations between '(' and ')'
 name|index
 operator|=
 name|signature
@@ -4419,7 +4419,7 @@ name|type
 decl_stmt|;
 try|try
 block|{
-comment|// Read return type after `)'
+comment|// Read return type after ')'
 name|index
 operator|=
 name|signature
@@ -4557,7 +4557,7 @@ literal|null
 argument_list|)
 return|;
 block|}
-comment|/**      * This method converts a method signature string into a Java type declaration like `void main(String[])' and throws a      * `ClassFormatException' when the parsed type is invalid.      *      * @param signature Method signature      * @param name Method name      * @param access Method access rights      * @param chopit flag that determines whether chopping is executed or not      * @param vars the LocalVariableTable for the method      * @return Java type declaration      * @throws ClassFormatException if a class is malformed or cannot be interpreted as a class file      */
+comment|/**      * This method converts a method signature string into a Java type declaration like 'void main(String[])' and throws a      * 'ClassFormatException' when the parsed type is invalid.      *      * @param signature Method signature      * @param name Method name      * @param access Method access rights      * @param chopit flag that determines whether chopping is executed or not      * @param vars the LocalVariableTable for the method      * @return Java type declaration      * @throws ClassFormatException if a class is malformed or cannot be interpreted as a class file      */
 specifier|public
 specifier|static
 name|String
@@ -4618,7 +4618,7 @@ literal|1
 decl_stmt|;
 try|try
 block|{
-comment|// Skip any type arguments to read argument declarations between `(' and `)'
+comment|// Skip any type arguments to read argument declarations between '(' and ')'
 name|index
 operator|=
 name|signature
@@ -4790,7 +4790,7 @@ name|index
 operator|++
 expr_stmt|;
 comment|// update position
-comment|// Read return type after `)'
+comment|// Read return type after ')'
 name|type
 operator|=
 name|typeSignatureToString
@@ -5349,7 +5349,7 @@ name|old
 argument_list|)
 condition|)
 block|{
-comment|// `old' found in str
+comment|// 'old' found in str
 specifier|final
 name|StringBuilder
 name|buf
@@ -5412,7 +5412,7 @@ operator|.
 name|length
 argument_list|()
 expr_stmt|;
-comment|// Skip `old'.length chars
+comment|// Skip 'old'.length chars
 block|}
 name|buf
 operator|.
@@ -5521,7 +5521,7 @@ operator|-
 literal|1
 return|;
 block|}
-comment|/**      * @return `flag' with bit `i' set to 1      */
+comment|/**      * @return 'flag' with bit 'i' set to 1      */
 specifier|public
 specifier|static
 name|int
@@ -6667,7 +6667,7 @@ name|toString
 argument_list|()
 return|;
 block|}
-comment|/**      *      * This method converts a type signature string into a Java type declaration such as `String[]' and throws a      * `ClassFormatException' when the parsed type is invalid.      *      * @param signature type signature      * @param chopit flag that determines whether chopping is executed or not      * @return string containing human readable type signature      * @throws ClassFormatException if a class is malformed or cannot be interpreted as a class file      * @since 6.4.0      */
+comment|/**      *      * This method converts a type signature string into a Java type declaration such as 'String[]' and throws a      * 'ClassFormatException' when the parsed type is invalid.      *      * @param signature type signature      * @param chopit flag that determines whether chopping is executed or not      * @return string containing human readable type signature      * @throws ClassFormatException if a class is malformed or cannot be interpreted as a class file      * @since 6.4.0      */
 specifier|public
 specifier|static
 name|String
@@ -6692,7 +6692,7 @@ argument_list|,
 literal|1
 argument_list|)
 expr_stmt|;
-comment|// This is the default, read just one char like `B'
+comment|// This is the default, read just one char like 'B'
 try|try
 block|{
 switch|switch
@@ -6757,7 +6757,7 @@ argument_list|(
 literal|';'
 argument_list|)
 decl_stmt|;
-comment|// Look for closing `;'
+comment|// Look for closing ';'
 if|if
 condition|(
 name|index
@@ -6785,7 +6785,7 @@ operator|+
 literal|1
 argument_list|)
 expr_stmt|;
-comment|// "Tblabla;" `T' and `;' are removed
+comment|// "Tblabla;" 'T' and ';' are removed
 return|return
 name|compactClassName
 argument_list|(
@@ -6876,7 +6876,7 @@ argument_list|,
 name|fromIndex
 argument_list|)
 decl_stmt|;
-comment|// Look for closing `;'
+comment|// Look for closing ';'
 if|if
 condition|(
 name|index
@@ -6930,7 +6930,7 @@ operator|+
 literal|1
 argument_list|)
 expr_stmt|;
-comment|// "Lblabla;" `L' and `;' are removed
+comment|// "Lblabla;" 'L' and ';' are removed
 return|return
 name|compactClassName
 argument_list|(
@@ -6991,7 +6991,7 @@ operator|+
 literal|1
 argument_list|)
 expr_stmt|;
-comment|// "Lblabla;" `L' and `;' are removed
+comment|// "Lblabla;" 'L' and ';' are removed
 return|return
 name|compactClassName
 argument_list|(
@@ -7484,7 +7484,7 @@ operator|=
 name|n
 expr_stmt|;
 comment|// Remember value
-comment|// The rest of the string denotes a `<field_type>'
+comment|// The rest of the string denotes a '<field_type>'
 name|type
 operator|=
 name|typeSignatureToString
@@ -7543,7 +7543,7 @@ throw|throw
 operator|new
 name|ClassFormatException
 argument_list|(
-literal|"Invalid signature: `"
+literal|"Invalid signature: '"
 operator|+
 name|signature
 operator|+

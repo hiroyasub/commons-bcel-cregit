@@ -1770,7 +1770,7 @@ name|ih
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Remove instructions from instruction `from' to instruction `to' contained in this list. The user must ensure that      * `from' is an instruction before `to', or risk havoc. The corresponding Instruction handles must not be reused!      *      * @param from where to start deleting (inclusive)      * @param to where to end deleting (inclusive)      */
+comment|/**      * Remove instructions from instruction 'from' to instruction 'to' contained in this list. The user must ensure that      * 'from' is an instruction before 'to', or risk havoc. The corresponding Instruction handles must not be reused!      *      * @param from where to start deleting (inclusive)      * @param to where to end deleting (inclusive)      */
 specifier|public
 name|void
 name|delete
@@ -1878,7 +1878,7 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Remove instructions from instruction `from' to instruction `to' contained in this list. The user must ensure that      * `from' is an instruction before `to', or risk havoc. The corresponding Instruction handles must not be reused!      *      * @param from where to start deleting (inclusive)      * @param to where to end deleting (inclusive)      */
+comment|/**      * Remove instructions from instruction 'from' to instruction 'to' contained in this list. The user must ensure that      * 'from' is an instruction before 'to', or risk havoc. The corresponding Instruction handles must not be reused!      *      * @param from where to start deleting (inclusive)      * @param to where to end deleting (inclusive)      */
 specifier|public
 name|void
 name|delete
@@ -3675,7 +3675,7 @@ expr_stmt|;
 block|}
 block|}
 block|}
-comment|/**      * Remove from instruction `prev' to instruction `next' both contained in this list. Throws TargetLostException when one      * of the removed instruction handles is still being targeted.      *      * @param prev where to start deleting (predecessor, exclusive)      * @param next where to end deleting (successor, exclusive)      */
+comment|/**      * Remove from instruction 'prev' to instruction 'next' both contained in this list. Throws TargetLostException when one      * of the removed instruction handles is still being targeted.      *      * @param prev where to start deleting (predecessor, exclusive)      * @param next where to end deleting (successor, exclusive)      */
 specifier|private
 name|void
 name|remove

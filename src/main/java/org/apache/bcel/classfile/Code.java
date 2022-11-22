@@ -327,7 +327,7 @@ name|file
 argument_list|)
 expr_stmt|;
 block|}
-comment|/*          * Read all attributes, currently `LineNumberTable' and `LocalVariableTable'          */
+comment|/*          * Read all attributes, currently 'LineNumberTable' and 'LocalVariableTable'          */
 specifier|final
 name|int
 name|attributesCount

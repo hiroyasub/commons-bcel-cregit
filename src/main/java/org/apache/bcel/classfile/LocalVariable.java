@@ -174,7 +174,7 @@ name|constantPool
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * @param startPc Range in which the variable      * @param length ... is valid      * @param nameIndex Index in constant pool of variable name      * @param signatureIndex Index of variable's signature      * @param index Variable is `index'th local variable on the method's frame      * @param constantPool Array of constants      */
+comment|/**      * @param startPc Range in which the variable      * @param length ... is valid      * @param nameIndex Index in constant pool of variable name      * @param signatureIndex Index of variable's signature      * @param index Variable is 'index'th local variable on the method's frame      * @param constantPool Array of constants      */
 specifier|public
 name|LocalVariable
 parameter_list|(
@@ -221,7 +221,7 @@ name|index
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * @param startPc Range in which the variable      * @param length ... is valid      * @param nameIndex Index in constant pool of variable name      * @param signatureIndex Index of variable's signature      * @param index Variable is `index'th local variable on the method's frame      * @param constantPool Array of constants      * @param origIndex Variable is `index'th local variable on the method's frame prior to any changes      */
+comment|/**      * @param startPc Range in which the variable      * @param length ... is valid      * @param nameIndex Index in constant pool of variable name      * @param signatureIndex Index of variable's signature      * @param index Variable is 'index'th local variable on the method's frame      * @param constantPool Array of constants      * @param origIndex Variable is 'index'th local variable on the method's frame prior to any changes      */
 specifier|public
 name|LocalVariable
 parameter_list|(

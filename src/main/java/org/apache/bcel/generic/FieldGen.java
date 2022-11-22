@@ -1467,7 +1467,7 @@ name|cp
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Return string representation close to declaration format, `public static final short MAX = 100', e.g..      *      * @return String representation of field      */
+comment|/**      * Return string representation close to declaration format, 'public static final short MAX = 100', e.g..      *      * @return String representation of field      */
 annotation|@
 name|Override
 specifier|public

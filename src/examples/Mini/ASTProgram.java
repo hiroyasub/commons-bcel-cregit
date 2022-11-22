@@ -1077,7 +1077,7 @@ literal|0
 argument_list|)
 argument_list|)
 expr_stmt|;
-comment|// Push `this'
+comment|// Push 'this'
 name|il
 operator|.
 name|append
@@ -1749,7 +1749,7 @@ literal|null
 argument_list|)
 argument_list|)
 expr_stmt|;
-comment|// `args' will be set by FunDecl.traverse()
+comment|// 'args' will be set by FunDecl.traverse()
 block|}
 block|}
 comment|// Go for it
@@ -1791,7 +1791,7 @@ name|clone
 argument_list|()
 argument_list|)
 expr_stmt|;
-comment|// Look for `main' routine
+comment|// Look for 'main' routine
 name|fname
 operator|=
 name|fun_decls
@@ -1844,7 +1844,7 @@ literal|0
 argument_list|,
 literal|0
 argument_list|,
-literal|"You didn't declare a `main' function."
+literal|"You didn't declare a 'main' function."
 argument_list|)
 expr_stmt|;
 block|}

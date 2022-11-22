@@ -342,7 +342,7 @@ operator|-
 literal|1
 condition|)
 block|{
-comment|// `old' found in str
+comment|// 'old' found in str
 name|buf
 operator|=
 operator|new
@@ -397,7 +397,7 @@ argument_list|(
 name|replacement
 argument_list|)
 expr_stmt|;
-comment|// append `replacement'
+comment|// append 'replacement'
 name|oldIndex
 operator|=
 name|index
@@ -407,7 +407,7 @@ operator|.
 name|length
 argument_list|()
 expr_stmt|;
-comment|// Skip `old'.length chars
+comment|// Skip 'old'.length chars
 block|}
 name|buf
 operator|.

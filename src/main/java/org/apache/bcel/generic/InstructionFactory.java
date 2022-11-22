@@ -1947,7 +1947,7 @@ argument_list|)
 throw|;
 block|}
 block|}
-comment|/**      * Create reference to `this'      */
+comment|/**      * Create reference to 'this'      */
 specifier|public
 specifier|static
 name|Instruction
