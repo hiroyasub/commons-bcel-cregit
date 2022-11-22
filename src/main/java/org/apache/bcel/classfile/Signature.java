@@ -69,6 +69,16 @@ end_import
 
 begin_import
 import|import
+name|java
+operator|.
+name|util
+operator|.
+name|Objects
+import|;
+end_import
+
+begin_import
+import|import
 name|org
 operator|.
 name|apache
@@ -877,6 +887,21 @@ operator|.
 name|signatureIndex
 operator|=
 name|signatureIndex
+expr_stmt|;
+comment|// validate:
+name|Objects
+operator|.
+name|requireNonNull
+argument_list|(
+name|constantPool
+operator|.
+name|getConstantUtf8
+argument_list|(
+name|signatureIndex
+argument_list|)
+argument_list|,
+literal|"constantPool.getConstantUtf8(signatureIndex)"
+argument_list|)
 expr_stmt|;
 block|}
 comment|/**      * Initialize from another object. Note that both objects use the same references (shallow copy). Use clone() for a      * physical copy.      */
