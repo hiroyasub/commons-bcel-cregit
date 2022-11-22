@@ -81,13 +81,11 @@ name|Node
 implements|,
 name|Cloneable
 block|{
-comment|/**      * Empty array.      */
-specifier|private
 specifier|static
 specifier|final
-name|StackMapType
+name|StackMapEntry
 index|[]
-name|EMPTY_STACK_MAP_TYPE_ARRAY
+name|EMPTY_ARRAY
 init|=
 block|{}
 decl_stmt|;
@@ -525,7 +523,9 @@ literal|null
 condition|?
 name|typesOfLocals
 else|:
-name|EMPTY_STACK_MAP_TYPE_ARRAY
+name|StackMapType
+operator|.
+name|EMPTY_ARRAY
 expr_stmt|;
 name|this
 operator|.
@@ -537,7 +537,9 @@ literal|null
 condition|?
 name|typesOfStackItems
 else|:
-name|EMPTY_STACK_MAP_TYPE_ARRAY
+name|StackMapType
+operator|.
+name|EMPTY_ARRAY
 expr_stmt|;
 name|this
 operator|.
@@ -625,7 +627,9 @@ literal|null
 condition|?
 name|typesOfLocals
 else|:
-name|EMPTY_STACK_MAP_TYPE_ARRAY
+name|StackMapType
+operator|.
+name|EMPTY_ARRAY
 expr_stmt|;
 name|this
 operator|.
@@ -637,7 +641,9 @@ literal|null
 condition|?
 name|typesOfStackItems
 else|:
-name|EMPTY_STACK_MAP_TYPE_ARRAY
+name|StackMapType
+operator|.
+name|EMPTY_ARRAY
 expr_stmt|;
 name|this
 operator|.
@@ -1657,7 +1663,9 @@ literal|null
 condition|?
 name|types
 else|:
-name|EMPTY_STACK_MAP_TYPE_ARRAY
+name|StackMapType
+operator|.
+name|EMPTY_ARRAY
 expr_stmt|;
 block|}
 specifier|public
@@ -1678,7 +1686,9 @@ literal|null
 condition|?
 name|types
 else|:
-name|EMPTY_STACK_MAP_TYPE_ARRAY
+name|StackMapType
+operator|.
+name|EMPTY_ARRAY
 expr_stmt|;
 block|}
 comment|/**      * @return String representation.      */

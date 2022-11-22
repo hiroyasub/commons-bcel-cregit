@@ -67,6 +67,20 @@ name|Const
 import|;
 end_import
 
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|bcel
+operator|.
+name|util
+operator|.
+name|Args
+import|;
+end_import
+
 begin_comment
 comment|/**  * This class represents a stack map attribute used for preverification of Java classes for the  *<a href="http://java.sun.com/j2me/"> Java 2 Micro Edition</a> (J2ME). This attribute is used by the  *<a href="http://java.sun.com/products/cldc/">KVM</a> and contained within the Code attribute of a method. See CLDC  * specification ï¿½5.3.1.2  *  *<pre>  * StackMapTable_attribute {  *   u2              attribute_name_index;  *   u4              attribute_length;  *   u2              number_of_entries;  *   stack_map_frame entries[number_of_entries];  * }  *</pre>  *  * @see Code  * @see StackMapEntry  * @see StackMapType  */
 end_comment
@@ -184,7 +198,7 @@ parameter_list|,
 specifier|final
 name|StackMapEntry
 index|[]
-name|map
+name|table
 parameter_list|,
 specifier|final
 name|ConstantPool
@@ -208,7 +222,28 @@ name|this
 operator|.
 name|table
 operator|=
-name|map
+name|table
+operator|!=
+literal|null
+condition|?
+name|table
+else|:
+name|StackMapEntry
+operator|.
+name|EMPTY_ARRAY
+expr_stmt|;
+name|Args
+operator|.
+name|requireU2
+argument_list|(
+name|this
+operator|.
+name|table
+operator|.
+name|length
+argument_list|,
+literal|"table.length"
+argument_list|)
 expr_stmt|;
 block|}
 comment|/**      * Called by objects that are traversing the nodes of the tree implicitly defined by the contents of a Java class.      * I.e., the hierarchy of methods, fields, attributes, etc. spawns a tree of objects.      *      * @param v Visitor object      */
@@ -350,12 +385,6 @@ parameter_list|()
 block|{
 return|return
 name|table
-operator|==
-literal|null
-condition|?
-literal|0
-else|:
-name|table
 operator|.
 name|length
 return|;
@@ -387,6 +416,14 @@ operator|.
 name|table
 operator|=
 name|table
+operator|!=
+literal|null
+condition|?
+name|table
+else|:
+name|StackMapEntry
+operator|.
+name|EMPTY_ARRAY
 expr_stmt|;
 name|int
 name|len
