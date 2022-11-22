@@ -45,6 +45,18 @@ name|IOException
 import|;
 end_import
 
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|bcel
+operator|.
+name|Const
+import|;
+end_import
+
 begin_comment
 comment|/**  * @since 6.0  */
 end_comment
@@ -186,6 +198,7 @@ literal|0
 argument_list|)
 return|;
 block|}
+comment|/**      * @since 6.7.0      */
 specifier|public
 specifier|static
 name|ElementValue
@@ -333,7 +346,9 @@ if|if
 condition|(
 name|arrayNesting
 operator|>
-literal|255
+name|Const
+operator|.
+name|MAX_ARRAY_DIMENSIONS
 condition|)
 block|{
 comment|// JVM spec 4.4.1
@@ -341,7 +356,16 @@ throw|throw
 operator|new
 name|ClassFormatException
 argument_list|(
-literal|"Arrays are only valid if they represent 255 or fewer dimensions."
+name|String
+operator|.
+name|format
+argument_list|(
+literal|"Arrays are only valid if they represent %,d or fewer dimensions."
+argument_list|,
+name|Const
+operator|.
+name|MAX_ARRAY_DIMENSIONS
+argument_list|)
 argument_list|)
 throw|;
 block|}
