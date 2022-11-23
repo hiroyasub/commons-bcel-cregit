@@ -445,7 +445,7 @@ name|HashMap
 argument_list|<>
 argument_list|()
 decl_stmt|;
-comment|/**      * Create empty constant pool.      */
+comment|/**      * Constructs a new empty constant pool.      */
 specifier|public
 name|ConstantPoolGen
 parameter_list|()
@@ -463,7 +463,7 @@ name|size
 index|]
 expr_stmt|;
 block|}
-comment|/**      * Initialize with given array of constants.      *      * @param cs array of given constants, new ones will be appended      */
+comment|/**      * Constructs a new instance with the given array of constants.      *      * @param cs array of given constants, new ones will be appended      */
 specifier|public
 name|ConstantPoolGen
 parameter_list|(
@@ -1192,7 +1192,7 @@ comment|//                assert false : "Unexpected constant type: " + c.getCla
 comment|//            }
 block|}
 block|}
-comment|/**      * Initialize with given constant pool.      *      * @param cp the constant pool.      */
+comment|/**      * Constructs a new instance with the given constant pool.      *      * @param cp the constant pool.      */
 specifier|public
 name|ConstantPoolGen
 parameter_list|(
@@ -1346,18 +1346,18 @@ name|ret
 argument_list|)
 return|;
 block|}
-comment|/**      * Import constant from another ConstantPool and return new index.      */
+comment|/**      * Adds a constant from another ConstantPool and returns the new index.      *      * @param constant The constant to add.      * @param cpGen Source pool.      * @return index of entry      */
 specifier|public
 name|int
 name|addConstant
 parameter_list|(
 specifier|final
 name|Constant
-name|c
+name|constant
 parameter_list|,
 specifier|final
 name|ConstantPoolGen
-name|cp
+name|cpGen
 parameter_list|)
 block|{
 specifier|final
@@ -1365,7 +1365,7 @@ name|Constant
 index|[]
 name|constants
 init|=
-name|cp
+name|cpGen
 operator|.
 name|getConstantPool
 argument_list|()
@@ -1375,7 +1375,7 @@ argument_list|()
 decl_stmt|;
 switch|switch
 condition|(
-name|c
+name|constant
 operator|.
 name|getTag
 argument_list|()
@@ -1394,7 +1394,7 @@ init|=
 operator|(
 name|ConstantString
 operator|)
-name|c
+name|constant
 decl_stmt|;
 specifier|final
 name|ConstantUtf8
@@ -1434,7 +1434,7 @@ init|=
 operator|(
 name|ConstantClass
 operator|)
-name|c
+name|constant
 decl_stmt|;
 specifier|final
 name|ConstantUtf8
@@ -1474,7 +1474,7 @@ init|=
 operator|(
 name|ConstantNameAndType
 operator|)
-name|c
+name|constant
 decl_stmt|;
 specifier|final
 name|ConstantUtf8
@@ -1533,7 +1533,7 @@ operator|(
 operator|(
 name|ConstantUtf8
 operator|)
-name|c
+name|constant
 operator|)
 operator|.
 name|getBytes
@@ -1552,7 +1552,7 @@ operator|(
 operator|(
 name|ConstantDouble
 operator|)
-name|c
+name|constant
 operator|)
 operator|.
 name|getBytes
@@ -1571,7 +1571,7 @@ operator|(
 operator|(
 name|ConstantFloat
 operator|)
-name|c
+name|constant
 operator|)
 operator|.
 name|getBytes
@@ -1590,7 +1590,7 @@ operator|(
 operator|(
 name|ConstantLong
 operator|)
-name|c
+name|constant
 operator|)
 operator|.
 name|getBytes
@@ -1609,7 +1609,7 @@ operator|(
 operator|(
 name|ConstantInteger
 operator|)
-name|c
+name|constant
 operator|)
 operator|.
 name|getBytes
@@ -1639,7 +1639,7 @@ init|=
 operator|(
 name|ConstantCP
 operator|)
-name|c
+name|constant
 decl_stmt|;
 specifier|final
 name|ConstantClass
@@ -1745,7 +1745,7 @@ argument_list|()
 decl_stmt|;
 switch|switch
 condition|(
-name|c
+name|constant
 operator|.
 name|getTag
 argument_list|()
@@ -1804,7 +1804,7 @@ name|IllegalArgumentException
 argument_list|(
 literal|"Unknown constant type "
 operator|+
-name|c
+name|constant
 argument_list|)
 throw|;
 block|}
@@ -1817,7 +1817,7 @@ name|IllegalArgumentException
 argument_list|(
 literal|"Unknown constant type "
 operator|+
-name|c
+name|constant
 argument_list|)
 throw|;
 block|}
