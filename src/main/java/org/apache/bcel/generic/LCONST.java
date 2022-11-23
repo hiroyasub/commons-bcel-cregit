@@ -29,6 +29,7 @@ implements|implements
 name|ConstantPushInstruction
 block|{
 specifier|private
+specifier|final
 name|long
 name|value
 decl_stmt|;
@@ -36,6 +37,11 @@ comment|/**      * Empty constructor needed for Instruction.readInstruction. Not
 name|LCONST
 parameter_list|()
 block|{
+name|this
+argument_list|(
+literal|0
+argument_list|)
+expr_stmt|;
 block|}
 specifier|public
 name|LCONST
