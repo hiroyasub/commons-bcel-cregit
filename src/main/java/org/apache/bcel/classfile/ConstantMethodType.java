@@ -73,7 +73,7 @@ specifier|private
 name|int
 name|descriptorIndex
 decl_stmt|;
-comment|/**      * Initialize from another object.      */
+comment|/**      * Initialize from another object.      *      * @param c Source to copy.      */
 specifier|public
 name|ConstantMethodType
 parameter_list|(

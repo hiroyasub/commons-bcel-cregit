@@ -79,7 +79,7 @@ name|int
 name|signatureIndex
 decl_stmt|;
 comment|// and its signature.
-comment|/**      * Initialize from another object.      */
+comment|/**      * Initialize from another object.      *      * @param c Source to copy.      */
 specifier|public
 name|ConstantNameAndType
 parameter_list|(

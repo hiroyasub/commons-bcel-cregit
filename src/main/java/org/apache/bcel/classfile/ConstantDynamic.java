@@ -59,7 +59,7 @@ name|ConstantDynamic
 extends|extends
 name|ConstantCP
 block|{
-comment|/**      * Initialize from another object.      */
+comment|/**      * Initialize from another object.      *      * @param c Source to copy.      */
 specifier|public
 name|ConstantDynamic
 parameter_list|(

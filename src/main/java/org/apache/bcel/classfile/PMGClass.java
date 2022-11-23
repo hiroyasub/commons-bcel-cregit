@@ -170,7 +170,7 @@ operator|=
 name|pmgClassIndex
 expr_stmt|;
 block|}
-comment|/**      * Initialize from another object. Note that both objects use the same references (shallow copy). Use copy() for a      * physical copy.      */
+comment|/**      * Initialize from another object. Note that both objects use the same references (shallow copy). Use copy() for a      * physical copy.      *      * @param pgmClass Source to copy.      */
 specifier|public
 name|PMGClass
 parameter_list|(

@@ -113,7 +113,7 @@ index|[]
 name|exceptionIndexTable
 decl_stmt|;
 comment|// constant pool
-comment|/**      * Initialize from another object. Note that both objects use the same references (shallow copy). Use copy() for a      * physical copy.      */
+comment|/**      * Initialize from another object. Note that both objects use the same references (shallow copy). Use copy() for a      * physical copy.      *      * @param c Source to copy.      */
 specifier|public
 name|ExceptionTable
 parameter_list|(

@@ -89,7 +89,7 @@ name|int
 index|[]
 name|bootstrapArguments
 decl_stmt|;
-comment|/**      * Initialize from another object.      */
+comment|/**      * Initialize from another object.      *      * @param c Source to copy.      */
 specifier|public
 name|BootstrapMethod
 parameter_list|(

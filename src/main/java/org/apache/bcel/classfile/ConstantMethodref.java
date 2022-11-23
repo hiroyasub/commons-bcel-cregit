@@ -59,7 +59,7 @@ name|ConstantMethodref
 extends|extends
 name|ConstantCP
 block|{
-comment|/**      * Initialize from another object.      */
+comment|/**      * Initialize from another object.      *      * @param c Source to copy.      */
 specifier|public
 name|ConstantMethodref
 parameter_list|(

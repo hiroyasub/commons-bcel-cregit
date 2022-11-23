@@ -272,7 +272,7 @@ literal|"localVariableTable.length"
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Initialize from another object. Note that both objects use the same references (shallow copy). Use copy() for a      * physical copy.      */
+comment|/**      * Initialize from another object. Note that both objects use the same references (shallow copy). Use copy() for a      * physical copy.      *      * @param c Source to copy.      */
 specifier|public
 name|LocalVariableTable
 parameter_list|(

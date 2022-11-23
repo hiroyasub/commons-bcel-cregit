@@ -75,7 +75,7 @@ specifier|private
 name|float
 name|bytes
 decl_stmt|;
-comment|/**      * Initialize from another object. Note that both objects use the same references (shallow copy). Use clone() for a      * physical copy.      */
+comment|/**      * Initialize from another object. Note that both objects use the same references (shallow copy). Use clone() for a      * physical copy.      *      * @param c Source to copy.      */
 specifier|public
 name|ConstantFloat
 parameter_list|(

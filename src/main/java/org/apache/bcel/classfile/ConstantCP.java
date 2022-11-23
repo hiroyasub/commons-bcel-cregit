@@ -162,7 +162,7 @@ operator|=
 name|nameAndTypeIndex
 expr_stmt|;
 block|}
-comment|/**      * Initialize from another object.      */
+comment|/**      * Initialize from another object.      *      * @param c Source to copy.      */
 specifier|public
 name|ConstantCP
 parameter_list|(

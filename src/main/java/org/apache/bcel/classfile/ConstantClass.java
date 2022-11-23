@@ -76,7 +76,7 @@ name|int
 name|nameIndex
 decl_stmt|;
 comment|// Identical to ConstantString except for the name
-comment|/**      * Initialize from another object.      */
+comment|/**      * Initialize from another object.      *      * @param c Source to copy.      */
 specifier|public
 name|ConstantClass
 parameter_list|(

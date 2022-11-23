@@ -101,7 +101,7 @@ index|[]
 name|bootstrapMethods
 decl_stmt|;
 comment|// TODO this could be made final (setter is not used)
-comment|/**      * Initialize from another object. Note that both objects use the same references (shallow copy). Use clone() for a      * physical copy.      */
+comment|/**      * Initialize from another object. Note that both objects use the same references (shallow copy). Use clone() for a      * physical copy.      *      * @param c Source to copy.      */
 specifier|public
 name|BootstrapMethods
 parameter_list|(
