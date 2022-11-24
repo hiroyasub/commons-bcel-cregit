@@ -240,11 +240,11 @@ return|;
 block|}
 comment|/// ** Symbolically executes the corresponding Java Virtual Machine instruction. */
 comment|// public void visitWIDE(WIDE o) {
-comment|// The WIDE instruction is modelled as a flag
+comment|// The WIDE instruction is modeled as a flag
 comment|// of the embedded instructions in BCEL.
 comment|// Therefore BCEL checks for possible errors
 comment|// when parsing in the .class file: We don't
-comment|// have even the possibilty to care for WIDE
+comment|// have even the possibility to care for WIDE
 comment|// here.
 comment|// }
 comment|/** Symbolically executes the corresponding Java Virtual Machine instruction. */
