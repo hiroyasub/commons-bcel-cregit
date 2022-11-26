@@ -46,6 +46,22 @@ import|;
 end_import
 
 begin_import
+import|import static
+name|org
+operator|.
+name|junit
+operator|.
+name|jupiter
+operator|.
+name|api
+operator|.
+name|Assertions
+operator|.
+name|assertNotNull
+import|;
+end_import
+
+begin_import
 import|import
 name|java
 operator|.
@@ -278,6 +294,36 @@ operator|.
 name|api
 operator|.
 name|Test
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|junit
+operator|.
+name|jupiter
+operator|.
+name|params
+operator|.
+name|ParameterizedTest
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|junit
+operator|.
+name|jupiter
+operator|.
+name|params
+operator|.
+name|provider
+operator|.
+name|ValueSource
 import|;
 end_import
 
@@ -904,11 +950,26 @@ expr_stmt|;
 block|}
 comment|/**      * Test to improve BCEL tests code coverage for classfile/Utility.java.      */
 annotation|@
-name|Test
+name|ParameterizedTest
+annotation|@
+name|ValueSource
+argument_list|(
+name|booleans
+operator|=
+block|{
+literal|true
+block|,
+literal|false
+block|}
+argument_list|)
 specifier|public
 name|void
 name|testCoverage
-parameter_list|()
+parameter_list|(
+specifier|final
+name|boolean
+name|compress
+parameter_list|)
 throws|throws
 name|ClassNotFoundException
 throws|,
@@ -987,6 +1048,7 @@ operator|!=
 literal|null
 condition|)
 block|{
+comment|// TODO: need for real assertions here
 specifier|final
 name|String
 name|encoded
@@ -1000,26 +1062,35 @@ operator|.
 name|getCode
 argument_list|()
 argument_list|,
-literal|true
+name|compress
 argument_list|)
 decl_stmt|;
+name|assertNotNull
+argument_list|(
+name|encoded
+argument_list|)
+expr_stmt|;
 comment|// following statement will throw exeception without classfile/Utility.encode fix
+name|assertNotNull
+argument_list|(
 name|Utility
 operator|.
 name|decode
 argument_list|(
 name|encoded
 argument_list|,
-literal|true
+name|compress
+argument_list|)
 argument_list|)
 expr_stmt|;
-comment|// discard result
+name|assertNotNull
+argument_list|(
 name|code
 operator|.
 name|toString
 argument_list|()
+argument_list|)
 expr_stmt|;
-comment|// discard result
 block|}
 block|}
 block|}
