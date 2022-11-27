@@ -1934,7 +1934,7 @@ name|getPrev
 argument_list|()
 control|)
 block|{
-comment|/*              * Causes BranchInstructions to release target and targeters, because it calls dispose() on the contained instruction.              */
+comment|// Causes BranchInstructions to release target and targeters, because it calls dispose() on the contained instruction.
 name|ih
 operator|.
 name|dispose
@@ -3814,7 +3814,7 @@ name|List
 argument_list|<
 name|InstructionHandle
 argument_list|>
-name|targetVec
+name|targetList
 init|=
 operator|new
 name|ArrayList
@@ -3895,7 +3895,7 @@ argument_list|()
 condition|)
 block|{
 comment|// Still got targeters?
-name|targetVec
+name|targetList
 operator|.
 name|add
 argument_list|(
@@ -3951,7 +3951,7 @@ expr_stmt|;
 if|if
 condition|(
 operator|!
-name|targetVec
+name|targetList
 operator|.
 name|isEmpty
 argument_list|()
@@ -3961,7 +3961,7 @@ throw|throw
 operator|new
 name|TargetLostException
 argument_list|(
-name|targetVec
+name|targetList
 operator|.
 name|toArray
 argument_list|(

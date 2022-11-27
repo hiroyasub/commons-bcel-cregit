@@ -4639,38 +4639,38 @@ argument_list|()
 argument_list|)
 decl_stmt|;
 name|Type
-name|shouldbe
+name|shouldBe
 init|=
 name|t
 decl_stmt|;
 if|if
 condition|(
-name|shouldbe
+name|shouldBe
 operator|==
 name|Type
 operator|.
 name|BOOLEAN
 operator|||
-name|shouldbe
+name|shouldBe
 operator|==
 name|Type
 operator|.
 name|BYTE
 operator|||
-name|shouldbe
+name|shouldBe
 operator|==
 name|Type
 operator|.
 name|CHAR
 operator|||
-name|shouldbe
+name|shouldBe
 operator|==
 name|Type
 operator|.
 name|SHORT
 condition|)
 block|{
-name|shouldbe
+name|shouldBe
 operator|=
 name|Type
 operator|.
@@ -4685,7 +4685,7 @@ name|ReferenceType
 condition|)
 block|{
 name|ReferenceType
-name|rvalue
+name|rValue
 init|=
 literal|null
 decl_stmt|;
@@ -4696,7 +4696,7 @@ operator|instanceof
 name|ReferenceType
 condition|)
 block|{
-name|rvalue
+name|rValue
 operator|=
 operator|(
 name|ReferenceType
@@ -4707,7 +4707,7 @@ name|referenceTypeIsInitialized
 argument_list|(
 name|o
 argument_list|,
-name|rvalue
+name|rValue
 argument_list|)
 expr_stmt|;
 block|}
@@ -4731,11 +4731,11 @@ comment|// Comment it out if you encounter problems. See also the analogon at vi
 if|if
 condition|(
 operator|!
-name|rvalue
+name|rValue
 operator|.
 name|isAssignmentCompatibleWith
 argument_list|(
-name|shouldbe
+name|shouldBe
 argument_list|)
 condition|)
 block|{
@@ -4749,7 +4749,7 @@ name|value
 operator|+
 literal|"' is not assignment compatible with '"
 operator|+
-name|shouldbe
+name|shouldBe
 operator|+
 literal|"'."
 argument_list|)
@@ -4758,7 +4758,7 @@ block|}
 block|}
 if|else if
 condition|(
-name|shouldbe
+name|shouldBe
 operator|!=
 name|value
 condition|)
@@ -4773,7 +4773,7 @@ name|value
 operator|+
 literal|"' is not of type '"
 operator|+
-name|shouldbe
+name|shouldBe
 operator|+
 literal|"' as expected."
 argument_list|)

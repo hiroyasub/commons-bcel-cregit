@@ -164,7 +164,6 @@ name|Object
 argument_list|>
 name|attributes
 decl_stmt|;
-comment|/* private */
 specifier|protected
 name|InstructionHandle
 parameter_list|(
