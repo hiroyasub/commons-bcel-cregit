@@ -437,6 +437,8 @@ specifier|final
 name|StackMapEntry
 name|element
 range|:
+name|this
+operator|.
 name|table
 control|)
 block|{
