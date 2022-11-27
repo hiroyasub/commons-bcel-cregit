@@ -48,6 +48,22 @@ import|;
 end_import
 
 begin_import
+import|import static
+name|org
+operator|.
+name|junit
+operator|.
+name|jupiter
+operator|.
+name|api
+operator|.
+name|Assertions
+operator|.
+name|assertTrue
+import|;
+end_import
+
+begin_import
 import|import
 name|java
 operator|.
@@ -123,6 +139,30 @@ end_import
 
 begin_import
 import|import
+name|java
+operator|.
+name|util
+operator|.
+name|regex
+operator|.
+name|Matcher
+import|;
+end_import
+
+begin_import
+import|import
+name|java
+operator|.
+name|util
+operator|.
+name|regex
+operator|.
+name|Pattern
+import|;
+end_import
+
+begin_import
+import|import
 name|org
 operator|.
 name|apache
@@ -170,6 +210,20 @@ operator|.
 name|classfile
 operator|.
 name|Utility
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|bcel
+operator|.
+name|generic
+operator|.
+name|BinaryOpCreator
 import|;
 end_import
 
@@ -1101,6 +1155,272 @@ operator|.
 name|start
 argument_list|()
 expr_stmt|;
+block|}
+annotation|@
+name|ParameterizedTest
+annotation|@
+name|ValueSource
+argument_list|(
+name|strings
+operator|=
+block|{
+comment|// @formatter:off
+literal|"iadd 3 2 = 5"
+block|,
+literal|"isub 3 2 = 1"
+block|,
+literal|"imul 3 2 = 6"
+block|,
+literal|"idiv 3 2 = 1"
+block|,
+literal|"irem 3 2 = 1"
+block|,
+literal|"iand 3 2 = 2"
+block|,
+literal|"ior 3 2 = 3"
+block|,
+literal|"ixor 3 2 = 1"
+block|,
+literal|"ishl 4 1 = 8"
+block|,
+literal|"ishr 4 1 = 2"
+block|,
+literal|"iushr 4 1 = 2"
+block|,
+literal|"ladd 3 2 = 5"
+block|,
+literal|"lsub 3 2 = 1"
+block|,
+literal|"lmul 3 2 = 6"
+block|,
+literal|"ldiv 3 2 = 1"
+block|,
+literal|"lrem 3 2 = 1"
+block|,
+literal|"land 3 2 = 2"
+block|,
+literal|"lor 3 2 = 3"
+block|,
+literal|"lxor 3 2 = 1"
+block|,
+literal|"lshl 4 1 = 8"
+block|,
+literal|"lshr 4 1 = 2"
+block|,
+literal|"lushr 4 1 = 2"
+block|,
+literal|"fadd 3 2 = 5.0"
+block|,
+literal|"fsub 3 2 = 1.0"
+block|,
+literal|"fmul 3 2 = 6.0"
+block|,
+literal|"fdiv 3 2 = 1.5"
+block|,
+literal|"frem 3 2 = 1.0"
+block|,
+literal|"dadd 3 2 = 5.0"
+block|,
+literal|"dsub 3 2 = 1.0"
+block|,
+literal|"dmul 3 2 = 6.0"
+block|,
+literal|"ddiv 3 2 = 1.5"
+block|,
+literal|"drem 3 2 = 1.0"
+comment|// @formatter:on
+block|}
+argument_list|)
+specifier|public
+name|void
+name|testBinaryOp
+parameter_list|(
+specifier|final
+name|String
+name|exp
+parameter_list|)
+throws|throws
+name|Exception
+block|{
+name|BinaryOpCreator
+operator|.
+name|main
+argument_list|(
+operator|new
+name|String
+index|[]
+block|{}
+argument_list|)
+expr_stmt|;
+specifier|final
+name|File
+name|workDir
+init|=
+operator|new
+name|File
+argument_list|(
+literal|"target"
+argument_list|)
+decl_stmt|;
+specifier|final
+name|Pattern
+name|pattern
+init|=
+name|Pattern
+operator|.
+name|compile
+argument_list|(
+literal|"([a-z]{3,5}) ([-+]?\\d*\\.?\\d+) ([-+]?\\d*\\.?\\d+) = ([-+]?\\d*\\.?\\d+)"
+argument_list|)
+decl_stmt|;
+specifier|final
+name|Matcher
+name|matcher
+init|=
+name|pattern
+operator|.
+name|matcher
+argument_list|(
+name|exp
+argument_list|)
+decl_stmt|;
+name|assertTrue
+argument_list|(
+name|matcher
+operator|.
+name|matches
+argument_list|()
+argument_list|)
+expr_stmt|;
+specifier|final
+name|String
+name|op
+init|=
+name|matcher
+operator|.
+name|group
+argument_list|(
+literal|1
+argument_list|)
+decl_stmt|;
+specifier|final
+name|String
+name|a
+init|=
+name|matcher
+operator|.
+name|group
+argument_list|(
+literal|2
+argument_list|)
+decl_stmt|;
+specifier|final
+name|String
+name|b
+init|=
+name|matcher
+operator|.
+name|group
+argument_list|(
+literal|3
+argument_list|)
+decl_stmt|;
+specifier|final
+name|String
+name|expected
+init|=
+name|matcher
+operator|.
+name|group
+argument_list|(
+literal|4
+argument_list|)
+decl_stmt|;
+specifier|final
+name|String
+name|javaAgent
+init|=
+name|getJavaAgent
+argument_list|()
+decl_stmt|;
+if|if
+condition|(
+name|javaAgent
+operator|==
+literal|null
+condition|)
+block|{
+name|assertEquals
+argument_list|(
+name|expected
+operator|+
+name|EOL
+argument_list|,
+name|exec
+argument_list|(
+name|workDir
+argument_list|,
+literal|"java"
+argument_list|,
+literal|"-cp"
+argument_list|,
+name|CLASSPATH
+argument_list|,
+literal|"org.apache.bcel.generic.BinaryOp"
+argument_list|,
+name|op
+argument_list|,
+name|a
+argument_list|,
+name|b
+argument_list|)
+argument_list|)
+expr_stmt|;
+block|}
+else|else
+block|{
+specifier|final
+name|String
+name|runtimeExecJavaAgent
+init|=
+name|javaAgent
+operator|.
+name|replace
+argument_list|(
+literal|"jacoco.exec"
+argument_list|,
+literal|"jacoco_org.apache.bcel.generic.BinaryOp.exec"
+argument_list|)
+decl_stmt|;
+name|assertEquals
+argument_list|(
+name|expected
+operator|+
+name|EOL
+argument_list|,
+name|exec
+argument_list|(
+name|workDir
+argument_list|,
+literal|"java"
+argument_list|,
+name|runtimeExecJavaAgent
+argument_list|,
+literal|"-cp"
+argument_list|,
+name|CLASSPATH
+argument_list|,
+literal|"org.apache.bcel.generic.BinaryOp"
+argument_list|,
+name|op
+argument_list|,
+name|a
+argument_list|,
+name|b
+argument_list|)
+argument_list|)
+expr_stmt|;
+block|}
 block|}
 block|}
 end_class

@@ -69,6 +69,7 @@ name|StackMapType
 implements|implements
 name|Cloneable
 block|{
+specifier|public
 specifier|static
 specifier|final
 name|StackMapType
@@ -77,6 +78,7 @@ name|EMPTY_ARRAY
 init|=
 block|{}
 decl_stmt|;
+comment|// must be public because BCELifier code generator writes calls to it
 specifier|private
 name|byte
 name|type
