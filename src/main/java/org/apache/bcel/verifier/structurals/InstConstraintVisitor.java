@@ -4684,11 +4684,6 @@ operator|instanceof
 name|ReferenceType
 condition|)
 block|{
-name|ReferenceType
-name|rValue
-init|=
-literal|null
-decl_stmt|;
 if|if
 condition|(
 name|value
@@ -4696,13 +4691,14 @@ operator|instanceof
 name|ReferenceType
 condition|)
 block|{
+name|ReferenceType
 name|rValue
-operator|=
+init|=
 operator|(
 name|ReferenceType
 operator|)
 name|value
-expr_stmt|;
+decl_stmt|;
 name|referenceTypeIsInitialized
 argument_list|(
 name|o
@@ -4710,21 +4706,6 @@ argument_list|,
 name|rValue
 argument_list|)
 expr_stmt|;
-block|}
-else|else
-block|{
-name|constraintViolated
-argument_list|(
-name|o
-argument_list|,
-literal|"The stack top type '"
-operator|+
-name|value
-operator|+
-literal|"' is not of a reference type as expected."
-argument_list|)
-expr_stmt|;
-block|}
 comment|// TODO: This can possibly only be checked using Staerk-et-al's "set-of-object types", not
 comment|// using "wider cast object types" created during verification.
 comment|// Comment it out if you encounter problems. See also the analogon at visitPUTFIELD|visitPUTSTATIC.
@@ -4752,6 +4733,21 @@ operator|+
 name|shouldBe
 operator|+
 literal|"'."
+argument_list|)
+expr_stmt|;
+block|}
+block|}
+else|else
+block|{
+name|constraintViolated
+argument_list|(
+name|o
+argument_list|,
+literal|"The stack top type '"
+operator|+
+name|value
+operator|+
+literal|"' is not of a reference type as expected."
 argument_list|)
 expr_stmt|;
 block|}
