@@ -104,7 +104,7 @@ name|InstructionComparator
 operator|.
 name|DEFAULT
 decl_stmt|;
-comment|/**      * Get Comparator object used in the equals() method to determine equality of instructions.      *      * @return currently used comparator for equals()      * @deprecated (6.0) use the built in comparator, or wrap this class in another object that implements these methods      */
+comment|/**      * Gets Comparator object used in the equals() method to determine equality of instructions.      *      * @return currently used comparator for equals()      * @deprecated (6.0) use the built in comparator, or wrap this class in another object that implements these methods      */
 annotation|@
 name|Deprecated
 specifier|public
@@ -117,7 +117,7 @@ return|return
 name|cmp
 return|;
 block|}
-comment|/**      * Check if the value can fit in a byte (signed)      *      * @param value the value to check      * @return true if the value is in range      * @since 6.0      */
+comment|/**      * Tests if the value can fit in a byte (signed)      *      * @param value the value to check      * @return true if the value is in range      * @since 6.0      */
 specifier|public
 specifier|static
 name|boolean
@@ -142,7 +142,7 @@ operator|.
 name|MAX_VALUE
 return|;
 block|}
-comment|/**      * Check if the value can fit in a short (signed)      *      * @param value the value to check      * @return true if the value is in range      * @since 6.0      */
+comment|/**      * Tests if the value can fit in a short (signed)      *      * @param value the value to check      * @return true if the value is in range      * @since 6.0      */
 specifier|public
 specifier|static
 name|boolean
@@ -167,7 +167,7 @@ operator|.
 name|MAX_VALUE
 return|;
 block|}
-comment|/**      * Read an instruction from (byte code) input stream and return the appropriate object.      *<p>      * If the Instruction is defined in {@link InstructionConst}, then the singleton instance is returned.      *      * @param bytes input stream bytes      * @return instruction object being read      * @throws IOException Thrown when an I/O exception of some sort has occurred.      * @see InstructionConst#getInstruction(int)      */
+comment|/**      * Reads an instruction from (byte code) input stream and return the appropriate object.      *<p>      * If the Instruction is defined in {@link InstructionConst}, then the singleton instance is returned.      *</p>      * @param bytes input stream bytes      * @return instruction object being read      * @throws IOException Thrown when an I/O exception of some sort has occurred.      * @see InstructionConst#getInstruction(int)      */
 comment|// @since 6.0 no longer final
 specifier|public
 specifier|static
@@ -1557,7 +1557,7 @@ return|return
 name|obj
 return|;
 block|}
-comment|/**      * Set comparator to be used for equals().      *      * @deprecated (6.0) use the built in comparator, or wrap this class in another object that implements these methods      */
+comment|/**      * Sets comparator to be used for equals().      *      * @deprecated (6.0) use the built in comparator, or wrap this class in another object that implements these methods      */
 annotation|@
 name|Deprecated
 specifier|public
@@ -1728,7 +1728,7 @@ name|dispose
 parameter_list|()
 block|{
 block|}
-comment|/**      * Dump instruction as byte code to stream out.      *      * @param out Output stream      * @throws IOException Thrown when an I/O exception of some sort has occurred.      */
+comment|/**      * Dumps instruction as byte code to stream out.      *      * @param out Output stream      * @throws IOException Thrown when an I/O exception of some sort has occurred.      */
 specifier|public
 name|void
 name|dump
@@ -1749,7 +1749,7 @@ argument_list|)
 expr_stmt|;
 comment|// Common for all instructions
 block|}
-comment|/**      * Check for equality, delegated to comparator      *      * @return true if that is an Instruction and has the same opcode      */
+comment|/**      * Tests for equality, delegated to comparator      *      * @return true if that is an Instruction and has the same opcode      */
 annotation|@
 name|Override
 specifier|public
@@ -1814,7 +1814,7 @@ return|return
 name|opcode
 return|;
 block|}
-comment|/**      * calculate the hashCode of this object      *      * @return the hashCode      * @since 6.0      */
+comment|/**      * Gets the hashCode of this object.      *      * @return the hashCode      * @since 6.0      */
 annotation|@
 name|Override
 specifier|public
@@ -1826,7 +1826,7 @@ return|return
 name|opcode
 return|;
 block|}
-comment|/**      * Read needed data (e.g. index) from file.      *      * @param bytes byte sequence to read from      * @param wide "wide" instruction flag      * @throws IOException may be thrown if the implementation needs to read data from the file      */
+comment|/**      * Reads needed data (e.g. index) from file.      *      * @param bytes byte sequence to read from      * @param wide "wide" instruction flag      * @throws IOException may be thrown if the implementation needs to read data from the file      */
 annotation|@
 name|SuppressWarnings
 argument_list|(
