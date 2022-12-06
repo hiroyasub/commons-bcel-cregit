@@ -1259,6 +1259,10 @@ decl_stmt|;
 if|if
 condition|(
 name|c
+operator|==
+literal|null
+operator|||
+name|c
 operator|.
 name|getTag
 argument_list|()
