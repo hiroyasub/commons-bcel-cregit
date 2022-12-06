@@ -1612,7 +1612,7 @@ name|getBytes
 argument_list|()
 return|;
 block|}
-comment|/**      * Returns list of ElementNameValuePair objects      */
+comment|/**      * Returns list of ElementNameValuePair objects.      *      * @return list of ElementNameValuePair objects.      */
 specifier|public
 name|List
 argument_list|<
