@@ -287,7 +287,7 @@ index|[
 name|constantPoolCount
 index|]
 expr_stmt|;
-comment|/*          * constantPool[0] is unused by the compiler and may be used freely by the implementation.          */
+comment|/*          * constantPool[0] is unused by the compiler and may be used freely by the implementation.          * constantPool[0] is currently unused by the implementation.          */
 for|for
 control|(
 name|int
@@ -1331,7 +1331,7 @@ name|length
 operator|||
 name|index
 operator|<
-literal|0
+literal|1
 condition|)
 block|{
 throw|throw
@@ -1418,11 +1418,6 @@ condition|(
 name|c
 operator|==
 literal|null
-comment|// the 0th element is always null
-operator|&&
-name|index
-operator|!=
-literal|0
 condition|)
 block|{
 specifier|final

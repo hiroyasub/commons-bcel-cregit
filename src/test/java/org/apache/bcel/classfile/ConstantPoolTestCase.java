@@ -399,7 +399,7 @@ name|IntStream
 operator|.
 name|range
 argument_list|(
-literal|0
+literal|1
 argument_list|,
 name|pool
 operator|.
@@ -572,7 +572,7 @@ name|IntStream
 operator|.
 name|range
 argument_list|(
-literal|0
+literal|1
 argument_list|,
 name|pool
 operator|.
