@@ -728,9 +728,7 @@ operator|new
 name|File
 argument_list|(
 name|testDir
-operator|+
-literal|"/"
-operator|+
+argument_list|,
 name|className
 operator|+
 literal|".classx"
@@ -744,9 +742,7 @@ operator|new
 name|File
 argument_list|(
 name|testDir
-operator|+
-literal|"/"
-operator|+
+argument_list|,
 name|className
 operator|+
 name|JavaClass
