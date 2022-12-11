@@ -715,7 +715,9 @@ argument_list|()
 condition|?
 literal|""
 else|:
-literal|"/"
+name|File
+operator|.
+name|separator
 operator|+
 name|directory
 operator|)
