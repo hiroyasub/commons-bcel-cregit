@@ -4532,28 +4532,18 @@ expr_stmt|;
 block|}
 name|bytePositions
 operator|=
-operator|new
-name|int
-index|[
-name|count
-index|]
-expr_stmt|;
-comment|// Trim to proper size
-name|System
+name|Arrays
 operator|.
-name|arraycopy
+name|copyOfRange
 argument_list|(
 name|pos
-argument_list|,
-literal|0
-argument_list|,
-name|bytePositions
 argument_list|,
 literal|0
 argument_list|,
 name|count
 argument_list|)
 expr_stmt|;
+comment|// Trim to proper size
 block|}
 comment|/**      * @return length of list (Number of instructions, not bytes)      */
 specifier|public
