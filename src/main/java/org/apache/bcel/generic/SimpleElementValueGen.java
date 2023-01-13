@@ -813,7 +813,7 @@ throw|throw
 operator|new
 name|IllegalStateException
 argument_list|(
-literal|"SimpleElementValueGen doesnt know how to write out type "
+literal|"SimpleElementValueGen doesn't know how to write out type "
 operator|+
 name|super
 operator|.

@@ -168,7 +168,7 @@ throw|throw
 operator|new
 name|ClassFormatException
 argument_list|(
-literal|"SimpleElementValue doesnt know how to write out type "
+literal|"SimpleElementValue doesn't know how to write out type "
 operator|+
 name|type
 argument_list|)
