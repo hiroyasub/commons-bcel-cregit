@@ -204,7 +204,7 @@ throw|throw
 operator|new
 name|IllegalStateException
 argument_list|(
-literal|"Dont call getValueBoolean() on a non BOOLEAN ElementValue"
+literal|"Don't call getValueBoolean() on a non BOOLEAN ElementValue"
 argument_list|)
 throw|;
 block|}
@@ -254,7 +254,7 @@ throw|throw
 operator|new
 name|IllegalStateException
 argument_list|(
-literal|"Dont call getValueByte() on a non BYTE ElementValue"
+literal|"Don't call getValueByte() on a non BYTE ElementValue"
 argument_list|)
 throw|;
 block|}
@@ -296,7 +296,7 @@ throw|throw
 operator|new
 name|IllegalStateException
 argument_list|(
-literal|"Dont call getValueChar() on a non CHAR ElementValue"
+literal|"Don't call getValueChar() on a non CHAR ElementValue"
 argument_list|)
 throw|;
 block|}
@@ -338,7 +338,7 @@ throw|throw
 operator|new
 name|IllegalStateException
 argument_list|(
-literal|"Dont call getValueDouble() on a non DOUBLE ElementValue"
+literal|"Don't call getValueDouble() on a non DOUBLE ElementValue"
 argument_list|)
 throw|;
 block|}
@@ -386,7 +386,7 @@ throw|throw
 operator|new
 name|IllegalStateException
 argument_list|(
-literal|"Dont call getValueFloat() on a non FLOAT ElementValue"
+literal|"Don't call getValueFloat() on a non FLOAT ElementValue"
 argument_list|)
 throw|;
 block|}
@@ -434,7 +434,7 @@ throw|throw
 operator|new
 name|IllegalStateException
 argument_list|(
-literal|"Dont call getValueInt() on a non INT ElementValue"
+literal|"Don't call getValueInt() on a non INT ElementValue"
 argument_list|)
 throw|;
 block|}
@@ -473,7 +473,7 @@ throw|throw
 operator|new
 name|IllegalStateException
 argument_list|(
-literal|"Dont call getValueLong() on a non LONG ElementValue"
+literal|"Don't call getValueLong() on a non LONG ElementValue"
 argument_list|)
 throw|;
 block|}
@@ -521,7 +521,7 @@ throw|throw
 operator|new
 name|IllegalStateException
 argument_list|(
-literal|"Dont call getValueShort() on a non SHORT ElementValue"
+literal|"Don't call getValueShort() on a non SHORT ElementValue"
 argument_list|)
 throw|;
 block|}
@@ -572,7 +572,7 @@ throw|throw
 operator|new
 name|IllegalStateException
 argument_list|(
-literal|"Dont call getValueString() on a non STRING ElementValue"
+literal|"Don't call getValueString() on a non STRING ElementValue"
 argument_list|)
 throw|;
 block|}
