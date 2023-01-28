@@ -316,7 +316,7 @@ operator|=
 literal|true
 expr_stmt|;
 block|}
-comment|/**      * Parses class from given .class file in a ZIP-archive      *      * @param zipFile zip file name      * @param fileName file name      */
+comment|/**      * Parses class from given .class file in a ZIP-archive      *      * @param zipFile ZIP file name      * @param fileName file name      */
 specifier|public
 name|ClassParser
 parameter_list|(

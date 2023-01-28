@@ -654,7 +654,7 @@ specifier|public
 interface|interface
 name|ClassFile
 block|{
-comment|/**          * @return base path of found class, i.e. class is contained relative to that path, which may either denote a directory,          *         or zip file          */
+comment|/**          * @return base path of found class, i.e. class is contained relative to that path, which may either denote a directory,          *         or ZIP file          */
 name|String
 name|getBase
 parameter_list|()
