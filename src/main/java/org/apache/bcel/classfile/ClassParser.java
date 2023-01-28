@@ -194,7 +194,7 @@ specifier|final
 name|boolean
 name|isZip
 decl_stmt|;
-comment|// Loaded from zip file
+comment|// Loaded from ZIP file
 comment|/**      * Parses class from the given stream.      *      * @param inputStream Input stream      * @param fileName File name      */
 specifier|public
 name|ClassParser

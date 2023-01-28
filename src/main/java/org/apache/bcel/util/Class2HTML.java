@@ -661,7 +661,7 @@ name|i
 index|]
 argument_list|)
 expr_stmt|;
-comment|// Create parser object from zip file
+comment|// Create parser object from ZIP file
 block|}
 name|javaClass
 operator|=
