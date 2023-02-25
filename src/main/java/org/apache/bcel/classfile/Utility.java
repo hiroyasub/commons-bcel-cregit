@@ -4219,10 +4219,8 @@ condition|)
 block|{
 throw|throw
 operator|new
-name|ClassFormatException
+name|InvalidMethodSignatureException
 argument_list|(
-literal|"Invalid method signature: "
-operator|+
 name|signature
 argument_list|)
 throw|;
@@ -4277,10 +4275,8 @@ block|{
 comment|// Should never occur
 throw|throw
 operator|new
-name|ClassFormatException
+name|InvalidMethodSignatureException
 argument_list|(
-literal|"Invalid method signature: "
-operator|+
 name|signature
 argument_list|,
 name|e
@@ -4366,10 +4362,8 @@ condition|)
 block|{
 throw|throw
 operator|new
-name|ClassFormatException
+name|InvalidMethodSignatureException
 argument_list|(
-literal|"Invalid method signature: "
-operator|+
 name|signature
 argument_list|)
 throw|;
@@ -4399,10 +4393,8 @@ block|{
 comment|// Should never occur
 throw|throw
 operator|new
-name|ClassFormatException
+name|InvalidMethodSignatureException
 argument_list|(
-literal|"Invalid method signature: "
-operator|+
 name|signature
 argument_list|,
 name|e
@@ -4565,10 +4557,8 @@ condition|)
 block|{
 throw|throw
 operator|new
-name|ClassFormatException
+name|InvalidMethodSignatureException
 argument_list|(
-literal|"Invalid method signature: "
-operator|+
 name|signature
 argument_list|)
 throw|;
@@ -4742,10 +4732,8 @@ block|{
 comment|// Should never occur
 throw|throw
 operator|new
-name|ClassFormatException
+name|InvalidMethodSignatureException
 argument_list|(
-literal|"Invalid method signature: "
-operator|+
 name|signature
 argument_list|,
 name|e
@@ -5924,10 +5912,8 @@ condition|)
 block|{
 throw|throw
 operator|new
-name|ClassFormatException
+name|InvalidMethodSignatureException
 argument_list|(
-literal|"Invalid method signature: "
-operator|+
 name|signature
 argument_list|)
 throw|;
@@ -5964,10 +5950,8 @@ parameter_list|)
 block|{
 throw|throw
 operator|new
-name|ClassFormatException
+name|InvalidMethodSignatureException
 argument_list|(
-literal|"Invalid method signature: "
-operator|+
 name|signature
 argument_list|,
 name|e
@@ -6114,10 +6098,8 @@ return|;
 default|default:
 throw|throw
 operator|new
-name|ClassFormatException
+name|InvalidMethodSignatureException
 argument_list|(
-literal|"Invalid method signature: "
-operator|+
 name|signature
 argument_list|)
 throw|;
@@ -6132,10 +6114,8 @@ parameter_list|)
 block|{
 throw|throw
 operator|new
-name|ClassFormatException
+name|InvalidMethodSignatureException
 argument_list|(
-literal|"Invalid method signature: "
-operator|+
 name|signature
 argument_list|,
 name|e
