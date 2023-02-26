@@ -441,7 +441,7 @@ return|return
 literal|null
 return|;
 block|}
-comment|/**      * @return type of field      */
+comment|/**      * See https://docs.oracle.com/javase/specs/jvms/se8/html/jvms-4.html#jvms-4.2.2      *      * @return type of field      */
 specifier|public
 name|Type
 name|getType
@@ -450,7 +450,7 @@ block|{
 return|return
 name|Type
 operator|.
-name|getReturnType
+name|getType
 argument_list|(
 name|getSignature
 argument_list|()
