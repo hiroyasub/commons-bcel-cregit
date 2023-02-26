@@ -487,7 +487,7 @@ argument_list|)
 argument_list|)
 argument_list|)
 expr_stmt|;
-comment|// corrected concurrent private static field acess
+comment|// corrected concurrent private static field access
 name|index
 operator|+=
 name|unwrap
@@ -1146,7 +1146,7 @@ operator|.
 name|T_VOID
 condition|)
 block|{
-comment|// corrected concurrent private static field acess
+comment|// corrected concurrent private static field access
 name|wrap
 argument_list|(
 name|CONSUMED_CHARS
@@ -1253,7 +1253,7 @@ name|dim
 argument_list|)
 argument_list|)
 decl_stmt|;
-comment|// corrected concurrent private static field acess
+comment|// corrected concurrent private static field access
 comment|// consumed_chars += dim; // update counter - is replaced by
 specifier|final
 name|int
